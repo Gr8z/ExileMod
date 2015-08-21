@@ -5,8 +5,8 @@ forceRotorLibSimulation = 2;
 disableChannels[] = {0, 2};
 
 author = "[GG] Ghostz Gamerz";
-loadScreen = "exile_client\texture\mod\logo.paa"; 
-onLoadMission= "www.ghostzgamerz.com";
+loadScreen = "gg.jpg"; 
+onLoadMission= "www.GHOSTZGAMERZ.com";
 OnLoadIntro = "";
 OnLoadIntroTime = false;
 OnLoadMissionTime = false;
