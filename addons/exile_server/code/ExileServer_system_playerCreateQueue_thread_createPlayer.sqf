@@ -35,7 +35,7 @@ if!(ExileSystemPlayerCreateASYNC isEqualTo [])then
 				}
 				else
 				{
-					deleteVehicle ((_x select 2) select 3)
+					deleteVehicle ((_x select 2) select 3);
 				};
 				ExileSystemPlayerCreateASYNC deleteAt _forEachIndex;
 			};

@@ -39,7 +39,7 @@ link17[] = {14,15};
 link18[] = {15,16};
 link19[] = {16,13};
 globals[] = {25.000000,1,0,0,0,640,480,1,442,6316128,1,182.945129,1490.095825,1108.985596,-158.778183,1061,1030,1};
-window[] = {2,-1,-1,-32000,-32000,916,182,1476,182,3,1079};
+window[] = {2,-1,-1,-32000,-32000,786,52,1346,52,3,1079};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -204,16 +204,7 @@ class FSM
        "" \n
        "	};" \n
        "}" \n
-       "forEach allGroups;" \n
-       "" \n
-       "{" \n
-       "	if((count _x) < 2)then" \n
-       "	{" \n
-       "		ExileSessions deleteAt _forEachIndex;" \n
-       "	};" \n
-       "} " \n
-       "forEach ExileSessions;" \n
-       ""/*%FSM</STATEINIT""">*/;
+       "forEach allGroups;"/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links
       {

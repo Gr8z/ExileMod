@@ -7,7 +7,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_unit","_id","_sessionID"];
+private["_unit","_id","_sessionID","_index"];
 _unit = _this select 0;
 _id = _this select 1;
 _uid = _this select 2;
@@ -21,6 +21,29 @@ if !(_uid in ["", "__SERVER__", "__HEADLESS__"]) then
 		deleteVehicle _unit;
 	};
 	_sessionID = _unit getVariable ["ExileSessionID","Wrong!"];
-	ExileSessions deleteAt ([ExileSessions,_sessionID] call ExileClient_util_find);
+	if!(ExileSystemDatabaseASYNC isEqualTo [])then
+	{
+		{
+			if(((_x select 2) select 0) isEqualTo _sessionID)exitWith
+			{
+				ExileSystemDatabaseASYNC deleteAt _forEachIndex;
+				"OHD: Deleted LoadEntry" call ExileServer_util_log;
+			};
+		} 
+		forEach ExileSystemDatabaseASYNC;
+	};
+	if!(ExileSystemPlayerCreateASYNC isEqualTo [])then
+	{
+		{
+			if(((_x select 2) select 0) isEqualTo _sessionID)exitWith
+			{
+				ExileSystemPlayerCreateASYNC deleteAt _forEachIndex;
+				"OHD: Deleted CreateEntry" call ExileServer_util_log;
+			};
+		}
+		forEach ExileSystemPlayerCreateASYNC;
+	};
+	_index = [ExileSessions,_sessionID] call ExileClient_util_find;
+	ExileSessions deleteAt _index;
 };
 false
