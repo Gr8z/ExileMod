@@ -5,7 +5,7 @@ forceRotorLibSimulation = 2;
 disableChannels[] = {0, 2};
 
 author = "[GG] Ghostz Gamerz";
-loadScreen = "logo.paa"; 
+loadScreen = "logo.jpg"; 
 onLoadMission= "www.GHOSTZGAMERZ.com";
 OnLoadIntro = "";
 OnLoadIntroTime = false;
