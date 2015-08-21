@@ -4,13 +4,13 @@ forceRotorLibSimulation = 2;
 // https://community.bistudio.com/wiki/Description.ext#disableChannels
 disableChannels[] = {0, 2};
 
-author = "[GG] Ghostz Gamerz";
-loadScreen = "gg.jpg"; 
-onLoadMission= "www.GHOSTZGAMERZ.com";
+author = "Exile Mod Team";
+loadScreen = "exile_client\texture\mod\logo.paa"; 
+onLoadMission= "www.exilemod.com";
 OnLoadIntro = "";
 OnLoadIntroTime = false;
 OnLoadMissionTime = false;
-onLoadName = "ExileMod";
+onLoadName = "Exile Mod";
 
 class Header
 {
