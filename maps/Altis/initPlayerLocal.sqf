@@ -208,6 +208,3 @@ call ExileClient_object_trader_create;
     313.349
 ]
 call ExileClient_object_trader_create;
-
-// Welcome Credits by Gr8
-[] execVM "custom\welcome.sqf";
