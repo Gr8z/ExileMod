@@ -10,7 +10,7 @@ onLoadMission= "www.exilemod.com";
 OnLoadIntro = "";
 OnLoadIntroTime = false;
 OnLoadMissionTime = false;
-onLoadName = "Arma 3 Exile Mod";
+onLoadName = "Exile Mod";
 
 class Header
 {

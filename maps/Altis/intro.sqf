@@ -1,5 +1,5 @@
 /**
- * Arma 3 Exile Mod
+ * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team
  *
