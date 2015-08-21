@@ -7,10 +7,12 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_who","_key","_query","_response"];
+private["_i","_who","_key","_query","_response","_player"];
 if!(ExileSystemDatabaseASYNC isEqualTo [])then
 {
+	_i = 0;
 	{
+		_i = _i + 1;
 		_who = _x select 0;
 		_key = _x select 1;
 		if(_key isEqualTo "")then
@@ -25,10 +27,15 @@ if!(ExileSystemDatabaseASYNC isEqualTo [])then
 			_response = call compile("extDB2" callExtension _query);
 			if((_response select 0) isEqualTo 1)then
 			{
-				[((_response select 1) select 0),_x select 2] call ExileServer_object_player_database_load;
+				_player = (_x select 2) select 1;
+				if(!isNull _player)then
+				{
+					[((_response select 1) select 0),_x select 2] call ExileServer_object_player_database_load;
+				};
 				ExileSystemDatabaseASYNC deleteAt _forEachIndex;
 			};
 		};
+		if (_i isEqualTo 3)exitWith{};
 	}
 	forEach ExileSystemDatabaseASYNC;
 };
