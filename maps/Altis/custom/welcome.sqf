@@ -84,7 +84,7 @@ for "_i" from 1 to 50 do
         _ms = _ms + [[_at,_as,_ap]];
     }
 };
-waitUntil{sleep 1; ExileClientPlayerIsSpawned}; 
+waitUntil{sleep 1; ExileClientSpawnLocationSelectionDone}; 
 sleep _Delay;
 if (_IntroMusic) then { playMusic "intro";};
 player enableSimulation true;
