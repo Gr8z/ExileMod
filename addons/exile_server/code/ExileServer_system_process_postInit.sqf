@@ -10,9 +10,7 @@
 if (!isNil "PublicHiveVersion") then
 {
 	call ExileServer_system_thread_initialize;
-	call ExileServer_system_playerLoadQueue_initialize;
 	call ExileServer_system_playerSaveQueue_initialize;
-	call ExileServer_system_playerCreateQueue_initialize;
 	call ExileServer_system_swapOwnershipQueue_initialize;
 	call ExileServer_system_vehicleSaveQueue_initialize;
 	call ExileServer_system_simulationMonitor_initialize;
