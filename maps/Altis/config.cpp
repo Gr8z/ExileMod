@@ -2015,6 +2015,7 @@ class CfgTraderCategories
 		{
 			"Exile_Item_Matches",
 			"Exile_Item_CookingPot",
+			"Exile_Melee_Axe",
 			"Binocular",
 			"Rangefinder",
 			"Laserdesignator",
