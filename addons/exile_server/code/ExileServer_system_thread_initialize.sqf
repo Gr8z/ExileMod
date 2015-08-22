@@ -36,5 +36,6 @@ ExileSystemThreadID = 0;
 			forEach ExileSystemSpawnThread;
 		};
 		ExileSystemMainTimer = time;
+		uiSleep ExileSystemThreadSleep;
 	};
 };

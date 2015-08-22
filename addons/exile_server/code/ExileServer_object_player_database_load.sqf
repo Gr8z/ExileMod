@@ -200,7 +200,6 @@ if !(_assigned_items isEqualTo []) then
 	forEach _assigned_items;
 };
 _player addMPEventHandler ["MPKilled", {_this call ExileServer_object_player_event_onMpKilled}];
-uiSleep 0.2;
 [
 	_sessionID, 
 	"loadPlayerResponse", 
