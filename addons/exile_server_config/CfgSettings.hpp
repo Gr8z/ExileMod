@@ -101,6 +101,6 @@ class CfgSettings {
 	class Time {
 		useRealTime = 0;
 		useStaticTime = 1;
-		staticTime[] = {1900, 0, 0, 0, 0};
+		staticTime[] = {2035,6,10,7,00};
 	};
 };
