@@ -7,9 +7,6 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_playerObject","_playerUID"];
-_sessionID = _this select 0;
-_playerObject = _sessionID call ExileServer_system_session_getPlayerObject;
-_playerUID = getPlayerUID _playerObject;
-ExileSystemDatabaseASYNC pushBack [_playerUID, "", [_sessionID,_playerObject]];
+ExileSystemPlayerCreateASYNC = [];
+[1, ExileServer_system_playerCreateQueue_thread_createPlayer, [], true] call ExileServer_system_thread_addtask;
 true

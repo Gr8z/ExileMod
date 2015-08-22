@@ -21,6 +21,28 @@ if !(_uid in ["", "__SERVER__", "__HEADLESS__"]) then
 		deleteVehicle _unit;
 	};
 	_sessionID = _unit getVariable ["ExileSessionID","Wrong!"];
+	if!(ExileSystemDatabaseASYNC isEqualTo [])then
+	{
+		{
+			if(((_x select 2) select 0) isEqualTo _sessionID)exitWith
+			{
+				ExileSystemDatabaseASYNC deleteAt _forEachIndex;
+				"OHD: Deleted LoadEntry" call ExileServer_util_log;
+			};
+		} 
+		forEach ExileSystemDatabaseASYNC;
+	};
+	if!(ExileSystemPlayerCreateASYNC isEqualTo [])then
+	{
+		{
+			if(((_x select 2) select 0) isEqualTo _sessionID)exitWith
+			{
+				ExileSystemPlayerCreateASYNC deleteAt _forEachIndex;
+				"OHD: Deleted CreateEntry" call ExileServer_util_log;
+			};
+		}
+		forEach ExileSystemPlayerCreateASYNC;
+	};
 	_index = [ExileSessions,_sessionID] call ExileClient_util_find;
 	ExileSessions deleteAt _index;
 };
