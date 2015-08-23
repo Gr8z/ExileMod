@@ -200,3 +200,5 @@ _objects =
     _object enableSimulation false; // :)
 }
 forEach _objects;
+
+execVM "\q\addons\custom_server\init.sqf";
