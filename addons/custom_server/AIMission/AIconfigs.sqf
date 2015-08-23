@@ -239,7 +239,12 @@ AI WEAPONS, UNIFORMS, VESTS AND GEAR
 			];
 
 	blck_vests = [
-				
+				"V_BandollierB_blk","V_BandollierB_cbr","V_BandollierB_khk","V_BandollierB_oli","V_BandollierB_rgr","V_Chestrig_blk","V_Chestrig_khk","V_Chestrig_oli","V_Chestrig_rgr","V_Press_F",
+				"V_Rangemaster_belt","V_TacVest_blk","V_TacVest_blk_POLICE","V_TacVest_brn","V_TacVest_camo","V_TacVest_khk","V_TacVest_oli","V_TacVestCamo_khk","V_TacVestIR_blk",
+				"V_I_G_resistanceLeader_F","V_HarnessO_brn","V_HarnessO_gry","V_HarnessOGL_brn","V_HarnessOGL_gry","V_HarnessOSpec_brn","V_HarnessOSpec_gry","V_PlateCarrier1_blk",
+				"V_PlateCarrier1_rgr","V_PlateCarrier2_rgr","V_PlateCarrier3_rgr","V_PlateCarrierGL_blk","V_PlateCarrierGL_mtp","V_PlateCarrierGL_rgr","V_PlateCarrierH_CTRG",
+				"V_PlateCarrierIA1_dgtl","V_PlateCarrierIA2_dgtl","V_PlateCarrierIAGL_dgtl","V_PlateCarrierIAGL_oli","V_PlateCarrierL_CTRG","V_PlateCarrierSpec_blk","V_PlateCarrierSpec_mtp",
+				"V_PlateCarrierSpec_rgr",
 				// DLC Vests
 				"V_PlateCarrierSpec_blk","V_PlateCarrierSpec_mtp","V_PlateCarrierGL_blk","V_PlateCarrierGL_mtp","V_PlateCarrierIAGL_oli"
 			];
@@ -333,11 +338,32 @@ for examples of how you can do this see \Major\Compositions.sqf
 				["optic_AMS_khk",1,3],["optic_AMS_snd",1,3],["optic_KHS_blk",1,3],["optic_KHS_hex",1,3],["optic_KHS_old",1,3],["optic_KHS_tan",1,3]
 			],
 			[// Materials and supplies				
-				["10Rnd_93x64_DMR_05_Mag",1,2]
+				["Exile_Item_Rope",5,20],
+				["Exile_Item_DuctTape",6,10],
+				["Exile_Item_ExtensionCord",2,4],
+				["Exile_Item_FuelCanisterEmpty",2,6],
+				["Exile_Item_JunkMetal",5,20],
+				["Exile_Item_LightBulb",1,3],
+				["Exile_Item_MetalBoard",3,10],
+				["Exile_Item_SafeKit",1,1],
+				["Exile_Item_CodeLock",1,1],
+				["Exile_Item_CamoTentKit",1,1],
+				["Exile_Item_MetalPole",5,30],
+				["Exile_Item_Matches",1,3],
+				["Exile_Item_CookingPot",1,3],
+				["Exile_Item_InstaDoc",1,3],
+				["Exile_Melee_Axe",1,3],
+				["Exile_Item_MetalPole",1,3],
+				["Exile_Item_WoodLog",10,30],
+				["Rangefinder",1,3]
 			],
 			[//Items
-
-				["Rangefinder",1,3]	
+				["Exile_Item_GloriousKnakworst",1,6],
+				["Exile_Item_Surstromming",1,2],
+				["Exile_Item_SausageGravy",1,2],
+				["Exile_Item_ChristmasTinner",1,4],
+				["Exile_Item_BBQSandwich",1,3],
+				["Exile_Item_Catfood",1,2]
 			],
 			[ // Backpacks
 				["B_AssaultPack_dgtl",1,2],["B_AssaultPack_khk",1,2],["B_AssaultPack_mcamo",1,2],["B_AssaultPack_ocamo",1,2],["B_AssaultPack_rgr",1,2],["B_AssaultPack_sgg",1,2],
@@ -414,12 +440,33 @@ for examples of how you can do this see \Major\Compositions.sqf
 				["optic_tws",1,3],["optic_tws_mg",1,3],["muzzle_snds_H",1,3],["muzzle_snds_L",1,3],["muzzle_snds_M",1,3],["muzzle_snds_B",1,3],["muzzle_snds_H_MG",1,3],["muzzle_snds_acp",1,3],
 				["optic_AMS_khk",1,3],["optic_AMS_snd",1,3],["optic_KHS_blk",1,3],["optic_KHS_hex",1,3],["optic_KHS_old",1,3],["optic_KHS_tan",1,3]
 			],
-			[	
-				["10Rnd_93x64_DMR_05_Mag",1,2]
+			[// Materials and supplies				
+				["Exile_Item_Rope",5,10],
+				["Exile_Item_DuctTape",6,5],
+				["Exile_Item_ExtensionCord",2,4],
+				["Exile_Item_FuelCanisterEmpty",2,6],
+				["Exile_Item_JunkMetal",5,20],
+				["Exile_Item_LightBulb",1,3],
+				["Exile_Item_MetalBoard",3,5],
+				["Exile_Item_SafeKit",1,1],
+				["Exile_Item_CodeLock",1,1],
+				["Exile_Item_CamoTentKit",1,1],
+				["Exile_Item_MetalPole",5,30],
+				["Exile_Item_Matches",1,3],
+				["Exile_Item_CookingPot",1,3],
+				["Exile_Item_InstaDoc",1,3],
+				["Exile_Melee_Axe",1,3],
+				["Exile_Item_MetalPole",1,3],
+				["Exile_Item_WoodLog",10,10],
+				["Rangefinder",1,3]
 			],
 			[//Items
-				// Format is ["Item name, Minimum number to add, Maximum number to add],
-				["Rangefinder",1,3]	
+				["Exile_Item_GloriousKnakworst",1,2],
+				["Exile_Item_Surstromming",1,2],
+				["Exile_Item_SausageGravy",1,2],
+				["Exile_Item_ChristmasTinner",1,2],
+				["Exile_Item_BBQSandwich",1,2],
+				["Exile_Item_Catfood",1,2]
 			],
 			[ // Backpacks
 				["B_AssaultPack_dgtl",1,2],["B_AssaultPack_khk",1,2],["B_AssaultPack_mcamo",1,2],["B_AssaultPack_ocamo",1,2],["B_AssaultPack_rgr",1,2],["B_AssaultPack_sgg",1,2],
@@ -487,11 +534,33 @@ for examples of how you can do this see \Major\Compositions.sqf
 				["optic_tws",1,3],["optic_tws_mg",1,3],["muzzle_snds_H",1,3],["muzzle_snds_L",1,3],["muzzle_snds_M",1,3],["muzzle_snds_B",1,3],["muzzle_snds_H_MG",1,3],["muzzle_snds_acp",1,3],
 				["optic_AMS_khk",1,3],["optic_AMS_snd",1,3],["optic_KHS_blk",1,3],["optic_KHS_hex",1,3],["optic_KHS_old",1,3],["optic_KHS_tan",1,3]
 			],
-			[
-				["10Rnd_93x64_DMR_05_Mag",1,2]		
+			[// Materials and supplies				
+				["Exile_Item_Rope",5,10],
+				["Exile_Item_DuctTape",6,5],
+				["Exile_Item_ExtensionCord",2,4],
+				["Exile_Item_FuelCanisterEmpty",2,6],
+				["Exile_Item_JunkMetal",5,20],
+				["Exile_Item_LightBulb",1,3],
+				["Exile_Item_MetalBoard",3,5],
+				["Exile_Item_SafeKit",1,1],
+				["Exile_Item_CodeLock",1,1],
+				["Exile_Item_CamoTentKit",1,1],
+				["Exile_Item_MetalPole",5,30],
+				["Exile_Item_Matches",1,3],
+				["Exile_Item_CookingPot",1,3],
+				["Exile_Item_InstaDoc",1,3],
+				["Exile_Melee_Axe",1,3],
+				["Exile_Item_MetalPole",1,3],
+				["Exile_Item_WoodLog",10,10],
+				["Rangefinder",1,3]
 			],
 			[//Items
-				["Rangefinder",1,3]	
+				["Exile_Item_GloriousKnakworst",1,2],
+				["Exile_Item_Surstromming",1,2],
+				["Exile_Item_SausageGravy",1,2],
+				["Exile_Item_ChristmasTinner",1,2],
+				["Exile_Item_BBQSandwich",1,2],
+				["Exile_Item_Catfood",1,2]
 			],
 			[ // Backpacks
 				["B_AssaultPack_dgtl",0,2],["B_AssaultPack_khk",0,2],["B_AssaultPack_mcamo",0,2],["B_AssaultPack_ocamo",0,2],["B_AssaultPack_rgr",0,2],["B_AssaultPack_sgg",0,2],
@@ -556,11 +625,33 @@ for examples of how you can do this see \Major\Compositions.sqf
 				["optic_tws",1,3],["optic_tws_mg",1,3],["muzzle_snds_H",1,3],["muzzle_snds_L",1,3],["muzzle_snds_M",1,3],["muzzle_snds_B",1,3],["muzzle_snds_H_MG",1,3],["muzzle_snds_acp",1,3],
 				["optic_AMS_khk",1,3],["optic_KHS_blk",1,3],["optic_KHS_hex",1,3],["optic_KHS_old",1,3],["optic_KHS_tan",1,3]
 			],			
-			[	
-				["10Rnd_93x64_DMR_05_Mag",1,2]
+			[// Materials and supplies				
+				["Exile_Item_Rope",1,3],
+				["Exile_Item_DuctTape",1,3],
+				["Exile_Item_ExtensionCord",1,3],
+				["Exile_Item_FuelCanisterEmpty",1,3],
+				["Exile_Item_JunkMetal",1,10],
+				["Exile_Item_LightBulb",1,3],
+				["Exile_Item_MetalBoard",3,5],
+				["Exile_Item_SafeKit",1,1],
+				["Exile_Item_CodeLock",1,1],
+				["Exile_Item_CamoTentKit",1,1],
+				["Exile_Item_MetalPole",1,5],
+				["Exile_Item_Matches",1,3],
+				["Exile_Item_CookingPot",1,3],
+				["Exile_Item_InstaDoc",1,3],
+				["Exile_Melee_Axe",1,3],
+				["Exile_Item_MetalPole",1,3],
+				["Exile_Item_WoodLog",1,5],
+				["Rangefinder",1,3]
 			],
 			[//Items
-				["Rangefinder",1,3]
+				["Exile_Item_GloriousKnakworst",1,2],
+				["Exile_Item_Surstromming",1,2],
+				["Exile_Item_SausageGravy",1,2],
+				["Exile_Item_ChristmasTinner",1,2],
+				["Exile_Item_BBQSandwich",1,2],
+				["Exile_Item_Catfood",1,2]
 			],
 			[ // Backpacks
 				["B_AssaultPack_dgtl",0,2],["B_AssaultPack_khk",0,2],["B_AssaultPack_mcamo",0,2],["B_AssaultPack_ocamo",0,2],["B_AssaultPack_rgr",0,2],["B_AssaultPack_sgg",0,2],

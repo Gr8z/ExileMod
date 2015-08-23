@@ -1,32 +1,8 @@
 /*
 Mission Compositions by Bill prepared for DBD Clan
 */
-private ["_default","_resupplyCamp","_redCamp","_medicalCamp","_crateLoot"];
+private ["_default","_resupplyCamp","_redCamp","_medicalCamp"];
 
-_crateLoot = 
-		[  
-			[// Weapons	
-				
-				["srifle_DMR_06_olive_F","20Rnd_762x51_Mag"]		
-			],
-			[//Magazines
-
-				["10Rnd_93x64_DMR_05_Mag" ,1,4]				
-			],			
-			[  // Optics
-				["optic_KHS_tan",1,3]
-			],
-			[// Materials and supplies				
-
-				["EnergyPackLg",1,3]
-			],
-			[//Items
-				["ItemTrout",1,3]
-			],
-			[ // Backpacks
-				["B_AssaultPack_khk",1,2]
-			]
-	];	
 /* Nested arrays are:
 [
 	["start message","end message","mission mame(used for map marker)"],
@@ -78,7 +54,6 @@ _default2 = [
 		// format ["chest class name",[offset from mission center x,y,z],loot array, [items from each loot category to add (see below)]]
 		// values are: number of things from the weapons, magazines, optics, materials(cinder etc), items (food etc) and backpacks arrays to add, respectively.
 		// The idea here was that you could define the position of loot boxes relative to buildings and bunkers so set them in 3D space as you wished.
-		["Box_NATO_Wps_F",[0,0,0],_crateLoot,[0,0,0,7,7,1]],  // Standard loot crate with standard loadout
 		["Land_CargoBox_V1_F",[-5,-5,0],blck_BoxLoot_Major,[0,0,0,10,10,3]],  	// No Weapons, Magazines, or optics; 10 each construction supplies and food/drink items, 3 backpacks
 		["Land_CargoBox_V1_F",[7, 5.4,0],blck_BoxLoot_Major,[0,15,7,10,0,0]]
 	],
