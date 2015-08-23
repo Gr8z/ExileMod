@@ -72,16 +72,16 @@ Last modified 8/1/15
 
 	// MISSION TIMERS
 	// Reduce to 1 sec for immediate spawns, or longer if you wish to space the missions out	
-	blck_TMin_Major = 1320;
-	blck_TMin_Major2 = 1200;
-	blck_TMin_Minor = 800;
-	blck_TMin_Minor2 = 850;
+	blck_TMin_Major = 660;
+	blck_TMin_Major2 = 600;
+	blck_TMin_Minor = 400;
+	blck_TMin_Minor2 = 450;
 	
 	//Maximum Spawn time between missions in seconds
-	blck_TMax_Major = 660;
-	blck_TMax_Major2 = 600;
-	blck_TMax_Minor = 400;
-	blck_TMax_Minor2 = 450;
+	blck_TMax_Major = 1320;
+	blck_TMax_Major2 = 1200;
+	blck_TMax_Minor = 800;
+	blck_TMax_Minor2 = 850;
 
 	/****************************************************************
 	
