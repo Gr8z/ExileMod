@@ -1,8 +1,9 @@
 ///////////////////////////////////////////////////////////////////////////////
 // Static Objects
 ///////////////////////////////////////////////////////////////////////////////
-#include "initServer.sqf"
+execVM "blckClient.sqf";
 
+#include "initServer.sqf"
 if (!hasInterface || isServer) exitWith {};
 
 ///////////////////////////////////////////////////////////////////////////
@@ -212,4 +213,4 @@ call ExileClient_object_trader_create;
 // Welcome Credits by Gr8
 //[] execVM "custom\welcome.sqf";
 
-act = player addaction [("<t color='#0074E8'>" + ("Deploy Bike") +"</t>"),"custom\Bike.sqf","",5,false,true,"","];
+act = player addaction [("'<t color=""#0074E8"">' + ('Deploy Bike') +"</t>"),'custom\Bike.sqf','',5,false,true,'',"];
