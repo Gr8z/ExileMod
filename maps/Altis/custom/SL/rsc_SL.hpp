@@ -5,10 +5,10 @@
 class imageHolder: RscPicture
 {
 	idc = 1200;
-	x = 0.8875 * safezoneW + safezoneX;
-	y = 0.8 * safezoneH + safezoneY;
-	w = 0.1 * safezoneW;
-	h = 0.1 * safezoneH;
+	x = 0.858874 * safezoneW + safezoneX;
+	y = 0.7816 * safezoneH + safezoneY;
+	w = 0.108281 * safezoneW;
+	h = 0.099 * safezoneH;
 };
 ////////////////////////////////////////////////////////
 // GUI EDITOR OUTPUT END
