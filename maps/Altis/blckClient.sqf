@@ -5,9 +5,9 @@
 //////////////////////////////////////////
 
 blck_MarkerPeristTime = 300;  
-blck_useHint = true;
+blck_useHint = false;
 blck_useSystemChat = true;
-blck_useTitleText = false;
+blck_useTitleText = true;
 
 "blck_Message" addPublicVariableEventHandler {
 	private["_event","_msg","_mission"];
@@ -20,8 +20,7 @@ blck_useTitleText = false;
 		"<t align='center' size='2.0' color='#f29420'>%1</t><br/>
 		<t size='1.25' color='#01DF01'>______________</t><br/><br/>
 		<t size='1.25' color='#ffff00'>%2</t><br/>
-		<t size='1.25' color='#01DF01'>______________</t><br/><br/>
-		<t size='1.25' color='#FFFFFF'>Any loot you find is yours as payment for eliminating the threat!</t>",_mission,_message
+		<t size='1.25' color='#01DF01'>______________</t><br/><br/>",_mission,_message
 		];	
 	if (blck_useTitleText) then {titleText [_message, "PLAIN DOWN",5];uiSleep 5; titleText ["", "PLAIN DOWN",5]};
 	};
