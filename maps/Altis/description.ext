@@ -55,7 +55,7 @@ allowFunctionsLog = 1;
 // 0 = Default behavior, available only in editor
 // 1 = Available in SP and for hosts / logged in admins
 // 2 = Available for everyone
-enableDebugConsole = 0; // 2 = dangerous in MP
+enableDebugConsole = 1; // 2 = dangerous in MP
 
 // NO NO NO
 allowFunctionsRecompile = 0;
