@@ -10,7 +10,7 @@ Last modified 8/1/15
 	
 	**************************************************************/
 	// if true then missions will not spawn within 1000 m of spawn points for Altis, Bornholm, Cherno, Esseker or stratis. 
-	blck_blacklistSpawns = true;
+	blck_blacklistSpawns = false;
 	// list of locations that are protected against mission spawns	
 	blck_locationBlackList = [
 	//Add location as [xpos,ypos,0],minimumDistance],

@@ -39,7 +39,6 @@ _skin = blck_SkinList call BIS_fnc_selectRandom;
 _ai1 forceAddUniform _skin;
 
 //Stops the AI from being cleaned up
-_ai1 setVariable["LASTLOGOUT_EPOCH",14400];
 _ai1 setVariable["LAST_CHECK",14400];
 
 //Sets AI Tactics
