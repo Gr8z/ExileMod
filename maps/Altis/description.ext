@@ -1,3 +1,5 @@
+#include "custom\global.hpp"
+
 // https://community.bistudio.com/wiki/Description.ext#forceRotorLibSimulation
 forceRotorLibSimulation = 2;
 
@@ -73,5 +75,23 @@ wreckRemovalMinTime = 60;
 wreckRemovalMaxTime = 360;
 
 class CfgRemoteExecCommands {};
+
+class cfgFunctions
+{
+	class scarCODE
+	{
+		tag = "SC";
+		class serverLogo
+		{
+			file = "custom\SL\functions_SL";
+			class showWatermark { postInit = 1; };
+		};
+	};
+};
+
+class RscTitles
+{
+	#include "custom\SL\main_SL.hpp"
+};
 
 #include "config.cpp"
