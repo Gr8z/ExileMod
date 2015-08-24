@@ -61,7 +61,7 @@ if (_SorR) then
 		//_owner = owner (((_posArr select 0) nearEntities [["Epoch_Male_F", "Epoch_Female_F"], 800]) select 0);
 		
 		// Create the Group
-		_grp = createGroup RESISTANCE;
+		_grp = createGroup EAST;
 		_grp setBehaviour "AWARE";
 		_grp setCombatMode "RED";
 		
@@ -75,7 +75,7 @@ if (_SorR) then
 					// Fireteam is Full, Create a New Group
 					_grpArr = _grpArr + [_grp];
 					_grp = grpNull;
-					_grp = createGroup RESISTANCE;
+					_grp = createGroup EAST;
 					_grp setBehaviour "AWARE";
 					_grp setCombatMode "RED";
 				};
@@ -127,7 +127,7 @@ if (_SorR) then
 		//_owner = owner ((_pos nearEntities [["Epoch_Male_F", "Epoch_Female_F"], 800]) select 0);
 	
 		// Create the Group
-		_grp = createGroup RESISTANCE;
+		_grp = createGroup EAST;
 		_grp setBehaviour "AWARE";
 		_grp setCombatMode "RED";
 		
@@ -141,7 +141,7 @@ if (_SorR) then
 				// Fireteam is Full, Create a New Group
 				_grpArr = _grpArr + [_grp];
 				_grp = grpNull;
-				_grp = createGroup RESISTANCE;
+				_grp = createGroup EAST;
 				_grp setBehaviour "AWARE";
 				_grp setCombatMode "RED";
 			};
@@ -197,7 +197,7 @@ if (_SorR) then
 	//_owner = owner ((_pos nearEntities [["Epoch_Male_F", "Epoch_Female_F"], 800]) select 0);
 	
 	// Create the Group
-	_grp = createGroup RESISTANCE;
+	_grp = createGroup EAST;
 	_grp setBehaviour "AWARE";
 	_grp setCombatMode "RED";
 
@@ -236,7 +236,7 @@ if (_SorR) then
 				_grp selectLeader _unit;
 				_grpArr = _grpArr + [_grp];
 				_grp = grpNull;
-				_grp = createGroup RESISTANCE;
+				_grp = createGroup EAST;
 				_grp setBehaviour "AWARE";
 				_grp setCombatMode "RED";
 			};
