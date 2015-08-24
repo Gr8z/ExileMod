@@ -72,7 +72,6 @@ Last modified 8/1/15
 
 	// MISSION TIMERS
 	// Reduce to 1 sec for immediate spawns, or longer if you wish to space the missions out	
-
 	blck_TMin_Major = 660;
 	blck_TMin_Major2 = 600;
 	blck_TMin_Minor = 400;
@@ -83,7 +82,6 @@ Last modified 8/1/15
 	blck_TMax_Major2 = 1200;
 	blck_TMax_Minor = 800;
 	blck_TMax_Minor2 = 850;
-
 
 	/****************************************************************
 	
@@ -119,7 +117,7 @@ Last modified 8/1/15
 	blck_MaxAI_Major = 25;
 	blck_AIGrps_Major = 5;
 	blck_SkillsOrange = [
-		["aimingAccuracy",0.15],["aimingShake",0.3],["aimingSpeed",0.5],["endurance",1.00],["spotDistance",0.7],["spotTime",0.7],["courage",1.00],["reloadSpeed",1.00],["commanding",1.00],["general",1.00]
+		["aimingAccuracy",0.1],["aimingShake",0.3],["aimingSpeed",0.4],["endurance",0.7],["spotDistance",0.6],["spotTime",0.6],["courage",0.7],["reloadSpeed",0.8],["commanding",0.6],["general",1.00]
 	];
 	
 	// Green Missions
@@ -127,7 +125,7 @@ Last modified 8/1/15
 	blck_MaxAI_Major2 = 21;
 	blck_AIGrps_Major2 = 4;
 	blck_SkillsGreen = [
-		["aimingAccuracy",0.1],["aimingShake",0.3],["aimingSpeed",0.4],["endurance",0.9],["spotDistance",0.6],["spotTime",0.6],["courage",85],["reloadSpeed",0.75],["commanding",0.9],["general",0.75]
+		["aimingAccuracy",0.08],["aimingShake",0.3],["aimingSpeed",0.3],["endurance",0.6],["spotDistance",0.5],["spotTime",0.5],["courage",6],["reloadSpeed",0.75],["commanding",0.5],["general",0.75]
 	];
 	
 	// Red Missions
@@ -135,7 +133,7 @@ Last modified 8/1/15
 	blck_MaxAI_Minor2 = 15;
 	blck_AIGrps_Minor2 = 3;
 	blck_SkillsRed = [
-		["aimingAccuracy",0.08],["aimingShake",0.1],["aimingSpeed",0.3],["endurance",0.60],["spotDistance",0.4],["spotTime",0.4],["courage",0.70],["reloadSpeed",0.70],["commanding",0.8],["general",0.70]
+		["aimingAccuracy",0.06],["aimingShake",0.1],["aimingSpeed",0.2],["endurance",0.50],["spotDistance",0.3],["spotTime",0.3],["courage",0.60],["reloadSpeed",0.60],["commanding",0.6],["general",0.70]
 	];
 	
 	// Blue Missions
@@ -143,7 +141,7 @@ Last modified 8/1/15
 	blck_MaxAI_Minor = 12;
 	blck_AIGrps_Minor = 2;
 	blck_SkillsBlue = [
-		["aimingAccuracy",0.06],["aimingShake",0.1],["aimingSpeed",0.20],["endurance",0.50],["spotDistance",0.30],["spotTime",0.30],["courage",0.60],["reloadSpeed",0.60],["commanding",0.7],["general",0.60]
+		["aimingAccuracy",0.04],["aimingShake",0.1],["aimingSpeed",0.10],["endurance",0.40],["spotDistance",0.20],["spotTime",0.2],["courage",0.50],["reloadSpeed",0.50],["commanding",0.5],["general",0.60]
 	];
 	
 /*********************************************************************************
