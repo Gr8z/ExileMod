@@ -25,7 +25,7 @@ class CfgSettings {
 		parachuteDropHeight = 400;
 		protectionDuration = 5;
 		spawnZoneRadius = 500;
-		spawnZoneVehicles[] = {{5, "Exile_Bike_OldBike"}, {5, "Exile_Bike_MountainBike"}};
+		spawnZoneVehicles[] = {{5, "Exile_Bike_QuadBike_Black"}, {5, "Exile_Bike_MountainBike"}};
 	};
 	
 	class LootSettings {
