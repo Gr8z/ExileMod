@@ -1073,8 +1073,9 @@ class CfgExileArsenal
 	class 100Rnd_65x39_caseless_mag 				{ quality = 1; price = 30; };
 	class 100Rnd_65x39_caseless_mag_Tracer 			{ quality = 2; price = 40; };
 	class 10Rnd_127x54_Mag 							{ quality = 1; price = 30; };
-	class 10Rnd_338_Mag 							{ quality = 1; price = 30; };
-	class 10Rnd_762x54_Mag 							{ quality = 1; price = 60; };
+	// Broken in Arma
+	//class 10Rnd_338_Mag 							{ quality = 1; price = 30; };
+	class 10Rnd_762x55_Mag 							{ quality = 1; price = 60; };
 	class 10Rnd_762x51_Mag 							{ quality = 1; price = 60; };
 	class 10Rnd_93x64_DMR_05_Mag 					{ quality = 1; price = 90; };
 	class 11Rnd_45ACP_Mag 							{ quality = 1; price = 8; };
