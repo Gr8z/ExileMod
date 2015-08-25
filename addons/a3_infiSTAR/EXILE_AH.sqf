@@ -20,6 +20,11 @@ _SpawnSelekano = getMarkerPos 'SpawnSelekano';
 _SpawnPrygos = getMarkerPos 'SpawnPrygos';
 _SpawnSofia = getMarkerPos 'SpawnSofia';
 _SpawnSyrta = getMarkerPos 'SpawnSyrta';
+_SpawnAthira = getMarkerPos 'SpawnAthira';
+_SpawnAgios = getMarkerPos 'SpawnAgios';
+_SpawnNegades = getMarkerPos 'SpawnNegades';
+_SpawnCharkia = getMarkerPos 'SpawnCharkia';
+_SpawnParos = getMarkerPos 'SpawnParos';
 createMarker ['ADMIN_MARKER', [0,0,0]];
 FNC_A3_LOG_RAND_VAR = compileFinal "
 	'ARMA_LOG' callExtension format['A3_RANDOMVAR_LOG:%1 (v0001)',_this];
@@ -1964,6 +1969,11 @@ _AH_MAIN_BLOCK = {
 					if(_lastpos distance "+str _SpawnPrygos+" <= 50)exitWith{false};
 					if(_lastpos distance "+str _SpawnSofia+" <= 50)exitWith{false};
 					if(_lastpos distance "+str _SpawnSyrta+" <= 50)exitWith{false};
+					if(_lastpos distance "+str _SpawnAthira+" <= 50)exitWith{false};
+					if(_lastpos distance "+str _SpawnAgios+" <= 50)exitWith{false};
+					if(_lastpos distance "+str _SpawnNegades+" <= 50)exitWith{false};
+					if(_lastpos distance "+str _SpawnCharkia+" <= 50)exitWith{false};
+					if(_lastpos distance "+str _SpawnParos+" <= 50)exitWith{false};
 					true
 				};
 				_fnc_revertTp = {
