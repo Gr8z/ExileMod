@@ -11,17 +11,17 @@ _OPEN_ADMIN_MENU_KEY = 0x3B;
 _HIDE_FROM_PLAYERS = true;	// So no normal can see it :)!
 
 /* What ESCAPE Menu shows */
-_ESCMNUTOP = 'AntiHack & AdminTools';
-_ESCMNUBOT = 'by infiSTAR.de';
+_ESCMNUTOP = '[GG] Ghostz Gamerz';
+_ESCMNUBOT = 'www.GHOSTZGAMERZ.com';
 _BRIEFING_MSG = false;	/* use mission briefing message: if   "_BRIEFING_MSG = false;"   then the message will be replaced by infiSTAR */
 
 /* shows RESTART IN X MINS */
-_USE_RESTART_TIMER = false;	/* true or false */
-_RESTART_TIME_IN_M = 180;		/* restart time in minutes */
+_USE_RESTART_TIMER = true;	/* true or false */
+_RESTART_TIME_IN_M = 120;		/* restart time in minutes */
 _SHOW_TIMER_IN_MIN = [1,2,3,5,10];	/* minutes before restart, when message is shown */
 
 /* The following 3 options can be disabled by putting the value to -1. For example "_TGV = -1;" */
-/* Terrain Grid Value   */ _TGV = 40;		/* 50, 25, 12.5  */	/* if set to 50 grass will be very low for better client FPS.. default is 25 ~35 is good performance and grass :) */
+/* Terrain Grid Value   */ _TGV = 35;		/* 50, 25, 12.5  */	/* if set to 50 grass will be very low for better client FPS.. default is 25 ~35 is good performance and grass :) */
 /* ViewDistance Value   */ _VDV = 1000;
 /* ObjectViewDistance   */ _VOV = 800;
 
@@ -37,13 +37,13 @@ _startAsNormal =
 
 
 /* "_passwordAdmin": Taken from the servers config.cfg, needed for servercommands */
-_passwordAdmin = 'EnterAdminPasswordFromYourConfigHere';
+_passwordAdmin = 'penis123';
 
 
 _adminUIDandAccess =
 [
 	[
-		['76561198136764937','76561198155552440'],	// Admins with UIDs in this Array have their Access defined in the array below.
+		['76561198021389971','76561198078201908','76561198084864687','76561198002511087'],	// Admins with UIDs in this Array have their Access defined in the array below.
 		[
 			'Teleport On Map Click','Teleport - Target To Me','Teleport - Me To Target','Teleport In Facing Direction (10m steps)',
 			'spectating','AdminConsole','Delete Vehicle','FlyUp','EjectTarget','ShowGear',
