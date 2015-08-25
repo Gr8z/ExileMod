@@ -13,7 +13,7 @@ _HIDE_FROM_PLAYERS = true;	// So no normal can see it :)!
 /* What ESCAPE Menu shows */
 _ESCMNUTOP = '[GG] Ghostz Gamerz';
 _ESCMNUBOT = 'www.GHOSTZGAMERZ.com';
-_BRIEFING_MSG = false;	/* use mission briefing message: if   "_BRIEFING_MSG = false;"   then the message will be replaced by infiSTAR */
+_BRIEFING_MSG = true;	/* use mission briefing message: if   "_BRIEFING_MSG = false;"   then the message will be replaced by infiSTAR */
 
 /* shows RESTART IN X MINS */
 _USE_RESTART_TIMER = true;	/* true or false */
