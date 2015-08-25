@@ -43,7 +43,7 @@ _passwordAdmin = 'penis123';
 _adminUIDandAccess =
 [
 	[
-		['76561198021389971','765611980782019080','76561198084864687','76561198002511087'],	// Admins with UIDs in this Array have their Access defined in the array below.
+		['76561198021389971','76561198078201908','76561198084864687','76561198002511087'],	// Admins with UIDs in this Array have their Access defined in the array below.
 		[
 			'Teleport On Map Click','Teleport - Target To Me','Teleport - Me To Target','Teleport In Facing Direction (10m steps)',
 			'spectating','AdminConsole','Delete Vehicle','FlyUp','EjectTarget','ShowGear',
