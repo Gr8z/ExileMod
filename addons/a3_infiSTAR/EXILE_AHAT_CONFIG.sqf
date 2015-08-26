@@ -291,7 +291,8 @@ _SupportBox2Content =
 
 _SupportBox3Content =
 [
-	'ItemMap',['ItemGPS',5],'ItemWatch'
+	['Exile_Item_Flag',1],['Exile_Item_WoodDoorKit',2],['Exile_Item_WoodGateKit',2],['Exile_Item_Codelock',4],['Exile_Item_WoodFloorKit',18],['Exile_Item_WoodFloorPortKit',2],
+	['Exile_Item_WoodWallKit',25],['Exile_Item_CampFireKit',1],['Exile_Item_SafeKit',1],['Exile_Item_Storagecratekit',4],['Exile_Item_WoodStairsKit',4]
 ];
 /* ********************************************************************************* */
 /* ********************************************************************************* */
