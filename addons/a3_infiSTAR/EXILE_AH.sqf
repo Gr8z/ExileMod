@@ -1353,6 +1353,8 @@ _A3AHstring = "
 				_arrayforcrate = [];
 				switch _select do {
 					case 1:{_arrayforcrate = "+str _SupportBox1Content+"};
+					case 2:{_arrayforcrate = "+str _SupportBox2Content+"};
+					case 3:{_arrayforcrate = "+str _SupportBox3Content+"};
 				};
 				if(_arrayforcrate isEqualTo [])exitWith{};
 				
