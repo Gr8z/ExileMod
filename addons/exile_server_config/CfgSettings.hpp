@@ -102,6 +102,5 @@ class CfgSettings {
 		useRealTime = 0;
 		useStaticTime = 1;
 		staticTime[] = {2039,6,24,12,0};
-		setTimeMultiplier 60;
 	};
 };
