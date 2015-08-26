@@ -1737,7 +1737,7 @@ _AH_MAIN_BLOCK = {
 											{
 												_log = format['BadlbText: %1 on %2 %3',_lbtxt,_display,_control];
 												[_name,_puid,'HLOG_SKICK',toArray(_log)] call "+_AH1KICKLOG+";
-//												[] spawn "+_AHKickOFF+";
+												[] spawn "+_AHKickOFF+";
 											};
 										} forEach _verybadStrings;
 									};
