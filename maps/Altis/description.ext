@@ -65,13 +65,13 @@ allowFunctionsRecompile = 0;
 
 // https://community.bistudio.com/wiki/Description.ext#corpseManagerMode
 corpseManagerMode = 1;
-corpseLimit = 400;
+corpseLimit = 20;
 corpseRemovalMinTime = 1800;
 corpseRemovalMaxTime = 3600;
 
 // https://community.bistudio.com/wiki/Description.ext#wreckManagerMode
 wreckManagerMode = 1;
-wreckLimit = 30;
+wreckLimit = 2;
 wreckRemovalMinTime = 60;
 wreckRemovalMaxTime = 360;
 
