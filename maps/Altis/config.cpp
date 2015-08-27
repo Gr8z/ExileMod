@@ -1551,9 +1551,10 @@ class CfgExileCustomCode
 
 		ExileClient_util_fusRoDah = "myaddon/myfunction.sqf";
 	*/
+	ExileClient_gui_safezone_fired = "custom\GG_gui_safezone_fired.sqf";
 };
 
-ExileClient_gui_safezone_fired = "custom\GG_gui_safezone_fired.sqf";
+
 
 class CfgExileMusic
 {
