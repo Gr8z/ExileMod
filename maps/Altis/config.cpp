@@ -1553,7 +1553,7 @@ class CfgExileCustomCode
 	*/
 };
 
-class Exile_Sign_TraderCity : Land_Billboard_F {
+class GG_Sign_TraderCity : Land_Billboard_F {
 	scope = public;
 	author = "Exile Mod Team";
 	displayName = "Exile Sign (Trader City)";
