@@ -130,7 +130,7 @@ _blacklistedFileArray append [
 _verybadStrings =
 [
 	'menu loaded','rustler','hangender','hungender',
-	'douggem','monstercheats','bigben','swagger','fireworks','antiantihack',
+	'douggem','monstercheats','bigben','fireworks','antiantihack',
 	'jxmxe','hydroxus','kill target','no recoil','rapid fire','explode all','teleportall',
 	'destroyall','destroy all','code to execute','g-e-f','box-esp','god on','god mode','unlimited mags',
 	'ctrlcreate','_execscript','_theban','rhynov1','b1g_b3n','infishit',

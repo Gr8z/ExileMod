@@ -8,7 +8,7 @@ forceRotorLibSimulation = 2;
 disableChannels[] = {0, 2};
 
 author = "[GG] Ghostz Gamerz";
-loadScreen = "logo.jpg"; 
+loadScreen = "custom\SL\logo.paa"; 
 onLoadMission= "www.GHOSTZGAMERZ.com";
 OnLoadIntro = "";
 OnLoadIntroTime = false;
@@ -65,13 +65,13 @@ allowFunctionsRecompile = 0;
 
 // https://community.bistudio.com/wiki/Description.ext#corpseManagerMode
 corpseManagerMode = 1;
-corpseLimit = 20;
+corpseLimit = 400;
 corpseRemovalMinTime = 1800;
 corpseRemovalMaxTime = 3600;
 
 // https://community.bistudio.com/wiki/Description.ext#wreckManagerMode
 wreckManagerMode = 1;
-wreckLimit = 2;
+wreckLimit = 30;
 wreckRemovalMinTime = 60;
 wreckRemovalMaxTime = 360;
 

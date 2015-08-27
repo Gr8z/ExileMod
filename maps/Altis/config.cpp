@@ -1552,6 +1552,13 @@ class CfgExileCustomCode
 		ExileClient_util_fusRoDah = "myaddon/myfunction.sqf";
 	*/
 };
+
+class Exile_Sign_TraderCity : Land_Billboard_F {
+	scope = public;
+	author = "Exile Mod Team";
+	displayName = "Exile Sign (Trader City)";
+	hiddenSelectionsTextures[] = {"custom\sign.paa"};
+};
 class CfgExileMusic
 {
 	Ambient[] = {"ExileTrack03","ExileTrack04"};
