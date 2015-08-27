@@ -22,7 +22,6 @@ _SpawnSofia = getMarkerPos 'SpawnSofia';
 _SpawnSyrta = getMarkerPos 'SpawnSyrta';
 _SpawnAthira = getMarkerPos 'SpawnAthira';
 _SpawnAgios = getMarkerPos 'SpawnAgios';
-_SpawnNegades = getMarkerPos 'SpawnNegades';
 _SpawnCharkia = getMarkerPos 'SpawnCharkia';
 _SpawnParos = getMarkerPos 'SpawnParos';
 createMarker ['ADMIN_MARKER', [0,0,0]];
@@ -1971,7 +1970,6 @@ _AH_MAIN_BLOCK = {
 					if(_lastpos distance "+str _SpawnSyrta+" <= 50)exitWith{false};
 					if(_lastpos distance "+str _SpawnAthira+" <= 50)exitWith{false};
 					if(_lastpos distance "+str _SpawnAgios+" <= 50)exitWith{false};
-					if(_lastpos distance "+str _SpawnNegades+" <= 50)exitWith{false};
 					if(_lastpos distance "+str _SpawnCharkia+" <= 50)exitWith{false};
 					if(_lastpos distance "+str _SpawnParos+" <= 50)exitWith{false};
 					true
