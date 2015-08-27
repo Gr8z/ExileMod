@@ -209,3 +209,105 @@ call ExileClient_object_trader_create;
     313.349
 ]
 call ExileClient_object_trader_create;
+
+///////////////////////////////////////////////////////////////////////////
+//////////////////////////TRADER CITY WEST///////////////////////////
+///////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////
+// Equipment Trader
+///////////////////////////////////////////////////////////////////////////
+[
+    "Exile_Trader_Equipment",
+    "WhiteHead_19",
+    ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3"],
+	[4568.4,15424.1,0.74942],23.2732
+]
+call ExileClient_object_trader_create;
+///////////////////////////////////////////////////////////////////////////
+// Armory Trader
+///////////////////////////////////////////////////////////////////////////
+_chair = "Land_CampingChair_V2_F" createVehicleLocal [0,0,0];
+_chair setDir 208.182;    
+_chair setPosATL [14568.1, 16764.3, 0.084837];
+
+[
+    "Exile_Trader_Armory",
+    "PersianHead_A3_02",
+    ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3"],
+	[4575.02,15425.3,1.00565],206.549
+]
+call ExileClient_object_trader_create;
+///////////////////////////////////////////////////////////////////////////
+// Hardware Trader
+///////////////////////////////////////////////////////////////////////////
+_workBench = "Land_Workbench_01_F" createVehicleLocal [0,0,0];
+_workBench setDir 45.4546;
+_workBench setPosATL [14587.8, 16758.7, 0.0938587];
+
+[
+    "Exile_Trader_Hardware",
+    "WhiteHead_17",
+    ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3"],
+    [4572.03,15419.2,0.357544],209.458
+]
+call ExileClient_object_trader_create;
+///////////////////////////////////////////////////////////////////////////
+// Specops Trader
+///////////////////////////////////////////////////////////////////////////
+[
+    "Exile_Trader_SpecialOperations",
+    "AfricanHead_02",
+    ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3"],
+    [4561.49,15410.5,0.275604], 23.2732
+]
+call ExileClient_object_trader_create;
+///////////////////////////////////////////////////////////////////////////
+// Office Trader
+///////////////////////////////////////////////////////////////////////////
+[
+    "Exile_Trader_Office",
+    "GreekHead_A3_04",
+    ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3"],
+    [4568.38,15410.9,0.274261],203.64
+]
+call ExileClient_object_trader_create;
+[
+    "Exile_Trader_Food",
+    "GreekHead_A3_01",
+    ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3"],
+    [4539.12,15394.1,0.49472],274.913
+]
+call ExileClient_object_trader_create;
+///////////////////////////////////////////////////////////////////////////
+// Vehicle Trader
+///////////////////////////////////////////////////////////////////////////
+
+_trader = 
+[
+    "Exile_Trader_Vehicle",
+    "WhiteHead_11",
+    ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3"],
+    [4564.43,15427.6,0.050415],292.368
+]
+call ExileClient_object_trader_create;
+///////////////////////////////////////////////////////////////////////////
+// Vehicle Customs Trader
+///////////////////////////////////////////////////////////////////////////
+[
+    "Exile_Trader_VehicleCustoms",
+    "WhiteHead_11",
+    ["AidlPercMstpSnonWnonDnon_G01", "AidlPercMstpSnonWnonDnon_G02", "AidlPercMstpSnonWnonDnon_G03", "AidlPercMstpSnonWnonDnon_G04", "AidlPercMstpSnonWnonDnon_G05", "AidlPercMstpSnonWnonDnon_G06"],
+    [4569.59,15436.1,-0.00424194],301.096
+]
+call ExileClient_object_trader_create;
+
+///////////////////////////////////////////////////////////////////////////
+// Waste Dump Trader
+///////////////////////////////////////////////////////////////////////////
+[
+    "Exile_Trader_WasteDump",
+    "GreekHead_A3_01",
+    ["HubStandingUA_move1", "HubStandingUA_move2", "HubStandingUA_idle1", "HubStandingUA_idle2", "HubStandingUA_idle3"],
+    [4559.77,15471.4,-0.00892639],110.547
+]
+call ExileClient_object_trader_create;
