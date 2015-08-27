@@ -54,7 +54,7 @@ _adminUIDandAccess =
 			'infiSTAR Player ESP','infiSTAR Dead ESP','infiSTAR AI ESP',
 			'infiSTAR MapIcons','Vehicle Marker','DeadPlayer Marker',
 			'God Mode','Vehicle God Mode','Lower Terrain','Vehboost','UnlimAmmo','noRecoil','Stealth / Invisible',
-			'Disable Announces','Mass Message','Spawn Support-Box1',
+			'Disable Announces','Mass Message','Spawn Support-Box1','Spawn Support-Box2','Spawn Support-Box3',
 			'Spawn Ammo','Login as Arma Admin','BIS FreeRoam Cam (works with ESP)','FreeRoam Cam (does not work with ESP)',
 			'Request Steam Name','showinfo',
 			'+2000 Money','+10000 Money','-2000 Money','-10000 Money'
@@ -72,7 +72,7 @@ _adminUIDandAccess =
 			'infiSTAR Player ESP','infiSTAR Dead ESP','infiSTAR AI ESP',
 			'infiSTAR MapIcons','Vehicle Marker','DeadPlayer Marker',
 			'God Mode','Vehicle God Mode','Lower Terrain','Vehboost','UnlimAmmo','noRecoil','Stealth / Invisible',
-			'Disable Announces','Mass Message','Spawn Support-Box1',
+			'Disable Announces','Mass Message','Spawn Support-Box1','Spawn Support-Box2','Spawn Support-Box3',
 			'Spawn Ammo','Login as Arma Admin','BIS FreeRoam Cam (works with ESP)','FreeRoam Cam (does not work with ESP)',
 			'Request Steam Name','showinfo',
 			'+2000 Money','+10000 Money','-2000 Money','-10000 Money'
@@ -90,7 +90,7 @@ _adminUIDandAccess =
 			'infiSTAR Player ESP','infiSTAR Dead ESP','infiSTAR AI ESP',
 			'infiSTAR MapIcons','Vehicle Marker','DeadPlayer Marker',
 			'God Mode','Vehicle God Mode','Lower Terrain','Vehboost','UnlimAmmo','noRecoil','Stealth / Invisible',
-			'Disable Announces','Mass Message','Spawn Support-Box1',
+			'Disable Announces','Mass Message','Spawn Support-Box1','Spawn Support-Box2','Spawn Support-Box3',
 			'Spawn Ammo','Login as Arma Admin','BIS FreeRoam Cam (works with ESP)','FreeRoam Cam (does not work with ESP)',
 			'Request Steam Name','showinfo',
 			'+2000 Money','+10000 Money','-2000 Money','-10000 Money'
@@ -280,6 +280,16 @@ _ForbiddenItems =
 	if an array is used like the   ['ItemGPS',5]   example, well I assume you could guess what it will do.
 */
 _SupportBox1Content =
+[
+	'ItemMap',['ItemGPS',5],'ItemWatch'
+];
+
+_SupportBox2Content =
+[
+	'ItemMap',['ItemGPS',5],'ItemWatch'
+];
+
+_SupportBox3Content =
 [
 	['Exile_Item_Flag',1],['Exile_Item_WoodDoorKit',2],['Exile_Item_WoodGateKit',2],['Exile_Item_Codelock',4],['Exile_Item_WoodFloorKit',18],['Exile_Item_WoodFloorPortKit',2],
 	['Exile_Item_WoodWallKit',25],['Exile_Item_CampFireKit',1],['Exile_Item_SafeKit',1],['Exile_Item_Storagecratekit',4],['Exile_Item_WoodStairsKit',4]
