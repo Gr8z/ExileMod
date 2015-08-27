@@ -1553,12 +1553,8 @@ class CfgExileCustomCode
 	*/
 };
 
-class GG_Sign_TraderCity : Land_Billboard_F {
-	scope = public;
-	author = "Exile Mod Team";
-	displayName = "Exile Sign (Trader City)";
-	hiddenSelectionsTextures[] = {"custom\sign.paa"};
-};
+ExileClient_gui_safezone_fired = "custom\GG_gui_safezone_fired.sqf"
+
 class CfgExileMusic
 {
 	Ambient[] = {"ExileTrack03","ExileTrack04"};
