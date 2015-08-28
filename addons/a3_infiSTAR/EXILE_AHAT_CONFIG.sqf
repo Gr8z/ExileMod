@@ -118,7 +118,7 @@ _aLocalM =
 /* _blacklistedFileArray: The AntiHack will test if the client has one of these files in his Arma3 folder. You have to put the extensions in allowedPreprocessFileExtensions in your servers config.cfg (only if _UBF = true;) */
 _blacklistedFileArray =
 [
-	'MixedScript.sqf','justtrolling.sqf','A3AH.sqf','hackfr.sqf','derp.sqf','run.sqf',
+	'justtrolling.sqf','A3AH.sqf','hackfr.sqf','derp.sqf','run.sqf',
 	'1.sqf','3.sqf','qa.sqf','gknova61_money.sqf','invi.sqf','Krypto.sqf','Dta\mhm.sqf','Newscroll.sqf',
 	'test\jude\3dollar\blub.sqf','lel.sqf','_src\Load.sqf','scripts\jmepoch.sqf','Det\Test.sqf','test\mhm.sqf',
 	'Jowin.sqf','FreundeMod\altea.sqf','dracau18scripts.sqf','CraftLourens.sqf','My Menu Collection\Wookie\mongoose.sqf',
