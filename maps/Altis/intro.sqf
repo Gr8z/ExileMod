@@ -1,9 +1,7 @@
 private ["_objectStorage", "_staticObjectTemplates"];
 
 endLoadingScreen;
-
-waitUntil{sleep 1; ExileClientPlayerIsSpawned}; 
-
+ 
 [] spawn {     
 		waitUntil{player == player};
         /* This is the advertisement. */
