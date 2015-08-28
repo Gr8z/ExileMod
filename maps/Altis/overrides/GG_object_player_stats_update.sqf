@@ -125,7 +125,7 @@ if (diag_tickTime - ExileClientPlayerLastHpRegenerationAt >= 60) then
 	{
 		if (_thirst >= 90) then
 		{
-			player setDamage (((damage player) - 0.3) max 0);
+			player setDamage (((damage player) - 0.08) max 0);
 			ExileClientPlayerLastHpRegenerationAt = diag_tickTime;
 		};	
 	};
