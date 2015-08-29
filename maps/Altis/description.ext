@@ -93,6 +93,7 @@ class cfgFunctions
 class RscTitles
 {
 	#include "custom\SL\main_SL.hpp"
+	#include "custom\StatusBar\statusBar.hpp"  
 };
 
 #include "config.cpp"

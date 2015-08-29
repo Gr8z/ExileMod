@@ -2,7 +2,7 @@
 // Static Objects
 ///////////////////////////////////////////////////////////////////////////////
 execVM "blckClient.sqf";
-
+[] execVM "custom\StatusBar\statusBar.sqf";
 #include "initServer.sqf"
 if (!hasInterface || isServer) exitWith {};
 
