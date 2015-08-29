@@ -16,13 +16,13 @@ _WeaponAttachments = [
 ];
 //CraftingFood
 _Meats=[
-
+"Exile_Item_SausageGravy_Cooked"
 ];
 _Drink = [
-
+"Exile_Item_SausageGravy_Cooked"
 ];
 _Food = [
-
+"Exile_Item_SausageGravy_Cooked"
 ];
 _aiConsumableItems = _Meats + _Drink + _Food;
 
@@ -39,7 +39,6 @@ _skin = blck_SkinList call BIS_fnc_selectRandom;
 _ai1 forceAddUniform _skin;
 
 //Stops the AI from being cleaned up
-_ai1 setVariable["LASTLOGOUT_EPOCH",14400];
 _ai1 setVariable["LAST_CHECK",14400];
 
 //Sets AI Tactics
@@ -61,7 +60,7 @@ _ai1 addVest _vest;
 // Add a primary weapon : Vampires logic used here.
 _weap = _weaponList call BIS_fnc_selectRandom;
 //diag_log format["[spawnUnit.sqf] _weap os %1",_weap];
-_ai1 addWeaponGlobal  _weap;
+_ai1 addWeaponGlobal  _weap; 
 // get the ammo that can be used with this weapon. This function returns an array with all possible ammo choices in it.
 _ammoChoices = getArray (configFile >> "CfgWeapons" >> _weap >> "magazines");
 _ammo = _ammoChoices call BIS_fnc_selectRandom;
@@ -76,20 +75,19 @@ if ((count(getArray (configFile >> "cfgWeapons" >> _weap >> "muzzles"))) > 1) th
 };
 
 uiSleep 0.2; //For some reason without this sometimes they don't spawn the weapon on them
-/* //Item Adding to AI inventory
+
 //adds 3 random items to AI.  _other = ["ITEM","COUNT"]
 _i = 0;
 while {_i < 3} do {
 	_i = _i + 1;
 	_ai1 addItem (_aiConsumableItems call BIS_fnc_selectRandom);
 };
-*/
 
 // Add an FAK or Grenade 50% of the time
-if (round(random 10) <= 9) then
+if (round(random 10) <= 9) then 
 {
 	_specialItems = ["HandGrenade","FAK"];
-
+	
 	_item = _specialItems call BIS_fnc_selectRandom;
 	//diag_log format["spawnUnit.sqf] -- Item is %1", _item];
 	_ai1 addItem _item;
@@ -98,12 +96,12 @@ if (_Launcher != "none") then
 {
 	private["_bpck"];
 	_bpck = blck_backpack call BIS_fnc_selectRandom;
-	_ai1 addBackpack _bpck;
+	_ai1 addBackpack _bpck; 
 	//diag_log format["spawnUnit.sqf:  Available Launcher Rounds are %1",getArray (configFile >> "CfgWeapons" >> _Launcher >> "magazines")];
 	_ai1 addWeaponGlobal _Launcher;
 	_launcherRound = getArray (configFile >> "CfgWeapons" >> _Launcher >> "magazines") select 0;
 	//diag_log format["[spawnUnit.sqf] Launcher round is %1",_launcherRound];
-	for "_i" from 1 to 3 do
+	for "_i" from 1 to 3 do 
 	{
 		//diag_log format["[spawnUnit.saf] Adding Launcher Round %1 ",_launcherRound];
 		_ai1 addItemToBackpack  _launcherRound call BIS_fnc_selectRandom;
@@ -127,7 +125,7 @@ _ai1 addeventhandler ["fired", {(_this select 0) setvehicleammo 1;}];
 // Do something if AI is killed
 _ai1 addEventHandler ["Killed",{ [(_this select 0), (_this select 1)] execVM blck_EH_AIKilled;}]; // changed to reduce number of concurrent threads, but also works as spawn blck_AIKilled; }];
 
-switch (_skillLevel) do
+switch (_skillLevel) do 
 {
 	case "blue": {_index = 0;_aiSkills = blck_SkillsBlue;};
 	case "red": {_index = 1;_aiSkills = blck_SkillsRed;};
@@ -136,7 +134,7 @@ switch (_skillLevel) do
 	default {_index = 0;_aiSkills = blck_SkillsBlue;};
 };
 
-_alertDist = blck_AIAlertDistance select _index;
+_alertDist = blck_AIAlertDistance select _index; 
 _intelligence = blck_AIIntelligence select _index;
 
 [_ai1,_aiSkills] call blck_setSkill;

@@ -27,9 +27,9 @@ if ((count (units group _unit)) > 1) then {
 	};
 };
 
-if (blck_launcherCleanup) then
+if (blck_launcherCleanup) then 
 {
-	if (_launcher != "") then
+	if (_launcher != "") then 
 	{
 		_launcherRounds = getArray (configFile >> "CfgWeapons" >> _Launcher >> "magazines"); //0;
 		_unit removeWeapon _Launcher;
@@ -39,7 +39,7 @@ if (blck_launcherCleanup) then
 				_unit removeMagazine _x;
 			};
 		} count magazines _unit;
-
+			
 	};
 };
 
@@ -52,7 +52,7 @@ if (blck_useNVG) then
 };
 //diag_log format["[AIKilled.sqf] --- >>> unit %1 killed",_unit];
 [_unit] joinSilent grpNull;
-// use the epoch cleanup routines to delete the ai corpse
+// elete the ai corpse
 _unit setVariable ["LAST_CHECK", (diag_tickTime + blck_bodyCleanUpTimer)];
 
 
@@ -78,26 +78,26 @@ if (!(isPlayer _killer)) exitWith {};
 	_vk = _this select 1;
 
 	{
-		if (((position _x) distance (position _unit)) <= 350) then
+		if (((position _x) distance (position _unit)) <= 350) then 
 		{
 			_x reveal [_vk, 4];
 			//diag_log "Killers vehicle revealed";
-			_x dowatch _vk;
-			_x doTarget _vk;
-			if (_launcher != "") then
-			{
+			_x dowatch _vk; 
+			_x doTarget _vk; 
+			if (_launcher != "") then 
+			{	
 				//diag_log "launcher selected";
 				_x selectWeapon (secondaryWeapon _unit);
 				_handle = _x fireAtTarget [_vk,_launcher];
 				//diag_log format["AIKilled.sqf] result of fireAtTarget is %1",_handle];
 			} else {
-				_x doFire _vk;
+				_x doFire _vk;		
 			};
 		};
 	} forEach allUnits;
 };
 
-fn_applyVehicleDamage = {  // apply a bit of damage
+fn_applyVehicleDamage = {  // apply a bit of damage 
 	private["_vk","_vd"];
 	_vk = _this select 0;
 	_vd = getDammage _vk;
@@ -120,7 +120,7 @@ if(typeOf _killer != typeOf (vehicle _killer)) then  // AI was killed by a vehic
 	//diag_log "[AIKilled.sqf] AI was killed by a vehicle in some way <<<<<<<<<-------------->>>>>>>>>>>>";
 	if(_killer == driver(vehicle _killer))then{  // The AI was runover
 		//diag_log "[AIKilled.sqf] AI was run over";
-		if(blck_RunGear) then {
+		if(blck_RunGear) then { 
 			[_unit] call fn_deleteAIGear;
 		};
 		if (blck_VK_RunoverDamage) then {//apply vehicle damage
@@ -130,7 +130,7 @@ if(typeOf _killer != typeOf (vehicle _killer)) then  // AI was killed by a vehic
 	};
 };
 //diag_log format["AIKilled.sqf -- >> killerName is %1 and he is armed with %2", name _killer, currentWeapon _killer];
-//
+// 
 if ( (typeOf vehicle _killer) in blck_forbidenVehicles or (currentWeapon _killer) in blck_forbidenVehicleGuns) then {
 	//diag_log "[AIKilled] --- >>> evaluating case where killer is vehicle in the forbiden list or a gun in that forbiden list";
 	if (blck_VK_Gear) then {[_unit] call fn_deleteAIGear;};
@@ -138,7 +138,7 @@ if ( (typeOf vehicle _killer) in blck_forbidenVehicles or (currentWeapon _killer
 	//diag_log "[AIKilled.sqf] Vehicle is in forbiddentlist !!!";
 	if (blck_VK_GunnerDamage) then {
 		[vehicle _killer] call fn_applyVehicleDamage;
-	};
+	};   
 };
 // unit cleanup depends on epoch cleanup; this code was left in the event that the epoch-cleanup approach no longer works properly.
 /*
