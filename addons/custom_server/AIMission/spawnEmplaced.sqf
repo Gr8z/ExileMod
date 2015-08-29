@@ -31,6 +31,7 @@ for "_i" from 1 to _noEmplaced do
 	_emplaced = _emplacedTypes call BIS_fnc_selectRandom;
 	_vehSE = createVehicle[_emplaced, _safepos, [], 0, "NONE"];
 	_vehSE setVariable["LAST_CHECK",14400];
+	_vehSE call EPOCH_server_setVToken;
 	clearWeaponCargoGlobal    _vehSE;
 	clearMagazineCargoGlobal  _vehSE;
 	clearBackpackCargoGlobal  _vehSE;

@@ -12,5 +12,6 @@ private["_veh","_pos","_vehType"];
 	//diag_log format["spawnVehicle.sqf:   _this = %1",_this];
 	_veh = createVehicle[_vehType, _pos, [], 0, "NONE"];
 	_veh setVariable["LAST_CHECK",14400];
+	//_veh call EPOCH_server_setVToken; //Probably looking to protect from AH cleanup (Apoc)
 	_veh
-	
+

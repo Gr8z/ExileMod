@@ -6,9 +6,9 @@ private ["_default","_resupplyCamp","_redCamp","_medicalCamp","_crateLoot"];
 
 _default = [
 	[  // select 0
-		"A group of Bandits was sighted in a nearby sector! Check the Blue marker on your map for the location!",
+		"A group of Rogue Mafia was sighted in a nearby sector! Check the Blue marker on your map for the location!",
 		"The Sector at the Blue Marker is under survivor control!",												// Mission End message for player
-		"Bandit Patrol"	
+		"Rogue Mafia"
 	],
 	[  // select 1  Buildings
 	],
