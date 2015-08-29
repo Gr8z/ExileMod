@@ -20,6 +20,11 @@ _SpawnSelekano = getMarkerPos 'SpawnSelekano';
 _SpawnPrygos = getMarkerPos 'SpawnPrygos';
 _SpawnSofia = getMarkerPos 'SpawnSofia';
 _SpawnSyrta = getMarkerPos 'SpawnSyrta';
+_SpawnAthira = getMarkerPos 'SpawnAthira';
+_SpawnAgios = getMarkerPos 'SpawnAgios';
+_SpawnNegades = getMarkerPos 'SpawnNegades';
+_SpawnCharkia = getMarkerPos 'SpawnCharkia';
+_SpawnParos = getMarkerPos 'SpawnParos';
 createMarker ['ADMIN_MARKER', [0,0,0]];
 FNC_A3_LOG_RAND_VAR = compileFinal "
 	'ARMA_LOG' callExtension format['A3_RANDOMVAR_LOG:%1 (v0001)',_this];
@@ -125,7 +130,7 @@ _blacklistedFileArray append [
 _verybadStrings =
 [
 	'menu loaded','rustler','hangender','hungender',
-	'douggem','monstercheats','bigben','swagger','fireworks','antiantihack',
+	'douggem','monstercheats','bigben','fireworks','antiantihack',
 	'jxmxe','hydroxus','kill target','no recoil','rapid fire','explode all','teleportall',
 	'destroyall','destroy all','code to execute','g-e-f','box-esp','god on','god mode','unlimited mags',
 	'ctrlcreate','_execscript','_theban','rhynov1','b1g_b3n','infishit',
@@ -1964,6 +1969,11 @@ _AH_MAIN_BLOCK = {
 					if(_lastpos distance "+str _SpawnPrygos+" <= 50)exitWith{false};
 					if(_lastpos distance "+str _SpawnSofia+" <= 50)exitWith{false};
 					if(_lastpos distance "+str _SpawnSyrta+" <= 50)exitWith{false};
+					if(_lastpos distance "+str _SpawnAthira+" <= 50)exitWith{false};
+					if(_lastpos distance "+str _SpawnAgios+" <= 50)exitWith{false};
+					if(_lastpos distance "+str _SpawnNegades+" <= 50)exitWith{false};
+					if(_lastpos distance "+str _SpawnCharkia+" <= 50)exitWith{false};
+					if(_lastpos distance "+str _SpawnParos+" <= 50)exitWith{false};
 					true
 				};
 				_fnc_revertTp = {

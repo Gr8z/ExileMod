@@ -34,8 +34,8 @@ execVM "\q\addons\custom_server\AIMission\configOverrides.sqf";
 //Start the mission timers
 [] execVM "\q\addons\custom_server\AIMission\Major\majorTimer.sqf"; //Starts major mission system (Orange Map Markers)
 [] execVM "\q\addons\custom_server\AIMission\Major2\major2Timer.sqf";//Starts major mission system 2 (Green Map Markers)
-[] execVM "\q\addons\custom_server\AIMission\Minor2\minor2Timer.sqf";//Starts minor mission system 2 (Red Map Markers)
-[] execVM "\q\addons\custom_server\AIMission\Minor\minorTimer.sqf";//Starts minor mission system (Blue Map Markers)
+//[] execVM "\q\addons\custom_server\AIMission\Minor2\minor2Timer.sqf";//Starts minor mission system 2 (Red Map Markers)
+//[] execVM "\q\addons\custom_server\AIMission\Minor\minorTimer.sqf";//Starts minor mission system (Blue Map Markers)
 
 
 diag_log "[blckeagls] >>--- Completed initialization"; 
