@@ -23,7 +23,7 @@ _pinCode = _data select 15;
 if!(_pinCode isEqualTo "000000")then
 {
 	_constructionObject setVariable ["ExileAccessCode",_pinCode];
-	_constructionObject setVariable ["ExileIsLocked",(_data select 14),true];
+	_constructionObject setVariable ["ExileIsLocked",-1,true];
 };
 _constructionObject addMPEventHandler ["MPKilled",{if!(isServer)exitWith{}; (_this select 0) call ExileServer_object_construction_databese_delete}];
 if (getNumber(configFile >> "CfgVehicles" >> (_data select 1) >> "exileRequiresSimulation") isEqualTo 1) then
@@ -31,7 +31,7 @@ if (getNumber(configFile >> "CfgVehicles" >> (_data select 1) >> "exileRequiresS
 	_constructionObject enableSimulationGlobal true;
 	_constructionObject call ExileServer_system_simulationMonitor_addVehicle;
 }
-else 
+else
 {
 	_constructionObject enableSimulationGlobal false;
 };
