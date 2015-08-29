@@ -263,4 +263,5 @@ forEach _objects;
 
 if (isServer) then {
 	[] ExecVM "\q\addons\custom_server\init.sqf";
+	[] ExecVM "\VEMF\init.sqf";
 };
