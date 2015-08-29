@@ -26,7 +26,7 @@ if (_numai2 > _numai1) then {
 };
 //diag_log format["spawnGroup.sqf:  _numbertospawn = %1",_numbertospawn];
 //Creates a group to make them attack players
-_aiGroup = createGroup RESISTANCE;	
+_aiGroup = createGroup EAST;	
 _aiGroup setcombatmode blck_combatMode;
 _aiGroup allowfleeing 0;
 _aiGroup setspeedmode "FULL";
