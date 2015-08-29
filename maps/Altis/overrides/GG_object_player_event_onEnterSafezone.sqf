@@ -17,7 +17,7 @@ player removeAllEventHandlers "HandleDamage";
 if (_vehicle isKindOf "Helicopter") then 
 	{ 
 		_vehicle enableRopeAttach false;
-	}
+	};
 	
 _vehicle = vehicle player;
 if !(_vehicle isEqualTo player) then
