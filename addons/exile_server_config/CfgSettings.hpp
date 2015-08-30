@@ -1,4 +1,8 @@
 class CfgSettings {
+	class GarbageCollector {
+		despawnAfterMinutes = 15;
+	};
+	
 	class Respect {
 		tradingRespectFactor = 0.1;
 		
@@ -19,34 +23,35 @@ class CfgSettings {
 		};
 	};
 	
+	class KillFeed {
+		showKillFeed = 1;
+	};
+	
 	class BambiSettings {
 		loadOut[] = {"ItemCompass", "ItemMap", "Exile_Item_XM8", "ItemRadio", "Exile_Item_PlasticBottleFreshWater"};
 		parachuteSpawning = 1;
-		parachuteDropHeight = 300;
+		parachuteDropHeight = 400;
 		protectionDuration = 5;
 		spawnZoneRadius = 500;
-		spawnZoneVehicles[] = {{1, "Exile_Bike_QuadBike_Black"}, {1, "Exile_Bike_MountainBike"}};
+		spawnZoneVehicles[] = {{5, "Exile_Bike_OldBike"}, {5, "Exile_Bike_MountainBike"}};
 	};
 	
 	class LootSettings {
 		spawnChance = 70;
 		spawnRadius = 100;
+		despawnRadius = 20;
 		lifeTime = 300;
 		notifyPlayer = 1;
 	};
 	
 	class VehicleSpawn {
-		vehiclesGridSize = 3200;
-		vehiclesGridAmount = 1;
+		vehiclesGridSize = 2200;
+		vehiclesGridAmount = 2;
 		vehiclesDebugMarkers = 0;
 		damageChance = 20;
 		maximumDamage = 0.9;
 		water[] = {"Exile_Boat_MotorBoat_Police", "Exile_Boat_MotorBoat_Orange", "Exile_Boat_MotorBoat_White", "Exile_Boat_RubberDuck_CSAT", "Exile_Boat_RubberDuck_Digital", "Exile_Boat_RubberDuck_Orange", "Exile_Boat_RubberDuck_Blue", "Exile_Boat_RubberDuck_Black", "Exile_Boat_SDV_CSAT", "Exile_Boat_SDV_Digital", "Exile_Boat_SDV_Grey"};
 		ground[] = {"Exile_Bike_QuadBike_Black", "Exile_Bike_QuadBike_Blue", "Exile_Bike_QuadBike_Red", "Exile_Bike_QuadBike_White", "Exile_Bike_QuadBike_Nato", "Exile_Bike_QuadBike_Csat", "Exile_Bike_QuadBike_Fia", "Exile_Bike_QuadBike_Guerilla01", "Exile_Bike_QuadBike_Guerilla02", "Exile_Car_Hatchback_Rusty1", "Exile_Car_Hatchback_Rusty2", "Exile_Car_Hatchback_Rusty3", "Exile_Car_Hatchback_Sport_Red", "Exile_Car_SUV_Red", "Exile_Car_Offroad_Rusty1", "Exile_Car_Offroad_Rusty2", "Exile_Car_Offroad_Rusty3", "Exile_Car_Van_Black", "Exile_Car_Van_Box_Black", "Exile_Car_Van_Fuel_Black"};
-	};
-	
-	class Construction {
-		baseExpire = 30;
 	};
 	
 	class LocalityMonitor {
@@ -56,7 +61,7 @@ class CfgSettings {
 	
 	class Weather {
 		interval = 30;
-		keyframes[] = {"Sunny", "Cloudy"};
+		keyframes[] = {"Sunny", "Cloudy", "Thunderstorm"};
 		
 		class Sunny {
 			fogValue = 0.1;
@@ -101,6 +106,18 @@ class CfgSettings {
 	class Time {
 		useRealTime = 0;
 		useStaticTime = 1;
-		staticTime[] = {2039,6,24,12,0};
+		staticTime[] = {2039, 10, 24, 12, 0};
 	};
+	
+	class RCON {
+		serverPassword = "KAPPAchangeMeKAPPA";
+		useAutoLock = 1;
+		restartAutoLock = 3;
+		restartTimer[] = {3, 0};
+		useAutoKick = 1;
+		kickTime = 2;
+		useRestartMessages = 1;
+		restartWarrningTime[] = {15, 10, 5, 3};
+	};
+	IReadAndModifiedThisByMyWishes = 0;
 };

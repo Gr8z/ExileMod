@@ -19,7 +19,7 @@ try
 		throw "Player Object NULL";
 	};	
 	_databaseID = _flag getVariable ["ExileDatabaseID",0];
-	_moderators = _flag getVariable ["ExileTerritoryModerator",[]];
+	_moderators = _flag getVariable ["ExileTerritoryModerators",[]];
 	if!((getPlayerUID _playerObject) in _moderators)then
 	{
 		throw "No upgrade Access!";
@@ -41,14 +41,14 @@ try
 	_playerRespect = _playerRespect - _territoryPrice;
 	_playerObject setVariable ["ExileScore",_playerRespect];
 	format["setAccountScore:%1:%2", _playerRespect,getPlayerUID _playerObject] call ExileServer_system_database_query_fireAndForget;
-	_flag setVariable ["ExileTerritoryLevel",_level + 1];
-	_flag setVariable ["ExileTerritorySize",_territoryRange];
+	_flag setVariable ["ExileTerritoryLevel",_level + 1, true];
+	_flag setVariable ["ExileTerritorySize",_territoryRange, true];
 	format ["setTerritoryLevel:%1:%2",_level + 1,_databaseID] call ExileServer_system_database_query_fireAndForget;
 	format ["setTerritorySize:%1:%2",_territoryRange,_databaseID] call ExileServer_system_database_query_fireAndForget;
-	[_sessionID,"notificationRequest",["Success",format ["Territory Upgraded! New Level: %1 New Range :%2",_level + 1,_territoryRange]]] call ExileServer_system_network_send_to;
+	[_sessionID,"notificationRequest",["Success",[format ["Territory Upgraded! New Level: %1 New Range :%2",_level + 1,_territoryRange]]]] call ExileServer_system_network_send_to;
 }
 catch
 {
-	[_sessionID,"notificationRequest",["Whoops",_exception]] call ExileServer_system_network_send_to;
+	[_sessionID,"notificationRequest",["Whoops",[_exception]]] call ExileServer_system_network_send_to;
 };
 true

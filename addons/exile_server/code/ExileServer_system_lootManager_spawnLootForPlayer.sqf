@@ -7,7 +7,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_playerObject","_spawnRadius","_spawnChance","_notifyPlayer","_playerPosition","_lastKnownPlayerPosition","_buildings","_spawnedLootForThisPlayer","_building","_buildingConfig","_lootTableName","_localPositions","_spawnedItemClassNames","_lootPosition","_itemClassName","_cargoType","_lootHolder","_magazineClassNames","_magazineClassName","_numberOfMagazines"];
+private["_playerObject","_spawnRadius","_spawnChance","_notifyPlayer","_playerPosition","_lastKnownPlayerPosition","_radius","_flags","_buildings","_spawnedLootForThisPlayer","_building","_flag","_flagRadius","_buildingConfig","_lootTableName","_localPositions","_spawnedItemClassNames","_lootPosition","_itemClassName","_cargoType","_lootHolder","_magazineClassNames","_magazineClassName","_numberOfMagazines"];
 _playerObject = _this;
 _spawnRadius = (getNumber(configFile >> "CfgSettings" >> "LootSettings" >> "spawnRadius") max 50) min 200; 
 _spawnChance = (getNumber(configFile >> "CfgSettings" >> "LootSettings" >> "spawnChance") max 0) min 99; 
@@ -23,23 +23,30 @@ try
 		throw false;
 	};
 	_playerPosition = getPosATL _playerObject;
-	if (_playerPosition call ExileClient_util_world_isInTerritory) then
-	{
-		throw false;
-	};
-	if (_playerPosition call ExileClient_util_world_isInTraderZone) then
-	{
-		throw false;
-	};
 	_lastKnownPlayerPosition = _playerObject getVariable["ExilePositionAtLastLootSpawnCircle", [0,0,0]]; 
 	if (_lastKnownPlayerPosition distance _playerPosition < 11) then
 	{
 		throw false;
 	};
+	_radius = getArray(missionConfigFile >> "CfgTerritories" >> "prices");
+	_radius = (_radius select ((count _radius) -1)) select 1;
+	_flags = _playerPosition nearObjects ["Exile_Construction_Flag_Static", _radius * 2];
 	_buildings = _playerPosition nearObjects ["House", _spawnRadius];
 	_spawnedLootForThisPlayer = false;
 	{
 		_building = _x;
+		if!(_flags isEqualTo [])then
+		{
+			{
+				_flag = _x;
+				_flagRadius = _flag getVariable ["ExileTerritorySize",0];
+				if((_building distance _flag) < _flagRadius)then
+				{
+					throw false;
+				}; 
+			} 
+			forEach _flags;
+		};
 		if (isClass(configFile >> "CfgBuildings" >> (typeOf _building))) then
 		{
 			if !([getPosATL _building, 10] call ExileServer_util_position_isPlayerNearby) then
@@ -104,7 +111,7 @@ try
 	{
 		if (_spawnedLootForThisPlayer) then
 		{
-			[_playerObject, "systemChatRequest", ["Loot spawned for you!"]] call ExileServer_system_network_send_to;
+			[_playerObject, "notificationRequest",["Success",["Loot spawned for you!"]]] call ExileServer_system_network_send_to;
 		};
 	};
 	_playerObject setVariable["ExilePositionAtLastLootSpawnCircle", _playerPosition];	

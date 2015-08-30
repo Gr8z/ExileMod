@@ -23,6 +23,7 @@ if(_lock isEqualTo -1)then
 {
 	_vehicleObject setVariable ["ExileIsLocked",-1];
 	_vehicleObject lock 2;
+	_vehicleObject enableRopeAttach false;
 }
 else
 {

@@ -18,7 +18,6 @@ clearBackpackCargoGlobal _vehicleObject;
 clearItemCargoGlobal _vehicleObject;
 clearMagazineCargoGlobal _vehicleObject;
 clearWeaponCargoGlobal _vehicleObject;
-addToRemainsCollector [_vehicleObject];
 _position set[2, (_position select 2) + 0.25]; 
 _vehicleObject setDir _direction;		
 if (_usePositionATL) then

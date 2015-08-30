@@ -8,7 +8,8 @@
  */
  
 private["_vehicleObject"];
-if!(isServer)exitWith{true};
+if !(isServer) exitWith {true};
 _vehicleObject = _this select 0;
 _vehicleObject call ExileServer_object_vehicle_remove;
+_vehicleObject setVariable ["ExileDiedAt", time];
 true

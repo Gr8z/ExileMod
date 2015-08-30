@@ -12,6 +12,7 @@ if (!isServer || hasInterface) exitWith {};
 _victim = _this select 0;
 _killer = _this select 1;
 if( isNull _victim ) exitWith {};
+_victim setVariable ["ExileDiedAt", time];
 if !(isPlayer _victim) exitWith {};
 format["killPlayer:%1", _victim getVariable ["ExileDatabaseId", -1]] call ExileServer_system_database_query_fireAndForget;
 _victim setVariable ["ExileIsDead", true];
@@ -19,22 +20,21 @@ _addDeathStat = true;
 _addKillStat = true;
 _killerRespectPoints = [];
 _fragAttributes = [];
-addToRemainsCollector [_victim];
 if (_victim isEqualTo _killer) then
 {
-	["systemChatRequest", [format["%1 commited suicide!", (name _victim)]]] call ExileServer_system_network_send_broadcast;
+	["systemChatRequest", [format["%1 commited suicide!", (name _victim)]]] call ExileServer_object_player_event_killFeed;
 }
 else 
 {
 	if (vehicle _victim isEqualTo _killer) then
 	{
-		["systemChatRequest", [format["%1 crashed to death!", (name _victim)]]] call ExileServer_system_network_send_broadcast;
+		["systemChatRequest", [format["%1 crashed to death!", (name _victim)]]] call ExileServer_object_player_event_killfeed;
 	}
 	else 
 	{
 		if (isNull _killer) then
 		{
-			["systemChatRequest", [format["%1 died for an unknown reason!", (name _victim)]]] call ExileServer_system_network_send_broadcast;
+			["systemChatRequest", [format["%1 died for an unknown reason!", (name _victim)]]] call ExileServer_object_player_event_killfeed;
 		}
 		else 
 		{
@@ -131,7 +131,7 @@ else
 					forEach _fragAttributes;
 					_killMessage = _killMessage + ")";
 				};
-				["systemChatRequest", [_killMessage]] call ExileServer_system_network_send_broadcast;
+				["systemChatRequest", [_killMessage]] call ExileServer_object_player_event_killfeed;
 				if (_addKillStat isEqualTo true) then
 				{
 					_newKillerFrags = _killer getVariable ["ExileKills", 0];
@@ -144,7 +144,7 @@ else
 			}
 			else 
 			{
-				["systemChatRequest", [format["%1 was killed by an NPC! (%2m Distance)", (name _victim), floor(_victim distance _killer)]]] call ExileServer_system_network_send_broadcast;
+				["systemChatRequest", [format["%1 was killed by an NPC! (%2m Distance)", (name _victim), floor(_victim distance _killer)]]] call ExileServer_object_player_event_killfeed;
 			};
 		};
 	};

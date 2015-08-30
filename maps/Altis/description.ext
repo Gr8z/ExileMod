@@ -30,6 +30,20 @@ respawnDialog = 0;
 respawnOnStart = 0;
 respawnButton = 1; 
 respawnTemplates[] = {"Exile"};
+
+
+// These are broken as fuck, do not use them!
+corpseManagerMode = 0;
+corpseLimit = 20;
+corpseRemovalMinTime = 1800;
+corpseRemovalMaxTime = 3600;
+wreckManagerMode = 0;
+wreckLimit = 2;
+wreckRemovalMinTime = 60;
+wreckRemovalMaxTime = 360;
+
+
+
 // DO NOT CHANGE THIS! -
 
 // When scripted player is enabled, game no longer shows "No player select" error message upon mission start when no player unit is present. 
@@ -61,18 +75,6 @@ enableDebugConsole = 1; // 2 = dangerous in MP
 
 // NO NO NO
 allowFunctionsRecompile = 0;
-
-// https://community.bistudio.com/wiki/Description.ext#corpseManagerMode
-corpseManagerMode = 1;
-corpseLimit = 20;
-corpseRemovalMinTime = 1800;
-corpseRemovalMaxTime = 3600;
-
-// https://community.bistudio.com/wiki/Description.ext#wreckManagerMode
-wreckManagerMode = 1;
-wreckLimit = 2;
-wreckRemovalMinTime = 60;
-wreckRemovalMaxTime = 360;
 
 class CfgRemoteExecCommands {};
 

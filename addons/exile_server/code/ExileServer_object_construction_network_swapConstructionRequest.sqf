@@ -7,7 +7,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_paramaters","_fromVehicleNetID","_toVehicleClassName","_objectProperties","_position","_vectorDirection","_vectorUp","_velocity","_fromVehicle","_flagTexture","_territoryName","_isContainer","_alphabet","_forbiddenCharacter","_toVehicle","_playerObject","_location"];
+private["_sessionID","_paramaters","_fromVehicleNetID","_toVehicleClassName","_objectProperties","_position","_vectorDirection","_vectorUp","_velocity","_fromVehicle","_flagTexture","_territoryName","_isContainer","_alphabet","_forbiddenCharacter","_toVehicle","_playerObject"];
 _sessionID = _this select 0;
 _paramaters = _this select 1;
 _fromVehicleNetID = _paramaters select 0;
@@ -38,7 +38,7 @@ switch (true) do
 {
 	case (!(_flagTexture isEqualTo "Kappa")) :
 	{
-		_location = [_toVehicle,_territoryName,_flagTexture] call ExileServer_system_territory_create;
+		[_toVehicle,_territoryName,_flagTexture] call ExileServer_system_territory_create;
 		[_toVehicle,_territoryName,_flagTexture] call ExileServer_system_territory_database_insert;
 	};
 	case (_isContainer)	:				{ _toVehicle call ExileServer_object_container_database_insert; };

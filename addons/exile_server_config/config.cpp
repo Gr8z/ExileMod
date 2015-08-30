@@ -1,4 +1,3 @@
-
 #include "CfgPatches.hpp"
 #include "CfgBuildings.hpp"
 #include "CfgLootTables.hpp"

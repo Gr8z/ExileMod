@@ -49,7 +49,6 @@ try
 	{
 		ExileServerOwnershipSwapQueue pushBack [_object,_playerObject];
 		[_sessionID,"constructionResponse",[netid _object]] call ExileServer_system_network_send_to;
-			format ["Object %1 created and ownershipt transferd to %2",_objectClassName,name _playerObject] call ExileServer_util_log;
 	}
 	else
 	{
@@ -59,6 +58,6 @@ try
 }
 catch
 {
-	[_sessionID,"notificationRequest",["Whoops",_exception]] call ExileServer_system_network_send_to;
+	[_sessionID,"notificationRequest",["Whoops",[_exception]]] call ExileServer_system_network_send_to;
 };
 true

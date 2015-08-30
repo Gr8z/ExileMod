@@ -7,19 +7,19 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_flagObject","_territoryName","_flagTexture","_territorySize","_location","_owner","_level"];
+private["_flagObject","_territoryName","_flagTexture","_territorySize","_owner"];
 _flagObject = _this select 0;
 _territoryName = _this select 1;
 _flagTexture = _this select 2;
-_territorySize = ((getArray(missionConfigFile >> "CfgTerritories" >> "prices")) select 1) select 1;
-_location = createLocation ["ExileTerritory",_flagObject,_territorySize,_territorySize];
-_location setName _territoryName;
+_territorySize = ((getArray(missionConfigFile >> "CfgTerritories" >> "prices")) select 0) select 1;
 _flagObject setFlagTexture _flagTexture;
 ExileLocations pushBack _flagObject;
-_owner = _flagObject getVariable ["ExileOwnerUID",""];
-_flagObject setVariable ["ExileTerritorySize",_territorySize];
-_flagObject setVariable ["ExileTerritoryBuildRights",[_owner]];
-_flagObject setVariable ["ExileTerritoryModerator",[_owner]];
-_flagObject setVariable ["ExileTerritoryLocation",_location];
-_flagObject setVariable ["ExileTerritoryLevel",_level];
-_location
+_owner = _flagObject getVariable ["ExileOwnerUID", ""];
+_flagObject setVariable ["ExileOwnerUID",_owner,true];
+_flagObject setVariable ["ExileTerritorySize", _territorySize, true];
+_flagObject setVariable ["ExileTerritoryBuildRights", [_owner], true];
+_flagObject setVariable ["ExileTerritoryModerators", [_owner], true];
+_flagObject setVariable ["ExileTerritoryLevel", 1, true];
+_flagObject setVariable ["ExileTerritoryName", _territoryName, true];
+_flagObject call ExileServer_system_territory_maintenance_recalculateDueDate;
+["announceTerritoryRequest", [netId _flagObject]] call ExileServer_system_network_send_broadcast;

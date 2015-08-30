@@ -74,7 +74,7 @@ try
 }
 catch
 {
-	[_sessionID,"notificationRequest",["Whoops",_exception]] call ExileServer_system_network_send_to;
+	[_sessionID,"notificationRequest",["Whoops",[_exception]]] call ExileServer_system_network_send_to;
 	_exception call ExileServer_util_log;
 };
 true
