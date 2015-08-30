@@ -1640,7 +1640,7 @@ _AH_MAIN_BLOCK = {
 					if(_txt find 'infishit' > -1)then{
 						waitUntil {(findDisplay 24) closeDisplay 0;isNull findDisplay 24};
 						_log = format['BadText: %1 [infishit]',_txt];
-						[_name,_puid,'BAN',toArray(_log)] call "+_AH1KICKLOG+";
+						[_name,_puid,'SLOG',toArray(_log)] call "+_AH1KICKLOG+";
 					};
 				};
 			};
