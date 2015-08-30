@@ -36,7 +36,7 @@ blck_useTitleText = true;
 	};
 };
 	
-if (!isNil "blck_OrangeMarker") then {[blck_OrangeMarker] execVM "debug\spawnMarker.sqf"};
-if (!isNil "blck_GreenMarker") then {[blck_GreenMarker] execVM "debug\spawnMarker.sqf"};
-if (!isNil "blck_RedMarker") then {[blck_RedMarker] execVM "debug\spawnMarker.sqf"};
-if (!isNil "blck_BlueMarker") then {[blck_BlueMarker] execVM "debug\spawnMarker.sqf"};
+if (!isNil "blck_OrangeMarker") then {[blck_OrangeMarker] execVM "GG\debug\spawnMarker.sqf"};
+if (!isNil "blck_GreenMarker") then {[blck_GreenMarker] execVM "GG\debug\spawnMarker.sqf"};
+if (!isNil "blck_RedMarker") then {[blck_RedMarker] execVM "GG\debug\spawnMarker.sqf"};
+if (!isNil "blck_BlueMarker") then {[blck_BlueMarker] execVM "GG\debug\spawnMarker.sqf"};

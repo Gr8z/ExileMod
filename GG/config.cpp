@@ -1569,7 +1569,7 @@ class CfgFlags
 	class MOIST
 	{
 		name = "MOIST";
-		texture = "custom\flags\moist.paa";
+		texture = "GG\images\flags\moist.paa";
 		uid = "";
 	};
 };

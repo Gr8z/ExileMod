@@ -1,5 +1,4 @@
-#include "GG_AdminMenu.hpp"
-#include "custom\global.hpp"
+#include "GG\GG_AdminMenu.hpp"
 
 // https://community.bistudio.com/wiki/Description.ext#forceRotorLibSimulation
 forceRotorLibSimulation = 2;
@@ -8,7 +7,7 @@ forceRotorLibSimulation = 2;
 disableChannels[] = {0, 2};
 
 author = "[GG] Ghostz Gamerz";
-loadScreen = "logo.jpg"; 
+loadScreen = "GG\images\logo.jpg"; 
 onLoadMission= "www.GHOSTZGAMERZ.com";
 OnLoadIntro = "";
 OnLoadIntroTime = false;
@@ -77,6 +76,8 @@ wreckRemovalMaxTime = 360;
 
 class CfgRemoteExecCommands {};
 
+#include "GG\SL\global.hpp"
+
 class cfgFunctions
 {
 	class scarCODE
@@ -84,7 +85,7 @@ class cfgFunctions
 		tag = "SC";
 		class serverLogo
 		{
-			file = "custom\SL\functions_SL";
+			file = "GG\SL";
 			class showWatermark { postInit = 1; };
 		};
 	};
@@ -92,8 +93,8 @@ class cfgFunctions
 
 class RscTitles
 {
-	#include "custom\SL\main_SL.hpp"
-	#include "custom\StatusBar\statusBar.hpp"  
+	#include "GG\SL\main.hpp"
+	#include "GG\StatusBar\statusBar.hpp"  
 };
 
-#include "config.cpp"
+#include "GG\config.cpp"
