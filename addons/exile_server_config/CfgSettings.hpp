@@ -22,22 +22,22 @@ class CfgSettings {
 	class BambiSettings {
 		loadOut[] = {"ItemCompass", "ItemMap", "Exile_Item_XM8", "ItemRadio", "Exile_Item_PlasticBottleFreshWater"};
 		parachuteSpawning = 1;
-		parachuteDropHeight = 400;
+		parachuteDropHeight = 300;
 		protectionDuration = 5;
 		spawnZoneRadius = 500;
-		spawnZoneVehicles[] = {{5, "Exile_Bike_QuadBike_Black"}, {5, "Exile_Bike_MountainBike"}};
+		spawnZoneVehicles[] = {{1, "Exile_Bike_QuadBike_Black"}, {1, "Exile_Bike_MountainBike"}};
 	};
 	
 	class LootSettings {
-		spawnChance = 70;
-		spawnRadius = 100;
-		lifeTime = 300;
+		spawnChance = 80;
+		spawnRadius = 200;
+		lifeTime = 600;
 		notifyPlayer = 1;
 	};
 	
 	class VehicleSpawn {
-		vehiclesGridSize = 2200;
-		vehiclesGridAmount = 2;
+		vehiclesGridSize = 4200;
+		vehiclesGridAmount = 1;
 		vehiclesDebugMarkers = 1;
 		damageChance = 20;
 		maximumDamage = 0.9;
