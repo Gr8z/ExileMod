@@ -29,15 +29,15 @@ class CfgSettings {
 	};
 	
 	class LootSettings {
-		spawnChance = 80;
-		spawnRadius = 200;
-		lifeTime = 600;
+		spawnChance = 70;
+		spawnRadius = 100;
+		lifeTime = 300;
 		notifyPlayer = 1;
 	};
 	
 	class VehicleSpawn {
-		vehiclesGridSize = 3200;
-		vehiclesGridAmount = 1;
+		vehiclesGridSize = 2200;
+		vehiclesGridAmount = 2;
 		vehiclesDebugMarkers = 0;
 		damageChance = 20;
 		maximumDamage = 0.9;
