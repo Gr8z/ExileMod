@@ -7,12 +7,11 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_unit","_id","_sessionID"];
+private["_unit","_id","_sessionID","_index"];
 _unit = _this select 0;
 _id = _this select 1;
 _uid = _this select 2;
 _name = _this select 3;
-	format ["OnHandleDisconnect: %1", _this] call ExileServer_util_log;
 if !(_uid in ["", "__SERVER__", "__HEADLESS__"]) then
 {
 	format["endAccountSession:%1", _uid] call ExileServer_system_database_query_fireAndForget;
@@ -22,6 +21,7 @@ if !(_uid in ["", "__SERVER__", "__HEADLESS__"]) then
 		deleteVehicle _unit;
 	};
 	_sessionID = _unit getVariable ["ExileSessionID","Wrong!"];
-	ExileSessions deleteAt ([ExileSessions,_sessionID] call ExileClient_util_find);
+	_index = [ExileSessions,_sessionID] call ExileClient_util_find;
+	ExileSessions deleteAt _index;
 };
 false

@@ -20,7 +20,6 @@ try
 	_sessionId = call ExileServer_system_session_createId;
 	ExileSessions pushBack [_sessionId, _player];
 	[_sessionId, "startSessionResponse", [_sessionId]] call ExileServer_system_network_send_to;
-	format["Session ID for '%1' is '%2'!", (name _player), _sessionId] call ExileServer_util_log;
 }
 catch
 {
