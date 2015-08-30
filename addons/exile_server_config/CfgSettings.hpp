@@ -119,5 +119,5 @@ class CfgSettings {
 		useRestartMessages = 1;
 		restartWarrningTime[] = {15, 10, 5, 3};
 	};
-	IReadAndModifiedThisByMyWishes = 0;
+	IReadAndModifiedThisByMyWishes = 1;
 };
