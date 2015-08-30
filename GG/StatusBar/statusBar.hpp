@@ -19,7 +19,7 @@ class statusBar {
 			w = 1;
 			h = 0.04;
 			shadow = 2;
-			colorBackground[] = { 1, 0.3, 0, 0.0 };
+			colorBackground[] = { 0, 0.3, 0, 0.0 };
 			font = "PuristaSemibold";
 			size = 0.03;
 			type = 13;
