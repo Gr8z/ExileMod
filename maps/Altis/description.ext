@@ -1,4 +1,4 @@
-#include "GG_AdminMenu.hpp"
+#include "GG\GG_AdminMenu.hpp"
 
 // https://community.bistudio.com/wiki/Description.ext#forceRotorLibSimulation
 forceRotorLibSimulation = 2;
