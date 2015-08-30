@@ -7,11 +7,12 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_data","_oldPlayerObject","_playerUID","_sessionID","_position","_direction","_player","_clanID","_clanName","_headgear","_goggles","_binocular","_uniform","_vest","_backpack","_uniformContainer","_vestContainer","_backpackContainer","_loadObject","_primaryWeapon","_handgunWeapon","_secondaryWeapon","_currentWeapon","_assigned"];
+private["_data","_playerParameters","_sessionID","_oldPlayerObject","_position","_direction","_player","_clanID","_clanName","_headgear","_goggles","_binocular","_uniform","_vest","_backpack","_uniformContainer","_vestContainer","_backpackContainer","_loadObject","_primaryWeapon","_handgunWeapon","_secondaryWeapon","_currentWeapon","_assigned"];
 _data = _this select 0;
-_oldPlayerObject = _this select 1;
-_playerUID = _this select 2;
-_sessionID = _this select 3;
+_playerParameters = _this select 1;
+_sessionID = _playerParameters select 0;
+_oldPlayerObject = _playerParameters select 1;
+_uid = getPlayerUID _oldPlayerObject;
 _name = name _oldPlayerObject;
 _position = [_data select 16, _data select 17, _data select 18];
 _direction = _data select 15;
@@ -41,13 +42,13 @@ _player setVariable ["ExileDeaths", (_data select 46)];
 _player setVariable ["ExileClanID", _clanID];
 _player setVariable ["ExileClanName", _clanName];
 _player setVariable ["ExileName", _name]; 
-_player setVariable ["ExileOwnerUID", _playerUID]; 
+_player setVariable ["ExileOwnerUID", _uid]; 
 _player setVariable ["ExileDatabaseID", _data select 0];
 _player setVariable ["ExileHunger", _data select 6];
 _player setVariable ["ExileThirst", _data select 7];
 _player setVariable ["ExileAlcohol", _data select 8]; 
 _player setVariable ["ExileIsBambi", false];
-_player setVariable ["ExileXM8IsOnline", true, true];
+_player setVariable ["ExileXM8IsOnline", false, true];
 _player setOxygenRemaining (_data select 9);
 _player setBleedingRemaining (_data select 10);
 _player setHitPointDamage ["hitHead", _data select 11];
@@ -199,6 +200,7 @@ if !(_assigned_items isEqualTo []) then
 	forEach _assigned_items;
 };
 _player addMPEventHandler ["MPKilled", {_this call ExileServer_object_player_event_onMpKilled}];
+uiSleep 0.2;
 [
 	_sessionID, 
 	"loadPlayerResponse", 
