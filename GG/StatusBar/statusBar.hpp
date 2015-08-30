@@ -14,7 +14,7 @@ class statusBar {
 	class controls {
 		class statusBarText {
 			idc = 1000;
-			x = safezoneX + safezoneW - 1.4;
+			x = safezoneX + safezoneW - 2.00;
 			y = safezoneY + safezoneH - 0.04;
 			w = 1;
 			h = 0.04;
@@ -26,7 +26,7 @@ class statusBar {
 			style = 1;
 			text="loading...";
 			class Attributes {
-				align="center";
+				align="left";
 				color = "#FFFFFF";
 			};
 		};
