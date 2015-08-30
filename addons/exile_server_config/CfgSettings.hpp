@@ -36,8 +36,8 @@ class CfgSettings {
 	};
 	
 	class VehicleSpawn {
-		vehiclesGridSize = 2200;
-		vehiclesGridAmount = 2;
+		vehiclesGridSize = 3200;
+		vehiclesGridAmount = 1;
 		vehiclesDebugMarkers = 0;
 		damageChance = 20;
 		maximumDamage = 0.9;
