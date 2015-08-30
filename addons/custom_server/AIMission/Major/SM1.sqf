@@ -73,7 +73,7 @@ _missionObjs = _missionCfg select 1;
 
 //diag_log "SM1.sqf: Setup Mission Map Marker";
 // Spawn a map marker on each client
-[blck_OrangeMarker] execVM "debug\spawnMarker.sqf";
+[blck_OrangeMarker] execVM "GG\debug\spawnMarker.sqf";
 
 waitUntil{ {isPlayer _x && _x distance _coords <= blck_TriggerDistance && vehicle _x == _x} count playableunits > 0 };
 //Spawns the objects in the composition

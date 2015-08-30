@@ -61,7 +61,7 @@ else
 
 //Sends message to all players about the AI Mission
 ["start",_startMsg,blck_GreenMarker select 2] call blck_MessagePlayers;
-[blck_GreenMarker] execVM "debug\spawnMarker.sqf";
+[blck_GreenMarker] execVM "GG\debug\spawnMarker.sqf";
 waitUntil{ {isPlayer _x && _x distance _coords <= blck_TriggerDistance /*&& vehicle _x == _x*/} count playableunits > 0 };
 _objects = [_coords, round(random(360)),_missionObjs,true] call blck_spawnCompositionObjects;
 if (count (_missionCfg select 2) > 0) then
