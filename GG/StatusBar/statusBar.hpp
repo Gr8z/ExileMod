@@ -14,7 +14,7 @@ class statusBar {
 	class controls {
 		class statusBarText {
 			idc = 1000;
-			x = safezoneX + safezoneW - 1.0;
+			x = safezoneX + safezoneW - 1.2;
 			y = safezoneY + safezoneH - 0.04;
 			w = 1;
 			h = 0.04;
