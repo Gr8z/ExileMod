@@ -1,5 +1,5 @@
 /////// CONFIG ///////
-_logo = "custom\SL\logo.paa";
+_logo = "GG\SL\logo.paa";
 //////////////////////
 
 [_logo] spawn

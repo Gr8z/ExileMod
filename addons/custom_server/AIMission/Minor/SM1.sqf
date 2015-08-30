@@ -62,7 +62,7 @@ else
 };
 blck_BlueMarker set [3,blck_labelMapMarkers select 1];
 ["start",_startMsg,blck_BlueMarker select 2] call blck_MessagePlayers;
-[blck_BlueMarker] execVM "debug\spawnMarker.sqf";
+[blck_BlueMarker] execVM "GG\debug\spawnMarker.sqf";
 waitUntil{ {isPlayer _x && _x distance _coords <= blck_TriggerDistance && vehicle _x == _x} count playableunits > 0 };
 _objects = [_coords, round(random(360)),_missionObjs,true] call blck_spawnCompositionObjects;
 if (count (_missionCfg select 2) > 0) then

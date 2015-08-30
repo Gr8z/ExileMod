@@ -6,6 +6,6 @@ class serverLogo
     onUnload = "uiNamespace setVariable ['SC_slDisp', nil]";
     class controls
     {
-        #include "rsc_SL.hpp"
+        #include "rsc.hpp"
     };
 };

@@ -263,5 +263,4 @@ forEach _objects;
 
 if (isServer) then {
 	[] ExecVM "\q\addons\custom_server\init.sqf";
-	[] execVM "custom\time.sqf";
 };
