@@ -30,14 +30,5 @@ class statusBar {
 				color = "#FFFFFF";
 			};
 		};
-		class background {
-			idc = 1000;
-			x = safezoneX + safezoneW - 1.4;
-			y = safezoneY + safezoneH - 0.04;
-			w = 1;
-			h = 0.04;
-			colorText[] = {1, 1, 1, 1};
-			text = "\exile_client\texture\hud\hud_panel_weapon_ca.paa";
-		};
 	};
 };
