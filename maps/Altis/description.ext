@@ -95,4 +95,4 @@ class RscTitles
 	#include "GG\StatusBar\statusBar.hpp"  
 };
 
-#include "config.cpp"
+#include "GG\config.cpp"
