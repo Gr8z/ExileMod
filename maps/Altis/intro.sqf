@@ -4,6 +4,7 @@ endLoadingScreen;
  
 [] spawn {     
 		waitUntil{player == player};
+		waitUntil{ExileClientPlayerIsSpawned}; 
         /* This is the advertisement. */
         [["Welcome to [GG] Ghostz Gamerz ExileMod Altis","", format["Do Your best to survive %1", name player],"","","","","","",""," ","","","",""], -.5, .85] call BIS_fnc_typeText;
         //sleep 2;
