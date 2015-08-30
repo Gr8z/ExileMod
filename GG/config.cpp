@@ -1550,8 +1550,8 @@ class CfgExileCustomCode
 
 		ExileClient_util_fusRoDah = "myaddon/myfunction.sqf";
 	*/
-	ExileClient_gui_safezone_fired = "overrides\GG_gui_safezone_fired.sqf";
-	ExileClient_object_player_stats_update = "overrides\GG_object_player_stats_update.sqf";
+	ExileClient_gui_safezone_fired = "GG\overrides\GG_gui_safezone_fired.sqf";
+	ExileClient_object_player_stats_update = "GG\overrides\GG_object_player_stats_update.sqf";
 };
 
 
