@@ -1552,8 +1552,6 @@ class CfgExileCustomCode
 	*/
 	ExileClient_gui_safezone_fired = "overrides\GG_gui_safezone_fired.sqf";
 	ExileClient_object_player_stats_update = "overrides\GG_object_player_stats_update.sqf";
-	ExileClient_object_player_event_onEnterSafezone = "overrides\GG_object_player_event_onEnterSafezone.sqf";
-	ExileClient_object_player_event_onLeaveSafezone = "overrides\GG_object_player_event_onLeaveSafezone.sqf";
 };
 
 
