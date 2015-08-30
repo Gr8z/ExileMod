@@ -76,6 +76,8 @@ wreckRemovalMaxTime = 360;
 
 class CfgRemoteExecCommands {};
 
+#include "GG\SL\global.hpp"
+
 class cfgFunctions
 {
 	class scarCODE
