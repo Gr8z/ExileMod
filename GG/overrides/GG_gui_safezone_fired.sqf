@@ -7,9 +7,8 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_playerObject","_playerUID"];
-_sessionID = _this select 0;
-_playerObject = _sessionID call ExileServer_system_session_getPlayerObject;
-_playerUID = getPlayerUID _playerObject;
-ExileSystemDatabaseASYNC pushBack [_playerUID, "", [_sessionID,_playerObject]];
+deleteVehicle (_this select 6);
+systemChat "You cannot shoot in safezone!";
+cutText ["You cannot shoot in safezone!","PLAIN DOWN"];
+hint "You cannot shoot in safezone!";
 true

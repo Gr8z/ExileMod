@@ -140,7 +140,7 @@ _objects =
     ["Land_GarbageBarrel_01_F",[14610,16902.2,0],0,0,0,false],
     ["Land_WheelieBin_01_F",[14608.6,16899.1,0],50,0,0,false],
     ["Land_cargo_house_slum_ruins_F",[14629.2,16910.5,0],300,0,0,false],
-    ["Exile_Sign_TraderCity",[14554.8,16906.4,0.0827427],132.273,0,0,false],
+    ["GG_Sign_TraderCity",[14554.8,16906.4,0.0827427],132.273,0,0,false],
     ["Land_FuelStation_Build_F",[14624.3,16894.8,0],72.2727,0,0,false],
     ["Land_FuelStation_Sign_F",[14621.4,16898.1,0],0,0,0,false],
     ["Land_FuelStation_Feed_F",[14619.2,16895.9,0],255.909,0,0,false],
