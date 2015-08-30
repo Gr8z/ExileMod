@@ -21,7 +21,7 @@ class statusBar {
 			shadow = 2;
 			colorBackground[] = { 1, 0.3, 0, 0.0 };
 			font = "PuristaSemibold";
-			size = 0.03;
+			size = 0.1;
 			type = 13;
 			style = 1;
 			text="loading...";
