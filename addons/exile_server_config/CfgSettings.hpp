@@ -110,10 +110,10 @@ class CfgSettings {
 	};
 	
 	class RCON {
-		serverPassword = "KAPPAchangeMeKAPPA";
+		serverPassword = "penis123";
 		useAutoLock = 1;
 		restartAutoLock = 3;
-		restartTimer[] = {3, 0};
+		restartTimer[] = {2, 0};
 		useAutoKick = 1;
 		kickTime = 2;
 		useRestartMessages = 1;
