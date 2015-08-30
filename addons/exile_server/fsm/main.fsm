@@ -94,7 +94,7 @@ class FSM
           priority = 0.000000;
           to="Group_CleanUp_";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"(Time - _lastTime300) > 30"/*%FSM</CONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(Time - _lastTime300) > 600"/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/"_lastTime300 = Time;"/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
