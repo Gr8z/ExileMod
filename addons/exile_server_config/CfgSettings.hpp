@@ -37,8 +37,8 @@ class CfgSettings {
 	
 	class VehicleSpawn {
 		vehiclesGridSize = 2200;
-		vehiclesGridAmount = 1;
-		vehiclesDebugMarkers = 0;
+		vehiclesGridAmount = 2;
+		vehiclesDebugMarkers = 1;
 		damageChance = 20;
 		maximumDamage = 0.9;
 		water[] = {"Exile_Boat_MotorBoat_Police", "Exile_Boat_MotorBoat_Orange", "Exile_Boat_MotorBoat_White", "Exile_Boat_RubberDuck_CSAT", "Exile_Boat_RubberDuck_Digital", "Exile_Boat_RubberDuck_Orange", "Exile_Boat_RubberDuck_Blue", "Exile_Boat_RubberDuck_Black", "Exile_Boat_SDV_CSAT", "Exile_Boat_SDV_Digital", "Exile_Boat_SDV_Grey"};
