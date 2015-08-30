@@ -14,14 +14,14 @@ class statusBar {
 	class controls {
 		class statusBarText {
 			idc = 1000;
-			x = safezoneX + safezoneW - 1.4;
+			x = safezoneX + safezoneW - 1.2;
 			y = safezoneY + safezoneH - 0.04;
 			w = 1;
 			h = 0.04;
 			shadow = 2;
 			colorBackground[] = { 1, 0.3, 0, 0.0 };
 			font = "PuristaSemibold";
-			size = 0.1;
+			size = 0.03;
 			type = 13;
 			style = 1;
 			text="loading...";
