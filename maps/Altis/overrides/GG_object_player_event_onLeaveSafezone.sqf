@@ -15,10 +15,6 @@ if (alive player) then
 	player allowDamage true;
 	player removeEventHandler ["Fired",ExileSafeZoneFiredEH];
 	player addEventHandler ["HandleDamage",{_this call ExileClient_object_player_event_onHandleDamage}];
-	if (_vehicle isKindOf "Helicopter") then 
-	{ 
-		_vehicle enableRopeAttach true;		
-	};
 	_vehicle = vehicle player;
 	if !(_vehicle isEqualTo player) then
 	{
@@ -26,6 +22,11 @@ if (alive player) then
 		{
 			_vehicle allowDamage true;
 		};
+		
+	if ((vehicle player isKindOf "Helicopter") && ((vehicle player getVariable ["ropeAttachEH",-1]) != -1)) then 
+	{ 
+		vehicle player removeEventHandler ["ropeAttach",(vehicle player getVariable "ropeAttachEH")]; };		
+	};
 };
 ExilePlayerInSafezone = false;
 true

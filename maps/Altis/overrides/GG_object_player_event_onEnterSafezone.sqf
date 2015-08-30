@@ -14,9 +14,10 @@ ExileSafeZoneEspEH = addMissionEventHandler ["Draw3D",{20 call ExileClient_gui_s
 ExileSafeZoneFiredEH = player addEventHandler ["Fired", {_this call ExileClient_gui_safezone_fired}];
 player allowDamage false;
 player removeAllEventHandlers "HandleDamage";
-if (_vehicle isKindOf "Helicopter") then 
+if ((_vehicle isKindOf "Helicopter") && (_vehicle getVariable ["ropeAttachEH",-1]) == -1) then 
 	{ 
-		_vehicle enableRopeAttach false;
+		_ropeEH = _vehicle addEventHandler ["ropeAttach",{ {(_this select 0) ropeDetach _vehicle;}forEach ropes(_this select 0)}]; 
+		_vehicle setVariable ["ropeAttachEH",_ropeEH,true]; 
 	}
 	
 _vehicle = vehicle player;
