@@ -458,6 +458,7 @@ class TAW_VD
 			
 			x = 0.38; y = 0.50;
 			w = 0.275; h = 0.04;
+			colorDisabled[] = {};
 		};
 		
 		class VD_terr_low : TAWVD_activeText
