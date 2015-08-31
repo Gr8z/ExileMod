@@ -489,3 +489,84 @@ _chair setPosATL [23379.6, 24169.3, 4.56662];
     _chair
 ]
 call ExileClient_object_trader_create;
+
+///////////////////////////////////////////////////////////////////////////
+// Equipment Trader
+///////////////////////////////////////////////////////////////////////////
+[
+    "Exile_Trader_Equipment",
+    "WhiteHead_19",
+    ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3"],
+	[20501.5,11011.3,-0.000190735],347.642
+]
+call ExileClient_object_trader_create;
+///////////////////////////////////////////////////////////////////////////
+// Armory Trader
+///////////////////////////////////////////////////////////////////////////
+[
+    "Exile_Trader_Armory",
+    "PersianHead_A3_02",
+    ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3"],
+	[20494.8,11049.9,5.34058e-005],164.366
+]
+call ExileClient_object_trader_create;
+///////////////////////////////////////////////////////////////////////////
+// Hardware Trader
+///////////////////////////////////////////////////////////////////////////
+[
+    "Exile_Trader_Hardware",
+    "WhiteHead_17",
+    ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3"],
+    [20478.7,11029,0.000175476],100.365
+]
+call ExileClient_object_trader_create;
+///////////////////////////////////////////////////////////////////////////
+// Specops Trader
+///////////////////////////////////////////////////////////////////////////
+[
+    "Exile_Trader_SpecialOperations",
+    "AfricanHead_02",
+    ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3"],
+   [20519,11026,0.00508881],283.641
+]
+call ExileClient_object_trader_create;
+///////////////////////////////////////////////////////////////////////////
+// Office Trader
+///////////////////////////////////////////////////////////////////////////
+[
+    "Exile_Trader_Office",
+    "GreekHead_A3_04",
+    ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3"],
+    [20483.4,11043.8,0.00103378],136.729
+]
+///////////////////////////////////////////////////////////////////////////
+// Food Trader
+///////////////////////////////////////////////////////////////////////////
+call ExileClient_object_trader_create;
+[
+    "Exile_Trader_Food",
+    "GreekHead_A3_01",
+    ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3"],
+    [20491,11010.8,0.000915527],11.3583
+]
+call ExileClient_object_trader_create;
+///////////////////////////////////////////////////////////////////////////
+// Vehicle Trader
+///////////////////////////////////////////////////////////////////////////
+[
+    "Exile_Trader_Vehicle",
+    "WhiteHead_11",
+    ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3"],
+    [20468.2,11028.7,-0.000102997],225.549
+]
+call ExileClient_object_trader_create;
+///////////////////////////////////////////////////////////////////////////
+// Waste Dump Trader
+///////////////////////////////////////////////////////////////////////////
+[
+    "Exile_Trader_WasteDump",
+    "GreekHead_A3_01",
+    ["HubStandingUA_move1", "HubStandingUA_move2", "HubStandingUA_idle1", "HubStandingUA_idle2", "HubStandingUA_idle3"],
+    [20462.3,10997.8,-0.000263214],50.9098
+]
+call ExileClient_object_trader_create;
