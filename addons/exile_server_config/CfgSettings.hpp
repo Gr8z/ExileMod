@@ -37,10 +37,10 @@ class CfgSettings {
 	};
 	
 	class LootSettings {
-		spawnChance = 70;
-		spawnRadius = 100;
+		spawnChance = 90;
+		spawnRadius = 300;
 		despawnRadius = 20;
-		lifeTime = 300;
+		lifeTime = 600;
 		notifyPlayer = 1;
 	};
 	
