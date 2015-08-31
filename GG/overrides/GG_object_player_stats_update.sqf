@@ -29,16 +29,16 @@ ExileClientPlayerIsHungry = (ExileClientPlayerAttributes select 2) < 25;
 ExileClientPlayerIsThirsty = (ExileClientPlayerAttributes select 3) < 25;
 ExileClientPlayerIsExhausted = (ExileClientPlayerAttributes select 1) < 40;
 if (ExileClientIsAutoRunning) then
+
+
+
+
+
+
 {
-	if ((vehicle player) isEqualTo player) then
-	{
-		player playAction "FastF";
-	}
-	else 
-	{
-		false call ExileClient_gui_hud_toggleAutoRunIcon;
-		ExileClientIsAutoRunning = false;
-	};
+	call ExileClient_system_autoRun_update
+
+;
 };
 if( ExileClientPlayerIsInCombat ) then
 {
@@ -46,6 +46,7 @@ if( ExileClientPlayerIsInCombat ) then
 	{
 		ExileClientPlayerIsInCombat = false;
 		false call ExileClient_gui_hud_toggleCombatIcon;
+		call ExileClient_system_rating_balance;		
 	};
 };
 _hungerFactor = 1;
@@ -54,8 +55,8 @@ if (ExileClientPlayerIsInfantry) then
 {
 	if (ExileClientPlayerVelocity > 0) then 
 	{
-		_hungerFactor = 1 + ExileClientPlayerVelocity / 48 * _timeElapsed; 
-		_thirstFactor = 1 + ExileClientPlayerVelocity / 32 * _timeElapsed; 
+		_hungerFactor = 1 + ExileClientPlayerVelocity / 64 * _timeElapsed; 
+		_thirstFactor = 1 + ExileClientPlayerVelocity / 48 * _timeElapsed; 
 	};
 };
 ExileClientPlayerAttributes set [2, ((((ExileClientPlayerAttributes select 2) - (100 / 5400 * _hungerFactor * _timeElapsed)) min 100) max 0)];
