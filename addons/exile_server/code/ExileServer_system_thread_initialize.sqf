@@ -10,7 +10,7 @@
 scriptName 'ExileServer Main Thread';
 ExileSystemSpawnThread = [];
 ExileSystemThreadDelays = [];
-ExileSystemMainTimer = time;
+ExileSystemMainTimer = diag_tickTime;
 ExileSystemThreadSleep = 0.01;
 ExileSystemThreadID = 0;
 [] spawn 
@@ -24,7 +24,7 @@ ExileSystemThreadID = 0;
 			{
 				if (ExileSystemMainTimer > (((_x select 1) + (_x select 0)) - ExileSystemThreadSleep)) then
 				{
-					_x set [1, time];
+					_x set [1, diag_tickTime];
 					(_x select 3) call (_x select 2);
 					if !(_x select 5) then
 					{
@@ -35,7 +35,7 @@ ExileSystemThreadID = 0;
 			} 
 			forEach ExileSystemSpawnThread;
 		};
-		ExileSystemMainTimer = time;
+		ExileSystemMainTimer = diag_tickTime;
 		uiSleep ExileSystemThreadSleep;
 	};
 };

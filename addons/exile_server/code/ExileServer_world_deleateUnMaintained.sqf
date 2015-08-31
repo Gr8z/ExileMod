@@ -10,7 +10,7 @@
 private["_countbefore","_baseExpire","_countafter"];
 "Removing unmaintained constructions" call ExileServer_util_log;
 _countbefore = "countConstruction" call ExileServer_system_database_query_selectSingleField;
-_baseExpire = getNumber(configFile >> "CfgSettings" >> "Construction" >> "baseExpire");
+_baseExpire = getNumber(missionConfigFile >> "CfgTerritories" >> "protectionPeriod");
 format ["deleateUnMaintainedConstruction:%1",_baseExpire]  call ExileServer_system_database_query_selectFull;
 _countafter = "countConstruction" call ExileServer_system_database_query_selectSingleField;
 format ["Removed %1 unmaintained constructions",_countbefore - _countafter] call ExileServer_util_log;

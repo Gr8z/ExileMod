@@ -49,7 +49,7 @@ try
 	_object setVariable ["ExileFlagTexture",_flag];
 	_object setFlagTexture _flag;
 	_object setVariable ["ExileTerritoryName",_territoryName];
-	_object setVariable ["ExileOwnerUID",getPlayerUID _playerObject];
+	_object setVariable ["ExileOwnerUID",getPlayerUID _playerObject,true];
 	if(isNull _playerObject)then
 	{
 		deleteVehicle _object;
@@ -60,7 +60,7 @@ try
 }
 catch
 {
-	[_sessionID,"notificationRequest",["Whoops",_exception]] call ExileServer_system_network_send_to;
+	[_sessionID,"notificationRequest",["Whoops",[_exception]]] call ExileServer_system_network_send_to;
 	_exception call ExileServer_util_log;
 };
 true

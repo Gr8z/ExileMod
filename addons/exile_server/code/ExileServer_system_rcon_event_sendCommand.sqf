@@ -7,6 +7,8 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-ExileSystemDatabaseASYNC = [];
-[1, ExileServer_system_playerLoadQueue_thread_loadPlayer, [], true] call ExileServer_system_thread_addtask;
-true
+private["_command","_password","_return"];
+_command = _this;
+_password = getText(configFile >> "CfgSettings" >> "RCON" >> "serverPassword");
+_return = _password serverCommand _command;
+_return

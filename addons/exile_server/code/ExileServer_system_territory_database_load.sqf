@@ -7,7 +7,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_territoryID","_data","_id","_owner","_position","_radius","_level","_flagTexture","_flagStolen","_flagStolenBy","_flagStealMessage","_lastPayed","_buildRights","_moderators","_flagObject","_location"];
+private["_territoryID","_data","_id","_owner","_position","_radius","_level","_flagTexture","_flagStolen","_flagStolenBy","_flagStealMessage","_lastPayed","_buildRights","_moderators","_flagObject"];
 _territoryID = _this;
 _data = format ["loadTerritory:%1", _territoryID] call ExileServer_system_database_query_selectSingle;
 _id = _data select 0;
@@ -31,13 +31,12 @@ _moderators = _data select 14;
 _flagObject = createVehicle ["Exile_Construction_Flag_Static",_position, [], 0, "CAN_COLLIDE"];
 _flagObject setFlagTexture _flagTexture;
 ExileLocations pushBack _flagObject;
-_location = createLocation ["ExileTerritory",_flagObject,_radius,_radius];
-_location setName _name;
-_flagObject setVariable ["ExileDatabaseID",_id];
-_flagObject setVariable ["ExileOwnerUID",_owner];
-_flagObject setVariable ["ExileTerritorySize",_radius];
-_flagObject setVariable ["ExileTerritoryBuildRights",_buildRights];
-_flagObject setVariable ["ExileTerritoryModerator",_moderators];
-_flagObject setVariable ["ExileTerritoryLevel",_level];
-_flagObject setVariable ["ExileTerritoryLocation",_location];
+_flagObject setVariable ["ExileTerritoryName", _name, true];
+_flagObject setVariable ["ExileDatabaseID", _id];
+_flagObject setVariable ["ExileOwnerUID", _owner, true];
+_flagObject setVariable ["ExileTerritorySize", _radius, true];
+_flagObject setVariable ["ExileTerritoryBuildRights", _buildRights, true];
+_flagObject setVariable ["ExileTerritoryModerators", _moderators, true];
+_flagObject setVariable ["ExileTerritoryLevel", _level, true];
+_flagObject setVariable ["ExileTerritoryLastPayed",_lastPayed];
 true

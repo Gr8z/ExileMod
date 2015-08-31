@@ -7,7 +7,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_parameters","_objectNetID","_object","_playerObject","_objectID"];
+private["_sessionID","_parameters","_objectNetID","_object","_playerObject","_type","_objectID","_config","_holder"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
 _objectNetID = _parameters select 0;
@@ -15,21 +15,20 @@ _object = objectFromNetId _objectNetID;
 _playerObject = _sessionID call ExileServer_system_session_getPlayerObject;
 if((_object getVariable ["ExileOwnerUID","Wrong!"]) == (getPlayerUID _playerObject))then
 {
-	deleteVehicle _object;
+	_type = typeOf _object;
 	if!(_object isKindOf "Exile_Construction_Abstract_Physics")then
 	{
 		_objectID = _object getVariable ["ExileDatabaseID",-1];
-		if(_objectID != -1)then{
+		if(_objectID != -1)then
+		{
 			_object call ExileServer_object_construction_database_delete;
-				format ["Object: %1 with ID: %2 removed!",typeOf _object,_objectID] call ExileServer_util_log;
+			_config = ("(getText(_x >> 'staticObject') isEqualTo _type)" configClasses (configFile >> "CfgConstruction")) select 0;
+			_config = getText (_config >> "kitMagazine");
+			_holder = createVehicle ["groundWeaponHolder", getPosATL _playerObject, [], 0, "CAN_COLLIDE"];
+			_holder addMagazine [_config,1];
+			[_sessionID,"notificationRequest",["Success",["Deconstructed"]]] call ExileServer_system_network_send_to;
 		};
 	};
-		format ["Construction removed: %1 by %2(%3)",typeOf _object,name _playerObject,getPlayerUID _playerObject] call ExileServer_util_log;
-		[_sessionID,"systemChatRequest",[format ["Construction removed: %1",typeOf _object]]] call ExileServer_system_network_send_to;
-}
-else
-{
-		"AbortEH: noup wrong OwnerUID" call ExileServer_util_log;
-		[_sessionID,"systemChatRequest",[format ["Construction object: %1 is not owned by you!",typeOf _object]]] call ExileServer_system_network_send_to;
+	deleteVehicle _object;
 };
 true

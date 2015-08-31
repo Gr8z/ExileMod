@@ -7,13 +7,19 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_parameters","_vehicleNetID","_mode","_playerObject","_vehicleObject","_cargo","_revenue","_playerMoney","_respectGain","_playerRespect","_responseCode"];
+private["_sessionID","_parameters","_vehicleNetID","_mode","_vehicleObject","_playerObject","_cargo","_revenue","_playerMoney","_respectGain","_playerRespect","_responseCode"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
 _vehicleNetID = _parameters select 0;
 _mode = _parameters select 1;
 try 
 {
+	_vehicleObject = objectFromNetId _vehicleNetID;
+	if(_vehicleObject getVariable ["ExileMutex",false])then
+	{
+		throw 12;
+	};
+	_vehicleObject setVariable ["ExileMutex",true];
 	_playerObject = _sessionID call ExileServer_system_session_getPlayerObject;
 	if (isNull _playerObject) then
 	{
@@ -23,7 +29,6 @@ try
 	{
 		throw 2;
 	};
-	_vehicleObject = objectFromNetId _vehicleNetID;
 	if (isNull _vehicleObject) then
 	{
 		throw 6;
@@ -43,6 +48,7 @@ try
 	else 
 	{
 		_vehicleObject call ExileServer_object_vehicle_database_update;
+		_vehicleObject setVariable ["ExileMutex",false];
 	};
 	_revenue = _revenue * 0.5; 
 	_playerMoney = _playerObject getVariable ["ExileMoney", 0];

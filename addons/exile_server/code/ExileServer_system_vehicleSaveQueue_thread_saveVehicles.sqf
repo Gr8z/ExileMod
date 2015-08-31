@@ -17,7 +17,7 @@ private["_vehicleObject","_removeFromQueue"];
 	}
 	else 
 	{
-		if (time - (_vehicleObject getVariable ["ExileVehicleSaveQueuedAt", 30]) > 60) then
+		if (diag_tickTime - (_vehicleObject getVariable ["ExileVehicleSaveQueuedAt", 30]) > 60) then
 		{
 			if(_vehicleObject getVariable ["ExileIsContainer",false])then
 			{

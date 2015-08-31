@@ -37,7 +37,8 @@ if((count _pincode) isEqualTo (count _objectPinCode))then
 				};
 				_object setVariable ["ExileIsLocked",0];
 			};
-			[_sessionID,"lockResponse",["Unlocked!" , true]] call ExileServer_system_network_send_to;
+			[_sessionID,"lockResponse",["Unlocked!", true , _object , _objectPinCode]] call ExileServer_system_network_send_to;
+			_object enableRopeAttach true;
 		}
 		else
 		{
@@ -57,13 +58,14 @@ if((count _pincode) isEqualTo (count _objectPinCode))then
 				};
 				_object setVariable ["ExileIsLocked",-1];
 			};
-			[_sessionID,"lockResponse",["Locked!",true]] call ExileServer_system_network_send_to;	
+			[_sessionID,"lockResponse",["Locked!",true, _object, _objectPinCode]] call ExileServer_system_network_send_to;
+			_object enableRopeAttach false;
 		};
 		_object call ExileServer_system_vehicleSaveQueue_addVehicle;
 	}
 	else
 	{
-		[_sessionID,"lockResponse",["WrongPinCode!", false]] call ExileServer_system_network_send_to;
+		[_sessionID,"lockResponse",["Wrong PIN Code!", false, objNull, ""]] call ExileServer_system_network_send_to;
 	};
 };
 true

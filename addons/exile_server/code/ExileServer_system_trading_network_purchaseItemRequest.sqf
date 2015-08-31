@@ -17,6 +17,11 @@ _containerNetID = _parameters select 3;
 try 
 {
 	_playerObject = _sessionID call ExileServer_system_session_getPlayerObject;
+	if(_playerObject getVariable ["ExileMutex",false])then
+	{
+		throw 12;
+	};
+	_playerObject setVariable ["ExileMutex",true];
 	_vehicleObject = objNull;
 	if (isNull _playerObject) then
 	{
@@ -58,4 +63,5 @@ catch
 	_responseCode = _exception;
 	[_sessionID, "purchaseItemResponse", [_responseCode, "", "", 0, 0, ""]] call ExileServer_system_network_send_to;
 };	
+_playerObject setVariable ["ExileMutex",false];
 true

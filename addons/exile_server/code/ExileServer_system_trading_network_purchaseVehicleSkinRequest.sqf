@@ -15,6 +15,11 @@ _skinClassName = _parameters select 1;
 try 
 {
 	_playerObject = _sessionID call ExileServer_system_session_getPlayerObject;
+	if(_playerObject getVariable ["ExileMutex",false])then
+	{
+		throw 12;
+	};
+	_playerObject setVariable ["ExileMutex",true];
 	if (isNull _playerObject) then
 	{
 		throw 1;
@@ -35,9 +40,6 @@ try
 	};
 	_salesPrice = -1;
 	_skinVariations = getArray(missionConfigFile >> "CfgVehicleCustoms" >> _vehicleParentClass >> "skins");
-	diag_log _skinClassName;
-	diag_log format["parent %1", _vehicleParentClass];
-	diag_log format["variations %1", _skinVariations];
 	{
 		_availableSkinClassName = _x select 0;
 		diag_log format["teste %1", _availableSkinClassName];
@@ -48,7 +50,6 @@ try
 		};
 	}
 	forEach _skinVariations;
-	diag_log format["price %1", _salesPrice];
 	if (_salesPrice <= 0) then
 	{
 		throw 4;
@@ -80,3 +81,5 @@ catch
 	_responseCode = _exception;
 	[_sessionID, "purchaseVehicleSkinResponse", [_responseCode, ""]] call ExileServer_system_network_send_to;
 };
+_playerObject setVariable ["ExileMutex",false];
+true

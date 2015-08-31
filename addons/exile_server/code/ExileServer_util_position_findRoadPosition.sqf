@@ -25,7 +25,7 @@ _position2d =
     _radius,            
     5,                  
     0,                  
-    1,                  
+    99999,              
     0                   
 ]
 call BIS_fnc_findSafePos;

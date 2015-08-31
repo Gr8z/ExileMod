@@ -10,9 +10,7 @@
 if (!isNil "PublicHiveVersion") then
 {
 	call ExileServer_system_thread_initialize;
-	call ExileServer_system_playerLoadQueue_initialize;
 	call ExileServer_system_playerSaveQueue_initialize;
-	call ExileServer_system_playerCreateQueue_initialize;
 	call ExileServer_system_swapOwnershipQueue_initialize;
 	call ExileServer_system_vehicleSaveQueue_initialize;
 	call ExileServer_system_simulationMonitor_initialize;
@@ -20,8 +18,10 @@ if (!isNil "PublicHiveVersion") then
 	call ExileServer_system_weather_initialize;
 	call ExileServer_world_initialize;
 	call ExileServer_system_LocalityMonitor_initialize;
+	call ExileServer_system_territory_maintenance_check;
 	PublicHiveIsLoaded = true; 
 	publicVariable "PublicHiveIsLoaded";
 	format ["Server is up and running! Version: %1", PublicHiveVersion] call ExileServer_util_log;
 	[] execFSM "exile_server\fsm\main.fsm";
+	call ExileServer_system_rcon_event_ready;
 };

@@ -11,11 +11,11 @@ private["_flagObject","_territoryName","_flagTexture","_territorySize","_owner",
 _flagObject = _this select 0;
 _territoryName = _this select 1;
 _flagTexture = _this select 2;
-_territorySize = ((getArray(missionConfigFile >> "CfgTerritories" >> "prices")) select 1)select 1;
+_territorySize = ((getArray(missionConfigFile >> "CfgTerritories" >> "prices")) select 0)select 1;
 _owner = _flagObject getVariable ["ExileOwnerUID",""];
 _position = getPosATL _flagObject;
 _build_rights = _flagObject getVariable ["ExileTerritoryBuildRights",[]];
-_moderators = _flagObject getVariable ["ExileTerritoryModerator",[]];
+_moderators = _flagObject getVariable ["ExileTerritoryModerators",[]];
 _data =
 [
 	_owner,

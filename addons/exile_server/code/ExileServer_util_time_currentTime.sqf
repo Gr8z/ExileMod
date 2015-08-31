@@ -7,6 +7,4 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-ExileSystemPlayerCreateASYNC = [];
-[1, ExileServer_system_playerCreateQueue_thread_createPlayer, [], true] call ExileServer_system_thread_addtask;
-true
+(call compile ("extDB2" callExtension "9:TIME")) select 1

@@ -8,7 +8,6 @@
  */
  
 private["_isKnownAccount"];
-	format ["onPlayerConnected : %1", _this] call ExileServer_util_log;
 _uid = _this select 0;
 _name = _this select 1;
 if !(_uid in ["", "__SERVER__", "__HEADLESS__"]) then

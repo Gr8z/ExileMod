@@ -11,7 +11,7 @@ private["_sessionID","_parameters","_flag","_moderators","_playerObject","_level
 _sessionID = _this select 0;
 _parameters = _this select 1;
 _flag = _parameters select 0;
-_moderators = _flag getVariable ["ExileTerritoryModerator",[]];
+_moderators = _flag getVariable ["ExileTerritoryModerators",[]];
 _playerObject = _sessionID call ExileServer_system_session_getPlayerObject;
 if((getPlayerUID _playerObject) in _moderators)then
 {
@@ -20,6 +20,6 @@ if((getPlayerUID _playerObject) in _moderators)then
 }
 else
 {
-	[_sessionID,"notificationRequest",["Whoops","Cant access upgrade for this territory!"]] call ExileServer_system_network_send_to;
+	[_sessionID,"notificationRequest",["Whoops",["Cant access upgrade for this territory!"]]] call ExileServer_system_network_send_to;
 };
 true

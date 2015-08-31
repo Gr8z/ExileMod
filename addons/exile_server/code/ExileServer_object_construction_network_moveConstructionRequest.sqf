@@ -15,20 +15,17 @@ _object = objectFromNetId _objectNetID;
 _playerObject = _sessionID call ExileServer_system_session_getPlayerObject;
 if((_object getVariable ["ExileOwnerUID","Wrong!"]) isEqualTo (getPlayerUID _playerObject))then
 {
-	deleteVehicle _object;
 	if!(_object isKindOf "Exile_Construction_Abstract_Physics")then
 	{
 		_objectID = _object getVariable ["ExileDatabaseID",-1];
 		if(_objectID != -1)then{
 			_object call ExileServer_object_construction_database_delete;
-				format ["Object: %1 with ID: %2 moved!",typeOf _object,_objectID] call ExileServer_util_log;
 		};
 	};
+	deleteVehicle _object;
 	[_sessionID,"constructionMoveResponse",[true,typeOf _object]] call ExileServer_system_network_send_to;
-		format ["Construction Moved: %1 by %2(%3)",typeOf _object,name _playerObject,getPlayerUID _playerObject] call ExileServer_util_log;
 }
 else
 {
 	[_sessionID,"constructionMoveResponse",[false,"Banana!"]] call ExileServer_system_network_send_to;
-		"moveRequest: noup wrong OwnerUID" call ExileServer_util_log;
 };
