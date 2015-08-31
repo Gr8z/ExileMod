@@ -61,7 +61,7 @@ class CfgSettings {
 	
 	class Weather {
 		interval = 30;
-		keyframes[] = {"Sunny", "Cloudy", "Thunderstorm"};
+		keyframes[] = {"Sunny"};
 		
 		class Sunny {
 			fogValue = 0.1;
