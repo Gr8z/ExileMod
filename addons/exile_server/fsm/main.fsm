@@ -32,7 +32,7 @@ link13[] = {11,12};
 link14[] = {12,13};
 link15[] = {13,10};
 globals[] = {25.000000,1,0,0,0,640,480,1,447,6316128,1,318.336456,1188.838989,628.367249,-216.700607,1061,910,1};
-window[] = {2,-1,-1,-1,-1,838,104,1398,104,3,1079};
+window[] = {2,-1,-1,-1,-1,890,156,1450,156,3,1079};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -170,11 +170,30 @@ class FSM
        "" \n
        "{" \n
        "	{" \n
-       "		// Do not despawn loot/items when players are nearby" \n
-       "		// Config Radius! :)" \n
-       "		if !([getPosATL _x, (getNumber(configFile >> ""CfgSettings"" >> ""LootSettings"" >>  ""despawnRadius""))] call ExileServer_util_position_isPlayerNearby) then" \n
+       "		_spawnedAt = _x getVariable [""ExileSpawnedAt"", -1];" \n
+       "" \n
+       "		// If this item was dropped, set it manually" \n
+       "		if (_spawnedAt isEqualTo -1) then " \n
+       "		{" \n
+       "			_spawnedAt = time;" \n
+       "			_x setVariable [""ExileSpawnedAt"", _spawnedAt];" \n
+       "		};" \n
+       "" \n
+       "		// Force despawn after 15 minutes" \n
+       "		if (time - _spawnedAt > 15 * 60) then " \n
        "		{" \n
        "			_objectsToDelete pushBack _x;" \n
+       "		}" \n
+       "		else " \n
+       "		{" \n
+       "			// Do not despawn loot/items when players are nearby" \n
+       "			// Config Radius! :)" \n
+       "			// Hardcoded to 80 now" \n
+       "			// getNumber(configFile >> ""CfgSettings"" >> ""LootSettings"" >>  ""despawnRadius"")" \n
+       "			if !([getPosATL _x, 80] call ExileServer_util_position_isPlayerNearby) then" \n
+       "			{" \n
+       "				_objectsToDelete pushBack _x;" \n
+       "			};" \n
        "		};" \n
        "	} " \n
        "	forEach (allMissionObjects _x);" \n
