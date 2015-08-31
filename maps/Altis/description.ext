@@ -95,8 +95,6 @@ class cfgFunctions
 	#include "GG\taw_vd\CfgFunctions.hpp"
 };
 
-tawvd_disablenone = false;
-
 class RscTitles
 {
 	#include "GG\SL\main.hpp"
