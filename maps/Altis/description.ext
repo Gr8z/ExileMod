@@ -100,3 +100,10 @@ class RscTitles
 };
 
 #include "GG\config.cpp"
+
+#include "GG\taw_vd\dialog.hpp"
+
+class CfgFunctions
+{
+	#include "GG\taw_vd\CfgFunctions.hpp"
+};
