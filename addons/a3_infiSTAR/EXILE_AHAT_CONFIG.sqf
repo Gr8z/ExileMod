@@ -281,7 +281,7 @@ _ForbiddenItems =
 */
 _SupportBox1Content =
 [
-	['Exile_Item_Flag',1],'WorkBench',1],['Exile_Item_WoodDoorKit',1],['Exile_Item_Codelock',1],['Exile_Item_WoodFloorKit',4],['Exile_Item_WoodFloorPortKit',2],
+	['Exile_Item_Flag',1],['WorkBench',1],['Exile_Item_WoodDoorKit',1],['Exile_Item_Codelock',1],['Exile_Item_WoodFloorKit',4],['Exile_Item_WoodFloorPortKit',2],
 	['Exile_Item_WoodWallKit',5],['Exile_Item_CampFireKit',1],['Exile_Item_SafeKit',1],['Exile_Item_Storagecratekit',2],['Exile_Melee_Axe',1],['Exile_Ammo_Swing',1],
 	['Exile_Item_Matches',1],['Exile_Item_CookingPot',1]
 ];
