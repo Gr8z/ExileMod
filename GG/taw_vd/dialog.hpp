@@ -470,6 +470,7 @@ class TAW_VD
 			
 			x = 0.47; y = 0.50;
 			w = 0.275; h = 0.04;
+			colorDisabled[] = {};
 		};
 		
 		class VD_terr_normal : TAWVD_activeText
@@ -481,6 +482,7 @@ class TAW_VD
 			
 			x = 0.56; y = 0.50;
 			w = 0.275; h = 0.04;
+			colorDisabled[] = {};
 		};
 		
 		class VD_terr_high : TAWVD_activeText
@@ -492,6 +494,7 @@ class TAW_VD
 			
 			x = 0.67; y = 0.50;
 			w = 0.275; h = 0.04;
+			colorDisabled[] = {};
 		};
 
 		class ButtonClose : TAWVD_RscButtonMenu {
