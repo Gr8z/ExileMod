@@ -102,3 +102,10 @@ class RscTitles
 };
 
 #include "GG\config.cpp"
+
+
+
+class CfgFunctions
+{
+	
+};
