@@ -79,6 +79,7 @@ allowFunctionsRecompile = 0;
 class CfgRemoteExecCommands {};
 
 #include "GG\SL\global.hpp"
+#include "GG\taw_vd\dialog.hpp"
 
 class cfgFunctions
 {
@@ -91,6 +92,7 @@ class cfgFunctions
 			class showWatermark { postInit = 1; };
 		};
 	};
+	#include "GG\taw_vd\CfgFunctions.hpp"
 };
 
 class RscTitles
@@ -101,9 +103,9 @@ class RscTitles
 
 #include "GG\config.cpp"
 
-#include "GG\taw_vd\dialog.hpp"
+
 
 class CfgFunctions
 {
-	#include "GG\taw_vd\CfgFunctions.hpp"
+	
 };
