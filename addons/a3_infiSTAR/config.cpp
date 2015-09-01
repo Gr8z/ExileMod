@@ -6,7 +6,7 @@ class CfgPatches {
 	class a3_infiSTAR {
 		units[] = {};
 		weapons[] = {};
-		a3_infiSTAR_version = 0.223;
+		a3_infiSTAR_version = 0.1;
 		requiredVersion = 1.36;
 		requiredAddons[] = {};
 	};
