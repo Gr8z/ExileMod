@@ -55,8 +55,8 @@ class CfgSettings {
 	};
 	
 	class LocalityMonitor {
-		monitor = 0;
-		threshold = 20;
+		monitor = 1;
+		threshold = 40;
 	};
 	
 	class Weather {
