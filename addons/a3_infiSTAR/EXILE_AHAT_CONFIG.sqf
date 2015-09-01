@@ -21,7 +21,7 @@ _RESTART_TIME_IN_M = 120;		/* restart time in minutes */
 _SHOW_TIMER_IN_MIN = [1,2,3,5,10];	/* minutes before restart, when message is shown */
 
 /* The following 3 options can be disabled by putting the value to -1. For example "_TGV = -1;" */
-/* Terrain Grid Value   */ _TGV = 35;		/* 50, 25, 12.5  */	/* if set to 50 grass will be very low for better client FPS.. default is 25 ~35 is good performance and grass :) */
+/* Terrain Grid Value   */ _TGV = 50;		/* 50, 25, 12.5  */	/* if set to 50 grass will be very low for better client FPS.. default is 25 ~35 is good performance and grass :) */
 /* ViewDistance Value   */ _VDV = 1000;
 /* ObjectViewDistance   */ _VOV = 800;
 
@@ -36,8 +36,8 @@ _startAsNormal =
 ];
 
 
-/* "_passwordAdmin": Taken from the servers config.cfg, needed for servercommands */
-_passwordAdmin = 'penis123';
+
+
 
 
 _adminUIDandAccess =
@@ -46,72 +46,102 @@ _adminUIDandAccess =
 		['76561198021389971','76561198078201908','76561198084864687','76561198002511087','76561198195305425','76561198153784743','76561198110162434'],	// Admins with UIDs in this Array have their Access defined in the array below.
 		[
 			'Teleport On Map Click','Teleport - Target To Me','Teleport - Me To Target','Teleport In Facing Direction (10m steps)',
-			'spectating','AdminConsole','Delete Vehicle','FlyUp','EjectTarget','ShowGear',
+			'spectating','AdminConsole','Delete Vehicle','FlyUp','ShowGear',
 			'HealSelf','HealRepairNear','AdminLog','Freeze Target','UnFreeze Target',
-			'==== Loadouts ====','==== Weapons ====','==== Magazines ====','==== Bags ====','==== Vehicles ====',
+
+			'==== Loadouts ====','==== Vehicles ====','Items spawn menu',
 			'Remove Gear','Heal','Restore','Move In My Vehicle','Move In Target Vehicle','Eject','Eject Crew',
 			'Kill','Explode','Force Disconnect','Kick (Silent)','Kick (Announce)','Ban (Silent)','Ban (Announce)',
 			'infiSTAR Player ESP','infiSTAR Dead ESP','infiSTAR AI ESP',
 			'infiSTAR MapIcons','Vehicle Marker','DeadPlayer Marker',
-			'God Mode','Vehicle God Mode','Lower Terrain','Vehboost','UnlimAmmo','noRecoil','Stealth / Invisible',
+			'God Mode','Vehicle God Mode','Lower Terrain','Vehboost','UnlimAmmo','noRecoil','FastFire','Stealth / Invisible',
 			'Disable Announces','Mass Message','Spawn Support-Box1','Spawn Support-Box2','Spawn Support-Box3',
 			'Spawn Ammo','Login as Arma Admin','BIS FreeRoam Cam (works with ESP)','FreeRoam Cam (does not work with ESP)',
 			'Request Steam Name','showinfo',
-			'+2000 Money','+10000 Money','-2000 Money','-10000 Money'
+			'+500 Money','+1000 Money','+2000 Money','+10000 Money','-500 Money','-1000 Money','-2000 Money','-10000 Money',
+			'+500 Respect','+5000 Respect','-500 Respect','-5000 Respect'
 		]
 	],
 	[
 		['03202340','02424420'],	// Admins with UIDs in this Array have their Access defined in the array below.
 		[
 			'Teleport On Map Click','Teleport - Target To Me','Teleport - Me To Target','Teleport In Facing Direction (10m steps)',
-			'spectating','AdminConsole','Delete Vehicle','FlyUp','EjectTarget','ShowGear',
+			'spectating','AdminConsole','Delete Vehicle','FlyUp','ShowGear',
 			'HealSelf','HealRepairNear','AdminLog','Freeze Target','UnFreeze Target',
-			'==== Loadouts ====','==== Weapons ====','==== Magazines ====','==== Bags ====','==== Vehicles ====',
+
+			'==== Loadouts ====','==== Vehicles ====','Items spawn menu',
 			'Remove Gear','Heal','Restore','Move In My Vehicle','Move In Target Vehicle','Eject','Eject Crew',
 			'Kill','Explode','Force Disconnect','Kick (Silent)','Kick (Announce)','Ban (Silent)','Ban (Announce)',
 			'infiSTAR Player ESP','infiSTAR Dead ESP','infiSTAR AI ESP',
 			'infiSTAR MapIcons','Vehicle Marker','DeadPlayer Marker',
-			'God Mode','Vehicle God Mode','Lower Terrain','Vehboost','UnlimAmmo','noRecoil','Stealth / Invisible',
+			'God Mode','Vehicle God Mode','Lower Terrain','Vehboost','UnlimAmmo','noRecoil','FastFire','Stealth / Invisible',
 			'Disable Announces','Mass Message','Spawn Support-Box1','Spawn Support-Box2','Spawn Support-Box3',
 			'Spawn Ammo','Login as Arma Admin','BIS FreeRoam Cam (works with ESP)','FreeRoam Cam (does not work with ESP)',
 			'Request Steam Name','showinfo',
-			'+2000 Money','+10000 Money','-2000 Money','-10000 Money'
+			'+500 Money','+1000 Money','+2000 Money','+10000 Money','-500 Money','-1000 Money','-2000 Money','-10000 Money',
+			'+500 Respect','+5000 Respect','-500 Respect','-5000 Respect'
 		]
 	],
 	[
 		['32234234'],	// Admins with UIDs in this Array have their Access defined in the array below.
 		[
 			'Teleport On Map Click','Teleport - Target To Me','Teleport - Me To Target','Teleport In Facing Direction (10m steps)',
-			'spectating','AdminConsole','Delete Vehicle','FlyUp','EjectTarget','ShowGear',
+			'spectating','AdminConsole','Delete Vehicle','FlyUp','ShowGear',
 			'HealSelf','HealRepairNear','AdminLog','Freeze Target','UnFreeze Target',
-			'==== Loadouts ====','==== Weapons ====','==== Magazines ====','==== Bags ====','==== Vehicles ====',
+
+			'==== Loadouts ====','==== Vehicles ====','Items spawn menu',
 			'Remove Gear','Heal','Restore','Move In My Vehicle','Move In Target Vehicle','Eject','Eject Crew',
 			'Kill','Explode','Force Disconnect','Kick (Silent)','Kick (Announce)','Ban (Silent)','Ban (Announce)',
 			'infiSTAR Player ESP','infiSTAR Dead ESP','infiSTAR AI ESP',
 			'infiSTAR MapIcons','Vehicle Marker','DeadPlayer Marker',
-			'God Mode','Vehicle God Mode','Lower Terrain','Vehboost','UnlimAmmo','noRecoil','Stealth / Invisible',
+			'God Mode','Vehicle God Mode','Lower Terrain','Vehboost','UnlimAmmo','noRecoil','FastFire','Stealth / Invisible',
 			'Disable Announces','Mass Message','Spawn Support-Box1','Spawn Support-Box2','Spawn Support-Box3',
 			'Spawn Ammo','Login as Arma Admin','BIS FreeRoam Cam (works with ESP)','FreeRoam Cam (does not work with ESP)',
 			'Request Steam Name','showinfo',
-			'+2000 Money','+10000 Money','-2000 Money','-10000 Money'
+			'+500 Money','+1000 Money','+2000 Money','+10000 Money','-500 Money','-1000 Money','-2000 Money','-10000 Money',
+			'+500 Respect','+5000 Respect','-500 Respect','-5000 Respect'
 		]
 	]
 ];
 /* ********************************************************************************* */
 /*            many checks should be set to true instead of false.                    */
 /* ********************************************************************************* */
-/*  Local Vehicle Check  */ _LVC = true;	/* true or false */
-/*  Use Anti Teleport    */ _UAT = true;	/* true or false */	/* might need to be set to false on other mods than Epoch! */
+
+
+_LVC = true;	/* Local Vehicle Check */
+_UAT = true;	/* Anti Teleport */
+_CMC = true;	/* Check for custom CommandingMenus */
+_KCM = true;	/* Just close ALL CommandingMenus */
+_CAP = true;	/* Check Actions Plr - will announce: xxx possible scroll menu hack */
+
 
 /*  Check Global Markers */ _CGM = true;	/* true or false */	/* you may need to disable this check for A.I. Missions - or whitelist the used Markers in the _aLocalM Array beneath */
 /*  Check Local Markers  */ _CLM = true;	/* true or false */	/* false if you do not want LocalMarker to be checked. */
 /*  Use _aLocalM array   */ _UMW = false;	/* true or false */	/* use allowed marker array from below (for example AltisLife uses house_ and others in there) or A.I. Missions */
 /* _aLocalM: if '_CLM' && _UMW - this array of names will be allowed */
-_aLocalM =
-[
-	'sek_','_marker','marker_','house_','_dead_marker','_gpstracker','cop','Marker200',
-	'SEM_','Plane','Bandit','Strange'
+_aLocalM = [];
+
+
+/* Use IDD White-List ? */ _UDW = true;	/* true or false */
+/* _allowedIDDs: Insert IDDs here to prevent them from being closed! */
+_allowedIDDs = [
+	0,4,5,6,8,12,18,24,46,49,54,55,63,70,131,160,174,602,999,148,163,129,169,
+	24001,24002,24004,24005,24006,24007,24008,24009,24010,24011,24012,24013,24014,24015,20016,20017,20018,20019,20020,20021
 ];
+
+/* _badIDDsToKick: Forbidden Idds that will get you Kicked by the AH */
+_badIDDsToKick = [-1337];
+
+/* _badIDDsToClose: Forbidden Idds that will get closed by the AH */
+_badIDDsToClose =
+[
+
+
+	2,3,7,17,19,25,26,27,28,29,30,31,32,37,40,41,43,44,45,51,52,53,74,85,
+	106,126,127,132,146,147,150,151,152,153,154,159,162,164,262,
+	314,632,1320,2121,148,163,129,169
+];
+
 
 
 /*  Use BadFile check    */ _UBF = true;	/* true or false */	/* Scriptscan pops up with message: "Done! badcontent.sqf not found" */
@@ -233,23 +263,25 @@ _blacklistedVariables =
 ];
 
 
-_UVC = false;	/* Use Vehicle Check(s) */
-_UVW = false;	/* if "_UVW = true;" then it checks all vehicles on the map. If their type is not in "_VehicleWhiteList", they are flagged as hacked in and destroyed. */
+_UVC = false;	/* Use Vehicle Check(s) - recommended but I am not sure if all existing vehicles are already in this white-list below. "EXILE" ones are white-listed anyways */
+
 _VehicleWhiteList =
 [
-	'AllowThisVehicle1','AllowThisVehicle2'
+
+	'Steerable_Parachute_F','I_UAV_01_F','B_HMG_01_high_F','O_HMG_01_F'
 ];
 _ForbiddenVehicles =
 [
-	'B_Heli_Light_01_armed_F','B_Heli_Attack_01_F','B_Plane_CAS_01_F','B_APC_Tracked_01_rcws_F','B_APC_Tracked_01_CRV_F','B_APC_Tracked_01_AA_F','B_MBT_01_cannon_F',
-	'B_MBT_01_arty_F','B_MBT_01_mlrs_F','B_Boat_Armed_01_minigun_F','B_UAV_02_F','B_UAV_02_CAS_F','B_MRAP_01_gmg_F','B_MRAP_01_hmg_F','B_G_Offroad_01_armed_F',
-	'B_APC_Wheeled_01_cannon_F','B_MBT_01_TUSK_F','O_Heli_Light_02_F','O_Heli_Attack_02_F','O_Heli_Attack_02_black_F','O_Plane_CAS_02_F','O_APC_Tracked_02_cannon_F',
-	'O_APC_Tracked_02_AA_F','O_MBT_02_cannon_F','O_MBT_02_arty_F','O_Boat_Armed_01_hmg_F','O_UAV_02_CAS_F','O_UAV_02_F','O_MRAP_02_hmg_F','O_MRAP_02_gmg_F','O_G_Offroad_01_armed_F',
-	'O_APC_Wheeled_02_rcws_F','O_UGV_01_rcws_F','B_UGV_01_rcws_F','I_UGV_01_rcws_F','I_APC_Wheeled_03_cannon_F','I_MRAP_03_gmg_F','I_MRAP_03_hmg_F','I_G_Offroad_01_armed_F',
-	'I_UAV_02_CAS_F','I_UAV_02_F','I_Boat_Armed_01_minigun_F','I_MBT_03_cannon_F','I_APC_tracked_03_cannon_F','I_Plane_Fighter_03_AA_F','I_Plane_Fighter_03_CAS_F','I_Heli_light_03_F',
-	'B_HMG_01_F','O_HMG_01_F','I_HMG_01_F','B_HMG_01_high_F','O_HMG_01_high_F','I_HMG_01_high_F','B_HMG_01_A_F','O_HMG_01_A_F','I_HMG_01_A_F','B_Mortar_01_F','O_Mortar_01_F',
-	'I_Mortar_01_F','I_G_Mortar_01_F','B_G_Mortar_01_F','O_G_Mortar_01_F','B_GMG_01_F','O_GMG_01_F','I_GMG_01_F','B_GMG_01_high_F','O_GMG_01_high_F','I_GMG_01_high_F','B_GMG_01_A_F',
-	'O_GMG_01_A_F','I_GMG_01_A_F','B_static_AA_F','O_static_AA_F','I_static_AA_F','B_static_AT_F','O_static_AT_F','I_static_AT_F'
+
+
+
+
+
+
+
+
+
+	'B_Heli_Light_01_armed_F','B_Heli_Attack_01_F'
 ];
 
 
@@ -268,8 +300,8 @@ _ForbiddenItems =
 	'Missile_AGM_02_Plane_CAS_01_F','Missile_AA_04_Plane_CAS_01_F','Missile_AA_03_Plane_CAS_02_F','Missile_AGM_01_Plane_CAS_02_F','missiles_DAGR',
 	'missiles_DAR','missiles_ASRAAM','missiles_SCALPEL','missiles_titan','missiles_titan_static','missiles_Zephyr','Mk82BombLauncher','mortar_82mm',
 	'mortar_155mm_AMOS','rockets_Skyfire','rockets_230mm_GAT','Rocket_04_HE_Plane_CAS_01_F','Rocket_04_AP_Plane_CAS_01_F','Rocket_03_HE_Plane_CAS_02_F',
-	'Rocket_03_AP_Plane_CAS_02_F','Twin_Cannon_20mm',
-	'Exile_Item_TreasureMap'
+	'Rocket_03_AP_Plane_CAS_02_F','Twin_Cannon_20mm'
+
 ];
 
 
@@ -281,24 +313,35 @@ _ForbiddenItems =
 */
 _SupportBox1Content =
 [
-	['Exile_Item_Flag',1],['WorkBench',1],['Exile_Item_WoodDoorKit',1],['Exile_Item_Codelock',1],['Exile_Item_WoodFloorKit',4],['Exile_Item_WoodFloorPortKit',2],
-	['Exile_Item_WoodWallKit',5],['Exile_Item_CampFireKit',1],['Exile_Item_SafeKit',1],['Exile_Item_Storagecratekit',2],['Exile_Melee_Axe',1],['Exile_Ammo_Swing',1],
-	['Exile_Item_Matches',1],['Exile_Item_CookingPot',1]
+
+
+
+	'Exile_Item_Flag','WorkBench','Exile_Item_WoodDoorKit','Exile_Item_Codelock',['Exile_Item_WoodFloorKit',4],['Exile_Item_WoodFloorPortKit',2],
+	['Exile_Item_WoodWallKit',5],'Exile_Item_CampFireKit','Exile_Item_SafeKit',['Exile_Item_Storagecratekit',2],'Exile_Melee_Axe','Exile_Ammo_Swing',
+	'Exile_Item_Matches','Exile_Item_CookingPot'
 ];
 
 _SupportBox2Content =
 [
-	['Exile_Item_Flag',1],['WorkBench',2],['Exile_Item_WoodDoorKit',2],['Exile_Item_WoodGateKit',2],['Exile_Item_Codelock',4],['Exile_Item_WoodFloorKit',18],['Exile_Item_WoodFloorPortKit',2],
-	['Exile_Item_WoodWallKit',25],['Exile_Item_CampFireKit',2],['Exile_Item_SafeKit',2],['Exile_Item_Storagecratekit',4],['Exile_Item_WoodStairsKit',4],['Exile_Melee_Axe',2],['Exile_Ammo_Swing',1],
-	['Exile_Item_Matches',2],['Exile_Item_CookingPot',2],['B_Carryall_oucamo',1]
+
+
+
+	'Exile_Item_Flag',['WorkBench',2],['Exile_Item_WoodDoorKit',2],['Exile_Item_WoodGateKit',2],['Exile_Item_Codelock',4],['Exile_Item_WoodFloorKit',18],['Exile_Item_WoodFloorPortKit',2],
+	['Exile_Item_WoodWallKit',25],['Exile_Item_CampFireKit',2],['Exile_Item_SafeKit',2],['Exile_Item_Storagecratekit',4],['Exile_Item_WoodStairsKit',4],['Exile_Melee_Axe',2],'Exile_Ammo_Swing',
+	['Exile_Item_Matches',2],['Exile_Item_CookingPot',2],'B_Carryall_oucamo'
 ];
 
 _SupportBox3Content =
 [
+
+
+
 	['Exile_Item_Flag',2],['WorkBench',3],['Exile_Item_WoodDoorKit',4],['Exile_Item_WoodGateKit',4],['Exile_Item_Codelock',8],['Exile_Item_WoodFloorKit',40],['Exile_Item_WoodFloorPortKit',4],
-	['Exile_Item_WoodWallKit',30],['Exile_Item_CampFireKit',3],['Exile_Item_SafeKit',3],['Exile_Item_Storagecratekit',5],['Exile_Item_WoodStairsKit',8],['Exile_Melee_Axe',3],['Exile_Ammo_Swing',1],
-	['Exile_Item_Matches',3],['Exile_Item_CookingPot',3],['B_Carryall_oucamo',1]
+	['Exile_Item_WoodWallKit',30],['Exile_Item_CampFireKit',3],['Exile_Item_SafeKit',3],['Exile_Item_Storagecratekit',5],['Exile_Item_WoodStairsKit',8],['Exile_Melee_Axe',3],'Exile_Ammo_Swing',
+	['Exile_Item_Matches',3],['Exile_Item_CookingPot',3],'B_Carryall_oucamo'
 ];
+/* ********************************************************************************* */
+if(isNil'ExileServerIsLocked')then{ExileServerIsLocked=false;};
 /* ********************************************************************************* */
 /* ********************************************************************************* */
 /* ********************************************************************************* */
@@ -352,7 +395,7 @@ if(!isNil 'infiSTAR_IS_RUN_ON_THIS_SERVER') exitWith {
 };
 infiSTAR_IS_RUN_ON_THIS_SERVER = time;
 /* ********************************************************************************* */
-/* #1 */
+/* #223 */
 /* ********************************************************************************* */
 comment 'Antihack & AdminTools - Christian Lorenzen - www.infiSTAR.de - License: (CC)';
 diag_log format['<infiSTAR.de> %1 - run.sqf - including AntiHack',time];
