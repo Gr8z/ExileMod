@@ -1,10 +1,7 @@
-/*--Configuration Options----------------------------------------------------
----------------------------------------------------------------------------*/
- 
 //enable/disable this script (you could do it here or just remove its execVM, up to you m8)
-INSPECT_ENABLE = true;
+P2_INSPECT_ENABLE = true;
 //distance at which items can be inspected (default: 2.5)
-INSPECT_DISTANCE = 2.75;
+P2_INSPECT_DISTANCE = 2.75;
  
 /*--End of Configuration Options---------------------------------------------
 ---------------------------------------------------------------------------*/
@@ -16,15 +13,15 @@ INSPECT_DISTANCE = 2.75;
 INSPECT_ITEM_ACTIONS = [];
  
 //ensure user didnt fuck up the config
-if (isNil 'INSPECT_DISTANCE') then { INSPECT_DISTANCE = 2.75; };
-if (isNil 'INSPECT_ENABLE') then { INSPECT_ENABLE = true; };
+if (isNil 'P2_INSPECT_DISTANCE') then { P2_INSPECT_DISTANCE = 2.75; };
+if (isNil 'P2_INSPECT_ENABLE') then { P2_INSPECT_ENABLE = true; };
  
 //      make sure key function exists / hasnt been renamed by exile mod team
 //declare these
 private["_timeSlept","_errorMsg","_quit"];
 //initialise these
 _timeSlept      = 0;
-_errorMsg       = "INSPECT: Error - ExileMod has removed or renamed the key function 'ExileClient_gui_itemDetails_show'";
+_errorMsg       = "P2_INSPECT: Error - ExileMod has removed or renamed the key function 'ExileClient_gui_itemDetails_show'";
 _quit           = false;
  
 waitUntil{
@@ -49,12 +46,12 @@ if (_quit) exitWith {
 };
  
 //start loop
-while {INSPECT_ENABLE} do {
+while {P2_INSPECT_ENABLE} do {
         //declare this here instead of down there because it is used in both scopes
         private["_nearObjects"];
  
-        //get near objects (INSPECT_DISTANCE meters)
-        _nearObjects = player nearObjects INSPECT_DISTANCE;
+        //get near objects (P2_INSPECT_DISTANCE meters)
+        _nearObjects = player nearObjects P2_INSPECT_DISTANCE;
  
         //wait a moment so we retrieve the objects properly (script would only fail without this on super slow systems surrounded by items)
         sleep 0.01;
@@ -68,7 +65,7 @@ while {INSPECT_ENABLE} do {
                 _obj = _x;
  
                 //if object not the player themselves
-                if (player != _obj && ((vehicle player) != _obj) && !isNull _obj) then {
+                if (player != _obj && ((vehicle player) != _obj) && !isNull _obj && (typeOf _obj == "GroundWeaponHolder")) then {
  
                         //get object contents
                         _mags  = getMagazineCargo       _obj;
@@ -114,6 +111,17 @@ while {INSPECT_ENABLE} do {
                                                         disableSerialization;
                                                         //use input vars (see below) to call up the item detail menu
                                                         [_this select 3 select 0, _this select 3 select 1] call ExileClient_gui_itemDetails_show;
+                                                        //ensure that while the menu is open that the consume/construct/inspect buttons cannot be clicked
+                                                        [] spawn {
+                                                                disableSerialization;
+                                                                //while dialog is open
+                                                                while {(str(uiNameSpace getVariable ["RscExileItemDetailsDialog", displayNull]) != "No display")} do {
+                                                                        _dialog = uiNameSpace getVariable ["RscExileItemDetailsDialog", displayNull];
+                                                                        (_dialog displayCtrl 1300) ctrlEnable false; //disable consume button
+                                                                        (_dialog displayCtrl 1301) ctrlEnable false; //disable inspect button
+                                                                        (_dialog displayCtrl 1303) ctrlEnable false; //disable construct button
+                                                                };
+                                                        };
                                                 },
                                                 //vars parsed to code (see above)
                                                 [_configName, _itemClassName],
@@ -137,7 +145,7 @@ while {INSPECT_ENABLE} do {
                                         //hold up a moment, we dont want to run this every 0.00001 seconds now do we? no, exactly, so fuckin hold up
                                         uiSleep 0.1;
                                         //if undefined it should default to this and assume the items gone
-                                        _dist = INSPECT_DISTANCE + 1;
+                                        _dist = P2_INSPECT_DISTANCE + 1;
                                         //if item not found, it is null
                                         if (isNil '_obj') then { _obj = objNull; };
                                         //if item not null, check distance from it
@@ -145,10 +153,10 @@ while {INSPECT_ENABLE} do {
                                                 _dist = player distance _obj;
                                         //if item is null, then set distance to 30 so we exit
                                         } else {
-                                                _dist = INSPECT_DISTANCE + 1;
+                                                _dist = P2_INSPECT_DISTANCE + 1;
                                         };
-                                        //if item distance > INSPECT_DISTANCE, then exit, otherwise keep loopin'
-                                        (_dist > INSPECT_DISTANCE)
+                                        //if item distance > P2_INSPECT_DISTANCE, then exit, otherwise keep loopin'
+                                        (_dist > P2_INSPECT_DISTANCE)
                                 };
  
                                 //remove all actions now that player has moved away from object
@@ -160,4 +168,4 @@ while {INSPECT_ENABLE} do {
  
         //wait a moment before checking nearby objects again - using uiSleep as we're not waiting for code to process
         uiSleep 0.667;
-}; //byPlayer2
+};

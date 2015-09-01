@@ -75,7 +75,7 @@ try
 			    (getPosATL _playerObject), 
 			    5,                  
 			    80,            	 	
-			    15,                 
+			    8,                 
 			    0,                  
 			    9999,               
 			    0                   

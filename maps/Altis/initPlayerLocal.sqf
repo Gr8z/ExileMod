@@ -3,7 +3,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 execVM "GG\blckClient.sqf";
 [] execVM "GG\StatusBar\statusBar.sqf";
-// [] execVM "GG\inspectLoop.sqf";
+[] execVM "GG\inspectLoop.sqf";
 #include "initServer.sqf"
 
 if (!hasInterface || isServer) exitWith {};
@@ -273,19 +273,19 @@ call ExileClient_object_trader_create;
 // Western Vehicle Trader
 ///////////////////////////////////////////////////////////////////////////
 
-//_trader = 
-//[
-//    "Exile_Trader_Vehicle",
-//    "WhiteHead_11",
-//   ["InBaseMoves_repairVehicleKnl", "InBaseMoves_repairVehiclePne"],
-//    [2980.19,18146.2,1.06391],
-//    222.352
-//]
-//call ExileClient_object_trader_create;
+_trader = 
+[
+    "Exile_Trader_Vehicle",
+    "WhiteHead_11",
+    ["InBaseMoves_repairVehicleKnl", "InBaseMoves_repairVehiclePne"],
+    [2980.19,18146.2,1.06391],
+    222.352
+]
+call ExileClient_object_trader_create;
 
-//_carWreck = "Land_Wreck_CarDismantled_F" createVehicleLocal [0,0,0];
-//_carWreck setDir 130.966;    
-//_carWreck setPosATL [2978.76,18144.5,1.13293];
+_carWreck = "Land_Wreck_CarDismantled_F" createVehicleLocal [0,0,0];
+_carWreck setDir 130.966;    
+_carWreck setPosATL [2978.76,18144.5,1.13293];
 
 ///////////////////////////////////////////////////////////////////////////
 // Western Waste Dump Trader

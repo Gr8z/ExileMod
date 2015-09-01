@@ -72,6 +72,7 @@ try
 								_lootHolder = createVehicle ["GroundWeaponHolder",_lootPosition,[],0,"CAN_COLLIDE"];
 								_lootHolder setDir (random 360);
 								_lootHolder setPosATL _lootPosition;
+								_lootHolder setVariable ["ExileSpawnedAt", time];
 								switch (_cargoType) do
 								{
 									case 1: 	{ _lootHolder addMagazineCargoGlobal [_itemClassName, 1]; };

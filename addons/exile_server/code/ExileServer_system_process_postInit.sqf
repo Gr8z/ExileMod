@@ -17,7 +17,7 @@ if (!isNil "PublicHiveVersion") then
 	call ExileServer_system_lootManager_initialize;
 	call ExileServer_system_weather_initialize;
 	call ExileServer_world_initialize;
-	call ExileServer_system_LocalityMonitor_initialize;
+	call ExileServer_system_localityMonitor_initialize;
 	call ExileServer_system_territory_maintenance_check;
 	PublicHiveIsLoaded = true; 
 	publicVariable "PublicHiveIsLoaded";

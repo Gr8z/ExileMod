@@ -1053,9 +1053,9 @@ infiSTAR_MAIN_CODE = "
 			if('FreeRoam Cam (does not work with ESP)' call ADMINLEVELACCESS)then{_ctrl lbAdd 'FreeRoam Cam (does not work with ESP)'};
 			if('AdminConsole' call ADMINLEVELACCESS)then{_ctrl lbAdd 'AdminConsole';};
 			if('Mass Message' call ADMINLEVELACCESS)then{_ctrl lbAdd 'Mass Message';};
-			if('Spawn Support-Box1' call ADMINLEVELACCESS)then{_ctrl lbAdd 'Spawn Support-Box1';};
-			if('Spawn Support-Box2' call ADMINLEVELACCESS)then{_ctrl lbAdd 'Spawn Support-Box2';};
-			if('Spawn Support-Box3' call ADMINLEVELACCESS)then{_ctrl lbAdd 'Spawn Support-Box3';};
+			if('Spawn Support-Box1' call ADMINLEVELACCESS)then{_ctrl lbAdd 'Spawn Starter Building Box';};
+			if('Spawn Support-Box2' call ADMINLEVELACCESS)then{_ctrl lbAdd 'Spawn Medium Building Box';};
+			if('Spawn Support-Box3' call ADMINLEVELACCESS)then{_ctrl lbAdd 'Spawn Pro Building Box';};
 			if('Spawn Ammo' call ADMINLEVELACCESS)then{_ctrl lbAdd 'Spawn Ammo';};
 			_ctrl lbAdd 'Self Disconnect';
 			_target = lbtext[LEFT_CTRL_ID,(lbCurSel LEFT_CTRL_ID)];
