@@ -2,7 +2,6 @@
 // Static Objects
 ///////////////////////////////////////////////////////////////////////////////
 
-execVM "GG\convoy.sqf";
 [] execVM "GG\StatusBar\statusBar.sqf";
 [] execVM "GG\inspectLoop.sqf";
 
