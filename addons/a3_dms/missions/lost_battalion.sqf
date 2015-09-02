@@ -39,7 +39,7 @@ _group =
 
 // Create Crate
 _crate = ["Box_NATO_Wps_F",_pos] call DMS_SpawnCrate;
-_crate2 = ["Box_NATO_Wps_F",_pos] call DMS_SpawnCrate;
+//_crate2 = ["Box_NATO_Wps_F",_pos] call DMS_SpawnCrate;
 
 // Set crate loot values
 _crate_loot_values =
