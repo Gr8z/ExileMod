@@ -12,9 +12,9 @@ DMS_DEBUG = false;
 
 /* Mission System Settings */
 	DMS_DynamicMission					= true;						// Enable/disable dynamic mission system
-	DMS_MaxBanditMissions				= 3;						// Maximum number of Bandit Missions running at the same time
+	DMS_MaxBanditMissions				= 5;						// Maximum number of Bandit Missions running at the same time
 	DMS_StaticMission					= false;					// Enable/disable static missions
-	DMS_TimeBetweenMissions				= [600,900];				// [Minimum,Maximum] time between missions (if mission limit is not reached) | DEFAULT: 10-15 mins
+	DMS_TimeBetweenMissions				= [300,600];				// [Minimum,Maximum] time between missions (if mission limit is not reached) | DEFAULT: 10-15 mins
 	DMS_MissionTimeOut					= [900,1800]; 				// [Minimum,Maximum] time it will take for a mission to timeout | Default: 15-30 mins
 
 	DMS_playerNearRadius				= 75;						// How close a player has to be to a mission in order to satisfy the "playerNear" mission requirement (can be customized per mission).
@@ -37,17 +37,17 @@ DMS_DEBUG = false;
 	DMS_MissionTimeoutReset				= true;						// Enable mission timeout timer reset if a player is close
 	DMS_MissionTimeoutResetRange		= 1000;						// If a player is this close to a mission then it won't time-out
 
-	DMS_PlayerNearBlacklist				= 2000;						// Missions won't spawn in a position this many meters close to a player
-	DMS_SpawnZoneNearBlacklist			= 2500;						// Missions won't spawn in a position this many meters close to a spawn zone
-	DMS_TraderZoneNearBlacklist			= 3000;						// Missions won't spawn in a position this many meters close to a trader zone
-	DMS_MissionNearBlacklist			= 4000;						// Missions won't spawn in a position this many meters close to another mission
-	DMS_WaterNearBlacklist				= 750;						// Missions won't spawn in a position this many meters close to water
+	DMS_PlayerNearBlacklist				= 1000;						// Missions won't spawn in a position this many meters close to a player
+	DMS_SpawnZoneNearBlacklist			= 1000;						// Missions won't spawn in a position this many meters close to a spawn zone
+	DMS_TraderZoneNearBlacklist			= 2000;						// Missions won't spawn in a position this many meters close to a trader zone
+	DMS_MissionNearBlacklist			= 3000;						// Missions won't spawn in a position this many meters close to another mission
+	DMS_WaterNearBlacklist				= 500;						// Missions won't spawn in a position this many meters close to water
 
 	DMS_SpawnBoxSmoke					= true;						// Spawn a smoke grenade on mission box upon misson completion during daytime
 	DMS_SpawnBoxIRGrenade				= true;						// Spawn an IR grenade on mission box upon misson completion during nighttime
 	
 	DMS_MinPlayerCount					= 0; 						// Minimum number of players until mission start
-	DMS_MinServerFPS					= 5; 						// Minimum server FPS for missions to start
+	DMS_MinServerFPS					= 1; 						// Minimum server FPS for missions to start
 
 	//Mission notification settings
 	DMS_PlayerNotificationTypes =		[							// Notification types. Supported values are: ["dynamicTextRequest", "standardHintRequest", "systemChatRequest"]
@@ -78,7 +78,7 @@ DMS_DEBUG = false;
 
 	DMS_banditSide						= EAST;						// The side (team) that AI Bandits will spawn on
 	DMS_clear_AI_body					= false;					// Clear AI body as soon as they die
-	DMS_clear_AI_body_chance			= 50;						// Percentage chance that AI bodies will be cleared when they die
+	DMS_clear_AI_body_chance			= 0;						// Percentage chance that AI bodies will be cleared when they die
 	DMS_remove_roadkill					= false; 					// Remove gear from AI bodies that are roadkilled
 	DMS_remove_roadkill_chance			= 0;						// Percentage chance that roadkilled AI bodies will be deleted
 	DMS_RemoveNVG						= false;					// Remove NVGs from AI bodies
@@ -385,7 +385,7 @@ DMS_DEBUG = false;
 											"sniper"
 										];
 
-	DMS_ai_use_launchers				= true;						// Enable/disable spawning an AI in a group with a launcher
+	DMS_ai_use_launchers				= false;						// Enable/disable spawning an AI in a group with a launcher
 	DMS_ai_use_launchers_chance			= 50;						// Percentage chance to actually spawn the launcher (per-group)
 	DMS_AI_launcher_ammo_count			= 2;						// How many rockets an AI will get with its launcher
 	DMS_ai_remove_launchers				= true;						// Remove rocket launchers on AI death
