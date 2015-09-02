@@ -4,6 +4,7 @@
 execVM "GG\blckClient.sqf";
 [] execVM "GG\StatusBar\statusBar.sqf";
 [] execVM "GG\inspectLoop.sqf";
+execVM "GG\safezone.sqf";
 #include "initServer.sqf"
 
 if (!hasInterface || isServer) exitWith {};
