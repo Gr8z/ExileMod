@@ -16,7 +16,7 @@ if (hasInterface) then {
 			_tName = _this select 0;
 			_tPos = _this select 1;
 			_maxVel = 100;
-			_tRad = 250;
+			_tRad = 170;
 			waitUntil {sleep 0.25;speed player > 1};
 			while {true} do {
 				_dist = player distance _tPos;
@@ -81,6 +81,8 @@ if (hasInterface) then {
 	
 	//Safezone
 	don_incar = false;
+	don_firedEH_1 = nil;
+	donn_godMode = false;
 	[] spawn {
 		private ['_runOneTime','_donn_notSafe','_don_passengers','_don_veh_crew','_don_player_veh','_don_veh_driver'];
 		waitUntil {!(isNil 'donn_notSafe')};
@@ -90,7 +92,10 @@ if (hasInterface) then {
 			waitUntil {!((_donn_notSafe && donn_notSafe) || (!_donn_notSafe && !donn_notSafe)) || !_runOneTime};
 			_donn_notSafe = donn_notSafe;
 			if (!_donn_notSafe) then {
-
+				//Player God Mode
+				player allowDamage false;
+				donn_sz_fired = player addEventHandler ['Fired',{deleteVehicle (_this select 6);}];
+				donn_godMode = true;
 				
 				//Protect Player Gear
 				donn_pv_protected_veh_add = player;
@@ -100,6 +105,10 @@ if (hasInterface) then {
 				[] spawn donn_avoidGearAccess;
 			};
 			if (_donn_notSafe && _runOneTime) then {
+				//Player God Mode Off
+				player allowDamage true;
+				player removeEventHandler ["Fired",donn_sz_fired];
+				donn_godMode = false;
 				
 				//Clear Player Gear Protection
 				donn_pv_protected_veh_sub = player;
@@ -113,6 +122,12 @@ if (hasInterface) then {
 				_don_veh_driver = driver _don_player_veh;
 				
 				if (player == _don_veh_driver) then {
+					//Car God Mode
+					_don_player_veh allowDamage false;
+					_don_player_veh removeAllEventHandlers 'handleDamage';
+					_don_player_veh addEventHandler ['handleDamage', {0}];
+					_don_player_veh removeAllEventHandlers 'Fired';
+					_don_player_veh addEventHandler ['Fired',{deleteVehicle (_this select 6);}];
 					
 					//Passenger Names
 					_don_passengers = '';
@@ -144,6 +159,11 @@ if (hasInterface) then {
 					_don_player_veh setVariable ['don_ownerity_code', nil, true];
 					_don_player_veh setVariable ['don_crew', nil, true];
 					_don_player_veh setVariable ['don_passengers', nil, true];
+				
+					//Car God Mode Off
+					_don_player_veh allowDamage true;
+					_don_player_veh removeAllEventHandlers 'handleDamage';
+					_don_player_veh removeAllEventHandlers 'Fired';
 					
 					//Clear Vehicle Gear Protection
 					donn_pv_protected_veh_sub = _don_player_veh;
@@ -191,8 +211,16 @@ if (hasInterface) then {
 						publicVariable 'cad_pvar_smessage';
 					};
 				};
+				don_player_veh allowDamage false;
+				don_player_veh removeAllEventHandlers 'handleDamage';
+				don_player_veh addEventHandler ['handleDamage', {0}];
+				don_player_veh removeAllEventHandlers 'Fired';
+				don_player_veh addEventHandler ['Fired',{deleteVehicle (_this select 6);}];
 			};
 			if (donn_notSafe) then {
+				don_player_veh allowDamage true;
+				don_player_veh removeAllEventHandlers 'handleDamage';
+				don_player_veh removeAllEventHandlers 'Fired';
 				if (player == driver don_player_veh) then {
 					don_player_veh setVariable ['don_ownerity_code', nil, true];
 					don_player_veh setVariable ['don_crew', nil, true];
@@ -210,6 +238,7 @@ if (hasInterface) then {
 		_message = (_this select 1) select 0; _receivers = (_this select 1) select 1;
 		if (getPlayerUID player in _receivers) then {cutText [_message, 'PLAIN DOWN'];};
 	};
+	diag_log "! SAZON OK !";
 };
 
 //=============
@@ -223,12 +252,12 @@ if (isServer) then {
 		donn_pv_protected_veh set [0,(donn_pv_protected_veh select 0) + 1];
 		donn_pv_protected_veh set [1,(donn_pv_protected_veh select 1) + [_this select 1]];
 		publicVariable "donn_pv_protected_veh";
-		diag_log ("Added veh to protection: " + str (_this select 1));
+		diag_log ("[SAZON] Added veh to protection: " + str (_this select 1));
 	};
 	"donn_pv_protected_veh_sub" addPublicVariableEventHandler {
 		donn_pv_protected_veh set [0,(donn_pv_protected_veh select 0) + 1];
 		donn_pv_protected_veh set [1,(donn_pv_protected_veh select 1) - [_this select 1]];
 		publicVariable "donn_pv_protected_veh";
-		diag_log ("Deadded veh to protection: " + str (_this select 1));
+		diag_log ("[SAZON] Deadded veh to protection: " + str (_this select 1));
 	};
 };
