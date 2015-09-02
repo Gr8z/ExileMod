@@ -2,6 +2,7 @@
 // Static Objects
 ///////////////////////////////////////////////////////////////////////////////
 execVM "GG\blckClient.sqf";
+execVM "convoy.sqf";
 [] execVM "GG\StatusBar\statusBar.sqf";
 [] execVM "GG\inspectLoop.sqf";
 #include "initServer.sqf"
