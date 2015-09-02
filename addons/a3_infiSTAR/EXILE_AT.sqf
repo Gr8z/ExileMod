@@ -10,7 +10,7 @@
 /* **************infiSTAR Copyright®© 2011 - 2015 All rights reserved.************** */
 /* *********************************www.infiSTAR.de********************************* */
 comment 'Antihack & AdminTools - Christian Lorenzen - www.infiSTAR.de - License: (CC)';
-VERSION_DATE_IS = '25082015#1';
+VERSION_DATE_IS = '01092015#223';
 infiSTAR_MAIN_CODE = "
 	_log = format['%1 <infiSTAR.de> Loading Menu...',time];systemchat _log;diag_log _log;
 	_mainMap = uiNamespace getVariable 'A3MAPICONS_mainMap';
@@ -36,12 +36,13 @@ infiSTAR_MAIN_CODE = "
 		if((toLower _t) find 'base' != -1)exitWith{false};
 		true
 	};
-	if(isNil 'ALL_BAGS_TO_SEARCH_C')then
+	if(isNil 'ALLC_ITEMS')then
 	{
-		ALL_BAGS_TO_SEARCH_C = [];
-		ALL_VEHS_TO_SEARCH_C = [];
-		ALL_WEPS_TO_SEARCH_C = [];
+		ALLC_ITEMS = [];
 		ALL_MAGS_TO_SEARCH_C = [];
+		ALL_VEHS_TO_SEARCH_C = [];
+		newAllItems_CATEGORY = [];
+		
 		_cfg = configFile >> 'cfgVehicles';
 		for '_j' from 0 to (count _cfg)-1 do
 		{
@@ -54,7 +55,10 @@ infiSTAR_MAIN_CODE = "
 					_BackPack = getText(configfile >> 'CfgVehicles' >> _t >> 'vehicleClass') == 'BackPacks';
 					if(_BackPack)then
 					{
-						ALL_BAGS_TO_SEARCH_C pushBack _t;
+						ALLC_ITEMS pushBack _t;
+						_itemInformation = [_t] call BIS_fnc_itemType;
+						_category = _itemInformation select 1;
+						if!(_category in newAllItems_CATEGORY)then{newAllItems_CATEGORY pushBack _category;};
 					}
 					else
 					{
@@ -81,7 +85,10 @@ infiSTAR_MAIN_CODE = "
 				{
 					if((getText(_c >> 'displayName') != '') && {getText(_c >> 'picture') != ''} && {getNumber(_c >> 'scope') in [0,2]})then
 					{
-						ALL_WEPS_TO_SEARCH_C pushBack _t;
+						ALLC_ITEMS pushBack _t;
+						_itemInformation = [_t] call BIS_fnc_itemType;
+						_category = _itemInformation select 1;
+						if!(_category in newAllItems_CATEGORY)then{newAllItems_CATEGORY pushBack _category;};
 					};
 				};
 			};
@@ -97,12 +104,32 @@ infiSTAR_MAIN_CODE = "
 				{
 					if((getText(_c >> 'displayName') != '') && {getText(_c >> 'picture') != ''} && {getNumber(_c >> 'scope') in [0,2]})then
 					{
+						ALLC_ITEMS pushBack _t;
 						ALL_MAGS_TO_SEARCH_C pushBack _t;
+						_itemInformation = [_t] call BIS_fnc_itemType;
+						_category = _itemInformation select 1;
+						if!(_category in newAllItems_CATEGORY)then{newAllItems_CATEGORY pushBack _category;};
 					};
 				};
 			};
 		};
-		ALLC_TO_SEARCH = ALL_BAGS_TO_SEARCH_C+ALL_VEHS_TO_SEARCH_C+ALL_WEPS_TO_SEARCH_C+ALL_MAGS_TO_SEARCH_C;
+		newAllItems_CATEGORY sort true;
+		
+		{
+			_itemInformation = [_x] call BIS_fnc_itemType;
+			_category = _itemInformation select 1;
+			
+			_variable = missionNameSpace getVariable (_category+'_ARRAY');
+			if(isNil '_variable')then
+			{
+				missionNameSpace setVariable [(_category+'_ARRAY'),[_x]];
+			}
+			else
+			{
+				_variable pushBack _x;
+				missionNameSpace setVariable [(_category+'_ARRAY'),_variable];
+			};
+		} forEach ALLC_ITEMS;
 	};
 	_log = '<infiSTAR.de> config data loaded...!';diag_log _log;
 	fnc_setFocus = {
@@ -168,50 +195,19 @@ infiSTAR_MAIN_CODE = "
 					lbClear _ctrl;
 					switch (LASTSUBBUTTON) do {
 						case 0:{
-							if('==== Weapons ====' call ADMINLEVELACCESS)then
+							if('Items spawn menu' call ADMINLEVELACCESS)then
 							{
-								_ctrl lbAdd '==== Weapons ====';
-								if(!isNil 'infiSTAR_add_weapons')then
 								{
-									{
-										_displayName = getText(configFile >> 'CfgWeapons' >> _x >> 'displayName');
-										if(((toLower _x) find _txt > -1)||((toLower _displayName) find _txt > -1))then{
-											_ctrl lbAdd format['%1 (%2)',_displayName,_x];
-											_x call fnc_addpic;
-											_ctrl lbSetData [(lbsize _ctrl)-1,_x];
-										};
-									} forEach ALL_WEPS_TO_SEARCH_C;
-								};
-							};
-							if('==== Magazines ====' call ADMINLEVELACCESS)then
-							{
-								_ctrl lbAdd '==== Magazines ====';
-								if(!isNil 'infiSTAR_add_magazines')then
-								{
-									{
-										_displayName = getText(configFile >> 'CfgMagazines' >> _x >> 'displayName');
-										if(((toLower _x) find _txt > -1)||((toLower _displayName) find _txt > -1))then{
-											_ctrl lbAdd format['%1 (%2)',_displayName,_x];
-											_x call fnc_addpic;
-											_ctrl lbSetData [(lbsize _ctrl)-1,_x];
-										};
-									} forEach ALL_MAGS_TO_SEARCH_C;
-								};
-							};
-							if('==== Bags ====' call ADMINLEVELACCESS)then
-							{
-								_ctrl lbAdd '==== Bags ====';
-								if(!isNil 'infiSTAR_add_bags')then
-								{
-									{
-										_displayName = getText(configFile >> 'CfgVehicles' >> _x >> 'displayName');
-										if(((toLower _x) find _txt > -1)||((toLower _displayName) find _txt > -1))then{
-											_ctrl lbAdd format['%1 (%2)',_displayName,_x];
-											_x call fnc_addpic;
-											_ctrl lbSetData [(lbsize _ctrl)-1,_x];
-										};
-									} forEach ALL_BAGS_TO_SEARCH_C;
-								};
+									_displayName = getText(configFile >> 'CfgWeapons' >> _x >> 'displayName');
+									if(_displayName isEqualTo '')then{_displayName = getText(configFile >> 'CfgMagazines' >> _x >> 'displayName');};
+									if(_displayName isEqualTo '')then{_displayName = getText(configFile >> 'CfgVehicles' >> _x >> 'displayName');};
+									if(((toLower _x) find _txt > -1)||((toLower _displayName) find _txt > -1))then{
+										_ctrl lbAdd format['%1 (%2)',_displayName,_x];
+										_x call fnc_addpic;
+										_ctrl lbSetData [(lbsize _ctrl)-1,_x];
+									};
+								} forEach ALLC_ITEMS;
+								for '_i' from 0 to 12 do {_ctrl lbAdd '';};
 							};
 						};
 						case 1:{
@@ -230,6 +226,7 @@ infiSTAR_MAIN_CODE = "
 									} forEach ALL_VEHS_TO_SEARCH_C;
 								};
 							};
+							for '_i' from 0 to 12 do {_ctrl lbAdd '';};
 						};
 					};
 					lastSearched = _txt;
@@ -354,7 +351,11 @@ infiSTAR_MAIN_CODE = "
 		_btnItems buttonSetAction '
 			LASTSUBBUTTON = 0;FILLMAINSTATE=1;[] call fnc_fill_infiSTAR_MAIN;[] call fnc_setFocus;[] call fnc_colorButtons;
 		';
-		
+		if!('Items spawn menu' call ADMINLEVELACCESS)then
+		{
+			_btnItems ctrlEnable false;
+			_btnItems ctrlShow false;
+		};
 		
 		_ctrlL = _display displayCtrl LEFT_CTRL_ID;
 		if(isNil 'ctrlposL')then{ctrlposL = ctrlPosition _ctrlL;};
@@ -396,6 +397,11 @@ infiSTAR_MAIN_CODE = "
 		_btnVehs buttonSetAction '
 			LASTSUBBUTTON = 1;FILLMAINSTATE=1;[] call fnc_fill_infiSTAR_MAIN;[] call fnc_setFocus;[] call fnc_colorButtons;
 		';
+		if!('==== Vehicles ====' call ADMINLEVELACCESS)then
+		{
+			_btnVehs ctrlEnable false;
+			_btnVehs ctrlShow false;
+		};
 		
 		_btnMisc = _display displayCtrl 38;
 		_btnMisc ctrlSetText 'Objects';
@@ -731,6 +737,7 @@ infiSTAR_MAIN_CODE = "
 		[] call fnc_initMenu;
 		[] call fnc_add_adminMainMapMovement;
 		if('==== Loadouts ====' call ADMINLEVELACCESS)then{call fnc_Loadoutmenu;};
+		call fnc_call_single_esps;
 	};
 	fnc_initMenu = {
 		disableSerialization;
@@ -852,6 +859,7 @@ infiSTAR_MAIN_CODE = "
 		if((LASTSUBBUTTON == 0)&&(FILLMAINSTATE == 1))then{_btnItems ctrlSetTextColor [0,1,0,1];} else {_btnItems ctrlSetTextColor [1,1,1,1];};
 		_btnVehs = _display displayCtrl 37;
 		if(LASTSUBBUTTON == 1)then{_btnVehs ctrlSetTextColor [0,1,0,1];} else {_btnVehs ctrlSetTextColor [1,1,1,1];};
+		
 		_btnMisc = _display displayCtrl 38;
 		_btnMisc ctrlEnable false;
 		_btnMisc ctrlShow false;
@@ -918,7 +926,7 @@ infiSTAR_MAIN_CODE = "
 			_ctrl lbAdd 'DBL-CLICK TO REMOVE';
 			{_ctrl lbAdd _x;} forEach PVAH_AHTMPBAN;
 		};
-		for '_i' from 0 to 10 do {_ctrl lbAdd '';};
+		for '_i' from 0 to 12 do {_ctrl lbAdd '';};
 	};
 	fnc_fill_AdminLog = {
 		disableSerialization;
@@ -934,7 +942,7 @@ infiSTAR_MAIN_CODE = "
 		{
 			_ctrl lbAdd 'Nothin to see here';
 		};
-		for '_i' from 0 to 10 do {_ctrl lbAdd '';};
+		for '_i' from 0 to 12 do {_ctrl lbAdd '';};
 	};
 	fnc_fill_infiSTAR_MAIN = {
 		disableSerialization;
@@ -942,20 +950,22 @@ infiSTAR_MAIN_CODE = "
 		lbclear _ctrl;
 		infiSTAR_SubMenus =
 		[
-			'==== Weapons ====','==== Magazines ====','==== Bags ====','==== Vehicles ====',
-			'==== OnTarget ====','==== Toggleable ===='
+			'==== Vehicles ====','==== OnTarget ====','==== Toggleable ===='
 		];
+		infiSTAR_SubMenus append newAllItems_CATEGORY;
 		infiSTAR_OnTargetNICE =
 		[
 			'Teleport - Target To Me','Teleport - Me To Target',
 			'Request Steam Name','Heal','Restore',
-			'+2000 Money','+10000 Money','-2000 Money','-10000 Money',
 			'Move In My Vehicle','Move In Target Vehicle',
+			'+500 Money','+1000 Money','+2000 Money','+10000 Money','+500 Respect','+5000 Respect',
 			'UnFreeze Target'
 		];
 		infiSTAR_OnTargetEVIL =
 		[
-			'Freeze Target','Remove Gear','Kill','Explode','Delete Vehicle','Eject','Eject Crew',
+			'Freeze Target',
+			'-500 Money','-1000 Money','-2000 Money','-10000 Money','-500 Respect','-5000 Respect',
+			'Remove Gear','Kill','Explode','Delete Vehicle','Eject','Eject Crew',
 			'Force Disconnect','Kick (Silent)','Kick (Announce)','Ban (Silent)','Ban (Announce)'
 		];
 		infiSTAR_OnTarget = infiSTAR_OnTargetNICE + infiSTAR_OnTargetEVIL;
@@ -963,48 +973,36 @@ infiSTAR_MAIN_CODE = "
 		[
 			'infiSTAR Player ESP','infiSTAR AI ESP','infiSTAR Dead ESP',
 			'infiSTAR MapIcons','Vehicle Marker','DeadPlayer Marker','Stealth / Invisible',
-			'God Mode','Vehicle God Mode','Vehboost','UnlimAmmo','noRecoil','Lower Terrain',
+			'God Mode','Vehicle God Mode','Vehboost','UnlimAmmo','noRecoil','FastFire','Lower Terrain',
 			'Disable Announces','Teleport In Facing Direction (10m steps)'
 		];
 		if(FILLMAINSTATE == 1)then
 		{
 			switch (LASTSUBBUTTON) do {
 				case 0:{
-					if('==== Weapons ====' call ADMINLEVELACCESS)then
+					if('Items spawn menu' call ADMINLEVELACCESS)then
 					{
-						_ctrl lbAdd '==== Weapons ====';
-						if(!isNil 'infiSTAR_add_weapons')then
 						{
+							_category = _x;
+							_ctrl lbAdd _category;
+							
+							_varstate = missionNameSpace getVariable (_category+'SHOW_STATE');
+							if(!isNil '_varstate')then
 							{
-								_ctrl lbAdd format['%1 (%2)',getText(configFile >> 'CfgWeapons' >> _x >> 'displayName'),_x];
-								_x call fnc_addpic;
-								_ctrl lbSetData [(lbsize _ctrl)-1,_x];
-							} forEach ALL_WEPS_TO_SEARCH_C;
-						};
-					};
-					if('==== Magazines ====' call ADMINLEVELACCESS)then
-					{
-						_ctrl lbAdd '==== Magazines ====';
-						if(!isNil 'infiSTAR_add_magazines')then
-						{
-							{
-								_ctrl lbAdd format['%1 (%2)',getText(configFile >> 'CfgMagazines' >> _x >> 'displayName'),_x];
-								_x call fnc_addpic;
-								_ctrl lbSetData [(lbsize _ctrl)-1,_x];
-							} forEach ALL_MAGS_TO_SEARCH_C;
-						};
-					};
-					if('==== Bags ====' call ADMINLEVELACCESS)then
-					{
-						_ctrl lbAdd '==== Bags ====';
-						if(!isNil 'infiSTAR_add_bags')then
-						{
-							{
-								_ctrl lbAdd format['%1 (%2)',getText(configFile >> 'CfgVehicles' >> _x >> 'displayName'),_x];
-								_x call fnc_addpic;
-								_ctrl lbSetData [(lbsize _ctrl)-1,_x];
-							} forEach ALL_BAGS_TO_SEARCH_C;
-						};
+								_variable = missionNameSpace getVariable (_category+'_ARRAY');
+								{
+									_displayName = getText(configFile >> 'CfgWeapons' >> _x >> 'displayName');
+									if(_displayName isEqualTo '')then{_displayName = getText(configFile >> 'CfgMagazines' >> _x >> 'displayName');};
+									if(_displayName isEqualTo '')then{_displayName = getText(configFile >> 'CfgVehicles' >> _x >> 'displayName');};
+									
+									_ctrl lbAdd format['%1 (%2)',_displayName,_x];
+									_x call fnc_addpic;
+									_ctrl lbSetData [(lbsize _ctrl)-1,_x];
+								} forEach _variable;
+							};
+							
+						} forEach newAllItems_CATEGORY;
+						for '_i' from 0 to 12 do {_ctrl lbAdd '';};
 					};
 				};
 				case 1:{
@@ -1020,7 +1018,9 @@ infiSTAR_MAIN_CODE = "
 							} forEach ALL_VEHS_TO_SEARCH_C;
 						};
 					};
+					for '_i' from 0 to 12 do {_ctrl lbAdd '';};
 				};
+				default {lbclear _ctrl;};
 			};
 		};
 		if(FILLMAINSTATE == 0)then
@@ -1053,9 +1053,9 @@ infiSTAR_MAIN_CODE = "
 			if('FreeRoam Cam (does not work with ESP)' call ADMINLEVELACCESS)then{_ctrl lbAdd 'FreeRoam Cam (does not work with ESP)'};
 			if('AdminConsole' call ADMINLEVELACCESS)then{_ctrl lbAdd 'AdminConsole';};
 			if('Mass Message' call ADMINLEVELACCESS)then{_ctrl lbAdd 'Mass Message';};
-			if('Spawn Support-Box1' call ADMINLEVELACCESS)then{_ctrl lbAdd 'Spawn Starter Building Box';};
-			if('Spawn Support-Box2' call ADMINLEVELACCESS)then{_ctrl lbAdd 'Spawn Medium Building Box';};
-			if('Spawn Support-Box3' call ADMINLEVELACCESS)then{_ctrl lbAdd 'Spawn Pro Building Box';};
+			if('Spawn Support-Box1' call ADMINLEVELACCESS)then{_ctrl lbAdd 'Spawn Support-Box1';};
+			if('Spawn Support-Box2' call ADMINLEVELACCESS)then{_ctrl lbAdd 'Spawn Support-Box2';};
+			if('Spawn Support-Box3' call ADMINLEVELACCESS)then{_ctrl lbAdd 'Spawn Support-Box3';};
 			if('Spawn Ammo' call ADMINLEVELACCESS)then{_ctrl lbAdd 'Spawn Ammo';};
 			_ctrl lbAdd 'Self Disconnect';
 			_target = lbtext[LEFT_CTRL_ID,(lbCurSel LEFT_CTRL_ID)];
@@ -1068,15 +1068,27 @@ infiSTAR_MAIN_CODE = "
 					_ctrl lbAdd format['#exec ban %1',str _target];
 				};
 			};
+			
+			_ctrl lbAdd '';
+			_ctrl lbAdd 'Keybinds:';
+			_ctrl lbAdd 'F1 - Default AdminMenu Key';
+			_ctrl lbAdd 'F6 - Heal Yourself';
+			_ctrl lbAdd 'F7 - Heal & Repair withing 15m';
+			_ctrl lbAdd 'F10 - Stop Spectating';
+			_ctrl lbAdd 'F11 - Add Ammo for current weapon';
+			_ctrl lbAdd 'SHIFT & 4 - Fly Up';
+			_ctrl lbAdd 'SHIFT & 5 - Teleport in looking direction (if enabled)';
+			_ctrl lbAdd 'SHIFT & F2 - Adminconsole';
+			_ctrl lbAdd 'SHIFT & TAB - Open Map';
+			_ctrl lbAdd 'SHIFT & I - Show Info (Like Codes of Vehicles and Doors)';
+			_ctrl lbAdd 'DELETE - Delete CursorTarget';
+			_ctrl lbAdd 'ON MAP - LEFT-ALT + CLICK To Teleport';
+			_ctrl lbAdd 'TYPE !admin in Chat to relog as player/admin';
 		};
 		[] call fnc_colorizeMain;
-		for '_i' from 0 to 10 do {_ctrl lbAdd '';};
+		for '_i' from 0 to 12 do {_ctrl lbAdd '';};
 	};
-	fnc_infiSTAR_get_LeftClicks = {
-		_array = playableUnits;
-		_array append allDeadMen;
-		_array
-	};
+	fnc_infiSTAR_get_LeftClicks = {allPlayers};
 	fnc_fill_infiSTAR_Player = {
 		disableSerialization;
 		if(!isNil 'filling_infiSTAR_Player')exitWith{};
@@ -1148,7 +1160,7 @@ infiSTAR_MAIN_CODE = "
 		_index = _ctrl lbAdd '[resistance]';_ctrl lbSetColor [_index,[0,0.65,0,1]];
 		_index = _ctrl lbAdd '[Admin]';_ctrl lbSetColor [_index,[0,1,0,1]];
 		_index = _ctrl lbAdd '[Dead Player]';_ctrl lbSetColor [_index,[1,1,1,1]];
-		for '_i' from 0 to 10 do {_ctrl lbAdd '';};
+		for '_i' from 0 to 12 do {_ctrl lbAdd '';};
 		filling_infiSTAR_Player = nil;
 	};
 	fnc_LBDblClick_LEFT = {
@@ -1206,7 +1218,6 @@ infiSTAR_MAIN_CODE = "
 	};
 	fnc_LBDblClick_RIGHT = {
 		_click = lbtext[RIGHT_CTRL_ID,(lbCurSel RIGHT_CTRL_ID)];
-		if(!isNil'VIRTUAL_ITEMSTHREAD')then{terminate VIRTUAL_ITEMSTHREAD;VIRTUAL_ITEMSTHREAD=nil;};
 		if(_click == '')exitWith{};
 		if(_click in AH_HackLogArray)exitWith{systemchat _click;hint _click;diag_log _click;};
 		if(_click in AH_SurvLogArray)exitWith{systemchat _click;hint _click;diag_log _click;};
@@ -1231,6 +1242,7 @@ infiSTAR_MAIN_CODE = "
 				case 'Vehboost':{call infiSTAR_VehicleBoost;};
 				case 'UnlimAmmo':{[] spawn fnc_infiSTAR_A3UnlAmmo;};
 				case 'noRecoil':{[] spawn fnc_infiSTAR_A3noRecoil;};
+				case 'FastFire':{[] spawn fnc_infiSTAR_A3FF;};
 				case 'Stealth / Invisible':{call fnc_infiSTARHIDE;};
 				case 'Disable Announces':{call fnc_DisableAnnouncements;};
 				case 'Teleport In Facing Direction (10m steps)':{if(isNil'infiSTAR_TpdirectionENABLED')then{infiSTAR_TpdirectionENABLED=true}else{infiSTAR_TpdirectionENABLED=nil;};};
@@ -1290,10 +1302,18 @@ infiSTAR_MAIN_CODE = "
 						case 'Request Steam Name':{[_unit] call fnc_getSteamName;};
 						case 'Heal':{[_unit] call fnc_HealTarget;};
 						case 'Restore':{[_unit] call fnc_RepairTarget;};
+						case '+500 Money':{[_unit,500] spawn fnc_ExileMoneyChange;};
+						case '+1000 Money':{[_unit,1000] spawn fnc_ExileMoneyChange;};
 						case '+2000 Money':{[_unit,2000] spawn fnc_ExileMoneyChange;};
 						case '+10000 Money':{[_unit,10000] spawn fnc_ExileMoneyChange;};
+						case '-500 Money':{[_unit,-500] spawn fnc_ExileMoneyChange;};
+						case '-1000 Money':{[_unit,-1000] spawn fnc_ExileMoneyChange;};
 						case '-2000 Money':{[_unit,-2000] spawn fnc_ExileMoneyChange;};
 						case '-10000 Money':{[_unit,-10000] spawn fnc_ExileMoneyChange;};
+						case '+500 Respect':{[_unit,500] spawn fnc_ExileRespectChange;};
+						case '+5000 Respect':{[_unit,5000] spawn fnc_ExileRespectChange;};
+						case '-500 Respect':{[_unit,-500] spawn fnc_ExileRespectChange;};
+						case '-5000 Respect':{[_unit,-5000] spawn fnc_ExileRespectChange;};
 						case 'Move In My Vehicle':{[_unit] call fnc_MoveInMyVehicle;};
 						case 'Move In Target Vehicle':{[_unit] call fnc_MoveInTargetVehicle;};
 						case 'Freeze Target':{[_unit,true] call fnc_freezeTarget;};
@@ -1317,9 +1337,6 @@ infiSTAR_MAIN_CODE = "
 		switch (_click) do {
 			case '==== OnTarget ====':{if(isNil 'infiSTAR_add_OnTarget')then{infiSTAR_add_OnTarget = true;} else {infiSTAR_add_OnTarget = nil;};};
 			case '==== Toggleable ====':{if(isNil 'infiSTAR_add_Toggleable')then{infiSTAR_add_Toggleable = true;} else {infiSTAR_add_Toggleable = nil;};};
-			case '==== Weapons ====':{if(isNil 'infiSTAR_add_weapons')then{infiSTAR_add_weapons = true;} else {infiSTAR_add_weapons = nil;};};
-			case '==== Magazines ====':{if(isNil 'infiSTAR_add_magazines')then{infiSTAR_add_magazines = true;} else {infiSTAR_add_magazines = nil;};};
-			case '==== Bags ====':{if(isNil 'infiSTAR_add_bags')then{infiSTAR_add_bags = true;} else {infiSTAR_add_bags = nil;};};
 			case '==== Vehicles ====':{if(isNil 'infiSTAR_add_vehicles')then{infiSTAR_add_vehicles = true;} else {infiSTAR_add_vehicles = nil;};};
 			case 'clear ingame HackLog':{[0] call fnc_clearLogArray;_click call fnc_adminLog;[] call fnc_fill_HackLog;};
 			case 'clear ingame AdminLog':{[1] call fnc_clearLogArray;_click call fnc_adminLog;[] call fnc_fill_AdminLog;};
@@ -1333,7 +1350,82 @@ infiSTAR_MAIN_CODE = "
 			case 'Spawn Ammo':{[] call infiSTAR_A3addAmmo;};
 			case 'Self Disconnect':{_click call fnc_adminLog;(finddisplay 46) closeDisplay 0;};
 		};
+		if(_click in newAllItems_CATEGORY)then
+		{
+			_varstate = missionNameSpace getVariable (_click+'SHOW_STATE');
+			if(isNil '_varstate')then
+			{
+				missionNameSpace setVariable [(_click+'SHOW_STATE'),true];
+			}
+			else
+			{
+				missionNameSpace setVariable [(_click+'SHOW_STATE'),nil];
+			};
+		};
 		_class = lbData[RIGHT_CTRL_ID,(lbCurSel RIGHT_CTRL_ID)];
+		if(_class in ALLC_ITEMS)exitWith
+		{
+			_target = if(isNull (call fnc_LBSelChanged_LEFT))then{player} else {(call fnc_LBSelChanged_LEFT)};
+			_log = format['Spawning %1 on %2!',_click,name _target];
+			cutText [_log, 'PLAIN DOWN'];
+			hint _log;
+			_log call fnc_adminLog;
+			
+			if(local _target)then
+			{
+				_added = [_target, _class] call ExileClient_util_playerEquipment_add;
+				if(!_added)then
+				{
+					_itemInformation = [_class] call BIS_fnc_itemType;
+					_itemCategory = _itemInformation select 0;
+					_itemType = _itemInformation select 1;
+					if(_itemCategory isEqualTo 'Magazine')then
+					{
+						_target addMagazine _class;
+					}
+					else
+					{
+						if(_itemCategory isEqualTo 'Weapon')then
+						{
+							_target addWeapon _class;
+						}
+						else
+						{
+							_target addItem _class;
+						};
+					};
+				};
+			}
+			else
+			{
+				['
+					_target = player;
+					_class = '+str _class+';
+					_added = [_target, _class] call ExileClient_util_playerEquipment_add;
+					if(!_added)then
+					{
+						_itemInformation = [_class] call BIS_fnc_itemType;
+						_itemCategory = _itemInformation select 0;
+						_itemType = _itemInformation select 1;
+						if(_itemCategory isEqualTo ''Magazine'')then
+						{
+							_target addMagazine _class;
+						}
+						else
+						{
+							if(_itemCategory isEqualTo ''Weapon'')then
+							{
+								_target addWeapon _class;
+							}
+							else
+							{
+								_target addItem _class;
+							};
+						};
+					};
+				',_target] call admin_d0_target;
+			};
+		};
 		if((_class find 'PaperCar' > -1)||(_click find 'PaperCar' > -1))exitWith{'Kicked for trying to spawn a PaperCar' call fnc_adminLog;(finddisplay 46) closeDisplay 0;};
 		if(_class in ALL_VEHS_TO_SEARCH_C)exitWith
 		{
@@ -1344,81 +1436,8 @@ infiSTAR_MAIN_CODE = "
 			_log = format['Spawning %1 infront of %2!',_click,name _target];
 			cutText [_log, 'PLAIN DOWN'];
 			hint _log;
-			[0,player,_class,_position,_dir] call fnc_AdminReq;
+			[0,player,_class,_position,_dir,netId _target] call fnc_AdminReq;
 			format['spawning %1',_click] call fnc_adminLog;
-		};
-		if(_class in ALL_BAGS_TO_SEARCH_C)exitWith
-		{
-			_target = if(isNull (call fnc_LBSelChanged_LEFT))then{player} else {(call fnc_LBSelChanged_LEFT)};
-			_pos = getPosATL _target;
-			
-			_log = format['Spawning %1 on the ground infront of %2!',_click,name _target];
-			cutText [_log, 'PLAIN DOWN'];
-			hint _log;
-			
-			if(local _target)then{_target addBackpack _class;}else{['player addBackpack '+str _class+';',_target] call admin_d0_target;};
-			format['spawning %1',_click] call fnc_adminLog;
-		};
-		if(_class in ALL_WEPS_TO_SEARCH_C)exitWith
-		{
-			_target = if(isNull (call fnc_LBSelChanged_LEFT))then{player} else {(call fnc_LBSelChanged_LEFT)};
-			_pos = getPosATL _target;
-			
-			_log = format['Spawning %1 on the ground infront of %2!',_click,name _target];
-			cutText [_log, 'PLAIN DOWN'];
-			hint _log;
-			
-			[3,player,_pos,_class,_target] call fnc_AdminReq;
-			format['spawning %1',_click] call fnc_adminLog;
-		};
-		if(_class in ALL_MAGS_TO_SEARCH_C)exitWith
-		{
-			format['spawning %1',_click] call fnc_adminLog;
-			_target = if(isNull (call fnc_LBSelChanged_LEFT))then{player} else {(call fnc_LBSelChanged_LEFT)};
-			if(!isPlayer _target)exitWith{
-				_log = format['Spawning %1 on the ground infront of %2!',_click,name _target];
-				cutText [_log, 'PLAIN DOWN'];
-				hint _log;
-			};
-			
-			if(fillmainstate == 6)exitWith
-			{
-				_log = format['Spawning %1..',_click];
-				cutText [_log, 'PLAIN DOWN'];
-				hint _log;
-				
-				if(local _target)then
-				{
-					_countMag = {_x == _class} count (magazines _target);
-					_target addMagazine _class;
-					_newCountMag = {_x == _class} count (magazines _target);
-					if(_countMag == _newCountMag)then
-					{
-						_target linkItem _class;
-					};
-				}
-				else
-				{
-					['
-						_target = player;
-						_class = '+str _class+';
-						
-						_countMag = {_x == _class} count (magazines _target);
-						_target addMagazine _class;
-						_newCountMag = {_x == _class} count (magazines _target);
-						if(_countMag == _newCountMag)then
-						{
-							_target linkItem _class;
-						};
-					',_target] call admin_d0_target;
-				};
-			};
-			
-			_pos = getPosATL _target;
-			_log = format['Spawning %1 on the ground infront of %2!',_click,name _target];
-			cutText [_log, 'PLAIN DOWN'];
-			hint _log;
-			[3,player,_pos,_class,_target] call fnc_AdminReq;
 		};
 		if(_click == 'Login')then{if(isNil 'serverCommandLoginDone')then{serverCommandLoginDone = true;serverCommand ('#login '+passwordAdmin);};};
 		if((_click find '#kick' > -1) || (_click find '#exec' > -1))then{serverCommand _click;};
@@ -1426,19 +1445,11 @@ infiSTAR_MAIN_CODE = "
 	};
 	fnc_LBSelChanged_RIGHT = {
 		_class = lbData[RIGHT_CTRL_ID,(lbCurSel RIGHT_CTRL_ID)];
-		if!(_class in ALLC_TO_SEARCH)exitWith{};
-		_cfg = '';
-		if(isClass (configFile >> 'CfgWeapons' >> _class))then
-		{
-			_cfg = 'CfgWeapons';
-		};
-		if(isClass (configFile >> 'CfgMagazines' >> _class))then
-		{
-			_cfg = 'CfgMagazines';
-		};
-		if(isClass (configFile >> 'CfgVehicles' >> _class))then
-		{
-			_cfg = 'CfgVehicles';
+		_cfg = call {
+			if(isClass (configFile >> 'CfgWeapons' >> _class))exitWith{'CfgWeapons'};
+			if(isClass (configFile >> 'CfgMagazines' >> _class))exitWith{'CfgMagazines'};
+			if(isClass (configFile >> 'CfgVehicles' >> _class))exitWith{'CfgVehicles'};
+			''
 		};
 		if(_cfg != '')then
 		{
@@ -1789,8 +1800,29 @@ infiSTAR_MAIN_CODE = "
 			hint _log;
 		};
 		[12,player,_target,_value] call fnc_AdminReq;
-		_log = format['Added %1 to %2!',_value,name _target];
-		if(_value < 0)then{_log = format['Removed %1 Money from %2!',_value,name _target];};
+		_log = format['Added %1 Pop Tabs to %2!',_value,name _target];
+		if(_value < 0)then{_log = format['Removed %1 Pop Tabs from %2!',_value,name _target];};
+		cutText [_log, 'PLAIN DOWN'];
+		hint _log;
+	};
+	fnc_ExileRespectChange = {
+		_target = _this select 0;
+		_value = _this select 1;
+		if(typeName _target != 'OBJECT')exitWith
+		{
+			_log = 'Target is not an Object!';
+			cutText [_log, 'PLAIN DOWN'];
+			hint _log;
+		};
+		if!(isPlayer _target)exitWith
+		{
+			_log = 'Target is not a Player!';
+			cutText [_log, 'PLAIN DOWN'];
+			hint _log;
+		};
+		[122,player,_target,_value] call fnc_AdminReq;
+		_log = format['Added %1 Respect to %2!',_value,name _target];
+		if(_value < 0)then{_log = format['Removed %1 Respect from %2!',_value,name _target];};
 		cutText [_log, 'PLAIN DOWN'];
 		hint _log;
 	};
@@ -1845,7 +1877,7 @@ infiSTAR_MAIN_CODE = "
 			} forEach [
 				format['%1, Code: %2',_type,_objectPinCode_RESULT],
 				format['WorldSpace: [%1,%2], @%3',getDir _obj,_pos,mapGridPosition _pos],
-				if(_obj in playableUnits)then{format['%1(%2) - Health: %3  Money: %4',name _obj,getPlayerUID _obj,(1-(damage _obj))*100,_obj getVariable ['MyMoneyVal',-1]]}else{''},
+				if(_obj in allPlayers)then{format['%1(%2) - Health: %3  Money: %4',name _obj,getPlayerUID _obj,(1-(damage _obj))*100,_obj getVariable ['MyMoneyVal',-1]]}else{''},
 				'--'
 			];
 		};
@@ -1954,6 +1986,29 @@ infiSTAR_MAIN_CODE = "
 		(vehicle player) setUnitRecoilCoefficient 1;
 		player setUnitRecoilCoefficient 1;
 	};
+	fnc_infiSTAR_A3FF = {
+		if(isNil 'A3FFrun')then{A3FFrun = 0;};
+		if(A3FFrun==0)then
+		{
+			A3FFrun=1;
+			_log = 'FastFire ON';
+			cutText [_log, 'PLAIN DOWN'];
+			hint _log;
+		}
+		else
+		{
+			A3FFrun=0;
+			_log = 'FastFire OFF';
+			cutText [_log, 'PLAIN DOWN'];
+			hint _log;
+		};
+		while {A3FFrun==1} do
+		{
+			_vehicle = (vehicle player);
+			_done = _vehicle setWeaponReloadingTime [gunner (vehicle player), currentMuzzle (gunner (vehicle player)), 0];
+			uiSleep 0.1;
+		};
+	};
 	fnc_infiSTARHIDE = {
 		if(isNil 'A3HIDErun')then{A3HIDErun = 0;};
 		if(A3HIDErun==0)then
@@ -2044,7 +2099,7 @@ infiSTAR_MAIN_CODE = "
 			if(isNil 'ToDeleteArray')then{ToDeleteArray = [];};
 			if(_delete in ToDeleteArray)then
 			{
-				_txt = 'Already getting deleted!';
+				_txt = format['%1 - IN DELETE QUEUE',_delete];
 				hint _txt;
 				cutText [_txt, 'PLAIN DOWN'];
 			}
@@ -2344,7 +2399,7 @@ infiSTAR_MAIN_CODE = "
 				_ctrl lbSetData [(lbsize _ctrl)-1,_x];
 			} forEach _magArray;
 			[] call fnc_colorizeMain;
-			for '_i' from 0 to 10 do {_ctrl lbAdd '';};
+			for '_i' from 0 to 12 do {_ctrl lbAdd '';};
 		}
 		else
 		{
@@ -2373,9 +2428,21 @@ infiSTAR_MAIN_CODE = "
 					player allowDamage false;
 					player removeAllEventhandlers 'HandleDamage';
 					player addEventhandler ['HandleDamage', {false}];
-					if(player getVariable ['ExileHunger', 100] < 80)then{player setVariable ['ExileHunger', 100];};
-					if(player getVariable ['ExileThirst', 100] < 80)then{player setVariable ['ExileThirst', 100];};
-					if(player getVariable ['ExileAlcohol', 0] > 0)then{player setVariable ['ExileAlcohol', 0];};
+					player setVariable ['ExileHunger', 100];
+					player setVariable ['ExileThirst', 100];
+					player setVariable ['ExileAlcohol', 0];
+					ExileClientPlayerAttributes = [100, 100, 100, 100, 0];
+					ExileClientPlayerAttributesASecondAgo = [100, 100, 100, 100, 0];
+					ExileClientPlayerLastHpRegenerationAt = diag_tickTime;
+					ExileClientPlayerOxygen = 100;
+					ExileClientPlayerIsAbleToBreathe = true;
+					ExileClientPlayerIsDrowning = false;
+					ExileClientPlayerIsInjured = false;
+					ExileClientPlayerIsBurning = false;
+					ExileClientPlayerIsBleeding = false;
+					ExileClientPlayerIsExhausted = false;
+					ExileClientPlayerIsHungry = false;
+					ExileClientPlayerIsThirsty = false;
 					uiSleep 1;
 				};
 				call fnc_A3_stopGod;
@@ -2396,13 +2463,6 @@ infiSTAR_MAIN_CODE = "
 	fnc_draw3dhandlerPLAYER1 = ""
 		FONT_3dHANDLERPlayer = 'TahomaB';
 		FONT_3dHANDLERPlayer = 'EtelkaMonospaceProBold';
-		if(isNil'SELECTED_TARGET_PLAYER')then{SELECTED_TARGET_PLAYER=objNull;};
-		if((!isNull cameraOn)&&(!isNull SELECTED_TARGET_PLAYER))then
-		{
-			_eyeposplayer = ASLToATL eyepos cameraOn;if(surfaceIsWater _eyeposplayer)then{_eyeposplayer = eyepos cameraOn;};
-			_eyeposSELECTED_TARGET_PLAYER = ASLToATL eyepos SELECTED_TARGET_PLAYER;if(surfaceIsWater _eyeposSELECTED_TARGET_PLAYER)then{_eyeposSELECTED_TARGET_PLAYER = eyepos SELECTED_TARGET_PLAYER;};
-			drawLine3D[_eyeposplayer,_eyeposSELECTED_TARGET_PLAYER,[1,1,1,1]];
-		};
 		
 		_shown = [];
 		if(cameraView == 'INTERNAL')then{_shown = [vehicle player];};
@@ -2478,7 +2538,7 @@ infiSTAR_MAIN_CODE = "
 					drawIcon3D['\A3\ui_f\data\map\Markers\Military\dot_ca.paa',_clr,_playerRenderedPos,0.5,0.5,0,_txt,_shadow,_fontSize * 0.75,FONT_3dHANDLERPlayer,'',true];
 				};
 			};
-		} forEach playableUnits;
+		} forEach allPlayers;
 	"";
 	fnc_draw3dhandlerAI = ""
 		if(!isNull cameraOn)then
@@ -2545,7 +2605,7 @@ infiSTAR_MAIN_CODE = "
 			removeMissionEventHandler ['Draw3D', ExileHudEventHandle];
 		};
 		removeAllMissionEventHandlers 'Draw3D';
-		_string = 'if(!isNull findDisplay 49)exitWith{};';
+		_string = '';
 		if(!isNil 'fnc_infiESP_statePlayer1')then
 		{
 			_string = _string + fnc_draw3dhandlerPLAYER1;
@@ -2560,6 +2620,7 @@ infiSTAR_MAIN_CODE = "
 		};
 		if(_string != '')then
 		{
+			_string = ('if(!isNull findDisplay 49)exitWith{};'+_string);
 			addMissionEventHandler ['Draw3D',_string];
 		};
 		('RscExileHUDLayer' call BIS_fnc_rscLayer) cutRsc ['RscExileHUD', 'PLAIN', 1, false];  
@@ -2666,7 +2727,7 @@ infiSTAR_MAIN_CODE = "
 							_ctrl drawIcon [_icon, _clr, getPosASL _veh, _iscale, _iscale, getDir _veh,_txt];
 						};
 					};
-				} forEach playableUnits;
+				} forEach allPlayers;
 			};
 			
 			if(mapiconsshowvehicles||mapiconsshowai)then
@@ -3040,44 +3101,6 @@ infiSTAR_MAIN_CODE = "
 		_pos = [(_pos select 0)+_distance*sin(_dir),(_pos select 1)+_distance*cos(_dir),(_pos select 2)];
 		_object setPos _pos;
 	};
-	infiSTAR_Eject_Join = {
-		EjectJoinTarget = nil;
-		NameEjectJoinTarget = nil;
-		go_in_nearestvehicle_callmevar = 
-		{
-			_vehicleair = (nearestObject[vehicle player,'AIR']);
-			_vehicleland = (nearestObject[vehicle player,'Landvehicle']);
-			if((player distance _vehicleair) > (player distance _vehicleland))then 
-			{
-				player action ['getInDriver', _vehicleland];
-			}
-			else
-			{
-				player action ['getInDriver', _vehicleair];
-			};
-		};
-		EjectJoinTarget = cursorTarget;
-		NameEjectJoinTarget = gettext (configFile >> 'CfgVehicles' >> (typeof EjectJoinTarget) >> 'displayName');
-		if(count(crew EjectJoinTarget)>0)then
-		{
-			EjectJoinTarget action ['eject',EjectJoinTarget];
-			EjectJoinTarget action ['getout',EjectJoinTarget];
-			cutText [format['%1 Ejected',NameEjectJoinTarget], 'PLAIN DOWN'];
-		}
-		else
-		{
-			cutText [format['Get in %1 ?',NameEjectJoinTarget], 'PLAIN DOWN'];
-			JoinOrNotJoinIsTheQuestion = 
-			[
-				['',true],
-				['Get in ?', [-1], '', -5, [['expression', '']], '1', '0'],
-				['YES', [2], '', -5, [['expression', 'player action [''getInDriver'', EjectJoinTarget];']], '1', '1'],
-				['Nearest', [4], '', -5, [['expression', 'call go_in_nearestvehicle_callmevar;']], '1', '1']
-			];
-			showCommandingMenu '#USER:JoinOrNotJoinIsTheQuestion';
-			cutText [format['%1 NO ONE TO EJECT',NameEjectJoinTarget], 'PLAIN DOWN'];
-		};
-	};
 	infiSTAR_Tpdirection = {
 		_distance = 10;
 		_veh = vehicle player;
@@ -3088,7 +3111,7 @@ infiSTAR_MAIN_CODE = "
 		_pos = [(_pos select 0)+_distance*sin(_dir),(_pos select 1)+_distance*cos(_dir),(_pos select 2)];
 		_veh setPos _pos;
 	};
-	_stayLocalNumber = 4;
+	_stayLocalNumber = 226;
 	fnc_RscDisplayDebugPublic = {
 		disableSerialization;
 		createdialog 'RscDisplayDebugPublic';
@@ -3110,7 +3133,7 @@ infiSTAR_MAIN_CODE = "
 		_testRscListBox1 ctrlEnable true;
 		_testRscListBox1 ctrlCommit 0;
 		lbClear _testRscListBox1;
-		_testRscListBox1 lbadd format['Player connected: %1',{getPlayerUID _x != ''} count playableUnits];_4=1;_3=1;_clr=1;[_4,_3,_clr];
+		_testRscListBox1 lbadd format['Player connected: %1',{getPlayerUID _x != ''} count allPlayers];
 		_names = [];
 		{
 			if(getPlayerUID _x != '')then
@@ -3123,10 +3146,12 @@ infiSTAR_MAIN_CODE = "
 			{
 				if!(name _x in _names)then{_names pushBack (name _x);};
 			};
-		} forEach playableUnits;_4=1;_3=1;_clr=1;[_4,_3,_clr];
+		} forEach allPlayers;
 		{
 			_testRscListBox1 lbadd _x;
 		} forEach _names;
+		
+		for '_i' from 0 to 12 do {_testRscListBox1 lbAdd '';};
 		
 		_watchField1 = _display displayCtrl 12285;
 		_watchField1 ctrlSetText '';
@@ -3183,7 +3208,7 @@ infiSTAR_MAIN_CODE = "
 							[-662,player,_input] call fnc_AdminReq;
 						};
 					};
-				} forEach playableUnits;_4=1;_3=1;_clr=1;[_4,_3,_clr];
+				} forEach allPlayers;
 			';
 			
 			_btnGuiEditor = _display displayCtrl 13292;
@@ -3202,7 +3227,7 @@ infiSTAR_MAIN_CODE = "
 							[-662,player,_input] call fnc_AdminReq;
 						};
 					};
-				} forEach playableUnits;_4=1;_3=1;_clr=1;[_4,_3,_clr];
+				} forEach allPlayers;
 			';
 			
 			_btnSE = _display displayCtrl 13286;
@@ -3231,7 +3256,7 @@ infiSTAR_MAIN_CODE = "
 			ALLOW_ME_THIS_KEYBIND = false;
 			_opened = false;
 			if('Teleport On Map Click' call ADMINLEVELACCESS)then{ALT_IS_PRESSED = _alt;};
-			if(isNil 'KeyBindsWorking')then{KeyBindsWorking = time;};
+			if(isNil 'KeyBindsWorking')then{KeyBindsWorking = diag_time+25;};
 			if(_alt)then{
 				[] call fnc_add_adminMainMapMovement;
 			};
@@ -3307,9 +3332,6 @@ infiSTAR_MAIN_CODE = "
 				case 0x06: {
 					if(_shift)then{if('Teleport In Facing Direction (10m steps)' call ADMINLEVELACCESS)then{if(isNil'infiSTAR_TpdirectionENABLED')exitWith{};_handled=true;[] call infiSTAR_Tpdirection;};};
 				};
-				case 0x07: {
-					if(_shift)then{if('EjectTarget' call ADMINLEVELACCESS)then{_handled=true;[] call infiSTAR_Eject_Join;};};
-				};
 				case 0x43: {
 					if('ShowGear' call ADMINLEVELACCESS)then{[] call admin_showGear;};
 				};
@@ -3367,12 +3389,8 @@ infiSTAR_MAIN_CODE = "
 		while {true} do
 		{
 			_exit = false;
-			if(!isNil 'KeyBindsWorking')then
-			{
-				if(time - KeyBindsWorking > 10)exitWith{_exit=true;};
-			};
+			if(!isNil 'KeyBindsWorking')then{if(diag_time - KeyBindsWorking > 25)exitWith{_exit=true;};};
 			if(_exit)exitWith{};
-			
 			
 			(findDisplay 46) displayRemoveAllEventHandlers 'KeyDown';
 			(findDisplay 46) displayAddEventHandler ['KeyDown',
