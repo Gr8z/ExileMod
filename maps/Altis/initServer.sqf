@@ -404,3 +404,8 @@ _objects =
     _object setPosATL (_x select 1);
     _object enableSimulation false; // :)
 }
+forEach _objects;
+
+if (isServer) then {
+	[] ExecVM "\q\addons\custom_server\init.sqf";
+};
