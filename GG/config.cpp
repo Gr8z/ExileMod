@@ -1580,6 +1580,9 @@ class CfgExileCustomCode
 	*/
 	ExileClient_gui_safezone_fired = "GG\overrides\GG_gui_safezone_fired.sqf";
 	ExileClient_object_player_stats_update = "GG\overrides\GG_object_player_stats_update.sqf";
+	ExileClient_gui_crafting_show = "GG\overrides\GG_gui_crafting_show.sqf";
+	ExileClient_gui_interactionMenu_update = "GG\overrides\GG_gui_interactionMenu_update.sqf";
+	ExileClient_object_construction_move = "GG\overrides\GG_object_construction_move.sqf";
 };
 class CfgExileMusic
 {

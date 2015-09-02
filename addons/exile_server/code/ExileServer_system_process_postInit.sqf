@@ -7,6 +7,35 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
+hotfix_getNearbyPlayers =
+{
+	private ["_pos", "_dis", "_OK", "_players"];
+
+	_OK = params
+	[
+		["_pos",[0,0,0],[objNull,[]],[2,3]],
+		["_dis",0,[0]]
+	];
+	if (!_OK) exitWith
+	{
+		diag_log format ["ERROR Invalid parameters for hotfix_getNearbyPlayers: %1",_this];
+	};
+ 
+	_players = _pos nearEntities ["Exile_Unit_Player",_dis];
+ 
+	// Check for Players in Vehicles
+	{
+		{
+			if (isPlayer _x) then
+			{
+				_players pushBack _x;
+			};
+			false;
+		} count (crew _x);
+		false;
+	} count (_pos nearEntities [["LandVehicle", "Air", "Ship"], _dis]);
+	_players
+};
 if (!isNil "PublicHiveVersion") then
 {
 	call ExileServer_system_thread_initialize;

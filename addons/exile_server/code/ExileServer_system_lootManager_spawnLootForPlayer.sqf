@@ -112,7 +112,10 @@ try
 	{
 		if (_spawnedLootForThisPlayer) then
 		{
-			[_playerObject, "notificationRequest",["Success",["Loot spawned for you!"]]] call ExileServer_system_network_send_to;
+			{
+				[_x, "notificationRequest",["Success",["Loot spawned near you!"]]] call ExileServer_system_network_send_to;
+				false;
+			} count ([_playerPosition, _spawnRadius] call hotfix_getNearbyPlayers);
 		};
 	};
 	_playerObject setVariable["ExilePositionAtLastLootSpawnCircle", _playerPosition];	
