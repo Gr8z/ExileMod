@@ -291,7 +291,7 @@ lootItem_list = [
 "Exile_Item_Catfood_Cooked",
 "Exile_Item_Catfood",
 "Exile_Item_PlasticBottleFreshWater",
-"Exile_Item_Energydrink", 
+"Exile_Item_Energydrink"
 ]],[ 6, [						// HANGARS
 "ItemCompass",
 "ItemMap",
