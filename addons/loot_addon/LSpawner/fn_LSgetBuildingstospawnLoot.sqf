@@ -81,6 +81,10 @@ _begintime = time;
 										_selecteditem = (floor(random(count((lootWeapon_list select _lootClass) select 1))));
 										_loot = (((lootWeapon_list select _lootClass) select 1) select _selecteditem);
 										_lootholder addWeaponCargoGlobal [_loot, 1];
+										//Function to add the right magazine for a weapon.
+										_ammo = [] + getArray (configFile >> "cfgWeapons" >> _loot >> "magazines");
+										_lootholder addMagazineCargoGlobal [(_ammo select 0),(round(random 3))]; //max 3 magazines per weapon
+										//end custom funtion
 										_lootholder setdir (random 360);
 										_lootholder setPosATL _spwnPos;
 									};
