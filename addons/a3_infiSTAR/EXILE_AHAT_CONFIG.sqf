@@ -142,7 +142,7 @@ _badIDDsToClose =
 
 
 
-/*  Use BadFile check    */ _UBF = true;	/* true or false */	/* Scriptscan pops up with message: "Done! badcontent.sqf not found" */
+/*  Use BadFile check    */ _UBF = false;	/* true or false */	/* Scriptscan pops up with message: "Done! badcontent.sqf not found" */
 /* _blacklistedFileArray: The AntiHack will test if the client has one of these files in his Arma3 folder. You have to put the extensions in allowedPreprocessFileExtensions in your servers config.cfg (only if _UBF = true;) */
 _blacklistedFileArray =
 [
@@ -162,7 +162,7 @@ _blacklistedFileArray =
 	'Dta\Screens.bin','ArmA2OA_Extras\ben_ex.sqf','RyanV1\Keybindiezz.sqf','ArmaX.sqf','insanity.sqf'
 ];
 
-/*  Use BadVar #1 */ _UBV = true;	/* true or false */	/* recommended to use */
+/*  Use BadVar #1 */ _UBV = false;	/* true or false */	/* recommended to use */
 /* _blacklistedVariables: The AntiHack will check if one of these variables is existing for the client (only if _UBV = true;) */
 _blacklistedVariables =
 [
@@ -272,7 +272,7 @@ _ForbiddenVehicles =
 ];
 
 
-_UFI = true;	/* Use "_ForbiddenItems"/Item Check(s) */
+_UFI = false;	/* Use "_ForbiddenItems"/Item Check(s) */
 _UIW = false;	/* if "_UIW = true;" then it checks if the items the individual player has are in "_ItemWhiteList" */
 _ItemWhiteList =
 [
