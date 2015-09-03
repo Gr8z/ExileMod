@@ -81,10 +81,8 @@ _begintime = time;
 										_selecteditem = (floor(random(count((lootWeapon_list select _lootClass) select 1))));
 										_loot = (((lootWeapon_list select _lootClass) select 1) select _selecteditem);
 										_lootholder addWeaponCargoGlobal [_loot, 1];
-										//Function to add the right magazine for a weapon.
 										_ammo = [] + getArray (configFile >> "cfgWeapons" >> _loot >> "magazines");
 										_lootholder addMagazineCargoGlobal [(_ammo select 0),(round(random 3))]; //max 3 magazines per weapon
-										//end custom funtion
 										_lootholder setdir (random 360);
 										_lootholder setPosATL _spwnPos;
 									};
@@ -126,27 +124,36 @@ _begintime = time;
 										if(_loot == "Land_CanisterFuel_F") then {
 											_chfullf = (random 100);
 											if (_chfullfuel > _chfullf) then {
-												_lootholder setVariable["mf_item_id", "Exile_Item_FuelCanisterFull", true];
+												_lootholder setVariable["mf_item_id", "jerrycanfull", true];
 											} else {
-												_lootholder setVariable["mf_item_id", "Exile_Item_FuelCanisterEmpty", true];
+												_lootholder setVariable["mf_item_id", "jerrycanempty", true];
 											};
 										};
 										if(_loot == "Land_CanisterOil_F") then {
-											_lootholder setVariable["mf_item_id", "Exile_Item_Matches", true];
+											_lootholder setVariable["mf_item_id", "syphonhose", true];
 										};
 										if(_loot == "Land_Can_V3_F") then {
-											_lootholder setVariable["mf_item_id", "Exile_Item_Energydrink", true];
+											_lootholder setVariable["mf_item_id", "energydrink", true];
 										};
 										if(_loot == "Land_Basket_F") then {
-											_lootholder setVariable["mf_item_id", "Exile_Item_Catfood", true];
+											_lootholder setVariable["mf_item_id", "cannedfood", true];
 										};
 										if(_loot == "Land_CanisterPlastic_F") then {
-											_lootholder setVariable["mf_item_id", "Exile_Item_PlasticBottleFreshWater", true];
+											_lootholder setVariable["mf_item_id", "water", true];
 										};
 										if(_loot == "Land_Suitcase_F") then {
-											_lootholder setVariable["mf_item_id", "Exile_Item_DuctTape", true];
+											_lootholder setVariable["mf_item_id", "repairkit", true];
 										};
-									};	
+										//if container clear its cargo
+										if (({_x == _loot} count exclcontainer_list) > 0) then {
+											clearWeaponCargoGlobal _lootholder;
+											clearMagazineCargoGlobal _lootholder;
+											clearBackpackCargoGlobal _lootholder;
+											clearItemCargoGlobal _lootholder;
+										};
+										_lootholder setdir (random 360);
+										_lootholder setPosATL _spwnPos;
+									};
 								};
 								//1 category loot only per place so -> exit For
 								//no lootpiling
