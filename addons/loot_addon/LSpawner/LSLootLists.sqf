@@ -12,18 +12,10 @@ lootWeapon_list = [
 "arifle_MK20C_F",
 "arifle_MK20_F",
 "arifle_TRG20_F",
-"arifle_TRG21_F",
-"srifle_DMR_04_Tan_F",	
-"srifle_DMR_05_blk_F",	
-"srifle_DMR_05_hex_F", 				
-"srifle_DMR_05_tan_f", 				
-"srifle_DMR_06_camo_F", 				
-"srifle_DMR_06_olive_F", 					
+"arifle_TRG21_F",				
 "srifle_EBR_F", 							
 "srifle_GM6_camo_F", 				
 "srifle_GM6_F", 		
-"srifle_LRR_camo_F",					
-"srifle_LRR_F", 
 "Binocular",						//counts as weapon
 "hgun_ACPC2_F",
 "hgun_P07_F",
@@ -74,9 +66,7 @@ lootWeapon_list = [
 "srifle_DMR_06_olive_F", 					
 "srifle_EBR_F", 							
 "srifle_GM6_camo_F", 				
-"srifle_GM6_F", 		
-"srifle_LRR_camo_F",					
-"srifle_LRR_F" 
+"srifle_GM6_F"	
 ]],[ 2, [
 "Exile_Item_InstaDoc",
 "arifle_Katiba_C_F",
