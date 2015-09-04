@@ -26,7 +26,7 @@ _ESCMNUBOT = 'www.GHOSTZGAMERZ.com';
 _BRIEFING_MSG = true;	/* use mission briefing message: if   "_BRIEFING_MSG = false;"   then the message will be replaced by infiSTAR */
 
 /* shows RESTART IN X MINS */
-_USE_RESTART_TIMER = false;	/* true or false */
+_USE_RESTART_TIMER = true;	/* true or false */
 _RESTART_TIME_IN_M = 120;		/* restart time in minutes */
 _SHOW_TIMER_IN_MIN = [1,2,3,5,10];	/* minutes before restart, when message is shown */
 
@@ -108,21 +108,21 @@ _adminUIDandAccess =
 /* ********************************************************************************* */
 /*            many checks should be set to true instead of false.                    */
 /* ********************************************************************************* */
-_LVC = false;	/* Local Vehicle Check */
-_UAT = false;	/* Anti Teleport */
-_CMC = false;	/* Check for custom CommandingMenus */
-_KCM = false;	/* Just close ALL CommandingMenus */
-_CAP = false;	/* Check Actions Plr - will announce: xxx possible scroll menu hack */
+_LVC = true;	/* Local Vehicle Check */
+_UAT = true;	/* Anti Teleport */
+_CMC = true;	/* Check for custom CommandingMenus */
+_KCM = true;	/* Just close ALL CommandingMenus */
+_CAP = true;	/* Check Actions Plr - will announce: xxx possible scroll menu hack */
 
 
-/*  Check Global Markers */ _CGM = false;	/* true or false */	/* you may need to disable this check for A.I. Missions - or whitelist the used Markers in the _aLocalM Array beneath */
-/*  Check Local Markers  */ _CLM = false;	/* true or false */	/* false if you do not want LocalMarker to be checked. */
-/*  Use _aLocalM array   */ _UMW = false;	/* true or false */	/* use allowed marker array from below (for example AltisLife uses house_ and others in there) or A.I. Missions */
+/*  Check Global Markers */ _CGM = true;	/* true or false */	/* you may need to disable this check for A.I. Missions - or whitelist the used Markers in the _aLocalM Array beneath */
+/*  Check Local Markers  */ _CLM = true;	/* true or false */	/* false if you do not want LocalMarker to be checked. */
+/*  Use _aLocalM array   */ _UMW = true;	/* true or false */	/* use allowed marker array from below (for example AltisLife uses house_ and others in there) or A.I. Missions */
 /* _aLocalM: if '_CLM' && _UMW - this array of names will be allowed */
 _aLocalM = ["DMS_MissionMarkerCircle","DMS_MissionMarkerDot"];
 
 
-/* Use IDD White-List ? */ _UDW = false;	/* true or false */
+/* Use IDD White-List ? */ _UDW = true;	/* true or false */
 /* _allowedIDDs: Insert IDDs here to prevent them from being closed! */
 _allowedIDDs = [
 	0,4,5,6,8,12,18,24,46,49,54,55,63,70,131,160,174,602,999,148,163,129,169,
