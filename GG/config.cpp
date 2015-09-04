@@ -962,7 +962,7 @@ class CfgExileArsenal
 	// Hardware
 	///////////////////////////////////////////////////////////////////////////////
 	class Exile_Item_Rope							{ quality = 1; price = 20; };
-	class Exile_Item_DuctTape						{ quality = 1; price = 20; };
+	class Exile_Item_DuctTape						{ quality = 1; price = 100; };
 	class Exile_Item_ExtensionCord					{ quality = 1; price = 40; };
 	class Exile_Item_FuelCanisterEmpty				{ quality = 1; price = 40; };
 	class Exile_Item_JunkMetal						{ quality = 1; price = 400; };

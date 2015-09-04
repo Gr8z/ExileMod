@@ -37,7 +37,7 @@ class CfgSettings {
 	};
 	
 	class LootSettings {
-		spawnChance = 90;
+		spawnChance = 100;
 		spawnRadius = 100;
 		despawnRadius = 200;
 		lifeTime = 600;
