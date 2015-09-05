@@ -9,7 +9,7 @@
  
 private["_vehicle"];
 ["SafezoneEnter"] call ExileClient_gui_notification_event_addNotification;
-["Whoops",["Vehicles inside the safezone will be unlocked every restart"]] call ExileClient_gui_notification_event_addNotification;
+["Whoops",["DO NOT PARK VEHICLES OVER RESTARTS"]] call ExileClient_gui_notification_event_addNotification;
 SystemChat "! WARNING : DO NOT LEAVE YOUR VEHICLES IN SAFEZONES OVER A RESTART. THEY WILL BE UNLOCKED !";
 ExilePlayerInSafezone = true;
 ExileSafeZoneEspEH = addMissionEventHandler ["Draw3D",{20 call ExileClient_gui_safezone_safeESP}];
