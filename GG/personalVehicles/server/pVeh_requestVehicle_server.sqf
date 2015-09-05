@@ -137,7 +137,7 @@ if (_canDo) then {
 	_dist = round(_dist);
 
 	//Update message to send to client
-	_msg = format["Your %1 has been delivered and is %2 meters away.",_vehName,_dist];
+	_msg = format["Your %1 has been delivered by Player2 Industries (C) and is %2 meters away.",_vehName,_dist];
 
 	//Create output to send to client
 	_out = [format["%1 %2", pVeh_messagePrefix, _msg], _vehObj];
