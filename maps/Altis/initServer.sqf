@@ -1,3 +1,5 @@
+[8,true,true,16] execFSM "GG\timeModule.fsm";
+
 _objects = 
 [
     ["Land_CarService_F",[14618.7,16877.4,0.900759],131.363,0,0,false],

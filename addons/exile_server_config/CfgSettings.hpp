@@ -103,10 +103,11 @@ class CfgSettings {
 		};
 	};
 	
-	class Time {
-		useRealTime = 0;
+	class Time
+	{
+		useRealTime = 0; 
 		useStaticTime = 1;
-		staticTime[] = {2039, 10, 24, 12, 0};
+		staticTime[] = {2015,08,22,06,00};
 	};
 	
 	class RCON {
