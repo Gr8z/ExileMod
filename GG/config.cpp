@@ -1274,7 +1274,7 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// BIKES
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Bike_OldBike 						{ quality = 1; price = 2; };
+	class Exile_Bike_OldBike 						{ quality = 1; price = 40; };
 	class Exile_Bike_MountainBike 					{ quality = 1; price = 50; };
 	class Exile_Bike_Crosser 						{ quality = 1; price = 500; };
 
@@ -1583,7 +1583,6 @@ class CfgExileCustomCode
 	ExileClient_gui_crafting_show = "GG\overrides\GG_gui_crafting_show.sqf";
 	ExileClient_gui_interactionMenu_update = "GG\overrides\GG_gui_interactionMenu_update.sqf";
 	ExileClient_object_construction_move = "GG\overrides\GG_object_construction_move.sqf";
-	ExileClient_gui_inventory_event_onSlotDoubleClick = "GG\overrides\GG_gui_inventory_event_onSlotDoubleClick.sqf";
 };
 class CfgExileMusic
 {

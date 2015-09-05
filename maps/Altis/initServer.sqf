@@ -405,5 +405,3 @@ _objects =
     _object enableSimulation false; // :)
 }
 forEach _objects;
-
-[] execVM "GG\personalVehicles\init.sqf";
