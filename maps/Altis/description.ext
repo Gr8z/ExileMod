@@ -79,7 +79,6 @@ allowFunctionsRecompile = 0;
 class CfgRemoteExecCommands {};
 
 #include "GG\SL\global.hpp"
-#include "GG\taw_vd\dialog.hpp"
 
 class cfgFunctions
 {
