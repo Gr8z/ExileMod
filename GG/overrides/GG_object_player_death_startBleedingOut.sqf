@@ -24,7 +24,7 @@ ExileClientBleedOutCountDownDuration = _respawnDelay;
 ExileClientBleedOutCountDownEnd = time + _respawnDelay;
 _layer = "BIS_fnc_respawnCounter" call bis_fnc_rscLayer;
 _layer cutText ["", "plain"];
-missionnamespace setvariable ["RscRespawnCounter_description", "<t size='2' align='center'DEAD</t>"];
+missionnamespace setvariable ["RscRespawnCounter_description", "<t size='2' align='center'>DEAD</t>"];
 missionnamespace setvariable ["RscRespawnCounter_colorID", 0];
 missionnamespace setvariable ["RscRespawnCounter_Custom", _respawnDelay];
 _layer cutRsc ["RscRespawnCounter", "plain"];
