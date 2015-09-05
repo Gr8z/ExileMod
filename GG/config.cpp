@@ -1274,7 +1274,7 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// BIKES
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Bike_OldBike 						{ quality = 1; price = 40; };
+	class Exile_Bike_OldBike 						{ quality = 1; price = 2; };
 	class Exile_Bike_MountainBike 					{ quality = 1; price = 50; };
 	class Exile_Bike_Crosser 						{ quality = 1; price = 500; };
 
@@ -1564,20 +1564,6 @@ class CfgExileArsenal
 };
 class CfgExileCustomCode 
 {
-	/*
-		You can overwrite every single file of our code without touching it.
-		To do that, add the function name you want to overwrite plus the 
-		path to your custom file here. If you wonder how this works, have a
-		look at our bootstrap/fn_preInit.sqf function.
-
-		Simply add the following scheme here:
-
-		<Function Name of Exile> = "<New File Name>";
-
-		Example:
-
-		ExileClient_util_fusRoDah = "myaddon/myfunction.sqf";
-	*/
 	ExileClient_gui_safezone_fired = "GG\overrides\GG_gui_safezone_fired.sqf";
 	ExileClient_object_player_stats_update = "GG\overrides\GG_object_player_stats_update.sqf";
 	ExileClient_gui_crafting_show = "GG\overrides\GG_gui_crafting_show.sqf";
@@ -1585,6 +1571,7 @@ class CfgExileCustomCode
 	ExileClient_object_construction_move = "GG\overrides\GG_object_construction_move.sqf";
 	ExileClient_object_player_death_startBleedingOut = "GG\overrides\GG_object_player_death_startBleedingOut.sqf";
 	ExileClient_object_player_event_onEnterSafezone = "GG\overrides\GG_object_player_event_onEnterSafezone.sqf";
+	ExileClient_gui_inventory_event_onSlotDoubleClick = "GG\overrides\GG_gui_inventory_event_onSlotDoubleClick.sqf";
 };
 class CfgExileMusic
 {
