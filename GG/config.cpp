@@ -1583,6 +1583,7 @@ class CfgExileCustomCode
 	ExileClient_gui_crafting_show = "GG\overrides\GG_gui_crafting_show.sqf";
 	ExileClient_gui_interactionMenu_update = "GG\overrides\GG_gui_interactionMenu_update.sqf";
 	ExileClient_object_construction_move = "GG\overrides\GG_object_construction_move.sqf";
+	ExileClient_object_player_death_startBleedingOut = "GG\overrides\GG_object_player_death_startBleedingOut.sqf";
 };
 class CfgExileMusic
 {

@@ -25,7 +25,7 @@ class Header
 showHUD = 0;
 
 respawn = "BASE";
-respawnDelay = 120;
+respawnDelay = 10;
 respawnDialog = 0;
 respawnOnStart = 0;
 respawnButton = 1; 
