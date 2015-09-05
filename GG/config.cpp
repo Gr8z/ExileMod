@@ -1587,6 +1587,13 @@ class CfgFlags
 		texture = "\A3\Data_F\Flags\flag_us_co.paa";
 		uid = "";
 	};
+	
+		class MOIST
+	{
+		name = "MOIST";
+		texture = "GG\images\flags\moist.paa";
+		uid = "";
+	};
 };
 class CfgTerritories
 {
