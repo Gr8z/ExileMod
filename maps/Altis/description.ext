@@ -92,7 +92,6 @@ class cfgFunctions
 			class showWatermark { postInit = 1; };
 		};
 	};
-	#include "GG\taw_vd\CfgFunctions.hpp"
 };
 
 class RscTitles
