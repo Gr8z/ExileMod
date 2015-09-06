@@ -1,4 +1,4 @@
-[8,true,true,16] execFSM "GG\timeModule.fsm";
+[10,true,true,16] execFSM "GG\timeModule.fsm";
 
 _objects = 
 [
