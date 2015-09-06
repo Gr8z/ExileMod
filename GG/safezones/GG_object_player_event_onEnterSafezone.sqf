@@ -7,7 +7,8 @@
 private["_vehicle"];
 if (!isNil "Gr8timer") then { terminate Gr8timer; };
 ["SafezoneEnter"] call ExileClient_gui_notification_event_addNotification;
-
+["Whoops",["DO NOT PARK VEHICLES OVER RESTARTS"]] call ExileClient_gui_notification_event_addNotification;
+SystemChat "! WARNING : DO NOT LEAVE YOUR VEHICLES IN SAFEZONES OVER A RESTART. THEY WILL BE UNLOCKED !";
 ExilePlayerInSafezone = true;
 ExileSafeZoneEspEH = addMissionEventHandler ["Draw3D",{20 call ExileClient_gui_safezone_safeESP}];
 ExileSafeZoneFiredEH = player addEventHandler ["Fired", {_this call ExileClient_gui_safezone_fired}];
