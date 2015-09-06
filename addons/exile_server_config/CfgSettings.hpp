@@ -155,7 +155,7 @@ class CfgSettings
 		 * 50m  = Minimum
 		 * 200m = Maximum
 		 */
-		spawnRadius = 100;
+		spawnRadius = 120;
 
 		/**
 		* Define a de-spawn radius here. That is the radius where loot
@@ -164,7 +164,7 @@ class CfgSettings
 		* 10m  = Minimum
 		* 200m = Maximum
 		*/
-		despawnRadius = 200;
+		despawnRadius = 80;
 
 		/**
 		 * Time in seconds to define how long loot stays on the ground
