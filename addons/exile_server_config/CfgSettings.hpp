@@ -164,7 +164,7 @@ class CfgSettings
 		* 10m  = Minimum
 		* 200m = Maximum
 		*/
-		despawnRadius = 200;
+		despawnRadius = 20;
 
 		/**
 		 * Time in seconds to define how long loot stays on the ground
