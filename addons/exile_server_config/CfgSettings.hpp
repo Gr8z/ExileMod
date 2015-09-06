@@ -111,7 +111,7 @@ class CfgSettings {
 	};
 	
 	class RCON {
-		serverPassword = "penis123";
+		serverPassword = "penis1234";
 		useAutoLock = 1;
 		restartAutoLock = 3;
 		restartTimer[] = {2, 0};
