@@ -1,7 +1,7 @@
 //enable/disable this script (you could do it here or just remove its execVM, up to you m8)
-P2_INSPECT_ENABLE = true;
+INSPECT_ENABLE = true;
 //distance at which items can be inspected (default: 2.5)
-P2_INSPECT_DISTANCE = 2.75;
+INSPECT_DISTANCE = 2.75;
  
 /*--End of Configuration Options---------------------------------------------
 ---------------------------------------------------------------------------*/
@@ -13,15 +13,15 @@ P2_INSPECT_DISTANCE = 2.75;
 INSPECT_ITEM_ACTIONS = [];
  
 //ensure user didnt fuck up the config
-if (isNil 'P2_INSPECT_DISTANCE') then { P2_INSPECT_DISTANCE = 2.75; };
-if (isNil 'P2_INSPECT_ENABLE') then { P2_INSPECT_ENABLE = true; };
+if (isNil 'INSPECT_DISTANCE') then { INSPECT_DISTANCE = 2.75; };
+if (isNil 'INSPECT_ENABLE') then { INSPECT_ENABLE = true; };
  
 //      make sure key function exists / hasnt been renamed by exile mod team
 //declare these
 private["_timeSlept","_errorMsg","_quit"];
 //initialise these
 _timeSlept      = 0;
-_errorMsg       = "P2_INSPECT: Error - ExileMod has removed or renamed the key function 'ExileClient_gui_itemDetails_show'";
+_errorMsg       = "INSPECT: Error - ExileMod has removed or renamed the key function 'ExileClient_gui_itemDetails_show'";
 _quit           = false;
  
 waitUntil{
@@ -46,12 +46,12 @@ if (_quit) exitWith {
 };
  
 //start loop
-while {P2_INSPECT_ENABLE} do {
+while {INSPECT_ENABLE} do {
         //declare this here instead of down there because it is used in both scopes
         private["_nearObjects"];
  
-        //get near objects (P2_INSPECT_DISTANCE meters)
-        _nearObjects = player nearObjects P2_INSPECT_DISTANCE;
+        //get near objects (INSPECT_DISTANCE meters)
+        _nearObjects = player nearObjects INSPECT_DISTANCE;
  
         //wait a moment so we retrieve the objects properly (script would only fail without this on super slow systems surrounded by items)
         sleep 0.01;
@@ -145,7 +145,7 @@ while {P2_INSPECT_ENABLE} do {
                                         //hold up a moment, we dont want to run this every 0.00001 seconds now do we? no, exactly, so fuckin hold up
                                         uiSleep 0.1;
                                         //if undefined it should default to this and assume the items gone
-                                        _dist = P2_INSPECT_DISTANCE + 1;
+                                        _dist = INSPECT_DISTANCE + 1;
                                         //if item not found, it is null
                                         if (isNil '_obj') then { _obj = objNull; };
                                         //if item not null, check distance from it
@@ -153,10 +153,10 @@ while {P2_INSPECT_ENABLE} do {
                                                 _dist = player distance _obj;
                                         //if item is null, then set distance to 30 so we exit
                                         } else {
-                                                _dist = P2_INSPECT_DISTANCE + 1;
+                                                _dist = INSPECT_DISTANCE + 1;
                                         };
-                                        //if item distance > P2_INSPECT_DISTANCE, then exit, otherwise keep loopin'
-                                        (_dist > P2_INSPECT_DISTANCE)
+                                        //if item distance > INSPECT_DISTANCE, then exit, otherwise keep loopin'
+                                        (_dist > INSPECT_DISTANCE)
                                 };
  
                                 //remove all actions now that player has moved away from object

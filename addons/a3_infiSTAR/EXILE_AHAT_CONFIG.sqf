@@ -26,7 +26,7 @@ _ESCMNUBOT = 'www.GHOSTZGAMERZ.com';
 _BRIEFING_MSG = true;	/* use mission briefing message: if   "_BRIEFING_MSG = false;"   then the message will be replaced by infiSTAR */
 
 /* shows RESTART IN X MINS */
-_USE_RESTART_TIMER = false;	/* true or false */
+_USE_RESTART_TIMER = true;	/* true or false */
 _RESTART_TIME_IN_M = 120;		/* restart time in minutes */
 _SHOW_TIMER_IN_MIN = [1,2,3,5,10];	/* minutes before restart, when message is shown */
 
@@ -108,21 +108,21 @@ _adminUIDandAccess =
 /* ********************************************************************************* */
 /*            many checks should be set to true instead of false.                    */
 /* ********************************************************************************* */
-_LVC = false;	/* Local Vehicle Check */
-_UAT = false;	/* Anti Teleport */
-_CMC = false;	/* Check for custom CommandingMenus */
-_KCM = false;	/* Just close ALL CommandingMenus */
-_CAP = false;	/* Check Actions Plr - will announce: xxx possible scroll menu hack */
+_LVC = true;	/* Local Vehicle Check */
+_UAT = true;	/* Anti Teleport */
+_CMC = true;	/* Check for custom CommandingMenus */
+_KCM = true;	/* Just close ALL CommandingMenus */
+_CAP = true;	/* Check Actions Plr - will announce: xxx possible scroll menu hack */
 
 
-/*  Check Global Markers */ _CGM = false;	/* true or false */	/* you may need to disable this check for A.I. Missions - or whitelist the used Markers in the _aLocalM Array beneath */
-/*  Check Local Markers  */ _CLM = false;	/* true or false */	/* false if you do not want LocalMarker to be checked. */
-/*  Use _aLocalM array   */ _UMW = false;	/* true or false */	/* use allowed marker array from below (for example AltisLife uses house_ and others in there) or A.I. Missions */
+/*  Check Global Markers */ _CGM = true;	/* true or false */	/* you may need to disable this check for A.I. Missions - or whitelist the used Markers in the _aLocalM Array beneath */
+/*  Check Local Markers  */ _CLM = true;	/* true or false */	/* false if you do not want LocalMarker to be checked. */
+/*  Use _aLocalM array   */ _UMW = true;	/* true or false */	/* use allowed marker array from below (for example AltisLife uses house_ and others in there) or A.I. Missions */
 /* _aLocalM: if '_CLM' && _UMW - this array of names will be allowed */
 _aLocalM = ["DMS_MissionMarkerCircle","DMS_MissionMarkerDot"];
 
 
-/* Use IDD White-List ? */ _UDW = false;	/* true or false */
+/* Use IDD White-List ? */ _UDW = true;	/* true or false */
 /* _allowedIDDs: Insert IDDs here to prevent them from being closed! */
 _allowedIDDs = [
 	0,4,5,6,8,12,18,24,46,49,54,55,63,70,131,160,174,602,999,148,163,129,169,
@@ -142,7 +142,7 @@ _badIDDsToClose =
 
 
 
-/*  Use BadFile check    */ _UBF = false;	/* true or false */	/* Scriptscan pops up with message: "Done! badcontent.sqf not found" */
+/*  Use BadFile check    */ _UBF = true;	/* true or false */	/* Scriptscan pops up with message: "Done! badcontent.sqf not found" */
 /* _blacklistedFileArray: The AntiHack will test if the client has one of these files in his Arma3 folder. You have to put the extensions in allowedPreprocessFileExtensions in your servers config.cfg (only if _UBF = true;) */
 _blacklistedFileArray =
 [
@@ -162,7 +162,7 @@ _blacklistedFileArray =
 	'Dta\Screens.bin','ArmA2OA_Extras\ben_ex.sqf','RyanV1\Keybindiezz.sqf','ArmaX.sqf','insanity.sqf'
 ];
 
-/*  Use BadVar #1 */ _UBV = false;	/* true or false */	/* recommended to use */
+/*  Use BadVar #1 */ _UBV = true;	/* true or false */	/* recommended to use */
 /* _blacklistedVariables: The AntiHack will check if one of these variables is existing for the client (only if _UBV = true;) */
 _blacklistedVariables =
 [
@@ -272,7 +272,7 @@ _ForbiddenVehicles =
 ];
 
 
-_UFI = false;	/* Use "_ForbiddenItems"/Item Check(s) */
+_UFI = true;	/* Use "_ForbiddenItems"/Item Check(s) */
 _UIW = false;	/* if "_UIW = true;" then it checks if the items the individual player has are in "_ItemWhiteList" */
 _ItemWhiteList =
 [
@@ -307,14 +307,14 @@ _SupportBox1Content =
 _SupportBox2Content =
 [
 	['Exile_Item_Flag',1],['WorkBench',2],['Exile_Item_WoodDoorKit',2],['Exile_Item_WoodGateKit',2],['Exile_Item_Codelock',4],['Exile_Item_WoodFloorKit',18],['Exile_Item_WoodFloorPortKit',2],
-	['Exile_Item_WoodWallKit',25],['Exile_Item_CampFireKit',2],['Exile_Item_SafeKit',2],['Exile_Item_Storagecratekit',4],['Exile_Item_WoodStairsKit',4],['Exile_Melee_Axe',2],['Exile_Ammo_Swing',1],
+	['Exile_Item_WoodWallKit',25],['Exile_Item_CampFireKit',2],['Exile_Item_SafeKit',3],['Exile_Item_Storagecratekit',4],['Exile_Item_WoodStairsKit',4],['Exile_Melee_Axe',2],['Exile_Ammo_Swing',1],
 	['Exile_Item_Matches',2],['Exile_Item_CookingPot',2],['B_Carryall_oucamo',1]
 ];
 
 _SupportBox3Content =
 [
 	['Exile_Item_Flag',2],['WorkBench',3],['Exile_Item_WoodDoorKit',4],['Exile_Item_WoodGateKit',4],['Exile_Item_Codelock',8],['Exile_Item_WoodFloorKit',40],['Exile_Item_WoodFloorPortKit',4],
-	['Exile_Item_WoodWallKit',30],['Exile_Item_CampFireKit',3],['Exile_Item_SafeKit',3],['Exile_Item_Storagecratekit',5],['Exile_Item_WoodStairsKit',8],['Exile_Melee_Axe',3],['Exile_Ammo_Swing',1],
+	['Exile_Item_WoodWallKit',30],['Exile_Item_CampFireKit',3],['Exile_Item_SafeKit',6],['Exile_Item_Storagecratekit',5],['Exile_Item_WoodStairsKit',8],['Exile_Melee_Axe',3],['Exile_Ammo_Swing',1],
 	['Exile_Item_Matches',3],['Exile_Item_CookingPot',3],['B_Carryall_oucamo',1]
 ];
 /* ********************************************************************************* */

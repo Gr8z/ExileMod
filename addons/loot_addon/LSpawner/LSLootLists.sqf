@@ -8,7 +8,6 @@
 //								weaponlist	: list of weapon class names
 lootWeapon_list = [
 [ 0, [							// CIVIL
-"Exile_Item_InstaDoc",
 "arifle_MK20C_F",
 "arifle_MK20_F",
 "arifle_TRG20_F",
@@ -68,7 +67,6 @@ lootWeapon_list = [
 "srifle_GM6_camo_F", 				
 "srifle_GM6_F"	
 ]],[ 2, [
-"Exile_Item_InstaDoc",
 "arifle_Katiba_C_F",
 "arifle_Mk20C_F",
 "arifle_Mk20_F",

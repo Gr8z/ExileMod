@@ -25,7 +25,7 @@ class Header
 showHUD = 0;
 
 respawn = "BASE";
-respawnDelay = 120;
+respawnDelay = 10;
 respawnDialog = 0;
 respawnOnStart = 0;
 respawnButton = 1; 
@@ -79,7 +79,6 @@ allowFunctionsRecompile = 0;
 class CfgRemoteExecCommands {};
 
 #include "GG\SL\global.hpp"
-#include "GG\taw_vd\dialog.hpp"
 
 class cfgFunctions
 {
@@ -92,7 +91,16 @@ class cfgFunctions
 			class showWatermark { postInit = 1; };
 		};
 	};
-	#include "GG\taw_vd\CfgFunctions.hpp"
+};
+
+class CfgRemoteExec
+{
+        class Functions
+        {
+                mode = 0;
+                jip = 0;
+        };
+        class Commands{mode=0;};
 };
 
 class RscTitles
