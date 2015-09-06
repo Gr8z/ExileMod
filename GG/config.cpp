@@ -1571,6 +1571,7 @@ class CfgExileCustomCode
 	ExileClient_object_construction_move = "GG\overrides\GG_object_construction_move.sqf";
 	ExileClient_object_player_death_startBleedingOut = "GG\overrides\GG_object_player_death_startBleedingOut.sqf";
 	ExileClient_object_player_event_onEnterSafezone = "GG\overrides\GG_object_player_event_onEnterSafezone.sqf";
+	ExileClient_object_player_event_onLeaveSafezone = "GG\overrides\GG_object_player_event_onLeaveSafezone.sqf";
 	ExileClient_gui_inventory_event_onSlotDoubleClick = "GG\overrides\GG_gui_inventory_event_onSlotDoubleClick.sqf";
 };
 class CfgExileMusic

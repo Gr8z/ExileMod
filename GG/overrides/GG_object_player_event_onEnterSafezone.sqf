@@ -8,6 +8,7 @@
  */
  
 private["_vehicle"];
+if (!isNil "timer30") then { terminate timer30; };
 ["SafezoneEnter"] call ExileClient_gui_notification_event_addNotification;
 ["Whoops",["DO NOT PARK VEHICLES OVER RESTARTS"]] call ExileClient_gui_notification_event_addNotification;
 SystemChat "! WARNING : DO NOT LEAVE YOUR VEHICLES IN SAFEZONES OVER A RESTART. THEY WILL BE UNLOCKED !";
