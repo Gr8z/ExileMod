@@ -45,7 +45,7 @@ Gr8timer = [] spawn {
 
 	
 	if (!ExilePlayerInSafezone) then {
-		if (CanShoot) then {player removeEventHandler ["Fired",ExileSafeZoneFiredEH];};
+		if !(CanShoot) then {player removeEventHandler ["Fired",ExileSafeZoneFiredEH];};
 		if (GodMode) then {
 			player allowDamage true;
 			player addEventHandler ["HandleDamage",{_this call ExileClient_object_player_event_onHandleDamage}];
