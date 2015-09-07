@@ -40,7 +40,7 @@ else
 		{
 			if (isPlayer _killer) then
 			{
-				if (_victim getVariable["Gr8Protection", false]) then {
+				if ((_victim getVariable ["Gr8Protection", false]) isEqualTo true) then {
 					_addKillStat = false;
 					_addDeathStat = false;
 					_fragAttributes pushBack "Safezone Camper";

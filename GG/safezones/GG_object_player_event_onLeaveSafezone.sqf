@@ -32,7 +32,7 @@ if !(ProtectVehicles) then {
 };
 
 if (LooseRespect) then {
-	player setVariable ["Gr8Protection", true];
+	player setVariable["Gr8Protection", true, true];
 };
 
 removeMissionEventHandler ["Draw3D",ExileSafeZoneEspEH];
@@ -48,7 +48,7 @@ Gr8timer = [] spawn {
 	};
 	
 	if (LooseRespect) then {
-		player setVariable ["Gr8Protection", false];
+		player setVariable["Gr8Protection", false, true];
 	};
 	
 	if (!ExilePlayerInSafezone) then {
