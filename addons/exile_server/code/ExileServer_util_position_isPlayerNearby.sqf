@@ -1,38 +1,24 @@
 /**
- * © 2015 eraser1
- * All rights reserved.
+ * Exile Mod
+ * www.exilemod.com
+ * Â© 2015 Exile Mod Team
+ *
+ * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
+ * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private ["_pos", "_dis", "_isNear"];
-
-_OK = params
-[
-	["_pos", "", [objNull,[]], [2,3]],
-	["_dis", 0, [0]]
-];
-
-if (!_OK) exitWith
+private["_position","_radius","_result"];
+_position = _this select 0;
+_radius = _this select 1;
+_result = false;
 {
-	diag_log format ["ExileServer - Error: Calling ExileServer_util_position_isPlayerNearby with invalid parameters: %1",_this];
-};
-
-_isNear = false;
-
-try
-{
+	if (alive _x) then
 	{
+		if (_x distance _position <= _radius) exitWith
 		{
-			if (isPlayer _x) then
-			{
-				throw _x;
-			};
-		} forEach (crew _x);
-	} forEach (_pos nearEntities [["Exile_Unit_Player","LandVehicle", "Air", "Ship"], _dis]);
+			_result = true;
+		};
+	};
 }
-catch
-{
-	_isNear = true;
-};
-
-
-_isNear;
+forEach allPlayers;
+_result

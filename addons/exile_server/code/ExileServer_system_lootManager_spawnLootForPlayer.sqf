@@ -4,9 +4,7 @@
  * © 2015 Exile Mod Team
  *
  * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
- * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
- *
- * Modified by Rod Serling
+ * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/
  */
  
 private["_playerObject","_spawnRadius","_spawnChance","_notifyPlayer","_playerPosition","_lastKnownPlayerPosition","_radius","_flags","_buildings","_spawnedLootForThisPlayer","_building","_flag","_flagRadius","_buildingConfig","_lootTableName","_localPositions","_spawnedItemClassNames","_lootPosition","_itemClassName","_cargoType","_lootHolder","_magazineClassNames","_magazineClassName","_numberOfMagazines", "_lootSpawnTime"];
@@ -55,7 +53,7 @@ try
 			{
 				if !(_building getVariable ["ExileHasLoot", false]) then
 				{
-					_lootSpawnTime = time;
+					_lootSpawnTime = time; // Make sure the building and loot have the same time, even on a slow server.
 					_buildingConfig = configFile >> "CfgBuildings" >> (typeOf _building);
 					_lootTableName = getText(_buildingConfig >> "table");
 					_localPositions = getArray(_buildingConfig >> "positions");
@@ -118,7 +116,7 @@ try
 			{
 				[_x, "notificationRequest",["Success",["Loot spawned near you!"]]] call ExileServer_system_network_send_to;
 				false;
-			} count ([_playerPosition, _spawnRadius] call ExileServer_util_position_getNearbyPlayers);
+			} count ([_playerPosition, _spawnRadius] call hotfix_getNearbyPlayers);
 		};
 	};
 	_playerObject setVariable["ExilePositionAtLastLootSpawnCircle", _playerPosition];	

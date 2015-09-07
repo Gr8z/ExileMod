@@ -2,41 +2,37 @@
 /*%FSM<HEAD>*/
 /*
 item0[] = {"Start",0,250,775.000000,-50.000000,875.000000,0.000000,0.000000,"Start"};
-item1[] = {"Continue",8,218,780.556396,25.617378,870.556396,75.617378,0.000000,"Continue"};
+item1[] = {"Continue",8,218,775.000000,25.000000,875.000000,75.000000,0.000000,"Continue"};
 item2[] = {"Wait",2,250,775.000000,100.000000,875.000000,150.000000,0.000000,"Wait"};
 item3[] = {"Every_30s",4,218,550.000000,175.000000,650.000000,225.000000,0.000000,"Every" \n "30s"};
 item4[] = {"Group_Garbage_Co",2,250,550.000000,250.000000,650.000000,300.000000,0.000000,"Group" \n "Garbage" \n "Collector"};
 item5[] = {"",7,210,596.000000,321.000000,604.000000,329.000000,0.000000,""};
-item6[] = {"Every_60s",4,218,859.681030,177.975006,959.680908,227.975006,1.000000,"Every" \n "60s"};
-item7[] = {"Loot_Garbage_Col",2,4346,864.462158,248.728394,954.462158,298.728394,0.000000,"Loot" \n "Garbage" \n "Collector"};
+item6[] = {"Every_1m",4,218,700.000000,175.000000,800.000000,225.000000,1.000000,"Every" \n "1m"};
+item7[] = {"Loot_Garbage_Col",2,4346,700.000000,250.000000,800.000000,300.000000,0.000000,"Loot" \n "Garbage" \n "Collector"};
 item8[] = {"",7,210,521.000000,321.000000,529.000000,329.000000,0.000000,""};
 item9[] = {"",7,210,521.000000,46.000000,529.000000,54.000000,0.000000,""};
-item10[] = {"Every_5m",4,218,704.611938,177.119370,804.611938,227.119370,2.000000,"Every" \n "5m"};
-item11[] = {"Corpse_Wreck_Garbage",2,250,698.677795,244.489624,798.677795,294.489624,0.000000,"Corpse/Wreck" \n "Garbage" \n "Collector"};
-item12[] = {"",7,210,744.850586,321.366150,752.850586,329.366150,0.000000,""};
-item13[] = {"Continue",8,218,864.010803,313.459747,954.010803,363.459717,0.000000,"Continue"};
-item14[] = {"Unlock_Buildings",2,250,864.364990,384.352051,954.364990,434.352051,0.000000,"Unlock" \n "Buildings"};
-item15[] = {"",7,210,744.824402,405.707916,752.824402,413.707916,0.000000,""};
+item10[] = {"",7,210,746.000000,321.000000,754.000000,329.000000,0.000000,""};
+item11[] = {"Every_5m",4,218,850.000000,175.000000,950.000000,225.000000,2.000000,"Every" \n "5m"};
+item12[] = {"Corpse_Wreck_Garbage",2,250,850.000000,250.000000,950.000000,300.000000,0.000000,"Corpse/Wreck" \n "Garbage" \n "Collector"};
+item13[] = {"",7,210,896.000000,321.000000,904.000000,329.000000,0.000000,""};
 link0[] = {0,1};
 link1[] = {1,2};
 link2[] = {2,3};
 link3[] = {2,6};
-link4[] = {2,10};
+link4[] = {2,11};
 link5[] = {3,4};
 link6[] = {4,5};
 link7[] = {5,8};
 link8[] = {6,7};
-link9[] = {7,13};
+link9[] = {7,10};
 link10[] = {8,9};
 link11[] = {9,1};
-link12[] = {10,11};
+link12[] = {10,5};
 link13[] = {11,12};
-link14[] = {12,5};
-link15[] = {13,14};
-link16[] = {14,15};
-link17[] = {15,12};
-globals[] = {0.000000,0,0,0,0,640,480,1,465,6316128,1,419.913757,1073.714600,600.752380,-19.092724,1059,1004,1};
-window[] = {2,-1,-1,-32000,-32000,838,104,1398,104,3,1077};
+link14[] = {12,13};
+link15[] = {13,10};
+globals[] = {0.000000,0,0,0,0,640,480,1,447,6316128,1,584.962463,922.212891,354.733795,35.601444,695,562,1};
+window[] = {0,-1,-1,-1,-1,939,399,1693,205,1,713};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -80,22 +76,22 @@ class FSM
                                 /*%FSM<LINK "Every_5m">*/
                                 class Every_5m
                                 {
-                                        itemno = 10;
+                                        itemno = 11;
                                         priority = 2.000000;
                                         to="Corpse_Wreck_Garbage";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"(time - _lastTime300) > 300"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(diag_ticktime - _lastTime300) > 300"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/"_lastTime300 = diag_ticktime;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
-                                /*%FSM<LINK "Every_60s">*/
-                                class Every_60s
+                                /*%FSM<LINK "Every_1m">*/
+                                class Every_1m
                                 {
                                         itemno = 6;
                                         priority = 1.000000;
                                         to="Loot_Garbage_Col";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"(time - _lastTime60) > 60"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(diag_ticktime - _lastTime60) > 60"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/"_lastTime60 = diag_ticktime;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -106,7 +102,7 @@ class FSM
                                         priority = 0.000000;
                                         to="Group_Garbage_Co";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"(time - _lastTime30) > 30"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(diag_ticktime - _lastTime30) > 30"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/"_lastTime30 = diag_ticktime;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -176,18 +172,19 @@ class FSM
                         name = "Loot_Garbage_Col";
                         itemno = 7;
                         init = /*%FSM<STATEINIT""">*/"/*" \n
-                         " * Collect expired loot." \n
+                         "	Throw away dropped items and loot not picked up" \n
                          "*/" \n
+                         "" \n
+                         "[""Performing loot cleanup.""] call Exile_DebugLog;" \n
                          "" \n
                          "_objectsToDelete = [];" \n
                          "" \n
-                         "_lootLifetime = getNumber(configFile >> ""CfgSettings"" >> ""LootSettings"" >>  ""lootLifetime"");" \n
-                         "_lootMaxLifetime = getNumber(configFile >> ""CfgSettings"" >> ""LootSettings"" >> ""lootMaxLifetime"");" \n
-                         "_droppedItemLiftime = getNumber(configFile >> ""CfgSettings"" >> ""LootSettings"" >> ""droppedItemLifetime"");" \n
+                         "_forceDespawnTime = getNumber(configFile >> ""CfgSettings"" >> ""GarbageCollector"" >> ""despawnAfterMinutes"") * 60;" \n
+                         "_lootLifetime = getNumber(configFile >> ""CfgSettings"" >> ""LootSettings"" >>  ""lifeTime"");" \n
                          "_despawnRadius = getNumber(configFile >> ""CfgSettings"" >> ""LootSettings"" >>  ""despawnRadius"");" \n
-                         "" \n
                          "{" \n
                          "	{" \n
+                         "		" \n
                          "		_spawnedAt = _x getVariable ""ExileSpawnedAt"";" \n
                          "" \n
                          "		// Item was dropped. Set time to now." \n
@@ -195,33 +192,30 @@ class FSM
                          "		{" \n
                          "			_spawnedAt = time;" \n
                          "			_x setVariable [""ExileSpawnedAt"", _spawnedAt];" \n
-                         "			_x setVariable [""ExileIsDroppedItem"", true];" \n
                          "		};" \n
                          "" \n
                          "		_timeAlive = time - _spawnedAt;" \n
                          "		_isPlayerNearby = [getPosATL _x, _despawnRadius] call ExileServer_util_position_isPlayerNearby;" \n
+                         "		[format [""Loot _timeAlive: %1, _isPlayerNearby: %2"", _timeAlive, _isPlayerNearby]] call Exile_DebugLog;" \n
                          "" \n
-                         "		if (_x getVariable [""ExileIsDroppedItem"", false]) then" \n
+                         "		// Force loot to despawn after 15 minutes." \n
+                         "		if (_timeAlive >= _forceDespawnTime || ((_timeAlive >= _lootLifeTime) && !_isPlayerNearby)) then" \n
                          "		{" \n
-                         "			if (_timeAlive >= _droppedItemLifetime) then" \n
-                         "			{" \n
-                         "				_objectsToDelete pushBack _x;" \n
-                         "			}" \n
+                         "			[""Deleting Loot.""] call Exile_DebugLog;" \n
+                         "			_objectsToDelete pushBack _x;" \n
                          "		}" \n
-                         "		else" \n
-                         "		{" \n
-                         "			if (_timeAlive >= _lootMaxLifetime || ((_timeAlive >= _lootLifetime) && !_isPlayerNearby)) then" \n
-                         "			{" \n
-                         "				_objectsToDelete pushBack _x;" \n
-                         "			}" \n
-                         "		}" \n
-                         "	} forEach (allMissionObjects _x);" \n
-                         "} forEach [""WeaponHolderSimulated"", ""GroundWeaponHolder""];" \n
+                         "	} " \n
+                         "	forEach (allMissionObjects _x);" \n
+                         "}" \n
+                         "forEach [""WeaponHolderSimulated"", ""GroundWeaponHolder""];" \n
                          "" \n
                          "// Delete them here. It is soo unlogical, that you can delete the current iterator in Arma, so lets be safe" \n
                          "{" \n
                          "	deleteVehicle _x;" \n
-                         "} count _objectsToDelete;" \n
+                         "}" \n
+                         "forEach _objectsToDelete;" \n
+                         "" \n
+                         "call ExileServer_system_lootManager_thread_unlockLootBuildings;" \n
                          ""/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
@@ -229,9 +223,9 @@ class FSM
                                 /*%FSM<LINK "Continue">*/
                                 class Continue
                                 {
-                                        itemno = 13;
+                                        itemno = 1;
                                         priority = 0.000000;
-                                        to="Unlock_Buildings";
+                                        to="Wait";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
@@ -244,7 +238,7 @@ class FSM
                 class Corpse_Wreck_Garbage
                 {
                         name = "Corpse_Wreck_Garbage";
-                        itemno = 11;
+                        itemno = 12;
                         init = /*%FSM<STATEINIT""">*/"/*" \n
                          "	Delete vehicles and/or dead men" \n
                          "*/" \n
@@ -279,47 +273,6 @@ class FSM
                          "	deleteVehicle _x;" \n
                          "}" \n
                          "forEach _objectsToRemove;"/*%FSM</STATEINIT""">*/;
-                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
-                        class Links
-                        {
-                                /*%FSM<LINK "Continue">*/
-                                class Continue
-                                {
-                                        itemno = 1;
-                                        priority = 0.000000;
-                                        to="Wait";
-                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
-                                };
-                                /*%FSM</LINK>*/
-                        };
-                };
-                /*%FSM</STATE>*/
-                /*%FSM<STATE "Unlock_Buildings">*/
-                class Unlock_Buildings
-                {
-                        name = "Unlock_Buildings";
-                        itemno = 14;
-                        init = /*%FSM<STATEINIT""">*/"_buildingUnlockTime = getNumber(configFile >> ""CfgSettings"" >> ""LootSettings"" >>  ""buildingUnlockTime"");" \n
-                         "_buildingMaxUnlockTime = getNumber(configFile >> ""CfgSettings"" >> ""LootSettings"" >>  ""buildingMaxUnlockTime"");" \n
-                         "_lootDespawnRadius = getNumber(configFile >> ""CfgSettings"" >> ""LootSettings"" >>  ""despawnRadius"");" \n
-                         "" \n
-                         "{" \n
-                         "	_building = objectFromNetId _x;" \n
-                         "" \n
-                         "	_timeLocked = time - (_building getVariable [""ExileLootSpawnedAt"", time]);" \n
-                         "	_isPlayerNearby = [getPosATL _building, _lootDespawnRadius] call ExileServer_util_position_isPlayerNearby;" \n
-                         "" \n
-                         "	if (_timeLocked >= _buildingMaxUnlockTime || (_timeLocked >= _buildingUnlockTime && !_isPlayerNearby)) then" \n
-                         "	{" \n
-                         "			_building setVariable [""ExileLootSpawnedAt"", nil];" \n
-                         "			_building setVariable [""ExileHasLoot"", false];" \n
-                         "			ExileServerBuildingNetIdsWithLoot deleteAt _forEachIndex;" \n
-                         "	};" \n
-                         "} forEach ExileServerBuildingNetIdsWithLoot;" \n
-                         "" \n
-                         "true"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
