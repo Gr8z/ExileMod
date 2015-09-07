@@ -2,7 +2,7 @@
 
 _objects = 
 [
-	["Land_Dome_Big_F",[4337,18085.4,0],64.6072,0,3,false],
+	["Land_Dome_Big_F",[4337,18085.4,-0.172607],64.6072,0,3,false],
     ["Land_Billboard_F",[4339.38,18006.7,0],0,0,0,false],
     ["Land_CampingTable_F",[4321.6,18093,0.000175476],297.323,0,0,false],
     ["Exile_Sign_Armory",[4320.69,18090.5,-0.172607],295.758,0,0,false],
