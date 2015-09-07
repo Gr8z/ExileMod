@@ -32,7 +32,7 @@ if !(ProtectVehicles) then {
 };
 
 if (LooseRespect) then {
-		player setVariable ["ExileIsBambi", true];
+	player setVariable ["Gr8Protection", true];
 };
 
 removeMissionEventHandler ["Draw3D",ExileSafeZoneEspEH];
@@ -48,7 +48,7 @@ Gr8timer = [] spawn {
 	};
 	
 	if (LooseRespect) then {
-			player setVariable ["ExileIsBambi", false]; // Bambis can exploit this to get out of bambi status
+		player setVariable ["Gr8Protection", false];
 	};
 	
 	if (!ExilePlayerInSafezone) then {
