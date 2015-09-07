@@ -31,6 +31,13 @@ if !(ProtectVehicles) then {
 	};
 };
 
+if (LooseRespect) then {
+	_isBambi = player getVariable["ExileIsBambi", false];
+	if !(_isBambi) then {
+		player setVariable ["ExileIsBambi", true];
+	};
+};
+
 removeMissionEventHandler ["Draw3D",ExileSafeZoneEspEH];
 
 if (!isNil "Gr8timer") then { terminate Gr8timer; };
@@ -42,7 +49,12 @@ Gr8timer = [] spawn {
 		if (ShowTime) then {if (_x >= 2) then {cutText [format ["PROTECTION ENDING IN %1s", TimerSecs+1-_x], "PLAIN DOWN"];};};
 		uiSleep 1;
 	};
-
+	
+	if (LooseRespect) then {
+		if !(_isBambi) then {
+			player setVariable ["ExileIsBambi", false];
+		};
+	};
 	
 	if (!ExilePlayerInSafezone) then {
 		if !(CanShoot) then {player removeEventHandler ["Fired",ExileSafeZoneFiredEH];};
