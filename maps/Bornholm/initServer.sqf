@@ -71,13 +71,15 @@ _objects =
 ];
 
 {
-    private ["_object"];
-
-    _object = (_x select 0) createVehicleLocal [0,0,0];
-    _object setDir (_x select 2);
-    _object setPosATL (_x select 1);
-    _object enableSimulation false; // :)
-}
+	private ["_objects"];
+	_objects = createVehicle [_x select 0, [0,0,0], [], 0, "CAN_COLLIDE"];
+	if (_x select 4) then {
+		_objects setDir (_x select 2);
+		_objects setPos (_x select 1);
+	} else {
+		_objects setPosATL (_x select 1);
+		_objects setVectorDirAndUp (_x select 3);
+	};
 forEach _objects;
 
 [] execVM "GG\personalVehicles\init.sqf";
