@@ -44,7 +44,7 @@ else
 					_addKillStat = false;
 					_addDeathStat = false;
 					_fragAttributes pushBack "Safezone Camper";
-					_killerRespectPoints pushBack ["SAFEZONE CAMPER", 200];
+					_killerRespectPoints pushBack ["SAFEZONE CAMPER", (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Frags" >> "safezone"))];
 				}
 				else 
 				{

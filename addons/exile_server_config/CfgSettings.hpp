@@ -30,6 +30,7 @@ class CfgSettings
 		class Frags
 		{
 			bambi = -500;			// Bambi slayers
+			safezone = -800;		// Safezone Campers by GR8
 			friendlyFire = -100;	// For party members
 			standard = 100;			// Normal kill
 			humiliation = 300;		// Axe
