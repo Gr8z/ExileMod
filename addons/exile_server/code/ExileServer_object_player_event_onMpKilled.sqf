@@ -44,7 +44,7 @@ else
 					_addKillStat = false;
 					_addDeathStat = false;
 					_fragAttributes pushBack "Safezone Camper";
-					_killerRespectPoints pushBack ["SAFEZONE CAMPER", (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Frags" >> "bambi"))];
+					_killerRespectPoints pushBack ["SAFEZONE CAMPER", 200];
 				}
 				else 
 				{
@@ -83,73 +83,73 @@ else
 							};
 						};
 					};
-					if (_addKillStat) then
+				};
+				if (_addKillStat) then
+				{
+					_lastKillAt = _killer getVariable["ExileLastKillAt", 0];
+					_killStack = _killer getVariable["ExileKillStack", 0];
+					_killStack = _killStack + 1;
+					if (isNil "ExileServerHadFirstBlood") then
 					{
-						_lastKillAt = _killer getVariable["ExileLastKillAt", 0];
-						_killStack = _killer getVariable["ExileKillStack", 0];
-						_killStack = _killStack + 1;
-						if (isNil "ExileServerHadFirstBlood") then
+						ExileServerHadFirstBlood = true;
+						_fragAttributes pushBack "First Blood";
+						_killerRespectPoints pushBack ["FIRST BLOOD", getNumber (configFile >> "CfgSettings" >> "Respect" >> "Bonus" >> "firstBlood")];
+					}
+					else 
+					{
+						if (time - _lastKillAt < (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Bonus" >> "killStreakTimeout"))) then
 						{
-							ExileServerHadFirstBlood = true;
-							_fragAttributes pushBack "First Blood";
-							_killerRespectPoints pushBack ["FIRST BLOOD", getNumber (configFile >> "CfgSettings" >> "Respect" >> "Bonus" >> "firstBlood")];
+							_fragAttributes pushBack (format ["%1x Kill Streak", _killStack]);
+							_killerRespectPoints pushBack [(format ["%1x KILL STREAK", _killStack]), _killStack * (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Bonus" >> "killStreak"))];
 						}
 						else 
 						{
-							if (time - _lastKillAt < (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Bonus" >> "killStreakTimeout"))) then
-							{
-								_fragAttributes pushBack (format ["%1x Kill Streak", _killStack]);
-								_killerRespectPoints pushBack [(format ["%1x KILL STREAK", _killStack]), _killStack * (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Bonus" >> "killStreak"))];
-							}
-							else 
-							{
-								_killStack = 1; 
-							};
-						};
-						_killer setVariable["ExileKillStack", _killStack];
-						_killer setVariable ["ExileLastKillAt", time];
-						_distance = floor(_victim distance _killer);
-						_fragAttributes pushBack (format ["%1m Distance", _distance]);
-						_distanceBonus = (floor (_distance / 100)) * getNumber (configFile >> "CfgSettings" >> "Respect" >> "Bonus" >> "per100mDistance");
-						if (_distanceBonus > 0) then
-						{
-							_killerRespectPoints pushBack [(format ["%1m RANGE BONUS", _distance]), _distanceBonus];
+							_killStack = 1; 
 						};
 					};
-					_overallRespectChange = 0;
+					_killer setVariable["ExileKillStack", _killStack];
+					_killer setVariable ["ExileLastKillAt", time];
+					_distance = floor(_victim distance _killer);
+					_fragAttributes pushBack (format ["%1m Distance", _distance]);
+					_distanceBonus = (floor (_distance / 100)) * getNumber (configFile >> "CfgSettings" >> "Respect" >> "Bonus" >> "per100mDistance");
+					if (_distanceBonus > 0) then
 					{
-						_overallRespectChange = _overallRespectChange + (_x select 1);
-					}
-					forEach _killerRespectPoints;
-					_newKillerScore = _killer getVariable ["ExileScore", 0];
-					_newKillerScore = _newKillerScore + _overallRespectChange;
-					_killer setVariable ["ExileScore", _newKillerScore];
-					format["setAccountScore:%1:%2", _newKillerScore,getPlayerUID _killer] call ExileServer_system_database_query_fireAndForget;
-					_killMessage = format ["%1 was killed by %2", (name _victim), (name _killer)];
-					if !(count _fragAttributes isEqualTo 0) then
-					{
-						_killMessage = _killMessage + " (";
-						{
-							if (_forEachIndex > 0) then
-							{
-								_killMessage = _killMessage + ", ";
-							};
-							_killMessage = _killMessage + _x;
-						}
-						forEach _fragAttributes;
-						_killMessage = _killMessage + ")";
+						_killerRespectPoints pushBack [(format ["%1m RANGE BONUS", _distance]), _distanceBonus];
 					};
-					["systemChatRequest", [_killMessage]] call ExileServer_object_player_event_killfeed;
-					if (_addKillStat isEqualTo true) then
-					{
-						_newKillerFrags = _killer getVariable ["ExileKills", 0];
-						_newKillerFrags = _newKillerFrags + 1;
-						_killer setVariable ["ExileKills", _newKillerFrags];
-						format["addAccountKill:%1", getPlayerUID _killer] call ExileServer_system_database_query_fireAndForget;
-					};
-					[_killer, "showFragRequest", [_killerRespectPoints]] call ExileServer_system_network_send_to;
-					_killer call ExileServer_object_player_sendStatsUpdate;
 				};
+				_overallRespectChange = 0;
+				{
+					_overallRespectChange = _overallRespectChange + (_x select 1);
+				}
+				forEach _killerRespectPoints;
+				_newKillerScore = _killer getVariable ["ExileScore", 0];
+				_newKillerScore = _newKillerScore + _overallRespectChange;
+				_killer setVariable ["ExileScore", _newKillerScore];
+				format["setAccountScore:%1:%2", _newKillerScore,getPlayerUID _killer] call ExileServer_system_database_query_fireAndForget;
+				_killMessage = format ["%1 was killed by %2", (name _victim), (name _killer)];
+				if !(count _fragAttributes isEqualTo 0) then
+				{
+					_killMessage = _killMessage + " (";
+					{
+						if (_forEachIndex > 0) then
+						{
+							_killMessage = _killMessage + ", ";
+						};
+						_killMessage = _killMessage + _x;
+					}
+					forEach _fragAttributes;
+					_killMessage = _killMessage + ")";
+				};
+				["systemChatRequest", [_killMessage]] call ExileServer_object_player_event_killfeed;
+				if (_addKillStat isEqualTo true) then
+				{
+					_newKillerFrags = _killer getVariable ["ExileKills", 0];
+					_newKillerFrags = _newKillerFrags + 1;
+					_killer setVariable ["ExileKills", _newKillerFrags];
+					format["addAccountKill:%1", getPlayerUID _killer] call ExileServer_system_database_query_fireAndForget;
+				};
+				[_killer, "showFragRequest", [_killerRespectPoints]] call ExileServer_system_network_send_to;
+				_killer call ExileServer_object_player_sendStatsUpdate;
 			}
 			else 
 			{
