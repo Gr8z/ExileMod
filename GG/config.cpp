@@ -1619,15 +1619,15 @@ class CfgExileCustomCode
 	ExileClient_object_player_event_onLeaveSafezone = "GG\safezones\GG_object_player_event_onLeaveSafezone.sqf";
 	ExileClient_gui_inventory_event_onSlotDoubleClick = "GG\overrides\GG_gui_inventory_event_onSlotDoubleClick.sqf";
 	
-	ExileClient_construction_beginExistingObject = "GG\overrides\ExileClient_construction_beginExistingObject.sqf";
-	ExileClient_construction_beginNewObject = "GG\overrides\ExileClient_construction_beginNewObject.sqf";
-	ExileClient_construction_thread = "GG\overrides\ExileClient_construction_thread.sqf";
-	ExileClient_gui_crafting_show = "GG\overrides\ExileClient_gui_crafting_show.sqf";
-	ExileClient_gui_interactionMenu_update = "GG\overrides\ExileClient_gui_interactionMenu_update.sqf";
-	ExileClient_object_construction_move = "GG\overrides\ExileClient_object_construction_move.sqf";
-	ExileClient_object_item_craft = "GG\overrides\ExileClient_object_item_craft.sqf";
-	ExileClient_object_player_initialize = "GG\overrides\ExileClient_object_player_initialize.sqf";
-	ExileClient_system_trading_network_moneyReceivedRequest = "GG\overrides\ExileClient_system_trading_network_moneyReceivedRequest.sqf";
+	ExileClient_construction_beginExistingObject = "GG\overrides\GG_construction_beginExistingObject.sqf";
+	ExileClient_construction_beginNewObject = "GG\overrides\GG_construction_beginNewObject.sqf";
+	ExileClient_construction_thread = "GG\overrides\GG_construction_thread.sqf";
+	ExileClient_gui_crafting_show = "GG\overrides\GG_gui_crafting_show.sqf";
+	ExileClient_gui_interactionMenu_update = "GG\overrides\GG_gui_interactionMenu_update.sqf";
+	ExileClient_object_construction_move = "GG\overrides\GG_object_construction_move.sqf";
+	ExileClient_object_item_craft = "GG\overrides\GG_object_item_craft.sqf";
+	ExileClient_object_player_initialize = "GG\overrides\GG_object_player_initialize.sqf";
+	ExileClient_system_trading_network_moneyReceivedRequest = "GG\overrides\GG_system_trading_network_moneyReceivedRequest.sqf";
 };
 class CfgExileMusic
 {
