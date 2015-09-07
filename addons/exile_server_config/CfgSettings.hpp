@@ -137,21 +137,52 @@ class CfgSettings
 	///////////////////////////////////////////////////////////////////////
 	class LootSettings
 	{
-		// Notify players near to the loot spawn.
-		notifyPlayer 	= 1;
+		/**
+		 * Chance in % to spawn loot per loot spot per building.
+		 *
+		 * 100% = Super high loot
+		 * 50%  = Normal loot spawn rates
+		 * 20%  = You get the point
+		 */
+		spawnChance = 70;
 
-		spawnChance 	= 70;	// % Chance a building will spawn loot.
-		spawnRadius 	= 100;	// Radius to spawn loot around a player.
-		
-		// The rest of the settings deal with loot despawn.
-		despawnRadius		= 20;	// Radius to check to delete loot. If loot has been alive longer than lifeTime and no players are within the despawnRadius, loot will despawn.
-		lootLifetime 		= 300;	// Life time of loot with no players within despawnRadius.
-		lootMaxLifetime 	= 900;	// Life time of loot, even with players within the despawnRadius.
-		droppedItemLifetime = 900;	// Life time of an item dropped by a player. Should match GarbageCollector>>despawnAfterMinutes;
-		
-		// When a building spawns loot, it is locked to prevent it from spawning loot again. These settings define how long a building should remain locked for.
-		buildingUnlockTime 		= 600;	// Time before a building unlocks with a player within despawnRadius. Should be higher or equal to lootLifeTime.
-		buildingMaxUnlockTime 	= 900;	// Max time a before a building unlocks. Should be higher or equal to lootMaxLifeTime.
+		/**
+		 * Radius in meter to spawn loot AROUND each player.
+		 * Do NOT touch this value if you dont know what you do.
+		 * The higher the number, the higher the drop rates, the
+		 * easier your server will lag.
+		 *
+		 * 50m  = Minimum
+		 * 200m = Maximum
+		 */
+		spawnRadius = 100;
+
+		/**
+		* Define a de-spawn radius here. That is the radius where loot
+		* is not near to players and their lifeTime expired.
+		*
+		* 10m  = Minimum
+		* 200m = Maximum
+		*/
+		despawnRadius = 200;
+
+		/**
+		 * Time in seconds to define how long loot stays on the ground
+		 * after it has been spawned. Remember it will not despawn if
+		 * a player is nearby.
+		 * 
+		 * 300s (5m)  = Minimum
+		 * 600s (10m) = Maximum
+		 */
+		lifeTime = 300;
+
+		/**
+		 * Notify a player that loot spawned for him
+		 *
+		 * 1 = Yes
+		 * 0 = No
+		 */
+		notifyPlayer = 1;
 	};
 
 	///////////////////////////////////////////////////////////////////////

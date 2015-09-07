@@ -1,12 +1,10 @@
 /**
  * Exile Mod
  * www.exilemod.com
- * © 2015 Exile Mod Team
+ * Â© 2015 Exile Mod Team
  *
  * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
- *
- * Modified by Rod Serling
  */
  
 private ['_code', '_function', '_file'];
@@ -190,8 +188,9 @@ forEach
 	['ExileServer_world_loadAllDatabaseVehicles', 'exile_server\code\ExileServer_world_loadAllDatabaseVehicles.sqf'],
 	['ExileServer_world_loadAllTerritories', 'exile_server\code\ExileServer_world_loadAllTerritories.sqf'],
 	['ExileServer_world_spawnSpawnZoneVehicles', 'exile_server\code\ExileServer_world_spawnSpawnZoneVehicles.sqf'],
-	['ExileServer_world_spawnVehicles', 'exile_server\code\ExileServer_world_spawnVehicles.sqf'],
-	['ExileServer_util_position_getNearbyPlayers', 'exile_server_config\code\ExileServer_util_position_getNearbyPlayers.sqf']
+	['ExileServer_world_spawnVehicles', 'exile_server\code\ExileServer_world_spawnVehicles.sqf']
 ];
+
+call ExileServer_system_process_preInit;
 
 true
