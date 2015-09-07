@@ -1,10 +1,12 @@
 /**
  * Exile Mod
  * www.exilemod.com
- * Â© 2015 Exile Mod Team
+ * © 2015 Exile Mod Team
  *
  * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
+ *
+ * Modified by Rod Serling. Redistributed with permission.
  */
  
 private["_object"];
@@ -15,7 +17,7 @@ try
 	{
 		player reveal _x;
 	}
-	forEach ((getPosATL player) nearObjects ["Exile_Construction_Abstract_Static", 13]);
+	forEach ((getPosATL player) nearObjects  ["Exile_Construction_Abstract_Static", 13]);
 	_object = cursorTarget;
 	if (isNull _object) then { throw false; };
 	if (_object isEqualTo ExileClientInteractionObject) then 
