@@ -1,13 +1,15 @@
 /**
  * Exile Mod
  * www.exilemod.com
- * Â© 2015 Exile Mod Team
+ * © 2015 Exile Mod Team
  *
  * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
+ *
+ * Modified by Rod Serling
  */
  
-private["_playerObject","_spawnRadius","_spawnChance","_notifyPlayer","_playerPosition","_lastKnownPlayerPosition","_radius","_flags","_buildings","_spawnedLootForThisPlayer","_building","_flag","_flagRadius","_buildingConfig","_lootTableName","_localPositions","_spawnedItemClassNames","_lootPosition","_itemClassName","_cargoType","_lootHolder","_magazineClassNames","_magazineClassName","_numberOfMagazines"];
+private["_playerObject","_spawnRadius","_spawnChance","_notifyPlayer","_playerPosition","_lastKnownPlayerPosition","_radius","_flags","_buildings","_spawnedLootForThisPlayer","_building","_flag","_flagRadius","_buildingConfig","_lootTableName","_localPositions","_spawnedItemClassNames","_lootPosition","_itemClassName","_cargoType","_lootHolder","_magazineClassNames","_magazineClassName","_numberOfMagazines", "_lootSpawnTime"];
 _playerObject = _this;
 _spawnRadius = (getNumber(configFile >> "CfgSettings" >> "LootSettings" >> "spawnRadius") max 50) min 200; 
 _spawnChance = (getNumber(configFile >> "CfgSettings" >> "LootSettings" >> "spawnChance") max 0) min 99; 
@@ -53,6 +55,7 @@ try
 			{
 				if !(_building getVariable ["ExileHasLoot", false]) then
 				{
+					_lootSpawnTime = time;
 					_buildingConfig = configFile >> "CfgBuildings" >> (typeOf _building);
 					_lootTableName = getText(_buildingConfig >> "table");
 					_localPositions = getArray(_buildingConfig >> "positions");
@@ -72,7 +75,7 @@ try
 								_lootHolder = createVehicle ["GroundWeaponHolder",_lootPosition,[],0,"CAN_COLLIDE"];
 								_lootHolder setDir (random 360);
 								_lootHolder setPosATL _lootPosition;
-								_lootHolder setVariable ["ExileSpawnedAt", time];
+								_lootHolder setVariable ["ExileSpawnedAt", _lootSpawnTime];
 								switch (_cargoType) do
 								{
 									case 1: 	{ _lootHolder addMagazineCargoGlobal [_itemClassName, 1]; };
@@ -101,7 +104,7 @@ try
 					}
 					forEach _localPositions;
 					ExileServerBuildingNetIdsWithLoot pushBack (netId _building);
-					_building setVariable ["ExileLootSpawnedAt", time];
+					_building setVariable ["ExileLootSpawnedAt", _lootSpawnTime];
 					_building setVariable ["ExileHasLoot", true];
 				};
 			};
@@ -115,7 +118,7 @@ try
 			{
 				[_x, "notificationRequest",["Success",["Loot spawned near you!"]]] call ExileServer_system_network_send_to;
 				false;
-			} count ([_playerPosition, _spawnRadius] call hotfix_getNearbyPlayers);
+			} count ([_playerPosition, _spawnRadius] call ExileServer_util_position_getNearbyPlayers);
 		};
 	};
 	_playerObject setVariable["ExilePositionAtLastLootSpawnCircle", _playerPosition];	
