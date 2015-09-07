@@ -40,47 +40,38 @@ else
 		{
 			if (isPlayer _killer) then
 			{
-				if ((_victim getVariable ["Gr8Protection", false]) isEqualTo true) then {
+				if (_victim getVariable["ExileIsBambi", false]) then
+				{
 					_addKillStat = false;
 					_addDeathStat = false;
-					_fragAttributes pushBack "Safezone Camper";
-					_killerRespectPoints pushBack ["SAFEZONE CAMPER", (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Frags" >> "safezone"))];
+					_fragAttributes pushBack "Bambi Slayer";
+					_killerRespectPoints pushBack ["BAMBI SLAYER", (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Frags" >> "bambi"))];
 				}
 				else 
 				{
-					if (_victim getVariable["ExileIsBambi", false]) then
+					if (vehicle _killer isEqualTo _killer) then
 					{
-						_addKillStat = false;
-						_addDeathStat = false;
-						_fragAttributes pushBack "Bambi Slayer";
-						_killerRespectPoints pushBack ["BAMBI SLAYER", (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Frags" >> "bambi"))];
-					}
-					else 
-					{
-						if (vehicle _killer isEqualTo _killer) then
+						if (currentWeapon _killer isEqualTo "Exile_Melee_Axe") then
 						{
-							if (currentWeapon _killer isEqualTo "Exile_Melee_Axe") then
-							{
-								_fragAttributes pushBack "Humiliation";
-								_killerRespectPoints pushBack ["HUMILIATION", (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Frags" >> "humiliation"))];
-							}
-							else 
-							{
-								_killerRespectPoints pushBack ["ENEMY FRAGGED", (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Frags" >> "standard"))];
-							};
+							_fragAttributes pushBack "Humiliation";
+							_killerRespectPoints pushBack ["HUMILIATION", (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Frags" >> "humiliation"))];
 						}
 						else 
 						{
-							if ((driver (vehicle _killer)) isEqualTo _killer) then
-							{
-								_fragAttributes pushBack "Road Kill";
-								_killerRespectPoints pushBack ["ROAD KILL", (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Frags" >> "roadKill"))];
-							}
-							else 
-							{	
-								_fragAttributes pushBack "Passenger";
-								_killerRespectPoints pushBack ["MAD PASSENGER", (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Frags" >> "passenger"))];
-							};
+							_killerRespectPoints pushBack ["ENEMY FRAGGED", (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Frags" >> "standard"))];
+						};
+					}
+					else 
+					{
+						if ((driver (vehicle _killer)) isEqualTo _killer) then
+						{
+							_fragAttributes pushBack "Road Kill";
+							_killerRespectPoints pushBack ["ROAD KILL", (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Frags" >> "roadKill"))];
+						}
+						else 
+						{	
+							_fragAttributes pushBack "Passenger";
+							_killerRespectPoints pushBack ["MAD PASSENGER", (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Frags" >> "passenger"))];
 						};
 					};
 				};
@@ -155,7 +146,6 @@ else
 			{
 				["systemChatRequest", [format["%1 was killed by an NPC! (%2m Distance)", (name _victim), floor(_victim distance _killer)]]] call ExileServer_object_player_event_killfeed;
 			};
-			
 		};
 	};
 };
