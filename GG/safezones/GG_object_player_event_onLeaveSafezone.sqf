@@ -33,7 +33,7 @@ if !(ProtectVehicles) then {
 
 _isBambi = player getVariable["ExileIsBambi", false];
 if (LooseRespect) then {
-	if !(isNull && _isBambi) then {
+	if (!isNull && !_isBambi) then {
 		player setVariable ["ExileIsBambi", true];
 	};
 };
@@ -51,7 +51,7 @@ Gr8timer = [] spawn {
 	};
 	
 	if (LooseRespect) then {
-		if !(isNull && _isBambi) then {
+		if (!isNull && !_isBambi) then {
 			player setVariable ["ExileIsBambi", false];
 		};
 	};
