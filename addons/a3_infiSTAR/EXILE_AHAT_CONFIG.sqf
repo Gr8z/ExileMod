@@ -67,7 +67,7 @@ _adminUIDandAccess =
 		]
 	],
 	[
-		['03202340','02424420'],	// Admins with UIDs in this Array have their Access defined in the array below.
+		['UID1','UID2','UID3','...'],	// Admins with UIDs in this Array have their Access defined in the array below.
 		[
 			'Teleport On Map Click','Teleport - Target To Me','Teleport - Me To Target','Teleport In Facing Direction (10m steps)',
 			'spectating','AdminConsole','Delete Vehicle','FlyUp','ShowGear',
@@ -86,7 +86,7 @@ _adminUIDandAccess =
 		]
 	],
 	[
-		['32234234'],	// Admins with UIDs in this Array have their Access defined in the array below.
+		['UID1','UID2','UID3','...'],	// Admins with UIDs in this Array have their Access defined in the array below.
 		[
 			'Teleport On Map Click','Teleport - Target To Me','Teleport - Me To Target','Teleport In Facing Direction (10m steps)',
 			'spectating','AdminConsole','Delete Vehicle','FlyUp','ShowGear',
@@ -125,19 +125,19 @@ _aLocalM = ["DMS_MissionMarkerCircle","DMS_MissionMarkerDot"];
 /* Use IDD White-List ? */ _UDW = true;	/* true or false */
 /* _allowedIDDs: Insert IDDs here to prevent them from being closed! */
 _allowedIDDs = [
-	0,4,5,6,8,12,18,24,46,49,54,55,63,70,131,160,174,602,999,148,163,129,169,
+	0,4,5,6,8,12,18,24,46,49,54,55,63,70,131,160,174,602,999,
 	24001,24002,24004,24005,24006,24007,24008,24009,24010,24011,24012,24013,24014,24015,20016,20017,20018,20019,20020,20021
 ];
 
 /* _badIDDsToKick: Forbidden Idds that will get you Kicked by the AH */
-_badIDDsToKick = [-1337];
+_badIDDsToKick = [-1337,133];
 
 /* _badIDDsToClose: Forbidden Idds that will get closed by the AH */
 _badIDDsToClose =
 [
 	2,3,7,17,19,25,26,27,28,29,30,31,32,37,40,41,43,44,45,51,52,53,74,85,
 	106,126,127,132,146,147,150,151,152,153,154,159,162,164,262,
-	314,632,1320,2121,148,163,129,169
+	314,632,1320,2121,148,163,129,169,157
 ];
 
 
@@ -162,8 +162,7 @@ _blacklistedFileArray =
 	'Dta\Screens.bin','ArmA2OA_Extras\ben_ex.sqf','RyanV1\Keybindiezz.sqf','ArmaX.sqf','insanity.sqf'
 ];
 
-/*  Use BadVar #1 */ _UBV = true;	/* true or false */	/* recommended to use */
-/* _blacklistedVariables: The AntiHack will check if one of these variables is existing for the client (only if _UBV = true;) */
+/* _blacklistedVariables: The AntiHack will check if one of these variables is existing for the client */
 _blacklistedVariables =
 [
 	'arsenalOpened','BIS_fnc_arsenal_fullArsenal','n912','TBMKnlist','PLAY','ALTISLIFENEXT3','SOMEONE_dsfnsjf',
@@ -317,8 +316,6 @@ _SupportBox3Content =
 	['Exile_Item_WoodWallKit',30],['Exile_Item_CampFireKit',3],['Exile_Item_SafeKit',6],['Exile_Item_Storagecratekit',5],['Exile_Item_WoodStairsKit',8],['Exile_Melee_Axe',3],['Exile_Ammo_Swing',1],
 	['Exile_Item_Matches',3],['Exile_Item_CookingPot',3],['B_Carryall_oucamo',1]
 ];
-/* ********************************************************************************* */
-if(isNil'ExileServerIsLocked')then{ExileServerIsLocked=false;};
 /* ********************************************************************************* */
 /* ********************************************************************************* */
 /* ********************************************************************************* */
