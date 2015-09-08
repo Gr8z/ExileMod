@@ -1,2 +1,4 @@
 //new
 7 "" !="exilexm8isonline" !="bis_fnc_selectrespawntemplate_respawned" !="mymoneyval"
+7 "ExileScore"
+7 "ExileMoney"

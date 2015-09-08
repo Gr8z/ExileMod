@@ -10,9 +10,15 @@
 /* **************infiSTAR Copyright®© 2011 - 2015 All rights reserved.************** */
 /* *********************************www.infiSTAR.de********************************* */
 comment 'Antihack & AdminTools - Christian Lorenzen - www.infiSTAR.de - License: (CC)';
-VERSION_DATE_IS = '01092015#223';
+VERSION_DATE_IS = '06092015#223';
 infiSTAR_MAIN_CODE = "
-	_log = format['%1 <infiSTAR.de> Loading Menu...',time];systemchat _log;diag_log _log;
+	GET_TIME_TIME = {
+		_hours = floor(time / 60 / 60);
+		_minutes = floor((((time / 60 / 60) - _hours) max 0.0001)*60);
+		_seconds = time - (_hours*60*60) - (_minutes * 60);
+		format['%1h %2min %3s',_hours,_minutes,round _seconds]
+	};
+	_log = format['%1 <infiSTAR.de> Loading Menu...',call GET_TIME_TIME];systemchat _log;diag_log _log;
 	_mainMap = uiNamespace getVariable 'A3MAPICONS_mainMap';
 	if((isNil 'CIVILIAN_COLOR')||(isNil '_mainMap'))then
 	{
@@ -34,6 +40,7 @@ infiSTAR_MAIN_CODE = "
 	if(isNil 'infiSTAR_toggled_A')then{infiSTAR_toggled_A = ['==== OnTarget ====','==== Toggleable ===='];};
 	_fnc_check_for_model = {
 		if((toLower _t) find 'base' != -1)exitWith{false};
+		if(_t find '_Abstract' != -1)exitWith{false};
 		true
 	};
 	if(isNil 'ALLC_ITEMS')then
@@ -757,12 +764,8 @@ infiSTAR_MAIN_CODE = "
 		_ctrlR ctrlAddEventHandler ['LBSelChanged', 'call fnc_LBSelChanged_RIGHT;[] call fnc_setFocus;'];
 		FILLMAINSTATE=0;[] call fnc_fill_infiSTAR_MAIN;
 		
-		_hours = floor(serverTime / 60 / 60);
-		_value = ((serverTime / 60 / 60) - _hours);
-		if(_value == 0)then{_value = 0.0001;};
-		_minutes = round(_value * 60);
 		_ctrl = _display displayCtrl 2;
-		_ctrl ctrlSetText format['Players loaded in: %1 of %2               infiSTAR.de   Admin Menu   SERVER UP FOR: %3h %4min               %5',count playableUnits,((playersNumber west)+(playersNumber east)+(playersNumber civilian)+(playersNumber resistance)),_hours,_minutes,INFISTARVERSION];
+		_ctrl ctrlSetText format['Players loaded in: %1 of %2               infiSTAR.de   Admin Menu   SERVER UP FOR: %3               %4',count playableUnits,((playersNumber west)+(playersNumber east)+(playersNumber civilian)+(playersNumber resistance)),call GET_TIME_TIME,INFISTARVERSION];
 		
 		_btnSortRange = _display displayCtrl 10;
 		_btnSortRange buttonSetAction 'SortAlphaPlease = nil;SortRangePlease = true;[] call fnc_fill_infiSTAR_Player;[] call fnc_setFocus;';
@@ -829,7 +832,7 @@ infiSTAR_MAIN_CODE = "
 			};
 			if(_lbtxt in infiSTAR_SubMenus)then
 			{
-				_ctrl lbSetColor [_i,[0.2,0.4,1,1]];
+				_ctrl lbSetColor [_i,CIVILIAN_COLOR];
 			};
 			if(_lbtxt in infiSTAR_OnTargetNICE)then
 			{
@@ -1344,7 +1347,7 @@ infiSTAR_MAIN_CODE = "
 			case 'FreeRoam Cam (does not work with ESP)':{call fnc_FreeRoamCam;};
 			case 'AdminConsole':{[] spawn fnc_RscDisplayDebugPublic;'AdminConsole' call fnc_adminLog;};
 			case 'Mass Message':{[] call fnc_mass_message;};
-			case 'Spawn Support-Box1':{[1] call fnc_spawn_Box;_click call fnc_adminLog;};
+			case 'Spawn Support-Box1':{[1] spawn fnc_spawn_Box;_click call fnc_adminLog;};
 			case 'Spawn Support-Box2':{[2] call fnc_spawn_Box;_click call fnc_adminLog;};
 			case 'Spawn Support-Box3':{[3] call fnc_spawn_Box;_click call fnc_adminLog;};
 			case 'Spawn Ammo':{[] call infiSTAR_A3addAmmo;};
@@ -1848,11 +1851,14 @@ infiSTAR_MAIN_CODE = "
 		hint _log;
 	};
 	fnc_spawn_Box = {
+		private['_select','_target'];
 		_select = _this select 0;
+		
 		_target = if(isNull (call fnc_LBSelChanged_LEFT))then{player} else {(call fnc_LBSelChanged_LEFT)};
 		_pos = _target modelToWorld [0,3,0];
-		[5000,player,_select,_pos] call fnc_AdminReq;
-		_log = format['Spawning Box %1 on the ground infront of %2!',_select,name _target];
+		
+		[5000,player,_select,_pos,(getDir _target) + 180,_target] call fnc_AdminReq;
+		_log = format['Spawning Box %1 infront of %2!',_select,name _target];
 		cutText [_log, 'PLAIN DOWN'];
 		hint _log;
 	};
@@ -2667,6 +2673,13 @@ infiSTAR_MAIN_CODE = "
 		};
 		if(visibleMap)then
 		{
+			if(mapiconsshowbuildings)then
+			{
+				_sizeIwantOnEachScale = 33.2012;
+				_scale = ctrlMapScale _ctrl;
+				_size = 5 max (_sizeIwantOnEachScale*(_sizeIwantOnEachScale/(_scale * 10000)));
+				{_ctrl drawIcon ['iconObject_1x1', [1,1,1,1], getPosASL _x, _size, _size, getDir _x];} forEach (allMissionObjects 'Exile_Construction_Abstract_Static');
+			};
 			if(mapiconsshowplayer)then
 			{
 				_shown = [];
@@ -2729,10 +2742,8 @@ infiSTAR_MAIN_CODE = "
 					};
 				} forEach allPlayers;
 			};
-			
 			if(mapiconsshowvehicles||mapiconsshowai)then
 			{
-				_allvehicles = [0,0,0] nearEntities ['Allvehicles',1000000];
 				{
 					if(!isNull _x)then
 					{
@@ -2761,7 +2772,7 @@ infiSTAR_MAIN_CODE = "
 							};
 						};
 					};
-				} forEach _allvehicles;
+				} forEach ([0,0,0] nearEntities ['Allvehicles',1000000]);
 			};
 			if(mapiconsshowdeadvehicles)then
 			{
@@ -2811,6 +2822,7 @@ infiSTAR_MAIN_CODE = "
 			hint _log;
 			
 			fnc_MapIcons_run = true;
+			if(isNil'mapiconsshowbuildings')then{mapiconsshowbuildings=false;};
 			if(isNil'mapiconsshowplayer')then{mapiconsshowplayer=true;};
 			if(isNil'mapiconsshowvehicles')then{mapiconsshowvehicles=false;};
 			if(isNil'mapiconsshowdeadplayer')then{mapiconsshowdeadplayer=false;};
@@ -2820,19 +2832,21 @@ infiSTAR_MAIN_CODE = "
 			if(!isNil'MAP_BUTTON_THREAD')exitWith{};
 			MAP_BUTTON_THREAD = [] spawn {
 				disableSerialization;
-				private['_fnc_removeButtons','_fnc_addButtons','_firstbutton','_secondbutton','_thirdbutton','_fourthbutton','_fithbutton','_button','_state','_text','_function','_color'];
-				_fnc_removeButtons = {{ctrlDelete ((findDisplay 12) displayCtrl _x);} forEach [1086,1087,1088,1089,1090];};
+				private['_fnc_removeButtons','_fnc_addButtons','_zerobutton','_firstbutton','_secondbutton','_thirdbutton','_fourthbutton','_fithbutton','_button','_state','_text','_function','_color'];
+				_fnc_removeButtons = {{ctrlDelete ((findDisplay 12) displayCtrl _x);} forEach [1085,1086,1087,1088,1089,1090];};
 				_fnc_addButtons = {
+					_zerobutton = (findDisplay 12) ctrlCreate ['RscButton',1085];
+					_zerobutton ctrlSetPosition [0,-0.05,0.3,0.05];
 					_firstbutton = (findDisplay 12) ctrlCreate ['RscButton',1086];
-					_firstbutton ctrlSetPosition [safeZoneX+0.1,0,0.3,0.05];
+					_firstbutton ctrlSetPosition [0,0,0.3,0.05];
 					_secondbutton = (findDisplay 12) ctrlCreate ['RscButton',1087];
-					_secondbutton ctrlSetPosition [safeZoneX+0.1,0.05,0.3,0.05];
+					_secondbutton ctrlSetPosition [0,0.05,0.3,0.05];
 					_thirdbutton = (findDisplay 12) ctrlCreate ['RscButton',1088];
-					_thirdbutton ctrlSetPosition [safeZoneX+0.1,0.1,0.3,0.05];
+					_thirdbutton ctrlSetPosition [0,0.1,0.3,0.05];
 					_fourthbutton = (findDisplay 12) ctrlCreate ['RscButton',1089];
-					_fourthbutton ctrlSetPosition [safeZoneX+0.1,0.15,0.3,0.05];
+					_fourthbutton ctrlSetPosition [0,0.15,0.3,0.05];
 					_fithbutton = (findDisplay 12) ctrlCreate ['RscButton',1090];
-					_fithbutton ctrlSetPosition [safeZoneX+0.1,0.2,0.3,0.05];
+					_fithbutton ctrlSetPosition [0,0.2,0.3,0.05];
 				};
 				while{true}do
 				{
@@ -2859,6 +2873,7 @@ infiSTAR_MAIN_CODE = "
 							_button ctrlCommit 0;
 						} forEach
 						[
+							[_zerobutton,mapiconsshowbuildings,'Hide Buildings','Show Buildings',{mapiconsshowbuildings = false;},{mapiconsshowbuildings = true;}],
 							[_firstbutton,mapiconsshowplayer,'Hide Player','Show Player',{mapiconsshowplayer = false;},{mapiconsshowplayer = true;}],
 							[_secondbutton,mapiconsshowdeadplayer,'Hide DeadPlayer','Show DeadPlayer',{mapiconsshowdeadplayer = false;},{mapiconsshowdeadplayer = true;}],
 							[_thirdbutton,mapiconsshowvehicles,'Hide Vehicles','Show Vehicles',{mapiconsshowvehicles = false;},{mapiconsshowvehicles = true;}],
@@ -2887,7 +2902,7 @@ infiSTAR_MAIN_CODE = "
 			fnc_MapIcons_run = nil;
 			terminate MAP_BUTTON_THREAD;MAP_BUTTON_THREAD=nil;
 			if(!isNil'EventHandlerDrawAdded')then{(uiNamespace getVariable 'A3MAPICONS_mainMap') ctrlRemoveEventHandler ['Draw',EventHandlerDrawAdded];EventHandlerDrawAdded=nil;};
-			{ctrlDelete ((findDisplay 12) displayCtrl _x);} forEach [1086,1087,1088,1089,1090];
+			{ctrlDelete ((findDisplay 12) displayCtrl _x);} forEach [1085,1086,1087,1088,1089,1090];
 		};
 	};
 	adminVehicleMarker = {
@@ -3243,7 +3258,7 @@ infiSTAR_MAIN_CODE = "
 	};
 	[] spawn {
 		waituntil { !(isNull findDisplay 46) };
-		systemChat format['%1 <infiSTAR.de> Menu Loaded - press F1 (default Key) to open it!',time];
+		systemChat format['%1 <infiSTAR.de> Menu Loaded - press F1 (default Key) to open it!',call GET_TIME_TIME];
 		if(isNil 'OPEN_ADMIN_MENU_KEY')then{OPEN_ADMIN_MENU_KEY = 0x3B;};
 		fnc_infiAdminKeyDown = {
 			private ['_key', '_shift', '_ctrl', '_alt', '_handled'];
