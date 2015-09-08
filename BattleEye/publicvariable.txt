@@ -1,2 +1,0 @@
-//new
-7 "" !="PublicMessage" !="PVAHR_[a-z,0-9]{10,16}" !="PVAH_AdminReq"
