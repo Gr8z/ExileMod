@@ -1,10 +1,3 @@
-/*
-	File: fn_heliCrashes.sqf
-	Author: [midgetgrimm]
-	Purpose: Spawns random heli crash with random loot based on your config. Wipes it, checks it, deletes it, and respawns it.
-	Notes: Global messages assist from eraser1, check config for notes on that
-	TODO: better fill crate system; better messaging system;
-*/
 exsys_heliCrashSpawned = false;
 exsys_safeToClean = true; 
 heliSmoke = "test_EmptyObjectForFireBig" createVehicle [0,0,0];
