@@ -5,53 +5,10 @@
  *
  * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
+ *
  */
  
 private ['_code', '_function', '_file'];
-
-Exile_Debug = false;
-
-Exile_DebugLog = 
-{
-	private ["_msg"];
-
-	if (Exile_Debug) then
-	{
-		diag_log format ["Exile Debug - %1", _msg];
-	};
-};
-
-
-
-hotfix_getNearbyPlayers =
-{
-	private ["_pos", "_dis", "_OK", "_players"];
-
-	_OK = params
-	[
-		["_pos",[0,0,0],[objNull,[]],[2,3]],
-		["_dis",0,[0]]
-	];
-	if (!_OK) exitWith
-	{
-		diag_log format ["ERROR Invalid parameters for hotfix_getNearbyPlayers: %1",_this];
-	};
- 
-	_players = _pos nearEntities ["Exile_Unit_Player",_dis];
- 
-	// Check for Players in Vehicles
-	{
-		{
-			if (isPlayer _x) then
-			{
-				_players pushBack _x;
-			};
-			false;
-		} count (crew _x);
-		false;
-	} count (_pos nearEntities [["LandVehicle", "Air", "Ship"], _dis]);
-	_players
-};
 
 {
     _code = '';
@@ -69,7 +26,9 @@ hotfix_getNearbyPlayers =
 }
 forEach 
 [
-
+	['ExileServer_util_position_getNearbyPlayers', 'exile_server_config\code\ExileServer_util_position_getNearbyPlayers.sqf'],
+	['ExileServer_object_vehicle_event_onRopeAttach', 'exile_server_config\code\ExileServer_object_vehicle_event_onRopeAttach.sqf']
 ];
+
 
 true

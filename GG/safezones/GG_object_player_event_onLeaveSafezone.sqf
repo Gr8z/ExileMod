@@ -31,6 +31,10 @@ if !(ProtectVehicles) then {
 	};
 };
 
+if (LooseRespect) then {
+	player setVariable["Gr8Protection", true, true];
+};
+
 removeMissionEventHandler ["Draw3D",ExileSafeZoneEspEH];
 
 if (!isNil "Gr8timer") then { terminate Gr8timer; };
@@ -42,10 +46,13 @@ Gr8timer = [] spawn {
 		if (ShowTime) then {if (_x >= 2) then {cutText [format ["PROTECTION ENDING IN %1s", TimerSecs+1-_x], "PLAIN DOWN"];};};
 		uiSleep 1;
 	};
-
+	
+	if (LooseRespect) then {
+		player setVariable["Gr8Protection", false, true];
+	};
 	
 	if (!ExilePlayerInSafezone) then {
-		if (CanShoot) then {player removeEventHandler ["Fired",ExileSafeZoneFiredEH];};
+		if !(CanShoot) then {player removeEventHandler ["Fired",ExileSafeZoneFiredEH];};
 		if (GodMode) then {
 			player allowDamage true;
 			player addEventHandler ["HandleDamage",{_this call ExileClient_object_player_event_onHandleDamage}];

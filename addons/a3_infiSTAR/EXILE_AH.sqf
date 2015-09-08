@@ -2224,7 +2224,6 @@ _AH_MAIN_BLOCK = {
 							diag_log 'IGNORE THIS';
 							diag_log '--------------------------------------------------';
 							"; if(_HIDE_FROM_PLAYERS)then{ _A3AHstring = _A3AHstring + "
-								preProcessFileLineNumbers 'welcome.sqf';
 							"; }else{ _A3AHstring = _A3AHstring + "
 								preProcessFileLineNumbers 'Done! badcontent.sqf';
 							"; }; _A3AHstring = _A3AHstring + "

@@ -1,10 +1,12 @@
 /**
  * Exile Mod
  * www.exilemod.com
- * Â© 2015 Exile Mod Team
+ * © 2015 Exile Mod Team
  *
  * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
+ *
+ * Modified by Rod Serling. Redistributed with permission.
  */
  
 private["_recipeClassName","_recipeConfig","_recipeName","_pictureItemClassName","_pictureItemConfig","_recipePicture","_canCraftItem","_possibleCraftQuantity","_equippedMagazines","_components","_returnedItems","_tools","_dialog","_description","_componentQuantity","_componentItemClassName","_componentItemName","_equippedComponentQuantity","_toolItemClassName","_toolItemName","_equippedToolQuantity","_interactionModelGroupClassName","_interactionModelGroupConfig","_interactionModelGroupName","_interactionModelGroupModels","_foundObject","_i","_listBoxIndex"];
@@ -97,7 +99,7 @@ if( _interactionModelGroupClassName != "" ) then
 	_interactionModelGroupModels = getArray(_interactionModelGroupConfig >> "models");
 	_description = _description + format["<t size='1' font='puristaMedium' align='left'>%1</t>", _interactionModelGroupName];
 	_foundObject = false;
-	if ([(getPosATL player), 10, _interactionModelGroupModels] call ExileClient_util_model_isNearby) then
+	if ([getPosATL player, 10, _interactionModelGroupModels] call ExileClient_util_model_isNearby) then
 	{
 		_foundObject = true;	
 	}
