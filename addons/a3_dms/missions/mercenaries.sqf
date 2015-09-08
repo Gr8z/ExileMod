@@ -5,7 +5,7 @@
 	Called from DMS_selectMission
 */
 
-private ["_num", "_side", "_pos", "_difficulty", "_AICount", "_group", "_crate", "_crate2", "_crate_loot_values", "_msgStart", "_msgWIN", "_msgLOSE", "_missionName", "_missionAIUnits", "_missionObjs", "_markers", "_time", "_added"];
+private ["_num", "_side", "_pos", "_difficulty", "_AICount", "_group", "_crate", "_crate_loot_values", "_msgStart", "_msgWIN", "_msgLOSE", "_missionName", "_missionAIUnits", "_missionObjs", "_markers", "_time", "_added"];
 
 // For logging purposes
 _num = DMS_MissionCount;
@@ -25,7 +25,7 @@ _difficulty = "moderate";
 
 // Create AI
 // TODO: Spawn AI only when players are nearby
-_AICount = 7 + (round (random 2));
+_AICount = 6 + (round (random 2));
 
 _group =
 [
@@ -43,9 +43,9 @@ _crate = ["Box_NATO_Wps_F",_pos] call DMS_fnc_SpawnCrate;
 // Set crate loot values
 _crate_loot_values =
 [
-	8,		// Weapons
-	5,		// Items
-	2 		// Backpacks
+	5,		// Weapons
+	10,		// Items
+	3 		// Backpacks
 ];
 
 
@@ -64,16 +64,16 @@ _missionObjs =
 ];
 
 // Define Mission Start message
-_msgStart = format["<t color='#FFFF00' size='1.25'>Lost Battalion! </t><br/> A battalion of soldiers have gotten lost in convict land! Eliminate them!"];
+_msgStart = format["<t color='#FFFF00' size='1.25'>Mercenary Group! </t><br/> A group of mercenaries has been spotted. Kill them and take their equipment!"];
 
 // Define Mission Win message
-_msgWIN = format["<t color='#0080ff' size='1.25'>Lost Battalion! </t><br/> Convicts have successfully eliminated the lost battalion!"];
+_msgWIN = format["<t color='#0080ff' size='1.25'>Mercenary Group! </t><br/> Convicts have successfully eliminated the mercenaries"];
 
 // Define Mission Lose message
-_msgLOSE = format["<t color='#FF0000' size='1.25'>Lost Battalion! </t><br/> Whittlesey escaped with his Lost Battalion!"];
+_msgLOSE = format["<t color='#FF0000' size='1.25'>Mercenary Group! </t><br/> The mercenaries have escaped and they took all their loot with them!"];
 
 // Define mission name (for map marker and logging)
-_missionName = "Lost Battalion";
+_missionName = "Mercenary Group";
 
 // Create Markers
 _markers =

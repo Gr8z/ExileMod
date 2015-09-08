@@ -5,7 +5,7 @@
 	Called from DMS_selectMission
 */
 
-private ["_num", "_side", "_pos", "_difficulty", "_AICount", "_group", "_crate", "_crate2", "_crate_loot_values", "_msgStart", "_msgWIN", "_msgLOSE", "_missionName", "_missionAIUnits", "_missionObjs", "_markers", "_time", "_added"];
+private ["_num", "_side", "_pos", "_difficulty", "_AICount", "_group", "_crate", "_crate_loot_values", "_msgStart", "_msgWIN", "_msgLOSE", "_missionName", "_missionAIUnits", "_missionObjs", "_markers", "_time", "_added"];
 
 // For logging purposes
 _num = DMS_MissionCount;
@@ -20,12 +20,12 @@ _pos = [10,100] call DMS_fnc_findSafePos;
 
 
 // Set general mission difficulty
-_difficulty = "moderate";
+_difficulty = "hardcore";
 
 
 // Create AI
 // TODO: Spawn AI only when players are nearby
-_AICount = 7 + (round (random 2));
+_AICount = 4 + (round (random 2));
 
 _group =
 [
@@ -43,9 +43,9 @@ _crate = ["Box_NATO_Wps_F",_pos] call DMS_fnc_SpawnCrate;
 // Set crate loot values
 _crate_loot_values =
 [
-	8,		// Weapons
-	5,		// Items
-	2 		// Backpacks
+	7,		// Weapons
+	2,		// Items
+	3 		// Backpacks
 ];
 
 
@@ -64,16 +64,16 @@ _missionObjs =
 ];
 
 // Define Mission Start message
-_msgStart = format["<t color='#FFFF00' size='1.25'>Lost Battalion! </t><br/> A battalion of soldiers have gotten lost in convict land! Eliminate them!"];
+_msgStart = format["<t color='#FFFF00' size='1.25'>Car Dealer Robbery! </t><br/> A squad of proffesional Navy Seals team is performing gorilla warfare in convict land, deal with them!"];
 
 // Define Mission Win message
-_msgWIN = format["<t color='#0080ff' size='1.25'>Lost Battalion! </t><br/> Convicts have successfully eliminated the lost battalion!"];
+_msgWIN = format["<t color='#0080ff' size='1.25'>Car Dealer Robbery! </t><br/> Convicts have successfully taken care of the Navy Seals, you must be the top of your class!"];
 
 // Define Mission Lose message
-_msgLOSE = format["<t color='#FF0000' size='1.25'>Lost Battalion! </t><br/> Whittlesey escaped with his Lost Battalion!"];
+_msgLOSE = format["<t color='#FF0000' size='1.25'>Car Dealer Robbery! </t><br/> The Navy Seals have escaped and are now planning their next raid!"];
 
 // Define mission name (for map marker and logging)
-_missionName = "Lost Battalion";
+_missionName = "Rogue Navy Seals";
 
 // Create Markers
 _markers =

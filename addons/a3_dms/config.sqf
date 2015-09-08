@@ -37,11 +37,11 @@ DMS_DEBUG = false;
 	DMS_MissionTimeoutReset				= true;						// Enable mission timeout timer reset if a player is close
 	DMS_MissionTimeoutResetRange		= 1000;						// If a player is this close to a mission then it won't time-out
 
-	DMS_PlayerNearBlacklist				= 1000;						// Missions won't spawn in a position this many meters close to a player
-	DMS_SpawnZoneNearBlacklist			= 1000;						// Missions won't spawn in a position this many meters close to a spawn zone
-	DMS_TraderZoneNearBlacklist			= 2000;						// Missions won't spawn in a position this many meters close to a trader zone
+	DMS_PlayerNearBlacklist				= 2000;						// Missions won't spawn in a position this many meters close to a player
+	DMS_SpawnZoneNearBlacklist			= 2500;						// Missions won't spawn in a position this many meters close to a spawn zone
+	DMS_TraderZoneNearBlacklist			= 3000;						// Missions won't spawn in a position this many meters close to a trader zone
 	DMS_MissionNearBlacklist			= 3000;						// Missions won't spawn in a position this many meters close to another mission
-	DMS_WaterNearBlacklist				= 500;						// Missions won't spawn in a position this many meters close to water
+	DMS_WaterNearBlacklist				= 750;						// Missions won't spawn in a position this many meters close to water
 
 	DMS_SpawnBoxSmoke					= true;						// Spawn a smoke grenade on mission box upon misson completion during daytime
 	DMS_SpawnBoxIRGrenade				= true;						// Spawn an IR grenade on mission box upon misson completion during nighttime
@@ -51,20 +51,28 @@ DMS_DEBUG = false;
 
 	//Mission notification settings
 	DMS_PlayerNotificationTypes =		[							// Notification types. Supported values are: ["dynamicTextRequest", "standardHintRequest", "systemChatRequest"]
-											//"dynamicTextRequest", <--- Currently won't work.
-											"standardHintRequest",
-											"systemChatRequest"
+											//"dynamicTextRequest", <--- Won't work in Exile v0.9.19
+											"standardHintRequest"
+											//"systemChatRequest"
 										];
-	DMS_dynamicText_Size				= "0.55";					// Dynamic Text size for "dynamicTextRequest" notification type.
+	DMS_dynamicText_Size				= "0.65";					// Dynamic Text size for "dynamicTextRequest" notification type.
 	DMS_dynamicText_Color				= "#FFCC00";				// Dynamic Text color for "dynamicTextRequest" notification type.
 
 	DMS_MissionTypes =					[							//	List of missions with spawn chances. If they add up to 100%, they represent the percentage chance each one will spawn
-											["mission1",25],
-											["mission2",25],
-											["mission3",15],
-											["mission4",10],
-											["bauhaus",45],
-											["lost_battalion",30],
+											["bandits",25],
+											["bauhaus",25],
+											["beertransport",15],
+											["behindenemylines",10],
+											["blackhawkdown",45],
+											["cardealer",25],
+											["constructionsite",35],
+											["donthasslethehoff",30],
+											["foodtransport",25],
+											["guntransport",20],
+											["humanitarian",25],
+											["lost_battalion",10],
+											["mercenaries",20],
+											["roguenavyseals",15],
 											["walmart",20]
 										];
 
@@ -385,7 +393,7 @@ DMS_DEBUG = false;
 											"sniper"
 										];
 
-	DMS_ai_use_launchers				= false;						// Enable/disable spawning an AI in a group with a launcher
+	DMS_ai_use_launchers				= true;						// Enable/disable spawning an AI in a group with a launcher
 	DMS_ai_use_launchers_chance			= 50;						// Percentage chance to actually spawn the launcher (per-group)
 	DMS_AI_launcher_ammo_count			= 2;						// How many rockets an AI will get with its launcher
 	DMS_ai_remove_launchers				= true;						// Remove rocket launchers on AI death
@@ -523,6 +531,6 @@ DMS_DEBUG = false;
 // Debug Overwrites
 if(DMS_DEBUG) then {
 	DMS_TimeBetweenMissions			= [30,60];
-	DMS_MissionTimeOut				= [240,300];
+	DMS_MissionTimeOut				= [60,90];
 	diag_log format ["DMS_DEBUG CONFIG :: Overriding DMS_TimeBetweenMissions (%1) and DMS_MissionTimeOut (%2)",DMS_TimeBetweenMissions,DMS_MissionTimeOut];
 };
