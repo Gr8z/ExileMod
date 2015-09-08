@@ -351,7 +351,7 @@ class CfgSettings
 		kickTime = 2;
 
 		// Selfexplanitory
-		useRestartMessages = 1;
+		useRestartMessages = 0;
 
 		// Times in minutes before restart warrning will be shown to all players
 		// 30 sec intervals min!

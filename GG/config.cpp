@@ -1602,7 +1602,7 @@ class CfgExileArsenal
 };
 class CfgExileCustomCode 
 {
-	ExileServer_object_construction_network_deconstructConstructionRequest = "exile_server_config\code\ExileServer_object_construction_network_deconstructConstructionRequest";
+	ExileServer_object_construction_network_deconstructConstructionRequest = "exile_server_config\code\ExileServer_object_construction_network_deconstructConstructionRequest.sqf";
 	ExileServer_object_vehicle_createNonPersistentVehicle = "exile_server_config\code\ExileServer_object_vehicle_createNonPersistentVehicle.sqf";
 	ExileServer_object_vehicle_createPersistentVehicle = "exile_server_config\code\ExileServer_object_vehicle_createPersistentVehicle.sqf";
 	ExileServer_object_vehicle_event_onGetIn = "exile_server_config\code\ExileServer_object_vehicle_event_onGetIn.sqf";
