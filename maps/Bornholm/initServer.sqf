@@ -3,7 +3,7 @@
 _objects = 
 [
 	["Land_Dome_Big_F",[4337,18085.4,-1.52588e-005],64.6072,0,3,false],
-    ["Exile_Sign_TraderCity",[4340.53,18003.1,0],0,0,0,false],
+    ["Land_Billboard_F",[4340.53,18003.1,0],0,0,0,false],
     ["Land_CampingTable_F",[4321.6,18093,0.000175476],297.323,0,0,false],
     ["Exile_Sign_Armory",[4320.69,18090.5,-0.172607],295.758,0,0,false],
     ["Land_Device_assembled_F",[4315.71,18090.1,0],0,0,0,false],
@@ -47,6 +47,7 @@ _objects =
     ["Land_CampingTable_F",[4331.39,18105.5,0.601669],257,0,0,false],
     ["Land_FlatTV_01_F",[4331.66,18105,1.52601],126.343,0,0,false],
     ["Land_PCSet_01_case_F",[4331.48,18105.3,0.610138],78.4003,0,0,false],
+    ["Flag_US_F",[4328.62,18104.2,0],0,0,0,false],
     ["Exile_Cosmetic_UAV",[4347.86,18103.2,0.85009],27.2787,0,0,false],
     ["Land_CncShelter_F",[4308.88,18074,-0.0992432],68.9145,0,0,false],
     ["Land_CncWall4_F",[4311.89,18071.8,-0.0320816],188.08,0,0,false],
@@ -142,7 +143,12 @@ _objects =
     ["Land_Pavement_narrow_F",[4300.93,18133.9,0.00673676],153.187,0,0,false],
     ["Land_Pavement_narrow_F",[4300.52,18136.9,0.00779724],243.637,0,0,false],
     ["Land_Pavement_narrow_F",[4298.79,18140.5,-0.257187],243.637,0,0,false],
-    ["Land_Mil_WiredFenceD_F",[4221.34,18100.7,-1.12393],33.4072,0,0,false]
+    ["Land_Mil_WiredFenceD_F",[4221.34,18100.7,-1.12393],33.4072,0,0,false],
+    ["Land_Shed_Small_F",[4220.4,18106.9,0.00185394],303.808,0,0,false],
+    ["Land_Wreck_Offroad_F",[4228.15,18104.4,0.0016098],44.5073,0,0,false],
+    ["Land_Wreck_Truck_F",[4216.08,18111.4,-0.000198364],34.4572,0,354.187,false],
+    ["Land_Wreck_Ural_F",[4222.26,18108.6,-0.00976563],178.158,0,0,false],
+    ["Land_Wreck_Van_F",[4212.81,18112.7,-0.000411987],35.8932,0,0,false]
 	
 	// Terminal Airport Trader
 	["Land_GarbageBags_F",[3127.62,5495.72,0],0,[[0,1,0],[0,0,1]],false],
