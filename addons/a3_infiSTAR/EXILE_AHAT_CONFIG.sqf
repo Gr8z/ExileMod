@@ -112,7 +112,7 @@ _LVC = true;	/* Local Vehicle Check */
 _UAT = true;	/* Anti Teleport */
 _CMC = true;	/* Check for custom CommandingMenus */
 _KCM = true;	/* Just close ALL CommandingMenus */
-_CAP = true;	/* Check Actions Plr - will announce: xxx possible scroll menu hack */
+_CAP = false;	/* Check Actions Plr - will announce: xxx possible scroll menu hack */
 
 
 /*  Check Global Markers */ _CGM = true;	/* true or false */	/* you may need to disable this check for A.I. Missions - or whitelist the used Markers in the _aLocalM Array beneath */
