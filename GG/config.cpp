@@ -1649,6 +1649,13 @@ class CfgFlags
 		name = "MOIST";
 		texture = "GG\images\flags\moist.paa";
 		uid = "";
+	};	
+	
+	class CENOBITE
+	{
+		name = "CENOBITE";
+		texture = "GG\images\flags\cenobite.paa";
+		uid = "76561198130402012";
 	};
 };
 class CfgTerritories
