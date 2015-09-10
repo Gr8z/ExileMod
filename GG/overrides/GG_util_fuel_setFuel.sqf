@@ -10,8 +10,8 @@
 private["_object","_amount","_fuelCapacity","_fuel"];
 _object = _this select 0;
 _amount = _this select 1;
-_pumps = ["Land_fs_feed_F","Land_FuelStation_Feed_F"];
-if((typeOf _object) in _pumps)exitWith{true};
+pumps = ["Land_fs_feed_F","Land_FuelStation_Feed_F"];
+if((typeOf _object) in pumps)exitWith{true};
 _fuelCapacity = getNumber(configFile >> "CfgVehicles" >> typeOf _object >> "fuelCapacity");
 _fuel = fuel _object;
 _fuel = _fuel + _amount/_fuelCapacity;

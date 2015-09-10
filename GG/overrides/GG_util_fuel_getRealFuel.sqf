@@ -9,8 +9,8 @@
  
 private["_object","_fuelCapacity","_fuel"];
 _object = _this;
-_pumps = ["Land_fs_feed_F","Land_FuelStation_Feed_F"];
-if((typeOf _object) in _pumps)exitWith{[9000,10000]};
+pumps = ["Land_fs_feed_F","Land_FuelStation_Feed_F"];
+if((typeOf _object) in pumps)exitWith{[9000,10000]};
 _fuelCapacity = getNumber(configFile >> "CfgVehicles" >> typeOf _object >> "fuelCapacity");
 _fuel = fuel _object;
 _fuel = round (_fuelCapacity * _fuel);
