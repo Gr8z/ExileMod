@@ -228,7 +228,7 @@ call ExileClient_object_trader_create;
 ///////////////////////////////////////////////////////////////////////////
 _workBench = "Land_Workbench_01_F" createVehicleLocal [0,0,0];
 _workBench setDir 0;
-_workBench setPosATL [4337.72, 18064.2, 0.1];
+_workBench setPosATL [4337.72, 18064.2, 0.2];
 
 [
     "Exile_Trader_Hardware",
@@ -314,7 +314,7 @@ call ExileClient_object_trader_create;
     "AfricanHead_02",
     ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3"],
     [4346.59,18102.9,0],
-    27.2786
+    153.2786
 ]
 call ExileClient_object_trader_create;
 
@@ -348,7 +348,7 @@ call ExileClient_object_trader_create;
 [
     "Exile_Trader_Aircraft",
     "WhiteHead_17",
-    ["LHD_krajPaluby"],
+    ["HubBriefing_scratch", "HubBriefing_stretch", "HubBriefing_think", "HubBriefing_lookAround1", "HubBriefing_lookAround2"],
     [4369.19,18096.1,0],
     14.544
 ]
