@@ -227,8 +227,8 @@ call ExileClient_object_trader_create;
 // Hardware Trader
 ///////////////////////////////////////////////////////////////////////////
 _workBench = "Land_Workbench_01_F" createVehicleLocal [0,0,0];
-_workBench setDir 0;
-_workBench setPosATL [4337.72, 18064.2, 0.2];
+_workBench setDir 180;
+_workBench setPosATL [4337.72, 18064.2, 0.1];
 
 [
     "Exile_Trader_Hardware",
