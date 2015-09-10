@@ -226,9 +226,9 @@ call ExileClient_object_trader_create;
 ///////////////////////////////////////////////////////////////////////////
 // Hardware Trader
 ///////////////////////////////////////////////////////////////////////////
-_workBench = "Land_Workbench_01_F" createVehicleLocal [0,0,0];
-_workBench setDir 180;
-_workBench setPosATL [4337.72, 18064.2, 0];
+_chair = "Land_CampingChair_V2_F" createVehicleLocal [0,0,0];
+_chair setDir 180;
+_chair setPosATL [4337.72, 18064.2, 0];
 
 [
     "Exile_Trader_Hardware",
