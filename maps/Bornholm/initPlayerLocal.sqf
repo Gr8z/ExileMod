@@ -219,3 +219,211 @@ call ExileClient_object_trader_create;
 ]
 call ExileClient_object_trader_create;
 
+///////////////////////////////////////////////////////////////////////////////
+// Dome Trader CITY
+///////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////
+// Hardware Trader
+///////////////////////////////////////////////////////////////////////////
+_workBench = "Land_Workbench_01_F" createVehicleLocal [0,0,0];
+_workBench setDir 0;
+_workBench setPosATL [4337.72, 18064.2, 0];
+
+[
+    "Exile_Trader_Hardware",
+    "WhiteHead_17",
+    ["InBaseMoves_sitHighUp1"],
+    [0, 0, -0.5],
+    170,
+    _workBench
+]
+call ExileClient_object_trader_create;
+
+///////////////////////////////////////////////////////////////////////////
+// Fast Food Trader
+///////////////////////////////////////////////////////////////////////////
+_cashDesk = "Land_CashDesk_F" createVehicleLocal [0,0,0];
+_cashDesk setDir 24.3162;
+_cashDesk setPosATL [4353.83, 18085.3, 0];
+
+_microwave = "Land_Microwave_01_F" createVehicleLocal [0,0,0];
+_cashDesk disableCollisionWith _microwave;         
+_microwave disableCollisionWith _cashDesk; 
+_microwave attachTo [_cashDesk, [-0.6, 0.2, 1.1]];
+
+_ketchup = "Land_Ketchup_01_F" createVehicleLocal [0,0,0];
+_cashDesk disableCollisionWith _ketchup;         
+_ketchup disableCollisionWith _cashDesk; 
+_ketchup attachTo [_cashDesk, [-0.6, 0, 1.1]];
+
+_mustard = "Land_Mustard_01_F" createVehicleLocal [0,0,0];
+_cashDesk disableCollisionWith _mustard;         
+_mustard disableCollisionWith _cashDesk; 
+_mustard attachTo [_cashDesk, [-0.5, -0.05, 1.1]];
+
+[
+    "Exile_Trader_Food",
+    "GreekHead_A3_01",
+    ["InBaseMoves_table1"],
+    [0.1, 0.5, 0.2],
+    170,
+    _cashDesk
+]
+call ExileClient_object_trader_create;
+
+///////////////////////////////////////////////////////////////////////////
+// Armory Trader
+///////////////////////////////////////////////////////////////////////////
+_chair = "Land_CampingChair_V2_F" createVehicleLocal [0,0,0];
+_chair setDir 295.758;    
+_chair setPosATL [4320.66,18093.5,0];
+
+[
+    "Exile_Trader_Armory",
+    "PersianHead_A3_02",
+    ["InBaseMoves_SittingRifle1"],
+    [0, -0.15, -0.45],
+    180,
+    _chair
+]
+call ExileClient_object_trader_create;
+
+///////////////////////////////////////////////////////////////////////////
+// Equipment Trader
+///////////////////////////////////////////////////////////////////////////
+_chair = "Land_CampingChair_V2_F" createVehicleLocal [0,0,0];
+_chair setDir 268.48;    
+_chair setPosATL [4318.02,18085.9,0];
+
+[
+    "Exile_Trader_Equipment",
+    "WhiteHead_19",
+    ["InBaseMoves_SittingRifle1"],
+	[0, -0.15, -0.45],
+    180,
+    _chair
+]
+call ExileClient_object_trader_create;
+
+///////////////////////////////////////////////////////////////////////////
+// Specops Trader
+///////////////////////////////////////////////////////////////////////////
+[
+    "Exile_Trader_SpecialOperations",
+    "AfricanHead_02",
+    ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3"],
+    [4346.59,18102.9,0],
+    27.2786
+]
+call ExileClient_object_trader_create;
+
+///////////////////////////////////////////////////////////////////////////
+// Office Trader
+///////////////////////////////////////////////////////////////////////////
+[
+    "Exile_Trader_Office",
+    "GreekHead_A3_04",
+    ["HubBriefing_scratch", "HubBriefing_stretch", "HubBriefing_think", "HubBriefing_lookAround1", "HubBriefing_lookAround2"],
+    [4330.4,18105.5,0.56574],
+    256.994
+]
+call ExileClient_object_trader_create;
+
+///////////////////////////////////////////////////////////////////////////
+// Waste Dump Trader
+///////////////////////////////////////////////////////////////////////////
+[
+    "Exile_Trader_WasteDump",
+    "GreekHead_A3_01",
+    ["HubStandingUA_move1", "HubStandingUA_move2", "HubStandingUA_idle1", "HubStandingUA_idle2", "HubStandingUA_idle3"],
+    [4288.66,18087.2,0],
+    254.112
+]
+call ExileClient_object_trader_create;
+
+///////////////////////////////////////////////////////////////////////////
+// Aircraft Trader
+///////////////////////////////////////////////////////////////////////////
+[
+    "Exile_Trader_Aircraft",
+    "WhiteHead_17",
+    ["LHD_krajPaluby"],
+    [4369.19,18096.1,0],
+    166.544
+]
+call ExileClient_object_trader_create;
+
+///////////////////////////////////////////////////////////////////////////
+// Aircraft Customs Trader
+///////////////////////////////////////////////////////////////////////////
+//[
+//    "Exile_Trader_AircraftCustoms",
+//    "GreekHead_A3_07",
+//    ["HubStandingUC_idle1", "HubStandingUC_idle2", "HubStandingUC_idle3", "HubStandingUC_move1", "HubStandingUC_move2"],
+//    [3072.65,5446.32,0],
+//    205
+//]
+//call ExileClient_object_trader_create;
+//no aircraft customs at dome
+///////////////////////////////////////////////////////////////////////////
+// Vehicle Trader
+///////////////////////////////////////////////////////////////////////////
+
+_trader = 
+[
+    "Exile_Trader_Vehicle",
+    "WhiteHead_11",
+    ["InBaseMoves_repairVehicleKnl", "InBaseMoves_repairVehiclePne"],
+    [4301.63,18097.2,0.98074],
+    11.4858
+]
+call ExileClient_object_trader_create;
+
+///////////////////////////////////////////////////////////////////////////
+// Vehicle Customs Trader
+///////////////////////////////////////////////////////////////////////////
+[
+    "Exile_Trader_VehicleCustoms",
+    "WhiteHead_11",
+    ["AidlPercMstpSnonWnonDnon_G01", "AidlPercMstpSnonWnonDnon_G02", "AidlPercMstpSnonWnonDnon_G03", "AidlPercMstpSnonWnonDnon_G04", "AidlPercMstpSnonWnonDnon_G05", "AidlPercMstpSnonWnonDnon_G06"],
+    [4300.87,18099.8,0.98074],
+    38.7644
+]
+call ExileClient_object_trader_create;
+
+///////////////////////////////////////////////////////////////////////////
+// Guard 01
+///////////////////////////////////////////////////////////////////////////
+[
+    "Exile_Guard_01",
+    "WhiteHead_17",
+    ["InBaseMoves_patrolling1"],
+    [4314.08,18073.3,0],
+    99.0647
+]
+call ExileClient_object_trader_create;
+
+///////////////////////////////////////////////////////////////////////////
+// Guard 02
+///////////////////////////////////////////////////////////////////////////
+[
+    "Exile_Guard_02",
+    "WhiteHead_03",
+    ["InBaseMoves_patrolling1"],
+    [4357.74v,18099.8,0],
+    13.0471
+]
+call ExileClient_object_trader_create;
+
+///////////////////////////////////////////////////////////////////////////
+// Guard 03
+///////////////////////////////////////////////////////////////////////////
+[
+    "Exile_Guard_03",
+    "AfricanHead_03",
+    ["InBaseMoves_patrolling1"],
+    [4372.65,18096.2,2.73849],
+    256.994
+]
+call ExileClient_object_trader_create;
