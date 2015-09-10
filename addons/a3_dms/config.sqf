@@ -21,9 +21,6 @@ DMS_DEBUG = false;
 
 	DMS_AI_KillPercent					= 100;						// The percent amount of AI that need to be killed for "killPercent" mission requirement (NOT IMPLEMENTED)
 
-	DMS_BanditMoneyGainOnKill			= 100;						// The amount of Poptabs gained for killing a bandit
-	DMS_BanditRepGainOnKill				= 25;						// The amount of Respect gained for killing a bandit
-
 	DMS_MissionMarkerWinDot				= true;						// Keep the mission marker dot with a "win" message after mission is over
 	DMS_MissionMarkerLoseDot			= true;						// Keep the mission marker dot with a "lose" message after mission is over
 	DMS_MissionMarkerWinDotTime			= 30;						// How many seconds the "win" mission dot will remain on the map
@@ -33,21 +30,21 @@ DMS_DEBUG = false;
 
 	DMS_CompletedMissionCleanup			= true;						// Cleanup mission-spawned buildings and AI bodies after some time
 	DMS_CompletedMissionCleanupTime		= 3600;						// Minimum time until mission-spawned buildings and AI are cleaned up
-	DMS_CleanUp_PlayerNearLimit			= 20;						// Cleanup of an object is aborted if a player is this many meters close to the object
+	DMS_CleanUp_PlayerNearLimit			= 100;						// Cleanup of an object is aborted if a player is this many meters close to the object
 	DMS_MissionTimeoutReset				= true;						// Enable mission timeout timer reset if a player is close
 	DMS_MissionTimeoutResetRange		= 1000;						// If a player is this close to a mission then it won't time-out
 
 	DMS_PlayerNearBlacklist				= 2000;						// Missions won't spawn in a position this many meters close to a player
 	DMS_SpawnZoneNearBlacklist			= 2500;						// Missions won't spawn in a position this many meters close to a spawn zone
-	DMS_TraderZoneNearBlacklist			= 3000;						// Missions won't spawn in a position this many meters close to a trader zone
-	DMS_MissionNearBlacklist			= 3000;						// Missions won't spawn in a position this many meters close to another mission
+	DMS_TraderZoneNearBlacklist			= 5000;						// Missions won't spawn in a position this many meters close to a trader zone
+	DMS_MissionNearBlacklist			= 4000;						// Missions won't spawn in a position this many meters close to another mission
 	DMS_WaterNearBlacklist				= 750;						// Missions won't spawn in a position this many meters close to water
 
 	DMS_SpawnBoxSmoke					= true;						// Spawn a smoke grenade on mission box upon misson completion during daytime
 	DMS_SpawnBoxIRGrenade				= true;						// Spawn an IR grenade on mission box upon misson completion during nighttime
 	
 	DMS_MinPlayerCount					= 0; 						// Minimum number of players until mission start
-	DMS_MinServerFPS					= 1; 						// Minimum server FPS for missions to start
+	DMS_MinServerFPS					= 5; 						// Minimum server FPS for missions to start
 
 	//Mission notification settings
 	DMS_PlayerNotificationTypes =		[							// Notification types. Supported values are: ["dynamicTextRequest", "standardHintRequest", "systemChatRequest"]
@@ -65,7 +62,7 @@ DMS_DEBUG = false;
 											["behindenemylines",10],
 											["blackhawkdown",45],
 											["cardealer",25],
-											["constructionsite",35],
+											["construction",35],
 											["donthasslethehoff",30],
 											["foodtransport",25],
 											["guntransport",20],
@@ -84,11 +81,18 @@ DMS_DEBUG = false;
 
 /* AI Settings */
 
+	DMS_Bandit_Soldier_MoneyGain		= 50;						// The amount of Poptabs gained for killing a bandit soldier
+	DMS_Bandit_Soldier_RepGain			= 10;						// The amount of Respect gained for killing a bandit soldier
+	DMS_Bandit_Static_MoneyGain			= 100;						// The amount of Poptabs gained for killing a bandit static gunner
+	DMS_Bandit_Static_RepGain			= 25;						// The amount of Respect gained for killing a bandit static gunner
+
 	DMS_banditSide						= EAST;						// The side (team) that AI Bandits will spawn on
 	DMS_clear_AI_body					= false;					// Clear AI body as soon as they die
-	DMS_clear_AI_body_chance			= 0;						// Percentage chance that AI bodies will be cleared when they die
+	DMS_clear_AI_body_chance			= 50;						// Percentage chance that AI bodies will be cleared when they die
+	DMS_ai_disable_ramming_damage 		= true;						// Disables damage due to ramming into AI. !!!NOTE: THIS WILL NOT BE RELIABLE WITH "DMS_ai_offload_to_client"!!!
+	DMS_credit_roadkill					= true;					// Credit players with respect/poptabs if they kill an AI by running it over
 	DMS_remove_roadkill					= false; 					// Remove gear from AI bodies that are roadkilled
-	DMS_remove_roadkill_chance			= 0;						// Percentage chance that roadkilled AI bodies will be deleted
+	DMS_remove_roadkill_chance			= 50;						// Percentage chance that roadkilled AI bodies will be deleted
 	DMS_RemoveNVG						= false;					// Remove NVGs from AI bodies
 
 	DMS_ai_offload_to_client			= true;						// Offload spawned AI groups to random clients. Helps with server performance.
@@ -100,7 +104,6 @@ DMS_DEBUG = false;
 	DMS_ai_enable_water_equipment		= true;						// Enable/disable overriding default weapons of an AI if it spawns on/in water
 
 	// https://community.bistudio.com/wiki/AI_Sub-skills#general
-	DMS_ai_static_skills				= true;						// Use "DMS_ai_skill_static" for AI on static guns
 	DMS_ai_skill_static					= [["aimingAccuracy",0.20],["aimingShake",0.70],["aimingSpeed",0.75],["spotDistance",0.70],["spotTime",0.50],["courage",1.00],["reloadSpeed",1.00],["commanding",1.00],["general",1.00]];	// Static AI Skills
 	DMS_ai_skill_easy					= [["aimingAccuracy",0.30],["aimingShake",0.50],["aimingSpeed",0.50],["spotDistance",0.50],["spotTime",0.50],["courage",1.00],["reloadSpeed",1.00],["commanding",1.00],["general",0.50]];	// Easy
 	DMS_ai_skill_moderate				= [["aimingAccuracy",0.60],["aimingShake",0.60],["aimingSpeed",0.60],["spotDistance",0.60],["spotTime",0.60],["courage",1.00],["reloadSpeed",1.00],["commanding",1.00],["general",0.60]];	// Moderate
@@ -532,5 +535,6 @@ DMS_DEBUG = false;
 if(DMS_DEBUG) then {
 	DMS_TimeBetweenMissions			= [30,60];
 	DMS_MissionTimeOut				= [60,90];
+	//DMS_MissionTypes = [["testmission",1]];
 	diag_log format ["DMS_DEBUG CONFIG :: Overriding DMS_TimeBetweenMissions (%1) and DMS_MissionTimeOut (%2)",DMS_TimeBetweenMissions,DMS_MissionTimeOut];
 };
