@@ -71,9 +71,9 @@ _objects =
     ["Land_WIP_F",[4251.79,18128.3,0.00389862],69.4789,0,0,false],
     ["Land_FuelStation_Shed_F",[4287.16,18065.2,-0.0581131],155.058,0,0,false],
     ["Land_FuelStation_Build_F",[4273.7,18058.8,0.0822754],245.508,0,0,false],
-    ["Land_fs_feed_F",[4293.6,18067.9,0.230392],66.0433,0,0,false],
-    ["Land_fs_feed_F",[4287.22,18065.1,0.230392],66.0433,0,0,false],
-    ["Land_fs_feed_F",[4280.88,18062.2,0.230392],66.0433,0,0,false],
+//    ["Land_fs_feed_F",[4293.6,18067.9,0.230392],66.0433,0,0,false],
+//    ["Land_fs_feed_F",[4287.22,18065.1,0.230392],66.0433,0,0,false],
+//    ["Land_fs_feed_F",[4280.88,18062.2,0.230392],66.0433,0,0,false],
     ["Land_FuelStation_Sign_F",[4303.03,18058.1,0.594124],71.786,0,0,false],
     ["Land_PowerPoleWooden_L_F",[4284.78,18280.9,0.00120544],97.629,0,0,false],
     ["Land_PowerPoleWooden_L_F",[4276.78,18254.4,0.00120544],104.629,0,0,false],
@@ -319,4 +319,22 @@ _objects =
 }
 forEach _objects;
 
+// any items that need simulation need to put in here (EX: actually refuel from fuel pumps)
+if (isServer && isDedicated) then 
+{
+	{
+	    private ["_object"];
+
+	    _object = (_x select 0) createVehicle [0,0,0];
+	    _object setDir (_x select 2);
+	    _object setPosATL (_x select 1);
+	    _object enableSimulationGlobal true; // for clarity
+	}
+	forEach
+	[
+	    ["Land_fs_feed_F",[4293.6,18067.9,0.230392],66.0433,0,0,false],
+	    ["Land_fs_feed_F",[4287.22,18065.1,0.230392],66.0433,0,0,false],
+	    ["Land_fs_feed_F",[4280.88,18062.2,0.230392],66.0433,0,0,false]
+    ];
+};
 [] execVM "GG\personalVehicles\init.sqf";
