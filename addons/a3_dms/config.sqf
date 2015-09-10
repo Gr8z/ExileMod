@@ -6,7 +6,7 @@
 */
 
 // If you're gonna make any changes to DMS functions and/or create any new missions, it's a good idea to enable this :)
-DMS_DEBUG = false;
+DMS_DEBUG = true;
 
 
 
@@ -74,7 +74,7 @@ DMS_DEBUG = false;
 										];
 
 	DMS_findSafePosBlacklist =			[							// For BIS_fnc_findSafePos position blacklist info refer to: https://community.bistudio.com/wiki/BIS_fnc_findSafePos
-											[[22500,19420],[24870,16725]]		// Salt flats
+											//[[22500,19420],[24870,16725]]		// Salt flats
 										];
 /* Mission System Settings */
 
