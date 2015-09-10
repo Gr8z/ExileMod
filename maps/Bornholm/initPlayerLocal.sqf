@@ -375,7 +375,7 @@ _trader =
     "Exile_Trader_Vehicle",
     "WhiteHead_11",
     ["InBaseMoves_repairVehicleKnl", "InBaseMoves_repairVehiclePne"],
-    [4301.63,18097.2,0.98074],
+    [4302.15,18098.2,1.06763],
     169.4858
 ]
 call ExileClient_object_trader_create;
