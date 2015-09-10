@@ -314,7 +314,7 @@ call ExileClient_object_trader_create;
     "AfricanHead_02",
     ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3"],
     [4346.59,18102.9,0],
-    153.2786
+    213.009
 ]
 call ExileClient_object_trader_create;
 
