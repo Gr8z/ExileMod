@@ -350,7 +350,7 @@ call ExileClient_object_trader_create;
     "WhiteHead_17",
     ["LHD_krajPaluby"],
     [4369.19,18096.1,0],
-    166.544
+    14.544
 ]
 call ExileClient_object_trader_create;
 
@@ -376,7 +376,7 @@ _trader =
     "WhiteHead_11",
     ["InBaseMoves_repairVehicleKnl", "InBaseMoves_repairVehiclePne"],
     [4301.63,18097.2,0.98074],
-    11.4858
+    169.4858
 ]
 call ExileClient_object_trader_create;
 
@@ -388,7 +388,7 @@ call ExileClient_object_trader_create;
     "WhiteHead_11",
     ["AidlPercMstpSnonWnonDnon_G01", "AidlPercMstpSnonWnonDnon_G02", "AidlPercMstpSnonWnonDnon_G03", "AidlPercMstpSnonWnonDnon_G04", "AidlPercMstpSnonWnonDnon_G05", "AidlPercMstpSnonWnonDnon_G06"],
     [4300.87,18099.8,0.98074],
-    38.7644
+    142.7644
 ]
 call ExileClient_object_trader_create;
 
