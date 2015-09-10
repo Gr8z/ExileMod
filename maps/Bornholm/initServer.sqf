@@ -148,8 +148,7 @@ _objects =
     ["Land_Wreck_Offroad_F",[4228.15,18104.4,0.0016098],44.5073,0,0,false],
     ["Land_Wreck_Truck_F",[4216.08,18111.4,-0.000198364],34.4572,0,354.187,false],
     ["Land_Wreck_Ural_F",[4222.26,18108.6,-0.00976563],178.158,0,0,false],
-    ["Land_Wreck_Van_F",[4212.81,18112.7,-0.000411987],35.8932,0,0,false]
-	
+    ["Land_Wreck_Van_F",[4212.81,18112.7,-0.000411987],35.8932,0,0,false],
 	// Terminal Airport Trader
 	["Land_GarbageBags_F",[3127.62,5495.72,0],0,[[0,1,0],[0,0,1]],false],
 	["Land_GarbageWashingMachine_F",[3130.13,5497.19,0],0,[[0,1,0],[0,0,1]],false],
