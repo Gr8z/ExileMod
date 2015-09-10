@@ -228,15 +228,15 @@ call ExileClient_object_trader_create;
 ///////////////////////////////////////////////////////////////////////////
 _chair = "Land_CampingChair_V2_F" createVehicleLocal [0,0,0];
 _chair setDir 180;
-_chair setPosATL [4337.72, 18064.2, 0];
+_chair setPosATL [4337.72, 18064.2, -0.1];
 
 [
     "Exile_Trader_Hardware",
     "WhiteHead_17",
-    ["InBaseMoves_sitHighUp1"],
+    ["InBaseMoves_SittingRifle1"],
     [0, -0.15, -0.45],
-    170,
-    _workBench
+    180,
+    _chair
 ]
 call ExileClient_object_trader_create;
 
