@@ -66,16 +66,16 @@ _missionObjs =
 ];
 
 // Define Mission Start message
-_msgStart = format["<t color='#FFFF00' size='1.25'>Blackhawk down! </t><br/> We got a Blackhawk down, Super 6-1 is down, secure the perimeter and claim what can be claimed!"];
+_msgStart = format["<t color='#FFFF00' size='1.25'>Helicopter down! </t><br/> We got a Helicopter down, Super 6-1 is down, secure the perimeter and claim what can be claimed!"];
 
 // Define Mission Win message
-_msgWIN = format["<t color='#0080ff' size='1.25'>Blackhawk down! </t><br/> Convicts have secured the blackhawk and claimed the remaining loot!"];
+_msgWIN = format["<t color='#0080ff' size='1.25'>Helicopter down! </t><br/> Convicts have secured the Helicopter and claimed the remaining loot!"];
 
 // Define Mission Lose message
-_msgLOSE = format["<t color='#FF0000' size='1.25'>Blackhawk down! </t><br/> The blackhawk has been sized by the enemy and the loot has been destroyed!"];
+_msgLOSE = format["<t color='#FF0000' size='1.25'>Helicopter down! </t><br/> The Helicopter has been seized by the enemy and the loot has been destroyed!"];
 
 // Define mission name (for map marker and logging)
-_missionName = "Blackhawk Down";
+_missionName = "Helicopter Down";
 
 // Create Markers
 _markers =
