@@ -87,7 +87,7 @@ call ExileClient_object_trader_create;
 [
     "Exile_Trader_Equipment",
     "WhiteHead_19",
-    ["InBaseMoves_Lean1"],
+    ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3"],
     [3117.68,5444.0635,0.14],
     125.78448
 ]
@@ -411,7 +411,7 @@ call ExileClient_object_trader_create;
     "Exile_Guard_02",
     "WhiteHead_03",
     ["InBaseMoves_patrolling1"],
-    [4357.74v,18099.8,0],
+    [4357.74,18099.8,0],
     13.0471
 ]
 call ExileClient_object_trader_create;
