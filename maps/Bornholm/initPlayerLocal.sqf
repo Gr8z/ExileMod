@@ -243,32 +243,12 @@ call ExileClient_object_trader_create;
 ///////////////////////////////////////////////////////////////////////////
 // Fast Food Trader
 ///////////////////////////////////////////////////////////////////////////
-_cashDesk = "Land_CashDesk_F" createVehicleLocal [0,0,0];
-_cashDesk setDir 24.3162;
-_cashDesk setPosATL [4353.83, 18085.3, 0];
-
-_microwave = "Land_Microwave_01_F" createVehicleLocal [0,0,0];
-_cashDesk disableCollisionWith _microwave;         
-_microwave disableCollisionWith _cashDesk; 
-_microwave attachTo [_cashDesk, [-0.6, 0.2, 1.1]];
-
-_ketchup = "Land_Ketchup_01_F" createVehicleLocal [0,0,0];
-_cashDesk disableCollisionWith _ketchup;         
-_ketchup disableCollisionWith _cashDesk; 
-_ketchup attachTo [_cashDesk, [-0.6, 0, 1.1]];
-
-_mustard = "Land_Mustard_01_F" createVehicleLocal [0,0,0];
-_cashDesk disableCollisionWith _mustard;         
-_mustard disableCollisionWith _cashDesk; 
-_mustard attachTo [_cashDesk, [-0.5, -0.05, 1.1]];
-
 [
     "Exile_Trader_Food",
     "GreekHead_A3_01",
-    ["InBaseMoves_table1"],
-    [0.1, 0.5, 0.2],
-    170,
-    _cashDesk
+    ["HubBriefing_scratch", "HubBriefing_stretch", "HubBriefing_think", "HubBriefing_lookAround1", "HubBriefing_lookAround2"],
+    [4353.72,18083.3,0.0269089],
+    277.985
 ]
 call ExileClient_object_trader_create;
 
