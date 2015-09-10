@@ -234,7 +234,7 @@ _chair setPosATL [4337.72, 18064.2, 0];
     "Exile_Trader_Hardware",
     "WhiteHead_17",
     ["InBaseMoves_sitHighUp1"],
-    [0, 0, -0.5],
+    [0, -0.15, -0.45],
     170,
     _workBench
 ]
