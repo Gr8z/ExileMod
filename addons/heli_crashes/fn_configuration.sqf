@@ -8,7 +8,7 @@
 exsys_cc_debugMode = true;
 exsys_cc_mapCenter = switch (toLower worldName) do {
 	case "altis":		{[14600,16797.199,22.35]; };
-	case "bornholm":	{[13816.9,6875.31,0.7]; };
+	case "bornholm":	{[10058.3, 117.542, 9015.85]; };
 };
 
 exsys_cc_weapon = [
