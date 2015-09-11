@@ -6,7 +6,7 @@
 */
 
 // If you're gonna make any changes to DMS functions and/or create any new missions, it's a good idea to enable this :)
-DMS_DEBUG = false;
+DMS_DEBUG = true;
 
 
 
@@ -535,8 +535,8 @@ DMS_DEBUG = false;
 
 // Debug Overwrites
 if(DMS_DEBUG) then {
-	DMS_TimeBetweenMissions			= [30,60];
-	DMS_MissionTimeOut				= [60,90];
+	DMS_TimeBetweenMissions			= [10,20];
+	DMS_MissionTimeOut				= [30,60];
 	//DMS_MissionTypes = [["testmission",1]];
 	diag_log format ["DMS_DEBUG CONFIG :: Overriding DMS_TimeBetweenMissions (%1) and DMS_MissionTimeOut (%2)",DMS_TimeBetweenMissions,DMS_MissionTimeOut];
 };

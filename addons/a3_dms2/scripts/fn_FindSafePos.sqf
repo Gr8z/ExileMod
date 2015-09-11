@@ -22,7 +22,7 @@ _safePosParams =
 [
 	[[],0,-1,_nearestObjectMinDistance,0,_maxTerrainGradient,0,DMS_findSafePosBlacklist],
 	[[16000,16000],0,16000,_nearestObjectMinDistance,0,_maxTerrainGradient,0,DMS_findSafePosBlacklist]		//[16000,16000] w/ radius of 16000 works well for Altis
-] select (worldName=="Altis");
+] select (worldName=="Bornholm");
 
 _validspot 	= false;
 _i = 0;
