@@ -36,11 +36,11 @@ DMS_DEBUG = false;
 	DMS_MissionTimeoutReset				= true;						// Enable mission timeout timer reset if a player is close
 	DMS_MissionTimeoutResetRange		= 1000;						// If a player is this close to a mission then it won't time-out
 
-	DMS_PlayerNearBlacklist				= 1000;						// Missions won't spawn in a position this many meters close to a player
-	DMS_SpawnZoneNearBlacklist			= 500;						// Missions won't spawn in a position this many meters close to a spawn zone
+	DMS_PlayerNearBlacklist				= 2000;						// Missions won't spawn in a position this many meters close to a player
+	DMS_SpawnZoneNearBlacklist			= 2000;						// Missions won't spawn in a position this many meters close to a spawn zone
 	DMS_TraderZoneNearBlacklist			= 3000;						// Missions won't spawn in a position this many meters close to a trader zone
 	DMS_MissionNearBlacklist			= 4000;						// Missions won't spawn in a position this many meters close to another mission
-	DMS_WaterNearBlacklist				= 450;						// Missions won't spawn in a position this many meters close to water
+	DMS_WaterNearBlacklist				= 750;						// Missions won't spawn in a position this many meters close to water
 
 	DMS_SpawnBoxSmoke					= true;						// Spawn a smoke grenade on mission box upon misson completion during daytime
 	DMS_SpawnBoxIRGrenade				= true;						// Spawn an IR grenade on mission box upon misson completion during nighttime
@@ -535,8 +535,8 @@ DMS_DEBUG = false;
 
 // Debug Overwrites
 if(DMS_DEBUG) then {
-	DMS_TimeBetweenMissions			= [30,60];
-	DMS_MissionTimeOut				= [60,90];
+	DMS_TimeBetweenMissions			= [10,20];
+	DMS_MissionTimeOut				= [30,60];
 	//DMS_MissionTypes = [["testmission",1]];
 	diag_log format ["DMS_DEBUG CONFIG :: Overriding DMS_TimeBetweenMissions (%1) and DMS_MissionTimeOut (%2)",DMS_TimeBetweenMissions,DMS_MissionTimeOut];
 };

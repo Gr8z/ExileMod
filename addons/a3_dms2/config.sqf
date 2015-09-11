@@ -6,7 +6,7 @@
 */
 
 // If you're gonna make any changes to DMS functions and/or create any new missions, it's a good idea to enable this :)
-DMS_DEBUG = true;
+DMS_DEBUG = false;
 
 
 
@@ -36,11 +36,11 @@ DMS_DEBUG = true;
 	DMS_MissionTimeoutReset				= true;						// Enable mission timeout timer reset if a player is close
 	DMS_MissionTimeoutResetRange		= 1000;						// If a player is this close to a mission then it won't time-out
 
-	DMS_PlayerNearBlacklist				= 1000;						// Missions won't spawn in a position this many meters close to a player
-	DMS_SpawnZoneNearBlacklist			= 500;						// Missions won't spawn in a position this many meters close to a spawn zone
+	DMS_PlayerNearBlacklist				= 2000;						// Missions won't spawn in a position this many meters close to a player
+	DMS_SpawnZoneNearBlacklist			= 2000;						// Missions won't spawn in a position this many meters close to a spawn zone
 	DMS_TraderZoneNearBlacklist			= 3000;						// Missions won't spawn in a position this many meters close to a trader zone
 	DMS_MissionNearBlacklist			= 4000;						// Missions won't spawn in a position this many meters close to another mission
-	DMS_WaterNearBlacklist				= 450;						// Missions won't spawn in a position this many meters close to water
+	DMS_WaterNearBlacklist				= 750;						// Missions won't spawn in a position this many meters close to water
 
 	DMS_SpawnBoxSmoke					= true;						// Spawn a smoke grenade on mission box upon misson completion during daytime
 	DMS_SpawnBoxIRGrenade				= true;						// Spawn an IR grenade on mission box upon misson completion during nighttime
