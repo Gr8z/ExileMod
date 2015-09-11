@@ -18,11 +18,35 @@ params
 	["_maxTerrainGradient",10,[0]]
 ];
 
-_safePosParams =
-[
-	[[],0,-1,_nearestObjectMinDistance,0,_maxTerrainGradient,0,DMS_findSafePosBlacklist],
-	[[16000,16000],0,16000,_nearestObjectMinDistance,0,_maxTerrainGradient,0,DMS_findSafePosBlacklist]		//[16000,16000] w/ radius of 16000 works well for Altis
-];
+switch(toLower worldName)do{
+	case "altis":{
+	_safePosParams =
+	[
+		[[],0,-1,_nearestObjectMinDistance,0,_maxTerrainGradient,0,DMS_findSafePosBlacklist],
+		[[16000,16000],0,16000,_nearestObjectMinDistance,0,_maxTerrainGradient,0,DMS_findSafePosBlacklist]		//[16000,16000] w/ radius of 16000 works well for Altis
+	]	select (worldName=="Altis");
+	};
+	case "stratis":{
+	_safePosParams =
+	[
+		[[],0,-1,_nearestObjectMinDistance,0,_maxTerrainGradient,0,DMS_findSafePosBlacklist],
+		[[16000,16000],0,16000,_nearestObjectMinDistance,0,_maxTerrainGradient,0,DMS_findSafePosBlacklist]		//[16000,16000] w/ radius of 16000 works well for Altis
+	]	select (worldName=="Stratis");
+	};
+	case "bornholm":{
+	_safePosParams =
+	[
+		[[],0,-1,_nearestObjectMinDistance,0,_maxTerrainGradient,0,DMS_findSafePosBlacklist],
+		[[16000,16000],0,16000,_nearestObjectMinDistance,0,_maxTerrainGradient,0,DMS_findSafePosBlacklist]		//[16000,16000] w/ radius of 16000 works well for Altis
+	]	select (worldName=="Bornholm");
+	};
+};
+
+//_safePosParams =
+//[
+//	[[],0,-1,_nearestObjectMinDistance,0,_maxTerrainGradient,0,DMS_findSafePosBlacklist],
+//	[[16000,16000],0,16000,_nearestObjectMinDistance,0,_maxTerrainGradient,0,DMS_findSafePosBlacklist]		//[16000,16000] w/ radius of 16000 works well for Altis
+//] select (worldName=="Altis");
 
 _validspot 	= false;
 _i = 0;
