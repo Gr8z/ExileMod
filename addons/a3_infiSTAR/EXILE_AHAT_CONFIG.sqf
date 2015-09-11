@@ -42,13 +42,13 @@ _enableIngameLogs = true;	/* true or false */
 /* "_startAsNormal": if you add admin UIDs in here as well, they will start as almost "normal" player instead of with admin menu and such. */
 _startAsNormal =
 [
-	'0','0','0' // mods and admin start as normal
+	'0','0','0'
 ];
 
 _adminUIDandAccess =
 [
 	[
-		['76561198021389971','76561198078201908','76561198084864687','76561198002511087','76561198195305425','76561198153784743','76561198110162434'],	// High Admins
+		['76561198021389971','76561198078201908','76561198084864687','76561198002511087','76561198195305425','76561198153784743','76561198110162434'],	// Admins with UIDs in this Array have their Access defined in the array below.
 		[
 			'Teleport On Map Click','Teleport - Target To Me','Teleport - Me To Target','Teleport In Facing Direction (10m steps)',
 			'spectating','AdminConsole','Delete Vehicle','FlyUp','ShowGear',
@@ -67,22 +67,41 @@ _adminUIDandAccess =
 		]
 	],
 	[
-		['UID1','UID2','UID3','...'],	// Admin
+		['UID1','UID2','UID3','...'],	// Admins with UIDs in this Array have their Access defined in the array below.
 		[
 			'Teleport On Map Click','Teleport - Target To Me','Teleport - Me To Target','Teleport In Facing Direction (10m steps)',
-			'spectating','Delete Vehicle','FlyUp','ShowGear','HealSelf','HealRepairNear','==== Loadouts ====','==== Vehicles ====',
-			'Items spawn menu','Remove Gear','Heal','Restore','Move In My Vehicle','Move In Target Vehicle','Eject','Eject Crew',
-			'Kill','Kick (Announce)','Ban (Announce)','infiSTAR Player ESP','infiSTAR Dead ESP','infiSTAR AI ESP','infiSTAR MapIcons',
-			'Vehicle Marker','DeadPlayer Marker','God Mode','Vehicle God Mode','Vehboost','Stealth / Invisible','Disable Announces','Mass Message',
-			'Spawn Support-Box1','Spawn Support-Box2','Spawn Support-Box3','Spawn Ammo','Request Steam Name','showinfo','+500 Money','+1000 Money',
-			'+2000 Money','+10000 Money','-500 Money','-1000 Money''-2000 Money','-10000 Money','+500 Respect','+5000 Respect','-500 Respect','-5000 Respect'
+			'spectating','AdminConsole','Delete Vehicle','FlyUp','ShowGear',
+			'HealSelf','HealRepairNear','AdminLog','Freeze Target','UnFreeze Target',
+			'==== Loadouts ====','==== Vehicles ====','Items spawn menu',
+			'Remove Gear','Heal','Restore','Move In My Vehicle','Move In Target Vehicle','Eject','Eject Crew',
+			'Kill','Explode','Force Disconnect','Kick (Silent)','Kick (Announce)','Ban (Silent)','Ban (Announce)',
+			'infiSTAR Player ESP','infiSTAR Dead ESP','infiSTAR AI ESP',
+			'infiSTAR MapIcons','Vehicle Marker','DeadPlayer Marker',
+			'God Mode','Vehicle God Mode','Lower Terrain','Vehboost','UnlimAmmo','noRecoil','FastFire','Stealth / Invisible',
+			'Disable Announces','Mass Message','Spawn Support-Box1','Spawn Support-Box2','Spawn Support-Box3',
+			'Spawn Ammo','Login as Arma Admin','BIS FreeRoam Cam (works with ESP)','FreeRoam Cam (does not work with ESP)',
+			'Request Steam Name','showinfo',
+			'+500 Money','+1000 Money','+2000 Money','+10000 Money','-500 Money','-1000 Money','-2000 Money','-10000 Money',
+			'+500 Respect','+5000 Respect','-500 Respect','-5000 Respect'
 		]
 	],
 	[
-		['UID1','UID2','UID3','...'],	// mods
+		['UID1','UID2','UID3','...'],	// Admins with UIDs in this Array have their Access defined in the array below.
 		[
-			'spectating','ShowGear','Remove Gear','Heal','Restore','Eject','Kill','Kick (Announce)','Vehicle Marker','DeadPlayer Marker','Request Steam Name','showinfo',
-			'+500 Money','+1000 Money','+2000 Money','+10000 Money','-500 Money','-1000 Money''-2000 Money','-10000 Money','+500 Respect','+5000 Respect','-500 Respect','-5000 Respect'
+			'Teleport On Map Click','Teleport - Target To Me','Teleport - Me To Target','Teleport In Facing Direction (10m steps)',
+			'spectating','AdminConsole','Delete Vehicle','FlyUp','ShowGear',
+			'HealSelf','HealRepairNear','AdminLog','Freeze Target','UnFreeze Target',
+			'==== Loadouts ====','==== Vehicles ====','Items spawn menu',
+			'Remove Gear','Heal','Restore','Move In My Vehicle','Move In Target Vehicle','Eject','Eject Crew',
+			'Kill','Explode','Force Disconnect','Kick (Silent)','Kick (Announce)','Ban (Silent)','Ban (Announce)',
+			'infiSTAR Player ESP','infiSTAR Dead ESP','infiSTAR AI ESP',
+			'infiSTAR MapIcons','Vehicle Marker','DeadPlayer Marker',
+			'God Mode','Vehicle God Mode','Lower Terrain','Vehboost','UnlimAmmo','noRecoil','FastFire','Stealth / Invisible',
+			'Disable Announces','Mass Message','Spawn Support-Box1','Spawn Support-Box2','Spawn Support-Box3',
+			'Spawn Ammo','Login as Arma Admin','BIS FreeRoam Cam (works with ESP)','FreeRoam Cam (does not work with ESP)',
+			'Request Steam Name','showinfo',
+			'+500 Money','+1000 Money','+2000 Money','+10000 Money','-500 Money','-1000 Money','-2000 Money','-10000 Money',
+			'+500 Respect','+5000 Respect','-500 Respect','-5000 Respect'
 		]
 	]
 ];
