@@ -14,7 +14,7 @@ private ["_nearestObjectMinDistance","_maxTerrainGradient","_safePosParams","_va
 
 params
 [
-	["_nearestObjectMinDistance",5,[0]],
+	["_nearestObjectMinDistance",25,[0]],
 	["_maxTerrainGradient",10,[0]]
 ];
 
