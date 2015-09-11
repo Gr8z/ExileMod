@@ -32,10 +32,10 @@ while{!_validspot} do {
 	try
 	{
 		// Check for nearby water
-		if ([_pos,DMS_WaterNearBlacklist] call DMS_fnc_isNearWater) exitWith 
-		{
-			throw ("water");
-		};
+//		if ([_pos,DMS_WaterNearBlacklist] call DMS_fnc_isNearWater) exitWith 
+//		{
+//			throw ("water");
+//		};
 		
 		// Check for nearby players
 		if ([_pos,DMS_PlayerNearBlacklist] call DMS_fnc_IsPlayerNearby) exitWith
