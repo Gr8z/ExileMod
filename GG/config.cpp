@@ -1628,6 +1628,7 @@ class CfgExileCustomCode
 	ExileClient_object_item_craft = "GG\overrides\GG_object_item_craft.sqf";
 	ExileClient_object_player_initialize = "GG\overrides\GG_object_player_initialize.sqf";
 	ExileClient_system_trading_network_moneyReceivedRequest = "GG\overrides\GG_system_trading_network_moneyReceivedRequest.sqf";
+	ExileClient_util_world_getNearestLocationName = "GG\overrides\GG_util_world_getNearestLocationName.sqf";
 };
 class CfgExileMusic
 {
