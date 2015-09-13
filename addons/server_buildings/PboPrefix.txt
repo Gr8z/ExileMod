@@ -1,1 +1,1 @@
-x\addons\a3_epoch_server_building
+x\addons\server_buildings

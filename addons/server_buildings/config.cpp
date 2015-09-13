@@ -9,7 +9,7 @@ class CfgPatches {
 class CfgFunctions {
 	class building {
 		class main {
-			file = "x\addons\a3_epoch_server_building\init";
+			file = "x\addons\server_buildings\init";
 			class init {
 				postInit = 1;
 			};
