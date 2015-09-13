@@ -1,7 +1,7 @@
 [] execVM "GG\safezones\init.sqf";
 [] execVM "GG\StatusBar\statusBar.sqf";
 [] execVM "GG\inspectLoop.sqf";
-[] execVM "banners.sqf";
+[] execVM "GG\player_markers.sqf";
 
 #include "initServer.sqf"
 
