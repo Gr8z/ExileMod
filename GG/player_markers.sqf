@@ -1,27 +1,38 @@
-private ["_mrkr","_name","_pPos"];
+private["_markers","_members"];
+_markers = [];
+_members = [];
 
 while {true} do {
-	if (visibleMap) then {
-		{
-			if ((!isNull _x) && {isPlayer _x} && {(driver (vehicle _x)) == _x}) then {
-				_name = name _x;
-				if (group _x == group player) then {
-					_pPos = getPosATL _x;
-					if (surfaceIsWater _pPos) then {_pPos = getPosASL _x;};
-					deleteMarkerLocal _name;
-					_mrkr = createMarkerLocal [_name,_pPos];
-					if ({_name != name player}) then {
-						_mrkr setMarkerTypeLocal "mil_box";
-						_mrkr setMarkerTextLocal format ["%1 (%2m)",_name,round(_pPos distance player)];
-					} else {
-						_mrkr setMarkerTypeLocal "mil_dot";
-						_mrkr setMarkerTextLocal format ["%1",_name];
-					};
-				} else {
-					deleteMarkerLocal _name;
-				};
-			};
-		} count playableUnits;
-	};
-	uiSleep 1;
+    sleep 0.5;
+    if(visibleMap) then {
+        _members = units (group player);
+        //Create markers
+        {
+            _marker = createMarkerLocal [format["%1_marker",_x],visiblePosition _x];
+            _marker setMarkerColorLocal "ColorGreen";
+            _marker setMarkerTypeLocal "Mil_dot";
+            _marker setMarkerTextLocal format["%1", _x getVariable["realname",name _x]];
+        
+            _markers pushBack [_marker,_x];
+        } foreach _members;
+            
+        while {visibleMap} do {
+            {
+                private["_marker","_unit"];
+                _marker = _x select 0;
+                _unit = _x select 1;
+                if(!isNil "_unit") then {
+                    if(!isNull _unit) then {
+                        _marker setMarkerPosLocal (visiblePosition _unit);
+                    };
+                };
+            } foreach _markers;
+            if(!visibleMap) exitWith {};
+            sleep 0.02;
+        };
+
+        {deleteMarkerLocal (_x select 0);} foreach _markers;
+        _markers = [];
+        _members = [];
+    };
 };
