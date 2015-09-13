@@ -1851,6 +1851,8 @@ _AH_MAIN_BLOCK = {
 					};
 				};
 			"; }; _A3AHstring = _A3AHstring + "
+			
+			onEachFrame {};
 			if((isNull _display49)&&(isNull _display24))then{uiSleep 0.2;};
 			"+_t1+"=str diag_tickTime;
 			if(rating player < 999999)then{player addRating 9999999;};
