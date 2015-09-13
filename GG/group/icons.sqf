@@ -21,7 +21,7 @@ dzgmIconsName = {
     };
     if (_makeIcons)then {
         _pIcons = [];
-		_pGicon = "\ca\ui\data\igui_side_blufor_ca.paa";
+		_pGicon = "\a3\ui_f\data\map\Markers\NATO\b_inf.paa";
         for "_markerIndex" from 0 to (_uc - 1) do {_pIcons set [_markerIndex,_pGicon];};
         player setVariable ["dzgmHudDisp",_pIcons];
     };
@@ -69,7 +69,6 @@ dzgmInit = {
 			609 cutRsc ["DZGMHud_Rsc","PLAIN"];
             while {SHOW_HUD} do {
 				call dzgmIconsName;
-				if (commandingMenu in ["RscTeam","#User:BIS_Menu_GroupCommunication"]) then {showCommandingMenu "";};
                 uiSleep .001;
             };
             609 cutText ["","PLAIN"];
