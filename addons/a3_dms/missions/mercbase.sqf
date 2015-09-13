@@ -1,11 +1,8 @@
 /*
-	Sample mission
-	Created by Defent and eraser1
-
-	Called from DMS_selectMission
+	Sample mission (duplicate for testing purposes)
 */
 
-private ["_num", "_side", "_pos", "_difficulty", "_AICount", "_group", "_crate", "_crate_loot_values", "_msgStart", "_msgWIN", "_msgLOSE", "_missionName", "_missionAIUnits", "_missionObjs", "_markers", "_time", "_added"];
+private ["_num", "_side", "_difficulty", "_AICount", "_staticGuns", "_baseObjs", "_crate", "_missionAIUnits", "_missionObjs", "_msgStart", "_msgWIN", "_msgLOSE", "_missionName", "_markers", "_time", "_added", "_cleanup"];
 
 // For logging purposes
 _num = DMS_MissionCount;
@@ -16,7 +13,7 @@ _side = "bandit";
 
 
 // find position
-_pos = [10,100] call DMS_fnc_findSafePos;
+_pos = call DMS_fnc_findSafePos;
 
 
 // Set general mission difficulty
@@ -24,29 +21,58 @@ _difficulty = "hardcore";
 
 
 // Create AI
-// TODO: Spawn AI only when players are nearby
-_AICount = 4 + (round (random 2));
+_AICount = 6 + (round (random 2));
 
 _group =
 [
-	_pos,					// Position of AI
-	_AICount,				// Number of AI
-	"random",				// "random","hardcore","difficult","moderate", or "easy"
-	"random", 				// "random","assault","MG","sniper" or "unarmed" OR [_type,_launcher]
-	_side 					// "bandit","hero", etc.
+	[_pos,[-9.48486,-12.4834,0]] call DMS_fnc_CalcPos,
+	_AICount,
+	"hardcore",
+	"random",
+	_side
 ] call DMS_fnc_SpawnAIGroup;
+
+// Use "base" waypoint instead
+while {(count (waypoints _group)) > 0} do
+{
+	deleteWaypoint ((waypoints _group) select 0);
+};
+
+[
+	_group,
+	[_pos,[-9.48486,-12.4834,0]] call DMS_fnc_CalcPos,
+	"base"
+] call DMS_fnc_SetGroupBehavior;
+
+
+_staticGuns =
+[
+	[
+		[_pos,[-6.29138,3.9917,0]] call DMS_fnc_CalcPos
+	],
+	_group,
+	"assault",
+	"hardcore",
+	"bandit",
+	"O_HMG_01_high_F"
+] call DMS_fnc_SpawnAIStatic;
+
+(_staticGuns select 0) setDir 15;
+
+
+_baseObjs =
+[
+	"base1",
+	_pos
+] call DMS_fnc_ImportFromM3E;
 
 
 // Create Crate
-_crate = ["Box_NATO_Wps_F",_pos] call DMS_fnc_SpawnCrate;
+_crate = ["Box_NATO_AmmoOrd_F",_pos] call DMS_fnc_SpawnCrate;
 
-// Set crate loot values
-_crate_loot_values =
-[
-	7,		// Weapons
-	2,		// Items
-	3 		// Backpacks
-];
+// Pink Crate ;)
+_crate setObjectTextureGlobal [0,"#(rgb,8,8,3)color(1,0.08,0.57,1)"];
+_crate setObjectTextureGlobal [1,"#(rgb,8,8,3)color(1,0.08,0.57,1)"];
 
 
 // Define mission-spawned AI Units
@@ -58,22 +84,22 @@ _missionAIUnits =
 // Define mission-spawned objects and loot values
 _missionObjs =
 [
+	_staticGuns+_baseObjs,			// base objects and static gun
 	[],
-	[],
-	[[_crate,_crate_loot_values]]
+	[[_crate,"Sniper"]]
 ];
 
 // Define Mission Start message
-_msgStart = format["<t color='#FFFF00' size='1.25'>Navy Seals! </t><br/> A squad of professional Navy Seals team is performing gorilla warfare in convict land, deal with them!"];
+_msgStart = format["<t color='#FFFF00' size='1.25'> Mercenary Base </t><br/> A mercenary base has been located at %1! There's reports of a dandy crate inside of it...",mapGridPosition _pos];
 
 // Define Mission Win message
-_msgWIN = format["<t color='#0080ff' size='1.25'>Navy Seals! </t><br/> Convicts have successfully taken care of the Navy Seals, you must be the top of your class!"];
+_msgWIN = format["<t color='#0080ff' size='1.25'> Mercenary Base </t><br/> Convicts have successfully assaulted the Mercenary Base and obtained the dandy crate!"];
 
 // Define Mission Lose message
-_msgLOSE = format["<t color='#FF0000' size='1.25'>Navy Seals! </t><br/> The Navy Seals have escaped and are now planning their next raid!"];
+_msgLOSE = format["<t color='#FF0000' size='1.25'> Mercenary Base </t><br/> Seems like the Mercenaries packed up and drove away..."];
 
 // Define mission name (for map marker and logging)
-_missionName = "Rogue Navy Seals";
+_missionName = "Mercenary Base";
 
 // Create Markers
 _markers =

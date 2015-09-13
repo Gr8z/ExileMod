@@ -12,10 +12,11 @@ DMS_DEBUG = false;
 
 /* Mission System Settings */
 	DMS_DynamicMission					= true;						// Enable/disable dynamic mission system
-	DMS_MaxBanditMissions				= 2;						// Maximum number of Bandit Missions running at the same time
+	DMS_MaxBanditMissions				= 3;						// Maximum number of Bandit Missions running at the same time
 	DMS_StaticMission					= false;					// Enable/disable static missions
-	DMS_TimeBetweenMissions				= [300,600];				// [Minimum,Maximum] time between missions (if mission limit is not reached) | DEFAULT: 10-15 mins
-	DMS_MissionTimeOut					= [1800,3600]; 				// [Minimum,Maximum]
+	DMS_TimeBetweenMissions				= [600,900];				// [Minimum,Maximum] time between missions (if mission limit is not reached) | DEFAULT: 10-15 mins
+	DMS_MissionTimeOut					= [900,1800]; 				// [Minimum,Maximum] time it will take for a mission to timeout | Default: 15-30 mins
+
 	DMS_playerNearRadius				= 75;						// How close a player has to be to a mission in order to satisfy the "playerNear" mission requirement (can be customized per mission).
 
 	DMS_AI_KillPercent					= 100;						// The percent amount of AI that need to be killed for "killPercent" mission requirement (NOT IMPLEMENTED)
@@ -37,7 +38,7 @@ DMS_DEBUG = false;
 	DMS_MissionTimeoutResetRange		= 1000;						// If a player is this close to a mission then it won't time-out
 
 	DMS_PlayerNearBlacklist				= 2000;						// Missions won't spawn in a position this many meters close to a player
-	DMS_SpawnZoneNearBlacklist			= 2000;						// Missions won't spawn in a position this many meters close to a spawn zone
+	DMS_SpawnZoneNearBlacklist			= 2500;						// Missions won't spawn in a position this many meters close to a spawn zone
 	DMS_TraderZoneNearBlacklist			= 3000;						// Missions won't spawn in a position this many meters close to a trader zone
 	DMS_MissionNearBlacklist			= 4000;						// Missions won't spawn in a position this many meters close to another mission
 	DMS_WaterNearBlacklist				= 750;						// Missions won't spawn in a position this many meters close to water
@@ -72,11 +73,12 @@ DMS_DEBUG = false;
 											["lost_battalion",10],
 											["mercenaries",20],
 											["roguenavyseals",15],
-											["walmart",20]
+											["walmart",20],
+											["mercbase",5]
 										];
 
 	DMS_findSafePosBlacklist =			[							// For BIS_fnc_findSafePos position blacklist info refer to: https://community.bistudio.com/wiki/BIS_fnc_findSafePos
-											//[[22500,19420],[24870,16725]]		// Salt flats
+											[[22500,19420],[24870,16725]]		// Salt flats
 										];
 /* Mission System Settings */
 
@@ -116,6 +118,7 @@ DMS_DEBUG = false;
 	DMS_AI_WP_Radius_moderate			= 40;						// Waypoint radius for "moderate" AI
 	DMS_AI_WP_Radius_difficult			= 75;						// Waypoint radius for "difficult" AI
 	DMS_AI_WP_Radius_hardcore			= 150;						// Waypoint radius for "hardcore" AI
+	DMS_AI_WP_Radius_base				= 5;						// Waypoint radius for AI in bases
 
 	DMS_static_weapons =				[							// Static weapons for AI
 											"O_HMG_01_F",
@@ -398,7 +401,7 @@ DMS_DEBUG = false;
 											"sniper"
 										];
 
-	DMS_ai_use_launchers				= false;						// Enable/disable spawning an AI in a group with a launcher
+	DMS_ai_use_launchers				= true;						// Enable/disable spawning an AI in a group with a launcher
 	DMS_ai_use_launchers_chance			= 50;						// Percentage chance to actually spawn the launcher (per-group)
 	DMS_AI_launcher_ammo_count			= 2;						// How many rockets an AI will get with its launcher
 	DMS_ai_remove_launchers				= true;						// Remove rocket launchers on AI death
@@ -416,6 +419,40 @@ DMS_DEBUG = false;
 
 
 /* Loot Settings */
+	DMS_GodmodeCrates 					= true;						// Whether or not crates will have godmode after being filled with loot.
+	DMS_CrateCase_Sniper =				[							// If you pass "Sniper" in _lootValues, then it will spawn these weapons/items/backpacks
+											[
+												["Rangefinder",1],
+												["srifle_GM6_F",1],
+												["srifle_LRR_F",1],
+												["srifle_EBR_DMS_pointer_snds_F",1],
+												["hgun_Pistol_heavy_01_MRD_F",1],
+												["hgun_PDW2000_Holo_snds_F",1]
+											],
+											[
+												["ItemGPS",1],
+												["U_B_FullGhillie_ard",1],
+												["U_I_FullGhillie_lsh",1],
+												["U_O_FullGhillie_sard",1],
+												["U_O_GhillieSuit",1],
+												["V_PlateCarrierGL_blk",1],
+												["V_HarnessO_brn",1],
+												["Exile_Item_InstaDoc",3],
+												["Exile_Item_Surstromming_Cooked",5],
+												["Exile_Item_PlasticBottleFreshWater",5],
+												["optic_LRPS",1],
+												["muzzle_snds_acp",1],
+												["5Rnd_127x108_APDS_Mag",3],
+												["7Rnd_408_Mag",3],
+												["20Rnd_762x51_Mag",5],
+												["11Rnd_45ACP_Mag",3],
+												["30Rnd_9x21_Mag",3]
+											],
+											[
+												["B_Carryall_cbr",1],
+												["B_Kitbag_mcamo",1]
+											]
+										];
 	DMS_BoxWeapons =					[							// List of weapons that can spawn in a crate
 											"Exile_Melee_Axe",
 											"arifle_Katiba_GL_F",
@@ -534,9 +571,11 @@ DMS_DEBUG = false;
 
 
 // Debug Overwrites
-if(DMS_DEBUG) then {
-	DMS_TimeBetweenMissions			= [10,20];
-	DMS_MissionTimeOut				= [30,60];
+if(DMS_DEBUG) then
+{
+	DMS_TimeBetweenMissions			= [30,60];
+	DMS_MissionTimeOut				= [60,90];
 	//DMS_MissionTypes = [["testmission",1]];
+	//DMS_MissionTypes = [["mercbase",1]];
 	diag_log format ["DMS_DEBUG CONFIG :: Overriding DMS_TimeBetweenMissions (%1) and DMS_MissionTimeOut (%2)",DMS_TimeBetweenMissions,DMS_MissionTimeOut];
 };
