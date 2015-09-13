@@ -1,16 +1,39 @@
-onEachFrame
-{
-	private["_vis","_pos"];
-	{
-		if(player distance _x < 2500 && isPlayer _x && _x != player && side _x == playerSide && group _x == group player) then
-		{
-			_vis = lineIntersects [eyePos player, eyePos _x,player, _x];
-            if(!_vis) then
-            {
-                _pos = visiblePosition _x;
-                _pos set[2,(getPosATL _x select 2) + 2.2];
-                drawIcon3D ["\a3\ui_f\data\map\Markers\NATO\b_inf.paa",[1,1,1,1],_pos,1,1,0,name _x,0,0.04];
+if(!isDedicated) then {
+    waitUntil {!isNull player && isPlayer player};
+    private["_unit", "_unitList", "_mySide", "_unitName", "_aMarker", "_aMarker"];
+    player addMPEventHandler ["MPRespawn", { [_this select 0] spawn pinMarkerF;}];
+    pinMarkerF = {
+        _unit = (_this select 0);
+        _unitList = allUnits;
+        _mySide = group _unit;
+        {
+            if((group _x) == _mySide) then {
+                _unitName = name _x;
+                _aMarker = vehicleVarName _x;
+                _aMarker = createMarkerLocal [_aMarker,[0,0]];
+                _aMarker setMarkerShapeLocal "ICON";
+                _aMarker setMarkerTypeLocal "mil_dot";
+                _aMarker setMarkerTextLocal _unitName;
+                _aMarker setMarkerSizeLocal [1,1];
+                _aMarker setmarkerDirLocal (getdir _x);
+                _aMarker setMarkerPosLocal (getPos _x);
+                _aMarker setMarkerTextLocal _unitName;
+                _aMarker setMarkerColorLocal "ColorGreen";
             };
-		};
-	} foreach playableUnits;
+        } foreach _unitList;
+        
+        while {alive _unit} do {
+            {
+            _aMarker = vehicleVarName _x;
+            _aMarker setMarkerDirLocal (getDir _x);
+            _aMarker setMarkerPosLocal (getPos _x);
+            } foreach _unitList;
+                sleep 0.2; 
+        };
+        _myVarName = vehicleVarName _unit;
+        _myVarName setMarkerColorLocal "ColorBlack";
+        sleep 3;
+        deleteMarkerLocal _myVarName;
+    };
+    [player] spawn pinMarkerF;
 };
