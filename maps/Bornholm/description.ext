@@ -110,3 +110,4 @@ class RscTitles
 };
 
 #include "GG\config.cpp"
+#include "GG\group\icons.h"
