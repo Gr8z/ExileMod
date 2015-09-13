@@ -1,7 +1,9 @@
 private ["_mrkr","_name","_pPos"];
 
 while {true} do {
+diag_log "LOOPING";
 	if (visibleMap) then {
+	diag_log "MAP OPENED";
 		{
 			if ((!isNull _x) && {isPlayer _x} && {(driver (vehicle _x)) == _x}) then {
 				_name = name _x;
