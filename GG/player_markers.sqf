@@ -12,9 +12,9 @@ while {true} do {
 					_mrkr = createMarkerLocal [_name,_pPos];
 					if ({_name != name player}) then {
 						_mrkr setMarkerTypeLocal "mil_box";
-						_mrkr setMarkerTextLocal format ["%1",_name,round(_pPos distance player)];
+						_mrkr setMarkerTextLocal format ["%1 (%2m)",_name,round(_pPos distance player)];
 					} else {
-						_mrkr setMarkerTypeLocal "mil_box";
+						_mrkr setMarkerTypeLocal "mil_dot";
 						_mrkr setMarkerTextLocal format ["%1",_name];
 					};
 				} else {
