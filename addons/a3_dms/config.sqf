@@ -12,12 +12,12 @@ DMS_DEBUG = false;
 
 /* Mission System Settings */
 	DMS_DynamicMission					= true;						// Enable/disable dynamic mission system
-	DMS_MaxBanditMissions				= 3;						// Maximum number of Bandit Missions running at the same time
+	DMS_MaxBanditMissions				= 4;						// Maximum number of Bandit Missions running at the same time
 	DMS_StaticMission					= false;					// Enable/disable static missions
-	DMS_TimeBetweenMissions				= [600,900];				// [Minimum,Maximum] time between missions (if mission limit is not reached) | DEFAULT: 10-15 mins
-	DMS_MissionTimeOut					= [900,1800]; 				// [Minimum,Maximum] time it will take for a mission to timeout | Default: 15-30 mins
+	DMS_TimeBetweenMissions				= [300,600];				// [Minimum,Maximum] time between missions (if mission limit is not reached) | DEFAULT: 10-15 mins
+	DMS_MissionTimeOut					= [1800,3600]; 				// [Minimum,Maximum] time it will take for a mission to timeout | Default: 15-30 mins
 
-	DMS_playerNearRadius				= 75;						// How close a player has to be to a mission in order to satisfy the "playerNear" mission requirement (can be customized per mission).
+	DMS_playerNearRadius				= 100;						// How close a player has to be to a mission in order to satisfy the "playerNear" mission requirement (can be customized per mission).
 
 	DMS_AI_KillPercent					= 100;						// The percent amount of AI that need to be killed for "killPercent" mission requirement (NOT IMPLEMENTED)
 
@@ -78,7 +78,7 @@ DMS_DEBUG = false;
 										];
 
 	DMS_findSafePosBlacklist =			[							// For BIS_fnc_findSafePos position blacklist info refer to: https://community.bistudio.com/wiki/BIS_fnc_findSafePos
-											[[22500,19420],[24870,16725]]		// Salt flats
+											//[[22500,19420],[24870,16725]]		// Salt flats
 										];
 /* Mission System Settings */
 
@@ -401,7 +401,7 @@ DMS_DEBUG = false;
 											"sniper"
 										];
 
-	DMS_ai_use_launchers				= true;						// Enable/disable spawning an AI in a group with a launcher
+	DMS_ai_use_launchers				= false;						// Enable/disable spawning an AI in a group with a launcher
 	DMS_ai_use_launchers_chance			= 50;						// Percentage chance to actually spawn the launcher (per-group)
 	DMS_AI_launcher_ammo_count			= 2;						// How many rockets an AI will get with its launcher
 	DMS_ai_remove_launchers				= true;						// Remove rocket launchers on AI death
