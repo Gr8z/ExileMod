@@ -5,6 +5,7 @@
 [] execVM "GG\safezones\init.sqf";
 [] execVM "GG\StatusBar\statusBar.sqf";
 [] execVM "GG\inspectLoop.sqf";
+[] execVM "GG\group\init.sqf";
 
 #include "initServer.sqf"
 
