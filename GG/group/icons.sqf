@@ -37,7 +37,7 @@ dzgmIconsName = {
 			_pPos set [2,(_pPos select 2) + 1.5];
 			_screen = worldToScreen _pPos;
 			_pIcon = _pIcons select _index;
-			if (tagName) then {_tag = composeText [image _pIcon," ",_pName," (",str _distanceR,"m)"];} else {_tag = composeText [image _pIcon];};
+			_tag = composeText [image _pIcon," ",_pName," (",str _distanceR,"m)"];} else {_tag = composeText [image _pIcon];
 			if ((count _screen) > 1) then {
 				_scale = 0;
 				_sx = _screen select 0;
