@@ -398,7 +398,7 @@ DMS_DEBUG = false;
 											"sniper"
 										];
 
-	DMS_ai_use_launchers				= true;						// Enable/disable spawning an AI in a group with a launcher
+	DMS_ai_use_launchers				= false;						// Enable/disable spawning an AI in a group with a launcher
 	DMS_ai_use_launchers_chance			= 50;						// Percentage chance to actually spawn the launcher (per-group)
 	DMS_AI_launcher_ammo_count			= 2;						// How many rockets an AI will get with its launcher
 	DMS_ai_remove_launchers				= true;						// Remove rocket launchers on AI death
