@@ -6,7 +6,7 @@ while {true} do {
 		{
 			if ((!isNull _x) && {isPlayer _x} && {(driver (vehicle _x)) == _x}) then {
 				_name = name _x;
-				if ((group _x == group player) && {_name != name player}) then {
+				if (group _x == group player) then {
 					_pPos = getPosATL _x;
 					if (surfaceIsWater _pPos) then {_pPos = getPosASL _x;};
 					deleteMarkerLocal _name;
