@@ -590,44 +590,6 @@ class UpgradeToWoodWindow: Exile_AbstractCraftingRecipe
 		{2, "Exile_Item_WoodPlank"}
 	};
 };
-class IEDLandSmall_Remote_Mag: Exile_AbstractCraftingRecipe
-{
-	name = "Small Crafted IED";
-	pictureItem = "IEDLandSmall_Remote_Mag";
-	requiresFire = 1;
-	requiredInteractionModelGroup = "WorkBench";
-	returnedItems[] = 
-	{
-		{1, "IEDLandSmall_Remote_Mag"}
-	};
-	components[] = 
-	{
-		{2, "Exile_Item_MetalPole"},
-		{4, "Exile_Item_JunkMetal"},
-		{3, "Exile_Item_FuelCanisterFull"},
-		{1, "Exile_Item_ExtensionCord"},
-		{1, "Exile_Item_DuctTape"}
-	};
-};
-class IEDLandbig_Remote_Mag: Exile_AbstractCraftingRecipe
-{
-	name = "Large Crafted IED";
-	pictureItem = "IEDLandBig_Remote_Mag";
-	requiresFire = 1;
-	requiredInteractionModelGroup = "WorkBench";
-	returnedItems[] = 
-	{
-		{1, "IEDLandBig_Remote_Mag"}
-	};
-	components[] = 
-	{
-		{1, "Exile_Item_FuelCanisterEmpty"},
-		{10, "Exile_Item_JunkMetal"},
-		{5, "Exile_Item_FuelCanisterFull"},
-		{2, "Exile_Item_ExtensionCord"},
-		{2, "Exile_Item_DuctTape"}
-	};
-};
 };
 class CfgExileArsenal
 {

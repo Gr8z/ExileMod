@@ -5,7 +5,6 @@
  *
  * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
- *
  */
  
 private ['_code', '_function', '_file'];
@@ -26,8 +25,7 @@ private ['_code', '_function', '_file'];
 }
 forEach 
 [
-	['ExileServer_util_position_getNearbyPlayers', 'exile_server_config\code\ExileServer_util_position_getNearbyPlayers.sqf'],
-	['ExileServer_object_vehicle_event_onRopeAttach', 'exile_server_config\code\ExileServer_object_vehicle_event_onRopeAttach.sqf']
+
 ];
 
 
