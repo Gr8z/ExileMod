@@ -1,4 +1,6 @@
+diag_log "Waiting for Bornholm Custom Buildings";
 if (isServer) then {
+	diag_log "Spawning Bornholm Custom Buildings";
 	_objects = 
 	[
 		["Land_Dome_Big_F",[4337,18085.4,-1.52588e-005],64.6072,0,3,false],
