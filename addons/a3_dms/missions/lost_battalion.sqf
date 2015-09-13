@@ -16,16 +16,16 @@ _side = "bandit";
 
 
 // find position
-_pos = [10,100] call DMS_findSafePos;
+_pos = [10,100] call DMS_fnc_findSafePos;
 
 
 // Set general mission difficulty
-_difficulty = "hardcore";
+_difficulty = "moderate";
 
 
 // Create AI
 // TODO: Spawn AI only when players are nearby
-_AICount = 6 + (round (random 2));
+_AICount = 7 + (round (random 2));
 
 _group =
 [
@@ -34,18 +34,18 @@ _group =
 	"random",				// "random","hardcore","difficult","moderate", or "easy"
 	"random", 				// "random","assault","MG","sniper" or "unarmed" OR [_type,_launcher]
 	_side 					// "bandit","hero", etc.
-] call DMS_SpawnAIGroup;
+] call DMS_fnc_SpawnAIGroup;
 
 
 // Create Crate
-_crate = ["Box_NATO_Wps_F",_pos] call DMS_SpawnCrate;
+_crate = ["Box_NATO_Wps_F",_pos] call DMS_fnc_SpawnCrate;
 
 // Set crate loot values
 _crate_loot_values =
 [
-	7,		// Weapons
+	8,		// Weapons
 	5,		// Items
-	5 		// Backpacks
+	2 		// Backpacks
 ];
 
 
@@ -58,20 +58,19 @@ _missionAIUnits =
 // Define mission-spawned objects and loot values
 _missionObjs =
 [
-	[],			// No spawned buildings
-	[_crate],
-	_crate_loot_values
+	[],
+	[],
+	[[_crate,_crate_loot_values]]
 ];
 
 // Define Mission Start message
-_msgStart = format["A battalion of soldiers have gotten lost in convict land! Eliminate them!"];
+_msgStart = format["<t color='#FFFF00' size='1.25'>Lost Battalion! </t><br/> A battalion of soldiers have gotten lost in convict land! Eliminate them!"];
 
 // Define Mission Win message
-_msgWIN = format["Convicts have successfully eliminated the lost battalion!"];
+_msgWIN = format["<t color='#0080ff' size='1.25'>Lost Battalion! </t><br/> Convicts have successfully eliminated the lost battalion!"];
 
 // Define Mission Lose message
-_msgLOSE = format["Whittlesey escaped with his Lost Battalion!"];
-
+_msgLOSE = format["<t color='#FF0000' size='1.25'>Lost Battalion! </t><br/> Whittlesey escaped with his Lost Battalion!"];
 
 // Define mission name (for map marker and logging)
 _missionName = "Lost Battalion";
@@ -82,7 +81,7 @@ _markers =
 	_pos,
 	_missionName,
 	_difficulty
-] call DMS_CreateMarker;
+] call DMS_fnc_CreateMarker;
 
 // Record time here (for logging purposes, otherwise you could just put "diag_tickTime" into the "DMS_AddMissionToMonitor" parameters directly)
 _time = diag_tickTime;
@@ -110,7 +109,7 @@ _added =
 	[_msgWIN,_msgLOSE],
 	_markers,
 	_side
-] call DMS_AddMissionToMonitor;
+] call DMS_fnc_AddMissionToMonitor;
 
 // Check to see if it was added correctly, otherwise delete the stuff
 if !(_added) exitWith
@@ -121,16 +120,19 @@ if !(_added) exitWith
 	_cleanup = [];
 	{
 		_cleanup pushBack _x;
-		false;
-	} count _missionAIUnits;
+	} forEach _missionAIUnits;
 
 	_cleanup pushBack ((_missionObjs select 0)+(_missionObjs select 1));
+	
+	{
+		_cleanup pushBack (_x select 0);
+	} foreach (_missionObjs select 2);
 
-	_cleanup call DMS_CleanUp;
+	_cleanup call DMS_fnc_CleanUp;
 
 
 	// Delete the markers directly
-	{deleteMarker _x;false;} count _markers;
+	{deleteMarker _x;} forEach _markers;
 
 
 	// Reset the mission count
@@ -139,7 +141,7 @@ if !(_added) exitWith
 
 
 // Notify players
-_msgStart call DMS_BroadcastMissionStatus;
+_msgStart call DMS_fnc_BroadcastMissionStatus;
 
 
 

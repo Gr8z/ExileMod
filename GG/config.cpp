@@ -1628,12 +1628,13 @@ class CfgExileCustomCode
 	ExileClient_object_item_craft = "GG\overrides\GG_object_item_craft.sqf";
 	ExileClient_object_player_initialize = "GG\overrides\GG_object_player_initialize.sqf";
 	ExileClient_system_trading_network_moneyReceivedRequest = "GG\overrides\GG_system_trading_network_moneyReceivedRequest.sqf";
+	ExileClient_util_world_getNearestLocationName = "GG\overrides\GG_util_world_getNearestLocationName.sqf";
 };
 class CfgExileMusic
 {
-	Ambient[] = {"ExileTrack03","ExileTrack04"};
+	Ambient[] = {};
 	Combat[] = {"ExileTrack06","ExileTrack07"};
-	Intro[] = {"ExileTrack02","ExileTrack03"};
+	Intro[] = {};
 };
 class CfgFlags 
 {
@@ -1649,6 +1650,13 @@ class CfgFlags
 		name = "MOIST";
 		texture = "GG\images\flags\moist.paa";
 		uid = "";
+	};	
+	
+	class CENOBITE
+	{
+		name = "CENOBITE";
+		texture = "GG\images\flags\cenobite.paa";
+		uid = "76561198130402012";
 	};
 };
 class CfgTerritories

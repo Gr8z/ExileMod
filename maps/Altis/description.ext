@@ -106,7 +106,7 @@ class CfgRemoteExec
 class RscTitles
 {
 	#include "GG\SL\main.hpp"
-	#include "GG\StatusBar\statusBar.hpp"  
+	#include "GG\StatusBar\statusBar.hpp"
 };
 
 #include "GG\config.cpp"

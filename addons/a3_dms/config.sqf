@@ -12,18 +12,18 @@ DMS_DEBUG = false;
 
 /* Mission System Settings */
 	DMS_DynamicMission					= true;						// Enable/disable dynamic mission system
-	DMS_MaxBanditMissions				= 2;						// Maximum number of Bandit Missions running at the same time
+	DMS_MaxBanditMissions				= 4;						// Maximum number of Bandit Missions running at the same time
 	DMS_StaticMission					= false;					// Enable/disable static missions
 	DMS_TimeBetweenMissions				= [300,600];				// [Minimum,Maximum] time between missions (if mission limit is not reached) | DEFAULT: 10-15 mins
 	DMS_MissionTimeOut					= [1800,3600]; 				// [Minimum,Maximum] time it will take for a mission to timeout | Default: 15-30 mins
 
-	DMS_playerNearRadius				= 75;						// How close a player has to be to a mission in order to satisfy the "playerNear" mission requirement (can be customized per mission).
+	DMS_playerNearRadius				= 100;						// How close a player has to be to a mission in order to satisfy the "playerNear" mission requirement (can be customized per mission).
 
 	DMS_AI_KillPercent					= 100;						// The percent amount of AI that need to be killed for "killPercent" mission requirement (NOT IMPLEMENTED)
 
-	DMS_BanditMoneyGainOnKill			= 100;						// The amount of Poptabs gained for killing a bandit
-	DMS_BanditRepGainOnKill				= 25;						// The amount of Respect gained for killing a bandit
-
+	DMS_MarkerPosRandomization			= false;					// Randomize the position of the circle marker of a mission
+	DMS_MarkerPosRandomRadius			= [25,100];					// Minimum/Maximum distance that the circle marker position will be randomized | Default: 0 meters to 200 meters
+	DMS_RandomMarkerBrush				= "Cross";					// See: https://community.bistudio.com/wiki/setMarkerBrush
 	DMS_MissionMarkerWinDot				= true;						// Keep the mission marker dot with a "win" message after mission is over
 	DMS_MissionMarkerLoseDot			= true;						// Keep the mission marker dot with a "lose" message after mission is over
 	DMS_MissionMarkerWinDotTime			= 30;						// How many seconds the "win" mission dot will remain on the map
@@ -37,50 +37,66 @@ DMS_DEBUG = false;
 	DMS_MissionTimeoutReset				= true;						// Enable mission timeout timer reset if a player is close
 	DMS_MissionTimeoutResetRange		= 1000;						// If a player is this close to a mission then it won't time-out
 
-	DMS_PlayerNearBlacklist				= 1000;						// Missions won't spawn in a position this many meters close to a player
-	DMS_SpawnZoneNearBlacklist			= 1000;						// Missions won't spawn in a position this many meters close to a spawn zone
-	DMS_TraderZoneNearBlacklist			= 2000;						// Missions won't spawn in a position this many meters close to a trader zone
-	DMS_MissionNearBlacklist			= 3000;						// Missions won't spawn in a position this many meters close to another mission
-	DMS_WaterNearBlacklist				= 500;						// Missions won't spawn in a position this many meters close to water
+	DMS_PlayerNearBlacklist				= 2000;						// Missions won't spawn in a position this many meters close to a player
+	DMS_SpawnZoneNearBlacklist			= 2500;						// Missions won't spawn in a position this many meters close to a spawn zone
+	DMS_TraderZoneNearBlacklist			= 3000;						// Missions won't spawn in a position this many meters close to a trader zone
+	DMS_MissionNearBlacklist			= 4000;						// Missions won't spawn in a position this many meters close to another mission
+	DMS_WaterNearBlacklist				= 750;						// Missions won't spawn in a position this many meters close to water
 
 	DMS_SpawnBoxSmoke					= true;						// Spawn a smoke grenade on mission box upon misson completion during daytime
 	DMS_SpawnBoxIRGrenade				= true;						// Spawn an IR grenade on mission box upon misson completion during nighttime
 	
 	DMS_MinPlayerCount					= 0; 						// Minimum number of players until mission start
-	DMS_MinServerFPS					= 1; 						// Minimum server FPS for missions to start
+	DMS_MinServerFPS					= 5; 						// Minimum server FPS for missions to start
 
 	//Mission notification settings
 	DMS_PlayerNotificationTypes =		[							// Notification types. Supported values are: ["dynamicTextRequest", "standardHintRequest", "systemChatRequest"]
-											//"dynamicTextRequest", <--- Currently won't work.
-											"standardHintRequest",
-											"systemChatRequest"
+											//"dynamicTextRequest", <--- Won't work in Exile v0.9.19
+											"standardHintRequest"
+											//"systemChatRequest"
 										];
-	DMS_dynamicText_Size				= "0.55";					// Dynamic Text size for "dynamicTextRequest" notification type.
+	DMS_dynamicText_Size				= "0.65";					// Dynamic Text size for "dynamicTextRequest" notification type.
 	DMS_dynamicText_Color				= "#FFCC00";				// Dynamic Text color for "dynamicTextRequest" notification type.
 
 	DMS_MissionTypes =					[							//	List of missions with spawn chances. If they add up to 100%, they represent the percentage chance each one will spawn
-											["mission1",25],
-											["mission2",25],
-											["mission3",15],
-											["mission4",10],
-											["bauhaus",45],
-											["lost_battalion",30],
-											["walmart",20]
+											["bandits",25],
+											["bauhaus",25],
+											["beertransport",15],
+											["behindenemylines",10],
+											["blackhawkdown",45],
+											["cardealer",25],
+											["construction",35],
+											["donthasslethehoff",30],
+											["foodtransport",25],
+											["guntransport",20],
+											["humanitarian",25],
+											["lost_battalion",10],
+											["mercenaries",20],
+											["roguenavyseals",15],
+											["walmart",20],
+											["mercbase",5]
 										];
 
 	DMS_findSafePosBlacklist =			[							// For BIS_fnc_findSafePos position blacklist info refer to: https://community.bistudio.com/wiki/BIS_fnc_findSafePos
-											[[22500,19420],[24870,16725]]		// Salt flats
+											//[[22500,19420],[24870,16725]]		// Salt flats
 										];
 /* Mission System Settings */
 
 
 /* AI Settings */
 
+	DMS_Bandit_Soldier_MoneyGain		= 50;						// The amount of Poptabs gained for killing a bandit soldier
+	DMS_Bandit_Soldier_RepGain			= 10;						// The amount of Respect gained for killing a bandit soldier
+	DMS_Bandit_Static_MoneyGain			= 100;						// The amount of Poptabs gained for killing a bandit static gunner
+	DMS_Bandit_Static_RepGain			= 25;						// The amount of Respect gained for killing a bandit static gunner
+
 	DMS_banditSide						= EAST;						// The side (team) that AI Bandits will spawn on
 	DMS_clear_AI_body					= false;					// Clear AI body as soon as they die
-	DMS_clear_AI_body_chance			= 0;						// Percentage chance that AI bodies will be cleared when they die
+	DMS_clear_AI_body_chance			= 50;						// Percentage chance that AI bodies will be cleared when they die
+	DMS_ai_disable_ramming_damage 		= false;						// Disables damage due to ramming into AI. !!!NOTE: THIS WILL NOT BE RELIABLE WITH "DMS_ai_offload_to_client"!!!
+	DMS_credit_roadkill					= false;					// Credit players with respect/poptabs if they kill an AI by running it over
 	DMS_remove_roadkill					= false; 					// Remove gear from AI bodies that are roadkilled
-	DMS_remove_roadkill_chance			= 0;						// Percentage chance that roadkilled AI bodies will be deleted
+	DMS_remove_roadkill_chance			= 50;						// Percentage chance that roadkilled AI bodies will be deleted
 	DMS_RemoveNVG						= false;					// Remove NVGs from AI bodies
 
 	DMS_ai_offload_to_client			= true;						// Offload spawned AI groups to random clients. Helps with server performance.
@@ -92,7 +108,6 @@ DMS_DEBUG = false;
 	DMS_ai_enable_water_equipment		= true;						// Enable/disable overriding default weapons of an AI if it spawns on/in water
 
 	// https://community.bistudio.com/wiki/AI_Sub-skills#general
-	DMS_ai_static_skills				= true;						// Use "DMS_ai_skill_static" for AI on static guns
 	DMS_ai_skill_static					= [["aimingAccuracy",0.20],["aimingShake",0.70],["aimingSpeed",0.75],["spotDistance",0.70],["spotTime",0.50],["courage",1.00],["reloadSpeed",1.00],["commanding",1.00],["general",1.00]];	// Static AI Skills
 	DMS_ai_skill_easy					= [["aimingAccuracy",0.30],["aimingShake",0.50],["aimingSpeed",0.50],["spotDistance",0.50],["spotTime",0.50],["courage",1.00],["reloadSpeed",1.00],["commanding",1.00],["general",0.50]];	// Easy
 	DMS_ai_skill_moderate				= [["aimingAccuracy",0.60],["aimingShake",0.60],["aimingSpeed",0.60],["spotDistance",0.60],["spotTime",0.60],["courage",1.00],["reloadSpeed",1.00],["commanding",1.00],["general",0.60]];	// Moderate
@@ -103,6 +118,7 @@ DMS_DEBUG = false;
 	DMS_AI_WP_Radius_moderate			= 40;						// Waypoint radius for "moderate" AI
 	DMS_AI_WP_Radius_difficult			= 75;						// Waypoint radius for "difficult" AI
 	DMS_AI_WP_Radius_hardcore			= 150;						// Waypoint radius for "hardcore" AI
+	DMS_AI_WP_Radius_base				= 5;						// Waypoint radius for AI in bases
 
 	DMS_static_weapons =				[							// Static weapons for AI
 											"O_HMG_01_F",
@@ -403,6 +419,40 @@ DMS_DEBUG = false;
 
 
 /* Loot Settings */
+	DMS_GodmodeCrates 					= true;						// Whether or not crates will have godmode after being filled with loot.
+	DMS_CrateCase_Sniper =				[							// If you pass "Sniper" in _lootValues, then it will spawn these weapons/items/backpacks
+											[
+												["Rangefinder",1],
+												["srifle_GM6_F",1],
+												["srifle_LRR_F",1],
+												["srifle_EBR_DMS_pointer_snds_F",1],
+												["hgun_Pistol_heavy_01_MRD_F",1],
+												["hgun_PDW2000_Holo_snds_F",1]
+											],
+											[
+												["ItemGPS",1],
+												["U_B_FullGhillie_ard",1],
+												["U_I_FullGhillie_lsh",1],
+												["U_O_FullGhillie_sard",1],
+												["U_O_GhillieSuit",1],
+												["V_PlateCarrierGL_blk",1],
+												["V_HarnessO_brn",1],
+												["Exile_Item_InstaDoc",3],
+												["Exile_Item_Surstromming_Cooked",5],
+												["Exile_Item_PlasticBottleFreshWater",5],
+												["optic_LRPS",1],
+												["muzzle_snds_acp",1],
+												["5Rnd_127x108_APDS_Mag",3],
+												["7Rnd_408_Mag",3],
+												["20Rnd_762x51_Mag",5],
+												["11Rnd_45ACP_Mag",3],
+												["30Rnd_9x21_Mag",3]
+											],
+											[
+												["B_Carryall_cbr",1],
+												["B_Kitbag_mcamo",1]
+											]
+										];
 	DMS_BoxWeapons =					[							// List of weapons that can spawn in a crate
 											"Exile_Melee_Axe",
 											"arifle_Katiba_GL_F",
@@ -521,8 +571,11 @@ DMS_DEBUG = false;
 
 
 // Debug Overwrites
-if(DMS_DEBUG) then {
+if(DMS_DEBUG) then
+{
 	DMS_TimeBetweenMissions			= [30,60];
-	DMS_MissionTimeOut				= [240,300];
+	DMS_MissionTimeOut				= [60,90];
+	//DMS_MissionTypes = [["testmission",1]];
+	//DMS_MissionTypes = [["mercbase",1]];
 	diag_log format ["DMS_DEBUG CONFIG :: Overriding DMS_TimeBetweenMissions (%1) and DMS_MissionTimeOut (%2)",DMS_TimeBetweenMissions,DMS_MissionTimeOut];
 };

@@ -1,1 +1,0 @@
-call compile preprocessFileLineNumbers "loot_addon\LSpawner\init.sqf";
