@@ -5,9 +5,9 @@ if(!isDedicated) then {
     pinMarkerF = {
         _unit = (_this select 0);
         _unitList = allUnits;
-        _mySide = group _unit;
+        _mySide = side _unit;
         {
-            if((group _x) == _mySide) then {
+            if((side _x) == _mySide) then {
                 _unitName = name _x;
                 _aMarker = vehicleVarName _x;
                 _aMarker = createMarkerLocal [_aMarker,[0,0]];
