@@ -1,7 +1,7 @@
 private ["_mrkr","_name","_pPos"];
 
 while {true} do {
-	if (visibleMap || (!isNull (findDisplay 88890))) then {
+	if (visibleMap) then {
 		{
 			if ((!isNull _x) && {isPlayer _x} && {(driver (vehicle _x)) == _x}) then {
 				_name = name _x;
@@ -11,7 +11,7 @@ while {true} do {
 					deleteMarkerLocal _name;
 					_mrkr = createMarkerLocal [_name,_pPos];
 					_mrkr setMarkerTypeLocal "hd_dot";
-					_mrkr setMarkerTextLocal format ["%1 (%2m)",_name,(player distance _x)];
+					_mrkr setMarkerTextLocal format ["%1",_name];
 				} else {
 					deleteMarkerLocal _name;
 				};
