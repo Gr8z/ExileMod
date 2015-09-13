@@ -1,26 +1,3 @@
-class W_RscStructuredText
-{
-	access = 0;
-	type = 13;
-	idc = -1;
-	style = 0;
-	colorText[] = {.8784,.8471,.651,1};
-	class Attributes
-	{
-		font = "Zeppelin32";
-		color = "#e0d8a6";
-		align = "center";
-		shadow = 1;
-	};
-	x = 0;
-	y = 0;
-	h = .035;
-	w = .1;
-	text = "";
-	size = .03921;
-	shadow = 2;
-};
-
 class DZGMHud_Rsc
 {
 	idd = -1;
