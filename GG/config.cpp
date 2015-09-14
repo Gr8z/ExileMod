@@ -1566,7 +1566,6 @@ class CfgExileCustomCode
 {
 	
 	ExileClient_gui_safezone_fired = "GG\overrides\GG_gui_safezone_fired.sqf";
-	ExileClient_object_player_stats_update = "GG\overrides\GG_object_player_stats_update.sqf";
 	ExileClient_object_player_event_onEnterSafezone = "GG\safezones\GG_object_player_event_onEnterSafezone.sqf";
 	ExileClient_object_player_event_onLeaveSafezone = "GG\safezones\GG_object_player_event_onLeaveSafezone.sqf";
 	ExileClient_gui_inventory_event_onSlotDoubleClick = "GG\overrides\GG_gui_inventory_event_onSlotDoubleClick.sqf";
