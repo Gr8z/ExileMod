@@ -1573,9 +1573,9 @@ class CfgExileCustomCode
 };
 class CfgExileMusic
 {
-	Ambient[] = {};
+	Ambient[] = {"ExileTrack03","ExileTrack04"};
 	Combat[] = {"ExileTrack06","ExileTrack07"};
-	Intro[] = {};
+	Intro[] = {"ExileTrack02","ExileTrack03"};
 };
 class CfgFlags 
 {
