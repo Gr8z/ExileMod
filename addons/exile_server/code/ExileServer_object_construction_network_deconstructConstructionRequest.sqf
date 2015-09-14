@@ -1,12 +1,6 @@
-/**
- * Exile Mod
- * www.exilemod.com
- * © 2015 Exile Mod Team
- *
- * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
- * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
- */
- 
+/*
+	infiSTAR: fixed deconstruct of objects (adding items now correctly) - addItemCargoGlobal instead of add magazine (add magazine wasn't working, locality issues (or not a magazine?))
+*/
 private["_sessionID","_parameters","_objectNetID","_object","_playerObject","_radius","_flags","_flag","_build","_type","_objectID","_config","_holder"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
@@ -30,7 +24,7 @@ if((getPlayerUID _playerObject) in _build_rights)then
 			_config = ("(getText(_x >> 'staticObject') isEqualTo _type)" configClasses (configFile >> "CfgConstruction")) select 0;
 			_config = getText (_config >> "kitMagazine");
 			_holder = createVehicle ["groundWeaponHolder", getPosATL _playerObject, [], 0, "CAN_COLLIDE"];
-			_holder addMagazine [_config,1];
+			_holder addItemCargoGlobal [_config,1];
 			[_sessionID,"notificationRequest",["Success",["Deconstructed"]]] call ExileServer_system_network_send_to;
 		};
 	};
