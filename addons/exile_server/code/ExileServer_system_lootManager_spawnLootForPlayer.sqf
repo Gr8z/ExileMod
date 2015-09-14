@@ -7,11 +7,12 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_playerObject","_spawnRadius","_spawnChance","_visualThreshold","_playerPosition","_lastKnownPlayerPosition","_buildings","_spawnedLoot","_building","_buildingType","_buildingConfig","_lootTableName","_localPositions","_spawnedItemClassNames","_lootGroundWeaponHolderNetIDs","_spawnedLootInThisBuilding","_lootPosition","_itemClassName","_cargoType","_lootHolder","_magazineClassNames","_magazineClassName","_numberOfMagazines"];
+private["_playerObject","_spawnRadius","_spawnChance","_visualThreshold","_spawnedLoot","_playerPosition","_lastKnownPlayerPosition","_buildings","_building","_buildingType","_buildingConfig","_lootTableName","_localPositions","_spawnedItemClassNames","_lootGroundWeaponHolderNetIDs","_spawnedLootInThisBuilding","_lootPosition","_itemClassName","_cargoType","_lootHolder","_magazineClassNames","_magazineClassName","_numberOfMagazines"];
 _playerObject = _this;
 _spawnRadius = getNumber (configFile >> "CfgSettings" >> "LootSettings" >> "spawnRadius");
 _spawnChance = (getNumber (configFile >> "CfgSettings" >> "LootSettings" >> "spawnChance") max 0) min 99; 
 _visualThreshold = getNumber (configFile >> "CfgSettings" >> "LootSettings" >>  "visualThreshold");
+_spawnedLoot = false;
 try 
 {
 	if !(alive _playerObject) then 
@@ -38,7 +39,6 @@ try
 		throw false;
 	};
 	_buildings = _playerPosition nearObjects ["House", _spawnRadius];
-	_spawnedLoot = false;
 	{
 		_building = _x;
 		_buildingType = typeOf _building;

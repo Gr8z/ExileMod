@@ -20,7 +20,7 @@ else
 {
 	if(_useRealTime isEqualTo 1)then
 	{
-		setDate ExileServerRealTime;
+		setDate ExileServerStartTime;
 	};
 };
 forceWeatherChange;

@@ -14,7 +14,7 @@ item9[] = {"",7,210,521.000000,46.000000,529.000000,54.000000,0.000000,""};
 item10[] = {"",7,210,746.000000,321.000000,754.000000,329.000000,0.000000,""};
 item11[] = {"Every_5m",4,218,825.000000,175.000000,925.000000,225.000000,1.000000,"Every" \n "5m"};
 item12[] = {"",7,210,871.000000,321.000000,879.000000,329.000000,0.000000,""};
-item13[] = {"Clean_up_Arma_sh",2,4346,700.000000,250.000000,800.000000,300.000000,0.000000,"Clean up" \n "Arma shit"};
+item13[] = {"Nothing",2,4346,700.000000,250.000000,800.000000,300.000000,0.000000,"Nothing"};
 link0[] = {0,1};
 link1[] = {1,2};
 link2[] = {2,3};
@@ -32,7 +32,7 @@ link13[] = {11,7};
 link14[] = {12,10};
 link15[] = {13,10};
 globals[] = {25.000000,1,0,0,0,640,480,1,450,6316128,1,480.422882,979.178955,356.321381,-71.452309,1061,910,1};
-window[] = {2,-1,-1,-1,-1,812,78,1372,78,3,1079};
+window[] = {2,-1,-1,-1,-1,968,234,1528,234,3,1079};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -74,7 +74,7 @@ class FSM
         class Every_1m
         {
           priority = 1.000000;
-          to="Clean_up_Arma_sh";
+          to="Nothing";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
           condition=/*%FSM<CONDITION""">*/"(diag_ticktime - _lastTime60) >= 60"/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/"_lastTime60 = diag_ticktime;"/*%FSM</ACTION""">*/;
@@ -247,14 +247,11 @@ class FSM
       };
     };
     /*%FSM</STATE>*/
-    /*%FSM<STATE "Clean_up_Arma_sh">*/
-    class Clean_up_Arma_sh
+    /*%FSM<STATE "Nothing">*/
+    class Nothing
     {
-      name = "Clean_up_Arma_sh";
-      init = /*%FSM<STATEINIT""">*/"{" \n
-       "	diag_log format [""Found %1 at %2"", _x, getPosATL _x];" \n
-       "}" \n
-       "forEach (entities ""All"");"/*%FSM</STATEINIT""">*/;
+      name = "Nothing";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links
       {
