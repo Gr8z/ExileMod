@@ -93,16 +93,6 @@ class cfgFunctions
 	};
 };
 
-class CfgRemoteExec
-{
-        class Functions
-        {
-                mode = 0;
-                jip = 0;
-        };
-        class Commands{mode=0;};
-};
-
 class RscTitles
 {
 	#include "GG\SL\main.hpp"
