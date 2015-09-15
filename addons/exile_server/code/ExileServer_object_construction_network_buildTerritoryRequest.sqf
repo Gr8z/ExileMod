@@ -52,6 +52,10 @@ try
 	_object setVariable ["ExileOwnerUID",getPlayerUID _playerObject,true];
 	if(isNull _playerObject)then
 	{
+		clearBackpackCargoGlobal _object;
+		clearItemCargoGlobal _object;
+		clearMagazineCargoGlobal _object;
+		clearWeaponCargoGlobal _object;
 		deleteVehicle _object;
 		throw "Invalid Player Object";
 	};
