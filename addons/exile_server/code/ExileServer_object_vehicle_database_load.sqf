@@ -21,12 +21,14 @@ _vehicleObject setVariable ["ExileOwnerUID", (_data select 3)];
 _lock = (_data select 4);
 if(_lock isEqualTo -1)then
 {
+	_vehicleObject setVehicleAmmo 0;
 	_vehicleObject setVariable ["ExileIsLocked",-1];
 	_vehicleObject lock 2;
 	_vehicleObject enableRopeAttach false;
 }
 else
 {
+	_vehicleObject setVehicleAmmo 0;
 	_vehicleObject setVariable ["ExileIsLocked",0];
 	_vehicleObject lock 0;
 };

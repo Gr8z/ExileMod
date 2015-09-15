@@ -58,4 +58,49 @@ for "_xSize" from 0 to _mapsizeX step _gridSize do
 	};
 };
 format ["Dynamic vehicles spawned. Count : %1",_vehicleCount] call ExileServer_util_log;
+//unlock vehicles in traders
+if (!isServer) exitWith{};
+private["_ExileTraderZone","_position","_radius","_vehicleArray","_vehicleUnlocked","_vehicleUnlockedTotal","_unLockVehiclesInTradeZone"];
+_unLockVehiclesInTradeZone = getNumber (configFile >> "CfgSettings" >> "Init" >> "unLockVehiclesInTradeZone");
+_unLockVehiclesInTradeZone = 1; //1 to enable 0 to disable
+if(_unLockVehiclesInTradeZone isEqualTo 1) then
+{
+	_vehicleUnlockedTotal = 0;
+	{
+		_ExileTraderZone = _x;
+		if (getMarkerType _ExileTraderZone isEqualTo "ExileTraderZone") then
+		{
+			_vehicleUnlocked    = 0;
+			_position          = getMarkerPos _ExileTraderZone;
+			_radius            = getMarkerSize _ExileTraderZone;
+
+			_vehicleArray = _position nearEntities[["Motorcycle","Car","Tank","Helicopter_Base_F","Plane_Base_F"], _radius select 0];
+			{
+				private["_vehicleObject","_vehicleClass","_vehicleKindOfExile"];
+				_vehicleObject = _x;
+
+				// Don't work if none exile vehicle is available on the server
+				//_vehicleClass       = getText (configFile >> "CfgVehicles" >> (typeOf _vehicleObject) >> "vehicleclass");
+				//_vehicleKindOfExile = _vehicleClass IN ["ExileCars","ExileChoppers","ExilePlanes","ExileBoats","ExileBikes"];
+
+				if (_vehicleObject getVariable "ExileIsLocked" isEqualTo -1) then
+				{
+					format ["ExileServer - Unlocking vehicle beloning to UID: %1 / TRADER: %3 / CLASS: (%2)", _vehicleObject getVariable "ExileOwnerUID", typeOf _vehicleObject, _ExileTraderZone] call ExileServer_util_log;
+					_vehicleObject setVariable ["ExileIsLocked", 0, true];
+					_vehicleObject lock 0;
+					_vehicleUnlocked = _vehicleUnlocked + 1;
+				};
+				true
+			}
+			count _vehicleArray;			
+			_vehicleUnlockedTotal = _vehicleUnlockedTotal + _vehicleUnlocked;
+			format ["ExileServer - %1 Vehicle unlocked in %2", _vehicleUnlocked, _ExileTraderZone] call ExileServer_util_log;
+		};
+		true
+	} count allMapMarkers;	
+	format ["ExileServer - Total unlocked vehicle: %1", _vehicleUnlockedTotal] call ExileServer_util_log;
+} else 
+{
+	format ["ExileServer - traderzone vehicle cleanup deactivated! setting: %1", _unLockVehiclesInTradeZone] call ExileServer_util_log;
+};
 true
