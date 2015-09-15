@@ -1579,6 +1579,7 @@ class CfgExileCustomCode
 	ExileClient_util_playerEquipment_add = "GG\overrides\GG_util_playerEquipment_add.sqf";
 	ExileClient_gui_interactionMenu_update = "GG\overrides\GG_gui_interactionMenu_update.sqf";
 	ExileClient_util_world_getNearbyPlayers = "GG\overrides\GG_util_world_getNearbyPlayers.sqf";
+	ExileClient_system_thread_removeTask = "GG\overrides\GG_system_thread_removeTask.sqf"
 };
 class CfgExileMusic
 {
