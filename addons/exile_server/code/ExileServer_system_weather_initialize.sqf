@@ -1,19 +1,26 @@
-/**
- * Exile Mod
- * www.exilemod.com
- * © 2015 Exile Mod Team
- *
- * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
- * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
- */
- 
-private["_useRealTime","_useStaticTime","_staticTime","_changetime"];
+/*
+	infiSTAR: This allows you to set multiple _staticTimes by just copy pasting the staticTime in your 
+	CfgSettings >> Time and rename the pastes like
+	staticTime1
+	staticTime2
+	and on.
+	Kepp the normal staticTime as well.
+*/
+private["_useRealTime","_useStaticTime","_staticTime","_staticTimers","_changetime"];
 call ExileServer_system_weather_thread_weatherSimulation;
 _useRealTime = getNumber (configFile >> "CfgSettings" >> "Time" >> "useRealTime");
 _useStaticTime = getNumber (configFile >> "CfgSettings" >> "Time" >> "useStaticTime");
-_staticTime = getArray (configFile >> "CfgSettings" >> "Time" >> "staticTime");
 if(_useStaticTime isEqualTo 1)then
 {
+	_staticTimers = [];
+	_staticTime = getArray (configFile >> "CfgSettings" >> "Time" >> "staticTime");
+	if!(_staticTime isEqualTo [])then{_staticTimers pushBack _staticTime};
+	for "_i" from 1 to 9 do{
+		_staticTime = getArray (configFile >> "CfgSettings" >> "Time" >> format["staticTime%1",_i]);
+		if!(_staticTime isEqualTo [])then{_staticTimers pushBack _staticTime};
+	};
+	_staticTimersCount = count _staticTimers;
+	_staticTime = _staticTimers select (floor(random _staticTimersCount));
 	setDate _staticTime;
 }
 else

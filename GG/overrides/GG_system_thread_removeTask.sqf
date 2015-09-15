@@ -18,9 +18,9 @@ _threadIndex = -1;
 	}
 } forEach ExileSystemSpawnThread;
 if (_threadIndex != -1) then
-{	
+{
 	ExileSystemThreadDelays deleteAt (ExileSystemThreadDelays find ((ExileSystemSpawnThread select _threadIndex) select 0));
-	[] call ExileServer_system_thread_threadAdjust;
+	[] call ExileClient_system_thread_threadAdjust;
 	ExileSystemSpawnThread deleteAt _threadIndex;
 	_result = true;
 };

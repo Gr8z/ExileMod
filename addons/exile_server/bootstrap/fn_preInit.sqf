@@ -79,6 +79,7 @@ forEach
 	['ExileServer_object_vehicle_event_onGetIn', 'exile_server\code\ExileServer_object_vehicle_event_onGetIn.sqf'],
 	['ExileServer_object_vehicle_event_onGetOut', 'exile_server\code\ExileServer_object_vehicle_event_onGetOut.sqf'],
 	['ExileServer_object_vehicle_event_onMPKilled', 'exile_server\code\ExileServer_object_vehicle_event_onMPKilled.sqf'],
+	['ExileServer_object_vehicle_event_onRopeAttach', 'exile_server\code\ExileServer_object_vehicle_event_onRopeAttach.sqf'],
 	['ExileServer_object_vehicle_network_flipVehRequest', 'exile_server\code\ExileServer_object_vehicle_network_flipVehRequest.sqf'],
 	['ExileServer_object_vehicle_network_lockVehicleRequest', 'exile_server\code\ExileServer_object_vehicle_network_lockVehicleRequest.sqf'],
 	['ExileServer_object_vehicle_network_pushVehicleRequest', 'exile_server\code\ExileServer_object_vehicle_network_pushVehicleRequest.sqf'],

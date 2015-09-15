@@ -16,4 +16,11 @@ if (isPlayer _unitObject) then
 		[_unitObject, "advancedHintRequest", ["SpawnZoneVehicles"]] call ExileServer_system_network_send_to;
 	};
 };
+
+if !(simulationEnabled _vehicleObject) then
+{
+	diag_log "ExileServer - Enabling simulation for disabled vehicle on player entry.";
+	_vehicleObject enableSimulationGlobal true;
+};
+
 true

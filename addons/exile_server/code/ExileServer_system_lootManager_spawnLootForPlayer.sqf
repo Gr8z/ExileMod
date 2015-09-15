@@ -7,7 +7,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_playerObject","_spawnRadius","_spawnChance","_visualThreshold","_spawnedLoot","_playerPosition","_lastKnownPlayerPosition","_buildings","_building","_buildingType","_buildingConfig","_lootTableName","_localPositions","_spawnedItemClassNames","_lootGroundWeaponHolderNetIDs","_spawnedLootInThisBuilding","_lootPosition","_itemClassName","_cargoType","_lootHolder","_magazineClassNames","_magazineClassName","_numberOfMagazines"];
+private["_playerObject","_spawnRadius","_spawnChance","_visualThreshold","_spawnedLoot","_playerPosition","_lastKnownPlayerPosition","_buildings","_building","_buildingPos","_buildingType","_buildingConfig","_lootTableName","_localPositions","_spawnedItemClassNames","_lootGroundWeaponHolderNetIDs","_spawnedLootInThisBuilding","_lootPosition","_itemClassName","_cargoType","_lootHolder","_magazineClassNames","_magazineClassName","_numberOfMagazines"];
 _playerObject = _this;
 _spawnRadius = getNumber (configFile >> "CfgSettings" >> "LootSettings" >> "spawnRadius");
 _spawnChance = (getNumber (configFile >> "CfgSettings" >> "LootSettings" >> "spawnChance") max 0) min 99; 
@@ -30,6 +30,7 @@ try
 		throw false;
 	};
 	_playerObject setVariable["ExilePositionAtLastLootSpawnCircle", _playerPosition];	
+
 	_buildings = _playerPosition nearObjects ["House", _spawnRadius];
 	{
 		_building = _x;
@@ -38,7 +39,11 @@ try
 		{
 			if !(_building getVariable ["ExileHasLoot", false]) then
 			{
-				if !([getPosATL _building, _visualThreshold] call ExileServer_util_position_isPlayerNearby) then
+				_buildingPos = getPosATL _building;
+
+				if (!([_buildingPos, _visualThreshold] call ExileServer_util_position_isPlayerNearby) &&
+					!(_buildingPos call ExileClient_util_world_isInTraderZone) &&
+					!(_buildingPos call ExileClient_util_world_isInTerritory)) then
 				{
 					_buildingConfig = configFile >> "CfgBuildings" >> _buildingType;
 					_lootTableName = getText(_buildingConfig >> "table");

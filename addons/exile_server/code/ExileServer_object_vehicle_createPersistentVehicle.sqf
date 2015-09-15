@@ -31,6 +31,11 @@ else
 _vehicleObject setVariable ["ExileIsPersistent", true];
 _vehicleObject setVariable ["ExileAccessCode",_pinCode];
 _vehicleObject addEventHandler ["GetOut", { _this call ExileServer_object_vehicle_event_onGetOut}];
+_vehicleObject addEventHandler ["GetIn", { _this call ExileServer_object_vehicle_event_onGetIn}];
+if (_vehicleObject isKindOf "Helicopter") then
+{
+	_vehicleObject addEventHandler ["RopeAttach", { _this call ExileServer_object_vehicle_event_onRopeAttach}];
+};
 _vehicleObject addMPEventHandler ["MPKilled", { _this call ExileServer_object_vehicle_event_onMPKilled}];
 _vehicleObject call ExileServer_system_simulationMonitor_addVehicle;
 _vehicleObject
