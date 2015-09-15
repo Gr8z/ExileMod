@@ -30,14 +30,6 @@ try
 		throw false;
 	};
 	_playerObject setVariable["ExilePositionAtLastLootSpawnCircle", _playerPosition];	
-	if (_playerPosition call ExileClient_util_world_isTraderZoneNearby) then
-	{
-		throw false;
-	};
-	if (_playerPosition call ExileClient_util_world_isTerritoryNearby) then
-	{
-		throw false;
-	};
 	_buildings = _playerPosition nearObjects ["House", _spawnRadius];
 	{
 		_building = _x;
