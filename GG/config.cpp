@@ -1578,6 +1578,7 @@ class CfgExileCustomCode
 	fn_ambientAnim = "GG\overrides\fn_ambientAnim.sqf";
 	ExileClient_util_playerEquipment_add = "GG\overrides\GG_util_playerEquipment_add.sqf";
 	ExileClient_gui_interactionMenu_update = "GG_gui_interactionMenu_update.sqf";
+	ExileClient_util_world_getNearbyPlayers = "GG_util_world_getNearbyPlayers.sqf";
 };
 class CfgExileMusic
 {
