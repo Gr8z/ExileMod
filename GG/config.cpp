@@ -1572,7 +1572,6 @@ class CfgExileCustomCode
 	ExileClient_util_world_getNearestLocationName = "GG\overrides\GG_util_world_getNearestLocationName.sqf";
 	ExileClient_gui_xm8_slide_healthScanner_onOpen = "GG\overrides\GG_gui_xm8_slide_healthScanner_onOpen.sqf";
 	ExileClient_object_item_consume = "GG\overrides\GG_object_item_consume.sqf";
-	ExileClient_object_item_craft = "GG\overrides\GG_object_item_craft.sqf";
 	ExileClient_object_player_event_onKilled = "GG\overrides\GG_object_player_event_onKilled.sqf";
 	ExileClient_util_gear_repackMagazines = "GG\overrides\GG_util_gear_repackMagazines.sqf";
 	ExileClient_util_inventory_replaceMagazine = "GG\overrides\GG_util_inventory_replaceMagazine.sqf";
