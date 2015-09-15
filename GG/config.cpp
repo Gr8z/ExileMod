@@ -1577,6 +1577,7 @@ class CfgExileCustomCode
 	ExileClient_util_gear_repackMagazines = "GG\overrides\GG_util_gear_repackMagazines.sqf";
 	ExileClient_util_inventory_replaceMagazine = "GG\overrides\GG_util_inventory_replaceMagazine.sqf";
 	fn_ambientAnim = "GG\overrides\fn_ambientAnim.sqf";
+	ExileClient_util_playerEquipment_add = "GG\overrides\GG_util_playerEquipment_add.sqf";
 };
 class CfgExileMusic
 {
