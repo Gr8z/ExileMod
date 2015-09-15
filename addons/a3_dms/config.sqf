@@ -5,19 +5,20 @@
 	Created by eraser1
 */
 
-// If you're gonna make any changes to DMS functions and/or create any new missions, it's a good idea to enable this :)
-DMS_DEBUG = false;
+// Enables debug logging in DMS functions. This will also make missions spawn and timeout more quickly (for testing purposes).
+// Disable this on live servers, unless you know what you're doing.
+DMS_DEBUG = true;
 
 
 
 /* Mission System Settings */
 	DMS_DynamicMission					= true;						// Enable/disable dynamic mission system
-	DMS_MaxBanditMissions				= 4;						// Maximum number of Bandit Missions running at the same time
+	DMS_MaxBanditMissions				= 3;						// Maximum number of Bandit Missions running at the same time
 	DMS_StaticMission					= false;					// Enable/disable static missions
-	DMS_TimeBetweenMissions				= [300,600];				// [Minimum,Maximum] time between missions (if mission limit is not reached) | DEFAULT: 10-15 mins
-	DMS_MissionTimeOut					= [1800,3600]; 				// [Minimum,Maximum] time it will take for a mission to timeout | Default: 15-30 mins
+	DMS_TimeBetweenMissions				= [600,900];				// [Minimum,Maximum] time between missions (if mission limit is not reached) | DEFAULT: 10-15 mins
+	DMS_MissionTimeOut					= [900,1800]; 				// [Minimum,Maximum] time it will take for a mission to timeout | Default: 15-30 mins
 
-	DMS_playerNearRadius				= 100;						// How close a player has to be to a mission in order to satisfy the "playerNear" mission requirement (can be customized per mission).
+	DMS_playerNearRadius				= 75;						// How close a player has to be to a mission in order to satisfy the "playerNear" mission requirement (can be customized per mission).
 
 	DMS_AI_KillPercent					= 100;						// The percent amount of AI that need to be killed for "killPercent" mission requirement (NOT IMPLEMENTED)
 
@@ -34,6 +35,7 @@ DMS_DEBUG = false;
 	DMS_CompletedMissionCleanup			= true;						// Cleanup mission-spawned buildings and AI bodies after some time
 	DMS_CompletedMissionCleanupTime		= 3600;						// Minimum time until mission-spawned buildings and AI are cleaned up
 	DMS_CleanUp_PlayerNearLimit			= 20;						// Cleanup of an object is aborted if a player is this many meters close to the object
+	DMS_AIVehCleanUpTime				= 900;						// Time until a destroyed AI vehicle is cleaned up.
 	DMS_MissionTimeoutReset				= true;						// Enable mission timeout timer reset if a player is close
 	DMS_MissionTimeoutResetRange		= 1000;						// If a player is this close to a mission then it won't time-out
 
@@ -43,6 +45,8 @@ DMS_DEBUG = false;
 	DMS_MissionNearBlacklist			= 4000;						// Missions won't spawn in a position this many meters close to another mission
 	DMS_WaterNearBlacklist				= 750;						// Missions won't spawn in a position this many meters close to water
 
+	DMS_MinWaterDepth					= 20;						// Minimum depth of water that an underwater mission can spawn at.
+
 	DMS_SpawnBoxSmoke					= true;						// Spawn a smoke grenade on mission box upon misson completion during daytime
 	DMS_SpawnBoxIRGrenade				= true;						// Spawn an IR grenade on mission box upon misson completion during nighttime
 	
@@ -51,11 +55,11 @@ DMS_DEBUG = false;
 
 	//Mission notification settings
 	DMS_PlayerNotificationTypes =		[							// Notification types. Supported values are: ["dynamicTextRequest", "standardHintRequest", "systemChatRequest"]
-											//"dynamicTextRequest", <--- Won't work in Exile v0.9.19
+											//"dynamicTextRequest", <--- Text formatting makes this weird...
 											"standardHintRequest"
 											//"systemChatRequest"
 										];
-	DMS_dynamicText_Size				= "0.65";					// Dynamic Text size for "dynamicTextRequest" notification type.
+	DMS_dynamicText_Size				= 0.65;						// Dynamic Text size for "dynamicTextRequest" notification type.
 	DMS_dynamicText_Color				= "#FFCC00";				// Dynamic Text color for "dynamicTextRequest" notification type.
 
 	DMS_MissionTypes =					[							//	List of missions with spawn chances. If they add up to 100%, they represent the percentage chance each one will spawn
@@ -87,15 +91,17 @@ DMS_DEBUG = false;
 
 	DMS_Bandit_Soldier_MoneyGain		= 50;						// The amount of Poptabs gained for killing a bandit soldier
 	DMS_Bandit_Soldier_RepGain			= 10;						// The amount of Respect gained for killing a bandit soldier
-	DMS_Bandit_Static_MoneyGain			= 100;						// The amount of Poptabs gained for killing a bandit static gunner
-	DMS_Bandit_Static_RepGain			= 25;						// The amount of Respect gained for killing a bandit static gunner
+	DMS_Bandit_Static_MoneyGain			= 75;						// The amount of Poptabs gained for killing a bandit static gunner
+	DMS_Bandit_Static_RepGain			= 15;						// The amount of Respect gained for killing a bandit static gunner
+	DMS_Bandit_Vehicle_MoneyGain		= 100;						// The amount of Poptabs gained for killing a bandit vehicle crew member
+	DMS_Bandit_Vehicle_RepGain			= 25;						// The amount of Respect gained for killing a bandit vehicle crew member
 
 	DMS_banditSide						= EAST;						// The side (team) that AI Bandits will spawn on
 	DMS_clear_AI_body					= false;					// Clear AI body as soon as they die
 	DMS_clear_AI_body_chance			= 50;						// Percentage chance that AI bodies will be cleared when they die
 	DMS_ai_disable_ramming_damage 		= false;						// Disables damage due to ramming into AI. !!!NOTE: THIS WILL NOT BE RELIABLE WITH "DMS_ai_offload_to_client"!!!
 	DMS_credit_roadkill					= false;					// Credit players with respect/poptabs if they kill an AI by running it over
-	DMS_remove_roadkill					= false; 					// Remove gear from AI bodies that are roadkilled
+	DMS_remove_roadkill					= true; 					// Remove gear from AI bodies that are roadkilled
 	DMS_remove_roadkill_chance			= 50;						// Percentage chance that roadkilled AI bodies will be deleted
 	DMS_RemoveNVG						= false;					// Remove NVGs from AI bodies
 
@@ -401,7 +407,7 @@ DMS_DEBUG = false;
 											"sniper"
 										];
 
-	DMS_ai_use_launchers				= false;						// Enable/disable spawning an AI in a group with a launcher
+	DMS_ai_use_launchers				= true;						// Enable/disable spawning an AI in a group with a launcher
 	DMS_ai_use_launchers_chance			= 50;						// Percentage chance to actually spawn the launcher (per-group)
 	DMS_AI_launcher_ammo_count			= 2;						// How many rockets an AI will get with its launcher
 	DMS_ai_remove_launchers				= true;						// Remove rocket launchers on AI death
@@ -575,7 +581,24 @@ if(DMS_DEBUG) then
 {
 	DMS_TimeBetweenMissions			= [30,60];
 	DMS_MissionTimeOut				= [60,90];
-	//DMS_MissionTypes = [["testmission",1]];
-	//DMS_MissionTypes = [["mercbase",1]];
+	DMS_MissionTypes =
+		[							//	List of missions with spawn chances. If they add up to 100%, they represent the percentage chance each one will spawn
+			["bandits",25],
+			["bauhaus",25],
+			["beertransport",15],
+			["behindenemylines",10],
+			["blackhawkdown",45],
+			["cardealer",25],
+			["construction",35],
+			["donthasslethehoff",30],
+			["foodtransport",25],
+			["guntransport",20],
+			["humanitarian",25],
+			["lost_battalion",10],
+			["mercenaries",20],
+			["roguenavyseals",15],
+			["walmart",20],
+			["mercbase",5]
+	];
 	diag_log format ["DMS_DEBUG CONFIG :: Overriding DMS_TimeBetweenMissions (%1) and DMS_MissionTimeOut (%2)",DMS_TimeBetweenMissions,DMS_MissionTimeOut];
 };
