@@ -1,6 +1,12 @@
-/*
-	infiSTAR: Logging kills to A3_EXILE_KILLED.txt AND server rpt file
-*/
+/**
+ * Exile Mod
+ * www.exilemod.com
+ * © 2015 Exile Mod Team
+ *
+ * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
+ * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
+ */
+ 
 private["_victim","_killer","_addDeathStat","_addKillStat","_killerRespectPoints","_fragAttributes","_lastKillAt","_killStack","_distance","_distanceBonus","_overallRespectChange","_newKillerScore","_killMessage","_newKillerFrags","_newVictimDeaths"];
 if (!isServer || hasInterface) exitWith {};
 _victim = _this select 0;
@@ -14,31 +20,21 @@ _addDeathStat = true;
 _addKillStat = true;
 _killerRespectPoints = [];
 _fragAttributes = [];
-ExileServer_object_player_event_killFeed_LOGTORPT = {
-	_this call ExileServer_object_player_event_killFeed;
-	diag_log str _this;
-};
 if (_victim isEqualTo _killer) then
 {
-	_log = format["%1 commited suicide!", (name _victim)];
-	'ARMA_LOG' callExtension format['A3_EXILE_KILLED:%1',_log];
-	["systemChatRequest", [_log]] call ExileServer_object_player_event_killFeed_LOGTORPT;
+	["systemChatRequest", [format["%1 commited suicide!", (name _victim)]]] call ExileServer_object_player_event_killFeed;
 }
 else 
 {
 	if (vehicle _victim isEqualTo _killer) then
 	{
-		_log = format["%1 crashed to death!", (name _victim)];
-		'ARMA_LOG' callExtension format['A3_EXILE_KILLED:%1',_log];
-		["systemChatRequest", [_log]] call ExileServer_object_player_event_killFeed_LOGTORPT;
+		["systemChatRequest", [format["%1 crashed to death!", (name _victim)]]] call ExileServer_object_player_event_killfeed;
 	}
 	else 
 	{
 		if (isNull _killer) then
 		{
-			_log = format["%1 died for an unknown reason!", (name _victim)];
-			'ARMA_LOG' callExtension format['A3_EXILE_KILLED:%1',_log];
-			["systemChatRequest", [_log]] call ExileServer_object_player_event_killFeed_LOGTORPT;
+			["systemChatRequest", [format["%1 died for an unknown reason!", (name _victim)]]] call ExileServer_object_player_event_killfeed;
 		}
 		else 
 		{
@@ -135,9 +131,7 @@ else
 					forEach _fragAttributes;
 					_killMessage = _killMessage + ")";
 				};
-				_log = _killMessage;
-				'ARMA_LOG' callExtension format['A3_EXILE_KILLED:%1',_log];
-				["systemChatRequest", [_log]] call ExileServer_object_player_event_killFeed_LOGTORPT;
+				["systemChatRequest", [_killMessage]] call ExileServer_object_player_event_killfeed;
 				if (_addKillStat isEqualTo true) then
 				{
 					_newKillerFrags = _killer getVariable ["ExileKills", 0];
@@ -150,9 +144,7 @@ else
 			}
 			else 
 			{
-				_log = format["%1 was killed by an NPC! (%2m Distance)", (name _victim), floor(_victim distance _killer)];
-				'ARMA_LOG' callExtension format['A3_EXILE_KILLED:%1',_log];
-				["systemChatRequest", [_log]] call ExileServer_object_player_event_killFeed_LOGTORPT;
+				["systemChatRequest", [format["%1 was killed by an NPC! (%2m Distance)", (name _victim), floor(_victim distance _killer)]]] call ExileServer_object_player_event_killfeed;
 			};
 		};
 	};

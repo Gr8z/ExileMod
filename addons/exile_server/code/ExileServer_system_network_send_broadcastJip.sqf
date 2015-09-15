@@ -10,5 +10,6 @@
 private["_messageName","_messageParameters"];
 _messageName = _this select 0;
 _messageParameters = _this select 1;
-_publicMessage = [_messageName, _messageParameters];
-_publicMessage remoteExecCall ["ExileClient_system_network_dispatchIncomingMessage", -2];
+PublicMessage = [_messageName, _messageParameters];
+publicVariable "PublicMessage";
+PublicMessage = nil;

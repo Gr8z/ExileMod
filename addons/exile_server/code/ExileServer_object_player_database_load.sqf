@@ -150,7 +150,7 @@ if !(isNil "_loadObject") then
 _primaryWeapon = _data select 31;
 if (_primaryWeapon != "") then 
 {
-	_player addWeaponGlobal _primaryWeapon;
+	_player addWeapon _primaryWeapon;
 	removeAllPrimaryWeaponItems _player;
 	{ 
 		if (_x != "") then
@@ -163,7 +163,7 @@ if (_primaryWeapon != "") then
 _handgunWeapon = _data select 27;
 if (_handgunWeapon != "") then
 {
-	_player addWeaponGlobal _handgunWeapon;
+	_player addWeapon _handgunWeapon;
 	removeAllHandgunItems _player;
 	{ 
 		if (_x != "") then
@@ -176,7 +176,7 @@ if (_handgunWeapon != "") then
 _secondaryWeapon = _data select 33;
 if (_secondaryWeapon != "") then
 {
-	_player addWeaponGlobal _secondaryWeapon;
+	_player addWeapon _secondaryWeapon;
 	{ 
 		if (_x != "") then
 		{
