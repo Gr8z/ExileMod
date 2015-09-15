@@ -27,6 +27,11 @@ else
 {
 	_vehicleObject setPosASL _position;	
 };
+_vehicleObject addEventHandler ["GetIn", { _this call ExileServer_object_vehicle_event_onGetIn}];
+if (_vehicleObject isKindOf "Helicopter") then
+{
+	_vehicleObject addEventHandler ["RopeAttach", { _this call ExileServer_object_vehicle_event_onRopeAttach}];
+};
 _vehicleObject setVariable ["ExileIsPersistent", false];
 _vehicleObject setFuel (random 1);
 _vehicleObject call ExileServer_system_simulationMonitor_addVehicle;

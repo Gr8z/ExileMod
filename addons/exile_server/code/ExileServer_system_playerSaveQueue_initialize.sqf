@@ -8,5 +8,6 @@
  */
  
 ExileSystemPlayerSaveASYNC = [];
-[30, ExileServer_system_playerSaveQueue_thread_SavePlayer, [], true] call ExileServer_system_thread_addtask;
+// Disable the queue. Threads are too slow right now.
+//[30, ExileServer_system_playerSaveQueue_thread_SavePlayer, [], true] call ExileServer_system_thread_addtask;
 true

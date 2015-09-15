@@ -19,9 +19,13 @@ if (!isNull _player) then
 	_player setVariable["ExileHunger", _hunger];
 	_player setVariable["ExileThirst", _thirst];
 	_player setVariable["ExileAlcohol", _alcohol];
+	/* Disable the queue. Threads are too slow right now.
 	if!(_player in ExileSystemPlayerSaveASYNC)then
 	{
 		ExileSystemPlayerSaveASYNC pushBack _player;
 	};
+	*/
+	
+	_player call ExileServer_object_player_database_update;
 };
 true
