@@ -8,7 +8,6 @@
  */
  
 private["_secondsRemaining","_transition","_display","_controlSuicide"];
-disableSerialization;
 _secondsRemaining = ExileClientBleedOutCountDownEnd - time;
 if (_secondsRemaining <= 0) then
 {
