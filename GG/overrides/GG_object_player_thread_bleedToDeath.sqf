@@ -9,6 +9,8 @@
  
 private["_secondsRemaining","_transition","_display","_controlSuicide"];
 _secondsRemaining = ExileClientBleedOutCountDownEnd - time;
+_display = findDisplay 49;
+_controlSuicide = _display displayCtrl 1337;
 if (_secondsRemaining <= 0) then
 {
 	"bleedToDeath - Killing player..." call ExileClient_util_log;
@@ -22,12 +24,7 @@ else
 		if (_secondsRemaining < 10) then
 		{
 			[_transition * 10] call BIS_fnc_bloodEffect;
-			
-			if (!isNull (findDisplay 49)) then {
-				_display = findDisplay 49;
-				_controlSuicide = _display displayCtrl 1337;
-				_controlSuicide ctrlEnable false;
-			};
+			_controlSuicide ctrlEnable false;
 		};
 		if (!ExileClientBleedOutHeartbeatPlaying) then
 		{
