@@ -7,9 +7,8 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_secondsRemaining","_transition","_display","_controlSuicide"];
+private["_secondsRemaining","_transition","_controlSuicide"];
 _secondsRemaining = ExileClientBleedOutCountDownEnd - time;
-_display = findDisplay 49;
 _controlSuicide = _display displayCtrl 1337;
 if (_secondsRemaining <= 0) then
 {
