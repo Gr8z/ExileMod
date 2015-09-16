@@ -27,10 +27,6 @@ if((getPlayerUID _playerObject) in _build_rights)then
 			_object call ExileServer_object_construction_database_delete;
 		};
 	};
-	clearBackpackCargoGlobal _object;
-	clearItemCargoGlobal _object;
-	clearMagazineCargoGlobal _object;
-	clearWeaponCargoGlobal _object;
 	deleteVehicle _object;
 	[_sessionID,"constructionMoveResponse",[true,typeOf _object]] call ExileServer_system_network_send_to;
 }

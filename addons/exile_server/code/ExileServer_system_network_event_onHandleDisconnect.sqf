@@ -18,10 +18,6 @@ if !(_uid in ["", "__SERVER__", "__HEADLESS__"]) then
 	if!(_unit getVariable ["ExileIsDead",false])then
 	{
 		_unit call ExileServer_object_player_database_update;
-		clearBackpackCargoGlobal _unit;
-		clearItemCargoGlobal _unit;
-		clearMagazineCargoGlobal _unit;
-		clearWeaponCargoGlobal _unit;
 		deleteVehicle _unit;
 	};
 	_sessionID = _unit getVariable ["ExileSessionID","Wrong!"];

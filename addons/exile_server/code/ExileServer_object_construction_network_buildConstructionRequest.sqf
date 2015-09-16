@@ -52,10 +52,6 @@ try
 	}
 	else
 	{
-		clearBackpackCargoGlobal _object;
-		clearItemCargoGlobal _object;
-		clearMagazineCargoGlobal _object;
-		clearWeaponCargoGlobal _object;
 		deleteVehicle _object;
 		"Construction request aborted player is null!" call ExileServer_util_log;
 	};

@@ -56,11 +56,7 @@ try
  		throw "Invalid Database ID"
  	};
  	_accessCode = _object getVariable ["ExileAccessCode","000000"];
-	clearBackpackCargoGlobal _object;
-	clearItemCargoGlobal _object;
-	clearMagazineCargoGlobal _object;
-	clearWeaponCargoGlobal _object;
-	deleteVehicle _object;
+ 	deleteVehicle _object;
  	format ["upgradeObject:%1:%2",_objectClass,_objectDatabaseID] call ExileServer_system_database_query_fireAndForget;
  	_newObject = createVehicle [_objectClass,_position,[],0,"CAN_COLIDE"];
  	_newObject setVariable ["ExileDatabaseID",_objectDatabaseID];

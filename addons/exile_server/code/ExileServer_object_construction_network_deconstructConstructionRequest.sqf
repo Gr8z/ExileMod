@@ -1,5 +1,5 @@
 /*
-	infiSTAR: fixed deconstruct of objects (adding items now correctly) - addItemCargoGlobal instead of addmagazine (addmagazine wasn't working, locality issues (or not a magazine?))
+	infiSTAR: fixed deconstruct of objects (adding items now correctly) - addItemCargoGlobal instead of add magazine (add magazine wasn't working, locality issues (or not a magazine?))
 */
 private["_sessionID","_parameters","_objectNetID","_object","_playerObject","_radius","_flags","_flag","_build","_type","_objectID","_config","_holder"];
 _sessionID = _this select 0;
@@ -28,10 +28,6 @@ if((getPlayerUID _playerObject) in _build_rights)then
 			[_sessionID,"notificationRequest",["Success",["Deconstructed"]]] call ExileServer_system_network_send_to;
 		};
 	};
-	clearBackpackCargoGlobal _object;
-	clearItemCargoGlobal _object;
-	clearMagazineCargoGlobal _object;
-	clearWeaponCargoGlobal _object;
 	deleteVehicle _object;
 };
 true

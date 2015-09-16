@@ -12,10 +12,6 @@ _sessionID = _this select 0;
 _player = _sessionID call ExileServer_system_getPlayerObject;
 if (!isNull _player) then
 {
-	clearBackpackCargoGlobal _player;
-	clearItemCargoGlobal _player;
-	clearMagazineCargoGlobal _player;
-	clearWeaponCargoGlobal _player;
 	deleteVehicle _player;
 };
 true

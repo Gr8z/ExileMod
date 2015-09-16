@@ -20,10 +20,6 @@ _postion = getPosATL _flag;
 	if!(_constructionID isEqualTo 0)then
 	{
 		format ["deleteConstruction:%1", _constructionID] call ExileServer_system_database_query_fireAndForget;
-		clearBackpackCargoGlobal _x;
-		clearItemCargoGlobal _x;
-		clearMagazineCargoGlobal _x;
-		clearWeaponCargoGlobal _x;
 		deleteVehicle _x;
 	}	
 	else
@@ -33,10 +29,6 @@ _postion = getPosATL _flag;
 } 
 forEach _constructionObjects;
 format ["deleteTerritory:%1", _flagID] call ExileServer_system_database_query_fireAndForget;
-clearBackpackCargoGlobal _flag;
-clearItemCargoGlobal _flag;
-clearMagazineCargoGlobal _flag;
-clearWeaponCargoGlobal _flag;
 deleteVehicle _flag;
 format 
 [
