@@ -37,6 +37,10 @@ _visualThreshold = getNumber (configFile >> "CfgSettings" >> "LootSettings" >>  
 			_groundWeaponHolder = objectFromNetId _x;
 			if !(isNull _groundWeaponHolder) then
 			{
+				clearBackpackCargoGlobal _groundWeaponHolder;
+				clearItemCargoGlobal _groundWeaponHolder;
+				clearMagazineCargoGlobal _groundWeaponHolder;
+				clearWeaponCargoGlobal _groundWeaponHolder;
 				deleteVehicle _groundWeaponHolder;
 			};
 		}

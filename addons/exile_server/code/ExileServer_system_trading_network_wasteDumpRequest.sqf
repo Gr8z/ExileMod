@@ -43,6 +43,10 @@ try
 	{
 		_revenue = _revenue + ([(typeOf _vehicleObject)] call ExileClient_util_gear_calculateTotalPrice);
 		_vehicleObject call ExileServer_object_vehicle_remove;
+		clearBackpackCargoGlobal _vehicleObject;
+		clearItemCargoGlobal _vehicleObject;
+		clearMagazineCargoGlobal _vehicleObject;
+		clearWeaponCargoGlobal _vehicleObject;
 		deleteVehicle _vehicleObject;
 	}
 	else 
