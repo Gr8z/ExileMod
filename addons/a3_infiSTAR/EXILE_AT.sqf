@@ -10,7 +10,7 @@
 /* **************infiSTAR Copyright®© 2011 - 2015 All rights reserved.************** */
 /* *********************************www.infiSTAR.de********************************* */
 comment 'Antihack & AdminTools - Christian Lorenzen - www.infiSTAR.de - License: (CC)';
-VERSION_DATE_IS = '06092015#223';
+VERSION_DATE_IS = '14092015#223';
 infiSTAR_MAIN_CODE = "
 	GET_TIME_TIME = {
 		_hours = floor(time / 60 / 60);
@@ -18,7 +18,7 @@ infiSTAR_MAIN_CODE = "
 		_seconds = time - (_hours*60*60) - (_minutes * 60);
 		format['%1h %2min %3s',_hours,_minutes,round _seconds]
 	};
-	_log = format['%1 <infiSTAR.de> Loading Menu...',call GET_TIME_TIME];systemchat _log;diag_log _log;
+	_log = format['<infiSTAR.de> %1 Loading Menu...',call GET_TIME_TIME];systemchat _log;diag_log _log;
 	_mainMap = uiNamespace getVariable 'A3MAPICONS_mainMap';
 	if((isNil 'CIVILIAN_COLOR')||(isNil '_mainMap'))then
 	{
@@ -139,6 +139,105 @@ infiSTAR_MAIN_CODE = "
 		} forEach ALLC_ITEMS;
 	};
 	_log = '<infiSTAR.de> config data loaded...!';diag_log _log;
+	if('==== Base Deleter ====' call ADMINLEVELACCESS)then
+	{
+		CCG_fnc_adminClick = {
+			private ['_click'];
+			_click = _this select 0;
+			if(_click == '')exitWith{};
+			try {
+				switch (_click) do {
+					case 'BD: Set Center' : {
+						call CCG_fnc_bdSetCenter;
+						throw 'BASEDELETER: Set Center';
+					};
+					case 'BD: Set Radius' : {
+						call CCG_fnc_bdSetRadius;
+						throw 'BASEDELETER: Set Radius';
+					};
+					case 'BD: Cancel' : {
+						call CCG_fnc_bdCancel;
+						throw 'BASEDELETER: Cancel';
+					};
+					case 'BD: Delete' : {
+						call CCG_fnc_bdDelete;
+						throw 'BASEDELETER: Delete';
+					};
+				};
+			} catch {
+				systemChat _exception;
+				call fnc_FULLinit;
+			};
+		};
+		CCG_fnc_bdSetCenter = {
+			private ['_arrow'];
+			CCGbdCenter = getPosASL player;
+			_arrow = 'Sign_Arrow_F' createVehicleLocal [0,0,0];
+			_arrow setPosASL CCGbdCenter;
+			if(isNil 'CCGbdObjs')then{CCGbdObjs = [];};
+			CCGbdObjs pushBack _arrow;
+		};
+		CCG_fnc_bdSetRadius = {
+			private ['_arrow', '_pos', '_radius', '_angle', '_distance', '_count', '_step', '_count', '_step', '_objects'];
+			if(isNil 'CCGbdCenter')then{throw 'BASEDELETER: Center not set!';};
+			CCGbdRadius = [CCGbdCenter, getPosASL player] call BIS_fnc_distance2D;
+			_arrow = 'Sign_Arrow_F' createVehicleLocal [0,0,0];
+			_arrow setPosASL CCGbdCenter;
+			CCGbdObjs pushBack _arrow;
+			_angle = 0;
+			_count = round((2 * pi * CCGbdRadius) / 2);
+			if(_count == 0)then{throw 'BASEDELETER: Center and Radius position can not be the same!';};
+			for '_x' from 0 to _count do
+			{
+				private['_a', '_b', '_obj'];
+				_a = (CCGbdCenter select 0) + (sin(_angle)*CCGbdRadius);
+				_b = (CCGbdCenter select 1) + (cos(_angle)*CCGbdRadius);
+				_obj = 'Sign_Sphere100cm_F' createVehicleLocal [0,0,0];
+				_obj setPosASL [_a, _b, CCGbdCenter select 2];
+				CCGbdObjs pushBack  _obj;
+				_angle = _angle + (360/_count);
+			};
+			for '_x' from 0 to _count do
+			{
+				private['_a', '_b', '_obj'];
+				_a = (CCGbdCenter select 0) + (sin(_angle)*CCGbdRadius);
+				_b = (CCGbdCenter select 2) + (cos(_angle)*CCGbdRadius);
+				_obj = 'Sign_Sphere100cm_F' createVehicleLocal [0,0,0];
+				_obj setPosASL [_a, CCGbdCenter select 1, _b];
+				CCGbdObjs pushBack  _obj;
+				_angle = _angle + (360/_count);
+			};
+			for '_x' from 0 to _count do
+			{
+				private['_a', '_b', '_obj'];
+				_a = (CCGbdCenter select 1) + (sin(_angle)*CCGbdRadius);
+				_b = (CCGbdCenter select 2) + (cos(_angle)*CCGbdRadius);
+				_obj = 'Sign_Sphere100cm_F' createVehicleLocal [0,0,0];
+				_obj setPosASL [CCGbdCenter select 0, _a, _b];
+				CCGbdObjs pushBack  _obj;
+				_angle = _angle + (360/_count);
+			};
+		};
+		CCG_fnc_bdGetObjectsToDelete = {
+			if(isNil 'CCGbdCenter')exitWith{[]};
+			if(isNil 'CCGbdRadius')exitWith{[]};
+			nearestObjects [ASLtoATL CCGbdCenter, ['Exile_Construction_Abstract_Static','Exile_Construction_Flag_Static','Exile_Container_Safe'], CCGbdRadius]
+		};
+		CCG_fnc_bdDelete = {
+			private ['_objects'];
+			if(isNil 'CCGbdCenter')then{throw 'BASEDELETER: Center not set!';};
+			if(isNil 'CCGbdRadius')then{throw 'BASEDELETER: Radius not set!';};
+			[-5,player,[ASLtoATL CCGbdCenter,CCGbdRadius]] call fnc_AdminReq;
+			systemChat format['BASEDELETER: Deleting..', count (call CCG_fnc_bdGetObjectsToDelete)];
+			call CCG_fnc_bdCancel;
+		};
+		CCG_fnc_bdCancel = {
+			CCGbdCenter = nil;
+			CCGbdRadius = nil;
+			{if(!isNull _x)then{deleteVehicle _x;};} foreach CCGbdObjs;
+			CCGbdObjs = [];
+		};
+	};
 	fnc_setFocus = {
 		disableSerialization;
 		ctrlSetFocus ((findDisplay MAIN_DISPLAY_ID) displayCtrl LEFT_CTRL_ID);
@@ -1051,14 +1150,40 @@ infiSTAR_MAIN_CODE = "
 				{
 					{_ctrl lbAdd _x;} forEach _Toggleable;
 				};
-			};			
+			};
+			
+			if('==== Base Deleter ====' call ADMINLEVELACCESS)then
+			{
+				_index = _ctrl lbAdd '==== Base Deleter ====';
+				_ctrl lbSetColor [_index, [0.2,0.4,1,1]];
+				_ctrl lbAdd 'BD: Set Center';
+				if(!isNil 'CCGbdCenter')then{
+					_ctrl lbAdd 'BD: Set Radius';
+				};
+				if(!isNil 'CCGbdCenter' && !isNil 'CCGbdRadius')then{
+					_ctrl lbAdd '';
+					_objects = call CCG_fnc_bdGetObjectsToDelete;
+					_ctrl lbAdd format['BD: Selected %1 Objects', count _objects];
+					_index = _ctrl lbAdd 'BD: Delete';
+					_ctrl lbSetColor [_index, [0.8,0,0,1]];
+					_ctrl lbAdd '';
+				};
+				_ctrl lbAdd 'BD: Cancel';
+				_index = _ctrl lbAdd '=== ========= ===';
+				_ctrl lbSetColor [_index, [0.2,0.4,1,1]];
+			};
+			
 			if('BIS FreeRoam Cam (works with ESP)' call ADMINLEVELACCESS)then{_ctrl lbAdd 'BIS FreeRoam Cam (works with ESP)'};
 			if('FreeRoam Cam (does not work with ESP)' call ADMINLEVELACCESS)then{_ctrl lbAdd 'FreeRoam Cam (does not work with ESP)'};
 			if('AdminConsole' call ADMINLEVELACCESS)then{_ctrl lbAdd 'AdminConsole';};
 			if('Mass Message' call ADMINLEVELACCESS)then{_ctrl lbAdd 'Mass Message';};
-			if('Spawn Support-Box1' call ADMINLEVELACCESS)then{_ctrl lbAdd 'Spawn Support-Box1';};
-			if('Spawn Support-Box2' call ADMINLEVELACCESS)then{_ctrl lbAdd 'Spawn Support-Box2';};
-			if('Spawn Support-Box3' call ADMINLEVELACCESS)then{_ctrl lbAdd 'Spawn Support-Box3';};
+			
+			for '_i' from 1 to "+str _allSupportBoxesCount+" do
+			{
+				_txt = format['Spawn Support-Box%1',_i];
+				if(_txt call ADMINLEVELACCESS)then{_ctrl lbAdd _txt;};
+			};
+			
 			if('Spawn Ammo' call ADMINLEVELACCESS)then{_ctrl lbAdd 'Spawn Ammo';};
 			_ctrl lbAdd 'Self Disconnect';
 			_target = lbtext[LEFT_CTRL_ID,(lbCurSel LEFT_CTRL_ID)];
@@ -1222,6 +1347,7 @@ infiSTAR_MAIN_CODE = "
 	fnc_LBDblClick_RIGHT = {
 		_click = lbtext[RIGHT_CTRL_ID,(lbCurSel RIGHT_CTRL_ID)];
 		if(_click == '')exitWith{};
+		if('==== Base Deleter ====' call ADMINLEVELACCESS)then{[_click] call CCG_fnc_adminClick;};
 		if(_click in AH_HackLogArray)exitWith{systemchat _click;hint _click;diag_log _click;};
 		if(_click in AH_SurvLogArray)exitWith{systemchat _click;hint _click;diag_log _click;};
 		if(_click in AH_AdmiLogArray)exitWith{systemchat _click;hint _click;diag_log _click;};
@@ -1337,6 +1463,15 @@ infiSTAR_MAIN_CODE = "
 				};
 			};
 		};
+		
+		_exitHere = false;
+		for '_i' from 1 to "+str _allSupportBoxesCount+" do
+		{
+			_txt = format['Spawn Support-Box%1',_i];
+			if(_click isEqualTo _txt)exitWith{[_i] call fnc_spawn_Box;_click call fnc_adminLog;_exitHere=true;};
+		};
+		if(_exitHere)exitWith{true};
+		
 		switch (_click) do {
 			case '==== OnTarget ====':{if(isNil 'infiSTAR_add_OnTarget')then{infiSTAR_add_OnTarget = true;} else {infiSTAR_add_OnTarget = nil;};};
 			case '==== Toggleable ====':{if(isNil 'infiSTAR_add_Toggleable')then{infiSTAR_add_Toggleable = true;} else {infiSTAR_add_Toggleable = nil;};};
@@ -1347,9 +1482,6 @@ infiSTAR_MAIN_CODE = "
 			case 'FreeRoam Cam (does not work with ESP)':{call fnc_FreeRoamCam;};
 			case 'AdminConsole':{[] spawn fnc_RscDisplayDebugPublic;'AdminConsole' call fnc_adminLog;};
 			case 'Mass Message':{[] call fnc_mass_message;};
-			case 'Spawn Support-Box1':{[1] spawn fnc_spawn_Box;_click call fnc_adminLog;};
-			case 'Spawn Support-Box2':{[2] call fnc_spawn_Box;_click call fnc_adminLog;};
-			case 'Spawn Support-Box3':{[3] call fnc_spawn_Box;_click call fnc_adminLog;};
 			case 'Spawn Ammo':{[] call infiSTAR_A3addAmmo;};
 			case 'Self Disconnect':{_click call fnc_adminLog;(finddisplay 46) closeDisplay 0;};
 		};
@@ -1697,7 +1829,7 @@ infiSTAR_MAIN_CODE = "
 			_steamname = (_this select 1) select 2;
 			RespondToNameRequest = nil;
 			
-			_log = format['%1(%2) SteamName is: %3',_name,_uid,_steamname];
+			_log = format['<infiSTAR.de> %1(%2) SteamName is: %3',_name,_uid,_steamname];
 			cutText [_log, 'PLAIN DOWN'];
 			hint _log;
 			systemchat _log;
@@ -1853,11 +1985,8 @@ infiSTAR_MAIN_CODE = "
 	fnc_spawn_Box = {
 		private['_select','_target'];
 		_select = _this select 0;
-		
 		_target = if(isNull (call fnc_LBSelChanged_LEFT))then{player} else {(call fnc_LBSelChanged_LEFT)};
-		_pos = _target modelToWorld [0,3,0];
-		
-		[5000,player,_select,_pos,(getDir _target) + 180,_target] call fnc_AdminReq;
+		[5000,player,_select,_target] call fnc_AdminReq;
 		_log = format['Spawning Box %1 infront of %2!',_select,name _target];
 		cutText [_log, 'PLAIN DOWN'];
 		hint _log;
@@ -2658,27 +2787,46 @@ infiSTAR_MAIN_CODE = "
 		call fnc_call_single_esps;
 	};
 	fnc_draw_MapIcons = {
-		if!(visibleMap || dialog)exitWith{};
-		private['_ctrl'];
-		_ctrl =  _this select 0;
-		_iscale = ((1 - ctrlMapScale _ctrl) max .2) * 28;
-		_icon = '';
-		
-		_fnc_get_color = {
-			if(_this == civilian)exitWith{CIVILIAN_COLOR};
-			if(_this == west)exitWith{[0.047,0.502,1,1]};
-			if(_this == resistance)exitWith{[0,0.65,0,1]};
-			if(_this == east)exitWith{[1,0.17,0.17,1]};
-			[1,1,1,1]
-		};
 		if(visibleMap)then
 		{
+			private['_ctrl'];
+			_ctrl =  _this select 0;
+			_iscale = ((1 - ctrlMapScale _ctrl) max .2) * 28;
+			_icon = '';
+			_fnc_get_color = {
+				if(_this == civilian)exitWith{CIVILIAN_COLOR};
+				if(_this == west)exitWith{[0.047,0.502,1,1]};
+				if(_this == resistance)exitWith{[0,0.65,0,1]};
+				if(_this == east)exitWith{[1,0.17,0.17,1]};
+				[1,1,1,1]
+			};
 			if(mapiconsshowbuildings)then
 			{
+				if(isNil'timerForBuildings')then{timerForBuildings = 0;};
+				if(time > timerForBuildings)then
+				{
+					timerForBuildings = time + 25;
+					Exile_Construction_Abstract_Static_ARRAY = (allMissionObjects 'Exile_Construction_Abstract_Static');
+				};
+				
 				_sizeIwantOnEachScale = 33.2012;
 				_scale = ctrlMapScale _ctrl;
 				_size = 5 max (_sizeIwantOnEachScale*(_sizeIwantOnEachScale/(_scale * 10000)));
-				{_ctrl drawIcon ['iconObject_1x1', [1,1,1,1], getPosASL _x, _size, _size, getDir _x];} forEach (allMissionObjects 'Exile_Construction_Abstract_Static');
+				{_ctrl drawIcon ['iconObject_1x1', [1,1,1,1], getPosASL _x, _size, _size, getDir _x];} forEach Exile_Construction_Abstract_Static_ARRAY;
+			};
+			if(mapiconsshowflags)then
+			{
+				if(isNil'timerForFlags')then{timerForFlags = 0;};
+				if(time > timerForFlags)then
+				{
+					timerForFlags = time + 25;
+					Exile_Construction_Flag_Static_ARRAY = (allMissionObjects 'Exile_Construction_Flag_Static');
+				};
+				
+				_sizeIwantOnEachScale = 33.2012;
+				_scale = ctrlMapScale _ctrl;
+				_size = 5 max (_sizeIwantOnEachScale*(_sizeIwantOnEachScale/(_scale * 10000)));
+				{_ctrl drawIcon ['iconObject_1x1', [0,1,1,1], getPosASL _x, _size, _size, getDir _x];} forEach Exile_Construction_Flag_Static_ARRAY;
 			};
 			if(mapiconsshowplayer)then
 			{
@@ -2823,6 +2971,7 @@ infiSTAR_MAIN_CODE = "
 			
 			fnc_MapIcons_run = true;
 			if(isNil'mapiconsshowbuildings')then{mapiconsshowbuildings=false;};
+			if(isNil'mapiconsshowflags')then{mapiconsshowflags=false;};
 			if(isNil'mapiconsshowplayer')then{mapiconsshowplayer=true;};
 			if(isNil'mapiconsshowvehicles')then{mapiconsshowvehicles=false;};
 			if(isNil'mapiconsshowdeadplayer')then{mapiconsshowdeadplayer=false;};
@@ -2832,21 +2981,23 @@ infiSTAR_MAIN_CODE = "
 			if(!isNil'MAP_BUTTON_THREAD')exitWith{};
 			MAP_BUTTON_THREAD = [] spawn {
 				disableSerialization;
-				private['_fnc_removeButtons','_fnc_addButtons','_zerobutton','_firstbutton','_secondbutton','_thirdbutton','_fourthbutton','_fithbutton','_button','_state','_text','_function','_color'];
-				_fnc_removeButtons = {{ctrlDelete ((findDisplay 12) displayCtrl _x);} forEach [1085,1086,1087,1088,1089,1090];};
+				private['_fnc_removeButtons','_fnc_addButtons','_zerobutton','_zerobutton_2','_firstbutton','_secondbutton','_thirdbutton','_fourthbutton','_fithbutton','_button','_state','_text','_function','_color'];
+				_fnc_removeButtons = {{ctrlDelete ((findDisplay 12) displayCtrl _x);} forEach [1084,1085,1086,1087,1088,1089,1090];};
 				_fnc_addButtons = {
-					_zerobutton = (findDisplay 12) ctrlCreate ['RscButton',1085];
-					_zerobutton ctrlSetPosition [0,-0.05,0.3,0.05];
+					_zerobutton = (findDisplay 12) ctrlCreate ['RscButton',1084];
+					_zerobutton ctrlSetPosition [safeZoneX+safeZoneW-0.3,-0.1,0.3,0.05];
+					_zerobutton_2 = (findDisplay 12) ctrlCreate ['RscButton',1085];
+					_zerobutton_2 ctrlSetPosition [safeZoneX+safeZoneW-0.3,-0.05,0.3,0.05];
 					_firstbutton = (findDisplay 12) ctrlCreate ['RscButton',1086];
-					_firstbutton ctrlSetPosition [0,0,0.3,0.05];
+					_firstbutton ctrlSetPosition [safeZoneX+safeZoneW-0.3,0,0.3,0.05];
 					_secondbutton = (findDisplay 12) ctrlCreate ['RscButton',1087];
-					_secondbutton ctrlSetPosition [0,0.05,0.3,0.05];
+					_secondbutton ctrlSetPosition [safeZoneX+safeZoneW-0.3,0.05,0.3,0.05];
 					_thirdbutton = (findDisplay 12) ctrlCreate ['RscButton',1088];
-					_thirdbutton ctrlSetPosition [0,0.1,0.3,0.05];
+					_thirdbutton ctrlSetPosition [safeZoneX+safeZoneW-0.3,0.1,0.3,0.05];
 					_fourthbutton = (findDisplay 12) ctrlCreate ['RscButton',1089];
-					_fourthbutton ctrlSetPosition [0,0.15,0.3,0.05];
+					_fourthbutton ctrlSetPosition [safeZoneX+safeZoneW-0.3,0.15,0.3,0.05];
 					_fithbutton = (findDisplay 12) ctrlCreate ['RscButton',1090];
-					_fithbutton ctrlSetPosition [0,0.2,0.3,0.05];
+					_fithbutton ctrlSetPosition [safeZoneX+safeZoneW-0.3,0.2,0.3,0.05];
 				};
 				while{true}do
 				{
@@ -2874,6 +3025,7 @@ infiSTAR_MAIN_CODE = "
 						} forEach
 						[
 							[_zerobutton,mapiconsshowbuildings,'Hide Buildings','Show Buildings',{mapiconsshowbuildings = false;},{mapiconsshowbuildings = true;}],
+							[_zerobutton_2,mapiconsshowflags,'Hide Flags','Show Flags',{mapiconsshowflags = false;},{mapiconsshowflags = true;}],
 							[_firstbutton,mapiconsshowplayer,'Hide Player','Show Player',{mapiconsshowplayer = false;},{mapiconsshowplayer = true;}],
 							[_secondbutton,mapiconsshowdeadplayer,'Hide DeadPlayer','Show DeadPlayer',{mapiconsshowdeadplayer = false;},{mapiconsshowdeadplayer = true;}],
 							[_thirdbutton,mapiconsshowvehicles,'Hide Vehicles','Show Vehicles',{mapiconsshowvehicles = false;},{mapiconsshowvehicles = true;}],
@@ -2902,7 +3054,7 @@ infiSTAR_MAIN_CODE = "
 			fnc_MapIcons_run = nil;
 			terminate MAP_BUTTON_THREAD;MAP_BUTTON_THREAD=nil;
 			if(!isNil'EventHandlerDrawAdded')then{(uiNamespace getVariable 'A3MAPICONS_mainMap') ctrlRemoveEventHandler ['Draw',EventHandlerDrawAdded];EventHandlerDrawAdded=nil;};
-			{ctrlDelete ((findDisplay 12) displayCtrl _x);} forEach [1085,1086,1087,1088,1089,1090];
+			{ctrlDelete ((findDisplay 12) displayCtrl _x);} forEach [1084,1085,1086,1087,1088,1089,1090];
 		};
 	};
 	adminVehicleMarker = {
