@@ -25,7 +25,7 @@ switch (toLower worldName) do
 { 
 	case "altis" : { _safePosParams = [[16000,16000],0,16000,_nearestObjectMinDistance,0,_maxTerrainGradient,0,DMS_findSafePosBlacklist]; }; //[16000,16000] w/ radius of 16000 works well for Altis
 	case "bornholm" : { _safePosParams = [[11264,11264],0,12000,_nearestObjectMinDistance,0,_maxTerrainGradient,0,DMS_findSafePosBlacklist]; }; // Thanks to thirdhero for testing this info
-	case "esseker" : { _safePosParams = [[6144,6144],0,6500,_nearestObjectMinDistance,0,_maxTerrainGradient,0,DMS_findSafePosBlacklist]; }; // Thanks to Flowrider for this info
+	case "esseker" : { _safePosParams = [[6276.77,6352.98,0],0,5000,_nearestObjectMinDistance,0,_maxTerrainGradient,0,DMS_findSafePosBlacklist]; }; // Thanks to Flowrider for this info
 	case "tavi" : { _safePosParams = [[12800,12800],0,12800,_nearestObjectMinDistance,0,_maxTerrainGradient,0,DMS_findSafePosBlacklist]; }; // Thanks to JamieKG for this info
 	default { _safePosParams = [[],0,-1,_nearestObjectMinDistance,0,_maxTerrainGradient,0,DMS_findSafePosBlacklist]; };
 };
@@ -40,32 +40,32 @@ while{!_validspot} do
 	try
 	{
 		// Check for nearby water
-		if ([_pos,DMS_WaterNearBlacklist] call DMS_fnc_isNearWater) then 
+		if ((DMS_WaterNearBlacklist>0) && {[_pos,DMS_WaterNearBlacklist] call DMS_fnc_isNearWater}) then 
 		{
 			throw ("water");
 		};
 		
 		// Check for nearby players
-		if ([_pos,DMS_PlayerNearBlacklist] call DMS_fnc_IsPlayerNearby) then
+		if ((DMS_PlayerNearBlacklist>0) && {[_pos,DMS_PlayerNearBlacklist] call DMS_fnc_IsPlayerNearby}) then
 		{
 			throw ("players");
 		};
 		
 		{
 			// Check for nearby spawn points
-			if (((markertype _x) == "ExileSpawnZone") && {((getMarkerPos _x) distance2D _pos)<=DMS_SpawnZoneNearBlacklist}) then
+			if ((DMS_SpawnZoneNearBlacklist>0) && {((markertype _x) == "ExileSpawnZone") && {((getMarkerPos _x) distance2D _pos)<=DMS_SpawnZoneNearBlacklist}}) then
 			{
 				throw ("a spawn zone");
 			};
 
 			// Check for nearby trader zones
-			if (((markertype _x) == "ExileTraderZone") && {((getMarkerPos _x) distance2D _pos)<=DMS_TraderZoneNearBlacklist}) then
+			if ((DMS_TraderZoneNearBlacklist>0) && {((markertype _x) == "ExileTraderZone") && {((getMarkerPos _x) distance2D _pos)<=DMS_TraderZoneNearBlacklist}}) then
 			{
 				throw ("a trader zone");
 			};
 
 			// Check for nearby missions
-			if (((_x find "DMS_MissionMarkerDot")>-1) && {((getMarkerPos _x) distance2D _pos)<=DMS_MissionNearBlacklist}) then
+			if ((DMS_MissionNearBlacklist>0) && {((_x find "DMS_MissionMarkerDot")>-1) && {((getMarkerPos _x) distance2D _pos)<=DMS_MissionNearBlacklist}}) then
 			{
 				throw ("another mission");
 			};
