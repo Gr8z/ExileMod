@@ -1579,7 +1579,6 @@ class CfgExileCustomCode
 	ExileClient_gui_interactionMenu_update = "GG\overrides\GG_gui_interactionMenu_update.sqf";
 	ExileClient_util_world_getNearbyPlayers = "GG\overrides\GG_util_world_getNearbyPlayers.sqf";
 	ExileClient_system_thread_removeTask = "GG\overrides\GG_system_thread_removeTask.sqf"
-	
 	ExileClient_gui_hud_renderWeaponPanel = "GG\overrides\GG_gui_hud_renderWeaponPanel.sqf";
 	ExileClient_gui_modelBox_destroy = "GG\overrides\GG_gui_modelBox_destroy.sqf";
 	ExileClient_gui_modelBox_update = "GG\overrides\GG_gui_modelBox_update.sqf";
@@ -1587,6 +1586,8 @@ class CfgExileCustomCode
 	ExileClient_object_player_parachuteFix = "GG\overrides\GG_object_player_parachuteFix.sqf";
 	ExileClient_object_player_death_startBleedingOut = "GG\overrides\GG_object_player_death_startBleedingOut.sqf";
 	ExileClient_object_player_thread_bleedToDeath = "GG\overrides\GG_object_player_thread_bleedToDeath.sqf";
+	ExileClient_construction_thread = "GG\overrides\GG_construction_thread.sqf";
+	ExileClient_util_world_canBuildHere = "GG\overrides\GG_util_world_canBuildHere.sqf";
 };
 class CfgExileMusic
 {
