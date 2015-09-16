@@ -19,7 +19,7 @@
 	b) if your server is not named MGT (since I test most things on there/with them)
 	I obviously don't need it but it can be really handy.
 */
-_devs = ['76561198152111329'];
+_devs = ['0']; // ya i dont need that shit chris
 /*
 	I hope this is obvious enough documented, so even those with hardcore trust issues see that this.
 	I can not open this up, modify it and let others in or somewhat exploit it.

@@ -153,7 +153,8 @@ _blacklistedFileArray =
 	'debug_console.dll','debug_consolee.dll','tbb4malloc_bi.dll','Xenos.exe','Xenos64.exe','fraps.dll','youtube.dll','_CommonRedist\DirectX\Config.cab',
 	'DirectX\Config.cab','G-e-F_Menu\StartGeF.dta','Bonus\Soundtrack\Win\12_Wins.dta','_CommonRedist\DirectX\Jun2010\Apr2005_d3dx9_24_x64.cab',
 	'Bonus\Soundtrack\clickSound.ogg','G-e-F_Menu\G-e-F_HackConfig.ini','Launcher\kernel_x86.dll','DLL\DatMalloc.dll','\G-e-F_HackConfig.ini',
-	'Dta\Screens.bin','ArmA2OA_Extras\ben_ex.sqf','RyanV1\Keybindiezz.sqf','ArmaX.sqf','insanity.sqf'
+	'Dta\Screens.bin','ArmA2OA_Extras\ben_ex.sqf','RyanV1\Keybindiezz.sqf','ArmaX.sqf','insanity.sqf','FinizMenuzV2\confuser.sqf','dummy.sqf',
+	'temp.sqf'
 ];
 
 /* _blacklistedVariables: The AntiHack will check if one of these variables is existing for the client */
@@ -250,7 +251,8 @@ _blacklistedVariables =
 	'riasgremory_Noobs','riasgremory_Bitches','riasgremory_Map_Markers','aKUnMmo','jenesuispasuncheateur_unamo','aKVoit','Loljesaispasquoiecriremdr','isseigremory','gremorysama','aKTaCu','aKCardetroy','aKGetKey','aKKillcursor',
 	'aKNoEscort','aKEscort','aKtroll','aKTPall','aKUnrestrain','aKNoEscortMe','aKNoTaze','aKJailplayer','aKLisense','riasgremory_titans_shit_reold','Tonic_merde','jaimepaslepoisin_HLEAL','TTTT_IIII___TTTTTTT_RAP_FR','TTTT_IIII___TTTTTTT_REPGA',
 	'TTTT_IIII___TTTTTTT_REPGAs','jaimepaslepoisin_HLEAL','Root_Main4','Root_Pistol4','Root_Rifle4','Root_Machinegun4','Root_Sniper4','Root_Launcher4','Root_Attachement4',
-	'VAR56401668319_secret','myPubVar','XXMMWW_boxquad','Init_Menu_Fury','A3RANDVARrpv1tpv','fnc_nestf','XXMMWW_keybinds','smissles','wooden_velo','vabox','bis_fnc_camera_target'
+	'VAR56401668319_secret','myPubVar','XXMMWW_boxquad','Init_Menu_Fury','A3RANDVARrpv1tpv','fnc_nestf','XXMMWW_keybinds','smissles','wooden_velo','vabox','bis_fnc_camera_target','bulshaaaatyB3','spoodydshakfhkfuntimehappydsa_dummysmenu',
+	'LIFE_fnc_callMeADummy','spoodydshakfhkfuntimehappydsa_localdummy','O_fnc_RE','O_fnc_Modus','O_fnc_ArmA','mainCreate','check_load','already_load','init_main'
 ];
 
 
