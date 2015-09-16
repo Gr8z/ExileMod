@@ -1,2 +1,2 @@
 //new
-1 "" !"Exile_Unit_Player" !"Exile_Unit_GhostPlayer"
+1 ""

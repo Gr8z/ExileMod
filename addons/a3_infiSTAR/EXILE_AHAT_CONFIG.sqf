@@ -31,9 +31,9 @@ _RESTART_TIME_IN_M = 120;		/* restart time in minutes */
 _SHOW_TIMER_IN_MIN = [1,2,3,5,10];	/* minutes before restart, when message is shown */
 
 /* The following 3 options can be disabled by putting the value to -1. For example "_TGV = -1;" */
-/* Terrain Grid Value   */ _TGV = 35;		/* 50, 25, 12.5  */	/* if set to 50 grass will be very low for better client FPS.. default is 25 ~35 is good performance and grass :) */
-/* ViewDistance Value   */ _VDV = 1000;
-/* ObjectViewDistance   */ _VOV = 1000;
+/* Terrain Grid Value   */ _TGV = 12.5;		/* 50, 25, 12.5  */	/* if set to 50 grass will be very low for better client FPS.. default is 25 ~35 is good performance and grass :) */
+/* ViewDistance Value   */ _VDV = 1500;
+/* ObjectViewDistance   */ _VOV = 1500;
 
 /* "_LogAdminActions": Sends actions done by each admin to the server to log it to the .txt file and .rpt file + sends it back to all other admins. */
 _LogAdminActions = true;	/* true or false */
@@ -53,7 +53,7 @@ _adminUIDandAccess =
 			'Teleport On Map Click','Teleport - Target To Me','Teleport - Me To Target','Teleport In Facing Direction (10m steps)',
 			'spectating','AdminConsole','Delete Vehicle','FlyUp','ShowGear',
 			'HealSelf','HealRepairNear','AdminLog','Freeze Target','UnFreeze Target',
-			'==== Loadouts ====','==== Vehicles ====','Items spawn menu',
+			'==== Loadouts ====','==== Vehicles ====','==== Base Deleter ====','Items spawn menu',
 			'Remove Gear','Heal','Restore','Move In My Vehicle','Move In Target Vehicle','Eject','Eject Crew',
 			'Kill','Explode','Force Disconnect','Kick (Silent)','Kick (Announce)','Ban (Silent)','Ban (Announce)',
 			'infiSTAR Player ESP','infiSTAR Dead ESP','infiSTAR AI ESP',
@@ -72,7 +72,7 @@ _adminUIDandAccess =
 			'Teleport On Map Click','Teleport - Target To Me','Teleport - Me To Target','Teleport In Facing Direction (10m steps)',
 			'spectating','AdminConsole','Delete Vehicle','FlyUp','ShowGear',
 			'HealSelf','HealRepairNear','AdminLog','Freeze Target','UnFreeze Target',
-			'==== Loadouts ====','==== Vehicles ====','Items spawn menu',
+			'==== Loadouts ====','==== Vehicles ====','==== Base Deleter ====','Items spawn menu',
 			'Remove Gear','Heal','Restore','Move In My Vehicle','Move In Target Vehicle','Eject','Eject Crew',
 			'Kill','Explode','Force Disconnect','Kick (Silent)','Kick (Announce)','Ban (Silent)','Ban (Announce)',
 			'infiSTAR Player ESP','infiSTAR Dead ESP','infiSTAR AI ESP',
@@ -91,7 +91,7 @@ _adminUIDandAccess =
 			'Teleport On Map Click','Teleport - Target To Me','Teleport - Me To Target','Teleport In Facing Direction (10m steps)',
 			'spectating','AdminConsole','Delete Vehicle','FlyUp','ShowGear',
 			'HealSelf','HealRepairNear','AdminLog','Freeze Target','UnFreeze Target',
-			'==== Loadouts ====','==== Vehicles ====','Items spawn menu',
+			'==== Loadouts ====','==== Vehicles ====','==== Base Deleter ====','Items spawn menu',
 			'Remove Gear','Heal','Restore','Move In My Vehicle','Move In Target Vehicle','Eject','Eject Crew',
 			'Kill','Explode','Force Disconnect','Kick (Silent)','Kick (Announce)','Ban (Silent)','Ban (Announce)',
 			'infiSTAR Player ESP','infiSTAR Dead ESP','infiSTAR AI ESP',
@@ -295,6 +295,9 @@ _ForbiddenItems =
 	custom Box content:
 	just an item like it is in the example with   'ItemMap'   will put the item once in the box.
 	if an array is used like the   ['ItemGPS',5]   example, well I assume you could guess what it will do.
+	
+	You can just define as many as you want buy copy pasting one of the existing _SupportBoxXContents and changing it up.
+	After doing that you have to add it into the _allSupportBoxes array (last entry can't have a , at the end or the array is broken!).
 */
 _SupportBox1Content =
 [
@@ -315,6 +318,18 @@ _SupportBox3Content =
 	['Exile_Item_Flag',2],['WorkBench',3],['Exile_Item_WoodDoorKit',4],['Exile_Item_WoodGateKit',4],['Exile_Item_Codelock',8],['Exile_Item_WoodFloorKit',40],['Exile_Item_WoodFloorPortKit',4],
 	['Exile_Item_WoodWallKit',30],['Exile_Item_CampFireKit',3],['Exile_Item_SafeKit',6],['Exile_Item_Storagecratekit',5],['Exile_Item_WoodStairsKit',8],['Exile_Melee_Axe',3],['Exile_Ammo_Swing',1],
 	['Exile_Item_Matches',3],['Exile_Item_CookingPot',3],['B_Carryall_oucamo',1]
+];
+
+_SupportBox4Content =
+[
+	'ItemMap',['ItemGPS',5],'ItemWatch'
+];
+
+_allSupportBoxes = [
+	_SupportBox1Content,
+	_SupportBox2Content,
+	_SupportBox3Content,
+	_SupportBox4Content
 ];
 /* ********************************************************************************* */
 /* ********************************************************************************* */
@@ -364,6 +379,7 @@ _SupportBox3Content =
 /* ********************************************************************************* */
 /* ********************************************************************************* */
 /* ******************************DO NOT TOUCH BELOW********************************* */
+_allSupportBoxesCount = count _allSupportBoxes;
 if(!isNil 'infiSTAR_IS_RUN_ON_THIS_SERVER') exitWith {
 	diag_log format['<infiSTAR.de> %1 - is already started %1 seconds ago..',time - infiSTAR_IS_RUN_ON_THIS_SERVER];
 };

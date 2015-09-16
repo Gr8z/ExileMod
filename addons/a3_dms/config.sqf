@@ -7,7 +7,7 @@
 
 // Enables debug logging in DMS functions. This will also make missions spawn and timeout more quickly (for testing purposes).
 // Disable this on live servers, unless you know what you're doing.
-DMS_DEBUG = true;
+DMS_DEBUG = false;
 
 
 
