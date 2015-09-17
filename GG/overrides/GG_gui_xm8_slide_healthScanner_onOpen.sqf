@@ -12,7 +12,7 @@ _hitpointInfo = getAllHitPointsDamage (vehicle player);
 	{
 		if(_x select [0,3] == "Hit")then
 		{
-			_hitPointName = _x select [4,(count _x)-4];
+			_hitPointName = _x select [3,(count _x)-1];
 		}
 		else
 		{
