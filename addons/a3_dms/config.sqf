@@ -99,11 +99,14 @@ DMS_DEBUG = false;
 	DMS_banditSide						= EAST;						// The side (team) that AI Bandits will spawn on
 	DMS_clear_AI_body					= false;					// Clear AI body as soon as they die
 	DMS_clear_AI_body_chance			= 50;						// Percentage chance that AI bodies will be cleared when they die
-	DMS_ai_disable_ramming_damage 		= false;						// Disables damage due to ramming into AI. !!!NOTE: THIS WILL NOT BE RELIABLE WITH "DMS_ai_offload_to_client"!!!
+	DMS_ai_disable_ramming_damage 		= true;						// Disables damage due to ramming into AI. !!!NOTE: THIS WILL NOT BE RELIABLE WITH "DMS_ai_offload_to_client"!!!
 	DMS_credit_roadkill					= false;					// Credit players with respect/poptabs if they kill an AI by running it over
 	DMS_remove_roadkill					= true; 					// Remove gear from AI bodies that are roadkilled
 	DMS_remove_roadkill_chance			= 50;						// Percentage chance that roadkilled AI bodies will be deleted
 	DMS_RemoveNVG						= false;					// Remove NVGs from AI bodies
+
+	DMS_MaxAIDistance					= 300;						// The maximum distance an AI unit can be from a mission before he is killed. Helps with AI running away and forcing the mission to keep running. Set to 0 if you don't want it.
+	DMS_AIDistanceCheckFrequency		= 60;						// How often to check within DMS_fnc_TargetsKilled whether or not the AI is out of the maximum radius. Lower values increase frequency and increase server load, greater values decrease frequency and may cause longer delays for "runaway" AI.
 
 	DMS_ai_offload_to_client			= true;						// Offload spawned AI groups to random clients. Helps with server performance.
 
@@ -127,7 +130,6 @@ DMS_DEBUG = false;
 	DMS_AI_WP_Radius_base				= 5;						// Waypoint radius for AI in bases
 
 	DMS_static_weapons =				[							// Static weapons for AI
-											"O_HMG_01_F",
 											"O_HMG_01_high_F"
 										];
 
@@ -579,8 +581,8 @@ DMS_DEBUG = false;
 // Debug Overwrites
 if(DMS_DEBUG) then
 {
-	DMS_TimeBetweenMissions			= [30,60];
-	DMS_MissionTimeOut				= [60,90];
+	DMS_TimeBetweenMissions			= [30,40];
+	DMS_MissionTimeOut				= [60,70];
 	DMS_MissionTypes =
 		[							//	List of missions with spawn chances. If they add up to 100%, they represent the percentage chance each one will spawn
 			["bandits",25],
