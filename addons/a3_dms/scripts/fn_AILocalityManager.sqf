@@ -10,7 +10,7 @@ if !(DMS_ai_offload_to_client) exitWith {};
 
 {
 	// Exile already has a group cleanup system, so we'll leave empty groups for it
-	if (((count (units _x))>1) && {!(_x getVariable ["DMS_LockLocality",false])}) then
+	if ((count (units _x))>1) then
 	{
 		private ["_leader", "_group", "_owner"];
 		_leader = leader _x;
@@ -39,14 +39,11 @@ if !(DMS_ai_offload_to_client) exitWith {};
 			}
 			else
 			{
-				if !((groupOwner _group) isEqualTo (owner DMS_HC_Object)) then
+				if (DMS_DEBUG) then
 				{
-					_transferSuccess = _group setGroupOwner (owner DMS_HC_Object);
-					if (DMS_DEBUG) then
-					{
-						diag_log format ["DMS_DEBUG AILocalityManager :: Setting ownership of group %1 to HC (%2). Success: %3",_group,DMS_HC_Object,_transferSuccess];
-					};
+					diag_log format ["DMS_DEBUG AILocalityManager :: Setting ownership of group %1 to HC (%2)",_group,DMS_HC_Object];
 				};
+				_group setGroupOwner (owner DMS_HC_Object);
 			};
 		};
 	};
