@@ -7,19 +7,48 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_data","_oldPlayerObject","_playerUID","_sessionID","_position","_direction","_player","_clanID","_clanName","_headgear","_goggles","_binocular","_uniform","_vest","_backpack","_uniformContainer","_vestContainer","_backpackContainer","_loadObject","_primaryWeapon","_handgunWeapon","_secondaryWeapon","_currentWeapon","_assigned"];
+private["_data","_oldPlayerObject","_playerUID","_sessionID","_position","_resetPosAboveObj","_intersectingObjs","_intersectingObj","_intersectingObjTopPos","_direction","_player","_clanID","_clanName","_headgear","_goggles","_binocular","_uniform","_vest","_backpack","_uniformContainer","_vestContainer","_backpackContainer","_loadObject","_primaryWeapon","_handgunWeapon","_secondaryWeapon","_currentWeapon","_assigned"];
 _data = _this select 0;
 _oldPlayerObject = _this select 1;
 _playerUID = _this select 2;
 _sessionID = _this select 3;
 _name = name _oldPlayerObject;
 _position = [_data select 16, _data select 17, _data select 18];
+
+_resetPosAboveObj = false;
+if ((_position select 2)>2.5) then
+{
+	_intersectingObjs = lineIntersectsWith [ATLtoASL _position, [_position select 0,_position select 1,0], objNull, objNull, true];
+
+	if (_intersectingObjs isEqualTo []) then
+	{
+		diag_log format ["Resetting player altitude to 0; Pos of %1 (%2) is above 2.5 meters, but there's nothing below the player!",_name,_playerUID];
+		_position set [2,0];
+	}
+	else
+	{
+		_intersectingObj = _intersectingObjs select ((count _intersectingObjs)-1);
+		_intersectingObjTopPos = ((getPosATL _intersectingObj) select 2)+((boundingBoxReal _intersectingObj) select 1 select 2);
+
+		if (((_position select 2)-_intersectingObjTopPos)>2.5) then
+		{
+			diag_log format ["Resetting player altitude above intersecting object; It is more than 2.5 meters below the player position | %1 (%2) | type: %3.",_name,_playerUID,typeOf _intersectingObj];
+			_resetPosAboveObj = true;
+		};
+	};
+};
+
 _direction = _data select 15;
 _group = createGroup independent;
 _player = _group createUnit ["Exile_Unit_Player", _position, [], 0, "CAN_COLLIDE"];
 _player setVariable ["ExileSessionID",_sessionID];
 _player setDir _direction;
 _player setPosATL _position;
+if (_resetPosAboveObj) then
+{
+	_position set [2, vectorMagnitude ((ATLToASL _position) vectorDiff getPos _player)];
+	_player setPosASL _position;
+};
 _player disableAI "FSM";
 _player disableAI "MOVE";
 _player disableAI "AUTOTARGET";
