@@ -2694,7 +2694,7 @@ class CfgSettings
 			{4, 0} = Every 4 hours
 			{1, 30} = Every one and a half hour (who the hell would do this?)
 		*/
-		restartTimer[] = {2, 0};
+		restartTimer[] = {4, 0};
 
 		/*
 			Kicks players before restart to prevent gear loss.

@@ -27,7 +27,7 @@ _BRIEFING_MSG = true;	/* use mission briefing message: if   "_BRIEFING_MSG = fal
 
 /* shows RESTART IN X MINS */
 _USE_RESTART_TIMER = true;	/* true or false */
-_RESTART_TIME_IN_M = 120;		/* restart time in minutes */
+_RESTART_TIME_IN_M = 240;		/* restart time in minutes */
 _SHOW_TIMER_IN_MIN = [1,2,3,5,10];	/* minutes before restart, when message is shown */
 
 /* The following 3 options can be disabled by putting the value to -1. For example "_TGV = -1;" */
