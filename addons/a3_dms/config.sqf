@@ -47,6 +47,7 @@ DMS_DEBUG = false;
 
 	DMS_MinWaterDepth					= 20;						// Minimum depth of water that an underwater mission can spawn at.
 
+	DMS_HideBox							= false;					// "Hide" the box from being visible by players until the mission is completed.
 	DMS_SpawnBoxSmoke					= true;						// Spawn a smoke grenade on mission box upon misson completion during daytime
 	DMS_SpawnBoxIRGrenade				= true;						// Spawn an IR grenade on mission box upon misson completion during nighttime
 	
@@ -63,21 +64,21 @@ DMS_DEBUG = false;
 	DMS_dynamicText_Color				= "#FFCC00";				// Dynamic Text color for "dynamicTextRequest" notification type.
 
 	DMS_MissionTypes =					[							//	List of missions with spawn chances. If they add up to 100%, they represent the percentage chance each one will spawn
-											["bandits",25],
-											["bauhaus",25],
-											["beertransport",15],
+											["bandits",5],
+											["bauhaus",10],
+											["beertransport",5],
 											["behindenemylines",10],
-											["blackhawkdown",45],
-											["cardealer",25],
-											["construction",35],
-											["donthasslethehoff",30],
-											["foodtransport",25],
-											["guntransport",20],
-											["humanitarian",25],
-											["lost_battalion",10],
-											["mercenaries",20],
-											["roguenavyseals",15],
-											["walmart",20],
+											["blackhawkdown",5],
+											["cardealer",10],
+											["construction",5],
+											//["donthasslethehoff",5],
+											//["foodtransport",5],
+											["guntransport",5],
+											["humanitarian",5],
+											["lost_battalion",5],
+											["mercenaries",5],
+											["roguenavyseals",5],
+											["walmart",10],
 											["mercbase",5]
 										];
 
@@ -99,9 +100,9 @@ DMS_DEBUG = false;
 	DMS_banditSide						= EAST;						// The side (team) that AI Bandits will spawn on
 	DMS_clear_AI_body					= false;					// Clear AI body as soon as they die
 	DMS_clear_AI_body_chance			= 50;						// Percentage chance that AI bodies will be cleared when they die
-	DMS_ai_disable_ramming_damage 		= true;						// Disables damage due to ramming into AI. !!!NOTE: THIS WILL NOT BE RELIABLE WITH "DMS_ai_offload_to_client"!!!
+	DMS_ai_disable_ramming_damage 		= false;						// Disables damage due to ramming into AI. !!!NOTE: THIS WILL NOT BE RELIABLE WITH "DMS_ai_offload_to_client"!!!
 	DMS_credit_roadkill					= false;					// Credit players with respect/poptabs if they kill an AI by running it over
-	DMS_remove_roadkill					= true; 					// Remove gear from AI bodies that are roadkilled
+	DMS_remove_roadkill					= false; 					// Remove gear from AI bodies that are roadkilled
 	DMS_remove_roadkill_chance			= 50;						// Percentage chance that roadkilled AI bodies will be deleted
 	DMS_RemoveNVG						= false;					// Remove NVGs from AI bodies
 
@@ -117,11 +118,11 @@ DMS_DEBUG = false;
 	DMS_ai_enable_water_equipment		= true;						// Enable/disable overriding default weapons of an AI if it spawns on/in water
 
 	// https://community.bistudio.com/wiki/AI_Sub-skills#general
-	DMS_ai_skill_static					= [["aimingAccuracy",0.20],["aimingShake",0.70],["aimingSpeed",0.75],["spotDistance",0.70],["spotTime",0.50],["courage",1.00],["reloadSpeed",1.00],["commanding",1.00],["general",1.00]];	// Static AI Skills
-	DMS_ai_skill_easy					= [["aimingAccuracy",0.30],["aimingShake",0.50],["aimingSpeed",0.50],["spotDistance",0.50],["spotTime",0.50],["courage",1.00],["reloadSpeed",1.00],["commanding",1.00],["general",0.50]];	// Easy
-	DMS_ai_skill_moderate				= [["aimingAccuracy",0.60],["aimingShake",0.60],["aimingSpeed",0.60],["spotDistance",0.60],["spotTime",0.60],["courage",1.00],["reloadSpeed",1.00],["commanding",1.00],["general",0.60]];	// Moderate
-	DMS_ai_skill_difficult				= [["aimingAccuracy",0.70],["aimingShake",0.70],["aimingSpeed",0.70],["spotDistance",0.70],["spotTime",0.80],["courage",1.00],["reloadSpeed",1.00],["commanding",1.00],["general",0.70]]; 	// Difficult
-	DMS_ai_skill_hardcore				= [["aimingAccuracy",1.00],["aimingShake",1.00],["aimingSpeed",1.00],["spotDistance",1.00],["spotTime",1.00],["courage",1.00],["reloadSpeed",1.00],["commanding",1.00],["general",1.00]]; 	// Hardcore
+	DMS_ai_skill_static					= [["aimingAccuracy",0.10],["aimingShake",0.70],["aimingSpeed",0.15],["spotDistance",0.70],["spotTime",0.50],["courage",1.00],["reloadSpeed",1.00],["commanding",1.00],["general",1.00]];	// Static AI Skills
+	DMS_ai_skill_easy					= [["aimingAccuracy",0.10],["aimingShake",0.20],["aimingSpeed",0.30],["spotDistance",0.40],["spotTime",0.50],["courage",1.00],["reloadSpeed",1.00],["commanding",1.00],["general",0.50]];	// Easy
+	DMS_ai_skill_moderate				= [["aimingAccuracy",0.20],["aimingShake",0.30],["aimingSpeed",0.40],["spotDistance",0.50],["spotTime",0.60],["courage",1.00],["reloadSpeed",1.00],["commanding",1.00],["general",0.60]];	// Moderate
+	DMS_ai_skill_difficult				= [["aimingAccuracy",0.30],["aimingShake",0.40],["aimingSpeed",0.50],["spotDistance",0.40],["spotTime",0.80],["courage",1.00],["reloadSpeed",1.00],["commanding",1.00],["general",0.70]]; 	// Difficult
+	DMS_ai_skill_hardcore				= [["aimingAccuracy",0.50],["aimingShake",0.50],["aimingSpeed",0.60],["spotDistance",0.50],["spotTime",1.00],["courage",1.00],["reloadSpeed",1.00],["commanding",1.00],["general",1.00]]; 	// Hardcore
 	DMS_ai_skill_random					= ["hardcore","difficult","difficult","difficult","moderate","moderate","moderate","moderate","easy","easy"];	// Skill frequencies for "random" AI skills | Default: 10% hardcore, 30% difficult, 40% moderate, and 20% easy
 	DMS_AI_WP_Radius_easy				= 20;						// Waypoint radius for "easy" AI
 	DMS_AI_WP_Radius_moderate			= 40;						// Waypoint radius for "moderate" AI
@@ -213,16 +214,20 @@ DMS_DEBUG = false;
 											"U_I_G_resistanceLeader_F"
 										];
 	DMS_assault_vests =					[							// Vests for Assault Class
-											"V_PlateCarrierH_CTRG",
-											"V_PlateCarrierSpec_rgr",
-											"V_PlateCarrierGL_blk",
-											"V_PlateCarrierGL_mtp",
-											"V_PlateCarrierGL_rgr",
-											"V_PlateCarrierSpec_blk",
-											"V_PlateCarrierSpec_mtp",
-											"V_PlateCarrierL_CTRG",
+											//"V_PlateCarrierH_CTRG",
+											//"V_PlateCarrierSpec_rgr",
+											//"V_PlateCarrierGL_blk",
+											//"V_PlateCarrierGL_mtp",
+											//"V_PlateCarrierGL_rgr",
+											//"V_PlateCarrierSpec_blk",
+											//"V_PlateCarrierSpec_mtp",
+											//"V_PlateCarrierL_CTRG",
+											//"V_TacVest_blk_POLICE",
+											//"V_PlateCarrierIA2_dgtl"
 											"V_TacVest_blk_POLICE",
-											"V_PlateCarrierIA2_dgtl"
+											"V_PlateCarrierIA2_dgtl",
+											"V_HarnessO_brn",
+											"V_HarnessO_gry"
 										];
 	DMS_assault_backpacks =				[							// Backpacks for Assault Class
 											"B_Bergen_rgr",
@@ -295,14 +300,14 @@ DMS_DEBUG = false;
 											"U_I_G_resistanceLeader_F"
 										];
 	DMS_MG_vests =						[							// Vests for MG Class
-											"V_PlateCarrierH_CTRG",
-											"V_PlateCarrierSpec_rgr",
-											"V_PlateCarrierGL_blk",
-											"V_PlateCarrierGL_mtp",
-											"V_PlateCarrierGL_rgr",
-											"V_PlateCarrierSpec_blk",
-											"V_PlateCarrierSpec_mtp",
-											"V_PlateCarrierL_CTRG",
+											//"V_PlateCarrierH_CTRG",
+											//"V_PlateCarrierSpec_rgr",
+											//"V_PlateCarrierGL_blk",
+											//"V_PlateCarrierGL_mtp",
+											//"V_PlateCarrierGL_rgr",
+											//"V_PlateCarrierSpec_blk",
+											//"V_PlateCarrierSpec_mtp",
+											//"V_PlateCarrierL_CTRG",
 											"V_TacVest_blk_POLICE",
 											"V_PlateCarrierIA2_dgtl",
 											"V_HarnessO_brn",
@@ -374,16 +379,16 @@ DMS_DEBUG = false;
 											"U_O_FullGhillie_sard"
 										];
 	DMS_sniper_vests =					[							// Vests for Sniper Class
-											"V_PlateCarrierH_CTRG",
-											"V_PlateCarrierSpec_rgr",
-											"V_PlateCarrierGL_blk",
-											"V_PlateCarrierGL_mtp",
-											"V_PlateCarrierGL_rgr",
-											"V_PlateCarrierSpec_blk",
-											"V_PlateCarrierSpec_mtp",
-											"V_PlateCarrierL_CTRG",
+											//"V_PlateCarrierH_CTRG",
+											//"V_PlateCarrierSpec_rgr",
+											//"V_PlateCarrierGL_blk",
+											//"V_PlateCarrierGL_mtp",
+											//"V_PlateCarrierGL_rgr",
+											//"V_PlateCarrierSpec_blk",
+											//"V_PlateCarrierSpec_mtp",
+											//"V_PlateCarrierL_CTRG",
 											"V_TacVest_blk_POLICE",
-											"V_PlateCarrierIA2_dgtl",
+											//"V_PlateCarrierIA2_dgtl",
 											"V_HarnessO_brn",
 											"V_HarnessO_gry"
 										];
@@ -415,9 +420,9 @@ DMS_DEBUG = false;
 	DMS_ai_remove_launchers				= true;						// Remove rocket launchers on AI death
 
 	DMS_AI_wep_launchers_AT =			[							// AT Launchers
-											"launch_NLAW_F",
+											//"launch_NLAW_F",
 											"launch_RPG32_F",
-											"launch_B_Titan_short_F"
+											//"launch_B_Titan_short_F"
 										];
 	DMS_AI_wep_launchers_AA =			[							// AA Launchers
 											"launch_B_Titan_F"
@@ -430,35 +435,35 @@ DMS_DEBUG = false;
 	DMS_GodmodeCrates 					= true;						// Whether or not crates will have godmode after being filled with loot.
 	DMS_CrateCase_Sniper =				[							// If you pass "Sniper" in _lootValues, then it will spawn these weapons/items/backpacks
 											[
-												["Rangefinder",1],
-												["srifle_GM6_F",1],
-												["srifle_LRR_F",1],
-												["srifle_EBR_DMS_pointer_snds_F",1],
-												["hgun_Pistol_heavy_01_MRD_F",1],
-												["hgun_PDW2000_Holo_snds_F",1]
+												["Rangefinder",2],
+												["srifle_GM6_F",2],
+												["srifle_LRR_F",2],
+												["srifle_EBR_DMS_pointer_snds_F",2],
+												["hgun_Pistol_heavy_01_MRD_F",2],
+												["hgun_PDW2000_Holo_snds_F",2]
 											],
 											[
-												["ItemGPS",1],
-												["U_B_FullGhillie_ard",1],
-												["U_I_FullGhillie_lsh",1],
-												["U_O_FullGhillie_sard",1],
-												["U_O_GhillieSuit",1],
-												["V_PlateCarrierGL_blk",1],
-												["V_HarnessO_brn",1],
-												["Exile_Item_InstaDoc",3],
-												["Exile_Item_Surstromming_Cooked",5],
-												["Exile_Item_PlasticBottleFreshWater",5],
-												["optic_LRPS",1],
-												["muzzle_snds_acp",1],
-												["5Rnd_127x108_APDS_Mag",3],
-												["7Rnd_408_Mag",3],
+												["ItemGPS",4],
+												["U_B_FullGhillie_ard",2],
+												["U_I_FullGhillie_lsh",2],
+												["U_O_FullGhillie_sard",2],
+												["U_O_GhillieSuit",2],
+												["V_PlateCarrierGL_blk",3],
+												["V_HarnessO_brn",3],
+												["Exile_Item_InstaDoc",10],
+												["Exile_Item_Surstromming_Cooked",10],
+												["Exile_Item_PlasticBottleFreshWater",10],
+												["optic_LRPS",5],
+												["muzzle_snds_acp",5],
+												["5Rnd_127x108_APDS_Mag",5],
+												["7Rnd_408_Mag",5],
 												["20Rnd_762x51_Mag",5],
-												["11Rnd_45ACP_Mag",3],
-												["30Rnd_9x21_Mag",3]
+												["11Rnd_45ACP_Mag",5],
+												["30Rnd_9x21_Mag",5]
 											],
 											[
-												["B_Carryall_cbr",1],
-												["B_Kitbag_mcamo",1]
+												["B_Carryall_cbr",2],
+												["B_Kitbag_mcamo",2]
 											]
 										];
 	DMS_BoxWeapons =					[							// List of weapons that can spawn in a crate
@@ -530,7 +535,7 @@ DMS_DEBUG = false;
 											"Exile_Item_SafeKit",
 											"Exile_Item_CodeLock"
 										];
-	DMS_RareLootChance					= 10;						// Percentage Chance to spawn rare loot in any crate | Default: 10%
+	DMS_RareLootChance					= 30;						// Percentage Chance to spawn rare loot in any crate | Default: 10%
 
 	// Vehicles
 	DMS_ArmedVehicles =					[							// List of armed vehicles that can spawn
