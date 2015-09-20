@@ -154,7 +154,7 @@ _blacklistedFileArray =
 	'DirectX\Config.cab','G-e-F_Menu\StartGeF.dta','Bonus\Soundtrack\Win\12_Wins.dta','_CommonRedist\DirectX\Jun2010\Apr2005_d3dx9_24_x64.cab',
 	'Bonus\Soundtrack\clickSound.ogg','G-e-F_Menu\G-e-F_HackConfig.ini','Launcher\kernel_x86.dll','DLL\DatMalloc.dll','\G-e-F_HackConfig.ini',
 	'Dta\Screens.bin','ArmA2OA_Extras\ben_ex.sqf','RyanV1\Keybindiezz.sqf','ArmaX.sqf','insanity.sqf','FinizMenuzV2\confuser.sqf','dummy.sqf',
-	'temp.sqf'
+	'temp.sqf','ExileDebug.sqf'
 ];
 
 /* _blacklistedVariables: The AntiHack will check if one of these variables is existing for the client */
