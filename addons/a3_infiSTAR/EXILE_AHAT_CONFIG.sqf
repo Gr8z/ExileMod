@@ -86,7 +86,7 @@ _adminUIDandAccess =
 		]
 	],
 	[
-		['76561197984308134'],	// Mods
+		['76561197984308134','76561198129049369'],	// Mods
 		[
 			'spectating','ShowGear',
 			'Freeze Target','UnFreeze Target',
