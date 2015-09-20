@@ -66,9 +66,6 @@ private ["_pos", "_success", "_timeStarted", "_timeUntilFail", "_units", "_build
 			{
 				_x lock 0;
 				_x allowDamage true;
-				_x enableRopeAttach true;
-				_x enableSimulationGlobal true;
-				_x call ExileServer_system_simulationMonitor_addVehicle;
 			} forEach _vehs;
 
 			{

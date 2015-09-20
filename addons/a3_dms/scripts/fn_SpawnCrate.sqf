@@ -33,9 +33,4 @@ clearItemCargoGlobal 		_crate;
 clearMagazineCargoGlobal 	_crate;
 clearBackpackCargoGlobal 	_crate;
 
-if (DMS_HideBox) then
-{
-	_crate hideObjectGlobal true;
-};
-
 _crate;
