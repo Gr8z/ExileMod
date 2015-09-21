@@ -1643,7 +1643,7 @@ class CfgTerritories
 	// Defines the period in days where protection money needs to be payed.
 	// Every time you pay the protection money, the "due date" will be
 	// pro-longed by that period too.
-	protectionPeriod = 21; 
+	protectionPeriod = 7; 
 
 	// Amount of pop tabs or respect per object to pay
 	popTabAmountPerObject = 10;
