@@ -2,6 +2,7 @@
 [] execVM "GG\StatusBar\statusBar.sqf";
 [] execVM "GG\inspectLoop.sqf";
 [] execVM "GG\group\init.sqf";
+[] execVM "GG\kills.sqf";
 
 #include "initServer.sqf"
 
