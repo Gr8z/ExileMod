@@ -64,6 +64,20 @@ else
 						{
 							_killerRespectPoints pushBack ["ENEMY FRAGGED", (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Frags" >> "standard"))];
 						};
+						
+						// Fix for killing players from a Mounted Vehicle Gun
+						if !(_killer isKindOf "Exile_Unit_Player") then
+						{
+							{
+								if ((name _x) isEqualTo (name _killer)) exitWith
+								{
+									_killer = _x;
+								};
+							} forEach (crew _killer);
+
+							_fragAttributes pushBack "Mounted Vehicle Gun";
+							_killerRespectPoints pushBack ["VEHICLE GUNNER", 5];
+						};
 					}
 					else 
 					{
