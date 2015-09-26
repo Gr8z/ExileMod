@@ -1,7 +1,7 @@
 /*
 	infiSTAR: Logging kills to A3_EXILE_KILLED.txt AND server rpt file
 */
-private["_victim","_killer","_addDeathStat","_addKillStat","_killerRespectPoints","_fragAttributes","_lastKillAt","_killStack","_distance","_distanceBonus","_overallRespectChange","_newKillerScore","_killMessage","_newKillerFrags","_newVictimDeaths"];
+private["_victim","_killer","_addDeathStat","_addKillStat","_killerRespectPoints","_fragAttributes","_lastKillAt","_killStack","_distance","_distanceBonus","_overallRespectChange","_newKillerScore","_killMessage","_newKillerFrags","_newVictimDeaths","_weapon","_txt","_pic"];
 if (!isServer || hasInterface) exitWith {};
 _victim = _this select 0;
 _killer = _this select 1;
@@ -134,8 +134,20 @@ else
 				_newKillerScore = _killer getVariable ["ExileScore", 0];
 				_newKillerScore = _newKillerScore + _overallRespectChange;
 				_killer setVariable ["ExileScore", _newKillerScore];
+				_weapon = currentWeapon _killer;
+				_txt = (gettext (configFile >> 'cfgWeapons' >> _weapon >> 'displayName'));
+				_pic = (gettext (configFile >> 'cfgWeapons' >> _weapon >> 'picture'));
+				if (_pic == "") then {
+					_weapon = typeOf (vehicle _killer);
+					_pic = (getText (configFile >> 'cfgVehicles' >> _weapon >> 'picture'));
+					_txt = (getText (configFile >> 'cfgVehicles' >> _weapon >> 'displayName'));
+				};
 				format["setAccountScore:%1:%2", _newKillerScore,getPlayerUID _killer] call ExileServer_system_database_query_fireAndForget;
 				_killMessage = format ["%1 was killed by %2", (name _victim), (name _killer)];
+				
+				Gr8s_kill_msg = [(name _killer), _pic, (name _victim), floor(_victim distance _killer), _txt, nil, nil];
+				publicVariable "Gr8s_kill_msg";
+				
 				if !(count _fragAttributes isEqualTo 0) then
 				{
 					_killMessage = _killMessage + " (";
@@ -164,7 +176,7 @@ else
 			}
 			else 
 			{
-				_log = format["%1 was killed by an NPC! (%2m Distance)", (name _victim), floor(_victim distance _killer)];
+				_log = format["%1 was killed by an AI! (%2m Distance)", (name _victim), floor(_victim distance _killer)];
 				'ARMA_LOG' callExtension format['A3_EXILE_KILLED:%1',_log];
 				["systemChatRequest", [_log]] call ExileServer_object_player_event_killFeed_LOGTORPT;
 			};
