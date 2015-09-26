@@ -27,7 +27,7 @@ _BRIEFING_MSG = true;	/* use mission briefing message: if   "_BRIEFING_MSG = fal
 
 /* shows RESTART IN X MINS */
 _USE_RESTART_TIMER = true;	/* true or false */
-_RESTART_TIME_IN_M = 240;		/* restart time in minutes */
+_RESTART_TIME_IN_M = 180;		/* restart time in minutes */
 _SHOW_TIMER_IN_MIN = [1,2,3,5,10];	/* minutes before restart, when message is shown */
 
 /* The following 3 options can be disabled by putting the value to -1. For example "_TGV = -1;" */
@@ -86,7 +86,7 @@ _adminUIDandAccess =
 		]
 	],
 	[
-		['76561197984308134','76561198129049369'],	// Mods
+		['76561197984308134','76561198129049369','76561198067566966','76561198144994529'],	// Mods
 		[
 			'spectating','ShowGear',
 			'Freeze Target','UnFreeze Target',

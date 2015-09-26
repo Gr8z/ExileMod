@@ -12,6 +12,6 @@ _rscLayer cutRsc["statusBar","PLAIN"];
 	{
 		sleep 1;
 		_counter = _counter - 1;
-		((uiNamespace getVariable "statusBar")displayCtrl 1000)ctrlSetText format[" RESTART: %1 MINS LEFT | PLAYERS: %2 | FPS: %3 | HEALTH: %4%5", (240-(round(serverTime/60))), (count playableUnits), (round diag_fps), round ((1 - damage player) * 100), "%"];
+		((uiNamespace getVariable "statusBar")displayCtrl 1000)ctrlSetText format[" RESTART: %1 MINS LEFT | PLAYERS: %2 | FPS: %3 | HEALTH: %4%5", (180-(round(serverTime/60))), (count playableUnits), (round diag_fps), round ((1 - damage player) * 100), "%"];
 	};
 };
