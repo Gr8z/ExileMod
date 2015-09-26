@@ -7,7 +7,7 @@
 
 /* CONFIG */
 ShowDynamicText = true; // Show Kills Top Left of the Screen with all the custom colors and styles.
-halvStyle = true; // If This ShowDynamicText is True., It will use the awesome style made by halv, If halvStyle is false then you will see a style made by me. 
+halvStyle = false; // If This ShowDynamicText is True., It will use the awesome style made by halv, If halvStyle is false then you will see a style made by me. 
 
 ShowHintText = true; // show Kill Message on the Top Mid Of the Screen
 
@@ -53,13 +53,13 @@ if (!isDedicated) then {
 				[_dyntxt,[safezoneX + 0.01 * safezoneW,2.0],[safezoneY + 0.01 * safezoneH,0.3],30,0.5] spawn BIS_fnc_dynamicText;
 				if (ShowHintText) then {
 					_message = parseText format ["
-						<t size='0.45'align='left'shadow='1'color='%5'>%1</t>
-						<t size='0.45'align='left'shadow='1'>  Killed  </t>
-						<t size='0.45'align='left'shadow='1'color='%6'>%2</t>
-						<t size='0.45'align='left'shadow='1'> With </t>
-						<t size='0.45'align='left'shadow='1'color='%7'>%3</t>
-						<t size='0.45'align='left'shadow='1'> from </t>
-						<t size='0.45'align='left'shadow='1'color='%8'>%4m</t><br/>
+						<t size='1'align='left'shadow='1'color='%5'>%1</t>
+						<t size='1'align='left'shadow='1'>  Killed  </t>
+						<t size='1'align='left'shadow='1'color='%6'>%2</t>
+						<t size='1'align='left'shadow='1'> With </t>
+						<t size='1'align='left'shadow='1'color='%7'>%3</t>
+						<t size='1'align='left'shadow='1'> from </t>
+						<t size='1'align='left'shadow='1'color='%8'>%4m</t>
 						",
 						_killerName,
 						_victimName,
@@ -97,13 +97,13 @@ if (!isDedicated) then {
 				[_dyntxt,[safezoneX + 0.01 * safezoneW,2.0],[safezoneY + 0.01 * safezoneH,0.3],30,0.5] spawn BIS_fnc_dynamicText;
 				if (ShowHintText) then {
 					_message = parseText format ["
-						<t size='0.45'align='left'shadow='1'color='%5'>%1</t>
-						<t size='0.45'align='left'shadow='1'>  Killed  </t>
-						<t size='0.45'align='left'shadow='1'color='%6'>%2</t>
-						<t size='0.45'align='left'shadow='1'> With </t>
-						<t size='0.45'align='left'shadow='1'color='%7'>%3</t>
-						<t size='0.45'align='left'shadow='1'> from </t>
-						<t size='0.45'align='left'shadow='1'color='%8'>%4m</t><br/>
+						<t size='1'align='left'shadow='1'color='%5'>%1</t>
+						<t size='1'align='left'shadow='1'>  Killed  </t>
+						<t size='1'align='left'shadow='1'color='%6'>%2</t>
+						<t size='1'align='left'shadow='1'> With </t>
+						<t size='1'align='left'shadow='1'color='%7'>%3</t>
+						<t size='1'align='left'shadow='1'> from </t>
+						<t size='1'align='left'shadow='1'color='%8'>%4m</t>
 						",
 						_killerName,
 						_victimName,
@@ -128,13 +128,13 @@ if (!isDedicated) then {
 			_distance 	= _id select 3;
 			_weapon 	= _id select 4;
 			_message = parseText format ["
-				<t size='0.45'align='left'shadow='1'color='%5'>%1</t>
-				<t size='0.45'align='left'shadow='1'>  Killed  </t>
-				<t size='0.45'align='left'shadow='1'color='%6'>%2</t>
-				<t size='0.45'align='left'shadow='1'> With </t>
-				<t size='0.45'align='left'shadow='1'color='%7'>%3</t>
-				<t size='0.45'align='left'shadow='1'> from </t>
-				<t size='0.45'align='left'shadow='1'color='%8'>%4m</t><br/>
+				<t size='1'align='left'shadow='1'color='%5'>%1</t>
+				<t size='1'align='left'shadow='1'>  Killed  </t>
+				<t size='1'align='left'shadow='1'color='%6'>%2</t>
+				<t size='1'align='left'shadow='1'> With </t>
+				<t size='1'align='left'shadow='1'color='%7'>%3</t>
+				<t size='1'align='left'shadow='1'> from </t>
+				<t size='1'align='left'shadow='1'color='%8'>%4m</t>
 				",
 				_killerName,
 				_victimName,
