@@ -8,6 +8,13 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
+class CfgActions
+{
+class None;
+	class TakeBag: None { show = 0; };
+	class AddBag: None { show = 0; };
+	class TakeItem: None { show = 0; };
+};
 
 class CfgClans
 {
