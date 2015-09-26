@@ -54,11 +54,11 @@ if (!isDedicated) then {
 				if (ShowHintText) then {
 					_message = parseText format ["
 						<t color='%5'>%1</t>
-						<t>  Killed  </t>
+						<t>Killed </t>
 						<t color='%6'>%2</t>
-						<t> With </t>
+						<t>With </t>
 						<t color='%7'>%3</t>
-						<t> from </t>
+						<t>from </t>
 						<t color='%8'>%4m</t>
 						",
 						_killerName,
@@ -99,11 +99,11 @@ if (!isDedicated) then {
 				if (ShowHintText) then {
 					_message = parseText format ["
 						<t color='%5'>%1</t>
-						<t>  Killed  </t>
+						<t>Killed </t>
 						<t color='%6'>%2</t>
-						<t> With </t>
+						<t>With </t>
 						<t color='%7'>%3</t>
-						<t> from </t>
+						<t>from </t>
 						<t color='%8'>%4m</t>
 						",
 						_killerName,
@@ -130,11 +130,11 @@ if (!isDedicated) then {
 			_weapon 	= _id select 4;
 			_message = parseText format ["
 				<t color='%5'>%1</t>
-				<t>  Killed  </t>
+				<t>Killed </t>
 				<t color='%6'>%2</t>
-				<t> With </t>
+				<t>With </t>
 				<t color='%7'>%3</t>
-				<t> from </t>
+				<t>from </t>
 				<t color='%8'>%4m</t>
 				",
 				_killerName,
