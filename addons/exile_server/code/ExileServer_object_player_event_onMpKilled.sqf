@@ -138,9 +138,12 @@ else
 				_txt = (gettext (configFile >> 'cfgWeapons' >> _weapon >> 'displayName'));
 				_pic = (gettext (configFile >> 'cfgWeapons' >> _weapon >> 'picture'));
 				format["setAccountScore:%1:%2", _newKillerScore,getPlayerUID _killer] call ExileServer_system_database_query_fireAndForget;
-				_killMessage = format ["%1 was killed by %2 with %3 from %4 ", (name _victim), (name _killer), _txt, (round _distance)];
-				Gr8s_kill_msg = [(name _killer), _pic, (name _victim), (round _distance), _txt, nil, nil];
-				publicVariable "Gr8s_kill_msg";
+				_killMessage = format ["%1 was killed by %2", (name _victim), (name _killer)];
+				
+				if (ShowPlayerKills) then {
+					Gr8s_kill_msg = [(name _killer), _pic, (name _victim), floor(_victim distance _killer), _txt, nil, nil];
+					publicVariable "Gr8s_kill_msg";
+				};
 				
 				if !(count _fragAttributes isEqualTo 0) then
 				{
@@ -171,6 +174,10 @@ else
 			else 
 			{
 				_log = format["%1 was killed by an AI! (%2m Distance)", (name _victim), floor(_victim distance _killer)];
+				if (ShowAIKills) then {
+					Gr8s_kill_msg = ["AI", _pic, (name _victim), floor(_victim distance _killer), _txt, nil, nil];
+					publicVariable "Gr8s_kill_msg";
+				};
 				'ARMA_LOG' callExtension format['A3_EXILE_KILLED:%1',_log];
 				["systemChatRequest", [_log]] call ExileServer_object_player_event_killFeed_LOGTORPT;
 			};
