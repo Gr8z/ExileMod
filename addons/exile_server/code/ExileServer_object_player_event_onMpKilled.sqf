@@ -124,7 +124,7 @@ else
 				_txt = (gettext (configFile >> 'cfgWeapons' >> _weapon >> 'displayName'));
 				_pic = (gettext (configFile >> 'cfgWeapons' >> _weapon >> 'picture'));
 				format["setAccountScore:%1:%2", _newKillerScore,getPlayerUID _killer] call ExileServer_system_database_query_fireAndForget;
-				_killMessage = format ["%1 was killed by %2 with %3 from %4", (name _victim), (name _killer), _weapon, (round _distance)];
+				_killMessage = format ["%1 was killed by %2 with %3 from %4 ", (name _victim), (name _killer), _txt, (round _distance)];
 				Gr8s_kill_msg = [(name _killer), _pic, (name _victim), (round _distance), _txt, nil, nil];
 				publicVariable "Gr8s_kill_msg";
 				
