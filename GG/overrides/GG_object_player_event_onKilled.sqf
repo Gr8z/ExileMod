@@ -22,16 +22,34 @@ _code = {
 	_nObject = nearestObject [_pos, 'WeaponHolderSimulated'];
 	if(!isNull _nObject)then
 	{
-		_weaponCargo = weaponCargo _nObject;
-		if!(_weaponCargo isEqualTo [])then
+		_weaponsItemsCargo = weaponsItemsCargo _nObject;
 		{
+			_wep = primaryWeapon _unit;
 			{
-				if(isNull _unit)exitWith{};
-				_unit addWeapon _x;
-			} forEach _weaponCargo;
-		};
+				if(_forEachIndex == 0)then
+				{
+					_wep = _x;
+				};
+				if(typeName _x isEqualTo 'STRING')then
+				{
+					_added = [_unit, _x] call ExileClient_util_playerEquipment_add;
+				}
+				else
+				{
+					{
+						if(typeName _x isEqualTo 'STRING')then
+						{
+							_added = [_unit, _x] call ExileClient_util_playerEquipment_add;
+						}
+						else
+						{
+							_unit setAmmo [_wep, _x];
+						};
+					} forEach _x;
+				};
+			} forEach _x;
+		} forEach _weaponsItemsCargo;
+		deleteVehicle _nObject;
 	};
-	if(isNull _unit)exitWith{};
-	deleteVehicle _nObject;
 };
 [1.5, _code, [ExileClientLastDiedPlayerObject], false] call ExileClient_system_thread_addtask;
