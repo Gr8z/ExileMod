@@ -19,12 +19,21 @@ _vehicleObject setVectorDirAndUp [_vectorDirection, _vectorUp];
 _vehicleObject setVariable ["ExileDatabaseID", _vehicleID];
 _vehicleObject setVariable ["ExileOwnerUID", (_data select 3)];
 _lock = (_data select 4);
+_vehicle_in_SZ = _position call ExileClient_util_world_isTraderZoneNearby;
 if(_lock isEqualTo -1)then
 {
 	_vehicleObject setVehicleAmmo 0;
 	_vehicleObject setVariable ["ExileIsLocked",-1];
 	_vehicleObject lock 2;
 	_vehicleObject enableRopeAttach false;
+	if(_vehicle_in_SZ)then{
+		_vehicleObj = str _vehicleObject select [19];
+		_vehicleObj = _vehicleObj select [0,count _vehicleObj - 4];
+		diag_log format ["UNLOCKING %1 ID: %2 owned by %3 (%4) @ %5 ###", _vehicleObj, _vehicleID, (_vehicleObject getVariable "ExileOwnerUID"), _pinCode, _position];
+		_vehicleObject setVariable ["ExileIsLocked",0];
+		_vehicleObject lock 0;
+		_vehicleObject enableRopeAttach true;
+	};
 }
 else
 {
