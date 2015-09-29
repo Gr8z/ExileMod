@@ -47,6 +47,7 @@ DMS_DEBUG = false;
 
 	DMS_MinWaterDepth					= 20;						// Minimum depth of water that an underwater mission can spawn at.
 
+	DMS_HideBox							= false;					// "Hide" the box from being visible by players until the mission is completed.
 	DMS_SpawnBoxSmoke					= true;						// Spawn a smoke grenade on mission box upon misson completion during daytime
 	DMS_SpawnBoxIRGrenade				= true;						// Spawn an IR grenade on mission box upon misson completion during nighttime
 	
@@ -82,7 +83,7 @@ DMS_DEBUG = false;
 										];
 
 	DMS_findSafePosBlacklist =			[							// For BIS_fnc_findSafePos position blacklist info refer to: https://community.bistudio.com/wiki/BIS_fnc_findSafePos
-											//[[22500,19420],[24870,16725]]		// Salt flats
+											[[22500,19420],[24870,16725]]		// Salt flats
 										];
 /* Mission System Settings */
 
@@ -105,7 +106,7 @@ DMS_DEBUG = false;
 	DMS_remove_roadkill_chance			= 50;						// Percentage chance that roadkilled AI bodies will be deleted
 	DMS_RemoveNVG						= false;					// Remove NVGs from AI bodies
 
-	DMS_MaxAIDistance					= 300;						// The maximum distance an AI unit can be from a mission before he is killed. Helps with AI running away and forcing the mission to keep running. Set to 0 if you don't want it.
+	DMS_MaxAIDistance					= 500;						// The maximum distance an AI unit can be from a mission before he is killed. Helps with AI running away and forcing the mission to keep running. Set to 0 if you don't want it.
 	DMS_AIDistanceCheckFrequency		= 60;						// How often to check within DMS_fnc_TargetsKilled whether or not the AI is out of the maximum radius. Lower values increase frequency and increase server load, greater values decrease frequency and may cause longer delays for "runaway" AI.
 
 	DMS_ai_offload_to_client			= true;						// Offload spawned AI groups to random clients. Helps with server performance.
@@ -581,26 +582,9 @@ DMS_DEBUG = false;
 // Debug Overwrites
 if(DMS_DEBUG) then
 {
-	DMS_TimeBetweenMissions			= [30,40];
+	DMS_TimeBetweenMissions			= [10,15];
 	DMS_MissionTimeOut				= [60,70];
-	DMS_MissionTypes =
-		[							//	List of missions with spawn chances. If they add up to 100%, they represent the percentage chance each one will spawn
-			["bandits",25],
-			["bauhaus",25],
-			["beertransport",15],
-			["behindenemylines",10],
-			["blackhawkdown",45],
-			["cardealer",25],
-			["construction",35],
-			["donthasslethehoff",30],
-			["foodtransport",25],
-			["guntransport",20],
-			["humanitarian",25],
-			["lost_battalion",10],
-			["mercenaries",20],
-			["roguenavyseals",15],
-			["walmart",20],
-			["mercbase",5]
-	];
+	DMS_MissionTypes = [["testmission",1]];
+	//DMS_MissionTypes = [["mercbase",1]];
 	diag_log format ["DMS_DEBUG CONFIG :: Overriding DMS_TimeBetweenMissions (%1) and DMS_MissionTimeOut (%2)",DMS_TimeBetweenMissions,DMS_MissionTimeOut];
 };
