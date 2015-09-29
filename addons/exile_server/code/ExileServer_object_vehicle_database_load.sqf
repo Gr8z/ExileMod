@@ -19,7 +19,7 @@ _vehicleObject setVectorDirAndUp [_vectorDirection, _vectorUp];
 _vehicleObject setVariable ["ExileDatabaseID", _vehicleID];
 _vehicleObject setVariable ["ExileOwnerUID", (_data select 3)];
 _lock = (_data select 4);
-_vehicle_in_SZ = _position call ExileClient_util_world_isTraderZoneNearby;
+_vehicle_in_SZ = _position call ExileClient_util_world_isInTraderZone;
 if(_lock isEqualTo -1)then
 {
 	_vehicleObject setVehicleAmmo 0;
