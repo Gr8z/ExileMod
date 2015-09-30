@@ -1587,6 +1587,9 @@ class CfgExileCustomCode
 	ExileClient_object_player_thread_bleedToDeath = "GG\overrides\GG_object_player_thread_bleedToDeath.sqf";
 	ExileClient_construction_thread = "GG\overrides\GG_construction_thread.sqf";
 	ExileClient_object_player_event_onInventoryClosed = "GG\overrides\GG_object_player_event_onInventoryClosed.sqf";
+	ExileClient_object_player_parachuteNoFallDamage = "GG\overrides\GG_object_player_parachuteNoFallDamage.sqf";
+	ExileClient_object_player_event_onHandleDamage = "GG\overrides\GG_object_player_event_onHandleDamage.sqf";
+	ExileClient_object_player_spawn = "GG\overrides\GG_object_player_spawn.sqf";
 };
 class CfgExileMusic
 {
