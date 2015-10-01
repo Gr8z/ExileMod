@@ -16,9 +16,9 @@ _data =
 [
 	typeOf _containerObject,
 	_containerObject getVariable ["ExileOwnerUID", ""],
-	_position select 0,
-	_position select 1,
-	_position select 2,
+	_position select 0 call ExileServer_util_floatToString,
+	_position select 1 call ExileServer_util_floatToString,
+	_position select 2 call ExileServer_util_floatToString,
 	_vectorDirection select 0, 
 	_vectorDirection select 1,
 	_vectorDirection select 2,
