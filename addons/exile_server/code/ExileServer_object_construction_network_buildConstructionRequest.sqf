@@ -7,7 +7,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_paramaters","_objectClassName","_objectPosition","_playerObject","_maxRange","_no","_flags","_range","_buildRights","_object"];
+private["_sessionID","_paramaters","_objectClassName","_objectPosition","_playerObject","_maxRange","_no","_flags","_range","_buildRights","_object","_unit","_maxConstructions","_constructionAmount"];
 _sessionID = _this select 0;
 _paramaters = _this select 1;
 _objectClassName = _paramaters select 0;
@@ -40,6 +40,26 @@ try
 			throw "Build a territory first!"
 		};
 	};
+	
+	/* START - Check if the maximum allowed constructions has been reached */
+	_flags = nearestObjects [_playerObject,["Exile_Construction_Flag_Static"],_maxRange];
+	_flags = _flags select 0;
+	_range = _flags getVariable ["ExileTerritorySize",0];
+	_maxConstructions = _range * 2;	
+	_constructionAmount = count ( nearestObjects [_playerObject,["Exile_Construction_Abstract_Static"],_maxRange*2] );
+	if(_constructionAmount >= _maxConstructions)then
+	{
+		if(_range < _maxRange)then
+		{
+			throw "Upgrade your flag to continue building!"
+		}
+		else
+		{
+			throw "Maximum construction items reached!"
+		};	
+	};
+	/* END - Check if the maximum allowed constructions has been reached */
+	
 	_object = createVehicle[_objectClassName, _objectPosition, [], 0, "CAN_COLLIDE"];
 	_object setPos _objectPosition;
 	_object setVariable ["BIS_enableRandomization", false];
@@ -52,10 +72,6 @@ try
 	}
 	else
 	{
-		clearBackpackCargoGlobal _object;
-		clearItemCargoGlobal _object;
-		clearMagazineCargoGlobal _object;
-		clearWeaponCargoGlobal _object;
 		deleteVehicle _object;
 		"Construction request aborted player is null!" call ExileServer_util_log;
 	};
