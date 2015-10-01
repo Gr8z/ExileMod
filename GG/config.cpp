@@ -1590,6 +1590,7 @@ class CfgExileCustomCode
 	ExileClient_object_player_parachuteNoFallDamage = "GG\overrides\GG_object_player_parachuteNoFallDamage.sqf";
 	ExileClient_object_player_event_onHandleDamage = "GG\overrides\GG_object_player_event_onHandleDamage.sqf";
 	ExileClient_object_player_spawn = "GG\overrides\GG_object_player_spawn.sqf";
+	ExileClient_object_player_stats_update = "GG\overrides\GG_object_player_stats_update.sqf";
 };
 class CfgExileMusic
 {
