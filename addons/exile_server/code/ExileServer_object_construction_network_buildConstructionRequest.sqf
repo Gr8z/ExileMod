@@ -45,7 +45,7 @@ try
 	_flags = nearestObjects [_playerObject,["Exile_Construction_Flag_Static"],_maxRange];
 	_flags = _flags select 0;
 	_range = _flags getVariable ["ExileTerritorySize",0];
-	_maxConstructions = _range * 2;	
+	_maxConstructions = _range * 3;	
 	_constructionAmount = count ( nearestObjects [_playerObject,["Exile_Construction_Abstract_Static"],_maxRange*2] );
 	if(_constructionAmount >= _maxConstructions)then
 	{
