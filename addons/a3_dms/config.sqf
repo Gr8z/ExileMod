@@ -12,16 +12,19 @@ DMS_DEBUG = false;
 
 
 /* Mission System Settings */
+	/*General settings for dynamic missions*/
 	DMS_DynamicMission					= true;						// Enable/disable dynamic mission system
 	DMS_MaxBanditMissions				= 3;						// Maximum number of Bandit Missions running at the same time
 	DMS_StaticMission					= false;					// Enable/disable static missions
 	DMS_TimeBetweenMissions				= [600,900];				// [Minimum,Maximum] time between missions (if mission limit is not reached) | DEFAULT: 10-15 mins
 	DMS_MissionTimeOut					= [900,1800]; 				// [Minimum,Maximum] time it will take for a mission to timeout | Default: 15-30 mins
+	/*General settings for dynamic missions*/
 
-	DMS_playerNearRadius				= 75;						// How close a player has to be to a mission in order to satisfy the "playerNear" mission requirement (can be customized per mission).
+	DMS_playerNearRadius				= 100;						// How close a player has to be to a mission in order to satisfy the "playerNear" mission requirement (can be customized per mission).
 
 	DMS_AI_KillPercent					= 100;						// The percent amount of AI that need to be killed for "killPercent" mission requirement (NOT IMPLEMENTED)
 
+	/*Mission Marker settings*/
 	DMS_MarkerPosRandomization			= false;					// Randomize the position of the circle marker of a mission
 	DMS_MarkerPosRandomRadius			= [25,100];					// Minimum/Maximum distance that the circle marker position will be randomized | Default: 0 meters to 200 meters
 	DMS_RandomMarkerBrush				= "Cross";					// See: https://community.bistudio.com/wiki/setMarkerBrush
@@ -31,30 +34,50 @@ DMS_DEBUG = false;
 	DMS_MissionMarkerLoseDotTime		= 30;						// How many seconds the "lose" mission dot will remain on the map
 	DMS_MissionMarkerWinDotColor		= "ColorBlue";				// The color of the "win" marker dot
 	DMS_MissionMarkerLoseDotColor		= "ColorRed";				// The color of the "lose" marker dot
+	/*Mission Marker settings*/
 
+	/*Mission Cleanup/Timeout settings*/
 	DMS_CompletedMissionCleanup			= true;						// Cleanup mission-spawned buildings and AI bodies after some time
 	DMS_CompletedMissionCleanupTime		= 3600;						// Minimum time until mission-spawned buildings and AI are cleaned up
 	DMS_CleanUp_PlayerNearLimit			= 20;						// Cleanup of an object is aborted if a player is this many meters close to the object
 	DMS_AIVehCleanUpTime				= 900;						// Time until a destroyed AI vehicle is cleaned up.
 	DMS_MissionTimeoutReset				= true;						// Enable mission timeout timer reset if a player is close
 	DMS_MissionTimeoutResetRange		= 1000;						// If a player is this close to a mission then it won't time-out
+	/*Mission Cleanup/Timeout settings*/
 
+	/*Mission spawn location settings*/
 	DMS_PlayerNearBlacklist				= 2000;						// Missions won't spawn in a position this many meters close to a player
 	DMS_SpawnZoneNearBlacklist			= 2500;						// Missions won't spawn in a position this many meters close to a spawn zone
 	DMS_TraderZoneNearBlacklist			= 3000;						// Missions won't spawn in a position this many meters close to a trader zone
 	DMS_MissionNearBlacklist			= 4000;						// Missions won't spawn in a position this many meters close to another mission
 	DMS_WaterNearBlacklist				= 750;						// Missions won't spawn in a position this many meters close to water
+	DMS_MaxSurfaceNormal				= 0.95;						// Missions won't spawn if the surface normal of the location is less than this amount. The lower the value, the steeper the location. Greater values means flatter locations
+	/*Mission spawn location settings*/
 
 	DMS_MinWaterDepth					= 20;						// Minimum depth of water that an underwater mission can spawn at.
 
+	/*Crate/Box settings*/
 	DMS_HideBox							= false;					// "Hide" the box from being visible by players until the mission is completed.
 	DMS_SpawnBoxSmoke					= true;						// Spawn a smoke grenade on mission box upon misson completion during daytime
 	DMS_SpawnBoxIRGrenade				= true;						// Spawn an IR grenade on mission box upon misson completion during nighttime
+	/*Crate/Box settings*/
+
+	/*Mine settings*/
+	DMS_SpawnMinefieldForEveryMission	= false;					// Whether or not to spawn a minefield for every dynamic mission.
+	DMS_SpawnMinesAroundMissions		= true;						// Whether or not to spawn mines around AI missions that have them.
+	DMS_despawnMines_onCompletion		= true;						// Despawn mines spawned around missions when the mission is completed
+	DMS_MineInfo_easy					= [5,50];					// Mine info for "easy" missions. This will spawn 5 mines within a 50m radius.
+	DMS_MineInfo_moderate				= [10,50];					// Mine info for "moderate" missions. This will spawn 10 mines within a 50m radius.
+	DMS_MineInfo_difficult				= [15,75];					// Mine info for "difficult" missions. This will spawn 15 mines within a 75m radius.
+	DMS_MineInfo_hardcore				= [25,100];					// Mine info for "hardcore" missions. This will spawn 25 mines within a 100m radius.
+	DMS_SpawnMineWarningSigns			= true;						// Whether or not to spawn mine warning signs around a minefield.
+	DMS_BulletProofMines				= true;						// Whether or not you want to make the mines bulletproof. Prevents players from being able to shoot the mines and creating explosions.
+	/*Mine settings*/
 	
 	DMS_MinPlayerCount					= 0; 						// Minimum number of players until mission start
 	DMS_MinServerFPS					= 5; 						// Minimum server FPS for missions to start
 
-	//Mission notification settings
+	/*Mission notification settings*/
 	DMS_PlayerNotificationTypes =		[							// Notification types. Supported values are: ["dynamicTextRequest", "standardHintRequest", "systemChatRequest"]
 											//"dynamicTextRequest", <--- Text formatting makes this weird...
 											"standardHintRequest"
@@ -62,8 +85,9 @@ DMS_DEBUG = false;
 										];
 	DMS_dynamicText_Size				= 0.65;						// Dynamic Text size for "dynamicTextRequest" notification type.
 	DMS_dynamicText_Color				= "#FFCC00";				// Dynamic Text color for "dynamicTextRequest" notification type.
+	/*Mission notification settings*/
 
-	DMS_MissionTypes =					[							//	List of missions with spawn chances. If they add up to 100%, they represent the percentage chance each one will spawn
+	DMS_BanditMissionTypes =			[							//	List of missions with spawn chances. If they add up to 100%, they represent the percentage chance each one will spawn
 											["bandits",25],
 											["bauhaus",25],
 											["beertransport",15],
@@ -83,7 +107,7 @@ DMS_DEBUG = false;
 										];
 
 	DMS_findSafePosBlacklist =			[							// For BIS_fnc_findSafePos position blacklist info refer to: https://community.bistudio.com/wiki/BIS_fnc_findSafePos
-											//[[22500,19420],[24870,16725]]		// Salt flats
+										//	[[22500,19420],[24870,16725]]		// Salt flats
 										];
 /* Mission System Settings */
 
@@ -97,19 +121,28 @@ DMS_DEBUG = false;
 	DMS_Bandit_Vehicle_MoneyGain		= 100;						// The amount of Poptabs gained for killing a bandit vehicle crew member
 	DMS_Bandit_Vehicle_RepGain			= 25;						// The amount of Respect gained for killing a bandit vehicle crew member
 
+	DMS_Diff_RepOrTabs_on_roadkill 		= true;						// Whether or not you want to use different values for giving respect/poptabs when you run an AI over. Default values are NEGATIVE. This means player will LOSE respect or poptabs.
+	DMS_Bandit_Soldier_RoadkillMoney	= -10;						// The amount of Poptabs gained/lost for running over a bandit soldier
+	DMS_Bandit_Soldier_RoadkillRep		= -5;						// The amount of Respect gained/lost for running over a bandit soldier
+	DMS_Bandit_Static_RoadkillMoney		= -10;						// The amount of Poptabs gained/lost for running over a bandit static gunner
+	DMS_Bandit_Static_RoadkillRep		= -5;						// The amount of Respect gained/lost for running over a bandit static gunner
+	DMS_Bandit_Vehicle_RoadkillMoney	= -10;						// The amount of Poptabs gained/lost for running over a bandit vehicle crew member
+	DMS_Bandit_Vehicle_RoadkillRep		= -5;						// The amount of Respect gained/lost for running over a bandit vehicle crew member
+
 	DMS_banditSide						= EAST;						// The side (team) that AI Bandits will spawn on
 	DMS_clear_AI_body					= false;					// Clear AI body as soon as they die
 	DMS_clear_AI_body_chance			= 50;						// Percentage chance that AI bodies will be cleared when they die
 	DMS_ai_disable_ramming_damage 		= true;						// Disables damage due to ramming into AI. !!!NOTE: THIS WILL NOT BE RELIABLE WITH "DMS_ai_offload_to_client"!!!
-	DMS_credit_roadkill					= false;					// Credit players with respect/poptabs if they kill an AI by running it over
 	DMS_remove_roadkill					= true; 					// Remove gear from AI bodies that are roadkilled
 	DMS_remove_roadkill_chance			= 50;						// Percentage chance that roadkilled AI bodies will be deleted
+	DMS_explode_onRoadkill				= true;						// Whether or not to spawn an explosion when an AI gets run over. It will likely take out the 2 front wheels. Should help mitigate the ineffective AI vs. striders issue ;)
 	DMS_RemoveNVG						= false;					// Remove NVGs from AI bodies
 
 	DMS_MaxAIDistance					= 500;						// The maximum distance an AI unit can be from a mission before he is killed. Helps with AI running away and forcing the mission to keep running. Set to 0 if you don't want it.
 	DMS_AIDistanceCheckFrequency		= 60;						// How often to check within DMS_fnc_TargetsKilled whether or not the AI is out of the maximum radius. Lower values increase frequency and increase server load, greater values decrease frequency and may cause longer delays for "runaway" AI.
 
 	DMS_ai_offload_to_client			= true;						// Offload spawned AI groups to random clients. Helps with server performance.
+	DMS_ai_offload_Only_DMS_AI			= false;					// Do you use other mission systems on your server but still want to offload AI? You should probably enable this then, unless you have tested it for compatibility.
 
 	DMS_ai_share_info					= true;						// Share info about killer
 	DMS_ai_share_info_distance			= 300;						// The distance killer's info will be shared to other AI
@@ -126,8 +159,8 @@ DMS_DEBUG = false;
 	DMS_ai_skill_random					= ["hardcore","difficult","difficult","difficult","moderate","moderate","moderate","moderate","easy","easy"];	// Skill frequencies for "random" AI skills | Default: 10% hardcore, 30% difficult, 40% moderate, and 20% easy
 	DMS_AI_WP_Radius_easy				= 20;						// Waypoint radius for "easy" AI
 	DMS_AI_WP_Radius_moderate			= 40;						// Waypoint radius for "moderate" AI
-	DMS_AI_WP_Radius_difficult			= 75;						// Waypoint radius for "difficult" AI
-	DMS_AI_WP_Radius_hardcore			= 150;						// Waypoint radius for "hardcore" AI
+	DMS_AI_WP_Radius_difficult			= 55;						// Waypoint radius for "difficult" AI
+	DMS_AI_WP_Radius_hardcore			= 75;						// Waypoint radius for "hardcore" AI
 	DMS_AI_WP_Radius_base				= 5;						// Waypoint radius for AI in bases
 
 	DMS_static_weapons =				[							// Static weapons for AI
@@ -577,14 +610,3 @@ DMS_DEBUG = false;
 											"Exile_Chopper_Taru_Transport_Black"
 										];
 /* Loot Settings */
-
-
-// Debug Overwrites
-if(DMS_DEBUG) then
-{
-	DMS_TimeBetweenMissions			= [10,15];
-	DMS_MissionTimeOut				= [60,70];
-	DMS_MissionTypes = [["testmission",1]];
-	//DMS_MissionTypes = [["mercbase",1]];
-	diag_log format ["DMS_DEBUG CONFIG :: Overriding DMS_TimeBetweenMissions (%1) and DMS_MissionTimeOut (%2)",DMS_TimeBetweenMissions,DMS_MissionTimeOut];
-};

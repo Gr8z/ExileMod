@@ -1,8 +1,11 @@
 /*
-	Sample mission (duplicate for testing purposes)
+	Sample mission
+	Created by Defent and eraser1
+
+	Called from DMS_selectMission
 */
 
-private ["_num", "_side", "_pos", "_difficulty", "_AICount", "_group", "_crate", "_crate_loot_values", "_msgStart", "_msgWIN", "_msgLOSE", "_missionName", "_missionAIUnits", "_missionObjs", "_markers", "_time", "_added","_wreck1","_wreck2","_wreck3","_vehicle"];
+private ["_num", "_side", "_pos", "_difficulty", "_AICount", "_group", "_crate", "_crate_loot_values", "_msgStart", "_msgWIN", "_msgLOSE", "_missionName", "_missionAIUnits", "_missionObjs", "_markers", "_time", "_added"];
 
 // For logging purposes
 _num = DMS_MissionCount;
@@ -13,43 +16,36 @@ _side = "bandit";
 
 
 // find position
-_pos = call DMS_fnc_findSafePos;
+_pos = [10] call DMS_fnc_findSafePos;
 
 
 // Set general mission difficulty
-_difficulty = "hardcore";
+_difficulty = "moderate";
 
 
 // Create AI
 // TODO: Spawn AI only when players are nearby
-_AICount = 5 + (round (random 2));
+_AICount = 6 + (round (random 2));
 
 _group =
 [
 	_pos,					// Position of AI
 	_AICount,				// Number of AI
-	"hardcore",				// "random","hardcore","difficult","moderate", or "easy"
+	"random",				// "random","hardcore","difficult","moderate", or "easy"
 	"random", 				// "random","assault","MG","sniper" or "unarmed" OR [_type,_launcher]
 	_side 					// "bandit","hero", etc.
 ] call DMS_fnc_SpawnAIGroup;
 
 
 // Create Crate
-_crate = ["Box_NATO_Wps_F",[(_pos select 0)+2,(_pos select 1)-1,0]] call DMS_fnc_SpawnCrate;
-
-_wreck1 = createVehicle ["Land_CinderBlocks_F",[(_pos select 0) - 10, (_pos select 1),-0.1],[], 0, "CAN_COLLIDE"];
-_wreck2 = createVehicle ["Land_Bricks_V1_F",[(_pos select 0) - 5, (_pos select 1),-3.3],[], 0, "CAN_COLLIDE"];
-_wreck3 = createVehicle ["Land_Bricks_V1_F",[(_pos select 0) - 13, (_pos select 1),-1],[], 0, "CAN_COLLIDE"];
-
-_vehicle = ["Exile_Car_Zamak",_pos] call DMS_fnc_SpawnNonPersistentVehicle;
-
+_crate = ["Box_NATO_Wps_F",_pos] call DMS_fnc_SpawnCrate;
 
 // Set crate loot values
 _crate_loot_values =
 [
-	3,		// Weapons
-	[15,["Exile_Item_WoodWallKit","Exile_Item_WoodWallHalfKit","Exile_Item_WoodDoorwayKit","Exile_Item_WoodDoorKit","Exile_Item_Codelock","Exile_Item_PortableGeneratorKit","Exile_Item_WoodFloorKit","Exile_Item_WoodFloorPortKit"]],		// Items
-	2 		// Backpacks
+	5,		// Weapons
+	10,		// Items
+	3 		// Backpacks
 ];
 
 
@@ -62,23 +58,22 @@ _missionAIUnits =
 // Define mission-spawned objects and loot values
 _missionObjs =
 [
-	[_wreck1,_wreck2,_wreck3],			// No spawned buildings
-	[_vehicle],
+	[],
+	[],
 	[[_crate,_crate_loot_values]]
 ];
 
 // Define Mission Start message
-_msgStart = format["<t color='#FFFF00' size='1.25'>Construction Site! </t><br/> A group of mercenaries have set up a construction site, clear them out!"];
+_msgStart = format["<t color='#FFFF00' size='1.25'>Mercenary Group! </t><br/> A group of mercenaries has been spotted. Kill them and take their equipment!"];
 
 // Define Mission Win message
-_msgWIN = format["<t color='#0080ff' size='1.25'>Construction Site! </t><br/> Convicts have successfully demolished the construction site!"];
+_msgWIN = format["<t color='#0080ff' size='1.25'>Mercenary Group! </t><br/> Convicts have successfully eliminated the mercenaries"];
 
 // Define Mission Lose message
-_msgLOSE = format["<t color='#FF0000' size='1.25'>Construction Site! </t><br/> The mercenaries have dismantled their construction site and escaped!"];
-
+_msgLOSE = format["<t color='#FF0000' size='1.25'>Mercenary Group! </t><br/> The mercenaries have escaped and they took all their loot with them!"];
 
 // Define mission name (for map marker and logging)
-_missionName = "Construction Site";
+_missionName = "Mercenary Group";
 
 // Create Markers
 _markers =
@@ -113,7 +108,9 @@ _added =
 	_missionObjs,
 	[_msgWIN,_msgLOSE],
 	_markers,
-	_side
+	_side,
+	_difficulty,
+	[]
 ] call DMS_fnc_AddMissionToMonitor;
 
 // Check to see if it was added correctly, otherwise delete the stuff

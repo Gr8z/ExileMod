@@ -26,8 +26,7 @@ params
 [
 	["_pos","ERROR",[[]],[2,3]],
 	["_text","ERROR",[""]],
-	["_difficulty","moderate",[""]],
-	["_randomMarker",DMS_MarkerPosRandomization,[false]]
+	["_difficulty","moderate",[""]]
 ];
 
 if ((_pos isEqualTo "ERROR") || ("_text" isEqualTo "ERROR")) exitWith
@@ -35,6 +34,13 @@ if ((_pos isEqualTo "ERROR") || ("_text" isEqualTo "ERROR")) exitWith
 	diag_log format ["DMS ERROR :: Calling DMS_CreateMarker with invalid parameters: %1",_this];
 
 	[];
+};
+
+
+_randomMarker = DMS_MarkerPosRandomization;
+if ((count _this)>3) then
+{
+	_randomMarker = param [3,DMS_MarkerPosRandomization,[false]];
 };
 
 _num = DMS_MissionCount;
@@ -58,6 +64,8 @@ _dot = createMarker [format ["DMS_MissionMarkerDot%1",_num], _pos];
 _dot setMarkerColor "ColorBlack";
 _dot setMarkerType "mil_dot";
 _dot setMarkerText _text;
+
+missionNamespace setVariable [format ["%1_pos",_dot], _pos];
 
 if (_randomMarker) then
 {

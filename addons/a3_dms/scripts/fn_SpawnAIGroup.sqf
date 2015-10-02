@@ -8,7 +8,7 @@
 		_pos,					// Position of AI
 		_count,					// Number of AI
 		_difficulty,			// AI Difficulty: "random","hardcore","difficult","moderate", or "easy"
-		_class 					// AI Class: "random","assault","MG","sniper" or "unarmed" OR [_class,_launcher]
+		_class,					// AI Class: "random","assault","MG","sniper" or "unarmed" OR [_class,_launcher]
 		_side 					// Only "bandit" is supported atm
 	] call DMS_fnc_SpawnAIGroup;
 
@@ -28,11 +28,6 @@ _OK = params
 if (!_OK) then
 {
 	diag_log format ["DMS ERROR :: Calling DMS_SpawnAIGroup with invalid parameters: %1",_this];
-};
-
-if (_count < 1) exitWith
-{
-	diag_log format ["DMS ERROR :: Calling DMS_SpawnAIGroup with less than 1 _count! _this: %1",_this];
 };
 
 _pos_x 			= _pos select 0;
@@ -74,6 +69,13 @@ if(_pos_z == 0) then
 _group = createGroup (missionNamespace getVariable [format ["DMS_%1Side",_side],EAST]);
 
 _group setVariable ["DMS_LockLocality",nil];
+_group setVariable ["DMS_SpawnedGroup",true];
+
+if (_count < 1) exitWith
+{
+	diag_log format ["DMS ERROR :: Calling DMS_SpawnAIGroup with less than 1 _count! _this: %1",_this];
+	_group
+};
 
 for "_i" from 1 to _count do
 {

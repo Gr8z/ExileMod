@@ -1,11 +1,8 @@
 /*
-	Sample mission
-	Created by Defent and eraser1
-
-	Called from DMS_selectMission
+	Sample mission (duplicate for testing purposes)
 */
 
-private ["_num", "_side", "_pos", "_difficulty", "_AICount", "_group", "_crate1", "_crate_loot_values1", "_crate2", "_crate_loot_values2", "_msgStart", "_msgWIN", "_msgLOSE", "_missionName", "_missionAIUnits", "_missionObjs", "_markers", "_time", "_added","_wreck"];
+private ["_num", "_side", "_pos", "_difficulty", "_AICount", "_group", "_crate", "_crate_loot_values", "_msgStart", "_msgWIN", "_msgLOSE", "_missionName", "_missionAIUnits", "_missionObjs", "_markers", "_time", "_added","_vehicle"];
 
 // For logging purposes
 _num = DMS_MissionCount;
@@ -16,16 +13,16 @@ _side = "bandit";
 
 
 // find position
-_pos = [10,100] call DMS_fnc_findSafePos;
+_pos = [10] call DMS_fnc_findSafePos;
 
 
 // Set general mission difficulty
-_difficulty = "difficult";
+_difficulty = "moderate";
 
 
 // Create AI
 // TODO: Spawn AI only when players are nearby
-_AICount = 6 + (round (random 2));
+_AICount = 1;
 
 _group =
 [
@@ -36,19 +33,64 @@ _group =
 	_side 					// "bandit","hero", etc.
 ] call DMS_fnc_SpawnAIGroup;
 
+_dir = random 180;
+_staticGuns =
+[
+	[
+		[_pos,5+random 5,_dir] call DMS_fnc_SelectOffsetPos
+	],
+	_group,
+	"assault",
+	"static",
+	"bandit"
+] call DMS_fnc_SpawnAIStatic;
 
-// Create Crates
-_crate1 = ["Box_NATO_Wps_F",_pos] call DMS_fnc_SpawnCrate;
 
-_wreck = createVehicle ["Land_Wreck_Van_F",[(_pos select 0) - 10, (_pos select 1),-0.2],[], 0, "CAN_COLLIDE"];
+// Create Crate
+_crate = ["Box_NATO_Wps_F",_pos] call DMS_fnc_SpawnCrate;
+
+// Spawn vehicle
+_vehicle = ["Exile_Car_Offroad_Armed_Guerilla01",[_pos,3+random 10,_dir+90] call DMS_fnc_SelectOffsetPos] call DMS_fnc_SpawnNonPersistentVehicle;
+
+//trololol
+_crate setObjectTextureGlobal [0,"#(rgb,8,8,3)color(1,0,0.1,1)"];
+_crate setObjectTextureGlobal [1,"#(rgb,8,8,3)color(1,0,0.1,1)"];
 
 // Set crate loot values
-_crate_loot_values1 =
+_crate_loot_values =
 [
-	10,		// Weapons
-	5,		// Items
-	2 		// Backpacks
+	5,		// Weapons
+	10,		// Items
+	3 		// Backpacks
 ];
+
+_veh =
+[
+	[
+		[_pos,100,random 360] call DMS_fnc_SelectOffsetPos,
+		_pos
+	],
+	_group,
+	"assault",
+	_difficulty,
+	_side
+] call DMS_fnc_SpawnAIVehicle;
+
+/*
+_baseObjs =
+[
+	"base1STATIC",
+	_pos
+] call DMS_fnc_ImportFromM3E_Convert;
+*/
+_baseObjs = [];
+
+_mines =
+[
+	_pos,
+	_difficulty,
+	_side
+] call DMS_fnc_SpawnMinefield;
 
 
 // Define mission-spawned AI Units
@@ -60,22 +102,23 @@ _missionAIUnits =
 // Define mission-spawned objects and loot values
 _missionObjs =
 [
-	[_wreck],
-	[],
-	[[_crate1,_crate_loot_values1]]
+	_staticGuns+[_veh]+_baseObjs,
+	[_vehicle],
+	[[_crate,"Sniper"]],
+	_mines
 ];
 
 // Define Mission Start message
-_msgStart = format["<t color='#FFFF00' size='1.25'>Gun Transport! </t><br/> A gun transport truck has crashed, secure the crash site and the guns!"];
+_msgStart = format["<t color='#FFFF00' size='1.25'>Armed Bandits! </t><br/> A heavily armed bandit group has been spotted, take them out and claim their vehicle!"];
 
 // Define Mission Win message
-_msgWIN = format["<t color='#0080ff' size='1.25'>Gun Transport! </t><br/> Convicts have successfully secured the area and claimed the guns for their own!"];
+_msgWIN = format["<t color='#0080ff' size='1.25'>Armed Bandits! </t><br/> Convicts have successfully taken care of the bandit group!"];
 
 // Define Mission Lose message
-_msgLOSE = format["<t color='#FF0000' size='1.25'>Gun Transport! </t><br/> The transport truck has been repaired and escaped the area!"];
+_msgLOSE = format["<t color='#FF0000' size='1.25'>Armed Bandits! </t><br/> The bandits have taken their vehicle and drove off, no loot today!"];
 
 // Define mission name (for map marker and logging)
-_missionName = "Gun Transport";
+_missionName = "Armed Bandits";
 
 // Create Markers
 _markers =
@@ -95,11 +138,13 @@ _added =
 	[
 		[
 			"kill",
-			_group
+			_group,
+			true
 		],
 		[
 			"playerNear",
-			[_pos,DMS_playerNearRadius]
+			[_pos,DMS_playerNearRadius],
+			true
 		]
 	],
 	[
@@ -110,7 +155,9 @@ _added =
 	_missionObjs,
 	[_msgWIN,_msgLOSE],
 	_markers,
-	_side
+	_side,
+	_difficulty,
+	[]
 ] call DMS_fnc_AddMissionToMonitor;
 
 // Check to see if it was added correctly, otherwise delete the stuff

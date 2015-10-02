@@ -16,16 +16,16 @@ _side = "bandit";
 
 
 // find position
-_pos = [10,100] call DMS_fnc_findSafePos;
+_pos = [10] call DMS_fnc_findSafePos;
 
 
 // Set general mission difficulty
-_difficulty = "easy";
+_difficulty = "difficult";
 
 
 // Create AI
 // TODO: Spawn AI only when players are nearby
-_AICount = 2 + (round (random 2));
+_AICount = 6 + (round (random 2));
 
 _group =
 [
@@ -40,13 +40,13 @@ _group =
 // Create Crates
 _crate1 = ["Box_NATO_Wps_F",_pos] call DMS_fnc_SpawnCrate;
 
-_wreck = createVehicle ["Land_BagBunker_Tower_F",[(_pos select 0) - 10, (_pos select 1),-0.2],[], 0, "CAN_COLLIDE"];
+_wreck = createVehicle ["Land_Wreck_Van_F",[(_pos select 0) - 10, (_pos select 1),-0.2],[], 0, "CAN_COLLIDE"];
 
 // Set crate loot values
 _crate_loot_values1 =
 [
-	5,		// Weapons
-	3,		// Items
+	10,		// Weapons
+	5,		// Items
 	2 		// Backpacks
 ];
 
@@ -66,16 +66,16 @@ _missionObjs =
 ];
 
 // Define Mission Start message
-_msgStart = format["<t color='#FFFF00' size='1.25'>Enemy Bunker! </t><br/> A team of soldiers have set up a bunker inside convict land. Rid them from this place!"];
+_msgStart = format["<t color='#FFFF00' size='1.25'>Gun Transport! </t><br/> A gun transport truck has crashed, secure the crash site and the guns!"];
 
 // Define Mission Win message
-_msgWIN = format["<t color='#0080ff' size='1.25'>Enemy Bunker! </t><br/> Convicts have successfully taken care of the enemies and their bunker!"];
+_msgWIN = format["<t color='#0080ff' size='1.25'>Gun Transport! </t><br/> Convicts have successfully secured the area and claimed the guns for their own!"];
 
 // Define Mission Lose message
-_msgLOSE = format["<t color='#FF0000' size='1.25'>Enemy Bunker! </t><br/> The soldiers became impatient and have escaped the area!"];
+_msgLOSE = format["<t color='#FF0000' size='1.25'>Gun Transport! </t><br/> The transport truck has been repaired and escaped the area!"];
 
 // Define mission name (for map marker and logging)
-_missionName = "Enemy Bunker";
+_missionName = "Gun Transport";
 
 // Create Markers
 _markers =
@@ -110,7 +110,9 @@ _added =
 	_missionObjs,
 	[_msgWIN,_msgLOSE],
 	_markers,
-	_side
+	_side,
+	_difficulty,
+	[]
 ] call DMS_fnc_AddMissionToMonitor;
 
 // Check to see if it was added correctly, otherwise delete the stuff

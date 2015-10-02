@@ -2,7 +2,7 @@
 	Sample mission (duplicate for testing purposes)
 */
 
-private ["_num", "_side", "_difficulty", "_AICount", "_staticGuns", "_baseObjs", "_crate", "_missionAIUnits", "_missionObjs", "_msgStart", "_msgWIN", "_msgLOSE", "_missionName", "_markers", "_time", "_added", "_cleanup"];
+private ["_num", "_side", "_pos", "_difficulty", "_AICount", "_group", "_crate", "_crate_loot_values", "_msgStart", "_msgWIN", "_msgLOSE", "_missionName", "_missionAIUnits", "_missionObjs", "_markers", "_time", "_added","_building","_vehicle"];
 
 // For logging purposes
 _num = DMS_MissionCount;
@@ -17,62 +17,38 @@ _pos = call DMS_fnc_findSafePos;
 
 
 // Set general mission difficulty
-_difficulty = "hardcore";
+_difficulty = "easy";
 
 
 // Create AI
-_AICount = 6 + (round (random 2));
+// TODO: Spawn AI only when players are nearby
+_AICount = 4 + (round (random 2));
 
 _group =
 [
-	[_pos,[-9.48486,-12.4834,0]] call DMS_fnc_CalcPos,
-	_AICount,
-	"hardcore",
-	"random",
-	_side
+	_pos,					// Position of AI
+	_AICount,				// Number of AI
+	"difficult",			// "random","hardcore","difficult","moderate", or "easy"
+	"random", 				// "random","assault","MG","sniper" or "unarmed" OR [_type,_launcher]
+	_side 					// "bandit","hero", etc.
 ] call DMS_fnc_SpawnAIGroup;
-
-// Use "base" waypoint instead
-while {(count (waypoints _group)) > 0} do
-{
-	deleteWaypoint ((waypoints _group) select 0);
-};
-
-[
-	_group,
-	[_pos,[-9.48486,-12.4834,0]] call DMS_fnc_CalcPos,
-	"base"
-] call DMS_fnc_SetGroupBehavior;
-
-
-_staticGuns =
-[
-	[
-		[_pos,[-6.29138,3.9917,0]] call DMS_fnc_CalcPos
-	],
-	_group,
-	"assault",
-	"hardcore",
-	"bandit",
-	"O_HMG_01_high_F"
-] call DMS_fnc_SpawnAIStatic;
-
-(_staticGuns select 0) setDir 15;
-
-
-_baseObjs =
-[
-	"base1",
-	_pos
-] call DMS_fnc_ImportFromM3E;
 
 
 // Create Crate
-_crate = ["Box_NATO_AmmoOrd_F",_pos] call DMS_fnc_SpawnCrate;
+_crate = ["Box_NATO_Wps_F",_pos] call DMS_fnc_SpawnCrate;
 
-// Pink Crate ;)
-_crate setObjectTextureGlobal [0,"#(rgb,8,8,3)color(1,0.08,0.57,1)"];
-_crate setObjectTextureGlobal [1,"#(rgb,8,8,3)color(1,0.08,0.57,1)"];
+_building = createVehicle ["Land_Medevac_HQ_V1_F",[(_pos select 0) - 10, (_pos select 1),-0.1],[], 0, "CAN_COLLIDE"];
+
+_vehicle = ["I_Truck_02_medical_F",_pos] call DMS_fnc_SpawnNonPersistentVehicle;
+
+
+// Set crate loot values
+_crate_loot_values =
+[
+	5,		// Weapons
+	[9,["Exile_Item_InstaDoc","Exile_Item_PlasticBottleFreshWater"]],		// Items
+	3 		// Backpacks
+];
 
 
 // Define mission-spawned AI Units
@@ -84,22 +60,22 @@ _missionAIUnits =
 // Define mission-spawned objects and loot values
 _missionObjs =
 [
-	_staticGuns+_baseObjs,			// base objects and static gun
-	[],
-	[[_crate,"Sniper"]]
+	[_building],			// No spawned buildings
+	[_vehicle],
+	[[_crate,_crate_loot_values]]
 ];
 
 // Define Mission Start message
-_msgStart = format["<t color='#FFFF00' size='1.25'> Mercenary Base </t><br/> A mercenary base has been located at %1! There's reports of a dandy crate inside of it...",mapGridPosition _pos];
+_msgStart = format["<t color='#FFFF00' size='1.25'>Deranged Doctors! </t><br/> A group of deranged doctors have set up a field hospital, sieze it for your own!"];
 
 // Define Mission Win message
-_msgWIN = format["<t color='#0080ff' size='1.25'> Mercenary Base </t><br/> Convicts have successfully assaulted the Mercenary Base and obtained the dandy crate!"];
+_msgWIN = format["<t color='#0080ff' size='1.25'>Deranged Doctors! </t><br/> Convicts have claimed the medical supplies for their own!"];
 
 // Define Mission Lose message
-_msgLOSE = format["<t color='#FF0000' size='1.25'> Mercenary Base </t><br/> Seems like the Mercenaries packed up and drove away..."];
+_msgLOSE = format["<t color='#FF0000' size='1.25'>Deranged Doctors! </t><br/> Hawkeye has ran off with the medical supplies, everything is gone!"];
 
 // Define mission name (for map marker and logging)
-_missionName = "Mercenary Base";
+_missionName = "Deranged Doctors";
 
 // Create Markers
 _markers =
@@ -134,7 +110,9 @@ _added =
 	_missionObjs,
 	[_msgWIN,_msgLOSE],
 	_markers,
-	_side
+	_side,
+	_difficulty,
+	[]
 ] call DMS_fnc_AddMissionToMonitor;
 
 // Check to see if it was added correctly, otherwise delete the stuff

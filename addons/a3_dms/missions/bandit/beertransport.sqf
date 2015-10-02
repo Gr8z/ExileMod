@@ -16,16 +16,16 @@ _side = "bandit";
 
 
 // find position
-_pos = [10,100] call DMS_fnc_findSafePos;
+_pos = [10] call DMS_fnc_findSafePos;
 
 
 // Set general mission difficulty
-_difficulty = "difficult";
+_difficulty = "easy";
 
 
 // Create AI
 // TODO: Spawn AI only when players are nearby
-_AICount = 6 + (round (random 2));
+_AICount = 3 + (round (random 2));
 
 _group =
 [
@@ -40,14 +40,14 @@ _group =
 // Create Crates
 _crate1 = ["Box_NATO_Wps_F",_pos] call DMS_fnc_SpawnCrate;
 
-_wreck = createVehicle ["Land_UWreck_Heli_Attack_02_F",[(_pos select 0) - 10, (_pos select 1),-0.2],[], 0, "CAN_COLLIDE"];
+_wreck = createVehicle ["Land_Wreck_Van_F",[(_pos select 0) - 10, (_pos select 1),-0.2],[], 0, "CAN_COLLIDE"];
 
 // Set crate loot values
 _crate_loot_values1 =
 [
 	8,		// Weapons
-	4,		// Items
-	2 		// Backpacks
+	[10,["Exile_Item_Beer"]],		// Items
+	1 		// Backpacks
 ];
 
 
@@ -66,16 +66,16 @@ _missionObjs =
 ];
 
 // Define Mission Start message
-_msgStart = format["<t color='#FFFF00' size='1.25'>Blackhawk down! </t><br/> We got a Blackhawk down, Super 6-1 is down, secure the perimeter and claim what can be claimed!"];
+_msgStart = format["<t color='#FFFF00' size='1.25'>Beer transport! </t><br/> A transport truck carrying beer and guns is being robbed, stop the robbers and steal the loot!"];
 
 // Define Mission Win message
-_msgWIN = format["<t color='#0080ff' size='1.25'>Blackhawk down! </t><br/> Convicts have secured the blackhawk and claimed the remaining loot!"];
+_msgWIN = format["<t color='#0080ff' size='1.25'>Beer transport! </t><br/> Convicts have successfully claimed all of the beer and guns. 'Murica."];
 
 // Define Mission Lose message
-_msgLOSE = format["<t color='#FF0000' size='1.25'>Blackhawk down! </t><br/> The blackhawk has been sized by the enemy and the loot has been destroyed!"];
+_msgLOSE = format["<t color='#FF0000' size='1.25'>Beer transport! </t><br/> The robbers have taken off with all the beer and all the guns, what a travesty!"];
 
 // Define mission name (for map marker and logging)
-_missionName = "Blackhawk Down";
+_missionName = "Beer & Guns Truck";
 
 // Create Markers
 _markers =
@@ -110,7 +110,9 @@ _added =
 	_missionObjs,
 	[_msgWIN,_msgLOSE],
 	_markers,
-	_side
+	_side,
+	_difficulty,
+	[]
 ] call DMS_fnc_AddMissionToMonitor;
 
 // Check to see if it was added correctly, otherwise delete the stuff

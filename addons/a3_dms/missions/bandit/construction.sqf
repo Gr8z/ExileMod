@@ -2,7 +2,7 @@
 	Sample mission (duplicate for testing purposes)
 */
 
-private ["_num", "_side", "_pos", "_difficulty", "_AICount", "_group", "_crate", "_crate_loot_values", "_msgStart", "_msgWIN", "_msgLOSE", "_missionName", "_missionAIUnits", "_missionObjs", "_markers", "_time", "_added","_vehicle"];
+private ["_num", "_side", "_pos", "_difficulty", "_AICount", "_group", "_crate", "_crate_loot_values", "_msgStart", "_msgWIN", "_msgLOSE", "_missionName", "_missionAIUnits", "_missionObjs", "_markers", "_time", "_added","_wreck1","_wreck2","_wreck3","_vehicle"];
 
 // For logging purposes
 _num = DMS_MissionCount;
@@ -17,64 +17,40 @@ _pos = call DMS_fnc_findSafePos;
 
 
 // Set general mission difficulty
-_difficulty = "moderate";
+_difficulty = "hardcore";
 
 
 // Create AI
 // TODO: Spawn AI only when players are nearby
-_AICount = 1;
+_AICount = 5 + (round (random 2));
 
 _group =
 [
 	_pos,					// Position of AI
 	_AICount,				// Number of AI
-	"random",				// "random","hardcore","difficult","moderate", or "easy"
+	"hardcore",				// "random","hardcore","difficult","moderate", or "easy"
 	"random", 				// "random","assault","MG","sniper" or "unarmed" OR [_type,_launcher]
 	_side 					// "bandit","hero", etc.
 ] call DMS_fnc_SpawnAIGroup;
 
-_dir = random 180;
-_staticGuns =
-[
-	[
-		[_pos,5+random 5,_dir] call DMS_fnc_SelectOffsetPos
-	],
-	_group,
-	"assault",
-	"static",
-	"bandit"
-] call DMS_fnc_SpawnAIStatic;
-
 
 // Create Crate
-_crate = ["Box_NATO_Wps_F",_pos] call DMS_fnc_SpawnCrate;
+_crate = ["Box_NATO_Wps_F",[(_pos select 0)+2,(_pos select 1)-1,0]] call DMS_fnc_SpawnCrate;
 
-// Spawn vehicle
-_vehicle = ["Exile_Car_Offroad_Armed_Guerilla01",[_pos,3+random 10,_dir+90] call DMS_fnc_SelectOffsetPos] call DMS_fnc_SpawnNonPersistentVehicle;
+_wreck1 = createVehicle ["Land_CinderBlocks_F",[(_pos select 0) - 10, (_pos select 1),-0.1],[], 0, "CAN_COLLIDE"];
+_wreck2 = createVehicle ["Land_Bricks_V1_F",[(_pos select 0) - 5, (_pos select 1),-3.3],[], 0, "CAN_COLLIDE"];
+_wreck3 = createVehicle ["Land_Bricks_V1_F",[(_pos select 0) - 13, (_pos select 1),-1],[], 0, "CAN_COLLIDE"];
 
-//trololol
-_crate setObjectTextureGlobal [0,"#(rgb,8,8,3)color(1,0,0.1,1)"];
-_crate setObjectTextureGlobal [1,"#(rgb,8,8,3)color(1,0,0.1,1)"];
+_vehicle = ["Exile_Car_Zamak",_pos] call DMS_fnc_SpawnNonPersistentVehicle;
+
 
 // Set crate loot values
 _crate_loot_values =
 [
-	5,		// Weapons
-	10,		// Items
-	3 		// Backpacks
+	3,		// Weapons
+	[15,["Exile_Item_WoodWallKit","Exile_Item_WoodWallHalfKit","Exile_Item_WoodDoorwayKit","Exile_Item_WoodDoorKit","Exile_Item_Codelock","Exile_Item_PortableGeneratorKit","Exile_Item_WoodFloorKit","Exile_Item_WoodFloorPortKit"]],		// Items
+	2 		// Backpacks
 ];
-
-_veh =
-[
-	[
-		[_pos,100,random 360] call DMS_fnc_SelectOffsetPos,
-		_pos
-	],
-	_group,
-	"assault",
-	_difficulty,
-	_side
-] call DMS_fnc_SpawnAIVehicle;
 
 
 // Define mission-spawned AI Units
@@ -86,22 +62,23 @@ _missionAIUnits =
 // Define mission-spawned objects and loot values
 _missionObjs =
 [
-	_staticGuns+[_veh],
+	[_wreck1,_wreck2,_wreck3],			// No spawned buildings
 	[_vehicle],
-	[[_crate,"Sniper"]]
+	[[_crate,_crate_loot_values]]
 ];
 
 // Define Mission Start message
-_msgStart = format["<t color='#FFFF00' size='1.25'>Armed Bandits! </t><br/> A heavily armed bandit group has been spotted, take them out and claim their vehicle!"];
+_msgStart = format["<t color='#FFFF00' size='1.25'>Construction Site! </t><br/> A group of mercenaries have set up a construction site, clear them out!"];
 
 // Define Mission Win message
-_msgWIN = format["<t color='#0080ff' size='1.25'>Armed Bandits! </t><br/> Convicts have successfully taken care of the bandit group!"];
+_msgWIN = format["<t color='#0080ff' size='1.25'>Construction Site! </t><br/> Convicts have successfully demolished the construction site!"];
 
 // Define Mission Lose message
-_msgLOSE = format["<t color='#FF0000' size='1.25'>Armed Bandits! </t><br/> The bandits have taken their vehicle and drove off, no loot today!"];
+_msgLOSE = format["<t color='#FF0000' size='1.25'>Construction Site! </t><br/> The mercenaries have dismantled their construction site and escaped!"];
+
 
 // Define mission name (for map marker and logging)
-_missionName = "Armed Bandits";
+_missionName = "Construction Site";
 
 // Create Markers
 _markers =
@@ -122,6 +99,10 @@ _added =
 		[
 			"kill",
 			_group
+		],
+		[
+			"playerNear",
+			[_pos,DMS_playerNearRadius]
 		]
 	],
 	[
@@ -132,7 +113,9 @@ _added =
 	_missionObjs,
 	[_msgWIN,_msgLOSE],
 	_markers,
-	_side
+	_side,
+	_difficulty,
+	[]
 ] call DMS_fnc_AddMissionToMonitor;
 
 // Check to see if it was added correctly, otherwise delete the stuff

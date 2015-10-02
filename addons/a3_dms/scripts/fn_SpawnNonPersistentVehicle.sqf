@@ -50,12 +50,31 @@ clearItemCargoGlobal _vehObj;
 clearMagazineCargoGlobal _vehObj;
 clearWeaponCargoGlobal _vehObj;
 
-_vehObj setVariable ["ExileIsPersistent", false];
-
 _vehObj setFuel (0.75+(random 0.25));
 _vehObj setDir (random 360);
 _vehObj setPosATL _vehpos;
 _vehObj setVectorUp (surfaceNormal _vehpos);
+
+_vehObj setVariable ["ExileIsPersistent", false];
+_vehObj addEventHandler ["GetIn", { _this call ExileServer_object_vehicle_event_onGetIn}];
+if (_vehObj isKindOf "Helicopter") then
+{
+	_vehObj addEventHandler ["RopeAttach", 
+	{
+		private "_vehicle";
+		_vehicle = _this select 2;
+
+		if !(simulationEnabled _vehicle) then
+		{
+			_vehicle enableSimulationGlobal true;
+		};
+	}];
+};
+
+if (!isNil "RS_VLS") then
+{
+	[_vehObj] call RS_VLS_sanitizeVehicle;
+};
 
 _vehObj lock 2;
 _vehObj allowDamage false;

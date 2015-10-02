@@ -5,7 +5,7 @@
 	Called from DMS_selectMission
 */
 
-private ["_num", "_side", "_pos", "_difficulty", "_AICount", "_group", "_crate", "_crate_loot_values", "_msgStart", "_msgWIN", "_msgLOSE", "_missionName", "_missionAIUnits", "_missionObjs", "_markers", "_time", "_added"];
+private ["_num", "_side", "_pos", "_difficulty", "_AICount", "_group", "_crate1", "_crate_loot_values1", "_crate2", "_crate_loot_values2", "_msgStart", "_msgWIN", "_msgLOSE", "_missionName", "_missionAIUnits", "_missionObjs", "_markers", "_time", "_added","_wreck","_vehicle"];
 
 // For logging purposes
 _num = DMS_MissionCount;
@@ -16,11 +16,11 @@ _side = "bandit";
 
 
 // find position
-_pos = [10,100] call DMS_fnc_findSafePos;
+_pos = [10] call DMS_fnc_findSafePos;
 
 
 // Set general mission difficulty
-_difficulty = "moderate";
+_difficulty = "difficult";
 
 
 // Create AI
@@ -36,16 +36,32 @@ _group =
 	_side 					// "bandit","hero", etc.
 ] call DMS_fnc_SpawnAIGroup;
 
+_staticGuns =
+[
+	[
+		[(_pos select 0)+(5+(random 5)),(_pos select 1)+(5+(random 5)),0],
+		[(_pos select 0) + -1*(5+(random 5)),(_pos select 1) + -1*(5+(random 5)),0]
+	],
+	_group,
+	"assault",
+	"static",
+	"bandit"
+] call DMS_fnc_SpawnAIStatic;
 
-// Create Crate
-_crate = ["Box_NATO_Wps_F",_pos] call DMS_fnc_SpawnCrate;
+
+// Create Crates
+_crate1 = ["Box_NATO_Wps_F",_pos] call DMS_fnc_SpawnCrate;
+
+_wreck = createVehicle ["Land_UWreck_Heli_Attack_02_F",[(_pos select 0) - 10, (_pos select 1),-0.2],[], 0, "CAN_COLLIDE"];
+
+_vehicle = ["Exile_Car_SUV_Black",_pos] call DMS_fnc_SpawnNonPersistentVehicle;
 
 // Set crate loot values
-_crate_loot_values =
+_crate_loot_values1 =
 [
-	5,		// Weapons
-	10,		// Items
-	3 		// Backpacks
+	8,		// Weapons
+	4,		// Items
+	2 		// Backpacks
 ];
 
 
@@ -58,22 +74,22 @@ _missionAIUnits =
 // Define mission-spawned objects and loot values
 _missionObjs =
 [
-	[],
-	[],
-	[[_crate,_crate_loot_values]]
+	[_wreck]+_staticGuns,
+	[_vehicle],
+	[[_crate1,_crate_loot_values1]]
 ];
 
 // Define Mission Start message
-_msgStart = format["<t color='#FFFF00' size='1.25'>Mercenary Group! </t><br/> A group of mercenaries has been spotted. Kill them and take their equipment!"];
+_msgStart = format["<t color='#FFFF00' size='1.25'>Knight Rider! </t><br/> KITT has been kidnapped, secure the position and reclaim KITT!"];
 
 // Define Mission Win message
-_msgWIN = format["<t color='#0080ff' size='1.25'>Mercenary Group! </t><br/> Convicts have successfully eliminated the mercenaries"];
+_msgWIN = format["<t color='#0080ff' size='1.25'>Knight Rider! </t><br/> Convicts secured KITT, that will show the bandits not to Hassle the Hoff!"];
 
 // Define Mission Lose message
-_msgLOSE = format["<t color='#FF0000' size='1.25'>Mercenary Group! </t><br/> The mercenaries have escaped and they took all their loot with them!"];
+_msgLOSE = format["<t color='#FF0000' size='1.25'>Knight Rider!</t><br/> KITT was never secured and has now been dismantled by the bandits, what a grim fate."];
 
 // Define mission name (for map marker and logging)
-_missionName = "Mercenary Group";
+_missionName = "KITT's Location";
 
 // Create Markers
 _markers =
@@ -108,7 +124,9 @@ _added =
 	_missionObjs,
 	[_msgWIN,_msgLOSE],
 	_markers,
-	_side
+	_side,
+	_difficulty,
+	[]
 ] call DMS_fnc_AddMissionToMonitor;
 
 // Check to see if it was added correctly, otherwise delete the stuff

@@ -10,7 +10,7 @@
 */
 
 
-private ["_nearestObjectMinDistance","_maxTerrainGradient","_safePosParams","_validspot","_i","_pos"];
+private ["_nearestObjectMinDistance","_maxTerrainGradient","_safePosParams","_validspot","_i","_pos","_missionPos"];
 
 params
 [
@@ -36,7 +36,7 @@ _i = 0;
 while{!_validspot} do
 {
 	_pos 	= _safePosParams call BIS_fnc_findSafePos;
-	_i = _i+1;
+	_i 		= _i+1;
 	try
 	{
 		// Check for nearby water
@@ -49,6 +49,12 @@ while{!_validspot} do
 		if ((DMS_PlayerNearBlacklist>0) && {[_pos,DMS_PlayerNearBlacklist] call DMS_fnc_IsPlayerNearby}) then
 		{
 			throw ("players");
+		};
+
+		// Terrain steepness check
+		if (((surfaceNormal _pos) select 2)<DMS_MaxSurfaceNormal) then
+		{
+			throw ("a steep location");
 		};
 		
 		{
@@ -65,9 +71,13 @@ while{!_validspot} do
 			};
 
 			// Check for nearby missions
-			if ((DMS_MissionNearBlacklist>0) && {((_x find "DMS_MissionMarkerDot")>-1) && {((getMarkerPos _x) distance2D _pos)<=DMS_MissionNearBlacklist}}) then
+			if (DMS_MissionNearBlacklist>0) then
 			{
-				throw ("another mission");
+				_missionPos = missionNamespace getVariable [format ["%1_pos",_x], []];
+				if (!(_missionPos isEqualTo []) && {(_missionPos distance2D _pos)<=DMS_MissionNearBlacklist}) then
+				{
+					throw ("another mission");
+				};
 			};
 		} forEach allMapMarkers;
 

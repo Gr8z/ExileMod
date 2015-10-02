@@ -5,7 +5,7 @@
 	Called from DMS_selectMission
 */
 
-private ["_num", "_side", "_pos", "_difficulty", "_AICount", "_group", "_crate", "_crate_loot_values", "_msgStart", "_msgWIN", "_msgLOSE", "_missionName", "_missionAIUnits", "_missionObjs", "_markers", "_time", "_added","_wreck1","_wreck2","_wreck3","_wreck4"];
+private ["_num", "_side", "_pos", "_difficulty", "_AICount", "_group", "_crate1", "_crate_loot_values1", "_crate2", "_crate_loot_values2", "_msgStart", "_msgWIN", "_msgLOSE", "_missionName", "_missionAIUnits", "_missionObjs", "_markers", "_time", "_added","_wreck"];
 
 // For logging purposes
 _num = DMS_MissionCount;
@@ -16,11 +16,11 @@ _side = "bandit";
 
 
 // find position
-_pos = [10,100] call DMS_fnc_findSafePos;
+_pos = [10] call DMS_fnc_findSafePos;
 
 
 // Set general mission difficulty
-_difficulty = "moderate";
+_difficulty = "difficult";
 
 
 // Create AI
@@ -37,19 +37,16 @@ _group =
 ] call DMS_fnc_SpawnAIGroup;
 
 
-// Create Crate
-_crate = ["Box_NATO_Wps_F",_pos] call DMS_fnc_SpawnCrate;
-_wreck1 = createVehicle ["Land_i_Shop_01_V1_F",[(_pos select 0) - 10, (_pos select 1),-0.1],[], 0, "CAN_COLLIDE"];
-_wreck2 = createVehicle ["Land_Sacks_goods_F",[(_pos select 0) - 2, (_pos select 1),-0.8],[], 0, "CAN_COLLIDE"];
-_wreck3 = createVehicle ["Land_StallWater_F",[(_pos select 0) - 5, (_pos select 1),-0.8],[], 0, "CAN_COLLIDE"];
-_wreck4 = createVehicle ["Land_WoodenCart_F",[(_pos select 0) - 16, (_pos select 1),-0.5],[], 0, "CAN_COLLIDE"];
-_wreck5 = createVehicle ["Land_CratesWooden_F",[(_pos select 0) - 16, (_pos select 1),-0.3],[], 0, "CAN_COLLIDE"];
+// Create Crates
+_crate1 = ["Box_NATO_Wps_F",_pos] call DMS_fnc_SpawnCrate;
+
+_wreck = createVehicle ["Land_Wreck_Van_F",[(_pos select 0) - 10, (_pos select 1),-0.2],[], 0, "CAN_COLLIDE"];
 
 // Set crate loot values
-_crate_loot_values =
+_crate_loot_values1 =
 [
 	2,		// Weapons
-	15,		// Items
+	[12,["Exile_Item_GloriousKnakWorst_Cooked","Exile_Item_PlasticBottleFreshWater","Exile_Item_PlasticBottleFreshWater","Exile_Item_BBQSandwich_Cooked","Exile_Item_Catfood_Cooked","Exile_Item_ChristmasTinner_Cooked"]],		// Items
 	2 		// Backpacks
 ];
 
@@ -63,22 +60,22 @@ _missionAIUnits =
 // Define mission-spawned objects and loot values
 _missionObjs =
 [
-	[_wreck1,_wreck2,_wreck3,_wreck4,_wreck5],
+	[_wreck],
 	[],
-	[[_crate,_crate_loot_values]]
+	[[_crate1,_crate_loot_values1]]
 ];
 
 // Define Mission Start message
-_msgStart = format["<t color='#FFFF00' size='1.25'>Walmart Riot! </t><br/> A local Walmart shop is being raided, stop the raiders and take the loot!"];
+_msgStart = format["<t color='#FFFF00' size='1.25'>Food Supplies! </t><br/> A food supply truck has been sized by ruthless bandits, stop them!"];
 
 // Define Mission Win message
-_msgWIN = format["<t color='#0080ff' size='1.25'>Walmart Riot! </t><br/> Convicts have done a good deed and stopped the raiders!"];
+_msgWIN = format["<t color='#0080ff' size='1.25'>Food Supplies! </t><br/> Convicts have successfully claimed the food supplies for themselves!"];
 
 // Define Mission Lose message
-_msgLOSE = format["<t color='#FF0000' size='1.25'>Walmart Riot! </t><br/> The raiders has looted everything from Walmart and escaped!"];
+_msgLOSE = format["<t color='#FF0000' size='1.25'>Food Supplies! </t><br/> The bandits have taken the food supplies and escaped!"];
 
 // Define mission name (for map marker and logging)
-_missionName = "Walmart Riot";
+_missionName = "Food Supplies";
 
 // Create Markers
 _markers =
@@ -113,7 +110,9 @@ _added =
 	_missionObjs,
 	[_msgWIN,_msgLOSE],
 	_markers,
-	_side
+	_side,
+	_difficulty,
+	[]
 ] call DMS_fnc_AddMissionToMonitor;
 
 // Check to see if it was added correctly, otherwise delete the stuff
@@ -128,6 +127,10 @@ if !(_added) exitWith
 	} forEach _missionAIUnits;
 
 	_cleanup pushBack ((_missionObjs select 0)+(_missionObjs select 1));
+	
+	{
+		_cleanup pushBack (_x select 0);
+	} foreach (_missionObjs select 2);
 
 	_cleanup call DMS_fnc_CleanUp;
 

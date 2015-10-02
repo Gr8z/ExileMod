@@ -16,16 +16,16 @@ _side = "bandit";
 
 
 // find position
-_pos = [10,100] call DMS_fnc_findSafePos;
+_pos = [10] call DMS_fnc_findSafePos;
 
 
 // Set general mission difficulty
-_difficulty = "difficult";
+_difficulty = "moderate";
 
 
 // Create AI
 // TODO: Spawn AI only when players are nearby
-_AICount = 6 + (round (random 2));
+_AICount = 3 + (round (random 2));
 
 _group =
 [
@@ -66,16 +66,16 @@ _missionObjs =
 ];
 
 // Define Mission Start message
-_msgStart = format["<t color='#FFFF00' size='1.25'>Humantarian Supplies! </t><br/> A humanitarian supply truck has been sized by ruthless bandits, stop them!"];
+_msgStart = format["<t color='#FFFF00' size='1.25'>Humanitarian Supplies! </t><br/> A truck carrying humanitarian supplies has been sized by bandits, stop them!"];
 
 // Define Mission Win message
-_msgWIN = format["<t color='#0080ff' size='1.25'>Humantarian Supplies! </t><br/> Convicts have successfully claimed the humanitarian supplies for themselves!"];
+_msgWIN = format["<t color='#0080ff' size='1.25'>Humanitarian Supplies! </t><br/> Convicts have successfully claimed the humanitarian supplies for themselves!"];
 
 // Define Mission Lose message
-_msgLOSE = format["<t color='#FF0000' size='1.25'>Humantarian Supplies! </t><br/> The bandits have taken the humanitarian supplies and escaped!"];
+_msgLOSE = format["<t color='#FF0000' size='1.25'>Humanitarian Supplies! </t><br/> The bandits have taken the humanitarian supplies and escaped!"];
 
 // Define mission name (for map marker and logging)
-_missionName = "Humantarian Supplies";
+_missionName = "Humanitarian Supplies";
 
 // Create Markers
 _markers =
@@ -110,7 +110,9 @@ _added =
 	_missionObjs,
 	[_msgWIN,_msgLOSE],
 	_markers,
-	_side
+	_side,
+	_difficulty,
+	[]
 ] call DMS_fnc_AddMissionToMonitor;
 
 // Check to see if it was added correctly, otherwise delete the stuff

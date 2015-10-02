@@ -5,7 +5,7 @@
 	Called from DMS_selectMission
 */
 
-private ["_num", "_side", "_pos", "_difficulty", "_AICount", "_group", "_crate1", "_crate_loot_values1", "_crate2", "_crate_loot_values2", "_msgStart", "_msgWIN", "_msgLOSE", "_missionName", "_missionAIUnits", "_missionObjs", "_markers", "_time", "_added","_wreck"];
+private ["_num", "_side", "_pos", "_difficulty", "_AICount", "_group", "_crate", "_crate_loot_values", "_msgStart", "_msgWIN", "_msgLOSE", "_missionName", "_missionAIUnits", "_missionObjs", "_markers", "_time", "_added"];
 
 // For logging purposes
 _num = DMS_MissionCount;
@@ -16,16 +16,16 @@ _side = "bandit";
 
 
 // find position
-_pos = [10,100] call DMS_fnc_findSafePos;
+_pos = [10] call DMS_fnc_findSafePos;
 
 
 // Set general mission difficulty
-_difficulty = "difficult";
+_difficulty = "hardcore";
 
 
 // Create AI
 // TODO: Spawn AI only when players are nearby
-_AICount = 6 + (round (random 2));
+_AICount = 4 + (round (random 2));
 
 _group =
 [
@@ -37,24 +37,15 @@ _group =
 ] call DMS_fnc_SpawnAIGroup;
 
 
-// Create Crates
-_crate1 = ["Box_NATO_Wps_F",_pos] call DMS_fnc_SpawnCrate;
-_crate2 = ["Box_NATO_Wps_F",[(_pos select 0)+2,(_pos select 1)-1,0]] call DMS_fnc_SpawnCrate;
-
-_wreck = createVehicle ["Land_Wreck_Ural_F",[(_pos select 0) - 10, (_pos select 1),-0.2],[], 0, "CAN_COLLIDE"];
+// Create Crate
+_crate = ["Box_NATO_Wps_F",_pos] call DMS_fnc_SpawnCrate;
 
 // Set crate loot values
-_crate_loot_values1 =
+_crate_loot_values =
 [
-	2,		// Weapons
-	15,		// Items
-	2 		// Backpacks
-];
-_crate_loot_values2 =
-[
-	1,		// Weapons
-	20,		// Items
-	5 		// Backpacks
+	7,		// Weapons
+	2,		// Items
+	3 		// Backpacks
 ];
 
 
@@ -67,22 +58,22 @@ _missionAIUnits =
 // Define mission-spawned objects and loot values
 _missionObjs =
 [
-	[_wreck],
 	[],
-	[[_crate1,_crate_loot_values1],[_crate2,_crate_loot_values2]]
+	[],
+	[[_crate,_crate_loot_values]]
 ];
 
-
-_msgStart = format["<t color='#FFFF00' size='1.25'>Bauhaus Truck </t><br/> A Bauhaus truck has crashed and lost all its building supplies, get there quickly!"];
+// Define Mission Start message
+_msgStart = format["<t color='#FFFF00' size='1.25'>Navy Seals! </t><br/> A squad of professional Navy Seals team is performing gorilla warfare in convict land, deal with them!"];
 
 // Define Mission Win message
-_msgWIN = format["<t color='#0080ff' size='1.25'>Bauhaus Truck </t><br/> Convicts have successfully claimed the crashed Buahaus truck!"];
+_msgWIN = format["<t color='#0080ff' size='1.25'>Navy Seals! </t><br/> Convicts have successfully taken care of the Navy Seals, you must be the top of your class!"];
 
 // Define Mission Lose message
-_msgLOSE = format["<t color='#FF0000' size='1.25'>Bauhaus Truck! </t><br/> The Bauhause truck has been repaired and escaped!"];
+_msgLOSE = format["<t color='#FF0000' size='1.25'>Navy Seals! </t><br/> The Navy Seals have escaped and are now planning their next raid!"];
 
 // Define mission name (for map marker and logging)
-_missionName = "Bauhaus Truck";
+_missionName = "Rogue Navy Seals";
 
 // Create Markers
 _markers =
@@ -117,7 +108,9 @@ _added =
 	_missionObjs,
 	[_msgWIN,_msgLOSE],
 	_markers,
-	_side
+	_side,
+	_difficulty,
+	[]
 ] call DMS_fnc_AddMissionToMonitor;
 
 // Check to see if it was added correctly, otherwise delete the stuff
