@@ -21,6 +21,6 @@ else
 {
 	_player = _sessionID call ExileServer_system_session_getPlayerObject;
 	_vehicle setOwner (owner _player);
-	[_sessionID,"rotateVehicleRequest",[_vehicle,_rotation]] call ExileServer_system_network_send_to;
+	[_sessionID,"rotateVehicleRequest",[_vehicleID,_rotation]] call ExileServer_system_network_send_to;
 };
 true

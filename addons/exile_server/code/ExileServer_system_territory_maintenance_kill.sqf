@@ -7,7 +7,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_flag","_maxRange","_constructionObjects","_owner","_flagID","_object","_databaseID","_isContainer","_construction"];
+private["_flag","_maxRange","_constructionObjects","_owner","_flagID","_object","_databaseID","_isContainer"];
 _flag = _this;
 _maxRange = getNumber (missionConfigFile >> "CfgTerritories" >> "maximumRadius");
 _constructionObjects = _flag nearObjects _maxRange;
@@ -27,7 +27,7 @@ _flagID = _flag getVariable ["ExileDatabaseID",-1];
 		{
 			format ["deleteConstruction:%1", _databaseID] call ExileServer_system_database_query_fireAndForget;
 		};	
-		deleteVehicle _construction;
+		deleteVehicle _object;
 	};
 } 
 forEach _constructionObjects;
