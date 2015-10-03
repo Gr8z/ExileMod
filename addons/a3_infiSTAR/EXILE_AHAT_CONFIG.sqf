@@ -67,7 +67,7 @@ _adminUIDandAccess =
 		]
 	],
 	[
-		['76561198084864687','76561198129049369'],	// Admins
+		['76561198084864687','76561198129049369','76561198067566966'],	// Admins
 		[
 			'Teleport On Map Click','Teleport - Target To Me','Teleport - Me To Target','Teleport In Facing Direction (10m steps)',
 			'spectating','Delete Vehicle','FlyUp','ShowGear',
@@ -86,7 +86,7 @@ _adminUIDandAccess =
 		]
 	],
 	[
-		['76561197984308134','76561198067566966','76561198144994529','76561198037365948','76561198126348047'],	// Mods
+		['76561197984308134','76561198144994529','76561198037365948','76561198126348047'],	// Mods
 		[
 			'spectating','ShowGear',
 			'Freeze Target','UnFreeze Target',
