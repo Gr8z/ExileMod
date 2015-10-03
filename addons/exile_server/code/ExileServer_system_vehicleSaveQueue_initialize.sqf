@@ -8,6 +8,5 @@
  */
  
 ExileServerVehicleSaveQueue = [];
-// Disable the queue. Threads are too slow right now.
-//[15, ExileServer_system_vehicleSaveQueue_thread_saveVehicles, [], true] call ExileServer_system_thread_addTask;
+[15, ExileServer_system_vehicleSaveQueue_thread_saveVehicles, [], true] call ExileServer_system_thread_addTask;
 true

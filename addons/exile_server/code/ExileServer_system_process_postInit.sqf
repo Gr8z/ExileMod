@@ -9,6 +9,7 @@
  
 if (!isNil "PublicHiveVersion") then
 {
+	call ExileClient_system_map_initialize;
 	call ExileServer_system_thread_initialize;
 	call ExileServer_system_playerSaveQueue_initialize;
 	call ExileServer_system_swapOwnershipQueue_initialize;

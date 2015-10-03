@@ -7,7 +7,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_paramaters","_object","_pincode","_state","_objectPinCode","_type"];
+private["_sessionID","_paramaters","_object","_pincode","_state","_objectPinCode","_type","_accessDenied","_accessDenialExpiresAt","_numberOfFails"];
 _sessionID = _this select 0;
 _paramaters = _this select 1;
 _object = objectFromNetId (_paramaters select 0);
@@ -15,57 +15,107 @@ _pincode = _paramaters select 1;
 _state = _paramaters select 2;
 _objectPinCode = _object getVariable ["ExileAccessCode","000000"];
 _type = typeOf _object;
-if((count _pincode) isEqualTo (count _objectPinCode))then
+_accessDenied = false;
+if (_object getVariable ["ExileAccessDenied", false]) then 
 {
-	if(_pincode isEqualTo _objectPinCode)then
+	_accessDenialExpiresAt = _object getVariable ["ExileAccessDeniedExpiresAt", 0];
+	if (time > _accessDenialExpiresAt) then 
 	{
-		if!(_state)then
+		_object setVariable ["ExileAccessDenied", false];
+		_object setVariable ["ExileAccessDeniedExpiresAt", 0];	
+	}
+	else 
+	{
+		_accessDenied = true;
+	};
+};
+if (_accessDenied) then 
+{
+	[_sessionID,"lockResponse",["Access denied!", false, objNull, "", -1]] call ExileServer_system_network_send_to;
+}
+else 
+{
+	if((count _pincode) isEqualTo (count _objectPinCode))then
+	{
+		if(_pincode isEqualTo _objectPinCode)then
 		{
-			if(isNumber(configFile >> "CfgVehicles" >> _type >> "exileIsLockable"))then
+			if!(_state)then
 			{
-				_object setVariable ["ExileIsLocked",0,true];
-			}
-			else
-			{
-				if(local _object)then
+				if(isNumber(configFile >> "CfgVehicles" >> _type >> "exileIsLockable"))then
 				{
-					_object lock 0;
+					_object setVariable ["ExileIsLocked",0,true];
 				}
 				else
 				{
-					[owner _object,"LockVehicleRequest",[_object,false]] call ExileServer_system_network_send_to;
+					if(local _object)then
+					{
+						_object lock 0;
+					}
+					else
+					{
+						[owner _object,"LockVehicleRequest",[_object,false]] call ExileServer_system_network_send_to;
+					};
+					_object setVariable ["ExileIsLocked",0];
 				};
-				_object setVariable ["ExileIsLocked",0];
+				[_sessionID,"lockResponse",["Unlocked!", true , _object , _objectPinCode, 0]] call ExileServer_system_network_send_to;
+				_object enableRopeAttach true;
+			}
+			else
+			{
+				if(isNumber(configFile >> "CfgVehicles" >> _type >> "exileIsLockable"))then
+				{
+					_object setVariable ["ExileIsLocked",-1,true];
+				}
+				else
+				{
+					if(local _object)then
+					{
+						_object lock 2;
+					}
+					else
+					{
+						[owner _object,"LockVehicleRequest",[_object,true]] call ExileServer_system_network_send_to;
+					};
+					_object setVariable ["ExileIsLocked",-1];
+				};
+				[_sessionID,"lockResponse",["Locked!",true, _object, _objectPinCode, 2]] call ExileServer_system_network_send_to;
+				_object enableRopeAttach false;
 			};
-			[_sessionID,"lockResponse",["Unlocked!", true , _object , _objectPinCode]] call ExileServer_system_network_send_to;
-			_object enableRopeAttach true;
+			_object setVariable ["ExileLastLockToggleAt", time];
+			_object setVariable ["ExileAccessDenied", false];
+			_object setVariable ["ExileAccessDeniedExpiresAt", 0];		
+			_object call ExileServer_system_vehicleSaveQueue_addVehicle;
 		}
 		else
 		{
-			if(isNumber(configFile >> "CfgVehicles" >> _type >> "exileIsLockable"))then
+			if ((getPosATL _object) call ExileClient_util_world_isInTraderZone) then 
 			{
-				_object setVariable ["ExileIsLocked",-1,true];
+				[_sessionID,"lockResponse",["Wrong PIN!", false, objNull, "", -1]] call ExileServer_system_network_send_to;
 			}
-			else
+			else 
 			{
-				if(local _object)then
+				_numberOfFails = _object getVariable ["ExileNumberOfFailedLocks", 0];
+				_numberOfFails = _numberOfFails + 1;
+				_object setVariable ["ExileNumberOfFailedLocks", _numberOfFails];
+				switch (_numberOfFails) do 
 				{
-					_object lock 2;
-				}
-				else
-				{
-					[owner _object,"LockVehicleRequest",[_object,true]] call ExileServer_system_network_send_to;
+					case 1:
+					{
+						[_sessionID,"lockResponse",["Wrong PIN! Two tries remaining.", false, objNull, "", -1]] call ExileServer_system_network_send_to;
+					};
+					case 2:
+					{
+						[_sessionID,"lockResponse",["Wrong PIN! One try remaining.", false, objNull, "", -1]] call ExileServer_system_network_send_to;
+					};
+					default
+					{
+						[_sessionID,"lockResponse",["Wrong PIN! Access denied for five minutes.", false, objNull, "", -1]] call ExileServer_system_network_send_to;
+						_object setVariable ["ExileAccessDenied", true];
+						_object setVariable ["ExileAccessDeniedExpiresAt", time + (5 * 60)];
+					};						
 				};
-				_object setVariable ["ExileIsLocked",-1];
 			};
-			[_sessionID,"lockResponse",["Locked!",true, _object, _objectPinCode]] call ExileServer_system_network_send_to;
-			_object enableRopeAttach false;
 		};
-		_object call ExileServer_system_vehicleSaveQueue_addVehicle;
-	}
-	else
-	{
-		[_sessionID,"lockResponse",["Wrong PIN Code!", false, objNull, ""]] call ExileServer_system_network_send_to;
 	};
 };
 true

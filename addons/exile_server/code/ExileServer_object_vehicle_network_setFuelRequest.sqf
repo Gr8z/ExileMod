@@ -23,8 +23,8 @@ else
 	if!(_crew isEqualTo [])then
 	{
 		_crew = _crew select 0;
-		_sessionIDcrew = _crew call ExileServer_system_session_getSessionID;
-		[_sessionIDcrew,"setFuelRequest",[_vehicleID,_ammount]] call ExileServer_system_network_send_to;
+		_sessionIDcrew = _crew getVariable ["ExileSessionID", ""];
+		[_sessionIDcrew, "setFuelRequest", [_vehicleID,_ammount]] call ExileServer_system_network_send_to;
 	};
 };
 true

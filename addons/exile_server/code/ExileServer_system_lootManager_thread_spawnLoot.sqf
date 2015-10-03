@@ -39,7 +39,7 @@ if (_notifyPlayer) then
 				_playersInformed pushBack _x;
 			};
 		}
-		forEach ([getPosATL _x, _spawnRadius] call ExileClient_util_world_getNearbyPlayers);
+		forEach ([getPosATL _x, _spawnRadius] call ExileClient_util_world_getAlivePlayerInfantryInRange);
 	}
 	forEach _spawnedLootForPlayers;
 };

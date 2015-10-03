@@ -7,6 +7,10 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-ExileServerOwnershipSwapQueue = [];
-[5, ExileServer_system_swapOwnershipQueue_thread_dispatchQueue, [], true] call ExileServer_system_thread_addTask;
-true
+private["_index"];
+_index = ExileSessionIDs find _this;
+if !(_index isEqualTo -1) then
+{
+	ExileSessionIDs deleteAt _index;
+	missionNamespace setVariable [format["ExileSessionPlayerObject%1", _this], nil];
+};

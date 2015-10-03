@@ -7,7 +7,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_parameters","_vehicleID","_vehicle","_player","_offset","_pos"];
+private["_sessionID","_parameters","_vehicleID","_vehicle","_player","_pos"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
 _vehicleID = _parameters select 0;
@@ -25,10 +25,9 @@ try
 	};
 	if (local _vehicle) then
 	{
-		_offset = _vehicle call ExileClient_util_model_getHeight;
-		_pos = getPos _vehicle;
-		_pos set [2,(_pos select 2) + (_offset / 3)];
-		_vehicle setPos _pos;
+		_pos = getPosATL _vehicle;
+		_pos set [2,(_pos select 2) + 0.1];
+		_vehicle setPosATL _pos;
 	}
 	else
 	{

@@ -7,14 +7,4 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionId","_playerObject"];
-_sessionId = _this;
-_playerObject = objNull;
-{
-	if (_x select 0 == _sessionId) exitWith
-	{
-		_playerObject = _x select 1;
-	};
-}
-forEach ExileSessions;
-_playerObject
+missionNamespace getVariable [format["ExileSessionPlayerObject%1", _this], objNull]

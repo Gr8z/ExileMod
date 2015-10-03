@@ -99,7 +99,7 @@ try
 	_vehicleObject removeAllEventHandlers "HandleDamage";
 	_vehicleObject call ExileServer_object_vehicle_database_insert;
 	_vehicleObject call ExileServer_object_vehicle_database_update;
-	ExileServerOwnershipSwapQueue pushBack [_vehicleObject, _playerObject];
+	[_vehicleObject, _playerObject]  call ExileServer_system_swapOwnershipQueue_add;
 	_playerMoney = _playerMoney - _salesPrice;
 	_playerObject setVariable ["ExileMoney", _playerMoney];
 	format["setAccountMoney:%1:%2", _playerMoney, (getPlayerUID _playerObject)] call ExileServer_system_database_query_fireAndForget;

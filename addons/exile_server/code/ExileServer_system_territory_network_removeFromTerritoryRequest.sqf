@@ -50,6 +50,7 @@ try
 	_buildRights = _buildRights - _playerToBeKickedUID;
 	_flagObject setVariable ["ExileTerritoryBuildRights", _buildRights, true];
 	format["updateTerritoryBuildRights:%1:%2", _buildRights, _territoryID] call ExileServer_system_database_query_fireAndForget;
+	format["updateTerritoryModerators:%1:%2", _moderators, _territoryID] call ExileServer_system_database_query_fireAndForget;
 }
 catch 
 {

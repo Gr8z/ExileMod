@@ -43,16 +43,11 @@ try
 	{
 		_revenue = _revenue + ([(typeOf _vehicleObject)] call ExileClient_util_gear_calculateTotalPrice);
 		_vehicleObject call ExileServer_object_vehicle_remove;
-		clearBackpackCargoGlobal _vehicleObject;
-		clearItemCargoGlobal _vehicleObject;
-		clearMagazineCargoGlobal _vehicleObject;
-		clearWeaponCargoGlobal _vehicleObject;
 		deleteVehicle _vehicleObject;
 	}
 	else 
 	{
 		_vehicleObject call ExileServer_object_vehicle_database_update;
-		_vehicleObject setVariable ["ExileMutex",false];
 	};
 	_revenue = _revenue * 0.5; 
 	_playerMoney = _playerObject getVariable ["ExileMoney", 0];
@@ -71,3 +66,8 @@ catch
 	diag_log format ["NOPE: %1", _responseCode];
 	[_sessionID, "wasteDumpResponse", [_responseCode, "", ""]] call ExileServer_system_network_send_to;
 };
+if(!isNull _vehicleObject)then
+{
+	_vehicleObject setVariable ["ExileMutex",false];
+};
+true

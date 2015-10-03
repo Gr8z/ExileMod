@@ -7,7 +7,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_unit","_id","_sessionID","_index"];
+private["_unit","_id","_sessionID"];
 _unit = _this select 0;
 _id = _this select 1;
 _uid = _this select 2;
@@ -15,17 +15,13 @@ _name = _this select 3;
 if !(_uid in ["", "__SERVER__", "__HEADLESS__"]) then
 {
 	format["endAccountSession:%1", _uid] call ExileServer_system_database_query_fireAndForget;
-	if!(_unit getVariable ["ExileIsDead",false])then
+	_sessionID = _unit getVariable ["ExileSessionID", ""];
+	_sessionID call ExileServer_system_session_end;
+	_unit setVariable ["ExileSessionID", nil];
+	if !(_unit getVariable ["ExileIsDead", false]) then
 	{
 		_unit call ExileServer_object_player_database_update;
-		clearBackpackCargoGlobal _unit;
-		clearItemCargoGlobal _unit;
-		clearMagazineCargoGlobal _unit;
-		clearWeaponCargoGlobal _unit;
 		deleteVehicle _unit;
 	};
-	_sessionID = _unit getVariable ["ExileSessionID","Wrong!"];
-	_index = [ExileSessions,_sessionID] call ExileClient_util_find;
-	ExileSessions deleteAt _index;
 };
 false

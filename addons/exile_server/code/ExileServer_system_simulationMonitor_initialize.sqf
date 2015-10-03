@@ -8,5 +8,5 @@
  */
  
 ExileSimulationMonitoredVehicles = [];
-[15, ExileServer_system_simulationMonitor_thread_toggleSimulation, [], true] call ExileServer_system_thread_addTask;
+[20, ExileServer_system_simulationMonitor_thread_toggleSimulation, [], true] call ExileServer_system_thread_addTask;
 true

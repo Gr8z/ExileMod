@@ -7,7 +7,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_minimumLootLifeTime","_maximumLootLifeTime","_visualThreshold","_building","_lootSpawnTime","_despawnLoot","_lootAliveTime","_groundWeaponHolderNetIDs","_groundWeaponHolder"];
+private["_minimumLootLifeTime","_maximumLootLifeTime","_visualThreshold","_building","_lootSpawnTime","_despawnLoot","_lootAliveTime","_lootWeaponHolderNetIDs","_lootWeaponHolder"];
 _minimumLootLifeTime = getNumber (configFile >> "CfgSettings" >> "LootSettings" >>  "minimumLifeTime");
 _maximumLootLifeTime = getNumber (configFile >> "CfgSettings" >> "LootSettings" >>  "maximumLifeTime");
 _visualThreshold = getNumber (configFile >> "CfgSettings" >> "LootSettings" >>  "visualThreshold");
@@ -24,7 +24,7 @@ _visualThreshold = getNumber (configFile >> "CfgSettings" >> "LootSettings" >>  
 	{
 		if (_lootAliveTime > _minimumLootLifeTime) then
 		{
-			if !([getPosATL _building, _visualThreshold] call ExileServer_util_position_isPlayerNearby) then
+			if !([getPosATL _building, _visualThreshold] call ExileClient_util_world_isAlivePlayerInfantryInRange) then
 			{
 				_despawnLoot = true;
 			};
@@ -32,22 +32,18 @@ _visualThreshold = getNumber (configFile >> "CfgSettings" >> "LootSettings" >>  
 	};
 	if (_despawnLoot) then
 	{
-		_groundWeaponHolderNetIDs = _building getVariable ["ExileLootGroundWeaponHolderNetIDs", []];
+		_lootWeaponHolderNetIDs = _building getVariable ["ExileLootWeaponHolderNetIDs", []];
 		{
-			_groundWeaponHolder = objectFromNetId _x;
-			if !(isNull _groundWeaponHolder) then
+			_lootWeaponHolder = objectFromNetId _x;
+			if !(isNull _lootWeaponHolder) then
 			{
-				clearBackpackCargoGlobal _groundWeaponHolder;
-				clearItemCargoGlobal _groundWeaponHolder;
-				clearMagazineCargoGlobal _groundWeaponHolder;
-				clearWeaponCargoGlobal _groundWeaponHolder;
-				deleteVehicle _groundWeaponHolder;
+				deleteVehicle _lootWeaponHolder;
 			};
 		}
-		forEach _groundWeaponHolderNetIDs;
+		forEach _lootWeaponHolderNetIDs;
 		_building setVariable ["ExileLootSpawnedAt", nil];
 		_building setVariable ["ExileHasLoot", false];
-		_building setVariable ["ExileLootGroundWeaponHolderNetIDs", []];
+		_building setVariable ["ExileLootWeaponHolderNetIDs", []];
 		ExileServerBuildingNetIdsWithLoot deleteAt _forEachIndex;
 	};
 }

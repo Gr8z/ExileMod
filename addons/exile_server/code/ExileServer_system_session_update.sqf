@@ -7,6 +7,8 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-ExileServerOwnershipSwapQueue = [];
-[5, ExileServer_system_swapOwnershipQueue_thread_dispatchQueue, [], true] call ExileServer_system_thread_addTask;
-true
+private["_sessionId","_player"];
+_sessionId = _this select 0;
+_player = _this select 1;
+_player setVariable ["ExileSessionID", _sessionId];
+missionNamespace setVariable [format["ExileSessionPlayerObject%1", _sessionId], _player];

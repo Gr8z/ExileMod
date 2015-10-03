@@ -7,41 +7,36 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_flag","_size","_constructionObjects","_owner","_flagID","_postion","_construction","_constructionID"];
+private["_flag","_maxRange","_constructionObjects","_owner","_flagID","_object","_databaseID","_isContainer","_construction"];
 _flag = _this;
-_size = _flag getVariable ["ExileTerritorySize",0];
-_constructionObjects = _flag nearObjects ["Exile_Construction_Abstract_Static", _size];
+_maxRange = getNumber (missionConfigFile >> "CfgTerritories" >> "maximumRadius");
+_constructionObjects = _flag nearObjects _maxRange;
 _owner = _flag getVariable ["ExileOwnerUID",""];
-_flagID = _flag getVariable ["ExileDatabaseID",0];
-_postion = getPosATL _flag;
+_flagID = _flag getVariable ["ExileDatabaseID",-1];
 {
-	_construction = _x;
-	_constructionID = _construction getVariable ["ExileDatabaseID",0];
-	if!(_constructionID isEqualTo 0)then
+	_object = _x;
+	_databaseID = _object getVariable ["ExileDatabaseID",-1];
+	if!(_databaseID isEqualTo -1)then
 	{
-		format ["deleteConstruction:%1", _constructionID] call ExileServer_system_database_query_fireAndForget;
-		clearBackpackCargoGlobal _x;
-		clearItemCargoGlobal _x;
-		clearMagazineCargoGlobal _x;
-		clearWeaponCargoGlobal _x;
-		deleteVehicle _x;
-	}	
-	else
-	{
-		format ["CantFindDbID for object %1",_x] call ExileServer_util_log;
+		_isContainer = if((getnumber (configFile >> "CfgVehicles" >> typeOf _object >> "exileContainer")) isEqualTo 1)then{true}else{false};
+		if(_isContainer)then
+		{
+			format ["deleteContainer:%1", _databaseID] call ExileServer_system_database_query_fireAndForget;
+		}
+		else
+		{
+			format ["deleteConstruction:%1", _databaseID] call ExileServer_system_database_query_fireAndForget;
+		};	
+		deleteVehicle _construction;
 	};
 } 
 forEach _constructionObjects;
 format ["deleteTerritory:%1", _flagID] call ExileServer_system_database_query_fireAndForget;
-clearBackpackCargoGlobal _flag;
-clearItemCargoGlobal _flag;
-clearMagazineCargoGlobal _flag;
-clearWeaponCargoGlobal _flag;
 deleteVehicle _flag;
 format 
 [
 	"Teritory at: %1 with previous owner(UID): %2 was deleted due to protection money not being payed.",
-	_postion,
+	getPosATL _flag,
 	_owner
 ]
 call ExileServer_util_log;

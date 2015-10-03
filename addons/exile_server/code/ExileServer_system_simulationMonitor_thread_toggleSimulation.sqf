@@ -24,7 +24,7 @@ private["_vehicle","_simulationShouldBeEnabled","_position"];
 		}
 		else 
 		{
-			if ([_position, 250] call ExileServer_util_position_isPlayerNearby) then
+			if ([_position, 250] call ExileClient_util_world_isAlivePlayerInRange) then
 			{
 				_simulationShouldBeEnabled = true;
 			};

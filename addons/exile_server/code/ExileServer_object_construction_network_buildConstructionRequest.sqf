@@ -7,7 +7,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_paramaters","_objectClassName","_objectPosition","_playerObject","_maxRange","_no","_flags","_range","_buildRights","_object","_unit","_maxConstructions","_constructionAmount"];
+private["_sessionID","_paramaters","_objectClassName","_objectPosition","_playerObject","_constructionConfig","_canBuildHereResult","_object"];
 _sessionID = _this select 0;
 _paramaters = _this select 1;
 _objectClassName = _paramaters select 0;
@@ -15,69 +15,45 @@ _objectPosition = _paramaters select 1;
 try
 {
 	_playerObject = _sessionID call ExileServer_system_session_getPlayerObject;
-	_maxRange = getArray(missionConfigFile >> "CfgTerritories" >> "prices");
-	_maxRange = (_maxRange select ((count _maxRange) -1)) select 1;
-	_no_need_for_Terriotry = getArray(missionConfigFile >> "CfgTerritories" >> "noNeedForTerritory");
-	if!(_objectClassName in _no_need_for_Terriotry)then
+	if (isNull _playerObject) then
 	{
-		_flags = nearestObjects [_playerObject,["Exile_Construction_Flag_Static"],_maxRange];
-		if!(_flags isEqualTo [])then
+		throw "Player object is null!";
+	};
+	_constructionConfig = ("getText(_x >> 'previewObject') == _objectClassName" configClasses(configFile >> "CfgConstruction")) select 0;
+	_canBuildHereResult = [configName _constructionConfig, _objectPosition, getPlayerUID _playerObject] call ExileClient_util_world_canBuildHere;
+	switch (_canBuildHereResult) do
+	{
+		case 1:
 		{
-			_flags = _flags select 0;
-			_range = _flags getVariable ["ExileTerritorySize",0];
-			if(_range < (_playerObject distance2D _flags))then
-			{
-				throw "Build a territory first!"
-			};
-			_buildRights = _flags getVariable ["ExileTerritoryBuildRights",[]];
-			if!((getPlayerUID _playerObject) in _buildRights)then
-			{
-				throw "No territory access!"
-			};
-		}
-		else
+			throw "You are not in your territory!";
+		};
+		case 2:
 		{
-			throw "Build a territory first!"
+			throw "You are inside enemy territory!";
+		};
+		case 3:
+		{
+			throw "This cannot be placed on roads!";
+		};
+		case 5:
+		{
+			throw "You are too close to a spawn zone!";
+		};
+		case 4:
+		{
+			throw "You are too close to traders!";
 		};
 	};
-	
-	/* START - Check if the maximum allowed constructions has been reached */
-	_flags = nearestObjects [_playerObject,["Exile_Construction_Flag_Static"],_maxRange];
-	_flags = _flags select 0;
-	_range = _flags getVariable ["ExileTerritorySize",0];
-	_maxConstructions = _range * 3;	
-	_constructionAmount = count ( nearestObjects [_playerObject,["Exile_Construction_Abstract_Static"],_maxRange*2] );
-	if(_constructionAmount >= _maxConstructions)then
-	{
-		if(_range < _maxRange)then
-		{
-			throw "Upgrade your flag to continue building!"
-		}
-		else
-		{
-			throw "Maximum construction items reached!"
-		};	
-	};
-	/* END - Check if the maximum allowed constructions has been reached */
-	
 	_object = createVehicle[_objectClassName, _objectPosition, [], 0, "CAN_COLLIDE"];
-	_object setPos _objectPosition;
+	_object setPosATL _objectPosition;
 	_object setVariable ["BIS_enableRandomization", false];
 	_object enableSimulationGlobal false;
-	_object setVariable ["ExileOwnerUID",getPlayerUID _playerObject];
-	if(!isNull _playerObject)then
-	{
-		ExileServerOwnershipSwapQueue pushBack [_object,_playerObject];
-		[_sessionID,"constructionResponse",[netid _object]] call ExileServer_system_network_send_to;
-	}
-	else
-	{
-		deleteVehicle _object;
-		"Construction request aborted player is null!" call ExileServer_util_log;
-	};
+	_object setVariable ["ExileOwnerUID", getPlayerUID _playerObject];
+	[_object, _playerObject] call ExileServer_system_swapOwnershipQueue_add;
+	[_sessionID, "constructionResponse", [netid _object]] call ExileServer_system_network_send_to;
 }
 catch
 {
-	[_sessionID,"notificationRequest",["Whoops",[_exception]]] call ExileServer_system_network_send_to;
+	[_sessionID,"notificationRequest", ["Whoops", [_exception]]] call ExileServer_system_network_send_to;
 };
 true

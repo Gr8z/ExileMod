@@ -20,7 +20,7 @@ _constructionObject setVariable ["ExileDatabaseID", _data select 0];
 _constructionObject setVariable ["ExileOwnerUID", (_data select 2)];
 _constructionObject setVariable ["ExileIsPersistent",true];
 _pinCode = _data select 15;
-if!(_pinCode isEqualTo "000000")then
+if !(_pinCode isEqualTo "000000") then
 {
 	_constructionObject setVariable ["ExileAccessCode",_pinCode];
 	_constructionObject setVariable ["ExileIsLocked",(_data select 14),true];

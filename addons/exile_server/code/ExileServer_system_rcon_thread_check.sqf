@@ -23,12 +23,12 @@ if (typeName _restartMessages isEqualTo "ARRAY") then
 			_time = _x;
 			if (_timeTilRestart < _time) then
 			{
-				if !(ExileSessions isEqualTo []) then
+				if (count ExileSessionIDs > 0) then
 				{
 					["notificationRequest",["RestartWarning",[format["Server restart in %1 min!",_time]]]] call ExileServer_system_network_send_broadcast;
 				};
 				ExileServerRestartMessages deleteAt _forEachIndex;
-				format ["Restart Warrnings for %1min sent",_time] call ExileServer_util_log;
+				format ["Restart Warrings for %1min sent",_time] call ExileServer_util_log;
 			};
 		} 
 		forEach _restartMessages;
@@ -48,7 +48,7 @@ if (_timeTilRestart < _lockTime) then
 		if !(ExileServerRestartMode) then
 		{
 			call ExileServer_system_rcon_event_kickAllrestart;
-			"Evryone kicked for restart" call ExileServer_util_log;
+			"Everyone kicked for restart" call ExileServer_util_log;
 			call ExileServer_system_rcon_event_clearBuffers;
 			"Buffers cleared!" call ExileServer_util_log;
 			for "_i" from 0 to 9 do

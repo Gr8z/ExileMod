@@ -17,8 +17,7 @@ try
 	{
 		throw "Cannot start session for unknown network ID!";
 	};
-	_sessionId = call ExileServer_system_session_createId;
-	ExileSessions pushBack [_sessionId, _player];
+	_sessionId = _player call ExileServer_system_session_begin;
 	[_sessionId, "startSessionResponse", [_sessionId]] call ExileServer_system_network_send_to;
 }
 catch

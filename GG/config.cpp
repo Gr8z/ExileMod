@@ -1,5 +1,4 @@
 /**
-/**
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team
@@ -8,13 +7,6 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-class CfgActions
-{
-class None;
-	class TakeBag: None { show = 0; };
-	class AddBag: None { show = 0; };
-	class TakeItem: None { show = 0; };
-};
 
 class CfgClans
 {
@@ -603,7 +595,6 @@ class CfgExileArsenal
 {
 	class Exile_Uniform_BambiOverall				{ quality = 1; price = 2; };
 
-	
 	///////////////////////////////////////////////////////////////////////////////
 	// Civillian Clothing
 	///////////////////////////////////////////////////////////////////////////////
@@ -1282,9 +1273,8 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// BIKES
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Bike_OldBike 						{ quality = 1; price = 2; };
+	class Exile_Bike_OldBike 						{ quality = 1; price = 40; };
 	class Exile_Bike_MountainBike 					{ quality = 1; price = 50; };
-	class Exile_Bike_Crosser 						{ quality = 1; price = 500; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// QUAD BIKES
@@ -1414,9 +1404,9 @@ class CfgExileArsenal
 	class Exile_Car_Hatchback_Grey						{ quality = 1; price = 1000; };
 	class Exile_Car_Hatchback_Black						{ quality = 1; price = 1000; };
 	class Exile_Car_Hatchback_Dark						{ quality = 1; price = 1000; };
-	class Exile_Car_Hatchback_Rusty1					{ quality = 1; price = 1000; };
-	class Exile_Car_Hatchback_Rusty2					{ quality = 1; price = 1000; };
-	class Exile_Car_Hatchback_Rusty3					{ quality = 1; price = 1000; };
+	class Exile_Car_Hatchback_Rusty1					{ quality = 1; price = 900; };
+	class Exile_Car_Hatchback_Rusty2					{ quality = 1; price = 900; };
+	class Exile_Car_Hatchback_Rusty3					{ quality = 1; price = 900; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Hatchback (Sport)
@@ -1639,11 +1629,23 @@ class CfgTerritories
 		{50000,	150}  // Level 10
 	};
 
-	noNeedForTerritory[] = 
-	{
-		"Exile_Construction_CampFire_Preview",
-		"Exile_Construction_CamoTent_Preview"
-	};
+	// A shortcut of the above maximum radius
+	maximumRadius = 150;
+
+	// The above * 2 plus coverving the 20m you can move while placing things
+	minimumDistanceToOtherTerritories = 325; 
+
+	/**
+	 * Defines the minimum distance to safe zones / trader cities where players
+	 * cannot build territories
+	 */
+	minimumDistanceToTraderZones = 1000;
+
+	/**
+	 * Defines the minimum distance to spawn zones where players
+	 * cannot build territories
+	 */
+	minimumDistanceToSpawnZones = 1000;
 
 	// Defines the period in days where protection money needs to be payed.
 	// Every time you pay the protection money, the "due date" will be
@@ -2081,7 +2083,8 @@ class CfgTraderCategories
 			"ItemMap",
 			"ItemCompass",
 			"ItemRadio",
-			"ItemWatch"
+			"ItemWatch",
+			"Exile_Item_XM8"
 		};
 	};
 

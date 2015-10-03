@@ -7,12 +7,12 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_paramaters","_object","_pincode","_newPinCode","_objectPinCode"];
+private["_sessionID","_parameters","_object","_pincode","_newPinCode","_objectPinCode"];
 _sessionID = _this select 0;
-_paramaters = _this select 1;
-_object = objectFromNetId (_paramaters select 0);
-_pincode = _paramaters select 1;
-_newPinCode = _paramaters select 2;
+_parameters = _this select 1;
+_object = objectFromNetId (_parameters select 0);
+_pincode = _parameters select 1;
+_newPinCode = _parameters select 2;
 _objectPinCode = _object getVariable ["ExileAccessCode","000000"];
 if(_pincode isEqualTo _objectPinCode)then
 {

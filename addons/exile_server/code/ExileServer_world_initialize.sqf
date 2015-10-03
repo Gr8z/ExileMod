@@ -10,6 +10,7 @@
 "Initializing game world..." call ExileServer_util_log;
 ExileServerKillFeed = if((getNumber (configFile >> "CfgSettings" >> "KillFeed" >> "showKillFeed")) isEqualTo 1)then{true}else{false};
 call ExileServer_World_loadAllTerritories;
+call ExileServer_world_deleteUnMaintained;
 call ExileServer_world_loadAllDatabaseConstructions;
 call ExileServer_world_loadAllDatabaseVehicles;
 call ExileServer_world_loadAllDatabaseContainers;

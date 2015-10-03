@@ -17,7 +17,15 @@ clearBackpackCargoGlobal _vehicleObject;
 clearItemCargoGlobal _vehicleObject;
 clearMagazineCargoGlobal _vehicleObject;
 clearWeaponCargoGlobal _vehicleObject;
-_position set[2, (_position select 2) + 0.25]; 
+if (getNumber (configFile >> "CfgSettings" >> "VehicleSpawn" >> "nightVision") isEqualTo 0) then 
+{
+	_vehicleObject disableNVGEquipment true;
+};
+if (getNumber (configFile >> "CfgSettings" >> "VehicleSpawn" >> "thermalVision") isEqualTo 0) then 
+{
+	_vehicleObject disableTIEquipment true;
+};
+_position set[2, (_position select 2) + 0.05]; 
 _vehicleObject setDir _direction;		
 if (_usePositionATL) then
 {
@@ -26,11 +34,6 @@ if (_usePositionATL) then
 else 
 {
 	_vehicleObject setPosASL _position;	
-};
-_vehicleObject addEventHandler ["GetIn", { _this call ExileServer_object_vehicle_event_onGetIn}];
-if (_vehicleObject isKindOf "Helicopter") then
-{
-	_vehicleObject addEventHandler ["RopeAttach", { _this call ExileServer_object_vehicle_event_onRopeAttach}];
 };
 _vehicleObject setVariable ["ExileIsPersistent", false];
 _vehicleObject setFuel (random 1);

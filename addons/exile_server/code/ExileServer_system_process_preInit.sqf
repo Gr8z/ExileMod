@@ -11,7 +11,7 @@ private["_MySql"];
 "Server is loading..." call ExileServer_util_log;
 call ExileServer_system_rcon_initialize;
 finishMissionInit;
-ExileSessions = []; 
+ExileSessionIDs = []; 
 ExileGraveyardGroup = createGroup independent;
 Independent setFriend [sideEnemy, 1];
 _MySql_connection = [] call ExileServer_system_database_connect;
@@ -23,6 +23,10 @@ if !(_MySql_connection) exitWith
 addMissionEventHandler ["HandleDisconnect", { _this call ExileServer_system_network_event_onHandleDisconnect; }];
 onPlayerConnected {[_uid, _name] call ExileServer_system_network_event_onPlayerConnected};
 onPlayerDisconnected {[_uid, _name] call ExileServer_system_network_event_onPlayerDisconnected};
+if!(getRemoteSensorsDisabled)then
+{
+	disableRemoteSensors true;
+};
 PublicServerFPS = 0;
 PublicHiveIsLoaded = false; 
 PublicHiveVersion = getText(configFile >> "CfgMods" >> "Exile" >> "version");

@@ -1,7 +1,13 @@
-/*
-	infiSTAR: Logging kills to A3_EXILE_KILLED.txt AND server rpt file
-*/
-private["_victim","_killer","_addDeathStat","_addKillStat","_killerRespectPoints","_fragAttributes","_lastKillAt","_killStack","_distance","_distanceBonus","_overallRespectChange","_newKillerScore","_killMessage","_newKillerFrags","_newVictimDeaths","_weapon","_txt","_pic"];
+/**
+ * Exile Mod
+ * www.exilemod.com
+ * © 2015 Exile Mod Team
+ *
+ * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
+ * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
+ */
+ 
+private["_victim","_killer","_addDeathStat","_addKillStat","_killerRespectPoints","_fragAttributes","_player","_vehicleRole","_vehicle","_lastKillAt","_killStack","_distance","_distanceBonus","_overallRespectChange","_newKillerScore","_killMessage","_newKillerFrags","_newVictimDeaths"];
 if (!isServer || hasInterface) exitWith {};
 _victim = _this select 0;
 _killer = _this select 1;
@@ -14,36 +20,53 @@ _addDeathStat = true;
 _addKillStat = true;
 _killerRespectPoints = [];
 _fragAttributes = [];
-ExileServer_object_player_event_killFeed_LOGTORPT = {
-	_this call ExileServer_object_player_event_killFeed;
-	diag_log str _this;
-};
 if (_victim isEqualTo _killer) then
 {
-	_log = format["%1 commited suicide!", (name _victim)];
-	'ARMA_LOG' callExtension format['A3_EXILE_KILLED:%1',_log];
-	["systemChatRequest", [_log]] call ExileServer_object_player_event_killFeed_LOGTORPT;
+	["systemChatRequest", [format["%1 commited suicide!", (name _victim)]]] call ExileServer_object_player_event_killFeed;
 }
 else 
 {
 	if (vehicle _victim isEqualTo _killer) then
 	{
-		_log = format["%1 crashed to death!", (name _victim)];
-		'ARMA_LOG' callExtension format['A3_EXILE_KILLED:%1',_log];
-		["systemChatRequest", [_log]] call ExileServer_object_player_event_killFeed_LOGTORPT;
+		["systemChatRequest", [format["%1 crashed to death!", (name _victim)]]] call ExileServer_object_player_event_killfeed;
 	}
 	else 
 	{
 		if (isNull _killer) then
 		{
-			_log = format["%1 died for an unknown reason!", (name _victim)];
-			'ARMA_LOG' callExtension format['A3_EXILE_KILLED:%1',_log];
-			["systemChatRequest", [_log]] call ExileServer_object_player_event_killFeed_LOGTORPT;
+			["systemChatRequest", [format["%1 died for an unknown reason!", (name _victim)]]] call ExileServer_object_player_event_killfeed;
 		}
 		else 
 		{
-			if (isPlayer _killer) then
+			_player = objNull;
+			if (isPlayer _killer) then 
 			{
+				if ((typeOf _killer) isEqualTo "Exile_Unit_Player") then
+				{
+					_player = _killer;	
+				}
+				else 
+				{
+					_uid = getPlayerUID _killer;
+					{
+						if ((getPlayerUID _x) isEqualTo _uid) exitWith 
+						{
+							_player = _x;
+						};
+					}
+					forEach allPlayers;
+				};
+			}
+			else 
+			{
+				if (isUAVConnected _killer) then 
+				{
+					_player = (UAVControl _killer) select 0;
+				};
+			};
+			if !(isNull _player) then
+			{
+				_killer = _player;
 				if (_victim getVariable["ExileIsBambi", false]) then
 				{
 					_addKillStat = false;
@@ -53,9 +76,9 @@ else
 				}
 				else 
 				{
-					if (vehicle _killer isEqualTo _killer) then
+					if ((vehicle _killer) isEqualTo _killer) then 
 					{
-						if (currentWeapon _killer isEqualTo "Exile_Melee_Axe") then
+						if ((currentWeapon _killer) isEqualTo "Exile_Melee_Axe") then
 						{
 							_fragAttributes pushBack "Humiliation";
 							_killerRespectPoints pushBack ["HUMILIATION", (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Frags" >> "humiliation"))];
@@ -64,32 +87,52 @@ else
 						{
 							_killerRespectPoints pushBack ["ENEMY FRAGGED", (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Frags" >> "standard"))];
 						};
-						
-						// Fix for killing players from a Mounted Vehicle Gun
-						if !(_killer isKindOf "Exile_Unit_Player") then
-						{
-							{
-								if ((name _x) isEqualTo (name _killer)) exitWith
-								{
-									_killer = _x;
-								};
-							} forEach (crew _killer);
-
-							_fragAttributes pushBack "Mounted Vehicle Gun";
-							_killerRespectPoints pushBack ["VEHICLE GUNNER", 5];
-						};
 					}
 					else 
 					{
-						if ((driver (vehicle _killer)) isEqualTo _killer) then
+						_vehicleRole = assignedVehicleRole _killer;
+						switch (toLower (_vehicleRole select 0)) do 
 						{
-							_fragAttributes pushBack "Road Kill";
-							_killerRespectPoints pushBack ["ROAD KILL", (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Frags" >> "roadKill"))];
-						}
-						else 
-						{	
-							_fragAttributes pushBack "Passenger";
-							_killerRespectPoints pushBack ["MAD PASSENGER", (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Frags" >> "passenger"))];
+							case "driver":
+							{
+								_vehicle = vehicle _killer;
+								switch (true) do 
+								{
+									case (_vehicle isKindOf "ParachuteBase"):
+									{
+										_fragAttributes pushBack "Chute > Chopper";
+										_killerRespectPoints pushBack ["CHUTE > CHOPPER", (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Frags" >> "chuteGreaterChopper"))];
+									};
+									case (_vehicle isKindOf "Air"):
+									{
+										_fragAttributes pushBack "Big Bird";
+										_killerRespectPoints pushBack ["BIG BIRD", (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Frags" >> "bigBird"))];
+									};
+									default 
+									{
+										_fragAttributes pushBack "Road Kill";
+										_killerRespectPoints pushBack ["ROAD KILL", (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Frags" >> "roadKill"))];
+									};
+								};
+							};
+							case "turret":
+							{
+								if ((currentWeapon _killer) isKindOf "StaticWeapon") then 
+								{
+									_fragAttributes pushBack "Let it Rain";
+									_killerRespectPoints pushBack ["LET IT RAIN", (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Frags" >> "letItRain"))];
+								}
+								else 
+								{
+									_fragAttributes pushBack "Mad Passenger";
+									_killerRespectPoints pushBack ["MAD PASSENGER", (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Frags" >> "passenger"))];
+								};
+							};
+							default
+							{
+								_fragAttributes pushBack "Mad Passenger";
+								_killerRespectPoints pushBack ["MAD PASSENGER", (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Frags" >> "passenger"))];
+							};							
 						};
 					};
 				};
@@ -150,20 +193,9 @@ else
 				
 				if !(count _fragAttributes isEqualTo 0) then
 				{
-					_killMessage = _killMessage + " (";
-					{
-						if (_forEachIndex > 0) then
-						{
-							_killMessage = _killMessage + ", ";
-						};
-						_killMessage = _killMessage + _x;
-					}
-					forEach _fragAttributes;
-					_killMessage = _killMessage + ")";
+					_killMessage = _killMessage + " (" + (_fragAttributes joinString ", ") + ")";
 				};
-				_log = _killMessage;
-				'ARMA_LOG' callExtension format['A3_EXILE_KILLED:%1',_log];
-				["systemChatRequest", [_log]] call ExileServer_object_player_event_killFeed_LOGTORPT;
+				["systemChatRequest", [_killMessage]] call ExileServer_object_player_event_killfeed;
 				if (_addKillStat isEqualTo true) then
 				{
 					_newKillerFrags = _killer getVariable ["ExileKills", 0];
@@ -176,9 +208,7 @@ else
 			}
 			else 
 			{
-				_log = format["%1 was killed by an AI! (%2m Distance)", (name _victim), floor(_victim distance _killer)];
-				'ARMA_LOG' callExtension format['A3_EXILE_KILLED:%1',_log];
-				["systemChatRequest", [_log]] call ExileServer_object_player_event_killFeed_LOGTORPT;
+				["systemChatRequest", [format["%1 was killed by an NPC! (%2m Distance)", (name _victim), floor(_victim distance _killer)]]] call ExileServer_object_player_event_killfeed;
 			};
 		};
 	};
