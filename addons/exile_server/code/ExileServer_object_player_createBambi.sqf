@@ -15,7 +15,7 @@ _bambiPlayer = _this select 3;
 _accountData = _this select 4;
 _spawnAreaPosition = getMarkerPos _spawnLocationMarkerName;
 _spawnAreaPosition set [2, getNumber(configFile >> "CfgSettings" >> "BambiSettings" >> "parachuteDropHeight")]; 
-_spawnAreaRadius = getNumber(configFile >> "CfgSpawnZones" >> "BambiSettings" >> "spawnZoneRadius");
+_spawnAreaRadius = getNumber(configFile >> "CfgSettings" >> "BambiSettings" >> "spawnZoneRadius");
 _direction = random 360;
 _position = [_spawnAreaPosition, _spawnAreaRadius] call ExileClient_util_math_getRandomPositionInCircle;
 _name = name _requestingPlayer;
