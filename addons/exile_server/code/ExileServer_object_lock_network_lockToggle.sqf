@@ -31,7 +31,7 @@ if (_object getVariable ["ExileAccessDenied", false]) then
 };
 if (_accessDenied) then 
 {
-	[_sessionID,"lockResponse",["Access denied!", false, objNull, "", -1]] call ExileServer_system_network_send_to;
+	[_sessionID,"lockResponse",["Access denied!", false, "", "", -1]] call ExileServer_system_network_send_to;
 }
 else 
 {
@@ -53,11 +53,11 @@ else
 					}
 					else
 					{
-						[owner _object,"LockVehicleRequest",[_object,false]] call ExileServer_system_network_send_to;
+						[owner _object,"LockVehicleRequest",[netId _object,false]] call ExileServer_system_network_send_to;
 					};
 					_object setVariable ["ExileIsLocked",0];
 				};
-				[_sessionID,"lockResponse",["Unlocked!", true , _object , _objectPinCode, 0]] call ExileServer_system_network_send_to;
+				[_sessionID,"lockResponse",["Unlocked!", true , netId _object , _objectPinCode, 0]] call ExileServer_system_network_send_to;
 				_object enableRopeAttach true;
 			}
 			else
@@ -74,11 +74,11 @@ else
 					}
 					else
 					{
-						[owner _object,"LockVehicleRequest",[_object,true]] call ExileServer_system_network_send_to;
+						[owner _object,"LockVehicleRequest",[netId _object,true]] call ExileServer_system_network_send_to;
 					};
 					_object setVariable ["ExileIsLocked",-1];
 				};
-				[_sessionID,"lockResponse",["Locked!",true, _object, _objectPinCode, 2]] call ExileServer_system_network_send_to;
+				[_sessionID,"lockResponse",["Locked!",true, netId _object, _objectPinCode, 2]] call ExileServer_system_network_send_to;
 				_object enableRopeAttach false;
 			};
 			_object setVariable ["ExileLastLockToggleAt", time];
@@ -90,7 +90,7 @@ else
 		{
 			if ((getPosATL _object) call ExileClient_util_world_isInTraderZone) then 
 			{
-				[_sessionID,"lockResponse",["Wrong PIN!", false, objNull, "", -1]] call ExileServer_system_network_send_to;
+				[_sessionID,"lockResponse",["Wrong PIN!", false, "", "", -1]] call ExileServer_system_network_send_to;
 			}
 			else 
 			{
@@ -101,15 +101,15 @@ else
 				{
 					case 1:
 					{
-						[_sessionID,"lockResponse",["Wrong PIN! Two tries remaining.", false, objNull, "", -1]] call ExileServer_system_network_send_to;
+						[_sessionID,"lockResponse",["Wrong PIN! Two tries remaining.", false, "", "", -1]] call ExileServer_system_network_send_to;
 					};
 					case 2:
 					{
-						[_sessionID,"lockResponse",["Wrong PIN! One try remaining.", false, objNull, "", -1]] call ExileServer_system_network_send_to;
+						[_sessionID,"lockResponse",["Wrong PIN! One try remaining.", false, "", "", -1]] call ExileServer_system_network_send_to;
 					};
 					default
 					{
-						[_sessionID,"lockResponse",["Wrong PIN! Access denied for five minutes.", false, objNull, "", -1]] call ExileServer_system_network_send_to;
+						[_sessionID,"lockResponse",["Wrong PIN! Access denied for five minutes.", false, "", "", -1]] call ExileServer_system_network_send_to;
 						_object setVariable ["ExileAccessDenied", true];
 						_object setVariable ["ExileAccessDeniedExpiresAt", time + (5 * 60)];
 					};						
