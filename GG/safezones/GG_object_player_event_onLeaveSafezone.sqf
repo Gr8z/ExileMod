@@ -5,17 +5,12 @@
 */
  
 private["_vehicle"];
-
+if !(ExilePlayerInSafezone) exitWith { false };
 ExilePlayerInSafezone = false;
 if !(isNil "ExileClientSafeZoneUpdateThreadHandle") then 
 {
 	[ExileClientSafeZoneUpdateThreadHandle] call ExileClient_system_thread_removeTask;
 	ExileClientSafeZoneUpdateThreadHandle = nil;
-};
-
-if (alive player) then 
-{
-	["SafezoneLeave"] call ExileClient_gui_notification_event_addNotification;
 };
 
 if !(GodMode) then {
@@ -52,8 +47,13 @@ if !(isNil "ExileClientSafeZoneESPEventHandler") then
 	removeMissionEventHandler ["Draw3D", ExileClientSafeZoneESPEventHandler];
 	ExileClientSafeZoneESPEventHandler = nil;
 };
-if (!isNil "Gr8timer") then { terminate Gr8timer; };
 
+if (alive player) then 
+{
+	["SafezoneLeave"] call ExileClient_gui_notification_event_addNotification;
+};
+
+if (!isNil "Gr8timer") then { terminate Gr8timer; };
 Gr8timer = [] spawn {
 	
 	

@@ -7,12 +7,16 @@
 private["_vehicle"];
 
 if (!isNil "Gr8timer") then { terminate Gr8timer; };
-if (!isNil "ExileClientSafeZoneVehicleFiredEventHandler") then { player removeEventHandler ["Fired",ExileClientSafeZoneVehicleFiredEventHandler]; };
+if (!isNil "ExileClientSafeZoneVehicleFiredEventHandler") then { 
+	if !(isNull ExileClientSafeZoneVehicle) then
+	{
+		ExileClientSafeZoneVehicle removeEventHandler ["Fired", ExileClientSafeZoneVehicleFiredEventHandler];	
+		ExileClientSafeZoneVehicle = objNull;
+		ExileClientSafeZoneVehicleFiredEventHandler = nil;
+	}; 
+};
 
-["SafezoneEnter"] call ExileClient_gui_notification_event_addNotification;
-["Whoops",["DO NOT PARK VEHICLES OVER RESTARTS"]] call ExileClient_gui_notification_event_addNotification;
-SystemChat "! WARNING : DO NOT LEAVE YOUR VEHICLES IN SAFEZONES OVER A RESTART. THEY WILL BE UNLOCKED !";
-
+if (ExilePlayerInSafezone) exitWith { false };
 ExilePlayerInSafezone = true;
 
 if (alive player) then
@@ -42,5 +46,9 @@ if !(_vehicle isEqualTo player) then
 	ExileClientSafeZoneVehicleFiredEventHandler = _vehicle addEventHandler ["Fired", {_this call ExileClient_object_player_event_onFiredSafeZoneVehicle}];
 };
 ExileClientSafeZoneESPEventHandler = addMissionEventHandler ["Draw3D", {20 call ExileClient_gui_safezone_safeESP}];
+["SafezoneEnter"] call ExileClient_gui_notification_event_addNotification;
+["Whoops",["DO NOT PARK VEHICLES OVER RESTARTS"]] call ExileClient_gui_notification_event_addNotification;
+SystemChat "! WARNING : DO NOT LEAVE YOUR VEHICLES IN SAFEZONES OVER A RESTART. THEY WILL BE UNLOCKED !";
+ExileClientSafeZoneUpdateThreadHandle = [1, ExileClient_object_player_thread_safeZone, [], true] call ExileClient_system_thread_addtask;
 // By Gr8
 true
