@@ -8,7 +8,7 @@ item3[] = {"Every_30s",4,218,575.000000,175.000000,675.000000,225.000000,0.00000
 item4[] = {"Group_Garbage_Co",2,250,575.000000,250.000000,675.000000,300.000000,0.000000,"Group" \n "Garbage" \n "Collector"};
 item5[] = {"",7,210,621.000000,321.000000,629.000000,329.000000,0.000000,""};
 item6[] = {"Every_1m",4,218,700.000000,175.000000,800.000000,225.000000,1.000000,"Every" \n "1m"};
-item7[] = {"Object_Garbage_C",2,250,825.000000,250.000000,925.000000,300.000000,0.000000,"Object" \n "Garbage" \n "Collector"};
+item7[] = {"Object_Garbage_C",2,4346,825.000000,250.000000,925.000000,300.000000,0.000000,"Object" \n "Garbage" \n "Collector"};
 item8[] = {"",7,210,521.000000,321.000000,529.000000,329.000000,0.000000,""};
 item9[] = {"",7,210,521.000000,46.000000,529.000000,54.000000,0.000000,""};
 item10[] = {"",7,210,746.000000,321.000000,754.000000,329.000000,0.000000,""};
@@ -165,6 +165,8 @@ class FSM
       init = /*%FSM<STATEINIT""">*/"///////////////////////////////////////////////////////////////////////" \n
        "// Corpses and Wrecks" \n
        "///////////////////////////////////////////////////////////////////////" \n
+       "private [""_removeObject"", ""_objectsToRemove"", ""_despawnAfterMinutes"", ""_forceDespawnAfterMinutes"", ""_delayDespawnIfPlayerInRange"", ""_diedAt"", ""_timeBeingDead""];" \n
+       "" \n
        "_objectsToRemove = [];" \n
        "" \n
        "{" \n
@@ -269,10 +271,7 @@ class FSM
        "" \n
        "  deleteVehicle _x;" \n
        "}" \n
-       "forEach _objectsToRemove;" \n
-       "" \n
-       "" \n
-       ""/*%FSM</STATEINIT""">*/;
+       "forEach _objectsToRemove;"/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links
       {
