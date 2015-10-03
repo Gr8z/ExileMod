@@ -1568,19 +1568,6 @@ class CfgExileCustomCode
 	ExileClient_object_player_event_onLeaveSafezone = "GG\safezones\GG_object_player_event_onLeaveSafezone.sqf";
 	ExileClient_gui_inventory_event_onSlotDoubleClick = "GG\overrides\GG_gui_inventory_event_onSlotDoubleClick.sqf";
 	ExileClient_util_world_getNearestLocationName = "GG\overrides\GG_util_world_getNearestLocationName.sqf";
-	ExileClient_gui_xm8_slide_healthScanner_onOpen = "GG\overrides\GG_gui_xm8_slide_healthScanner_onOpen.sqf";
-	ExileClient_object_player_event_onKilled = "GG\overrides\GG_object_player_event_onKilled.sqf";
-	ExileClient_gui_interactionMenu_update = "GG\overrides\GG_gui_interactionMenu_update.sqf";
-	ExileClient_system_thread_removeTask = "GG\overrides\GG_system_thread_removeTask.sqf"
-	ExileClient_gui_hud_renderWeaponPanel = "GG\overrides\GG_gui_hud_renderWeaponPanel.sqf";
-	ExileClient_object_player_death_startBleedingOut = "GG\overrides\GG_object_player_death_startBleedingOut.sqf";
-	ExileClient_object_player_thread_bleedToDeath = "GG\overrides\GG_object_player_thread_bleedToDeath.sqf";
-	ExileClient_construction_thread = "GG\overrides\GG_construction_thread.sqf";
-	ExileClient_object_player_event_onInventoryClosed = "GG\overrides\GG_object_player_event_onInventoryClosed.sqf";
-	ExileClient_object_player_parachuteNoFallDamage = "GG\overrides\GG_object_player_parachuteNoFallDamage.sqf";
-	ExileClient_object_player_event_onHandleDamage = "GG\overrides\GG_object_player_event_onHandleDamage.sqf";
-	ExileClient_object_player_spawn = "GG\overrides\GG_object_player_spawn.sqf";
-	ExileClient_object_player_stats_update = "GG\overrides\GG_object_player_stats_update.sqf";
 };
 class CfgExileMusic
 {

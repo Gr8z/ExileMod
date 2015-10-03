@@ -7,6 +7,11 @@
 private["_vehicle"];
 
 ExilePlayerInSafezone = false;
+if !(isNil "ExileClientSafeZoneUpdateThreadHandle") then 
+{
+	[ExileClientSafeZoneUpdateThreadHandle] call ExileClient_system_thread_removeTask;
+	ExileClientSafeZoneUpdateThreadHandle = nil;
+};
 
 if (alive player) then 
 {
@@ -15,19 +20,25 @@ if (alive player) then
 
 if !(GodMode) then {
 	player allowDamage true;
-	player addEventHandler ["HandleDamage",{_this call ExileClient_object_player_event_onHandleDamage}];
+	player addEventHandler ["HandleDamage", {_this call ExileClient_object_player_event_onHandleDamage}];
 };
 
 if (CanShoot) then {player removeEventHandler ["Fired",ExileSafeZoneFiredEH];};
 
 if !(ProtectVehicles) then {
-	_vehicle = vehicle player;
-	if !(_vehicle isEqualTo player) then
+	if !(isNull ExileClientSafeZoneVehicle) then
 	{
-		if (local _vehicle) then
+		ExileClientSafeZoneVehicle removeEventHandler ["Fired", ExileClientSafeZoneVehicleFiredEventHandler];	
+		ExileClientSafeZoneVehicle = objNull;
+		ExileClientSafeZoneVehicleFiredEventHandler = nil;
+	};
+	_vehicle = vehicle player; 
+	if !(_vehicle isEqualTo player) then 
+	{
+		if (local _vehicle) then 
 		{
 			_vehicle allowDamage true;
-		};		
+		};
 	};
 };
 
@@ -35,8 +46,11 @@ if (LooseRespect) then {
 	player setVariable["Gr8Protection", true, true];
 };
 
-removeMissionEventHandler ["Draw3D",ExileSafeZoneEspEH];
-
+if !(isNil "ExileClientSafeZoneESPEventHandler") then 
+{
+	removeMissionEventHandler ["Draw3D", ExileClientSafeZoneESPEventHandler];
+	ExileClientSafeZoneESPEventHandler = nil;
+};
 if (!isNil "Gr8timer") then { terminate Gr8timer; };
 
 Gr8timer = [] spawn {
@@ -55,16 +69,22 @@ Gr8timer = [] spawn {
 		if !(CanShoot) then {player removeEventHandler ["Fired",ExileSafeZoneFiredEH];};
 		if (GodMode) then {
 			player allowDamage true;
-			player addEventHandler ["HandleDamage",{_this call ExileClient_object_player_event_onHandleDamage}];
+			player addEventHandler ["HandleDamage", {_this call ExileClient_object_player_event_onHandleDamage}];
 		};	
 		if (ProtectVehicles) then {
-			_vehicle = vehicle player;
-			if !(_vehicle isEqualTo player) then
+			if !(isNull ExileClientSafeZoneVehicle) then
 			{
-				if (local _vehicle) then
+				ExileClientSafeZoneVehicle removeEventHandler ["Fired", ExileClientSafeZoneVehicleFiredEventHandler];	
+				ExileClientSafeZoneVehicle = objNull;
+				ExileClientSafeZoneVehicleFiredEventHandler = nil;
+			};
+			_vehicle = vehicle player; 
+			if !(_vehicle isEqualTo player) then 
+			{
+				if (local _vehicle) then 
 				{
 					_vehicle allowDamage true;
-				};		
+				};
 			};
 		};
 		if (alive player) then 
