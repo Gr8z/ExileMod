@@ -23,15 +23,16 @@ if !(GodMode) then {
 	player addEventHandler ["HandleDamage", {_this call ExileClient_object_player_event_onHandleDamage}];
 };
 
-if (CanShoot) then {player removeEventHandler ["Fired",ExileSafeZoneFiredEH];};
-
-if !(ProtectVehicles) then {
+if (CanShoot) then {
 	if !(isNull ExileClientSafeZoneVehicle) then
 	{
 		ExileClientSafeZoneVehicle removeEventHandler ["Fired", ExileClientSafeZoneVehicleFiredEventHandler];	
 		ExileClientSafeZoneVehicle = objNull;
 		ExileClientSafeZoneVehicleFiredEventHandler = nil;
 	};
+};
+
+if !(ProtectVehicles) then {
 	_vehicle = vehicle player; 
 	if !(_vehicle isEqualTo player) then 
 	{
@@ -66,18 +67,19 @@ Gr8timer = [] spawn {
 	};
 	
 	if (!ExilePlayerInSafezone) then {
-		if !(CanShoot) then {player removeEventHandler ["Fired",ExileSafeZoneFiredEH];};
-		if (GodMode) then {
-			player allowDamage true;
-			player addEventHandler ["HandleDamage", {_this call ExileClient_object_player_event_onHandleDamage}];
-		};	
-		if (ProtectVehicles) then {
+		if !(CanShoot) then {
 			if !(isNull ExileClientSafeZoneVehicle) then
 			{
 				ExileClientSafeZoneVehicle removeEventHandler ["Fired", ExileClientSafeZoneVehicleFiredEventHandler];	
 				ExileClientSafeZoneVehicle = objNull;
 				ExileClientSafeZoneVehicleFiredEventHandler = nil;
 			};
+		};
+		if (GodMode) then {
+			player allowDamage true;
+			player addEventHandler ["HandleDamage", {_this call ExileClient_object_player_event_onHandleDamage}];
+		};	
+		if (ProtectVehicles) then {
 			_vehicle = vehicle player; 
 			if !(_vehicle isEqualTo player) then 
 			{

@@ -7,7 +7,7 @@
 private["_vehicle"];
 
 if (!isNil "Gr8timer") then { terminate Gr8timer; };
-if (!isNil "ExileSafeZoneFiredEH") then { player removeEventHandler ["Fired",ExileSafeZoneFiredEH]; };
+if (!isNil "ExileClientSafeZoneVehicleFiredEventHandler") then { player removeEventHandler ["Fired",ExileClientSafeZoneVehicleFiredEventHandler]; };
 
 ["SafezoneEnter"] call ExileClient_gui_notification_event_addNotification;
 ["Whoops",["DO NOT PARK VEHICLES OVER RESTARTS"]] call ExileClient_gui_notification_event_addNotification;
