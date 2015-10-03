@@ -50,6 +50,12 @@ try
 	_playerObject setVariable ["ExileScore", _playerRespect];
 	format["setAccountMoneyAndRespect:%1:%2:%3", _playerMoney, _playerRespect, (getPlayerUID _playerObject)] call ExileServer_system_database_query_fireAndForget;
 	[_sessionID, "sellItemResponse", [0, str _playerMoney, _itemClassName, 1, _containerType, _containerNetID, str _playerRespect]] call ExileServer_system_network_send_to;
+	
+	_traderLog = format ["PLAYER: ( %6 ) %1 SOLD ITEM: %5 FOR %2 POPTABS AND %3 RESPECT | PLAYER TOTAL MONEY: %4",_playerObject,_sellPrice,_respectGain,_playerMoney,_itemClassName,getPlayerUID _playerObject];
+	_traderLog call ExileServer_util_log; // this logs to rpt or marma
+	'ARMA_LOG' callExtension format['A3_EXILE_TRADERLOG:%1',_traderLog]; // this works with infistar and outputs to txt
+	
+	
 	if !(_vehicleObject isEqualTo objNull) then
 	{
 		_vehicleObject call ExileServer_object_vehicle_database_update;

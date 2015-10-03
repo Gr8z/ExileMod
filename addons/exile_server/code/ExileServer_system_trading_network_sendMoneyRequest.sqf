@@ -47,6 +47,10 @@ try
 	_receiverPlayerObject setVariable ["ExileMoney", _receiverAccountBalance];
 	format["setAccountMoney:%1:%2", _receiverAccountBalance, getPlayerUID _receiverPlayerObject] call ExileServer_system_database_query_fireAndForget;
 	[_receiverPlayerObject, "moneyReceivedRequest", [str _receiverAccountBalance, name _senderPlayerObject]] call ExileServer_system_network_send_to;
+	
+	_poptabLog = format ["POPTAB TRANSFER ( %4 ) %1 SENT %2 POPTABS TO ( %5 ) %3",_senderPlayerObject,_amountToTransfer,_receiverPlayerObject,getPlayerUID _senderPlayerObject, getPlayerUID _receiverPlayerObject];
+	_poptabLog call ExileServer_util_log;  // this logs to rpt or marma
+	'ARMA_LOG' callExtension format['A3_EXILE_POPTABXFER:%1',_poptabLog];  // this works with infistar and outputs to txt 
 }
 catch 
 {
