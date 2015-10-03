@@ -2504,7 +2504,7 @@ class CfgSettings
 		/**
 		 * Radius of spawn zones around the center of spawn zone markers.
 		 */
-		spawnZoneRadius = 500;
+		spawnZoneRadius = 175;
 
 		/**
 		 * These vehicles spawn on server restart close to spawn zones.
@@ -2619,13 +2619,13 @@ class CfgSettings
 		* smaller the number more vehicles,
 		* you get the point
 		*/
-		vehiclesGridSize = 2200;
+		vehiclesGridSize = 3200;
 
 		/**
 		* Vehicle ammount per grid
 		* kinda self explanitory
 		*/
-		vehiclesGridAmount = 2;
+		vehiclesGridAmount = 1;
 
 		/**
 		* Creates global markers for vehicle spawn tweeking,
@@ -2703,7 +2703,7 @@ class CfgSettings
 		* Transfers the ownership of construction objects to clients to ease the load on server
 		* EXPERIMENTAL!
 		*/
-		monitor = 0;	// 0 = off, 1 = on
+		monitor = 1;	// 0 = off, 1 = on
 
 		threshold = 20; // Triggers when x ammout on players are on
 	};
