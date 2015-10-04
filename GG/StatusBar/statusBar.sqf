@@ -51,7 +51,7 @@ _rscLayer cutRsc["osefStatusBarAdmin","PLAIN"];
 		_wallet = ExileClientPlayerMoney;
 		_stamina = ExileClientPlayerScore;
 		_serverFPS = round diag_fps;
-		_time = (round(180-(serverTime)/60));
+		_time = (round(120-(serverTime)/60));
 		_hours = (floor(_time/60));
 		_minutes = (_time - (_hours * 60));
 		
