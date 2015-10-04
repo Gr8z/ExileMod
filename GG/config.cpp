@@ -1565,6 +1565,7 @@ class CfgExileCustomCode
 	ExileClient_object_player_event_onEnterSafezone = "GG\safezones\GG_object_player_event_onEnterSafezone.sqf";
 	ExileClient_object_player_event_onLeaveSafezone = "GG\safezones\GG_object_player_event_onLeaveSafezone.sqf";
 	ExileClient_gui_inventory_event_onSlotDoubleClick = "GG\overrides\GG_gui_inventory_event_onSlotDoubleClick.sqf";
+	ExileClient_gui_safezone_safeESP = "GG\overrides\GG_gui_safezone_safeESP.sqf";
 };
 class CfgExileMusic
 {
