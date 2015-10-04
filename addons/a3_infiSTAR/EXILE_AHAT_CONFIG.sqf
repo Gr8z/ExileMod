@@ -67,7 +67,7 @@ _adminUIDandAccess =
 		]
 	],
 	[
-		['76561198084864687','76561198129049369','76561198067566966'],	// Admins
+		['76561198084864687','76561198129049369','76561198067566966','76561198163835069'],	// Admins
 		[
 			'Teleport On Map Click','Teleport - Target To Me','Teleport - Me To Target','Teleport In Facing Direction (10m steps)',
 			'spectating','Delete Vehicle','FlyUp','ShowGear',
