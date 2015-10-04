@@ -25,8 +25,14 @@ WHERE last_connect_at < NOW() - INTERVAL 30 DAY;
 DELETE FROM vehicle_1
 WHERE LastUpdated < NOW() - INTERVAL 7 DAY;
 
-/* DELETE old Containers */
-DELETE FROM container_1
-WHERE last_accessed < NOW() - INTERVAL 14 DAY;
-
 /* =================== UDPATES =================== */
+
+/* Unlock Old Vehicles */
+UPDATE `vehicle_1`
+SET `is_locked` = '0' , `pin_code` = '0000' 
+WHERE `LastUpdated` < now() - INTERVAL 5 DAY;
+
+/* Unlock Old Safes */
+UPDATE `container_1`
+SET `is_locked` = '0' , `pin_code` = '0000' 
+WHERE `last_accessed` < now() - INTERVAL 7 DAY;
