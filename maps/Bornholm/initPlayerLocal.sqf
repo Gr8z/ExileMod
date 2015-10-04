@@ -417,7 +417,7 @@ call ExileClient_object_trader_create;
 // Hardware Trader
 ///////////////////////////////////////////////////////////////////////////
 _chair = "Land_CampingChair_V2_F" createVehicleLocal [0,0,0];
-_chair setDir 66.0026;
+_chair setDir 246.0026;
 _chair setPosATL [18131.6, 8131.12, 0];
 
 [
@@ -446,7 +446,7 @@ call ExileClient_object_trader_create;
 // Armory Trader
 ///////////////////////////////////////////////////////////////////////////
 _chair = "Land_CampingChair_V2_F" createVehicleLocal [0,0,0];
-_chair setDir 19.2441;    
+_chair setDir 199.2441;    
 _chair setPosATL [18158,8099.02,0];
 
 [
@@ -463,7 +463,7 @@ call ExileClient_object_trader_create;
 // Equipment Trader
 ///////////////////////////////////////////////////////////////////////////
 _chair = "Land_CampingChair_V2_F" createVehicleLocal [0,0,0];
-_chair setDir 222.715;    
+_chair setDir 42.715;    
 _chair setPosATL [18153.8,8118.05,0];
 
 [
@@ -545,7 +545,7 @@ call ExileClient_object_trader_create;
     "WhiteHead_17",
     ["AidlPercMstpSnonWnonDnon_G01", "AidlPercMstpSnonWnonDnon_G02", "AidlPercMstpSnonWnonDnon_G03", "AidlPercMstpSnonWnonDnon_G04", "AidlPercMstpSnonWnonDnon_G05", "AidlPercMstpSnonWnonDnon_G06"],
     [18131.8,8146.07,0],
-    88.3346
+    140.825
 ]
 call ExileClient_object_trader_create;
 
