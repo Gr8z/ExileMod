@@ -34,7 +34,7 @@ try
 	};
 	if(_mode)then
 	{
-		if!((_moderatedPlayerAccess select 0) isEqualTo 3)then
+		if!((_requestingPlayerAccess select 0) isEqualTo 3)then
 		{
 			throw "Only owners can promote to moderators!";
 		};

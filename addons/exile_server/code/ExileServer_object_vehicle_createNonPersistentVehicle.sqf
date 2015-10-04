@@ -17,6 +17,10 @@ clearBackpackCargoGlobal _vehicleObject;
 clearItemCargoGlobal _vehicleObject;
 clearMagazineCargoGlobal _vehicleObject;
 clearWeaponCargoGlobal _vehicleObject;
+if (_className isKindOf "I_UGV_01_F") then 
+{
+	createVehicleCrew _vehicleObject;
+};
 if (getNumber (configFile >> "CfgSettings" >> "VehicleSpawn" >> "nightVision") isEqualTo 0) then 
 {
 	_vehicleObject disableNVGEquipment true;

@@ -46,8 +46,8 @@ try
 			throw "Only moderators can kick!";
 		};	
 	};
-	_moderators = _moderators - _playerToBeKickedUID;
-	_buildRights = _buildRights - _playerToBeKickedUID;
+	_moderators = _moderators - [_playerToBeKickedUID];
+	_buildRights = _buildRights - [_playerToBeKickedUID];
 	_flagObject setVariable ["ExileTerritoryBuildRights", _buildRights, true];
 	format["updateTerritoryBuildRights:%1:%2", _buildRights, _territoryID] call ExileServer_system_database_query_fireAndForget;
 	format["updateTerritoryModerators:%1:%2", _moderators, _territoryID] call ExileServer_system_database_query_fireAndForget;
