@@ -99,6 +99,11 @@ if (_canDo) then {
 		_canDo = false;
 		_msg = "Sorry, we could not find a safe location to spawn the vehicle. Please stand clear of any obstacles and call again.";
 	};
+	
+	if (count _safePos isEqualTo 3) then {
+		_canDo = false;
+		_msg = "Sorry, we could not find a safe location to spawn the vehicle. Please stand clear of any obstacles and call again.";
+	};
 
 	if ((str(_safePos) == "[10801.9,10589.6,100]")) then {
 		_canDo = false;
