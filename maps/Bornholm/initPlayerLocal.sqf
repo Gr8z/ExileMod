@@ -477,16 +477,16 @@ _chair setPosATL [18153.8,8118.05,0];
 call ExileClient_object_trader_create;
 
 ///////////////////////////////////////////////////////////////////////////
-// Specops Trader (coming soon)
+// Specops Trader
 ///////////////////////////////////////////////////////////////////////////
-//[
-//    "Exile_Trader_SpecialOperations",
-//    "AfricanHead_02",
-//    ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3"],
-//    [4346.59,18102.9,0],
-//    213.009
-//]
-//call ExileClient_object_trader_create;
+[
+    "Exile_Trader_SpecialOperations",
+    "AfricanHead_02",
+    ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3"],
+    [18166.2,8108.46,0],
+    26.909
+]
+call ExileClient_object_trader_create;
 
 ///////////////////////////////////////////////////////////////////////////
 // Office Trader
@@ -501,41 +501,48 @@ call ExileClient_object_trader_create;
 call ExileClient_object_trader_create;
 
 ///////////////////////////////////////////////////////////////////////////
-// Waste Dump Trader(coming soon)
+// Waste Dump Trader
 ///////////////////////////////////////////////////////////////////////////
-//[
-//    "Exile_Trader_WasteDump",
-//    "GreekHead_A3_01",
-//    ["HubStandingUA_move1", "HubStandingUA_move2", "HubStandingUA_idle1", "HubStandingUA_idle2", "HubStandingUA_idle3"],
-//    [4288.66,18087.2,0],
-//    54.112
-//]
-//call ExileClient_object_trader_create;
+[
+    "Exile_Trader_WasteDump",
+    "GreekHead_A3_01",
+    ["HubStandingUA_move1", "HubStandingUA_move2", "HubStandingUA_idle1", "HubStandingUA_idle2", "HubStandingUA_idle3"],
+    [18117.8,8020.6,0],
+    183.636
+]
+call ExileClient_object_trader_create;
+
 ///////////////////////////////////////////////////////////////////////////
-// Vehicle Trader(coming soon)
+// Vehicle Trader
 ///////////////////////////////////////////////////////////////////////////
-//
-//_trader = 
-//[
-//    "Exile_Trader_Vehicle",
-//    "WhiteHead_11",
-//    ["InBaseMoves_repairVehicleKnl", "InBaseMoves_repairVehiclePne"],
-//    [4301.91,18098.9,1.06763],
-//    169.4858
-//]
-//call ExileClient_object_trader_create;
-//
+_trader = 
+_cashDesk = "Land_CashDesk_F" createVehicleLocal [0,0,0];
+_cashDesk setDir 180;
+_cashDesk setPosATL [18143.6, 8028.94, 3.0104];
+[
+    "Exile_Trader_Vehicle",
+    "WhiteHead_11",
+    ["InBaseMoves_table1"],
+    [0.1, 0.5, 0.2],
+    170,
+    _cashDesk
+]
+call ExileClient_object_trader_create;
 ///////////////////////////////////////////////////////////////////////////
 // Vehicle Customs Trader
 ///////////////////////////////////////////////////////////////////////////
-//[
-//    "Exile_Trader_VehicleCustoms",
-//    "WhiteHead_11",
-//    ["AidlPercMstpSnonWnonDnon_G01", "AidlPercMstpSnonWnonDnon_G02", "AidlPercMstpSnonWnonDnon_G03", "AidlPercMstpSnonWnonDnon_G04", "AidlPercMstpSnonWnonDnon_G05", "AidlPercMstpSnonWnonDnon_G06"],
-//    [4300.87,18099.8,0.98074],
-//    142.7644
-//]
-//call ExileClient_object_trader_create;
+_cashDesk = "Land_CashDesk_F" createVehicleLocal [0,0,0];
+_cashDesk setDir 180;
+_cashDesk setPosATL [18138, 8030, 3.24874];
+[
+    "Exile_Trader_VehicleCustoms",
+    "WhiteHead_11",
+    ["InBaseMoves_table1"],
+    [0.1, 0.5, 0.2],
+    170,
+    _cashDesk
+]
+call ExileClient_object_trader_create;
 
 ///////////////////////////////////////////////////////////////////////////
 // Western Boat Trader
