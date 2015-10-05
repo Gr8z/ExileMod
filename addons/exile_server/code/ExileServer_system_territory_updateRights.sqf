@@ -19,16 +19,16 @@ switch (_newUserLevel) do
 { 
 	case 1 :
 	{
-		if(_moderatedPlayerUID in _moderatorRights)then
+		if (_moderatedPlayerUID in _moderatorRights) then
 		{	
-			_moderatorRights = _moderatorRights deleteAt (_moderatorRights find _moderatedPlayerUID);
+			_moderatorRights deleteAt (_moderatorRights find _moderatedPlayerUID);
 		};
 	}; 
 	case 2 : 
 	{
-		if!(_moderatedPlayerUID in _moderatorRights)then
+		if !(_moderatedPlayerUID in _moderatorRights) then
 		{
-			_moderatorRights = _moderatorRights pushBack _moderatedPlayerUID;
+			_moderatorRights pushBack _moderatedPlayerUID;
 		};
 	}; 
 	default {};

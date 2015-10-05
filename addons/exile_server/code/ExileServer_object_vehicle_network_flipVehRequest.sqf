@@ -28,6 +28,7 @@ try
 		_pos = getPosATL _vehicle;
 		_pos set [2,(_pos select 2) + 0.1];
 		_vehicle setPosATL _pos;
+		_vehicle setVectorUp [0, 0, 1];
 	}
 	else
 	{
