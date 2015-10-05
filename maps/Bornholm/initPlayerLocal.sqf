@@ -558,11 +558,11 @@ call ExileClient_object_trader_create;
 ///////////////////////////////////////////////////////////////////////////
 // Boat Customs
 ///////////////////////////////////////////////////////////////////////////
-[
-    "Exile_Trader_VehicleCustoms",
-    "WhiteHead_11",
-    ["AidlPercMstpSnonWnonDnon_G01", "AidlPercMstpSnonWnonDnon_G02", "AidlPercMstpSnonWnonDnon_G03", "AidlPercMstpSnonWnonDnon_G04", "AidlPercMstpSnonWnonDnon_G05", "AidlPercMstpSnonWnonDnon_G06"],
-    [18128.3,8143.35,0],
-    140.825
-]
-call ExileClient_object_trader_create;
+//[
+//    "Exile_Trader_VehicleCustoms",
+//    "WhiteHead_11",
+//    ["AidlPercMstpSnonWnonDnon_G01", "AidlPercMstpSnonWnonDnon_G02", "AidlPercMstpSnonWnonDnon_G03", "AidlPercMstpSnonWnonDnon_G04", "AidlPercMstpSnonWnonDnon_G05", "AidlPercMstpSnonWnonDnon_G06"],
+//    [18128.3,8143.35,0],
+//    140.825
+//]
+//call ExileClient_object_trader_create;
