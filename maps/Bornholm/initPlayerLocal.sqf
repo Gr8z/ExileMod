@@ -484,7 +484,7 @@ call ExileClient_object_trader_create;
     "AfricanHead_02",
     ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3"],
     [18166.2,8108.46,0],
-    26.909
+    205.909
 ]
 call ExileClient_object_trader_create;
 
@@ -516,8 +516,8 @@ call ExileClient_object_trader_create;
 // Vehicle Trader
 ///////////////////////////////////////////////////////////////////////////
 _cashDesk = "Land_CashDesk_F" createVehicleLocal [0,0,0];
-_cashDesk setDir 180;
-_cashDesk setPosATL [18143.6, 8028.94, 3.0104];
+_cashDesk setDir 0;
+_cashDesk setPosATL [18143.6, 8028.94, 0.2519];
 [
     "Exile_Trader_Vehicle",
     "WhiteHead_11",
@@ -531,8 +531,8 @@ call ExileClient_object_trader_create;
 // Vehicle Customs Trader
 ///////////////////////////////////////////////////////////////////////////
 _cashDesk = "Land_CashDesk_F" createVehicleLocal [0,0,0];
-_cashDesk setDir 180;
-_cashDesk setPosATL [18138, 8030, 3.24874];
+_cashDesk setDir 0;
+_cashDesk setPosATL [18138, 8030, 0.141397];
 [
     "Exile_Trader_VehicleCustoms",
     "WhiteHead_11",
