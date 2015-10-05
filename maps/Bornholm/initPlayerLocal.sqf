@@ -515,7 +515,6 @@ call ExileClient_object_trader_create;
 ///////////////////////////////////////////////////////////////////////////
 // Vehicle Trader
 ///////////////////////////////////////////////////////////////////////////
-_trader = 
 _cashDesk = "Land_CashDesk_F" createVehicleLocal [0,0,0];
 _cashDesk setDir 180;
 _cashDesk setPosATL [18143.6, 8028.94, 3.0104];
