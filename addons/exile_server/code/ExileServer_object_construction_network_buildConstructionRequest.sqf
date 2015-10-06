@@ -45,7 +45,7 @@ try
 		};
 	};
 	
-	/* START - Check if the maximum allowed constructions has been reached */
+/*	 START - Check if the maximum allowed constructions has been reached 
 	_maxRange = 150;
 	_flags = nearestObjects [_playerObject,["Exile_Construction_Flag_Static"],_maxRange*2];
 	_flags = _flags select 0;
@@ -63,7 +63,7 @@ try
 			throw "Maximum construction items reached!"		
 		};	
 	};
-	/* END - Check if the maximum allowed constructions has been reached */	
+	 END - Check if the maximum allowed constructions has been reached */	
 
 	
 	_object = createVehicle[_objectClassName, _objectPosition, [], 0, "CAN_COLLIDE"];
