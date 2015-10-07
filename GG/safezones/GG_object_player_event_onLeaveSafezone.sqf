@@ -25,6 +25,7 @@ if (CanShoot) then {
 		ExileClientSafeZoneVehicle = objNull;
 		ExileClientSafeZoneVehicleFiredEventHandler = nil;
 	};
+	call ExileClient_gui_safezone_reset;
 };
 
 if !(ProtectVehicles) then {
@@ -74,6 +75,7 @@ Gr8timer = [] spawn {
 				ExileClientSafeZoneVehicle = objNull;
 				ExileClientSafeZoneVehicleFiredEventHandler = nil;
 			};
+			call ExileClient_gui_safezone_reset;
 		};
 		if (GodMode) then {
 			player allowDamage true;

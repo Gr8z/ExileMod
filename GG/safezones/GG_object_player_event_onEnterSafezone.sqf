@@ -14,6 +14,7 @@ if (!isNil "ExileClientSafeZoneVehicleFiredEventHandler") then {
 		ExileClientSafeZoneVehicle = objNull;
 		ExileClientSafeZoneVehicleFiredEventHandler = nil;
 	}; 
+	call ExileClient_gui_safezone_reset;
 };
 
 if (ExilePlayerInSafezone) exitWith { false };
