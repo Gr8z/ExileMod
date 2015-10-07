@@ -1279,7 +1279,7 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// QUAD BIKES
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Bike_QuadBike_Black					{ quality = 1; price = 500; };
+//	class Exile_Bike_QuadBike_Black					{ quality = 1; price = 500; };
 	class Exile_Bike_QuadBike_Blue					{ quality = 1; price = 500; };
 	class Exile_Bike_QuadBike_Red					{ quality = 1; price = 500; };
 	class Exile_Bike_QuadBike_White					{ quality = 1; price = 500; };
@@ -2387,7 +2387,7 @@ class CfgTraderCategories
 		items[] = 
 		{
 			"Exile_Car_Kart_Black",
-			"Exile_Bike_QuadBike_Black",
+//			"Exile_Bike_QuadBike_Black",
 			"Exile_Car_Hatchback_Rusty1",
 			"Exile_Car_Hatchback_Rusty2",
 			"Exile_Car_Hatchback_Rusty3",
@@ -2619,7 +2619,7 @@ class CfgVehicleCustoms
 	{
 		skins[] = 
 		{
-			{"Exile_Bike_QuadBike_Black",		100},
+//			{"Exile_Bike_QuadBike_Black",		100},
 			{"Exile_Bike_QuadBike_Blue",		100},
 			{"Exile_Bike_QuadBike_Red",			100},
 			{"Exile_Bike_QuadBike_White",		100},

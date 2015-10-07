@@ -2529,7 +2529,7 @@ class CfgSettings
 		/**
 		 * Chance in % to spawn loot in a building
 		 */
-		spawnChancePerBuilding = 50;
+		spawnChancePerBuilding = 100;
 
 		/**
 		 * Chance in % to spawn loot per loot spot per building.
@@ -2538,12 +2538,12 @@ class CfgSettings
 		 * 50%  = Normal loot spawn rates
 		 * 20%  = You get the point
 		 */
-		spawnChancePerPosition = 50;
+		spawnChancePerPosition = 100;
 
 		/**
 		 * Should be self-explanatory :)
 		 */
-		maximumNumberOfLootSpotsPerBuilding = 4;
+		maximumNumberOfLootSpotsPerBuilding = 5;
 
 		/**
 		 * Exile spawns a random number of items per loot spot. This 
@@ -2561,7 +2561,7 @@ class CfgSettings
 		 * 50m  = Minimum
 		 * 200m = Maximum
 		 */
-		spawnRadius = 80;
+		spawnRadius = 150;
 
 		/**
 		* Define a de-spawn radius here. That is the radius where loot
@@ -2605,7 +2605,7 @@ class CfgSettings
 		 * set this to a lower value than the maximum radius of a territory,
 		 * which is 150m by default.
 		 */
-		minimumDistanceToTerritories = 150;
+		minimumDistanceToTerritories = 0;
 	};
 
 	///////////////////////////////////////////////////////////////////////
