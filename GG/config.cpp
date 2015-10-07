@@ -1273,8 +1273,8 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// BIKES
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Bike_OldBike 						{ quality = 1; price = 40; };
-	class Exile_Bike_MountainBike 					{ quality = 1; price = 50; };
+//	class Exile_Bike_OldBike 						{ quality = 1; price = 40; };
+//	class Exile_Bike_MountainBike 					{ quality = 1; price = 50; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// QUAD BIKES
@@ -1562,8 +1562,6 @@ class CfgExileArsenal
 };
 class CfgExileCustomCode 
 {
-	ExileClient_object_player_event_onEnterSafezone = "GG\safezones\GG_object_player_event_onEnterSafezone.sqf";
-	ExileClient_object_player_event_onLeaveSafezone = "GG\safezones\GG_object_player_event_onLeaveSafezone.sqf";
 	ExileClient_gui_inventory_event_onSlotDoubleClick = "GG\overrides\GG_gui_inventory_event_onSlotDoubleClick.sqf";
 	ExileClient_gui_safezone_safeESP = "GG\overrides\GG_gui_safezone_safeESP.sqf";
 	ExileClient_gui_inventory_combineMagazines = "GG\overrides\GG_gui_inventory_combineMagazines.sqf";
@@ -2377,8 +2375,8 @@ class CfgTraderCategories
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
-			"Exile_Bike_OldBike",
-			"Exile_Bike_MountainBike"
+//			"Exile_Bike_OldBike",
+//			"Exile_Bike_MountainBike"
 		};
 	};
 

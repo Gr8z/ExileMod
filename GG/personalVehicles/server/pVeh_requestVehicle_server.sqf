@@ -118,7 +118,8 @@ if (_canDo) then {
 	if (_moveVeh) then {
 		//Set lastVeh to current
 		_vehObj = _lastVeh;
-
+		//set damage to 0
+		_vehObj setDamage 0;
 		//Move Vehicle
 		_vehObj setPosATL _safePos;
 	} else {
