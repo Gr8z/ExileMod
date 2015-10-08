@@ -7,7 +7,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_parameters","_vehicleClass","_pinCode","_playerObject","_salesPrice","_playerMoney","_position","_vehicleObject","_position2d","_offset","_responseCode"];
+private["_sessionID","_parameters","_vehicleClass","_pinCode","_playerObject","_salesPrice","_playerMoney","_position","_vehicleObject","_position2d","_responseCode"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
 _vehicleClass = _parameters select 0;
@@ -50,6 +50,9 @@ try
 	{
 		_position = [(getPosATL _playerObject), 80, 10] call ExileClient_util_world_findWaterPosition;
 		_vehicleObject = [_vehicleClass, _position, (random 360), true, _pinCode] call ExileServer_object_vehicle_createPersistentVehicle;
+		_vehicleObject allowDamage false;
+		_vehicleObject removeAllEventHandlers "HandleDamage";
+		_vehicleObject addEventHandler["HandleDamage",{false}];
 		_vehicleObject setPosASL _position;
 	}
 	else 
@@ -87,23 +90,23 @@ try
 			throw 13;
 		};
 		_vehicleObject = [_vehicleClass, [0,0,1000], (random 360), true, _pinCode] call ExileServer_object_vehicle_createPersistentVehicle;
-		_position2d set [2,0];
-		_offset = _vehicleObject call ExileClient_util_model_getHeight;
-		_position2d set [2,_offset / 4];
+		_vehicleObject allowDamage false;
+		_vehicleObject removeAllEventHandlers "HandleDamage";
+		_vehicleObject addEventHandler["HandleDamage",{false}];
+		_position2d set [2,0.1];	
 		_vehicleObject setPosATL _position2d;
 	};	
 	_vehicleObject setVariable ["ExileOwnerUID", (getPlayerUID _playerObject)];
 	_vehicleObject setVariable ["ExileIsLocked",0];
 	_vehicleObject lock 0;
-	_vehicleObject allowDamage false;
-	_vehicleObject removeAllEventHandlers "HandleDamage";
 	_vehicleObject call ExileServer_object_vehicle_database_insert;
 	_vehicleObject call ExileServer_object_vehicle_database_update;
-	[_vehicleObject, _playerObject]  call ExileServer_system_swapOwnershipQueue_add;
 	_playerMoney = _playerMoney - _salesPrice;
 	_playerObject setVariable ["ExileMoney", _playerMoney];
 	format["setAccountMoney:%1:%2", _playerMoney, (getPlayerUID _playerObject)] call ExileServer_system_database_query_fireAndForget;
 	[_sessionID, "purchaseVehicleResponse", [0, netId _vehicleObject, str _playerMoney]] call ExileServer_system_network_send_to;
+	_vehicleObject allowDamage true;
+	_vehicleObject removeAllEventHandlers "HandleDamage";
 }
 catch 
 {

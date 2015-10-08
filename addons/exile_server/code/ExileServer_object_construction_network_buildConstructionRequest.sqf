@@ -44,28 +44,6 @@ try
 			throw "You are too close to traders!";
 		};
 	};
-	
-/*	 START - Check if the maximum allowed constructions has been reached 
-	_maxRange = 150;
-	_flags = nearestObjects [_playerObject,["Exile_Construction_Flag_Static"],_maxRange*2];
-	_flags = _flags select 0;
-	_range = _flags getVariable ["ExileTerritorySize",0];
-	_maxConstructions = _range * 3;	
-	_constructionAmount = count ( nearestObjects [_playerObject,["Exile_Construction_Abstract_Static"],_maxRange*2] );
-	if(_constructionAmount >= _maxConstructions)then
-	{
-		if(_range < _maxRange)then
-		{
-			throw "Upgrade your flag to continue building!"
-		}
-		else
-		{
-			throw "Maximum construction items reached!"		
-		};	
-	};
-	 END - Check if the maximum allowed constructions has been reached */	
-
-	
 	_object = createVehicle[_objectClassName, _objectPosition, [], 0, "CAN_COLLIDE"];
 	_object setPosATL _objectPosition;
 	_object setVariable ["BIS_enableRandomization", false];

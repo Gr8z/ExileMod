@@ -7,7 +7,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_lootTableName","_itemClassName","_lootTableConfig","_top","_count","_half","_halfIndex","_lootTableEntries","_chance","_startIndex","_endIndex","_i","_entry"];
+private["_lootTableName","_itemClassName","_lootTableConfig","_top","_count","_half","_halfIndex","_lootTableEntries","_maxPossible","_chance","_startIndex","_endIndex","_i","_entry"];
 _lootTableName = _this;
 _itemClassName = "";
 _lootTableConfig = configFile >> "CfgLootTables" >> _lootTableName;
@@ -16,6 +16,7 @@ _count = getNumber(_lootTableConfig >> "count");
 _half = getNumber(_lootTableConfig >> "half");
 _halfIndex = getNumber(_lootTableConfig >> "halfIndex");
 _lootTableEntries = getArray(_lootTableConfig >> "items");
+_maxPossible = (count _lootTableEntries)-1;	
 _chance = random(_top); 
 if (_chance >= _half) then
 {
@@ -27,6 +28,7 @@ else
 	_startIndex = 0;
 	_endIndex = _halfIndex + 1;
 };
+if(_endIndex > _maxPossible)then{_endIndex = _maxPossible;};
 for "_i" from _startIndex to _endIndex do 
 {
 	_entry = _lootTableEntries select _i;

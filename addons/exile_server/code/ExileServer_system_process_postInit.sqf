@@ -19,7 +19,6 @@ if (!isNil "PublicHiveVersion") then
 	call ExileServer_system_weather_initialize;
 	call ExileServer_world_initialize;
 	call ExileServer_system_localityMonitor_initialize;
-	call ExileServer_system_territory_maintenance_check;
 	PublicHiveIsLoaded = true; 
 	publicVariable "PublicHiveIsLoaded";
 	format ["Server is up and running! Version: %1", PublicHiveVersion] call ExileServer_util_log;
