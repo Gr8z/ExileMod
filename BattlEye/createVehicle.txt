@@ -1,5 +1,5 @@
 //new
-7 "" !="Exile_Unit_GhostPlayer" !="Steerable_Parachute_F" !"CMflare" !"I_UAV" !"LaserTarget" !"SLAM" !"SatchelCharge_Remote_Ammo" !"DemoCharge" !"ClaymoreDirectionalMine" !"IEDUrban" !"G_40mm_" !"F_40mm_" !="Exile_Ammo_Swing" !"F_Signal" !="I_IRStrobe" !="O_IRStrobe" !="NVG_TargetG" !"WeaponHolder" !"Supply" !"B_" !"SmokeShell" !"IEDLand" !"APERS" !="O_HMG_01_weapon_F" !="O_HMG_01_F" !="O_HMG_01_support_F" !"Chemlight" !="GrenadeHand" !="mini_Grenade" !="#smokesource" !="SmokeLauncherAmmo" !"I_UGV_01_F" !"I_HMG_01_A_F" !="I_HMG_01_A_weapon_F" !="I_HMG_01_support_F"
+7 "" !="Exile_Unit_GhostPlayer" !="Steerable_Parachute_F" !"CMflare" !"I_UAV" !"LaserTarget" !"SLAM" !"SatchelCharge_Remote_Ammo" !"DemoCharge" !"ClaymoreDirectionalMine" !"IEDUrban" !"G_40mm_" !"F_40mm_" !="Exile_Ammo_Swing" !"F_Signal" !="I_IRStrobe" !="O_IRStrobe" !="NVG_TargetG" !"WeaponHolder" !"Supply" !"B_" !"SmokeShell" !"IEDLand" !"APERS" !="O_HMG_01_weapon_F" !="O_HMG_01_F" !="O_HMG_01_support_F" !"Chemlight" !="GrenadeHand" !="mini_Grenade" !="SmokeLauncherAmmo"
 1 "IEDLand"
 1 "IEDUrban"
 1 "APERS"
@@ -18,4 +18,3 @@
 1 "SatchelCharge_Remote_Ammo"
 1 "I_UAV"
 1 "O_HMG_01_F"
-1 "Steerable_Parachute_F"

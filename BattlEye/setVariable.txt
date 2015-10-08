@@ -1,5 +1,2 @@
 //new
-7 "" !="exilexm8isonline" !="bis_fnc_selectrespawntemplate_respawned" !="holder_in_use" !="slx_xeh_playable"
-7 "realname"
-7 "ExileScore"
-7 "ExileMoney"
+7 "" !="exilexm8isonline" !="bis_fnc_selectrespawntemplate_respawned"
