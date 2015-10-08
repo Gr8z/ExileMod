@@ -2590,7 +2590,7 @@ class CfgSettings
 		 * 1 = Yes
 		 * 0 = No
 		 */
-		notifyPlayer = 1;
+		notifyPlayer = 0;
 
 		/**
 		 * Defines the radius around trader cities where the system should
