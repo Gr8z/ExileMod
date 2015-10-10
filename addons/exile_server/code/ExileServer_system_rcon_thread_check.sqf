@@ -28,7 +28,7 @@ if (typeName _restartMessages isEqualTo "ARRAY") then
 					["notificationRequest",["RestartWarning",[format["Server restart in %1 min!",_time]]]] call ExileServer_system_network_send_broadcast;
 				};
 				ExileServerRestartMessages deleteAt _forEachIndex;
-				format ["Restart Warrings for %1min sent",_time] call ExileServer_util_log;
+				format ["Restart Warnings for %1min sent",_time] call ExileServer_util_log;
 			};
 		} 
 		forEach _restartMessages;

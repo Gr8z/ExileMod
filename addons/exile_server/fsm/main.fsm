@@ -8,13 +8,13 @@ item3[] = {"Every_30s",4,218,575.000000,175.000000,675.000000,225.000000,0.00000
 item4[] = {"Group_Garbage_Co",2,250,575.000000,250.000000,675.000000,300.000000,0.000000,"Group" \n "Garbage" \n "Collector"};
 item5[] = {"",7,210,621.000000,321.000000,629.000000,329.000000,0.000000,""};
 item6[] = {"Every_1m",4,218,700.000000,175.000000,800.000000,225.000000,1.000000,"Every" \n "1m"};
-item7[] = {"Object_Garbage_C",2,4346,825.000000,250.000000,925.000000,300.000000,0.000000,"Object" \n "Garbage" \n "Collector"};
+item7[] = {"Object_Garbage_C",2,250,700.000000,250.000000,800.000000,300.000000,0.000000,"Object" \n "Garbage" \n "Collector"};
 item8[] = {"",7,210,521.000000,321.000000,529.000000,329.000000,0.000000,""};
 item9[] = {"",7,210,521.000000,46.000000,529.000000,54.000000,0.000000,""};
 item10[] = {"",7,210,746.000000,321.000000,754.000000,329.000000,0.000000,""};
 item11[] = {"Every_5m",4,218,825.000000,175.000000,925.000000,225.000000,1.000000,"Every" \n "5m"};
 item12[] = {"",7,210,871.000000,321.000000,879.000000,329.000000,0.000000,""};
-item13[] = {"Nothing",2,250,700.000000,250.000000,800.000000,300.000000,0.000000,"Nothing"};
+item13[] = {"Supply_Garbage_C",2,250,825.000000,250.000000,925.000000,300.000000,0.000000,"Supply" \n "Garbage" \n "Collector"};
 link0[] = {0,1};
 link1[] = {1,2};
 link2[] = {2,3};
@@ -23,16 +23,16 @@ link4[] = {2,11};
 link5[] = {3,4};
 link6[] = {4,5};
 link7[] = {5,8};
-link8[] = {6,13};
-link9[] = {7,12};
+link8[] = {6,7};
+link9[] = {7,10};
 link10[] = {8,9};
 link11[] = {9,1};
 link12[] = {10,5};
-link13[] = {11,7};
+link13[] = {11,13};
 link14[] = {12,10};
-link15[] = {13,10};
+link15[] = {13,12};
 globals[] = {25.000000,1,0,0,0,640,480,1,451,6316128,1,517.096252,1015.852173,395.846161,-67.757454,979,910,1};
-window[] = {2,-1,-1,-1,-1,760,26,1320,26,3,997};
+window[] = {2,-1,-1,-1,-1,786,52,1346,52,3,997};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -74,7 +74,7 @@ class FSM
         class Every_1m
         {
           priority = 1.000000;
-          to="Nothing";
+          to="Object_Garbage_C";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
           condition=/*%FSM<CONDITION""">*/"(diag_ticktime - _lastTime60) >= 60"/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/"_lastTime60 = diag_ticktime;"/*%FSM</ACTION""">*/;
@@ -84,7 +84,7 @@ class FSM
         class Every_5m
         {
           priority = 1.000000;
-          to="Object_Garbage_C";
+          to="Supply_Garbage_C";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
           condition=/*%FSM<CONDITION""">*/"(diag_ticktime - _lastTime300) >= 300"/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/"_lastTime300 = diag_ticktime;"/*%FSM</ACTION""">*/;
@@ -110,6 +110,8 @@ class FSM
       init = /*%FSM<STATEINIT""">*/"/*" \n
        "  Throw away empty groups" \n
        "*/" \n
+       "" \n
+       "private [""_groupsToDelete"", ""_units""];" \n
        "" \n
        "_groupsToDelete = [];" \n
        "" \n
@@ -288,11 +290,35 @@ class FSM
       };
     };
     /*%FSM</STATE>*/
-    /*%FSM<STATE "Nothing">*/
-    class Nothing
+    /*%FSM<STATE "Supply_Garbage_C">*/
+    class Supply_Garbage_C
     {
-      name = "Nothing";
-      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      name = "Supply_Garbage_C";
+      init = /*%FSM<STATEINIT""">*/"private [""_entity"", ""_entityTypeName""];" \n
+       "" \n
+       "if (isNil ""ExileServerSupplyRemovalLastCheckedNetID"") then " \n
+       "{" \n
+       "	ExileServerSupplyRemovalLastCheckedNetID = 1;" \n
+       "};" \n
+       "" \n
+       "for ""_i"" from ExileServerSupplyRemovalLastCheckedNetID to (ExileServerSupplyRemovalLastCheckedNetID + 100) do " \n
+       "{" \n
+       "	_entity = objectFromNetId (format [""2:%1"", _i]);" \n
+       "" \n
+       "	ExileServerSupplyRemovalLastCheckedNetID = _i;" \n
+       "" \n
+       "	if (isNull _entity) exitWith {};" \n
+       "" \n
+       "	_entityTypeName = typeName _entity;" \n
+       "" \n
+       "	if ((_entityTypeName select [0, 6]) isEqualTo ""Supply"") then " \n
+       "	{" \n
+       "		if ((_entity distance [0, 0, 0]) < 10) then " \n
+       "		{" \n
+       "			deleteVehicle _entity;" \n
+       "		};" \n
+       "	};" \n
+       "};"/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links
       {

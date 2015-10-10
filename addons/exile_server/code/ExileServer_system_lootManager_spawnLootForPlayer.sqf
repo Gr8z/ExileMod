@@ -48,7 +48,7 @@ try
 					_buildingPosition = getPosATL _building;
 					if (_minimumDistanceToTraderZones > 0) then
 					{
-						if ([_buildingPosition, _minimumDistanceToTerritories] call ExileClient_util_world_isTraderZoneInRange) then
+						if ([_buildingPosition, _minimumDistanceToTraderZones] call ExileClient_util_world_isTraderZoneInRange) then
 						{
 							throw false;
 						};

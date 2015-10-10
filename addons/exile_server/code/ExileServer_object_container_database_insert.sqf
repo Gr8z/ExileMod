@@ -37,7 +37,7 @@ _containerObject setVariable ["ExileDatabaseID", _containerID];
 _containerObject setVariable ["ExileIsPersistent", true];
 _containerObject setVariable ["ExileIsContainer", true];
 _containerObject setVariable ["ExileAccessCode","0000"];
-_containerObject addMPEventHandler ["MPKilled",{if!(isServer)exitwith{}; (_this select 0) call ExileServer_object_container_database_delete}];
+_containerObject addMPEventHandler ["MPKilled", { if !(isServer) exitWith {}; (_this select 0) call ExileServer_object_container_event_onMpKilled; }];
 if(getNumber(configFile >> "CfgVehicles" >> typeOf _containerObject >> "exileIsLockable") isEqualTo 1)then
 {
 	_containerObject setVariable ["ExileIsLocked",-1,true];

@@ -32,5 +32,5 @@ if !(_cargoContainers isEqualTo []) then
 };
 _containerObject enableSimulationGlobal false;
 _containerObject call ExileServer_system_simulationMonitor_addVehicle;
-_containerObject addMPEventHandler ["MPKilled",{if!(isServer)exitwith{}; (_this select 0) call ExileServer_object_container_database_delete}];
+_containerObject addMPEventHandler ["MPKilled", { if !(isServer) exitWith {}; (_this select 0) call ExileServer_object_container_event_onMpKilled; }];
 _containerObject

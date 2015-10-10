@@ -7,10 +7,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_vehicleObject"];
-_vehicleObject = _this select 0;
-if !(simulationEnabled _vehicleObject) then 
-{
-	_vehicleObject enableSimulationGlobal true;
-};
-true
+private["_object"];
+_object = _this;
+_object call ExileServer_object_construction_database_delete;
+deleteVehicle _object;

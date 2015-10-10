@@ -29,5 +29,5 @@ _data =
 _extDB2Message = ["insertConstruction", _data] call ExileServer_util_extDB2_createMessage;
 _constructionID = _extDB2Message call ExileServer_system_database_query_insertSingle;
 _constructionObject setVariable ["ExileDatabaseID", _constructionID];
-_constructionObject addMPEventHandler ["MPKilled",{if!(isServer)exitWith{}; (_this select 0) call ExileServer_object_construction_database_delete}];
+_constructionObject addMPEventHandler ["MPKilled", { if !(isServer) exitWith {}; (_this select 0) call ExileServer_object_construction_event_onMpKilled; }];
 _constructionID
