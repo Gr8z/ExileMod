@@ -1,6 +1,6 @@
 //new
 7 "call"
-7 "spwan"
+7 "spawn"
 7 "compile"
 7 "exec"
 7 "config"

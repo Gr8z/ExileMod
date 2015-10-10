@@ -111,7 +111,7 @@ forEach
 	['ExileServer_system_party_network_inviteToPartyRequest', 'exile_server\code\ExileServer_system_party_network_inviteToPartyRequest.sqf'],
 	['ExileServer_system_party_network_kickFromPartyRequest', 'exile_server\code\ExileServer_system_party_network_kickFromPartyRequest.sqf'],
 	['ExileServer_system_playerSaveQueue_initialize', 'exile_server\code\ExileServer_system_playerSaveQueue_initialize.sqf'],
-	['ExileServer_system_playerSaveQueue_thread_savePlayer', 'exile_server\code\ExileServer_system_playerSaveQueue_thread_savePlayer.sqf'],
+	['ExileServer_system_playerSaveQueue_thread_saveplayer', 'exile_server\code\ExileServer_system_playerSaveQueue_thread_saveplayer.sqf'],
 	['ExileServer_system_process_postInit', 'exile_server\code\ExileServer_system_process_postInit.sqf'],
 	['ExileServer_system_process_preInit', 'exile_server\code\ExileServer_system_process_preInit.sqf'],
 	['ExileServer_system_rcon_initialize', 'exile_server\code\ExileServer_system_rcon_initialize.sqf'],
