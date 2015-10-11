@@ -18,10 +18,7 @@
 private ["_unit", "_killer", "_side", "_type", "_launcher", "_launcherVar", "_playerObj", "_removeAll", "_rockets", "_grpUnits", "_av", "_memCount", "_gunner", "_driver", "_gunnerIsAlive", "_driverIsAlive", "_grp", "_owner", "_start", "_roadKilled", "_veh", "_boom", "_revealAmount", "_silencer", "_moneyChange", "_repChange", "_money", "_respect", "_msgType", "_msgParams"];
 
 
-if (DMS_DEBUG) then
-{
-	diag_log format ["DMS_DEBUG OnKilled :: Logging AI death with parameters: %1",_this];
-};
+(format ["OnKilled :: Logging AI death with parameters: %1",_this]) call DMS_fnc_DebugLog;
 	
 _unit 			= _this select 0 select 0;
 _killer 		= _this select 0 select 1;
@@ -38,11 +35,11 @@ _removeAll =
 	{_this unlinkItem _x;} forEach (assignedItems _this);
 	{_this removeItem _x;} forEach (items _this);
 
-	removeAllItemsWithMagazines 	_unit;
-	removeHeadgear 					_unit;
-	removeUniform 					_unit;
-	removeVest 						_unit;
-	removeBackpackGlobal 			_unit;
+	removeAllItemsWithMagazines 	_this;
+	removeHeadgear 					_this;
+	removeUniform 					_this;
+	removeVest 						_this;
+	removeBackpackGlobal 			_this;
 };
 
 moveOut _unit;
@@ -112,10 +109,7 @@ if (!isNull _av) then
 		_av spawn {sleep 1;_this enableSimulationGlobal false;};
 
 
-		if (DMS_DEBUG) then
-		{
-			diag_log format["DMS_DEBUG OnKilled :: Destroying used AI vehicle %1, disabling simulation, and adding to cleanup.",typeOf _av];
-		};
+		(format["OnKilled :: Destroying used AI vehicle %1, disabling simulation, and adding to cleanup.",typeOf _av]) call DMS_fnc_DebugLog;
 	}
 	else
 	{
@@ -188,10 +182,7 @@ if (!isNull _av) then
 					
 					_driver enableCollisionWith _av;
 
-					if (DMS_DEBUG) then
-					{
-						diag_log format["DMS_DEBUG OnKilled :: Switched driver of AI Vehicle (%1) to gunner.",typeOf _av];
-					};
+					(format["OnKilled :: Switched driver of AI Vehicle (%1) to gunner.",typeOf _av]) call DMS_fnc_DebugLog;
 
 					if (_owner!=2) then
 					{
@@ -263,10 +254,7 @@ if (isPlayer _killer) then
 		{
 			_boom = createVehicle ["SLAMDirectionalMine_Wire_Ammo", ASLToAGL(getPosWorld _unit), [], 0, "CAN_COLLIDE"];
 			_boom setDamage 1;
-			if (DMS_DEBUG) then
-			{
-				diag_log format ["DMS_DEBUG OnKilled :: %1 roadkilled an AI! Creating mine at the roadkilled AI's position!",name _killer];
-			};
+			(format ["OnKilled :: %1 roadkilled an AI! Creating mine at the roadkilled AI's position!",name _killer]) call DMS_fnc_DebugLog;
 		};
 
 
@@ -283,15 +271,20 @@ if (isPlayer _killer) then
 	{
 		_revealAmount = 4.0;
 
-		_silencer = _playerObj weaponAccessories currentMuzzle _playerObj select 0;
-		if (!isNil "_silencer" && {_silencer != ""}) then
+		_muzzle = currentMuzzle _playerObj;
+
+		if ((typeName _muzzle)=="STRING") then
 		{
-			_revealAmount = 2.0;
+			_silencer = _playerObj weaponAccessories _muzzle select 0;
+			if (!isNil "_silencer" && {_silencer != ""}) then
+			{
+				_revealAmount = 2.0;
+			};
 		};
 
 
 		{
-			if ((alive _x) && {!(isPlayer _x) && {((getPosWorld _x) distance2D (getPosWorld _unit)) <= DMS_ai_share_info_distance}}) then
+			if ((alive _x) && {!(isPlayer _x) && {(_x distance2D _unit) <= DMS_ai_share_info_distance}}) then
 			{
 				_x reveal [_killer, _revealAmount max (_x knowsAbout _playerObj)];
 			};
@@ -325,12 +318,12 @@ if ((!isNull _playerObj) && {((getPlayerUID _playerObj) != "") && {_playerObj is
 			_money = (_money + _moneyChange) max 0;
 			_playerObj setVariable ["ExileMoney",_money];
 
-			// Change message for players when they're actually LOSING poptabs
 			_msgType = "moneyReceivedRequest";
 			_msgParams = [str _money, format ["killing a %1 AI",_type]];
 
 			if (_moneyChange<0) then
 			{
+				// Change message for players when they're actually LOSING poptabs
 				_msgType = "notificationRequest";
 				_msgParams = ["Whoops",[format ["Lost %1 poptabs from running over a %2 AI!",abs _moneyChange,_type]]];
 
@@ -340,8 +333,21 @@ if ((!isNull _playerObj) && {((getPlayerUID _playerObj) != "") && {_playerObj is
 				ExileClientPlayerMoney = nil;
 			};
 
-			// Send notification and update client's money stats
-			[_playerObj, _msgType, _msgParams] call ExileServer_system_network_send_to;
+			if (DMS_Show_Kill_Poptabs_Notification) then
+			{
+				// Send notification and update client's money stats
+				[_playerObj, _msgType, _msgParams] call ExileServer_system_network_send_to;
+			}
+			else
+			{
+				// Player's money will already be updated for negative values, so let's not create unnecessary network traffic by sending another PVC
+				if (_moneyChange>0) then
+				{
+					ExileClientPlayerMoney = _money;
+					(owner _playerObj) publicVariableClient "ExileClientPlayerMoney";
+					ExileClientPlayerMoney = nil;
+				};
+			};
 		};
 
 		if (_repChange!=0) then
@@ -350,8 +356,11 @@ if ((!isNull _playerObj) && {((getPlayerUID _playerObj) != "") && {_playerObj is
 			_respect = _respect + _repChange;
 			_playerObj setVariable ["ExileScore",_respect];
 
-			// Send frag message
-			[_playerObj, "showFragRequest", [ [[format ["%1 AI KILL",toUpper _type],_repChange]] ] ] call ExileServer_system_network_send_to;
+			if (DMS_Show_Kill_Respect_Notification) then
+			{
+				// Send frag message
+				[_playerObj, "showFragRequest", [ [[format ["%1 AI KILL",toUpper _type],_repChange]] ] ] call ExileServer_system_network_send_to;
+			};
 
 			// Send updated respect value to client
 			ExileClientPlayerScore = _respect;

@@ -84,7 +84,7 @@ if (DMS_SpawnMinesAroundMissions) then
 		for "_i" from 0 to 359 step 90 do
 		{
 			_sign = createVehicle ["Land_Sign_Mines_F",[_centerPos, _radius+2, _randDirOffset+_i] call DMS_fnc_SelectOffsetPos, [], 0, "CAN_COLLIDE"];
-			_sign setDir _i;
+			_sign setDir (180+_i);
 			_sign setVectorUp [0,0,1];
 
 			// _mines array is for only cleanup atm, so just add them to the list
@@ -92,10 +92,7 @@ if (DMS_SpawnMinesAroundMissions) then
 		};
 	};
 
-	if (DMS_DEBUG) then
-	{
-		diag_log format ["DMS_DEBUG SpawnMinefield :: Spawned %1 mines around %2 with _minesInfo: %3 | Warning signs spawned: %5 | _mines: %4",_mineCount,_centerPos,_minesInfo,_mines,_spawnWarningSign];
-	};
+	(format ["SpawnMinefield :: Spawned %1 mines around %2 with _minesInfo: %3 | Warning signs spawned: %5 | _mines: %4",_mineCount,_centerPos,_minesInfo,_mines,_spawnWarningSign]) call DMS_fnc_DebugLog;
 };
 
 

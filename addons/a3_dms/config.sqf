@@ -5,10 +5,19 @@
 	Created by eraser1
 */
 
+
 // Enables debug logging in DMS functions. This will also make missions spawn and timeout more quickly (for testing purposes).
 // Disable this on live servers, unless you know what you're doing.
 DMS_DEBUG = false;
 
+
+
+DMS_Use_Map_Config = true;	// Whether or not to use config overwrites specific to the map.
+/*
+	If you are using a map other than Altis, Bornholm, Esseker, or Tavi (Taviana) you should set this to false OR create a new file within the map_configs folder for the map so that you don't get a missing file error.
+	To share your map-specific config, please create a merge request on GitHub and/or leave a message on the DMS thread in the Exile forums.
+	For any questions regarding map-specific configs, please leave a reply in the DMS thread on the Exile forums.
+*/
 
 
 /* Mission System Settings */
@@ -27,7 +36,7 @@ DMS_DEBUG = false;
 	/*Mission Marker settings*/
 	DMS_MarkerText_ShowMissionPrefix	= true;						// Whether or not to place a prefix before the mission marker text. Enable this if your players get confused by the marker names :P
 	DMS_MarkerText_MissionPrefix		= "Mission:";				// The text displayed before the mission name in the mission marker.
-	DMS_MarkerText_ShowAICount			= false;						// Whether or not to display the number of remaining AI in the marker name.
+	DMS_MarkerText_ShowAICount			= true;						// Whether or not to display the number of remaining AI in the marker name.
 	DMS_MarkerText_AIName				= "Units";					// What the AI will be called in the map marker. For example, the marker text can show: "Car Dealer (3 Units remaining)"
 	DMS_MarkerPosRandomization			= false;					// Randomize the position of the circle marker of a mission
 	DMS_MarkerPosRandomRadius			= [25,100];					// Minimum/Maximum distance that the circle marker position will be randomized | Default: 0 meters to 200 meters
@@ -61,7 +70,7 @@ DMS_DEBUG = false;
 	DMS_TraderZoneNearBlacklist			= 2500;						// Missions won't spawn in a position this many meters close to a trader zone
 	DMS_MissionNearBlacklist			= 2500;						// Missions won't spawn in a position this many meters close to another mission
 	DMS_WaterNearBlacklist				= 500;						// Missions won't spawn in a position this many meters close to water
-	DMS_MaxSurfaceNormal				= 0.95;						// Missions won't spawn if the surface normal of the location is less than this amount. The lower the value, the steeper the location. Greater values means flatter locations
+	DMS_MaxSurfaceNormal				= 0.95;						// Missions won't spawn if the surface normal of the location is less than this amount. The lower the value, the steeper the location. Greater values means flatter locations. Values can range from 0-1, with 0 being sideways, and 1 being perfectly flat. For reference: SurfaceNormal of about 0.7 is when you are forced to walk up a surface.
 	/*Mission spawn location settings*/
 
 	DMS_MinWaterDepth					= 20;						// Minimum depth of water that an underwater mission can spawn at.
@@ -81,20 +90,48 @@ DMS_DEBUG = false;
 	DMS_MineInfo_difficult				= [15,75];					// Mine info for "difficult" missions. This will spawn 15 mines within a 75m radius.
 	DMS_MineInfo_hardcore				= [25,100];					// Mine info for "hardcore" missions. This will spawn 25 mines within a 100m radius.
 	DMS_SpawnMineWarningSigns			= true;						// Whether or not to spawn mine warning signs around a minefield.
-	DMS_BulletProofMines				= false;						// Whether or not you want to make the mines bulletproof. Prevents players from being able to shoot the mines and creating explosions.
+	DMS_BulletProofMines				= true;						// Whether or not you want to make the mines bulletproof. Prevents players from being able to shoot the mines and creating explosions.
 	/*Mine settings*/
 	
 	DMS_MinPlayerCount					= 0; 						// Minimum number of players until mission start
 	DMS_MinServerFPS					= 5; 						// Minimum server FPS for missions to start
 
 	/*Mission notification settings*/
-	DMS_PlayerNotificationTypes =		[							// Notification types. Supported values are: ["dynamicTextRequest", "standardHintRequest", "systemChatRequest"]
-											"dynamicTextRequest",
-											//"standardHintRequest",
-											"systemChatRequest"
+	DMS_PlayerNotificationTypes =		[							// Notification types. Supported values are: ["dynamicTextRequest", "standardHintRequest", "systemChatRequest", "textTilesRequest"]
+											//"dynamicTextRequest",			// You should use either "dynamicTextRequest" or "textTilesRequest", and I think "textTilesRequest" looks better.
+											//"standardHintRequest",		// Hints are a bit wonky...
+											"textTilesRequest",				// Keep in mind you can only have 1 "text tile" message up at a time, so the message will disappear if the player gets a kill or something while the message is shown.
+											"systemChatRequest"				// Always nice to show in chat so that players can scroll up to read the info if they need to.
 										];
-	DMS_dynamicText_Size				= 0.65;						// Dynamic Text size for "dynamicTextRequest" notification type.
-	DMS_dynamicText_Color				= "#FFFFFF";				// Dynamic Text color for "dynamicTextRequest" notification type.
+
+		/*Dynamic Text Notification Settings*/
+	DMS_dynamicText_Duration			= 7;						// Number of seconds that the message will last on the screen.
+	DMS_dynamicText_FadeTime			= 1.5;						// Number of seconds that the message will fade in/out (does not affect duration).
+	DMS_dynamicText_Title_Size			= 1.2;						// Size for Client Dynamic Text mission titles.
+	DMS_dynamicText_Title_Font			= "puristaMedium";			// Font for Client Dynamic Text mission titles.
+	DMS_dynamicText_Message_Color		= "#FFFFFF";				// Dynamic Text color for "dynamicTextRequest" client notification type.
+	DMS_dynamicText_Message_Size		= 0.65;						// Dynamic Text size for "dynamicTextRequest" client notification type.
+	DMS_dynamicText_Message_Font		= "OrbitronMedium";			// Dynamic Text font for "dynamicTextRequest" client notification type.
+		/*Dynamic Text Notification Settings*/
+
+		/*Standard Hint Notification Settings*/
+	DMS_standardHint_Title_Size			= 2.5;						// Size for Client Standard Hint mission titles.
+	DMS_standardHint_Title_Font			= "puristaMedium";			// Font for Client Standard Hint mission titles.
+	DMS_standardHint_Message_Color		= "#FFFFFF";				// Standard Hint color for "standardHintRequest" client notification type.
+	DMS_standardHint_Message_Size		= 1;						// Standard Hint size for "standardHintRequest" client notification type.
+	DMS_standardHint_Message_Font		= "OrbitronMedium";			// Standard Hint font for "standardHintRequest" client notification type.
+		/*Standard Hint Notification Settings*/
+
+		/*Text Tiles Notification Settings*/
+	DMS_textTiles_Duration				= 7;						// Number of seconds that the message will last on the screen.
+	DMS_textTiles_FadeTime				= 1.5;						// Number of seconds that the message will fade in/out (does not affect duration).
+	DMS_textTiles_Title_Size			= 2.3;						// Size for Client Text Tiles mission titles.
+	DMS_textTiles_Title_Font			= "puristaMedium";			// Font for Client Text Tiles mission titles.
+	DMS_textTiles_Message_Color			= "#FFFFFF";				// Text Tiles color for "textTilesRequest" client notification type.
+	DMS_textTiles_Message_Size			= 1.25;						// Text Tiles size for "textTilesRequest" client notification type.
+	DMS_textTiles_Message_Font			= "OrbitronMedium";			// Text Tiles font for "textTilesRequest" client notification type.
+		/*Text Tiles Notification Settings*/
+
 	/*Mission notification settings*/
 
 	DMS_BanditMissionTypes =			[							//	List of missions with spawn chances. If they add up to 100%, they represent the percentage chance each one will spawn
@@ -117,13 +154,16 @@ DMS_DEBUG = false;
 											["mercbase",5]
 										];
 
-	DMS_findSafePosBlacklist =			[							// For BIS_fnc_findSafePos position blacklist info refer to: https://community.bistudio.com/wiki/BIS_fnc_findSafePos
-										//	[[22500,19420],[24870,16725]]		// Salt flats
+	DMS_findSafePosBlacklist =			[							// For BIS_fnc_findSafePos position blacklist info refer to: https://community.bistudio.com/wiki/BIS_fnc_findSafePos 
+											// An example is given in the altis_config.sqf (it blacklists the salt flats).
 										];
 /* Mission System Settings */
 
 
 /* AI Settings */
+
+	DMS_Show_Kill_Poptabs_Notification	= true;						// Whether or not to show the poptabs gained/lost message on the player's screen when killing an AI. (It will still change the player's money, it just won't show the "Money Received" notification)
+	DMS_Show_Kill_Respect_Notification	= true;						// Whether or not to show the "Frag Message" on the player's screen when killing an AI. (It will still change the player's respect, it just won't show the "AI Killed" frag message)
 
 	DMS_Bandit_Soldier_MoneyGain		= 50;						// The amount of Poptabs gained for killing a bandit soldier
 	DMS_Bandit_Soldier_RepGain			= 10;						// The amount of Respect gained for killing a bandit soldier
@@ -169,8 +209,8 @@ DMS_DEBUG = false;
 	DMS_ai_skill_hardcore				= [["aimingAccuracy",1.00],["aimingShake",1.00],["aimingSpeed",1.00],["spotDistance",1.00],["spotTime",1.00],["courage",1.00],["reloadSpeed",1.00],["commanding",1.00],["general",1.00]]; 	// Hardcore
 	DMS_ai_skill_random					= ["hardcore","difficult","difficult","difficult","moderate","moderate","moderate","moderate","easy","easy"];	// Skill frequencies for "random" AI skills | Default: 10% hardcore, 30% difficult, 40% moderate, and 20% easy
 	DMS_AI_WP_Radius_easy				= 20;						// Waypoint radius for "easy" AI
-	DMS_AI_WP_Radius_moderate			= 40;						// Waypoint radius for "moderate" AI
-	DMS_AI_WP_Radius_difficult			= 55;						// Waypoint radius for "difficult" AI
+	DMS_AI_WP_Radius_moderate			= 30;						// Waypoint radius for "moderate" AI
+	DMS_AI_WP_Radius_difficult			= 50;						// Waypoint radius for "difficult" AI
 	DMS_AI_WP_Radius_hardcore			= 75;						// Waypoint radius for "hardcore" AI
 	DMS_AI_WP_Radius_base				= 5;						// Waypoint radius for AI in bases
 
