@@ -1,13 +1,12 @@
 /*
 	KILL MESSAGES
 	BY GR8
-	v1.1
 */
 
 
 /* CONFIG */
 ShowDynamicText = true; // Show Kills Top Left of the Screen with all the custom colors and styles.
-halvStyle = true; // If This ShowDynamicText is True., It will use the awesome style made by halv, If halvStyle is false then you will see a style made by me. 
+halvStyle = false; // If This ShowDynamicText is True., It will use the awesome style made by halv, If halvStyle is false then you will see a style made by me. 
 
 ShowHintText = false; // show Kill Message on the Top Mid Of the Screen
 
@@ -31,14 +30,14 @@ if (!isDedicated) then {
 				_distance 	= _id select 3;
 				_weapon 	= _id select 4;
 				_dyntxt = format["
-				<t size='0.75'align='left'shadow='1'color='%6'>%1</t>
-				<t size='0.5'align='left'shadow='1'>  Killed  </t>
-				<t size='0.75'align='left'shadow='1'color='%7'>%2</t><br/>
-				<t size='0.45'align='left'shadow='1'> With: </t>
-				<t size='0.5'align='left'shadow='1'color='%8'>%3</t>
-				<t size='0.45'align='left'shadow='1'> - Distance: </t>
-				<t size='0.5'align='left'shadow='1'color='%9'>%4m</t><br/>
-				<img size='2.5'align='left'shadow='1'image='%5'/>
+				<t size='0.15'align='left'shadow='1'color='%6'>%1</t>
+				<t size='0.15'align='left'shadow='1'>  Killed  </t>
+				<t size='0.15'align='left'shadow='1'color='%7'>%2</t><br/>
+				<t size='0.15'align='left'shadow='1'> With: </t>
+				<t size='0.15'align='left'shadow='1'color='%8'>%3</t>
+				<t size='0.15'align='left'shadow='1'> - Distance: </t>
+				<t size='0.15'align='left'shadow='1'color='%9'>%4m</t><br/>
+				<img size='0.5' align='left'shadow='1'image='%5'/>
 				",
 				_killerName,
 				_victimName,
@@ -82,10 +81,10 @@ if (!isDedicated) then {
 				_distance 	= _id select 3;
 				_weapon 	= _id select 4;
 				_dyntxt = format["
-				<t align='left'size='0.9'color='%5'>%1 </t>
-				<img size='1.0'align='left' image='%2'/>
-				<t align='left'size='0.9'color='%6'> %3 </t>
-				<t align='left'size='0.9'color='%7'>[%4m]</t>
+				<t align='left'size='0.6'color='%5'>%1 </t>
+				<img size='0.8'align='left' image='%2'/>
+				<t align='left'size='0.6'color='%6'> %3 </t>
+				<t align='left'size='0.6'color='%7'>[%4m]</t>
 				",
 				_killerName,
 				_pic,
