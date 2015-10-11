@@ -30,6 +30,10 @@ WHERE last_connect_at < NOW() - INTERVAL 30 DAY;
 DELETE FROM vehicle_2
 WHERE LastUpdated < NOW() - INTERVAL 7 DAY;
 
+/* DELETE old Bases */
+DELETE FROM construction_2
+WHERE LastUpdated < NOW() - INTERVAL 10 DAY;
+
 /* =================== UDPATES =================== */
 
 /* Unlock Old Vehicles */
