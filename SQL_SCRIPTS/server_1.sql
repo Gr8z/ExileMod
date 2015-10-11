@@ -4,6 +4,11 @@
 DELETE from player_1
 WHERE is_alive = 0;
 
+/* DELETE Inactive Players */
+DELETE FROM player_1
+WHERE account_uid IN (SELECT uid FROM account WHERE last_connect_at < NOW() - INTERVAL 7 DAY 
+AND total_connections < 10);
+
 /* DELETE Bugged Players */
 DELETE FROM player_1 
 WHERE is_alive = 1 
