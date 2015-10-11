@@ -41,3 +41,9 @@ WHERE `LastUpdated` < now() - INTERVAL 5 DAY;
 UPDATE `container_2`
 SET `is_locked` = '0' , `pin_code` = '0000' 
 WHERE `last_accessed` < now() - INTERVAL 7 DAY;
+
+/* fix players unable to log in */
+UPDATE player
+set damage = 0, hitpoint_head = 0, hitpoint_body = 0, hitpoint_hands = 0, hitpoint_legs = 0 
+where is_alive = 1 
+and damage = 1;
