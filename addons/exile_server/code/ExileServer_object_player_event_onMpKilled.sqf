@@ -219,8 +219,8 @@ else
 				_pic = (getText (configFile >> 'cfgVehicles' >> _weapon >> 'picture'));
 				_txt = (getText (configFile >> 'cfgVehicles' >> _weapon >> 'displayName'));
 			};		
-				["systemChatRequest", [format["%1 was killed by an NPC! (%2m Distance)", (name _victim), floor(_victim distance _killer)]]] call ExileServer_object_player_event_killfeed;
-				// KILL MESSAGES BY GR8
+			["systemChatRequest", [format["%1 was killed by an NPC! (%2m Distance)", (name _victim), floor(_victim distance _killer)]]] call ExileServer_object_player_event_killfeed;
+			// KILL MESSAGES BY GR8
 			Gr8s_kill_msg = ["NPC", _pic, (name _victim), floor(_victim distance _killer), _txt, nil, nil];
 			publicVariable "Gr8s_kill_msg";		
 			};
