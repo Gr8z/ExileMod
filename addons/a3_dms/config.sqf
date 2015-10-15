@@ -50,7 +50,7 @@ DMS_Use_Map_Config = true;	// Whether or not to use config overwrites specific t
 	/*Mission Marker settings*/
 
 	/*Mission Cleanup/Timeout settings*/
-	DMS_CompletedMissionCleanup			= false;						// Cleanup mission-spawned buildings and AI bodies after some time
+	DMS_CompletedMissionCleanup			= false;					// Cleanup mission-spawned buildings and AI bodies after some time
 	DMS_CompletedMissionCleanupTime		= 7200;						// Minimum time until mission-spawned buildings and AI are cleaned up
 	DMS_CleanUp_PlayerNearLimit			= 5000;						// Cleanup of an object is aborted if a player is this many meters close to the object
 	DMS_AIVehCleanUpTime				= 3600;						// Time until a destroyed AI vehicle is cleaned up.
