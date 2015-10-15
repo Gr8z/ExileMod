@@ -50,12 +50,12 @@ DMS_Use_Map_Config = true;	// Whether or not to use config overwrites specific t
 	/*Mission Marker settings*/
 
 	/*Mission Cleanup/Timeout settings*/
-	DMS_CompletedMissionCleanup			= true;						// Cleanup mission-spawned buildings and AI bodies after some time
-	DMS_CompletedMissionCleanupTime		= 3600;						// Minimum time until mission-spawned buildings and AI are cleaned up
-	DMS_CleanUp_PlayerNearLimit			= 20;						// Cleanup of an object is aborted if a player is this many meters close to the object
-	DMS_AIVehCleanUpTime				= 900;						// Time until a destroyed AI vehicle is cleaned up.
+	DMS_CompletedMissionCleanup			= false;						// Cleanup mission-spawned buildings and AI bodies after some time
+	DMS_CompletedMissionCleanupTime		= 7200;						// Minimum time until mission-spawned buildings and AI are cleaned up
+	DMS_CleanUp_PlayerNearLimit			= 5000;						// Cleanup of an object is aborted if a player is this many meters close to the object
+	DMS_AIVehCleanUpTime				= 3600;						// Time until a destroyed AI vehicle is cleaned up.
 	DMS_MissionTimeoutReset				= true;						// Enable mission timeout timer reset if a player is close
-	DMS_MissionTimeoutResetRange		= 1000;						// If a player is this close to a mission then it won't time-out
+	DMS_MissionTimeoutResetRange		= 2000;						// If a player is this close to a mission then it won't time-out
 	/*Mission Cleanup/Timeout settings*/
 
 	/*Mission spawn location settings*/
@@ -184,7 +184,7 @@ DMS_Use_Map_Config = true;	// Whether or not to use config overwrites specific t
 	DMS_clear_AI_body					= false;					// Clear AI body as soon as they die
 	DMS_clear_AI_body_chance			= 50;						// Percentage chance that AI bodies will be cleared when they die
 	DMS_ai_disable_ramming_damage 		= false;						// Disables damage due to ramming into AI. !!!NOTE: THIS WILL NOT BE RELIABLE WITH "DMS_ai_offload_to_client"!!!
-	DMS_remove_roadkill					= true; 					// Remove gear from AI bodies that are roadkilled
+	DMS_remove_roadkill					= false; 					// Remove gear from AI bodies that are roadkilled
 	DMS_remove_roadkill_chance			= 50;						// Percentage chance that roadkilled AI bodies will be deleted
 	DMS_explode_onRoadkill				= false;						// Whether or not to spawn an explosion when an AI gets run over. It will likely take out the 2 front wheels. Should help mitigate the ineffective AI vs. striders issue ;)
 	DMS_RemoveNVG						= false;					// Remove NVGs from AI bodies
