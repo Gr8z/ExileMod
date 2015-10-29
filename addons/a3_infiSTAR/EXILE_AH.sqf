@@ -1872,10 +1872,10 @@ _AH_MAIN_BLOCK = {
 						(_display49 displayCtrl 122) ctrlShow false;
 					};
 					"; if(!_BRIEFING_MSG)then{ _A3AHstring = _A3AHstring + "
-						(_display49 displayCtrl 120) ctrlSetText 'infiSTAR.de AntiHack & AdminsTools - [Author: infiSTAR, Contact: infiSTAR23@gmail.com]';
+						(_display49 displayCtrl 120) ctrlSetText 'Hello There ! Visit Our Website @ www.GHOSTZGAMERZ.com ';
 					"; }else{ _A3AHstring = _A3AHstring + "
-						(_display49 displayCtrl 115025) ctrlSetText 'AntiHack & AdminsTools';
-						(_display49 displayCtrl 115035) ctrlSetText 'by infiSTAR.de';
+						(_display49 displayCtrl 115025) ctrlSetText 'Exilemod Servers';
+						(_display49 displayCtrl 115035) ctrlSetText 'by [GG] Ghostz Gamerz';
 					"; }; _A3AHstring = _A3AHstring + "
 				};
 			"; }; _A3AHstring = _A3AHstring + "
