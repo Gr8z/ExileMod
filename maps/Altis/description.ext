@@ -104,12 +104,14 @@ class cfgFunctions
 			class showWatermark { postInit = 1; };
 		};
 	};
+	#include "GG\VEMFr_client\CfgFunctions.hpp"
 };
 
 class RscTitles
 {
 	#include "GG\SL\main.hpp"
 	#include "GG\StatusBar\statusBar.hpp"
+	#include "GG\VEMFr_client\gui\hpp_mainVEMFrClient.hpp"
 };
 
 #include "GG\config.cpp"
