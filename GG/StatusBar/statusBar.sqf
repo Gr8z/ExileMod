@@ -41,7 +41,7 @@ StatusEnabled = true;
 			_dir = round (getDir (vehicle player));
 			_grid = mapGridPosition  player; _xx = (format[_grid]) select  [0,3];
 			_yy = (format[_grid]) select  [3,3];
-			_time = (round(240-(serverTime)/60));  //edit the '240' value (60*4=240) to change the countdown timer if your server restarts are shorter or longer than 4 hour intervals
+			_time = (round(120-(serverTime)/60));
 			_hours = (floor(_time/60));
 			_minutes = (_time - (_hours * 60));
 
@@ -129,10 +129,8 @@ StatusEnabled = true;
 			format
 			["
 				<t shadow='1' shadowColor='#000000' color='%9'><img size='1.6'  shadowColor='#000000' image='GG\StatusBar\icons\players.paa' color='%9'/> %2</t>
-				<t shadow='1' shadowColor='#000000' color='%14'><img size='1.0'  shadowColor='#000000' image='G\StatusBar\icons\health.paa' color='%9'/> %3%1</t>
+				<t shadow='1' shadowColor='#000000' color='%14'><img size='1.0'  shadowColor='#000000' image='GG\StatusBar\icons\health.paa' color='%9'/> %3%1</t>
 				<t shadow='1' shadowColor='#000000' color='%9'><img size='1.0'  shadowColor='#000000' image='GG\StatusBar\icons\poptab_ca.paa' color='%9'/> %4</t>
-				<t shadow='1' shadowColor='#000000' color='%15'><img size='1.6'  shadowColor='#000000' image='GG\StatusBar\icons\hunger.paa' color='%9'/> %5%1</t>
-				<t shadow='1' shadowColor='#000000' color='%16'><img size='1.6'  shadowColor='#000000' image='GG\StatusBar\icons\thirst.paa' color='%9'/> %6%1</t>
 				<t shadow='1' shadowColor='#000000' color='%9'><img size='1.0'  shadowColor='#000000' image='GG\StatusBar\icons\exile.paa' color='%9'/> %8</t>
 				<t shadow='1' shadowColor='#000000' color='%9'>FPS: %7</t>
 				<t shadow='1' shadowColor='#000000' color='%9'><img size='1.0'  shadowColor='#000000' image='GG\StatusBar\icons\compass.paa' color='%9'/> %11</t>
