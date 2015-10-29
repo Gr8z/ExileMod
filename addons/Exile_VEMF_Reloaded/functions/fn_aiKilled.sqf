@@ -63,7 +63,7 @@ if not isNull _target then
 			if (_respectReward > 1) then
 			{
 				_message = [[]];
-				_killMsg = ["AI WACKED","AI CLIPPED","AI DISABLED","AI DISQUALIFIED","AI WIPED","AI WIPED","AI ERASED","AI LYNCHED","AI WRECKED","AI NEUTRALIZED","AI SNUFFED","AI WASTED","AI ZAPPED"] call VEMFr_fnc_random;
+				_killMsg = ["AI KILLED","AI ELIMINATED","AI DISABLED"] call VEMFr_fnc_random;
 				(_message select 0) pushBack [_killMsg,_respectReward];
 				_dist = _target distance _killer;
 				switch true do
@@ -162,12 +162,12 @@ if not isNull _target then
 					_curWeapon = currentWeapon _killer;
 					if (_sayKilled isEqualTo 1) then
 					{
-						_kMsg = format["[VEMF] %1 *poofed* an AI from %2m with %3", name _killer, round _dist, getText(configFile >> "CfgWeapons" >> _curWeapon >> "DisplayName")];
+						_kMsg = format["%1 killed an AI from %2m with %3", name _killer, round _dist, getText(configFile >> "CfgWeapons" >> _curWeapon >> "DisplayName")];
 						[_kMsg, "sys"] spawn VEMFr_fnc_broadCast;
 					};
 					if (_sayKilled isEqualTo 2) then
 					{
-						VEMFrClientMsg = [format["[VEMF] You killed an AI from %1m with %2", round _dist, getText(configFile >> "CfgWeapons" >> _curWeapon >> "DisplayName")], "sys"];
+						VEMFrClientMsg = [format["You killed an AI from %1m with %2", round _dist, getText(configFile >> "CfgWeapons" >> _curWeapon >> "DisplayName")], "sys"];
 						(owner _killer) publicVariableClient "VEMFrClientMsg";
 						VEMFrClientMsg = nil;
 					};
@@ -184,7 +184,7 @@ if not isNull _target then
 				{
 					if (isPlayer _killer) then // Should prevent Error:NoUnit
 					{
-						_kMsg = format["[VEMF] %1 road-killed an AI", name _killer];
+						_kMsg = format["%1 road-killed an AI", name _killer];
 						[_kMsg, "sys"] spawn VEMFr_fnc_broadCast;
 					};
 				};
