@@ -73,6 +73,12 @@ _begintime = time;
 										_lootholder addWeaponCargoGlobal [_loot, 1];
 										_lootholder setdir (random 360);
 										_lootholder setPosATL _spwnPos;
+										//Function to add the right magazine for a weapon.
+										_ammo = [] + getArray (configFile >> "cfgWeapons" >> _loot >> "magazines");
+										_lootholder addMagazineCargoGlobal [(_ammo select 0),(round(random 3))]; //max 3 magazines per weapon
+										//end custom funtion
+										_lootholder setdir (random 360);
+										_lootholder setPosATL _spwnPos;
 									};
 									//special for magazines: spawn 1-6
 									if(_lootType == 2) exitWith {
