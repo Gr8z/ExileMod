@@ -23,7 +23,7 @@ class RscExileStatusBar
 						colorBackground[]={0,0,0,0};
 						sizeEx = 0.4;
 						font = "OrbitronLight";
-                        text = "GG\StatusBar\StatusBarBackground_ca.paa";
+                        text = "GG\images\StatusBarBackground.paa";
                 };
         };
  

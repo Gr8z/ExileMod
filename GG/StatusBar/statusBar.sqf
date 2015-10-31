@@ -128,13 +128,13 @@ StatusEnabled = true;
 			parseText
 			format
 			["
-				<t shadow='1' shadowColor='#000000' color='%9'><img size='1.6'  shadowColor='#000000' image='GG\StatusBar\icons\players.paa' color='%9'/> %2</t>
-				<t shadow='1' shadowColor='#000000' color='%14'><img size='1.0'  shadowColor='#000000' image='GG\StatusBar\icons\health.paa' color='%9'/> %3%1</t>
-				<t shadow='1' shadowColor='#000000' color='%9'><img size='1.0'  shadowColor='#000000' image='GG\StatusBar\icons\poptab_ca.paa' color='%9'/> %4</t>
-				<t shadow='1' shadowColor='#000000' color='%9'><img size='1.0'  shadowColor='#000000' image='GG\StatusBar\icons\exile.paa' color='%9'/> %8</t>
+				<t shadow='1' shadowColor='#000000' color='%9'><img size='1.6'  shadowColor='#000000' image='GG\images\icons\players.paa' color='%9'/> %2</t>
+				<t shadow='1' shadowColor='#000000' color='%14'><img size='1.0'  shadowColor='#000000' image='GG\images\icons\health.paa' color='%9'/> %3%1</t>
+				<t shadow='1' shadowColor='#000000' color='%9'><img size='1.0'  shadowColor='#000000' image='GG\images\icons\poptab_ca.paa' color='%9'/> %4</t>
+				<t shadow='1' shadowColor='#000000' color='%9'><img size='1.0'  shadowColor='#000000' image='GG\images\icons\exile.paa' color='%9'/> %8</t>
 				<t shadow='1' shadowColor='#000000' color='%9'>FPS: %7</t>
-				<t shadow='1' shadowColor='#000000' color='%9'><img size='1.0'  shadowColor='#000000' image='GG\StatusBar\icons\compass.paa' color='%9'/> %11</t>
-				<t shadow='1' shadowColor='#000000' color='%9'><img size='1.6'  shadowColor='#000000' image='GG\StatusBar\icons\restart.paa' color='%9'/>%12:%13</t>",
+				<t shadow='1' shadowColor='#000000' color='%9'><img size='1.0'  shadowColor='#000000' image='GG\images\icons\compass.paa' color='%9'/> %11</t>
+				<t shadow='1' shadowColor='#000000' color='%9'><img size='1.6'  shadowColor='#000000' image='GG\images\icons\restart.paa' color='%9'/>%12:%13</t>",
 
 						"%",
 						count playableUnits,

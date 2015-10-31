@@ -2850,72 +2850,67 @@ class CfgFlags
 	class YTUBE
 	{
 		name = "YouTube";
-		texture = "Flags\flag_ytube.paa";
+		texture = "GG\images\flags\flag_ytube.paa";
 		uid = "";
-
-
-
 	};
 	class TWITCH
 	{
 		name = "Twitch";
-
-
-		texture = "Flags\flag_twitch.paa";
+		texture = "GG\images\flags\flag_twitch.paa";
 		uid = "";
 	};
 	class SMAN
 	{
 		name = "Superman";
-		texture = "Flags\flag_sman.paa";
+		texture = "GG\images\flags\flag_sman.paa";
 		uid = "";
 	};
 	class SEGA
 	{
 		name = "SEGA";
-		texture = "Flags\flag_sega.paa";
+		texture = "GG\images\flags\flag_sega.paa";
 		uid = "";
 	};
 	class RAZOR
 	{
 		name = "Razor";
-		texture = "Flags\flag_razor.paa";
+		texture = "GG\images\flags\flag_razor.paa";
 		uid = "";
 	};
 	class KFC
 	{
 		name = "KFC";
-		texture = "Flags\flag_kfc.paa";
+		texture = "GG\images\flags\flag_kfc.paa";
 		uid = "";
 	};
 	class KAPPA
 	{
 		name = "KAPPA";
-		texture = "Flags\flag_kappa.paa";
+		texture = "GG\images\flags\flag_kappa.paa";
 		uid = "";
 	};
 	class INTEL
 	{
 		name = "INTEL";
-		texture = "Flags\flag_intel.paa";
+		texture = "GG\images\flags\flag_intel.paa";
 		uid = "";
 	};
 	class GOGL
 	{
 		name = "Google";
-		texture = "Flags\flag_gogl.paa";
+		texture = "GG\images\flags\flag_gogl.paa";
 		uid = "";
 	};
 	class DAYZ
 	{
 		name = "DayZ";
-		texture = "Flags\flag_dayz.paa";
+		texture = "GG\images\flags\flag_dayz.paa";
 		uid = "";
 	};
 	class MCD
 	{
 		name = "Mcdonalds";
-		texture = "Flags\flag_bigmac.paa";
+		texture = "GG\images\flags\flag_bigmac.paa";
 		uid = "";
 	};
 };

@@ -27,7 +27,7 @@ if (hasInterface && !isDedicated) then {
                 {
                     _x setVariable ["IL_Taru_Action_Attach",true,false];
 
-                    IL_Taru_Action_Attach = _x addAction ["<img image='GG\IgiLoad\images\load.paa' /><t color=""#007f0e""> Attach the Pod</t>", "[""attach"",_this] call IL_Taru_Do_Action;", nil, 2, false, true, "",
+                    IL_Taru_Action_Attach = _x addAction ["<img image='GG\images\icons\load.paa' /><t color=""#007f0e""> Attach the Pod</t>", "[""attach"",_this] call IL_Taru_Do_Action;", nil, 2, false, true, "",
                     "[_this] call IL_Verify_Heli and {[vehicle _this] call IL_Verify_Pod} and {!([vehicle _this] call IL_Verify_Attached_Object)}"];
                 };
 
@@ -35,7 +35,7 @@ if (hasInterface && !isDedicated) then {
                 {
                     _x setVariable ["IL_Taru_Action_Deattach",true,false];
 
-                    IL_Taru_Action_Deattach = _x addAction ["<img image='GG\IgiLoad\images\unload.paa' /><t color=""#ff0000""> Detach the Pod</t>", "[""deattach"",_this] call IL_Taru_Do_Action;", nil, 2, false, true, "",
+                    IL_Taru_Action_Deattach = _x addAction ["<img image='GG\images\icons\unload.paa' /><t color=""#ff0000""> Detach the Pod</t>", "[""deattach"",_this] call IL_Taru_Do_Action;", nil, 2, false, true, "",
                     "[_this] call IL_Verify_Heli and [_this] call IL_Verify_Altitude and {[vehicle _this] call IL_Verify_Attached_Object}"];
                 };
 
@@ -43,7 +43,7 @@ if (hasInterface && !isDedicated) then {
                 {
                     _x setVariable ["IL_Taru_Action_Drop",true,false];
 
-                    IL_Taru_Action_Drop = _x addAction ["<img image='GG\IgiLoad\images\unload_para.paa' /><t color=""#b200ff""> Drop the Pod</t>", "[""drop"",_this] call IL_Taru_Do_Action;", nil, 2, false, true, "",
+                    IL_Taru_Action_Drop = _x addAction ["<img image='GG\images\icons\unload_para.paa' /><t color=""#b200ff""> Drop the Pod</t>", "[""drop"",_this] call IL_Taru_Do_Action;", nil, 2, false, true, "",
                     "[_this] call IL_Verify_Heli and {[vehicle _this] call IL_Verify_Attached_Object}"];
                 };
             } foreach units group player;
