@@ -34,7 +34,10 @@ _messageInfo params
 	["_message","",[""]]
 ];
 
-(format["BroadcastMissionStatus :: Notification types: |%1| for broadcasting mission status: %2",DMS_PlayerNotificationTypes,_message]) call DMS_fnc_DebugLog;
+if (DMS_DEBUG) then
+{
+	(format["BroadcastMissionStatus :: Notification types: |%1| for broadcasting mission status: %2",DMS_PlayerNotificationTypes,_message]) call DMS_fnc_DebugLog;
+};
 
 if ((typeName _message) != "STRING") then
 {
@@ -48,7 +51,7 @@ if ((typeName _message) != "STRING") then
 	{ 
 		case "systemchatrequest":
 		{
-			[_x, [format ["%1: %2",toUpper _missionName,_message]]] call ExileServer_system_network_send_broadcast;
+			[_x, [format ["%1: %2",toUpper _missionName,_message]], "-1"] call ExileServer_system_network_send_broadcast;
 		};
 
 		case "standardhintrequest":
@@ -68,7 +71,8 @@ if ((typeName _message) != "STRING") then
 						DMS_standardHint_Message_Font,
 						_message
 					]
-				]
+				],
+				"-1"
 			] call ExileServer_system_network_send_broadcast;
 		};
 

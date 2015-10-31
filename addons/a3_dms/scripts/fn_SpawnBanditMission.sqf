@@ -12,7 +12,7 @@
 */
 
 
-private ["_OK", "_missionType", "_parameters"];
+private ["_missionType", "_parameters"];
 
 
 _missionType = param [0, DMS_BanditMissionTypesArray call BIS_fnc_selectRandom, [""]];
@@ -23,12 +23,7 @@ if !(_missionType in DMS_BanditMissionTypesArray) then
 }
 else
 {
-	_parameters = [];
-
-	if ((count _this)>1) then
-	{
-		_parameters = _this select 1;
-	};
+	_parameters = if ((count _this)>1) then {_this select 1} else {[]};
 
 	DMS_MissionCount 			= DMS_MissionCount + 1;
 	DMS_RunningBMissionCount 	= DMS_RunningBMissionCount + 1;
@@ -39,5 +34,8 @@ else
 	DMS_BMissionLastStart 		= diag_tickTime;
 
 
-	(format ["SelectMission :: Spawned mission %1 with parameters (%2) | DMS_BMissionDelay set to %3 seconds",str _missionType,_parameters,DMS_BMissionDelay]) call DMS_fnc_DebugLog;
+	if (DMS_DEBUG) then
+	{
+		(format ["SpawnBanditMission :: Spawned mission %1 with parameters (%2) | DMS_BMissionDelay set to %3 seconds", _missionType, _parameters, DMS_BMissionDelay]) call DMS_fnc_DebugLog;
+	};
 };

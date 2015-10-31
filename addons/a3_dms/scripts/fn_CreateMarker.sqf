@@ -54,6 +54,12 @@ switch (_difficulty) do
 	default 			{_color = _difficulty;};
 };
 
+if !((toLower _color) in DMS_A3_AllMarkerColors) then
+{
+	diag_log format ["DMS ERROR :: Color ""%1"" is not a valid marker color! Switching to ""ColorRed""",_color];
+	_color = "ColorRed";
+};
+
 _circle = createMarker [format ["DMS_MissionMarkerCircle%1",_num], _pos];
 _circle setMarkerColor _color;
 _circle setMarkerShape "ELLIPSE";
@@ -83,10 +89,16 @@ if (_randomMarker) then
 	_dot setMarkerPos _npos;
 	_circle setMarkerBrush DMS_RandomMarkerBrush;
 
-	(format ["CreateMarker :: Moving markers %1 from %2 to %3 (%4m away)",[_dot,_circle],_pos,_npos,_dis]) call DMS_fnc_DebugLog;
+	if (DMS_DEBUG) then
+	{
+		(format ["CreateMarker :: Moving markers %1 from %2 to %3 (%4m away)",[_dot,_circle],_pos,_npos,_dis]) call DMS_fnc_DebugLog;
+	};
 };
 
-(format ["CreateMarker :: Created markers |%1| at %2 with text |%3| colored %4",[_dot,_circle],_pos,_text,_color]) call DMS_fnc_DebugLog;
+if (DMS_DEBUG) then
+{
+	(format ["CreateMarker :: Created markers |%1| at %2 with text |%3| colored %4",[_dot,_circle],_pos,_text,_color]) call DMS_fnc_DebugLog;
+};
 
 
 [_dot,_circle];
