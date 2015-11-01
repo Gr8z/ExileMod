@@ -3,7 +3,6 @@
 [] execVM "GG\inspectLoop.sqf";
 [] execVM "GG\group\player_markers.sqf";
 [] execVM "GG\KillMessages.sqf";
-[] execVM "GG\IgiLoad\IgiLoadInit.sqf";
 
 #include "initServer.sqf"
 

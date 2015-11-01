@@ -1,0 +1,1 @@
+[] execVM "GG\IgiLoad\IgiLoadInit.sqf";
