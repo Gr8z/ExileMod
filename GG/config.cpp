@@ -2792,46 +2792,13 @@ class CfgExileArsenal
 	class RHS_UH60M									{ quality = 1; price = 60000; };
 	
 };
+
 class CfgExileCustomCode 
 {
-
-	/*
-		You can overwrite every single file of our code without touching it.
-		To do that, add the function name you want to overwrite plus the 
-		path to your custom file here. If you wonder how this works, have a
-		look at our bootstrap/fn_preInit.sqf function.
-
-		Simply add the following scheme here:
-
-		<Function Name of Exile> = "<New File Name>";
-
-		Example:
-
-		ExileClient_util_fusRoDah = "myaddon/myfunction.sqf";
-	*/
-	// Fix for Duping in 0.9.34 via combineMag, thermal scanner and matches
-	//ExileClient_util_gear_repackMagazines = "overwrite\exile_client\code\ExileClient_util_gear_repackMagazines.sqf";
-	/* // Exile 0.9.3.2 Crafting bugfix:
-	ExileClient_object_item_craft = "fixes\ExileClient_object_item_craft.sqf";
-	// Fixing no Loot near Territory's
-	ExileClient_util_world_isTerritoryNearby = "overwrite\exile_client\code\ExileClient_util_world_isTerritoryNearby.sqf";
-	
-	// Fix Ghost bug:
-	ExileClient_object_player_initialize = "fixes\ExileClient_object_player_initialize.sqf";
-	
-	//	Revert this to old "default" (much better/faster)
-	ExileServer_system_network_event_onPlayerConnected = "fixes\ExileServer_system_network_event_onPlayerConnected.sqf";
-	
-	//	Now deconstruct works as intended and you get the item in a weaponholder if you deconstruct a construction.
-	ExileServer_object_construction_network_deconstructConstructionRequest = "fixes\ExileServer_object_construction_network_deconstructConstructionRequest.sqf";
-	
-	//	Incase you add Tanks/Jets and whatever, this will Remove Weapons (and their magazines) from the vehicle on Purchase.
-	ExileServer_object_vehicle_createPersistentVehicle = "fixes\ExileServer_object_vehicle_createPersistentVehicle.sqf";
-	*/	
-	//ExileServer_object_vehicle_createPersistentVehicle = "fixes\ ExileClient_object_player_event_onEnterSafezon.sqf";
-	//ExileClient_object_player_event_onHandleDamage = "client\ExileClient_object_player_event_onHandleDamage.sqf";
-	
+	ExileClient_gui_inventory_event_onSlotDoubleClick = "GG\overrides\GG_gui_inventory_event_onSlotDoubleClick.sqf";
+	ExileClient_object_player_death_startBleedingOut = "GG\overrides\GG_object_player_death_startBleedingOut.sqf";
 };
+
 class CfgExileMusic
 {
 	Ambient[] = {"ExileTrack03","ExileTrack04"};
