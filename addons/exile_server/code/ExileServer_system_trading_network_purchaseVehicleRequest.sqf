@@ -89,7 +89,7 @@ try
 		{
 			throw 13;
 		};
-		_vehicleObject = [_vehicleClass, _position2d, (random 360), true, _pinCode] call ExileServer_object_vehicle_createPersistentVehicle;
+		_vehicleObject = [_vehicleClass, [0,0,1000], (random 360), true, _pinCode] call ExileServer_object_vehicle_createPersistentVehicle;
 		_vehicleObject allowDamage false;
 		_vehicleObject removeAllEventHandlers "HandleDamage";
 		_vehicleObject addEventHandler["HandleDamage",{false}];
