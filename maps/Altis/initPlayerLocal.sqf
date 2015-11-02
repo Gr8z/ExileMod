@@ -4,6 +4,7 @@
 [] execVM "GG\group\player_markers.sqf";
 [] execVM "GG\KillMessages.sqf";
 [] execVM "GG\IgiLoad\IgiLoadInit.sqf";
+[] execVM "GG\ModCheck.sqf";
 
 #include "initServer.sqf"
 
