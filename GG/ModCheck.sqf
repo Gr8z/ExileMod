@@ -3,7 +3,7 @@ waitUntil {!dialog};
 
 sleep 6;
 
-if(getText(configFile >> "cfgWeapons" >> "rhs_weap_M107" >> "displayname") isEqualTo "" || getText(configFile >> "cfgWeapons" >> "rhs_weap_svd" >> "displayname") isEqualTo "" || getText(configFile >> "cfgWeapons" >> "TRYK_H_headset2" >> "displayname") isEqualTo "" || getText(configFile >> "cfgWeapons" >> "RyanZombieC_man_polo_1_F" >> "displayname") isEqualTo "" )then{
+if(getText(configFile >> "cfgWeapons" >> "rhs_weap_M107" >> "displayname") isEqualTo "" || getText(configFile >> "cfgWeapons" >> "rhs_weap_svd" >> "displayname") isEqualTo "" || getText(configFile >> "cfgWeapons" >> "TRYK_H_headset2" >> "displayname") isEqualTo "" || getText(configFile >> "CfgPatches" >> "RyanZombieC_man_polo_1_F" >> "displayname") isEqualTo "" )then{
     _att = format["[WARNING %1!]",name player];
     _att hintC [
         parseText "<t shadow='2' size='3'align='center'color='#cf2e4e'>THIS SERVER IS RUNNING </t><br/><t shadow='2' size='1.75'align='center'color='#b0eb00'>@RHSUSAF @RHSAFRF @TRYK </t><br/><br/><t shadow='2'align='center' size='1.25'>These mods add new weapons, vehicles and Uniforms and zombies</t><br/><t shadow='2'align='center'>You will not be able to see or use the new items. It is recomended that you download:</t>",
