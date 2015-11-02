@@ -194,7 +194,7 @@
 		{
 			"rhs_weap_pya",
 			"rhs_weap_makarov_pmm",
-			"rhsusf_weap_m1911a1",
+			"rhsusf_weap_m1911a1"
 		};
 	};
 	
