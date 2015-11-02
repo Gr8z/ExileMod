@@ -1573,7 +1573,11 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	class Exile_Car_Zamak 								{ quality = 1; price = 3000; };
 };
-#include "cfg\CfgExileCustomCode.hpp"
+class CfgExileCustomCode 
+{
+	ExileClient_gui_inventory_event_onSlotDoubleClick = "GG\overrides\GG_gui_inventory_event_onSlotDoubleClick.sqf";
+	ExileClient_object_player_death_startBleedingOut = "GG\overrides\GG_object_player_death_startBleedingOut.sqf";
+};
 class CfgExileMusic
 {
 	Ambient[] = {"ExileTrack03","ExileTrack04"};
@@ -1586,6 +1590,72 @@ class CfgFlags
 	{
 		name = "USA";
 		texture = "\A3\Data_F\Flags\flag_us_co.paa";
+		uid = "";
+	};
+	class YTUBE
+	{
+		name = "YouTube";
+		texture = "GG\images\flags\flag_ytube.paa";
+		uid = "";
+	};
+	class TWITCH
+	{
+		name = "Twitch";
+		texture = "GG\images\flags\flag_twitch.paa";
+		uid = "";
+	};
+	class SMAN
+	{
+		name = "Superman";
+		texture = "GG\images\flags\flag_sman.paa";
+		uid = "";
+	};
+	class SEGA
+	{
+		name = "SEGA";
+		texture = "GG\images\flags\flag_sega.paa";
+		uid = "";
+	};
+	class RAZOR
+	{
+		name = "Razor";
+		texture = "GG\images\flags\flag_razor.paa";
+		uid = "";
+	};
+	class KFC
+	{
+		name = "KFC";
+		texture = "GG\images\flags\flag_kfc.paa";
+		uid = "";
+	};
+	class KAPPA
+	{
+		name = "KAPPA";
+		texture = "GG\images\flags\flag_kappa.paa";
+		uid = "";
+	};
+	class INTEL
+	{
+		name = "INTEL";
+		texture = "GG\images\flags\flag_intel.paa";
+		uid = "";
+	};
+	class GOGL
+	{
+		name = "Google";
+		texture = "GG\images\flags\flag_gogl.paa";
+		uid = "";
+	};
+	class DAYZ
+	{
+		name = "DayZ";
+		texture = "GG\images\flags\flag_dayz.paa";
+		uid = "";
+	};
+	class MCD
+	{
+		name = "Mcdonalds";
+		texture = "GG\images\flags\flag_bigmac.paa";
 		uid = "";
 	};
 };
