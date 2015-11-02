@@ -1,7 +1,7 @@
 [] execVM "GG\safezones\init.sqf";
 [] execVM "GG\StatusBar\statusBar.sqf";
 [] execVM "GG\inspectLoop.sqf";
-[] execVM "GG\group\player_markers.sqf";
+[] execVM "GG\player_markers.sqf";
 [] execVM "GG\KillMessages.sqf";
 [] execVM "GG\IgiLoad\IgiLoadInit.sqf";
 [] execVM "GG\ModCheck.sqf";
