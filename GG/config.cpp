@@ -2451,12 +2451,6 @@ class CfgTraderCategories
 			"B_TacticalPack_ocamo",
 			"B_TacticalPack_oli",
 			"B_TacticalPack_rgr",
-			"B_Carryall_ocamo",
-			"B_Carryall_oucamo",
-			"B_Carryall_mcamo",
-			"B_Carryall_oli",
-			"B_Carryall_khk",
-			"B_Carryall_cbr"
 		};
 	};
 
