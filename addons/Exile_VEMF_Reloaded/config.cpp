@@ -116,7 +116,7 @@ class CfgVemfReloaded
 			"H_Beret_ocamo","H_Beret_02","H_Beret_Colonel","H_Watchcap_blk","H_Watchcap_cbr","H_Watchcap_khk","H_Watchcap_camo","H_Watchcap_sgg",
 			"H_Hat_blue","H_Hat_brown","H_Hat_camo","H_Hat_checker","H_Hat_grey","H_Hat_tan","H_StrawHat","H_StrawHat_dark","H_TurbanO_blk","rhs_6b27m_digi",
 			"rhs_6b27m_digi_bala","rhs_6b27m_digi_ess","rhs_6b27m_digi_ess_bala","rhs_6b27m","rhs_6b27m_ess","rhs_6b27m_bala","rhs_6b27m_ess_bala","rhs_6b27m_ml",
-			"rhs_6b27m_ml_bala","rhs_6b27m_ml_ess","rhs_6b27m_ML_ess_bala""TRYK_US_ESS_Glasses",
+			"rhs_6b27m_ml_bala","rhs_6b27m_ml_ess","rhs_6b27m_ML_ess_bala","TRYK_US_ESS_Glasses",
 			"TRYK_US_ESS_Glasses_WH","TRYK_US_ESS_Glasses_BLK","TRYK_US_ESS_Glasses_TAN","TRYK_US_ESS_Glasses_TAN_BLK","TRYK_SPGEAR_Glasses","TRYK_headset_Glasses","TRYK_SpsetG_Glasses",
 			"TRYK_Spset_PHC1_Glasses","TRYK_Spset_PHC2_Glasses","TRYK_US_ESS_Glasses_H","TRYK_US_ESS_Glasses_Cover","TRYK_headset2_glasses","TRYK_US_ESS_Glasses_NV","TRYK_US_ESS_Glasses_TAN_NV",
 			"TRYK_ESS_BLKTAN_NV","TRYK_ESS_BLKBLK_NV","TRYK_G_Shades_Black_NV","TRYK_G_Shades_Blue_NV","TRYK_G_bala_ess_NV","TRYK_bandana_NV","TRYK_SPgearG_NV",
