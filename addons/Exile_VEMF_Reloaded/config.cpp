@@ -99,14 +99,80 @@ class CfgVemfReloaded
 		uniforms[] = {"U_C_Journalist","U_Rangemaster","U_Marshal","U_Competitor"};
 		headGear[] =
 		{
-			"H_Cap_police","H_Beret_blk_POLICE","H_Cap_blk_ION","H_Cap_khaki_specops_UK","H_Cap_tan_specops_US","H_Cap_brn_SPECOPS","H_Cap_blk_CMMG","H_Cap_blk","H_Cap_blu","H_Cap_red",
-			"H_Cap_press","H_Cap_usblack","H_Beret_brn_SF","H_Beret_Colonel"
+			"H_HelmetB","H_HelmetB_camo","H_HelmetB_paint","H_HelmetB_light","H_Booniehat_khk","H_Booniehat_oli","H_Booniehat_indp",
+			"H_Booniehat_mcamo","H_Booniehat_grn","H_Booniehat_tan","H_Booniehat_dirty","H_Booniehat_dgtl","H_Booniehat_khk_hs","H_HelmetB_plain_mcamo",
+			"H_HelmetB_plain_blk","H_HelmetSpecB","H_HelmetSpecB_paint1","H_HelmetSpecB_paint2","H_HelmetSpecB_blk","H_HelmetIA","H_HelmetIA_net",
+			"H_HelmetIA_camo","H_Helmet_Kerry","H_HelmetB_grass","H_HelmetB_snakeskin","H_HelmetB_desert","H_HelmetB_black","H_HelmetB_sand",
+			"H_Cap_red","H_Cap_blu","H_Cap_oli","H_Cap_headphones","H_Cap_tan","H_Cap_blk","H_Cap_blk_CMMG","H_Cap_brn_SPECOPS","H_Cap_tan_specops_US",
+			"H_Cap_khaki_specops_UK","H_Cap_grn","H_Cap_grn_BI","H_Cap_blk_Raven","H_Cap_blk_ION","H_Cap_oli_hs","H_Cap_press","H_Cap_usblack","H_Cap_police",
+			"H_HelmetCrew_B","H_HelmetCrew_O","H_HelmetCrew_I","H_PilotHelmetFighter_B","H_PilotHelmetFighter_O","H_PilotHelmetFighter_I",
+			"H_PilotHelmetHeli_B","H_PilotHelmetHeli_O","H_PilotHelmetHeli_I","H_CrewHelmetHeli_B","H_CrewHelmetHeli_O","H_CrewHelmetHeli_I","H_HelmetO_ocamo",
+			"H_HelmetLeaderO_ocamo","H_MilCap_ocamo","H_MilCap_mcamo","H_MilCap_oucamo","H_MilCap_rucamo","H_MilCap_gry","H_MilCap_dgtl",
+			"H_MilCap_blue","H_HelmetB_light_grass","H_HelmetB_light_snakeskin","H_HelmetB_light_desert","H_HelmetB_light_black","H_HelmetB_light_sand","H_BandMask_blk",
+			"H_BandMask_khk","H_BandMask_reaper","H_BandMask_demon","H_HelmetO_oucamo","H_HelmetLeaderO_oucamo","H_HelmetSpecO_ocamo","H_HelmetSpecO_blk",
+			"H_Bandanna_surfer","H_Bandanna_khk","H_Bandanna_khk_hs","H_Bandanna_cbr","H_Bandanna_sgg","H_Bandanna_sand","H_Bandanna_surfer_blk","H_Bandanna_surfer_grn",
+			"H_Bandanna_gry","H_Bandanna_blu","H_Bandanna_camo","H_Bandanna_mcamo","H_Shemag_khk","H_Shemag_tan","H_Shemag_olive","H_Shemag_olive_hs",
+			"H_ShemagOpen_khk","H_ShemagOpen_tan","H_Beret_blk","H_Beret_blk_POLICE","H_Beret_red","H_Beret_grn","H_Beret_grn_SF","H_Beret_brn_SF",
+			"H_Beret_ocamo","H_Beret_02","H_Beret_Colonel","H_Watchcap_blk","H_Watchcap_cbr","H_Watchcap_khk","H_Watchcap_camo","H_Watchcap_sgg",
+			"H_Hat_blue","H_Hat_brown","H_Hat_camo","H_Hat_checker","H_Hat_grey","H_Hat_tan","H_StrawHat","H_StrawHat_dark","H_TurbanO_blk","rhs_6b27m_digi",
+			"rhs_6b27m_digi_bala","rhs_6b27m_digi_ess","rhs_6b27m_digi_ess_bala","rhs_6b27m","rhs_6b27m_ess","rhs_6b27m_bala","rhs_6b27m_ess_bala","rhs_6b27m_ml",
+			"rhs_6b27m_ml_bala","rhs_6b27m_ml_ess","rhs_6b27m_ML_ess_bala"
 		};
-		vests[] = {"V_TacVest_blk_POLICE","V_PlateCarrierSpec_blk","V_PlateCarrierGL_blk","V_TacVestCamo_khk","V_TacVest_blk","V_BandollierB_blk","V_Rangemaster_belt"};
+		vests[] = 
+		{	
+			"V_PlateCarrier1_rgr","V_PlateCarrier2_rgr","V_PlateCarrier3_rgr","V_PlateCarrierGL_rgr","V_PlateCarrier1_blk",
+			"V_PlateCarrierSpec_rgr","V_Chestrig_khk","V_Chestrig_rgr","V_Chestrig_blk","V_Chestrig_oli","V_TacVest_khk",
+			"V_TacVest_brn","V_TacVest_oli","V_TacVest_blk","V_TacVest_camo","V_TacVest_blk_POLICE","V_TacVestIR_blk","V_TacVestCamo_khk",
+			"V_HarnessO_brn","V_HarnessOGL_brn","V_HarnessO_gry","V_HarnessOGL_gry","V_HarnessOSpec_brn","V_HarnessOSpec_gry",
+			"V_PlateCarrierIA1_dgtl","V_PlateCarrierIA2_dgtl","V_PlateCarrierIAGL_dgtl","V_RebreatherB","V_RebreatherIR","V_RebreatherIA",
+			"V_PlateCarrier_Kerry","V_PlateCarrierL_CTRG","V_PlateCarrierH_CTRG","V_I_G_resistanceLeader_F","V_Press_F"
+			"V_Press_F","V_Rangemaster_belt","V_BandollierB_blk","V_BandollierB_cbr","V_BandollierB_khk","V_BandollierB_oli",
+			"V_BandollierB_rgr","V_PlateCarrierGL_blk","V_PlateCarrierGL_mtp","V_PlateCarrierIAGL_oli","V_PlateCarrierSpec_blk","V_PlateCarrierSpec_mtp","rhs_6sh92_headset",
+			"rhs_6sh92_radio","rhs_6sh92_vog","rhs_6sh92_vog_headset","rhs_vydra_3m","rhs_6sh92_digi","rhs_6b13_6sh92_vog","rhs_6b13_6sh92_radio","rhs_6b23_digi_6sh92_vog_headset",
+			"rhs_6b13_Flora","rhs_6b13_Flora_6sh92","rhs_6b13_Flora_6sh92_headset_mapcase","rhs_6b13_Flora_6sh92_vog","rhs_6b13_Flora_crewofficer","rhs_6b23",
+			"rhs_6b23_6sh92","rhs_6b23_6sh92_headset","rhs_6b23_6sh92_headset_mapcase","rhs_6b23_6sh92_radio","rhs_6b23_6sh92_vog","rhs_6b23_6sh92_vog_headset",
+			"rhs_6b23_crew","rhs_6b23_engineer","rhs_6b23_rifleman","rhs_6b23_sniper","rhs_6b23_ML","rhs_6b23_ML_6sh92","rhs_6b23_ML_6sh92_headset",
+			"rhs_6b23_ML_6sh92_headset_mapcase","rhs_6b23_ML_6sh92_radio","rhs_6b23_ML_6sh92_vog","rhs_6b23_ML_6sh92_vog_headset","rhs_6b23_ML_crewofficer","rhs_6b23_ML_crew","rhs_6b23_ML_engineer",
+			"rhs_6b23_ML_rifleman","rhs_6b23_ML_sniper","rhs_6sh46","rhsusf_iotv_ocp","rhsusf_iotv_ucp","rhsusf_iotv_ocp_Medic","rhsusf_iotv_ucp_Medic",
+			"rhsusf_iotv_ocp_Repair","rhsusf_iotv_ucp_Repair","rhsusf_iotv_ocp_Rifleman","rhsusf_iotv_ucp_Rifleman","rhsusf_iotv_ocp_SAW","rhsusf_iotv_ucp_SAW","rhsusf_iotv_ocp_Squadleader",
+			"rhsusf_iotv_ucp_Squadleader","rhsusf_iotv_ocp_Teamleader","rhsusf_iotv_ucp_Teamleader","rhsusf_iotv_ocp_Grenadier","rhsusf_iotv_ucp_Grenadier","TRYK_Hrp_vest_ucp",
+			"TRYK_V_PlateCarrier_JSDF","TRYK_V_ArmorVest_AOR1","TRYK_V_ArmorVest_AOR2","TRYK_V_ArmorVest_coyo","TRYK_V_ArmorVest_Brown","TRYK_V_ArmorVest_CBR","TRYK_V_ArmorVest_khk",
+			"TRYK_V_ArmorVest_rgr","TRYK_V_ArmorVest_green","TRYK_V_ArmorVest_tan","TRYK_V_ArmorVest_Delta","TRYK_V_ArmorVest_Ranger","TRYK_V_ArmorVest_AOR1_2","TRYK_V_ArmorVest_AOR2_2",
+			"TRYK_V_ArmorVest_coyo2","TRYK_V_ArmorVest_Brown2","TRYK_V_ArmorVest_cbr2","TRYK_V_ArmorVest_khk2","TRYK_V_ArmorVest_rgr2","TRYK_V_ArmorVest_green2","TRYK_V_ArmorVest_tan2",
+			"TRYK_V_ArmorVest_Delta2","TRYK_V_ArmorVest_Ranger2","TRYK_V_PlateCarrier_blk","TRYK_V_PlateCarrier_coyo","TRYK_V_PlateCarrier_wood","TRYK_V_PlateCarrier_ACU","TRYK_V_TacVest_coyo",
+			"TRYK_V_harnes_blk_L","TRYK_V_harnes_od_L","TRYK_V_harnes_TAN_L","TRYK_V_PlateCarrier_blk_L","TRYK_V_PlateCarrier_wood_L","TRYK_V_PlateCarrier_ACU_L","TRYK_V_PlateCarrier_coyo_L",
+			"TRYK_V_ChestRig_L","TRYK_V_ChestRig","TRYK_V_Bulletproof","TRYK_V_Bulletproof_BLK","TRYK_V_Bulletproof_BL","TRYK_V_IOTV_BLK","TRYK_V_tacv1M_BK",
+			"TRYK_V_tacv1MLC_BK","TRYK_V_tacv1","TRYK_V_tacv1_CY","TRYK_V_tacv1_BK","TRYK_V_tacv1_P_BK","TRYK_V_tacv1_SHERIFF_BK","TRYK_V_tacv1_FBI_BK",
+			"TRYK_V_tacv1LP_BK","TRYK_V_tacv1LSRF_BK","TRYK_V_tacv1LC_BK","TRYK_V_tacv1LC_CY","TRYK_V_tacv1LC_OD","TRYK_V_tacv1LC_FBI_BK","TRYK_V_tacv1LC_SRF_BK",
+			"TRYK_V_tacv1LC_SRF_OD","TRYK_V_tacv1LC_P_BK","TRYK_V_PlateCarrier_POLICE","TRYK_V_ArmorVest_HRT_B","TRYK_V_ArmorVest_HRT_OD","TRYK_V_ArmorVest_HRT2_B","TRYK_V_ArmorVest_HRT2_OD",
+			"TRYK_V_ArmorVest_Winter","TRYK_V_Sheriff_BA_OD","TRYK_V_tacv10_BK","TRYK_V_tacv10_OD","TRYK_V_tacv10_TN","TRYK_V_tacv10LC_BK","TRYK_V_tacv10LC_OD",
+			"TRYK_V_tacv10LC_TN","TRYK_V_tacv1L_BK","TRYK_V_tacv1L_OD","TRYK_V_tacv1L_CY","TRYK_V_tacv1LC_FBI2_BK","TRYK_V_tacv1LC_SRF2_BK","TRYK_V_tacv1LC_SRF2_OD",
+			"TRYK_V_tacv1LC_P2_BK","TRYK_V_tacv1_MSL_BK","TRYK_V_tacv1_MSL_NV","TRYK_V_tacv1LMSL_BK","TRYK_V_tacv1LMSL_NV","TRYK_V_tacv1LC_MSL_BK","TRYK_V_tacv1LC_MSL_NV",
+			"TRYK_V_tacSVD_BK","TRYK_V_tacSVD_OD","TRYK_V_Sheriff_BA_TL","TRYK_V_Sheriff_BA_TBL","TRYK_V_Sheriff_BA_TCL","TRYK_V_Sheriff_BA_TL2","TRYK_V_Sheriff_BA_TBL2",
+			"TRYK_V_Sheriff_BA_TCL2","TRYK_V_Sheriff_BA_T","TRYK_V_Sheriff_BA_TB","TRYK_V_Sheriff_BA_T2","TRYK_V_Sheriff_BA_TB2","TRYK_V_Sheriff_BA_T3","TRYK_V_Sheriff_BA_TB3",
+			"TRYK_V_Sheriff_BA_T4","TRYK_V_Sheriff_BA_TB4","TRYK_V_Sheriff_BA_T5","TRYK_V_Sheriff_BA_TB5","TRYK_V_Sheriff_BA_TBL3_BK","TRYK_V_Sheriff_BA_TBL3_OD","TRYK_V_Sheriff_BA_TBL3_TN",
+			"TRYK_LOC_AK_chestrig_OD","TRYK_LOC_AK_chestrig_TAN"
+			};
 		rifles[] =
 		{
-			"arifle_Katiba_F","arifle_Katiba_C_F","arifle_Katiba_GL_F","arifle_Mk20_F","arifle_Mk20_plain_F","arifle_Mk20C_F","arifle_Mk20C_plain_F","arifle_Mk20_GL_F","arifle_Mk20_GL_plain_F",
-			"arifle_MXC_F","arifle_MX_F","arifle_MX_SW_F","arifle_MXC_Black_F","arifle_MX_Black_F","arifle_TRG21_F","arifle_TRG20_F","arifle_TRG21_GL_F","hgun_PDW2000_F","SMG_01_F","SMG_02_F"
+			"srifle_EBR_F","srifle_DMR_01_F","arifle_Katiba_F","arifle_Katiba_C_F","arifle_Katiba_GL_F","arifle_MXC_F",
+			"arifle_MX_F","arifle_MX_GL_F","arifle_MXM_F","arifle_SDAR_F","arifle_TRG21_F","arifle_TRG20_F",
+			"arifle_TRG21_GL_F","arifle_Mk20_F","arifle_Mk20C_F","arifle_Mk20_GL_F","arifle_Mk20_plain_F",
+			"arifle_Mk20C_plain_F","arifle_Mk20_GL_plain_F","SMG_01_F","SMG_02_F","hgun_PDW2000_F","arifle_MXM_Black_F",
+			"arifle_MX_GL_Black_F","arifle_MX_Black_F","arifle_MXC_Black_F","LMG_Mk200_F","arifle_MX_SW_F",
+			"LMG_Zafir_F","arifle_MX_SW_Black_F","rhs_weap_m249_pip_L",
+			"rhs_weap_m249_pip_L_para","rhs_weap_m249_pip_L_vfg","rhs_weap_m249_pip_S","rhs_weap_m249_pip_S_para","rhs_weap_m249_pip_S_vfg","rhs_weap_m240B","rhs_weap_m240B_CAP",
+			"rhs_weap_m240G","rhs_weap_pkm","rhs_weap_pkp","rhs_weap_m16a4",
+			"rhs_weap_m16a4_carryhandle","rhs_weap_m16a4_carryhandle_grip","rhs_weap_m16a4_carryhandle_grip_pmag","rhs_weap_m16a4_carryhandle_M203","rhs_weap_m16a4_carryhandle_pmag","rhs_weap_m16a4_grip","rhs_weap_m4",
+			"rhs_weap_m4_grip2","rhs_weap_m4_carryhandle","rhs_weap_m4_carryhandle_pmag","rhs_weap_m4_grip","rhs_weap_m4_m203","rhs_weap_m4_m320","rhs_weap_m4a1_carryhandle",
+			"rhs_weap_m4a1_carryhandle_grip2","rhs_weap_m4a1_carryhandle_pmag","rhs_weap_m4a1_carryhandle_m203","rhs_weap_m4a1","rhs_weap_m4a1_grip2","rhs_weap_m4a1_grip","rhs_weap_m4a1_m203",
+			"rhs_weap_m4a1_m320","rhs_weap_m4a1_blockII","rhs_weap_m4a1_blockII_KAC","rhs_weap_m4a1_blockII_grip2","rhs_weap_m4a1_blockII_grip2_KAC","rhs_weap_m4a1_blockII_M203","rhs_weap_mk18",
+			"rhs_weap_mk18_KAC","rhs_weap_mk18_grip2","rhs_weap_mk18_grip2_KAC","rhs_weap_mk18_m320","rhs_weap_ak103","rhs_weap_ak103_npz","rhs_weap_ak103_1",
+			"rhs_weap_ak74m","rhs_weap_ak74m_2mag","rhs_weap_ak74m_2mag_camo","rhs_weap_ak74m_2mag_npz","rhs_weap_ak74m_camo","rhs_weap_ak74m_desert","rhs_weap_ak74m_desert_npz",
+			"rhs_weap_ak74m_desert_folded","rhs_weap_ak74m_plummag_folded","rhs_weap_ak74m_folded","rhs_weap_ak74m_camo_folded","rhs_weap_ak74m_gp25","rhs_weap_ak74m_gp25_npz","rhs_weap_ak74m_npz",
+			"rhs_weap_ak74m_plummag","rhs_weap_ak74m_plummag_npz","rhs_weap_akm","rhs_weap_akm_gp25","rhs_weap_akms","rhs_weap_akms_gp25","rhs_weap_M107",
+			"rhs_weap_sr25","rhs_weap_sr25_ec","rhs_weap_m14ebrri","rhs_weap_XM2010","rhs_weap_XM2010_wd","rhs_weap_XM2010_d","rhs_weap_XM2010_sa",
+			"rhs_weap_svd","rhs_weap_svdp_wd","rhs_weap_svdp_wd_npz","rhs_weap_svdp_npz","rhs_weap_svds","rhs_weap_svds_npz"
 		};
 		pistols[] = {"hgun_ACPC2_F","hgun_P07_F","hgun_Pistol_heavy_01_F","hgun_Pistol_heavy_02_F","hgun_Rook40_F"};
 		backpacks[] =
@@ -117,7 +183,13 @@ class CfgVemfReloaded
 			"B_FieldPack_blk","B_Carryall_ocamo","B_Carryall_oucamo","B_Carryall_mcamo","B_Carryall_khk","B_Carryall_cbr",
 			"B_Parachute","B_FieldPack_oli","B_Carryall_oli","B_Kitbag_Base","B_Kitbag_cbr","B_Kitbag_mcamo",
 			"B_Kitbag_rgr","B_Kitbag_sgg","B_OutdoorPack_Base","B_OutdoorPack_blk","B_OutdoorPack_blu",
-			"B_OutdoorPack_tan"
+			"B_OutdoorPack_tan","TRYK_B_AssaultPack_UCP",
+			"TRYK_B_AssaultPack_Type2camo","TRYK_B_AssaultPack_MARPAT_Desert","TRYK_B_AssaultPack_MARPAT_Wood","TRYK_B_Kitbag_Base","TRYK_B_Kitbag_blk","TRYK_B_Kitbag_aaf","TRYK_B_Carryall_blk",
+			"TRYK_B_Carryall_wh","TRYK_B_Carryall_wood","TRYK_B_Carryall_JSDF","TRYK_B_Kitbag_Base_JSDF","TRYK_B_Coyotebackpack","TRYK_B_Coyotebackpack_OD","TRYK_B_Coyotebackpack_BLK",
+			"TRYK_B_Coyotebackpack_WH","TRYK_B_Alicepack","TRYK_B_Medbag","TRYK_B_Medbag_OD","TRYK_B_Medbag_BK","TRYK_B_Medbag_ucp","TRYK_B_Belt",
+			"TRYK_B_Belt_BLK","TRYK_B_Belt_CYT","TRYK_B_Belt_tan","TRYK_B_Belt_br","TRYK_B_Belt_GR","TRYK_B_Belt_AOR1","TRYK_B_Belt_AOR2",
+			"TRYK_B_BAF_BAG_BLK","TRYK_B_BAF_BAG_CYT","TRYK_B_BAF_BAG_OD","TRYK_B_BAF_BAG_rgr","TRYK_B_BAF_BAG_mcamo","TRYK_B_tube_cyt","TRYK_B_tube_od",
+			"TRYK_B_tube_blk","TRYK_B_FieldPack_Wood","TRYK_Winter_pack"
 		};
 	};
 
