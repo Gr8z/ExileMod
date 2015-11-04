@@ -388,7 +388,7 @@ class CfgVemfReloaded
 			"TRYK_H_ghillie_top_headless3glass","TRYK_shoulder_armor_BK","TRYK_shoulder_armor_OD","TRYK_shoulder_armor_CY","TRYK_H_ghillie_top_headless3","TRYK_U_B_PCUHsW","TRYK_U_B_PCUHsW2",
 			"TRYK_U_B_PCUHsW3","TRYK_U_B_PCUHsW3nh","TRYK_U_B_PCUHsW4","TRYK_U_B_PCUHsW5","TRYK_U_B_PCUHsW6"
 		};
-		iVests[] =
+		aiVests[] =
 		{
 			"V_PlateCarrier1_rgr","V_PlateCarrier2_rgr","V_PlateCarrier3_rgr","V_PlateCarrierGL_rgr","V_PlateCarrier1_blk",
 			"V_PlateCarrierSpec_rgr","V_Chestrig_khk","V_Chestrig_rgr","V_Chestrig_blk","V_Chestrig_oli","V_TacVest_khk",
