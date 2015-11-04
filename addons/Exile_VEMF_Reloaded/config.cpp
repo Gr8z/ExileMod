@@ -125,16 +125,16 @@ class CfgVemfReloaded
 			"TRYK_TAC_SET_OD_2","TRYK_TAC_SET_WH_2","TRYK_TAC_SET_MESH_2","TRYK_bandana_g","TRYK_H_PASGT_BLK","TRYK_H_PASGT_OD","TRYK_H_PASGT_COYO",
 			"TRYK_H_PASGT_TAN","TRYK_H_Helmet_Snow","TRYK_H_WH","TRYK_H_GR","TRYK_H_AOR1","TRYK_H_AOR2","TRYK_H_EARMUFF",
 			"TRYK_H_TACEARMUFF_H","TRYK_H_Bandana_H","TRYK_H_Bandana_wig","TRYK_H_Bandana_wig_g","TRYK_H_wig","TRYK_H_headset2","TRYK_H_ghillie_over",
-			"TRYK_H_ghillie_top","TRYK_H_ghillie_top_headless","TRYK_H_ghillie_over_green","TRYK_H_ghillie_top_green","TRYK_H_ghillie_top_headless_green",
-			"TRYK_H_woolhat","TRYK_H_woolhat_CW","TRYK_H_woolhat_WH","TRYK_H_woolhat_br","TRYK_H_woolhat_cu","TRYK_H_woolhat_tan","TRYK_H_headsetcap","TRYK_H_headsetcap_blk",
-			"TRYK_H_headsetcap_od","TRYK_H_pakol","TRYK_H_pakol2","TRYK_H_LHS_HEL_G","TRYK_H_Helmet_Winter","TRYK_H_Helmet_Winter_2","TRYK_Headphone_NV",
-			"TRYK_HRPIGEAR_NV","TRYK_Headset_NV","TRYK_TAC_boonie_SET_NV","TRYK_TAC_SET_NV_TAN","TRYK_TAC_SET_NV_OD","TRYK_TAC_SET_NV_WH","TRYK_TAC_SET_NV_MESH",
-			"TRYK_TAC_SET_NV_TAN_2","TRYK_TAC_SET_NV_OD_2","TRYK_TAC_SET_NV_WH_2","TRYK_TAC_SET_NV_MESH_2","TRYK_H_DELTAHELM_NV","TRYK_Shemagh_shade_MESH","TRYK_Shemagh_shade_N",
-			"TRYK_Shemagh_shade_G_N","TRYK_Shemagh_shade_WH_N","TRYK_kio_balaclava_WH","TRYK_kio_balaclava_BLK","TRYK_kio_balaclavas","TRYK_kio_balaclava_BLK_ear","TRYK_kio_balaclava_ear",
-			"TRYK_kio_balaclava_ESS","TRYK_Shemagh","TRYK_Shemagh_mesh","TRYK_Shemagh_G","TRYK_Shemagh_WH","TRYK_Shemagh_shade","TRYK_Shemagh_shade_G",
-			"TRYK_Shemagh_shade_WH","TRYK_Shemagh_shade_MH","TRYK_Shemagh_ESS","TRYK_Shemagh_ESS_G","TRYK_Shemagh_ESS_WH","TRYK_Shemagh_EAR_TAN","TRYK_Shemagh_EAR_WH",
-			"TRYK_balaclava_BLACK_NV","TRYK_balaclava_NV","TRYK_balaclava_BLACK_EAR_NV","TRYK_balaclava_EAR_NV","TRYK_Shemagh_TAN_NV","TRYK_Shemagh_MESH_NV","TRYK_Shemagh_G_NV",
-			"TRYK_Shemagh_WH_NV","TRYK_Shemagh_EAR_NV","TRYK_Shemagh_EAR_G_NV","TRYK_Shemagh_EAR_WH_NV","TRYK_ShemaghESSTAN_NV","TRYK_ShemaghESSOD_NV","TRYK_ShemaghESSWH_NV"};
+			"TRYK_H_ghillie_top","TRYK_H_ghillie_top_headless","TRYK_H_ghillie_over_green","TRYK_H_ghillie_top_green","TRYK_H_ghillie_top_headless_green","TRYK_H_woolhat","TRYK_H_woolhat_CW",
+			"TRYK_H_woolhat_WH","TRYK_H_woolhat_br","TRYK_H_woolhat_cu","TRYK_H_woolhat_tan","TRYK_H_headsetcap","TRYK_H_headsetcap_blk","TRYK_H_headsetcap_od",
+			"TRYK_H_pakol","TRYK_H_pakol2","TRYK_H_LHS_HEL_G","TRYK_H_Helmet_Winter","TRYK_H_Helmet_Winter_2","TRYK_Headphone_NV","TRYK_HRPIGEAR_NV",
+			"TRYK_Headset_NV","TRYK_TAC_boonie_SET_NV","TRYK_TAC_SET_NV_TAN","TRYK_TAC_SET_NV_OD","TRYK_TAC_SET_NV_WH","TRYK_TAC_SET_NV_MESH","TRYK_TAC_SET_NV_TAN_2",
+			"TRYK_TAC_SET_NV_OD_2","TRYK_TAC_SET_NV_WH_2","TRYK_TAC_SET_NV_MESH_2","TRYK_H_DELTAHELM_NV","TRYK_Shemagh_shade_MESH","TRYK_Shemagh_shade_N","TRYK_Shemagh_shade_G_N",
+			"TRYK_Shemagh_shade_WH_N","TRYK_kio_balaclava_WH","TRYK_kio_balaclava_BLK","TRYK_kio_balaclavas","TRYK_kio_balaclava_BLK_ear","TRYK_kio_balaclava_ear","TRYK_kio_balaclava_ESS",
+			"TRYK_Shemagh","TRYK_Shemagh_mesh","TRYK_Shemagh_G","TRYK_Shemagh_WH","TRYK_Shemagh_shade","TRYK_Shemagh_shade_G","TRYK_Shemagh_shade_WH",
+			"TRYK_Shemagh_shade_MH","TRYK_Shemagh_ESS","TRYK_Shemagh_ESS_G","TRYK_Shemagh_ESS_WH","TRYK_Shemagh_EAR_TAN","TRYK_Shemagh_EAR_WH","TRYK_balaclava_BLACK_NV",
+			"TRYK_balaclava_NV","TRYK_balaclava_BLACK_EAR_NV","TRYK_balaclava_EAR_NV","TRYK_Shemagh_TAN_NV","TRYK_Shemagh_MESH_NV","TRYK_Shemagh_G_NV","TRYK_Shemagh_WH_NV",
+			"TRYK_Shemagh_EAR_NV","TRYK_Shemagh_EAR_G_NV","TRYK_Shemagh_EAR_WH_NV","TRYK_ShemaghESSTAN_NV","TRYK_ShemaghESSOD_NV","TRYK_ShemaghESSWH_NV"};
 		vests[] = 
 		{	
 			"V_PlateCarrier1_rgr","V_PlateCarrier2_rgr","V_PlateCarrier3_rgr","V_PlateCarrierGL_rgr","V_PlateCarrier1_blk",
