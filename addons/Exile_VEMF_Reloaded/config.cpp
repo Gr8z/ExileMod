@@ -97,8 +97,7 @@ class CfgVemfReloaded
 	class policeConfig
 	{
 		uniforms[] = {"U_C_Journalist","U_Rangemaster","U_Marshal","U_Competitor"};
-		headGear[] =
-		{
+		headGear[] = {
 			"H_HelmetB","H_HelmetB_camo","H_HelmetB_paint","H_HelmetB_light","H_Booniehat_khk","H_Booniehat_oli","H_Booniehat_indp",
 			"H_Booniehat_mcamo","H_Booniehat_grn","H_Booniehat_tan","H_Booniehat_dirty","H_Booniehat_dgtl","H_Booniehat_khk_hs","H_HelmetB_plain_mcamo",
 			"H_HelmetB_plain_blk","H_HelmetSpecB","H_HelmetSpecB_paint1","H_HelmetSpecB_paint2","H_HelmetSpecB_blk","H_HelmetIA","H_HelmetIA_net",
