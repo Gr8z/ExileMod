@@ -109,7 +109,7 @@ class CfgVemfReloaded
 			"V_TacVest_brn","V_TacVest_oli","V_TacVest_blk","V_TacVest_camo","V_TacVest_blk_POLICE","V_TacVestIR_blk","V_TacVestCamo_khk",
 			"V_HarnessO_brn","V_HarnessOGL_brn","V_HarnessO_gry","V_HarnessOGL_gry","V_HarnessOSpec_brn","V_HarnessOSpec_gry",
 			"V_PlateCarrierIA1_dgtl","V_PlateCarrierIA2_dgtl","V_PlateCarrierIAGL_dgtl","V_RebreatherB","V_RebreatherIR","V_RebreatherIA",
-			"V_PlateCarrier_Kerry","V_PlateCarrierL_CTRG","V_PlateCarrierH_CTRG","V_I_G_resistanceLeader_F","V_Press_F"
+			"V_PlateCarrier_Kerry","V_PlateCarrierL_CTRG","V_PlateCarrierH_CTRG","V_I_G_resistanceLeader_F","V_Press_F",
 			"V_Press_F","V_Rangemaster_belt","V_BandollierB_blk","V_BandollierB_cbr","V_BandollierB_khk","V_BandollierB_oli",
 			"V_BandollierB_rgr","V_PlateCarrierGL_blk","V_PlateCarrierGL_mtp","V_PlateCarrierIAGL_oli","V_PlateCarrierSpec_blk","V_PlateCarrierSpec_mtp","rhs_6sh92_headset",
 			"rhs_6sh92_radio","rhs_6sh92_vog","rhs_6sh92_vog_headset","rhs_vydra_3m","rhs_6sh92_digi","rhs_6b13_6sh92_vog","rhs_6b13_6sh92_radio","rhs_6b23_digi_6sh92_vog_headset",
