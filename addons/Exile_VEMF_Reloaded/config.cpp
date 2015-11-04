@@ -135,8 +135,7 @@ class CfgVemfReloaded
 			"TRYK_kio_balaclava_ESS","TRYK_Shemagh","TRYK_Shemagh_mesh","TRYK_Shemagh_G","TRYK_Shemagh_WH","TRYK_Shemagh_shade","TRYK_Shemagh_shade_G",
 			"TRYK_Shemagh_shade_WH","TRYK_Shemagh_shade_MH","TRYK_Shemagh_ESS","TRYK_Shemagh_ESS_G","TRYK_Shemagh_ESS_WH","TRYK_Shemagh_EAR_TAN","TRYK_Shemagh_EAR_WH",
 			"TRYK_balaclava_BLACK_NV","TRYK_balaclava_NV","TRYK_balaclava_BLACK_EAR_NV","TRYK_balaclava_EAR_NV","TRYK_Shemagh_TAN_NV","TRYK_Shemagh_MESH_NV","TRYK_Shemagh_G_NV",
-			"TRYK_Shemagh_WH_NV","TRYK_Shemagh_EAR_NV","TRYK_Shemagh_EAR_G_NV","TRYK_Shemagh_EAR_WH_NV","TRYK_ShemaghESSTAN_NV","TRYK_ShemaghESSOD_NV","TRYK_ShemaghESSWH_NV"
-		};
+			"TRYK_Shemagh_WH_NV","TRYK_Shemagh_EAR_NV","TRYK_Shemagh_EAR_G_NV","TRYK_Shemagh_EAR_WH_NV","TRYK_ShemaghESSTAN_NV","TRYK_ShemaghESSOD_NV","TRYK_ShemaghESSWH_NV"};
 		vests[] = 
 		{	
 			"V_PlateCarrier1_rgr","V_PlateCarrier2_rgr","V_PlateCarrier3_rgr","V_PlateCarrierGL_rgr","V_PlateCarrier1_blk",
