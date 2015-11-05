@@ -99,7 +99,7 @@ _startAsNormal =
 _adminUIDandAccess =
 [
 	[
-		['76561198021389971','76561198153784743','76561198195305425','76561198115492831'],	// Head admin/Owner
+		['76561198078201908','76561198021389971','76561198153784743','76561198195305425','76561198115492831'],	// Head admin/Owner
 		[
 			'Teleport On Map Click','Teleport - Target To Me','Teleport - Me To Target','Teleport In Facing Direction (10m steps)',
 			'spectating','AdminConsole','Delete Vehicle','FlyUp','ShowGear','Show Server Information',
