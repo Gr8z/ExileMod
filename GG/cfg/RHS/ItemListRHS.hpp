@@ -330,7 +330,7 @@
 	// HMVE
 	//////////////////////////////////////////////////////////////////////////////
 	class rhsusf_m1025_w							{ quality = 1; price = 5000; };
-	class rhsusf_m1025_w_m2							{ quality = 1; price = 10000; };
+	class rhsusf_m1025_w_m2							{ quality = 1; price = 20000; };
 	class rhsusf_m998_w_2dr							{ quality = 1; price = 5000; };
 	class rhsusf_m998_w_4dr							{ quality = 1; price = 5000; };
 	class rhsusf_m998_w_s_2dr_fulltop				{ quality = 1; price = 5000; };
@@ -361,7 +361,7 @@
 	///////////////////////////////////////////////////////////////////////////////
 	// RG-33
 	//////////////////////////////////////////////////////////////////////////////
-	class rhsusf_rg33_d								{ quality = 3; price = 20000; };
+	class rhsusf_rg33_d								{ quality = 3; price = 10000; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// UAZ
