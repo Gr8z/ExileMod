@@ -20,7 +20,7 @@ class CfgVemfReloaded
 	validateLoot = 1; // Use -1 to disable. Checks if defined classes in loot and ai gear (except blacklist) are valid. Will output test result to RPT if ERROR logs enabled
 	minPlayers = 1; // Missions will not start until player count reaches this number OR when player count goes below this amount
 	maxGlobalMissions = 2; // Use -1 to disable limit | Max amount of missions that are allowed to run at the same time
- 	timeOutTime = 5; // In minutes. Use -1 to disable mission timeout; Minimal: 5
+ 	timeOutTime = 20; // In minutes. Use -1 to disable mission timeout; Minimal: 5
 	minNew = 2; // Minimum time before new mission can run
 	maxNew = 3; // Maximum time before new mission can run
 	missionList[] = {"DynamicLocationInvasion"}; // Speaks for itself, right?
