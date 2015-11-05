@@ -21,10 +21,10 @@ Thanks to code34 for better spawn system the core is based on Civilian Life by c
 	
 	//Main Settings
 	zA2Building = 0;         // set to 1 if using A2 Maps only looks for Land_House_L_1_EP1 at this time
-	ZOMWALKING = 1;          // set to 1 to force zombies to walk around else they just spawn and wait 0 is better for FPS
-	ZOMdistancepop = 100;    // distance trigger pops lower it for better FPS smaller zone = less zeds
+	ZOMWALKING = 0;          // set to 1 to force zombies to walk around else they just spawn and wait 0 is better for FPS
+	ZOMdistancepop = 40;    // distance trigger pops lower it for better FPS smaller zone = less zeds
 	ZOMgroupsize = 1;        // Number max random to group spawn in a trigger zone keep it under 5 for better FPS
-	ZOMdistancemove = 100;   // zombie group movement area max is what ever your ZOMdistancepop is
+	ZOMdistancemove = 30;   // zombie group movement area max is what ever your ZOMdistancepop is
 	ZOMcivilianside = east;  // zombie team side east, west and Civilian can be used
 	ZOMBAD = 0;              // set to 1 for zombies to attack each other and other AI will kill them - BAD FPS if used
 	SAFEZONE = 1;            // Removes All AI in safezone in ExilePlayerInSafezone set to 0 to disable works for default traders
@@ -33,7 +33,7 @@ Thanks to code34 for better spawn system the core is based on Civilian Life by c
 	FPS Settings - Thanks Otto for updating FPS script this is optional setting exile has own system in place this gives more control
 	The FPS system is all in beta stage and not needed for main script I added it here for optional tool with Spawner script 
 	*/
-	ZOMperformance = false;   // Set to true to enable performance system will cache all server AI systems better for FPS
+	ZOMperformance = true;   // Set to true to enable performance system will cache all server AI systems better for FPS
 	ZOMFPSDEBUGER = false;    // set to true to view live AI Caching Report can be seen by all on server if on true 
 	ZBNOAM = true;          // true/false removes ambient life from map better FPS
 	ZBAISTATZ = false;       // true/false disable AI Cache keeps Cache on vehicles and objects 
