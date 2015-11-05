@@ -207,7 +207,7 @@ _blacklistedVariables =
 ];
 
 
-_UVC = true;	/* Use Vehicle Check(s) - recommended but I am not sure if all existing vehicles are already in this white-list below. "EXILE" ones are white-listed anyways */
+_UVC = false;	/* Use Vehicle Check(s) - recommended but I am not sure if all existing vehicles are already in this white-list below. "EXILE" ones are white-listed anyways */
 _VehicleWhiteList =
 [
 	'Steerable_Parachute_F','I_UAV_01_F','B_HMG_01_high_F','O_HMG_01_F','B_Heli_Transport_01_F','B_Heli_Transport_01_camo_F','O_MRAP_02_gmg_F','O_static_AT_F','Land_Camping_Light_F'
