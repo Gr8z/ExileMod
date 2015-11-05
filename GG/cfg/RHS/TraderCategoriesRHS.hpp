@@ -90,6 +90,11 @@
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\headgear_ca.paa";
 		items[] =
 		{
+			"rhs_6b26"
+			"rhs_6b26_bala"
+			"rhs_6b26_ess"
+			"rhs_6b26_ess_bala"
+			"rhs_6b26_green"
 			"rhs_6b27m_digi",
 			"rhs_6b27m_digi_bala",
 			"rhs_6b27m_digi_ess",

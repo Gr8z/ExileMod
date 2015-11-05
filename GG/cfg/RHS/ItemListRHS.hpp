@@ -88,6 +88,11 @@
 	class rhsusf_spc					            { quality = 2; price = 450; };
 	
 	//HELMETS
+	class rhs_6b26									{ quality = 1; price = 40; };
+	class rhs_6b26_bala								{ quality = 1; price = 40; };
+	class rhs_6b26_ess								{ quality = 1; price = 40; };
+	class rhs_6b26_ess_bala							{ quality = 1; price = 40; };
+	class rhs_6b26_green							{ quality = 1; price = 40; };
 	class rhs_6b27m_digi							{ quality = 1; price = 40; };
 	class rhs_6b27m_digi_ess						{ quality = 1; price = 40; };
 	class rhs_6b27m_digi_bala						{ quality = 2; price = 60; };
