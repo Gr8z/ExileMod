@@ -597,6 +597,8 @@ class CfgVemfReloaded
 			"arifle_Mk20C_plain_F","arifle_Mk20_GL_plain_F","SMG_01_F","SMG_02_F","hgun_PDW2000_F","arifle_MXM_Black_F",
 			"arifle_MX_GL_Black_F","arifle_MX_Black_F","arifle_MXC_Black_F","LMG_Mk200_F","arifle_MX_SW_F",
 			"LMG_Zafir_F","arifle_MX_SW_Black_F","rhs_weap_m249_pip_L",
+			"srifle_DMR_03_multicam_F","srifle_DMR_03_tan_F","srifle_DMR_03_woodland_F","srifle_DMR_04_F","srifle_DMR_04_Tan_F","srifle_DMR_05_blk_F","srifle_DMR_05_hex_F",
+			"srifle_DMR_05_tan_f","srifle_DMR_06_camo_F","srifle_DMR_06_olive_F","srifle_GM6_camo_F","srifle_GM6_F","srifle_LRR_camo_F","srifle_LRR_F",
 			"rhs_weap_m249_pip_L_para","rhs_weap_m249_pip_L_vfg","rhs_weap_m249_pip_S","rhs_weap_m249_pip_S_para","rhs_weap_m249_pip_S_vfg","rhs_weap_m240B","rhs_weap_m240B_CAP",
 			"rhs_weap_m240G","rhs_weap_pkm","rhs_weap_pkp","rhs_weap_m16a4",
 			"rhs_weap_m16a4_carryhandle","rhs_weap_m16a4_carryhandle_grip","rhs_weap_m16a4_carryhandle_grip_pmag","rhs_weap_m16a4_carryhandle_M203","rhs_weap_m16a4_carryhandle_pmag","rhs_weap_m16a4_grip","rhs_weap_m4",
