@@ -1,18 +1,11 @@
-if (!hasInterface && !isServer) then
-{
-    1 spawn
-    {
-        waitUntil {player==player};
-        DMS_HC_Object = player;
-        publicVariableServer "DMS_HC_Object";
-    };
-};
-
 [] execVM "GG\safezones\init.sqf";
 [] execVM "GG\StatusBar\statusBar.sqf";
 [] execVM "GG\inspectLoop.sqf";
-[] execVM "GG\group\init.sqf";
+[] execVM "GG\player_markers.sqf";
 [] execVM "GG\KillMessages.sqf";
+[] execVM "GG\IgiLoad\IgiLoadInit.sqf";
+[] execVM "GG\ModCheck.sqf";
+[] execVM "GG\ZOM\init.sqf";
 
 #include "initServer.sqf"
 

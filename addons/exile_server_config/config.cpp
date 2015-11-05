@@ -23,6 +23,7 @@ class CfgPatches
 
 class CfgBuildings
 {
+	#include "CfgBuildings_Taviana.h"
 	///////////////////////////////////////////////////////////////////////////
 	// Castles & Lighthouses & Life Guard Towers
 	///////////////////////////////////////////////////////////////////////////
@@ -806,1538 +807,2775 @@ class CfgBuildings
 };
 class CfgLootTables
 {
-	/**
-	  Result of 100 rounds:
-
-	  B_AssaultPack_khk
-	  U_IG_Guerilla2_1
-	  SMG_02_F
-	  U_C_Poloshirt_burgundy
-	  B_OutdoorPack_blu
-	  V_HarnessO_gry
-	  optic_MRCO
-	  Exile_Item_PlasticBottleEmpty
-	  Exile_Item_DuctTape
-	  U_C_Poor_2
-	  Exile_Item_GloriousKnakworst
-	  V_HarnessOSpec_brn
-	  H_Booniehat_khk
-	  U_C_Poloshirt_blue
-	  B_Kitbag_cbr
-	  Exile_Item_BBQSandwich
-	  Exile_Item_Matches
-	  B_AssaultPack_sgg
-	  V_HarnessOSpec_brn
-	  16Rnd_9x21_Mag
-	  Exile_Item_Catfood
-	  B_Kitbag_sgg
-	  Exile_Item_DuctTape
-	  30Rnd_556x45_Stanag_Tracer_Red
-	  H_Bandanna_sgg
-	  30Rnd_45ACP_Mag_SMG_01
-	  H_Booniehat_dirty
-	  Exile_Item_ChristmasTinner_Cooked
-	  U_IG_Guerilla2_3
-	  B_FieldPack_blk
-	  30Rnd_556x45_Stanag_Tracer_Red
-	  B_Bergen_blk
-	  U_IG_Guerilla2_2
-	  B_Bergen_sgg
-	  H_Watchcap_khk
-	  Exile_Item_CookingPot
-	  Exile_Item_SausageGravy
-	  H_Cap_khaki_specops_UK
-	  B_Bergen_sgg
-	  H_Booniehat_mcamo
-	  V_HarnessOGL_gry
-	  30Rnd_556x45_Stanag_Tracer_Red
-	  B_FieldPack_cbr
-	  H_Bandanna_khk_hs
-	  muzzle_snds_M
-	  Exile_Item_SausageGravy
-	  Exile_Item_LightBulb
-	  Chemlight_red
-	  ItemGPS
-	  Exile_Item_BBQSandwich
-	  V_HarnessO_gry
-	  hgun_PDW2000_F
-	  H_Bandanna_cbr
-	  hgun_Rook40_F
-	  muzzle_snds_M
-	  V_HarnessOSpec_gry
-	  Exile_Item_Catfood
-	  30Rnd_65x39_caseless_green_mag_Tracer
-	  SMG_01_F
-	  Exile_Item_PlasticBottleFreshWater
-	  Exile_Item_Surstromming
-	  H_Hat_camo
-	  FlareGreen_F
-	  Exile_Item_ChristmasTinner
-	  16Rnd_9x21_Mag
-	  optic_Aco
-	  30Rnd_9x21_Mag
-	  11Rnd_45ACP_Mag
-	  Exile_Item_Beer
-	  Exile_Item_PlasticBottleEmpty
-	  V_HarnessO_brn
-	  Exile_Item_BBQSandwich
-	  H_Booniehat_khk_hs
-	  Exile_Item_BBQSandwich
-	  FlareGreen_F
-	  B_FieldPack_oucamo
-	  H_Booniehat_indp
-	  U_IG_Guerilla3_2
-	  B_Bergen_blk
-	  arifle_Katiba_GL_F
-	  Exile_Item_Matches
-	  U_C_Poor_2
-	  Exile_Item_Catfood
-	  B_Bergen_mcamo
-	  B_Bergen_rgr
-	  muzzle_snds_L
-	  U_IG_Guerilla2_2
-	  B_OutdoorPack_blu
-	  H_Booniehat_mcamo
-	  Exile_Item_Catfood
-	  30Rnd_556x45_Stanag
-	  U_IG_Guerilla1_1
-	  Exile_Item_BBQSandwich
-	  Exile_Item_Matches
-	  arifle_TRG21_F
-	  V_HarnessOGL_brn
-	  Exile_Item_Surstromming
-	  B_AssaultPack_blk
-	  B_FieldPack_cbr
-	  11Rnd_45ACP_Mag
-	*/
-	class CivillianLowerClass
-	{
-		top = 78.32;
-		count = 177;
-		half = 62.1;
-		halfIndex = 88;
-		maximum = 100;
-		sum = 17700;
-		items[] = 
-		{
-			{2, "Exile_Item_Catfood"},
-			{4, "Exile_Item_Matches"},
-			{6, "Exile_Item_PlasticBottleEmpty"},
-			{7.9, "Exile_Item_Surstromming"},
-			{9.6, "Exile_Item_BBQSandwich"},
-			{11.3, "Exile_Item_ChristmasTinner"},
-			{13, "Exile_Item_SausageGravy"},
-			{14.5, "Exile_Item_GloriousKnakworst"},
-			{15.5, "Chemlight_red"},
-			{16.5, "Chemlight_blue"},
-			{17.5, "Chemlight_green"},
-			{18.5, "Chemlight_yellow"},
-			{19.4, "11Rnd_45ACP_Mag"},
-			{20.3, "30Rnd_9x21_Mag"},
-			{21.2, "16Rnd_9x21_Mag"},
-			{22.1, "9Rnd_45ACP_Mag"},
-			{22.9, "hgun_P07_F"},
-			{23.7, "FlareWhite_F"},
-			{24.5, "hgun_ACPC2_F"},
-			{25.3, "FlareGreen_F"},
-			{26.1, "FlareYellow_F"},
-			{26.9, "hgun_Rook40_F"},
-			{27.7, "FlareRed_F"},
-			{28.45, "B_OutdoorPack_blk"},
-			{29.2, "B_OutdoorPack_tan"},
-			{29.95, "B_OutdoorPack_blu"},
-			{30.65, "30Rnd_65x39_caseless_green_mag_Tracer"},
-			{31.35, "30Rnd_556x45_Stanag_Tracer_Yellow"},
-			{32.05, "30Rnd_65x39_caseless_green"},
-			{32.75, "30Rnd_556x45_Stanag_Tracer_Red"},
-			{33.45, "30Rnd_556x45_Stanag_Tracer_Green"},
-			{34.15, "30Rnd_556x45_Stanag"},
-			{34.85, "B_HuntingBackpack"},
-			{35.5, "Exile_Item_CookingPot"},
-			{36.1, "B_AssaultPack_cbr"},
-			{36.7, "B_AssaultPack_khk"},
-			{37.3, "B_AssaultPack_mcamo"},
-			{37.9, "6Rnd_45ACP_Cylinder"},
-			{38.5, "B_AssaultPack_dgtl"},
-			{39.1, "B_AssaultPack_rgr"},
-			{39.7, "B_AssaultPack_sgg"},
-			{40.3, "B_AssaultPack_blk"},
-			{40.9, "B_Kitbag_cbr"},
-			{41.5, "B_Kitbag_sgg"},
-			{42.1, "B_Kitbag_mcamo"},
-			{42.6, "20Rnd_556x45_UW_mag"},
-			{43.1, "hgun_Pistol_heavy_01_F"},
-			{43.6, "U_C_HunterBody_grn"},
-			{44.1, "optic_Aco"},
-			{44.6, "B_FieldPack_blk"},
-			{45.1, "optic_Aco_smg"},
-			{45.6, "B_FieldPack_ocamo"},
-			{46.1, "optic_Holosight_smg"},
-			{46.6, "B_FieldPack_oucamo"},
-			{47.1, "Exile_Item_PlasticBottleFreshWater"},
-			{47.6, "muzzle_snds_L"},
-			{48.1, "muzzle_snds_acp"},
-			{48.6, "B_Bergen_blk"},
-			{49.1, "B_Bergen_rgr"},
-			{49.6, "B_Bergen_mcamo"},
-			{50.1, "B_Bergen_sgg"},
-			{50.6, "B_FieldPack_cbr"},
-			{51.1, "optic_ACO_grn_smg"},
-			{51.6, "optic_ACO_grn"},
-			{52.1, "hgun_Pistol_Signal_F"},
-			{52.6, "hgun_Pistol_heavy_02_F"},
-			{53.1, "U_C_Poor_shorts_1"},
-			{53.6, "U_C_Poor_2"},
-			{54.1, "U_C_Poor_1"},
-			{54.5, "arifle_TRG20_F"},
-			{54.9, "U_C_Poloshirt_blue"},
-			{55.3, "Exile_Item_DuctTape"},
-			{55.7, "U_IG_Guerilla2_2"},
-			{56.1, "U_C_Poloshirt_tricolour"},
-			{56.5, "U_IG_Guerilla2_1"},
-			{56.9, "U_C_Poloshirt_burgundy"},
-			{57.3, "U_C_Poloshirt_salmon"},
-			{57.7, "Exile_Item_LightBulb"},
-			{58.1, "U_IG_Guerilla2_3"},
-			{58.5, "arifle_Katiba_F"},
-			{58.9, "arifle_Katiba_GL_F"},
-			{59.3, "Exile_Item_Beer"},
-			{59.7, "arifle_TRG21_F"},
-			{60.1, "U_C_Poloshirt_stripped"},
-			{60.5, "U_IG_Guerilla1_1"},
-			{60.9, "30Rnd_45ACP_Mag_SMG_01_Tracer_Green"},
-			{61.3, "30Rnd_45ACP_Mag_SMG_01"},
-			{61.7, "U_IG_Guerilla3_1"},
-			{62.1, "acc_flashlight"},
-			{62.5, "U_IG_Guerilla3_2"},
-			{62.8, "muzzle_snds_M"},
-			{63.1, "SMG_02_F"},
-			{63.4, "arifle_SDAR_F"},
-			{63.7, "hgun_PDW2000_F"},
-			{64, "Exile_Item_Energydrink"},
-			{64.3, "H_Booniehat_tan"},
-			{64.6, "SMG_01_F"},
-			{64.9, "H_Booniehat_grn"},
-			{65.2, "optic_DMS"},
-			{65.5, "6Rnd_RedSignal_F"},
-			{65.8, "H_Booniehat_mcamo"},
-			{66.1, "muzzle_snds_H"},
-			{66.4, "optic_Arco"},
-			{66.7, "optic_Hamr"},
-			{67, "optic_Holosight"},
-			{67.3, "acc_pointer_IR"},
-			{67.6, "optic_MRCO"},
-			{67.8999999999999, "H_Booniehat_dirty"},
-			{68.1999999999999, "H_Booniehat_khk_hs"},
-			{68.4999999999999, "H_Booniehat_dgtl"},
-			{68.7999999999999, "6Rnd_GreenSignal_F"},
-			{69.0999999999999, "H_Booniehat_khk"},
-			{69.3999999999999, "H_Booniehat_indp"},
-			{69.6499999999999, "ItemGPS"},
-			{69.8499999999999, "Exile_Item_ChristmasTinner_Cooked"},
-			{70.0499999999999, "H_BandMask_blk"},
-			{70.2499999999999, "H_Bandanna_mcamo"},
-			{70.4499999999999, "H_Bandanna_camo"},
-			{70.6499999999999, "H_Bandanna_gry"},
-			{70.85, "H_Bandanna_sgg"},
-			{71.05, "H_Bandanna_cbr"},
-			{71.25, "H_Bandanna_khk_hs"},
-			{71.45, "H_Bandanna_khk"},
-			{71.65, "Exile_Item_BBQSandwich_Cooked"},
-			{71.85, "optic_MRD"},
-			{72.05, "Exile_Item_Catfood_Cooked"},
-			{72.25, "optic_Yorris"},
-			{72.45, "Exile_Item_Surstromming_Cooked"},
-			{72.65, "Exile_Item_SausageGravy_Cooked"},
-			{72.85, "Exile_Item_GloriousKnakworst_Cooked"},
-			{73, "H_Watchcap_sgg"},
-			{73.15, "V_BandollierB_khk"},
-			{73.3, "H_Cap_khaki_specops_UK"},
-			{73.45, "V_HarnessOSpec_gry"},
-			{73.6, "H_Watchcap_blk"},
-			{73.75, "V_HarnessOGL_gry"},
-			{73.9, "H_Watchcap_khk"},
-			{74.05, "V_BandollierB_cbr"},
-			{74.2, "V_HarnessO_gry"},
-			{74.35, "V_BandollierB_blk"},
-			{74.5, "V_BandollierB_oli"},
-			{74.65, "V_HarnessO_brn"},
-			{74.8000000000001, "H_TurbanO_blk"},
-			{74.9500000000001, "Binocular"},
-			{75.1000000000001, "H_Watchcap_camo"},
-			{75.2500000000001, "V_HarnessOSpec_brn"},
-			{75.4000000000001, "Exile_Item_InstaDoc"},
-			{75.5500000000001, "V_BandollierB_rgr"},
-			{75.7000000000001, "H_Cap_tan_specops_US"},
-			{75.8500000000001, "H_Cap_brn_SPECOPS"},
-			{76.0000000000001, "H_Hat_camo"},
-			{76.1500000000001, "V_HarnessOGL_brn"},
-			{76.2500000000001, "H_Beret_red"},
-			{76.3500000000001, "H_Beret_blk"},
-			{76.4500000000001, "H_Beret_02"},
-			{76.5500000000001, "H_Shemag_olive_hs"},
-			{76.6500000000001, "H_Beret_ocamo"},
-			{76.7500000000001, "H_Shemag_tan"},
-			{76.8500000000001, "H_Beret_brn_SF"},
-			{76.9500000000001, "V_Chestrig_rgr"},
-			{77.0500000000001, "H_Beret_grn_SF"},
-			{77.15, "V_Chestrig_blk"},
-			{77.25, "H_Beret_grn"},
-			{77.35, "Exile_Item_CamoTentKit"},
-			{77.45, "U_IG_leader"},
-			{77.55, "V_Chestrig_khk"},
-			{77.65, "H_Shemag_olive"},
-			{77.75, "H_ShemagOpen_khk"},
-			{77.85, "H_ShemagOpen_tan"},
-			{77.95, "H_Beret_Colonel"},
-			{78.05, "H_Shemag_khk"},
-			{78.15, "V_Chestrig_oli"},
-			{78.2, "U_I_G_resistanceLeader_F"},
-			{78.25, "optic_NVS"},
-			{78.3, "V_I_G_resistanceLeader_F"},
-			{78.31, "optic_Nightstalker"},
-			{78.32, "optic_tws"}
-		};
-	};
-
-	/**
-	  Result of 100 rounds:
-
-	  H_Hat_grey
-	  U_C_Scientist
-	  hgun_Rook40_F
-	  Exile_Item_GloriousKnakworst_Cooked
-	  H_Cap_headphones
-	  Exile_Item_ChristmasTinner
-	  hgun_P07_F
-	  30Rnd_65x39_caseless_mag_Tracer
-	  H_Hat_blue
-	  H_Hat_checker
-	  U_C_Journalist
-	  H_Cap_blk_Raven
-	  6Rnd_45ACP_Cylinder
-	  arifle_TRG21_F
-	  hgun_Pistol_Signal_F
-	  U_C_Poloshirt_stripped
-	  hgun_Pistol_heavy_01_F
-	  Exile_Item_Surstromming
-	  Exile_Item_GloriousKnakworst
-	  muzzle_snds_L
-	  30Rnd_556x45_Stanag
-	  optic_DMS
-	  Exile_Item_PlasticBottleFreshWater
-	  arifle_SDAR_F
-	  Exile_Item_Energydrink
-	  H_StrawHat_dark
-	  Exile_Item_Energydrink
-	  H_Cap_headphones
-	  B_OutdoorPack_blk
-	  6Rnd_GreenSignal_F
-	  Exile_Item_PlasticBottleEmpty
-	  H_Cap_blu
-	  U_C_Poloshirt_stripped
-	  hgun_Pistol_heavy_02_F
-	  Exile_Item_GloriousKnakworst_Cooked
-	  acc_flashlight
-	  optic_MRD
-	  30Rnd_9x21_Mag
-	  arifle_SDAR_F
-	  optic_Arco
-	  U_C_Scientist
-	  U_C_Poloshirt_salmon
-	  H_Hat_tan
-	  H_Cap_grn
-	  30Rnd_65x39_caseless_mag
-	  16Rnd_9x21_Mag
-	  16Rnd_9x21_Mag
-	  Exile_Item_Catfood_Cooked
-	  H_Bandanna_surfer
-	  arifle_Mk20_F
-	  Exile_Item_Catfood
-	  30Rnd_65x39_caseless_mag
-	  30Rnd_556x45_Stanag_Tracer_Red
-	  Exile_Item_BBQSandwich_Cooked
-	  30Rnd_556x45_Stanag
-	  Exile_Item_Catfood
-	  Exile_Item_Catfood
-	  arifle_MX_F
-	  Exile_Item_Catfood
-	  U_Rangemaster
-	  Exile_Item_BBQSandwich
-	  30Rnd_65x39_caseless_mag_Tracer
-	  acc_flashlight
-	  hgun_Pistol_heavy_01_F
-	  arifle_MXC_F
-	  U_C_Poloshirt_tricolour
-	  arifle_TRG21_F
-	  arifle_MXC_F
-	  arifle_TRG21_F
-	  hgun_P07_F
-	  U_C_Poloshirt_burgundy
-	  B_HuntingBackpack
-	  U_C_Poloshirt_burgundy
-	  U_C_Poloshirt_tricolour
-	  Exile_Item_Surstromming
-	  Exile_Item_BBQSandwich
-	  Exile_Item_PlasticBottleFreshWater
-	  B_OutdoorPack_blk
-	  arifle_Katiba_F
-	  H_Cap_red
-	  16Rnd_9x21_Mag
-	  Exile_Item_ChristmasTinner_Cooked
-	  Exile_Item_Beer
-	  arifle_MXM_F
-	  U_Rangemaster
-	  H_Cap_oli
-	  30Rnd_65x39_caseless_mag_Tracer
-	  U_C_Poloshirt_burgundy
-	  9Rnd_45ACP_Mag
-	  muzzle_snds_acp
-	  arifle_Katiba_F
-	  U_C_Poloshirt_burgundy
-	  11Rnd_45ACP_Mag
-	  30Rnd_65x39_caseless_green_mag_Tracer
-	  H_Hat_checker
-	  Exile_Item_Surstromming
-	  arifle_MX_F
-	  30Rnd_65x39_caseless_green_mag_Tracer
-	  30Rnd_556x45_Stanag_Tracer_Red
-	  Exile_Item_ChristmasTinner
-	*/
-	class CivillianUpperClass
-	{
-		top = 62.22;
-		count = 100;
-		half = 44.15;
-		halfIndex = 50;
-		maximum = 100;
-		sum = 10000;
-		items[] = 
-		{
-			{2, "Exile_Item_Catfood"},
-			{4, "Exile_Item_PlasticBottleEmpty"},
-			{5.9, "Exile_Item_Surstromming"},
-			{7.6, "Exile_Item_ChristmasTinner"},
-			{9.3, "Exile_Item_SausageGravy"},
-			{11, "Exile_Item_BBQSandwich"},
-			{12.5, "Exile_Item_GloriousKnakworst"},
-			{13.5, "U_C_Poloshirt_blue"},
-			{14.5, "U_C_Poloshirt_salmon"},
-			{15.5, "U_C_Poloshirt_tricolour"},
-			{16.5, "U_C_Poloshirt_stripped"},
-			{17.5, "U_C_Poloshirt_burgundy"},
-			{18.35, "B_OutdoorPack_blk"},
-			{19.2, "B_OutdoorPack_tan"},
-			{20.05, "B_OutdoorPack_blu"},
-			{20.85, "11Rnd_45ACP_Mag"},
-			{21.65, "30Rnd_65x39_caseless_mag"},
-			{22.45, "30Rnd_9x21_Mag"},
-			{23.25, "16Rnd_9x21_Mag"},
-			{24.05, "30Rnd_65x39_caseless_green"},
-			{24.85, "30Rnd_556x45_Stanag"},
-			{25.55, "9Rnd_45ACP_Mag"},
-			{26.25, "arifle_TRG21_F"},
-			{26.95, "acc_pointer_IR"},
-			{27.65, "hgun_P07_F"},
-			{28.35, "hgun_ACPC2_F"},
-			{29.05, "arifle_Mk20_F"},
-			{29.75, "B_HuntingBackpack"},
-			{30.45, "arifle_Katiba_F"},
-			{31.15, "arifle_Mk20C_F"},
-			{31.85, "acc_flashlight"},
-			{32.55, "arifle_TRG20_F"},
-			{33.25, "6Rnd_45ACP_Cylinder"},
-			{33.95, "hgun_Rook40_F"},
-			{34.55, "optic_MRCO"},
-			{35.15, "H_StrawHat"},
-			{35.75, "H_Cap_tan"},
-			{36.35, "H_Cap_grn"},
-			{36.95, "H_Cap_red"},
-			{37.55, "arifle_MX_GL_F"},
-			{38.15, "H_Cap_press"},
-			{38.75, "optic_DMS"},
-			{39.35, "20Rnd_556x45_UW_mag"},
-			{39.95, "H_Cap_headphones"},
-			{40.55, "H_Hat_grey"},
-			{41.15, "H_Cap_blu"},
-			{41.75, "H_Cap_blk_Raven"},
-			{42.35, "H_Cap_blk"},
-			{42.95, "H_Beret_blk_POLICE"},
-			{43.55, "H_Bandanna_surfer"},
-			{44.15, "H_Cap_oli"},
-			{44.75, "arifle_MX_F"},
-			{45.35, "arifle_MXC_F"},
-			{45.95, "H_StrawHat_dark"},
-			{46.55, "H_Hat_tan"},
-			{47.15, "H_Hat_blue"},
-			{47.75, "H_Hat_brown"},
-			{48.35, "H_Hat_checker"},
-			{48.85, "V_Press_F"},
-			{49.35, "V_Rangemaster_belt"},
-			{49.85, "30Rnd_65x39_caseless_mag_Tracer"},
-			{50.35, "hgun_Pistol_heavy_02_F"},
-			{50.85, "arifle_SDAR_F"},
-			{51.35, "arifle_MXM_F"},
-			{51.85, "hgun_Pistol_heavy_01_F"},
-			{52.35, "V_TacVest_blk_POLICE"},
-			{52.85, "6Rnd_RedSignal_F"},
-			{53.35, "30Rnd_556x45_Stanag_Tracer_Green"},
-			{53.85, "30Rnd_556x45_Stanag_Tracer_Red"},
-			{54.35, "30Rnd_556x45_Stanag_Tracer_Yellow"},
-			{54.85, "Exile_Item_PlasticBottleFreshWater"},
-			{55.35, "U_C_Journalist"},
-			{55.85, "U_C_Scientist"},
-			{56.35, "U_Rangemaster"},
-			{56.85, "30Rnd_65x39_caseless_green_mag_Tracer"},
-			{57.35, "6Rnd_GreenSignal_F"},
-			{57.75, "optic_Hamr"},
-			{58.15, "optic_Holosight"},
-			{58.55, "optic_Arco"},
-			{58.95, "Exile_Item_Beer"},
-			{59.3, "hgun_Pistol_Signal_F"},
-			{59.6, "Exile_Item_Energydrink"},
-			{59.85, "muzzle_snds_H"},
-			{60.1, "muzzle_snds_M"},
-			{60.35, "muzzle_snds_acp"},
-			{60.6, "muzzle_snds_L"},
-			{60.8, "Exile_Item_Catfood_Cooked"},
-			{61, "Exile_Item_Surstromming_Cooked"},
-			{61.2, "Exile_Item_ChristmasTinner_Cooked"},
-			{61.4, "Exile_Item_BBQSandwich_Cooked"},
-			{61.6000000000001, "Exile_Item_GloriousKnakworst_Cooked"},
-			{61.8000000000001, "Exile_Item_SausageGravy_Cooked"},
-			{61.9000000000001, "optic_MRD"},
-			{62.0000000000001, "optic_Yorris"},
-			{62.0500000000001, "U_NikosBody"},
-			{62.1000000000001, "U_NikosAgedBody"},
-			{62.15, "U_OrestesBody"},
-			{62.2, "optic_NVS"},
-			{62.21, "optic_tws"},
-			{62.22, "optic_Nightstalker"}
-		};
-	};
-
-	/**
-	  Result of 100 rounds:
-
-	  Exile_Item_GloriousKnakworst
-	  hgun_Rook40_F
-	  Exile_Item_Surstromming_Cooked
-	  Exile_Item_SausageGravy
-	  Exile_Item_ChristmasTinner
-	  Exile_Item_SausageGravy_Cooked
-	  Exile_Item_ChristmasTinner_Cooked
-	  6Rnd_GreenSignal_F
-	  Exile_Item_BBQSandwich_Cooked
-	  Exile_Item_BBQSandwich
-	  Exile_Item_Surstromming
-	  Exile_Item_PlasticBottleEmpty
-	  Exile_Item_Surstromming
-	  Exile_Item_ChristmasTinner
-	  Exile_Item_ChristmasTinner
-	  Binocular
-	  6Rnd_GreenSignal_F
-	  Exile_Item_Surstromming
-	  hgun_Pistol_heavy_01_F
-	  ItemGPS
-	  Exile_Item_GloriousKnakworst
-	  9Rnd_45ACP_Mag
-	  6Rnd_RedSignal_F
-	  Exile_Item_ChristmasTinner
-	  hgun_ACPC2_F
-	  SmokeShellOrange
-	  Exile_Item_Matches
-	  SmokeShellRed
-	  6Rnd_GreenSignal_F
-	  6Rnd_RedSignal_F
-	  SmokeShellGreen
-	  Exile_Item_Catfood
-	  hgun_Pistol_Signal_F
-	  Exile_Item_SausageGravy
-	  Exile_Item_LightBulb
-	  Exile_Item_GloriousKnakworst
-	  Exile_Item_InstaDoc
-	  Exile_Item_SausageGravy
-	  Exile_Item_Energydrink
-	  SmokeShellGreen
-	  Exile_Item_Surstromming
-	  6Rnd_GreenSignal_F
-	  Exile_Item_BBQSandwich
-	  Exile_Item_Surstromming_Cooked
-	  Exile_Item_PlasticBottleEmpty
-	  Exile_Item_Surstromming_Cooked
-	  Exile_Item_PlasticBottleEmpty
-	  Exile_Item_BBQSandwich
-	  hgun_Pistol_heavy_02_F
-	  Exile_Item_Surstromming_Cooked
-	  hgun_P07_F
-	  Exile_Item_Matches
-	  Exile_Item_SausageGravy
-	  hgun_Pistol_heavy_02_F
-	  30Rnd_9x21_Mag
-	  Exile_Item_PlasticBottleFreshWater
-	  Exile_Item_CookingPot
-	  6Rnd_45ACP_Cylinder
-	  SmokeShellYellow
-	  hgun_Rook40_F
-	  Exile_Item_Beer
-	  Exile_Item_Surstromming
-	  optic_Yorris
-	  Exile_Item_Surstromming
-	  11Rnd_45ACP_Mag
-	  Exile_Item_Surstromming
-	  Exile_Item_SausageGravy
-	  muzzle_snds_L
-	  hgun_Pistol_heavy_01_F
-	  hgun_Pistol_Signal_F
-	  Exile_Item_Matches
-	  hgun_ACPC2_F
-	  Exile_Item_SausageGravy
-	  Exile_Item_InstaDoc
-	  6Rnd_GreenSignal_F
-	  6Rnd_45ACP_Cylinder
-	  Exile_Item_Surstromming
-	  SmokeShellRed
-	  Exile_Item_PlasticBottleEmpty
-	  hgun_P07_F
-	  6Rnd_45ACP_Cylinder
-	  Exile_Item_CookingPot
-	  Exile_Item_PlasticBottleEmpty
-	  SmokeShell
-	  Exile_Item_SausageGravy
-	  6Rnd_45ACP_Cylinder
-	  6Rnd_GreenSignal_F
-	  Exile_Item_SausageGravy
-	  6Rnd_GreenSignal_F
-	  SmokeShellRed
-	  Exile_Item_CookingPot
-	  Exile_Item_Surstromming
-	  hgun_ACPC2_F
-	  hgun_ACPC2_F
-	  hgun_Pistol_Signal_F
-	  Exile_Item_Catfood
-	  6Rnd_RedSignal_F
-	  Exile_Item_PlasticBottleEmpty
-	  Exile_Item_BBQSandwich
-	  ItemGPS
-	*/
-	class Shop
-	{
-		top = 33.95;
-		count = 48;
-		half = 26.95;
-		halfIndex = 24;
-		maximum = 100;
-		sum = 4800;
-		items[] = 
-		{
-			{2, "Exile_Item_Catfood"},
-			{4, "Exile_Item_Matches"},
-			{6, "Exile_Item_PlasticBottleEmpty"},
-			{7.9, "Exile_Item_Surstromming"},
-			{9.6, "Exile_Item_SausageGravy"},
-			{11.3, "Exile_Item_ChristmasTinner"},
-			{13, "Exile_Item_BBQSandwich"},
-			{14.5, "Exile_Item_GloriousKnakworst"},
-			{15.5, "hgun_Rook40_F"},
-			{16.5, "hgun_ACPC2_F"},
-			{17.5, "hgun_P07_F"},
-			{18.3, "9Rnd_45ACP_Mag"},
-			{19.1, "30Rnd_9x21_Mag"},
-			{19.9, "16Rnd_9x21_Mag"},
-			{20.7, "11Rnd_45ACP_Mag"},
-			{21.5, "Exile_Item_LightBulb"},
-			{22.2, "hgun_Pistol_heavy_02_F"},
-			{22.9, "hgun_Pistol_heavy_01_F"},
-			{23.6, "6Rnd_45ACP_Cylinder"},
-			{24.25, "Exile_Item_CookingPot"},
-			{24.85, "6Rnd_GreenSignal_F"},
-			{25.45, "6Rnd_RedSignal_F"},
-			{25.95, "SmokeShell"},
-			{26.45, "SmokeShellRed"},
-			{26.95, "SmokeShellGreen"},
-			{27.45, "SmokeShellYellow"},
-			{27.95, "SmokeShellPurple"},
-			{28.45, "SmokeShellBlue"},
-			{28.95, "Exile_Item_PlasticBottleFreshWater"},
-			{29.45, "SmokeShellOrange"},
-			{29.95, "Exile_Item_InstaDoc"},
-			{30.45, "hgun_Pistol_Signal_F"},
-			{30.85, "Exile_Item_Beer"},
-			{31.25, "Exile_Item_DuctTape"},
-			{31.55, "Exile_Item_Energydrink"},
-			{31.8, "ItemGPS"},
-			{32.05, "muzzle_snds_L"},
-			{32.3, "muzzle_snds_acp"},
-			{32.5, "Exile_Item_BBQSandwich_Cooked"},
-			{32.7, "Exile_Item_ChristmasTinner_Cooked"},
-			{32.9, "Exile_Item_Catfood_Cooked"},
-			{33.1, "Exile_Item_Surstromming_Cooked"},
-			{33.3, "Exile_Item_SausageGravy_Cooked"},
-			{33.5, "Exile_Item_GloriousKnakworst_Cooked"},
-			{33.65, "Binocular"},
-			{33.75, "optic_MRD"},
-			{33.85, "optic_Yorris"},
-			{33.95, "Exile_Item_CamoTentKit"}
-		};
-	};
-
-	/**
-	  Result of 100 rounds:
-
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_PortableGeneratorKit
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_PortableGeneratorKit
-	  Exile_Item_DuctTape
-	  Exile_Item_JunkMetal
-	  Exile_Item_DuctTape
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Melee_Axe
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_FloodLightKit
-	  Exile_Item_JunkMetal
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_ExtensionCord
-	  Exile_Item_DuctTape
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_Matches
-	  Exile_Item_JunkMetal
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_Rope
-	  Exile_Melee_Axe
-	  Exile_Item_JunkMetal
-	  Exile_Item_JunkMetal
-	  Exile_Item_JunkMetal
-	  Exile_Item_JunkMetal
-	  Exile_Melee_Axe
-	  Exile_Item_Rope
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_ExtensionCord
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_Rope
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_DuctTape
-	  Exile_Item_LightBulb
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_JunkMetal
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_PortableGeneratorKit
-	  Exile_Melee_Axe
-	  Exile_Item_PortableGeneratorKit
-	  Exile_Melee_Axe
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_ExtensionCord
-	  Exile_Item_PortableGeneratorKit
-	  Exile_Item_Matches
-	  Exile_Melee_Axe
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_ExtensionCord
-	  Exile_Item_Matches
-	  Exile_Item_LightBulb
-	  Exile_Item_JunkMetal
-	  Exile_Item_ExtensionCord
-	  Exile_Item_LightBulb
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_MetalBoard
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_FloodLightKit
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_Matches
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_DuctTape
-	  Exile_Item_ExtensionCord
-	  Exile_Item_MetalBoard
-	  Exile_Melee_Axe
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_Rope
-	  Exile_Item_JunkMetal
-	  Exile_Item_ExtensionCord
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_JunkMetal
-	  Exile_Melee_Axe
-	  Exile_Item_Matches
-	  Exile_Item_ExtensionCord
-	  Exile_Item_JunkMetal
-	  Exile_Melee_Axe
-	  Exile_Item_JunkMetal
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_ExtensionCord
-	  Exile_Item_JunkMetal
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_JunkMetal
-	  Exile_Item_JunkMetal
-	  Exile_Item_JunkMetal
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_MetalBoard
-	  Exile_Melee_Axe
-	  Exile_Item_JunkMetal
-	  Exile_Melee_Axe
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_DuctTape
-	*/
-	class Industrial
-	{
-		top = 2.86;
-		count = 13;
-		half = 2.45;
-		halfIndex = 6;
-		maximum = 100;
-		sum = 1300;
-		items[] = 
-		{
-			{0.5, "Exile_Melee_Axe"},
-			{1, "Exile_Item_FuelCanisterEmpty"},
-			{1.4, "Exile_Item_FuelCanisterFull"},
-			{1.7, "Exile_Item_Matches"},
-			{2, "Exile_Item_ExtensionCord"},
-			{2.25, "Exile_Item_JunkMetal"},
-			{2.45, "Exile_Item_LightBulb"},
-			{2.55, "Exile_Item_Rope"},
-			{2.65, "Exile_Item_MetalBoard"},
-			{2.75, "Exile_Item_DuctTape"},
-			{2.8, "Exile_Item_PortableGeneratorKit"},
-			{2.85, "Exile_Item_FloodLightKit"},
-			{2.86, "Exile_Item_ThermalScannerPro"}
-		};
-	};
-
-	/**
-	  Result of 100 rounds:
-
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_DuctTape
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_DuctTape
-	  Exile_Item_DuctTape
-	  Exile_Item_JunkMetal
-	  Exile_Item_DuctTape
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_DuctTape
-	  Exile_Item_JunkMetal
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_JunkMetal
-	  Exile_Item_DuctTape
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_LightBulb
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_MetalBoard
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_LightBulb
-	  Exile_Item_JunkMetal
-	  Exile_Item_LightBulb
-	  Exile_Item_LightBulb
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_MetalBoard
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_JunkMetal
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_MetalBoard
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_MetalBoard
-	  Exile_Item_LightBulb
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_JunkMetal
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_DuctTape
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_DuctTape
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_JunkMetal
-	  Exile_Item_DuctTape
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_JunkMetal
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_LightBulb
-	  Exile_Item_JunkMetal
-	  Exile_Item_JunkMetal
-	  Exile_Item_LightBulb
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_MetalBoard
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_ThermalScannerPro
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_JunkMetal
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_DuctTape
-	  Exile_Item_JunkMetal
-	  Exile_Item_MetalBoard
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_MetalBoard
-	  Exile_Item_JunkMetal
-	  Exile_Item_JunkMetal
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_LightBulb
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_JunkMetal
-	  Exile_Item_JunkMetal
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_LightBulb
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_JunkMetal
-	  Exile_Item_JunkMetal
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_JunkMetal
-	  Exile_Item_LightBulb
-	  Exile_Item_JunkMetal
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_MetalBoard
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_JunkMetal
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_DuctTape
-	*/
-	class VehicleService
-	{
-		top = 1.56;
-		count = 7;
-		half = 1.35;
-		halfIndex = 3;
-		maximum = 100;
-		sum = 700;
-		items[] = 
-		{
-			{0.5, "Exile_Item_FuelCanisterEmpty"},
-			{0.9, "Exile_Item_FuelCanisterFull"},
-			{1.15, "Exile_Item_JunkMetal"},
-			{1.35, "Exile_Item_LightBulb"},
-			{1.45, "Exile_Item_MetalBoard"},
-			{1.55, "Exile_Item_DuctTape"},
-			{1.56, "Exile_Item_ThermalScannerPro"}
-		};
-	};
-
-	/**
-	  Result of 100 rounds:
-
-	  H_HelmetSpecB_paint1
-	  acc_pointer_IR
-	  3Rnd_Smoke_Grenade_shell
-	  H_HelmetIA_camo
-	  V_PlateCarrierIA1_dgtl
-	  U_O_SpecopsUniform_ocamo
-	  B_Bergen_rgr
-	  SmokeShellYellow
-	  srifle_LRR_F
-	  H_HelmetSpecB_blk
-	  H_HelmetB_desert
-	  U_B_CTRG_1
-	  V_PlateCarrierGL_rgr
-	  V_PlateCarrierSpec_rgr
-	  H_MilCap_oucamo
-	  3Rnd_SmokeBlue_Grenade_shell
-	  1Rnd_SmokeBlue_Grenade_shell
-	  H_MilCap_mcamo
-	  10Rnd_762x51_Mag
-	  B_FieldPack_blk
-	  H_HelmetB
-	  V_TacVest_blk
-	  1Rnd_SmokeRed_Grenade_shell
-	  V_PlateCarrierSpec_rgr
-	  150Rnd_762x54_Box_Tracer
-	  V_RebreatherIA
-	  B_OutdoorPack_blu
-	  SmokeShell
-	  20Rnd_556x45_UW_mag
-	  1Rnd_SmokeRed_Grenade_shell
-	  U_I_CombatUniform
-	  150Rnd_93x64_Mag
-	  H_PilotHelmetHeli_I
-	  U_B_CombatUniform_mcam_vest
-	  V_TacVest_oli
-	  H_HelmetB_paint
-	  H_PilotHelmetHeli_I
-	  H_HelmetB_grass
-	  H_HelmetB_camo
-	  U_O_PilotCoveralls
-	  H_HelmetB_black
-	  1Rnd_SmokeBlue_Grenade_shell
-	  H_MilCap_rucamo
-	  3Rnd_Smoke_Grenade_shell
-	  H_HelmetB_light_desert
-	  U_B_GhillieSuit
-	  arifle_TRG20_F
-	  H_HelmetSpecB_paint1
-	  optic_Holosight
-	  3Rnd_Smoke_Grenade_shell
-	  arifle_MX_SW_Black_F
-	  U_B_CombatUniform_mcam_tshirt
-	  H_HelmetIA_net
-	  V_TacVest_brn
-	  30Rnd_556x45_Stanag
-	  H_PilotHelmetFighter_B
-	  ItemGPS
-	  H_HelmetCrew_B
-	  U_B_HeliPilotCoveralls
-	  acc_pointer_IR
-	  U_I_Wetsuit
-	  H_HelmetB_light_grass
-	  H_HelmetSpecO_ocamo
-	  H_HelmetB_black
-	  arifle_MX_SW_F
-	  V_PlateCarrierGL_rgr
-	  150Rnd_762x54_Box
-	  arifle_MXM_Black_F
-	  20Rnd_762x51_Mag
-	  U_I_Wetsuit
-	  B_OutdoorPack_blk
-	  150Rnd_762x54_Box_Tracer
-	  150Rnd_762x54_Box
-	  U_B_SpecopsUniform_sgg
-	  SmokeShellYellow
-	  30Rnd_556x45_Stanag_Tracer_Green
-	  H_HelmetB_sand
-	  SmokeShell
-	  acc_flashlight
-	  B_AssaultPack_mcamo
-	  B_Kitbag_sgg
-	  30Rnd_556x45_Stanag_Tracer_Red
-	  arifle_MX_F
-	  1Rnd_SmokeOrange_Grenade_shell
-	  V_PlateCarrier1_blk
-	  30Rnd_556x45_Stanag_Tracer_Green
-	  SmokeShellYellow
-	  V_PlateCarrier1_blk
-	  20Rnd_556x45_UW_mag
-	  SmokeShell
-	  30Rnd_556x45_Stanag_Tracer_Yellow
-	  V_PlateCarrierIA2_dgtl
-	  arifle_Mk20C_F
-	  150Rnd_762x54_Box_Tracer
-	  srifle_EBR_F
-	  150Rnd_93x64_Mag
-	  SmokeShellOrange
-	  arifle_MX_F
-	  H_HelmetSpecB_paint1
-	  B_FieldPack_blk
-	*/
-	class Military
-	{
-		top = 94.13;
-		count = 220;
-		half = 68.3500000000001;
-		halfIndex = 110;
-		maximum = 100;
-		sum = 22000;
-		items[] = 
-		{
-			{3, "150Rnd_93x64_Mag"},
-			{3.9, "U_B_CombatUniform_mcam_worn"},
-			{4.7, "arifle_Katiba_F"},
-			{5.4, "Binocular"},
-			{6.1, "V_PlateCarrier1_rgr"},
-			{6.8, "B_OutdoorPack_tan"},
-			{7.5, "V_Rangemaster_belt"},
-			{8.2, "B_OutdoorPack_blu"},
-			{8.9, "H_HelmetB_light_sand"},
-			{9.6, "U_B_CombatUniform_mcam_tshirt"},
-			{10.3, "B_OutdoorPack_blk"},
-			{11, "arifle_Katiba_GL_F"},
-			{11.7, "H_HelmetB_light_black"},
-			{12.4, "arifle_MX_F"},
-			{13.1, "acc_flashlight"},
-			{13.8, "U_B_CTRG_1"},
-			{14.5, "H_HelmetB_light_desert"},
-			{15.2, "H_MilCap_ocamo"},
-			{15.9, "H_HelmetB_light_snakeskin"},
-			{16.6, "arifle_TRG20_F"},
-			{17.3, "H_HelmetB_light_grass"},
-			{18, "H_MilCap_mcamo"},
-			{18.7, "H_HelmetB_sand"},
-			{19.4, "V_PlateCarrierIA2_dgtl"},
-			{20.1, "H_HelmetB_black"},
-			{20.8, "V_PlateCarrierGL_rgr"},
-			{21.5, "H_HelmetB_desert"},
-			{22.2, "V_PlateCarrier2_rgr"},
-			{22.9, "H_HelmetB_snakeskin"},
-			{23.6, "V_PlateCarrier1_blk"},
-			{24.3, "H_HelmetB_grass"},
-			{25, "150Rnd_762x54_Box"},
-			{25.7, "H_HelmetIA_camo"},
-			{26.4, "U_B_CombatUniform_mcam_vest"},
-			{27.1, "H_HelmetIA_net"},
-			{27.8, "V_PlateCarrierSpec_rgr"},
-			{28.5, "arifle_TRG21_F"},
-			{29.2, "V_PlateCarrierIAGL_dgtl"},
-			{29.9, "H_MilCap_oucamo"},
-			{30.6, "V_PlateCarrierIA1_dgtl"},
-			{31.3, "V_PlateCarrier3_rgr"},
-			{32, "H_MilCap_rucamo"},
-			{32.7, "100Rnd_65x39_caseless_mag"},
-			{33.4, "U_B_CTRG_3"},
-			{34.1, "H_HelmetIA"},
-			{34.8, "H_HelmetSpecB_blk"},
-			{35.5, "H_HelmetSpecB_paint2"},
-			{36.2, "H_HelmetSpecB_paint1"},
-			{36.9, "H_HelmetSpecB"},
-			{37.6, "H_HelmetB_plain_blk"},
-			{38.3, "H_HelmetB_light"},
-			{39, "H_HelmetB_paint"},
-			{39.7, "H_HelmetB"},
-			{40.4, "H_MilCap_dgtl"},
-			{41.1, "arifle_MXC_F"},
-			{41.8, "H_MilCap_blue"},
-			{42.5, "U_B_CTRG_2"},
-			{43.1, "acc_pointer_IR"},
-			{43.7, "arifle_Mk20C_F"},
-			{44.3, "100Rnd_65x39_caseless_mag_Tracer"},
-			{44.9, "150Rnd_762x54_Box_Tracer"},
-			{45.5, "B_HuntingBackpack"},
-			{46.1, "arifle_SDAR_F"},
-			{46.7, "arifle_Mk20_F"},
-			{47.2, "arifle_MX_SW_Black_F"},
-			{47.7, "B_AssaultPack_mcamo"},
-			{48.2, "U_B_CombatUniform_mcam"},
-			{48.7, "V_TacVest_khk"},
-			{49.2, "B_AssaultPack_blk"},
-			{49.7, "optic_MRCO"},
-			{50.2, "V_TacVest_blk"},
-			{50.7, "arifle_MXM_F"},
-			{51.2, "optic_Hamr"},
-			{51.7, "30Rnd_556x45_Stanag"},
-			{52.2, "V_TacVestCamo_khk"},
-			{52.7, "B_AssaultPack_cbr"},
-			{53.2, "B_AssaultPack_rgr"},
-			{53.7, "Exile_Item_InstaDoc"},
-			{54.2, "LMG_Mk200_F"},
-			{54.7, "B_AssaultPack_dgtl"},
-			{55.2, "V_TacVest_camo"},
-			{55.7, "arifle_MX_SW_F"},
-			{56.2, "ItemRadio"},
-			{56.7, "30Rnd_65x39_caseless_mag"},
-			{57.2, "B_AssaultPack_sgg"},
-			{57.7, "30Rnd_65x39_caseless_green"},
-			{58.2, "NVGoggles"},
-			{58.7, "V_TacVestIR_blk"},
-			{59.2, "V_TacVest_oli"},
-			{59.7, "optic_Arco"},
-			{60.2, "V_TacVest_brn"},
-			{60.7, "LMG_Zafir_F"},
-			{61.2, "optic_Holosight"},
-			{61.7, "B_AssaultPack_khk"},
-			{62.1, "30Rnd_65x39_caseless_green_mag_Tracer"},
-			{62.5, "20Rnd_762x51_Mag"},
-			{62.9, "10Rnd_762x51_Mag"},
-			{63.3, "H_HelmetCrew_I"},
-			{63.7, "H_HelmetCrew_O"},
-			{64.1, "H_HelmetCrew_B"},
-			{64.5, "30Rnd_556x45_Stanag_Tracer_Green"},
-			{64.9, "B_Kitbag_mcamo"},
-			{65.3, "B_Kitbag_sgg"},
-			{65.7, "B_Kitbag_cbr"},
-			{66.1000000000001, "30Rnd_556x45_Stanag_Tracer_Red"},
-			{66.5000000000001, "30Rnd_556x45_Stanag_Tracer_Yellow"},
-			{66.9000000000001, "ItemGPS"},
-			{67.3000000000001, "30Rnd_65x39_caseless_mag_Tracer"},
-			{67.6500000000001, "SmokeShellBlue"},
-			{68.0000000000001, "1Rnd_SmokeGreen_Grenade_shell"},
-			{68.3500000000001, "SmokeShellYellow"},
-			{68.7, "1Rnd_SmokeBlue_Grenade_shell"},
-			{69.05, "20Rnd_556x45_UW_mag"},
-			{69.4, "SmokeShellOrange"},
-			{69.75, "SmokeShellGreen"},
-			{70.1, "1Rnd_Smoke_Grenade_shell"},
-			{70.45, "1Rnd_SmokeRed_Grenade_shell"},
-			{70.8, "UGL_FlareGreen_F"},
-			{71.15, "optic_LRPS"},
-			{71.5, "UGL_FlareRed_F"},
-			{71.85, "1Rnd_SmokeOrange_Grenade_shell"},
-			{72.2, "optic_SOS"},
-			{72.55, "arifle_MX_GL_F"},
-			{72.9, "UGL_FlareYellow_F"},
-			{73.25, "SmokeShell"},
-			{73.6, "U_I_CombatUniform"},
-			{73.95, "U_I_pilotCoveralls"},
-			{74.3, "U_B_PilotCoveralls"},
-			{74.6499999999999, "U_O_PilotCoveralls"},
-			{74.9999999999999, "U_B_HeliPilotCoveralls"},
-			{75.3499999999999, "U_I_CombatUniform_shortsleeve"},
-			{75.6999999999999, "1Rnd_SmokePurple_Grenade_shell"},
-			{76.0499999999999, "optic_DMS"},
-			{76.3999999999999, "UGL_FlareWhite_F"},
-			{76.7499999999999, "SmokeShellRed"},
-			{77.0999999999999, "U_I_HeliPilotCoveralls"},
-			{77.4499999999999, "1Rnd_SmokeYellow_Grenade_shell"},
-			{77.7999999999999, "U_I_CombatUniform_tshirt"},
-			{78.1499999999999, "SmokeShellPurple"},
-			{78.4499999999999, "arifle_TRG21_GL_F"},
-			{78.7499999999999, "130Rnd_338_Mag"},
-			{79.0499999999999, "H_PilotHelmetHeli_O"},
-			{79.3499999999999, "H_PilotHelmetHeli_B"},
-			{79.6499999999999, "H_PilotHelmetFighter_I"},
-			{79.9499999999999, "H_PilotHelmetFighter_O"},
-			{80.2499999999999, "H_PilotHelmetFighter_B"},
-			{80.5499999999999, "H_CrewHelmetHeli_B"},
-			{80.8499999999999, "H_CrewHelmetHeli_O"},
-			{81.1499999999999, "H_CrewHelmetHeli_I"},
-			{81.4499999999999, "1Rnd_HE_Grenade_shell"},
-			{81.7499999999999, "V_RebreatherIA"},
-			{82.0499999999999, "V_RebreatherIR"},
-			{82.3499999999999, "V_RebreatherB"},
-			{82.6499999999998, "U_B_SpecopsUniform_sgg"},
-			{82.9499999999998, "arifle_Mk20_GL_F"},
-			{83.2499999999998, "H_PilotHelmetHeli_I"},
-			{83.4999999999998, "U_B_Wetsuit"},
-			{83.7499999999998, "U_O_Wetsuit"},
-			{83.9999999999998, "srifle_DMR_01_F"},
-			{84.2499999999998, "srifle_EBR_F"},
-			{84.4999999999998, "U_I_Wetsuit"},
-			{84.7499999999998, "MiniGrenade"},
-			{84.9999999999998, "muzzle_snds_H"},
-			{85.2499999999998, "muzzle_snds_M"},
-			{85.4999999999998, "5Rnd_127x108_Mag"},
-			{85.7499999999998, "H_BandMask_demon"},
-			{85.9999999999998, "H_BandMask_reaper"},
-			{86.2499999999998, "H_BandMask_khk"},
-			{86.4999999999998, "7Rnd_408_Mag"},
-			{86.7499999999998, "muzzle_snds_B"},
-			{86.9999999999998, "HandGrenade"},
-			{87.2499999999998, "H_HelmetB_camo"},
-			{87.4499999999998, "U_I_OfficerUniform"},
-			{87.6499999999998, "U_O_OfficerUniform_ocamo"},
-			{87.8499999999999, "srifle_GM6_F"},
-			{88.0499999999999, "B_FieldPack_blk"},
-			{88.2499999999999, "B_FieldPack_ocamo"},
-			{88.4499999999999, "arifle_MXM_Black_F"},
-			{88.6499999999999, "B_FieldPack_oucamo"},
-			{88.8499999999999, "B_FieldPack_cbr"},
-			{89.0499999999999, "arifle_MXC_Black_F"},
-			{89.2499999999999, "arifle_MX_Black_F"},
-			{89.4499999999999, "arifle_MX_GL_Black_F"},
-			{89.6499999999999, "srifle_LRR_F"},
-			{89.7999999999999, "U_O_SpecopsUniform_blk"},
-			{89.9499999999999, "3Rnd_SmokeYellow_Grenade_shell"},
-			{90.0999999999999, "B_Bergen_blk"},
-			{90.2499999999999, "U_O_CombatUniform_ocamo"},
-			{90.3999999999999, "B_Bergen_rgr"},
-			{90.5499999999999, "3Rnd_UGL_FlareRed_F"},
-			{90.6999999999999, "B_Bergen_mcamo"},
-			{90.8499999999999, "3Rnd_UGL_FlareYellow_F"},
-			{90.9999999999999, "B_Bergen_sgg"},
-			{91.1499999999999, "U_I_GhillieSuit"},
-			{91.2999999999999, "3Rnd_Smoke_Grenade_shell"},
-			{91.4499999999999, "U_B_GhillieSuit"},
-			{91.6, "3Rnd_SmokePurple_Grenade_shell"},
-			{91.75, "3Rnd_SmokeRed_Grenade_shell"},
-			{91.9, "3Rnd_SmokeOrange_Grenade_shell"},
-			{92.05, "3Rnd_HE_Grenade_shell"},
-			{92.2, "U_O_SpecopsUniform_ocamo"},
-			{92.35, "3Rnd_UGL_FlareWhite_F"},
-			{92.5, "3Rnd_UGL_FlareGreen_F"},
-			{92.65, "U_O_CombatUniform_oucamo"},
-			{92.8, "U_O_GhillieSuit"},
-			{92.95, "5Rnd_127x108_APDS_Mag"},
-			{93.1, "3Rnd_SmokeGreen_Grenade_shell"},
-			{93.25, "3Rnd_SmokeBlue_Grenade_shell"},
-			{93.35, "H_HelmetO_ocamo"},
-			{93.45, "H_HelmetLeaderO_ocamo"},
-			{93.55, "H_HelmetSpecO_blk"},
-			{93.65, "H_HelmetSpecO_ocamo"},
-			{93.75, "H_HelmetLeaderO_oucamo"},
-			{93.85, "H_HelmetO_oucamo"},
-			{93.95, "V_PlateCarrierL_CTRG"},
-			{94.05, "V_PlateCarrierH_CTRG"},
-			{94.1, "optic_NVS"},
-			{94.11, "optic_tws_mg"},
-			{94.12, "optic_Nightstalker"},
-			{94.13, "optic_tws"}
-		};
-	};
-
-	/**
-	  Result of 100 rounds:
-
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	  Exile_Item_InstaDoc
-	*/
-	class Medical
-	{
-		top = 1;
-		count = 1;
-		half = 1;
-		halfIndex = 0;
-		maximum = 100;
-		sum = 100;
-		items[] = 
-		{
-			{1, "Exile_Item_InstaDoc"}
-		};
-	};
-
-	/**
-	  Result of 100 rounds:
-
-	  muzzle_snds_B
-	  acc_pointer_IR
-	  B_Carryall_oucamo
-	  srifle_LRR_F
-	  srifle_GM6_F
-	  B_Carryall_mcamo
-	  HandGrenade
-	  7Rnd_408_Mag
-	  HandGrenade
-	  muzzle_snds_B
-	  optic_LRPS
-	  Binocular
-	  optic_LRPS
-	  srifle_LRR_F
-	  srifle_GM6_F
-	  B_Carryall_khk
-	  7Rnd_408_Mag
-	  Rangefinder
-	  10Rnd_762x51_Mag
-	  MiniGrenade
-	  acc_flashlight
-	  optic_DMS
-	  Exile_Item_InstaDoc
-	  srifle_LRR_F
-	  acc_pointer_IR
-	  Laserdesignator
-	  srifle_DMR_01_F
-	  NVGoggles
-	  7Rnd_408_Mag
-	  Exile_Item_InstaDoc
-	  NVGoggles
-	  srifle_EBR_F
-	  5Rnd_127x108_APDS_Mag
-	  srifle_LRR_F
-	  20Rnd_762x51_Mag
-	  acc_flashlight
-	  5Rnd_127x108_APDS_Mag
-	  optic_LRPS
-	  MiniGrenade
-	  NVGoggles
-	  Rangefinder
-	  7Rnd_408_Mag
-	  srifle_GM6_F
-	  B_Carryall_oucamo
-	  Binocular
-	  B_Carryall_oucamo
-	  Rangefinder
-	  muzzle_snds_B
-	  10Rnd_762x51_Mag
-	  B_Carryall_oucamo
-	  optic_DMS
-	  srifle_DMR_01_F
-	  srifle_LRR_F
-	  10Rnd_762x51_Mag
-	  optic_SOS
-	  Laserdesignator
-	  7Rnd_408_Mag
-	  5Rnd_127x108_Mag
-	  NVGoggles
-	  acc_pointer_IR
-	  5Rnd_127x108_APDS_Mag
-	  Rangefinder
-	  B_Carryall_cbr
-	  Rangefinder
-	  optic_SOS
-	  optic_LRPS
-	  srifle_LRR_F
-	  MiniGrenade
-	  10Rnd_762x51_Mag
-	  5Rnd_127x108_APDS_Mag
-	  Binocular
-	  acc_pointer_IR
-	  srifle_LRR_F
-	  5Rnd_127x108_APDS_Mag
-	  7Rnd_408_Mag
-	  5Rnd_127x108_Mag
-	  Rangefinder
-	  NVGoggles
-	  Binocular
-	  optic_DMS
-	  5Rnd_127x108_Mag
-	  5Rnd_127x108_Mag
-	  Binocular
-	  Exile_Item_InstaDoc
-	  optic_LRPS
-	  5Rnd_127x108_Mag
-	  7Rnd_408_Mag
-	  optic_LRPS
-	  7Rnd_408_Mag
-	  NVGoggles
-	  7Rnd_408_Mag
-	  Rangefinder
-	  acc_pointer_IR
-	  acc_pointer_IR
-	  5Rnd_127x108_APDS_Mag
-	  srifle_EBR_F
-	  7Rnd_408_Mag
-	  Binocular
-	  muzzle_snds_B
-	  MiniGrenade
-	*/
-	class Tourist
-	{
-		top = 14.85;
-		count = 30;
-		half = 10.95;
-		halfIndex = 15;
-		maximum = 100;
-		sum = 3000;
-		items[] = 
-		{
-			{0.8, "srifle_EBR_F"},
-			{1.6, "srifle_DMR_01_F"},
-			{2.4, "Binocular"},
-			{3.15, "Rangefinder"},
-			{3.85, "optic_LRPS"},
-			{4.55, "srifle_LRR_F"},
-			{5.25, "srifle_GM6_F"},
-			{5.95, "muzzle_snds_B"},
-			{6.65, "acc_flashlight"},
-			{7.35, "acc_pointer_IR"},
-			{8.05, "optic_DMS"},
-			{8.75, "optic_SOS"},
-			{9.35, "20Rnd_762x51_Mag"},
-			{9.95, "10Rnd_762x51_Mag"},
-			{10.45, "5Rnd_127x108_Mag"},
-			{10.95, "7Rnd_408_Mag"},
-			{11.45, "Exile_Item_InstaDoc"},
-			{11.95, "NVGoggles"},
-			{12.45, "ItemRadio"},
-			{12.95, "Laserdesignator"},
-			{13.35, "5Rnd_127x108_APDS_Mag"},
-			{13.75, "ItemGPS"},
-			{14, "MiniGrenade"},
-			{14.25, "HandGrenade"},
-			{14.35, "B_Carryall_ocamo"},
-			{14.45, "B_Carryall_oucamo"},
-			{14.55, "B_Carryall_mcamo"},
-			{14.65, "B_Carryall_oli"},
-			{14.75, "B_Carryall_khk"},
-			{14.85, "B_Carryall_cbr"}
-		};
-	};
-
+        /**
+          Result of 100 rounds:
+ 
+          optic_ACO_grn_smg
+          Exile_Item_LightBulb
+          rhs_weap_ak74m_folded
+          TRYK_OVERALL_SAGE_BLKboots_nk_blk
+          rhs_10Rnd_762x54mmR_7N1
+          srifle_mas_sr25_v
+          TRYK_V_tacSVD_OD
+          rhs_weap_aks74u
+          arifle_mas_m4_d
+          U_IG_Guerilla2_1
+          arifle_mas_akms_c
+          Exile_Item_ChristmasTinner
+          FlareWhite_F
+          muzzle_mas_snds_C
+          arifle_mas_l119
+          TRYK_shirts_DENIM_ylb_Sleeve
+          optic_Aco
+          Exile_Item_PlasticBottleEmpty
+          100Rnd_mas_762x54_mag
+          TRYK_U_denim_hood_nc
+          TRYK_H_woolhat
+          hgun_Pistol_heavy_01_F
+          FlareYellow_F
+          arifle_mas_g36c
+          U_IG_Guerilla2_3
+          10Rnd_mas_45acp_Mag
+          Exile_Item_Surstromming
+          B_AssaultPack_mcamo
+          17Rnd_mas_9x21_Mag
+          B_AssaultPack_rgr
+          rhs_weap_ak74m
+          TRYK_shirts_BLK_PAD_BK
+          TRYK_V_harnes_od_L
+          H_Cap_tan_specops_US
+          B_Bergen_mcamo
+          B_AssaultPack_dgtl
+          optic_Aco
+          12Rnd_mas_45acp_Mag
+          rhs_weap_sr25
+          arifle_mas_m4_gl_v
+          TRYK_shirts_PAD_RED2
+          40Rnd_mas_46x30_Mag
+          FlareGreen_F
+          Exile_Item_Matches
+          arifle_mas_m4_v
+          arifle_mas_l119_m203_d
+          100Rnd_mas_545x39_mag
+          TRYK_U_denim_hood_nc
+          Exile_Item_ChristmasTinner
+          rhsusf_100Rnd_556x45_soft_pouch
+          srifle_mas_mk17s
+          Exile_Item_BBQSandwich
+          TRYK_shirts_TAN_PAD
+          rhs_weap_ak74m_camo
+          arifle_mas_asval
+          TRYK_shirts_TAN_PAD_BLW
+          TRYK_shirts_DENIM_BWH
+          rhs_weap_makarov_pmm
+          U_C_Poor_2
+          arifle_mas_mk16
+          arifle_mas_m4c_v
+          rhs_weap_aks74u
+          150Rnd_mas_556x45_Stanag
+          TRYK_B_FieldPack_Wood
+          arifle_mas_fal
+          TRYK_shirts_DENIM_RED2
+          Chemlight_green
+          B_OutdoorPack_blu
+          hgun_ACPC2_F
+          10Rnd_mas_45acp_Mag
+          TRYK_B_Carryall_JSDF
+          TRYK_U_denim_hood_mc
+          TRYK_shirts_TAN_PAD_BLU3
+          rhs_10Rnd_762x54mmR_7N1
+          TRYK_r_cap_od_Glasses
+          B_AssaultPack_blk
+          TRYK_V_tacv1MLC_BK
+          30Rnd_mas_9x21_Stanag
+          B_Bergen_sgg
+          arifle_mas_ak12_sf
+          H_Beret_grn_SF
+          rhsusf_mag_7x45acp_MHP
+          rhs_weap_ak74m
+          TRYK_B_BAF_BAG_BLK
+          Chemlight_green
+          arifle_mas_m4c
+          TRYK_V_tacv10LC_TN
+          rhs_30Rnd_762x39mm
+          arifle_mas_hk416c_v
+          hgun_mas_bhp_F
+          Exile_Item_BBQSandwich
+          TRYK_shirts_DENIM_BWH_Sleeve
+          30Rnd_556x45_Stanag_Tracer_Red
+          arifle_TRG20_F
+          TRYK_V_tacv1LC_SRF2_OD
+          rhs_weap_aks74
+          Exile_Item_Surstromming
+          10Rnd_mas_762x54_mag
+          optic_Holosight_smg
+          H_Booniehat_tan
+        */
+        class CivillianLowerClass
+        {
+                top = 236.470000000001;
+                count = 474;
+                half = 174.65;
+                halfIndex = 237;
+                maximum = 100;
+                sum = 47400;
+                items[] =
+                {
+                        {2, "Exile_Item_Catfood"},
+                        {4, "Exile_Item_Matches"},
+                        {6, "Exile_Item_PlasticBottleEmpty"},
+                        {7.9, "Exile_Item_Surstromming"},
+                        {9.6, "Exile_Item_BBQSandwich"},
+                        {11.3, "Exile_Item_ChristmasTinner"},
+                        {13, "Exile_Item_SausageGravy"},
+                        {14.5, "Exile_Item_GloriousKnakworst"},
+                        {15.5, "Chemlight_blue"},
+                        {16.5, "Chemlight_red"},
+                        {17.5, "Chemlight_yellow"},
+                        {18.5, "Chemlight_green"},
+                        {19.4, "17Rnd_mas_9x21_Mag"},
+                        {20.3, "11Rnd_45ACP_Mag"},
+                        {21.2, "hgun_mas_usp_l_F"},
+                        {22.1, "9Rnd_45ACP_Mag"},
+                        {23, "hgun_mas_acp_F"},
+                        {23.9, "hgun_mas_glock_F"},
+                        {24.8, "hgun_mas_bhp_F"},
+                        {25.7, "rhs_weap_makarov_pmm"},
+                        {26.6, "rhs_weap_pya"},
+                        {27.5, "hgun_mas_m9_F"},
+                        {28.4, "hgun_Pistol_heavy_02_F"},
+                        {29.3, "hgun_Pistol_heavy_01_F"},
+                        {30.2, "12Rnd_mas_45acp_Mag"},
+                        {31.1, "16Rnd_9x21_Mag"},
+                        {32, "30Rnd_9x21_Mag"},
+                        {32.9, "30Rnd_mas_9x21D_Stanag"},
+                        {33.8, "hgun_mas_usp_F"},
+                        {34.6, "TRYK_B_Kitbag_blk"},
+                        {35.4, "30Rnd_mas_9x21_Stanag"},
+                        {36.2, "13Rnd_mas_9x21_Mag"},
+                        {37, "15Rnd_mas_9x21_Mag"},
+                        {37.8, "FlareYellow_F"},
+                        {38.6, "FlareWhite_F"},
+                        {39.4, "FlareRed_F"},
+                        {40.2, "FlareGreen_F"},
+                        {41, "hgun_ACPC2_F"},
+                        {41.7999999999999, "hgun_P07_F"},
+                        {42.5999999999999, "hgun_Rook40_F"},
+                        {43.3499999999999, "B_OutdoorPack_blk"},
+                        {44.0999999999999, "B_OutdoorPack_tan"},
+                        {44.8499999999999, "B_OutdoorPack_blu"},
+                        {45.5999999999999, "TRYK_B_Coyotebackpack_OD"},
+                        {46.2999999999999, "rhs_30Rnd_545x39_AK"},
+                        {47, "rhsusf_8Rnd_00Buck"},
+                        {47.7, "rhs_weap_akm"},
+                        {48.4, "rhs_weap_akms"},
+                        {49.1, "arifle_mas_ak_74m_c"},
+                        {49.8, "rhsusf_5Rnd_00Buck"},
+                        {50.5, "arifle_mas_akm"},
+                        {51.2, "25Rnd_mas_9x19_Mag"},
+                        {51.9, "arifle_mas_akms"},
+                        {52.6, "rhsusf_5Rnd_300winmag_xm2010"},
+                        {53.3, "arifle_mas_akms_c"},
+                        {54, "rhsusf_20Rnd_762x51_m993_Mag"},
+                        {54.7, "arifle_mas_aks74"},
+                        {55.4, "rhsusf_50Rnd_762x51_m993"},
+                        {56.1, "arifle_mas_aks74u"},
+                        {56.8, "rhsusf_50Rnd_762x51"},
+                        {57.5, "arifle_mas_aks74u_c"},
+                        {58.2, "rhsusf_100Rnd_556x45_soft_pouch"},
+                        {58.9, "arifle_mas_aks_74_sf"},
+                        {59.6, "rhs_mag_30Rnd_556x45_m855A1_Stanag"},
+                        {60.3, "arifle_mas_fal"},
+                        {61, "rhs_mag_9x19_17"},
+                        {61.7, "arifle_mas_g3"},
+                        {62.4, "rhs_10Rnd_762x54mmR_7N1"},
+                        {63.1, "arifle_mas_g36c"},
+                        {63.8, "5Rnd_mas_127x108_mag"},
+                        {64.5, "arifle_mas_g3s"},
+                        {65.2, "B_HuntingBackpack"},
+                        {65.9, "arifle_mas_hk416"},
+                        {66.6, "150Rnd_mas_556x45_Stanag"},
+                        {67.3, "arifle_mas_hk416_d"},
+                        {68, "10Rnd_mas_762x54_mag"},
+                        {68.7, "arifle_mas_hk416_h"},
+                        {69.4, "10Rnd_mas_12Gauge_Pellets"},
+                        {70.1, "20Rnd_mas_12Gauge_Pellets"},
+                        {70.8, "10Rnd_mas_12Gauge_Slug"},
+                        {71.5, "7Rnd_mas_12Gauge_Pellets"},
+                        {72.2, "7Rnd_mas_12Gauge_Slug"},
+                        {72.9, "40Rnd_mas_46x30_Mag"},
+                        {73.6000000000001, "20Rnd_mas_12Gauge_Slug"},
+                        {74.3000000000001, "20Rnd_mas_9x39_mag"},
+                        {75.0000000000001, "30Rnd_mas_762x39_mag"},
+                        {75.7000000000001, "20Rnd_mas_765x17_Mag"},
+                        {76.4000000000001, "30Rnd_mas_556x45_Stanag"},
+                        {77.1000000000001, "30Rnd_65x39_caseless_green_mag_Tracer"},
+                        {77.8000000000001, "30Rnd_65x39_caseless_green"},
+                        {78.5000000000001, "TRYK_B_AssaultPack_MARPAT_Wood"},
+                        {79.2000000000001, "30Rnd_mas_9x39_mag"},
+                        {79.9000000000001, "30Rnd_556x45_Stanag_Tracer_Red"},
+                        {80.6000000000001, "30Rnd_556x45_Stanag_Tracer_Green"},
+                        {81.3000000000001, "30Rnd_556x45_Stanag"},
+                        {82.0000000000001, "rhs_weap_sr25"},
+                        {82.7000000000001, "rhs_weap_m16a4"},
+                        {83.4000000000001, "TRYK_B_Belt_BLK"},
+                        {84.1000000000001, "rhs_weap_m4a1"},
+                        {84.8000000000001, "rhs_weap_m4"},
+                        {85.5000000000001, "rhs_weap_aks74u"},
+                        {86.2000000000001, "rhs_weap_aks74"},
+                        {86.9000000000001, "rhs_weap_ak74"},
+                        {87.6000000000001, "rhs_weap_ak74m_folded"},
+                        {88.3000000000001, "arifle_mas_ak12_sf"},
+                        {89.0000000000001, "arifle_mas_ak74"},
+                        {89.7000000000001, "arifle_mas_ak_74m"},
+                        {90.4000000000001, "rhs_weap_ak74m_npz"},
+                        {91.1000000000001, "30Rnd_556x45_Stanag_Tracer_Yellow"},
+                        {91.8000000000001, "8Rnd_mas_9x18_Mag"},
+                        {92.5000000000001, "rhs_45Rnd_545x39_AK"},
+                        {93.2000000000001, "rhsusf_mag_7x45acp_MHP"},
+                        {93.9000000000001, "rhsusf_20Rnd_762x51_m118_special_Mag"},
+                        {94.6000000000001, "rhsusf_50Rnd_762x51_m80a1epr"},
+                        {95.3000000000001, "rhsusf_200Rnd_556x45_soft_pouch"},
+                        {96.0000000000001, "rhs_mag_30Rnd_556x45_m855A1_Stanag_No_Tracer"},
+                        {96.7000000000001, "rhs_mag_9x18_12_57N181S"},
+                        {97.4000000000001, "rhs_30Rnd_762x39mm"},
+                        {98.1000000000002, "rhs_30Rnd_545x39_AK_no_tracers"},
+                        {98.8000000000002, "5Rnd_mas_127x99_Stanag"},
+                        {99.5000000000002, "10Rnd_mas_338_Stanag"},
+                        {100.2, "30Rnd_mas_545x39_mag"},
+                        {100.9, "arifle_mas_hk416_v"},
+                        {101.6, "arifle_mas_hk416c"},
+                        {102.3, "arifle_mas_hk416c_d"},
+                        {103, "arifle_mas_hk416c_v"},
+                        {103.7, "arifle_mas_hk417c"},
+                        {104.4, "arifle_mas_hk417c_d"},
+                        {105.1, "arifle_mas_hk417c_v"},
+                        {105.8, "srifle_mas_hk417"},
+                        {106.5, "srifle_mas_hk417_d"},
+                        {107.2, "srifle_mas_hk417_v"},
+                        {107.9, "arifle_mas_l119"},
+                        {108.6, "arifle_mas_l119_d"},
+                        {109.3, "arifle_mas_l119_gl"},
+                        {110, "arifle_mas_l119_gl_d"},
+                        {110.7, "arifle_mas_l119_gl_v"},
+                        {111.4, "arifle_mas_l119_m203"},
+                        {112.1, "arifle_mas_l119_m203_d"},
+                        {112.8, "arifle_mas_l119_m203_v"},
+                        {113.5, "arifle_mas_l119_v"},
+                        {114.2, "arifle_mas_l119c"},
+                        {114.9, "arifle_mas_l119c_d"},
+                        {115.6, "arifle_mas_l119c_v"},
+                        {116.3, "arifle_mas_m16"},
+                        {117, "arifle_mas_m16_gl"},
+                        {117.7, "arifle_mas_m4"},
+                        {118.4, "arifle_mas_m4_d"},
+                        {119.1, "arifle_mas_m4_gl"},
+                        {119.8, "arifle_mas_m4_gl_d"},
+                        {120.5, "arifle_mas_m4_gl_v"},
+                        {121.2, "arifle_mas_m4_v"},
+                        {121.9, "arifle_mas_m4c"},
+                        {122.6, "arifle_mas_m4c_d"},
+                        {123.3, "arifle_mas_m4c_v"},
+                        {124, "arifle_mas_m4vlt"},
+                        {124.7, "arifle_mas_mk16"},
+                        {125.4, "arifle_mas_mk17"},
+                        {126.1, "arifle_mas_arx"},
+                        {126.8, "arifle_mas_arx_l"},
+                        {127.5, "arifle_mas_asval"},
+                        {128.2, "arifle_mas_asval_ds"},
+                        {128.9, "srifle_mas_mk17s"},
+                        {129.6, "srifle_mas_sr25"},
+                        {130.3, "srifle_mas_sr25_d"},
+                        {131, "srifle_mas_sr25_v"},
+                        {131.7, "rhs_weap_ak74m"},
+                        {132.4, "rhs_weap_ak74m_camo"},
+                        {133.1, "5Rnd_mas_762x51_Stanag"},
+                        {133.8, "rhs_weap_ak103"},
+                        {134.45, "Exile_Item_CookingPot"},
+                        {135.05, "TRYK_shirts_DENIM_WH_Sleeve"},
+                        {135.65, "TRYK_shirts_DENIM_BK_Sleeve"},
+                        {136.25, "B_AssaultPack_khk"},
+                        {136.85, "TRYK_shirts_OD_PAD_YEL"},
+                        {137.45, "TRYK_shirts_DENIM_WHB_Sleeve"},
+                        {138.05, "TRYK_shirts_DENIM_BL_Sleeve"},
+                        {138.65, "B_Kitbag_cbr"},
+                        {139.25, "TRYK_shirts_DENIM_od"},
+                        {139.85, "B_Kitbag_sgg"},
+                        {140.45, "TRYK_B_Medbag"},
+                        {141.05, "B_Kitbag_mcamo"},
+                        {141.65, "TRYK_shirts_BLK_PAD_BK"},
+                        {142.25, "B_AssaultPack_mcamo"},
+                        {142.85, "TRYK_shirts_OD_PAD_BK"},
+                        {143.45, "B_AssaultPack_cbr"},
+                        {144.05, "TRYK_shirts_DENIM_WHB"},
+                        {144.65, "B_AssaultPack_blk"},
+                        {145.25, "TRYK_shirts_TAN_PAD"},
+                        {145.85, "B_AssaultPack_sgg"},
+                        {146.45, "TRYK_T_camo_3c_BG"},
+                        {147.05, "B_AssaultPack_rgr"},
+                        {147.65, "rhsusf_acc_eotech_552"},
+                        {148.25, "TRYK_shirts_OD_PAD_BLU3"},
+                        {148.85, "TRYK_shirts_DENIM_RED2"},
+                        {149.45, "TRYK_shirts_PAD_BLU3"},
+                        {150.05, "TRYK_OVERALL_SAGE_BLKboots_nk_blk"},
+                        {150.65, "TRYK_shirts_BLK_PAD_RED2"},
+                        {151.25, "TRYK_U_denim_jersey_blu"},
+                        {151.85, "TRYK_U_denim_hood_nc"},
+                        {152.45, "TRYK_U_denim_hood_3c"},
+                        {153.05, "TRYK_U_denim_hood_mc"},
+                        {153.65, "TRYK_U_denim_hood_blk"},
+                        {154.25, "TRYK_shirts_DENIM_od_Sleeve"},
+                        {154.85, "TRYK_shirts_DENIM_ylb_Sleeve"},
+                        {155.45, "TRYK_shirts_TAN_PAD_BLW"},
+                        {156.05, "TRYK_shirts_BLK_PAD_BLW"},
+                        {156.65, "TRYK_shirts_PAD_YEL"},
+                        {157.25, "TRYK_B_Medbag_OD"},
+                        {157.85, "6Rnd_45ACP_Cylinder"},
+                        {158.45, "TRYK_shirts_DENIM_BWH_Sleeve"},
+                        {159.05, "TRYK_T_camo_Wood"},
+                        {159.65, "TRYK_shirts_BLK_PAD_BLU3"},
+                        {160.25, "TRYK_shirts_TAN_PAD_BLU3"},
+                        {160.85, "TRYK_shirts_BLK_PAD_YEL"},
+                        {161.45, "rhsusf_acc_LEUPOLDMK4"},
+                        {162.05, "TRYK_shirts_DENIM_BWH"},
+                        {162.65, "TRYK_shirts_TAN_PAD_RED2"},
+                        {163.25, "TRYK_shirts_OD_PAD_RED2"},
+                        {163.85, "TRYK_T_camo_wood_marpat_BG"},
+                        {164.45, "TRYK_shirts_DENIM_RED2_Sleeve"},
+                        {165.05, "TRYK_shirts_OD_PAD_BLW"},
+                        {165.65, "TRYK_shirts_DENIM_R_Sleeve"},
+                        {166.25, "TRYK_shirts_DENIM_ylb"},
+                        {166.85, "TRYK_shirts_PAD_BLW"},
+                        {167.45, "TRYK_shirts_TAN_PAD_BK"},
+                        {168.05, "TRYK_shirts_PAD_BK"},
+                        {168.65, "TRYK_shirts_BLK_PAD"},
+                        {169.25, "TRYK_shirts_OD_PAD"},
+                        {169.85, "TRYK_T_camo_Desert_marpat"},
+                        {170.45, "B_AssaultPack_dgtl"},
+                        {171.05, "TRYK_shirts_PAD_RED2"},
+                        {171.65, "TRYK_T_camo_desert_marpat_BG"},
+                        {172.25, "TRYK_OVERALL_SAGE_BLKboots"},
+                        {172.85, "TRYK_shirts_TAN_PAD_YEL"},
+                        {173.45, "TRYK_T_camo_wood_marpat"},
+                        {174.05, "10Rnd_mas_45acp_Mag"},
+                        {174.65, "TRYK_shirts_PAD"},
+                        {175.25, "TRYK_T_camo_Wood_BG"},
+                        {175.85, "TRYK_U_denim_jersey_blk"},
+                        {176.35, "100Rnd_mas_545x39_mag"},
+                        {176.85, "optic_ACO_grn"},
+                        {177.35, "100Rnd_mas_762x39_mag"},
+                        {177.85, "rhs_200rnd_556x45_M_SAW"},
+                        {178.35, "B_Bergen_sgg"},
+                        {178.85, "optic_Holosight_smg"},
+                        {179.35, "B_Bergen_mcamo"},
+                        {179.85, "rhs_100Rnd_762x54mmR"},
+                        {180.35, "200Rnd_mas_556x45_Stanag"},
+                        {180.85, "B_FieldPack_ocamo"},
+                        {181.35, "B_FieldPack_oucamo"},
+                        {181.85, "B_FieldPack_cbr"},
+                        {182.35, "100Rnd_mas_762x54_mag"},
+                        {182.85, "100Rnd_mas_762x51_Stanag"},
+                        {183.35, "optic_Aco"},
+                        {183.85, "optic_Aco_smg"},
+                        {184.35, "optic_ACO_grn_smg"},
+                        {184.85, "muzzle_snds_L"},
+                        {185.35, "muzzle_snds_acp"},
+                        {185.85, "B_Bergen_rgr"},
+                        {186.35, "U_C_HunterBody_grn"},
+                        {186.85, "U_C_Poor_shorts_1"},
+                        {187.35, "U_C_Poor_2"},
+                        {187.85, "U_C_Poor_1"},
+                        {188.35, "Exile_Item_PlasticBottleFreshWater"},
+                        {188.85, "B_Bergen_blk"},
+                        {189.35, "20Rnd_556x45_UW_mag"},
+                        {189.85, "rhs_mag_m441_HE"},
+                        {190.35, "B_FieldPack_blk"},
+                        {190.85, "rhs_mag_M433_HEDP"},
+                        {191.25, "arifle_TRG21_F"},
+                        {191.65, "U_IG_Guerilla2_1"},
+                        {192.05, "U_C_Poloshirt_burgundy"},
+                        {192.45, "Exile_Item_Beer"},
+                        {192.85, "U_C_Poloshirt_blue"},
+                        {193.25, "U_IG_Guerilla3_1"},
+                        {193.65, "arifle_TRG20_F"},
+                        {194.05, "Exile_Item_DuctTape"},
+                        {194.45, "optic_mas_PSO"},
+                        {194.85, "U_IG_Guerilla3_2"},
+                        {195.25, "optic_mas_aim"},
+                        {195.65, "30Rnd_45ACP_Mag_SMG_01"},
+                        {196.05, "U_C_Poloshirt_salmon"},
+                        {196.45, "arifle_Katiba_GL_F"},
+                        {196.85, "arifle_Katiba_F"},
+                        {197.25, "hgun_Pistol_Signal_F"},
+                        {197.65, "TRYK_B_BAF_BAG_BLK"},
+                        {198.05, "acc_flashlight"},
+                        {198.45, "optic_mas_acog"},
+                        {198.85, "30Rnd_45ACP_Mag_SMG_01_Tracer_Green"},
+                        {199.25, "Exile_Item_LightBulb"},
+                        {199.65, "U_IG_Guerilla2_3"},
+                        {200.05, "U_IG_Guerilla2_2"},
+                        {200.45, "U_IG_Guerilla1_1"},
+                        {200.85, "U_C_Poloshirt_stripped"},
+                        {201.25, "U_C_Poloshirt_tricolour"},
+                        {201.55, "TRYK_ESS_CAP_OD"},
+                        {201.85, "TRYK_TAC_EARMUFF_Gs"},
+                        {202.15, "SMG_02_F"},
+                        {202.45, "SMG_01_F"},
+                        {202.75, "arifle_mas_mp5_v"},
+                        {203.05, "TRYK_R_CAP_TAN"},
+                        {203.35, "arifle_mas_mp5_d"},
+                        {203.65, "TRYK_R_CAP_OD_US"},
+                        {203.95, "arifle_mas_mp5"},
+                        {204.25, "TRYK_r_cap_blk_Glasses"},
+                        {204.55, "hgun_PDW2000_F"},
+                        {204.85, "TRYK_H_headsetcap_Glasses"},
+                        {205.15, "Exile_Item_Energydrink"},
+                        {205.45, "optic_MRCO"},
+                        {205.75, "TRYK_NOMIC_TAC_EARMUFF_Gs"},
+                        {206.05, "optic_Holosight"},
+                        {206.35, "64Rnd_mas_9x18_mag"},
+                        {206.65, "optic_Arco"},
+                        {206.95, "H_Booniehat_khk"},
+                        {207.25, "muzzle_snds_M"},
+                        {207.55, "H_Booniehat_indp"},
+                        {207.85, "TRYK_B_Carryall_JSDF"},
+                        {208.15, "H_Booniehat_mcamo"},
+                        {208.45, "TRYK_B_FieldPack_Wood"},
+                        {208.75, "H_Booniehat_grn"},
+                        {209.05, "6Rnd_RedSignal_F"},
+                        {209.35, "H_Booniehat_tan"},
+                        {209.65, "arifle_mas_mp40"},
+                        {209.95, "H_Booniehat_dirty"},
+                        {210.25, "TRYK_R_CAP_BLK"},
+                        {210.55, "H_Booniehat_dgtl"},
+                        {210.85, "TRYK_r_cap_tan_Glasses"},
+                        {211.15, "H_Booniehat_khk_hs"},
+                        {211.45, "acc_pointer_IR"},
+                        {211.75, "optic_Hamr"},
+                        {212.05, "muzzle_snds_H"},
+                        {212.35, "arifle_SDAR_F"},
+                        {212.65, "TRYK_B_Alicepack"},
+                        {212.95, "6Rnd_GreenSignal_F"},
+                        {213.25, "arifle_mas_bizon"},
+                        {213.55, "TRYK_H_headsetcap_od_Glasses"},
+                        {213.85, "TRYK_ESS_CAP_tan"},
+                        {214.15, "TRYK_headset2"},
+                        {214.45, "TRYK_NOMIC_TAC_EARMUFF"},
+                        {214.75, "TRYK_TAC_EARMUFF"},
+                        {215.05, "TRYK_TAC_EARMUFF_SHADE"},
+                        {215.35, "TRYK_H_woolhat_tan"},
+                        {215.65, "TRYK_H_woolhat_cu"},
+                        {215.950000000001, "TRYK_H_woolhat_br"},
+                        {216.250000000001, "TRYK_H_woolhat_WH"},
+                        {216.550000000001, "TRYK_H_woolhat_CW"},
+                        {216.850000000001, "TRYK_H_woolhat"},
+                        {217.150000000001, "TRYK_r_cap_od_Glasses"},
+                        {217.450000000001, "TRYK_H_headsetcap_blk_Glasses"},
+                        {217.750000000001, "optic_DMS"},
+                        {218.000000000001, "ItemGPS"},
+                        {218.250000000001, "muzzle_mas_snds_MP7"},
+                        {218.500000000001, "muzzle_mas_snds_L"},
+                        {218.750000000001, "muzzle_mas_snds_SM"},
+                        {219.000000000001, "muzzle_mas_snds_AK"},
+                        {219.250000000001, "muzzle_mas_snds_Mc"},
+                        {219.500000000001, "muzzle_mas_snds_MP5SD6"},
+                        {219.750000000001, "muzzle_mas_snds_C"},
+                        {220.000000000001, "muzzle_mas_snds_LM"},
+                        {220.200000000001, "optic_Yorris"},
+                        {220.400000000001, "TRYK_SUITS_BR_F"},
+                        {220.600000000001, "Exile_Item_BBQSandwich_Cooked"},
+                        {220.800000000001, "H_BandMask_blk"},
+                        {221.000000000001, "optic_MRD"},
+                        {221.200000000001, "H_Bandanna_camo"},
+                        {221.4, "H_Bandanna_gry"},
+                        {221.6, "H_Bandanna_sgg"},
+                        {221.8, "H_Bandanna_cbr"},
+                        {222, "H_Bandanna_khk_hs"},
+                        {222.2, "H_Bandanna_khk"},
+                        {222.4, "Exile_Item_ChristmasTinner_Cooked"},
+                        {222.6, "H_Bandanna_mcamo"},
+                        {222.8, "Exile_Item_GloriousKnakworst_Cooked"},
+                        {223, "Exile_Item_SausageGravy_Cooked"},
+                        {223.2, "Exile_Item_Surstromming_Cooked"},
+                        {223.4, "Exile_Item_Catfood_Cooked"},
+                        {223.6, "TRYK_SUITS_BLK_F"},
+                        {223.8, "arifle_mas_mp5sd"},
+                        {223.95, "TRYK_V_IOTV_BLK"},
+                        {224.1, "TRYK_V_tacv1LSRF_BK"},
+                        {224.25, "H_Watchcap_camo"},
+                        {224.4, "TRYK_V_tacv1LC_BK"},
+                        {224.55, "TRYK_V_harnes_TAN_L"},
+                        {224.7, "H_TurbanO_blk"},
+                        {224.85, "TRYK_V_ChestRig"},
+                        {225, "Exile_Item_InstaDoc"},
+                        {225.15, "H_Watchcap_khk"},
+                        {225.3, "H_Cap_brn_SPECOPS"},
+                        {225.45, "TRYK_V_tacv1M_BK"},
+                        {225.6, "H_Cap_khaki_specops_UK"},
+                        {225.75, "TRYK_V_tacv1MLC_BK"},
+                        {225.9, "TRYK_TAC_SET_bn"},
+                        {226.05, "TRYK_V_tacv1"},
+                        {226.2, "V_BandollierB_khk"},
+                        {226.35, "TRYK_V_tacv1_CY"},
+                        {226.5, "V_BandollierB_rgr"},
+                        {226.65, "TRYK_V_tacv1_BK"},
+                        {226.8, "V_BandollierB_oli"},
+                        {226.95, "TRYK_V_tacv1_P_BK"},
+                        {227.1, "TRYK_V_tacSVD_OD"},
+                        {227.25, "TRYK_V_tacv1_FBI_BK"},
+                        {227.4, "TRYK_V_tacv1LC_MSL_NV"},
+                        {227.55, "TRYK_V_tacv1LP_BK"},
+                        {227.700000000001, "V_HarnessOGL_brn"},
+                        {227.850000000001, "TRYK_V_tacv1LMSL_NV"},
+                        {228.000000000001, "V_HarnessOGL_gry"},
+                        {228.150000000001, "TRYK_V_tacv1LMSL_BK"},
+                        {228.300000000001, "V_HarnessOSpec_gry"},
+                        {228.450000000001, "TRYK_V_tacv1LC_CY"},
+                        {228.600000000001, "TRYK_Hrp_vest_ucp"},
+                        {228.750000000001, "TRYK_V_tacv1LC_OD"},
+                        {228.900000000001, "TRYK_V_harnes_blk_L"},
+                        {229.050000000001, "TRYK_V_harnes_od_L"},
+                        {229.200000000001, "TRYK_V_tacv1_MSL_BK"},
+                        {229.350000000001, "H_Watchcap_sgg"},
+                        {229.500000000001, "Binocular"},
+                        {229.650000000001, "H_Hat_camo"},
+                        {229.800000000001, "H_Cap_tan_specops_US"},
+                        {229.950000000001, "H_Watchcap_blk"},
+                        {230.100000000001, "TRYK_LOC_AK_chestrig_TAN"},
+                        {230.250000000001, "V_BandollierB_cbr"},
+                        {230.400000000001, "V_BandollierB_blk"},
+                        {230.550000000001, "TRYK_LOC_AK_chestrig_OD"},
+                        {230.700000000001, "TRYK_V_tacSVD_BK"},
+                        {230.850000000001, "V_HarnessO_brn"},
+                        {231.000000000001, "V_HarnessO_gry"},
+                        {231.150000000001, "V_HarnessOSpec_brn"},
+                        {231.300000000001, "TRYK_V_tacv1LC_MSL_BK"},
+                        {231.450000000001, "TRYK_V_tacv1LC_FBI_BK"},
+                        {231.600000000001, "TRYK_V_tacv1LC_SRF_BK"},
+                        {231.750000000001, "TRYK_V_tacv1LC_SRF_OD"},
+                        {231.900000000001, "TRYK_V_tacv1LC_P_BK"},
+                        {232.050000000001, "TRYK_V_tacv10_BK"},
+                        {232.200000000001, "TRYK_V_tacv10_OD"},
+                        {232.350000000001, "TRYK_V_tacv10_TN"},
+                        {232.500000000001, "TRYK_V_tacv10LC_BK"},
+                        {232.650000000001, "TRYK_V_tacv10LC_OD"},
+                        {232.800000000001, "TRYK_V_tacv10LC_TN"},
+                        {232.950000000001, "TRYK_V_tacv1L_BK"},
+                        {233.100000000001, "TRYK_V_tacv1L_OD"},
+                        {233.250000000001, "TRYK_V_tacv1L_CY"},
+                        {233.400000000001, "TRYK_V_tacv1LC_FBI2_BK"},
+                        {233.550000000001, "TRYK_V_tacv1LC_SRF2_BK"},
+                        {233.700000000001, "TRYK_V_tacv1LC_SRF2_OD"},
+                        {233.850000000001, "TRYK_V_tacv1LC_P2_BK"},
+                        {234.000000000001, "TRYK_Hrp_vest_od"},
+                        {234.150000000001, "TRYK_V_tacv1_MSL_NV"},
+                        {234.300000000001, "TRYK_V_TacVest_coyo"},
+                        {234.400000000001, "H_Beret_blk"},
+                        {234.500000000001, "H_Beret_grn_SF"},
+                        {234.600000000001, "H_Shemag_tan"},
+                        {234.700000000001, "V_Chestrig_oli"},
+                        {234.800000000001, "Exile_Item_CamoTentKit"},
+                        {234.900000000001, "V_Chestrig_rgr"},
+                        {235.000000000001, "U_IG_leader"},
+                        {235.100000000001, "H_ShemagOpen_tan"},
+                        {235.200000000001, "H_Beret_grn"},
+                        {235.300000000001, "H_ShemagOpen_khk"},
+                        {235.400000000001, "H_Beret_brn_SF"},
+                        {235.500000000001, "H_Beret_ocamo"},
+                        {235.600000000001, "H_Shemag_khk"},
+                        {235.700000000001, "H_Beret_02"},
+                        {235.800000000001, "V_Chestrig_khk"},
+                        {235.900000000001, "V_Chestrig_blk"},
+                        {236.000000000001, "H_Beret_red"},
+                        {236.100000000001, "H_Beret_Colonel"},
+                        {236.200000000001, "H_Shemag_olive"},
+                        {236.300000000001, "H_Shemag_olive_hs"},
+                        {236.350000000001, "U_I_G_resistanceLeader_F"},
+                        {236.400000000001, "optic_NVS"},
+                        {236.450000000001, "V_I_G_resistanceLeader_F"},
+                        {236.460000000001, "optic_Nightstalker"},
+                        {236.470000000001, "optic_tws"}
+                };
+        };
+ 
+        /**
+          Result of 100 rounds:
+ 
+          V_TacVest_blk_POLICE
+          rhs_weap_pya
+          H_Cap_blk
+          muzzle_mas_snds_MP5SD6
+          arifle_mas_l119_d
+          rhs_mag_30Rnd_556x45_m855A1_Stanag
+          arifle_mas_m4_gl
+          arifle_mas_hk417c_d
+          acc_flashlight
+          srifle_mas_mk17s
+          TRYK_shirts_DENIM_BWH_Sleeve
+          rhs_mag_9x18_12_57N181S
+          TRYK_H_pakol
+          arifle_mas_m4_v
+          muzzle_mas_snds_MP5SD6
+          arifle_mas_l119_gl_v
+          iansky_rds
+          arifle_mas_m4
+          6Rnd_GreenSignal_F
+          TRYK_LOC_AK_chestrig_OD
+          Exile_Item_PlasticBottleEmpty
+          muzzle_mas_snds_C
+          Exile_Item_SausageGravy
+          64Rnd_mas_9x18_mag
+          TRYK_shirts_PAD
+          arifle_mas_hk416_d
+          arifle_mas_l119_gl
+          arifle_mas_l119c_v
+          5Rnd_mas_762x51_Stanag
+          rhs_45Rnd_545x39_AK
+          hgun_mas_glock_F
+          Exile_Item_GloriousKnakworst_Cooked
+          B_OutdoorPack_tan
+          muzzle_mas_snds_LM
+          TRYK_shirts_BLK_PAD_BLW
+          B_OutdoorPack_tan
+          rhs_weap_aks74u
+          TRYK_H_AOR1
+          H_Cap_grn
+          Exile_Item_ChristmasTinner
+          srifle_mas_hk417_v
+          arifle_mas_m4_gl
+          30Rnd_65x39_caseless_mag
+          TRYK_shirts_PAD_BLU3
+          rhsusf_5Rnd_00Buck
+          TRYK_shirts_TAN_PAD_RED2
+          hgun_Rook40_F
+          hgun_Pistol_heavy_01_F
+          arifle_mas_l119_m203_d
+          rhsusf_100Rnd_556x45_soft_pouch
+          TRYK_B_Coyotebackpack_OD
+          TRYK_shirts_DENIM_BL_Sleeve
+          TRYK_H_woolhat_tan
+          30Rnd_mas_762x39_mag
+          arifle_TRG20_F
+          TRYK_H_PASGT_OD
+          rhs_weap_aks74u
+          hgun_mas_usp_l_F
+          rhsusf_50Rnd_762x51_m993
+          TRYK_shirts_DENIM_ylb_Sleeve
+          TRYK_V_tacv1L_CY
+          Exile_Item_PlasticBottleEmpty
+          H_Cap_grn
+          TRYK_B_Alicepack
+          TRYK_H_pakol
+          30Rnd_65x39_caseless_green_mag_Tracer
+          40Rnd_mas_46x30_Mag
+          TRYK_V_ArmorVest_HRT2_OD
+          TRYK_shirts_DENIM_BL_Sleeve
+          Exile_Item_Beer
+          100Rnd_mas_762x39_mag
+          TRYK_OVERALL_SAGE_BLKboots
+          TRYK_shirts_OD_PAD_BK
+          100Rnd_mas_545x39_mag
+          TRYK_shirts_TAN_PAD_YEL
+          TRYK_shirts_PAD_YEL
+          U_C_Journalist
+          srifle_mas_mk17s
+          30Rnd_556x45_Stanag
+          Exile_Item_BBQSandwich
+          arifle_mas_m4_v
+          150Rnd_mas_556x45_Stanag
+          Exile_Item_PlasticBottleEmpty
+          rhs_weap_ak74m_camo
+          arifle_mas_arx
+          TRYK_U_denim_hood_blk
+          Exile_Item_SausageGravy
+          arifle_mas_hk416c_v
+          rhs_weap_pya
+          TRYK_shirts_TAN_PAD
+          H_Hat_blue
+          arifle_mas_l119c_d
+          TRYK_shirts_PAD_YEL
+          TRYK_V_ArmorVest_HRT2_OD
+          U_C_Poloshirt_tricolour
+          arifle_mas_ak_74m
+          H_Hat_blue
+          rhs_weap_ak74m_npz
+          TRYK_shirts_DENIM_ylb
+          arifle_mas_hk416c_v
+        */
+        class CivillianUpperClass
+        {
+                top = 219.370000000001;
+                count = 423;
+                half = 154.9;
+                halfIndex = 211;
+                maximum = 100;
+                sum = 42300;
+                items[] =
+                {
+                        {2, "Exile_Item_Catfood"},
+                        {4, "Exile_Item_PlasticBottleEmpty"},
+                        {5.9, "Exile_Item_Surstromming"},
+                        {7.6, "Exile_Item_ChristmasTinner"},
+                        {9.3, "Exile_Item_SausageGravy"},
+                        {11, "Exile_Item_BBQSandwich"},
+                        {12.5, "Exile_Item_GloriousKnakworst"},
+                        {13.5, "U_C_Poloshirt_tricolour"},
+                        {14.5, "U_C_Poloshirt_salmon"},
+                        {15.5, "U_C_Poloshirt_stripped"},
+                        {16.5, "U_C_Poloshirt_burgundy"},
+                        {17.5, "U_C_Poloshirt_blue"},
+                        {18.4, "17Rnd_mas_9x21_Mag"},
+                        {19.3, "12Rnd_mas_45acp_Mag"},
+                        {20.15, "B_OutdoorPack_tan"},
+                        {21, "B_OutdoorPack_blk"},
+                        {21.85, "B_OutdoorPack_blu"},
+                        {22.65, "30Rnd_65x39_caseless_green"},
+                        {23.45, "11Rnd_45ACP_Mag"},
+                        {24.25, "30Rnd_556x45_Stanag"},
+                        {25.05, "30Rnd_9x21_Mag"},
+                        {25.85, "30Rnd_65x39_caseless_mag"},
+                        {26.65, "16Rnd_9x21_Mag"},
+                        {27.45, "15Rnd_mas_9x21_Mag"},
+                        {28.25, "13Rnd_mas_9x21_Mag"},
+                        {29.05, "TRYK_B_Kitbag_blk"},
+                        {29.8, "TRYK_B_Coyotebackpack_OD"},
+                        {30.5, "rhsusf_8Rnd_00Buck"},
+                        {31.2, "hgun_mas_usp_l_F"},
+                        {31.9, "arifle_mas_aks_74_sf"},
+                        {32.6, "hgun_mas_acp_F"},
+                        {33.3, "10Rnd_mas_12Gauge_Slug"},
+                        {34, "hgun_mas_bhp_F"},
+                        {34.7, "20Rnd_mas_12Gauge_Pellets"},
+                        {35.4, "arifle_mas_aks74u"},
+                        {36.1, "20Rnd_mas_12Gauge_Slug"},
+                        {36.8, "9Rnd_45ACP_Mag"},
+                        {37.5, "7Rnd_mas_12Gauge_Pellets"},
+                        {38.2, "7Rnd_mas_12Gauge_Slug"},
+                        {38.9, "arifle_mas_hk417c_d"},
+                        {39.6, "8Rnd_mas_9x18_Mag"},
+                        {40.3, "40Rnd_mas_46x30_Mag"},
+                        {41, "arifle_mas_akms"},
+                        {41.7, "30Rnd_mas_9x39_mag"},
+                        {42.4, "rhsusf_5Rnd_300winmag_xm2010"},
+                        {43.1000000000001, "20Rnd_mas_9x39_mag"},
+                        {43.8000000000001, "rhsusf_mag_7x45acp_MHP"},
+                        {44.5000000000001, "srifle_mas_sr25"},
+                        {45.2000000000001, "hgun_Rook40_F"},
+                        {45.9000000000001, "srifle_mas_sr25_d"},
+                        {46.6000000000001, "B_HuntingBackpack"},
+                        {47.3000000000001, "srifle_mas_sr25_v"},
+                        {48.0000000000001, "TRYK_B_AssaultPack_MARPAT_Wood"},
+                        {48.7000000000001, "rhs_weap_ak74m"},
+                        {49.4000000000001, "rhsusf_20Rnd_762x51_m993_Mag"},
+                        {50.1000000000001, "rhs_weap_ak74m_camo"},
+                        {50.8000000000001, "rhsusf_50Rnd_762x51_m993"},
+                        {51.5000000000001, "rhs_weap_ak74m_npz"},
+                        {52.2000000000001, "arifle_mas_ak_74m_c"},
+                        {52.9000000000001, "rhs_weap_akm"},
+                        {53.6000000000001, "rhsusf_50Rnd_762x51"},
+                        {54.3000000000001, "rhsusf_200Rnd_556x45_soft_pouch"},
+                        {55.0000000000001, "rhsusf_100Rnd_556x45_soft_pouch"},
+                        {55.7000000000001, "rhs_mag_30Rnd_556x45_m855A1_Stanag_No_Tracer"},
+                        {56.4000000000001, "rhs_mag_30Rnd_556x45_m855A1_Stanag"},
+                        {57.1000000000001, "arifle_mas_ak_74m"},
+                        {57.8000000000001, "arifle_mas_ak74"},
+                        {58.5000000000001, "arifle_mas_ak12_sf"},
+                        {59.2000000000001, "rhs_mag_9x18_12_57N181S"},
+                        {59.9000000000001, "rhs_mag_9x19_17"},
+                        {60.6000000000001, "rhs_30Rnd_762x39mm"},
+                        {61.3000000000001, "srifle_mas_hk417_v"},
+                        {62.0000000000001, "arifle_mas_l119"},
+                        {62.7000000000001, "arifle_mas_l119_d"},
+                        {63.4000000000001, "arifle_mas_l119_gl"},
+                        {64.1000000000001, "arifle_mas_l119_gl_d"},
+                        {64.8000000000001, "arifle_mas_l119_gl_v"},
+                        {65.5000000000001, "arifle_mas_l119_m203"},
+                        {66.2000000000001, "arifle_mas_l119_m203_d"},
+                        {66.9000000000001, "arifle_mas_l119_m203_v"},
+                        {67.6000000000002, "arifle_mas_l119_v"},
+                        {68.3000000000002, "arifle_mas_l119c"},
+                        {69.0000000000002, "arifle_mas_l119c_d"},
+                        {69.7000000000002, "arifle_mas_l119c_v"},
+                        {70.4000000000002, "hgun_mas_usp_F"},
+                        {71.1000000000002, "arifle_mas_m16"},
+                        {71.8000000000002, "arifle_mas_m16_gl"},
+                        {72.5000000000002, "arifle_mas_m4"},
+                        {73.2000000000002, "arifle_mas_m4_d"},
+                        {73.9000000000002, "arifle_mas_m4_gl"},
+                        {74.6000000000002, "arifle_mas_m4_gl_d"},
+                        {75.3000000000002, "arifle_mas_m4_gl_v"},
+                        {76.0000000000002, "arifle_mas_m4_v"},
+                        {76.7000000000002, "arifle_mas_m4c"},
+                        {77.4000000000002, "arifle_mas_m4c_d"},
+                        {78.1000000000002, "arifle_mas_m4c_v"},
+                        {78.8000000000002, "arifle_mas_m4vlt"},
+                        {79.5000000000002, "arifle_mas_mk16"},
+                        {80.2000000000002, "rhsusf_5Rnd_00Buck"},
+                        {80.9000000000002, "arifle_mas_mk17"},
+                        {81.6000000000002, "arifle_mas_arx"},
+                        {82.3000000000002, "arifle_mas_arx_l"},
+                        {83.0000000000002, "arifle_mas_asval"},
+                        {83.7000000000002, "arifle_mas_asval_ds"},
+                        {84.4000000000002, "srifle_mas_mk17s"},
+                        {85.1000000000002, "acc_flashlight"},
+                        {85.8000000000002, "arifle_mas_akm"},
+                        {86.5000000000002, "hgun_P07_F"},
+                        {87.2000000000002, "hgun_ACPC2_F"},
+                        {87.9000000000002, "srifle_mas_hk417"},
+                        {88.6000000000002, "rhsusf_20Rnd_762x51_m118_special_Mag"},
+                        {89.3000000000002, "srifle_mas_hk417_d"},
+                        {90.0000000000002, "rhs_weap_akms"},
+                        {90.7000000000002, "rhs_weap_ak103"},
+                        {91.4000000000002, "rhs_weap_ak74m_folded"},
+                        {92.1000000000003, "rhs_weap_ak74"},
+                        {92.8000000000003, "rhs_weap_aks74"},
+                        {93.5000000000003, "rhs_10Rnd_762x54mmR_7N1"},
+                        {94.2000000000003, "arifle_Mk20C_F"},
+                        {94.9000000000003, "arifle_Mk20_F"},
+                        {95.6000000000003, "arifle_TRG20_F"},
+                        {96.3000000000003, "arifle_TRG21_F"},
+                        {97.0000000000003, "rhs_30Rnd_545x39_AK_no_tracers"},
+                        {97.7000000000003, "rhs_30Rnd_545x39_AK"},
+                        {98.4000000000003, "5Rnd_mas_127x108_mag"},
+                        {99.1000000000003, "5Rnd_mas_127x99_Stanag"},
+                        {99.8000000000003, "10Rnd_mas_338_Stanag"},
+                        {100.5, "rhs_weap_aks74u"},
+                        {101.2, "150Rnd_mas_556x45_Stanag"},
+                        {101.9, "rhs_weap_m4"},
+                        {102.6, "30Rnd_mas_545x39_mag"},
+                        {103.3, "10Rnd_mas_762x54_mag"},
+                        {104, "64Rnd_mas_9x18_mag"},
+                        {104.7, "5Rnd_mas_762x51_Stanag"},
+                        {105.4, "10Rnd_mas_12Gauge_Pellets"},
+                        {106.1, "arifle_mas_hk417c_v"},
+                        {106.8, "hgun_mas_glock_F"},
+                        {107.5, "6Rnd_45ACP_Cylinder"},
+                        {108.2, "arifle_mas_aks74"},
+                        {108.9, "rhs_weap_makarov_pmm"},
+                        {109.6, "rhs_weap_pya"},
+                        {110.3, "arifle_mas_akms_c"},
+                        {111, "rhs_45Rnd_545x39_AK"},
+                        {111.7, "rhsusf_5Rnd_Slug"},
+                        {112.4, "arifle_Katiba_F"},
+                        {113.1, "arifle_mas_fal"},
+                        {113.8, "30Rnd_mas_762x39_mag"},
+                        {114.5, "20Rnd_mas_765x17_Mag"},
+                        {115.2, "30Rnd_mas_556x45_Stanag"},
+                        {115.9, "arifle_mas_g3"},
+                        {116.6, "arifle_mas_aks74u_c"},
+                        {117.3, "hgun_mas_m9_F"},
+                        {118, "arifle_mas_g36c"},
+                        {118.7, "arifle_mas_g3s"},
+                        {119.4, "arifle_mas_hk416"},
+                        {120.1, "arifle_mas_hk416_d"},
+                        {120.8, "rhs_weap_m4a1"},
+                        {121.5, "arifle_mas_hk416_h"},
+                        {122.2, "arifle_mas_hk416_v"},
+                        {122.9, "arifle_mas_hk416c"},
+                        {123.6, "rhs_weap_m16a4"},
+                        {124.3, "rhs_weap_sr25"},
+                        {125, "arifle_mas_hk417c"},
+                        {125.7, "arifle_mas_hk416c_v"},
+                        {126.4, "acc_pointer_IR"},
+                        {127.1, "TRYK_B_Belt_BLK"},
+                        {127.8, "arifle_mas_hk416c_d"},
+                        {128.5, "rhsusf_50Rnd_762x51_m80a1epr"},
+                        {129.1, "arifle_MXC_F"},
+                        {129.7, "optic_DMS"},
+                        {130.3, "TRYK_shirts_BLK_PAD_BLW"},
+                        {130.9, "rhsusf_acc_ELCAN"},
+                        {131.5, "TRYK_shirts_TAN_PAD_BLW"},
+                        {132.1, "arifle_MX_F"},
+                        {132.7, "TRYK_shirts_OD_PAD_BLW"},
+                        {133.3, "H_Bandanna_surfer"},
+                        {133.9, "TRYK_shirts_PAD_BLW"},
+                        {134.5, "H_Cap_blk"},
+                        {135.1, "TRYK_shirts_BLK_PAD_BK"},
+                        {135.7, "H_Cap_blu"},
+                        {136.3, "TRYK_shirts_TAN_PAD_BK"},
+                        {136.9, "H_Cap_headphones"},
+                        {137.5, "TRYK_shirts_OD_PAD_BK"},
+                        {138.1, "H_Cap_red"},
+                        {138.7, "H_Cap_tan"},
+                        {139.3, "H_Hat_blue"},
+                        {139.9, "H_Hat_brown"},
+                        {140.5, "H_Hat_checker"},
+                        {141.1, "H_Hat_grey"},
+                        {141.7, "H_Hat_tan"},
+                        {142.3, "H_StrawHat"},
+                        {142.9, "H_StrawHat_dark"},
+                        {143.5, "TRYK_shirts_BLK_PAD_BLU3"},
+                        {144.1, "TRYK_shirts_TAN_PAD_BLU3"},
+                        {144.7, "TRYK_shirts_OD_PAD_BLU3"},
+                        {145.3, "TRYK_shirts_PAD_BLU3"},
+                        {145.9, "TRYK_shirts_BLK_PAD_RED2"},
+                        {146.5, "TRYK_shirts_TAN_PAD_RED2"},
+                        {147.1, "TRYK_shirts_OD_PAD_RED2"},
+                        {147.7, "TRYK_shirts_PAD_RED2"},
+                        {148.3, "TRYK_shirts_BLK_PAD_YEL"},
+                        {148.9, "TRYK_shirts_TAN_PAD_YEL"},
+                        {149.5, "TRYK_shirts_OD_PAD_YEL"},
+                        {150.1, "TRYK_shirts_PAD_YEL"},
+                        {150.7, "optic_MRCO"},
+                        {151.3, "rhsusf_acc_ELCAN_pip"},
+                        {151.9, "20Rnd_556x45_UW_mag"},
+                        {152.5, "arifle_MX_GL_F"},
+                        {153.1, "H_Beret_blk_POLICE"},
+                        {153.7, "H_Cap_blk_Raven"},
+                        {154.3, "H_Cap_grn"},
+                        {154.9, "TRYK_shirts_PAD_BK"},
+                        {155.5, "TRYK_shirts_BLK_PAD"},
+                        {156.1, "TRYK_shirts_TAN_PAD"},
+                        {156.7, "TRYK_shirts_OD_PAD"},
+                        {157.3, "TRYK_shirts_PAD"},
+                        {157.9, "TRYK_U_denim_jersey_blk"},
+                        {158.5, "TRYK_U_denim_jersey_blu"},
+                        {159.1, "TRYK_U_denim_hood_nc"},
+                        {159.7, "TRYK_U_denim_hood_3c"},
+                        {160.3, "TRYK_U_denim_hood_mc"},
+                        {160.9, "TRYK_U_denim_hood_blk"},
+                        {161.5, "TRYK_shirts_DENIM_od_Sleeve"},
+                        {162.1, "TRYK_shirts_DENIM_ylb_Sleeve"},
+                        {162.7, "TRYK_shirts_DENIM_WHB_Sleeve"},
+                        {163.3, "TRYK_shirts_DENIM_RED2_Sleeve"},
+                        {163.9, "TRYK_shirts_DENIM_BWH_Sleeve"},
+                        {164.5, "TRYK_shirts_DENIM_WH_Sleeve"},
+                        {165.1, "TRYK_shirts_DENIM_BK_Sleeve"},
+                        {165.7, "TRYK_shirts_DENIM_BL_Sleeve"},
+                        {166.3, "TRYK_shirts_DENIM_R_Sleeve"},
+                        {166.9, "TRYK_shirts_DENIM_od"},
+                        {167.5, "TRYK_shirts_DENIM_ylb"},
+                        {168.1, "TRYK_shirts_DENIM_WHB"},
+                        {168.7, "TRYK_shirts_DENIM_RED2"},
+                        {169.3, "TRYK_shirts_DENIM_BWH"},
+                        {169.9, "TRYK_OVERALL_SAGE_BLKboots_nk_blk"},
+                        {170.5, "TRYK_OVERALL_SAGE_BLKboots"},
+                        {171.1, "TRYK_B_Medbag"},
+                        {171.7, "TRYK_B_Medbag_OD"},
+                        {172.3, "H_Cap_oli"},
+                        {172.9, "10Rnd_mas_45acp_Mag"},
+                        {173.5, "H_Cap_press"},
+                        {174, "30Rnd_65x39_caseless_green_mag_Tracer"},
+                        {174.5, "arifle_MXM_F"},
+                        {175, "Exile_Item_PlasticBottleFreshWater"},
+                        {175.5, "arifle_SDAR_F"},
+                        {176, "100Rnd_mas_762x54_mag"},
+                        {176.5, "6Rnd_RedSignal_F"},
+                        {177, "100Rnd_mas_545x39_mag"},
+                        {177.5, "30Rnd_556x45_Stanag_Tracer_Green"},
+                        {178, "200Rnd_mas_556x45_Stanag"},
+                        {178.5, "U_C_Scientist"},
+                        {179, "30Rnd_556x45_Stanag_Tracer_Red"},
+                        {179.5, "rhs_100Rnd_762x54mmR"},
+                        {180, "V_Rangemaster_belt"},
+                        {180.5, "V_Press_F"},
+                        {181, "V_TacVest_blk_POLICE"},
+                        {181.5, "U_C_Journalist"},
+                        {182, "hgun_Pistol_heavy_01_F"},
+                        {182.5, "hgun_Pistol_heavy_02_F"},
+                        {183, "6Rnd_GreenSignal_F"},
+                        {183.5, "U_Rangemaster"},
+                        {184, "100Rnd_mas_762x51_Stanag"},
+                        {184.5, "100Rnd_mas_762x39_mag"},
+                        {185, "30Rnd_65x39_caseless_mag_Tracer"},
+                        {185.5, "30Rnd_556x45_Stanag_Tracer_Yellow"},
+                        {185.9, "optic_mas_acog"},
+                        {186.3, "optic_Hamr"},
+                        {186.7, "optic_Holosight"},
+                        {187.1, "optic_mas_aim"},
+                        {187.5, "optic_mas_PSO"},
+                        {187.9, "Exile_Item_Beer"},
+                        {188.3, "optic_Arco"},
+                        {188.7, "TRYK_B_BAF_BAG_BLK"},
+                        {189.05, "hgun_Pistol_Signal_F"},
+                        {189.35, "TRYK_H_Helmet_Snow"},
+                        {189.65, "TRYK_H_pakol2"},
+                        {189.95, "TRYK_TAC_EARMUFF_SHADE_Gs"},
+                        {190.25, "TRYK_H_headsetcap_od"},
+                        {190.55, "TRYK_H_LHS_HEL_G"},
+                        {190.85, "TRYK_H_headsetcap"},
+                        {191.15, "TRYK_H_GR"},
+                        {191.45, "TRYK_H_woolhat_cu"},
+                        {191.75, "TRYK_H_WH"},
+                        {192.05, "TRYK_H_woolhat_WH"},
+                        {192.35, "TRYK_H_PASGT_TAN"},
+                        {192.65, "TRYK_H_woolhat"},
+                        {192.95, "TRYK_H_PASGT_COYO"},
+                        {193.25, "TRYK_ESS_CAP_tan"},
+                        {193.55, "TRYK_H_PASGT_OD"},
+                        {193.85, "TRYK_B_Alicepack"},
+                        {194.15, "TRYK_H_PASGT_BLK"},
+                        {194.45, "TRYK_R_CAP_BLK"},
+                        {194.75, "TRYK_bandana_g"},
+                        {195.05, "TRYK_H_wig"},
+                        {195.35, "TRYK_R_CAP_TAN"},
+                        {195.65, "TRYK_H_Bandana_wig"},
+                        {195.95, "TRYK_R_CAP_OD_US"},
+                        {196.25, "TRYK_H_TACEARMUFF_H"},
+                        {196.55, "TRYK_r_cap_tan_Glasses"},
+                        {196.85, "TRYK_H_AOR2"},
+                        {197.15, "TRYK_H_pakol"},
+                        {197.45, "TRYK_H_headsetcap_od_Glasses"},
+                        {197.75, "TRYK_H_headsetcap_blk"},
+                        {198.05, "TRYK_H_woolhat_br"},
+                        {198.35, "TRYK_r_cap_blk_Glasses"},
+                        {198.65, "TRYK_B_FieldPack_Wood"},
+                        {198.95, "TRYK_B_Carryall_JSDF"},
+                        {199.25, "TRYK_H_headset2"},
+                        {199.55, "TRYK_H_Bandana_wig_g"},
+                        {199.85, "TRYK_H_Bandana_H"},
+                        {200.15, "TRYK_H_EARMUFF"},
+                        {200.45, "TRYK_H_AOR1"},
+                        {200.75, "TRYK_H_woolhat_tan"},
+                        {201.05, "TRYK_r_cap_od_Glasses"},
+                        {201.35, "Exile_Item_Energydrink"},
+                        {201.65, "TRYK_NOMIC_TAC_EARMUFF_Gs"},
+                        {201.950000000001, "TRYK_H_headsetcap_Glasses"},
+                        {202.250000000001, "TRYK_TAC_EARMUFF_Gs"},
+                        {202.550000000001, "TRYK_headset2"},
+                        {202.850000000001, "TRYK_NOMIC_TAC_EARMUFF"},
+                        {203.150000000001, "TRYK_TAC_EARMUFF"},
+                        {203.450000000001, "TRYK_TAC_EARMUFF_SHADE"},
+                        {203.750000000001, "TRYK_H_woolhat_CW"},
+                        {204.050000000001, "TRYK_H_headsetcap_blk_Glasses"},
+                        {204.350000000001, "TRYK_ESS_CAP_OD"},
+                        {204.600000000001, "muzzle_mas_snds_LM"},
+                        {204.850000000001, "muzzle_mas_snds_M"},
+                        {205.100000000001, "muzzle_mas_snds_SM"},
+                        {205.350000000001, "muzzle_mas_snds_MP7"},
+                        {205.600000000001, "muzzle_mas_snds_AK"},
+                        {205.850000000001, "muzzle_snds_L"},
+                        {206.100000000001, "muzzle_snds_acp"},
+                        {206.350000000001, "muzzle_mas_snds_L"},
+                        {206.600000000001, "muzzle_mas_snds_Mc"},
+                        {206.850000000001, "muzzle_mas_snds_C"},
+                        {207.100000000001, "muzzle_snds_H"},
+                        {207.350000000001, "muzzle_snds_M"},
+                        {207.600000000001, "muzzle_mas_snds_MP5SD6"},
+                        {207.800000000001, "Exile_Item_ChristmasTinner_Cooked"},
+                        {208.000000000001, "Exile_Item_BBQSandwich_Cooked"},
+                        {208.200000000001, "TRYK_SUITS_BR_F"},
+                        {208.400000000001, "Exile_Item_Catfood_Cooked"},
+                        {208.600000000001, "Exile_Item_Surstromming_Cooked"},
+                        {208.800000000001, "Exile_Item_SausageGravy_Cooked"},
+                        {209.000000000001, "Exile_Item_GloriousKnakworst_Cooked"},
+                        {209.200000000001, "TRYK_SUITS_BLK_F"},
+                        {209.350000000001, "TRYK_V_tacSVD_BK"},
+                        {209.500000000001, "TRYK_LOC_AK_chestrig_OD"},
+                        {209.650000000001, "TRYK_V_tacv1LC_BK"},
+                        {209.800000000001, "TRYK_V_tacv1LSRF_BK"},
+                        {209.950000000001, "TRYK_V_tacv1LC_OD"},
+                        {210.100000000001, "TRYK_V_tacv1LC_MSL_NV"},
+                        {210.250000000001, "TRYK_V_tacv1LC_CY"},
+                        {210.400000000001, "TRYK_V_tacv1LMSL_NV"},
+                        {210.550000000001, "TRYK_V_tacSVD_OD"},
+                        {210.700000000001, "TRYK_V_tacv1_MSL_NV"},
+                        {210.850000000001, "TRYK_LOC_AK_chestrig_TAN"},
+                        {211.000000000001, "TRYK_V_tacv1LC_SRF2_BK"},
+                        {211.150000000001, "TRYK_V_tacv1LP_BK"},
+                        {211.300000000001, "TRYK_V_PlateCarrier_POLICE"},
+                        {211.450000000001, "TRYK_V_tacv1_FBI_BK"},
+                        {211.600000000001, "TRYK_V_ArmorVest_HRT_OD"},
+                        {211.750000000001, "TRYK_V_tacv1_P_BK"},
+                        {211.900000000001, "TRYK_V_ArmorVest_HRT2_OD"},
+                        {212.050000000001, "TRYK_V_tacv1_BK"},
+                        {212.200000000001, "TRYK_V_tacv1_MSL_BK"},
+                        {212.350000000001, "TRYK_V_tacv1_CY"},
+                        {212.500000000001, "TRYK_V_tacv1L_CY"},
+                        {212.650000000001, "TRYK_V_tacv1"},
+                        {212.800000000001, "TRYK_V_tacv1L_BK"},
+                        {212.950000000001, "TRYK_V_tacv1MLC_BK"},
+                        {213.100000000001, "TRYK_V_tacv10LC_TN"},
+                        {213.250000000001, "TRYK_V_tacv1M_BK"},
+                        {213.400000000001, "TRYK_V_tacv10LC_BK"},
+                        {213.550000000001, "TRYK_V_IOTV_BLK"},
+                        {213.700000000001, "TRYK_V_tacv10_OD"},
+                        {213.850000000001, "TRYK_V_ChestRig"},
+                        {214.000000000001, "TRYK_TAC_SET_OD_2"},
+                        {214.150000000001, "TRYK_V_tacv10_TN"},
+                        {214.300000000001, "TRYK_TAC_SET_WH_2"},
+                        {214.450000000001, "TRYK_V_tacv1LC_SRF_OD"},
+                        {214.600000000001, "TRYK_V_tacv10_BK"},
+                        {214.750000000001, "TRYK_V_tacv1LC_P_BK"},
+                        {214.900000000001, "TRYK_TAC_SET_MESH_2"},
+                        {215.050000000001, "TRYK_V_tacv10LC_OD"},
+                        {215.200000000001, "TRYK_V_tacv1LC_P2_BK"},
+                        {215.350000000001, "TRYK_V_ArmorVest_HRT_B"},
+                        {215.500000000001, "TRYK_V_ArmorVest_HRT2_B"},
+                        {215.650000000001, "TRYK_V_harnes_TAN_L"},
+                        {215.800000000001, "TRYK_V_tacv1LC_SRF_BK"},
+                        {215.950000000001, "TRYK_V_tacv1L_OD"},
+                        {216.100000000001, "TRYK_TAC_SET_TAN"},
+                        {216.250000000001, "TRYK_V_tacv1LMSL_BK"},
+                        {216.400000000001, "TRYK_V_tacv1LC_FBI_BK"},
+                        {216.550000000001, "TRYK_V_tacv1LC_FBI2_BK"},
+                        {216.700000000001, "TRYK_V_harnes_od_L"},
+                        {216.850000000001, "TRYK_V_harnes_blk_L"},
+                        {217.000000000001, "TRYK_V_TacVest_coyo"},
+                        {217.150000000001, "TRYK_Hrp_vest_od"},
+                        {217.300000000001, "TRYK_Hrp_vest_ucp"},
+                        {217.450000000001, "TRYK_TAC_SET_OD"},
+                        {217.600000000001, "TRYK_TAC_SET_WH"},
+                        {217.750000000001, "TRYK_TAC_SET_bn"},
+                        {217.900000000001, "TRYK_V_tacv1LC_MSL_BK"},
+                        {218.050000000001, "TRYK_V_tacv1LC_SRF2_OD"},
+                        {218.200000000001, "TRYK_TAC_SET_MESH"},
+                        {218.350000000001, "TRYK_TAC_SET_TAN_2"},
+                        {218.450000000001, "TRYK_H_ghillie_over"},
+                        {218.550000000001, "TRYK_H_ghillie_top"},
+                        {218.650000000001, "TRYK_H_ghillie_over_green"},
+                        {218.750000000001, "TRYK_H_ghillie_top_headless"},
+                        {218.850000000001, "TRYK_H_ghillie_top_green"},
+                        {218.950000000001, "TRYK_H_ghillie_top_headless_green"},
+                        {219.050000000001, "optic_Yorris"},
+                        {219.150000000001, "optic_MRD"},
+                        {219.200000000001, "optic_NVS"},
+                        {219.250000000001, "U_OrestesBody"},
+                        {219.300000000001, "U_NikosAgedBody"},
+                        {219.350000000001, "U_NikosBody"},
+                        {219.360000000001, "optic_Nightstalker"},
+                        {219.370000000001, "optic_tws"}
+                };
+        };
+ 
+        /**
+          Result of 100 rounds:
+ 
+          SmokeShellYellow
+          9Rnd_45ACP_Mag
+          hgun_Pistol_heavy_01_F
+          muzzle_snds_acp
+          Exile_Item_ChristmasTinner
+          Exile_Item_ChristmasTinner
+          hgun_P07_F
+          Exile_Item_Surstromming
+          hgun_ACPC2_F
+          hgun_ACPC2_F
+          hgun_mas_usp_l_F
+          Exile_Item_ChristmasTinner
+          Exile_Item_PlasticBottleFreshWater
+          hgun_P07_F
+          muzzle_snds_acp
+          Exile_Item_GloriousKnakworst
+          6Rnd_45ACP_Cylinder
+          hgun_P07_F
+          SmokeShellPurple
+          muzzle_snds_L
+          Exile_Item_Catfood
+          Exile_Item_Energydrink
+          Exile_Item_Catfood
+          Exile_Item_LightBulb
+          hgun_mas_glock_F
+          16Rnd_9x21_Mag
+          Exile_Item_ChristmasTinner
+          Exile_Item_GloriousKnakworst
+          30Rnd_9x21_Mag
+          9Rnd_45ACP_Mag
+          30Rnd_9x21_Mag
+          muzzle_snds_L
+          Exile_Item_Matches
+          Exile_Item_Beer
+          8Rnd_mas_9x18_Mag
+          Exile_Item_Matches
+          Exile_Item_LightBulb
+          SmokeShellRed
+          6Rnd_45ACP_Cylinder
+          Exile_Item_Catfood
+          Exile_Item_ChristmasTinner
+          hgun_P07_F
+          Exile_Item_PlasticBottleEmpty
+          rhs_weap_makarov_pmm
+          hgun_Rook40_F
+          rhs_weap_makarov_pmm
+          Exile_Item_SausageGravy
+          SmokeShellPurple
+          Exile_Item_GloriousKnakworst
+          Exile_Item_BBQSandwich
+          Exile_Item_PlasticBottleEmpty
+          Exile_Item_CookingPot
+          SmokeShellRed
+          13Rnd_mas_9x21_Mag
+          17Rnd_mas_9x21_Mag
+          Exile_Item_InstaDoc
+          Exile_Item_LightBulb
+          Exile_Item_Surstromming
+          Exile_Item_BBQSandwich
+          hgun_mas_usp_l_F
+          Exile_Item_SausageGravy_Cooked
+          Exile_Item_Catfood
+          6Rnd_45ACP_Cylinder
+          Exile_Item_InstaDoc
+          Exile_Item_PlasticBottleFreshWater
+          6Rnd_RedSignal_F
+          Exile_Item_SausageGravy
+          Exile_Item_SausageGravy_Cooked
+          Exile_Item_CookingPot
+          SmokeShellOrange
+          SmokeShellBlue
+          10Rnd_mas_45acp_Mag
+          hgun_Pistol_heavy_02_F
+          SmokeShell
+          hgun_mas_bhp_F
+          hgun_mas_bhp_F
+          SmokeShellYellow
+          hgun_ACPC2_F
+          Exile_Item_PlasticBottleEmpty
+          Exile_Item_Matches
+          hgun_P07_F
+          Exile_Item_LightBulb
+          Exile_Item_Catfood
+          Exile_Item_BBQSandwich
+          hgun_Rook40_F
+          hgun_mas_usp_F
+          Exile_Item_Catfood
+          hgun_mas_acp_F
+          9Rnd_45ACP_Mag
+          hgun_mas_glock_F
+          hgun_Pistol_heavy_02_F
+          Exile_Item_GloriousKnakworst
+          hgun_mas_bhp_F
+          Exile_Item_SausageGravy_Cooked
+          Exile_Item_Matches
+          Exile_Item_ChristmasTinner
+          hgun_Pistol_heavy_02_F
+          Exile_Item_BBQSandwich
+          Exile_Item_CookingPot
+          hgun_mas_acp_F
+        */
+        class Shop
+        {
+                top = 44.35;
+                count = 63;
+                half = 33.3;
+                halfIndex = 31;
+                maximum = 100;
+                sum = 6300;
+                items[] =
+                {
+                        {2, "Exile_Item_Catfood"},
+                        {4, "Exile_Item_Matches"},
+                        {6, "Exile_Item_PlasticBottleEmpty"},
+                        {7.9, "Exile_Item_Surstromming"},
+                        {9.6, "Exile_Item_SausageGravy"},
+                        {11.3, "Exile_Item_BBQSandwich"},
+                        {13, "Exile_Item_ChristmasTinner"},
+                        {14.5, "Exile_Item_GloriousKnakworst"},
+                        {15.5, "hgun_P07_F"},
+                        {16.5, "hgun_Rook40_F"},
+                        {17.5, "hgun_ACPC2_F"},
+                        {18.4, "12Rnd_mas_45acp_Mag"},
+                        {19.3, "17Rnd_mas_9x21_Mag"},
+                        {20.1, "11Rnd_45ACP_Mag"},
+                        {20.9, "Exile_Item_LightBulb"},
+                        {21.7, "30Rnd_9x21_Mag"},
+                        {22.5, "9Rnd_45ACP_Mag"},
+                        {23.3, "13Rnd_mas_9x21_Mag"},
+                        {24.1, "15Rnd_mas_9x21_Mag"},
+                        {24.9, "16Rnd_9x21_Mag"},
+                        {25.6, "hgun_mas_acp_F"},
+                        {26.3, "8Rnd_mas_9x18_Mag"},
+                        {27, "hgun_mas_m9_F"},
+                        {27.7, "hgun_Pistol_heavy_01_F"},
+                        {28.4, "hgun_Pistol_heavy_02_F"},
+                        {29.1, "rhs_weap_pya"},
+                        {29.8, "rhs_weap_makarov_pmm"},
+                        {30.5, "hgun_mas_bhp_F"},
+                        {31.2, "6Rnd_45ACP_Cylinder"},
+                        {31.9, "hgun_mas_glock_F"},
+                        {32.6, "hgun_mas_usp_F"},
+                        {33.3, "hgun_mas_usp_l_F"},
+                        {33.95, "Exile_Item_CookingPot"},
+                        {34.55, "10Rnd_mas_45acp_Mag"},
+                        {35.15, "6Rnd_RedSignal_F"},
+                        {35.75, "6Rnd_GreenSignal_F"},
+                        {36.25, "SmokeShell"},
+                        {36.75, "SmokeShellYellow"},
+                        {37.25, "SmokeShellPurple"},
+                        {37.75, "SmokeShellBlue"},
+                        {38.25, "SmokeShellOrange"},
+                        {38.75, "hgun_Pistol_Signal_F"},
+                        {39.25, "Exile_Item_InstaDoc"},
+                        {39.75, "SmokeShellGreen"},
+                        {40.25, "Exile_Item_PlasticBottleFreshWater"},
+                        {40.75, "SmokeShellRed"},
+                        {41.15, "Exile_Item_DuctTape"},
+                        {41.55, "Exile_Item_Beer"},
+                        {41.85, "Exile_Item_Energydrink"},
+                        {42.1, "muzzle_snds_acp"},
+                        {42.35, "muzzle_snds_L"},
+                        {42.6, "ItemGPS"},
+                        {42.8, "Exile_Item_ChristmasTinner_Cooked"},
+                        {43, "Exile_Item_SausageGravy_Cooked"},
+                        {43.2, "Exile_Item_BBQSandwich_Cooked"},
+                        {43.4, "Exile_Item_GloriousKnakworst_Cooked"},
+                        {43.6, "Exile_Item_Catfood_Cooked"},
+                        {43.8, "Exile_Item_Surstromming_Cooked"},
+                        {43.95, "Binocular"},
+                        {44.05, "optic_Yorris"},
+                        {44.15, "optic_MRD"},
+                        {44.25, "25Rnd_mas_9x19_Mag"},
+                        {44.35, "Exile_Item_CamoTentKit"}
+                };
+        };
+ 
+        /**
+          Result of 100 rounds:
+ 
+          Exile_Item_LightBulb
+          Exile_Item_Matches
+          Exile_Item_ExtensionCord
+          Exile_Item_DuctTape
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_FuelCanisterFull
+          Exile_Item_FuelCanisterFull
+          Exile_Item_JunkMetal
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_MetalBoard
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_DuctTape
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_ExtensionCord
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_LightBulb
+          Exile_Item_DuctTape
+          Exile_Melee_Axe
+          Exile_Item_DuctTape
+          Exile_Melee_Axe
+          Exile_Item_FuelCanisterFull
+          Exile_Item_JunkMetal
+          Exile_Item_Matches
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_FuelCanisterFull
+          Exile_Item_Matches
+          Exile_Item_FuelCanisterFull
+          Exile_Item_DuctTape
+          Exile_Melee_Axe
+          Exile_Item_DuctTape
+          Exile_Item_Matches
+          Exile_Melee_Axe
+          Exile_Item_FuelCanisterFull
+          Exile_Item_MetalBoard
+          Exile_Item_JunkMetal
+          Exile_Melee_Axe
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_FuelCanisterEmpty
+          Exile_Melee_Axe
+          Exile_Item_ExtensionCord
+          Exile_Item_FuelCanisterFull
+          Exile_Item_ExtensionCord
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_LightBulb
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_FuelCanisterEmpty
+          Exile_Melee_Axe
+          Exile_Item_JunkMetal
+          Exile_Item_MetalBoard
+          Exile_Item_Matches
+          Exile_Item_FuelCanisterFull
+          Exile_Item_Rope
+          Exile_Item_FuelCanisterFull
+          Exile_Melee_Axe
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_JunkMetal
+          Exile_Item_PortableGeneratorKit
+          Exile_Melee_Axe
+          Exile_Item_JunkMetal
+          Exile_Item_Rope
+          Exile_Item_MetalBoard
+          Exile_Item_LightBulb
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_PortableGeneratorKit
+          Exile_Item_JunkMetal
+          Exile_Item_LightBulb
+          Exile_Item_LightBulb
+          Exile_Item_JunkMetal
+          Exile_Item_ExtensionCord
+          Exile_Item_LightBulb
+          Exile_Item_ExtensionCord
+          Exile_Item_ExtensionCord
+          Exile_Item_LightBulb
+          Exile_Item_FuelCanisterFull
+          Exile_Melee_Axe
+          Exile_Melee_Axe
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_FuelCanisterFull
+          Exile_Melee_Axe
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_FuelCanisterFull
+          Exile_Item_JunkMetal
+          Exile_Melee_Axe
+          Exile_Item_Matches
+          Exile_Item_Matches
+          Exile_Item_JunkMetal
+          Exile_Item_ExtensionCord
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_ExtensionCord
+          Exile_Item_PortableGeneratorKit
+          Exile_Melee_Axe
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_ExtensionCord
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_JunkMetal
+          Exile_Item_Matches
+        */
+        class Industrial
+        {
+                top = 2.86;
+                count = 13;
+                half = 2.45;
+                halfIndex = 6;
+                maximum = 100;
+                sum = 1300;
+                items[] =
+                {
+                        {0.5, "Exile_Melee_Axe"},
+                        {1, "Exile_Item_FuelCanisterEmpty"},
+                        {1.4, "Exile_Item_FuelCanisterFull"},
+                        {1.7, "Exile_Item_Matches"},
+                        {2, "Exile_Item_ExtensionCord"},
+                        {2.25, "Exile_Item_JunkMetal"},
+                        {2.45, "Exile_Item_LightBulb"},
+                        {2.55, "Exile_Item_Rope"},
+                        {2.65, "Exile_Item_MetalBoard"},
+                        {2.75, "Exile_Item_DuctTape"},
+                        {2.8, "Exile_Item_PortableGeneratorKit"},
+                        {2.85, "Exile_Item_FloodLightKit"},
+                        {2.86, "Exile_Item_ThermalScannerPro"}
+                };
+        };
+ 
+        /**
+          Result of 100 rounds:
+ 
+          Exile_Item_LightBulb
+          Exile_Item_FuelCanisterFull
+          Exile_Item_JunkMetal
+          Exile_Item_DuctTape
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_FuelCanisterFull
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_FuelCanisterFull
+          Exile_Item_FuelCanisterFull
+          Exile_Item_LightBulb
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_MetalBoard
+          Exile_Item_FuelCanisterFull
+          Exile_Item_DuctTape
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_JunkMetal
+          Exile_Item_FuelCanisterFull
+          Exile_Item_LightBulb
+          Exile_Item_DuctTape
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_DuctTape
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_FuelCanisterFull
+          Exile_Item_JunkMetal
+          Exile_Item_FuelCanisterFull
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_FuelCanisterFull
+          Exile_Item_FuelCanisterFull
+          Exile_Item_FuelCanisterFull
+          Exile_Item_DuctTape
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_DuctTape
+          Exile_Item_JunkMetal
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_FuelCanisterFull
+          Exile_Item_MetalBoard
+          Exile_Item_JunkMetal
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_FuelCanisterFull
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_JunkMetal
+          Exile_Item_FuelCanisterFull
+          Exile_Item_JunkMetal
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_LightBulb
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_LightBulb
+          Exile_Item_MetalBoard
+          Exile_Item_FuelCanisterFull
+          Exile_Item_FuelCanisterFull
+          Exile_Item_MetalBoard
+          Exile_Item_FuelCanisterFull
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_JunkMetal
+          Exile_Item_DuctTape
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_JunkMetal
+          Exile_Item_MetalBoard
+          Exile_Item_MetalBoard
+          Exile_Item_LightBulb
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_DuctTape
+          Exile_Item_LightBulb
+          Exile_Item_LightBulb
+          Exile_Item_LightBulb
+          Exile_Item_LightBulb
+          Exile_Item_JunkMetal
+          Exile_Item_LightBulb
+          Exile_Item_JunkMetal
+          Exile_Item_JunkMetal
+          Exile_Item_LightBulb
+          Exile_Item_FuelCanisterFull
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_FuelCanisterFull
+          Exile_Item_FuelCanisterFull
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_FuelCanisterFull
+          Exile_Item_JunkMetal
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_FuelCanisterFull
+          Exile_Item_FuelCanisterFull
+          Exile_Item_JunkMetal
+          Exile_Item_JunkMetal
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_JunkMetal
+          Exile_Item_DuctTape
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_JunkMetal
+          Exile_Item_FuelCanisterEmpty
+          Exile_Item_LightBulb
+          Exile_Item_FuelCanisterFull
+        */
+        class VehicleService
+        {
+                top = 1.56;
+                count = 7;
+                half = 1.35;
+                halfIndex = 3;
+                maximum = 100;
+                sum = 700;
+                items[] =
+                {
+                        {0.5, "Exile_Item_FuelCanisterEmpty"},
+                        {0.9, "Exile_Item_FuelCanisterFull"},
+                        {1.15, "Exile_Item_JunkMetal"},
+                        {1.35, "Exile_Item_LightBulb"},
+                        {1.45, "Exile_Item_MetalBoard"},
+                        {1.55, "Exile_Item_DuctTape"},
+                        {1.56, "Exile_Item_ThermalScannerPro"}
+                };
+        };
+ 
+        /**
+          Result of 100 rounds:
+ 
+          optic_mas_ACO_grn_camo
+          TRYK_U_denim_hood_mc
+          TRYK_U_B_BLK_TAN_2
+          TRYK_V_tacv1L_BK
+          rhs_mag_9x19_17
+          rhsusf_8Rnd_00Buck
+          TRYK_T_camo_Wood
+          V_PlateCarrierIA1_dgtl
+          TRYK_U_Bts_PCUs
+          iansky_specterdr_d_2D
+          B_AssaultPack_cbr
+          rhsusf_20Rnd_762x51_m118_special_Mag
+          TRYK_H_PASGT_TAN
+          rhsusf_acc_eotech_552
+          TRYK_V_tacv1
+          5Rnd_mas_127x99_Stanag
+          arifle_Mk20_F
+          30Rnd_mas_556x45_Stanag
+          optic_mas_PSO_nv
+          3Rnd_SmokeBlue_Grenade_shell
+          H_HelmetSpecB_paint1
+          arifle_MXM_Black_F
+          arifle_mas_m4c_d
+          TRYK_shirts_BLK_PAD_BLW
+          iansky_specterdrkf_d
+          iansky_specterdr
+          rhs_10Rnd_762x54mmR_7N1
+          7Rnd_mas_12Gauge_Slug
+          TRYK_shirts_OD_PAD_BLW
+          TRYK_T_CSAT_PAD
+          TRYK_shirts_BLK_PAD
+          TRYK_V_tacv1_MSL_NV
+          rhs_weap_ak74m
+          muzzle_mas_snds_MP5SD6
+          TRYK_U_B_NATO_OCP_BLK_R_CombatUniform
+          H_HelmetB
+          TRYK_shirts_TAN_PAD_BLU3
+          H_CrewHelmetHeli_I
+          100Rnd_65x39_caseless_mag_Tracer
+          arifle_mas_m4_gl_d
+          rhsusf_100Rnd_556x45_soft_pouch
+          TRYK_T_camo_Wood
+          arifle_mas_g3
+          TRYK_U_B_JSDF_CombatUniform
+          TRYK_U_pad_hood_Blod
+          TRYK_U_B_woodtan_CombatUniform
+          H_HelmetSpecB_paint2
+          TRYK_B_BAF_BAG_BLK
+          30Rnd_mas_545x39_mag
+          B_OutdoorPack_blu
+          arifle_mas_hk417c
+          LMG_mas_M249_F_d
+          TRYK_H_headsetcap_blk
+          TRYK_T_camo_Wood_BG
+          TRYK_shirts_DENIM_BL_Sleeve
+          TRYK_H_Bandana_H
+          TRYK_shirts_TAN_PAD_BLU3
+          srifle_mas_hk417_d
+          H_MilCap_blue
+          Exile_Item_InstaDoc
+          TRYK_V_ArmorVest_HRT_OD
+          H_HelmetSpecB_paint1
+          150Rnd_762x54_Box_Tracer
+          TRYK_B_FieldPack_Wood
+          TRYK_H_PASGT_TAN
+          optic_Holosight
+          V_PlateCarrier1_rgr
+          5Rnd_127x108_APDS_Mag
+          rhs_weap_m249_pip_L
+          SmokeShell
+          optic_mas_Holosight_camo
+          30Rnd_65x39_caseless_mag
+          TRYK_U_B_ODTAN
+          optic_mas_acog_eo
+          TRYK_U_B_wood3c_CombatUniformTshirt
+          TRYK_U_B_GRTANR_CombatUniformTshirt
+          optic_mas_Hamr_camo
+          TRYK_U_pad_j_blk
+          arifle_mas_aks74u
+          H_HelmetB_black
+          TRYK_hoodie_3c
+          TRYK_shirts_PAD_BLU3
+          TRYK_B_Coyotebackpack_OD
+          rhs_weap_m4a1
+          iansky_t1
+          rhs_weap_pkm
+          arifle_mas_m4c
+          TRYK_U_B_BLK_T_BG_BK
+          TRYK_U_denim_hood_blk
+          TRYK_U_B_OD_OD_R_CombatUniform
+          TRYK_U_B_BLK
+          20Rnd_mas_12Gauge_Slug
+          TRYK_U_B_GRTANR_CombatUniformTshirt
+          TRYK_V_tacv1_P_BK
+          arifle_mas_arx
+          rhsusf_5Rnd_300winmag_xm2010
+          TRYK_U_B_BLK_Tshirt
+          H_MilCap_blue
+          rhs_100Rnd_762x54mmR
+          TRYK_U_B_BLK_T_BG_BK
+        */
+        class Military
+        {
+                top = 384.929999999998;
+                count = 822;
+                half = 267.75;
+                halfIndex = 411;
+                maximum = 100;
+                sum = 82200;
+                items[] =
+                {
+                        {3, "150Rnd_93x64_Mag"},
+                        {3.9, "U_B_CombatUniform_mcam_worn"},
+                        {4.7, "arifle_Katiba_F"},
+                        {5.5, "TRYK_B_Kitbag_blk"},
+                        {6.25, "TRYK_B_Coyotebackpack_OD"},
+                        {6.95, "H_HelmetSpecB_paint1"},
+                        {7.65, "arifle_mas_m16"},
+                        {8.35, "V_PlateCarrierSpec_rgr"},
+                        {9.05, "arifle_mas_m4_gl"},
+                        {9.75, "V_PlateCarrierIA2_dgtl"},
+                        {10.45, "arifle_mas_m4_gl_d"},
+                        {11.15, "V_PlateCarrierGL_rgr"},
+                        {11.85, "arifle_mas_m4_gl_v"},
+                        {12.55, "V_PlateCarrier2_rgr"},
+                        {13.25, "arifle_mas_m4_v"},
+                        {13.95, "V_PlateCarrier1_blk"},
+                        {14.65, "arifle_mas_m4c"},
+                        {15.35, "H_HelmetB_light_sand"},
+                        {16.05, "arifle_mas_m4c_d"},
+                        {16.75, "H_HelmetB_light_desert"},
+                        {17.45, "arifle_mas_m4c_v"},
+                        {18.15, "H_HelmetB_light_grass"},
+                        {18.85, "arifle_mas_m4vlt"},
+                        {19.55, "H_HelmetB_black"},
+                        {20.25, "arifle_mas_mk16"},
+                        {20.95, "100Rnd_65x39_caseless_mag"},
+                        {21.65, "arifle_mas_mk17"},
+                        {22.35, "150Rnd_762x54_Box"},
+                        {23.05, "arifle_mas_arx"},
+                        {23.75, "H_HelmetIA_camo"},
+                        {24.45, "arifle_mas_arx_l"},
+                        {25.15, "U_B_CTRG_3"},
+                        {25.85, "arifle_mas_asval"},
+                        {26.55, "arifle_MXC_F"},
+                        {27.25, "arifle_mas_asval_ds"},
+                        {27.95, "H_HelmetIA_net"},
+                        {28.65, "srifle_mas_mk17s"},
+                        {29.35, "H_HelmetSpecB_blk"},
+                        {30.05, "srifle_mas_sr25"},
+                        {30.75, "arifle_TRG21_F"},
+                        {31.45, "srifle_mas_sr25_d"},
+                        {32.15, "H_HelmetSpecB"},
+                        {32.85, "srifle_mas_sr25_v"},
+                        {33.55, "H_HelmetB_light"},
+                        {34.25, "rhs_weap_ak74m"},
+                        {34.95, "H_HelmetB"},
+                        {35.65, "rhs_weap_ak74m_camo"},
+                        {36.35, "arifle_mas_ak12_sf"},
+                        {37.05, "arifle_mas_ak74"},
+                        {37.75, "arifle_mas_ak_74m"},
+                        {38.45, "arifle_mas_ak_74m_c"},
+                        {39.15, "arifle_mas_akm"},
+                        {39.85, "arifle_mas_akms"},
+                        {40.55, "arifle_mas_akms_c"},
+                        {41.25, "arifle_mas_aks74"},
+                        {41.95, "arifle_mas_aks74u"},
+                        {42.65, "arifle_mas_aks74u_c"},
+                        {43.35, "arifle_mas_aks_74_sf"},
+                        {44.05, "arifle_mas_fal"},
+                        {44.75, "arifle_mas_g3"},
+                        {45.45, "arifle_mas_g36c"},
+                        {46.15, "arifle_mas_g3s"},
+                        {46.85, "arifle_mas_hk416"},
+                        {47.55, "arifle_mas_hk416_d"},
+                        {48.25, "arifle_mas_hk416_h"},
+                        {48.95, "arifle_mas_hk416_v"},
+                        {49.65, "arifle_mas_hk416c"},
+                        {50.3500000000001, "arifle_mas_hk416c_d"},
+                        {51.0500000000001, "arifle_mas_hk416c_v"},
+                        {51.7500000000001, "arifle_mas_hk417c"},
+                        {52.4500000000001, "arifle_mas_hk417c_d"},
+                        {53.1500000000001, "arifle_mas_hk417c_v"},
+                        {53.8500000000001, "srifle_mas_hk417"},
+                        {54.5500000000001, "srifle_mas_hk417_d"},
+                        {55.2500000000001, "srifle_mas_hk417_v"},
+                        {55.9500000000001, "arifle_mas_l119"},
+                        {56.6500000000001, "arifle_mas_l119_d"},
+                        {57.3500000000001, "arifle_mas_l119_gl"},
+                        {58.0500000000001, "arifle_mas_l119_gl_d"},
+                        {58.7500000000001, "arifle_mas_l119_gl_v"},
+                        {59.4500000000001, "arifle_mas_l119_m203"},
+                        {60.1500000000001, "arifle_mas_l119_m203_d"},
+                        {60.8500000000001, "arifle_mas_l119_m203_v"},
+                        {61.5500000000001, "arifle_mas_l119_v"},
+                        {62.2500000000001, "arifle_mas_l119c"},
+                        {62.9500000000001, "arifle_mas_l119c_d"},
+                        {63.6500000000001, "arifle_mas_l119c_v"},
+                        {64.3500000000001, "20Rnd_mas_765x17_Mag"},
+                        {65.0500000000001, "arifle_mas_m16_gl"},
+                        {65.7500000000001, "arifle_mas_m4"},
+                        {66.4500000000001, "arifle_mas_m4_d"},
+                        {67.1500000000001, "U_B_CTRG_1"},
+                        {67.8500000000001, "V_PlateCarrierIAGL_dgtl"},
+                        {68.5500000000001, "V_PlateCarrierIA1_dgtl"},
+                        {69.2500000000001, "V_PlateCarrier3_rgr"},
+                        {69.9500000000001, "V_PlateCarrier1_rgr"},
+                        {70.6500000000001, "V_Rangemaster_belt"},
+                        {71.3500000000001, "H_HelmetB_light_black"},
+                        {72.0500000000001, "H_HelmetB_light_snakeskin"},
+                        {72.7500000000001, "H_HelmetB_sand"},
+                        {73.4500000000001, "H_HelmetB_desert"},
+                        {74.1500000000001, "H_HelmetB_snakeskin"},
+                        {74.8500000000002, "H_HelmetB_grass"},
+                        {75.5500000000002, "U_B_CTRG_2"},
+                        {76.2500000000002, "arifle_Katiba_GL_F"},
+                        {76.9500000000002, "arifle_MX_F"},
+                        {77.6500000000002, "H_HelmetIA"},
+                        {78.3500000000002, "H_HelmetSpecB_paint2"},
+                        {79.0500000000002, "arifle_TRG20_F"},
+                        {79.7500000000002, "H_HelmetB_plain_blk"},
+                        {80.4500000000002, "H_HelmetB_paint"},
+                        {81.1500000000002, "rhs_weap_ak74m_npz"},
+                        {81.8500000000002, "rhs_weap_akm"},
+                        {82.5500000000002, "rhs_weap_akms"},
+                        {83.2500000000002, "rhs_weap_ak103"},
+                        {83.9500000000002, "rhs_weap_ak74m_folded"},
+                        {84.6500000000002, "rhs_weap_ak74"},
+                        {85.3500000000002, "rhs_weap_aks74"},
+                        {86.0500000000002, "rhs_weap_aks74u"},
+                        {86.7500000000002, "rhs_weap_m4"},
+                        {87.4500000000002, "rhs_weap_m4a1"},
+                        {88.1500000000002, "rhs_weap_m16a4"},
+                        {88.8500000000002, "rhs_weap_sr25"},
+                        {89.5500000000002, "H_MilCap_blue"},
+                        {90.2500000000002, "H_MilCap_oucamo"},
+                        {90.9500000000002, "H_MilCap_mcamo"},
+                        {91.6500000000002, "H_MilCap_ocamo"},
+                        {92.3500000000002, "U_B_CombatUniform_mcam_tshirt"},
+                        {93.0500000000002, "TRYK_B_Belt_BLK"},
+                        {93.7500000000002, "TRYK_B_AssaultPack_MARPAT_Wood"},
+                        {94.4500000000002, "acc_flashlight"},
+                        {95.1500000000002, "U_B_CombatUniform_mcam_vest"},
+                        {95.8500000000002, "B_OutdoorPack_blu"},
+                        {96.5500000000002, "B_OutdoorPack_tan"},
+                        {97.2500000000002, "B_OutdoorPack_blk"},
+                        {97.9500000000002, "Binocular"},
+                        {98.6500000000002, "rhsusf_8Rnd_00Buck"},
+                        {99.3500000000003, "rhsusf_5Rnd_00Buck"},
+                        {100.05, "rhs_45Rnd_545x39_AK"},
+                        {100.75, "rhsusf_5Rnd_300winmag_xm2010"},
+                        {101.45, "rhsusf_5Rnd_Slug"},
+                        {102.15, "rhsusf_mag_7x45acp_MHP"},
+                        {102.85, "rhsusf_20Rnd_762x51_m993_Mag"},
+                        {103.55, "rhsusf_20Rnd_762x51_m118_special_Mag"},
+                        {104.25, "rhsusf_50Rnd_762x51_m993"},
+                        {104.95, "rhsusf_50Rnd_762x51_m80a1epr"},
+                        {105.65, "rhsusf_50Rnd_762x51"},
+                        {106.35, "rhsusf_200Rnd_556x45_soft_pouch"},
+                        {107.05, "rhsusf_100Rnd_556x45_soft_pouch"},
+                        {107.75, "rhs_mag_30Rnd_556x45_m855A1_Stanag_No_Tracer"},
+                        {108.45, "rhs_mag_30Rnd_556x45_m855A1_Stanag"},
+                        {109.15, "rhs_mag_9x18_12_57N181S"},
+                        {109.85, "rhs_mag_9x19_17"},
+                        {110.55, "rhs_30Rnd_762x39mm"},
+                        {111.25, "rhs_10Rnd_762x54mmR_7N1"},
+                        {111.95, "rhs_30Rnd_545x39_AK_no_tracers"},
+                        {112.65, "rhs_30Rnd_545x39_AK"},
+                        {113.35, "5Rnd_mas_127x108_mag"},
+                        {114.05, "5Rnd_mas_127x99_Stanag"},
+                        {114.75, "10Rnd_mas_338_Stanag"},
+                        {115.45, "150Rnd_mas_556x45_Stanag"},
+                        {116.15, "30Rnd_mas_545x39_mag"},
+                        {116.85, "10Rnd_mas_762x54_mag"},
+                        {117.55, "64Rnd_mas_9x18_mag"},
+                        {118.25, "5Rnd_mas_762x51_Stanag"},
+                        {118.95, "10Rnd_mas_12Gauge_Pellets"},
+                        {119.65, "10Rnd_mas_12Gauge_Slug"},
+                        {120.35, "20Rnd_mas_12Gauge_Pellets"},
+                        {121.05, "20Rnd_mas_12Gauge_Slug"},
+                        {121.75, "7Rnd_mas_12Gauge_Pellets"},
+                        {122.45, "7Rnd_mas_12Gauge_Slug"},
+                        {123.15, "40Rnd_mas_46x30_Mag"},
+                        {123.85, "30Rnd_mas_9x39_mag"},
+                        {124.55, "20Rnd_mas_9x39_mag"},
+                        {125.25, "30Rnd_mas_762x39_mag"},
+                        {125.95, "H_MilCap_dgtl"},
+                        {126.65, "30Rnd_mas_556x45_Stanag"},
+                        {127.35, "H_MilCap_rucamo"},
+                        {127.95, "TRYK_H_ghillie_top_headless3glass"},
+                        {128.55, "rhs_acc_pkas"},
+                        {129.15, "TRYK_T_camo_Wood"},
+                        {129.75, "rhs_acc_ekp1"},
+                        {130.35, "TRYK_T_camo_3c"},
+                        {130.95, "rhs_acc_pgo7v"},
+                        {131.55, "TRYK_T_camo_tan"},
+                        {132.15, "rhs_acc_1pn93_2"},
+                        {132.75, "TRYK_hoodie_3c"},
+                        {133.35, "rhsusf_acc_eotech_552"},
+                        {133.95, "TRYK_hoodie_Wood"},
+                        {134.55, "rhsusf_acc_ELCAN"},
+                        {135.15, "TRYK_hoodie_FR"},
+                        {135.75, "rhsusf_acc_ACOG2"},
+                        {136.35, "TRYK_hoodie_Blk"},
+                        {136.95, "rhsusf_acc_ACOG3"},
+                        {137.55, "TRYK_U_pad_hood_BKT2"},
+                        {138.15, "rhsusf_acc_EOTECH"},
+                        {138.75, "TRYK_U_pad_hood_odBK"},
+                        {139.35, "rhsusf_acc_ACOG"},
+                        {139.95, "TRYK_U_pad_hood_Blod"},
+                        {140.55, "rhsusf_acc_ACOG_pip"},
+                        {141.15, "TRYK_U_pad_hood_CSATBlk"},
+                        {141.75, "rhs_acc_1pn93_2"},
+                        {142.35, "TRYK_U_pad_hood_Blk"},
+                        {142.95, "rhsusf_acc_ACOG2"},
+                        {143.55, "TRYK_U_pad_hood_tan"},
+                        {144.15, "rhsusf_acc_ACOG_USMC"},
+                        {144.75, "TRYK_U_pad_hood_Cl_blk"},
+                        {145.35, "rhsusf_acc_ACOG2_USMC"},
+                        {145.95, "TRYK_U_pad_hood_Cl"},
+                        {146.55, "rhsusf_acc_ACOG3_USMC"},
+                        {147.15, "TRYK_U_pad_j_blk"},
+                        {147.75, "rhsusf_acc_LEUPOLDMK4_2"},
+                        {148.35, "TRYK_U_pad_j"},
+                        {148.95, "rhsusf_acc_EOTECH"},
+                        {149.55, "TRYK_U_Bts_PCUs"},
+                        {150.15, "rhs_acc_1p29"},
+                        {150.75, "TRYK_U_Bts_Wood_PCUs"},
+                        {151.35, "rhs_acc_1p78"},
+                        {151.95, "TRYK_U_Bts_UCP_PCUs"},
+                        {152.55, "rhs_acc_pkas"},
+                        {153.15, "rhs_acc_1p63"},
+                        {153.75, "rhs_acc_ekp1"},
+                        {154.35, "rhs_acc_pso1m2"},
+                        {154.95, "TRYK_SUITS_BLK_F"},
+                        {155.55, "TRYK_OVERALL_SAGE_BLKboots_nk_blk"},
+                        {156.15, "TRYK_OVERALL_SAGE_BLKboots"},
+                        {156.75, "TRYK_OVERALL_nok_flesh"},
+                        {157.35, "TRYK_OVERALL_flesh"},
+                        {157.95, "TRYK_B_USMC_R_ROLL"},
+                        {158.55, "TRYK_B_USMC_R"},
+                        {159.15, "TRYK_U_B_PCUODHs"},
+                        {159.75, "TRYK_U_B_PCUGHs"},
+                        {160.35, "TRYK_U_B_PCUHs"},
+                        {160.95, "TRYK_shirts_BLK_PAD_BL"},
+                        {161.55, "TRYK_shirts_TAN_PAD_BL"},
+                        {162.15, "TRYK_shirts_OD_PAD_BL"},
+                        {162.75, "TRYK_shirts_PAD_BL"},
+                        {163.35, "TRYK_shirts_DENIM_od_Sleeve"},
+                        {163.95, "TRYK_shirts_DENIM_ylb_Sleeve"},
+                        {164.55, "TRYK_shirts_DENIM_WHB_Sleeve"},
+                        {165.15, "TRYK_shirts_DENIM_RED2_Sleeve"},
+                        {165.75, "TRYK_shirts_DENIM_BWH_Sleeve"},
+                        {166.35, "TRYK_shirts_DENIM_WH_Sleeve"},
+                        {166.95, "TRYK_shirts_DENIM_BK_Sleeve"},
+                        {167.55, "TRYK_shirts_DENIM_BL_Sleeve"},
+                        {168.15, "TRYK_shirts_DENIM_R_Sleeve"},
+                        {168.75, "TRYK_shirts_DENIM_od"},
+                        {169.35, "TRYK_shirts_DENIM_ylb"},
+                        {169.95, "rhs_acc_1p29"},
+                        {170.55, "TRYK_shirts_DENIM_WHB"},
+                        {171.15, "TRYK_shirts_DENIM_RED2"},
+                        {171.75, "TRYK_shirts_DENIM_BWH"},
+                        {172.35, "TRYK_shirts_DENIM_WH"},
+                        {172.95, "TRYK_shirts_DENIM_BK"},
+                        {173.55, "TRYK_shirts_DENIM_BL"},
+                        {174.15, "TRYK_shirts_DENIM_R"},
+                        {174.75, "TRYK_shirts_BLK_PAD_BLU3"},
+                        {175.35, "TRYK_shirts_TAN_PAD_BLU3"},
+                        {175.95, "TRYK_shirts_OD_PAD_BLU3"},
+                        {176.55, "TRYK_shirts_PAD_BLU3"},
+                        {177.15, "TRYK_shirts_BLK_PAD_RED2"},
+                        {177.75, "TRYK_shirts_TAN_PAD_RED2"},
+                        {178.35, "TRYK_shirts_OD_PAD_RED2"},
+                        {178.95, "TRYK_shirts_PAD_RED2"},
+                        {179.55, "TRYK_shirts_BLK_PAD_YEL"},
+                        {180.15, "TRYK_shirts_TAN_PAD_YEL"},
+                        {180.75, "TRYK_shirts_OD_PAD_YEL"},
+                        {181.35, "TRYK_shirts_PAD_YEL"},
+                        {181.95, "TRYK_shirts_BLK_PAD_BLW"},
+                        {182.55, "TRYK_shirts_TAN_PAD_BLW"},
+                        {183.15, "TRYK_shirts_OD_PAD_BLW"},
+                        {183.75, "TRYK_shirts_PAD_BLW"},
+                        {184.35, "TRYK_shirts_BLK_PAD_BK"},
+                        {184.95, "TRYK_shirts_TAN_PAD_BK"},
+                        {185.55, "TRYK_shirts_OD_PAD_BK"},
+                        {186.15, "TRYK_shirts_PAD_BK"},
+                        {186.75, "TRYK_shirts_BLK_PAD"},
+                        {187.35, "TRYK_shirts_TAN_PAD"},
+                        {187.95, "TRYK_shirts_OD_PAD"},
+                        {188.55, "TRYK_shirts_PAD"},
+                        {189.15, "TRYK_U_denim_jersey_blk"},
+                        {189.75, "TRYK_U_denim_jersey_blu"},
+                        {190.35, "TRYK_U_denim_hood_nc"},
+                        {190.95, "TRYK_U_denim_hood_3c"},
+                        {191.55, "TRYK_U_denim_hood_mc"},
+                        {192.15, "TRYK_U_denim_hood_blk"},
+                        {192.75, "TRYK_U_hood_mc"},
+                        {193.35, "TRYK_U_hood_nc"},
+                        {193.95, "TRYK_U_nohoodPcu_gry"},
+                        {194.55, "TRYK_T_CSAT_PAD"},
+                        {195.15, "TRYK_T_T2_PAD"},
+                        {195.75, "TRYK_T_BLK_PAD"},
+                        {196.35, "TRYK_T_TAN_PAD"},
+                        {196.95, "TRYK_T_OD_PAD"},
+                        {197.55, "TRYK_T_PAD"},
+                        {198.15, "TRYK_T_camo_desert_marpat_BG"},
+                        {198.75, "TRYK_T_camo_wood_marpat_BG"},
+                        {199.35, "TRYK_T_camo_Wood_BG"},
+                        {199.95, "TRYK_T_camo_3c_BG"},
+                        {200.55, "TRYK_T_camo_Desert_marpat"},
+                        {201.15, "TRYK_T_camo_wood_marpat"},
+                        {201.75, "TRYK_HRP_UCP"},
+                        {202.35, "rhs_acc_1p63"},
+                        {202.95, "rhs_acc_pso1m2"},
+                        {203.55, "rhs_acc_1pn93_1"},
+                        {204.15, "rhsusf_acc_compm4"},
+                        {204.75, "rhsusf_acc_LEUPOLDMK4"},
+                        {205.35, "rhsusf_acc_ELCAN_pip"},
+                        {205.95, "rhsusf_acc_ACOG"},
+                        {206.55, "rhsusf_acc_ACOG_USMC"},
+                        {207.15, "Aimpoint RDS"},
+                        {207.75, "rhs_acc_pgo7v"},
+                        {208.35, "rhs_acc_1pn93_1"},
+                        {208.95, "rhsusf_acc_eotech_552"},
+                        {209.55, "rhsusf_acc_LEUPOLDMK4"},
+                        {210.15, "rhsusf_acc_ELCAN"},
+                        {210.75, "rhsusf_acc_ELCAN_pip"},
+                        {211.35, "rhsusf_acc_ACOG"},
+                        {211.95, "rhsusf_acc_ACOG_pip"},
+                        {212.55, "rhs_acc_1pn93_2"},
+                        {213.15, "rhsusf_acc_ACOG2"},
+                        {213.75, "TRYK_U_Bts_GRYGRY_PCUs"},
+                        {214.35, "TRYK_U_B_Wood_PCUs_R"},
+                        {214.95, "TRYK_U_B_GRY_PCUs_R"},
+                        {215.55, "TRYK_U_B_UCP_PCUs_R"},
+                        {216.15, "TRYK_U_B_PCUs"},
+                        {216.75, "TRYK_U_B_Wood_PCUs"},
+                        {217.35, "TRYK_U_B_GRY_PCUs"},
+                        {217.95, "TRYK_U_B_UCP_PCUs"},
+                        {218.55, "TRYK_U_B_fleece_UCP"},
+                        {219.149999999999, "TRYK_U_B_fleece"},
+                        {219.749999999999, "TRYK_U_B_RED_T_BG_BR"},
+                        {220.349999999999, "TRYK_U_B_BLK_T_BG_BK"},
+                        {220.949999999999, "TRYK_U_B_BLK_T_BG_WH"},
+                        {221.549999999999, "TRYK_U_B_Denim_T_BG_BK"},
+                        {222.149999999999, "TRYK_U_B_Denim_T_BG_WH"},
+                        {222.749999999999, "TRYK_U_B_RED_T_BR"},
+                        {223.349999999999, "TRYK_U_B_BLK_T_BK"},
+                        {223.949999999999, "TRYK_U_B_BLK_T_WH"},
+                        {224.549999999999, "TRYK_U_B_Denim_T_BK"},
+                        {225.149999999999, "TRYK_U_B_Denim_T_WH"},
+                        {225.749999999999, "TRYK_U_B_NATO_OCP_R_CombatUniform"},
+                        {226.349999999999, "TRYK_U_B_NATO_OCP_CombatUniform"},
+                        {226.949999999999, "TRYK_U_B_NATO_OCPD_R_CombatUniform"},
+                        {227.549999999999, "TRYK_U_B_NATO_OCPD_CombatUniform"},
+                        {228.149999999999, "TRYK_U_B_NATO_OCP_BLK_R_CombatUniform"},
+                        {228.749999999999, "TRYK_U_B_NATO_OCP_BLK_CombatUniform"},
+                        {229.349999999999, "TRYK_U_B_NATO_OCP_BLK_c_R_CombatUniform"},
+                        {229.949999999999, "TRYK_U_B_NATO_OCP_c_BLK_CombatUniform"},
+                        {230.549999999999, "TRYK_U_B_NATO_UCP_R_CombatUniform"},
+                        {231.149999999999, "TRYK_U_B_NATO_UCP_CombatUniform"},
+                        {231.749999999999, "TRYK_U_B_NATO_UCP_GRY_R_CombatUniform"},
+                        {232.349999999999, "TRYK_U_B_NATO_UCP_GRY_CombatUniform"},
+                        {232.949999999999, "TRYK_U_B_BLK_OD_Rollup_CombatUniform"},
+                        {233.549999999999, "TRYK_U_B_BLK_tan_Rollup_CombatUniform"},
+                        {234.149999999999, "TRYK_U_B_wh_blk_Rollup_CombatUniform"},
+                        {234.749999999999, "TRYK_U_B_wh_OD_Rollup_CombatUniform"},
+                        {235.349999999999, "TRYK_U_B_wh_tan_Rollup_CombatUniform"},
+                        {235.949999999999, "TRYK_U_B_BLK_TAN_2"},
+                        {236.549999999999, "TRYK_U_B_BLK_TAN_1"},
+                        {237.149999999999, "TRYK_U_B_OD_BLK_2"},
+                        {237.749999999999, "TRYK_U_B_OD_BLK"},
+                        {238.349999999999, "TRYK_U_B_C02_Tsirt"},
+                        {238.949999999999, "TRYK_U_B_C01_Tsirt"},
+                        {239.549999999999, "TRYK_U_B_BLK_OD_Tshirt"},
+                        {240.149999999999, "TRYK_U_B_BLK_OD"},
+                        {240.749999999999, "TRYK_U_B_ODTAN_Tshirt"},
+                        {241.349999999999, "TRYK_U_B_ODTAN"},
+                        {241.949999999999, "TRYK_U_B_BLKTAN_Tshirt"},
+                        {242.549999999999, "B_HuntingBackpack"},
+                        {243.149999999999, "TRYK_U_B_BLKTAN"},
+                        {243.749999999999, "TRYK_U_B_BLK_Tshirt"},
+                        {244.349999999999, "TRYK_U_B_BLK"},
+                        {244.949999999999, "TRYK_U_B_BLK3CD_Tshirt"},
+                        {245.549999999999, "TRYK_U_B_BLK3CD"},
+                        {246.149999999999, "TRYK_U_B_Sage_Tshirt"},
+                        {246.749999999999, "TRYK_U_B_3cr"},
+                        {247.349999999999, "TRYK_U_B_3c"},
+                        {247.949999999999, "TRYK_U_B_MARPAT_Wood_Tshirt"},
+                        {248.549999999999, "TRYK_U_B_MARPAT_Wood"},
+                        {249.149999999999, "TRYK_U_B_ACUTshirt"},
+                        {249.749999999999, "TRYK_U_B_ACU"},
+                        {250.349999999999, "TRYK_U_B_3CD_BLK_BDUTshirt2"},
+                        {250.949999999999, "TRYK_U_B_3CD_BLK_BDUTshirt"},
+                        {251.549999999999, "TRYK_U_B_3CD_Ranger_BDUTshirt"},
+                        {252.149999999999, "TRYK_U_B_3CD_Ranger_BDU"},
+                        {252.749999999999, "TRYK_U_B_3CD_Delta_BDUTshirt"},
+                        {253.349999999999, "TRYK_U_B_3CD_Delta_BDU"},
+                        {253.949999999999, "TRYK_U_B_JSDF_CombatUniformTshirt"},
+                        {254.549999999999, "TRYK_U_B_JSDF_CombatUniform"},
+                        {255.149999999999, "TRYK_B_Medbag_OD"},
+                        {255.749999999999, "TRYK_U_B_woodtanR_CombatUniformTshirt"},
+                        {256.349999999999, "TRYK_U_B_woodtan_CombatUniform"},
+                        {256.949999999999, "TRYK_U_B_WOOD_MARPAT_CombatUniformTshirt"},
+                        {257.549999999999, "TRYK_B_Medbag"},
+                        {258.149999999999, "TRYK_U_B_WOOD_MARPAT_CombatUniform"},
+                        {258.749999999999, "acc_pointer_IR"},
+                        {259.349999999999, "TRYK_U_B_MARPAT_WOOD_CombatUniformTshirt"},
+                        {259.949999999999, "TRYK_U_B_MARPAT_WOOD_CombatUniform"},
+                        {260.549999999999, "TRYK_U_B_wood3c_CombatUniformTshirt"},
+                        {261.149999999999, "TRYK_U_B_wood3c_CombatUniform"},
+                        {261.749999999999, "TRYK_U_B_woodR_CombatUniformTshirt"},
+                        {262.349999999999, "TRYK_U_B_wood_CombatUniform"},
+                        {262.949999999999, "TRYK_U_B_GRTANR_CombatUniformTshirt"},
+                        {263.549999999999, "TRYK_U_B_GRTAN_CombatUniform"},
+                        {264.149999999999, "TRYK_U_B_ODTANR_CombatUniformTshirt"},
+                        {264.749999999999, "arifle_Mk20C_F"},
+                        {265.35, "arifle_Mk20_F"},
+                        {265.95, "TRYK_U_B_ODTAN_CombatUniform"},
+                        {266.55, "TRYK_SUITS_BR_F"},
+                        {267.15, "arifle_SDAR_F"},
+                        {267.75, "TRYK_U_B_BLKTANR_CombatUniformTshirt"},
+                        {268.35, "TRYK_U_B_BLKTAN_CombatUniform"},
+                        {268.95, "TRYK_U_B_BLKOCP_R_CombatUniformTshirt"},
+                        {269.55, "TRYK_U_B_BLKOCP_CombatUniform"},
+                        {270.15, "150Rnd_762x54_Box_Tracer"},
+                        {270.75, "100Rnd_65x39_caseless_mag_Tracer"},
+                        {271.35, "TRYK_U_B_GRYOCP_R_CombatUniformTshirt"},
+                        {271.95, "TRYK_U_B_GRYOCP_CombatUniform"},
+                        {272.55, "TRYK_U_B_BLKBLK_R_CombatUniform"},
+                        {273.15, "TRYK_U_B_BLKBLK_CombatUniform"},
+                        {273.75, "TRYK_U_B_OD_OD_R_CombatUniform"},
+                        {274.35, "TRYK_U_B_OD_OD_CombatUniform"},
+                        {274.95, "TRYK_HRP_USMC"},
+                        {275.55, "rhsusf_acc_ACOG_USMC"},
+                        {276.15, "rhs_acc_1p78"},
+                        {276.75, "rhsusf_acc_ACOG2_USMC"},
+                        {277.25, "LMG_mas_M249_F_v"},
+                        {277.75, "arifle_MX_SW_Black_F"},
+                        {278.25, "rhs_weap_m249_pip_S"},
+                        {278.75, "30Rnd_65x39_caseless_green"},
+                        {279.25, "rhs_weap_lmg_minimi_railed"},
+                        {279.75, "100Rnd_mas_762x39_mag"},
+                        {280.25, "rhs_weap_rpk74"},
+                        {280.75, "100Rnd_mas_762x54_mag"},
+                        {281.25, "rhs_weap_rpk74m"},
+                        {281.75, "200Rnd_mas_556x45_Stanag"},
+                        {282.25, "rhs_weap_pkm"},
+                        {282.75, "ItemRadio"},
+                        {283.25, "rhs_weap_pkp"},
+                        {283.75, "Exile_Item_InstaDoc"},
+                        {284.25, "arifle_MX_SW_F"},
+                        {284.75, "B_AssaultPack_dgtl"},
+                        {285.25, "LMG_Mk200_F"},
+                        {285.75, "B_AssaultPack_sgg"},
+                        {286.25, "LMG_Zafir_F"},
+                        {286.75, "B_AssaultPack_cbr"},
+                        {287.25, "U_B_CombatUniform_mcam"},
+                        {287.75, "optic_MRCO"},
+                        {288.25, "LMG_mas_M240_F"},
+                        {288.75, "optic_Hamr"},
+                        {289.25, "LMG_mas_M249_F"},
+                        {289.75, "arifle_MXM_F"},
+                        {290.25, "LMG_mas_M249_F_d"},
+                        {290.75, "rhs_weap_m249_pip_L"},
+                        {291.25, "V_TacVestIR_blk"},
+                        {291.75, "30Rnd_556x45_Stanag"},
+                        {292.25, "V_TacVestCamo_khk"},
+                        {292.75, "100Rnd_mas_762x51_Stanag"},
+                        {293.25, "V_TacVest_oli"},
+                        {293.75, "rhs_100Rnd_762x54mmR"},
+                        {294.25, "V_TacVest_khk"},
+                        {294.75, "B_AssaultPack_khk"},
+                        {295.25, "V_TacVest_camo"},
+                        {295.75, "B_AssaultPack_blk"},
+                        {296.25, "V_TacVest_brn"},
+                        {296.75, "optic_Arco"},
+                        {297.25, "rhs_weap_m240B"},
+                        {297.75, "LMG_mas_rpk_F"},
+                        {298.25, "30Rnd_65x39_caseless_mag"},
+                        {298.75, "100Rnd_mas_545x39_mag"},
+                        {299.25, "NVGoggles"},
+                        {299.75, "B_AssaultPack_rgr"},
+                        {300.25, "V_TacVest_blk"},
+                        {300.75, "LMG_mas_M249a_F"},
+                        {301.25, "LMG_mas_M60_F"},
+                        {301.75, "LMG_mas_Mk48_F"},
+                        {302.25, "LMG_mas_Mk48_F_d"},
+                        {302.75, "LMG_mas_Mk48_F_v"},
+                        {303.25, "LMG_mas_mg3_F"},
+                        {303.75, "LMG_mas_pkm_F"},
+                        {304.25, "B_AssaultPack_mcamo"},
+                        {304.75, "LMG_mas_m72_F"},
+                        {305.25, "optic_Holosight"},
+                        {305.65, "H_HelmetCrew_I"},
+                        {306.05, "optic_mas_Arco_camo"},
+                        {306.45, "optic_mas_aim"},
+                        {306.85, "30Rnd_556x45_Stanag_Tracer_Green"},
+                        {307.25, "optic_mas_handle"},
+                        {307.65, "30Rnd_556x45_Stanag_Tracer_Yellow"},
+                        {308.05, "optic_mas_acog_rd_c"},
+                        {308.45, "30Rnd_65x39_caseless_mag_Tracer"},
+                        {308.85, "optic_mas_acog_rd"},
+                        {309.25, "optic_mas_PSO_kv"},
+                        {309.65, "optic_mas_acog_eo_c"},
+                        {310.05, "optic_mas_nspu"},
+                        {310.45, "optic_mas_acog_eo"},
+                        {310.85, "optic_mas_LRPS"},
+                        {311.25, "optic_mas_acog_c"},
+                        {311.65, "optic_mas_term"},
+                        {312.05, "optic_mas_acog"},
+                        {312.45, "optic_mas_PSO_nv_day"},
+                        {312.85, "optic_mas_zeiss_eo_c"},
+                        {313.249999999999, "optic_mas_PSO_nv_eo_c"},
+                        {313.649999999999, "optic_mas_zeiss_eo"},
+                        {314.049999999999, "optic_mas_PSO_nv_c"},
+                        {314.449999999999, "optic_mas_zeiss_c"},
+                        {314.849999999999, "optic_mas_PSO_eo_c"},
+                        {315.249999999999, "optic_mas_zeiss"},
+                        {315.649999999999, "optic_mas_PSO_c"},
+                        {316.049999999999, "optic_mas_MRCO_camo"},
+                        {316.449999999999, "optic_mas_aim_c"},
+                        {316.849999999999, "optic_mas_ACO_grn_camo"},
+                        {317.249999999999, "H_HelmetCrew_O"},
+                        {317.649999999999, "optic_mas_Aco_camo"},
+                        {318.049999999999, "30Rnd_65x39_caseless_green_mag_Tracer"},
+                        {318.449999999999, "optic_mas_Hamr_camo"},
+                        {318.849999999999, "optic_mas_goshawk"},
+                        {319.249999999999, "TRYK_B_BAF_BAG_BLK"},
+                        {319.649999999999, "H_HelmetCrew_B"},
+                        {320.049999999999, "optic_mas_PSO_day"},
+                        {320.449999999999, "optic_mas_PSO_nv_eo"},
+                        {320.849999999999, "optic_mas_PSO_nv"},
+                        {321.249999999999, "optic_mas_PSO_eo"},
+                        {321.649999999999, "optic_mas_PSO"},
+                        {322.049999999999, "ItemGPS"},
+                        {322.449999999999, "30Rnd_556x45_Stanag_Tracer_Red"},
+                        {322.849999999999, "optic_mas_PSO_kv_c"},
+                        {323.249999999999, "optic_mas_Arco_blk"},
+                        {323.649999999999, "optic_mas_Holosight_camo"},
+                        {324.049999999999, "optic_mas_Holosight_blk"},
+                        {324.449999999999, "optic_mas_DMS_c"},
+                        {324.849999999999, "10Rnd_762x51_Mag"},
+                        {325.249999999999, "20Rnd_762x51_Mag"},
+                        {325.649999999999, "B_Kitbag_cbr"},
+                        {326.049999999999, "B_Kitbag_sgg"},
+                        {326.449999999999, "B_Kitbag_mcamo"},
+                        {326.849999999999, "optic_mas_kobra_c"},
+                        {327.249999999999, "optic_mas_DMS"},
+                        {327.649999999999, "optic_mas_MRD"},
+                        {327.999999999999, "U_I_CombatUniform"},
+                        {328.349999999999, "SmokeShellYellow"},
+                        {328.699999999999, "SmokeShellRed"},
+                        {329.049999999999, "SmokeShellBlue"},
+                        {329.399999999999, "SmokeShell"},
+                        {329.749999999999, "UGL_FlareGreen_F"},
+                        {330.099999999999, "optic_LRPS"},
+                        {330.449999999999, "UGL_FlareWhite_F"},
+                        {330.799999999999, "optic_SOS"},
+                        {331.149999999999, "1Rnd_Smoke_Grenade_shell"},
+                        {331.499999999999, "optic_DMS"},
+                        {331.849999999999, "1Rnd_SmokeGreen_Grenade_shell"},
+                        {332.199999999999, "U_I_CombatUniform_tshirt"},
+                        {332.549999999999, "1Rnd_SmokePurple_Grenade_shell"},
+                        {332.899999999999, "arifle_MX_GL_F"},
+                        {333.249999999999, "1Rnd_SmokeYellow_Grenade_shell"},
+                        {333.599999999999, "20Rnd_556x45_UW_mag"},
+                        {333.949999999999, "SmokeShellGreen"},
+                        {334.299999999999, "U_I_CombatUniform_shortsleeve"},
+                        {334.649999999999, "U_B_HeliPilotCoveralls"},
+                        {334.999999999999, "U_O_PilotCoveralls"},
+                        {335.349999999999, "U_B_PilotCoveralls"},
+                        {335.699999999999, "U_I_pilotCoveralls"},
+                        {336.049999999999, "U_I_HeliPilotCoveralls"},
+                        {336.399999999999, "1Rnd_SmokeRed_Grenade_shell"},
+                        {336.749999999999, "1Rnd_SmokeOrange_Grenade_shell"},
+                        {337.099999999999, "1Rnd_SmokeBlue_Grenade_shell"},
+                        {337.449999999999, "UGL_FlareYellow_F"},
+                        {337.799999999999, "UGL_FlareRed_F"},
+                        {338.149999999999, "SmokeShellOrange"},
+                        {338.499999999999, "SmokeShellPurple"},
+                        {338.799999999999, "TRYK_H_woolhat_br"},
+                        {339.099999999999, "TRYK_B_Alicepack"},
+                        {339.399999999999, "TRYK_H_Bandana_H"},
+                        {339.699999999999, "H_PilotHelmetFighter_O"},
+                        {339.999999999999, "TRYK_B_FieldPack_Wood"},
+                        {340.299999999999, "TRYK_H_headsetcap_od"},
+                        {340.599999999999, "TRYK_B_Carryall_JSDF"},
+                        {340.899999999999, "H_PilotHelmetFighter_I"},
+                        {341.199999999999, "TRYK_TAC_EARMUFF_SHADE_Gs"},
+                        {341.499999999999, "TRYK_H_woolhat_CW"},
+                        {341.8, "arifle_TRG21_GL_F"},
+                        {342.1, "TRYK_H_woolhat"},
+                        {342.4, "130Rnd_338_Mag"},
+                        {342.7, "H_PilotHelmetHeli_B"},
+                        {343, "TRYK_H_PASGT_BLK"},
+                        {343.3, "TRYK_H_AOR1"},
+                        {343.6, "V_RebreatherIA"},
+                        {343.9, "TRYK_H_GR"},
+                        {344.2, "H_CrewHelmetHeli_B"},
+                        {344.5, "TRYK_H_WH"},
+                        {344.8, "H_PilotHelmetFighter_B"},
+                        {345.1, "TRYK_H_Helmet_Snow"},
+                        {345.4, "TRYK_H_headsetcap"},
+                        {345.7, "TRYK_H_PASGT_TAN"},
+                        {346, "TRYK_H_EARMUFF"},
+                        {346.3, "TRYK_H_PASGT_COYO"},
+                        {346.6, "TRYK_H_woolhat_WH"},
+                        {346.9, "TRYK_H_PASGT_OD"},
+                        {347.2, "arifle_Mk20_GL_F"},
+                        {347.5, "U_B_SpecopsUniform_sgg"},
+                        {347.8, "TRYK_bandana_g"},
+                        {348.1, "V_RebreatherB"},
+                        {348.4, "TRYK_H_TACEARMUFF_H"},
+                        {348.7, "H_CrewHelmetHeli_O"},
+                        {349, "TRYK_H_Bandana_wig"},
+                        {349.3, "TRYK_H_Bandana_wig_g"},
+                        {349.6, "TRYK_H_wig"},
+                        {349.9, "TRYK_H_headset2"},
+                        {350.2, "H_PilotHelmetHeli_I"},
+                        {350.5, "H_PilotHelmetHeli_O"},
+                        {350.8, "TRYK_H_AOR2"},
+                        {351.1, "1Rnd_HE_Grenade_shell"},
+                        {351.4, "TRYK_NOMIC_TAC_EARMUFF_Gs"},
+                        {351.7, "H_CrewHelmetHeli_I"},
+                        {352, "TRYK_H_headsetcap_blk"},
+                        {352.3, "TRYK_H_woolhat_tan"},
+                        {352.6, "TRYK_H_woolhat_cu"},
+                        {352.9, "V_RebreatherIR"},
+                        {353.15, "U_I_Wetsuit"},
+                        {353.4, "muzzle_mas_snds_AK"},
+                        {353.65, "5Rnd_127x108_Mag"},
+                        {353.9, "U_B_Wetsuit"},
+                        {354.15, "7Rnd_408_Mag"},
+                        {354.4, "H_BandMask_demon"},
+                        {354.65, "muzzle_mas_snds_SMc"},
+                        {354.9, "muzzle_mas_snds_KSVK"},
+                        {355.15, "muzzle_snds_B"},
+                        {355.4, "muzzle_mas_snds_SV"},
+                        {355.65, "muzzle_mas_snds_SM"},
+                        {355.9, "muzzle_mas_snds_SH"},
+                        {356.15, "muzzle_mas_snds_L"},
+                        {356.4, "srifle_EBR_F"},
+                        {356.65, "muzzle_mas_snds_LM"},
+                        {356.9, "H_BandMask_khk"},
+                        {357.15, "muzzle_mas_snds_MP7"},
+                        {357.4, "muzzle_mas_snds_M"},
+                        {357.65, "muzzle_mas_snds_Mc"},
+                        {357.9, "HandGrenade"},
+                        {358.15, "muzzle_snds_H"},
+                        {358.4, "muzzle_snds_M"},
+                        {358.65, "MiniGrenade"},
+                        {358.9, "muzzle_mas_snds_MP5SD6"},
+                        {359.15, "muzzle_mas_snds_C"},
+                        {359.4, "H_BandMask_reaper"},
+                        {359.65, "srifle_DMR_01_F"},
+                        {359.9, "muzzle_mas_snds_SHc"},
+                        {360.15, "muzzle_mas_snds_SVc"},
+                        {360.4, "muzzle_mas_snds_SVD"},
+                        {360.65, "U_O_Wetsuit"},
+                        {360.9, "H_HelmetB_camo"},
+                        {361.1, "U_I_OfficerUniform"},
+                        {361.3, "B_FieldPack_oucamo"},
+                        {361.5, "arifle_MX_GL_Black_F"},
+                        {361.7, "B_FieldPack_ocamo"},
+                        {361.9, "B_FieldPack_blk"},
+                        {362.1, "U_O_OfficerUniform_ocamo"},
+                        {362.3, "srifle_GM6_F"},
+                        {362.5, "srifle_LRR_F"},
+                        {362.7, "arifle_MXM_Black_F"},
+                        {362.9, "B_FieldPack_cbr"},
+                        {363.1, "arifle_MXC_Black_F"},
+                        {363.3, "arifle_MX_Black_F"},
+                        {363.45, "TRYK_V_PlateCarrier_coyo_L"},
+                        {363.6, "B_Bergen_mcamo"},
+                        {363.75, "TRYK_V_PlateCarrier_POLICE"},
+                        {363.9, "TRYK_V_tacv1"},
+                        {364.05, "TRYK_TAC_SET_MESH"},
+                        {364.2, "TRYK_V_ArmorVest_HRT_B"},
+                        {364.35, "TRYK_V_tacv1L_BK"},
+                        {364.5, "TRYK_V_ArmorVest_HRT2_B"},
+                        {364.65, "TRYK_V_tacv1L_OD"},
+                        {364.8, "TRYK_V_tacv10_BK"},
+                        {364.95, "TRYK_V_tacv1L_CY"},
+                        {365.1, "B_Bergen_rgr"},
+                        {365.249999999999, "TRYK_V_tacv1LC_FBI2_BK"},
+                        {365.399999999999, "TRYK_V_tacv10LC_BK"},
+                        {365.549999999999, "TRYK_V_tacv1LC_SRF2_BK"},
+                        {365.699999999999, "B_Bergen_blk"},
+                        {365.849999999999, "TRYK_V_tacv1LC_SRF2_OD"},
+                        {365.999999999999, "TRYK_V_tacv1M_BK"},
+                        {366.149999999999, "TRYK_V_tacv1LC_P2_BK"},
+                        {366.299999999999, "TRYK_V_IOTV_BLK"},
+                        {366.449999999999, "TRYK_V_tacv1_MSL_BK"},
+                        {366.599999999999, "TRYK_TAC_SET_TAN"},
+                        {366.749999999999, "TRYK_V_tacv1_MSL_NV"},
+                        {366.899999999999, "3Rnd_SmokeRed_Grenade_shell"},
+                        {367.049999999999, "TRYK_V_tacv1LMSL_BK"},
+                        {367.199999999999, "3Rnd_SmokeOrange_Grenade_shell"},
+                        {367.349999999999, "TRYK_V_tacv1LMSL_NV"},
+                        {367.499999999999, "3Rnd_SmokeBlue_Grenade_shell"},
+                        {367.649999999999, "TRYK_V_tacv1LC_MSL_BK"},
+                        {367.799999999999, "TRYK_V_Bulletproof_BL"},
+                        {367.949999999999, "TRYK_V_tacv1LC_MSL_NV"},
+                        {368.099999999999, "TRYK_V_Bulletproof"},
+                        {368.249999999999, "TRYK_V_tacSVD_BK"},
+                        {368.399999999999, "TRYK_V_tacv1LC_P_BK"},
+                        {368.549999999999, "TRYK_V_PlateCarrier_ACU_L"},
+                        {368.699999999999, "TRYK_V_PlateCarrier_wood_L"},
+                        {368.849999999999, "TRYK_V_PlateCarrier_blk_L"},
+                        {368.999999999999, "TRYK_V_harnes_TAN_L"},
+                        {369.149999999999, "TRYK_V_harnes_od_L"},
+                        {369.299999999999, "3Rnd_UGL_FlareYellow_F"},
+                        {369.449999999999, "3Rnd_UGL_FlareWhite_F"},
+                        {369.599999999999, "3Rnd_UGL_FlareRed_F"},
+                        {369.749999999999, "3Rnd_UGL_FlareGreen_F"},
+                        {369.899999999999, "TRYK_V_harnes_blk_L"},
+                        {370.049999999999, "TRYK_V_TacVest_coyo"},
+                        {370.199999999999, "TRYK_V_PlateCarrier_ACU"},
+                        {370.349999999999, "TRYK_V_PlateCarrier_wood"},
+                        {370.499999999999, "TRYK_V_PlateCarrier_coyo"},
+                        {370.649999999999, "TRYK_V_PlateCarrier_oli"},
+                        {370.799999999999, "TRYK_V_PlateCarrier_blk"},
+                        {370.949999999999, "3Rnd_HE_Grenade_shell"},
+                        {371.099999999999, "TRYK_TAC_SET_OD"},
+                        {371.249999999999, "TRYK_V_ArmorVest_Ranger2"},
+                        {371.399999999999, "TRYK_V_ArmorVest_Delta2"},
+                        {371.549999999999, "TRYK_V_ArmorVest_tan2"},
+                        {371.699999999999, "TRYK_V_tacv1_P_BK"},
+                        {371.849999999998, "5Rnd_127x108_APDS_Mag"},
+                        {371.999999999998, "TRYK_V_ArmorVest_green2"},
+                        {372.149999999998, "TRYK_V_ArmorVest_rgr2"},
+                        {372.299999999998, "TRYK_TAC_SET_WH"},
+                        {372.449999999998, "U_O_GhillieSuit"},
+                        {372.599999999998, "TRYK_V_tacv1MLC_BK"},
+                        {372.749999999998, "TRYK_V_ArmorVest_HRT_OD"},
+                        {372.899999999998, "TRYK_V_ArmorVest_HRT2_OD"},
+                        {373.049999999998, "TRYK_V_tacv10_OD"},
+                        {373.199999999998, "TRYK_V_tacv10_TN"},
+                        {373.349999999998, "TRYK_V_tacv10LC_OD"},
+                        {373.499999999998, "TRYK_V_tacv10LC_TN"},
+                        {373.649999999998, "TRYK_TAC_SET_bn"},
+                        {373.799999999998, "TRYK_V_tacv1_BK"},
+                        {373.949999999998, "3Rnd_SmokeYellow_Grenade_shell"},
+                        {374.099999999998, "3Rnd_SmokePurple_Grenade_shell"},
+                        {374.249999999998, "3Rnd_SmokeGreen_Grenade_shell"},
+                        {374.399999999998, "3Rnd_Smoke_Grenade_shell"},
+                        {374.549999999998, "TRYK_V_Bulletproof_BLK"},
+                        {374.699999999998, "TRYK_V_tacSVD_OD"},
+                        {374.849999999998, "TRYK_LOC_AK_chestrig_OD"},
+                        {374.999999999998, "TRYK_LOC_AK_chestrig_TAN"},
+                        {375.149999999998, "B_Bergen_sgg"},
+                        {375.299999999998, "TRYK_V_tacv1_CY"},
+                        {375.449999999998, "TRYK_V_tacv1LC_SRF_OD"},
+                        {375.599999999998, "TRYK_TAC_SET_TAN_2"},
+                        {375.749999999998, "TRYK_TAC_SET_OD_2"},
+                        {375.899999999998, "TRYK_TAC_SET_WH_2"},
+                        {376.049999999998, "TRYK_TAC_SET_MESH_2"},
+                        {376.199999999998, "TRYK_V_ArmorVest_khk2"},
+                        {376.349999999998, "TRYK_V_ArmorVest_cbr2"},
+                        {376.499999999998, "TRYK_V_ArmorVest_Brown2"},
+                        {376.649999999998, "TRYK_V_ArmorVest_coyo2"},
+                        {376.799999999998, "TRYK_V_ArmorVest_AOR2_2"},
+                        {376.949999999998, "TRYK_V_ArmorVest_AOR1_2"},
+                        {377.099999999998, "TRYK_V_ArmorVest_Ranger"},
+                        {377.249999999998, "TRYK_V_ArmorVest_Delta"},
+                        {377.399999999998, "TRYK_V_ArmorVest_tan"},
+                        {377.549999999998, "TRYK_V_ArmorVest_green"},
+                        {377.699999999998, "TRYK_V_ArmorVest_rgr"},
+                        {377.849999999998, "TRYK_V_ArmorVest_khk"},
+                        {377.999999999998, "TRYK_V_ArmorVest_CBR"},
+                        {378.149999999998, "TRYK_V_ArmorVest_Brown"},
+                        {378.299999999998, "TRYK_V_ArmorVest_coyo"},
+                        {378.449999999997, "TRYK_V_ArmorVest_AOR2"},
+                        {378.599999999997, "TRYK_V_ArmorVest_AOR1"},
+                        {378.749999999997, "TRYK_V_PlateCarrier_JSDF"},
+                        {378.899999999997, "TRYK_Hrp_vest_od"},
+                        {379.049999999997, "U_O_SpecopsUniform_blk"},
+                        {379.199999999997, "TRYK_Hrp_vest_ucp"},
+                        {379.349999999997, "TRYK_V_tacv1LC_SRF_BK"},
+                        {379.499999999997, "TRYK_V_tacv1LC_FBI_BK"},
+                        {379.649999999997, "U_O_SpecopsUniform_ocamo"},
+                        {379.799999999997, "U_O_CombatUniform_oucamo"},
+                        {379.949999999997, "U_O_CombatUniform_ocamo"},
+                        {380.099999999997, "TRYK_V_tacv1_FBI_BK"},
+                        {380.249999999997, "TRYK_V_tacv1LP_BK"},
+                        {380.399999999997, "TRYK_V_tacv1LSRF_BK"},
+                        {380.549999999997, "TRYK_V_tacv1LC_BK"},
+                        {380.699999999997, "TRYK_V_tacv1LC_CY"},
+                        {380.849999999997, "TRYK_V_tacv1LC_OD"},
+                        {380.999999999997, "U_I_GhillieSuit"},
+                        {381.149999999997, "TRYK_V_ChestRig"},
+                        {381.299999999997, "U_B_GhillieSuit"},
+                        {381.449999999997, "TRYK_V_ChestRig_L"},
+                        {381.549999999997, "srifle_mas_ksvk"},
+                        {381.649999999997, "TRYK_H_ghillie_over"},
+                        {381.749999999997, "srifle_mas_vss"},
+                        {381.849999999997, "TRYK_H_ghillie_top_headless"},
+                        {381.949999999997, "srifle_mas_m91"},
+                        {382.049999999997, "TRYK_H_ghillie_top_green"},
+                        {382.149999999997, "arifle_mas_lee"},
+                        {382.249999999997, "srifle_mas_ebr"},
+                        {382.349999999997, "rhs_weap_m39"},
+                        {382.449999999997, "TRYK_H_ghillie_top_headless_green"},
+                        {382.549999999997, "rhs_weap_xm2010"},
+                        {382.649999999997, "rifle_mas_m110"},
+                        {382.749999999997, "rhs_weap_svd"},
+                        {382.849999999997, "srifle_mas_m107_d"},
+                        {382.949999999997, "rhs_weap_m14ebrri"},
+                        {383.049999999997, "srifle_mas_m24"},
+                        {383.149999999997, "srifle_mas_ksvk_c"},
+                        {383.249999999997, "srifle_mas_m24_v"},
+                        {383.349999999997, "srifle_mas_m110"},
+                        {383.449999999997, "H_HelmetSpecO_blk"},
+                        {383.549999999998, "srifle_mas_svd"},
+                        {383.649999999998, "H_HelmetLeaderO_oucamo"},
+                        {383.749999999998, "H_HelmetO_oucamo"},
+                        {383.849999999998, "H_HelmetO_ocamo"},
+                        {383.949999999998, "H_HelmetLeaderO_ocamo"},
+                        {384.049999999998, "srifle_mas_m24_d"},
+                        {384.149999999998, "arifle_mas_m14"},
+                        {384.249999999998, "H_HelmetSpecO_ocamo"},
+                        {384.349999999998, "srifle_mas_m107"},
+                        {384.449999999998, "srifle_mas_lrr"},
+                        {384.549999999998, "V_PlateCarrierH_CTRG"},
+                        {384.649999999998, "TRYK_H_ghillie_over_green"},
+                        {384.749999999998, "TRYK_H_ghillie_top"},
+                        {384.849999999998, "V_PlateCarrierL_CTRG"},
+                        {384.899999999998, "optic_NVS"},
+                        {384.909999999998, "optic_tws"},
+                        {384.919999999998, "optic_Nightstalker"},
+                        {384.929999999998, "optic_tws_mg"}
+                };
+        };
+ 
+        /**
+          Result of 100 rounds:
+ 
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+          Exile_Item_InstaDoc
+        */
+        class Medical
+        {
+                top = 0.2;
+                count = 1;
+                half = 0.2;
+                halfIndex = 0;
+                maximum = 100;
+                sum = 100;
+                items[] =
+                {
+                        {0.2, "Exile_Item_InstaDoc"}
+                };
+        };
+ 
+        /**
+          Result of 100 rounds:
+ 
+          Exile_Item_InstaDoc
+          acc_pointer_IR
+          ItemGPS
+          optic_SOS
+          7Rnd_408_Mag
+          srifle_LRR_F
+          srifle_LRR_F
+          ItemGPS
+          srifle_DMR_01_F
+          optic_DMS
+          acc_flashlight
+          acc_pointer_IR
+          srifle_LRR_F
+          Exile_Item_InstaDoc
+          acc_flashlight
+          7Rnd_408_Mag
+          optic_SOS
+          10Rnd_762x51_Mag
+          optic_SOS
+          ItemGPS
+          acc_pointer_IR
+          acc_pointer_IR
+          acc_pointer_IR
+          Rangefinder
+          5Rnd_127x108_Mag
+          Rangefinder
+          optic_SOS
+          srifle_EBR_F
+          srifle_DMR_01_F
+          Binocular
+          HandGrenade
+          Binocular
+          srifle_DMR_01_F
+          10Rnd_762x51_Mag
+          B_Carryall_oucamo
+          srifle_LRR_F
+          7Rnd_408_Mag
+          20Rnd_762x51_Mag
+          optic_DMS
+          Binocular
+          acc_pointer_IR
+          acc_pointer_IR
+          acc_pointer_IR
+          10Rnd_762x51_Mag
+          Laserdesignator
+          ItemRadio
+          10Rnd_762x51_Mag
+          optic_LRPS
+          10Rnd_762x51_Mag
+          10Rnd_762x51_Mag
+          ItemGPS
+          MiniGrenade
+          5Rnd_127x108_APDS_Mag
+          srifle_LRR_F
+          srifle_GM6_F
+          optic_LRPS
+          srifle_EBR_F
+          5Rnd_127x108_Mag
+          ItemGPS
+          optic_DMS
+          7Rnd_408_Mag
+          optic_LRPS
+          Laserdesignator
+          B_Carryall_oucamo
+          optic_SOS
+          srifle_LRR_F
+          muzzle_snds_B
+          20Rnd_762x51_Mag
+          NVGoggles
+          Binocular
+          B_Carryall_khk
+          HandGrenade
+          Binocular
+          muzzle_snds_B
+          acc_pointer_IR
+          srifle_EBR_F
+          srifle_EBR_F
+          ItemRadio
+          muzzle_snds_B
+          Laserdesignator
+          optic_SOS
+          srifle_GM6_F
+          muzzle_snds_B
+          acc_flashlight
+          Rangefinder
+          srifle_EBR_F
+          srifle_LRR_F
+          ItemRadio
+          srifle_GM6_F
+          7Rnd_408_Mag
+          srifle_LRR_F
+          srifle_EBR_F
+          7Rnd_408_Mag
+          B_Carryall_ocamo
+          acc_flashlight
+          Rangefinder
+          20Rnd_762x51_Mag
+          acc_pointer_IR
+          srifle_DMR_01_F
+          optic_SOS
+        */
+        class Tourist
+        {
+                top = 14.85;
+                count = 30;
+                half = 10.95;
+                halfIndex = 15;
+                maximum = 100;
+                sum = 3000;
+                items[] =
+                {
+                        {0.8, "srifle_EBR_F"},
+                        {1.6, "srifle_DMR_01_F"},
+                        {2.4, "Binocular"},
+                        {3.15, "Rangefinder"},
+                        {3.85, "optic_LRPS"},
+                        {4.55, "srifle_LRR_F"},
+                        {5.25, "srifle_GM6_F"},
+                        {5.95, "muzzle_snds_B"},
+                        {6.65, "acc_flashlight"},
+                        {7.35, "acc_pointer_IR"},
+                        {8.05, "optic_DMS"},
+                        {8.75, "optic_SOS"},
+                        {9.35, "20Rnd_762x51_Mag"},
+                        {9.95, "10Rnd_762x51_Mag"},
+                        {10.45, "5Rnd_127x108_Mag"},
+                        {10.95, "7Rnd_408_Mag"},
+                        {11.45, "Exile_Item_InstaDoc"},
+                        {11.95, "NVGoggles"},
+                        {12.45, "ItemRadio"},
+                        {12.95, "Laserdesignator"},
+                        {13.35, "5Rnd_127x108_APDS_Mag"},
+                        {13.75, "ItemGPS"},
+                        {14, "MiniGrenade"},
+                        {14.25, "HandGrenade"},
+                        {14.35, "B_Carryall_ocamo"},
+                        {14.45, "B_Carryall_oucamo"},
+                        {14.55, "B_Carryall_mcamo"},
+                        {14.65, "B_Carryall_oli"},
+                        {14.75, "B_Carryall_khk"},
+                        {14.85, "B_Carryall_cbr"}
+                };
+        };
+ 
 };
 
 class CfgSettings
