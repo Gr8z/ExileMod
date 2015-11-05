@@ -44,7 +44,7 @@ class CfgVemfReloaded
 	// Global AI skill settings. They affect each VEMF unit for any default VEMF mission
 	class aiSkill // Minimum: 0 | Maximum: 1
 	{
-		difficulty = "Veteran"; // Options: "Easy" "Normal" "Veteran" "Hardcore" | Default: Veteran
+		difficulty = "Normal"; // Options: "Easy" "Normal" "Veteran" "Hardcore" | Default: Veteran
 		class Easy // AI looks stupid with this setting xD
 		{
 			accuracy = 0.4; aimingShake = 0.20; aimingSpeed = 0.3; endurance = 0.25; spotDistance = 0.5; spotTime = 0.7; courage = 1; reloadSpeed = 0.3; commanding = 0.8; general = 0.3;
