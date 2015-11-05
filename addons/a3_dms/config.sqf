@@ -1599,8 +1599,8 @@ DMS_Use_Map_Config = true;	// Whether or not to use config overwrites specific t
 											],
 											[
 												["B_Carryall_cbr",1],
-												["B_Kitbag_mcamo",1]
-												["TRYK_B_Coyotebackpack_WH",1]
+												["B_Kitbag_mcamo",1],
+												["TRYK_B_Coyotebackpack_WH",1],
 												["TRYK_B_Coyotebackpack_BLK",1]
 											]
 										];
