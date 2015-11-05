@@ -3062,7 +3062,7 @@ _GET_TIME_TIME = {
 };
 _devLog = format['%1 VERSION: 27102015 infiSTAR.de AHAT (v0016C) - server running: %2:1',VERSIONCHECKRESULT,call _GET_TIME_TIME];diag_log _devLog;
 "; if(!_HIDE_FROM_PLAYERS)then{ _A3AHstring = _A3AHstring + "
-	systemChat format['<infiSTAR.de> %1 - Successfully Loaded In.',call _GET_TIME_TIME];
+	systemChat format['%1 - Successfully Loaded In.',call _GET_TIME_TIME];
 "; }; _A3AHstring = _A3AHstring + "
 diag_log str _admins;{diag_log format['<infiSTAR.de> %1',_x];} forEach diag_activeSQFScripts;
 if(isNil '"+_adminsA+"')then
@@ -3089,7 +3089,7 @@ else
 "; if(_VOV != -1)then{ _A3AHstring = _A3AHstring + "
 	setObjectViewDistance ["+str _VOV+",0];
 "; }; _A3AHstring = _A3AHstring + "
-player createDiaryRecord ['Diary', ['infiSTAR.de AntiHack & AdminTools', '<br/>  Get your own infiSTAR.de AntiHack and AdminTools available on <br/><br/>http://www.infiSTAR.de<br/><br/>']];
+player createDiaryRecord ['Diary', ['[GG] Ghostz Gamerz Exile Mod', '<br/>  Visit us @ <br/><br/>www.GHOSTZGAMERZ.com<br/><br/>']];
 if(isNil'VERSIONCHECKRESULT')then{VERSIONCHECKRESULT='';};
 _bis_fnc_diagkey = uiNamespace getVariable ['bis_fnc_diagkey',{false}];
 if(!isNil'_bis_fnc_diagkey')then{if!((str _bis_fnc_diagkey) in ['{false}','{}'])then{bis_fnc_diagkeychanged='bis_fnc_diagkeychanged';publicVariableServer'bis_fnc_diagkeychanged';};};
