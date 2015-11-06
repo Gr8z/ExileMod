@@ -1002,7 +1002,6 @@ class CfgExileArsenal
 	class Exile_Item_CookingPot						{ quality = 2; price = 80; };
 	class Exile_Item_InstaDoc                       { quality = 1; price = 250; };
 	class Exile_Melee_Axe							{ quality = 1; price = 100; };
-	class Exile_Magazine_Swing						{ quality = 1; price = 1; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Navigation
@@ -2361,7 +2360,6 @@ class CfgTraderCategories
 			"Exile_Item_Matches",
 			"Exile_Item_CookingPot",
 			"Exile_Melee_Axe",
-			"Exile_Magazine_Swing",
 			"Binocular",
 			"Rangefinder",
 			"Laserdesignator",
