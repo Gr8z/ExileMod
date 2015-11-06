@@ -5,7 +5,6 @@
 [] execVM "GG\KillMessages.sqf";
 [] execVM "GG\IgiLoad\IgiLoadInit.sqf";
 [] execVM "GG\ModCheck.sqf";
-[] execVM "GG\ZOM\init.sqf";
 
 #include "initServer.sqf"
 
