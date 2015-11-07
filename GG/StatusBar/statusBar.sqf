@@ -31,7 +31,6 @@ StatusEnabled = true;
 			//initialize variables and set values
 			_unit = _this select 0;
 			_damage = round ((1 - (damage player)) * 100);
-			//_damage = (round(_damage * 100));
 			_wallet = ExileClientPlayerMoney;
 			_respect = ExileClientPlayerScore;
 			_serverFPS = round diag_fps;
