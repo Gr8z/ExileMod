@@ -26,7 +26,7 @@ FuMS_ServerData =
         // -1 = all HC's.  0= Server only,  1=1st HC to connect, 2=2nd, etc.
         //  Note: Server option not currenty operational.
     //   ["Admin",-1],
-      // ["Test",-1], //Remove this theme if on a production server.
+       ["Test",-1], //Remove this theme if on a production server.
 	  ["Zombies",-1],
     //  ["HeloPatrols",-1], // 2 sets of 3 armed helo's patrol the skys!!!      
    //   ["SEM",-1], // basic old school Arma2 Epoch encounters
@@ -37,7 +37,7 @@ FuMS_ServerData =
  // ["StaticSpawns",-1], // creates 10 Dayz style Helo crashes at random locations.
     //    ["Jurassic",-1], // creates 3 encounters with wondering Raptors and some scattered loot.
  //  ["Captive", -1], // Mission in which 7 hostages must be rescued from the humans within 30minutes while fending off paradropped reinforcemnets.
-	["RoadBlock_Pato",-1] // Concept based upon missions from Pato!
+	//["RoadBlock_Pato",-1] // Concept based upon missions from Pato!
 
     ],
     [  // Event and AI Radio messsage behavior
