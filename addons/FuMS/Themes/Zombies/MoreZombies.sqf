@@ -47,7 +47,7 @@
  // ["Land_Grave_obelisk_F",[0,0],0,0,"SMOKE_BIG"]
 ],
 [ // AI GROUPS. Only options marked 'Def:' implemented.
-[["WEST","COMBAT","RED","COLUMN"],   [  [5,"Zombie"],[5,"ZombieSpider"]  ],   ["Zombie",[0,0],[0,0], [100,true,300]    ]]
+[["WEST","COMBAT","RED","COLUMN"],   [  [10,"Zombie"]]  ],   ["Zombie",[0,0],[0,0], [100,true,300]    ]]
 //[["WEST","COMBAT","RED","COLUMN"],   [  [10,"Zombie"],[1,"ZombieBoss"]  ],   ["Zombie",[0,0],[0,0], [100,true,300]    ]]
  //   [["RESISTANCE","COMBAT","RED","LINE"],   [  [3,"Rifleman"]                                         ],   ["Sentry",[-20,10],[0,0],[70] ]],
  //  [["RESISTANCE","COMBAT","RED","LINE"],   [  [2,"Hunter"]                                              ],   ["Guard",[6,6],[0,0],[30]     ]]
