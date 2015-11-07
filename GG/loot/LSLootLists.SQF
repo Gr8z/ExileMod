@@ -485,7 +485,7 @@ lootMagazine_list = [
 "3Rnd_SmokeGreen_Grenade_shell",
 "3Rnd_SmokeRed_Grenade_shell",
 "16Rnd_9x21_Mag",
-"30Rnd_9x21_Mag",
+"30Rnd_9x21_Mag"
 ]],[ 2, [// INDUSTRIAL
 "20Rnd_556x45_UW_mag",
 "30Rnd_45ACP_Mag_SMG_01",
@@ -497,7 +497,6 @@ lootMagazine_list = [
 "30Rnd_65x39_caseless_green_mag_Tracer",
 "30Rnd_65x39_caseless_mag",
 "30Rnd_65x39_caseless_mag_Tracer",
-
 "30Rnd_9x21_Mag"
 ]],[ 3, [// RESEARCH
 ]]];
