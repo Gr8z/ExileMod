@@ -6,8 +6,8 @@
 //*************************************************************
 // This routine will assume locations are MAP specific coords!
 //**************************************************************
-//HC_AddWaypoint = compile preprocessFileLineNumbers "HC\Functions\HC_AddWaypoint.sqf";
-//XPos = compile preprocessFileLineNumbers "HC\Encounters\Functions\XPos.sqf";
+//HC_AddWaypoint = compile preprocessFileLineNumbers "GG\HC\Functions\HC_AddWaypoint.sqf";
+//XPos = compile preprocessFileLineNumbers "GG\HC\Encounters\Functions\XPos.sqf";
 private ["_group","_destinations","_returnToBase","_wp","_speed","_roadsOnly","_despawn","_patternOptions","_actionLoc","_behaviour","_flyheight","_compRadius"];
 _group = _this select 0;
 _actionLoc = _this select 1; // currently ignored in this routine.
@@ -128,7 +128,7 @@ sleep 10;
      {
          if (_x == driver(vehicle _x)) then
          {
-             //[_x] execVM "HC\Encounters\AI_Logic\VehStuck.sqf";
+             //[_x] execVM "GG\HC\Encounters\AI_Logic\VehStuck.sqf";
 			 [_x] spawn FuMS_fnc_HC_AI_Logic_VehStuck;
            //  diag_log format ["##PatrolRoute: VehStuck.sqf started for %1 in %2",_x, vehicle _x];
          };

@@ -1,6 +1,6 @@
 // Messages Transmitted by AI!
 // Inputs: From, To, Message, RadioChannel, Range, Position
-//RadioChatter = compile preprocessFileLineNumbers "HC\Encounters\Functions\RadioChatter.sqf";
+//RadioChatter = compile preprocessFileLineNumbers "GG\HC\Encounters\Functions\RadioChatter.sqf";
 private ["_from","_to","_msg","_channel","_range","_position","_formattedMsg","_mA","_start","_keyword","_keywords","_newMsg",
 "_actionData","_leader","_missionName","_numAlive","_maxAlive"];
 _from = _this select 0;

@@ -4,7 +4,7 @@
 // Inputs ServerData array
 // OUTPUTS true or false
 //ASSERT data in FuMS_ServerData and FuMS_THEMEDATA is valid!
-//VerifyLoot = compile preprocessFileLineNumbers "HC\Encounters\Functions\DataCheck\VerifyLoot.sqf";
+//VerifyLoot = compile preprocessFileLineNumbers "GG\HC\Encounters\Functions\DataCheck\VerifyLoot.sqf";
 
 private ["_abort","_msg","_globalIndex","_file","_start","_critical","_i","_theme","_themeList","_usingGlobal"];
 _themeList = FuMS_ServerData select 3;

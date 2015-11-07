@@ -4,7 +4,7 @@
 // Inputs: arrary containing 'data', and a 'chance'  [data, chance]
 // Output: a single element of data, or nullObj
 //  If AddIt true, and 'data' is an array a random element is selected from 'data'.
-//AddIt = compile preprocessFileLineNumbers "HC\Encounters\Functions\AddIt.sqf";
+//AddIt = compile preprocessFileLineNumbers "GG\HC\Encounters\Functions\AddIt.sqf";
 // Input: [ data, chance]
 // if chance passes, returns data.
 // if 'data' is an array of items, a single random choice is returned.

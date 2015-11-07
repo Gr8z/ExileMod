@@ -5,7 +5,7 @@
 // [group, pos, partycomp, themeindex]
 //RETURNS:: group created
 // Note:   group must remain in scope to maintain proper interaction with players.
-//SpawnSoldier = compile preprocessFileLineNumbers "HC\Encounters\AI_Logic\SpawnSoldier.sqf"; 
+//SpawnSoldier = compile preprocessFileLineNumbers "GG\HC\Encounters\AI_Logic\SpawnSoldier.sqf"; 
 
 private ["_partycomp","_group","_unit","_i","_pos","_partysize","_typesoldier","_themeIndex"];
 _group = _this select 0;

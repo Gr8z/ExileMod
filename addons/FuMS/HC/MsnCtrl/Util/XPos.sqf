@@ -3,7 +3,7 @@
 // 1/3/2015
 // INPUTS: Origin point, offset point
 // OUTPUTS:Provides in game coordinates for an 'offset' from the supplied origin.
-//FindTown = compile preprocessFileLineNumbers "HC\Encounters\Functions\FindTown.sqf";
+//FindTown = compile preprocessFileLineNumbers "GG\HC\Encounters\Functions\FindTown.sqf";
 private ["_origin","_offset","_newloc","_newx","_newy"];
 _origin = _this select 0;
 _offset = _this select 1;

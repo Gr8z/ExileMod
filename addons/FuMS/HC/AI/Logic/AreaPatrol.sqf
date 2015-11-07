@@ -11,7 +11,7 @@
 // modifications post 'call AreaPatrol' will override functionality.
 // all waypoints added are default 'NO CHANGE', so base behavior of group, or
 //  settings of the groups last waypoint before these are added, will be used.
-//HC_AddWaypoint = compile preprocessFileLineNumbers "HC\Functions\HC_AddWaypoint.sqf";
+//HC_AddWaypoint = compile preprocessFileLineNumbers "GG\HC\Functions\HC_AddWaypoint.sqf";
 
 //_wp = [_group, [_xx, _yy], 0] call HC_AddWaypoint;  
 private ["_group","_radius","_degsep","_xx","_yy","_wp","_centroid","_cos","_sin","_xbase","_ybase","_xmulti","_ymulti"];

@@ -4,8 +4,8 @@
 // Inputs: From FuMsnInit: This loop sets up overall THEME information, then maintains constant stream of missions for that theme.
 // Event/Mission Control loop:
 // This code provides core mission functionality for a group of missions
-//PullData = compile preprocessFileLineNumbers "HC\Encounters\Functions\PullData.sqf";
-//StaticMissionControlLoop = compile preprocessFileLineNumbers "HC\Encounters\LogicBomb\StaticMissionControlLoop.sqf";
+//PullData = compile preprocessFileLineNumbers "GG\HC\Encounters\Functions\PullData.sqf";
+//StaticMissionControlLoop = compile preprocessFileLineNumbers "GG\HC\Encounters\LogicBomb\StaticMissionControlLoop.sqf";
 //FuMS_C1_PullData = compile FuMS_S_PullData;
 private ["_missionTheme","_respawnDelay","_encounterLocations","_missionList","_spawnedByAdmin",
 "_pos","_activeMission","_missionSelection","_trackList","_missionTheme","_themeIndex","_themeOptions","_themeData",

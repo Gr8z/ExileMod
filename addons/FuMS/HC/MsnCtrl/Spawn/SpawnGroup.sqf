@@ -195,7 +195,7 @@ if (!isNil "_groupData") then
                 if (count _groups == 0) then {_silentcheckin = false;}else{_silentcheckin=true;}
             };    
             // initiate radio logic for the group, now that its formation is complete!
-           // [_group, _themeIndex, _eCenter, _silentcheckin, _missionName] execVM "HC\Encounters\AI_Logic\RadioChatter\AIRadio.sqf";   
+           // [_group, _themeIndex, _eCenter, _silentcheckin, _missionName] execVM "GG\HC\Encounters\AI_Logic\RadioChatter\AIRadio.sqf";   
 		   //[_group, _themeIndex, _eCenter, _silentcheckin, _missionName] spawn FuMS_fnc_HC_AI_RC_AIRadio;
             _groups = _groups + [_group];
         }else{diag_log format ["##SpawnGroup: Error in data formatting in Group section: %1, theme:%2, data:%3",_missionName, _themeIndex, _x];};

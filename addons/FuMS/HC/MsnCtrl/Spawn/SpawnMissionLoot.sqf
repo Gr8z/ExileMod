@@ -3,8 +3,8 @@
 //1/2/15
 //INPUTS: loot data from Mission, encounter center, one of "STATIC","WIN","LOSE", Loot Data to be parsed!
 //OUTPUTS: loot box filled.
-//XPos = compile preprocessFileLineNumbers "HC\Encounters\Functions\XPos.sqf";
-//FillLoot = compile preprocessFileLineNumbers "HC\Encounters\LogicBomb\FillLoot.sqf";
+//XPos = compile preprocessFileLineNumbers "GG\HC\Encounters\Functions\XPos.sqf";
+//FillLoot = compile preprocessFileLineNumbers "GG\HC\Encounters\LogicBomb\FillLoot.sqf";
 
 private ["_lootConfig","_eCenter","_option","_staticLoot","_winLoot","_pos","_themeIndex","_box","_boxes","_loseLoot","_loot","_abort","_msnStatus",
 "_lineage","_generation","_offspringID","_msnTag"];

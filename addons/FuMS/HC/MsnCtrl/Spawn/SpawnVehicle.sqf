@@ -220,7 +220,7 @@ if (!_abort) then
             /*
             if (! ( (_vehicles select _i) isKindOf "Air") ) then
 			{
-				//[_drivers select _i] execVM "HC\Encounters\AI_Logic\VehStuck.sqf";
+				//[_drivers select _i] execVM "GG\HC\Encounters\AI_Logic\VehStuck.sqf";
 				[_drivers select _i] spawn FuMS_fnc_HC_AI_Logic_VehStuck;
 			};
             */

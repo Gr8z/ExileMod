@@ -237,7 +237,7 @@ if !(hasInterface) then
        // Start any other addons here!
        if (FuMS_SoldierVCOM_Driving) then
        {
-           [] execVM "HC\VCOM_Driving\init.sqf";
+           [] execVM "GG\HC\VCOM_Driving\init.sqf";
            diag_log format ["<FuMS> FuMsnInit: Genesis92x VCOM_Driving V1.20 Initialized."];
        };   
        
@@ -293,7 +293,7 @@ if !(hasInterface) then
         if (!isNil "_themeData") then
         {
             waituntil {diag_fps >FuMS_FPSMinimum};
-          //  [_x, _themeNumber ] execVM "HC\Encounters\ControlLoop.sqf";
+          //  [_x, _themeNumber ] execVM "GG\HC\Encounters\ControlLoop.sqf";
 		  [_x, _themeNumber] spawn FuMS_fnc_HC_MsnCtrl_ControlLoop;
         //    diag_log format ["*********************************************************************"];
          //   diag_log format ["*********************************************************************"];

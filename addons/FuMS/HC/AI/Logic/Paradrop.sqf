@@ -4,7 +4,7 @@
 //Inputs: group, droploc, array of options [speed, height, FlagRTB, smokes]
 // _dropData = [_x,  HC_CreateGroup data,  _testingpos, 300, "undefined"];
 // executed by 'pilot' of an airborne asset.
-//HC_AddWaypoint = compile preprocessFileLineNumbers "HC\Functions\HC_AddWaypoint.sqf";
+//HC_AddWaypoint = compile preprocessFileLineNumbers "GG\HC\Functions\HC_AddWaypoint.sqf";
 
 private ["_dropLoc","_fih","_data","_group","_flagRTB","_flagSmoke","_spawnLoc","_leaderData","_speed","_wp"];
 _group = _this select 0;

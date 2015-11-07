@@ -6,9 +6,9 @@
 // Input Data format expected:
 // 0:"Type", 1:[ 8 numbers], 2:Uniform, 3:Vest, 4:Helmet, 5:Backpack, 6;Rifle, 7:[3 numbers], 
 // 8: Pistol,9: [5 numbers beltItems], 10:[3numbers visionItems], 11:[2 Flags],12:[ array of items]
-//AddIt = compile preprocessFileLineNumbers "HC\Encounters\Functions\AddIt.sqf";
-//GetChoice = compile preprocessFileLineNumbers "HC\Encounters\LogicBomb\GetChoice.sqf";
-//AttachMuzzle = compile preprocessFileLineNumbers "HC\Encounters\AI_Logic\AttachMuzzle.sqf";
+//AddIt = compile preprocessFileLineNumbers "GG\HC\Encounters\Functions\AddIt.sqf";
+//GetChoice = compile preprocessFileLineNumbers "GG\HC\Encounters\LogicBomb\GetChoice.sqf";
+//AttachMuzzle = compile preprocessFileLineNumbers "GG\HC\Encounters\AI_Logic\AttachMuzzle.sqf";
 private ["_group","_type","_pos","_themeIndex","_unit","_typeFound","_aiName","_gear","_flags","_skills","_types","_i","_priweapon","_soldierData","_secweapon"];
 _group = _this select 0;
 _type = toupper (_this select 1);
@@ -101,7 +101,7 @@ _typeFound = false;
                 // ONLY NEEDS TO RUN ON HeadlessClient!
                 // If a port to server only occurs, this will possibly need to be modified to MP to support server notifications.           
                 _gear = [_x select 2] call FuMS_fnc_HC_Loot_GetChoice;if (_gear != "") then {_unit forceAddUniform _gear;};
-                //  if (toupper _type == "ZOMBIE")then { _unit setObjectTextureGlobal [0, "HC\Zombies\zskin.jpg"];};
+                //  if (toupper _type == "ZOMBIE")then { _unit setObjectTextureGlobal [0, "GG\HC\Zombies\zskin.jpg"];};
                 _gear = [_x select 3] call FuMS_fnc_HC_Loot_GetChoice;if (_gear != "") then {_unit addVest _gear;};           
                 _gear = [_x select 5] call FuMS_fnc_HC_Loot_GetChoice;if (_gear != "") then {_unit addBackpack _gear;};
                 // Rifle

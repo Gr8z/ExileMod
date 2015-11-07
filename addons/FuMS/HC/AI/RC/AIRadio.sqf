@@ -18,8 +18,8 @@
  
  ASSERT: THEMEDATA has been fully initialized.
  */
-//FormatAndBroadcastAI = compile preprocessFileLineNumbers "HC\Encounters\AI_Logic\RadioChatter\FormatAndBroadcastAI.sqf";
-//RadioChatter = compile preprocessFileLineNumbers "HC\Encounters\Functions\RadioChatter.sqf";
+//FormatAndBroadcastAI = compile preprocessFileLineNumbers "GG\HC\Encounters\AI_Logic\RadioChatter\FormatAndBroadcastAI.sqf";
+//RadioChatter = compile preprocessFileLineNumbers "GG\HC\Encounters\Functions\RadioChatter.sqf";
 
 //REINFORCE = 100;  // 20% chance reinforcements when a call for help is made.
 private ["_data","_themeRadioData","_group","_index","_pos","_aiDeathMsg","_options", "_numgroups","_number","_silentCheckinOverride",

@@ -4,7 +4,7 @@
 //INPUTS: Group, destination, Flag_returntobase
 // [_group, [x,y], speed, FlagRTB, FlagroadsOnly]
 //OUTPUTS convoy destination waypoint, or 1st waypoint of the Follow-on pattern.
-//HC_AddWaypoint = compile preprocessFileLineNumbers "HC\Functions\HC_AddWaypoint.sqf";
+//HC_AddWaypoint = compile preprocessFileLineNumbers "GG\HC\Functions\HC_AddWaypoint.sqf";
 
 private ["_group","_destination","_returnToBase","_wp","_speed","_roadsOnly","_despawn","_patternOptions","_xfill","_convoyType"];
 _group = _this select 0;

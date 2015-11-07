@@ -3,7 +3,7 @@
 // 1/4/15
 // INPUTS: Mission Marker data, Mission notifications, mission status
 // OUTPUTS: None
-//RadioChatter = compile preprocessFileLineNumbers "HC\Encounters\Functions\RadioChatter.sqf";
+//RadioChatter = compile preprocessFileLineNumbers "GG\HC\Encounters\Functions\RadioChatter.sqf";
 private ["_markers","_notifications","_msnStatus","_mkr1","_mkr2","_eCenter","_notify","_showMap","_delay",
 "_msnSuccessText","_msnStartText","_msnFailureText","_ogjstr","_msnText","_options","_winDelay","_loseDelay",
 "_radionotify","_radiochannel","_radiorange","_missionNameOverride","_msnStatus_status"];

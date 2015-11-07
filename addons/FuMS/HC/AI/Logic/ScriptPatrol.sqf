@@ -6,7 +6,7 @@
 
 // This ONLY LAUNCHES AI_PB script! So this is now Tier03!
 
-//HC_AddWaypoint = compile preprocessFileLineNumbers "HC\Functions\HC_AddWaypoint.sqf";
+//HC_AddWaypoint = compile preprocessFileLineNumbers "GG\HC\Functions\HC_AddWaypoint.sqf";
 
 //_wp = [_group, [_xx, _yy], 0] call HC_AddWaypoint;  
 //AI_PB.sqf - patrols buildings [radius, time]
@@ -19,7 +19,7 @@ _passOnData = _this select 3; // array to be sent to the script.
 _xfillVehicleWP = _this select 4;
 //diag_log format ["##ScriptPatrol MoveWaypoint  for %1 at %2",_group, _location];
 _wp = [_group, _location,0] call FuMS_fnc_HC_AI_Logic_Addwaypoint;  // basic move to waypoint to ensure AI gets there before script run.
-//_script = format ["HC\Encounters\AI_Logic\%1.sqf",_aiScript];
+//_script = format ["GG\HC\Encounters\AI_Logic\%1.sqf",_aiScript];
 //diag_log format ["##ScriptPatrol Scripted waypoint adeded. Info:%1  script:%2",_passOnData, _script];
 // this will be done outside of ScriptPatrol ..just here for testing!
 _wp = [_group, _location,0] call FuMS_fnc_HC_AI_Logic_Addwaypoint;

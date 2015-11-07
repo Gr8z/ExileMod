@@ -19,7 +19,7 @@
  ASSERT: THEMEDATA has been fully initialized.
  */
 // Build the list of BaseOps that are active
-//FormatAndBroadcast = compile preprocessFileLineNumbers "HC\Encounters\AI_Logic\RadioChatter\FormatAndBroadcast.sqf";
+//FormatAndBroadcast = compile preprocessFileLineNumbers "GG\HC\Encounters\AI_Logic\RadioChatter\FormatAndBroadcast.sqf";
 FuMS_AI_XMT_MsgQue = [];
 FuMS_AI_RCV_MsgQue = [];
 FuMS_GroupCount = [];

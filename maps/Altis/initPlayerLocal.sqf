@@ -1,3 +1,4 @@
+[] execVM "GG\HC\init.sqf"
 [] execVM "GG\safezones\init.sqf";
 [] execVM "GG\StatusBar\statusBar.sqf";
 [] execVM "GG\inspectLoop.sqf";

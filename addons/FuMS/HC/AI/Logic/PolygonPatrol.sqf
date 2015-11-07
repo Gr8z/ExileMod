@@ -10,7 +10,7 @@
 //       closeout just controls if the patrol will repeat the path.
 //OUTPUTS: 1st of the waypoints added, to permit further modification.
 //  NOTE: closeout = TRUE => vertices+1 points  FALSE=> vertices   
-//HC_AddWaypoint = compile preprocessFileLineNumbers "HC\Functions\HC_AddWaypoint.sqf";
+//HC_AddWaypoint = compile preprocessFileLineNumbers "GG\HC\Functions\HC_AddWaypoint.sqf";
 
 //_wp = [_group, [_xx, _yy], 0] call HC_AddWaypoint;  
 private ["_group","_radius","_rotation","_vertices","_degsep","_i","_xx","_yy","_wp","_closeout","_centroid",
