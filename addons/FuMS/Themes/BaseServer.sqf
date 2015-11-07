@@ -33,7 +33,7 @@ FuMS_ServerData =
   // ["TownRaid",-1], // random town is raided by 4 truck loads of humans!
   //  ["Small",-1],  // 6 man groups invade a random village
    ["Aquatic",-1], // 3 coastal areas w/ boats and ai   
-     ["Convoy",-1], // 2 random convoys of 3 vehicles move across the map.
+     ["Convoy",-1] // 2 random convoys of 3 vehicles move across the map.
  // ["StaticSpawns",-1], // creates 10 Dayz style Helo crashes at random locations.
     //    ["Jurassic",-1], // creates 3 encounters with wondering Raptors and some scattered loot.
  //  ["Captive", -1], // Mission in which 7 hostages must be rescued from the humans within 30minutes while fending off paradropped reinforcemnets.
