@@ -10,7 +10,7 @@ _themeData =
         "Aquatic", // Needs to match the folder name!
         4,  //Mission Selection: 1=Random, 2=In order, 3=Random:once only until all missions run
              // 4=Static: All missions in 'Mission List' will be created at server start!
-        60, // Respawn delay in seconds
+        600, // Respawn delay in seconds
 		true, // use Global Loot Data (GlobalLootData.sqf)
 		true,  // use Global Soldier Data file (GlobalSoldierData.sqf)
 		true, // ThemeAutoStart: Setting this to 'false' will prevent normal start-up of the Theme! See \Docs\AdminControls.txt

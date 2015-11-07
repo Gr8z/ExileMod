@@ -10,7 +10,7 @@
     [// NOTIFICATION Messages and Map display Control.
 	true, 0, 0, // Notify players via Radio Message, radio channel, range from encounter center (0=unlimited.
     true, // Notify players via global message
-    false,// Show encounter area on the map
+    true,// Show encounter area on the map
     30,    // Win delay: Time in seconds after a WIN before mission cleanup is performed
     10       // Lose delay: Time in seconds after a lose before mission cleanup is performed
           //NOTE: the above delay must occur before the mission is considered 'complete' by the mission manager control loop.
@@ -18,7 +18,7 @@
     // Spawn Mission Message 
     ["",  // title line
      "", // title line, do not remove these!
-     "A convoy of clone hunters have entered the area." //description/radio message.
+     "A convoy of bambi hunters have entered the area." //description/radio message.
 	],  
     // Mission Success Message
     ["Mission Success",

@@ -28,15 +28,15 @@ FuMS_ServerData =
     //   ["Admin",-1],
       // ["Test",-1], //Remove this theme if on a production server.
 	  ["Zombies",-1],
-      ["HeloPatrols",-1], // 2 sets of 3 armed helo's patrol the skys!!!      
-      ["SEM",-1], // basic old school Arma2 Epoch encounters
-   ["TownRaid",-1], // random town is raided by 4 truck loads of humans!
-    ["Small",-1],  // 6 man groups invade a random village
+    //  ["HeloPatrols",-1], // 2 sets of 3 armed helo's patrol the skys!!!      
+   //   ["SEM",-1], // basic old school Arma2 Epoch encounters
+  // ["TownRaid",-1], // random town is raided by 4 truck loads of humans!
+  //  ["Small",-1],  // 6 man groups invade a random village
    ["Aquatic",-1], // 3 coastal areas w/ boats and ai   
      ["Convoy",-1], // 2 random convoys of 3 vehicles move across the map.
-  ["StaticSpawns",-1], // creates 10 Dayz style Helo crashes at random locations.
+ // ["StaticSpawns",-1], // creates 10 Dayz style Helo crashes at random locations.
     //    ["Jurassic",-1], // creates 3 encounters with wondering Raptors and some scattered loot.
-   ["Captive", -1], // Mission in which 7 hostages must be rescued from the humans within 30minutes while fending off paradropped reinforcemnets.
+ //  ["Captive", -1], // Mission in which 7 hostages must be rescued from the humans within 30minutes while fending off paradropped reinforcemnets.
 	["RoadBlock_Pato",-1] // Concept based upon missions from Pato!
 
     ],
