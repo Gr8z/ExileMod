@@ -2599,22 +2599,23 @@ class CfgTraders
 		{
 			"PointerAttachments",
 			"RHSPointerAttachments",
+			"BipodAttachments",
 			"RHSBipodAttachments",
+			"MuzzleAttachments",
 			"RHSMuzzleAttachments",
+			"OpticAttachments",
 			"RHSOpticAttachments",
+			"Pistols",
 			"RHSPistols",
+			"LightMachineGuns",
+			"SubMachineGuns",
 			"RHSLightMachineGuns",
+			"AssaultRifles",
 			"RHSAssaultRifles",
+			"SniperRifles",
 			"RHSSniperRifles",
 			"RHSAmmo",
-			"MuzzleAttachments",
-			"OpticAttachments",
-			"Ammunition",
-			"Pistols",
-			"SubMachineGuns",
-			"LightMachineGuns",
-			"AssaultRifles",
-			"SniperRifles"
+			"Ammunition"								
 		};
 	};
 
