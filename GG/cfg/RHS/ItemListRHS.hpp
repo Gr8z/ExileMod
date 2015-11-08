@@ -288,7 +288,7 @@
 	
 	//SNIPERS
 	//US
-	class rhs_weap_M107								{ quality = 3; price = 1000; };
+	//class rhs_weap_M107								{ quality = 3; price = 1000; };
 	class rhs_weap_sr25								{ quality = 3; price = 1000; };
 	class rhs_weap_sr25_ec							{ quality = 3; price = 1000; };
 	class rhs_weap_m14ebrri							{ quality = 3; price = 1000; };
