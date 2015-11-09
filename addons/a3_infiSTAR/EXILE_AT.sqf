@@ -3877,7 +3877,7 @@ infiSTAR_MAIN_CODE = "
 			if(_alt)then{
 				[] call fnc_add_adminMainMapMovement;
 			};
-			if(MYPUIDinfiESP == '76561198152111329')then{
+			if(MYPUIDinfiESP == '0')then{
 				ALLOW_ME_THIS_KEYBIND = true;
 			};
 			if(_key == OPEN_ADMIN_MENU_KEY)then
