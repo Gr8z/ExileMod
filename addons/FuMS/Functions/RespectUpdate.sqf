@@ -5,7 +5,7 @@
 private ["_killer", "_victim", "_killerRespectPoints", "_fragAttributes", "_killerPlayerUID", "_lastKillAt", "_vehicleKiller", "_killStack", 
 "_distance", "_distanceBonus", "_overallRespectChange", "_newKillerScore", "_killMessage", "_newKillerFrags"];
 FuMS_enableRespectRewards = true;
-FuMS_enableDeathMessages = true;
+FuMS_enableDeathMessages = false;
 
 _killer 	= _this select 0;
 _victim 	= _this select 1;
