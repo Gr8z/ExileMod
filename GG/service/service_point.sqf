@@ -63,8 +63,8 @@ _NoGoAmmoCName = [
  
 //cost per magazine for individual vehicles
 _rearm_costs = [ 
-        ["Air",0],
-        ["AllVehicles",0] 
+        ["Air",300],
+        ["AllVehicles",200] 
 ];
  
 //debug weapons to see classnames in chat/rpt
