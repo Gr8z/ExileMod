@@ -1576,8 +1576,12 @@ class CfgExileArsenal
 };
 class CfgExileCustomCode 
 {
-	ExileClient_gui_inventory_event_onSlotDoubleClick = "GG\overrides\GG_gui_inventory_event_onSlotDoubleClick.sqf";
-	ExileClient_object_player_death_startBleedingOut = "GG\overrides\GG_object_player_death_startBleedingOut.sqf";
+	ExileClient_gui_inventory_event_onSlotDoubleClick 	= "GG\overrides\GG_gui_inventory_event_onSlotDoubleClick.sqf";
+	ExileClient_object_player_death_startBleedingOut 	= "GG\overrides\GG_object_player_death_startBleedingOut.sqf";
+	ExileClient_object_player_parachuteNoFallDamage 	= "GG\overrides\GG_object_player_parachuteNoFallDamage.sqf";
+	ExileClient_object_player_event_onHandleDamage		= "GG\overrides\GG_object_player_event_onHandleDamage.sqf";
+	ExileClient_object_player_spawn						= "GG\overrides\GG_object_player_spawn.sqf";
+	ExileClient_system_process_preInit					= "GG\overrides\GG_system_process_preInit.sqf";
 };
 class CfgExileMusic
 {
