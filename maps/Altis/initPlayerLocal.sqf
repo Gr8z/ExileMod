@@ -6,6 +6,8 @@
 [] execVM "GG\KillMessages.sqf";
 [] execVM "GG\IgiLoad\IgiLoadInit.sqf";
 [] execVM "GG\ModCheck.sqf";
+[] execVM "GG\money\takegive_poptab_init.sqf";
+[] execVM "GG\service\service_point.sqf";
 
 #include "initServer.sqf"
 
