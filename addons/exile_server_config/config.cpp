@@ -3702,7 +3702,9 @@ class CfgSettings
 			"ItemMap",
 			"Exile_Item_XM8",
 			"ItemRadio",
-			"Exile_Item_PlasticBottleFreshWater"
+			"Exile_Item_PlasticBottleFreshWater",
+			"rhs_sidor",
+			"H_Cap_red"
 		};
 
 		/**
