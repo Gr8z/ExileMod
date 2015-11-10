@@ -191,7 +191,8 @@ else
 
 			// KILL MESSAGES BY GR8
 			Gr8s_kill_msg = [(name _killer), _pic, (name _victim), floor(_victim distance _killer), _txt, nil, nil];
-			publicVariable "Gr8s_kill_msg";
+			if (LogPlayerKills) then {format["logGr8Kill:%1:%2:%3:%4:%5:%6", (name _killer), getPlayerUID _killer, (name _victim), getPlayerUID _victim, _txt, floor(_victim distance _killer)] call ExileServer_system_database_query_fireAndForget;};
+			if (ShowPlayerKills) then {publicVariable "Gr8s_kill_msg";};
 
 				if !(count _fragAttributes isEqualTo 0) then
 				{
@@ -222,7 +223,8 @@ else
 			["systemChatRequest", [format["%1 was killed by an NPC! (%2m Distance)", (name _victim), floor(_victim distance _killer)]]] call ExileServer_object_player_event_killfeed;
 			// KILL MESSAGES BY GR8
 			Gr8s_kill_msg = ["NPC", _pic, (name _victim), floor(_victim distance _killer), _txt, nil, nil];
-			publicVariable "Gr8s_kill_msg";		
+			if (LogAIKills) then {format["logGr8Kill:%1:%2:%3:%4:%5:%6", "NPC", getPlayerUID _killer, (name _victim), getPlayerUID _victim, _txt, floor(_victim distance _killer)] call ExileServer_system_database_query_fireAndForget;};
+			if (ShowAIKills) then {publicVariable "Gr8s_kill_msg";};	
 			};
 		};
 	};
