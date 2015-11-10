@@ -27,7 +27,7 @@
 	],  
     // Mission Success Message
     ["Mission Success",
-     "",
+     "Zombie Horde in Town",
      "The source of the infection has been destroyed!"
 	], 
     // Mission Failure Message
