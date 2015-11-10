@@ -13,7 +13,7 @@ publicVariableServer "ShowAIKills";
 ShowPlayerKills = true; // Show players killing Players messages.
 publicVariableServer "ShowPlayerKills";
 
-LogAIKills = false; // Log AI killing players into the database.
+LogAIKills = true; // Log AI killing players into the database.
 publicVariableServer "LogAIKills";
 LogPlayerKills = true; // Log Player killing players into the database.
 publicVariableServer "LogPlayerKills";
