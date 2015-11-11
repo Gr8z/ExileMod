@@ -34,6 +34,18 @@ WHERE LastUpdated < NOW() - INTERVAL 7 DAY;
 DELETE FROM construction_1
 WHERE LastUpdated < NOW() - INTERVAL 10 DAY;
 
+/* DELETE old kills */
+DELETE FROM `kills`
+WHERE id NOT IN (
+  SELECT id
+  FROM (
+    SELECT id
+    FROM `kills`
+    ORDER BY id DESC
+    LIMIT 500
+  ) foo
+);
+
 /* =================== UDPATES =================== */
 
 /* Unlock Old Vehicles */
