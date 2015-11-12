@@ -3,7 +3,7 @@ class CHVD
 	tag = "CHVD";
 	class script
 	{
-		file = "CHVD";
+		file = "GG\CHVD";
 		class onCheckedChanged {};
 		class onSliderChange {};
 		class onLBSelChanged {};
