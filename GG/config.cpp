@@ -1578,6 +1578,7 @@ class CfgExileCustomCode
 {
 	ExileClient_gui_inventory_event_onSlotDoubleClick = "GG\overrides\GG_gui_inventory_event_onSlotDoubleClick.sqf";
 	ExileClient_object_player_death_startBleedingOut = "GG\overrides\GG_object_player_death_startBleedingOut.sqf";
+	ExileClient_object_player_bambiStateBegin = "GG\overrides\GG_object_player_bambiStateBegin.sqf";
 };
 class CfgExileMusic
 {

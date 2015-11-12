@@ -92,6 +92,16 @@ class CfgRemoteExec
 	};
 };
 
+class CfgSounds
+{
+    sounds[] = {};
+    class intro
+    {
+        name = "";
+        sound[] = {"\GG\introsong.ogg", db+1,1}; 
+    };
+};
+
 #include "GG\SL\global.hpp"
 
 class cfgFunctions
