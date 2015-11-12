@@ -7,8 +7,8 @@
 	
 	//Define variables, load from profileNamespace
 	CHVD_allowNoGrass = if (isNil "CHVD_allowNoGrass") then {true} else {CHVD_allowNoGrass};
-	CHVD_maxView = if (isNil "CHVD_maxView") then {12000} else {CHVD_maxView};
-	CHVD_maxObj = if (isNil "CHVD_maxObj") then {12000} else {CHVD_maxObj};
+	CHVD_maxView = if (isNil "CHVD_maxView") then {5000} else {CHVD_maxView};
+	CHVD_maxObj = if (isNil "CHVD_maxObj") then {5000} else {CHVD_maxObj};
 
 	CHVD_footSyncObj = profileNamespace getVariable ["CHVD_footSyncObj",false];
 	CHVD_carSyncObj = profileNamespace getVariable ["CHVD_carSyncObj",false];
