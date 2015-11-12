@@ -103,7 +103,7 @@ class CfgSounds
 };
 
 #include "GG\SL\global.hpp"
-
+#include "GG\CHVD\dialog.hpp"
 class cfgFunctions
 {
 	class scarCODE
@@ -116,6 +116,7 @@ class cfgFunctions
 		};
 	};
 	#include "GG\VEMFr_client\CfgFunctions.hpp"
+	#include "GG\CHVD\CfgFunctions.hpp"
 };
 
 class RscTitles
