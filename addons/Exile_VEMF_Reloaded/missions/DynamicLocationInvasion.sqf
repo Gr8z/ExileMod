@@ -4,7 +4,7 @@
 private ["_settings","_grpCount","_groupUnits","_playerCheck","_loc","_hasPlayers","_spawned","_grpArr","_unitArr","_done","_boxes","_box","_chute","_colors","_lightType","_light","_smoke"];
 
 // Define _settings
-_settings = [["DynamicLocationInvasion"],["maxInvasions","groupCount","groupUnits","distanceCheck","distanceTooClose","distanceMaxPrefered","playerCheck","crateAltitude","useMarker","parachuteCrate","crateVisualMarker","crateMapMarker","useAnnouncements"]] call VEMFr_fnc_getSetting;
+_settings = [["DynamicLocationInvasion"],["maxInvasions","groupCount","groupUnits","distanceCheck","distanceTooClose","distanceMaxPrefered","playerCheck","crateAltitude","useMarker","parachuteCrate","crateVisualMarker","crateMapMarker","useAnnouncements","killTheLights","fixTheLights","lightsRange","canLiftCrate"]] call VEMFr_fnc_getSetting;
 _maxInvasions = _settings select 0;
 if isNil"VEMFr_invasCount" then
 {
@@ -25,6 +25,10 @@ if (VEMFr_invasCount <= _maxInvasions) then
 	_crateVisualMarker = _settings select 10;
 	_crateMapMarker = _settings select 11;
 	_useAnnouncements = _settings select 12;
+	_killTheLights = _settings select 13;
+	_fixTheLights = _settings select 14;
+	_lightsRange = _settings select 15;
+	_allowLift = _settings select 16;
 
 	_loc = ["loc", false, position (allPlayers call VEMFr_fnc_random), _range, _tooClose, _maxPref, _playerCheck] call VEMFr_fnc_findPos;
 	if (typeName _loc isEqualTo "ARRAY") then
@@ -78,6 +82,21 @@ if (VEMFr_invasCount <= _maxInvasions) then
 				};
 			};
 		};
+
+		// If enabled, kill all the lights
+		if (_killTheLights isEqualTo 1) then
+		{
+			private ["_all"];
+			_all = nearestObjects [_loc select 1, ["Lamps_Base_F","PowerLines_base_F","Land_PowerPoleWooden_L_F"], _lightsRange];
+			{
+				if (damage _x < 0.95) then
+				{
+					_x setDamage 0.95;
+					uiSleep 0.1;
+				};
+			} forEach _all;
+		};
+
 		// Usage: POSITION, Radius
 		_playerNear = [_loc select 1, 800] call VEMFr_fnc_waitForPlayers;
 		if _playerNear then
@@ -170,6 +189,10 @@ if (VEMFr_invasCount <= _maxInvasions) then
 							_crate allowDamage false;
 							_crate enableSimulationGlobal true;
 							_crate attachTo [_chute, [0,0,0]];
+							if (_allowLift isEqualTo -1) then
+							{
+								_crate enableRopeAttach false;
+							};
 							["DynamicLocationInvasion", 1, format ["Crate parachuted at: %1 / Grid: %2", (getPosATL _crate), mapGridPosition (getPosATL _crate)]] call VEMFr_fnc_log;
 							_lootLoaded = [_crate] call VEMFr_fnc_loadLoot;
 							if _lootLoaded then { ["DynamicLocationInvasion", 1, "Loot loaded successfully into parachuting crate"] call VEMFr_fnc_log };
@@ -179,6 +202,10 @@ if (VEMFr_invasCount <= _maxInvasions) then
 					{
 						_crate = createVehicle [_box, _pos, [], 0, "NONE"];
 						_crate allowDamage false;
+						if (_allowLift isEqualTo -1) then
+						{
+							_crate enableRopeAttach false;
+						};
 						_lootLoaded = [_crate] call VEMFr_fnc_loadLoot;
 						if _lootLoaded then { ["DynamicLocationInvasion", 1, "Loot loaded successfully into crate"] call VEMFr_fnc_log };
 					};
@@ -272,6 +299,20 @@ if (VEMFr_invasCount <= _maxInvasions) then
 							["DynamicLocationInvasion", 1, format["Successfully deleted all %1 mines at %2", count _minesPlaced, _locName]] call VEMFr_fnc_log;
 							_minesPlaced = nil;
 						};
+					};
+
+					// If enabled, fix all the lights
+					if (_fixTheLights isEqualTo 1) then
+					{
+						private ["_all"];
+						_all = nearestObjects [_loc select 1, ["Lamps_Base_F","PowerLines_base_F","Land_PowerPoleWooden_L_F"], _lightsRange];
+						{
+							if (damage _x > 0.94) then
+							{
+								_x setDamage 0;
+								uiSleep 0.2;
+							};
+						} forEach _all;
 					};
 				};
 			};

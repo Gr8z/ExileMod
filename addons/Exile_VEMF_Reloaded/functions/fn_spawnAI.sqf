@@ -31,7 +31,7 @@ if (count _pos isEqualTo 3) then
 		if (_unitsPerGrp > 0) then
 		{
 			_mode = [_this, 3, -1, [0]] call BIS_fnc_param;
-			_sldrClass = "B_G_Soldier_AR_F";
+			_sldrClass = "unitClass" call VEMFr_fnc_getSetting;
 			_groups = [];
 			_hc = "allowHeadLessClient" call VEMFr_fnc_getSetting;
 			_aiDifficulty = [[["aiSkill"],["difficulty"]] call VEMFr_fnc_getSetting, 0, "Veteran", [""]] call BIS_fnc_param;
@@ -53,7 +53,7 @@ if (count _pos isEqualTo 3) then
 			{ // Filter the houses that are too small for one group
 				if not(typeOf _x in _notTheseHouses) then
 				{
-					if (count ([_x] call BIS_fnc_buildingPositions) > _unitsPerGrp) then
+					if ([_x, _unitsPerGrp] call BIS_fnc_isBuildingEnterable) then
 					{
 						_goodHouses pushBack _x;
 					};
@@ -81,85 +81,115 @@ if (count _pos isEqualTo 3) then
 						_noHouses = true
 					};
 				};
-				private ["_grp","_unit"];
-				_grp = createGroup WEST;
-				if not _noHouses then
+				private ["_unitSide","_grp","_unit"];
+				_unitSide = getText (configFile >> "CfgVehicles" >> ("unitClass" call VEMFr_fnc_getSetting) >> "faction");
+				switch _unitSide do
 				{
-					_grp enableAttack false;
+					case "BLU_G_F":
+					{
+						_grp = createGroup WEST;
+					};
+					case "CIV_F":
+					{
+						_grp = createGroup civilian;
+					};
+					case "IND_F":
+					{
+						_grp = createGroup independent;
+					};
+					case "IND_G_F":
+					{
+						_grp = createGroup resistance;
+					};
+					case "OPF_F":
+					{
+						_grp = createGroup EAST;
+					};
+					default
+					{
+						["fn_spawnAI", 0, format["Unknown side %1", _unitSide]] call VEMFr_fnc_log;
+					};
 				};
-				_grp setBehaviour "AWARE";
-				_grp setCombatMode "RED";
-				_grp allowFleeing 0;
-				private ["_house","_housePositions"];
-				if not _noHouses then
+				if not isNil"_grp" then
 				{
-					_house = _goodHouses call VEMFr_fnc_random;
-					_houseID = _goodHouses find _house;
-					_goodHouses deleteAt _houseID;
-					_housePositions = [_house] call BIS_fnc_buildingPositions;
-				};
-
-				_placed50 = false;
-				for "_u" from 1 to _unitsPerGrp do
-				{
-					private ["_spawnPos","_hmg"];
 					if not _noHouses then
 					{
-						_spawnPos = _housePositions call VEMFr_fnc_random;
-						if not _placed50 then
-						{
-							_placed50 = true;
-							if (_cal50s > 0) then
-							{
-								_hmg = createVehicle ["B_HMG_01_high_F", _spawnPos, [], 0, "CAN_COLLIDE"];
-								_hmg setVehicleLock "LOCKEDPLAYER";
-								(_spawned select 1) pushBack _hmg;
-							};
-						};
+						_grp enableAttack false;
 					};
-					if _noHouses then
-					{
-						_spawnPos = [_pos,20,250,1,0,200,0] call BIS_fnc_findSafePos; // Find Nearby Position
-					};
-
-					_unit = _grp createUnit [_sldrClass, _spawnPos, [], 0, "CAN_COLLIDE"]; // Create Unit There
+					_grp setBehaviour "AWARE";
+					_grp setCombatMode "RED";
+					_grp allowFleeing 0;
+					private ["_house","_housePositions"];
 					if not _noHouses then
 					{
-						doStop _unit;
-						if (_cal50s > 0) then
+						_house = _goodHouses call VEMFr_fnc_random;
+						_houseID = _goodHouses find _house;
+						_goodHouses deleteAt _houseID;
+						_housePositions = [_house] call BIS_fnc_buildingPositions;
+					};
+
+					_placed50 = false;
+					for "_u" from 1 to _unitsPerGrp do
+					{
+						private ["_spawnPos","_hmg"];
+						if not _noHouses then
 						{
-							if not isNil"_hmg" then
+							_spawnPos = _housePositions call VEMFr_fnc_random;
+							if not _placed50 then
 							{
-								if not isNull _hmg then
+								_placed50 = true;
+								if (_cal50s > 0) then
 								{
-									_unit moveInGunner _hmg;
-									_hmg = nil;
-									_cal50s = _cal50s - 1;
+									_hmg = createVehicle ["B_HMG_01_high_F", _spawnPos, [], 0, "CAN_COLLIDE"];
+									_hmg setVehicleLock "LOCKEDPLAYER";
+									(_spawned select 1) pushBack _hmg;
 								};
 							};
 						};
+						if _noHouses then
+						{
+							_spawnPos = [_pos,20,250,1,0,200,0] call BIS_fnc_findSafePos; // Find Nearby Position
+						};
 
-						_houseIndex = _housePositions find _spawnPos;
-						_housePositions deleteAt _houseIndex;
+						_unit = _grp createUnit [_sldrClass, _spawnPos, [], 0, "CAN_COLLIDE"]; // Create Unit There
+						if not _noHouses then
+						{
+							doStop _unit;
+							if (_cal50s > 0) then
+							{
+								if not isNil"_hmg" then
+								{
+									if not isNull _hmg then
+									{
+										_unit moveInGunner _hmg;
+										_hmg = nil;
+										_cal50s = _cal50s - 1;
+									};
+								};
+							};
+
+							_houseIndex = _housePositions find _spawnPos;
+							_housePositions deleteAt _houseIndex;
+						};
+
+						_unit addMPEventHandler ["mpkilled","if (isDedicated) then { [_this select 0, _this select 1] spawn VEMFr_fnc_aiKilled }"];
+						(_spawned select 0) pushBack _unit;
+						// Set skills
+						_unit setSkill ["aimingAccuracy", _accuracy];
+						_unit setSkill ["aimingShake", _aimShake];
+						_unit setSkill ["aimingSpeed", _aimSpeed];
+						_unit setSkill ["endurance", _stamina];
+						_unit setSkill ["spotDistance", _spotDist];
+						_unit setSkill ["spotTime", _spotTime];
+						_unit setSkill ["courage", _courage];
+						_unit setSkill ["reloadSpeed", _reloadSpd];
+						_unit setSkill ["commanding", _commanding];
+						_unit setSkill ["general", _general];
+						_unit setRank "Private"; // Set rank
 					};
-
-					_unit addMPEventHandler ["mpkilled","if (isDedicated) then { [_this select 0, _this select 1] spawn VEMFr_fnc_aiKilled }"];
-					(_spawned select 0) pushBack _unit;
-					// Set skills
-					_unit setSkill ["aimingAccuracy", _accuracy];
-					_unit setSkill ["aimingShake", _aimShake];
-					_unit setSkill ["aimingSpeed", _aimSpeed];
-					_unit setSkill ["endurance", _stamina];
-					_unit setSkill ["spotDistance", _spotDist];
-					_unit setSkill ["spotTime", _spotTime];
-					_unit setSkill ["courage", _courage];
-					_unit setSkill ["reloadSpeed", _reloadSpd];
-					_unit setSkill ["commanding", _commanding];
-					_unit setSkill ["general", _general];
-					_unit setRank "Private"; // Set rank
+					_grp selectLeader _unit; // Leader Assignment
+					_groups pushBack _grp; // Push it into the _groups array
 				};
-				_grp selectLeader _unit; // Leader Assignment
-				_groups pushBack _grp; // Push it into the _groups array
 			};
 
 			_invLoaded = [_spawned select 0, "Invasion", _mode] call VEMFr_fnc_loadInv; // Load the AI's inventory

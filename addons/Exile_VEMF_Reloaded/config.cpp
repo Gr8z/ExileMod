@@ -20,11 +20,11 @@ class CfgVemfReloaded
 	validateLoot = 1; // Use -1 to disable. Checks if defined classes in loot and ai gear (except blacklist) are valid. Will output test result to RPT if ERROR logs enabled
 	minPlayers = 1; // Missions will not start until player count reaches this number OR when player count goes below this amount
 	maxGlobalMissions = 2; // Use -1 to disable limit | Max amount of missions that are allowed to run at the same time
- 	timeOutTime = 20; // In minutes. Use -1 to disable mission timeout; Minimal: 5
+ 	timeOutTime = 25; // In minutes. Use -1 to disable mission timeout; Minimal: 5
 	minNew = 2; // Minimum time before new mission can run
 	maxNew = 3; // Maximum time before new mission can run
 	missionList[] = {"DynamicLocationInvasion"}; // Speaks for itself, right?
-	missionDistance = 3000; // Minimum distance between missions
+	missionDistance = 2000; // Minimum distance between missions
 	addons[] = {}; // Not used for now
 	noMissionPos[] = {}; // Format: {{position},radius} | Default: Exile safezones
 	locationBlackList[] = {"Sagonisi","Monisi","Fournos","Savri","Atsalis","Polemista","Cap Makrinos","Pyrgi","Makrynisi","Chelonisi","Almyra","Surf Club"};
@@ -36,6 +36,7 @@ class CfgVemfReloaded
 	keepAIbodies = 1; // Set to -1 if you want the AI's body to be deleted after they are killed
 	aiPoliceMode = 1; // Use -1 to give AI normal soldier clothing | 1 = normal police | 2 = S.W.A.T.
 	respectReward = 20; // Default respect to give always | Use -1 to disable respect gain. Minimum: 1 (if you want it enabled) | VEMF will automatically give bonus
+	unitClass = "B_G_Soldier_AR_F"; // Default: "B_G_Soldier_AR_F"
 
 	/////// Debugging/learning mode ///////
 	enableDebug = 0; // -1 to disable, 0 = ERRORS only | 1 = INFO only | 2 = ERRORS & INFO
@@ -92,6 +93,10 @@ class CfgVemfReloaded
 			minesAmount = 20; // Ignore if placeMines = -1;
 			cleanMines = 1; // 1 = remove mines when mission done | 2 = explode mines when mission done :D guarenteed chaos, LOL!
 		randomModes = 1; // Set to -1 to disable random invasion modes
+		killTheLights = -1; // Use -1 to prevent all street lights from being turned off at the mission location
+		fixTheLights = 1; // Use -1 to prevent all street lights from being fixed when mission is done
+		lightsRange = 1000; // Range to use for the two settings above
+		canLiftCrate = -1; // Use -1 to disallow lifting of loot crate
 	};
 
 	class policeConfig
@@ -335,8 +340,8 @@ class CfgVemfReloaded
 		minAttSlots = 2; // Minimum number of attachment slots in each loot crate
 		attachmentsLoot[] =
 		{ // The number after each classname means how much of that type will be put in crate. WARNING: DO NOT USE NUMBERS WITH DECIMALS.
-			{"ItemGPS",5},{"ItemRadio",4},{"ItemMap",6},{"MineDetector",1},{"Binocular",4},{"Rangefinder",2},{"Medikit",3},{"ToolKit",1},
-			{"muzzle_snds_H",2},{"muzzle_snds_L",2},{"muzzle_snds_M",2},{"muzzle_snds_B",2},{"muzzle_snds_H_MG",2},{"muzzle_snds_H_SW",2},
+			{"ItemGPS",5},{"ItemRadio",4},{"ItemMap",6},{"MineDetector",1},{"Binocular",4},{"Rangefinder",2},{"muzzle_snds_H",2},
+			{"muzzle_snds_L",2},{"muzzle_snds_M",2},{"muzzle_snds_B",2},{"muzzle_snds_H_MG",2},{"muzzle_snds_H_SW",2},
 			{"optic_Arco",3},{"optic_Aco",3},{"optic_ACO_grn",3},{"optic_Aco_smg",3},{"optic_ACO_grn_smg",3},{"optic_Holosight",3},
 			{"optic_Holosight_smg",3},{"optic_SOS",3},{"acc_flashlight",3},{"acc_pointer_IR",3},{"optic_MRCO",3},{"muzzle_snds_acp",3},
 			{"optic_NVS",3},{"optic_DMS",3},{"optic_Yorris",2},{"optic_MRD",2},{"optic_LRPS",3},{"muzzle_snds_338_black",3},{"muzzle_snds_338_green",3},
@@ -642,11 +647,11 @@ class CfgPatches
 {
 	class Exile_VEMF_Reloaded
 	{
-		units[] = {"B_G_Soldier_AR_F"};
+		units[] = {};
 		requiredAddons[] = {"exile_server"};
 		fileName = "Exile_VEMF_Reloaded.pbo";
 		requiredVersion = 1.50;
-		version = 0730.2; // Do NOT change
+		version = 0730.21; // Do NOT change
 		author[]= {"IT07"}; // Original author: Vampire. Permission to continue/remake VEMF under VEMF_Reloaded given to IT07
 	};
 };
