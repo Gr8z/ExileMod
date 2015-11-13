@@ -94,12 +94,13 @@ class CfgRemoteExec
 
 class CfgSounds
 {
-    sounds[] = {};
-    class intro
-    {
-        name = "";
-        sound[] = {"\GG\introsong.ogg", db+1,1}; 
-    };
+	sounds[] = {intro};
+	class intro
+	{
+		name = "intro";
+		sound[] = {"\GG\introsong.ogg", 1, 1};
+		titles[] = {};
+	};
 };
 
 #include "GG\SL\global.hpp"
