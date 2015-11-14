@@ -156,8 +156,7 @@ _adminUIDandAccess =
 		[
 			'spectating','AdminConsole','Show Server Information',
 			'HealSelf','HealRepairNear','Heal','Flip Vehicle',
-			'Lower Terrain','Vehboost',
-			'Request Steam Name','showinfo','Add / Remove Money'
+			'Lower Terrain','Request Steam Name','showinfo','Add / Remove Money'
 		]
 	]
 ];
