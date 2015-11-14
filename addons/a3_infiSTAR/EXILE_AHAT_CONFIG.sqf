@@ -98,8 +98,13 @@ _startAsNormal =
 
 _adminUIDandAccess =
 [
-	[
-		['76561198078201908','76561198021389971','76561198153784743','76561198195305425','76561198115492831'],	// Head admin/Owner
+	[	 /* Head Admin/Owner */
+		['76561198078201908', //GR8
+		 '76561198153784743', //Ghost
+		 '76561198195305425', //Shahzad
+		 '76561198115492831', //BigEgg
+		 //Add UID's Above - Don't forget the comma!
+		 '0'],
 		[
 			'Teleport On Map Click','Teleport - Target To Me','Teleport - Me To Target','Teleport In Facing Direction (10m steps)',
 			'spectating','AdminConsole','Delete Vehicle','FlyUp','ShowGear','Show Server Information',
@@ -115,8 +120,18 @@ _adminUIDandAccess =
 			'Request Steam Name','showinfo','Add / Remove Money','Add / Remove Respect'
 		]
 	],
-	[
-		['76561198084864687','76561198129049369','76561198067566966','76561198163835069','76561198001066546','76561198196195669','76561198084154973','76561198257149369','76561198042335279'],	// Admins
+	[	 /* Admins */
+		['76561198084864687', //Kozak
+		 '76561198129049369', //Zatley
+		 '76561198067566966', //Snipernosniping
+		 '76561198163835069', //Snipernosniping
+		 '76561198001066546', //Meowmix
+		 '76561198196195669', //Shroudy
+		 '76561198084154973', //Mr. Bandit
+		 '76561198257149369', //TangoWhiskey
+		 '76561197960289679', //Dirk Verite
+		 //Add UID's Above - Don't forget the comma!
+		 '0'],
 		[
 			'Teleport On Map Click','Teleport - Target To Me','Teleport - Me To Target','Teleport In Facing Direction (10m steps)',
 			'spectating','AdminConsole','Delete Vehicle','FlyUp','ShowGear','Show Server Information',
@@ -132,8 +147,12 @@ _adminUIDandAccess =
 			'Request Steam Name','showinfo','Add / Remove Money','Add / Remove Respect'
 		]
 	],
-	[
-		['76561197984308134','76561198144994529','76561198037365948','76561198126348047','76561198066303734','76561198227881216','76561197960289679','76561198029881052','76561198135739831'],	// Mods
+	[	/* Mods */
+		['76561198126348047', //Mr. Bandit
+		 '76561198227881216', //Local User
+		 '76561198042335279', //Dean Winchester
+		 //Add UID's Above - Don't forget the comma!
+		 '0'],
 		[
 			'Teleport On Map Click','Teleport - Target To Me','Teleport - Me To Target','Teleport In Facing Direction (10m steps)',
 			'spectating','AdminConsole','Delete Vehicle','FlyUp','ShowGear','Show Server Information',
