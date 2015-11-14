@@ -130,6 +130,7 @@ _adminUIDandAccess =
 		 '76561198084154973', //Mr. Bandit
 		 '76561198257149369', //TangoWhiskey
 		 '76561197960289679', //Dirk Verite
+		 '76561198042335279', //Dean Winchester
 		 //Add UID's Above - Don't forget the comma!
 		 '0'],
 		[
@@ -150,7 +151,6 @@ _adminUIDandAccess =
 	[	/* Mods */
 		['76561198126348047', //Mr. Bandit
 		 '76561198227881216', //Local User
-		 '76561198042335279', //Dean Winchester
 		 //Add UID's Above - Don't forget the comma!
 		 '0'],
 		[
