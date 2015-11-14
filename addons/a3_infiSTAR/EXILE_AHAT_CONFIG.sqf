@@ -83,8 +83,8 @@ _VDN = true;	/* true or false - Chat-Vote Day/Night */
 
 /* The following 3 options can be disabled by putting the value to -1. For example "_TGV = -1;" */
 /* Terrain Grid Value   */ _TGV = 40;		/* 50, 25, 12.5  */	/* if set to 50 grass will be very low for better client FPS.. default is 25 ~35 is good performance and grass :) */
-/* ViewDistance Value   */ _VDV = 1400;
-/* ObjectViewDistance   */ _VOV = 1250;
+/* ViewDistance Value   */ _VDV = -1;
+/* ObjectViewDistance   */ _VOV = -1;
 
 /* "_LogAdminActions": Sends actions done by each admin to the server to log it to the .txt file and .rpt file + sends it back to all other admins. */
 _LogAdminActions = true;	/* true or false */
