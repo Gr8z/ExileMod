@@ -154,18 +154,10 @@ _adminUIDandAccess =
 		 //Add UID's Above - Don't forget the comma!
 		 '0'],
 		[
-			'Teleport On Map Click','Teleport - Target To Me','Teleport - Me To Target','Teleport In Facing Direction (10m steps)',
-			'spectating','AdminConsole','Delete Vehicle','FlyUp','ShowGear','Show Server Information',
-			'HealSelf','HealRepairNear','AdminLog','Freeze Target','UnFreeze Target',
-			'==== Loadouts ====','==== Vehicles ====','==== Base Deleter ====','==== WeatherLord ====','Items spawn menu',
-			'Remove Gear','Heal','Restore','Flip Vehicle','Move In My Vehicle','Move In Target Vehicle','Eject','Eject Crew',
-			'Kill','Explode','Force Disconnect','Kick (Silent)','Kick (Announce)','Ban (Silent)','Ban (Announce)',
-			'infiSTAR Player ESP','infiSTAR Dead ESP','infiSTAR AI ESP',
-			'infiSTAR MapIcons','Vehicle Marker','Flag Marker (with radius)','DeadPlayer Marker',
-			'God Mode','Vehicle God Mode','Lower Terrain','Vehboost','UnlimAmmo','noRecoil','FastFire','Stealth / Invisible',
-			'Disable Announces','Mass Message','Spawn Support-Boxes',
-			'Spawn Ammo','Login as Arma Admin','BIS FreeRoam Cam (works with ESP)','FreeRoam Cam (does not work with ESP)',
-			'Request Steam Name','showinfo','Add / Remove Money','Add / Remove Respect'
+			'spectating','AdminConsole','Show Server Information',
+			'HealSelf','HealRepairNear','Heal','Flip Vehicle',
+			'Lower Terrain','Vehboost',
+			'Request Steam Name','showinfo','Add / Remove Money'
 		]
 	]
 ];
