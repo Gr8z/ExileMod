@@ -11,6 +11,7 @@ echo RUNNING PHP FIX Script...
 echo.
 echo.
 C:\xampp\php\php.exe C:\xampp\htdocs\database\server_1\fix_construction_protection.php
+C:\xampp\php\php.exe C:\xampp\htdocs\database\server_1\delete_abandoned_vehicles.php
 echo.
 echo.
 echo RUNNING SQL Cleanup Script...
