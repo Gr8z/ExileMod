@@ -150,6 +150,7 @@ _adminUIDandAccess =
 	[	/* Mods */
 		['76561198126348047', //Mr. Bandit
 		 '76561198227881216', //Local User
+		 '76561198137880291', //Xenon
 		 //Add UID's Above - Don't forget the comma!
 		 '0'],
 		[
