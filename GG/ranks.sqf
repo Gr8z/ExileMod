@@ -1,4 +1,3 @@
-// Exile Ranks here ! by CRE4MPIE
 uiSleep 2;
 _respect = ExileClientPlayerScore;
 
