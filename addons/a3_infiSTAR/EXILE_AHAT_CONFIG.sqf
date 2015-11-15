@@ -128,8 +128,8 @@ _adminUIDandAccess =
 		 '76561198001066546', //Meowmix
 		 '76561198196195669', //Shroudy
 		 '76561198084154973', //Mr. Bandit
-		 '76561198257149369', //TangoWhiskey
-		 '76561197960289679', //Dirk Verite
+		 '76561197960289679', //TangoWhiskey
+		 '76561198029881052', //Dirk Verite
 		 '76561198042335279', //Dean Winchester
 		 //Add UID's Above - Don't forget the comma!
 		 '0'],
