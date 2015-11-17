@@ -30,9 +30,10 @@ WHERE last_connect_at < NOW() - INTERVAL 30 DAY;
 DELETE FROM vehicle_1
 WHERE LastUpdated < NOW() - INTERVAL 7 DAY;
 
-/* DELETE old Bases */
+/* DELETE old Bases 
 DELETE FROM construction_1
 WHERE maintained_at < NOW() - INTERVAL 10 DAY;
+*/
 
 /* DELETE old Territories */
 DELETE FROM territory_1
