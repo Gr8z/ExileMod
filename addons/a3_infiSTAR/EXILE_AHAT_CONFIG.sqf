@@ -103,6 +103,7 @@ _adminUIDandAccess =
 		 '76561198153784743', //Ghost
 		 '76561198195305425', //Shahzad
 		 '76561198115492831', //BigEgg
+		 '76561198137100220', //Deadskin
 		 //Add UID's Above - Don't forget the comma!
 		 '0'],
 		[
