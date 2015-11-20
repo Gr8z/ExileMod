@@ -61,7 +61,7 @@ WHERE id NOT IN (
     SELECT id
     FROM `kills`
     ORDER BY id DESC
-    LIMIT 500
+    LIMIT 100
   ) foo
 );
 
