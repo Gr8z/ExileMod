@@ -30,7 +30,7 @@ class CfgVemfReloaded
 	locationBlackList[] = {"Sagonisi","Monisi","Fournos","Savri","Atsalis","Polemista","Cap Makrinos","Pyrgi","Makrynisi","Chelonisi","Almyra","Surf Club"};
 	housesBlackList[] = {"Land_Pier_F"};
 	killPercentage = 100; // In percent. 100 means all AI that belong to mission need to be killed
-	sayKilled = 1; // Set to -1 if you do not want AI killed messages | 1 = everyone will see message | 2 = send message only to the killer
+	sayKilled = 2; // Set to -1 if you do not want AI killed messages | 1 = everyone will see message | 2 = send message only to the killer
 	allowSmall = 1; // Set to -1 if you do not want missions to target very small unusual locations
 	keepLaunchers = -1; // Use -1 to remove AI's launcher on killed
 	keepAIbodies = 1; // Set to -1 if you want the AI's body to be deleted after they are killed
