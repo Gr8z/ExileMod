@@ -9,10 +9,10 @@ while {true} do {
         //Create markers
         {
             _marker = createMarkerLocal [format["%1_marker",_x],visiblePosition _x];
-            _marker setMarkerColorLocal "ColorGreen";
-            _marker setMarkerTypeLocal "Mil_dot";
+            _marker setMarkerColorLocal "ColorBlue";
+            _marker setMarkerTypeLocal "mil_start";
             _marker setMarkerTextLocal format["%1", _x getVariable["realname",name _x]];
-        
+            _marker setMarkerDirLocal (direction _x);
             _markers pushBack [_marker,_x];
         } foreach _members;
             

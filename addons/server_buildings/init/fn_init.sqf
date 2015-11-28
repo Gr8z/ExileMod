@@ -8,4 +8,9 @@ switch(toLower worldName)do{
 		diag_log "Loading Bornholm Custom Buildings";
 		call compile preprocessFileLineNumbers "x\addons\a3_epoch_server_building\buildings\Bornholm\traders.sqf";
 	};
+	case "chernarus":{
+		diag_log "Loading chernarus Custom Buildings";
+		call compile preprocessFileLineNumbers "x\addons\a3_epoch_server_building\buildings\Chernarus\traders.sqf";
+		call compile preprocessFileLineNumbers "x\addons\a3_epoch_server_building\buildings\Chernarus\water.sqf";
+	};
 };
