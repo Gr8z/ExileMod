@@ -4,7 +4,7 @@ if (isServer) then {
 	private ["_objs"];
 	_objs = [
 		//Stary Trader
-	   ["Land_CncBarrierMedium4_F",[6367.41,7750.97,0],27.7273,[[0.465264,0.885172,0],[0,0,1]],false],
+	    ["Land_CncBarrierMedium4_F",[6367.41,7750.97,0],27.7273,[[0.465264,0.885172,0],[0,0,1]],false],
 		["Land_CncBarrierMedium4_F",[6354.93,7757.59,0],30.9091,[[0.513677,0.857983,0],[0,0,1]],false],
 		["Land_CncBarrierMedium4_F",[6348.53,7761.63,0],30.9091,[[0.513677,0.857983,0],[0,0,1]],false],
 		["Land_CncBarrierMedium4_F",[6342.18,7765.48,0],30.9091,[[0.513677,0.857983,0],[0,0,1]],false],
@@ -294,7 +294,7 @@ if (isServer) then {
 	    ["Land_fort_bagfence_long",[1268.45,2481.57,0],297.955,0,0,false],
 	    ["Exile_Sign_TraderCity",[1275.42,2486.17,0],186.136,0,0,false],
 	    ["Land_wpp_Turbine_V2_F",[1234.89,2459.13,0.263403],344.572,0,0,false],
-	    ["Land_Wreck_Car_F",[1232.66,2435.79,0],0,0,0,false],
+	    ["Land_Wreck_Car_F",[1232.66,2435.79,0],0,0,0,false]
 	];
 
 	{
