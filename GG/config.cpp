@@ -1187,9 +1187,8 @@ class CfgExileArsenal
 	class optic_KHS_tan								{ quality = 3; price = 300; };
 	class optic_LRPS								{ quality = 2; price = 300; };
 	class optic_MRCO								{ quality = 1; price = 100; };
-	class optic_MRD									{ quality = 1; price = 10; };					{ quality = 3; price = 1000; };
-	class optic_NVS									{ quality = 2; price = 500; };
-	class optic_SOS									{ quality = 2; price = 200; };							{ quality = 3; price = 1500; };
+	class optic_MRD									{ quality = 1; price = 10; };
+	class optic_SOS									{ quality = 2; price = 200; };
 	class optic_Yorris								{ quality = 1; price = 10; };
 
 
