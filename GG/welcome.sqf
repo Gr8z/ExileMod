@@ -4,6 +4,7 @@
 		_worldName = switch(toLower worldName)do{
                 case "altis"             :{"Altis"};
                 case "bornholm"             :{"Bornholm"};
+                case "chernarus"             :{"Chernarus"};
                 default{worldName};
         };
         /* This is the advertisement. */
