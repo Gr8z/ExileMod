@@ -8,7 +8,7 @@
 
 DMS_findSafePosBlacklist =
 [
-	[[22500,19420],[24870,16725]]		// Salt flats are blacklisted for Altis by default.
+
 ];
 
 // These configs are the default values from the main config. Just included here as an example.
