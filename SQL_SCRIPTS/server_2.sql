@@ -10,7 +10,7 @@ WHERE account_uid IN (SELECT uid FROM account WHERE last_connect_at < NOW() - IN
 AND total_connections < 10);
 
 /* DELETE Bugged Players */
-DELETE FROM player_2
+DELETE FROM player_2 
 WHERE is_alive = 1 
 and damage = 1;
 
@@ -30,9 +30,28 @@ WHERE last_connect_at < NOW() - INTERVAL 30 DAY;
 DELETE FROM vehicle_2
 WHERE LastUpdated < NOW() - INTERVAL 7 DAY;
 
-/* DELETE old Bases */
-DELETE FROM construction_2
-WHERE LastUpdated < NOW() - INTERVAL 10 DAY;
+/* DELETE old Bases 
+DELETE FROM construction_1
+WHERE maintained_at < NOW() - INTERVAL 10 DAY;
+*/
+
+/* DELETE old Territories */
+DELETE FROM territory_2
+WHERE last_payed_at < NOW() - INTERVAL 10 DAY;
+
+/* DELETE old Containers */
+DELETE FROM container_2
+WHERE spawned_at < now() - interval 10 DAY 
+AND last_accessed < now() - interval 10 DAY 
+AND last_accessed <> '0000-00-00 00:00:00';
+
+/* Remove empty containers */
+DELETE FROM container_2
+WHERE last_accessed <= NOW() - INTERVAL 48 HOUR
+AND cargo_items = '[[],[]]' 
+AND cargo_magazines = '[]' 
+AND cargo_weapons = '[]' 
+AND cargo_container = '[]';
 
 /* DELETE old kills */
 DELETE FROM `kills`
@@ -42,7 +61,7 @@ WHERE id NOT IN (
     SELECT id
     FROM `kills`
     ORDER BY id DESC
-    LIMIT 500
+    LIMIT 100
   ) foo
 );
 
