@@ -19,7 +19,7 @@ FuMS_ServerData =
     // See \FuMS\HC\Util\GetWorldInfo.sqf if you need to make changes
     ],
     [	 
-	//	["PlayerWatch",-1], // DO NOT REMOVE OR COMMENT OUT THIS THEME!
+		["PlayerWatch",-1], // DO NOT REMOVE OR COMMENT OUT THIS THEME!
         // ActiveThemes
         // A folder matching the names below needs to exist in the ..\Themes folder.
         // use this block to easily turn off/on your various mission sets.
