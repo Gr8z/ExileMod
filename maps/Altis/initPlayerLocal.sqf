@@ -3,7 +3,7 @@
 [] execVM "GG\StatusBar\statusBar.sqf";
 [] execVM "GG\inspectLoop.sqf";
 [] execVM "GG\markers\player_markers.sqf";
-[2000,false] execVM "GG\markers\playerNames.sqf";
+[2000,false] execVM "GG\markers\player_names.sqf";
 [] execVM "GG\KillMessages.sqf";
 [] execVM "GG\IgiLoad\IgiLoadInit.sqf";
 [] execVM "GG\ModCheck.sqf";
