@@ -22,8 +22,7 @@ _themeData =
     [  
        //All missions defined in PlayerWatchConfig.sqf MUST be declared here in order
 	   //  for the server to properly compile and push the mission to the HC!
-		["neutrals"],["helodrop"],["chaseHelo"],["chasecar"],["attackboat"],["divers"],["zombies"],["smallband"],
-		["gunfight"]
+		["neutrals"]
 		
 		
     ],
