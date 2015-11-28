@@ -589,6 +589,240 @@ class UpgradeToWoodWindow: Exile_AbstractCraftingRecipe
 		{2, "Exile_Item_WoodPlank"}
 	};
 };
+//NEW CRAFTING RECIPIES
+class IEDLandSmall_Remote_Mag: Exile_AbstractCraftingRecipe
+{
+    name = "Small Crafted IED";
+    pictureItem = "IEDLandSmall_Remote_Mag";
+    requiresFire = 1;
+    requiredInteractionModelGroup = "WorkBench";
+    returnedItems[] =
+    {
+        {1, "IEDLandSmall_Remote_Mag"}
+    };
+    components[] =
+    {
+        {2, "Exile_Item_MetalPole"},
+        {4, "Exile_Item_JunkMetal"},
+        {3, "Exile_Item_FuelCanisterFull"},
+        {1, "Exile_Item_ExtensionCord"},
+        {1, "Exile_Item_DuctTape"}
+    };
+};
+class IEDLandbig_Remote_Mag: Exile_AbstractCraftingRecipe
+{
+    name = "Large Crafted IED";
+    pictureItem = "IEDLandBig_Remote_Mag";
+    requiresFire = 1;
+    requiredInteractionModelGroup = "WorkBench";
+    returnedItems[] =
+    {
+        {1, "IEDLandBig_Remote_Mag"}
+    };
+    components[] =
+    {
+        {1, "Exile_Item_FuelCanisterEmpty"},
+        {10, "Exile_Item_JunkMetal"},
+        {5, "Exile_Item_FuelCanisterFull"},
+        {2, "Exile_Item_ExtensionCord"},
+        {2, "Exile_Item_DuctTape"}
+    };
+};
+
+class Exile_Item_CookingPot: Exile_AbstractCraftingRecipe
+{
+    name = "Craft Cookingpot";
+    pictureItem = "Exile_Item_CookingPot";
+    requiresFire = 1;
+    requiredInteractionModelGroup = "WorkBench";
+    returnedItems[] =
+    {
+        {1, "Exile_Item_CookingPot"}
+    };
+    components[] =
+    {
+        {1, "Exile_Item_JunkMetal"}
+    };
+};
+
+class Exile_melee_Axe: Exile_AbstractCraftingRecipe
+{
+    name = "Craft Axe";
+    pictureItem = "Exile_melee_Axe";
+    requiresFire = 1;
+    requiredInteractionModelGroup = "WorkBench";
+    returnedItems[] =
+    {
+        {1, "Exile_melee_Axe"}
+    };
+    components[] =
+    {
+        {2, "Exile_Item_JunkMetal"},
+        {1, "Exile_Item_WoodLog"}
+    };
+};
+
+class Exile_Item_SafeKit: Exile_AbstractCraftingRecipe
+{
+    name = "Craft Safe";
+    pictureItem = "Exile_Item_SafeKit";
+    requiresFire = 1;
+    requiredInteractionModelGroup = "WorkBench";
+    returnedItems[] =
+    {
+        {1, "Exile_Item_SafeKit"}
+    };
+    components[] =
+    {
+        {2, "Exile_Item_MetalPole"},
+        {4, "Exile_Item_MetalBoard"},
+        {1, "Exile_Item_Codelock"}
+    };
+};
+
+class Exile_Item_Camo_TentKit: Exile_AbstractCraftingRecipe
+{
+    name = "Craft Camo Tent";
+    pictureItem = "Exile_Item_Camo_TentKit";
+    requiresFire = 1;
+    requiredInteractionModelGroup = "WorkBench";
+    returnedItems[] =
+    {
+        {1, "Exile_Item_Camo_TentKit"}
+    };
+    components[] =
+    {
+        {2, "Exile_Item_DuctTape"},
+        {4, "Exile_Item_WoodPlank"},
+        {2, "Exile_Item_Rope"}
+    };
+};
+
+class Laserdesignator: Exile_AbstractCraftingRecipe
+{
+    name = "Craft Laserdesignator";
+    pictureItem = "Laserdesignator";
+    requiresFire = 1;
+    returnedItems[] =
+    {
+        {1, "Laserdesignator"}
+    };
+    components[] =
+    {
+        {2, "Exile_Item_LightBulb"},
+        {1, "Exile_Item_JunkMetal"},
+        {1, "Exile_Item_Rope"}
+    };
+};
+//NEW CRAFTING RECIPIES END
+//NEW WEAPON MAGAZINE CRAFTING
+class 10Rnd_93x64_DMR_05_Mag: Exile_AbstractCraftingRecipe
+{
+    name = "Craft 15 Cyrus Magazines";
+    pictureItem = "10Rnd_93x64_DMR_05_Mag";
+    requiredInteractionModelGroup = "WorkBench";
+    returnedItems[] =
+    {
+        {15, "10Rnd_93x64_DMR_05_Mag"}
+    };
+    components[] =
+    {
+        {1, "150Rnd_93x64_Mag"}
+    };
+};
+
+class 10Rnd_338_Mag: Exile_AbstractCraftingRecipe
+{
+    name = "Craft 13 Mar-10 Magazines";
+    pictureItem = "10Rnd_338_Mag";
+    requiredInteractionModelGroup = "WorkBench";
+    returnedItems[] =
+    {
+        {13, "10Rnd_338_Mag"}
+    };
+    components[] =
+    {
+        {1, "130Rnd_338_Mag"}
+    };
+};
+
+class 10Rnd_127x54_Mag: Exile_AbstractCraftingRecipe
+{
+    name = "Craft 2 Lynx Magazines";
+    pictureItem = "5Rnd_127x108_Mag";
+    requiredInteractionModelGroup = "WorkBench";
+    returnedItems[] =
+    {
+        {2, "5Rnd_127x108_Mag"}
+    };
+    components[] =
+    {
+        {1, "10Rnd_127x54_Mag"}
+    };
+};
+
+class 30Rnd_65x39_caseless_mag: Exile_AbstractCraftingRecipe
+{
+    name = "Craft 6 MX|MXC|MXM 30er Magazines";
+    pictureItem = "30Rnd_65x39_caseless_mag";
+    requiredInteractionModelGroup = "WorkBench";
+    returnedItems[] =
+    {
+        {6, "30Rnd_65x39_caseless_mag"}
+    };
+    components[] =
+    {
+        {1, "200Rnd_65x39_cased_Box"}
+    };
+};
+
+class 20Rnd_762x51_Mag: Exile_AbstractCraftingRecipe
+{
+    name = "Craft 7 MK18|MK1|MK14 Magazines";
+    pictureItem = "20Rnd_762x51_Mag";
+    requiredInteractionModelGroup = "WorkBench";
+    returnedItems[] =
+    {
+        {7, "20Rnd_762x51_Mag"}
+    };
+    components[] =
+    {
+        {1, "150Rnd_762x51_Box"}
+    };
+};
+
+class 10Rnd_762x54_Mag: Exile_AbstractCraftingRecipe
+{
+    name = "Craft 15 Rahim Magazines";
+    pictureItem = "10Rnd_762x54_Mag";
+    requiredInteractionModelGroup = "WorkBench";
+    returnedItems[] =
+    {
+        {15, "10Rnd_762x54_Mag"}
+    };
+    components[] =
+    {
+        {1, "150Rnd_762x51_Box"}
+    };
+};
+
+class 5Rnd_127x108_APDS_Mag: Exile_AbstractCraftingRecipe
+{
+    name = "Craft 2 Lynx APSD Magazines";
+    pictureItem = "5Rnd_127x108_APDS_Mag";
+    requiredInteractionModelGroup = "WorkBench";
+    requiresFire = 1;
+    returnedItems[] =
+    {
+        {2, "5Rnd_127x108_APDS_Mag"}
+    };
+    components[] =
+    {
+        {1, "10Rnd_127x54_Mag"},
+        {1, "HandGrenade"}
+    };
+};
+//NEW MAGAZINE CRAFTING END
 };
 class CfgExileArsenal
 {
@@ -922,13 +1156,13 @@ class CfgExileArsenal
 	// UAVS
 	///////////////////////////////////////////////////////////////////////////////
 	class I_UavTerminal								{ quality = 3; price = 750; };
-	class I_UAV_01_backpack_F						{ quality = 3; price = 3000; };
+	class I_UAV_01_backpack_F						{ quality = 3; price = 5000; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Static MGs
 	///////////////////////////////////////////////////////////////////////////////
-	class O_HMG_01_weapon_F 						{ quality = 3; price = 5000; };
-	class O_HMG_01_support_F 						{ quality = 3; price = 1000; };
+	class O_HMG_01_weapon_F 						{ quality = 3; price = 50000; };
+	class O_HMG_01_support_F 						{ quality = 3; price = 10000; };
 	// Does not seem to work with HMG01, only the lower version does
 	//class O_HMG_01_support_high_F 					{ quality = 3; price = 5000; };
 
@@ -953,12 +1187,9 @@ class CfgExileArsenal
 	class optic_KHS_tan								{ quality = 3; price = 300; };
 	class optic_LRPS								{ quality = 2; price = 300; };
 	class optic_MRCO								{ quality = 1; price = 100; };
-	class optic_MRD									{ quality = 1; price = 10; };
-	//class optic_Nightstalker						{ quality = 3; price = 1000; };
+	class optic_MRD									{ quality = 1; price = 10; };					{ quality = 3; price = 1000; };
 	class optic_NVS									{ quality = 2; price = 500; };
-	class optic_SOS									{ quality = 2; price = 200; };
-	//class optic_tws									{ quality = 3; price = 1500; };
-	//class optic_tws_mg								{ quality = 3; price = 1500; };
+	class optic_SOS									{ quality = 2; price = 200; };							{ quality = 3; price = 1500; };
 	class optic_Yorris								{ quality = 1; price = 10; };
 
 
@@ -1014,13 +1245,17 @@ class CfgExileArsenal
 	class ItemRadio									{ quality = 1; price = 40; };
 	class Binocular									{ quality = 1; price = 40; };
 	class Rangefinder								{ quality = 2; price = 200; };
-	//class Laserdesignator							{ quality = 3; price = 750; };
-	//class Laserdesignator_02						{ quality = 3; price = 750; };
-	//class Laserdesignator_03						{ quality = 3; price = 750; };
-	class NVGoggles									{ quality = 2; price = 250; };
-	class NVGoggles_INDEP							{ quality = 2; price = 250; };
-	class NVGoggles_OPFOR							{ quality = 2; price = 250; };
-	class Exile_Item_XM8							{ quality = 2; price = 20; };
+	class NVGoggles									{ quality = 2; price = 100; };
+	class NVGoggles_INDEP							{ quality = 2; price = 100; };
+	class NVGoggles_OPFOR							{ quality = 2; price = 100; };
+	class Exile_Item_XM8							{ quality = 2; price = 20; };	
+	class rhsusf_ANPVS_14                           { quality = 2; price = 90; };
+	class rhsusf_ANPVS_15                           { quality = 2; price = 95; };
+	class lerca_1200_black                          { quality = 2; price = 100; };
+	class lerca_1200_tan                            { quality = 2; price = 100; };
+	class Leupold_Mk4                               { quality = 2; price = 105; };
+	class rhs_pdu4                                  { quality = 2; price = 95; };
+
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Rebreather
@@ -1190,17 +1425,31 @@ class CfgExileArsenal
 	class I_IR_Grenade								{ quality = 1; price = 50; };
 	class 1Rnd_HE_Grenade_shell						{ quality = 2; price = 70; };
 	class 3Rnd_HE_Grenade_shell						{ quality = 3; price = 70*3; };
-	class APERSBoundingMine_Range_Mag				{ quality = 3; price = 750; };
-	class APERSMine_Range_Mag						{ quality = 3; price = 600; };
-	class APERSTripMine_Wire_Mag					{ quality = 3; price = 500; };
-	class ClaymoreDirectionalMine_Remote_Mag		{ quality = 3; price = 550; };
-	class DemoCharge_Remote_Mag						{ quality = 3; price = 2000; };
-	class IEDLandBig_Remote_Mag						{ quality = 3; price = 1200; };
-	class IEDLandSmall_Remote_Mag					{ quality = 3; price = 600; };
-	class IEDUrbanBig_Remote_Mag					{ quality = 3; price = 1600; };
-	class IEDUrbanSmall_Remote_Mag					{ quality = 3; price = 800; };
-	class SatchelCharge_Remote_Mag					{ quality = 3; price = 6000; };
-	class SLAMDirectionalMine_Wire_Mag				{ quality = 3; price = 1000; };
+	class rhs_m136_mag								{ quality = 1; price = 1000; };
+	class rhs_weap_M136								{ quality = 1; price = 7000; };
+	class APERSBoundingMine_Range_Mag				{ quality = 3; price = 5000; };
+	class APERSMine_Range_Mag						{ quality = 3; price = 6000; };
+	class launch_RPG32_F							{ quality = 3; price = 10000; };
+	class RPG32_F									{ quality = 3; price = 4000; };
+	class APERSTripMine_Wire_Mag					{ quality = 3; price = 3000; };
+	class ClaymoreDirectionalMine_Remote_Mag		{ quality = 3; price = 3500; };
+	class DemoCharge_Remote_Mag						{ quality = 3; price = 7000; };
+	class IEDLandBig_Remote_Mag						{ quality = 3; price = 6000; };
+	class IEDLandSmall_Remote_Mag					{ quality = 3; price = 3000; };
+	class IEDUrbanBig_Remote_Mag					{ quality = 3; price = 8000; };
+	class IEDUrbanSmall_Remote_Mag					{ quality = 3; price = 4000; };
+	class SatchelCharge_Remote_Mag					{ quality = 3; price = 12000;};
+	class SLAMDirectionalMine_Wire_Mag				{ quality = 3; price = 7000; };
+	
+	
+	///////////////////////////////////////////////////////////////////////////////
+	// RHS
+	///////////////////////////////////////////////////////////////////////////////
+
+	class rhs_mag_m4009								{ quality = 3; price = 80; };
+	class rhs_mag_m576								{ quality = 3; price = 80; };
+	class rhs_VOG25									{ quality = 3; price = 80; };
+	class rhs_VG40SZ								{ quality = 3; price = 80; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Pistols
@@ -1222,16 +1471,16 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// Light Machine Guns
 	///////////////////////////////////////////////////////////////////////////////
-	class arifle_MX_SW_Black_F						{ quality = 2; price = 250; };
-	class arifle_MX_SW_F							{ quality = 2; price = 250; };
-	class LMG_Mk200_F								{ quality = 2; price = 300; };
-	class LMG_Zafir_F								{ quality = 2; price = 500; };
-	class MMG_01_hex_F								{ quality = 3; price = 5000; };
-	class MMG_01_tan_F								{ quality = 3; price = 5000; };
-	class MMG_02_black_F							{ quality = 3; price = 4000; };
-	class MMG_02_camo_F								{ quality = 3; price = 4000; };
-	class MMG_02_sand_F								{ quality = 3; price = 4000; };
-
+	class arifle_MX_SW_Black_F						{ quality = 2; price = 500; };
+	class arifle_MX_SW_F							{ quality = 2; price = 500; };
+	class LMG_Mk200_F								{ quality = 2; price = 500; };
+	class LMG_Zafir_F								{ quality = 2; price = 550; };
+	class MMG_01_hex_F								{ quality = 3; price = 8000; };
+	class MMG_01_tan_F								{ quality = 3; price = 8000; };
+	class MMG_02_black_F							{ quality = 3; price = 6500; };
+	class MMG_02_camo_F								{ quality = 3; price = 6500; };
+	class MMG_02_sand_F								{ quality = 3; price = 6500; };
+	
 	///////////////////////////////////////////////////////////////////////////////
 	// Assault Rifles
 	///////////////////////////////////////////////////////////////////////////////
@@ -1258,37 +1507,37 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// Sniper Rifles
 	///////////////////////////////////////////////////////////////////////////////
-	class arifle_MXM_Black_F 						{ quality = 1; price = 750; };
-	class arifle_MXM_F 								{ quality = 1; price = 750; };
-	class srifle_DMR_01_F 							{ quality = 2; price = 1000; };
-	class srifle_DMR_02_camo_F 						{ quality = 3; price = 1000; };
-	class srifle_DMR_02_F 							{ quality = 3; price = 1000; };
-	class srifle_DMR_02_sniper_F 					{ quality = 3; price = 1000; };
-	class srifle_DMR_03_F 							{ quality = 3; price = 1250; };
-	class srifle_DMR_03_khaki_F 					{ quality = 3; price = 1250; };
-	class srifle_DMR_03_multicam_F 					{ quality = 3; price = 1250; };
-	class srifle_DMR_03_tan_F 						{ quality = 3; price = 1250; };
-	class srifle_DMR_03_woodland_F 					{ quality = 3; price = 1250; };
-	class srifle_DMR_04_F 							{ quality = 3; price = 1250; };
-	class srifle_DMR_04_Tan_F 						{ quality = 3; price = 1250; };
-	class srifle_DMR_05_blk_F 						{ quality = 3; price = 1500; };
-	class srifle_DMR_05_hex_F 						{ quality = 3; price = 1500; };
-	class srifle_DMR_05_tan_f 						{ quality = 3; price = 1500; };
-	class srifle_DMR_06_camo_F 						{ quality = 3; price = 1000; };
-	class srifle_DMR_06_olive_F 					{ quality = 3; price = 1000; };
-	class srifle_EBR_F 								{ quality = 2; price = 1250; };
-	class srifle_GM6_camo_F 						{ quality = 3; price = 1500; };
-	class srifle_GM6_F 								{ quality = 3; price = 1500; };
-	class srifle_LRR_camo_F 						{ quality = 3; price = 1500; };
-	class srifle_LRR_F 								{ quality = 3; price = 1500; };
+	class arifle_MXM_Black_F 						{ quality = 1; price = 550; };
+	class arifle_MXM_F 								{ quality = 1; price = 550; };
+	class srifle_DMR_01_F 							{ quality = 2; price = 600; };
+	class srifle_DMR_02_camo_F 						{ quality = 3; price = 800; };
+	class srifle_DMR_02_F 							{ quality = 3; price = 800; };
+	class srifle_DMR_02_sniper_F 					{ quality = 3; price = 800; };
+	class srifle_DMR_03_F 							{ quality = 3; price = 750; };
+	class srifle_DMR_03_khaki_F 					{ quality = 3; price = 750; };
+	class srifle_DMR_03_multicam_F 					{ quality = 3; price = 750; };
+	class srifle_DMR_03_tan_F 						{ quality = 3; price = 750; };
+	class srifle_DMR_03_woodland_F 					{ quality = 3; price = 750; };
+	class srifle_DMR_04_F 							{ quality = 3; price = 700; };
+	class srifle_DMR_04_Tan_F 						{ quality = 3; price = 700; };
+	class srifle_DMR_05_blk_F 						{ quality = 3; price = 850; };
+	class srifle_DMR_05_hex_F 						{ quality = 3; price = 850; };
+	class srifle_DMR_05_tan_f 						{ quality = 3; price = 850; };
+	class srifle_DMR_06_camo_F 						{ quality = 3; price = 800; };
+	class srifle_DMR_06_olive_F 					{ quality = 3; price = 800; };
+	class srifle_EBR_F 								{ quality = 2; price = 700; };
+	class srifle_GM6_camo_F 						{ quality = 3; price = 9000; };
+	class srifle_GM6_F 								{ quality = 3; price = 9000; };
+	class srifle_LRR_camo_F 						{ quality = 3; price = 8500; };
+	class srifle_LRR_F 								{ quality = 3; price = 8500; };
 
 	
 
 	///////////////////////////////////////////////////////////////////////////////
 	// BIKES
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Bike_OldBike 						{ quality = 1; price = 2; };
-	class Exile_Bike_MountainBike 					{ quality = 1; price = 2; };
+	class Exile_Bike_OldBike 						{ quality = 1; price = 40; };
+	class Exile_Bike_MountainBike 					{ quality = 1; price = 50; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// QUAD BIKES
@@ -1348,7 +1597,8 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// Hummingbird
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Chopper_Hummingbird_Green			{ quality = 1; price = 6500; };
+	class Exile_Chopper_Hummingbird_Green				{ quality = 1; price = 6500; };
+
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Hummingbird (Civillian)
@@ -1440,12 +1690,14 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// Hunter
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Car_Hunter 								{ quality = 1; price = 8000; };
+	class Exile_Car_Hunter 								{ quality = 1; price = 26000; };
+	class B_MRAP_01_hmg_F 								{ quality = 1; price = 120000; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Ifrit
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Car_Ifrit 								{ quality = 1; price = 10000; };
+	class Exile_Car_Ifrit 								{ quality = 1; price = 28000; };
+	class O_MRAP_02_hmg_F 								{ quality = 1; price = 140000; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Offroad
@@ -1514,7 +1766,8 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// Strider
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Car_Strider 							{ quality = 1; price = 15000; };
+	class Exile_Car_Strider							{ quality = 1; price = 30000; };
+
 
 	///////////////////////////////////////////////////////////////////////////////
 	// SUV
@@ -1560,7 +1813,7 @@ class CfgExileArsenal
 	class Exile_Car_Van_Box_Guerilla08 					{ quality = 1; price = 2000; };
 
 	///////////////////////////////////////////////////////////////////////////////
-	// Van (Fuel) 
+	// Fuel Trucks 
 	///////////////////////////////////////////////////////////////////////////////
 	class Exile_Car_Van_Fuel_Black 						{ quality = 1; price = 4500; };
 	class Exile_Car_Van_Fuel_White 						{ quality = 1; price = 4500; };
@@ -1568,11 +1821,15 @@ class CfgExileArsenal
 	class Exile_Car_Van_Fuel_Guerilla01 				{ quality = 1; price = 4500; };
 	class Exile_Car_Van_Fuel_Guerilla02 				{ quality = 1; price = 4500; };
 	class Exile_Car_Van_Fuel_Guerilla03 				{ quality = 1; price = 4500; };
-
+	class B_Truck_01_fuel_F								{ quality = 1; price = 6500; };
+	class O_Truck_03_fuel_F								{ quality = 1; price = 6500; };
+	class O_Truck_02_fuel_F								{ quality = 1; price = 6500; };
 	///////////////////////////////////////////////////////////////////////////////
 	// Zamak
 	///////////////////////////////////////////////////////////////////////////////
 	class Exile_Car_Zamak 								{ quality = 1; price = 3000; };
+	class I_Truck_02_covered_F							{ quality = 1; price = 3000; };
+	class I_Truck_02_transport_F						{ quality = 1; price = 3000; };
 };
 class CfgExileCustomCode 
 {
@@ -1692,7 +1949,7 @@ class CfgTerritories
 	maximumRadius = 150;
 
 	// The above * 2 plus coverving the 20m you can move while placing things
-	minimumDistanceToOtherTerritories = 325; 
+	minimumDistanceToOtherTerritories = 150; 
 
 	/**
 	 * Defines the minimum distance to safe zones / trader cities where players
@@ -1704,7 +1961,7 @@ class CfgTerritories
 	 * Defines the minimum distance to spawn zones where players
 	 * cannot build territories
 	 */
-	minimumDistanceToSpawnZones = 1400;
+	minimumDistanceToSpawnZones = 1000;
 
 	// Defines the period in days where protection money needs to be payed.
 	// Every time you pay the protection money, the "due date" will be
@@ -1712,8 +1969,8 @@ class CfgTerritories
 	protectionPeriod = 10; 
 
 	// Amount of pop tabs or respect per object to pay
-	popTabAmountPerObject = 7;
-	respectAmountPerObject = 3;
+	popTabAmountPerObject = 30;
+	respectAmountPerObject = 5;
 };
 class CfgTraderCategories
 {
@@ -2356,7 +2613,6 @@ class CfgTraderCategories
 		items[] =
 		{
 			"Exile_Item_PlasticBottleFreshWater",
-			//"Exile_Item_PlasticBottleEmpty",
 			"Exile_Item_Beer",
 			"Exile_Item_Energydrink"
 		};
@@ -2374,9 +2630,6 @@ class CfgTraderCategories
 			"Exile_Magazine_Swing",
 			"Binocular",
 			"Rangefinder",
-			"Laserdesignator",
-			"Laserdesignator_02",
-			"Laserdesignator_03",
 			"NVGoggles",
 			"NVGoggles_INDEP",
 			"NVGoggles_OPFOR",
@@ -2485,14 +2738,21 @@ class CfgTraderCategories
 		{
 			"Exile_Car_Kart_Black",
 			"Exile_Car_Hatchback_Rusty1",
+			"Exile_Car_Hatchback_Rusty2",
+			"Exile_Car_Hatchback_Rusty3",
 			"Exile_Car_Hatchback_Sport_Red",
 			"Exile_Car_SUV_Red",
 			"Exile_Car_Offroad_Rusty1",
+			"Exile_Car_Offroad_Rusty2",
+			"Exile_Car_Offroad_Rusty3",
 			"Exile_Car_Offroad_Repair_Civillian",
 			"Exile_Car_Offroad_Armed_Guerilla01",
 			"Exile_Car_Strider",
 			"Exile_Car_Hunter",
-			"Exile_Car_Ifrit"
+			"Exile_Car_Ifrit",
+			"B_MRAP_01_hmg_F",
+			"I_MRAP_03_hmg_F",
+			"O_MRAP_02_hmg_F"
 		};
 	};
 
@@ -2507,7 +2767,12 @@ class CfgTraderCategories
 			"Exile_Car_Van_Fuel_Black",
 			"Exile_Car_Zamak",
 			"Exile_Car_Tempest",
-			"Exile_Car_HEMMT"
+			"Exile_Car_HEMMT",
+			"B_Truck_01_fuel_F",
+			"O_Truck_03_fuel_F",
+			"O_Truck_02_fuel_F",
+			"I_Truck_02_covered_F",
+			"I_Truck_02_transport_F"
 		};
 	};
 
