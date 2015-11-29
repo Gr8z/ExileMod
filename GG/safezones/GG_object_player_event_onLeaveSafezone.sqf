@@ -21,7 +21,6 @@ if !(GodMode) then {
 if (CanShoot) then {
 	player removeEventHandler ["Fired",ExileSafeZoneFiredEH];
 	vehicle player removeEventHandler ["Fired",ExileClientSafeZoneVehicleFiredEventHandler];
-	vehicle player addEventHandler ExileClientSafeZoneVehicleFiredEventHandler = nil;
 };
 
 if !(ProtectVehicles) then {
@@ -59,7 +58,6 @@ Gr8timer = [] spawn {
 		if !(CanShoot) then {
 			player removeEventHandler ["Fired",ExileSafeZoneFiredEH];
 			vehicle player removeEventHandler ["Fired",ExileClientSafeZoneVehicleFiredEventHandler];
-			vehicle player addEventHandler ExileClientSafeZoneVehicleFiredEventHandler = nil;
 		};
 		if (GodMode) then {
 			player allowDamage true;
