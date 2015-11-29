@@ -32,7 +32,7 @@ while {true} do
 				_pos = visiblePosition _veh;
 				_pos set[2,(_pos select 2) + _maxHeight];
 				
-				drawIcon3D['\a3\ui_f\data\map\Markers\NATO\b_inf.paa', _clr, _pos, 0, 0, 0, _name, 1, 0.03];
+				drawIcon3D['', _clr, _pos, 0, 0, 0, _name, 1, 0.03];
 			};
 		} forEach _members;
 	}];
