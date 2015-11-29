@@ -2752,7 +2752,6 @@ class CfgTraderCategories
 			"Exile_Car_Hunter",
 			"Exile_Car_Ifrit",
 			"B_MRAP_01_hmg_F",
-			"I_MRAP_03_hmg_F",
 			"O_MRAP_02_hmg_F"
 		};
 	};
