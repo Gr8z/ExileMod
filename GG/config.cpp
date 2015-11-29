@@ -1836,6 +1836,8 @@ class CfgExileCustomCode
 	ExileClient_object_player_death_startBleedingOut = "GG\overrides\GG_object_player_death_startBleedingOut.sqf";
 	ExileClient_object_player_bambiStateBegin = "GG\overrides\GG_object_player_bambiStateBegin.sqf";
 	ExileClient_gui_hud_event_onKeyDown = "GG\overrides\GG_gui_hud_event_onKeyDown.sqf";
+	ExileClient_object_player_event_onEnterSafezone = "GG\safezones\GG_object_player_event_onEnterSafezone.sqf";
+	ExileClient_object_player_event_onLeaveSafezone = "GG\safezones\GG_object_player_event_onLeaveSafezone.sqf";
 };
 class CfgExileMusic
 {
