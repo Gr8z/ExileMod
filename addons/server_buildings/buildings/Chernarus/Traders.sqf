@@ -295,7 +295,6 @@ if (isServer) then {
 	];
 
 	{
-	
 	private ["_object"];
 
     _object = (_x select 0) createVehicle [0,0,0];
