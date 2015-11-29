@@ -53,83 +53,74 @@ call ExileClient_object_trader_create;
 ///////////////////////////////////////////////////////////////////////////
 
 [
-    "Exile_Trader_Hardware",
-     "WhiteHead_17",
-    ["HubStanding_idle1"],
-    [11458.5, 11326, 0.00140381],
-    47.1875
-]
-call ExileClient_object_trader_create;
-
-[
-    "Exile_Trader_Food",
-    "GreekHead_A3_01",
-    ["HubStanding_idle2"],
-    [11495.8, 11345.7, 0.00143433],
-    256.01
-]
-call ExileClient_object_trader_create;
-
-[
     "Exile_Trader_Armory",
     "PersianHead_A3_02",
-    ["HubStanding_idle1"],
-    [11483.8, 11320.3, 0.00143433],
-    336.023
+    ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3"],
+    [11490.1,11324,0.54892],57
 ]
 call ExileClient_object_trader_create;
 
 [
     "Exile_Trader_Equipment",
     "WhiteHead_19",
-    ["HubStanding_idle3"],
-    [11473.6, 11362, 0.00146484],
-    178.881
+    ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3", "HubBriefing_scratch", "HubBriefing_stretch", "HubBriefing_think", "HubBriefing_lookAround1", "HubBriefing_lookAround2"],
+    [11473.2,11340.2,0],7
 ]
 call ExileClient_object_trader_create;
 
 [
-    "Exile_Trader_SpecialOperations",
-    "AfricanHead_02",
-    ["HubStandingUC_idle3"],
-    [11470.9, 11319.3, 0.00143433],
-    10.6717
+    "Exile_Trader_Food",
+    "GreekHead_A3_01",
+    ["AidlPercMstpSnonWnonDnon_G01", "AidlPercMstpSnonWnonDnon_G02", "AidlPercMstpSnonWnonDnon_G03", "AidlPercMstpSnonWnonDnon_G04", "AidlPercMstpSnonWnonDnon_G05", "AidlPercMstpSnonWnonDnon_G06"],
+    [11495.1,11335.5,0.180817],233
+]
+call ExileClient_object_trader_create;
+
+[
+    "Exile_Trader_Hardware",
+    "WhiteHead_17",
+    ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3"],
+    [11460.9,11342.9,0],10
 ]
 call ExileClient_object_trader_create;
 
 [
     "Exile_Trader_Office",
     "GreekHead_A3_04",
-    ["HubStandingUC_idle1", "HubStandingUC_idle2", "HubStandingUC_idle3"],
-    [11453.5, 11338.7, 0.00143433],
-    84.3003
+    ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3", "HubBriefing_scratch", "HubBriefing_stretch", "HubBriefing_think", "HubBriefing_lookAround1", "HubBriefing_lookAround2"],
+    [11468.9,11341.2,0],9
 ]
 call ExileClient_object_trader_create;
 
 [
-    "Exile_Trader_WasteDump",
-    "GreekHead_A3_01",
-    ["HubStandingUC_idle1"],
-    [11441, 11333, 0.00140381],
-    308.349
+    "Exile_Trader_SpecialOperations",
+    "AfricanHead_02",
+    ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3"],
+    [11496,11319.1,0.565857],329
 ]
 call ExileClient_object_trader_create;
 
 [
     "Exile_Trader_Vehicle",
     "WhiteHead_11",
-    ["HubStandingUC_idle1"],
-    [11444.6, 11345.8, 0.00137329],
-    263.448
+    ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3", "HubBriefing_scratch", "HubBriefing_stretch", "HubBriefing_think", "HubBriefing_lookAround1", "HubBriefing_lookAround2"],
+    [11452,11323.8,0],15
 ]
 call ExileClient_object_trader_create;
 
 [
     "Exile_Trader_VehicleCustoms",
     "WhiteHead_11",
-    ["HubStandingUC_idle2"],
-    [11437.4, 11353.6, 0.00146484],
-    236.574
+    ["AidlPercMstpSnonWnonDnon_G01", "AidlPercMstpSnonWnonDnon_G02", "AidlPercMstpSnonWnonDnon_G03", "AidlPercMstpSnonWnonDnon_G04", "AidlPercMstpSnonWnonDnon_G05", "AidlPercMstpSnonWnonDnon_G06"],
+    [11450.1,11317.8,0],189
+]
+call ExileClient_object_trader_create;
+
+[
+    "Exile_Trader_WasteDump",
+    "GreekHead_A3_01",
+    ["HubStandingUA_move1", "HubStandingUA_move2", "HubStandingUA_idle1", "HubStandingUA_idle2", "HubStandingUA_idle3"],
+    [11456.6,11344.2,0],13
 ]
 call ExileClient_object_trader_create;
 
