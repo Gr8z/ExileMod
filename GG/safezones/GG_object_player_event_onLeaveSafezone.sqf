@@ -8,6 +8,12 @@ private["_vehicle"];
 
 ExilePlayerInSafezone = false;
 
+if !(isNil "ExileClientSafeZoneUpdateThreadHandle") then 
+{
+	[ExileClientSafeZoneUpdateThreadHandle] call ExileClient_system_thread_removeTask;
+	ExileClientSafeZoneUpdateThreadHandle = nil;
+};
+
 if (alive player) then 
 {
 	["SafezoneLeave"] call ExileClient_gui_notification_event_addNotification;
@@ -38,7 +44,11 @@ if (LooseRespect) then {
 	player setVariable["Gr8Protection", true, true];
 };
 
-removeMissionEventHandler ["Draw3D",ExileSafeZoneEspEH];
+if !(isNil "ExileClientSafeZoneESPEventHandler") then 
+{
+	removeMissionEventHandler ["Draw3D", ExileClientSafeZoneESPEventHandler];
+	ExileClientSafeZoneESPEventHandler = nil;
+};
 
 if (!isNil "Gr8timer") then { terminate Gr8timer; };
 
