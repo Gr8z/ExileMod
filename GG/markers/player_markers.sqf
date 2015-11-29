@@ -11,6 +11,7 @@ while {true} do {
             _marker = createMarkerLocal [format["%1_marker",_x],visiblePosition _x];
             _marker setMarkerColorLocal "ColorBlue";
             _marker setMarkerTypeLocal "mil_start";
+            _marker setMarkerSize [1,1];
             _marker setMarkerTextLocal format["%1", _x getVariable["realname",name _x]];
             _marker setMarkerDirLocal (direction _x);
             _markers pushBack [_marker,_x];
