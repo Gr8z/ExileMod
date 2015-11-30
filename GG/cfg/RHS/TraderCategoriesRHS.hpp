@@ -407,6 +407,8 @@
 			"RHS_Ural_Fuel_MSV_01",
 			"RHS_Ural_Open_MSV_01",
 			"rhs_btr60_chdkz",
+			"usf_M108A1P2_B_M2_d_fmtv_usarmy",
+			"rhsusf_M1083A1P2_B_M2_d_open_fmtv_usarmy",
 			"rhs_pts_vmf",
 			"rhsusf_rg33_m2_d",
 			"rhs_Ural_Flat_MSV_01"
