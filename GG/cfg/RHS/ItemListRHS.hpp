@@ -386,7 +386,7 @@
 	///
 	//Btr's
 	///
-	class rhs_btr60_chdkz	 						{ quality = 1; price = 50000; };
+	class rhs_btr60_chdkz	 						{ quality = 1; price = 45000; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// URAL
