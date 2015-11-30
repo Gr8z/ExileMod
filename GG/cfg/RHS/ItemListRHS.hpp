@@ -384,9 +384,10 @@
 	class rhs_pts_vmf	 						{ quality = 1; price = 15000; };	
 	
 	///
-	//Btr's
+	//Btr's/ armor 
 	///
-	class rhs_btr60_chdkz	 						{ quality = 1; price = 20000; };
+	class rhs_btr60_chdkz	 						{ quality = 1; price = 30000; };
+	class rhsusf_m113_usarmy	 						{ quality = 1; price = 13500; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// URAL
