@@ -1637,6 +1637,7 @@ class CfgExileArsenal
 	class Exile_Chopper_Orca_CSAT								{ quality = 1; price = 7000; };
 	class Exile_Chopper_Orca_Black								{ quality = 1; price = 7000; };
 	class Exile_Chopper_Orca_BlackCustom						{ quality = 1; price = 7000; };
+	class O_Heli_Light_02_v2_F									{ quality = 1; price = 200000; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Taru
