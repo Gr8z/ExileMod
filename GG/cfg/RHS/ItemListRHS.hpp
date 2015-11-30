@@ -379,7 +379,7 @@
 	class rhs_uaz_open_vmf	 						{ quality = 1; price = 2000; };
 
 	/////////
-	///Lifty trucky thingy tank?
+	// Lifty trucky thingy tank
 	/////////
 	class rhs_pts_vmf	 						{ quality = 1; price = 15000; };	
 	///////////////////////////////////////////////////////////////////////////////
