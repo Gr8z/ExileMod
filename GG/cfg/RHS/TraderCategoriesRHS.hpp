@@ -406,7 +406,6 @@
 			"RHS_Ural_MSV_01",
 			"RHS_Ural_Fuel_MSV_01",
 			"RHS_Ural_Open_MSV_01",
-			"rhs_pts_vmf",
 			"rhsusf_rg33_m2_d",
 			"rhs_Ural_Flat_MSV_01"
 		};
