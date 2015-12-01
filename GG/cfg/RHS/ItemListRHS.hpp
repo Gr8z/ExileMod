@@ -395,11 +395,7 @@
 	class rhs_Ural_Flat_MSV_01 						{ quality = 1; price = 2500; };
 	class rhsusf_M108A1P2_B_M2_d_fmtv_usarmy 		{ quality = 1; price = 30000; };
 	class rhsusf_M1083A1P2_B_M2_d_open_fmtv_usarmy 	{ quality = 1; price = 25000; };
-	///
-	//BTR/Armor
-	///
-	class rhs_btr60_chdkz 	{ quality = 1; price = 50000; };
-	
+
 	///////////////////////////////////////////////////////////////////////////////
 	// CH-47
 	//////////////////////////////////////////////////////////////////////////////
