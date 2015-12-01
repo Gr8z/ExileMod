@@ -428,7 +428,6 @@
 			"rhs_UH60M_MEV2_d",
 			"rhs_Mi8mt_vvs",
 			"rhs_Mi8mt_cargo_vvs",
-			"RHS_UH1Y",
 			"O_Heli_Light_02_v2_F",
 			"rhs_UH1Y_unarmed"
 		};
