@@ -393,7 +393,7 @@
 	class RHS_Ural_Fuel_MSV_01						{ quality = 1; price = 3000; };
 	class RHS_Ural_Open_MSV_01						{ quality = 1; price = 3000; };
 	class rhs_Ural_Flat_MSV_01 						{ quality = 1; price = 2500; };
-	class rhsusf_M108A1P2_B_M2_d_fmtv_usarmy 		{ quality = 1; price = 30000; };
+	class rhsusf_M1083A1P2_B_M2_d_fmtv_usarmy 		{ quality = 1; price = 30000; };
 	class rhsusf_M1083A1P2_B_M2_d_open_fmtv_usarmy 	{ quality = 1; price = 25000; };
 	///
 	//BTR/Armor
