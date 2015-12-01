@@ -409,6 +409,7 @@
 			"rhsusf_M108A1P2_B_M2_d_fmtv_usarmy",
 			"rhsusf_M1083A1P2_B_M2_d_open_fmtv_usarmy",
 			"rhs_pts_vmf",
+			"rhs_btr60_chdkz",
 			"rhsusf_rg33_m2_d",
 			"rhs_Ural_Flat_MSV_01"
 		};
