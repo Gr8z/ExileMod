@@ -122,8 +122,7 @@ _adminUIDandAccess =
 		]
 	],
 	[	 /* Admins */
-		['76561198084864687', //Kozak
-		 '76561198129049369', //Zatley
+		['76561198029881052', //Dirk Verite
 		 '76561198067566966', //Snipernosniping
 		 '76561198163835069', //Snipernosniping
 		 '76561198001066546', //Meowmix
@@ -133,6 +132,7 @@ _adminUIDandAccess =
 		 '76561198029881052', //Dirk Verite
 		 '76561198042335279', //Dean Winchester
 		 '76561198135739831', //Daveyy
+		 '76561198084864687', //Kozak
 		 //Add UID's Above - Don't forget the comma!
 		 '0'],
 		[
