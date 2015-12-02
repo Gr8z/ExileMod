@@ -132,7 +132,6 @@ _adminUIDandAccess =
 		 '76561198029881052', //Dirk Verite
 		 '76561198042335279', //Dean Winchester
 		 '76561198135739831', //Daveyy
-		 '76561198084864687', //Kozak
 		 //Add UID's Above - Don't forget the comma!
 		 '0'],
 		[
