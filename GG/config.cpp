@@ -1839,8 +1839,8 @@ class CfgExileCustomCode
 	ExileClient_gui_hud_event_onKeyDown = "GG\overrides\GG_gui_hud_event_onKeyDown.sqf";
 	ExileClient_object_player_event_onEnterSafezone = "GG\safezones\GG_object_player_event_onEnterSafezone.sqf";
 	ExileClient_object_player_event_onLeaveSafezone = "GG\safezones\GG_object_player_event_onLeaveSafezone.sqf";
-	ExileClient_object_player_respawn = "GG\safezones\GG_object_player_respawn.sqf";
-	ExileClient_object_player_spawn = "GG\safezones\GG_object_player_spawn.sqf";
+	ExileClient_object_player_respawn = "GG\overrides\GG_object_player_respawn.sqf";
+	ExileClient_object_player_spawn = "GG\overrides\GG_object_player_spawn.sqf";
 };
 class CfgExileMusic
 {
