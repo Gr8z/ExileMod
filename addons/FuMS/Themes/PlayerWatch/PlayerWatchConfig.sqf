@@ -1,7 +1,7 @@
 // PlayerWatch.sqf
 // Horbin
 // 10/26/2015
-FuMS_PlayerWatch_Enable = true; // set to 'false' to turn off PlayerWatch missions
+FuMS_PlayerWatch_Enable = false; // set to 'false' to turn off PlayerWatch missions
 FuMS_PlayerWatch_CheckTime = 1200;  // default 20 mins. time, in seconds, between checks
 FuMS_PlayerWatch_CheckChance = 50; // chance of a player mission spawning
 FuMS_PlayerWatch_DespawnRange = 1500; // distance, in meters,player must get away from his encounter before it despawns.
