@@ -143,7 +143,7 @@ _adminUIDandAccess =
 			'Remove Gear','Heal','Restore','Flip Vehicle','Force Disconnect',
 			'infiSTAR Player ESP','infiSTAR Dead ESP','infiSTAR AI ESP',
 			'infiSTAR MapIcons','Vehicle Marker','Flag Marker (with radius)','DeadPlayer Marker',
-			'God Mode','Vehicle God Mode','Lower Terrain','Vehboost','Stealth / Invisible',
+			'God Mode','Vehicle God Mode','Lower Terrain','Stealth / Invisible',
 			'Disable Announces','Mass Message','Spawn Support-Boxes',
 			'Spawn Ammo','BIS FreeRoam Cam (works with ESP)','FreeRoam Cam (does not work with ESP)',
 			'Request Steam Name','showinfo','Add / Remove Money','Add / Remove Respect'
