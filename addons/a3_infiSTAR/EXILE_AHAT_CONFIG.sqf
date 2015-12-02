@@ -149,8 +149,7 @@ _adminUIDandAccess =
 		]
 	],
 	[	/* Mods */
-		['76561198126348047', //Mr. Bandit
-		 '76561198137880291', //Xenon
+		['76561198137880291', //Xenon
 		 '76561198056028211', //Nasty
 		 //Add UID's Above - Don't forget the comma!
 		 '0'],
