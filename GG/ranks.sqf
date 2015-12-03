@@ -32,24 +32,28 @@ switch (true) do
    {
 
 	_rank = "Tyrant";  
+  call ExileClient_object_player_bambiStateEnd;
 	 [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,40000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
    };
    
     case (_respect > 39999 && _respect < 49999):
    {
 	_rank = "Triggerman";  
+  call ExileClient_object_player_bambiStateEnd;
 	 [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,50000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
    };
    
     case (_respect > 49999 && _respect < 69999):
    {
 	_rank = "Trooper";  
+  call ExileClient_object_player_bambiStateEnd;
 	 [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,70000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
    };
    
     case (_respect > 69999 && _respect < 89999):
    {
 	_rank = "High Executioner";  
+  call ExileClient_object_player_bambiStateEnd;
 	 [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,90000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
    };
    
@@ -57,12 +61,14 @@ switch (true) do
    {
 
 	_rank = "Reaper";  
+  call ExileClient_object_player_bambiStateEnd;
 	 [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,150000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
    };
 
      case (_respect > 149999):
    {
 	_rank = "Supreme Overlord";  
+  call ExileClient_object_player_bambiStateEnd;
 	 [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/>",_rank],0,0,10,0] spawn bis_fnc_dynamictext;
    };
     default
