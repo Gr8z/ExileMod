@@ -104,6 +104,7 @@ _adminUIDandAccess =
 		 '76561198195305425', //Shahzad
 		 '76561198115492831', //BigEgg
 		 '76561198137100220', //Deadskin
+		 '76561198001066546', //Meowmix
 		 //Add UID's Above - Don't forget the comma!
 		 '0'],
 		[
@@ -124,8 +125,7 @@ _adminUIDandAccess =
 	[	 /* Admins */
 		['76561198029881052', //Dirk Verite
 		 '76561198067566966', //Snipernosniping
-		 '76561198163835069', //Snipernosniping
-		 '76561198001066546', //Meowmix
+		 '76561198163835069', //Snipernosniping		 
 		 '76561198196195669', //Shroudy
 		 '76561198084154973', //Mr. Bandit
 		 '76561197960289679', //TangoWhiskey
