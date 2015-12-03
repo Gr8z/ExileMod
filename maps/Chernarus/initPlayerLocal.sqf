@@ -128,7 +128,6 @@ call ExileClient_object_trader_create;
 ////////////////////////// BASH TRADER
 ///////////////////////////////////////////////////////////////////////////
 
-call ExileClient_object_trader_create;
 _workBench = "Land_Workbench_01_F" createVehicleLocal [0,0,0];
 _workBench setDir 260;
 _workBench setPosATL [4054.45,11669.7,0];
@@ -234,7 +233,7 @@ call ExileClient_object_trader_create;
     ["AidlPercMstpSnonWnonDnon_G01", "AidlPercMstpSnonWnonDnon_G02", "AidlPercMstpSnonWnonDnon_G03", "AidlPercMstpSnonWnonDnon_G04", "AidlPercMstpSnonWnonDnon_G05", "AidlPercMstpSnonWnonDnon_G06"],
     [4070.2,11659.8,0],48.6363
 ]
-
+call ExileClient_object_trader_create;
 
 ///////////////////////////////////////////////////////////////////////////
 ////////////////////////// STARY TRADER
