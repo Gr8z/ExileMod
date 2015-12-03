@@ -3703,7 +3703,6 @@ class CfgSettings
 			"Exile_Item_XM8",
 			"ItemRadio",
 			"Exile_Item_PlasticBottleFreshWater",
-			"H_Cap_red"
 		};
 
 		/**
