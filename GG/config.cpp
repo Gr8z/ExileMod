@@ -1841,6 +1841,7 @@ class CfgExileCustomCode
 	ExileClient_object_player_event_onLeaveSafezone = "GG\safezones\GG_object_player_event_onLeaveSafezone.sqf";
 	ExileClient_object_player_respawn = "GG\overrides\GG_object_player_respawn.sqf";
 	ExileClient_object_player_spawn = "GG\overrides\GG_object_player_spawn.sqf";
+	ExileClient_gui_selectSpawnLocation_show = "GG\overrides\GG_gui_selectSpawnLocation_show.sqf";
 };
 class CfgExileMusic
 {
