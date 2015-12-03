@@ -26,8 +26,10 @@ if !(GodMode) then {
 
 if (CanShoot) then {
 	player removeEventHandler ["Fired",ExileSafeZoneFiredEH];
-	vehicle player removeEventHandler ["Fired",ExileClientSafeZoneVehicleFiredEventHandler];
+	_vehicle = vehicle player;
+	if (!isNil ExileClientSafeZoneVehicleFiredEventHandler) then {vehicle player removeEventHandler ["Fired",ExileClientSafeZoneVehicleFiredEventHandler];};
 };
+	
 
 if !(ProtectVehicles) then {
 	_vehicle = vehicle player;
@@ -67,7 +69,7 @@ Gr8timer = [] spawn {
 	if (!ExilePlayerInSafezone) then {
 		if !(CanShoot) then {
 			player removeEventHandler ["Fired",ExileSafeZoneFiredEH];
-			vehicle player removeEventHandler ["Fired",ExileClientSafeZoneVehicleFiredEventHandler];
+			if (!isNil ExileClientSafeZoneVehicleFiredEventHandler) then {vehicle player removeEventHandler ["Fired",ExileClientSafeZoneVehicleFiredEventHandler];};
 		};
 		if (GodMode) then {
 			player allowDamage true;
