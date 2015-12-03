@@ -443,7 +443,18 @@
 			"rhs_mine_tm62m_mag",
 			"rhsusf_m112_mag",
 			"rhsusf_m112x4_mag",
+			"rhs_rpg7_PG7VL_mag",
 			"rhs_mine_m19_mag"
+		};
+	};
+	
+		class RPG's
+	{
+		name = "RPG";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] =
+		{
+		"rhs_weap_rpg7"
 		};
 	};
 	
