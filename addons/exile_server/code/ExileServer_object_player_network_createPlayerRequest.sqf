@@ -95,7 +95,6 @@ switch (true) do
 	_bambiPlayer addItem "Exile_Item_BBQSandwich";
 	_bambiPlayer addItem "Exile_Item_PlasticBottleFreshWater";
 	_bambiPlayer addItem "Exile_Item_InstaDoc";
-	call ExileClient_object_player_bambiStateEnd;
 
 //	 "Your rank is Tyrant";
    };
@@ -116,7 +115,6 @@ switch (true) do
 	_bambiPlayer addItem "Exile_Item_BBQSandwich";
 	_bambiPlayer addItem "Exile_Item_PlasticBottleFreshWater";
 	_bambiPlayer addItem "Exile_Item_InstaDoc";
-	call ExileClient_object_player_bambiStateEnd;
       
 //	"Your rank is Triggerman";
    };
@@ -138,7 +136,6 @@ switch (true) do
 	_bambiPlayer addItem "Exile_Item_BBQSandwich";
 	_bambiPlayer addItem "Exile_Item_PlasticBottleFreshWater";
 	_bambiPlayer addItem "Exile_Item_InstaDoc";
-	call ExileClient_object_player_bambiStateEnd;
 //	 "Your rank is Trooper";
    };
    
@@ -159,7 +156,6 @@ switch (true) do
 	_bambiPlayer addItem "Exile_Item_BBQSandwich";
 	_bambiPlayer addItem "Exile_Item_PlasticBottleFreshWater";
 	_bambiPlayer addItem "Exile_Item_InstaDoc";
-	call ExileClient_object_player_bambiStateEnd;
 //  "Your rank is High Executioner";
    };
    
@@ -182,7 +178,6 @@ switch (true) do
 	_bambiPlayer addItem "Exile_Item_BBQSandwich";
 	_bambiPlayer addItem "Exile_Item_PlasticBottleFreshWater";
 	_bambiPlayer addItem "Exile_Item_InstaDoc";
-	call ExileClient_object_player_bambiStateEnd;
 //	 "Your rank is Reaper";
    };
 
@@ -208,7 +203,6 @@ switch (true) do
 	_bambiPlayer addItem "Exile_Item_BBQSandwich";
 	_bambiPlayer addItem "Exile_Item_PlasticBottleFreshWater";
 	_bambiPlayer addItem "Exile_Item_InstaDoc";
-	call ExileClient_object_player_bambiStateEnd;
 //	"Your rank is Supreme Overlord";
    };
     default
