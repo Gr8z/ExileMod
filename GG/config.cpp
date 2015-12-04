@@ -1842,6 +1842,7 @@ class CfgExileCustomCode
 	ExileClient_object_player_respawn = "GG\overrides\GG_object_player_respawn.sqf";
 	ExileClient_object_player_spawn = "GG\overrides\GG_object_player_spawn.sqf";
 	ExileClient_gui_selectSpawnLocation_show = "GG\overrides\GG_gui_selectSpawnLocation_show.sqf";
+	ExileClient_gui_xm8_slide_territory_event_onTerritoryDropdownSelectionChanged = "GG\overrides\GG_gui_xm8_slide_territory_event_onTerritoryDropdownSelectionChanged.sqf";
 };
 class CfgExileMusic
 {

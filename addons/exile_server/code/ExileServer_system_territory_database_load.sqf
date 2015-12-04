@@ -3,7 +3,7 @@
  * www.exilemod.com
  * © 2015 Exile Mod Team
  *
- * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
+ * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
@@ -13,11 +13,11 @@ _data = format ["loadTerritory:%1", _territoryID] call ExileServer_system_databa
 _id = _data select 0;
 _owner = _data select 1;
 _name = _data select 2;
-_position = 
+_position =
 [
-	_data select 3,
-	_data select 4,
-	_data select 5
+        _data select 3,
+        _data select 4,
+        _data select 5
 ];
 _radius = _data select 6;
 _level = _data select 7;
@@ -38,5 +38,5 @@ _flagObject setVariable ["ExileTerritorySize", _radius, true];
 _flagObject setVariable ["ExileTerritoryBuildRights", _buildRights, true];
 _flagObject setVariable ["ExileTerritoryModerators", _moderators, true];
 _flagObject setVariable ["ExileTerritoryLevel", _level, true];
-_flagObject setVariable ["ExileTerritoryLastPayed",_lastPayed];
+_flagObject setVariable ["ExileTerritoryLastPayed", _lastPayed, true];
 true
