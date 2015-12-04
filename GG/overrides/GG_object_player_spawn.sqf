@@ -42,6 +42,7 @@ switch (_spawnType) do
 		ExileJobParachuteFix = [0.25, ExileClient_object_player_parachuteFix, [], true] call ExileClient_system_thread_addtask;
 	};
 };
+player enableFatigue false;
 player enableStamina false;
 player allowSprint true;
 player setCustomAimCoef 0.1;

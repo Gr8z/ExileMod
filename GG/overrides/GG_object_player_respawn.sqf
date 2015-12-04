@@ -28,6 +28,8 @@ ExileClientPlayerAttributesASecondAgo set [2, ExileClientPlayerAttributes select
 ExileClientPlayerAttributesASecondAgo set [3, ExileClientPlayerAttributes select 3];
 ExileClientPlayerAttributesASecondAgo set [4, ExileClientPlayerAttributes select 4];
 ExileClientPlayerIsSpawned = true;
+
+player enableFatigue false;
 player enableStamina false;
 player allowSprint true;
 player setCustomAimCoef 0.1;
