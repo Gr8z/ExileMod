@@ -5,4 +5,5 @@ if (isServer) then {
 	fn_getBuildingstospawnLoot = compile preProcessFileLineNumbers "GG\loot\fn_LSgetBuildingstospawnLoot.sqf";
     LSdeleter = compile preProcessFileLineNumbers "GG\loot\LSdeleter.sqf";
     execVM "GG\loot\Lootspawner.sqf";
+    execVM "SearchAndReplace.sqf";
 };
