@@ -48,7 +48,10 @@ try
         };
         if (_vehicleClass isKindOf "Ship") then
         {
-                _position = [(getPosATL _playerObject), 80, 10] call ExileClient_util_world_findWaterPosition;
+               _nObject = nearestObject [(getPosATL _playerObject), "HeliHEmpty"];
+	    	if ( isNull _nObject ) then { throw 13; };
+	    	_position = getPos _nObject;
+	    	_position set [2, 0.0];
                 _vehicleObject = [_vehicleClass, _position, (random 360), true, _pinCode] call ExileServer_object_vehicle_createPersistentVehicle;
                 _vehicleObject allowDamage false;
                 _vehicleObject removeAllEventHandlers "HandleDamage";
@@ -57,39 +60,25 @@ try
         }
         else
         {
-                if (_vehicleClass isKindOf "Air") then
-                {
-                        _position2d =
-                        [
-                            (getPosATL _playerObject),
-                            5,                  
-                            175,                       
-                            40,                
-                            0,                  
-                            9999,              
-                            0                  
-                        ]
-                        call BIS_fnc_findSafePos;
-                }
-                else
-                {
-                        _position2d =
-                        [
-                            (getPosATL _playerObject),
-                            5,                  
-                            80,                        
-                            8,                
-                            0,                  
-                            9999,              
-                            0                  
-                        ]
-                        call BIS_fnc_findSafePos;
-                };
+                if (_vehicleClass isKindOf "Air") then 
+		    {
+		      _nObject = nearestObject [(getPosATL _playerObject), "HeliH"];
+		      if ( isNull _nObject ) then { throw 13; };
+		      _position3d = getPos _nObject;
+		      _position2d = [_position3d select 0, _position3d select 1];
+		    }
+		    else 
+		    {
+		      _nObject = nearestObject [(getPosATL _playerObject), "HeliHEmpty"];
+		      if ( isNull _nObject ) then { throw 13; };
+		      _position3d = getPos _nObject;
+		      _position2d = [_position3d select 0, _position3d select 1];
+		    };
                 if(count _position2d isEqualTo 3)then
                 {
                         throw 13;
                 };
-                _vehicleObject = [_vehicleClass, _position2d, (random 360), true, _pinCode] call ExileServer_object_vehicle_createPersistentVehicle;
+                _vehicleObject = [_vehicleClass, [0,0,1000], (random 360), true, _pinCode] call ExileServer_object_vehicle_createPersistentVehicle;
                 _vehicleObject allowDamage false;
                 _vehicleObject removeAllEventHandlers "HandleDamage";
                 _vehicleObject addEventHandler["HandleDamage",{false}];
