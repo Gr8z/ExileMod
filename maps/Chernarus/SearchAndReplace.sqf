@@ -51,7 +51,7 @@ for "_i" from 0 to(count myBuildings-1) do {
     
 
     {
-        hideObject  _x;
+        hideObjectGlobal  _x;
     
         _myReplacement = createVehicle [_ReplacementBuilding, getPosATL _x, [], 0, "CAN_COLLIDE"];
         _myReplacement setDir (getdir _x) + _DirectionOffset;
