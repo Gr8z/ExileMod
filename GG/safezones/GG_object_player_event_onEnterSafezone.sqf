@@ -9,6 +9,7 @@ if (!isNil "Gr8timer") then { terminate Gr8timer; };
 if (!isNil "ExileSafeZoneFiredEH") then { player removeEventHandler ["Fired",ExileSafeZoneFiredEH]; };
 
 ["SafezoneEnter"] call ExileClient_gui_notification_event_addNotification;
+["Whoops",["All vehicles inside safezones will be deleted after restart."]] call ExileClient_gui_notification_event_addNotification;
 
 ExilePlayerInSafezone = true;
 ExileClientSafeZoneESPEventHandler = addMissionEventHandler ["Draw3D", {20 call ExileClient_gui_safezone_safeESP}];
