@@ -3,7 +3,7 @@
  * www.exilemod.com
  * © 2015 Exile Mod Team
  *
- * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
+ * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
@@ -15,4 +15,4 @@ _timePayedMinutes = _timePayed call ExileServer_util_time_toMinutes;
 _maintenancePeriod = getNumber(missionConfigFile >> "CfgTerritories" >> "protectionPeriod");
 _maintenancePeriodMinutes = _maintenancePeriod * 1440;
 _nukeTime = _timePayedMinutes + _maintenancePeriodMinutes;
-_flag setVariable ["ExileTerritoryMaintenanceDue", _timePayed call ExileServer_util_time_toArma, true]; // Changed _nukeTime to _timePayed
+_flag setVariable ["ExileTerritoryMaintenanceDue", _nukeTime call ExileServer_util_time_toArma, true];
