@@ -49,9 +49,9 @@ try
         if (_vehicleClass isKindOf "Ship") then
         {
                _nObject = nearestObject [(getPosATL _playerObject), "HeliHEmpty"];
-	    	if ( isNull _nObject ) then { throw 13; };
-	    	_position = getPos _nObject;
-	    	_position set [2, 0.0];
+	    	    if ( isNull _nObject ) then { throw 13; };
+    	    	_position = getPos _nObject;
+    	    	_position set [2, 0.0];
                 _vehicleObject = [_vehicleClass, _position, (random 360), true, _pinCode] call ExileServer_object_vehicle_createPersistentVehicle;
                 _vehicleObject allowDamage false;
                 _vehicleObject removeAllEventHandlers "HandleDamage";
