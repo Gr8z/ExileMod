@@ -10,7 +10,7 @@ waitUntil
 	!isNull _display
 };
 _topTextCTRL1 = _display displayCtrl 1001;
-_topTextCTRL1 ctrlSetText "MGT Exile Mod";
+_topTextCTRL1 ctrlSetText "[GG] Exile Mod";
 _topTextCTRL2 = _display displayCtrl 1002;
 _topTextCTRL2 ctrlSetText format["Welcome %1 (%2)",profileNameSteam,profileName];
 _spawnButton = _display displayCtrl 24003;
