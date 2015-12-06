@@ -32,14 +32,11 @@ if (isServer) then {
 		["Land_BagBunker_Tower_F",[7677.7,16171,0],284.727,[[-0.967147,0.254218,0],[0,0,1]],false]
 	];
 	{
-		private ["_obj"];
-		_obj = createVehicle [_x select 0, [0,0,0], [], 0, "CAN_COLLIDE"];
-		if (_x select 4) then {
-			_obj setDir (_x select 2);
-			_obj setPos (_x select 1);
-		} else {
-			_obj setPosATL (_x select 1);
-			_obj setVectorDirAndUp (_x select 3);
-		};
+	private ["_object"];
+
+    _object = (_x select 0) createVehicle [0,0,0];
+    _object setDir (_x select 2);
+    _object setPosATL (_x select 1);
+    _object enableSimulation false; // :)
 	} foreach _objs;
 };
