@@ -1,4 +1,4 @@
-[10,true,true,16] execFSM "GG\timeModule.fsm";
+//[10,true,true,16] execFSM "GG\timeModule.fsm";
 [] execVM "GG\personalVehicles\init.sqf";
 
 if (isServer) then {
