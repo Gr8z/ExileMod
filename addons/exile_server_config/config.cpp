@@ -3305,9 +3305,9 @@ class CfgLootTables
                         {384.749999999998, "TRYK_H_ghillie_top"},
                         {384.849999999998, "V_PlateCarrierL_CTRG"},
                         {384.899999999998, "optic_NVS"},
-                        {384.909999999998, "optic_tws"},
+                        //{384.909999999998, "optic_tws"},
                         {384.919999999998, "optic_Nightstalker"},
-                        {384.929999999998, "optic_tws_mg"}
+                        //{384.929999999998, "optic_tws_mg"}
                 };
         };
  
