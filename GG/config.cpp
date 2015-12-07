@@ -822,6 +822,32 @@ class 5Rnd_127x108_APDS_Mag: Exile_AbstractCraftingRecipe
         {1, "HandGrenade"}
     };
 };
+class SpillDirtyWater: Exile_AbstractCraftingRecipe
+{
+	name = "Spill Dirty Water";
+	pictureItem = "Exile_Item_PlasticBottleEmpty";
+	returnedItems[] =
+	{
+		{1, "Exile_Item_PlasticBottleEmpty"}
+	};
+	components[] =
+	{
+		{1, "Exile_Item_PlasticBottleDirtyWater"}
+	};
+};
+class SpillSaltWater: Exile_AbstractCraftingRecipe
+{
+	name = "Spill Salt Water";
+	pictureItem = "Exile_Item_PlasticBottleEmpty";
+	returnedItems[] =
+	{
+		{1, "Exile_Item_PlasticBottleEmpty"}
+	};
+	components[] =
+	{
+		{1, "Exile_Item_PlasticBottleSaltWater"}
+	};
+};
 //NEW MAGAZINE CRAFTING END
 };
 class CfgExileArsenal
