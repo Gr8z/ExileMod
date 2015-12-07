@@ -107,7 +107,7 @@ FuMS_W_OpticsLv1 = ["optic_Aco","optic_ACO_grn","optic_ACO_grn_smg","optic_Aco_s
 	"optic_Holosight_smg","optic_Yorris","optic_MRD","optic_MRCO"];
 FuMS_W_OpticsLv2 = ["optic_LRPS","optic_NVS","optic_SOS"];
 FuMS_W_OpticsLv3 = ["optic_AMS","optic_AMS_khk","optic_AMS_snd","optic_DMS","optic_Hamr","optic_KHS_blk",
-	"optic_KHS_hex","optic_KHS_old","optic_KHS_tan","optic_Nightstalker",];
+	"optic_KHS_hex","optic_KHS_old","optic_KHS_tan","optic_Nightstalker"];
 FuMS_W_Optics_ALL = FuMS_W_OpticsLv1 + FuMS_W_OpticsLv2 + FuMS_W_OpticsLv3;
 FuMS_W_Attachments = FuMS_W_Pointer + FuMS_W_Bipod + FuMS_W_Muzzle + FuMS_W_Optics_ALL;	
 
