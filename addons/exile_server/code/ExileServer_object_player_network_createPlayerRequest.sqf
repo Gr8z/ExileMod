@@ -195,7 +195,7 @@ switch (true) do
 	for "_i" from 1 to 2 do {_bambiPlayer addItemToUniform "11Rnd_45ACP_Mag";};
 	_bambiPlayer addWeaponGlobal "hgun_Pistol_heavy_01_F";
 	_bambiPlayer addHandgunItem "muzzle_snds_acp";
-	_bambiPlayer addHandgunItem "optic_MRD";
+	_bambiPlayer addHandgunItem "optic_Aco";
 	_bambiPlayer addItem "Exile_Item_Matches";
 	_bambiPlayer linkItem "ItemGPS";
 	_bambiPlayer addWeaponGlobal "Exile_Melee_Axe";
