@@ -1393,8 +1393,8 @@ class CfgLootTables
                         {236.350000000001, "U_I_G_resistanceLeader_F"},
                         {236.400000000001, "optic_NVS"},
                         {236.450000000001, "V_I_G_resistanceLeader_F"},
-                        {236.460000000001, "optic_Nightstalker"},
-                        {236.470000000001, "optic_tws"}
+                        {236.460000000001, "optic_Nightstalker"}
+                        //{236.470000000001, "optic_tws"}
                 };
         };
  
@@ -1934,7 +1934,7 @@ class CfgLootTables
                         {219.300000000001, "U_NikosAgedBody"},
                         {219.350000000001, "U_NikosBody"},
                         {219.360000000001, "optic_Nightstalker"},
-                        {219.370000000001, "optic_tws"}
+                        //{219.370000000001, "optic_tws"}
                 };
         };
  
