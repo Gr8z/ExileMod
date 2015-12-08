@@ -3,11 +3,11 @@ if (isServer) then {
 	_objs = [
 
 		// HELI PADS
-		["HeliHEmpty",[100.0620422,14597.916016,0],0,0,0,false],
-		["HeliHEmpty",[2914.93042,18224.203125,0],0,0,0,false],
-		["HeliHEmpty",[23293.931641,24207.632813,0],0,0,0,false],
-		["HeliHEmpty",[20458.519531,11021.273438,0],0,0,0,false],
-		["HeliH",[14625.606445,16751.205078,0],0,0,0,false],
+		["Land_HelipadEmpty_F",[100.0620422,14597.916016,0],0,0,0,false],
+		["Land_HelipadEmpty_F",[2914.93042,18224.203125,0],0,0,0,false],
+		["Land_HelipadEmpty_F",[23293.931641,24207.632813,0],0,0,0,false],
+		["Land_HelipadEmpty_F",[20458.519531,11021.273438,0],0,0,0,false],
+		["Land_HelipadSquare_F",[14625.606445,16751.205078,0],0,0,0,false],
 		
 		// Terminal
 		["Land_CarService_F",[14618.7,16877.4,0.900759],131.363,[[0.750538,-0.660827,0],[0,-0,1]],false],
