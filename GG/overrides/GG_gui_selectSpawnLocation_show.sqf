@@ -47,8 +47,8 @@ _listItemIndex = _listBox lbAdd "Sniper";
 _listItemIndex = _listBox lbAdd "Soldier";
 _listItemIndex = _listBox lbAdd "Medic";
 _listItemIndex = _listBox lbAdd "Engineer";
-if(isNil"donors")exitWith{systemChat 'Donor Loadouts Coming Soon !';true};
-if!((getPlayerUID player) in donors)exitWith{systemChat 'Donor Loadouts Coming Soon !';true};
+if(isNil"donors")exitWith{systemChat 'Donor Loadouts Are Never Coming :)-Ghost !';true};
+if!((getPlayerUID player) in donors)exitWith{systemChat 'Donor Loadouts Are Never Coming :)-Ghost !';true};
 FNC_GET_ACTUAL_LOADOUT = {
 	waitUntil {typeOf player isEqualTo 'Exile_Unit_Player'};
 	uiSleep 3;
