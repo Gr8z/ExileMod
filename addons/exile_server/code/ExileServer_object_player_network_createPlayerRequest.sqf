@@ -191,11 +191,11 @@ switch (true) do
  	_bambiPlayer addWeaponGlobal "rhs_weap_m4_carryhandle";
 	_bambiPlayer addPrimaryWeaponItem "acc_flashlight";
 	_bambiPlayer addPrimaryWeaponItem "rhsusf_acc_nt4_black";
-	_bambiPlayer addPrimaryWeaponItem "rhsusf_acc_M2A1";
+	_bambiPlayer addPrimaryWeaponItem "optic_Aco";
 	for "_i" from 1 to 2 do {_bambiPlayer addItemToUniform "11Rnd_45ACP_Mag";};
 	_bambiPlayer addWeaponGlobal "hgun_Pistol_heavy_01_F";
 	_bambiPlayer addHandgunItem "muzzle_snds_acp";
-	_bambiPlayer addHandgunItem "optic_Aco";
+	_bambiPlayer addHandgunItem "optic_MRD";
 	_bambiPlayer addItem "Exile_Item_Matches";
 	_bambiPlayer linkItem "ItemGPS";
 	_bambiPlayer addWeaponGlobal "Exile_Melee_Axe";
