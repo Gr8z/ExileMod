@@ -1463,7 +1463,7 @@ class CfgExileArsenal
 	class IEDLandSmall_Remote_Mag					{ quality = 3; price = 3000; };
 	class IEDUrbanBig_Remote_Mag					{ quality = 3; price = 8000; };
 	class IEDUrbanSmall_Remote_Mag					{ quality = 3; price = 4000; };
-	class SatchelCharge_Remote_Mag					{ quality = 3; price = 12000;};
+	class SatchelCharge_Remote_Mag					{ quality = 3; price = 10000;};
 	class SLAMDirectionalMine_Wire_Mag				{ quality = 3; price = 7000; };
 	
 	
