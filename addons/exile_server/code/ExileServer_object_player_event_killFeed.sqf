@@ -1,4 +1,6 @@
 /**
+ * ExileServer_object_player_event_killFeed
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team

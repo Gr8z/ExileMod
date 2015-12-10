@@ -1,4 +1,6 @@
 /**
+ * ExileServer_system_territory_network_removeFromTerritoryRequest
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team
@@ -41,10 +43,10 @@ try
 	}
 	else  
 	{
-		if !((getPlayerUID _playerObject) in _moderators) then 
+		if !((getPlayerUID _playerObject) in _moderators) then
 		{
-			throw "Only moderators can kick!";
-		};	
+			throw "Only moderators can kick!"; 
+		};
 	};
 	_moderators = _moderators - [_playerToBeKickedUID];
 	_buildRights = _buildRights - [_playerToBeKickedUID];

@@ -1,4 +1,6 @@
 /**
+ * ExileServer_util_time_currentTime
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team
@@ -7,4 +9,4 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-(call compile ("extDB2" callExtension "9:TIME")) select 1
+(call compile ("extDB2" callExtension "9:LOCAL_TIME")) select 1

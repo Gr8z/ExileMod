@@ -1,4 +1,6 @@
 /**
+ * ExileServer_object_construction_network_buildConstructionRequest
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team
@@ -7,20 +9,20 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_paramaters","_objectClassName","_objectPosition","_playerObject","_constructionConfig","_canBuildHereResult","_object"];
+private["_sessionID","_parameters","_objectClassName","_objectPosition","_playerObject","_constructionConfig","_canBuildHereResult","_object"];
 _sessionID = _this select 0;
-_paramaters = _this select 1;
-_objectClassName = _paramaters select 0;
-_objectPosition = _paramaters select 1;
+_parameters = _this select 1;
+_objectClassName = _parameters select 0;
+_objectPosition = _parameters select 1;
 try
 {
 	_playerObject = _sessionID call ExileServer_system_session_getPlayerObject;
-	if (isNull _playerObject) then
+	if (isNull _playerObject) then 
 	{
 		throw "Player object is null!";
 	};
 	_constructionConfig = ("getText(_x >> 'previewObject') == _objectClassName" configClasses(configFile >> "CfgConstruction")) select 0;
-	_canBuildHereResult = [configName _constructionConfig, _objectPosition, getPlayerUID _playerObject] call ExileClient_util_world_canBuildHere;
+	_canBuildHereResult = [configName _constructionConfig, (ASLtoAGL (ATLtoASL _objectPosition)), getPlayerUID _playerObject] call ExileClient_util_world_canBuildHere;
 	switch (_canBuildHereResult) do
 	{
 		case 1:
@@ -42,6 +44,10 @@ try
 		case 4:
 		{
 			throw "You are too close to traders!";
+		};
+		case 6:
+		{
+			throw "Maximum number of objects reached!";
 		};
 	};
 	_object = createVehicle[_objectClassName, _objectPosition, [], 0, "CAN_COLLIDE"];

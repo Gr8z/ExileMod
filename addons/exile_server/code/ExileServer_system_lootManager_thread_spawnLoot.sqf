@@ -1,4 +1,6 @@
 /**
+ * ExileServer_system_lootManager_thread_spawnLoot
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team
@@ -14,13 +16,13 @@ _notifyPlayer = (getNumber (configFile >> "CfgSettings" >> "LootSettings" >> "no
 {
 	_player = _x;
 	_time = _player getVariable ["ExileLastLootSpawnTime", 0];
-	if (_time + 60 < time) then
+	if (_time + 120 < time) then
 	{
 		_spawnedLoot = _player call ExileServer_system_lootManager_spawnLootForPlayer;
-		_player setVariable["ExileLastLootSpawnTime", time];
-		if (_notifyPlayer) then
+		if (_spawnedLoot) then
 		{
-			if (_spawnedLoot) then
+			_player setVariable["ExileLastLootSpawnTime", time];
+			if (_notifyPlayer) then
 			{
 				_spawnedLootForPlayers pushBack _player;
 			};

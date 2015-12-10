@@ -1,4 +1,6 @@
 /**
+ * ExileServer_util_extDB2_createMessage
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team

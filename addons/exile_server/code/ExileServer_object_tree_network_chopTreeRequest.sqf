@@ -1,4 +1,6 @@
 /**
+ * ExileServer_object_tree_network_chopTreeRequest
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team
@@ -15,7 +17,7 @@ _tree = objectFromNetId _treeNetId;
 if (!isNull _tree) then
 {
 	_isTree = false;
-	_treeModelNames = getArray(configFile >> "CfgInteractionModels" >> "WoodSource" >> "models");
+	_treeModelNames = getArray(missionConfigFile >> "CfgInteractionModels" >> "WoodSource" >> "models");
 	{
 		if !(((str _tree) find _x) isEqualTo -1)exitWith {_isTree = true};
 	}

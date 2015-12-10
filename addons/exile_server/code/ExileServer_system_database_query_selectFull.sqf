@@ -1,4 +1,6 @@
 /**
+ * ExileServer_system_database_query_selectFull
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team
@@ -9,7 +11,17 @@
  
 private["_parameters","_query","_result"];
 _parameters = _this;
-_query = format["%1:%2:%3", 0, ExileServerDatabaseSessionId, _parameters];
-_result = "extDB2" callExtension _query;
-_result = call compile format["%1", _result];
+_query = [0, ExileServerDatabaseSessionId, _parameters] joinString ":";
+_result = call compile ("extDB2" callExtension _query);
+switch (_result select 0) do
+{
+	case 0:
+	{
+		(format["Database Error: %1", (_result select 1)]) call ExileServer_util_log;
+	};
+	case 2:
+	{
+		_result = (_result select 1) call ExileServer_system_database_handleBig;
+	};
+};
 _result select 1

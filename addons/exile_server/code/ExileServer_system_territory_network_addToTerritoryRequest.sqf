@@ -1,4 +1,6 @@
 /**
+ * ExileServer_system_territory_network_addToTerritoryRequest
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team
@@ -20,9 +22,9 @@ try
 		throw "Player (owner or moderator) object not found.";
 	};
 	_flagObject = objectFromNetId _flagNetID;
-	if (isNull _flagObject) then 
+	if (isNull _flagObject) then
 	{
-		throw "Flag object not found.";
+		throw "Flag object not found."; 
 	};
 	_playerToBeAddedObject = objectFromNetId _playerToBeAddedNetID;
 	if (isNull _playerToBeAddedObject) then

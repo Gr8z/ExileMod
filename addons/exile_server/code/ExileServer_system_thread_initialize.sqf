@@ -1,4 +1,6 @@
 /**
+ * ExileServer_system_thread_initialize
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team
@@ -15,7 +17,7 @@ ExileSystemThreadSleep = 0.01;
 ExileSystemThreadID = 10000;
 [] spawn 
 {
-	waitUntil { (time > 0) && PublicHiveIsLoaded };
+	waitUntil { (time > 0) && PublicServerIsLoaded };
 	"Main thread started" call ExileServer_util_log;
 	while {true} do
 	{

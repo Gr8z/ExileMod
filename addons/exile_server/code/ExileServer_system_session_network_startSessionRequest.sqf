@@ -1,4 +1,6 @@
 /**
+ * ExileServer_system_session_network_startSessionRequest
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team
@@ -7,15 +9,20 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_parameters","_netId","_player","_sessionId"];
+private["_parameters","_netId","_player","_ExileSessionID","_sessionId"];
 _parameters = _this select 1;
 _netId = _parameters select 0;
 try 
 {
 	_player = objectFromNetId _netId;
-	if (isNull _player) then
+	if (isNull _player) then 
 	{
 		throw "Cannot start session for unknown network ID!";
+	};
+	_ExileSessionID = _player getVariable ["ExileSessionID",-1];
+	if !(_ExileSessionID isEqualTo -1) then 
+	{
+		throw "Trying to get a second session ID!";
 	};
 	_sessionId = _player call ExileServer_system_session_begin;
 	[_sessionId, "startSessionResponse", [_sessionId]] call ExileServer_system_network_send_to;

@@ -1,4 +1,6 @@
 /**
+ * ExileServer_object_player_database_update
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team
@@ -11,25 +13,16 @@ private["_player","_playerID","_playerPos","_data","_extDB2Message"];
 _player = _this;
 _playerID = _player getVariable["ExileDatabaseID", -1];
 _playerPos = getPosATL _player;
-if(_playerPos select 2 > 500)then
-{
-	_playerPos set [2,0];
-};
 _data = 
 [
-	name _player,
-	if (_player getVariable ["ExileIsDead",false]) then {0} else {1},
+	_player getVariable ["ExileName",""],
 	damage _player,
-	getFatigue _player,
 	_player getVariable ["ExileHunger", 100],
 	_player getVariable ["ExileThirst", 100],
 	_player getVariable ["ExileAlcohol", 0],
 	getOxygenRemaining _player,
 	getBleedingRemaining _player,
-	_player getHitPointDamage "hitHead",
-	_player getHitPointDamage "hitBody",
-	_player getHitPointDamage "hitHands",
-	_player getHitPointDamage "hitLegs",
+	_player call ExileClient_util_player_getHitPointMap,
 	getDir _player,
 	_playerPos select 0,
 	_playerPos select 1,

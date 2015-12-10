@@ -1,4 +1,6 @@
 /**
+ * ExileServer_system_rcon_event_kickAll
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team

@@ -1,4 +1,6 @@
 /**
+ * ExileServer_system_rcon_thread_check
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team
@@ -49,13 +51,18 @@ if (_timeTilRestart < _lockTime) then
 		{
 			call ExileServer_system_rcon_event_kickAllrestart;
 			"Everyone kicked for restart" call ExileServer_util_log;
+			ExileSystemSpawnThread = [];
 			call ExileServer_system_rcon_event_clearBuffers;
 			"Buffers cleared!" call ExileServer_util_log;
-			for "_i" from 0 to 9 do
+			for "_i" from 0 to 49 do
 			{
 				"SERVER READY FOR RESTART!!" call ExileServer_util_log;
 			};
 			ExileServerRestartMode = true;
+			if(getNumber(configFile >> "CfgSettings" >> "RCON" >> "useShutdown") isEqualTo 1)then
+			{
+				'#shutdown' call ExileServer_system_rcon_event_sendCommand;
+			};
 		};
 	};
 };

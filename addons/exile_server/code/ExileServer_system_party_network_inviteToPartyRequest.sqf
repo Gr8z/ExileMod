@@ -1,4 +1,6 @@
 /**
+ * ExileServer_system_party_network_inviteToPartyRequest
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team

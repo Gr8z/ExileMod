@@ -1,4 +1,6 @@
 /**
+ * ExileServer_world_initialize
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team
@@ -13,7 +15,6 @@ call ExileServer_World_loadAllTerritories;
 call ExileServer_world_loadAllDatabaseConstructions;
 call ExileServer_world_loadAllDatabaseVehicles;
 call ExileServer_world_loadAllDatabaseContainers;
-call ExileServer_system_territory_maintenance_check;
 call ExileServer_world_spawnSpawnZoneVehicles;
 call ExileServer_world_spawnVehicles;
 "Game world initialized! Let the fun begin!" call ExileServer_util_log;

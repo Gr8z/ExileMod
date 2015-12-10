@@ -1,4 +1,6 @@
 /**
+ * ExileServer_object_vehicle_createPersistentVehicle
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team
@@ -13,33 +15,7 @@ _position = _this select 1;
 _direction = _this select 2;
 _usePositionATL = _this select 3;
 _pinCode = _this select 4;
-_vehicleObject = createVehicle [_className, _position, [], 0, "CAN_COLLIDE"];
-clearBackpackCargoGlobal _vehicleObject;
-clearItemCargoGlobal _vehicleObject;
-clearMagazineCargoGlobal _vehicleObject;
-clearWeaponCargoGlobal _vehicleObject;
-if (_className isKindOf "I_UGV_01_F") then 
-{
-	createVehicleCrew _vehicleObject;
-};
-if (getNumber (configFile >> "CfgSettings" >> "VehicleSpawn" >> "nightVision") isEqualTo 0) then 
-{
-	_vehicleObject disableNVGEquipment true;
-};
-if (getNumber (configFile >> "CfgSettings" >> "VehicleSpawn" >> "thermalVision") isEqualTo 0) then 
-{
-	_vehicleObject disableTIEquipment true;
-};
-_position set[2, (_position select 2) + 0.05]; 
-_vehicleObject setDir _direction;		
-if (_usePositionATL) then
-{
-	_vehicleObject setPosATL _position;
-}
-else 
-{
-	_vehicleObject setPosASL _position;
-};
+_vehicleObject = [_className, _position, _direction, _usePositionATL] call ExileServer_object_vehicle_carefulCreateVehicle;
 _vehicleObject setVariable ["ExileIsPersistent", true];
 _vehicleObject setVariable ["ExileAccessCode", _pinCode];
 _vehicleObject addEventHandler ["GetOut", {_this call ExileServer_object_vehicle_event_onGetOut}];

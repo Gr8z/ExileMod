@@ -1,4 +1,6 @@
 /**
+ * ExileServer_system_rcon_event_kickAllrestart
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team
@@ -8,7 +10,7 @@
  */
  
 private["_i"];
-for "_i" from 0 to 99 do 
+for "_i" from 0 to ((playableSlotsNumber independent) - 1) do 
 {
 	format ["#kick %1", _i] call ExileServer_system_rcon_event_sendCommand;
 	uiSleep 0.2;

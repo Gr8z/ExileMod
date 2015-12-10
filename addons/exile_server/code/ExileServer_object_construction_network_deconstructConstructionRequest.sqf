@@ -1,4 +1,6 @@
 /**
+ * ExileServer_object_construction_network_deconstructConstructionRequest
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team
@@ -7,52 +9,52 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_parameters","_objectNetID","_object","_playerObject","_playerUID","_objectID","_ownerUID","_canDeconstruct","_radius","_flags","_flag","_buildRights","_constructionConfig","_holderPosition","_holder"];
+private["_sessionID","_parameters","_objectNetID","_object","_playerObject","_playerUID","_objectID","_ownerUID","_canDeconstruct","_flag","_buildRights","_constructionConfig","_holderPosition","_holder"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
 _objectNetID = _parameters select 0;
 try 
 {
 	_object = objectFromNetId _objectNetID;
-	if (isNull _object) then
+	if (isNull _object) then 
 	{
 		throw "Construction object is null!";
 	};
-	if (_object isKindOf "Exile_Construction_Abstract_Physics") then
+	if (_object isKindOf "Exile_Construction_Abstract_Physics") then 
 	{
 		throw "You can only deconstruct static objects!";
 	};
 	_playerObject = _sessionID call ExileServer_system_session_getPlayerObject;
-	if (isNull _playerObject) then
+	if (isNull _playerObject) then 
 	{
 		throw "Player object is null!";
 	};
 	_playerUID = getPlayerUID _playerObject;
 	_objectID = _object getVariable ["ExileDatabaseID", -1];
-	if (_objectID isEqualTo -1) then
+	if (_objectID isEqualTo -1) then 
 	{
 		throw "Construction object is not saved in database!";
 	};
 	_ownerUID = _object getVariable ["ExileOwnerUID", -1];
-	if (_ownerUID isEqualTo -1) then
+	if (_ownerUID isEqualTo -1) then 
 	{
 		throw "Object has no owner!";
 	};
 	_canDeconstruct = false;
+	_flag = (getPos _object) call ExileClient_util_world_getTerritoryAtPosition;
 	if (_playerUID isEqualTo _ownerUID) then
 	{
 		_canDeconstruct = true;
 	}
 	else 
 	{
-		_radius = getArray(missionConfigFile >> "CfgTerritories" >> "prices");
-		_radius = (_radius select ((count _radius) -1)) select 1;
-		_flags = _playerObject nearObjects ["Exile_Construction_Flag_Static", _radius * 2];
-		_flag = _flags select 0;
-		_buildRights = _flag getVariable ["ExileTerritoryBuildRights",[]];
-		if (_playerUID in _buildRights) then
+		if !(isNull _flag) then 
 		{
-			_canDeconstruct = true;
+			_buildRights = _flag getVariable ["ExileTerritoryBuildRights",[]];
+			if (_playerUID in _buildRights) then
+			{
+				_canDeconstruct = true;
+			};
 		};
 	};
 	if (_canDeconstruct) then
@@ -71,6 +73,10 @@ try
 			_holder addMagazineCargoGlobal ["Exile_Item_Codelock", 1];
 		};
 		deleteVehicle _object;
+		if !(isNull _flag) then 
+		{
+			_flag call ExileServer_system_territory_updateNumberOfConstructions;
+		};
 		[_sessionID, "notificationRequest", ["Success", ["Aaaand, it's gone!"]]] call ExileServer_system_network_send_to;
 	}
 	else 

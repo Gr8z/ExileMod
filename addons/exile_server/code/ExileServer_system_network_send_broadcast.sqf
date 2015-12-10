@@ -1,4 +1,6 @@
 /**
+ * ExileServer_system_network_send_broadcast
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team
@@ -7,8 +9,8 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_messageName","_messageParameters","_exludeSessionID","_publicMessage"];
-params ["_messageName", "_messageParameters", ["_exludeSessionID", "-1"]];	
+private["_messageName","_messageParameters","_publicMessage"];
+params ["_messageName", "_messageParameters"];
 _publicMessage = [_messageName, _messageParameters];
 _publicMessage remoteExecCall ["ExileClient_system_network_dispatchIncomingMessage", -2];
 _publicMessage = nil;

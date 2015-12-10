@@ -1,4 +1,6 @@
 /**
+ * ExileServer_object_lock_network_setPin
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team
@@ -17,7 +19,7 @@ _objectPinCode = _object getVariable ["ExileAccessCode","000000"];
 if(_pincode isEqualTo _objectPinCode)then
 {
 	_object setVariable ["ExileAccessCode",_newPinCode];
-	[_sessionID,"setPinResponse",[["Success",[format ["New pin set to: %1",_newPinCode]]], netId _object,_newPinCode]] call ExileServer_system_network_send_to;
+	[_sessionID,"setPinResponse",[["Success",[format ["New pin set"]]], netId _object,_newPinCode]] call ExileServer_system_network_send_to;
 	[_object,_newPinCode] call ExileServer_object_container_database_setpin;
 }
 else
