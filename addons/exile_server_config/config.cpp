@@ -584,8 +584,6 @@ class CfgBuildings
 	///////////////////////////////////////////////////////////////////////////
 	// Industrial
 	///////////////////////////////////////////////////////////////////////////
-	// TODO: "Land_Factory_Main_F"
-
 	class Land_Unfinished_Building_01_F 
 	{
 		table = "Industrial";
@@ -610,22 +608,10 @@ class CfgBuildings
 		positions[] = {{-0.0898438, -1.58203, 5.32797}};
 	};
 
-	class Land_dp_mainFactory_F
-	{
-		table = "Industrial";
-		positions[] = {{-12.8477, -4.8457, -4.45162}, {-15.4961, 6.70703, -4.45162}, {-6.36133, -2.13477, 1.18268}, {-6.91211, -15.3555, 1.18268}, {0.736328, 8.16406, 1.18268}, {1.25391, -10.5801, 1.18268}, {12.8926, 7.0332, -5.51301}, {13.0332, -3.95117, -4.22302}, {13.1719, 4.60742, -4.22302}, {13.2676, 0.710938, -4.22302}, {14.793, -16.8613, -4.08302}, {18.1406, -9.24023, -4.08302}, {19.0566, 5.17969, -7.61482}, {19.0996, -5.68555, -5.51301}, {19.3535, 2.14844, -5.51301}, {3.43555, -2.94141, 1.18268}, {8.82617, -7.33008, -0.280016}, {8.92773, -13.9453, -0.280016}, {9.13281, 8.58203, -0.280016}};
-	};
-
 	class Land_dp_bigTank_F
 	{
 		table = "Industrial";
 		positions[] = {{-1.54102, -1.93359, 3.59794}, {-5.79883, -0.496094, 3.59794}, {5.9707, -1.84375, 3.59794}};
-	};
-
-	class Land_dp_smallFactory_F
-	{
-		table = "Industrial";
-		positions[] = {{-1.97266, 3.14844, 2.62608}, {-6.49609, -4.92773, 2.82442}, {5.32422, -3.69531, 2.95848}, {9.49805, -4.71094, 1.21193}, {9.95898, 1.41211, 1.21193}};
 	};
 
 	class Land_u_Shed_Ind_F
@@ -657,6 +643,28 @@ class CfgBuildings
 		table = "Industrial";
 		positions[] = {{-1.03125, 2.60547, -3.26622}, {-2.25195, -2.75586, -0.741376}, {-2.28711, -3.94141, -3.26622}, {4.69336, 4.01172, -3.26622}, {6.06445, 3.50391, -0.741376}};
 	};
+
+	///////////////////////////////////////////////////////////////////////////
+	// Factories
+	///////////////////////////////////////////////////////////////////////////
+	class Land_Factory_Main_F 
+	{
+		table = "Factories";
+		positions[] = {{-8.51953,13.5698,-6.45422}, {-8.75,10.9609,-6.41479}};
+	};
+	
+	class Land_dp_smallFactory_F
+	{
+		table = "Factories";
+		positions[] = {{-1.97266, 3.14844, 2.62608}, {-6.49609, -4.92773, 2.82442}, {5.32422, -3.69531, 2.95848}, {9.49805, -4.71094, 1.21193}, {9.95898, 1.41211, 1.21193}};
+	};
+	
+	class Land_dp_mainFactory_F
+	{
+		table = "Factories";
+		positions[] = {{-12.8477, -4.8457, -4.45162}, {-15.4961, 6.70703, -4.45162}, {-6.36133, -2.13477, 1.18268}, {-6.91211, -15.3555, 1.18268}, {0.736328, 8.16406, 1.18268}, {1.25391, -10.5801, 1.18268}, {12.8926, 7.0332, -5.51301}, {13.0332, -3.95117, -4.22302}, {13.1719, 4.60742, -4.22302}, {13.2676, 0.710938, -4.22302}, {14.793, -16.8613, -4.08302}, {18.1406, -9.24023, -4.08302}, {19.0566, 5.17969, -7.61482}, {19.0996, -5.68555, -5.51301}, {19.3535, 2.14844, -5.51301}, {3.43555, -2.94141, 1.18268}, {8.82617, -7.33008, -0.280016}, {8.92773, -13.9453, -0.280016}, {9.13281, 8.58203, -0.280016}};
+	};
+
 	// Custom Buildings
 	
 	class Land_bo_A_GeneralStore_01 {
@@ -3586,40 +3594,64 @@ class CfgSettings
 	class GarbageCollector
 	{
 		/*
-		* despawnAfterMinutes defines after how many minutes (+1..5 minutes imprecision) 
-		* a corpse, vehicle wreck or dropped item should despawn.
-        *
-        * These things will despawn after despawnAfterMinutes time, but only
-        * if there is no player within delayDespawnIfPlayerInRange. If 
-        * forceDespawnAfterMinutes exceeded, it will not delay despawning and 
-        * force a despawn after despawnAfterMinutes.
-        *
-        * despawnAfterMinutes = minutes
-        * forceDespawnAfterMinutes = minutes
-        * delayDespawnIfPlayerInRange = meters
+			Remark: 
+			In 0.9.35 and below, Exile has checked if a player was nearby and then delayed
+			the deletion. This check has been removed to save server performance.
+
+			Do NOT touch these if you are not 10000% sure what you do!	
 		*/
-
-		class Corpses
+		class Ingame 
 		{
-			despawnAfterMinutes = 15;
-			delayDespawnIfPlayerInRange = 40;
-			forceDespawnAfterMinutes = 25;
+			// Dropped items without fissix
+			class GroundWeaponHolder
+			{
+				lifeTime = 10;
+				interval = 5;
+			};
+
+			// Dropped items with fissix
+			class WeaponHolderSimulated
+			{
+				lifeTime = 10;
+				interval = 5;
+			};
+
+			// Corpses and wrecks
+			class AllDead 
+			{
+				lifeTime = 15;
+				interval = 5;
+			};
+
+			// Loot spawned inside a building
+			class Loot 
+			{
+				lifeTime = 15;
+				interval = 5;
+			};
+
+			// Never touch this or you will break your sever!
+			class Groups 
+			{
+				interval = 0.5;
+			};
 		};
 
-		class Wrecks
+		class Database 
 		{
-			// Wrecks should always despawn after 5 minutes, since
-			// they are useless
-			despawnAfterMinutes = 5;
-			delayDespawnIfPlayerInRange = 40;
-			forceDespawnAfterMinutes = 5;
-		};
+			// Remove all territories (and contructions + containers in it) that were not paid after X days
+			territoryLifeTime = 7;
 
-		class DroppedItems
-		{
-			despawnAfterMinutes = 15;
-			delayDespawnIfPlayerInRange = 20;
-			forceDespawnAfterMinutes = 25;
+			// Remove all containers outside of territories that have not been used for X days
+			// Example: Tents
+			containerLifeTime = 7;
+
+			// Remove all constructions outside of territories that are older than X days or not moved for X days 
+			// Example: Work Benches
+			constructionLifeTime = 2;
+
+			// Remove all vehicles that were not moved/used for X days
+			vehicleLifeTime = 3;
 		};
 	};
 
@@ -3641,14 +3673,23 @@ class CfgSettings
 		class Frags
 		{
 			bambi = -500;				// Bambi slayers
-			friendlyFire = -100;		// For party members
+			friendlyFire = -1000;			// For party members
 			standard = 100;				// Normal kill
+			domination = 80;			// Keeps killing the same guy
 			letItRain = 150;			// MG, also vehicle MGs
 			humiliation = 300;			// Axe
 			passenger = 400;			// Out of car/chopper/boat
 			roadKill = -500;				// :)
 			bigBird = 600;				// Roadkill, but with chopper/plane
-			chuteGreaterChopper = 600; 	// Someone flies into chute and chopper/plane explodes 			
+			chuteGreaterChopper = 1000;		// Someone flies into chute and chopper/plane explodes	
+		};
+
+		class Handcuffs 
+		{
+			trapping = 50; 					// A handcuffs B
+			breakingFree = 100; 			// B broke free
+			releasedByHero = 150; 			// C releases B
+			releasedByHostageTaker = 100; 	// A releases B	
 		};
 
 		class Bonus
@@ -3658,6 +3699,12 @@ class CfgSettings
 
 			// First blood after server restart
 			firstBlood = 100;
+
+			// If you kill someone while you are in your own territory
+			homie = 20;
+
+			// If you kill someone who is in his own territory
+			raid = 20;
 
 			/*
 				Example with killstreak = 50
@@ -3702,8 +3749,7 @@ class CfgSettings
 			"ItemMap",
 			"Exile_Item_XM8",
 			"ItemRadio",
-			"Exile_Item_PlasticBottleFreshWater",
-			"H_Cap_red"
+			"Exile_Item_PlasticBottleFreshWater"
 		};
 
 		/**
@@ -3743,7 +3789,7 @@ class CfgSettings
 		/**
 		 * Radius of spawn zones around the center of spawn zone markers.
 		 */
-		spawnZoneRadius = 175;
+		spawnZoneRadius = 500;
 
 		/**
 		 * These vehicles spawn on server restart close to spawn zones.
@@ -3755,7 +3801,7 @@ class CfgSettings
 		 */
 		spawnZoneVehicles[] =
 		{
-			{5, "Exile_Bike_QuadBike_Black"}
+			{5, "Exile_Bike_QuadBike_Black"},
 //			{5, "Exile_Bike_MountainBike"}
 		};
 	};
@@ -3800,7 +3846,7 @@ class CfgSettings
 		 * 50m  = Minimum
 		 * 200m = Maximum
 		 */
-		spawnRadius = 150;
+		spawnRadius = 60;
 
 		/**
 		* Define a de-spawn radius here. That is the radius where loot
@@ -3812,16 +3858,6 @@ class CfgSettings
 		* 50m = Maximum
 		*/
 		visualThreshold = 10;
-
-		/**
-		 * Time in seconds to define how long loot stays on the ground
-		 * after it has been spawned. Loot will despawn after this time
-		 * has passed and if no player is within the despawnRadius.
-		 * If the maximum life time expired, it will despawn loot 
-		 * regardless if players are nearby or not.
-		 */
-		minimumLifeTime = 300; // 5 minutes
-		maximumLifeTime = 600; // 10 minutes
 
 		/**
 		 * Notify players that loot spawned for them
@@ -3906,17 +3942,10 @@ class CfgSettings
 			"Exile_Bike_QuadBike_Fia",
 			"Exile_Bike_QuadBike_Guerilla01",
 			"Exile_Bike_QuadBike_Guerilla02",
-			"Exile_Car_Hatchback_Rusty1",
-			"Exile_Car_Hatchback_Rusty2",
-			"Exile_Car_Hatchback_Rusty3",
-			"Exile_Car_Hatchback_Sport_Red",
-			"Exile_Car_SUV_Red",
-			"Exile_Car_Offroad_Rusty1",
-			"Exile_Car_Offroad_Rusty2",
-			"Exile_Car_Offroad_Rusty3",
-			"Exile_Car_Van_Black",
-			"Exile_Car_Van_Box_Black",
-			"Exile_Car_Van_Fuel_Black"
+			"Exile_Car_Volha_Blue",
+			"Exile_Car_Volha_White",
+			"Exile_Car_Lada_Green",
+			"Exile_Car_Lada_Taxi"
 		};
 
 		/**
@@ -3934,17 +3963,14 @@ class CfgSettings
 		 * 1 = on
 		 */
 		thermalVision = 0;		
-	};
 
-	class LocalityMonitor
-	{
 		/**
-		* Transfers the ownership of construction objects to clients to ease the load on server
-		* EXPERIMENTAL!
-		*/
-		monitor = 1;	// 0 = off, 1 = on
-
-		threshold = 20; // Triggers when x ammout on players are on
+		 * Set this to 1 to unlock vehicles on server boot if they are in safe zones
+		 *
+		 * 0 = off
+		 * 1 = on
+		 */
+		unlockInSafeZonesAfterRestart = 1;	
 	};
 
 	class Weather
@@ -4089,6 +4115,125 @@ class CfgSettings
 
 			Only use full minutes here. Value like 5.5 have not been tested.
 		*/
-		restartWarrningTime[] = {15, 10, 5, 3}; 
+		restartWarningTime[] = {15, 10, 5, 3}; 
+
+		/* 
+			If set to 1 server will execute '#shutdown',
+			to try to shutdown the server
+		*/
+
+		useShutdown = 1;
+	};
+
+	class ServerSettings
+	{
+		/*
+			Support for custom server FSM if wanted
+		*/
+		serverFSM = "exile_server\fsm\main.fsm";
+
+		/*
+			If this is enabled, Exile developers will spawn with a ton of pop tabs.
+			We will have a hard time debugging things if you disable this.
+		*/
+		devFriendyMode = 0;
+
+		devs[] = 
+		{
+			"0", // Eichi
+			"0"	 // Grim
+		};
+	};
+
+	class Events 
+	{
+		/*
+			A list of events that are active
+		*/
+		enabledEvents[] = {}; 
+
+		class SupplyBox // DONT USE IT: WIP BROKEN
+		{
+			/*
+				Drops a supply box on a parachute next to a random airport on the map.
+				The box may contain items. The box can be transported to a territory
+				and installed to become a normal storage container.
+			*/
+			type = "spawn";
+			function = "ExileServer_system_event_supplyBox_start";
+			interval = 1; // minutes
+			minimumPlayersOnline = 0;
+			dropRadius = 500; // 500m around an airport (including the main airport on Altis!)
+			dropAltitude = 100; // altitude of the drop
+
+			/*
+				These are different types of boxes can be dropped.
+				You can specify the cargo a box should contain.
+				The type of box is chosen randomly from the following list.
+				Add a type multiple times to increase the chance of being used.
+			*/
+			types[] = {"Beer", "Beer", "Tools", "Food", "Food", "RepairParts", "Nades"};
+
+			class BoxTypes
+			{
+				class Beer 
+				{
+					items[] = 
+					{
+						{"Exile_Item_Beer", 24}
+					};
+				};
+
+				class Nades 
+				{
+					items[] = 
+					{
+						{"Exile_Item_Beer", 10}
+					};
+				};
+
+				class Food 
+				{
+					items[] = 
+					{
+						{"Exile_Item_BBQSandwich", 5},
+						{"Exile_Item_Catfood", 5},
+						{"Exile_Item_ChristmasTinner", 5},
+						{"Exile_Item_GloriousKnakworst", 5},
+						{"Exile_Item_SausageGravy", 5},
+						{"Exile_Item_Surstromming", 5},
+						{"Exile_Item_CanOpener", 1},
+						{"Exile_Item_CookingPot", 1},
+						{"Exile_Item_Matches", 1}
+					};
+				};
+
+				class Tools 
+				{
+					items[] = 
+					{
+						{"Exile_Item_Wrench", 1},
+						{"Exile_Item_Shovel", 1},
+						{"Exile_Item_Screwdriver", 1},
+						{"Exile_Item_Pliers", 1},
+						{"Exile_Item_Handsaw", 1},
+						{"Exile_Item_FireExtinguisher", 1},
+						{"Exile_Item_DuctTape", 1}
+					};
+				};
+
+				class RepairParts 
+				{
+					items[] = 
+					{
+						{"Exile_Item_CarWheel", 8},
+						{"Exile_Item_FuelCanisterFull", 4},
+						{"Exile_Item_OilCanister", 1},
+						{"Exile_Item_Grinder", 1},
+						{"Exile_Item_CordlessScrewdriver", 1}
+					};
+				};
+			};
+		};
 	};
 };
