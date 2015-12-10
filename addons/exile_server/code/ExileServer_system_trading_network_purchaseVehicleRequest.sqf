@@ -50,17 +50,29 @@ try
 	};
 	if (_vehicleClass isKindOf "Ship") then 
 	{
-		_position = [(getPosATL _playerObject), 80, 10] call ExileClient_util_world_findWaterPosition;
+		 _nObject = nearestObject [(getPosATL _playerObject), "HeliHEmpty"];
+	    if ( isNull _nObject ) then { throw 13; };
+	    _position = getPos _nObject;
+	    _position set [2, 0.0];
 		_vehicleObject = [_vehicleClass, _position, (random 360), true, _pinCode] call ExileServer_object_vehicle_createPersistentVehicle;
 	}
 	else 
 	{
-		_position = (getPos _playerObject) findEmptyPosition [10, 175, _vehicleClass];
-		if (_position isEqualTo []) then 
-		{
-			throw 13;
-		};
-		_vehicleObject = [_vehicleClass, _position, (random 360), true, _pinCode] call ExileServer_object_vehicle_createPersistentVehicle;
+		 if (_vehicleClass isKindOf "Air") then 
+		   {
+		     _nObject = nearestObject [(getPosATL _playerObject), "HeliH"];
+		     if ( isNull _nObject ) then { throw 13; };
+		     _position3d = getPos _nObject;
+		     _position2d = [_position3d select 0, _position3d select 1];
+		   }
+		   else 
+		   {
+		     _nObject = nearestObject [(getPosATL _playerObject), "HeliHEmpty"];
+		     if ( isNull _nObject ) then { throw 13; };
+		     _position3d = getPos _nObject;
+		     _position2d = [_position3d select 0, _position3d select 1];
+		   };
+		_vehicleObject = [_vehicleClass, _position2d, (random 360), true, _pinCode] call ExileServer_object_vehicle_createPersistentVehicle;
 	};	
 	_vehicleObject setVariable ["ExileOwnerUID", (getPlayerUID _playerObject)];
 	_vehicleObject setVariable ["ExileIsLocked",0];
