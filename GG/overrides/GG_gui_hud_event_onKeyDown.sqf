@@ -1,4 +1,6 @@
 /**
+ * ExileClient_gui_hud_event_onKeyDown
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team
@@ -7,18 +9,32 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_stopPropagation","_caller","_keyCode","_shiftState","_controlState","_altState"];
+private["_stopPropagation","_caller","_keyCode","_shiftState","_controlState","_altState","_grenadeName"];
 _stopPropagation = false;
 _caller = _this select 0;
 _keyCode = _this select 1;
 _shiftState = _this select 2;
 _controlState = _this select 3;
 _altState = _this select 4; 
-if (_keyCode in (actionKeys 'TacticalView'))exitWith{true};
+if (_keyCode in (actionKeys "TacticalView")) exitWith {true};
+if (_keyCode in (actionKeys "Throw")) exitWith
+{
+	_stopPropagation = false;
+	if !(_controlState) then 
+	{
+		_grenadeName = (currentThrowable player) select 0;
+		if (_grenadeName isEqualTo "Exile_Item_ZipTie") then 
+		{
+			call ExileClient_object_handcuffs_use;
+			_stopPropagation = true;
+		};
+	};
+	_stopPropagation
+};
 switch (_keyCode) do  
 { 
 	case 0x29:	{ _stopPropagation = true; }; 
-	case 0x0B:	{ _stopPropagation = true; };
+	case 0x0B:	 	{ _stopPropagation = true; };
 	case 0x06: 	{ _stopPropagation = true; };
 	case 0x07: 	{ _stopPropagation = true; };
 	case 0x08:
