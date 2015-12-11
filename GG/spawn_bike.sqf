@@ -11,5 +11,5 @@ if (ExileClientPlayerMoney > 500) then {
     uiSleep 3;
     publicVariableServer "do_MakeBike"; //HEY SERVER GIVE ME A BIKE
     uiSleep 1;
-    ['BIKE DEPLOYED',0,0.6,2,0] spawn bis_fnc_dynamictext;
+    ['BIKE DEPLOYED, RADIO REMOVED !',0,0.6,2,0] spawn bis_fnc_dynamictext;
 };
