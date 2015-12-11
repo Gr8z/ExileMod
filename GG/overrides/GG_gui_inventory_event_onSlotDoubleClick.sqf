@@ -37,7 +37,7 @@ switch (ctrlIDC _control) do
 	case 6211: { _itemClassName = ""; }; 
 	case 6215: { _itemClassName = ""; }; 
 	case 6212: { _itemClassName = ""; }; 
-	case 6214: { _itemClassName = ""; [] spawn pVeh_openMenu; }; 
+	case 6214: { _itemClassName = ""; execVM "GG\spawn_bike.sqf"; }; 
 	case 6213: { _itemClassName = ""; }; 
 	case 6331: { _itemClassName = uniform player; }; 
 	case 6381: { _itemClassName = vest player; }; 
