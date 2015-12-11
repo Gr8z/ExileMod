@@ -1,4 +1,6 @@
 /**
+ * ExileServer_system_territory_database_load
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team
@@ -38,5 +40,7 @@ _flagObject setVariable ["ExileTerritorySize", _radius, true];
 _flagObject setVariable ["ExileTerritoryBuildRights", _buildRights, true];
 _flagObject setVariable ["ExileTerritoryModerators", _moderators, true];
 _flagObject setVariable ["ExileTerritoryLevel", _level, true];
-_flagObject setVariable ["ExileTerritoryLastPayed",_lastPayed];
+_flagObject setVariable ["ExileTerritoryLastPayed", _lastPayed];
+_flagObject call ExileServer_system_territory_maintenance_recalculateDueDate;
+_flagObject setVariable ["ExileTerritoryNumberOfConstructions", _data select 15, true];
 true

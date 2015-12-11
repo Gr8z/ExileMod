@@ -1,4 +1,6 @@
 /**
+ * ExileServer_system_database_query_fireAndForget
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team
@@ -9,6 +11,6 @@
  
 private["_parameters","_query"];
 _parameters = _this;
-_query = format["%1:%2:%3", 1, ExileServerDatabaseSessionId, _parameters];
+_query = [1, ExileServerDatabaseSessionId, _parameters] joinString ":";
 "extDB2" callExtension _query;
 true

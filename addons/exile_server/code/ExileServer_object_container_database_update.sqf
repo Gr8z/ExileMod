@@ -1,4 +1,6 @@
 /**
+ * ExileServer_object_container_database_update
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team
@@ -7,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_containerObject","_containerID","_position","_vectorDirection","_vectorUp","_data","_extDB2Message"];
+private["_containerObject","_containerID","_position","_vectorDirection","_vectorUp","_territoryFlag","_territoryID","_data","_extDB2Message"];
 _containerObject= _this;
 _containerID = _containerObject getVariable ["ExileDatabaseID", -1];
 if (_containerID > -1) then
@@ -15,6 +17,9 @@ if (_containerID > -1) then
 	_position = getPosATL _containerObject;
 	_vectorDirection = vectorDir _containerObject;
 	_vectorUp = vectorUp _containerObject;
+	_territoryFlag = (getPos _containerObject) call ExileClient_util_world_getTerritoryAtPosition;
+	_territoryID = if (isNull _territoryFlag) then { 'NULL' } else  { _territoryFlag getVariable ["ExileDatabaseID", 'NULL']};
+	_containerObject setVariable ["ExileTerritoryID", _territoryID];
 	_data =
 	[
 		_containerObject getVariable ["ExileIsLocked",-1],
@@ -31,7 +36,8 @@ if (_containerID > -1) then
 		magazinesAmmoCargo _containerObject,
 		weaponsItemsCargo _containerObject,
 		_containerObject call ExileServer_util_getObjectContainerCargo,
-		_containerID 
+		_containerID,
+		_territoryID
 	];
 	_extDB2Message = ["updateContainer", _data] call ExileServer_util_extDB2_createMessage;
 	_extDB2Message call ExileServer_system_database_query_fireAndForget;

@@ -1,4 +1,6 @@
 /**
+ * ExileServer_system_clan_network_registerClanRequest
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team

@@ -1,4 +1,6 @@
 /**
+ * ExileServer_system_territory_network_purchaseTerritory
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team
@@ -12,17 +14,17 @@ _sessionID = _this select 0;
 try
 {
 	_player = _sessionID call ExileServer_system_session_getPlayerObject;
-	if(isNull _player)then
+	if (isNull _player) then
 	{
 		throw 1;
 	};
-	if!(alive _player)then
+	if !(alive _player) then
 	{
 		throw 2;
 	};
 	_price = ((getArray(missionConfigFile >> "CfgTerritories" >> "prices")) select 0) select 0;
 	_playerMoney = _player getVariable ["ExileMoney", 0];
-	if(_price > _playerMoney)then
+	if (_price > _playerMoney) then
 	{
 		throw 3;
 	};

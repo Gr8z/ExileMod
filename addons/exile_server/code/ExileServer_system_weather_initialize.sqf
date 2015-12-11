@@ -1,4 +1,6 @@
 /**
+ * ExileServer_system_weather_initialize
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team

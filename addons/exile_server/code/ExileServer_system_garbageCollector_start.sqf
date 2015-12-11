@@ -1,4 +1,6 @@
 /**
+ * ExileServer_system_garbageCollector_start
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team
@@ -7,6 +9,4 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-
-
-true
+[] execFSM (getText (configFile >> "CfgSettings" >> "ServerSettings" >> "serverFSM"));

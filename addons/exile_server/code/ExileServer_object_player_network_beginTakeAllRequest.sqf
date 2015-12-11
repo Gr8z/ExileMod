@@ -1,4 +1,6 @@
 /**
+ * ExileServer_object_player_network_beginTakeAllRequest
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team

@@ -1,4 +1,6 @@
 /**
+ * ExileServer_world_spawnSpawnZoneVehicles
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team
@@ -21,7 +23,8 @@ _vehiclesToSpawn = getArray(configFile >> "CfgSettings" >> "BambiSettings" >> "s
 			_vehicleClassName = _x select 1;
 			for "_i" from 1 to _numberOfVehiclesToSpawn do
 			{
-				_vehiclePosition = [_markerCenterPosition, _spawnRadius] call ExileServer_util_position_findRoadPosition;
+				_vehiclePosition = [_markerCenterPosition, _spawnRadius] call ExileClient_util_world_findRoadPosition;
+				if(_vehiclePosition isEqualTo [])exitWith{};
 				_vehicleDirection = (random 360);
 				[_vehicleClassName, _vehiclePosition, _vehicleDirection, true] call ExileServer_object_vehicle_createNonPersistentVehicle;
 			};

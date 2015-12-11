@@ -18,32 +18,13 @@ DELETE FROM player_1
 WHERE account_uid = 'SomethingWentWrong'
 OR account_uid = '';
 
-/* DELETE old Players */
+/* DELETE old Players
 DELETE FROM player_1
 WHERE LastUpdated < NOW() - INTERVAL 14 DAY;
-
+ */
 /* DELETE old accounts */
 DELETE FROM account
 WHERE last_connect_at < NOW() - INTERVAL 30 DAY;
-
-/* DELETE old Vehicles */
-DELETE FROM vehicle_1
-WHERE LastUpdated < NOW() - INTERVAL 7 DAY;
-
-/* DELETE old Bases 
-DELETE FROM construction_1
-WHERE maintained_at < NOW() - INTERVAL 10 DAY;
-*/
-
-/* DELETE old Territories */
-DELETE FROM territory_1
-WHERE last_payed_at < NOW() - INTERVAL 10 DAY;
-
-/* DELETE old Containers */
-DELETE FROM container_1
-WHERE spawned_at < now() - interval 10 DAY 
-AND last_accessed < now() - interval 10 DAY 
-AND last_accessed <> '0000-00-00 00:00:00';
 
 /* Remove empty containers */
 DELETE FROM container_1
@@ -66,16 +47,6 @@ WHERE id NOT IN (
 );
 
 /* =================== UDPATES =================== */
-
-/* Unlock Old Vehicles */
-UPDATE `vehicle_1`
-SET `is_locked` = '0' , `pin_code` = '0000' 
-WHERE `LastUpdated` < now() - INTERVAL 5 DAY;
-
-/* Unlock Old Safes */
-UPDATE `container_1`
-SET `is_locked` = '0' , `pin_code` = '0000' 
-WHERE `last_accessed` < now() - INTERVAL 7 DAY;
 
 /* fix players unable to log in */
 UPDATE player_1

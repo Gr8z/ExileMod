@@ -1,4 +1,6 @@
 /**
+ * ExileServer_system_session_begin
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team

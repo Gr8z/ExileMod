@@ -1,4 +1,6 @@
 /**
+ * ExileServer_object_construction_database_delete
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team

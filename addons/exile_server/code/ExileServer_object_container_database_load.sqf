@@ -1,4 +1,6 @@
 /**
+ * ExileServer_object_container_database_load
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team
@@ -18,6 +20,7 @@ _containerObject setVectorDirAndUp [_vectorDirection, _vectorUp];
 _containerObject setVariable ["ExileDatabaseID", _containerID];
 _containerObject setVariable ["ExileOwnerUID", (_data select 2)];
 _containerObject setVariable ["ExileAccessCode",(_data select 16)];
+_containerObject setVariable ["ExileTerritoryID", (_data select 17)];
 if(getNumber(configFile >> "CfgVehicles" >> typeOf _containerObject >> "exileIsLockable") isEqualTo 1)then
 {
 	_containerObject setVariable ["ExileIsLocked",(_data select 3),true];

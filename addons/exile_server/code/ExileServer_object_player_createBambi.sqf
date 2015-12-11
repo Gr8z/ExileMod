@@ -1,4 +1,6 @@
 /**
+ * ExileServer_object_player_createBambi
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team
@@ -7,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_requestingPlayer","_spawnLocationMarkerName","_bambiPlayer","_accountData","_spawnAreaPosition","_spawnAreaRadius","_direction","_position","_clanID","_clanName","_parachuteNetID","_spawnType","_parachuteObject"];
+private["_sessionID","_requestingPlayer","_spawnLocationMarkerName","_bambiPlayer","_accountData","_spawnAreaPosition","_spawnAreaRadius","_direction","_position","_clanID","_clanName","_devFriendlyMode","_devs","_parachuteNetID","_spawnType","_parachuteObject"];
 _sessionID = _this select 0;
 _requestingPlayer = _this select 1;
 _spawnLocationMarkerName = _this select 2;
@@ -31,6 +33,7 @@ _bambiPlayer disableAI "FSM";
 _bambiPlayer disableAI "MOVE";
 _bambiPlayer disableAI "AUTOTARGET";
 _bambiPlayer disableAI "TARGET";
+_bambiPlayer disableAI "CHECKVISIBLE";
 _bambiPlayer setDir _direction;
 _bambiPlayer setName _name;
 _bambiPlayer setVariable ["ExileMoney", (_accountData select 0)];
@@ -46,6 +49,16 @@ _bambiPlayer setVariable ["ExileName", _name];
 _bambiPlayer setVariable ["ExileOwnerUID", getPlayerUID _requestingPlayer]; 
 _bambiPlayer setVariable ["ExileIsBambi", true];
 _bambiPlayer setVariable ["ExileXM8IsOnline", false, true];
+_devFriendlyMode = getNumber (configFile >> "CfgSettings" >> "ServerSettings" >> "devFriendyMode");
+if (_devFriendlyMode isEqualTo 1) then 
+{
+	_devs = getArray (configFile >> "CfgSettings" >> "ServerSettings" >> "devs");
+	if ((getPlayerUID _requestingPlayer) in _devs) then 
+	{
+		_bambiPlayer setVariable ["ExileMoney", 500000];
+		_bambiPlayer setVariable ["ExileScore", 100000];
+	};
+};
 _parachuteNetID = "";
 if ((getNumber(configFile >> "CfgSettings" >> "BambiSettings" >> "parachuteSpawning")) isEqualTo 1) then
 {

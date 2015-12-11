@@ -1,4 +1,6 @@
 /**
+ * ExileServer_system_party_network_kickFromPartyRequest
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team

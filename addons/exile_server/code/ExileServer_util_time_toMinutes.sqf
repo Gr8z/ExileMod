@@ -1,4 +1,6 @@
 /**
+ * ExileServer_util_time_toMinutes
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team

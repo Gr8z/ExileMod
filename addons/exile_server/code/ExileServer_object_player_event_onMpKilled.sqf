@@ -1,4 +1,6 @@
 /**
+ * ExileServer_object_player_event_onMpKilled
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team
@@ -7,17 +9,22 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_victim","_killer","_addDeathStat","_addKillStat","_killerRespectPoints","_fragAttributes","_player","_vehicleRole","_vehicle","_lastKillAt","_killStack","_distance","_distanceBonus","_overallRespectChange","_newKillerScore","_killMessage","_newKillerFrags","_newVictimDeaths"];
+private["_victim","_killer","_victimPosition","_addDeathStat","_addKillStat","_normalkill","_killerRespectPoints","_fragAttributes","_player","_grpvictim","_grpkiller","_log","_lastVictims","_victimUID","_vehicleRole","_vehicle","_lastKillAt","_killStack","_distance","_distanceBonus","_flagNextToKiller","_homieBonus","_flagNextToVictim","_raidBonus","_overallRespectChange","_newKillerScore","_killMessage","_newKillerFrags","_newVictimDeaths"];
 if (!isServer || hasInterface) exitWith {};
 _victim = _this select 0;
 _killer = _this select 1;
 if( isNull _victim ) exitWith {};
 _victim setVariable ["ExileDiedAt", time];
 if !(isPlayer _victim) exitWith {};
-format["killPlayer:%1", _victim getVariable ["ExileDatabaseId", -1]] call ExileServer_system_database_query_fireAndForget;
+_victimPosition = getPos _victim;
+format["insertPlayerHistory:%1:%2:%3:%4:%5", getPlayerUID _victim, name _victim, _victimPosition select 0, _victimPosition select 1, _victimPosition select 2] call ExileServer_system_database_query_fireAndForget;
+format["deletePlayer:%1", _victim getVariable ["ExileDatabaseId", -1]] call ExileServer_system_database_query_fireAndForget;
 _victim setVariable ["ExileIsDead", true];
+_victim setVariable ["ExileName", name _victim, true]; 
+_victim call ExileServer_object_flies_spawn;
 _addDeathStat = true;
 _addKillStat = true;
+_normalkill = true;
 _killerRespectPoints = [];
 _fragAttributes = [];
 if (_victim isEqualTo _killer) then
@@ -67,7 +74,7 @@ else
 			if !(isNull _player) then
 			{
 				_killer = _player;
-				if (_victim getVariable["ExileIsBambi", false]) then
+				if (_victim getVariable ["ExileIsBambi", false]) then
 				{
 					_addKillStat = false;
 					_addDeathStat = false;
@@ -76,97 +83,154 @@ else
 				}
 				else 
 				{
-					if ((vehicle _killer) isEqualTo _killer) then 
+					_grpvictim = _victim getVariable ["ExileGroup",(group _victim)];
+					_grpkiller = _killer getVariable ["ExileGroup",(group _killer)];
+					if((_grpvictim isEqualTo _grpkiller)&&!(ExileGraveyardGroup isEqualTo _grpkiller))then
 					{
-						if ((currentWeapon _killer) isEqualTo "Exile_Melee_Axe") then
-						{
-							_fragAttributes pushBack "Humiliation";
-							_killerRespectPoints pushBack ["HUMILIATION", (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Frags" >> "humiliation"))];
-						}
-						else 
-						{
-							_killerRespectPoints pushBack ["ENEMY FRAGGED", (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Frags" >> "standard"))];
-						};
+						_log = format["%2 was team-killed by %1!", (name _killer), (name _victim)];
+						["systemChatRequest", [_log]] call ExileServer_object_player_event_killfeed;
+						_fragAttributes pushBack "Teamkill";
+						_killerRespectPoints pushBack ["TEAMKILL", (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Frags" >> "friendlyFire"))];
+						_normalkill = false;
 					}
-					else 
+					else
 					{
-						_vehicleRole = assignedVehicleRole _killer;
-						switch (toLower (_vehicleRole select 0)) do 
+						_lastVictims = _killer getVariable ["ExileLastVictims", ["0", "1", "2"]];
+						_victimUID = _victim getVariable ["ExileOwnerUID", getPlayerUID _victim];
+						if (_victimUID in _lastVictims) then
 						{
-							case "driver":
+							_log = format["%1 keeps killing %2!", (name _killer), (name _victim)];
+							["systemChatRequest", [_log]] call ExileServer_object_player_event_killfeed;
+							_fragAttributes pushBack "Domination";
+							_killerRespectPoints pushBack ["DOMINATION BONUS", (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Frags" >> "domination"))];
+						}
+						else
+						{
+							_lastVictims deleteAt 0;
+							_lastVictims pushBack _victimUID;
+							_killer setVariable ["ExileLastVictims", _lastVictims];
+							if ((vehicle _killer) isEqualTo _killer) then 
 							{
-								_vehicle = vehicle _killer;
-								switch (true) do 
+								if ((currentWeapon _killer) isEqualTo "Exile_Melee_Axe") then
 								{
-									case (_vehicle isKindOf "ParachuteBase"):
-									{
-										_fragAttributes pushBack "Chute > Chopper";
-										_killerRespectPoints pushBack ["CHUTE > CHOPPER", (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Frags" >> "chuteGreaterChopper"))];
-									};
-									case (_vehicle isKindOf "Air"):
-									{
-										_fragAttributes pushBack "Big Bird";
-										_killerRespectPoints pushBack ["BIG BIRD", (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Frags" >> "bigBird"))];
-									};
-									default 
-									{
-										_fragAttributes pushBack "Road Kill";
-										_killerRespectPoints pushBack ["ROAD KILL", (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Frags" >> "roadKill"))];
-									};
-								};
-							};
-							case "turret":
-							{
-								if ((currentWeapon _killer) isKindOf "StaticWeapon") then 
-								{
-									_fragAttributes pushBack "Let it Rain";
-									_killerRespectPoints pushBack ["LET IT RAIN", (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Frags" >> "letItRain"))];
+									_fragAttributes pushBack "Humiliation";
+									_killerRespectPoints pushBack ["HUMILIATION", (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Frags" >> "humiliation"))];
 								}
 								else 
 								{
-									_fragAttributes pushBack "Mad Passenger";
-									_killerRespectPoints pushBack ["MAD PASSENGER", (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Frags" >> "passenger"))];
+									_killerRespectPoints pushBack ["ENEMY FRAGGED", (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Frags" >> "standard"))];
 								};
-							};
-							default
+							}
+							else 
 							{
-								_fragAttributes pushBack "Mad Passenger";
-								_killerRespectPoints pushBack ["MAD PASSENGER", (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Frags" >> "passenger"))];
-							};							
+								_vehicleRole = assignedVehicleRole _killer;
+								switch (toLower (_vehicleRole select 0)) do 
+								{
+									case "driver":
+									{
+										_vehicle = vehicle _killer;
+										switch (true) do 
+										{
+											case (_vehicle isKindOf "ParachuteBase"):
+											{
+												_fragAttributes pushBack "Chute > Chopper";
+												_killerRespectPoints pushBack ["CHUTE > CHOPPER", (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Frags" >> "chuteGreaterChopper"))];
+											};
+											case (_vehicle isKindOf "Air"):
+											{
+												_fragAttributes pushBack "Big Bird";
+												_killerRespectPoints pushBack ["BIG BIRD", (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Frags" >> "bigBird"))];
+											};
+											default 
+											{
+												_fragAttributes pushBack "Road Kill";
+												_killerRespectPoints pushBack ["ROAD KILL", (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Frags" >> "roadKill"))];
+											};
+										};
+									};
+									case "turret":
+									{
+										if ((currentWeapon _killer) isKindOf "StaticWeapon") then 
+										{
+											_fragAttributes pushBack "Let it Rain";
+											_killerRespectPoints pushBack ["LET IT RAIN", (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Frags" >> "letItRain"))];
+										}
+										else 
+										{
+											_fragAttributes pushBack "Mad Passenger";
+											_killerRespectPoints pushBack ["MAD PASSENGER", (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Frags" >> "passenger"))];
+										};
+									};
+									default
+									{
+										_fragAttributes pushBack "Mad Passenger";
+										_killerRespectPoints pushBack ["MAD PASSENGER", (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Frags" >> "passenger"))];
+									};
+								};
+							};						
 						};
 					};
 				};
 				if (_addKillStat) then
 				{
-					_lastKillAt = _killer getVariable["ExileLastKillAt", 0];
-					_killStack = _killer getVariable["ExileKillStack", 0];
-					_killStack = _killStack + 1;
-					if (isNil "ExileServerHadFirstBlood") then
+					if(_normalkill)then
 					{
-						ExileServerHadFirstBlood = true;
-						_fragAttributes pushBack "First Blood";
-						_killerRespectPoints pushBack ["FIRST BLOOD", getNumber (configFile >> "CfgSettings" >> "Respect" >> "Bonus" >> "firstBlood")];
-					}
-					else 
-					{
-						if (time - _lastKillAt < (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Bonus" >> "killStreakTimeout"))) then
+						_lastKillAt = _killer getVariable ["ExileLastKillAt", 0];
+						_killStack = _killer getVariable ["ExileKillStack", 0];
+						_killStack = _killStack + 1;
+						if (isNil "ExileServerHadFirstBlood") then
 						{
-							_fragAttributes pushBack (format ["%1x Kill Streak", _killStack]);
-							_killerRespectPoints pushBack [(format ["%1x KILL STREAK", _killStack]), _killStack * (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Bonus" >> "killStreak"))];
+							ExileServerHadFirstBlood = true;
+							_fragAttributes pushBack "First Blood";
+							_killerRespectPoints pushBack ["FIRST BLOOD", getNumber (configFile >> "CfgSettings" >> "Respect" >> "Bonus" >> "firstBlood")];
 						}
 						else 
 						{
-							_killStack = 1; 
+							if (time - _lastKillAt < (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Bonus" >> "killStreakTimeout"))) then
+							{
+								_fragAttributes pushBack (format ["%1x Kill Streak", _killStack]);
+								_killerRespectPoints pushBack [(format ["%1x KILL STREAK", _killStack]), _killStack * (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Bonus" >> "killStreak"))];
+							}
+							else 
+							{
+								_killStack = 1; 
+							};
 						};
+						_killer setVariable ["ExileKillStack", _killStack];
+						_killer setVariable ["ExileLastKillAt", time];
 					};
-					_killer setVariable["ExileKillStack", _killStack];
-					_killer setVariable ["ExileLastKillAt", time];
 					_distance = floor(_victim distance _killer);
 					_fragAttributes pushBack (format ["%1m Distance", _distance]);
-					_distanceBonus = (floor (_distance / 100)) * getNumber (configFile >> "CfgSettings" >> "Respect" >> "Bonus" >> "per100mDistance");
+					_distanceBonus = (floor ((_distance min 3000) / 100)) * getNumber (configFile >> "CfgSettings" >> "Respect" >> "Bonus" >> "per100mDistance");
 					if (_distanceBonus > 0) then
 					{
 						_killerRespectPoints pushBack [(format ["%1m RANGE BONUS", _distance]), _distanceBonus];
+					};
+					_flagNextToKiller = (getPos _killer) call ExileClient_util_world_getTerritoryAtPosition;
+					if !(isNull _flagNextToKiller) then 
+					{
+						if ((getPlayerUID _killer) in (_flagNextToKiller getVariable ["ExileTerritoryBuildRights", []])) then
+						{
+							_homieBonus = getNumber (configFile >> "CfgSettings" >> "Respect" >> "Bonus" >> "homie");
+							if (_homieBonus > 0) then
+							{
+								_fragAttributes pushBack "Homie";
+								_killerRespectPoints pushBack ["HOMIE BONUS", _homieBonus];
+							};
+						};
+					};
+					_flagNextToVictim = (getPos _victim) call ExileClient_util_world_getTerritoryAtPosition;
+					if !(isNull _flagNextToVictim) then 
+					{
+						if ((getPlayerUID _victim) in (_flagNextToVictim getVariable ["ExileTerritoryBuildRights", []])) then
+						{
+							_raidBonus = getNumber (configFile >> "CfgSettings" >> "Respect" >> "Bonus" >> "raid");
+							if (_raidBonus > 0) then
+							{
+								_fragAttributes pushBack "Raid";
+								_killerRespectPoints pushBack ["RAID BONUS", _raidBonus];
+							};
+						};
 					};
 				};
 				_overallRespectChange = 0;
@@ -176,56 +240,54 @@ else
 				forEach _killerRespectPoints;
 				_newKillerScore = _killer getVariable ["ExileScore", 0];
 				_newKillerScore = _newKillerScore + _overallRespectChange;
-				
-			_killer setVariable ["ExileScore", _newKillerScore];
-			_weapon = currentWeapon _killer;
-			_txt = (gettext (configFile >> 'cfgWeapons' >> _weapon >> 'displayName'));
-			_pic = (gettext (configFile >> 'cfgWeapons' >> _weapon >> 'picture'));
-			if (_pic == "") then {
-				_weapon = typeOf (vehicle _killer);
-				_pic = (getText (configFile >> 'cfgVehicles' >> _weapon >> 'picture'));
-				_txt = (getText (configFile >> 'cfgVehicles' >> _weapon >> 'displayName'));
-			};
-			format["setAccountScore:%1:%2", _newKillerScore,getPlayerUID _killer] call ExileServer_system_database_query_fireAndForget;
-			_killMessage = format ["%1 was killed by %2", (name _victim), (name _killer)];
-
-			// KILL MESSAGES BY GR8
-			Gr8s_kill_msg = [(name _killer), _pic, (name _victim), floor(_victim distance _killer), _txt, nil, nil];
-			if (LogPlayerKills) then {format["logGr8Kill:%1:%2:%3:%4:%5:%6:%7", (name _killer), getPlayerUID _killer, (name _victim), getPlayerUID _victim, _txt, floor(_victim distance _killer), _overallRespectChange] call ExileServer_system_database_query_insertSingle;};
-			if (ShowPlayerKills) then {publicVariable "Gr8s_kill_msg";};
-
-				if !(count _fragAttributes isEqualTo 0) then
+				_killer setVariable ["ExileScore", _newKillerScore];
+				format["setAccountScore:%1:%2", _newKillerScore,getPlayerUID _killer] call ExileServer_system_database_query_fireAndForget;
+				if(_normalkill)then
 				{
-					_killMessage = _killMessage + " (" + (_fragAttributes joinString ", ") + ")";
-				};
-				["systemChatRequest", [_killMessage]] call ExileServer_object_player_event_killfeed;
-				if (_addKillStat isEqualTo true) then
-				{
-					_newKillerFrags = _killer getVariable ["ExileKills", 0];
-					_newKillerFrags = _newKillerFrags + 1;
-					_killer setVariable ["ExileKills", _newKillerFrags];
-					format["addAccountKill:%1", getPlayerUID _killer] call ExileServer_system_database_query_fireAndForget;
+					_weapon = currentWeapon _killer;
+					_txt = (gettext (configFile >> 'cfgWeapons' >> _weapon >> 'displayName'));
+					_pic = (gettext (configFile >> 'cfgWeapons' >> _weapon >> 'picture'));
+					if (_pic == "") then {
+					    _weapon = typeOf (vehicle _killer);
+					    _pic = (getText (configFile >> 'cfgVehicles' >> _weapon >> 'picture'));
+					    _txt = (getText (configFile >> 'cfgVehicles' >> _weapon >> 'displayName'));
+					};
+					_killMessage = format ["%1 was killed by %2", (name _victim), (name _killer)];
+
+					Gr8s_kill_msg = [(name _killer), _pic, (name _victim), floor(_victim distance _killer), _txt, nil, nil];
+					if (LogPlayerKills) then {format["logGr8Kill:%1:%2:%3:%4:%5:%6:%7", (name _killer), getPlayerUID _killer, (name _victim), getPlayerUID _victim, _txt, floor(_victim distance _killer), _overallRespectChange] call ExileServer_system_database_query_insertSingle;};
+					if (ShowPlayerKills) then {publicVariable "Gr8s_kill_msg";};
+					if !(count _fragAttributes isEqualTo 0) then
+					{
+						_killMessage = _killMessage + " (" + (_fragAttributes joinString ", ") + ")";
+					};
+					["systemChatRequest", [_killMessage]] call ExileServer_object_player_event_killfeed;
+					if (_addKillStat isEqualTo true) then
+					{
+						_newKillerFrags = _killer getVariable ["ExileKills", 0];
+						_newKillerFrags = _newKillerFrags + 1;
+						_killer setVariable ["ExileKills", _newKillerFrags];
+						format["addAccountKill:%1", getPlayerUID _killer] call ExileServer_system_database_query_fireAndForget;
+					};
 				};
 				[_killer, "showFragRequest", [_killerRespectPoints]] call ExileServer_system_network_send_to;
 				_killer call ExileServer_object_player_sendStatsUpdate;
 			}
 			else 
 			{
-			
-			_weapon = currentWeapon _killer;
-			_txt = (gettext (configFile >> 'cfgWeapons' >> _weapon >> 'displayName'));
-			_pic = (gettext (configFile >> 'cfgWeapons' >> _weapon >> 'picture'));
-			if (_pic == "") then {
-				_weapon = typeOf (vehicle _killer);
-				_pic = (getText (configFile >> 'cfgVehicles' >> _weapon >> 'picture'));
-				_txt = (getText (configFile >> 'cfgVehicles' >> _weapon >> 'displayName'));
-			};		
-			["systemChatRequest", [format["%1 was killed by an NPC! (%2m Distance)", (name _victim), floor(_victim distance _killer)]]] call ExileServer_object_player_event_killfeed;
-			// KILL MESSAGES BY GR8
-			Gr8s_kill_msg = ["NPC", _pic, (name _victim), floor(_victim distance _killer), _txt, nil, nil];
-			if (LogAIKills) then {format["logGr8Kill:%1:%2:%3:%4:%5:%6:%7", "NPC", getPlayerUID _killer, (name _victim), getPlayerUID _victim, _txt, floor(_victim distance _killer), 0] call ExileServer_system_database_query_insertSingle;};
-			if (ShowAIKills) then {publicVariable "Gr8s_kill_msg";};	
-			};
+				_weapon = currentWeapon _killer;
+				_txt = (gettext (configFile >> 'cfgWeapons' >> _weapon >> 'displayName'));
+				_pic = (gettext (configFile >> 'cfgWeapons' >> _weapon >> 'picture'));
+				if (_pic == "") then {
+				   _weapon = typeOf (vehicle _killer);
+				   _pic = (getText (configFile >> 'cfgVehicles' >> _weapon >> 'picture'));
+				   _txt = (getText (configFile >> 'cfgVehicles' >> _weapon >> 'displayName'));
+				};
+				["systemChatRequest", [format["%1 was killed by an NPC! (%2m Distance)", (name _victim), floor(_victim distance _killer)]]] call ExileServer_object_player_event_killfeed;
+				// KILL MESSAGES BY GR8
+				Gr8s_kill_msg = ["NPC", _pic, (name _victim), floor(_victim distance _killer), _txt, nil, nil];
+				if (LogAIKills) then {format["logGr8Kill:%1:%2:%3:%4:%5:%6:%7", "NPC", getPlayerUID _killer, (name _victim), getPlayerUID _victim, _txt, floor(_victim distance _killer), 0] call ExileServer_system_database_query_insertSingle;};
+				if (ShowAIKills) then {publicVariable "Gr8s_kill_msg";};    
 		};
 	};
 };

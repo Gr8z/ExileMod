@@ -1,4 +1,6 @@
 /**
+ * ExileClient_gui_inventory_event_onSlotDoubleClick
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team

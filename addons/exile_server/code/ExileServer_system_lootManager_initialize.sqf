@@ -1,4 +1,6 @@
 /**
+ * ExileServer_system_lootManager_initialize
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team
@@ -8,6 +10,5 @@
  */
  
 ExileServerBuildingNetIdsWithLoot = [];
-[5 * 60, ExileServer_system_lootManager_thread_despawnLoot, [], true] call ExileServer_system_thread_addTask;
 [30, ExileServer_system_lootManager_thread_spawnLoot, [], true] call ExileServer_system_thread_addTask;
 true

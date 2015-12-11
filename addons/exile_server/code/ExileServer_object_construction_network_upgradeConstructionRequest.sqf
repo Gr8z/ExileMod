@@ -1,4 +1,6 @@
 /**
+ * ExileServer_object_construction_network_upgradeConstructionRequest
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team
@@ -17,20 +19,20 @@ try
 	_maxRange = getArray(missionConfigFile >> "CfgTerritories" >> "prices");
 	_maxRange = (_maxRange select ((count _maxRange) -1)) select 1;
 	_flags = nearestObjects [_playerObject,["Exile_Construction_Flag_Static"],_maxRange];
-	if(_flags isEqualTo [])then
+	if (_flags isEqualTo []) then 
 	{
-		throw "You are retarded!"
+		throw "You are retarded!";
 	};
 	_flags = _flags select 0;
 	_buildRights = _flags getVariable ["ExileTerritoryBuildRights",[]];
-	if!((getPlayerUID _playerObject) in _buildRights)then
+	if !((getPlayerUID _playerObject) in _buildRights) then 
 	{
-		throw "No territory access!"
+		throw "No territory access!";
 	};
 	_playerGear = _playerObject call ExileClient_util_playerCargo_list;
-	if!("Exile_Item_FortificationUpgrade" in _playerGear)then
+	if !("Exile_Item_FortificationUpgrade" in _playerGear) then 
 	{
-		throw "Really?"
+		throw "Really?";
 	};
 	_objectConfig =
 	"
@@ -40,10 +42,10 @@ try
  	"
  	configClasses 
  	(configFile >> 'CfgConstruction');
- 	if(_objectConfig isEqualTo [])then
- 	{
- 		throw "Invalid Upgrade"
- 	};
+ 	if (_objectConfig isEqualTo []) then 
+	{
+ 		throw "Invalid Upgrade";
+	};
  	_objectConfig = _objectConfig select 0;
  	_objectClass = getText (_objectConfig >> "upgradeObject");
  	_position = getPosATL _object;
@@ -51,10 +53,10 @@ try
  	_vectorDir = vectorDir _object;
  	_objectDatabaseID = _object getVariable ["ExileDatabaseID",0];
  	_objectOwner = _object getVariable ["ExileOwnerUID",""];
- 	if(_objectDatabaseID isEqualTo 0)then
- 	{
- 		throw "Invalid Database ID"
- 	};
+ 	if (_objectDatabaseID isEqualTo 0) then 
+	{
+ 		throw "Invalid Database ID";
+	};
  	_accessCode = _object getVariable ["ExileAccessCode","000000"];
  	deleteVehicle _object;
  	format ["upgradeObject:%1:%2",_objectClass,_objectDatabaseID] call ExileServer_system_database_query_fireAndForget;
@@ -64,7 +66,7 @@ try
  	_newObject setVariable ["ExileIsPersistent",true];
  	_newObject setPosATL _position;
  	_newObject setVectorDirAndUp [_vectorDir,_vectorUp];
- 	if!(_accessCode isEqualTo "000000")then
+ 	if !(_accessCode isEqualTo "000000") then
  	{
  		_newObject setVariable ["ExileAccessCode",_accessCode];
  		_newObject setVariable ["ExileIsLocked",0,true];

@@ -1,4 +1,6 @@
 /**
+ * ExileServer_system_process_preInit
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team
@@ -23,11 +25,10 @@ if !(_MySql_connection) exitWith
 addMissionEventHandler ["HandleDisconnect", { _this call ExileServer_system_network_event_onHandleDisconnect; }];
 onPlayerConnected {[_uid, _name] call ExileServer_system_network_event_onPlayerConnected};
 onPlayerDisconnected {[_uid, _name] call ExileServer_system_network_event_onPlayerDisconnected};
-if!(getRemoteSensorsDisabled)then
+if !(getRemoteSensorsDisabled) then
 {
 	disableRemoteSensors true;
 };
-PublicServerFPS = 0;
-PublicHiveIsLoaded = false; 
-PublicHiveVersion = getText(configFile >> "CfgMods" >> "Exile" >> "version");
-publicVariable "PublicHiveVersion";
+PublicServerIsLoaded = false; 
+PublicServerVersion = getText(configFile >> "CfgMods" >> "Exile" >> "version");
+publicVariable "PublicServerVersion";

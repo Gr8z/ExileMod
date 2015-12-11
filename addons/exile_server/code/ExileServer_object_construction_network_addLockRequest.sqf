@@ -1,4 +1,6 @@
 /**
+ * ExileServer_object_construction_network_addLockRequest
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team
@@ -15,28 +17,28 @@ _pincode = _paramaters select 1;
 try
 {
 	_playerObject = _sessionID call ExileServer_system_session_getPlayerObject;
-	if!("Exile_Item_Codelock" in (_playerObject call ExileClient_util_playerCargo_list))then
+	if !("Exile_Item_Codelock" in (_playerObject call ExileClient_util_playerCargo_list)) then 
 	{
-		throw "No Can do!"
+		throw "No Can do!";
 	};
-	if!(isNumber(configFile >> "CfgVehicles" >> (typeOf _door) >> "ExileIsDoor"))then
+	if !(isNumber(configFile >> "CfgVehicles" >> (typeOf _door) >> "ExileIsDoor")) then 
 	{
 		throw "Really no can do!";
 	};
-	if!((_door getVariable ["ExileIsLocked",""]) isEqualTo "")then
+	if !((_door getVariable ["ExileIsLocked",""]) isEqualTo "") then 
 	{
 		throw "Really really no can do";
 	};
-	if!((count _pincode) isEqualTo 4)then
+	if !((count _pincode) isEqualTo 4) then 
 	{
 		throw "Invalid PinCode";
 	};
-	if((_door animationPhase 'DoorRotation') > 0.5)then
+	if ((_door animationPhase 'DoorRotation') > 0.5) then 
 	{
 		throw "Close the door first!";
 	};
 	_databaseID = _door getVariable ["ExileDatabaseID",0];
-	if(_databaseID isEqualTo 0)then
+	if(_databaseID isEqualTo 0) then 
 	{
 		throw "Smt went goof";
 	};

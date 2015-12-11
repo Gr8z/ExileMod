@@ -1,4 +1,6 @@
 /**
+ * ExileServer_system_trading_network_purchaseVehicleSkinRequest
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team
@@ -15,11 +17,6 @@ _skinClassName = _parameters select 1;
 try 
 {
 	_playerObject = _sessionID call ExileServer_system_session_getPlayerObject;
-	if(_playerObject getVariable ["ExileMutex",false])then
-	{
-		throw 12;
-	};
-	_playerObject setVariable ["ExileMutex",true];
 	if (isNull _playerObject) then
 	{
 		throw 1;
@@ -28,6 +25,11 @@ try
 	{
 		throw 2;
 	};
+	if(_playerObject getVariable ["ExileMutex",false]) then
+	{
+		throw 12;
+	};
+	_playerObject setVariable ["ExileMutex",true];
 	_vehicleObject = objectFromNetId _vehicleNetID;
 	if (isNull _vehicleObject) then
 	{
@@ -42,10 +44,8 @@ try
 	_skinVariations = getArray(missionConfigFile >> "CfgVehicleCustoms" >> _vehicleParentClass >> "skins");
 	{
 		_availableSkinClassName = _x select 0;
-		diag_log format["teste %1", _availableSkinClassName];
 		if (_availableSkinClassName isEqualTo _skinClassName) exitWith
 		{
-		diag_log "Yay";
 			_salesPrice = _x select 1;
 		};
 	}
@@ -81,5 +81,8 @@ catch
 	_responseCode = _exception;
 	[_sessionID, "purchaseVehicleSkinResponse", [_responseCode, ""]] call ExileServer_system_network_send_to;
 };
-_playerObject setVariable ["ExileMutex",false];
+if !(isNull _playerObject) then 
+{
+	_playerObject setVariable ["ExileMutex", false];
+};
 true

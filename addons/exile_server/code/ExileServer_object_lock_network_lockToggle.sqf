@@ -1,4 +1,6 @@
 /**
+ * ExileServer_object_lock_network_lockToggle
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team

@@ -1,4 +1,6 @@
 /**
+ * ExileServer_object_container_network_packRequest
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team
@@ -27,7 +29,7 @@ else
 	}
 	else
 	{
-		[_sessionID,"systemChatRequest",["Wrong pin code! "]] call ExileServer_system_network_send_to;
+		[_sessionID,"systemChatRequest",["Wrong PIN code! "]] call ExileServer_system_network_send_to;
 	};
 };
 true
