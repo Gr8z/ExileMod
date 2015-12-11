@@ -153,20 +153,6 @@ call ExileClient_object_trader_create;
 // Vehicle Trader
 ///////////////////////////////////////////////////////////////////////////
 
-_trader = 
-[
-    "Exile_Trader_Vehicle",
-    "WhiteHead_11",
-    ["InBaseMoves_repairVehicleKnl", "InBaseMoves_repairVehiclePne"],
-    [14603.7, 16877.3, 0.00143433],
-    90
-]
-call ExileClient_object_trader_create;
-
-_carWreck = "Land_Wreck_CarDismantled_F" createVehicleLocal [0,0,0];
-_carWreck setDir 355.455;    
-_carWreck setPosATL [14605.6, 16877.3, 0.0208359];
-
 ///////////////////////////////////////////////////////////////////////////
 // Vehicle Customs Trader
 ///////////////////////////////////////////////////////////////////////////
