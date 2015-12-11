@@ -8,7 +8,6 @@ if (ExileClientPlayerMoney > 500) then {
     _spawnPos = player modelToWorld [0,2,0];
     _spawnDir = (getDir player) -90;
     do_MakeBike = [player, _spawnPos, _spawnDir];
-    ExileClientPlayerMoney = ExileClientPlayerMoney - 500; //REMOVE THE MONEY
     uiSleep 3;
     publicVariableServer "do_MakeBike"; //HEY SERVER GIVE ME A BIKE
     uiSleep 1;
