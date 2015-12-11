@@ -3025,7 +3025,7 @@ class CfgSettings
 		/**
 		 * Chance in % to spawn loot in a building
 		 */
-		spawnChancePerBuilding = 50;
+		spawnChancePerBuilding = 100;
 
 		/**
 		 * Chance in % to spawn loot per loot spot per building.
@@ -3083,7 +3083,7 @@ class CfgSettings
 		 * not spawn loot. Set this to 0 if you want to have loot spawning
 		 * in trader citites, ugh.
 		 */
-		minimumDistanceToTraderZones = 500;
+		minimumDistanceToTraderZones = 100;
 
 		/**
 		 * Defines the radius around territories where no loot spawns.
@@ -3091,7 +3091,7 @@ class CfgSettings
 		 * set this to a lower value than the maximum radius of a territory,
 		 * which is 150m by default.
 		 */
-		minimumDistanceToTerritories = 150;
+		minimumDistanceToTerritories = 0;
 	};
 
 	///////////////////////////////////////////////////////////////////////
