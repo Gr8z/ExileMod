@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_parameters","_vehicleClass","_pinCode","_playerObject","_salesPrice","_playerMoney","_position","_vehicleObject","_responseCode"];
+private["_sessionID","_parameters","_vehicleClass","_pinCode","_playerObject","_salesPrice","_playerMoney","_position","_vehicleObject","_responseCode","_nObject", "_position3d"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
 _vehicleClass = _parameters select 0;
@@ -50,7 +50,7 @@ try
 	};
 	if (_vehicleClass isKindOf "Ship") then 
 	{
-		 _nObject = nearestObject [(getPosATL _playerObject), "Land_HelipadEmpty_F"];
+		_nObject = nearestObject [(getPosATL _playerObject), "Land_HelipadEmpty_F"];
 	    if ( isNull _nObject ) then { throw 13; };
 	    _position = getPos _nObject;
 	    _position set [2, 0.0];
