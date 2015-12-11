@@ -196,21 +196,21 @@ try
 		_bambiPlayer addItem "Exile_Item_InstaDoc";
 	//	 "Your rank is Reaper";
 	   };
-
-	     case (_respect > 149999):
+     case (_respect > 149999):
 	   {
 		_bambiPlayer forceAddUniform "TRYK_ZARATAKI";
-		for "_i" from 1 to 2 do {_bambiPlayer addItemToUniform "30Rnd_mas_9x39_mag";};
+		for "_i" from 1 to 2 do {_bambiPlayer addItemToUniform "rhs_mag_30Rnd_556x45_Mk318_Stanag";};
 		_bambiPlayer addVest "TRYK_V_ArmorVest_AOR1_2";
-		_bambiPlayer addBackpack "B_mas_m_Bergen_acr";
+		_bambiPlayer addBackpack "TRYK_B_Carryall_blk";
 		_bambiPlayer addHeadgear "H_ShemagOpen_khk";
-	 	_bambiPlayer addWeaponGlobal "arifle_mas_asval";
+	 	_bambiPlayer addWeaponGlobal "rhs_weap_m4_carryhandle";
 		_bambiPlayer addPrimaryWeaponItem "acc_flashlight";
-		_bambiPlayer addPrimaryWeaponItem "optic_mas_kobra";
-		for "_i" from 1 to 2 do {_bambiPlayer addItemToUniform "25Rnd_mas_9x19_Mag";};
-		_bambiPlayer addWeaponGlobal "hgun_mas_uzi_F";
-		_bambiPlayer addHandgunItem "optic_Yorris";
-		_bambiPlayer addHandgunItem "muzzle_mas_snds_L";
+		_bambiPlayer addPrimaryWeaponItem "rhsusf_acc_nt4_black";
+		_bambiPlayer addPrimaryWeaponItem "optic_Aco";
+		for "_i" from 1 to 2 do {_bambiPlayer addItemToUniform "11Rnd_45ACP_Mag";};
+		_bambiPlayer addWeaponGlobal "hgun_Pistol_heavy_01_F";
+		_bambiPlayer addHandgunItem "muzzle_snds_acp";
+		_bambiPlayer addHandgunItem "optic_MRD";
 		_bambiPlayer addItem "Exile_Item_Matches";
 		_bambiPlayer linkItem "ItemGPS";
 		_bambiPlayer addWeaponGlobal "Exile_Melee_Axe";
@@ -223,7 +223,6 @@ try
 	    default
 	    {	
 	//  "Your rank is Inmate";
-		};
 	};
 
 	

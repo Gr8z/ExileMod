@@ -2795,7 +2795,6 @@ class CfgLootTables
 			{10000, "H_HelmetO_ocamo"} // 0.10%
 		};
 	};
-
 };
 
 class CfgSettings
