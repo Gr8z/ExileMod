@@ -156,6 +156,14 @@ call ExileClient_object_trader_create;
 ///////////////////////////////////////////////////////////////////////////
 // Vehicle Customs Trader
 ///////////////////////////////////////////////////////////////////////////
+[
+    "Exile_Trader_VehicleCustoms",
+    "WhiteHead_11",
+    ["AidlPercMstpSnonWnonDnon_G01", "AidlPercMstpSnonWnonDnon_G02", "AidlPercMstpSnonWnonDnon_G03", "AidlPercMstpSnonWnonDnon_G04", "AidlPercMstpSnonWnonDnon_G05", "AidlPercMstpSnonWnonDnon_G06"],
+    [14617.2, 16888.4, 0],
+    269.96
+]
+call ExileClient_object_trader_create;
 
 ///////////////////////////////////////////////////////////////////////////
 // Guard 01
@@ -253,6 +261,20 @@ call ExileClient_object_trader_create;
 ///////////////////////////////////////////////////////////////////////////
 // Western Vehicle Trader
 ///////////////////////////////////////////////////////////////////////////
+
+_trader = 
+[
+    "Exile_Trader_Vehicle",
+    "WhiteHead_11",
+    ["InBaseMoves_repairVehicleKnl", "InBaseMoves_repairVehiclePne"],
+    [2980.19,18146.2,1.06391],
+    222.352
+]
+call ExileClient_object_trader_create;
+
+_carWreck = "Land_Wreck_CarDismantled_F" createVehicleLocal [0,0,0];
+_carWreck setDir 130.966;    
+_carWreck setPosATL [2978.76,18144.5,1.13293];
 
 ///////////////////////////////////////////////////////////////////////////
 // Western Waste Dump Trader
@@ -372,6 +394,20 @@ call ExileClient_object_trader_create;
 ///////////////////////////////////////////////////////////////////////////
 // Eastern Vehicle Trader
 ///////////////////////////////////////////////////////////////////////////
+
+_trader = 
+[
+    "Exile_Trader_Vehicle",
+    "WhiteHead_11",
+    ["InBaseMoves_repairVehicleKnl", "InBaseMoves_repairVehiclePne"],
+    [23385.6,24191.6,0.00136566],
+    123
+]
+call ExileClient_object_trader_create;
+
+_carWreck = "Land_Wreck_CarDismantled_F" createVehicleLocal [0,0,0];
+_carWreck setDir 47.2728;    
+_carWreck setPosATL [23387.3, 24190.3, 0.05];
 
 ///////////////////////////////////////////////////////////////////////////
 // Eastern Hardware Trader
@@ -506,7 +542,12 @@ call ExileClient_object_trader_create;
 ///////////////////////////////////////////////////////////////////////////
 // Vehicle Trader
 ///////////////////////////////////////////////////////////////////////////
-
+[
+    "Exile_Trader_Vehicle",
+    "WhiteHead_11",
+    ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3"],
+    [20468.2,11028.7,-0.000102997],225.549
+]
 call ExileClient_object_trader_create;
 ///////////////////////////////////////////////////////////////////////////
 // Waste Dump Trader

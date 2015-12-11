@@ -95,6 +95,16 @@ call ExileClient_object_trader_create;
     ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3"],
     [11496,11319.1,0.565857],329
 ]
+call ExileClient_object_trader_create;
+
+[
+    "Exile_Trader_Vehicle",
+    "WhiteHead_11",
+    ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3", "HubBriefing_scratch", "HubBriefing_stretch", "HubBriefing_think", "HubBriefing_lookAround1", "HubBriefing_lookAround2"],
+    [11452,11323.8,0],15
+]
+
+
 
 ///////////////////////////////////////////////////////////////////////////
 ////////////////////////// BASH TRADER
@@ -191,7 +201,13 @@ call ExileClient_object_trader_create;
     [4046.69,11662.8,0.00140381],
     0
 ]
-
+call ExileClient_object_trader_create;
+[
+    "Exile_Trader_Vehicle",
+    "WhiteHead_11",
+    ["AidlPercMstpSnonWnonDnon_G01", "AidlPercMstpSnonWnonDnon_G02", "AidlPercMstpSnonWnonDnon_G03", "AidlPercMstpSnonWnonDnon_G04", "AidlPercMstpSnonWnonDnon_G05", "AidlPercMstpSnonWnonDnon_G06"],
+    [4076.35,11653.7,0],0
+]
 call ExileClient_object_trader_create;
 [
     "Exile_Trader_VehicleCustoms",
@@ -325,6 +341,19 @@ call ExileClient_object_trader_create;
 ///////////////////////////////////////////////////////////////////////////
 // Vehicle Trader
 ///////////////////////////////////////////////////////////////////////////
+
+_trader = 
+[
+    "Exile_Trader_Vehicle",
+    "WhiteHead_11",
+    ["InBaseMoves_repairVehicleKnl", "InBaseMoves_repairVehiclePne"],
+    [6313.3,7800.93,0],270
+]
+call ExileClient_object_trader_create;
+
+_carWreck = "Land_Wreck_CarDismantled_F" createVehicleLocal [0,0,0];
+_carWreck setDir 181.364;
+_carWreck setPosATL [6311.59,7801.33,0];
 
 ///////////////////////////////////////////////////////////////////////////
 // Vehicle Customs Trader
