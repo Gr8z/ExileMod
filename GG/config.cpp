@@ -2878,6 +2878,9 @@ class CfgTerritories
 };
 class CfgTraderCategories 
 {
+	#include "cfg\RHS\TraderCategoriesRHS.hpp"
+	#include "cfg\TRYK\TraderCategoriesTRYK.hpp"
+	
 	class Community
 	{
 		name = "Community Items";
