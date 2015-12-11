@@ -95,14 +95,7 @@ call ExileClient_object_trader_create;
     ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3"],
     [11496,11319.1,0.565857],329
 ]
-call ExileClient_object_trader_create;
 
-[
-    "Exile_Trader_Vehicle",
-    "WhiteHead_11",
-    ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3", "HubBriefing_scratch", "HubBriefing_stretch", "HubBriefing_think", "HubBriefing_lookAround1", "HubBriefing_lookAround2"],
-    [11452,11323.8,0],15
-]
 call ExileClient_object_trader_create;
 
 [
