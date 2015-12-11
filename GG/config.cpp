@@ -3991,7 +3991,20 @@ class CfgTraders
 		};
 	};
 
-
+	/**
+	 * Sells cars and general vehicles
+	 */
+	class Exile_Trader_Vehicle
+	{
+		name = "VEHICLE";
+		showWeaponFilter = 0;
+		categories[] = 
+		{
+			"Cars",
+			"Trucks",
+			"RHSVehicles"
+		};
+	};
 
 	/**
 	 * Sells choppers and planes
