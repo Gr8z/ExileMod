@@ -1,14 +1,12 @@
 [] execVM "GG\HC\init.sqf";
 [] execVM "GG\StatusBar\statusBar.sqf";
 [] execVM "GG\inspectLoop.sqf";
-[] execVM "GG\markers\player_markers.sqf";
-[2000,false] execVM "GG\markers\player_names.sqf";
 [] execVM "GG\KillMessages.sqf";
 [] execVM "GG\IgiLoad\IgiLoadInit.sqf";
 [] execVM "GG\ModCheck.sqf";
 [] execVM "GG\money\takegive_poptab_init.sqf";
 [] execVM "GG\service\service_point.sqf";
-[] execVM "GG\safezones\config.sqf";
+
 
 #include "initServer.sqf"
 
