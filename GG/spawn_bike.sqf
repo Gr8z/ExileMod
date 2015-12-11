@@ -4,10 +4,10 @@ if !((vehicle player) isEqualTo player) exitWith {}; //MAKE SURE WE ARE ON FEET
 if (ExileClientPlayerMoney > 500) then {
     titleText ["", "PLAIN DOWN"];
     player playActionNow "Medic"; //ANIMATED DELAY
-    player removeAction DeployBikeAction; //REMOVE TO LET PLAYER SPAWN BIKES DURING THE PLAY
     _spawnPos = player modelToWorld [0,2,0];
     _spawnDir = (getDir player) -90;
     do_MakeBike = [player, _spawnPos, _spawnDir];
+    removeItem "itemRadio";
     uiSleep 3;
     publicVariableServer "do_MakeBike"; //HEY SERVER GIVE ME A BIKE
     uiSleep 1;
