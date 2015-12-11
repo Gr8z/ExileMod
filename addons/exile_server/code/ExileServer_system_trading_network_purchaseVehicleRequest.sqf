@@ -50,7 +50,7 @@ try
 	};
 	if (_vehicleClass isKindOf "Ship") then 
 	{
-		 _nObject = nearestObject [(getPosATL _playerObject), "HeliHEmpty"];
+		 _nObject = nearestObject [(getPosATL _playerObject), "Land_HelipadEmpty_F"];
 	    if ( isNull _nObject ) then { throw 13; };
 	    _position = getPos _nObject;
 	    _position set [2, 0.0];
@@ -60,14 +60,14 @@ try
 	{
 		 if (_vehicleClass isKindOf "Air") then 
 		   {
-		     _nObject = nearestObject [(getPosATL _playerObject), "HeliH"];
+		     _nObject = nearestObject [(getPosATL _playerObject), "Land_HelipadSquare_F"];
 		     if ( isNull _nObject ) then { throw 13; };
 		     _position3d = getPos _nObject;
 		     _position2d = [_position3d select 0, _position3d select 1];
 		   }
 		   else 
 		   {
-		     _nObject = nearestObject [(getPosATL _playerObject), "HeliHEmpty"];
+		     _nObject = nearestObject [(getPosATL _playerObject), "Land_HelipadEmpty_F"];
 		     if ( isNull _nObject ) then { throw 13; };
 		     _position3d = getPos _nObject;
 		     _position2d = [_position3d select 0, _position3d select 1];
