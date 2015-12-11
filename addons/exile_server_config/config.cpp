@@ -2852,7 +2852,7 @@ class CfgSettings
 		class Database 
 		{
 			// Remove all territories (and contructions + containers in it) that were not paid after X days
-			territoryLifeTime = 7;
+			territoryLifeTime = 10;
 
 			// Remove all containers outside of territories that have not been used for X days
 			// Example: Tents
