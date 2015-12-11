@@ -103,8 +103,23 @@ call ExileClient_object_trader_create;
     ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3", "HubBriefing_scratch", "HubBriefing_stretch", "HubBriefing_think", "HubBriefing_lookAround1", "HubBriefing_lookAround2"],
     [11452,11323.8,0],15
 ]
+call ExileClient_object_trader_create;
 
+[
+    "Exile_Trader_VehicleCustoms",
+    "WhiteHead_11",
+    ["AidlPercMstpSnonWnonDnon_G01", "AidlPercMstpSnonWnonDnon_G02", "AidlPercMstpSnonWnonDnon_G03", "AidlPercMstpSnonWnonDnon_G04", "AidlPercMstpSnonWnonDnon_G05", "AidlPercMstpSnonWnonDnon_G06"],
+    [11450.1,11317.8,0],189
+]
+call ExileClient_object_trader_create;
 
+[
+    "Exile_Trader_WasteDump",
+    "GreekHead_A3_01",
+    ["HubStandingUA_move1", "HubStandingUA_move2", "HubStandingUA_idle1", "HubStandingUA_idle2", "HubStandingUA_idle3"],
+    [11456.6,11344.2,0],13
+]
+call ExileClient_object_trader_create;
 
 ///////////////////////////////////////////////////////////////////////////
 ////////////////////////// BASH TRADER
