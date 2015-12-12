@@ -72,7 +72,7 @@ try
 		     _position3d = getPos _nObject;
 		     _position2d = [_position3d select 0, _position3d select 1];
 		   };
-		_vehicleObject = [_vehicleClass, _position2d, (random 360), true, _pinCode] call ExileServer_object_vehicle_createPersistentVehicle;
+		_vehicleObject = [_vehicleClass, _position3d, (random 360), true, _pinCode] call ExileServer_object_vehicle_createPersistentVehicle;
 	};	
 	_vehicleObject setVariable ["ExileOwnerUID", (getPlayerUID _playerObject)];
 	_vehicleObject setVariable ["ExileIsLocked",0];
