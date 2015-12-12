@@ -1,6 +1,6 @@
 // CHRISTMAS THEME FOR THE HOLIDAYS - GR8
 
-_alpha = .55 + random 0.12;// set the alpha of the particles
+_alpha = .55 + random 0.6;// set the alpha of the particles
 [_alpha] spawn {     
 
         while {true} do {               
