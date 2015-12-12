@@ -2830,7 +2830,7 @@ class CfgPlayer
 	// https://community.bistudio.com/wiki/Arma_3_Stamina
 	// Set to -1 if you want to use Arma 3 default value
 	// setCustomAimCoef
-	customAimCoefficient = 0.5;
+	customAimCoefficient = 0.15;
 
 	// 0 or 1
 	enableFatigue = 0;
