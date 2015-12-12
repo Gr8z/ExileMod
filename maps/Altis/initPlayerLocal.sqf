@@ -7,9 +7,6 @@
 [] execVM "GG\money\takegive_poptab_init.sqf";
 [] execVM "GG\service\service_point.sqf";
 
-// FOR HOLIDAYS
-[] execVM "GG\snow.sqf";
-
 #include "initServer.sqf"
 
 if (!hasInterface || isServer) exitWith {};
