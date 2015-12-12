@@ -1897,11 +1897,13 @@ class CfgExileArsenal
 	// Hunter
 	///////////////////////////////////////////////////////////////////////////////
 	class Exile_Car_Hunter 								{ quality = 1; price = 26500; };
+	class B_MRAP_01_hmg_F 								{ quality = 1; price = 139500; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Ifrit
 	///////////////////////////////////////////////////////////////////////////////
 	class Exile_Car_Ifrit 								{ quality = 1; price = 23000; };
+	class O_MRAP_02_hmg_F 								{ quality = 1; price = 133000; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Offroad
@@ -1971,6 +1973,7 @@ class CfgExileArsenal
 	// Strider
 	///////////////////////////////////////////////////////////////////////////////
 	class Exile_Car_Strider 							{ quality = 1; price = 44000; };
+	class I_MRAP_03_hmg_F 							   { quality = 1; price = 148000; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// SUV
@@ -3782,6 +3785,9 @@ class CfgTraderCategories
 			"Exile_Car_Offroad_Armed_Guerilla01",
 			"Exile_Car_Strider",
 			"Exile_Car_Hunter",
+			"B_MRAP_01_hmg_F",
+			"I_MRAP_03_hmg_F",
+			"O_MRAP_02_hmg_F",
 			"Exile_Car_Ifrit"
 		};
 	};
