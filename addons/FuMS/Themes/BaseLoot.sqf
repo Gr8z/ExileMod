@@ -52,8 +52,33 @@ FuMS_U_All = FuMS_U_Civ + FuMS_U_Soldier + FuMS_U_Guerilla + FuMS_U_Ghillie + Fu
 // Vest / Chest container items
 FuMS_V_Bandolliers = ["V_BandollierB_blk","V_BandollierB_cbr","V_BandollierB_khk","V_BandollierB_oli","V_BandollierB_rgr"];
 FuMS_V_Chestrig = ["V_Chestrig_blk","V_Chestrig_khk","V_Chestrig_oli","V_Chestrig_rgr"];
-FuMS_V_Vests = ["V_Press_F","V_Rangemaster_belt","V_TacVest_blk","V_TacVest_blk_POLICE","V_TacVest_brn",
-	"V_TacVest_camo","V_TacVest_khk","V_TacVest_oli","V_TacVestCamo_khk","V_TacVestIR_blk",
+FuMS_V_Vests = ["V_Press_F","V_Rangemaster_belt","V_TacVest_blk","V_TacVest_blk_POLICE","V_TacVest_brn","TRYK_Hrp_vest_ucp",
+			"TRYK_V_PlateCarrier_JSDF","TRYK_V_ArmorVest_AOR1","TRYK_V_ArmorVest_AOR2","TRYK_V_ArmorVest_coyo","TRYK_V_ArmorVest_Brown","TRYK_V_ArmorVest_CBR",
+			"TRYK_V_ArmorVest_khk","TRYK_V_ArmorVest_rgr","TRYK_V_ArmorVest_green","TRYK_V_ArmorVest_tan",
+			"TRYK_V_ArmorVest_Delta","TRYK_V_ArmorVest_Ranger","TRYK_V_ArmorVest_AOR1_2","TRYK_V_ArmorVest_AOR2_2",
+			"TRYK_V_ArmorVest_coyo2","TRYK_V_ArmorVest_Brown2","TRYK_V_ArmorVest_cbr2","TRYK_V_ArmorVest_khk2",
+			"TRYK_V_ArmorVest_rgr2","TRYK_V_ArmorVest_green2","TRYK_V_ArmorVest_tan2","TRYK_V_ArmorVest_Delta2",
+			"TRYK_V_ArmorVest_Ranger2","TRYK_V_PlateCarrier_blk","TRYK_V_PlateCarrier_coyo","TRYK_V_PlateCarrier_wood",
+			"TRYK_V_PlateCarrier_ACU","TRYK_V_TacVest_coyo","TRYK_V_harnes_blk_L","TRYK_V_harnes_od_L",
+			"TRYK_V_harnes_TAN_L","TRYK_V_PlateCarrier_blk_L","TRYK_V_PlateCarrier_wood_L","TRYK_V_PlateCarrier_ACU_L",
+			"TRYK_V_PlateCarrier_coyo_L","TRYK_V_ChestRig_L","TRYK_V_ChestRig","TRYK_V_Bulletproof",
+			"TRYK_V_Bulletproof_BLK","TRYK_V_Bulletproof_BL","TRYK_V_IOTV_BLK","TRYK_V_tacv1M_BK",
+			"TRYK_V_tacv1MLC_BK","TRYK_V_tacv1","TRYK_V_tacv1_CY","TRYK_V_tacv1_BK",
+			"TRYK_V_tacv1_P_BK","TRYK_V_tacv1_SHERIFF_BK","TRYK_V_tacv1_FBI_BK","TRYK_V_tacv1LP_BK",
+			"TRYK_V_tacv1LSRF_BK","TRYK_V_tacv1LC_BK","TRYK_V_tacv1LC_CY","TRYK_V_tacv1LC_OD",
+			"TRYK_V_tacv1LC_FBI_BK","TRYK_V_tacv1LC_SRF_BK","TRYK_V_tacv1LC_SRF_OD","TRYK_V_tacv1LC_P_BK",
+			"TRYK_V_PlateCarrier_POLICE","TRYK_V_ArmorVest_HRT_B","TRYK_V_ArmorVest_HRT_OD","TRYK_V_ArmorVest_HRT2_B",
+			"TRYK_V_ArmorVest_HRT2_OD","TRYK_V_ArmorVest_Winter","TRYK_V_Sheriff_BA_OD","TRYK_V_tacv10_BK",
+			"TRYK_V_tacv10_OD","TRYK_V_tacv10_TN","TRYK_V_tacv10LC_BK","TRYK_V_tacv10LC_OD",
+			"TRYK_V_tacv10LC_TN","TRYK_V_tacv1L_BK","TRYK_V_tacv1L_OD","TRYK_V_tacv1L_CY",
+			"TRYK_V_tacv1LC_FBI2_BK","TRYK_V_tacv1LC_SRF2_BK","TRYK_V_tacv1LC_SRF2_OD","TRYK_V_tacv1LC_P2_BK",
+			"TRYK_V_tacv1_MSL_BK","TRYK_V_tacv1_MSL_NV","TRYK_V_tacv1LMSL_BK","TRYK_V_tacv1LMSL_NV","TRYK_V_tacv1LC_MSL_BK",
+			"TRYK_V_tacv1LC_MSL_NV","TRYK_V_tacSVD_BK","TRYK_V_tacSVD_OD","TRYK_V_Sheriff_BA_TL","TRYK_V_Sheriff_BA_TBL","TRYK_V_Sheriff_BA_TCL","TRYK_V_Sheriff_BA_TL2","TRYK_V_Sheriff_BA_TBL2","TRYK_V_Sheriff_BA_TCL2",
+			"TRYK_V_Sheriff_BA_T","TRYK_V_Sheriff_BA_TB","TRYK_V_Sheriff_BA_T2","TRYK_V_Sheriff_BA_TB2",
+			"TRYK_V_Sheriff_BA_T3","TRYK_V_Sheriff_BA_TB3","TRYK_V_Sheriff_BA_T4","TRYK_V_Sheriff_BA_TB4",
+			"TRYK_V_Sheriff_BA_T5","TRYK_V_Sheriff_BA_TB5","TRYK_V_Sheriff_BA_TBL3_BK","TRYK_V_Sheriff_BA_TBL3_OD",
+			"TRYK_V_Sheriff_BA_TBL3_TN","TRYK_LOC_AK_chestrig_OD",
+			"TRYK_LOC_AK_chestrig_TAN""V_TacVest_camo","V_TacVest_khk","V_TacVest_oli","V_TacVestCamo_khk","V_TacVestIR_blk",
 	"V_I_G_resistanceLeader_F"];
 FuMS_V_Harness = ["V_HarnessO_brn","V_HarnessO_gry","V_HarnessOGL_brn","V_HarnessOGL_gry",
 	"V_HarnessOSpec_brn","V_HarnessOSpec_gry"];
@@ -69,8 +94,41 @@ FuMS_V_All = FuMS_V_Bandolliers + FuMS_V_Chestrig + FuMS_V_Vests + FuMS_V_Harnes
 // Head/Hat items
 FuMS_H_Caps = ["H_Cap_blk","H_Cap_blk_Raven","H_Cap_blu","H_Cap_brn_SPECOPS","H_Cap_grn",
 	"H_Cap_headphones","H_Cap_khaki_specops_UK","H_Cap_oli","H_Cap_press","H_Cap_red",
-	"H_Cap_tan","H_Cap_tan_specops_US"];
-FuMS_H_MilitaryCaps = ["H_MilCap_blue","H_MilCap_dgtl","H_MilCap_mcamo","H_MilCap_ocamo","H_MilCap_oucamo","H_MilCap_rucamo"];
+	"H_Cap_tan","TRYK_US_ESS_Glasses_WH","TRYK_US_ESS_Glasses_BLK","TRYK_US_ESS_Glasses_TAN","TRYK_US_ESS_Glasses_TAN_BLK",
+			"TRYK_SPGEAR_Glasses","TRYK_headset_Glasses","TRYK_SpsetG_Glasses","TRYK_Spset_PHC1_Glasses",
+			"TRYK_Spset_PHC2_Glasses","TRYK_US_ESS_Glasses_H","TRYK_US_ESS_Glasses_Cover","TRYK_headset2_glasses",
+			"TRYK_US_ESS_Glasses_NV","TRYK_US_ESS_Glasses_TAN_NV","TRYK_ESS_BLKTAN_NV","TRYK_ESS_BLKBLK_NV",
+			"TRYK_G_Shades_Black_NV","TRYK_G_Shades_Blue_NV","TRYK_G_bala_ess_NV","TRYK_bandana_NV",
+			"TRYK_SPgearG_NV","TRYK_SPgear_PHC1_NV","TRYK_SPgear_PHC2_NV","TRYK_G_bala_wh_NV",
+			"TRYK_ESS_wh_NV","TRYK_ESS_CAP_OD","TRYK_ESS_CAP_tan","TRYK_R_CAP_BLK",
+			"TRYK_R_CAP_TAN","TRYK_R_CAP_OD_US","TRYK_r_cap_tan_Glasses","TRYK_r_cap_blk_Glasses",
+			"TRYK_r_cap_od_Glasses","TRYK_H_headsetcap_Glasses","TRYK_H_headsetcap_blk_Glasses","TRYK_H_headsetcap_od_Glasses",
+			"TRYK_TAC_EARMUFF_SHADE","TRYK_TAC_EARMUFF","TRYK_NOMIC_TAC_EARMUFF","TRYK_headset2","H_Cap_tan_specops_US"];
+FuMS_H_MilitaryCaps = ["H_MilCap_blue","H_MilCap_dgtl","H_MilCap_mcamo","H_MilCap_ocamo","H_MilCap_oucamo",
+"TRYK_US_ESS_Glasses","TRYK_TAC_EARMUFF_Gs","TRYK_TAC_SET_bn","TRYK_NOMIC_TAC_EARMUFF_Gs",
+			"TRYK_TAC_EARMUFF_SHADE_Gs","TRYK_TAC_SET_TAN","TRYK_TAC_SET_OD","TRYK_TAC_SET_WH",
+			"TRYK_TAC_SET_MESH","TRYK_TAC_SET_TAN_2","TRYK_TAC_SET_OD_2","TRYK_TAC_SET_WH_2",
+			"TRYK_TAC_SET_MESH_2","TRYK_bandana_g","TRYK_H_PASGT_BLK","TRYK_H_PASGT_OD",
+			"TRYK_H_PASGT_COYO","TRYK_H_PASGT_TAN","TRYK_H_Helmet_Snow","TRYK_H_WH",
+			"TRYK_H_GR","TRYK_H_AOR1","TRYK_H_AOR2","TRYK_H_EARMUFF",
+			"TRYK_H_TACEARMUFF_H","TRYK_H_Bandana_H","TRYK_H_Bandana_wig","TRYK_H_Bandana_wig_g","TRYK_H_wig","TRYK_H_headset2","TRYK_H_ghillie_over",
+			"TRYK_H_ghillie_top","TRYK_H_ghillie_top_headless","TRYK_H_ghillie_over_green","TRYK_H_ghillie_top_green",
+			"TRYK_H_ghillie_top_headless_green","TRYK_H_woolhat","TRYK_H_woolhat_CW","TRYK_H_woolhat_WH",
+			"TRYK_H_woolhat_br","TRYK_H_woolhat_cu","TRYK_H_woolhat_tan","TRYK_H_headsetcap",
+			"TRYK_H_headsetcap_blk","TRYK_H_headsetcap_od","TRYK_H_pakol","TRYK_H_pakol2",
+			"TRYK_H_LHS_HEL_G","TRYK_H_Helmet_Winter","TRYK_H_Helmet_Winter_2","TRYK_Headphone_NV",
+			"TRYK_HRPIGEAR_NV","TRYK_Headset_NV","TRYK_TAC_boonie_SET_NV","TRYK_TAC_SET_NV_TAN",
+			"TRYK_TAC_SET_NV_OD","TRYK_TAC_SET_NV_WH","TRYK_TAC_SET_NV_MESH","TRYK_TAC_SET_NV_TAN_2",
+			"TRYK_TAC_SET_NV_OD_2","TRYK_TAC_SET_NV_WH_2","TRYK_TAC_SET_NV_MESH_2","TRYK_H_DELTAHELM_NV",
+			"TRYK_Shemagh_shade_MESH","TRYK_Shemagh_shade_N","TRYK_Shemagh_shade_G_N","TRYK_Shemagh_shade_WH_N",
+			"TRYK_kio_balaclava_WH","TRYK_kio_balaclava_BLK","TRYK_kio_balaclavas","TRYK_kio_balaclava_BLK_ear",
+			"TRYK_kio_balaclava_ear","TRYK_kio_balaclava_ESS","TRYK_Shemagh","TRYK_Shemagh_mesh",
+			"TRYK_Shemagh_G","TRYK_Shemagh_WH","TRYK_Shemagh_shade","TRYK_Shemagh_shade_G",
+			"TRYK_Shemagh_shade_WH","TRYK_Shemagh_shade_MH","TRYK_Shemagh_ESS","TRYK_Shemagh_ESS_G",
+			"TRYK_Shemagh_ESS_WH","TRYK_Shemagh_EAR_TAN","TRYK_Shemagh_EAR_WH","TRYK_balaclava_BLACK_NV",
+			"TRYK_balaclava_NV","TRYK_balaclava_BLACK_EAR_NV","TRYK_balaclava_EAR_NV","TRYK_Shemagh_TAN_NV",
+			"TRYK_Shemagh_MESH_NV","TRYK_Shemagh_G_NV","TRYK_Shemagh_WH_NV","TRYK_Shemagh_EAR_NV",
+			"TRYK_Shemagh_EAR_G_NV","TRYK_Shemagh_EAR_WH_NV","TRYK_ShemaghESSTAN_NV","TRYK_ShemaghESSOD_NV","H_MilCap_rucamo"];
 FuMS_H_Beanies = ["H_Watchcap_blk","H_Watchcap_camo","H_Watchcap_khk","H_Watchcap_sgg"];
 FuMS_H_Bandannas = ["H_Bandanna_camo","H_Bandanna_cbr","H_Bandanna_gry","H_Bandanna_khk",
 	"H_Bandanna_khk_hs","H_Bandanna_mcamo","H_Bandanna_sgg","H_Bandanna_surfer"];
@@ -104,7 +162,12 @@ FuMS_W_Muzzle = ["muzzle_snds_338_black","muzzle_snds_338_green","muzzle_snds_33
 	"muzzle_snds_93mmg","muzzle_snds_93mmg_tan","muzzle_snds_acp","muzzle_snds_B","muzzle_snds_H",
 	"muzzle_snds_H_MG","muzzle_snds_H_SW","muzzle_snds_L","muzzle_snds_M"];
 FuMS_W_OpticsLv1 = ["optic_Aco","optic_ACO_grn","optic_ACO_grn_smg","optic_Aco_smg","optic_Arco","optic_Holosight",
-	"optic_Holosight_smg","optic_Yorris","optic_MRD","optic_MRCO"];
+	"optic_Holosight_smg","optic_Yorris","optic_MRD","optic_MRCO","rhsusf_acc_eotech_552",
+			"rhsusf_acc_LEUPOLDMK4","rhsusf_acc_ELCAN","rhsusf_acc_ELCAN_pip","rhsusf_acc_ACOG",
+			"rhsusf_acc_ACOG_pip","rhs_acc_1pn93_2","rhsusf_acc_ACOG2","rhsusf_acc_ACOG_USMC",
+			"rhsusf_acc_ACOG2_USMC","rhsusf_acc_ACOG3_USMC","rhsusf_acc_LEUPOLDMK4_2","rhsusf_acc_EOTECH",
+			"rhs_acc_1p29","rhs_acc_1p78","rhs_acc_pkas","rhs_acc_1p63",
+			"rhs_acc_ekp1","rhs_acc_pso1m2","rhs_acc_pgo7v","rhs_acc_1pn93_1"];
 FuMS_W_OpticsLv2 = ["optic_LRPS","optic_NVS","optic_SOS"];
 FuMS_W_OpticsLv3 = ["optic_AMS","optic_AMS_khk","optic_AMS_snd","optic_DMS","optic_Hamr","optic_KHS_blk",
 	"optic_KHS_hex","optic_KHS_old","optic_KHS_tan","optic_Nightstalker"];
@@ -136,7 +199,16 @@ FuMS_Ammo_All = ["100Rnd_65x39_caseless_mag","100Rnd_65x39_caseless_mag_Tracer",
 "30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Yellow",
 "30Rnd_556x45_Stanag_red","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green_mag_Tracer",
 "30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag_Tracer","30Rnd_9x21_Mag","5Rnd_127x108_APDS_Mag",
-"5Rnd_127x108_Mag","6Rnd_45ACP_Cylinder","6Rnd_GreenSignal_F","6Rnd_RedSignal_F","7Rnd_408_Mag","9Rnd_45ACP_Mag"];
+			"rhsusf_mag_7x45acp_MHP","rhs_mag_9x18_12_57N181S","rhs_mag_9x19_17","rhs_mag_30Rnd_556x45_Mk318_Stanag",
+			"rhs_mag_30Rnd_556x45_Mk262_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Green","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Yellow","rhs_200rnd_556x45_M_SAW","rhs_200rnd_556x45_B_SAW",
+			"rhs_200rnd_556x45_T_SAW","rhsusf_50Rnd_762x51","rhsusf_50Rnd_762x51_m993","rhsusf_50Rnd_762x51_m80a1epr",
+			"rhsusf_100Rnd_762x51","rhsusf_100Rnd_762x51_m993","rhsusf_100Rnd_762x51_m80a1epr","rhsusf_5Rnd_00Buck",
+			"rhsusf_5Rnd_Slug","rhsusf_8Rnd_00Buck","rhsusf_8Rnd_Slug","rhsusf_20Rnd_762x51_m993_Mag",
+			"rhsusf_5Rnd_300winmag_xm2010","rhs_30Rnd_762x39mm","rhs_30Rnd_762x39mm_tracer","rhs_30Rnd_762x39mm_89",
+			"rhs_30Rnd_545x39_AK","rhs_30Rnd_545x39_AK_no_tracers","rhs_30Rnd_545x39_7N10_AK","rhs_30Rnd_545x39_7N22_AK",
+			"rhs_30Rnd_545x39_AK_green","rhs_45Rnd_545X39_AK","rhs_45Rnd_545X39_7N10_AK","rhs_45Rnd_545X39_7N22_AK",
+			"rhs_45Rnd_545X39_AK_Green","rhs_100Rnd_762x54mmR","rhs_100Rnd_762x54mmR_gree","5Rnd_127x108_Mag","6Rnd_45ACP_Cylinder","6Rnd_GreenSignal_F","6Rnd_RedSignal_F","7Rnd_408_Mag","9Rnd_45ACP_Mag"];
 FuMS_Ammo_762 = ["10Rnd_762x54_Mag","10Rnd_762x51_Mag","150Rnd_762x54_Box","150Rnd_762x54_Box_Tracer","20Rnd_762x51_Mag"];
 FuMS_Ammo_93 = ["10Rnd_93x64_DMR_05_Mag","150Rnd_93x64_Mag"];
 FuMS_Ammo_45 = ["11Rnd_45ACP_Mag","30Rnd_45ACP_Mag_SMG_01","30Rnd_45ACP_Mag_SMG_01_Tracer_Green","30Rnd_45ACP_Mag_SMG_01_Tracer_Yellow",
@@ -187,9 +259,25 @@ FuMS_E_All = FuMS_E_Grenade + FuMS_E_GrenadeIR + FuMS_E_1Rnd + FuMS_E_3Rnd + FuM
 //Guns
 FuMS_Pistols = ["hgun_ACPC2_F","hgun_P07_F","hgun_Pistol_heavy_01_F","hgun_Pistol_heavy_02_F","hgun_Pistol_Signal_F","hgun_Rook40_F"];
 FuMS_SubMGs = [	"hgun_PDW2000_F","SMG_01_F","SMG_02_F"];
-FuMS_LightMGs = ["arifle_MX_SW_Black_F","arifle_MX_SW_F","LMG_Mk200_F","LMG_Zafir_F","MMG_01_hex_F","MMG_01_tan_F","MMG_02_black_F","MMG_02_camo_F","MMG_02_sand_F"];
-FuMS_AssaultRifles = ["arifle_Katiba_C_F","arifle_Katiba_F","arifle_Katiba_GL_F","arifle_Mk20_F","arifle_Mk20_GL_F","arifle_Mk20_GL_plain_F","arifle_Mk20_plain_F","arifle_Mk20C_F","arifle_Mk20C_plain_F","arifle_MX_Black_F","arifle_MX_F","arifle_MX_GL_Black_F","arifle_MX_GL_F","arifle_MXC_Black_F","arifle_MXC_F","arifle_SDAR_F","arifle_TRG20_F","arifle_TRG21_F","arifle_TRG21_GL_F"];
-FuMS_SniperRifles = ["arifle_MXM_Black_F","arifle_MXM_F","srifle_DMR_01_F","srifle_DMR_02_camo_F","srifle_DMR_02_F","srifle_DMR_02_sniper_F","srifle_DMR_03_F","srifle_DMR_03_khaki_F","srifle_DMR_03_multicam_F","srifle_DMR_03_tan_F","srifle_DMR_03_woodland_F","srifle_DMR_04_F","srifle_DMR_04_Tan_F","srifle_DMR_05_blk_F","srifle_DMR_05_hex_F","srifle_DMR_05_tan_f","srifle_DMR_06_camo_F","srifle_DMR_06_olive_F","srifle_EBR_F","srifle_GM6_camo_F","srifle_GM6_F","srifle_LRR_camo_F","srifle_LRR_F"];
+FuMS_LightMGs = ["arifle_MX_SW_Black_F","arifle_MX_SW_F","LMG_Mk200_F","LMG_Zafir_F","MMG_01_hex_F","MMG_01_tan_F","MMG_02_black_F","MMG_02_camo_F","MMG_02_sand_F","rhs_weap_m249_pip_L",
+			"rhs_weap_m249_pip_L_para","rhs_weap_m249_pip_L_vfg","rhs_weap_m249_pip_S","rhs_weap_m249_pip_S_para","rhs_weap_m249_pip_S_vfg","rhs_weap_m240B","rhs_weap_m240B_CAP","rhs_weap_m240G",
+			"rhs_weap_pkm","rhs_weap_pkp"];
+FuMS_AssaultRifles = ["arifle_Katiba_C_F",
+			"rhs_weap_M590_5RD","rhs_weap_M590_8RD","rhs_weap_m16a4","rhs_weap_m16a4_carryhandle","rhs_weap_m16a4_carryhandle_grip","rhs_weap_m16a4_carryhandle_grip_pmag","rhs_weap_m16a4_carryhandle_M203",
+			"rhs_weap_m16a4_carryhandle_pmag","rhs_weap_m16a4_grip","rhs_weap_m4","rhs_weap_m4_grip2","rhs_weap_m4_carryhandle","rhs_weap_m4_carryhandle_pmag","rhs_weap_m4_grip",
+			"rhs_weap_m4_m203","rhs_weap_m4_m320","rhs_weap_m4a1_carryhandle","rhs_weap_m4a1_carryhandle_grip2","rhs_weap_m4a1_carryhandle_pmag","rhs_weap_m4a1_carryhandle_m203","rhs_weap_m4a1",
+			"rhs_weap_m4a1_grip2","rhs_weap_m4a1_grip","rhs_weap_m4a1_m203","rhs_weap_m4a1_m320","rhs_weap_m4a1_blockII","rhs_weap_m4a1_blockII_KAC","rhs_weap_m4a1_blockII_grip2",
+			"rhs_weap_m4a1_blockII_grip2_KAC","rhs_weap_m4a1_blockII_M203","rhs_weap_mk18","rhs_weap_mk18_KAC","rhs_weap_mk18_grip2","rhs_weap_mk18_grip2_KAC","rhs_weap_mk18_m320",
+			"rhs_weap_ak103","rhs_weap_ak103_npz","rhs_weap_ak103_1","rhs_weap_ak74m","rhs_weap_ak74m_2mag","rhs_weap_ak74m_2mag_camo","rhs_weap_ak74m_2mag_npz",
+			"rhs_weap_ak74m_camo","rhs_weap_ak74m_desert","rhs_weap_ak74m_desert_npz","rhs_weap_ak74m_desert_folded","rhs_weap_ak74m_plummag_folded","rhs_weap_ak74m_folded","rhs_weap_ak74m_camo_folded",
+			"rhs_weap_ak74m_gp25","rhs_weap_ak74m_gp25_npz","rhs_weap_ak74m_npz","rhs_weap_ak74m_plummag","rhs_weap_ak74m_plummag_npz","rhs_weap_akm","rhs_weap_akm_gp25","rhs_weap_akms",
+			"rhs_weap_akms_gp25","arifle_Katiba_F","arifle_Katiba_GL_F","arifle_Mk20_F","arifle_Mk20_GL_F","arifle_Mk20_GL_plain_F","arifle_Mk20_plain_F","arifle_Mk20C_F","arifle_Mk20C_plain_F","arifle_MX_Black_F","arifle_MX_F","arifle_MX_GL_Black_F","arifle_MX_GL_F","arifle_MXC_Black_F","arifle_MXC_F","arifle_SDAR_F","arifle_TRG20_F","arifle_TRG21_F","arifle_TRG21_GL_F"];
+FuMS_SniperRifles = ["arifle_MXM_Black_F","arifle_MXM_F","srifle_DMR_01_F","srifle_DMR_02_camo_F","srifle_DMR_02_F","srifle_DMR_02_sniper_F","srifle_DMR_03_F","srifle_DMR_03_khaki_F","srifle_DMR_03_multicam_F",
+			"srifle_DMR_03_tan_F","srifle_DMR_03_woodland_F","srifle_DMR_04_F","srifle_DMR_04_Tan_F","srifle_DMR_05_blk_F","srifle_DMR_05_hex_F","srifle_DMR_05_tan_f","srifle_DMR_06_camo_F","srifle_DMR_06_olive_F","srifle_EBR_F","srifle_GM6_camo_F","srifle_GM6_F",
+			"srifle_LRR_camo_F","rhs_weap_M107","rhs_weap_sr25","rhs_weap_sr25_ec","rhs_weap_m14ebrri",
+			"rhs_weap_XM2010","rhs_weap_XM2010_wd","rhs_weap_XM2010_d","rhs_weap_XM2010_sa",
+			"rhs_weap_svd","rhs_weap_svdp_wd","rhs_weap_svdp_wd_npz","rhs_weap_svdp_npz",
+			"rhs_weap_svds","srifle_LRR_F"];
 FuMS_Rifles_ALL = FuMS_LightMGs + FuMS_AssaultRifles + FuMS_SniperRifles;
 FuMS_Guns_ALL = FuMS_Rifles_ALL + FuMS_SubMGs + FuMS_Pistols;
 
