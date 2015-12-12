@@ -7,7 +7,7 @@ if (ExileClientPlayerMoney > 500) then {
     _spawnPos = player modelToWorld [0,2,0];
     _spawnDir = (getDir player) -90;
     do_MakeBike = [player, _spawnPos, _spawnDir];
-    player removeItem "ItemRadio";
+    player unlinkItem "ItemRadio";
     uiSleep 3;
     publicVariableServer "do_MakeBike";
     uiSleep 1;
