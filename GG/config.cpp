@@ -3038,7 +3038,7 @@ class CfgTraderCategories
 			"U_BG_leader",
 			"U_IG_leader",
 			"U_I_G_resistanceLeader_F",
-			/*"U_B_FullGhillie_ard",
+			"U_B_FullGhillie_ard",
 			"U_B_FullGhillie_lsh",
 			"U_B_FullGhillie_sard",
 			"U_B_GhillieSuit",
@@ -3049,7 +3049,7 @@ class CfgTraderCategories
 			"U_O_FullGhillie_ard",
 			"U_O_FullGhillie_lsh",
 			"U_O_FullGhillie_sard",
-			"U_O_GhillieSuit",*/
+			"U_O_GhillieSuit",
 			"U_I_Wetsuit",
 			"U_O_Wetsuit",
 			"U_B_Wetsuit",
