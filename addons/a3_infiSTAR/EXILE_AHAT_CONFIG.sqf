@@ -130,7 +130,6 @@ _adminUIDandAccess =
 		 '76561198084154973', //Mr. Bandit
 		 '76561197960289679', //TangoWhiskey
 		 '76561198029881052', //Dirk Verite
-		 '76561198135739831', //Daveyy
 		 '76561198062993387', //Azul
 		 //Add UID's Above - Don't forget the comma!
 		 '0'],
@@ -149,8 +148,7 @@ _adminUIDandAccess =
 		]
 	],
 	[	/* Mods */
-		['76561198137880291', //Xenon
-		 '76561198056028211', //Nasty
+		['76561198056028211', //Nasty
 		 //Add UID's Above - Don't forget the comma!
 		 '0'],
 		[
