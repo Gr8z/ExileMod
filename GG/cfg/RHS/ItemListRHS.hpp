@@ -184,7 +184,9 @@
 	class rhsusf_100Rnd_762x51									{ quality = 3; price = 95; };
 	class rhsusf_100Rnd_762x51_m993								{ quality = 3; price = 95; };
 	class rhsusf_100Rnd_762x51_m80a1epr							{ quality = 3; price = 95; };
-	class rhsusf_8Rnd_00Buck									{ quality = 3; price = 40; };
+	class rhsusf_5Rnd_00Buck									{ quality = 3; price = 40; };
+	class rhsusf_5Rnd_Slug										{ quality = 3; price = 30; };
+	class rhsusf_8Rnd_00Buck									{ quality = 3; price = 20; };
 	class rhsusf_8Rnd_Slug										{ quality = 3; price = 50; };
 	class rhsusf_20Rnd_762x51_m993_Mag							{ quality = 3; price = 45; };
 	class rhsusf_5Rnd_300winmag_xm2010							{ quality = 3; price = 55; };								
@@ -228,6 +230,8 @@
 	
 	//ASSAULT RIFLES
 	//US
+	class rhs_weap_M590_5RD							{ quality = 3; price = 350; };
+	class rhs_weap_M590_8RD							{ quality = 3; price = 350; };
 	class rhs_weap_m16a4							{ quality = 1; price = 350; };
 	class rhs_weap_m16a4_carryhandle				{ quality = 1; price = 350; };
 	class rhs_weap_m16a4_carryhandle_grip			{ quality = 2; price = 400; };
@@ -261,6 +265,7 @@
 	class rhs_weap_mk18_grip2						{ quality = 3; price = 500; };
 	class rhs_weap_mk18_grip2_KAC					{ quality = 3; price = 500; };
 	class rhs_weap_mk18_m320						{ quality = 3; price = 500; };
+
 	//Russian
 	class rhs_weap_ak103							{ quality = 1; price = 150; };
 	class rhs_weap_ak103_npz						{ quality = 1; price = 150; };

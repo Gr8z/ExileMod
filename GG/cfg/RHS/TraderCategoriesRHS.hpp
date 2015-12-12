@@ -229,6 +229,8 @@
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[]=
 		{
+			"rhs_weap_M590_5RD",
+			"rhs_weap_M590_8RD",
 			"rhs_weap_m16a4",
 			"rhs_weap_m16a4_carryhandle",
 			"rhs_weap_m16a4_carryhandle_grip",
@@ -336,6 +338,8 @@
 			"rhsusf_100Rnd_762x51",
 			"rhsusf_100Rnd_762x51_m993",
 			"rhsusf_100Rnd_762x51_m80a1epr",
+			"rhsusf_5Rnd_00Buck",
+			"rhsusf_5Rnd_Slug",
 			"rhsusf_8Rnd_00Buck",
 			"rhsusf_8Rnd_Slug",
 			"rhsusf_20Rnd_762x51_m993_Mag",
