@@ -2675,7 +2675,9 @@ class CfgInteractionModels
 			"stallwater_f",
 			"waterpump_01_f",
 			"water_source_f",
-			"misc_well.p3d"
+			"misc_well.p3d",
+			"watertank_f.p3d",
+			"pumpa.p3d"
 		};
 	};
 
