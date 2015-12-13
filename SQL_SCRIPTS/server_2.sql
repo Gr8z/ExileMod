@@ -40,3 +40,11 @@ WHERE id NOT IN (
     LIMIT 100
   ) foo
 );
+
+/* =================== UDPATES =================== */
+
+/* fix players unable to log in */
+UPDATE player_1
+set damage = 0, hitpoints = '[]'
+where hitpoints = '[["'
+and damage = 1;
