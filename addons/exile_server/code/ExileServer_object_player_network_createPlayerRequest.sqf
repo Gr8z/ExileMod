@@ -35,8 +35,8 @@ try
 	{
 	    case (_respect > 2500 && _respect < 4999):
 	    {
-		_bambiPlayer forceAddUniform "TRYK_U_B_Denim_T_BG_BK";
-		_bambiPlayer addBackpack "TRYK_B_tube_blk";
+		_bambiPlayer forceAddUniform "U_C_Poloshirt_blue";
+		_bambiPlayer addBackpack "B_OutdoorPack_blk";
 		_bambiPlayer addItem "Exile_Item_Matches";
 		_bambiPlayer linkItem "ItemGPS";
 		_bambiPlayer addWeaponGlobal "Exile_Melee_Axe";
@@ -46,7 +46,7 @@ try
 			
 	    case (_respect > 5000 && _respect < 9999):
 	   {
-		_bambiPlayer forceAddUniform "TRYK_hoodie_Wood";
+		_bambiPlayer forceAddUniform "U_IG_Guerilla2_1";
 		_bambiPlayer addVest "V_BandollierB_oli";
 		_bambiPlayer addBackpack "B_AssaultPack_Kerry";
 		_bambiPlayer addItem "Exile_Item_Matches";
@@ -60,8 +60,8 @@ try
 	   
 		case (_respect > 10000 && _respect < 19999):
 	   {
-		_bambiPlayer forceAddUniform "TRYK_U_denim_hood_mc";
-		_bambiPlayer addHeadgear "TRYK_H_woolhat_cu";
+		_bambiPlayer forceAddUniform "U_OG_Guerilla3_1";
+		_bambiPlayer addHeadgear "B_AssaultPack_khk";
 		_bambiPlayer addVest "V_BandollierB_oli";
 		_bambiPlayer addBackpack "B_TacticalPack_mcamo";
 		_bambiPlayer addItem "Exile_Item_Matches";
@@ -76,12 +76,11 @@ try
 	   
 	    case (_respect > 19999 && _respect < 29999):
 	   {
-		_bambiPlayer forceAddUniform "TRYK_shirts_DENIM_RED2_Sleeve";
-		for "_i" from 1 to 2 do {_bambiPlayer addItemToUniform "rhsusf_mag_17Rnd_9x19_JHP";};
+		_bambiPlayer forceAddUniform "U_NikosAgedBody";
+		for "_i" from 1 to 2 do {_bambiPlayer addItemToUniform "rhsusf_mag_7x45acp_MHP";};
 		_bambiPlayer addVest "V_BandollierB_khk";
-		_bambiPlayer addBackpack "TRYK_B_Kitbag_aaf";
-		_bambiPlayer addHeadgear "TRYK_H_headsetcap_blk";
-	 	_bambiPlayer addWeaponGlobal "rhsusf_weap_glock17g4";
+		_bambiPlayer addBackpack "B_Kitbag_mcamo";
+	 	_bambiPlayer addWeaponGlobal "rhsusf_weap_m1911a1";
 		_bambiPlayer addItem "Exile_Item_Matches";
 		_bambiPlayer linkItem "ItemGPS";
 		_bambiPlayer addWeaponGlobal "Exile_Melee_Axe";
@@ -94,12 +93,12 @@ try
 	   
 	    case (_respect > 29999 && _respect < 39999):
 	   {
-	   	_bambiPlayer forceAddUniform "TRYK_U_denim_hood_3c";
-		for "_i" from 1 to 2 do {_bambiPlayer addItemToUniform "rhsusf_mag_7x45acp_MHP";};
+	   	_bambiPlayer forceAddUniform "U_B_HeliPilotCoveralls";
+		for "_i" from 1 to 2 do {_bambiPlayer addItemToUniform "rhsusf_mag_17Rnd_9x19_JHP";};
 		_bambiPlayer addVest "V_TacVest_camo";
-		_bambiPlayer addBackpack "TRYK_B_Kitbag_Base_JSDF";
+		_bambiPlayer addBackpack "B_FieldPack_blk";
 		_bambiPlayer addHeadgear "H_Booniehat_dgtl";
-	 	_bambiPlayer addWeaponGlobal "rhsusf_weap_m1911a1";
+	 	_bambiPlayer addWeaponGlobal "rhsusf_weap_glock17g4";
 		_bambiPlayer addItem "Exile_Item_Matches";
 		_bambiPlayer linkItem "ItemGPS";
 		_bambiPlayer addWeaponGlobal "Exile_Melee_Axe";
@@ -113,10 +112,10 @@ try
 	   
 	    case (_respect > 39999 && _respect < 49999):
 	   {
-		_bambiPlayer forceAddUniform "TRYK_U_Bts_PCUs";
+		_bambiPlayer forceAddUniform "U_B_CombatUniform_mcam_tshirt";
 		for "_i" from 1 to 2 do {_bambiPlayer addItemToUniform "11Rnd_45ACP_Mag";};
 		_bambiPlayer addVest "V_PlateCarrierIA1_dgtl";
-		_bambiPlayer addBackpack "TRYK_B_Coyotebackpack";
+		_bambiPlayer addBackpack "B_Bergen_sgg";
 		_bambiPlayer addHeadgear "H_Cap_brn_SPECOPS";
 	 	_bambiPlayer addWeaponGlobal "hgun_Pistol_heavy_01_F";
 		_bambiPlayer addHandgunItem "optic_MRD";
@@ -133,10 +132,10 @@ try
 	   
 	    case (_respect > 49999 && _respect < 69999):
 	   {
-		_bambiPlayer forceAddUniform "TRYK_U_B_PCUODHs";
+		_bambiPlayer forceAddUniform "U_O_CombatUniform_oucamo";
 		for "_i" from 1 to 2 do {_bambiPlayer addItemToUniform "11Rnd_45ACP_Mag";};
 		_bambiPlayer addVest "V_PlateCarrierIA2_dgtl";
-		_bambiPlayer addBackpack "TRYK_B_Coyotebackpack";
+		_bambiPlayer addBackpack "B_Bergen_mcamo";
 		_bambiPlayer addHeadgear "H_Cap_oli_hs";
 	 	_bambiPlayer addWeaponGlobal "hgun_Pistol_heavy_01_F";
 		_bambiPlayer addHandgunItem "muzzle_snds_acp";
@@ -153,10 +152,10 @@ try
 	   
 	    case (_respect > 69999 && _respect < 89999):
 	   {
-		_bambiPlayer forceAddUniform "TRYK_U_B_3cr";
+		_bambiPlayer forceAddUniform "U_OG_leader";
 		for "_i" from 1 to 2 do {_bambiPlayer addItemToUniform "11Rnd_45ACP_Mag";};
-		_bambiPlayer addVest "TRYK_V_tacSVD_BK";
-		_bambiPlayer addBackpack "TRYK_B_Coyotebackpack";
+		_bambiPlayer addVest "V_BandollierB_oli";
+		_bambiPlayer addBackpack "B_Bergen_blk";
 		_bambiPlayer addHeadgear "H_ShemagOpen_tan";
 	 	_bambiPlayer addWeaponGlobal "hgun_Pistol_heavy_01_F";
 		_bambiPlayer addHandgunItem "muzzle_snds_acp";
@@ -173,10 +172,10 @@ try
 	   
 	     case (_respect > 89999 && _respect < 149999):
 	   {
-		_bambiPlayer forceAddUniform "TRYK_U_B_woodR_CombatUniformTshirt";
+		_bambiPlayer forceAddUniform "U_O_CombatUniform_ocamo";
 		for "_i" from 1 to 2 do {_bambiPlayer addItemToUniform "rhs_mag_30Rnd_556x45_Mk318_Stanag";};
 		_bambiPlayer addVest "V_TacVest_camo";
-		_bambiPlayer addBackpack "TRYK_B_Carryall_JSDF";
+		_bambiPlayer addBackpack "B_Carryall_oli";
 		_bambiPlayer addHeadgear "H_Beret_blk";
 	 	_bambiPlayer addWeaponGlobal "rhs_weap_m4";
 		for "_i" from 1 to 2 do {_bambiPlayer addItemToUniform "11Rnd_45ACP_Mag";};
@@ -195,10 +194,10 @@ try
 
 	     case (_respect > 149999):
 	   {
-		_bambiPlayer forceAddUniform "TRYK_ZARATAKI";
+		_bambiPlayer forceAddUniform "U_B_GhillieSuit";
 		for "_i" from 1 to 2 do {_bambiPlayer addItemToUniform "rhs_mag_30Rnd_556x45_Mk318_Stanag";};
-		_bambiPlayer addVest "TRYK_V_ArmorVest_AOR1_2";
-		_bambiPlayer addBackpack "TRYK_B_Carryall_blk";
+		_bambiPlayer addVest "V_TacVest_camo";
+		_bambiPlayer addBackpack "B_Carryall_cbr";
 		_bambiPlayer addHeadgear "H_ShemagOpen_khk";
 	 	_bambiPlayer addWeaponGlobal "rhs_weap_m4_carryhandle";
 		_bambiPlayer addPrimaryWeaponItem "acc_flashlight";
