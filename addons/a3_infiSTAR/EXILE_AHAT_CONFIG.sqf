@@ -132,6 +132,7 @@ _adminUIDandAccess =
 		 '76561198029881052', //Dirk Verite
 		 '76561198062993387', //Azul
 		 '76561198058099842', //Fap
+		 '76561198056028211', //Nasty
 		 //Add UID's Above - Don't forget the comma!
 		 '0'],
 		[
@@ -149,7 +150,7 @@ _adminUIDandAccess =
 		]
 	],
 	[	/* Mods */
-		['76561198056028211', //Nasty
+		['00000000000000000', // Put in zeros so I don't break the code.
 		 //Add UID's Above - Don't forget the comma!
 		 '0'],
 		[
