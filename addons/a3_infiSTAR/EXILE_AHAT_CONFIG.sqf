@@ -131,6 +131,7 @@ _adminUIDandAccess =
 		 '76561197960289679', //TangoWhiskey
 		 '76561198029881052', //Dirk Verite
 		 '76561198062993387', //Azul
+		 '76561198058099842', //Fap
 		 //Add UID's Above - Don't forget the comma!
 		 '0'],
 		[
