@@ -47,4 +47,5 @@ WHERE id NOT IN (
 UPDATE player_2
 set damage = 0, hitpoints = '[]'
 where hitpoints = '[["'
+OR hitpoints = '[["!'
 and damage = 1;
