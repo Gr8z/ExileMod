@@ -2868,7 +2868,7 @@ class CfgTerritories
 	 * Defines the minimum distance to safe zones / trader cities where players
 	 * cannot build territories
 	 */
-	minimumDistanceToTraderZones = 1000;
+	minimumDistanceToTraderZones = 500;
 
 	/**
 	 * Defines the minimum distance to spawn zones where players
