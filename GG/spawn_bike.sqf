@@ -1,5 +1,5 @@
 if !((vehicle player) isEqualTo player) exitWith {};
-
+if (("ItemRadio" in (items player) || "ItemRadio" in (assigneditems player))) then { ['You need a radio to deploy a bike !',0,0.6,2,0] spawn bis_fnc_dynamictext;}
 
 if (ExileClientPlayerMoney > 500) then {
     titleText ["", "PLAIN DOWN"];
