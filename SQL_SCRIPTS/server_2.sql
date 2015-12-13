@@ -44,7 +44,7 @@ WHERE id NOT IN (
 /* =================== UDPATES =================== */
 
 /* fix players unable to log in */
-UPDATE player_1
+UPDATE player_2
 set damage = 0, hitpoints = '[]'
 where hitpoints = '[["'
 and damage = 1;
