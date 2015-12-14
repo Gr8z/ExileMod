@@ -3023,76 +3023,15 @@ class CfgSettings
 	///////////////////////////////////////////////////////////////////////
 	class LootSettings
 	{
-		/**
-		 * Chance in % to spawn loot in a building
-		 */
-		spawnChancePerBuilding = 100;
-
-		/**
-		 * Chance in % to spawn loot per loot spot per building.
-		 *
-		 * 100% = Super high loot
-		 * 50%  = Normal loot spawn rates
-		 * 20%  = You get the point
-		 */
-		spawnChancePerPosition = 90;
-
-		/**
-		 * Should be self-explanatory :)
-		 */
-		maximumNumberOfLootSpotsPerBuilding = 4;
-
-		/**
-		 * Exile spawns a random number of items per loot spot. This 
-		 * is the upper cap for that. So 3 means it could spawn 1, 2 
-		 * or 3.
-		 */
-		maximumNumberOfItemsPerLootSpot = 3;
-
-		/**
-		 * Radius in meter to spawn loot AROUND each player.
-		 * Do NOT touch this value if you dont know what you do.
-		 * The higher the number, the higher the drop rates, the
-		 * easier your server will lag.
-		 *
-		 * 50m  = Minimum
-		 * 200m = Maximum
-		 */
-		spawnRadius = 120;
-
-		/**
-		* Define a de-spawn radius here. That is the radius where loot
-		* is not near to players and their lifeTime expired. It will 
-		* also not spawn loot in a circle around the players to 
-		* prevent "flickering".
-		*
-		* 10m  = Minimum (thats better if a house is alone in the wild)
-		* 50m = Maximum
-		*/
+		spawnChancePerBuilding = 90;
+		spawnChancePerPosition = 75;
+		maximumNumberOfLootSpotsPerBuilding = 10;
+		maximumNumberOfItemsPerLootSpot = 2;
+		spawnRadius = 80;
 		visualThreshold = 10;
-
-		/**
-		 * Notify players that loot spawned for them
-		 *
-		 * 1 = Yes
-		 * 0 = No
-		 */
-		notifyPlayer = 0;
-
-		/**
-		 * Defines the radius around trader cities where the system should
-		 * not spawn loot. Set this to 0 if you want to have loot spawning
-		 * in trader citites, ugh.
-		 */
-		minimumDistanceToTraderZones = 100;
-
-		/**
-		 * Defines the radius around territories where no loot spawns.
-		 * This does not regard the actual size of a territory. So do not
-		 * set this to a lower value than the maximum radius of a territory,
-		 * which is 150m by default.
-		 */
-		minimumDistanceToTerritories = 0;
+		notifyPlayer = 1;
+		minimumDistanceToTraderZones = 500;
+		minimumDistanceToTerritories = 150;
 	};
 
 	///////////////////////////////////////////////////////////////////////
