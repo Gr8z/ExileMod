@@ -955,6 +955,7 @@ class CfgExileArsenal
 	class Exile_Uniform_BambiOverall				{ quality = 1; price = 1; sellPrice = 1; };
 
 	#include "cfg\RHS\ItemListRHS.hpp"
+	#include "cfg\TRYK\ItemListTRYK.hpp"
 	
 	
 	///////////////////////////////////////////////////////////////////////////////
@@ -2885,6 +2886,7 @@ class CfgTerritories
 class CfgTraderCategories 
 {
 	#include "cfg\RHS\TraderCategoriesRHS.hpp"
+	#include "cfg\TRYK\TraderCategoriesTRYK.hpp"
 	
 	class Community
 	{
@@ -3958,11 +3960,15 @@ class CfgTraders
 		{
 			"Headgear",
 			"RHSHeadgear",
+			"TRYKHeadgear",
 			"Uniforms",
 			"RHSUniforms",
+			"TRYKUniforms",
 			"Vests",
 			"RHSVests",
+			"TRYKVests",
 			"Backpacks",
+			"TRYKBackpacks",
 			"FirstAid"
 		};
 	};
