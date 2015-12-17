@@ -181,7 +181,7 @@ _maxMapMenuEntries = 6;	/* "Map Menu has been changed x entries found - Texts: y
 
 
 /* if steam api.steampowered.com is working, this might be a nice feature */
-_check_steam_ban = true;	/* will announce and log steambanned players - using GetPlayerBans v1 */
+_check_steam_ban = false;	/* will announce and log steambanned players - using GetPlayerBans v1 */
 _ban_for_steam_ban = false;	/* if "_check_steam_ban = true;" then steambanned players will get banned from your Arma server! */
 
 
@@ -212,7 +212,7 @@ _allowedIDDs =
 [
 	0,4,5,6,8,12,18,24,46,49,54,55,63,70,160,174,602,999,
 	20023,24001,24002,24004,24005,24006,24007,24008,24009,24010,24011,24012,
-	24013,24014,24015,20016,20017,20018,20019,20020,20021,24025
+	24013,24014,24015,20016,20017,20018,20019,20020,20021,24025,2900
 ];
 
 
