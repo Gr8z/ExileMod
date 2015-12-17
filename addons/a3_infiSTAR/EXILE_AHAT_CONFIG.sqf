@@ -286,8 +286,7 @@ _SupportBox1Content =
 [
 	['Exile_Item_Flag',1],['WorkBench',1],['Exile_Item_WoodDoorKit',1],['Exile_Item_Codelock',1],['Exile_Item_WoodFloorKit',4],['Exile_Item_WoodFloorPortKit',2],
 	['Exile_Item_WoodWallKit',5],['Exile_Item_CampFireKit',1],['Exile_Item_SafeKit',1],['Exile_Item_Storagecratekit',2],['Exile_Melee_Axe',1],['Exile_Ammo_Swing',1],
-	['Exile_Item_Matches',1],['Exile_Item_CookingPot',1]
-	'Exile_Item_Flag','Exile_Item_CookingPot',
+	['Exile_Item_Matches',1],['Exile_Item_CookingPot',1],
 	['Exile_Item_Codelock',5],['Exile_Item_DuctTape',10],['Exile_Item_InstaDoc',10],
 	['Exile_Item_Energydrink',10],['Exile_Item_ExtensionCord',5],['Exile_Item_FloodLightKit',5],
 	['Exile_Item_FortificationUpgrade',5],['Exile_Item_FuelCanisterFull',5],['Exile_Item_GloriousKnakworst_Cooked',10],
@@ -300,8 +299,7 @@ _SupportBox2Content =
 [
 	['Exile_Item_Flag',1],['WorkBench',2],['Exile_Item_WoodDoorKit',2],['Exile_Item_WoodGateKit',2],['Exile_Item_Codelock',4],['Exile_Item_WoodFloorKit',18],['Exile_Item_WoodFloorPortKit',2],
 	['Exile_Item_WoodWallKit',25],['Exile_Item_CampFireKit',2],['Exile_Item_SafeKit',3],['Exile_Item_Storagecratekit',4],['Exile_Item_WoodStairsKit',4],['Exile_Melee_Axe',2],['Exile_Ammo_Swing',1],
-	['Exile_Item_Matches',2],['Exile_Item_CookingPot',2],['B_Carryall_oucamo',1]
-	'Exile_Item_Flag',
+	['Exile_Item_Matches',2],['Exile_Item_CookingPot',2],['B_Carryall_oucamo',1],
 	['Exile_Item_WoodDoorKit',15],['Exile_Item_WoodDoorwayKit',15],['Exile_Item_WoodDrawBridgeKit',15],
 	['Exile_Item_WoodFloorKit',15],['Exile_Item_WoodFloorPortKit',15],['Exile_Item_WoodGateKit',15],
 	['Exile_Item_WoodLog',15],['Exile_Item_WoodPlank',15],['Exile_Item_WoodStairsKit',15],
@@ -313,7 +311,7 @@ _SupportBox3Content =
 [
 	['Exile_Item_Flag',2],['WorkBench',3],['Exile_Item_WoodDoorKit',4],['Exile_Item_WoodGateKit',4],['Exile_Item_Codelock',8],['Exile_Item_WoodFloorKit',40],['Exile_Item_WoodFloorPortKit',4],
 	['Exile_Item_WoodWallKit',30],['Exile_Item_CampFireKit',3],['Exile_Item_SafeKit',6],['Exile_Item_Storagecratekit',5],['Exile_Item_WoodStairsKit',8],['Exile_Melee_Axe',3],['Exile_Ammo_Swing',1],
-	['Exile_Item_Matches',3],['Exile_Item_CookingPot',3],['B_Carryall_oucamo',1]
+	['Exile_Item_Matches',3],['Exile_Item_CookingPot',3],['B_Carryall_oucamo',1],
 	['Exile_Item_Flag',5],['Exile_Item_WoodDoorKit',15],['Exile_Item_WoodWallKit',15],
 	['Exile_Item_WoodWindowKit',15],['Exile_Item_WoodFloorKit',15],['Exile_Item_SafeKit',5]
 ];
