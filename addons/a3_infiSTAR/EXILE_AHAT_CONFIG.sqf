@@ -1,7 +1,6 @@
 /*
-	File: EXILE_AHAT_CONFIG.sqf
 	Author: Chris(tian) "infiSTAR" Lorenzen
-	Contact: infiSTAR23@gmail.com
+	Contact: infiSTAR23@gmail.com // www.infiSTAR.de
 	
 	Description:
 	Arma AntiHack & AdminTools - infiSTAR.de
@@ -20,47 +19,45 @@
 */
 _serverCommandPassword = 'penis1234';
 
-
-
 /*
 	"_passwordAdmin" is passwordAdmin - in your servers config.cfg, needed for servercommands from client
 	
 	This is used to be able to use the "login" function ingame. Will log you in as Arma "Admin".
 */
 _passwordAdmin = 'penis123';
-
+/* _serverCommandPassword and _passwordAdmin should always be different passwords or it could cause problems! */
 
 
 
 /* Anti Teleport */
-_UAT = true;
+_UAT = false;
 /* if "_UAT = true;" you can add more allowed TP positions to the array like -> _allowTP pushBack [POSITION,RADIUS]; */
 _allowTP = [];
 if(worldName == 'Altis')then	/* using == instead of isEqualTo because == is not case sensetive */
 {
 	_allowTP append
 	[
-		[[14599.966,16797.193,0],300],
-		[[23334.605,24188.938,0],300],
-		[[2998.0603,18175.479,0],300]
+		[[14599.966,16797.193,0],325],
+		[[23334.605,24188.938,0],325],
+		[[2998.0603,18175.479,0],325]
 	];
 };
 if(worldName == 'Esseker')then
 {
 	_allowTP append
 	[
-		[[3943,9284,0],300],
-		[[10810,4765,0],300],
-		[[4739,4671,0],300]
+		[[3943,9284,0],325],
+		[[10810,4765,0],325],
+		[[4739,4671,0],325]
 	];
 };
 if(worldName == 'Bornholm')then
 {
 	_allowTP append
 	[
-		[[3092.2,5468.97,0],321],
-		[[12737.6,8757.8,0],321],
-		[[6420.46,17217.2,0],321]
+		[[3092.2,5468.97,0],325],
+		[[12737.6,8757.8,0],325],
+		[[6420.46,17217.2,0],325]
 	];
 };
 
@@ -68,7 +65,10 @@ if(worldName == 'Bornholm')then
 
 /* "_OPEN_ADMIN_MENU_KEY": Key to open the menu (google DIK_KeyCodes (0x3B is F1))   */
 _OPEN_ADMIN_MENU_KEY = 0x3B;
-_HIDE_FROM_PLAYERS = false;	// So no normal can see it :)!
+_HIDE_FROM_PLAYERS = false;		/* So no normal can see it :)! */
+_WRITE_TXT_LOG_FILES = true;	/* (DEFAULT VALUE: TRUE, has always been true) uses ARMA_LOG.dll */
+_announce_adminstate_changed = false;	/* whenever you type !admin as an admin it will announce that you logged out or in to all players on the server! */
+
 
 /* What ESCAPE Menu shows */
 _ESCMNUTOP = '[GG] Ghostz Gamerz';
@@ -79,10 +79,10 @@ _BRIEFING_MSG = true;	/* use mission briefing message: if   "_BRIEFING_MSG = fal
 _USE_RESTART_TIMER = true;	/* true or false */
 _RESTART_TIME_IN_M = 120;		/* restart time in minutes */
 _SHOW_TIMER_IN_MIN = [1,2,3,5,10];	/* minutes before restart, when message is shown */
-_VDN = true;	/* true or false - Chat-Vote Day/Night */
+_VDN = false;	/* true or false - Chat-Vote Day/Night */
 
 /* The following 3 options can be disabled by putting the value to -1. For example "_TGV = -1;" */
-/* Terrain Grid Value   */ _TGV = 40;		/* 50, 25, 12.5  */	/* if set to 50 grass will be very low for better client FPS.. default is 25 ~35 is good performance and grass :) */
+/* Terrain Grid Value   */ _TGV = -1;		/* 50, 25, 12.5  */	/* if set to 50 grass will be very low for better client FPS.. default is 25 ~35 is good performance and grass :) */
 /* ViewDistance Value   */ _VDV = -1;
 /* ObjectViewDistance   */ _VOV = -1;
 
@@ -96,9 +96,11 @@ _startAsNormal =
 	'0','0','0'
 ];
 
+
 _adminUIDandAccess =
 [
-	[	 /* Head Admin/Owner */
+	[
+		/* Head Admin/Owner */
 		['76561198078201908', //GR8
 		 '76561198153784743', //Ghost
 		 '76561198195305425', //Shahzad
@@ -110,7 +112,7 @@ _adminUIDandAccess =
 		[
 			'Teleport On Map Click','Teleport - Target To Me','Teleport - Me To Target','Teleport In Facing Direction (10m steps)',
 			'spectating','AdminConsole','Delete Vehicle','FlyUp','ShowGear','Show Server Information',
-			'HealSelf','HealRepairNear','AdminLog','Freeze Target','UnFreeze Target',
+			'HealSelf','HealRepairNear','AdminLog','Freeze Target','UnFreeze Target','Restrain','UnRestrain',
 			'==== Loadouts ====','==== Vehicles ====','==== Base Deleter ====','==== WeatherLord ====','Items spawn menu',
 			'Remove Gear','Heal','Restore','Flip Vehicle','Move In My Vehicle','Move In Target Vehicle','Eject','Eject Crew',
 			'Kill','Explode','Force Disconnect','Kick (Silent)','Kick (Announce)','Ban (Silent)','Ban (Announce)',
@@ -122,7 +124,8 @@ _adminUIDandAccess =
 			'Request Steam Name','showinfo','Add / Remove Money','Add / Remove Respect'
 		]
 	],
-	[	 /* Admins */
+	[
+		/* Admins */
 		['76561198029881052', //Dirk Verite
 		 '76561198067566966', //Snipernosniping
 		 '76561198163835069', //Snipernosniping		 
@@ -137,65 +140,78 @@ _adminUIDandAccess =
 		 '0'],
 		[
 			'Teleport On Map Click','Teleport - Target To Me','Teleport - Me To Target','Teleport In Facing Direction (10m steps)',
-			'spectating','Delete Vehicle','FlyUp','ShowGear','Show Server Information',
-			'HealSelf','HealRepairNear','AdminLog',
-			'==== Vehicles ====','==== Base Deleter ====','Items spawn menu',
-			'Remove Gear','Heal','Restore','Flip Vehicle','Force Disconnect',
+			'spectating','AdminConsole','Delete Vehicle','FlyUp','ShowGear','Show Server Information',
+			'HealSelf','HealRepairNear','AdminLog','Freeze Target','UnFreeze Target','Restrain','UnRestrain',
+			'==== Loadouts ====','==== Vehicles ====','==== Base Deleter ====','==== WeatherLord ====','Items spawn menu',
+			'Remove Gear','Heal','Restore','Flip Vehicle','Move In My Vehicle','Move In Target Vehicle','Eject','Eject Crew',
+			'Kill','Explode','Force Disconnect','Kick (Silent)','Kick (Announce)','Ban (Silent)','Ban (Announce)',
 			'infiSTAR Player ESP','infiSTAR Dead ESP','infiSTAR AI ESP',
 			'infiSTAR MapIcons','Vehicle Marker','Flag Marker (with radius)','DeadPlayer Marker',
-			'God Mode','Lower Terrain','Stealth / Invisible',
+			'God Mode','Vehicle God Mode','Lower Terrain','Vehboost','UnlimAmmo','noRecoil','FastFire','Stealth / Invisible',
 			'Disable Announces','Mass Message','Spawn Support-Boxes',
-			'Spawn Ammo','BIS FreeRoam Cam (works with ESP)','FreeRoam Cam (does not work with ESP)',
+			'Spawn Ammo','Login as Arma Admin','BIS FreeRoam Cam (works with ESP)','FreeRoam Cam (does not work with ESP)',
 			'Request Steam Name','showinfo','Add / Remove Money','Add / Remove Respect'
 		]
 	],
 	[	/* Mods */
 		['76561198124203897', // Put in zeros so I don't break the code.
 		 //Add UID's Above - Don't forget the comma!
-		 '0'],
+		 '0'],['UID1','UID2','UID3','...'],	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		[
-			'spectating','Show Server Information',
-			'HealSelf','HealRepairNear','Heal','Flip Vehicle',
-			'Lower Terrain','Request Steam Name','showinfo','Add / Remove Money'
+			'Teleport On Map Click','Teleport - Target To Me','Teleport - Me To Target','Teleport In Facing Direction (10m steps)',
+			'spectating','AdminConsole','Delete Vehicle','FlyUp','ShowGear','Show Server Information',
+			'HealSelf','HealRepairNear','AdminLog','Freeze Target','UnFreeze Target','Restrain','UnRestrain',
+			'==== Loadouts ====','==== Vehicles ====','==== Base Deleter ====','==== WeatherLord ====','Items spawn menu',
+			'Remove Gear','Heal','Restore','Flip Vehicle','Move In My Vehicle','Move In Target Vehicle','Eject','Eject Crew',
+			'Kill','Explode','Force Disconnect','Kick (Silent)','Kick (Announce)','Ban (Silent)','Ban (Announce)',
+			'infiSTAR Player ESP','infiSTAR Dead ESP','infiSTAR AI ESP',
+			'infiSTAR MapIcons','Vehicle Marker','Flag Marker (with radius)','DeadPlayer Marker',
+			'God Mode','Vehicle God Mode','Lower Terrain','Vehboost','UnlimAmmo','noRecoil','FastFire','Stealth / Invisible',
+			'Disable Announces','Mass Message','Spawn Support-Boxes',
+			'Spawn Ammo','Login as Arma Admin','BIS FreeRoam Cam (works with ESP)','FreeRoam Cam (does not work with ESP)',
+			'Request Steam Name','showinfo','Add / Remove Money','Add / Remove Respect'
 		]
 	]
 ];
 /* ********************************************************************************* */
 /*            many checks should be set to true instead of false.                    */
 /* ********************************************************************************* */
-_LVC = true;	/* Local Vehicle Check */
-_CMC = true;	/* Check for custom CommandingMenus */
-_KCM = true;	/* Just close ALL CommandingMenus */
-_CAP = false;	/* Check Actions Plr - "Actions: xxx/xxx possible scroll menu hack (or you added custom actions..)" */
-_wall_look = false;	/* checks if a players tries to look through a wall (if player is allowed to build in that territory, it will not be logged.) */
-_wall_glitch_object = true;	/* checks if a players tries to glitch through a wall (if player is allowed to build in that territory, it will not be logged.) */
-_wall_glitch_vehicle = true;	/* stops people from glitching into bases using "eject" or "getout" of a vehicle.. */
+_URC = true;		/* Check unitRecoilCoefficient and reset default unitRecoilCoefficient */
+_LVC = true;		/* Local Vehicle Check */
+_CMC = true;		/* Check for custom CommandingMenus */
+_KCM = false;		/* Just close ALL CommandingMenus */
+_CAP = false;		/* Check Actions Plr - "Actions: xxx/xxx possible scroll menu hack (or you added custom actions..)" */
+_wall_look = false;					/* checks if a players tries to look through a wall (if player is allowed to build in that territory, it will not be logged.) */
+_wall_glitch_object = false;		/* checks if a players tries to glitch through a wall (if player is allowed to build in that territory, it will not be logged.) */
+_wall_glitch_vehicle = false;		/* stops players from glitching into bases using "eject" or "getout" of a vehicle.. */
+_forceWalk_near_enemyBase = false;	/* forcing players to walk when near an enemy base */
+_RHS_MOD_ENABLED = true;			/* You need to set this option to true if you run RHS mod */
 
 _maxMapMenuEntries = 6;	/* "Map Menu has been changed x entries found - Texts: y" incase you want to add some briefing to your map menu */
 
 
 /* if steam api.steampowered.com is working, this might be a nice feature */
-_check_steam_ban = true;	/* will announce and log steambanned players - using GetPlayerBans v1 */
+_check_steam_ban = false;	/* will announce and log steambanned players - using GetPlayerBans v1 */
 _ban_for_steam_ban = false;	/* if "_check_steam_ban = true;" then steambanned players will get banned from your Arma server! */
 
 
-/*  Check Global Markers */ _CGM = true;	/* true or false */	/* you may need to disable this check for A.I. Missions - or whitelist the used Markers in the _aLocalM Array beneath */
+/*  Check Global Markers */ _CGM = false;	/* true or false */	/* you may need to disable this check for A.I. Missions - or whitelist the used Markers in the _aLocalM Array beneath */
 /*  Check Local Markers  */ _CLM = false;	/* true or false */	/* false if you do not want LocalMarker to be checked. */
 /*  Use _aLocalM array   */ _UMW = false;	/* true or false */	/* use allowed marker array from below (for example AltisLife uses house_ and others in there) or A.I. Missions */
 /* _aLocalM: if '_CLM' && _UMW - this array of names will be allowed */
-_aLocalM = ['TreasureMarker','MissionMarker'];
+_aLocalM = ['MissionMarker'];
 
 
 
 
 /* _badIDDsToKick will be checked before _badIDDsToClose, _badIDDsToClose will be checked before _allowedIDDs */
 /* _badIDDsToKick: Forbidden Idds that will get you Kicked by the AH */
-_badIDDsToKick = [-1337,133];
+_badIDDsToKick = [-1337,133,167,1340,1341,1342,1343,1344,1345,1346,1347];
 
 /* _badIDDsToClose: Forbidden Idds that will get closed by the AH */
 _badIDDsToClose =
 [
-	2,3,7,17,19,25,26,27,28,29,30,31,32,37,40,41,43,44,45,51,52,53,74,85,
+	2,3,7,17,19,25,26,27,28,29,30,31,32,37,40,41,43,44,45,51,52,53,56,74,85,
 	106,126,127,132,146,147,150,151,152,153,154,155,159,162,164,262,
 	314,632,1320,2121,148,163,129,169,157,131,69
 ];
@@ -205,9 +221,11 @@ _badIDDsToClose =
 _allowedIDDs =
 [
 	0,4,5,6,8,12,18,24,46,49,54,55,63,70,160,174,602,999,
-	24001,24002,24004,24005,24006,24007,24008,24009,24010,24011,24012,24013,24014,24015,20016,20017,20018,20019,20020,20021,
-	24025,2900
+	20023,24001,24002,24004,24005,24006,24007,24008,24009,24010,24011,24012,
+	24013,24014,24015,20016,20017,20018,20019,20020,20021,24025
 ];
+
+
 
 
 /* _blacklistedVariables: The AntiHack will check if one of these variables is existing for the client */
@@ -236,7 +254,7 @@ _ForbiddenVehicles =
 ];
 
 
-_UFI = true;	/* Use "_ForbiddenItems"/Item Check(s) */
+_UFI = false;	/* Use "_ForbiddenItems"/Item Check(s) */
 _UIW = false;	/* if "_UIW = true;" then it checks if the items the individual player has are in "_ItemWhiteList" */
 _ItemWhiteList =
 [
@@ -269,6 +287,13 @@ _SupportBox1Content =
 	['Exile_Item_Flag',1],['WorkBench',1],['Exile_Item_WoodDoorKit',1],['Exile_Item_Codelock',1],['Exile_Item_WoodFloorKit',4],['Exile_Item_WoodFloorPortKit',2],
 	['Exile_Item_WoodWallKit',5],['Exile_Item_CampFireKit',1],['Exile_Item_SafeKit',1],['Exile_Item_Storagecratekit',2],['Exile_Melee_Axe',1],['Exile_Ammo_Swing',1],
 	['Exile_Item_Matches',1],['Exile_Item_CookingPot',1]
+	'Exile_Item_Flag','Exile_Item_CookingPot',
+	['Exile_Item_Codelock',5],['Exile_Item_DuctTape',10],['Exile_Item_InstaDoc',10],
+	['Exile_Item_Energydrink',10],['Exile_Item_ExtensionCord',5],['Exile_Item_FloodLightKit',5],
+	['Exile_Item_FortificationUpgrade',5],['Exile_Item_FuelCanisterFull',5],['Exile_Item_GloriousKnakworst_Cooked',10],
+	['Exile_Item_LightBulb',5],['Exile_Item_Matches',5],['Exile_Item_MetalBoard',5],
+	['Exile_Item_MetalPole',5],['Exile_Item_PlasticBottleFreshWater',10],['Exile_Item_PortableGeneratorKit',5],
+	['Exile_Item_Rope',15],['Exile_Item_SafeKit',15],['Exile_Magazine_Battery',15]
 ];
 
 _SupportBox2Content =
@@ -276,6 +301,12 @@ _SupportBox2Content =
 	['Exile_Item_Flag',1],['WorkBench',2],['Exile_Item_WoodDoorKit',2],['Exile_Item_WoodGateKit',2],['Exile_Item_Codelock',4],['Exile_Item_WoodFloorKit',18],['Exile_Item_WoodFloorPortKit',2],
 	['Exile_Item_WoodWallKit',25],['Exile_Item_CampFireKit',2],['Exile_Item_SafeKit',3],['Exile_Item_Storagecratekit',4],['Exile_Item_WoodStairsKit',4],['Exile_Melee_Axe',2],['Exile_Ammo_Swing',1],
 	['Exile_Item_Matches',2],['Exile_Item_CookingPot',2],['B_Carryall_oucamo',1]
+	'Exile_Item_Flag',
+	['Exile_Item_WoodDoorKit',15],['Exile_Item_WoodDoorwayKit',15],['Exile_Item_WoodDrawBridgeKit',15],
+	['Exile_Item_WoodFloorKit',15],['Exile_Item_WoodFloorPortKit',15],['Exile_Item_WoodGateKit',15],
+	['Exile_Item_WoodLog',15],['Exile_Item_WoodPlank',15],['Exile_Item_WoodStairsKit',15],
+	['Exile_Item_WoodSupportKit',15],['Exile_Item_WoodWallHalfKit',15],['Exile_Item_WoodWallKit',15],
+	['Exile_Item_WoodWindowKit',15],['Exile_Item_WorkBenchKit',15]
 ];
 
 _SupportBox3Content =
@@ -283,14 +314,32 @@ _SupportBox3Content =
 	['Exile_Item_Flag',2],['WorkBench',3],['Exile_Item_WoodDoorKit',4],['Exile_Item_WoodGateKit',4],['Exile_Item_Codelock',8],['Exile_Item_WoodFloorKit',40],['Exile_Item_WoodFloorPortKit',4],
 	['Exile_Item_WoodWallKit',30],['Exile_Item_CampFireKit',3],['Exile_Item_SafeKit',6],['Exile_Item_Storagecratekit',5],['Exile_Item_WoodStairsKit',8],['Exile_Melee_Axe',3],['Exile_Ammo_Swing',1],
 	['Exile_Item_Matches',3],['Exile_Item_CookingPot',3],['B_Carryall_oucamo',1]
+	['Exile_Item_Flag',5],['Exile_Item_WoodDoorKit',15],['Exile_Item_WoodWallKit',15],
+	['Exile_Item_WoodWindowKit',15],['Exile_Item_WoodFloorKit',15],['Exile_Item_SafeKit',5]
 ];
 
+_SupportBox4Content =
+[
+	'ItemMap',['ItemGPS',5],'ItemWatch'
+];
 
 _allSupportBoxes = [
 	_SupportBox1Content,
 	_SupportBox2Content,
 	_SupportBox3Content
 ];
+
+
+
+
+/* ***DANGER***DANGER***DANGER***DANGER***DANGER***DANGER***DANGER***DANGER***DANGER***DANGER */
+/*
+	THE KYLE MODE - by enabling it (setting it to true), you disable 99% of the AntiHack features.
+	(DEFAULT VALUE: FALSE).
+	This is only for those, that want to use the Admin Menu only!
+*/
+_KYLE_MODE = false;
+/* ***DANGER***DANGER***DANGER***DANGER***DANGER***DANGER***DANGER***DANGER***DANGER***DANGER */
 /* ********************************************************************************* */
 /* ********************************************************************************* */
 /* ********************************************************************************* */
@@ -345,16 +394,35 @@ if(!isNil 'infiSTAR_IS_RUN_ON_THIS_SERVER') exitWith {
 };
 infiSTAR_IS_RUN_ON_THIS_SERVER = time;
 /* ********************************************************************************* */
-/* #1 */
+/* #4076 */
 /* ********************************************************************************* */
-comment 'Antihack & AdminTools - Christian Lorenzen - www.infiSTAR.de - License: (CC)';
-diag_log format['<infiSTAR.de> %1 - STARTUP - including AdminTools',time];
-#include "EXILE_AT.sqf"
-diag_log format['<infiSTAR.de> %1 - STARTUP - AdminTools included!',time];
-
-diag_log format['<infiSTAR.de> %1 - STARTUP - including AntiHack',time];
-#include "EXILE_AH.sqf"
-diag_log format['<infiSTAR.de> %1 - STARTUP - AntiHack included!',time];
+_exileFound = false;
+_cfgPatches = configFile >> 'CfgPatches';
+for '_i' from 0 to (count _cfgPatches - 1) do
+{
+	_patchClass = _cfgPatches select _i;
+	if(configName _patchClass == 'exile_server')exitWith
+	{
+		_exileFound = true;
+	};
+};
+if(_exileFound)then
+{
+	comment 'Antihack & AdminTools - Christian Lorenzen - www.infiSTAR.de - License: (CC)';
+	diag_log format['<infiSTAR.de> %1 - STARTUP - including AdminTools',time];
+	#include "EXILE_AT.sqf"
+	diag_log format['<infiSTAR.de> %1 - STARTUP - AdminTools included!',time];
+	diag_log format['<infiSTAR.de> %1 - STARTUP - including AntiHack',time];
+	#include "EXILE_AH.sqf"
+	diag_log format['<infiSTAR.de> %1 - STARTUP - AntiHack included!',time];
+}
+else
+{
+	for '_i' from 0 to 20 do
+	{
+		diag_log '<infiSTAR.de> could not find exile_server';
+	};
+};
 /* ********************************************************************************* */
 /* *********************************www.infiSTAR.de********************************* */
 /* *******************Developed by infiSTAR (infiSTAR23@gmail.com)****************** */
