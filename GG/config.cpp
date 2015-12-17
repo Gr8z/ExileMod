@@ -2276,6 +2276,13 @@ class CfgInteractionMenus
 				condition = "call ExileClient_object_vehicle_interaction_show";
 				action = "_this call ExileClient_object_vehicle_drain";
 			};
+			// Drains fuel from a car into an empty jerry can
+			class PackBike: ExileAbstractAction
+			{
+				title = "Pack Bike";
+				condition = "(!ExilePlayerInSafezone)";
+				action = "deleteVehicle ExileClientInteractionObject;player linkItem 'ItemRadio';['BIKE REMOVED, RADIO ADDED !',0,0.6,2,0] spawn bis_fnc_dynamictext;";
+			};
 		};
 	};
 
