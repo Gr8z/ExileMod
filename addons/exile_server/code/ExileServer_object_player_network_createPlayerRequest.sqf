@@ -195,7 +195,7 @@ try
 
 	     case (_respect > 149999):
 	   {
-		_bambiPlayer forceAddUniform "TRYK_ZARATAKI";
+		_bambiPlayer forceAddUniform "TRYK_U_taki_G_COY";
 		for "_i" from 1 to 2 do {_bambiPlayer addItemToUniform "rhs_mag_30Rnd_556x45_Mk318_Stanag";};
 		_bambiPlayer addVest "TRYK_V_ArmorVest_AOR1_2";
 		_bambiPlayer addBackpack "TRYK_B_Carryall_blk";

@@ -413,9 +413,6 @@
     class TRYK_U_B_PCUODHs                              { quality = 1; price = 100; };
     class TRYK_B_USMC_R                                 { quality = 1; price = 100; };
     class TRYK_B_USMC_R_ROLL                            { quality = 1; price = 100; };
-    class TRYK_ZARATAKI                                 { quality = 1; price = 100; };
-    class TRYK_ZARATAKI2                                { quality = 1; price = 100; };
-    class TRYK_ZARATAKI3                                { quality = 1; price = 100; };
     class TRYK_B_TRYK_UCP_T                             { quality = 1; price = 100; };
     class TRYK_B_TRYK_3C_T                              { quality = 1; price = 100; };
     class TRYK_B_TRYK_MTP_T                             { quality = 1; price = 100; };
