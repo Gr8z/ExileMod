@@ -78,6 +78,53 @@ if (_binocular != "") then
 {
 	_player addWeaponGlobal _binocular;
 };
+_primaryWeapon = _data select 26;
+if (_primaryWeapon != "") then 
+{
+	_player addWeaponGlobal _primaryWeapon;
+	removeAllPrimaryWeaponItems _player;
+	{ 
+		if (_x != "") then
+		{
+			_player addPrimaryWeaponItem _x; 
+		};
+	} 
+	forEach (_data select 27);
+};
+_handgunWeapon = _data select 22;
+if (_handgunWeapon != "") then
+{
+	_player addWeaponGlobal _handgunWeapon;
+	removeAllHandgunItems _player;
+	{ 
+		if (_x != "") then
+		{
+			_player addHandgunItem _x; 
+		};
+	} 
+	forEach (_data select 21);
+};
+_secondaryWeapon = _data select 28;
+if (_secondaryWeapon != "") then
+{
+	_player addWeaponGlobal _secondaryWeapon;
+	{ 
+		if (_x != "") then
+		{
+			_player addSecondaryWeaponItem _x; 
+		};
+	} 
+	forEach (_data select 29);
+};
+ _currentWeapon = _data select 19;
+if (_currentWeapon != "") then
+{
+	 _player selectWeapon _currentWeapon;
+};
+{ 
+	_player addWeaponItem [_x select 0, [_x select 1, _x select 2, _x select 3]];
+} 
+forEach (_data select 25);
 _uniform = _data select 30;
 _vest = _data select 34;
 _backpack = _data select 15;
@@ -141,53 +188,6 @@ if !(isNil "_backpackContainer") then
 	} 
 	forEach (_data select 16);
 };
-_primaryWeapon = _data select 26;
-if (_primaryWeapon != "") then 
-{
-	_player addWeaponGlobal _primaryWeapon;
-	removeAllPrimaryWeaponItems _player;
-	{ 
-		if (_x != "") then
-		{
-			_player addPrimaryWeaponItem _x; 
-		};
-	} 
-	forEach (_data select 27);
-};
-_handgunWeapon = _data select 22;
-if (_handgunWeapon != "") then
-{
-	_player addWeaponGlobal _handgunWeapon;
-	removeAllHandgunItems _player;
-	{ 
-		if (_x != "") then
-		{
-			_player addHandgunItem _x; 
-		};
-	} 
-	forEach (_data select 21);
-};
-_secondaryWeapon = _data select 28;
-if (_secondaryWeapon != "") then
-{
-	_player addWeaponGlobal _secondaryWeapon;
-	{ 
-		if (_x != "") then
-		{
-			_player addSecondaryWeaponItem _x; 
-		};
-	} 
-	forEach (_data select 29);
-};
- _currentWeapon = _data select 19;
-if (_currentWeapon != "") then
-{
-	 _player selectWeapon _currentWeapon;
-};
-{ 
-	_player addWeaponItem [_x select 0, [_x select 1, _x select 2, _x select 3]];
-} 
-forEach (_data select 25);
 _assignedItems = _data select 14;
 if !(_assignedItems isEqualTo []) then
 {
