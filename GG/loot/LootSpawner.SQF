@@ -14,7 +14,7 @@ _spInterval = 1200;					//Time (in sec.) to pass before an building spawns new l
 _chfullfuel = 35;					//Chance (in %) of a spawned fuelcan to be full instead of empty
 _genZadjust = -0.1;					//High adjustment (in engine units) thats generally added to every spawnpoint
 _tmpTstPlace = [14730, 16276, 0];	//Coord's, in [x,y,z] of a preferably flat and unocupied piece of land
-_chperSpot = 90;					//Chance (in %) if a spot gets loot. Will be considered before 'spawnClassChance_list'
+_chperSpot = 70;					//Chance (in %) if a spot gets loot. Will be considered before 'spawnClassChance_list'
 
 //"spawnClassChance_list" array of [class, %weapon, %magazine, %ICV, %backpack, %object]
 //									class   	: same classname as used in "Buildingstoloot_list"
