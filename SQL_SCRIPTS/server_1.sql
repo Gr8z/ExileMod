@@ -10,6 +10,12 @@ DELETE FROM player_1
 WHERE damage = 1;
 
 DELETE FROM player_1 
+WHERE direction = 0
+AND position_x = 0
+AND postion_y = 0
+AND postition_z = 0;
+
+DELETE FROM player_1 
 WHERE account_uid = 'SomethingWentWrong'
 OR account_uid = '';
 
@@ -40,6 +46,7 @@ WHERE id NOT IN (
     LIMIT 100
   ) foo
 );
+
 
 /* =================== UDPATES =================== */
 

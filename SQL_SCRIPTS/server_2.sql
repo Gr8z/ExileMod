@@ -10,6 +10,12 @@ DELETE FROM player_2
 WHERE damage = 1;
 
 DELETE FROM player_2
+WHERE direction = 0
+AND position_x = 0
+AND position_y = 0
+AND position_z = 0;
+
+DELETE FROM player_2
 WHERE account_uid = 'SomethingWentWrong'
 OR account_uid = '';
 
