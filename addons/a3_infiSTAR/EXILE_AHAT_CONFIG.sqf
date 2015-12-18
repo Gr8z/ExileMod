@@ -66,7 +66,7 @@ if(worldName == 'Bornholm')then
 /* "_OPEN_ADMIN_MENU_KEY": Key to open the menu (google DIK_KeyCodes (0x3B is F1))   */
 _OPEN_ADMIN_MENU_KEY = 0x3B;
 _HIDE_FROM_PLAYERS = false;		/* So no normal can see it :)! */
-_WRITE_TXT_LOG_FILES = true;	/* (DEFAULT VALUE: TRUE, has always been true) uses ARMA_LOG.dll */
+_WRITE_TXT_LOG_FILES = false;	/* (DEFAULT VALUE: TRUE, has always been true) uses ARMA_LOG.dll */
 _announce_adminstate_changed = false;	/* whenever you type !admin as an admin it will announce that you logged out or in to all players on the server! */
 
 
