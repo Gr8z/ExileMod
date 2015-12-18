@@ -2719,7 +2719,8 @@ class CfgInteractionModels
             " str_",
             " Smrk_",
             " les_",
-            " brg_"			
+            " brg_",
+            "jablon"		
 		};
 	};
 
