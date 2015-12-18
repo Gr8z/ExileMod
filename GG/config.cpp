@@ -2277,13 +2277,6 @@ class CfgInteractionMenus
 				condition = "call ExileClient_object_vehicle_interaction_show";
 				action = "_this call ExileClient_object_vehicle_drain";
 			};
-			// Drains fuel from a car into an empty jerry can
-			class PackBike: ExileAbstractAction
-			{
-				title = "Pack Bike";
-				condition = "(!ExilePlayerInSafezone)";
-				action = "deleteVehicle ExileClientInteractionObject;player linkItem 'ItemRadio';['BIKE REMOVED, RADIO ADDED !',0,0.6,2,0] spawn bis_fnc_dynamictext;";
-			};
 		};
 	};
 
@@ -2611,7 +2604,7 @@ class CfgInteractionMenus
 			// Pushes a boat into look direction to move into water
 			class Push: ExileAbstractAction
 			{
-				title = "Fus Ro Dah!";
+				title = "Push!";
 				condition = "((crew ExileClientInteractionObject) isEqualTo [])";
 				action = "_this call ExileClient_object_vehicle_push";
 			};
@@ -2630,6 +2623,12 @@ class CfgInteractionMenus
 				title = "Flip";
 				condition = "true";
 				action = "_this call ExileClient_object_vehicle_flip";
+			};
+			class Pack: ExileAbstractAction
+			{
+				title = "Pack Bike";
+				condition = "(!ExilePlayerInSafezone)";
+				action = "deleteVehicle ExileClientInteractionObject;player linkItem 'ItemRadio';['BIKE REMOVED, RADIO ADDED !',0,0.6,2,0] spawn bis_fnc_dynamictext;";
 			};
 		};
 	};
