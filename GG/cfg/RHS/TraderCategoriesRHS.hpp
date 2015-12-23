@@ -457,6 +457,7 @@
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
-			"RHS_C130J"
+			"RHS_C130J",
+			"RHS_A10"
 		};
 	};	

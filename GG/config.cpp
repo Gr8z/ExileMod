@@ -1974,7 +1974,12 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	class Exile_Car_Strider 							{ quality = 1; price = 44000; };
 	class I_MRAP_03_hmg_F 							   { quality = 1; price = 148000; };
-
+	
+	///
+	//KUMA
+	///
+	class I_MBT_03_cannon_F 							{ quality = 1; price = 1000; };
+	
 	///////////////////////////////////////////////////////////////////////////////
 	// SUV
 	///////////////////////////////////////////////////////////////////////////////
@@ -3797,6 +3802,7 @@ class CfgTraderCategories
 			"B_MRAP_01_hmg_F",
 			"I_MRAP_03_hmg_F",
 			"O_MRAP_02_hmg_F",
+			"I_MBT_03_cannon_F",
 			"Exile_Car_Ifrit"
 		};
 	};
