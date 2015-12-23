@@ -37,7 +37,7 @@ if (!isNull _tree) then
 			_treePosition = getPosATL _tree;
 			_treePosition set[2, 0];
 			_spawnRadius = 3;
-			_weaponHolders = nearestObjects[_tree, ["GroundWeaponHolder"], _spawnRadius];
+			_weaponHolders = nearestObjects[_treePosition, ["GroundWeaponHolder"], _spawnRadius];
 			_weaponHolder = objNull;
 			if (_weaponHolders isEqualTo []) then
 			{
