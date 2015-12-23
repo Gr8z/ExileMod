@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_data","_oldPlayerObject","_playerUID","_sessionID","_position","_direction","_player","_clanID","_clanName","_devFriendlyMode","_devs","_headgear","_goggles","_binocular","_uniform","_vest","_backpack","_uniformContainer","_vestContainer","_backpackContainer","_primaryWeapon","_handgunWeapon","_secondaryWeapon","_currentWeapon","_assignedItems"];
+private["_data","_oldPlayerObject","_playerUID","_sessionID","_position","_direction","_player","_clanID","_clanName","_devFriendlyMode","_devs","_headgear","_goggles","_binocular","_primaryWeapon","_handgunWeapon","_secondaryWeapon","_currentWeapon","_uniform","_vest","_backpack","_uniformContainer","_vestContainer","_backpackContainer","_assignedItems"];
 _data = _this select 0;
 _oldPlayerObject = _this select 1;
 _playerUID = _this select 2;

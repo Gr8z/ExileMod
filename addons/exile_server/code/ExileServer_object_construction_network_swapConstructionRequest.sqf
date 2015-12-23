@@ -48,7 +48,7 @@ switch (true) do
 	case (_isContainer)	:				{ _toVehicle call ExileServer_object_container_database_insert; };
 	default 							{ _toVehicle call ExileServer_object_construction_database_insert; };
 };
-_flag = (getPos _toVehicle) call ExileClient_util_world_getTerritoryAtPosition;
+_flag = _toVehicle call ExileClient_util_world_getTerritoryAtPosition;
 if !(isNull _flag) then 
 {
 	_flag call ExileServer_system_territory_updateNumberOfConstructions;

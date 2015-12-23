@@ -24,7 +24,7 @@ try
 	{
 		throw "Fuck off";
 	};
-	_territory = (getpos _box) call ExileClient_util_world_getTerritoryAtPosition;
+	_territory = _box call ExileClient_util_world_getTerritoryAtPosition;
 	if (isNull _territory) then 
 	{
 		throw "Only allowed to install in a territory!";

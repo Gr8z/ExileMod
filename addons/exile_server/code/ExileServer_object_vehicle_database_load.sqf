@@ -67,7 +67,7 @@ if ((typeName _cargoContainers) isEqualTo "ARRAY") then
 };
 _vehicleObject enableSimulationGlobal false;
 _vehicleObject call ExileServer_system_simulationMonitor_addVehicle;
-if ((getPosATL _vehicleObject) call ExileClient_util_world_isInTraderZone) then 
+if (_vehicleObject call ExileClient_util_world_isInTraderZone) then 
 {
 	_vehicleObject allowDamage false;
 };

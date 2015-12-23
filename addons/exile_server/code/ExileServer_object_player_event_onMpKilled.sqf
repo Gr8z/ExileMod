@@ -208,7 +208,7 @@ else
 					{
 						_killerRespectPoints pushBack [(format ["%1m RANGE BONUS", _distance]), _distanceBonus];
 					};
-					_flagNextToKiller = (getPos _killer) call ExileClient_util_world_getTerritoryAtPosition;
+					_flagNextToKiller = _killer call ExileClient_util_world_getTerritoryAtPosition;
 					if !(isNull _flagNextToKiller) then 
 					{
 						if ((getPlayerUID _killer) in (_flagNextToKiller getVariable ["ExileTerritoryBuildRights", []])) then
@@ -221,7 +221,7 @@ else
 							};
 						};
 					};
-					_flagNextToVictim = (getPos _victim) call ExileClient_util_world_getTerritoryAtPosition;
+					_flagNextToVictim = _victim call ExileClient_util_world_getTerritoryAtPosition;
 					if !(isNull _flagNextToVictim) then 
 					{
 						if ((getPlayerUID _victim) in (_flagNextToVictim getVariable ["ExileTerritoryBuildRights", []])) then

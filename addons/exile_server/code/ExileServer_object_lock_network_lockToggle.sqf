@@ -90,7 +90,7 @@ else
 		}
 		else
 		{
-			if ((getPosATL _object) call ExileClient_util_world_isInTraderZone) then 
+			if (_object call ExileClient_util_world_isInTraderZone) then 
 			{
 				[_sessionID,"lockResponse",["Wrong PIN!", false, "", "", -1]] call ExileServer_system_network_send_to;
 			}

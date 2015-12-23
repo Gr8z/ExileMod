@@ -26,7 +26,7 @@ try
 	};
 	_boxConfig = missionConfigFile >> "CfgVehicleTransport" >> typeOf _box;
 	_vehicleTypes = getArray (_boxConfig >> "vehicles");
-	_vehicles = nearestObjects [getPos _box, _vehicleTypes, 15];
+	_vehicles = nearestObjects [_box, _vehicleTypes, 15];
 	if (_vehicles isEqualTo []) then 
 	{
 		throw "No transport vehicle nearby."; 

@@ -32,7 +32,7 @@ try
 	{
 		throw "NOPE"; 
 	};
-	if ((getPosATL _object) call ExileClient_util_world_isInTraderZone) then 
+	if (_object call ExileClient_util_world_isInTraderZone) then 
 	{
 		throw "NOPE"; 
 	};

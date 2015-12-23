@@ -14,7 +14,7 @@ _containerObject = _this;
 _position = getPosATL _containerObject;
 _vectorDirection = vectorDir _containerObject;
 _vectorUp = vectorUp _containerObject;
-_territoryFlag = (getPos _containerObject) call ExileClient_util_world_getTerritoryAtPosition;
+_territoryFlag = _containerObject call ExileClient_util_world_getTerritoryAtPosition;
 _territoryID = if (isNull _territoryFlag) then { 'NULL' } else  { _territoryFlag getVariable ["ExileDatabaseID", 'NULL']};
 _data =
 [

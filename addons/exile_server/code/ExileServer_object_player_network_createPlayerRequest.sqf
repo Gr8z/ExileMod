@@ -28,7 +28,7 @@ try
 	_accountData = format["getAccountStats:%1", _playerUID] call ExileServer_system_database_query_selectSingle;
 	_group = createGroup independent;
 	_bambiPlayer = _group createUnit ["Exile_Unit_Player", [0,0,0], [], 0, "CAN_COLLIDE"];
-
+	_bambiPlayer addHeadgear "Exile_Headgear_SantaHat";
 	_respect = (_accountData select 1);   // get the players respect from the database
 
 	switch (true) do 

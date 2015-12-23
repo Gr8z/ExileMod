@@ -29,7 +29,7 @@ try
 	_territoryDatabaseID = _flagObject getVariable ["ExileDatabaseID", 0];
 	_radius = _flagObject getVariable ["ExileTerritorySize", 15];
 	_level = _flagObject getVariable ["ExileTerritoryLevel", 1];
-	_objectsInTerritory = 1 + (count ((getPosATL _flagObject) nearObjects ["Exile_Construction_Abstract_Static", _radius]));
+	_objectsInTerritory = _flagObject getVariable ["ExileTerritoryNumberOfConstructions", 0];
 	_popTabAmountPerObject = getNumber (missionConfigFile >> "CfgTerritories" >> "popTabAmountPerObject");
 	_totalPopTabAmount = _level * _popTabAmountPerObject * _objectsInTerritory;
 	_respectAmountPerObject = getNumber (missionConfigFile >> "CfgTerritories" >> "respectAmountPerObject");

@@ -41,7 +41,7 @@ try
 		throw "Object has no owner!";
 	};
 	_canMove = false;
-	_flag = (getPos _object) call ExileClient_util_world_getTerritoryAtPosition;
+	_flag = _object call ExileClient_util_world_getTerritoryAtPosition;
 	if (_playerUID isEqualTo _ownerUID) then
 	{
 		_canMove = true;

@@ -12,7 +12,14 @@
 private["_sessionID","_player","_hasAlivePlayer"];
 _sessionID = _this select 0;
 _player = _sessionID call ExileServer_system_session_getPlayerObject;
-_uid = getPlayerUID _player;
-_hasAlivePlayer = format["hasAlivePlayer:%1", _uid] call ExileServer_system_database_query_selectSingleField;
-[_sessionID, "hasPlayerResponse", [_hasAlivePlayer]] call ExileServer_system_network_send_to;
+if (isNull _player) then 
+{
+	(format ["Broken session (%1) found while loading character!", _sessionID]) call ExileServer_util_log;
+}
+else 
+{
+	_uid = getPlayerUID _player;
+	_hasAlivePlayer = format["hasAlivePlayer:%1", _uid] call ExileServer_system_database_query_selectSingleField;
+	[_sessionID, "hasPlayerResponse", [_hasAlivePlayer]] call ExileServer_system_network_send_to;
+};
 true

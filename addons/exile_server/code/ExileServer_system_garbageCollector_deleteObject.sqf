@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_object"];
+private["_object","_fliesSound","_fliesParticles"];
 _object = _this;
 if (_object getVariable ["ExileIsSimulationMonitored", false]) then
 {
@@ -28,6 +28,16 @@ removeAllContainers _object;
 if !(isNull (attachedTo _object)) then 
 {
 	detach _object;
+};
+_fliesSound = _object getVariable ["ExileFliesSound", objNull];
+if !(isNull _fliesSound) then 
+{
+	deleteVehicle _fliesSound;
+};
+_fliesParticles = _object getVariable ["ExileFliesParticles", objNull];
+if !(isNull _fliesParticles) then 
+{
+	_fliesParticles setDamage 999; 
 };
 {
 	_x call ExileServer_system_garbageCollector_deleteObject;

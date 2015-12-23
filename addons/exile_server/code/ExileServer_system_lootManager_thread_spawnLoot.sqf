@@ -16,7 +16,7 @@ _notifyPlayer = (getNumber (configFile >> "CfgSettings" >> "LootSettings" >> "no
 {
 	_player = _x;
 	_time = _player getVariable ["ExileLastLootSpawnTime", 0];
-	if (_time + 100 < time) then
+	if (_time + 120 < time) then
 	{
 		_spawnedLoot = _player call ExileServer_system_lootManager_spawnLootForPlayer;
 		if (_spawnedLoot) then
