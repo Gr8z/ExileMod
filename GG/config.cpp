@@ -955,7 +955,7 @@ class CfgExileArsenal
 	class Exile_Uniform_BambiOverall				{ quality = 1; price = 1; sellPrice = 1; };
 
 	#include "cfg\CUPW\ItemListCUPW.hpp"
-	#include "cfg\CUPV\ItemListCUPV.hpp"
+	#include "cfg\CUPV\ItemListCUPW.hpp"
 	
 	
 	///////////////////////////////////////////////////////////////////////////////
