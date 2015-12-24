@@ -954,8 +954,8 @@ class CfgExileArsenal
 {
 	class Exile_Uniform_BambiOverall				{ quality = 1; price = 1; sellPrice = 1; };
 
-	#include "cfg\CUPW\ItemListCUPW.hpp"
-	#include "cfg\CUPV\ItemListCUPW.hpp"
+	#include "cfg\RHS\ItemListRHS.hpp"
+	#include "cfg\TRYK\ItemListTRYK.hpp"
 	
 	
 	///////////////////////////////////////////////////////////////////////////////
@@ -1388,7 +1388,18 @@ class CfgExileArsenal
 	class Exile_Item_CanOpener						{ quality = 1; price = 80; };
 	class Exile_Item_Handsaw						{ quality = 1; price = 500; };
 	class Exile_Item_Pliers							{ quality = 1; price = 350; };
-	class Exile_Item_Grinder						{ quality = 1; price = 1250; };
+	//class Exile_Item_Grinder						{ quality = 1; price = 1250; };
+	//class Exile_Item_Foolbox						{ quality = 1; price = 4000; };
+	//class Exile_Item_CordlessScrewdriver			{ quality = 1; price = 750; };
+	//class Exile_Item_FireExtinguisher				{ quality = 1; price = 650; };
+	//class Exile_Item_Hammer						{ quality = 1; price = 600; };
+	//class Exile_Item_OilCanister					{ quality = 1; price = 1750; };
+	//class Exile_Item_Screwdriver					{ quality = 1; price = 250; };
+	//class Exile_Item_Shovel						{ quality = 1; price = 700; };
+	//class Exile_Item_Wrench						{ quality = 1; price = 250; };
+	//class Exile_Item_SleepingMat					{ quality = 1; price = 1250; };
+	//class Exile_Item_ToiletPaper					{ quality = 1; price = 5; };
+	//class Exile_Item_ZipTie						{ quality = 1; price = 250; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Navigation
@@ -1404,9 +1415,12 @@ class CfgExileArsenal
 	class NVGoggles_INDEP							{ quality = 2; price = 100; };
 	class NVGoggles_OPFOR							{ quality = 2; price = 100; };
 	class Exile_Item_XM8							{ quality = 2; price = 2; };	
+	class rhsusf_ANPVS_14                           { quality = 2; price = 90; };
+	class rhsusf_ANPVS_15                           { quality = 2; price = 95; };
 	class lerca_1200_black                          { quality = 2; price = 100; };
 	class lerca_1200_tan                            { quality = 2; price = 100; };
 	class Leupold_Mk4                               { quality = 2; price = 105; };
+	class rhs_pdu4                                  { quality = 2; price = 95; };
 
 
 	///////////////////////////////////////////////////////////////////////////////
@@ -1574,6 +1588,8 @@ class CfgExileArsenal
 	class I_IR_Grenade								{ quality = 1; price = 50; };
 	class 1Rnd_HE_Grenade_shell						{ quality = 2; price = 70; };
 	class 3Rnd_HE_Grenade_shell						{ quality = 3; price = 70*3; };
+	class rhs_m136_mag								{ quality = 1; price = 1000; };
+	class rhs_weap_M136								{ quality = 1; price = 7000; };
 	class APERSBoundingMine_Range_Mag				{ quality = 3; price = 5000; };
 	class APERSMine_Range_Mag						{ quality = 3; price = 6000; };
 	class launch_RPG32_F							{ quality = 3; price = 10000; };
@@ -1588,6 +1604,15 @@ class CfgExileArsenal
 	class SatchelCharge_Remote_Mag					{ quality = 3; price = 10000;};
 	class SLAMDirectionalMine_Wire_Mag				{ quality = 3; price = 7000; };
 	
+	
+	///////////////////////////////////////////////////////////////////////////////
+	// RHS
+	///////////////////////////////////////////////////////////////////////////////
+
+	class rhs_mag_m4009								{ quality = 3; price = 80; };
+	class rhs_mag_m576								{ quality = 3; price = 80; };
+	class rhs_VOG25									{ quality = 3; price = 80; };
+	class rhs_VG40SZ								{ quality = 3; price = 80; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Pistols
@@ -2869,8 +2894,8 @@ class CfgTerritories
 };
 class CfgTraderCategories 
 {
-	#include "cfg\CUPW\TraderCategoriesCUPW.hpp"
-	#include "cfg\CUPV\TraderCategoriesCUPV.hpp"
+	#include "cfg\RHS\TraderCategoriesRHS.hpp"
+	#include "cfg\TRYK\TraderCategoriesTRYK.hpp"
 	
 	class Community
 	{
@@ -3859,7 +3884,20 @@ class CfgTraderCategories
 		"ItemRadio",
 		"ItemGPS",
 		"NVGoggles",
-		"Exile_Item_InstaDoc"
+		"Exile_Item_InstaDoc",
+		"rhs_weap_sr25",
+		"rhs_weap_sr25_ec",
+		"rhs_weap_m14ebrri",
+		"rhs_weap_XM2010",
+		"rhs_weap_XM2010_wd",
+		"rhs_weap_XM2010_d",
+		"rhs_weap_XM2010_sa",
+		"rhs_weap_svd",
+		"rhs_weap_svdp_wd",
+		"rhs_weap_svdp_wd_npz",
+		"rhs_weap_svdp_npz",
+		"rhs_weap_svds",
+		"rhs_weap_svds_npz"
 
     };
   };
@@ -3877,24 +3915,24 @@ class CfgTraders
 		categories[] = 
 		{
 			"PointerAttachments",
-			"CUPPointerAttachments",
+			"RHSPointerAttachments",
 			"BipodAttachments",
+			"RHSBipodAttachments",
 			"MuzzleAttachments",
-			"CUPMuzzleAttachments",
+			"RHSMuzzleAttachments",
 			"OpticAttachments",
-			"CUPOpticAttachments",
+			"RHSOpticAttachments",
 			"Ammunition",
-			"CUPAmmunition",
+			"RHSAmmo",
 			"Pistols",
-			"CUPPistols",
+			"RHSPistols",
 			"SubMachineGuns",
-			"CUPSubMachineGuns",
 			"LightMachineGuns",
-			"CUPLightMachineGuns",
+			"RHSLightMachineGuns",
 			"AssaultRifles",
-			"CUPAssaultRifles",
+			"RHSAssaultRifles",
 			"SniperRifles",
-			"CUPSniperRifles"
+			"RHSSniperRifles"
 		};
 	};
 
@@ -3911,12 +3949,9 @@ class CfgTraders
 			"Smokes",
 			"UAVs",
 			"StaticMGs",
-			"Navigation",
-			"ExplosiveWeapons",
 			"Explosives",
-			"CUPLaunchers",
-			"CUPLauncherAmmo",
-			"CUPExplosive"
+			"RHSMines",
+			"Navigation"
 		};
 	};
 
@@ -3930,14 +3965,16 @@ class CfgTraders
 		categories[] = 
 		{
 			"Headgear",
+			"RHSHeadgear",
 			"TRYKHeadgear",
 			"Uniforms",
+			"RHSUniforms",
 			"TRYKUniforms",
 			"Vests",
+			"RHSVests",
 			"TRYKVests",
 			"Backpacks",
 			"TRYKBackpacks",
-			"Tools",
 			"FirstAid"
 		};
 	};
@@ -3965,7 +4002,8 @@ class CfgTraders
 		showWeaponFilter = 0;
 		categories[] = 
 		{
-			"Hardware"
+			"Hardware",
+			"Tools"
 		};
 	};
 
@@ -3978,11 +4016,9 @@ class CfgTraders
 		showWeaponFilter = 0;
 		categories[] = 
 		{
-			"Bikes",
 			"Cars",
-			"CUPUnarmed",
-			"CUPArmed",
-			"Trucks"			
+			"Trucks",
+			"RHSVehicles"
 		};
 	};
 
@@ -3995,9 +4031,10 @@ class CfgTraders
 		showWeaponFilter = 0;
 		categories[] = 
 		{
+			"RHSHelicopters",
+			"RHSPlanes",
 			"Choppers", 
-			"CUPChoppers",
-			"Planes"	
+			"Planes"
 		};
 	};
 
@@ -4026,6 +4063,7 @@ class CfgTraders
 			"Community"
 		};
 	};
+
 	class Exile_Trader_CommunityCustoms2
 	{
 		name = "COMMUNITY";
@@ -4115,7 +4153,6 @@ class CfgTraders
 			"Community10"
 		};
 	};
-	
 };
 class CfgTrading 
 {
