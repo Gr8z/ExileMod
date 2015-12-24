@@ -3404,20 +3404,8 @@ class CfgTraderCategories
 			"Exile_Item_Handsaw",
 			"Exile_Item_Pliers",
 			
-			/*
+
 			"class Exile_Item_Grinder",
-			"class Exile_Item_Foolbox",
-			"class Exile_Item_CordlessScrewdriver",
-			"class Exile_Item_FireExtinguisher",
-			"class Exile_Item_Hammer",
-			"class Exile_Item_OilCanister",
-			"class Exile_Item_Screwdriver",
-			"class Exile_Item_Shovel",
-			"class Exile_Item_Wrench",
-			"class Exile_Item_SleepingMat",	
-			"class Exile_Item_ToiletPaper",			
-			"class Exile_Item_ZipTie",
-			*/
 
 			"Binocular",
 			"Rangefinder",
