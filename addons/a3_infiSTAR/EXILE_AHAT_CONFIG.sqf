@@ -30,7 +30,7 @@ _passwordAdmin = 'penis123';
 
 
 /* Anti Teleport */
-_UAT = true;
+_UAT = false;
 /* if "_UAT = true;" you can add more allowed TP positions to the array like -> _allowTP pushBack [POSITION,RADIUS]; */
 _allowTP = [];
 if(worldName == 'Altis')then	/* using == instead of isEqualTo because == is not case sensetive */
