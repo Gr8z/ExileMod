@@ -418,7 +418,7 @@ fnc_VoteTimeServer = compileFinal "
 	_clientUID = _this select 0;
 	_vote = _this select 1;
 	
-	if(isNil 'TimeVoteCooldown')then{TimeVoteCooldown = 300;};
+	if(isNil 'TimeVoteCooldown')then{TimeVoteCooldown = 3000;};
 	if(isNil 'LastVoteGoneThrough')then{LastVoteGoneThrough = 600;};
 	if((TimeVoteCooldown + LastVoteGoneThrough) < time)then
 	{
