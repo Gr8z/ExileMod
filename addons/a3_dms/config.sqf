@@ -730,7 +730,7 @@ DMS_Use_Map_Config = true;	// Whether or not to use config overwrites specific t
 											],
 											[
 												["B_Carryall_cbr",1],
-												["B_Kitbag_mcamo",1],
+												["B_Kitbag_mcamo",1]
 											]
 										];
 	DMS_BoxWeapons =					[							// List of weapons that can spawn in a crate
