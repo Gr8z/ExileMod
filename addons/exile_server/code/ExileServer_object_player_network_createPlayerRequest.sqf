@@ -36,7 +36,7 @@ try
 	    case (_respect > 2500 && _respect < 4999):
 	    {
 		_bambiPlayer forceAddUniform "U_DrestesBody";
-		_bambiPlayer addBackpack "V_BandollierB_oli";
+		_bambiPlayer addBackpack "B_AssaultPack_cbr";
 		_bambiPlayer addItem "Exile_Item_Matches";
 		_bambiPlayer linkItem "ItemGPS";
 		_bambiPlayer addWeaponGlobal "Exile_Melee_Axe";
@@ -48,7 +48,7 @@ try
 	   {
 		_bambiPlayer forceAddUniform "U_B_CombatUniform_mcam_worn";
 		_bambiPlayer addVest "V_BandollierB_oli";
-		_bambiPlayer addBackpack "B_AssaultPack_Kerry";
+		_bambiPlayer addBackpack "B_AssaultPack_cbr";
 		_bambiPlayer addItem "Exile_Item_Matches";
 		_bambiPlayer linkItem "ItemGPS";
 		_bambiPlayer addWeaponGlobal "Exile_Melee_Axe";
