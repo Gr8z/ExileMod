@@ -30,7 +30,7 @@ try
 	_bambiPlayer = _group createUnit ["Exile_Unit_Player", [0,0,0], [], 0, "CAN_COLLIDE"];
 	_bambiPlayer addHeadgear "Exile_Headgear_SantaHat";
 	_respect = (_accountData select 1);   // get the players respect from the database
-/*
+
 	switch (true) do 
 	{
 	    case (_respect > 2500 && _respect < 4999):
@@ -222,7 +222,7 @@ try
 	//  "Your rank is Inmate";
 		};
 	};
-*/	
+
 	{
 		_cargoType = _x call ExileClient_util_cargo_getType;
 		switch (_cargoType) do
