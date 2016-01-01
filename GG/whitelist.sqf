@@ -1,6 +1,6 @@
 if ((_this select 0) == player) then {
 	if (!isDedicated) then {
-		waitUntil {player == player};
+		waitUntil {alive player && isplayer player};
 		waitUntil {!isNil "SlotDonor"};
 		if !(getPlayerUID player in SlotDonor) then {
 			titleCut ["", "BLACK FADED", 10];
