@@ -56,7 +56,7 @@ wreckRemovalMaxTime = 360;
 scriptedPlayer = 1;
 
 // Automatically take a free slot in lobby
-joinUnassigned = 0;
+joinUnassigned = 1;
 
 // Removes all playable units which do not have a human player.
 disabledAI = true;
