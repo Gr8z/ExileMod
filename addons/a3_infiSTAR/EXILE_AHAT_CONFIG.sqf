@@ -135,6 +135,7 @@ _adminUIDandAccess =
 		 '76561198062993387', //Azul
 		 '76561198058099842', //Fap
 		 '76561198056028211', //Nasty
+		 '76561198124203897', //Gambino
 		 //Add UID's Above - Don't forget the comma!
 		 '0'],
 		[
