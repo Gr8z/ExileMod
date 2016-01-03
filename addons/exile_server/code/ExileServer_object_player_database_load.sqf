@@ -19,6 +19,7 @@ _position = [_data select 11, _data select 12, _data select 13];
 _direction = _data select 10;
 _group = createGroup independent;
 _player = _group createUnit ["Exile_Unit_Player", _position, [], 0, "CAN_COLLIDE"];
+_player enableSimulation false;
 _player setDir _direction;
 _player setPosATL _position;
 _player disableAI "FSM";
@@ -197,6 +198,17 @@ if !(_assignedItems isEqualTo []) then
 	forEach _assignedItems;
 };
 _player addMPEventHandler ["MPKilled", {_this call ExileServer_object_player_event_onMpKilled}];
+
+_tempFix =
+{
+	if (!local _this) then
+	{
+		_this enableSimulation true;
+		[_x select 4] call ExileServer_system_thread_removeTask;
+	};
+};
+[1, _tempFix, _player, true] call ExileServer_system_thread_addTask;
+
 [
 	_sessionID, 
 	"loadPlayerResponse", 
