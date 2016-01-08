@@ -153,7 +153,11 @@ _adminUIDandAccess =
 		]
 	],
 	[	/* Mods */
-		['76561198124203897','76561198133936962', // Put in zeros so I don't break the code.
+		['76561198124203897',
+		 '76561198133936962',
+		 '76561198135739831',
+		 	
+		// Put in zeros so I don't break the code.
 		 //Add UID's Above - Don't forget the comma!
 		 '0'],
 		[
