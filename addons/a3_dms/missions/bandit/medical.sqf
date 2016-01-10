@@ -68,9 +68,9 @@ _vehicle = ["I_Truck_02_medical_F",_pos] call DMS_fnc_SpawnNonPersistentVehicle;
 // Set crate loot values
 _crate_loot_values =
 [
-	5,		// Weapons
-	[9,["Exile_Item_InstaDoc","Exile_Item_PlasticBottleFreshWater"]],		// Items
-	3 		// Backpacks
+	10,		// Weapons
+	[18,["Exile_Item_InstaDoc","Exile_Item_PlasticBottleFreshWater"]],		// Items
+	6 		// Backpacks
 ];
 
 
