@@ -43,8 +43,6 @@
 			"rhs_6sh92_digi_vog_headset",
 			"rhs_6sh92_digi_headset",
 			"rhs_6sh92_vog_head",
-			"rhs_6sh92",
-			"rhs_6sh92_digi",
 			"rhs_vydra_3m",
 		    "rhs_6b13",
 		    "rhs_6b13_EMR",
