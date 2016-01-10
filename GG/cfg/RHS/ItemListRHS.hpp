@@ -229,7 +229,6 @@
 	class rhs_weap_pkp								{ quality = 2; price = 300; };	
 
 	//RPG's
-	class rhs_weap_rpg7								{ quality = 2; price = 25000; };
 	class rhs_rpg7_PG7VL_mag						{ quality = 2; price = 3500; };
 	class rhs_rpg7_PG7VR_mag						{ quality = 2; price = 3500; };
 	class rhs_rpg7_TBG7V_mag						{ quality = 2; price = 3500; };
