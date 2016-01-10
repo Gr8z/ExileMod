@@ -303,7 +303,6 @@
 	class rhs_mag_m576								{ quality = 3; price = 80; };
 	class rhs_VOG25									{ quality = 3; price = 80; };
 	class rhs_VG40SZ								{ quality = 3; price = 80; };
-	class RHS_VOG25 				                { quality = 3; price = 30; };
 	class rhs_VG40TB                                { quality = 3; price = 25; };
 	class rhs_VG40MD_Green                          { quality = 3; price = 20; };
 	class rhs_VG40MD_Red                            { quality = 3; price = 20; };
