@@ -12,7 +12,7 @@ class CfgPatches
 	class exile_server_config
 	{
 		requiredVersion = 0.1;
-		requiredAddons[] = {};
+		requiredAddons[] = {"rhsusf_c_uav","rhs_us_a2_airimport","rhsusf_vehicles","rhsusf_c_heavyweapons","rhsusf_c_troops","rhs_c_a3retex","rhs_c_cars","RHS_A2_CarsImport","RHS_A2_AirImport","rhs_c_trucks","rhs_c_a2port_air","rhs_c_a2port_car"};
 		units[] = {};
 		weapons[] = {};
 		magazines[] = {};
