@@ -1738,9 +1738,6 @@ class CfgExileArsenal
 	class Exile_Boat_SDV_CSAT						{ quality = 1; price = 11000; };
 	class Exile_Boat_SDV_Digital					{ quality = 1; price = 11000; };
 	class Exile_Boat_SDV_Grey						{ quality = 1; price = 11000; };
-	
-	// sick ass boat
-	class B_Boat_Armed_01_minigun_F                 { quality = 1; price = 9000; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Hellcat
@@ -3846,8 +3843,7 @@ class CfgTraderCategories
 			"Exile_Boat_MotorBoat_White",
 			"Exile_Boat_SDV_CSAT",
 			"Exile_Boat_SDV_Digital",
-			"Exile_Boat_SDV_Grey",
-			"B_Boat_Armed_01_minigun_F"
+			"Exile_Boat_SDV_Grey"
 		};
 	};
 
