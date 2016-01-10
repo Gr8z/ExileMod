@@ -3636,7 +3636,6 @@ class CfgTraderCategories
 			"rhs_mag_m576",
 			"rhs_VOG25",
 			"rhs_VG40SZ",
-			"RHS_VOG25",
 			"rhs_VG40TB",
 			"rhs_VG40MD_Green",
 			"rhs_VG40MD_Red",
