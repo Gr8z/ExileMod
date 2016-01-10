@@ -321,7 +321,6 @@
 	class rhsusf_m112x4_mag							{ quality = 1; price = 6000; };
 	class rhs_mine_m19_mag 							{ quality = 1; price = 1500; };
 	class rhs_weap_rpg7 							{ quality = 1; price = 25000; };
-	class rhs_rpg7_PG7VL_mag 						{ quality = 1; price = 10000; };
 	
 	//VEHICLES
 	///////////////////////////////////////////////////////////////////////////////
