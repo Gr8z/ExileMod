@@ -447,7 +447,6 @@
 			"rhs_mine_tm62m_mag",
 			"rhsusf_m112_mag",
 			"rhsusf_m112x4_mag",
-			"rhs_weap_rpg7",
 			"rhs_rpg7_PG7VL_mag",
 			"rhs_rpg7_PG7VR_mag",
 			"rhs_rpg7_TBG7V_mag",
