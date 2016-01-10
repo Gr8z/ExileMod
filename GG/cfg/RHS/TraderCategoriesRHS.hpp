@@ -365,7 +365,7 @@
 			"rhs_tigr_ffv_vmf",
 			"rhs_tigr_ffv_3camo_vdv",
 			"rhs_tigr_ffv_3camo_vv",
-			"rhs_tigr_m_msv ",
+			"rhs_tigr_m_msv",
 			"rhs_tigr_m_3camo_vdv",
 			"rhsusf_m998_w_2dr_fulltop",
 			"rhsusf_m998_d_2dr_fulltop",
