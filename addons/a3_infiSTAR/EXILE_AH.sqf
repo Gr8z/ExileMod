@@ -748,7 +748,6 @@ _FN_INJECT_ON_CLIENT = {
 						systemChat 'SERVER: To get ahold of an admin, you must get in Teamspeak Support Channels';
 						uiSleep 1;
 						systemChat 'Teamspeak Server : TS.GHOSTZGAMERZ.COM';
-						(findDisplay 46)closeDisplay 0;
 					};
 				};
 				{
