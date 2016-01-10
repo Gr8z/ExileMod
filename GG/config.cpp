@@ -2042,6 +2042,7 @@ class CfgExileCustomCode
 	ExileClient_object_player_event_onKilled = 			"GG\overrides\GG_object_player_event_onKilled.sqf";
 	ExileClient_object_item_craft = 					"GG\overrides\GG_object_item_craft.sqf";
 	ExileClient_util_playerEquipment_add = 				"GG\overrides\GG_util_playerEquipment_add.sqf";
+	ExileClient_object_player_event_onEnterSafezone = 	"GG\overrides\GG_object_player_event_onEnterSafezone.sqf";
 };
 class CfgExileHUD
 {
