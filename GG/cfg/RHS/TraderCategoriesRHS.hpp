@@ -358,10 +358,6 @@
 			"rhs_45Rnd_545X39_AK_Green",
 			"rhs_100Rnd_762x54mmR",
 			"rhs_100Rnd_762x54mmR_green",
-			"rhs_rpg7_PG7VL_mag",
-			"rhs_rpg7_PG7VR_mag",
-			"rhs_rpg7_TBG7V_mag",
-			"rhs_rpg7_OG7V_mag",
 			"rhs_10Rnd_762x54mmR_7N1"
 		};
 	};
@@ -452,6 +448,10 @@
 			"rhsusf_m112_mag",
 			"rhsusf_m112x4_mag",
 			"rhs_weap_rpg7",
+			"rhs_rpg7_PG7VL_mag",
+			"rhs_rpg7_PG7VR_mag",
+			"rhs_rpg7_TBG7V_mag",
+			"rhs_rpg7_OG7V_mag",
 			"rhs_mine_m19_mag"
 		};
 	};
