@@ -176,7 +176,7 @@
 	class rhs_weap_makarov_pmm						{ quality = 3; price = 100; };
 	class rhsusf_weap_m1911a1						{ quality = 3; price = 100; };
 	class rhsusf_weap_glock17g4                     { quality = 1; price = 60; };
-	class rhsusf_weap_m9                            { quality = 1; price = 60; };s
+	class rhsusf_weap_m9                            { quality = 1; price = 60; };
 	
 	//LMG
 	//US
