@@ -1280,8 +1280,8 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// UAVS
 	///////////////////////////////////////////////////////////////////////////////
-	class I_UavTerminal								{ quality = 3; price = 750; };
-	class I_UAV_01_backpack_F						{ quality = 3; price = 5000; };
+//	class I_UavTerminal								{ quality = 3; price = 750; };
+//	class I_UAV_01_backpack_F						{ quality = 3; price = 5000; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Static MGs
@@ -3288,17 +3288,6 @@ class CfgTraderCategories
 		};
 	};
 
-	class UAVs
-	{
-		name = "Unmanned Aerial Vehicles";
-		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\gps_ca.paa";
-		items[] = 
-		{
-			"I_UavTerminal",
-			"I_UAV_01_backpack_F"
-		};
-	};
-
 	class StaticMGs
 	{
 		name = "Static Machine Guns";
@@ -3946,7 +3935,6 @@ class CfgTraders
 		{
 			"Flares",
 			"Smokes",
-			"UAVs",
 			"StaticMGs",
 			"Explosives",
 			"RHSMines",
