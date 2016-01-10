@@ -33,8 +33,6 @@
 	class rhs_6sh92_digi_vog						{ quality = 2; price = 50; };
 	class rhs_6sh92_digi_vog_headset				{ quality = 2; price = 50; };
 	class rhs_6sh92_digi_headset					{ quality = 2; price = 50; };
-	class rhs_6sh92                                 { quality = 1; price = 30; };
-	class rhs_6sh92_digi                            { quality = 1; price = 30; };
 	class rhs_vydra_3m                              { quality = 1; price = 30; };
     class rhs_6b13                            	  { quality = 2; price = 700; };
     class rhs_6b13_EMR                    	      { quality = 2; price = 700; };
