@@ -227,7 +227,13 @@
 	//Russian
 	class rhs_weap_pkm								{ quality = 2; price = 250; };
 	class rhs_weap_pkp								{ quality = 2; price = 300; };	
-	
+
+	//RPG's
+	class rhs_weap_rpg7								{ quality = 2; price = 15000; };
+	class rhs_rpg7_PG7VL_mag						{ quality = 2; price = 3500; };
+	class rhs_rpg7_PG7VR_mag						{ quality = 2; price = 3500; };
+	class rhs_rpg7_TBG7V_mag						{ quality = 2; price = 3500; };
+	class rhs_rpg7_OG7V_mag							{ quality = 2; price = 3500; };
 	//ASSAULT RIFLES
 	//US
 	class rhs_weap_M590_5RD							{ quality = 3; price = 350; };
