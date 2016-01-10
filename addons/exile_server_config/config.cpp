@@ -3034,7 +3034,7 @@ class CfgSettings
 		visualThreshold = 10;
 		notifyPlayer = 1;
 		minimumDistanceToTraderZones = 500;
-		minimumDistanceToTerritories = 150;
+		minimumDistanceToTerritories = 10;
 	};
 
 	///////////////////////////////////////////////////////////////////////
