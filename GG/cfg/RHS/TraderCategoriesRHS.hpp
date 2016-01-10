@@ -17,7 +17,12 @@
 			"rhs_uniform_FROG01_wd",
 			"rhs_uniform_m88_patchless",
 			"rhs_uniform_mflora_patchless",
-			"rhs_uniform_vdv_mflora"
+			"rhs_uniform_vdv_mflora",
+			"rhs_chdkz_uniform_1",
+			"rhs_chdkz_uniform_2",
+			"rhs_chdkz_uniform_3",
+			"rhs_chdkz_uniform_4",
+			"rhs_chdkz_uniform_5"
 		};
 	};
 
@@ -27,60 +32,26 @@
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\vest_ca.paa";
 		items[] = 
 		{
-			"rhs_6sh92_headset",
+			"rhs_6sh92",
 			"rhs_6sh92_radio",
 			"rhs_6sh92_vog",
 			"rhs_6sh92_vog_headset",
-			"rhs_vydra_3m",
+			"rhs_6sh92_headset",
 			"rhs_6sh92_digi",
-			"rhs_6b13_6sh92_vog",
-			"rhs_6b13_6sh92_radio",
-			"rhs_6b23_digi_6sh92_vog_headset",
-			"rhs_6b13_Flora",
-			"rhs_6b13_Flora_6sh92",
-			"rhs_6b13_Flora_6sh92_headset_mapcase",
-			"rhs_6b13_Flora_6sh92_vog",
-			"rhs_6b13_Flora_crewofficer",
-			"rhs_6b23",
-			"rhs_6b23_6sh92",
-			"rhs_6b23_6sh92_headset",
-			"rhs_6b23_6sh92_headset_mapcase",
-			"rhs_6b23_6sh92_radio",
-			"rhs_6b23_6sh92_vog",
-			"rhs_6b23_6sh92_vog_headset",
-			"rhs_6b23_crew",
-			"rhs_6b23_engineer",
-			"rhs_6b23_rifleman",
-			"rhs_6b23_sniper",
-			"rhs_6b23_ML",
-			"rhs_6b23_ML_6sh92",
-			"rhs_6b23_ML_6sh92_headset",
-			"rhs_6b23_ML_6sh92_headset_mapcase",
-			"rhs_6b23_ML_6sh92_radio",
-			"rhs_6b23_ML_6sh92_vog",
-			"rhs_6b23_ML_6sh92_vog_headset",
-			"rhs_6b23_ML_crewofficer",
-			"rhs_6b23_ML_crew",
-			"rhs_6b23_ML_engineer",
-			"rhs_6b23_ML_rifleman",
-			"rhs_6b23_ML_sniper",
-			"rhs_6sh46",
-			"rhsusf_iotv_ocp",
-			"rhsusf_iotv_ucp",
-			"rhsusf_iotv_ocp_Medic",
-			"rhsusf_iotv_ucp_Medic",
-			"rhsusf_iotv_ocp_Repair",
-			"rhsusf_iotv_ucp_Repair",
-			"rhsusf_iotv_ocp_Rifleman",
-			"rhsusf_iotv_ucp_Rifleman",
-			"rhsusf_iotv_ocp_SAW",
-			"rhsusf_iotv_ucp_SAW",
-			"rhsusf_iotv_ocp_Squadleader",
-			"rhsusf_iotv_ucp_Squadleader",
-			"rhsusf_iotv_ocp_Teamleader",
-			"rhsusf_iotv_ucp_Teamleader",
-			"rhsusf_iotv_ocp_Grenadier",
-			"rhsusf_iotv_ucp_Grenadier"
+			"rhs_6sh92_digi_radio",
+			"rhs_6sh92_digi_vog",
+			"rhs_6sh92_digi_vog_headset",
+			"rhs_6sh92_digi_headset",
+			"rhs_6sh92_vog_head",
+			"rhs_6sh92",
+			"rhs_6sh92_digi",
+			"rhs_vydra_3m",
+		    "rhs_6b13",
+		    "rhs_6b13_EMR",
+		    "rhsusf_iotv_ocp",
+		    "rhsusf_iotv_ocp_Rifleman",
+		    "rhsusf_iotv_ocp_Squadleader",
+			"rhsusf_spc_rifleman"
 		};
 	};
 
@@ -91,22 +62,27 @@
 		items[] =
 		{
 			"rhs_6b26",
-			"rhs_6b26_bala",
 			"rhs_6b26_ess",
-			"rhs_6b26_ess_bala",
-			"rhs_6b26_green",
-			"rhs_6b27m_digi",
-			"rhs_6b27m_digi_bala",
-			"rhs_6b27m_digi_ess",
-			"rhs_6b27m_digi_ess_bala",
-			"rhs_6b27m",
-			"rhs_6b27m_ess",
-			"rhs_6b27m_bala",
-			"rhs_6b27m_ess_bala",
+			"rhs_6b26_bala_green",
+			"rhs_6b27m ",
 			"rhs_6b27m_ml",
-			"rhs_6b27m_ml_bala",
-			"rhs_6b27m_ml_ess",
-			"rhs_6b27m_ML_ess_bala"
+			"rhs_6b27m_green_ess",
+			"rhs_6b28_flora",
+			"rhs_6b28_ess",
+			"rhs_6b28_flora_ess",
+			"rhs_6b28_green_ess_bala",
+			"rhs_tsh4",
+			"rhs_tsh4_ess",
+			"rhs_tsh4_bala",
+			"rhsusf_lwh_helmet_marpatwd_ess",
+			"rhsusf_lwh_helmet_marpatwd",
+			"rhsusf_mich_helmet_marpatwd",
+			"rhsusf_mich_helmet_marpatwd_headset",
+			"rhsusf_mich_helmet_marpatwd_norotos",
+			"rhsusf_mich_bare",
+			"rhsusf_mich_bare_alt",
+			"rhsusf_mich_bare_tan",
+			"rhs_ssh68"
 		};
 	};
 
@@ -187,7 +163,8 @@
 			"rhs_acc_ekp1",
 			"rhs_acc_pso1m2",
 			"rhs_acc_pgo7v",
-			"rhs_acc_1pn93_1"
+			"rhs_acc_1pn93_1",
+			"rhs_acc_pso1m21"
 		};
 	};
 	
@@ -199,7 +176,9 @@
 		{
 			"rhs_weap_pya",
 			"rhs_weap_makarov_pmm",
-			"rhsusf_weap_m1911a1"
+			"rhsusf_weap_m1911a1",
+			"rhsusf_weap_glock17g4",
+			"rhsusf_weap_m9"
 		};
 	};
 	
@@ -286,7 +265,13 @@
 			"rhs_weap_akm",
 			"rhs_weap_akm_gp25",
 			"rhs_weap_akms",
-			"rhs_weap_akms_gp25"
+			"rhs_weap_akms_gp25",
+			"rhs_weap_asval",
+			"rhs_weap_asval_npz",
+			"rhs_weap_ak104",
+			"rhs_weap_ak104_npz",
+			"rhs_weap_ak105",
+			"rhs_weap_ak105_npz"
 		};
 	};
 	
@@ -296,7 +281,6 @@
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[]=
 		{
-			"rhs_weap_M107",
 			"rhs_weap_sr25",
 			"rhs_weap_sr25_ec",
 			"rhs_weap_m14ebrri",
@@ -309,7 +293,8 @@
 			"rhs_weap_svdp_wd_npz",
 			"rhs_weap_svdp_npz",
 			"rhs_weap_svds",
-			"rhs_weap_svds_npz"
+			"rhs_weap_svds_npz",
+			"rhs_weap_m110"
 		};
 	};
 	
@@ -344,6 +329,9 @@
 			"rhsusf_8Rnd_Slug",
 			"rhsusf_20Rnd_762x51_m993_Mag",
 			"rhsusf_5Rnd_300winmag_xm2010",
+			"rhsusf_8Rnd_HE",
+			"rhsusf_8Rnd_FRAG",
+			"rhsusf_100Rnd_762x51_m61_ap",
 			"rhs_30Rnd_762x39mm",
 			"rhs_30Rnd_762x39mm_tracer",
 			"rhs_30Rnd_762x39mm_89",
@@ -368,54 +356,35 @@
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[]=
 		{
-			"rhs_tigr_ffv_3camo_vdv",
-			"rhs_tigr_ffv_vdv",
-			"rhs_gaz66_r142_vmf",
-			"rhs_gaz66_repair_vmf",
-			"rhs_gaz66_vmf",
-			"rhs_gaz66_flat_vdv",
-			"rhs_gaz66o_vdv",
-			"rhs_gaz66o_flat_vdv",
-			"rhs_gaz66_ammo_vmf",
+			"rhsusf_m1025_d",
 			"rhsusf_m1025_w",
-			"rhsusf_m1025_w_m2",
+			"rhsusf_m1025_w_s",
+			"rhsusf_m1025_d_s",
 			"rhsusf_m998_w_2dr",
-			"rhsusf_m998_w_4dr",
-			"rhsusf_m998_w_s_2dr_fulltop",
-			"rhsusf_m998_d_s_2dr_fulltop",
-			"rhsusf_m998_w_s_2dr_halftop",
-			"rhsusf_m998_d_s_2dr_halftop",
-			"rhsusf_m998_d_s_4dr_fulltop",
-			"rhsusf_m998_w_s_4dr_fulltop",
-			"rhsusf_m998_d_s_4dr_halftop",
-			"rhsusf_m998_w_s_4dr_halftop",
-			"rhsusf_M1078A1P2_wd_fmtv_usarmy",
-			"rhsusf_M1078A1P2_d_fmtv_usarmy",
-			"rhsusf_M1078A1P2_wd_open_fmtv_usarmy",
-			"rhsusf_M1078A1P2_d_open_fmtv_usarmy",
-			"rhsusf_M1078A1P2_wd_flatbed_fmtv_usarmy",
-			"rhsusf_M1078A1P2_d_flatbed_fmtv_usarmy",
-			"rhsusf_M1078A1P2_B_d_fmtv_usarmy",
-			"rhsusf_M1078A1P2_B_wd_fmtv_usarmy",
-			"rhsusf_M1078A1P2_B_wd_open_fmtv_usarmy",
-			"rhsusf_M1078A1P2_B_d_open_fmtv_usarmy",
-			"rhsusf_M1078A1P2_B_wd_flatbed_fmtv_usarmy",
-			"rhsusf_M1078A1P2_B_d_flatbed_fmtv_usarmy",
-			"rhsusf_rg33_d",
-			"rhs_uaz_vmf",
-			"rhs_uaz_open_vmf",
-			"RHS_Ural_Open_Civ_01",
-			"RHS_Ural_Open_Civ_02",
-			"RHS_Ural_Open_Civ_03",
+			"rhsusf_m998_d_s_2dr",
+			"rhs_tigr_vmf",
+			"rhs_tigr_3camo_vmf",
+			"rhs_tigr_ffv_vmf",
+			"rhs_tigr_ffv_3camo_vdv",
+			"rhs_tigr_ffv_3camo_vv",
+			"rhs_tigr_m_msv ",
+			"rhs_tigr_m_3camo_vdv",
+			"rhsusf_m998_w_2dr_fulltop",
+			"rhsusf_m998_d_2dr_fulltop",
+			"RHS_UAZ_MSV_01",
+			"rhs_uaz_open_MSV_01",
+			"rhs_uaz_dshkm_chdkz",
+			"RHS_Ural_Flat_MSV_01",
 			"RHS_Ural_MSV_01",
-			"RHS_Ural_Fuel_MSV_01",
-			"RHS_Ural_Open_MSV_01",
-			"rhsusf_M1083A1P2_B_M2_d_fmtv_usarmy",
-			"rhsusf_M1083A1P2_B_M2_d_open_fmtv_usarmy",
-			"rhs_pts_vmf",
-			"rhs_btr60_chdkz",
-			"rhsusf_rg33_m2_d",
-			"rhs_Ural_Flat_MSV_01"
+			"RHS_Ural_Open_Civ_03",
+			"rhsusf_m1025_w_m2",
+			"rhsusf_m1025_d_m2",
+			"rhsusf_M1078A1P2_B_M2_wd_fmtv_usarmy",
+			"rhsusf_M1078A1P2_B_M2_wd_flatbed_fmtv_usarmy",
+			"rhsusf_M1078A1P2_B_M2_d_fmtv_usarmy",
+			"rhsusf_M1078A1P2_B_M2_d_flatbed_fmtv_usarmy",
+			"B_Boat_Armed_01_minigun_F",
+			"rhs_btr60_chdkz"
 		};
 	};
 	
@@ -425,15 +394,21 @@
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[]=
 		{			
-			"RHS_CH_47F",
+			"RHS_UH60M_MEV",
+			"RHS_UH1Y_UNARMED",
+			"RHS_UH1Y_UNARMED_d",
+			"RHS_Mi8mt_cargo_vdv",
+			"RHS_Mi8amt_civilian",
 			"rhs_ka60_c",
 			"rhs_ka60_grey",
+			"RHS_CH_47F",
+			"RHS_CH_47F_light",
 			"RHS_UH60M",
-			"rhs_UH60M_MEV2_d",
-			"rhs_Mi8mt_vvs",
-			"rhs_Mi8mt_cargo_vvs",
-			"O_Heli_Light_02_v2_F",
-			"rhs_UH1Y_unarmed"
+			"RHS_Mi8mt_vvs",
+			"RHS_Mi8amt_chdkz",
+			"RHS_UH1Y",
+			"RHS_Mi24Vt_vvs",
+			"rhsusf_CH53E_USMC"
 		};
 	};
 	
@@ -462,6 +437,7 @@
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
-			"RHS_C130J"
+			"RHS_C130J",
+			"GNT_C185F"
 		};
 	};	

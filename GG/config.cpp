@@ -1602,16 +1602,6 @@ class CfgExileArsenal
 	class IEDUrbanSmall_Remote_Mag					{ quality = 3; price = 4000; };
 	class SatchelCharge_Remote_Mag					{ quality = 3; price = 10000;};
 	class SLAMDirectionalMine_Wire_Mag				{ quality = 3; price = 7000; };
-	
-	
-	///////////////////////////////////////////////////////////////////////////////
-	// RHS
-	///////////////////////////////////////////////////////////////////////////////
-
-	class rhs_mag_m4009								{ quality = 3; price = 80; };
-	class rhs_mag_m576								{ quality = 3; price = 80; };
-	class rhs_VOG25									{ quality = 3; price = 80; };
-	class rhs_VG40SZ								{ quality = 3; price = 80; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Pistols
@@ -3641,7 +3631,19 @@ class CfgTraderCategories
 			"IEDUrbanBig_Remote_Mag",
 			"IEDUrbanSmall_Remote_Mag",
 			"SatchelCharge_Remote_Mag",
-			"SLAMDirectionalMine_Wire_Mag"
+			"SLAMDirectionalMine_Wire_Mag",
+			"rhs_mag_m4009",
+			"rhs_mag_m576",
+			"rhs_VOG25",
+			"rhs_VG40SZ",
+			"RHS_VOG25",
+			"rhs_VG40TB",
+			"rhs_VG40MD_Green",
+			"rhs_VG40MD_Red",
+			"rhs_VG40MD_White",
+			"rhs_VG40OP_green",
+			"rhs_VG40OP_red",
+			"rhs_VG40OP_white"
 		};
 	};
 
