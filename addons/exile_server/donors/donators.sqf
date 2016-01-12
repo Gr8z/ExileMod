@@ -27,3 +27,106 @@ SlotDonor = [
 	// Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "SlotDonor";
+
+/////////// Engineer Class ///////
+Engineer1 = [
+	"0", // NAME (OD-00-00-0000) #0000
+// Add UIDs above, don't forget the comma
+"0"
+];publicVariable "Engineer1";
+
+Engineer2 = [
+	"0", // NAME (OD-00-00-0000) #0000
+// Add UIDs above, don't forget the comma
+"0"
+];publicVariable "Engineer2";
+
+Engineer3 = [
+	"76561198078201908", // Gr8
+	"76561198153784743", // Ghost
+// Add UIDs above, don't forget the comma
+"0"
+];publicVariable "Engineer3";
+///////////////////////////
+
+// Marksman Class  /////////
+Marksman1 = [
+	"0", // NAME (OD-00-00-0000) #0000
+// Add UIDs above, don't forget the comma
+"0"
+];publicVariable "Marksman1";
+
+Marksman2 = [
+	"0", // NAME (OD-00-00-0000) #0000
+// Add UIDs above, don't forget the comma
+"0"
+];publicVariable "Marksman2";
+
+Marksman3 = [
+	"76561198078201908", // Gr8
+	"76561198153784743", // Ghost
+// Add UIDs above, don't forget the comma
+"0"
+];publicVariable "Marksman3";
+///////////////////////////////
+
+/////// Medic Class ///////////
+Medic1 = [
+	"0", // NAME (OD-00-00-0000) #0000
+// Add UIDs above, don't forget the comma
+"0"
+];publicVariable "Medic1";
+
+Medic2 = [
+	"0", // NAME (OD-00-00-0000) #0000
+// Add UIDs above, don't forget the comma
+"0"
+];publicVariable "Medic2";
+
+Medic3 = [
+	"76561198078201908", // Gr8
+	"76561198153784743", // Ghost
+// Add UIDs above, don't forget the comma
+"0"
+];publicVariable "Medic3";
+
+/////// Scout Class ///////////
+Scout1 = [
+	"0", // NAME (OD-00-00-0000) #0000
+// Add UIDs above, don't forget the comma
+"0"
+];publicVariable "Scout1";
+
+Scout2 = [
+	"0", // ThatEstonian Mod Loadout(Upgraded by MeowMix)
+// Add UIDs above, don't forget the comma
+"0"
+];publicVariable "Scout2";
+
+Scout3 = [
+	"76561198078201908", // Gr8
+	"76561198153784743", // Ghost
+// Add UIDs above, don't forget the comma
+"0"
+];publicVariable "Scout3";
+///////////////////////////////
+
+/////// Soldier Class ///////////
+Soldier1 = [
+	"0", // NAME (OD-00-00-0000) #0000
+// Add UIDs above, don't forget the comma
+"0"
+];publicVariable "Soldier1";
+
+Soldier2 = [
+	"0", // NAME (OD-00-00-0000) #0000
+// Add UIDs above, don't forget the comma
+"0"
+];publicVariable "Soldier2";
+
+Soldier3 = [
+	"76561198078201908", // Gr8
+	"76561198153784743", // Ghost
+// Add UIDs above, don't forget the comma
+"0"
+];publicVariable "Soldier3";
