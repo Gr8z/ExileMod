@@ -208,7 +208,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player forceAddUniform "U_B_CombatUniform_mcam_tshirt";
 			player addHeadgear "H_HelmetB";
 			player addBackpack "B_AssaultPack_khk";
-			addWeapon "NVGoggles";
+			player addWeapon "NVGoggles";
 			player addWeapon "rhsusf_weap_m1911a1";
 			for "_i" from 1 to 3 do {player addItemToUniform "rhsusf_mag_7x45acp_MHP";};
 			player addItemToUniform "Exile_Magazine_Swing";
