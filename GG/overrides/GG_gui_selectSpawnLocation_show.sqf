@@ -361,7 +361,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToBackpack "Exile_Item_EnergyDrink";
 			player addItemToBackpack "Exile_Item_InstaDoc";
 			player addItemToBackpack "Exile_Item_GloriousKnakworst";
-			addItemToBackpack "Exile_Item_Vishpirin";
+			player addItemToBackpack "Exile_Item_Vishpirin";
 			player addWeapon "Exile_Melee_Axe";
 			call ExileClient_object_player_bambiStateEnd;
 		};
