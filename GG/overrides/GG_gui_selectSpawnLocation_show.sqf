@@ -250,7 +250,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addWeapon "NVGoggles";
 			player addWeapon "rhs_weap_m4_grip";
 			player addWeapon "rhsusf_weap_m1911a1";
-			player addPrimaryWeaponItem "rhsusf_acc_ACOG_wd"
+			player addPrimaryWeaponItem "rhsusf_acc_ACOG_wd";
 			for "_i" from 1 to 2 do {player addItemToUniform "rhs_mag_30Rnd_556x45_Mk318_Stanag";};
 			for "_i" from 1 to 3 do {player addItemToUniform "rhsusf_mag_7x45acp_MHP";};
 			player addItemToUniform "Exile_Magazine_Swing";
