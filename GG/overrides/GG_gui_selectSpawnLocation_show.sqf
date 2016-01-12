@@ -3,7 +3,6 @@ disableSerialization;
 diag_log "Selecting spawn location...";
 ExileClientSpawnLocationSelectionDone = false;
 ExileClientSelectedSpawnLocationMarkerName = "";
-_puid = getPlayerUID player;
 createDialog "RscExileSelectSpawnLocationDialog";
 waitUntil
 {
@@ -64,6 +63,7 @@ waitUntil {!isNil "Soldier3"};
 FNC_GET_ACTUAL_LOADOUT = {
 	waitUntil {typeOf player isEqualTo 'Exile_Unit_Player'};
 	uiSleep 3;
+	_puid = getPlayerUID player;
 	switch (_this) do {
 		case 0:{
 			execVM "GG\ranks.sqf";
@@ -71,7 +71,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 1:{
 			if (_puid in Scout1 + Scout2 + Scout3) exitWith {[parseText format["<img size='2' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Scout Loadout Donators.This loadout is available on the website.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;};
 			[parseText format["<img size='2' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Scout Loadout 10</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
-			removeAllWeapons player;removeAllItems player;removeAllAssignedItems player;removeUniform player;removeVest player;removeBackpack player;removeHeadgear player;removeGoggles player;
+
 			player forceAddUniform "U_B_CTRG_2";
 			player addHeadgear "H_Booniehat_oli";
 			player addGoggles "G_Bandanna_khk";
@@ -91,7 +91,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 2:{
 			if (_puid in Scout2 + Scout3) exitWith {[parseText format["<img size='2' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Scout Loadout Donators.This loadout is available on the website.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;};
 			[parseText format["<img size='2' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Scout Loadout 2</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
-			removeAllWeapons player;removeAllItems player;removeAllAssignedItems player;removeUniform player;removeVest player;removeBackpack player;removeHeadgear player;removeGoggles player;
+
 			player forceAddUniform "U_B_CTRG_3";
 			player addHeadgear "H_Booniehat_oli";
 			player addGoggles "G_Bandanna_khk";
@@ -116,7 +116,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 3:{
 			if (_puid in Scout3) exitWith {[parseText format["<img size='2' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Scout Loadout Donators.This loadout is available on the website.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;};
 			[parseText format["<img size='2' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Scout Loadout 3</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
-			removeAllWeapons player;removeAllItems player;removeAllAssignedItems player;removeUniform player;removeVest player;removeBackpack player;removeHeadgear player;removeGoggles player;
+
 			player forceAddUniform "rhs_uniform_FROG01_m81";
 			player addHeadgear "H_ShemagOpen_tan";
 			player addVest "V_TacVest_camo";
@@ -142,7 +142,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 4:{
 			if (_puid in Marksman1 + Marksman2 + Marksman3) exitWith {[parseText format["<img size='2' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Marksman Loadout Donators.This loadout is available on the website.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;};
 			[parseText format["<img size='2' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Marksman Loadout 1</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
-			removeAllWeapons player;removeAllItems player;removeAllAssignedItems player;removeUniform player;removeVest player;removeBackpack player;removeHeadgear player;removeGoggles player;
+
 			player forceAddUniform "U_I_G_resistanceLeader_F";
 			player addHeadgear "H_Bandanna_sgg";
 			player addBackpack "B_AssaultPack_khk";
@@ -159,7 +159,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 5:{
 			if (_puid in Marksman2 + Marksman3) exitWith {[parseText format["<img size='2' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Marksman Loadout Donators.This loadout is available on the website.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;};
 			[parseText format["<img size='2' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Marksman Loadout 2</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
-			removeAllWeapons player;removeAllItems player;removeAllAssignedItems player;removeUniform player;removeVest player;removeBackpack player;removeHeadgear player;removeGoggles player;
+
 			player forceAddUniform "U_I_G_resistanceLeader_F";
 			player addHeadgear "H_Bandanna_sgg";
 			player addVest "V_Rangemaster_belt";
@@ -181,7 +181,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 6:{
 			if (_puid in Marksman3) exitWith {[parseText format["<img size='2' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Marksman Loadout Donators.This loadout is available on the website.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;};
 			[parseText format["<img size='2' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Marksman Loadout 3</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
-			removeAllWeapons player;removeAllItems player;removeAllAssignedItems player;removeUniform player;removeVest player;removeBackpack player;removeHeadgear player;removeGoggles player;
+
 			player forceAddUniform "U_B_FullGhillie_lsh";
 			player addVest "V_TacVest_camo";
 			player addBackpack "B_FieldPack_khk";
@@ -204,7 +204,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 7:{
 			if (_puid in Soldier1 + Soldier2 + Soldier3) exitWith {[parseText format["<img size='2' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Soldier Loadout Donators.This loadout is available on the website.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;};
 			[parseText format["<img size='2' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Soldier Loadout 1</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
-			removeAllWeapons player;removeAllItems player;removeAllAssignedItems player;removeUniform player;removeVest player;removeBackpack player;removeHeadgear player;removeGoggles player;
+
 			player forceAddUniform "U_B_CombatUniform_mcam_tshirt";
 			player addHeadgear "H_HelmetB";
 			player addBackpack "B_AssaultPack_khk";
@@ -221,7 +221,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 8:{
 			if (_puid in Soldier2 + Soldier3) exitWith {[parseText format["<img size='2' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Soldier Loadout Donators.This loadout is available on the website.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;};
 			[parseText format["<img size='2' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Soldier Loadout 2</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
-			removeAllWeapons player;removeAllItems player;removeAllAssignedItems player;removeUniform player;removeVest player;removeBackpack player;removeHeadgear player;removeGoggles player;
+
 			player forceAddUniform "U_B_CombatUniform_mcam";
 			player addHeadgear "H_HelmetB";
 			player addVest "V_Rangemaster_belt";
@@ -242,7 +242,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 9:{
 			if (_puid in Soldier3) exitWith {[parseText format["<img size='2' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Soldier Loadout Donators.This loadout is available on the website.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;};
 			[parseText format["<img size='2' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Soldier Loadout 3</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
-			removeAllWeapons player;removeAllItems player;removeAllAssignedItems player;removeUniform player;removeVest player;removeBackpack player;removeHeadgear player;removeGoggles player;
+
 			player forceAddUniform "rhs_uniform_FROG01_wd";
 			player addVest "V_PlateCarrier1_rgr";
 			player addHeadgear "rhsusf_lwh_helmet_marpatwd";
@@ -264,7 +264,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 10:{
 			if (_puid in Medic1 + Medic2 + Medic3) exitWith {[parseText format["<img size='2' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Medic Loadout Donators.This loadout is available on the website.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;};
 			[parseText format["<img size='2' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Medic Loadout 1</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
-			removeAllWeapons player;removeAllItems player;removeAllAssignedItems player;removeUniform player;removeVest player;removeBackpack player;removeHeadgear player;removeGoggles player;
+
 			player forceAddUniform "U_C_Scientist";
 			player addHeadgear "H_Beret_02";
 			player addBackpack "B_FieldPack_oucamo";
@@ -282,7 +282,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 11:{
 			if (_puid in Medic2 + Medic3) exitWith {[parseText format["<img size='2' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Medic Loadout Donators.This loadout is available on the website.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;};
 			[parseText format["<img size='2' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Medic Loadout 2</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
-			removeAllWeapons player;removeAllItems player;removeAllAssignedItems player;removeUniform player;removeVest player;removeBackpack player;removeHeadgear player;removeGoggles player;
+
 			player forceAddUniform "U_C_Scientist";
 			player addHeadgear "H_Beret_02";
 			player addVest "V_Rangemaster_belt";
@@ -304,7 +304,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 12:{
 			if (_puid in Medic3) exitWith {[parseText format["<img size='2' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Medic Loadout Donators.This loadout is available on the website.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;};
 			[parseText format["<img size='2' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Medic Loadout 3</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
-			removeAllWeapons player;removeAllItems player;removeAllAssignedItems player;removeUniform player;removeVest player;removeBackpack player;removeHeadgear player;removeGoggles player;
+
 			player forceAddUniform "rhs_uniform_flora_patchless";
 			player addVest "rhs_6b23_medic";
 			player addHeadgear "rhs_fieldcap_digi";
@@ -327,7 +327,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 13:{
 			if (_puid in Engineer1 + Engineer2 + Engineer3) exitWith {[parseText format["<img size='2' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Engineer Loadout Donators.This loadout is available on the website.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;};
 			[parseText format["<img size='2' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Engineer Loadout 1</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
-			removeAllWeapons player;removeAllItems player;removeAllAssignedItems player;removeUniform player;removeVest player;removeBackpack player;removeHeadgear player;removeGoggles player;
+
 			player forceAddUniform "U_I_pilotCoveralls";
 			player addHeadgear "H_Cap_blk";
 			player addBackpack "B_FieldPack_oli";
@@ -345,7 +345,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 14:{
 			if (_puid in Engineer2 + Engineer3) exitWith {[parseText format["<img size='2' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Engineer Loadout Donators.This loadout is available on the website.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;};
 			[parseText format["<img size='2' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Engineer Loadout 2</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
-			removeAllWeapons player;removeAllItems player;removeAllAssignedItems player;removeUniform player;removeVest player;removeBackpack player;removeHeadgear player;removeGoggles player;
+
 			player forceAddUniform "U_I_pilotCoveralls";
 			player addHeadgear "H_Cap_blk";
 			player addVest "V_Rangemaster_belt";
@@ -368,7 +368,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 15:{
 			if (_puid in Engineer3) exitWith {[parseText format["<img size='2' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Engineer Loadout Donators.This loadout is available on the website.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;};
 			[parseText format["<img size='2' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Engineer Loadout 3</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
-			removeAllWeapons player;removeAllItems player;removeAllAssignedItems player;removeUniform player;removeVest player;removeBackpack player;removeHeadgear player;removeGoggles player;
+
 			player forceAddUniform "U_O_PilotCoveralls";
 			player addVest "V_TacVest_khk";
 			player addHeadgear "H_Cap_brn_SPECOPS";

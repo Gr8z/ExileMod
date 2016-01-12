@@ -2987,12 +2987,12 @@ class CfgSettings
 		 * 1 = On
 		 * 0 = Off
 		 */
-		haloJump = 1;
+		haloJump = 0;
 
 		/**
 		 * Parachute drop height in meters. 
 		 */
-		parachuteDropHeight = 1000;
+		parachuteDropHeight = 500;
 
 		/**
 		 * Number of minutes where a fresh spawned player remains in the
