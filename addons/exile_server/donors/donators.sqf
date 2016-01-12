@@ -86,6 +86,7 @@ Medic2 = [
 Medic3 = [
 	"76561198078201908", // Gr8
 	"76561198153784743", // Ghost
+	"76561198136638540", // Unknown (OD-2016-01-11) #12839
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Medic3";
