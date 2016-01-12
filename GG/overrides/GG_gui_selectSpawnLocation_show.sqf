@@ -167,7 +167,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addWeapon "Binocular";
 			player addWeapon "hgun_PDW2000_F";
 			player addWeapon "hgun_ACPC2_F";
-			player addPrimaryWeaponItem "optic_ACO_grn_smg"
+			player addPrimaryWeaponItem "optic_ACO_grn_smg";
 			for "_i" from 1 to 2 do {player addItemToUniform "30Rnd_9x21_Mag";};
 			for "_i" from 1 to 3 do {player addItemToUniform "9Rnd_45ACP_Mag";};
 			player addItemToUniform "Exile_Magazine_Swing";
