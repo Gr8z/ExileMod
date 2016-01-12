@@ -99,8 +99,8 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addBackpack "B_FieldPack_oli";
 			player addWeapon "hgun_PDW2000_F";
 			player addWeapon "hgun_Pistol_heavy_01_F";
-			player addPrimaryWeaponItem "muzzle_snds_L"
-			player addPrimaryWeaponItem "optic_Holosight_smg"
+			player addPrimaryWeaponItem "muzzle_snds_L";
+			player addPrimaryWeaponItem "optic_Holosight_smg";
 			player addHandgunItem "muzzle_snds_acp";
 			player addHandgunItem "optic_MRD";
 			for "_i" from 1 to 2 do {player addItemToUniform "30Rnd_9x21_Mag";};
@@ -123,9 +123,9 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addBackpack "B_FieldPack_oli";
 			player addWeapon "arifle_MXM_Black_F";
 			player addWeapon "hgun_Pistol_heavy_01_F";
-			player addPrimaryWeaponItem "muzzle_snds_H"
-			player addPrimaryWeaponItem "optic_MRCO"
-			player addPrimaryWeaponItem "bipod_01_F_blk"
+			player addPrimaryWeaponItem "muzzle_snds_H";
+			player addPrimaryWeaponItem "optic_MRCO";
+			player addPrimaryWeaponItem "bipod_01_F_blk";
 			player addHandgunItem "muzzle_snds_acp";
 			player addHandgunItem "optic_MRD";
 			for "_i" from 1 to 2 do {player addItemToUniform "30Rnd_65x39_caseless_mag";};
@@ -188,8 +188,8 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addWeapon "Rangefinder";
 			player addWeapon "srifle_DMR_03_multicam_F";
 			player addWeapon "hgun_ACPC2_F";
-			player addPrimaryWeaponItem "optic_MRCO"
-			player addPrimaryWeaponItem "bipod_02_F_hex"
+			player addPrimaryWeaponItem "optic_MRCO";
+			player addPrimaryWeaponItem "bipod_02_F_hex";
 			player addHandgunItem "optic_MRD";
 			for "_i" from 1 to 2 do {player addItemToUniform "20Rnd_762x51_Mag";};
 			for "_i" from 1 to 3 do {player addItemToUniform "9Rnd_45ACP_Mag";};
@@ -229,7 +229,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addWeapon "SMG_02_F";
 			player addWeapon "NVGoggles";
 			player addWeapon "rhsusf_weap_m1911a1";
-			player addPrimaryWeaponItem "optic_Aco_smg"
+			player addPrimaryWeaponItem "optic_Aco_smg";
 			for "_i" from 1 to 2 do {player addItemToUniform "30Rnd_9x21_Mag";};
 			for "_i" from 1 to 3 do {player addItemToUniform "rhsusf_mag_7x45acp_MHP";};
 			player addItemToUniform "Exile_Magazine_Swing";
@@ -289,7 +289,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addBackpack "B_FieldPack_oucamo";
 			player addWeapon "SMG_01_F";
 			player addWeapon "hgun_Pistol_heavy_01_F";
-			player addPrimaryWeaponItem "optic_Holosight_smg"
+			player addPrimaryWeaponItem "optic_Holosight_smg";
 			player addHandgunItem "optic_MRD";
 			for "_i" from 1 to 2 do {player addItemToUniform "30Rnd_45ACP_Mag_SMG_01";};
 			for "_i" from 1 to 3 do {player addItemToVest "11Rnd_45ACP_Mag";};
@@ -311,7 +311,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addBackpack "B_FieldPack_oli";
 			player addWeapon "rhs_weap_ak74m_camo_folded";
 			player addWeapon "hgun_Pistol_heavy_01_F";
-			player addPrimaryWeaponItem "optic_Holosight"
+			player addPrimaryWeaponItem "optic_Holosight";
 			player addHandgunItem "optic_MRD";
 			for "_i" from 1 to 2 do {player addItemToUniform "rhs_30Rnd_545x39_AK";};
 			for "_i" from 1 to 3 do {player addItemToVest "11Rnd_45ACP_Mag";};
@@ -352,7 +352,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addBackpack "B_FieldPack_oli";
 			player addWeapon "SMG_02_F";
 			player addWeapon "hgun_Pistol_heavy_01_F";
-			player addPrimaryWeaponItem "optic_ACO_grn"
+			player addPrimaryWeaponItem "optic_ACO_grn";
 			player addHandgunItem "optic_MRD";
 			for "_i" from 1 to 2 do {player addItemToUniform "30Rnd_9x21_Mag";};
 			for "_i" from 1 to 3 do {player addItemToVest "11Rnd_45ACP_Mag";};
@@ -376,8 +376,8 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addWeapon "NVGoggles";
 			player addWeapon "arifle_MX_SW_F";
 			player addWeapon "hgun_Pistol_heavy_01_F";
-			player addPrimaryWeaponItem "optic_Holosight"
-			player addPrimaryWeaponItem "bipod_01_F_snd"
+			player addPrimaryWeaponItem "optic_Holosight";
+			player addPrimaryWeaponItem "bipod_01_F_snd";
 			player addHandgunItem "optic_MRD";
 			for "_i" from 1 to 2 do {player addItemToUniform "100Rnd_65x39_caseless_mag_Tracer";};
 			for "_i" from 1 to 3 do {player addItemToUniform "11Rnd_45ACP_Mag";};
