@@ -46,6 +46,7 @@ Engineer2 = [
 Engineer3 = [
 	"76561198078201908", // Gr8
 	"76561198153784743", // Ghost
+	"76561198195305425", // shaz
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Engineer3";
@@ -67,6 +68,7 @@ Marksman2 = [
 Marksman3 = [
 	"76561198078201908", // Gr8
 	"76561198153784743", // Ghost
+	"76561198195305425", // shaz
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Marksman3";
@@ -88,6 +90,7 @@ Medic2 = [
 Medic3 = [
 	"76561198078201908", // Gr8
 	"76561198153784743", // Ghost
+	"76561198195305425", // shaz
 	"76561198136638540", // Unknown (OD-2016-01-11) #12839
 // Add UIDs above, don't forget the comma
 "0"
@@ -109,6 +112,7 @@ Scout2 = [
 Scout3 = [
 	"76561198078201908", // Gr8
 	"76561198153784743", // Ghost
+	"76561198195305425", // shaz
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout3";
@@ -130,6 +134,7 @@ Soldier2 = [
 Soldier3 = [
 	"76561198078201908", // Gr8
 	"76561198153784743", // Ghost
+	"76561198195305425", // shaz
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Soldier3";
