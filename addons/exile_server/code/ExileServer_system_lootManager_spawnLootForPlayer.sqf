@@ -101,7 +101,7 @@ try
 										{
 											if ((floor (random 100)) < 50) then 
 											{
-												_lootHolder = createVehicle [_presentClasses call BIS_fnc_selectRandom, _lootPosition, [], 0, "CAN_COLLIDE"];
+												_lootHolder = createVehicle ["LootWeaponHolder", _lootPosition, [], 0, "CAN_COLLIDE"];
 											}
 											else 
 											{
