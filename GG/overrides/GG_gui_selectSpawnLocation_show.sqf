@@ -70,7 +70,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		};
 		case 1:{
 			if !(_puid in Scout1 + Scout2 + Scout3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Scout Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Scout Loadout 10</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Scout Loadout 1</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "U_B_CTRG_2";
 			player addHeadgear "H_Booniehat_oli";
