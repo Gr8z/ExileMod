@@ -26,6 +26,8 @@ SlotDonor = [
 	"76561198158176757", // FancyPants (OD-2016-01-09) #12796   
 	"76561198108967475", // Fiona (OD-2016-01-11) #12842
 	"76561198022084265", // topkekmaster (OD-2016-01-10) #12824
+	"76561198095216500", // Chuck Claus (OD-2016-01-13) #12906 
+	"76561198050941799", // Surge (OD-2016-01-13) #12908 
 	// Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "SlotDonor";
