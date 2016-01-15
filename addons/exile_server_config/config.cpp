@@ -2960,11 +2960,11 @@ class CfgSettings
 		 */
 		loadOut[] = 
 		{
+			"Exile_Item_CanOpener",
 			"ItemCompass",
 			"ItemMap",
 			"Exile_Item_XM8",
 			"ItemRadio",
-			"Exile_Item_CanOpener",
 			"Exile_Item_PlasticBottleFreshWater"
 		};
 
