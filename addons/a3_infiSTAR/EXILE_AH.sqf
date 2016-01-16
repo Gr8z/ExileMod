@@ -433,7 +433,7 @@ fnc_VoteTimeServer = compileFinal "
 			{
 				_cntday = 0;
 				_cntnight = 0;
-				if((_cntVoted / _cntAll) > 0.49)then
+				if((_cntVoted / _cntAll) > 0.69)then
 				{
 					_oUIDs = [];
 					{
