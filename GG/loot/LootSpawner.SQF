@@ -153,7 +153,7 @@ getListBuildingPositionjunction = {
 				//diag_log format["-- LOOTSPAWNER DEBUG add to Buildingpositions_list: v%1v v%2v v%3v added", _buildingname, _posIdxlist, _posAdjustZlist];
 				Buildingpositions_list set [count Buildingpositions_list, [_buildingname, _posIdxlist, _posAdjustZlist]];
 			} else {
-				diag_log format["-- !!LOOTSPAWNER WARNING!! in Buildingstoloot_list: %1 has no building positions --", _buildingname];
+			//	diag_log format["-- !!LOOTSPAWNER WARNING!! in Buildingstoloot_list: %1 has no building positions --", _buildingname];
 				Buildingpositions_list set [count Buildingpositions_list, [_buildingname, [0], [0]]];
 			};
 		};
