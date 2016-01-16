@@ -30,6 +30,7 @@ SlotDonor = [
 	"76561198050941799", // Surge (OD-2016-01-13) #12908 
 	"76561198024060811", // Topoiler (EXP-2016-02-13) #0000
 	"76561198085751693", // OOOG Ghost (OD-2016-01-13) #12896
+	"76561198038610323", // Kamron (OD-2016-01-14) #12925 
 	// Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "SlotDonor";
@@ -75,6 +76,7 @@ Marksman3 = [
 	"76561198153784743", // Ghost
 	"76561198195305425", // shaz
 	"76561198078201908", // MeowMix
+	"76561198038610323", // Kamron (OD-2016-01-14) #12923 
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Marksman3";
