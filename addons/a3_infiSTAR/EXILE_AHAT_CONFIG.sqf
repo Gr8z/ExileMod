@@ -129,7 +129,6 @@ _adminUIDandAccess =
 		['76561198029881052', //Dirk Verite
 		 '76561198067566966', //Snipernosniping
 		 '76561198163835069', //Snipernosniping		 
-		 '76561198126348047', //Mr. Bandit
 		 '76561197960289679', //TangoWhiskey
 		 '76561197970384248', //Blackhawk
 		 '76561198062993387', //Azul
