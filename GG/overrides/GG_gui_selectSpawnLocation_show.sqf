@@ -146,7 +146,6 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player forceAddUniform "U_I_G_resistanceLeader_F";
 			player addHeadgear "H_Bandanna_sgg";
 			player addBackpack "B_AssaultPack_khk";
-			player addWeapon "Binocular";
 			player addWeapon "hgun_ACPC2_F";
 			player addHandgunItem "muzzle_snds_acp";
 			for "_i" from 1 to 3 do {player addItemToUniform "9Rnd_45ACP_Mag";};
