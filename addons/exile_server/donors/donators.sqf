@@ -53,6 +53,7 @@ Engineer3 = [
 	"76561198153784743", // Ghost
 	"76561198195305425", // shaz
 	"76561198078201908", // MeowMix
+	"76561197978528230", // Dark (player Created these loadouts)
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Engineer3";
@@ -76,6 +77,7 @@ Marksman3 = [
 	"76561198153784743", // Ghost
 	"76561198195305425", // shaz
 	"76561198078201908", // MeowMix
+	"76561197978528230", // Dark (player Created these loadouts)
 	"76561198038610323", // Kamron (OD-2016-01-14) #12923 
 	"76561198058824453", // Nahr Royalic (OD-2016-01-15) #12941 
 
@@ -101,6 +103,7 @@ Medic3 = [
 	"76561198078201908", // Gr8
 	"76561198153784743", // Ghost
 	"76561198195305425", // shaz
+	"76561197978528230", // Dark (player Created these loadouts)
 	"76561198136638540", // Unknown (OD-2016-01-11) #12839
 	"76561198078201908", // MeowMix
 // Add UIDs above, don't forget the comma
@@ -125,6 +128,7 @@ Scout3 = [
 	"76561198153784743", // Ghost
 	"76561198195305425", // shaz
 	"76561198078201908", // MeowMix
+	"76561197978528230", // Dark (player Created these loadouts)
 	"76561198208136816", // Dakota Husky (OD-2016-01-14) #12910 
 	"76561198236879848", // Winston (OD-2016-01-13) #12903  
 	"76561198085751693", // OOOG Ghost (OD-2016-01-13) #12898
@@ -151,6 +155,7 @@ Soldier3 = [
 	"76561198153784743", // Ghost
 	"76561198195305425", // shaz
 	"76561198078201908", // MeowMix
+	"76561197978528230", // Dark (player Created these loadouts)
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Soldier3";
