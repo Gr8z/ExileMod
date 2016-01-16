@@ -80,6 +80,7 @@ Marksman3 = [
 	"76561198195305425", // shaz
 	"76561198078201908", // MeowMix
 	"76561197978528230", // Dark (player Created these loadouts)
+	"76561198208136816", // Dakota Husky (OD-2016-01-14) #12910 
 	"76561198038610323", // Kamron (OD-2016-01-14) #12923 
 	"76561198058824453", // Nahr Royalic (OD-2016-01-15) #12941 
 
@@ -131,7 +132,6 @@ Scout3 = [
 	"76561198195305425", // shaz
 	"76561198078201908", // MeowMix
 	"76561197978528230", // Dark (player Created these loadouts)
-	"76561198208136816", // Dakota Husky (OD-2016-01-14) #12910 
 	"76561198236879848", // Winston (OD-2016-01-13) #12903  
 	"76561198085751693", // OOOG Ghost (OD-2016-01-13) #12898
 // Add UIDs above, don't forget the comma
