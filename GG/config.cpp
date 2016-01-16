@@ -1740,6 +1740,11 @@ class CfgExileArsenal
 	class Exile_Boat_SDV_Grey						{ quality = 1; price = 11000; };
 
 	///////////////////////////////////////////////////////////////////////////////
+	// ARMED BOAT
+	///////////////////////////////////////////////////////////////////////////////
+	class B_Boat_Armed_01_minigun_F            		{ quality = 1; price = 9000; };
+
+	///////////////////////////////////////////////////////////////////////////////
 	// Hellcat
 	///////////////////////////////////////////////////////////////////////////////
 	class Exile_Chopper_Hellcat_Green				{ quality = 1; price = 20000; };
@@ -3843,7 +3848,8 @@ class CfgTraderCategories
 			"Exile_Boat_MotorBoat_White",
 			"Exile_Boat_SDV_CSAT",
 			"Exile_Boat_SDV_Digital",
-			"Exile_Boat_SDV_Grey"
+			"Exile_Boat_SDV_Grey",
+			"B_Boat_Armed_01_minigun_F"
 		};
 	};
 

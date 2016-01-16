@@ -342,7 +342,6 @@
 	class     rhsusf_M1078A1P2_B_M2_wd_flatbed_fmtv_usarmy  { quality = 1; price = 50000; };
 	class     rhsusf_M1078A1P2_B_M2_d_fmtv_usarmy  { quality = 1; price = 50000; };
 	class     rhsusf_M1078A1P2_B_M2_d_flatbed_fmtv_usarmy  { quality = 1; price = 50000; };
-	class     B_Boat_Armed_01_minigun_F                 { quality = 1; price = 9000; };
 	class 	  rhs_btr60_chdkz 							{ quality = 1; price = 75000; };
 	
 	///////////////////////////////////////////////////////////////////////////////
