@@ -2687,7 +2687,16 @@ class CfgInteractionModels
 			"water_source_f",
 			"misc_well.p3d",
 			"watertank_f.p3d",
-			"pumpa.p3d"
+			"pumpa.p3d",
+			"Land_Water_source_F",
+			"Land_WaterTank_F",
+			"Land_BarrelEmpty_F",
+			"Land_BarrelWater_F",
+			"Land_BarrelWater_grey_F",
+			"Land_WaterBarrel_F",
+			"Land_WaterCooler_01_new_F",
+			"Land_WaterCooler_01_old_F",
+			"Land_pumpa"
 		};
 	};
 
