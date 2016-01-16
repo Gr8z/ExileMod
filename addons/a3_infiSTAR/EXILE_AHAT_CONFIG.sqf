@@ -152,8 +152,7 @@ _adminUIDandAccess =
 		]
 	],
 	[	/* Mods */
-		['76561198124203897',
-		 '76561198133936962',
+		 '76561197970384248', //Blackhawk
 		 '76561198135739831', //dAVVEY
 		 	
 		// Put in zeros so I don't break the code.
