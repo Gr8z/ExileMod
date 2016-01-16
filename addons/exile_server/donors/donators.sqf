@@ -33,6 +33,7 @@ SlotDonor = [
 	"76561198038610323", // Kamron (OD-2016-01-14) #12925
 	"76561198076900770", // Blake (OD-2016-01-15) #12945
 	"76561198067921127", // Victorio (OD-2016-01-15) #12948
+	"76561197961413637", // CheMiCaL OG (OD-2016-01-15) #12951 
 	// Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "SlotDonor";
@@ -83,6 +84,7 @@ Marksman3 = [
 	"76561198208136816", // Dakota Husky (OD-2016-01-14) #12910 
 	"76561198038610323", // Kamron (OD-2016-01-14) #12923 
 	"76561198058824453", // Nahr Royalic (OD-2016-01-15) #12941 
+	"76561197996933894", // zarouzky (OD-2016-01-16) #12955  
 
 // Add UIDs above, don't forget the comma
 "0"
