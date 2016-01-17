@@ -4,9 +4,11 @@ if (isServer) then {
 
 		// HELI PADS
 		["Land_HelipadEmpty_F",[14601.3,16889,0],89,0,0,false], // Terminal
-		["Land_HelipadEmpty_F",[2914.93042,18224.203125,0],0,0,0,false], // Fotia
-		["Land_HelipadEmpty_F",[23293.931641,24207.632813,0],0,0,0,false], // Sideras
-		["Land_HelipadEmpty_F",[20458.519531,11021.273438,0],0,0,0,false], // Chalkia
+		["Land_HelipadEmpty_F",[2914.93042,18224.203125,0],0,0,0,false], // Fotia 1
+		["Land_HelipadEmpty_F",[3002.600586,18145.892578,0],0,0,0,false], // Fotia 2
+		["Land_HelipadEmpty_F",[23293.931641,24207.632813,0],0,0,0,false], // Sideras 1
+		["Land_HelipadEmpty_F",[23388.666016,24202.0839844,0],0,0,0,false], // Sideras 2
+		["Land_HelipadEmpty_F",[20458.519531,11021.273438,0],0,0,0,false], // dome 
 		["Land_HelipadSquare_F",[14625.606445,16751.205078,0],44,0,0,false], // Terminal Air
 
 		// Terminal
