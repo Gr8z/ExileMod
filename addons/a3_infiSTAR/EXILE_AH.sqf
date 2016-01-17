@@ -727,28 +727,29 @@ _FN_INJECT_ON_CLIENT = {
 						[_name,_puid,'AC',toArray(_txt)] call _AHKickLog;
 						(findDisplay 46)closeDisplay 0;
 					};
-					if(
-						(_txt select [0,5] isEqualTo 'admin')||(_txt select [1,5] isEqualTo 'admin')||(_txt select [2,5] isEqualTo 'admin')||
-						(_txt select [3,5] isEqualTo 'admin')||(_txt select [4,5] isEqualTo 'admin')||(_txt select [5,5] isEqualTo 'admin')||
-						(_txt select [6,5] isEqualTo 'admin')||(_txt select [7,5] isEqualTo 'admin')||(_txt select [8,5] isEqualTo 'admin')||
-						(_txt select [9,5] isEqualTo 'admin')||(_txt select [10,5] isEqualTo 'admin')||(_txt select [11,5] isEqualTo 'admin')||
-						(_txt select [12,5] isEqualTo 'admin')||(_txt select [13,5] isEqualTo 'admin')||(_txt select [14,5] isEqualTo 'admin')||
-						(_txt select [15,5] isEqualTo 'admin')||(_txt select [16,5] isEqualTo 'admin')||(_txt select [17,5] isEqualTo 'admin')||
-						(_txt select [18,5] isEqualTo 'admin')||(_txt select [19,5] isEqualTo 'admin')||(_txt select [20,5] isEqualTo 'admin')||
-						(_txt select [21,5] isEqualTo 'admin')||(_txt select [22,5] isEqualTo 'admin')||(_txt select [23,5] isEqualTo 'admin')||
-						(_txt select [24,5] isEqualTo 'admin')||(_txt select [25,5] isEqualTo 'admin')||(_txt select [26,5] isEqualTo 'admin')||
-						(_txt select [27,5] isEqualTo 'admin')||(_txt select [28,5] isEqualTo 'admin')||(_txt select [27,5] isEqualTo 'admin')||
-						(_txt select [30,5] isEqualTo 'admin')||(_txt select [31,5] isEqualTo 'admin')||(_txt select [32,5] isEqualTo 'admin')||
-						(_txt select [36,5] isEqualTo 'admin')||(_txt select [37,5] isEqualTo 'admin')||(_txt select [38,5] isEqualTo 'admin')
-					)then
-					{
-						waitUntil {(findDisplay 24) closeDisplay 0;isNull findDisplay 24};
-						systemChat 'SERVER: Asking For Help in SideChat Is forbidden';		
-						uiSleep 1;
-						systemChat 'SERVER: To get ahold of an admin, you must get in Teamspeak Support Channels';
-						uiSleep 1;
-						systemChat 'Teamspeak Server : TS.GHOSTZGAMERZ.COM';
-					};
+					
+				};
+				if(
+					(_txt select [0,5] isEqualTo 'admin')||(_txt select [1,5] isEqualTo 'admin')||(_txt select [2,5] isEqualTo 'admin')||
+					(_txt select [3,5] isEqualTo 'admin')||(_txt select [4,5] isEqualTo 'admin')||(_txt select [5,5] isEqualTo 'admin')||
+					(_txt select [6,5] isEqualTo 'admin')||(_txt select [7,5] isEqualTo 'admin')||(_txt select [8,5] isEqualTo 'admin')||
+					(_txt select [9,5] isEqualTo 'admin')||(_txt select [10,5] isEqualTo 'admin')||(_txt select [11,5] isEqualTo 'admin')||
+					(_txt select [12,5] isEqualTo 'admin')||(_txt select [13,5] isEqualTo 'admin')||(_txt select [14,5] isEqualTo 'admin')||
+					(_txt select [15,5] isEqualTo 'admin')||(_txt select [16,5] isEqualTo 'admin')||(_txt select [17,5] isEqualTo 'admin')||
+					(_txt select [18,5] isEqualTo 'admin')||(_txt select [19,5] isEqualTo 'admin')||(_txt select [20,5] isEqualTo 'admin')||
+					(_txt select [21,5] isEqualTo 'admin')||(_txt select [22,5] isEqualTo 'admin')||(_txt select [23,5] isEqualTo 'admin')||
+					(_txt select [24,5] isEqualTo 'admin')||(_txt select [25,5] isEqualTo 'admin')||(_txt select [26,5] isEqualTo 'admin')||
+					(_txt select [27,5] isEqualTo 'admin')||(_txt select [28,5] isEqualTo 'admin')||(_txt select [27,5] isEqualTo 'admin')||
+					(_txt select [30,5] isEqualTo 'admin')||(_txt select [31,5] isEqualTo 'admin')||(_txt select [32,5] isEqualTo 'admin')||
+					(_txt select [36,5] isEqualTo 'admin')||(_txt select [37,5] isEqualTo 'admin')||(_txt select [38,5] isEqualTo 'admin')
+				)then
+				{
+					waitUntil {(findDisplay 24) closeDisplay 0;isNull findDisplay 24};
+					systemChat 'SERVER: Asking For Help in SideChat Is forbidden';		
+					uiSleep 1;
+					systemChat 'SERVER: To get ahold of an admin, you must get in Teamspeak Support Channels';
+					uiSleep 1;
+					systemChat 'Teamspeak Server : TS.GHOSTZGAMERZ.COM';
 				};
 				{
 					if(_txt find _x > -1)then{
