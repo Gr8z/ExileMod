@@ -2992,7 +2992,7 @@ class CfgSettings
 		/**
 		 * Parachute drop height in meters. 
 		 */
-		parachuteDropHeight = 500;
+		parachuteDropHeight = 200;
 
 		/**
 		 * Number of minutes where a fresh spawned player remains in the
