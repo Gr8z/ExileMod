@@ -153,7 +153,7 @@ _adminUIDandAccess =
 	],
 	[	/* Mods */
 		 ['76561198135739831', //dAVVEY
-		 	
+		  '76561198086239163', // thatestonian
 		// Put in zeros so I don't break the code.
 		 //Add UID's Above - Don't forget the comma!
 		 '0'],
