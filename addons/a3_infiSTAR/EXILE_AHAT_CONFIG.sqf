@@ -152,10 +152,10 @@ _adminUIDandAccess =
 		]
 	],
 	[	/* Mods */
-		 ['76561198135739831', //dAVVEY
-		 	
-		// Put in zeros so I don't break the code.
-		 //Add UID's Above - Don't forget the comma!
+		 ['76561198135739831', //Daveyy
+		  '76561198133936962', // Wrice4
+		 // Put in zeros so I don't break the code.
+		 // Add UID's Above - Don't forget the comma!
 		 '0'],
 		[
 			'spectating','Show Server Information',
