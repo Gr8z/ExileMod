@@ -451,7 +451,6 @@ lootMagazine_list = [
 ]],[ 1, [// MILITARY
 "100Rnd_65x39_caseless_mag",
 "100Rnd_65x39_caseless_mag_Tracer",
-"ItemGPS",
 "Exile_Item_GloriousKnakworst",
 "Exile_Item_Surstromming",
 "Exile_Item_SausageGravy",
