@@ -127,8 +127,6 @@ _adminUIDandAccess =
 	[
 		/* Admins */
 		['76561198029881052', //Dirk Verite
-		 '76561198067566966', //Snipernosniping
-		 '76561198163835069', //Snipernosniping		 
 		 '76561197960289679', //TangoWhiskey
 		 '76561198072499795', //Blackhawk
 		 '76561198062993387', //Azul
@@ -152,10 +150,10 @@ _adminUIDandAccess =
 		]
 	],
 	[	/* Mods */
-		 ['76561198135739831', //dAVVEY
-		  '76561198086239163', // thatestonian
+		 ['76561198135739831', // Daveyy
+		  '76561198086239163', // ThatEstonian
 		  '76561198133936962', // Wrice4
-		 // Put in zeros so I don't break the code.
+		  '76532298015716211', // BigHeadGamess
 		 // Add UID's Above - Don't forget the comma!
 		 '0'],
 		[
