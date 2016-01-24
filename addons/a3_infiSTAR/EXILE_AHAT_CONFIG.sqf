@@ -153,7 +153,7 @@ _adminUIDandAccess =
 		 ['76561198135739831', // Daveyy
 		  '76561198086239163', // ThatEstonian
 		  '76561198133936962', // Wrice4
-		  '76532298015716211', // BigHeadGamess
+		  '76561198174644181', // BigHeadGamess
 		 // Add UID's Above - Don't forget the comma!
 		 '0'],
 		[
