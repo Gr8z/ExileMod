@@ -150,7 +150,6 @@ _adminUIDandAccess =
 	],
 	[	/* Mods */
 		 ['76561198135739831', // Daveyy
-		  '76561198086239163', // ThatEstonian
 		  '76561198133936962', // Wrice4
 		  '76561198174644181', // BigHeadGamess
 		 // Add UID's Above - Don't forget the comma!
