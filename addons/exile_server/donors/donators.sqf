@@ -34,7 +34,8 @@ SlotDonor = [
 	"76561198076900770", // Blake (OD-2016-01-15) #12945
 	"76561198067921127", // Victorio (OD-2016-01-15) #12948
 	"76561198061613021", // James Nunn (EXP-2016-02-16) #
-	"76561197961413637", // CheMiCaL OG (OD-2016-01-15) #12951 
+	"76561197961413637", // CheMiCaL OG (OD-2016-01-15) #12951
+	
 	// Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "SlotDonor";
@@ -128,6 +129,7 @@ Scout1 = [
 
 Scout2 = [
 	"0", // ThatEstonian Mod Loadout(Upgraded by MeowMix)
+	"76561197980662311" // ezPK XS PWR #11479
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout2";
