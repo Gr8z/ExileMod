@@ -166,6 +166,7 @@ Soldier3 = [
 	"76561198153784743", // Ghost
 	"76561198195305425", // shaz
 	"76561198001066546", // MeowMix
+	"76561198072478428", // Featherlite (OD-2016-01-27) #13076
 	"76561197978528230", // Dark (player Created these loadouts)
 // Add UIDs above, don't forget the comma
 "0"
