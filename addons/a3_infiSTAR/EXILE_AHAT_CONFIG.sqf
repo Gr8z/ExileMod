@@ -132,6 +132,7 @@ _adminUIDandAccess =
 		 '76561198058099842', //Fap
 		 '76561198056028211', //Nasty
 		 '76561198124203897', //Gambino
+		 '76561198133936962', // Wrice4
 		 //Add UID's Above - Don't forget the comma!
 		 '0'],
 		[
@@ -150,7 +151,6 @@ _adminUIDandAccess =
 	],
 	[	/* Mods */
 		 ['76561198135739831', // Daveyy
-		  '76561198133936962', // Wrice4
 		  '76561198174644181', // BigHeadGamess
 		 // Add UID's Above - Don't forget the comma!
 		 '0'],
