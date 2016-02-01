@@ -58,7 +58,7 @@ _listItemIndex = _listBox lbAdd "Medic Level 3";
 _listItemIndex = _listBox lbAdd "Engineer Level 1";
 _listItemIndex = _listBox lbAdd "Engineer Level 2";
 _listItemIndex = _listBox lbAdd "Engineer Level 3";
-systemChat 'To access the loadouts - donate at ghostzgamerz.com';
+systemChat 'These Loadouts are not forsale until they are approved- Being Reworked';
 waitUntil {!isNil "Soldier3"};
 FNC_GET_ACTUAL_LOADOUT = {
 	waitUntil {typeOf player isEqualTo 'Exile_Unit_Player'};
