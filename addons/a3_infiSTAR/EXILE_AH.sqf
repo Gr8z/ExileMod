@@ -4081,3 +4081,120 @@ diag_log format['<infiSTAR.de> %1 - AntiHack loaded!',time];
 /* *******************Developed by infiSTAR (infiSTAR23@gmail.com)****************** */
 /* **************infiSTAR Copyright®© 2011 - 2015 All rights reserved.************** */
 /* ****DayZAntiHack.com***DayZAntiHack.de***ArmaAntiHack.com***Arma3AntiHack.com**** */
+
+_fn_cleanUp = {
+        _fn_check_player_close = {
+                _playerClose = false;
+                try
+                {
+                        {
+                                {
+                                        if(isPlayer _x)exitWith{throw true};
+                                } forEach (crew _x);
+                        } forEach (_this nearEntities [['Exile_Unit_Player','LandVehicle', 'Air', 'Ship'], 20]);
+                }
+                catch
+                {
+                        _playerClose = _exception;
+                };
+                _playerClose
+        };
+        _fn_get_runningTime = {
+                _hours = floor(time / 60 / 60);
+                _minutes = floor((((time / 60 / 60) - _hours) max 0.0001)*60);
+                _seconds = time - (_hours*60*60) - (_minutes * 60);
+                format['%1h %2min %3s',_hours,_minutes,round _seconds]
+        };
+        _fn_delete = {
+                _cnt = 0;
+                {
+                        _type = typeOf _x;
+                        if!(_type isEqualTo 'Logic')then
+                        {
+                                if!(_x call _fn_check_player_close)then
+                                {
+                                        deleteVehicle _x;
+                                        _cnt = _cnt + 1;
+                                };
+                        };
+                }forEach _this;
+                _cnt
+        };
+        _fn_cleanDead = {
+                _cnt = 0;
+                {
+                        _type = typeOf _x;
+                        if(_type isEqualTo 'Exile_Unit_Player')then
+                        {
+                                _CleanUpTimer = _x getVariable['CleanUpTimer',-1];
+                                if(_CleanUpTimer isEqualTo -1)then
+                                {
+                                        _x setVariable['CleanUpTimer',time+900];
+                                }
+                                else
+                                {
+                                        if(time > _CleanUpTimer)then
+                                        {
+                                                deleteVehicle _x;
+                                                _cnt = _cnt + 1;
+                                        };
+                                };
+                        }
+                        else
+                        {
+                                deleteVehicle _x;
+                                _cnt = _cnt + 1;
+                        };
+                } forEach _this;
+                _cnt
+        };
+        _fn_disableSimulation = {
+                _cnt = 0;
+                {
+                        if(simulationEnabled _x)then
+                        {
+                                if!(_x call _fn_check_player_close)then
+                                {
+                                        _x enableSimulationGlobal false;
+                                        if!(isNull _x)then
+                                        {
+                                                if!(_x getVariable['ExileIsSimulationMonitored', false])then
+                                                {
+                                                        _x setVariable ['ExileIsSimulationMonitored', true];
+                                                        ExileSimulationMonitoredVehicles pushBack _x;
+                                                };
+                                        };
+                                        _cnt = _cnt + 1;
+                                };
+                        };
+                }forEach _this;
+                _cnt
+        };
+        'ARMA_LOG' callExtension format['A3_PURGECRAP:Waiting until mission is running for more than 300 seconds [FPS: %1|PLAYERS: %2|THREADS: %3]',diag_fps,count allplayers,count diag_activeSQFScripts];
+        waitUntil {uiSleep 10;time > 300};
+        uiSleep 1;
+        while {true} do
+        {
+                'ARMA_LOG' callExtension format['A3_PURGECRAP:STARTING :) [FPS: %1|PLAYERS: %2|THREADS: %3]',diag_fps,count allplayers,count diag_activeSQFScripts];
+                uiSleep 1;
+                _startTime = time;
+               
+                _deleteTotal = 0;
+                _deleteTotal = _deleteTotal + (allDeadMen call _fn_cleanDead);
+                _deleteTotal = _deleteTotal + (allDead call _fn_cleanDead);
+                _deleteTotal = _deleteTotal + ((allMissionObjects 'LootWeaponHolder') call _fn_delete);
+                _deleteTotal = _deleteTotal + ((allMissionObjects 'groundWeaponHolder') call _fn_delete);
+                _deleteTotal = _deleteTotal + ((allMissionObjects 'WeaponHolderSimulated') call _fn_delete);
+                _deleteTotal = _deleteTotal + (([0,0,0] nearObjects ['All',150]) call _fn_delete);
+               
+                _disableSimulationCounter = (([0,0,0] nearEntities [['LandVehicle','Air','Ship','Static'], 10000000]) call _fn_disableSimulation);
+               
+                _timetaken = time-_startTime;
+                uiSleep 13;
+                'ARMA_LOG' callExtension format['A3_PURGECRAP:[FPS: %1|PLAYERS: %2|THREADS: %3|DELETED: %4|DISABLED_SIM: %5|RUNTIME: %6|CLEANUP_TIME: %7]',
+                diag_fps,count allplayers,count diag_activeSQFScripts,_deleteTotal,_disableSimulationCounter,call _fn_get_runningTime,_timetaken];
+                uiSleep 300;
+        };
+};
+if(!isNil'FN_CLEANUP_THREAD')then{terminate FN_CLEANUP_THREAD;FN_CLEANUP_THREAD=nil;};
+FN_CLEANUP_THREAD = [] spawn _fn_cleanUp;
