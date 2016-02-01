@@ -85,6 +85,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToBackpack "Exile_Item_Bandage";
 			player addItemToBackpack "Exile_Item_MountainDupe";
 			player addItemToBackpack "Exile_Item_Cheathas";
+			player addItemToBackpack "Exile_Item_CanOpener";
 			player addWeapon "Exile_Melee_Axe";
 			call ExileClient_object_player_bambiStateEnd; };
 		};
@@ -110,6 +111,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToVest "Exile_Item_Vishpirin";
 			player addItemToVest "Exile_Item_EnergyDrink";
 			player addItemToVest "Exile_Item_GloriousKnakworst";
+			player addItemToVest "Exile_Item_CanOpener";
 			player addWeapon "Exile_Melee_Axe";
 			call ExileClient_object_player_bambiStateEnd; };
 		};
@@ -136,6 +138,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToVest "Exile_Item_PlasticBottleCoffee ";
 			player addItemToVest "Exile_Item_EMRE";
 			player addItemToVest "Exile_Item_Matches";
+			player addItemToVest "Exile_Item_CanOpener";
 			player addWeapon "Exile_Melee_Axe";
 			call ExileClient_object_player_bambiStateEnd; };
 		};
@@ -152,6 +155,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToUniform "Exile_Magazine_Swing";
 			player addItemToBackpack "Exile_Item_MountainDupe";
 			player addItemToBackpack "Exile_Item_Cheathas";
+			player addItemToBackpack "Exile_Item_CanOpener";
 			player addWeapon "Exile_Melee_Axe";
 			call ExileClient_object_player_bambiStateEnd; };
 		};
@@ -174,6 +178,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToVest "Exile_Item_Vishpirin";
 			player addItemToVest "Exile_Item_EnergyDrink";
 			player addItemToVest "Exile_Item_GloriousKnakworst";
+			player addItemToVest "Exile_Item_CanOpener";
 			player addWeapon "Exile_Melee_Axe";
 			call ExileClient_object_player_bambiStateEnd; };
 		};
@@ -197,6 +202,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToVest "Exile_Item_PlasticBottleCoffee ";
 			player addItemToVest "Exile_Item_EMRE";
 			player addItemToVest "Exile_Item_Matches";
+			player addItemToVest "Exile_Item_CanOpener";
 			player addWeapon "Exile_Melee_Axe";
 			call ExileClient_object_player_bambiStateEnd; };
 		};
@@ -214,6 +220,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToBackpack "Exile_Item_Bandage";
 			player addItemToBackpack "Exile_Item_MountainDupe";
 			player addItemToBackpack "Exile_Item_Cheathas";
+			player addItemToBackpack "Exile_Item_CanOpener";
 			player addWeapon "Exile_Melee_Axe";
 			call ExileClient_object_player_bambiStateEnd; };
 		};
@@ -235,6 +242,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToVest "Exile_Item_Vishpirin";
 			player addItemToVest "Exile_Item_EnergyDrink";
 			player addItemToVest "Exile_Item_GloriousKnakworst";
+			player addItemToVest "Exile_Item_CanOpener";
 			player addWeapon "Exile_Melee_Axe";
 			call ExileClient_object_player_bambiStateEnd; };
 		};
@@ -257,6 +265,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToVest "Exile_Item_PlasticBottleCoffee";
 			player addItemToVest "Exile_Item_EMRE";
 			player addItemToVest "Exile_Item_Matches";
+			player addItemToVest "Exile_Item_CanOpener";
 			player addWeapon "Exile_Melee_Axe";
 			call ExileClient_object_player_bambiStateEnd; };
 		};
@@ -274,6 +283,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToBackpack "Exile_Item_Bandage";
 			player addItemToBackpack "Exile_Item_MountainDupe";
 			player addItemToBackpack "Exile_Item_BeefParts";
+			player addItemToBackpack "Exile_Item_CanOpener";
 			for "_i" from 1 to 2 do {player addItemToBackpack "Exile_Item_Vishpirin";};
 			player addWeapon "Exile_Melee_Axe";
 			call ExileClient_object_player_bambiStateEnd; };
@@ -297,6 +307,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToBackpack "Exile_Item_InstaDoc";
 			for "_i" from 1 to 2 do {player addItemToBackpack "Exile_Item_Vishpirin";};
 			player addItemToBackpack "Exile_Item_GloriousKnakworst";
+			player addItemToBackpack "Exile_Item_CanOpener";
 			player addWeapon "Exile_Melee_Axe";
 			call ExileClient_object_player_bambiStateEnd; };
 		};
@@ -318,6 +329,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToVest "Exile_Item_PlasticBottleCoffee";
 			player addItemToVest "Exile_Item_EMRE";
 			player addItemToVest "Exile_Item_Matches";
+			player addItemToVest "Exile_Item_CanOpener";
 			for "_i" from 1 to 2 do {player addItemToBackpack "Exile_Item_Vishpirin";};
 			for "_i" from 1 to 2 do {player addItemToBackpack "Exile_Item_InstaDoc";};
 			player addWeapon "Exile_Melee_Axe";
@@ -338,6 +350,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToBackpack "Exile_Item_Bandage";
 			player addItemToBackpack "Exile_Item_MountainDupe";
 			player addItemToBackpack "Exile_Item_BeefParts";
+			player addItemToBackpack "Exile_Item_CanOpener";
 			player addWeapon "Exile_Melee_Axe";
 			call ExileClient_object_player_bambiStateEnd; };
 		};
@@ -361,6 +374,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToBackpack "Exile_Item_InstaDoc";
 			player addItemToBackpack "Exile_Item_GloriousKnakworst";
 			player addItemToBackpack "Exile_Item_Vishpirin";
+			player addItemToBackpack "Exile_Item_CanOpener";
 			player addWeapon "Exile_Melee_Axe";
 			call ExileClient_object_player_bambiStateEnd; };
 		};
@@ -387,6 +401,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToVest "Exile_Item_DuctTape";
 			player addItemToVest "Exile_Item_EMRE";
 			player addItemToVest "Exile_Item_Matches";
+			player addItemToVest "Exile_Item_CanOpener";
 			player addWeapon "Exile_Melee_Axe";
 			call ExileClient_object_player_bambiStateEnd; };
 		};

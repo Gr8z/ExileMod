@@ -10,6 +10,7 @@ switch (true) do
     player forceAddUniform "U_DrestesBody";
     player addBackpack "B_AssaultPack_cbr";
     player addItem "Exile_Item_Matches";
+    player addItem "Exile_Item_CanOpener";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
@@ -24,6 +25,7 @@ switch (true) do
     player addVest "V_BandollierB_oli";
     player addBackpack "B_AssaultPack_cbr";
     player addItem "Exile_Item_Matches";
+    player addItem "Exile_Item_CanOpener";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
@@ -40,6 +42,7 @@ switch (true) do
     player addVest "V_BandollierB_oli";
     player addBackpack "B_TacticalPack_mcamo";
     player addItem "Exile_Item_Matches";
+    player addItem "Exile_Item_CanOpener";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
@@ -61,6 +64,7 @@ switch (true) do
     player addHeadgear "H_Bandanna_khk";
     player addWeaponGlobal "rhsusf_weap_glock17g4";
     player addItem "Exile_Item_Matches";
+    player addItem "Exile_Item_CanOpener";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
@@ -82,6 +86,7 @@ switch (true) do
     player addHeadgear "H_Booniehat_dgtl";
     player addWeaponGlobal "rhsusf_weap_m1911a1";
     player addItem "Exile_Item_Matches";
+    player addItem "Exile_Item_CanOpener";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
@@ -104,6 +109,7 @@ switch (true) do
     player addWeaponGlobal "hgun_Pistol_heavy_01_F";
     player addHandgunItem "optic_MRD";
     player addItem "Exile_Item_Matches";
+    player addItem "Exile_Item_CanOpener";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
@@ -127,6 +133,7 @@ switch (true) do
     player addHandgunItem "muzzle_snds_acp";
     player addHandgunItem "optic_MRD";
     player addItem "Exile_Item_Matches";
+    player addItem "Exile_Item_CanOpener";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
@@ -150,6 +157,7 @@ switch (true) do
     player addHandgunItem "muzzle_snds_acp";
     player addHandgunItem "optic_MRD";
     player addItem "Exile_Item_Matches";
+    player addItem "Exile_Item_CanOpener";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
@@ -176,6 +184,7 @@ switch (true) do
     player addHandgunItem "muzzle_snds_acp";
     player addHandgunItem "optic_MRD";
     player addItem "Exile_Item_Matches";
+    player addItem "Exile_Item_CanOpener";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
@@ -204,6 +213,7 @@ switch (true) do
     player addHandgunItem "muzzle_snds_acp";
     player addHandgunItem "optic_MRD";
     player addItem "Exile_Item_Matches";
+    player addItem "Exile_Item_CanOpener";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
