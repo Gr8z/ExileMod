@@ -1,9 +1,3 @@
-/*
-Exile_RevivePlayer.sqf
-[_ZEN_] Happydayz
-© 2016 Enigma Team
-*/
-
 private["_handguntype","_handgunammo","_player","_playerID","_playerPos","_reviveused","_reviverownerID","_bambiPlayerID","_playerPos","_data","_extDB2Message","_revivername","_msg","_reviveused","_ind","_playerID","_sessionID","_requestingPlayer", "_requestingPlayerUID", "_items", "_dir", "_location", "_type", "_weapon", "_attachments", "_currWeap", "_itemSlot", "_itemqtys", "_goggles", "_headgear", "_vest", "_backpack", "_uniform", "_weapons", "_magazinesAmmo", "_itemsplayer", "_weaponsplayer", "_group", "_primaryWeapon", "_secondaryWeapon", "_attachment", "_equipped", "_wMags", "_requestingPlayerGroup", "_droppedWeapons", "_bambiPlayer", "_ownerID", "_reviver"];
 
 _requestingPlayer = _this select 0;
@@ -29,7 +23,7 @@ if (!local _requestingPlayer) then {
 		_accountData = format["getAccountStats:%1", _requestingPlayerUID] call ExileServer_system_database_query_selectSingle;
 
 			if (_requestingPlayer == _reviver) exitWith {
-				Diag_log format ["Enigma Revive - Attempted hack revive by %1",_requestingPlayer];
+				Diag_log format ["Revive - Attempted hack revive by %1",_requestingPlayer];
 				};
 
 				_ind = ((count ReviveChk_cache) - 1);

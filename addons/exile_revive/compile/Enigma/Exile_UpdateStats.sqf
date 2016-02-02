@@ -1,9 +1,3 @@
-/*
-Exile_UpdateStats.sqf
-[_ZEN_] Happydayz
-© 2015 Enigma Team
-*/
-
 Private["_target","_newmoneyvalue","_newscorevalue","_newMoney","_newScore"];
 
 _target = _this select 0;
