@@ -4091,7 +4091,7 @@ _fn_cleanUp = {
                                 {
                                         if(isPlayer _x)exitWith{throw true};
                                 } forEach (crew _x);
-                        } forEach (_this nearEntities [['Exile_Unit_Player','LandVehicle', 'Air', 'Ship'], 20]);
+                        } forEach (_this nearEntities [['Exile_Unit_Player','LandVehicle', 'Air', 'Ship'], 80]);
                 }
                 catch
                 {
