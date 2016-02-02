@@ -3330,11 +3330,7 @@ class CfgTraderCategories
 			"optic_LRPS",
 			"optic_MRCO",
 			"optic_MRD",
-			//"optic_Nightstalker",
-			//"optic_NVS",
 			"optic_SOS",
-			//"optic_tws",
-			//"optic_tws_mg",
 			"optic_Yorris"
 		};
 	};
@@ -3356,7 +3352,7 @@ class CfgTraderCategories
 			"Exile_Item_MetalPole",
 			"Exile_Item_SafeKit",
 			"Exile_Item_CamoTentKit",
-			"Exile_Item_CodeLock"
+			"Exile_Item_CodeLock",
 			"Exile_Item_Laptop",
 			"Exile_Item_BaseCameraKit"
 		};
