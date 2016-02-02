@@ -811,7 +811,8 @@ class Laserdesignator: Exile_AbstractCraftingRecipe
     {
         {2, "Exile_Item_LightBulb"},
         {1, "Exile_Item_JunkMetal"},
-        {1, "Exile_Item_Rope"}
+        {1, "Rangefinder"},
+        {1, "Exile_Item_ThermalScannerPro"}
     };
 };
 //NEW CRAFTING RECIPIES END
