@@ -1329,8 +1329,9 @@ class CfgExileArsenal
 	//class Exile_Item_MetalHedgehogKit				{ quality = 1; price = 1200; };
 	class Exile_Item_SafeKit						{ quality = 3; price = 10000; };
 	class Exile_Item_CodeLock						{ quality = 2; price = 5000; };
-	//class Exile_Item_Laptop						{ quality = 2; price = 9000; };
-	//class Exile_Item_BaseCameraKit				{ quality = 2; price = 5000; };
+	class Exile_Item_Laptop						{ quality = 2; price = 9000; };
+	class Exile_Item_BaseCameraKit				{ quality = 2; price = 5000; };
+	class Exile_Magazine_Battery					{ quality = 1; price = 7500; };
 	class Exile_Item_CamoTentKit					{ quality = 1; price = 250; };
 	class Exile_Item_MetalPole						{ quality = 1; price = 800; };
 	//class Exile_Item_MetalScrews					{ quality = 1; price = 100; };
@@ -1376,8 +1377,6 @@ class CfgExileArsenal
 	class Exile_Item_InstaDoc                       { quality = 1; price = 1250; };
 	class Exile_Item_Vishpirin						{ quality = 1; price = 300; };
 	class Exile_Item_Bandage	                    { quality = 1; price = 100; };
-	class Exile_Magazine_Battery					{ quality = 1; price = 7500; };
-	
 	///////////////////////////////////////////////////////////////////////////////
 	// Tools
 	///////////////////////////////////////////////////////////////////////////////
@@ -1387,19 +1386,7 @@ class CfgExileArsenal
 	class Exile_Item_CanOpener						{ quality = 1; price = 80; };
 	class Exile_Item_Handsaw						{ quality = 1; price = 500; };
 	class Exile_Item_Pliers							{ quality = 1; price = 350; };
-	//class Exile_Item_Grinder						{ quality = 1; price = 1250; };
-	//class Exile_Item_Foolbox						{ quality = 1; price = 4000; };
-	//class Exile_Item_CordlessScrewdriver			{ quality = 1; price = 750; };
-	//class Exile_Item_FireExtinguisher				{ quality = 1; price = 650; };
-	//class Exile_Item_Hammer						{ quality = 1; price = 600; };
-	//class Exile_Item_OilCanister					{ quality = 1; price = 1750; };
-	//class Exile_Item_Screwdriver					{ quality = 1; price = 250; };
-	//class Exile_Item_Shovel						{ quality = 1; price = 700; };
-	//class Exile_Item_Wrench						{ quality = 1; price = 250; };
-	//class Exile_Item_SleepingMat					{ quality = 1; price = 1250; };
-	//class Exile_Item_ToiletPaper					{ quality = 1; price = 5; };
-	//class Exile_Item_ZipTie						{ quality = 1; price = 250; };
-
+	
 	///////////////////////////////////////////////////////////////////////////////
 	// Navigation
 	///////////////////////////////////////////////////////////////////////////////
@@ -3360,6 +3347,7 @@ class CfgTraderCategories
 		{
 			"Exile_Item_Rope",
 			"Exile_Item_DuctTape",
+			"Exile_Magazine_Battery",
 			"Exile_Item_ExtensionCord",
 			"Exile_Item_FuelCanisterEmpty",
 			"Exile_Item_JunkMetal",
@@ -3369,17 +3357,8 @@ class CfgTraderCategories
 			"Exile_Item_SafeKit",
 			"Exile_Item_CamoTentKit",
 			"Exile_Item_CodeLock"
-			
-			/*
-			"Exile_Item_MetalScrews",
-			"Exile_Item_MetalWire",
 			"Exile_Item_Laptop",
-			"Exile_Item_BaseCameraKit",
-			"Exile_Item_MetalHedgehogKit",
-			"Exile_Item_CarWheel",
-			"Exile_Item_Cement",
-			"Exile_Item_Sand"
-			*/
+			"Exile_Item_BaseCameraKit"
 		};
 	};
 
@@ -3434,27 +3413,8 @@ class CfgTraderCategories
 			"Exile_Item_CanOpener",
 			"Exile_Item_Handsaw",
 			"Exile_Item_Pliers",
-			
-			/*
-			"class Exile_Item_Grinder",
-			"class Exile_Item_Foolbox",
-			"class Exile_Item_CordlessScrewdriver",
-			"class Exile_Item_FireExtinguisher",
-			"class Exile_Item_Hammer",
-			"class Exile_Item_OilCanister",
-			"class Exile_Item_Screwdriver",
-			"class Exile_Item_Shovel",
-			"class Exile_Item_Wrench",
-			"class Exile_Item_SleepingMat",	
-			"class Exile_Item_ToiletPaper",			
-			"class Exile_Item_ZipTie",
-			*/
-
 			"Binocular",
 			"Rangefinder",
-			/*"Laserdesignator",
-			"Laserdesignator_02",
-			"Laserdesignator_03",*/
 			"NVGoggles",
 			"NVGoggles_INDEP",
 			"NVGoggles_OPFOR",
@@ -3475,8 +3435,7 @@ class CfgTraderCategories
 		{
 			"Exile_Item_InstaDoc",
 			"Exile_Item_Bandage",
-			"Exile_Item_Vishpirin",
-			"Exile_Magazine_Battery"
+			"Exile_Item_Vishpirin"
 		};
 	};
 	class Navigation
