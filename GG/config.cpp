@@ -2653,7 +2653,7 @@ class CfgInteractionMenus
 			};
 			class Revive: ExileAbstractAction
 	        {
-	            title = "Perform CPR";
+	            title = "Revive Player";
 	            condition = "(!(alive ExileClientInteractionObject) && (ExileClientInteractionObject getVariable ['EnigmaRevivePermitted', true]) && (magazines player find 'Exile_Item_Defibrillator' >= 0) && (magazines player find 'Exile_Magazine_Battery' >= 0))";
 	            action = "_this spawn Enigma_RevivePlyr";
 	        };
