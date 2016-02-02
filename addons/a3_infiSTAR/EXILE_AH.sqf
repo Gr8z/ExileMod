@@ -4170,12 +4170,10 @@ _fn_cleanUp = {
                 }forEach _this;
                 _cnt
         };
-        'ARMA_LOG' callExtension format['A3_PURGECRAP:Waiting until mission is running for more than 300 seconds [FPS: %1|PLAYERS: %2|THREADS: %3]',diag_fps,count allplayers,count diag_activeSQFScripts];
         waitUntil {uiSleep 10;time > 300};
         uiSleep 1;
         while {true} do
         {
-                'ARMA_LOG' callExtension format['A3_PURGECRAP:STARTING :) [FPS: %1|PLAYERS: %2|THREADS: %3]',diag_fps,count allplayers,count diag_activeSQFScripts];
                 uiSleep 1;
                 _startTime = time;
                
