@@ -5,8 +5,7 @@ class CfgPatches
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		author[]= {"Happydayz_EngimaTeam"};
-		requiredAddons[] = {"exile_client","exile_server_config"};
+		author[]= {"Happydayz_EngimaTeam"}; 	
 	};
 };
 class CfgFunctions 
