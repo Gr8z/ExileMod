@@ -1376,7 +1376,7 @@ class CfgExileArsenal
 	class Exile_Item_InstaDoc                       { quality = 1; price = 1250; };
 	class Exile_Item_Vishpirin						{ quality = 1; price = 300; };
 	class Exile_Item_Bandage	                    { quality = 1; price = 100; };
-	//class Exile_Item_Defibrillator				{ quality = 1; price = 7500; };
+	class Exile_Magazine_Battery					{ quality = 1; price = 7500; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Tools
@@ -2043,7 +2043,8 @@ class CfgExileCustomCode
 	ExileClient_object_item_craft = 					"GG\overrides\GG_object_item_craft.sqf";
 	ExileClient_util_playerEquipment_add = 				"GG\overrides\GG_util_playerEquipment_add.sqf";
 	ExileClient_object_player_event_onEnterSafezone = 	"GG\overrides\GG_object_player_event_onEnterSafezone.sqf";
-	ExileClient_object_item_construct= 					"GG\overrides\GG_object_item_construct.sqf";
+	ExileClient_object_item_construct= 					"GG\overrides\GG_object_item_construct.sqf";\
+	ExileClient_object_player_event_onInventoryOpened = "GG\overrides\GG_object_player_event_onInventoryOpened.sqf";
 };
 class CfgExileHUD
 {
@@ -2663,6 +2664,12 @@ class CfgInteractionMenus
 				condition = "!(alive ExileClientInteractionObject)";
 				action = "_this call ExileClient_object_player_identifyBody";
 			};
+			class Revive: ExileAbstractAction
+	        {
+	            title = "Perform CPR";
+	            condition = "(!(alive ExileClientInteractionObject) && (ExileClientInteractionObject getVariable ['EnigmaRevivePermitted', true]) && (magazines player find 'Exile_Item_Defibrillator' >= 0) && (magazines player find 'Exile_Magazine_Battery' >= 0))";
+	            action = "_this spawn Enigma_RevivePlyr";
+	        };
 		};
 	};
 };
@@ -3468,10 +3475,8 @@ class CfgTraderCategories
 		{
 			"Exile_Item_InstaDoc",
 			"Exile_Item_Bandage",
-			"Exile_Item_Vishpirin"
-
-			// Not available in 0.9.4!
-			//"Exile_Item_Defibrillator"
+			"Exile_Item_Vishpirin",
+			"Exile_Magazine_Battery"
 		};
 	};
 	class Navigation

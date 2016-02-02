@@ -35,7 +35,7 @@ showHUD[] =
 };
 
 respawn = "BASE";
-respawnDelay = 10;
+respawnDelay = 120;
 respawnDialog = 0;
 respawnOnStart = 0;
 respawnButton = 1; 
