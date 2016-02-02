@@ -5,7 +5,6 @@
 [] execVM "GG\IgiLoad\IgiLoadInit.sqf";
 [] execVM "GG\money\takegive_poptab_init.sqf";
 [] execVM "GG\service\service_point.sqf";
-[] execVM "GG\Revive\init.sqf";
 
 #include "initServer.sqf"
 

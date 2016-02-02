@@ -1,0 +1,1 @@
+[] execVM "GG\Revive\init.sqf";
