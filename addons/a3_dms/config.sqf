@@ -742,9 +742,9 @@ DMS_Use_Map_Config = true;	// Whether or not to use config overwrites specific t
 											"srifle_LRR_F",
 											"srifle_DMR_02_F",
 											"MMG_01_tan_F",
-											"MMG_02_camo_F"
-											"MMG_02_black_F"
-											"MMG_02_sand_F"
+											"MMG_02_camo_F",
+											"MMG_02_black_F",
+											"MMG_02_sand_F",
 											"srifle_DMR_03_F",
 											"srifle_DMR_03_khaki_F",
 											"srifle_DMR_03_tan_F",
