@@ -1431,6 +1431,7 @@ class CfgExileArsenal
 	class H_PilotHelmetHeli_B						{ quality = 3; price = 100; };
 	class H_PilotHelmetHeli_I						{ quality = 3; price = 100; };
 	class H_PilotHelmetHeli_O						{ quality = 3; price = 100; };
+	class Exile_Headgear_SantaHat					{ quality = 3; price = 300; };
 	class U_B_HeliPilotCoveralls					{ quality = 1; price = 80; };
 	class U_B_PilotCoveralls						{ quality = 1; price = 60; };
 	class U_I_HeliPilotCoveralls					{ quality = 1; price = 60; };
@@ -3243,7 +3244,8 @@ class CfgTraderCategories
 			"H_HelmetCrew_O",
 			"H_PilotHelmetHeli_B",
 			"H_PilotHelmetHeli_I",
-			"H_PilotHelmetHeli_O"
+			"H_PilotHelmetHeli_O",
+			"Exile_Headgear_SantaHat"
 		};
 	};
 
