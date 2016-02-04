@@ -955,6 +955,8 @@ class CfgExileArsenal
 	class Exile_Uniform_BambiOverall				{ quality = 1; price = 1; sellPrice = 1; };
 
 	#include "cfg\RHS\ItemListRHS.hpp"
+	#include "cfg\CUP\ItemListCUP.hpp"
+	#include "cfg\TRYK\ItemListTRYK.hpp"
 	
 	
 	///////////////////////////////////////////////////////////////////////////////
@@ -2900,6 +2902,8 @@ class CfgTerritories
 class CfgTraderCategories 
 {
 	#include "cfg\RHS\TraderCategoriesRHS.hpp"
+	#include "cfg\CUP\TraderCategoriesCUP.hpp"
+	#include "cfg\TRYK\TraderCategoriesTRYK.hpp"
 	
 	class Community
 	{
@@ -3887,23 +3891,33 @@ class CfgTraders
 		{
 			"PointerAttachments",
 			"RHSPointerAttachments",
+			"CUPPointerAttachments",
 			"BipodAttachments",
 			"RHSBipodAttachments",
+			"CUPBipodAttachments",
 			"MuzzleAttachments",
 			"RHSMuzzleAttachments",
+			"CUPMuzzleAttachments",
 			"OpticAttachments",
 			"RHSOpticAttachments",
+			"CUPOpticAttachments",
 			"Ammunition",
 			"RHSAmmo",
+			"CUPAmmunition",
 			"Pistols",
 			"RHSPistols",
+			"CUPPistols",
 			"SubMachineGuns",
+			"CUPSubMachineGuns",
 			"LightMachineGuns",
 			"RHSLightMachineGuns",
+			"CUPLightMachineGuns",
 			"AssaultRifles",
 			"RHSAssaultRifles",
+			"CUPAssaultRifles",
 			"SniperRifles",
-			"RHSSniperRifles"
+			"RHSSniperRifles",
+			"CUPSniperRifles"
 		};
 	};
 
@@ -3920,6 +3934,9 @@ class CfgTraders
 			"Smokes",
 			"StaticMGs",
 			"Explosives",
+			"CUPLaunchers",
+			"CUPLauncherAmmo",
+			"CUPExplosive",
 			"RHSMines",
 			"Navigation"
 		};
@@ -3936,11 +3953,15 @@ class CfgTraders
 		{
 			"Headgear",
 			"RHSHeadgear",
+			"TRYKHeadgear",
 			"Uniforms",
 			"RHSUniforms",
+			"TRYKUniforms",
 			"Vests",
 			"RHSVests",
+			"TRYKVests",
 			"Backpacks",
+			"TRYKBackpacks",
 			"FirstAid"
 		};
 	};
@@ -3983,8 +4004,10 @@ class CfgTraders
 		categories[] = 
 		{
 			"Cars",
+			"CUPUnarmed",
 			"Trucks",
-			"RHSVehicles"
+			"RHSVehicles",
+			"CUPArmed"
 		};
 	};
 
