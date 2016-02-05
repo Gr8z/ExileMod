@@ -359,7 +359,7 @@
 	class     RHS_UH60M                                 { quality = 1; price = 50000; };
 	class	  RHS_Mi8mt_vvs                             { quality = 1; price = 30000; };
 	class	  RHS_Mi8amt_chdkz                          { quality = 1; price = 8000; };
-	class     RHS_UH1Y                                  { quality = 1; price = 150000; };
+	class     RHS_UH1Y                                  { quality = 1; price = 250000; };
 	class     RHS_Mi24Vt_vvs                            { quality = 1; price = 200000; };
 	class     RHS_C130J                                 { quality = 1; price = 40000; };
 	class     GNT_C185F                                 { quality = 1; price = 5000; };
