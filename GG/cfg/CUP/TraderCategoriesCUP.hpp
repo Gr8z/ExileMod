@@ -347,29 +347,25 @@
 	
 	class CUPLaunchers 
 	{
-		name = "CUP Launchers";
+		name = "Launchers";
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
 	"CUP_glaunch_M32",
 	"CUP_glaunch_M79",
-	"CUP_glaunch_Mk13"	
+	"CUP_glaunch_Mk13",
+	"CUP_launch_RPG7V"
 		};
 	};	
 	
 	class CUPLauncherAmmo 
 	{
-		name = "CUP Launcher Ammo";
+		name = "Launcher Ammo";
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
 	"CUP_RPG18_M",
 	"CUP_PG7VL_M",
-	"CUP_PG7VR_M",	
-	"CUP_Igla_M",
-	"CUP_Javelin_M",
-	"CUP_M136_M",
-	"CUP_MAAWS_HEAT_M",
-	"CUP_MAAWS_HEDP_M"
+	"CUP_PG7VR_M"
 		};
 	};		

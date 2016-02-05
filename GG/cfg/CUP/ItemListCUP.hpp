@@ -304,22 +304,13 @@
 	///////////////////////////////////////////////////////////////////////////////
     class CUP_glaunch_M32 							{ quality = 1; price = 10000; };
     class CUP_glaunch_M79 							{ quality = 1; price = 10000; };
-    class CUP_glaunch_Mk13 							{ quality = 1; price = 10000; };
+    class CUP_glaunch_Mk13                          { quality = 1; price = 10000; };
+    class CUP_launch_RPG7V      					{ quality = 1; price = 25000; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Launcher Ammo
 	///////////////////////////////////////////////////////////////////////////////
-    class CUP_RPG18_M    							{ quality = 2; price = 1000; };
-    class CUP_SMAW_HEAA_M    						{ quality = 2; price = 1000; };
-    class CUP_SMAW_HEDP_M    						{ quality = 2; price = 1000; };
-    class CUP_Stinger_M    							{ quality = 2; price = 1000; };
-    class CUP_Strela_2_M    						{ quality = 2; price = 1000; };
-	class CUP_NLAW_M   						 		{ quality = 2; price = 1000; };
-    class CUP_OG7_M    								{ quality = 2; price = 1000; };
-    class CUP_PG7VL_M    							{ quality = 2; price = 1000; };
-    class CUP_PG7VR_M    							{ quality = 2; price = 1000; };	
-    class CUP_Igla_M    							{ quality = 2; price = 1000; };
-    class CUP_Javelin_M    							{ quality = 2; price = 1000; };
-    class CUP_M136_M    							{ quality = 2; price = 1000; };
-    class CUP_MAAWS_HEAT_M   						{ quality = 2; price = 1000; };
-    class CUP_MAAWS_HEDP_M  						{ quality = 2; price = 1000; };	
+    class CUP_RPG18_M    							{ quality = 2; price = 4000; };
+    class CUP_PG7VL_M    							{ quality = 2; price = 4000; };
+    class CUP_PG7VR_M    							{ quality = 2; price = 4000; };	
+    class CUP_M136_M                                { quality = 2; price = 1000; };

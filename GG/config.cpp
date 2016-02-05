@@ -1576,13 +1576,9 @@ class CfgExileArsenal
 	class O_IR_Grenade								{ quality = 1; price = 50; };
 	class I_IR_Grenade								{ quality = 1; price = 50; };
 	class 1Rnd_HE_Grenade_shell						{ quality = 2; price = 70; };
-	class 3Rnd_HE_Grenade_shell						{ quality = 3; price = 70*3; };
-	class rhs_m136_mag								{ quality = 1; price = 1000; };
-	class rhs_weap_M136								{ quality = 1; price = 7000; };
+	class 3Rnd_HE_Grenade_shell						{ quality = 3; price = 703; };	
 	class APERSBoundingMine_Range_Mag				{ quality = 3; price = 5000; };
 	class APERSMine_Range_Mag						{ quality = 3; price = 6000; };
-	class launch_RPG32_F							{ quality = 3; price = 10000; };
-	class RPG32_F									{ quality = 3; price = 4000; };
 	class APERSTripMine_Wire_Mag					{ quality = 3; price = 3000; };
 	class ClaymoreDirectionalMine_Remote_Mag		{ quality = 3; price = 3500; };
 	class DemoCharge_Remote_Mag						{ quality = 3; price = 7000; };
@@ -3896,7 +3892,6 @@ class CfgTraders
 			"CUPPointerAttachments",
 			"BipodAttachments",
 			"RHSBipodAttachments",
-			"CUPBipodAttachments",
 			"MuzzleAttachments",
 			"RHSMuzzleAttachments",
 			"CUPMuzzleAttachments",
