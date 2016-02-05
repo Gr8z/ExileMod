@@ -814,7 +814,7 @@ class CfgBuildings
 	};
 };
 
-#include CfgLootTables.hpp
+#include "CfgLootTables.hpp"
 
 class CfgSettings
 {
