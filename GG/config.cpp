@@ -955,6 +955,8 @@ class CfgExileArsenal
 	class Exile_Uniform_BambiOverall				{ quality = 1; price = 1; sellPrice = 1; };
 
 	#include "cfg\RHS\ItemListRHS.hpp"
+	#include "cfg\CUP\ItemListCUP.hpp"
+	#include "cfg\TRYK\ItemListTRYK.hpp"
 	
 	
 	///////////////////////////////////////////////////////////////////////////////
@@ -1429,6 +1431,7 @@ class CfgExileArsenal
 	class H_PilotHelmetHeli_B						{ quality = 3; price = 100; };
 	class H_PilotHelmetHeli_I						{ quality = 3; price = 100; };
 	class H_PilotHelmetHeli_O						{ quality = 3; price = 100; };
+	class Exile_Headgear_SantaHat					{ quality = 3; price = 300; };
 	class U_B_HeliPilotCoveralls					{ quality = 1; price = 80; };
 	class U_B_PilotCoveralls						{ quality = 1; price = 60; };
 	class U_I_HeliPilotCoveralls					{ quality = 1; price = 60; };
@@ -1573,13 +1576,9 @@ class CfgExileArsenal
 	class O_IR_Grenade								{ quality = 1; price = 50; };
 	class I_IR_Grenade								{ quality = 1; price = 50; };
 	class 1Rnd_HE_Grenade_shell						{ quality = 2; price = 70; };
-	class 3Rnd_HE_Grenade_shell						{ quality = 3; price = 70*3; };
-	class rhs_m136_mag								{ quality = 1; price = 1000; };
-	class rhs_weap_M136								{ quality = 1; price = 7000; };
+	class 3Rnd_HE_Grenade_shell						{ quality = 3; price = 703; };	
 	class APERSBoundingMine_Range_Mag				{ quality = 3; price = 5000; };
 	class APERSMine_Range_Mag						{ quality = 3; price = 6000; };
-	class launch_RPG32_F							{ quality = 3; price = 10000; };
-	class RPG32_F									{ quality = 3; price = 4000; };
 	class APERSTripMine_Wire_Mag					{ quality = 3; price = 3000; };
 	class ClaymoreDirectionalMine_Remote_Mag		{ quality = 3; price = 3500; };
 	class DemoCharge_Remote_Mag						{ quality = 3; price = 7000; };
@@ -2900,6 +2899,8 @@ class CfgTerritories
 class CfgTraderCategories 
 {
 	#include "cfg\RHS\TraderCategoriesRHS.hpp"
+	#include "cfg\CUP\TraderCategoriesCUP.hpp"
+	#include "cfg\TRYK\TraderCategoriesTRYK.hpp"
 	
 	class Community
 	{
@@ -3239,7 +3240,8 @@ class CfgTraderCategories
 			"H_HelmetCrew_O",
 			"H_PilotHelmetHeli_B",
 			"H_PilotHelmetHeli_I",
-			"H_PilotHelmetHeli_O"
+			"H_PilotHelmetHeli_O",
+			"Exile_Headgear_SantaHat"
 		};
 	};
 
@@ -3887,23 +3889,32 @@ class CfgTraders
 		{
 			"PointerAttachments",
 			"RHSPointerAttachments",
+			"CUPPointerAttachments",
 			"BipodAttachments",
 			"RHSBipodAttachments",
 			"MuzzleAttachments",
 			"RHSMuzzleAttachments",
+			"CUPMuzzleAttachments",
 			"OpticAttachments",
 			"RHSOpticAttachments",
+			"CUPOpticAttachments",
 			"Ammunition",
 			"RHSAmmo",
+			"CUPAmmunition",
 			"Pistols",
 			"RHSPistols",
+			"CUPPistols",
 			"SubMachineGuns",
+			"CUPSubMachineGuns",
 			"LightMachineGuns",
 			"RHSLightMachineGuns",
+			"CUPLightMachineGuns",
 			"AssaultRifles",
 			"RHSAssaultRifles",
+			"CUPAssaultRifles",
 			"SniperRifles",
-			"RHSSniperRifles"
+			"RHSSniperRifles",
+			"CUPSniperRifles"
 		};
 	};
 
@@ -3920,6 +3931,9 @@ class CfgTraders
 			"Smokes",
 			"StaticMGs",
 			"Explosives",
+			"CUPLaunchers",
+			"CUPLauncherAmmo",
+			"CUPExplosive",
 			"RHSMines",
 			"Navigation"
 		};
@@ -3936,11 +3950,15 @@ class CfgTraders
 		{
 			"Headgear",
 			"RHSHeadgear",
+			"TRYKHeadgear",
 			"Uniforms",
 			"RHSUniforms",
+			"TRYKUniforms",
 			"Vests",
 			"RHSVests",
+			"TRYKVests",
 			"Backpacks",
+			"TRYKBackpacks",
 			"FirstAid"
 		};
 	};
@@ -3983,8 +4001,10 @@ class CfgTraders
 		categories[] = 
 		{
 			"Cars",
+			"CUPUnarmed",
 			"Trucks",
-			"RHSVehicles"
+			"RHSVehicles",
+			"CUPArmed"
 		};
 	};
 
