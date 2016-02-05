@@ -1502,7 +1502,6 @@ DMS_Use_Map_Config = true;	// Whether or not to use config overwrites specific t
 											"TRYK_B_FieldPack_Wood",
 											"TRYK_Winter_pack"
 										];
-										];
 
 	//Sniper Class
 	DMS_sniper_weps =					[							// Sniper Rifles
