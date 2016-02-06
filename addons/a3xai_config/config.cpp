@@ -263,7 +263,7 @@ class CfgA3XAISettings {
 	vehicleDespawnTime = 600;
 	
 	//Enable player use of AI vehicles. Players must either disable the vehicle or kill all units of the group in order to access the vehicle. (Default: 0)
-	vehiclesAllowedForPlayers = 0;
+	vehiclesAllowedForPlayers = 1;
 	
 	//Add name of location as displayed on map prevent AI vehicle patrols from travelling to these locations. Location names are case-sensitive. Note: Vehicles may still pass through these areas
 	//Example: waypointBlacklistAir[] = {"Aggelochori","Panochori","Zaros"};
