@@ -2,6 +2,12 @@
 	Author: Chris(tian) "infiSTAR" Lorenzen
 	Contact: infiSTAR23@gmail.com // www.infiSTAR.de
 	
+	Copyright infiSTAR - 2011 - 2016. All rights reserved.
+	Christian (Chris) L. (infiSTAR23@gmail.com) Developer of infiSTAR
+	
+	Description:
+	Arma AntiHack & AdminTools - infiSTAR.de
+	
 	
 	READ:
 	type 0 = just execute
@@ -70,9 +76,3 @@ class CfgCustomFunctions {
 		code = "systemChat 'custom5';";
 	};
 };
-
-
-
-
-
-
