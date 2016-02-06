@@ -147,6 +147,7 @@ if (isServer) then {
 	    ["Exile_Sign_AircraftCustoms",[12168.3,12739.9,0],0,0,0,false],
 	    ["Land_PressureWasher_01_F",[12178.3,12733.1,0],46.7045,0,0,false],
 	    ["Land_HelipadSquare_F",[12132.542969,12707.420898,0],0,0,0,false],
+	    ["Land_HelipadSquare_F",[12074.459961,12679.46582,0],0,0,0,false],
 	    ["Land_Portable_generator_F",[12169,12738.5,0],351.818,0,0,false],
 	    ["Land_PortableLight_double_F",[12165.7,12740.2,0],346.364,0,0,false],
 	    ["Land_ToiletBox_F",[12157.5,12744.7,0],331.023,0,0,false],
