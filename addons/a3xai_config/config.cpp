@@ -22,7 +22,7 @@ class CfgA3XAISettings {
 	
 	//Enable or disable verification and error-correction of classname tables used by A3XAI. If invalid entries are found, they are removed and logged into the RPT log.
 	//If disabled, any invalid classnames will not be removed and clients may crash if AI bodies with invalid items are looted. Only disable if a previous scan shows no invalid classnames (Default: 1).										
-	verifyClassnames = 1;
+	verifyClassnames = 0;
 	
 	//Enables checking of all A3XAI config settings. (Default: 1)
 	verifySettings = 1;
