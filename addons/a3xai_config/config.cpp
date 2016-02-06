@@ -382,7 +382,7 @@ class CfgA3XAISettings {
 		{"rhsusf_M1078A1P2_B_M2_wd_flatbed_fmtv_usarmy",5},
 		{"rhsusf_M1078A1P2_B_M2_d_fmtv_usarmy",5},
 		{"rhsusf_M1078A1P2_B_M2_d_flatbed_fmtv_usarmy",5},
-		{"rhs_btr60_chdkz"5}
+		{"rhs_btr60_chdkz",5}
 	};
 	
 	//Maximum number of gunner units per land vehicle. Limited by actual number of available gunner positions. (Default: 2)
