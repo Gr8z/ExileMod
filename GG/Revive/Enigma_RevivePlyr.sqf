@@ -94,7 +94,9 @@ systemChat Format ["RIP %1! They are too far gone!",_targetname];
 		} else {		
 		systemChat Format ["RIP %1! They suffered a fatal injury!",_targetname];
 		};
-	}; 
+	} else {
+		systemChat "You need Defibrillators and a Battery to perform a CPR.";
+	};
 } else {		
 		systemChat Format ["RIP %1! They suffered a fatal injury!",_targetname];
 		};
