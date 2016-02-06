@@ -3614,6 +3614,8 @@ class CfgTraderCategories
 			"IEDUrbanSmall_Remote_Mag",
 			"SatchelCharge_Remote_Mag",
 			"SLAMDirectionalMine_Wire_Mag",
+			"CUP_Mine_M",
+			"CUP_PipeBomb_M",
 			"rhs_mag_m4009",
 			"rhs_mag_m576",
 			"rhs_VOG25",

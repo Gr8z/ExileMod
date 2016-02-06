@@ -138,8 +138,8 @@
     class CUP_HandGrenade_M67    							{ quality = 2; price = 20; };
 	class CUP_6Rnd_HE_M203    								{ quality = 2; price = 120; };
 	class CUP_1Rnd_HE_M203    								{ quality = 2; price = 40; };
-    class CUP_Mine_M   										{ quality = 2; price = 100; };
-    class CUP_PipeBomb_M    								{ quality = 2; price = 100; };	
+    class CUP_Mine_M   										{ quality = 2; price = 8000; };
+    class CUP_PipeBomb_M    								{ quality = 2; price = 1000; };	
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Flares AND SMOKES

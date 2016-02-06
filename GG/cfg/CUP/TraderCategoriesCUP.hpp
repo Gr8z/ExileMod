@@ -156,8 +156,6 @@
 	"CUP_HandGrenade_M67",
 	"CUP_6Rnd_HE_M203",
 	"CUP_1Rnd_HE_M203",
-	"CUP_Mine_M",
-	"CUP_PipeBomb_M",
 	"CUP_6Rnd_Smoke_M203"	
 		};
 	};
