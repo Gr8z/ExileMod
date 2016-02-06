@@ -154,7 +154,7 @@ HTML_LOAD_URL = "";	/* HTML_LOAD_URL = ""; == disabled and if you set a url it w
 USE_RESTART_TIMER = true;			/* show time left to next restart */
 RESTART_TIME_IN_M = 120;			/* restart time in minutes (default: 180min == 3 hours) */
 SHOW_TIMER_IN_MIN[] = {1,2,3,5,10};	/* minutes before restart, when message is shown */
-USE_RESTART_TIMER_SHUTDOWN = true;	/* #shutdown the server after RESTART_TIME_IN_M minutes */
+USE_RESTART_TIMER_SHUTDOWN = false;	/* #shutdown the server after RESTART_TIME_IN_M minutes */
 
 /* The following 3 options can be disabled by putting the value to -1. For example "TGV = -1;" */
 /* Terrain Grid Value   */ TGV = -1;	/* 50, 25, 12.5  */	/* if set to 50 grass will be very low for better client FPS.. default is 25 ~35 is good performance and grass :) */
