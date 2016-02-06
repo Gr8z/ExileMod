@@ -41,7 +41,6 @@
 	class CUP_optic_PSO_1 							{ quality = 1; price = 70; };
 	class CUP_optic_PSO_3 							{ quality = 1; price = 70; };
 	class CUP_optic_Kobra 							{ quality = 1; price = 70; };
-	class CUP_optic_GOSHAWK 						{ quality = 1; price = 70; };
 	class CUP_optic_NSPU 							{ quality = 1; price = 70; };
 	class CUP_optic_PechenegScope 					{ quality = 1; price = 70; };
 	class CUP_optic_HoloBlack 						{ quality = 1; price = 70; };
@@ -51,7 +50,6 @@
 	class CUP_optic_Eotech533Grey 					{ quality = 1; price = 70; };
 	class CUP_optic_CompM4 							{ quality = 1; price = 70; };
 	class CUP_optic_SUSAT 							{ quality = 1; price = 70; };
-	class CUP_optic_CWS  							{ quality = 1; price = 70; };
 	class CUP_optic_RCO 							{ quality = 1; price = 70; };
 	class CUP_optic_RCO_desert 						{ quality = 1; price = 70; };
 	class CUP_optic_CompM2_Woodland2 				{ quality = 1; price = 70; };
@@ -60,7 +58,6 @@
 	class CUP_optic_CompM2_Desert 					{ quality = 1; price = 70; };
 	class CUP_optic_ACOG 							{ quality = 1; price = 70; };
 	class CUP_optic_SB_3_12x50_PMII 				{ quality = 1; price = 70; };
-	class CUP_optic_AN_PAS_13c2 					{ quality = 1; price = 70; };
 	class CUP_optic_AN_PVS_4 						{ quality = 1; price = 70; };
 	class CUP_optic_AN_PVS_10 						{ quality = 1; price = 70; };
 	class CUP_optic_LeupoldMk4 						{ quality = 1; price = 70; };
@@ -72,7 +69,6 @@
 	class CUP_optic_Leupold_VX3 					{ quality = 1; price = 70; };
 	class CUP_optic_ElcanM145 						{ quality = 1; price = 70; };
 	class CUP_optic_ELCAN_SpecterDR 				{ quality = 1; price = 70; };
-	class CUP_optic_AN_PAS_13c1 					{ quality = 1; price = 70; };
 	class CUP_optic_SB_11_4x20_PM 					{ quality = 1; price = 70; };
 	class CUP_optic_ZDDot 							{ quality = 1; price = 70; };
 	class CUP_optic_MRad 							{ quality = 1; price = 70; };
@@ -111,7 +107,6 @@
     class CUP_30Rnd_9x19_EVO    							{ quality = 2; price = 20; };
     class CUP_20Rnd_B_AA12_Pellets    						{ quality = 2; price = 20; };
 	class CUP_20Rnd_B_AA12_74Slug    						{ quality = 2; price = 20; };
-	class CUP_20Rnd_B_AA12_HE		   						{ quality = 2; price = 100; };	
     class CUP_30Rnd_545x39_AK_M    							{ quality = 2; price = 20; };
     class CUP_30Rnd_556x45_G36    							{ quality = 2; price = 20; };
     class CUP_30Rnd_556x45_Stanag    						{ quality = 2; price = 20; };
