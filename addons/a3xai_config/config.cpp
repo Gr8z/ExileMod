@@ -129,12 +129,12 @@ class CfgA3XAISettings {
 	
 	//(Static/Dynamic/Random Spawns) minAI: Minimum number of units. addAI: maximum number of additional units. unitLevel: Unit level (0-3)
 	minAI_city = 1;
-	addAI_city = 2;
+	addAI_city = 3;
 	unitLevel_city = 1;
 	spawnChance_city = 0.90;
 	
 	//(Static/Dynamic/Random Spawns) minAI: Minimum number of units. addAI: maximum number of additional units. unitLevel: Unit level (0-3)
-	minAI_capitalCity = 2;
+	minAI_capitalCity = 4;
 	addAI_capitalCity = 1;
 	unitLevel_capitalCity = 1;
 	spawnChance_capitalCity = 1;
