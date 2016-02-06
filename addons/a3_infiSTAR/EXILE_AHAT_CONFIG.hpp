@@ -147,7 +147,7 @@ UID_WHITELIST[] =
 ESCMNUTOP = "[GG] Ghostz Gamerz";
 ESCMNUBOT = "www.GHOSTZGAMERZ.com";
 BRIEFING_MSG = true;	/* use mission briefing message: if   "BRIEFING_MSG = false;"   then the message will be replaced by infiSTAR */
-HTML_LOAD_URL = "http://ghostzgamerz.com";	/* HTML_LOAD_URL = ""; == disabled and if you set a url it will be shown in ESCAPE menu. HTML in Arma/this is limited. Try it :) example: "http://goo.gl/gb0o7b" */
+HTML_LOAD_URL = "";	/* HTML_LOAD_URL = ""; == disabled and if you set a url it will be shown in ESCAPE menu. HTML in Arma/this is limited. Try it :) example: "http://goo.gl/gb0o7b" */
 
 
 /* shows RESTART IN X MINS */
