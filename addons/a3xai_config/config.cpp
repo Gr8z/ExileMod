@@ -56,49 +56,49 @@ class CfgA3XAISettings {
 	//1: Generate AI weapons from Exile trader tables (Default)
 	//0: Weapons defined by pistolList, rifleList, machinegunList, sniperList
 	//dynamicWeaponBlacklist: Classnames of weapons to ignore from Exile trader tables
-	generateDynamicWeapons = 1;
+	generateDynamicWeaponsgenerateDynamicWeapons = 0;
 	dynamicWeaponBlacklist[] = {};
 	
 	//1: Use Exile loot table data as whitelist for AI-usable weapon scopes (Default)
 	//0: Scopes defined by weaponOpticsList
 	//dynamicOpticsBlacklist: List of optics classnames to ignore from Exile trader tables.
-	generateDynamicOptics = 1;
+	generateDynamicOptics = 0;
 	dynamicOpticsBlacklist[] = {};
 	
 	//1: Generate AI uniform types from Exile trader tables (Default)
 	//0: Uniforms defined by uniformTypes0, uniformTypes1, uniformTypes2, uniformTypes3
 	//dynamicUniformBlacklist: List of uniform classnames to ignore from Exile trader tables.
-	generateDynamicUniforms = 1;
+	generateDynamicUniforms = 0;
 	dynamicUniformBlacklist[] = {};
 	
 	//1: Generate AI backpack types from Exile trader tables (Default)
 	//0: Backpacks defined by backpackTypes0, backpackTypes1, backpackTypes2, backpackTypes3
 	//dynamicBackpackBlacklist: List of backpack classnames to ignore from Exile trader tables.
-	generateDynamicBackpacks = 1;
+	generateDynamicBackpacks = 0;
 	dynamicBackpackBlacklist[] = {};
 	
 	//1: Generate AI backpack types from Exile trader tables (Default)
 	//0: Vests defined by vestTypes0, vestTypes1, vestTypes2, vestTypes3
 	//dynamicVestBlacklist: List of vest classnames to ignore from Exile trader tables.
-	generateDynamicVests = 1;
+	generateDynamicVests = 0;
 	dynamicVestBlacklist[] = {};
 	
 	//1: Generate AI headgear types from Exile trader tables (Default)
 	//0: Headgear defined by headgearTypes0, headgearTypes1, headgearTypes2, headgearTypes3
 	//dynamicHeadgearBlacklist: List of headgear classnames to ignore from Exile trader tables.
-	generateDynamicHeadgear = 1;
+	generateDynamicHeadgear = 0;
 	dynamicHeadgearBlacklist[] = {};
 	
 	//1: Generate AI food types from Exile trader tables (Default)
 	//0: Food defined by foodLoot
 	//dynamicFoodBlacklist: List of food classnames to ignore from Exile trader tables.
-	generateDynamicFood = 1;
+	generateDynamicFood = 0;
 	dynamicFoodBlacklist[] = {};
 	
 	//1: Generate AI generic loot types from Exile trader tables. Includes "Hardware", "Smoke", "Flare" -class items. (Default)
 	//0: Loot defined by MiscLoot
 	//dynamicLootBlacklist: List of loot classnames to ignore from Exile trader tables.
-	generateDynamicLoot = 1;
+	generateDynamicLoot = 0;
 	dynamicLootBlacklist[] = {};
 
 
@@ -113,7 +113,7 @@ class CfgA3XAISettings {
 	side = east;
 	
 	//Number of online players required for maximum (or minimum) AI spawn chance. Affects Static, Dynamic, Random AI spawns. (Default: 10)	
-	playerCountThreshold = 10;
+	playerCountThreshold = 1;
 	
 	//1: Spawn chance multiplier scales upwards from value defined by chanceScalingThreshold to 1.00. 0: Spawn chance multiplier scales downwards from 1.00 to chanceScalingThreshold.
 	upwardsChanceScaling = 1;
@@ -325,7 +325,7 @@ class CfgA3XAISettings {
 	--------------------------------------------------------------------------------------------------------------------*/	
 
 	//Global maximum number of active AI land vehicle patrols. Set at 0 to disable (Default: 0).	
-	maxLandPatrols = 0;
+	maxLandPatrols = 3;
 	
 	//Probability of spawning Level 0/1/2/3 AI land vehicle spawns. Probabilities should add up to 1.00		
 	levelChancesLand[] = {0.00,0.50,0.35,0.15};
@@ -354,7 +354,35 @@ class CfgA3XAISettings {
 		{"Exile_Car_Van_Fuel_Black",5},
 		{"Exile_Car_Zamak",5},
 		{"Exile_Car_Tempest",5},
-		{"Exile_Car_HEMMT",5}
+		{"Exile_Car_HEMMT",5},
+		{"rhsusf_m1025_d",5},
+		{"rhsusf_m1025_w",5},
+		{"rhsusf_m1025_w_s",5},
+		{"rhsusf_m1025_d_s",5},
+		{"rhsusf_m998_w_2dr",5},
+		{"rhsusf_m998_d_s_2dr",5},
+		{"rhs_tigr_vmf",5},
+		{"rhs_tigr_3camo_vmf",5},
+		{"rhs_tigr_ffv_vmf",5},
+		{"rhs_tigr_ffv_3camo_vdv",5},
+		{"rhs_tigr_ffv_3camo_vv",5},
+		{"rhs_tigr_m_msv",5},
+		{"rhs_tigr_m_3camo_vdv",5},
+		{"rhsusf_m998_w_2dr_fulltop",5},
+		{"rhsusf_m998_d_2dr_fulltop",5},
+		{"RHS_UAZ_MSV_01",5},
+		{"rhs_uaz_open_MSV_01",5},
+		{"rhs_uaz_dshkm_chdkz",5},
+		{"RHS_Ural_Flat_MSV_01",5},
+		{"RHS_Ural_MSV_01",5},
+		{"RHS_Ural_Open_Civ_03",5},
+		{"rhsusf_m1025_w_m2",5},
+		{"rhsusf_m1025_d_m2",5},
+		{"rhsusf_M1078A1P2_B_M2_wd_fmtv_usarmy",5},
+		{"rhsusf_M1078A1P2_B_M2_wd_flatbed_fmtv_usarmy",5},
+		{"rhsusf_M1078A1P2_B_M2_d_fmtv_usarmy",5},
+		{"rhsusf_M1078A1P2_B_M2_d_flatbed_fmtv_usarmy",5},
+		{"rhs_btr60_chdkz"5}
 	};
 	
 	//Maximum number of gunner units per land vehicle. Limited by actual number of available gunner positions. (Default: 2)
@@ -380,7 +408,8 @@ class CfgA3XAISettings {
 	//Armed air vehicles will detect and engage players within reinforcement area. Unarmed air vehicles will deploy an AI paradrop group.
 	airReinforcementVehicles[] = {
 		"B_Heli_Transport_01_F",
-		"B_Heli_Light_01_armed_F"
+		"B_Heli_Light_01_armed_F",
+		"rhsusf_CH53E_USMC"
 	};
 	
 	//Probability to spawn reinforcements for each AI level.
@@ -655,21 +684,21 @@ class CfgA3XAISettings {
 
 	//AI uniform classnames. Note: uniformTypes0-3 will not be read if generateDynamicUniforms is enabled.
 	//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	uniformTypes0[] = {"U_C_Journalist","U_C_Poloshirt_blue","U_C_Poloshirt_burgundy","U_C_Poloshirt_salmon","U_C_Poloshirt_stripped","U_C_Poloshirt_tricolour","U_C_Poor_1","U_C_Poor_2","U_C_Poor_shorts_1","U_C_Scientist"};
-	uniformTypes1[] = {"U_B_CombatUniform_mcam_worn","U_B_CTRG_1","U_B_CTRG_2","U_B_CTRG_3","U_I_CombatUniform","U_I_CombatUniform_shortsleeve","U_I_CombatUniform_tshirt","U_I_OfficerUniform","U_O_CombatUniform_ocamo","U_O_CombatUniform_oucamo","U_C_HunterBody_grn","U_IG_Guerilla1_1","U_IG_Guerilla2_1","U_IG_Guerilla2_2","U_IG_Guerilla2_3","U_IG_Guerilla3_1","U_BG_Guerilla2_1","U_IG_Guerilla3_2","U_BG_Guerrilla_6_1","U_BG_Guerilla1_1","U_BG_Guerilla2_2","U_BG_Guerilla2_3","U_BG_Guerilla3_1","U_BG_leader","U_IG_leader","U_B_GhillieSuit","U_I_GhillieSuit","U_O_GhillieSuit","U_B_HeliPilotCoveralls","U_I_HeliPilotCoveralls","U_B_PilotCoveralls","U_I_pilotCoveralls"};
-	uniformTypes2[] = {"U_OrestesBody","U_NikosAgedBody","U_NikosBody","U_B_CombatUniform_mcam","U_B_CTRG_1","U_B_CTRG_2","U_B_CTRG_3","U_O_OfficerUniform_ocamo","U_B_SpecopsUniform_sgg","U_O_SpecopsUniform_blk","U_O_SpecopsUniform_ocamo","U_I_G_Story_Protagonist_F","U_IG_Guerilla2_1","U_BG_Guerrilla_6_1","U_I_G_resistanceLeader_F","U_B_FullGhillie_ard","U_B_FullGhillie_lsh","U_B_FullGhillie_sard","U_B_GhillieSuit","U_I_FullGhillie_ard","U_I_FullGhillie_lsh","U_I_FullGhillie_sard","U_I_GhillieSuit","U_O_FullGhillie_ard","U_O_FullGhillie_lsh","U_O_FullGhillie_sard","U_O_GhillieSuit","U_I_Wetsuit","U_O_Wetsuit","U_B_Wetsuit","U_B_survival_uniform"};
-	uniformTypes3[] = {"U_OrestesBody","U_NikosAgedBody","U_NikosBody","U_O_OfficerUniform_ocamo","U_B_SpecopsUniform_sgg","U_O_SpecopsUniform_blk","U_O_SpecopsUniform_ocamo","U_I_G_Story_Protagonist_F","U_I_G_resistanceLeader_F","U_B_FullGhillie_ard","U_B_FullGhillie_lsh","U_B_FullGhillie_sard","U_I_FullGhillie_ard","U_I_FullGhillie_lsh","U_I_FullGhillie_sard","U_O_FullGhillie_ard","U_O_FullGhillie_lsh","U_O_FullGhillie_sard","U_I_Wetsuit","U_O_Wetsuit","U_B_Wetsuit","U_B_survival_uniform"};
-	
+	uniformTypes0[] = {"U_C_Journalist","U_C_Poloshirt_blue","U_C_Poloshirt_burgundy","U_C_Poloshirt_salmon","U_C_Poloshirt_stripped","U_C_Poloshirt_tricolour","U_C_Poor_1","U_C_Poor_2","U_C_Poor_shorts_1","U_C_Scientist","TRYK_HRP_UCP","TRYK_HRP_USMC","TRYK_HRP_khk","TRYK_U_B_OD_OD_CombatUniform","TRYK_U_B_OD_OD_R_CombatUniform","TRYK_U_B_TANTAN_CombatUniform","TRYK_U_B_TANTAN_R_CombatUniform","TRYK_U_B_BLKBLK_CombatUniform","TRYK_U_B_BLKBLK_R_CombatUniform","TRYK_U_B_GRYOCP_CombatUniform","TRYK_U_B_GRYOCP_R_CombatUniformTshirt","TRYK_U_B_TANOCP_CombatUniform","TRYK_U_B_TANOCP_R_CombatUniformTshirt","TRYK_U_B_BLKOCP_CombatUniform","TRYK_U_B_BLKOCP_R_CombatUniformTshirt","TRYK_U_B_BLKTAN_CombatUniform","TRYK_U_B_BLKTANR_CombatUniformTshirt","TRYK_U_B_ODTAN_CombatUniform","TRYK_U_B_ODTANR_CombatUniformTshirt","TRYK_U_B_GRTAN_CombatUniform","TRYK_U_B_GRTANR_CombatUniformTshirt","TRYK_U_B_wood_CombatUniform","TRYK_U_B_woodR_CombatUniformTshirt","TRYK_U_B_wood3c_CombatUniform","TRYK_U_B_wood3c_CombatUniformTshirt","TRYK_U_B_MARPAT_WOOD_CombatUniform","TRYK_U_B_MARPAT_WOOD_CombatUniformTshirt","TRYK_U_B_WOOD_MARPAT_CombatUniform","TRYK_U_B_WOOD_MARPAT_CombatUniformTshirt","TRYK_U_B_woodtan_CombatUniform","TRYK_U_B_woodtanR_CombatUniformTshirt","TRYK_U_B_JSDF_CombatUniform","TRYK_U_B_JSDF_CombatUniformTshirt","TRYK_U_B_3CD_Delta_BDU","TRYK_U_B_3CD_Delta_BDUTshirt","TRYK_U_B_3CD_Ranger_BDU","TRYK_U_B_3CD_Ranger_BDUTshirt","TRYK_U_B_3CD_BLK_BDUTshirt","TRYK_U_B_3CD_BLK_BDUTshirt2","TRYK_U_B_ACU","TRYK_U_B_ACUTshirt","TRYK_U_B_MARPAT_Wood","TRYK_U_B_MARPAT_Wood_Tshirt","TRYK_U_B_MARPAT_Desert","TRYK_U_B_MARPAT_Desert_Tshirt","TRYK_U_B_MARPAT_Desert2","TRYK_U_B_MARPAT_Desert2_Tshirt","TRYK_U_B_3c","TRYK_U_B_3cr","TRYK_U_B_Sage_Tshirt","TRYK_U_B_BLK3CD","TRYK_U_B_BLK3CD_Tshirt","TRYK_U_B_BLK","TRYK_U_B_BLK_Tshirt","TRYK_U_B_BLKTAN","TRYK_U_B_BLKTAN_Tshirt","TRYK_U_B_ODTAN","TRYK_U_B_ODTAN_Tshirt","TRYK_U_B_BLK_OD","TRYK_U_B_BLK_OD_Tshirt","TRYK_U_B_C01_Tsirt","TRYK_U_B_C02_Tsirt","TRYK_U_B_OD_BLK","TRYK_U_B_OD_BLK_2","TRYK_U_B_BLK_TAN_1","TRYK_U_B_BLK_TAN_2"};
+	uniformTypes1[] = {"U_B_CombatUniform_mcam_worn","U_B_CTRG_1","U_B_CTRG_2","U_B_CTRG_3","U_I_CombatUniform","U_I_CombatUniform_shortsleeve","U_I_CombatUniform_tshirt","U_I_OfficerUniform","U_O_CombatUniform_ocamo","U_O_CombatUniform_oucamo","U_C_HunterBody_grn","U_IG_Guerilla1_1","U_IG_Guerilla2_1","U_IG_Guerilla2_2","U_IG_Guerilla2_3","U_IG_Guerilla3_1","U_BG_Guerilla2_1","U_IG_Guerilla3_2","U_BG_Guerrilla_6_1","U_BG_Guerilla1_1","U_BG_Guerilla2_2","U_BG_Guerilla2_3","U_BG_Guerilla3_1","U_BG_leader","U_IG_leader","U_B_GhillieSuit","U_I_GhillieSuit","U_O_GhillieSuit","U_B_HeliPilotCoveralls","U_I_HeliPilotCoveralls","U_B_PilotCoveralls","U_I_pilotCoveralls","TRYK_U_B_wh_tan_Rollup_CombatUniform","TRYK_U_B_wh_OD_Rollup_CombatUniform","TRYK_U_B_wh_blk_Rollup_CombatUniform","TRYK_U_B_BLK_tan_Rollup_CombatUniform","TRYK_U_B_BLK_OD_Rollup_CombatUniform","TRYK_U_B_NATO_UCP_GRY_CombatUniform","TRYK_U_B_NATO_UCP_GRY_R_CombatUniform","TRYK_U_B_NATO_UCP_CombatUniform","TRYK_U_B_NATO_UCP_R_CombatUniform","TRYK_U_B_NATO_OCP_c_BLK_CombatUniform","TRYK_U_B_NATO_OCP_BLK_c_R_CombatUniform","TRYK_U_B_NATO_OCP_BLK_CombatUniform","TRYK_U_B_NATO_OCP_BLK_R_CombatUniform","TRYK_U_B_NATO_OCPD_CombatUniform","TRYK_U_B_NATO_OCPD_R_CombatUniform","TRYK_U_B_NATO_OCP_CombatUniform","TRYK_U_B_NATO_OCP_R_CombatUniform","TRYK_U_B_AOR1_Rollup_CombatUniform","TRYK_U_B_AOR2_Rollup_CombatUniform","TRYK_U_B_MTP_CombatUniform","TRYK_U_B_MTP_R_CombatUniform","TRYK_U_B_MTP_BLK_CombatUniform","TRYK_U_B_MTP_BLK_R_CombatUniform","TRYK_U_B_Woodland","TRYK_U_B_Woodland_Tshirt","TRYK_U_B_WDL_GRY_CombatUniform","TRYK_U_B_WDL_GRY_R_CombatUniform","TRYK_U_B_ARO1_GR_CombatUniform","TRYK_U_B_ARO1_GR_R_CombatUniform","TRYK_U_B_ARO1_GRY_CombatUniform","TRYK_U_B_ARO1_GRY_R_CombatUniform","TRYK_U_B_ARO1_CombatUniform","TRYK_U_B_ARO1R_CombatUniform","TRYK_U_B_ARO1_BLK_CombatUniform","TRYK_U_B_ARO1_BLK_R_CombatUniform","TRYK_U_B_ARO1_CBR_CombatUniform","TRYK_U_B_ARO1_CBR_R_CombatUniform","TRYK_U_B_ARO2_CombatUniform","TRYK_U_B_ARO2R_CombatUniform","TRYK_U_B_AOR2_BLK_CombatUniform","TRYK_U_B_AOR2_BLK_R_CombatUniform","TRYK_U_B_AOR2_OD_CombatUniform","TRYK_U_B_AOR2_OD_R_CombatUniform","TRYK_U_B_AOR2_GRY_CombatUniform","TRYK_U_B_AOR2_GRY_R_CombatUniform","TRYK_U_B_Snow_CombatUniform"};
+	uniformTypes2[] = {"U_OrestesBody","U_NikosAgedBody","U_NikosBody","U_B_CombatUniform_mcam","U_B_CTRG_1","U_B_CTRG_2","U_B_CTRG_3","U_O_OfficerUniform_ocamo","U_B_SpecopsUniform_sgg","U_O_SpecopsUniform_blk","U_O_SpecopsUniform_ocamo","U_I_G_Story_Protagonist_F","U_IG_Guerilla2_1","U_BG_Guerrilla_6_1","U_I_G_resistanceLeader_F","U_B_FullGhillie_ard","U_B_FullGhillie_lsh","U_B_FullGhillie_sard","U_B_GhillieSuit","U_I_FullGhillie_ard","U_I_FullGhillie_lsh","U_I_FullGhillie_sard","U_I_GhillieSuit","U_O_FullGhillie_ard","U_O_FullGhillie_lsh","U_O_FullGhillie_sard","U_O_GhillieSuit","U_I_Wetsuit","U_O_Wetsuit","U_B_Wetsuit","U_B_survival_uniform","rhs_uniform_cu_ocp","rhs_uniform_cu_ucp","rhs_uniform_cu_ocp_101st","rhs_uniform_df15","rhs_uniform_m88_patchless","rhs_uniform_emr_patchless","rhs_uniform_flora_patchless","rhs_uniform_flora_patchless_alt","rhs_uniform_FROG01_m81","rhs_uniform_FROG01_d","rhs_uniform_FROG01_wd","rhs_uniform_m88_patchless","rhs_uniform_mflora_patchless","rhs_uniform_vdv_mflora","rhs_chdkz_uniform_1","rhs_chdkz_uniform_2","rhs_chdkz_uniform_3","rhs_chdkz_uniform_4","rhs_chdkz_uniform_5","TRYK_U_B_Snowt","TRYK_U_B_Denim_T_WH","TRYK_U_B_Denim_T_BK","TRYK_U_B_BLK_T_WH","TRYK_U_B_BLK_T_BK","TRYK_U_B_RED_T_BR","TRYK_U_B_Denim_T_BG_WH","TRYK_U_B_Denim_T_BG_BK","TRYK_U_B_BLK_T_BG_WH","TRYK_U_B_BLK_T_BG_BK","TRYK_U_B_RED_T_BG_BR","TRYK_U_B_fleece","TRYK_U_B_fleece_UCP","TRYK_U_B_UCP_PCUs","TRYK_U_B_GRY_PCUs","TRYK_U_B_Wood_PCUs","TRYK_U_B_PCUs","TRYK_U_B_UCP_PCUs_R","TRYK_U_B_GRY_PCUs_R","TRYK_U_B_Wood_PCUs_R","TRYK_U_B_PCUs_R","TRYK_U_B_PCUGs","TRYK_U_B_PCUODs","TRYK_U_B_PCUGs_gry","TRYK_U_B_PCUGs_BLK","TRYK_U_B_PCUGs_OD","TRYK_U_B_PCUGs_gry_R","TRYK_U_B_PCUGs_BLK_R","TRYK_U_B_PCUGs_OD_R","TRYK_U_Bts_GRYGRY_PCUs","TRYK_U_Bts_UCP_PCUs","TRYK_U_Bts_Wood_PCUs","TRYK_U_Bts_PCUs","TRYK_U_pad_j","TRYK_U_pad_j_blk","TRYK_U_pad_hood_Cl","TRYK_U_pad_hood_Cl_blk","TRYK_U_pad_hood_tan","TRYK_U_pad_hood_Blk","TRYK_U_pad_hood_CSATBlk","TRYK_U_pad_hood_Blod","TRYK_U_pad_hood_odBK","TRYK_U_pad_hood_BKT2","TRYK_hoodie_Blk","TRYK_hoodie_FR","TRYK_hoodie_Wood","TRYK_hoodie_3c","TRYK_T_camo_tan","TRYK_T_camo_3c","TRYK_T_camo_Wood","TRYK_T_camo_wood_marpat","TRYK_T_camo_Desert_marpat","TRYK_T_camo_3c_BG","TRYK_T_camo_Wood_BG","TRYK_T_camo_wood_marpat_BG","TRYK_T_camo_desert_marpat_BG","TRYK_T_PAD","TRYK_T_OD_PAD","TRYK_T_TAN_PAD","TRYK_T_BLK_PAD","TRYK_T_T2_PAD","TRYK_T_CSAT_PAD","TRYK_U_nohoodPcu_gry","TRYK_U_hood_nc","TRYK_U_hood_mc","TRYK_U_denim_hood_blk","TRYK_U_denim_hood_mc","TRYK_U_denim_hood_3c","TRYK_U_denim_hood_nc","TRYK_U_denim_jersey_blu","TRYK_U_denim_jersey_blk","TRYK_shirts_PAD","TRYK_shirts_OD_PAD","TRYK_shirts_TAN_PAD","TRYK_shirts_BLK_PAD","TRYK_shirts_PAD_BK","TRYK_shirts_OD_PAD_BK","TRYK_shirts_TAN_PAD_BK","TRYK_shirts_BLK_PAD_BK","TRYK_shirts_PAD_BLW","TRYK_shirts_OD_PAD_BLW","TRYK_shirts_TAN_PAD_BLW","TRYK_shirts_BLK_PAD_BLW","TRYK_shirts_PAD_YEL","TRYK_shirts_OD_PAD_YEL","TRYK_shirts_TAN_PAD_YEL","TRYK_shirts_BLK_PAD_YEL","TRYK_shirts_PAD_RED2","TRYK_shirts_OD_PAD_RED2","TRYK_shirts_TAN_PAD_RED2","TRYK_shirts_BLK_PAD_RED2","TRYK_shirts_PAD_BLU3","TRYK_shirts_OD_PAD_BLU3","TRYK_shirts_TAN_PAD_BLU3","TRYK_shirts_BLK_PAD_BLU3","TRYK_shirts_DENIM_R","TRYK_shirts_DENIM_BL","TRYK_shirts_DENIM_BK","TRYK_shirts_DENIM_WH","TRYK_shirts_DENIM_BWH","TRYK_shirts_DENIM_RED2","TRYK_shirts_DENIM_WHB","TRYK_shirts_DENIM_ylb","TRYK_shirts_DENIM_od","TRYK_shirts_DENIM_R_Sleeve","TRYK_shirts_DENIM_BL_Sleeve","TRYK_shirts_DENIM_BK_Sleeve","TRYK_shirts_DENIM_WH_Sleeve","TRYK_shirts_DENIM_BWH_Sleeve","TRYK_shirts_DENIM_RED2_Sleeve","TRYK_shirts_DENIM_WHB_Sleeve","TRYK_shirts_DENIM_ylb_Sleeve","TRYK_shirts_DENIM_od_Sleeve"};
+	uniformTypes3[] = {"U_OrestesBody","U_NikosAgedBody","U_NikosBody","U_O_OfficerUniform_ocamo","U_B_SpecopsUniform_sgg","U_O_SpecopsUniform_blk","U_O_SpecopsUniform_ocamo","U_I_G_Story_Protagonist_F","U_I_G_resistanceLeader_F","U_B_FullGhillie_ard","U_B_FullGhillie_lsh","U_B_FullGhillie_sard","U_I_FullGhillie_ard","U_I_FullGhillie_lsh","U_I_FullGhillie_sard","U_O_FullGhillie_ard","U_O_FullGhillie_lsh","U_O_FullGhillie_sard","U_I_Wetsuit","U_O_Wetsuit","U_B_Wetsuit","U_B_survival_uniform","TRYK_shirts_PAD_BL","TRYK_shirts_OD_PAD_BL","TRYK_shirts_TAN_PAD_BL","TRYK_shirts_BLK_PAD_BL","TRYK_U_taki_wh","TRYK_U_taki_COY","TRYK_U_taki_BL","TRYK_U_taki_BLK","TRYK_U_Bts_PCUGs","TRYK_U_Bts_PCUODs","TRYK_U_taki_G_WH","TRYK_U_taki_G_COY","TRYK_U_taki_G_BL","TRYK_U_taki_G_BLK","TRYK_U_B_PCUHs","TRYK_U_B_PCUGHs","TRYK_U_B_PCUODHs","TRYK_B_USMC_R","TRYK_B_USMC_R_ROLL","TRYK_ZARATAKI","TRYK_ZARATAKI2","TRYK_ZARATAKI3","TRYK_B_TRYK_UCP_T","TRYK_B_TRYK_3C_T","TRYK_B_TRYK_MTP_T","TRYK_B_TRYK_OCP_T","TRYK_B_TRYK_OCP_D_T","TRYK_DMARPAT_T","TRYK_C_AOR2_T","TRYK_U_B_Sage_T","TRYK_U_B_Wood_T","TRYK_U_B_BLTAN_T","TRYK_U_B_BLOD_T","TRYK_OVERALL_flesh","TRYK_OVERALL_nok_flesh","TRYK_OVERALL_SAGE_BLKboots","TRYK_OVERALL_SAGE_BLKboots_nk_blk","TRYK_OVERALL_SAGE_BLKboots_nk","TRYK_OVERALL_SAGE_BLKboots_nk_blk2","TRYK_OVERALL_SAGE","TRYK_SUITS_BLK_F","TRYK_SUITS_BR_F","TRYK_H_ghillie_top_headless3glass","TRYK_shoulder_armor_BK","TRYK_shoulder_armor_OD","TRYK_shoulder_armor_CY","TRYK_H_ghillie_top_headless3","TRYK_U_B_PCUHsW","TRYK_U_B_PCUHsW2","TRYK_U_B_PCUHsW3","TRYK_U_B_PCUHsW3nh","TRYK_U_B_PCUHsW4","TRYK_U_B_PCUHsW5","TRYK_U_B_PCUHsW6"};
+
 	//AI weapon classnames. Note: pistolList, rifleList, machinegunList, sniperList will not be read if generateDynamicWeapons is enabled.
 	//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	pistolList[] = {"hgun_ACPC2_F","hgun_P07_F","hgun_Pistol_heavy_01_F","hgun_Pistol_heavy_02_F","hgun_Rook40_F"};
-	rifleList[] = {"arifle_Katiba_C_F","arifle_Katiba_F","arifle_Katiba_GL_F","arifle_Mk20_F","arifle_Mk20_GL_F","arifle_Mk20_GL_plain_F","arifle_Mk20_plain_F","arifle_Mk20C_F","arifle_Mk20C_plain_F","arifle_MX_Black_F","arifle_MX_F","arifle_MX_GL_Black_F","arifle_MX_GL_F","arifle_MXC_Black_F","arifle_MXC_F","arifle_SDAR_F","arifle_TRG20_F","arifle_TRG21_F","arifle_TRG21_GL_F"};
-	machinegunList[] = {"arifle_MX_SW_Black_F","arifle_MX_SW_F","LMG_Mk200_F","LMG_Zafir_F","MMG_01_hex_F","MMG_01_tan_F","MMG_02_black_F","MMG_02_camo_F","MMG_02_sand_F"};
-	sniperList[] = {"arifle_MXM_Black_F","arifle_MXM_F","srifle_DMR_01_F","srifle_DMR_02_camo_F","srifle_DMR_02_F","srifle_DMR_02_sniper_F","srifle_DMR_03_F","srifle_DMR_03_khaki_F","srifle_DMR_03_multicam_F","srifle_DMR_03_tan_F","srifle_DMR_03_woodland_F","srifle_DMR_04_F","srifle_DMR_04_Tan_F","srifle_DMR_05_blk_F","srifle_DMR_05_hex_F","srifle_DMR_05_tan_f","srifle_DMR_06_camo_F","srifle_DMR_06_olive_F","srifle_EBR_F","srifle_GM6_camo_F","srifle_GM6_F","srifle_LRR_camo_F","srifle_LRR_F"};
+	pistolList[] = {"hgun_ACPC2_F","hgun_P07_F","hgun_Pistol_heavy_01_F","hgun_Pistol_heavy_02_F","hgun_Rook40_F","CUP_hgun_Colt1911","CUP_hgun_Compact","CUP_hgun_Makarov","CUP_hgun_MicroUzi","CUP_hgun_TaurusTracker455","CUP_hgun_TaurusTracker455_gold","CUP_hgun_M9","CUP_hgun_SA61","CUP_hgun_Duty","CUP_hgun_Phantom","CUP_hgun_PB6P9","CUP_hgun_Glock17","rhs_weap_pya","rhs_weap_makarov_pmm","rhsusf_weap_m1911a1","rhsusf_weap_glock17g4","rhsusf_weap_m9"};	
+	rifleList[] = {"arifle_Katiba_C_F","arifle_Katiba_F","arifle_Katiba_GL_F","arifle_Mk20_F","arifle_Mk20_GL_F","arifle_Mk20_GL_plain_F","arifle_Mk20_plain_F","arifle_Mk20C_F","arifle_Mk20C_plain_F","arifle_MX_Black_F","arifle_MX_F","arifle_MX_GL_Black_F","arifle_MX_GL_F","arifle_MXC_Black_F","arifle_MXC_F","arifle_SDAR_F","arifle_TRG20_F","arifle_TRG21_F","arifle_TRG21_GL_F","CUP_arifle_Mk16_CQC_FG","CUP_arifle_Mk16_CQC_SFG","CUP_arifle_Mk16_CQC_EGLM","CUP_arifle_Mk16_STD","CUP_arifle_Mk16_STD_FG","CUP_arifle_Mk16_STD_SFG","CUP_arifle_Mk16_STD_EGLM","CUP_arifle_Mk16_SV","CUP_arifle_Mk17_CQC","CUP_arifle_Mk17_CQC_FG","CUP_arifle_Mk17_CQC_SFG","CUP_arifle_Mk17_CQC_EGLM","CUP_arifle_Mk17_STD","CUP_arifle_Mk17_STD_FG","CUP_arifle_Mk17_STD_SFG","CUP_arifle_Mk17_STD_EGLM","CUP_arifle_Mk20","CUP_arifle_XM8_Compact_Rail","CUP_arifle_XM8_Railed","CUP_arifle_M16A4_Base","CUP_arifle_M4A1_BUIS_GL","CUP_arifle_M4A1_BUIS_camo_GL","CUP_arifle_M4A1_BUIS_desert_GL","CUP_arifle_M4A1_black","CUP_arifle_M4A1_desert","CUP_arifle_L85A2","CUP_arifle_L85A2_GL","CUP_arifle_L86A2","CUP_arifle_FNFAL_railed","CUP_arifle_AK107_GL","CUP_arifle_Sa58P_des","CUP_arifle_Sa58V_camo","CUP_arifle_Sa58RIS1","CUP_arifle_Sa58RIS1_des","CUP_arifle_Sa58RIS2","CUP_arifle_Sa58RIS2_camo","CUP_arifle_CZ805_A1","CUP_arifle_CZ805_GL","CUP_arifle_CZ805_B_GL","CUP_arifle_CZ805_B","CUP_arifle_XM8_Carbine","CUP_arifle_XM8_Carbine_FG","CUP_arifle_XM8_Carbine_GL","CUP_arifle_XM8_Compact","CUP_arifle_xm8_SAW","CUP_arifle_xm8_sharpshooter","CUP_arifle_Mk16_CQC","CUP_arifle_Sa58P","CUP_arifle_Sa58V","CUP_arifle_M16A2","CUP_arifle_M16A2_GL","CUP_arifle_M16A4_GL","CUP_arifle_M4A1","CUP_arifle_M4A1_camo","CUP_arifle_FNFAL","CUP_arifle_G36A","CUP_arifle_G36A_camo","CUP_arifle_G36K","CUP_arifle_G36K_camo","CUP_arifle_G36C","CUP_arifle_G36C_camo","CUP_arifle_MG36","CUP_arifle_MG36_camo","CUP_arifle_AK74","CUP_arifle_AK107","CUP_arifle_AKS74","CUP_arifle_AKS74U","CUP_arifle_AK74_GL","CUP_arifle_AKM","CUP_arifle_AKS","CUP_arifle_AKS_Gold","CUP_arifle_RPK74","CUP_arifle_AK74_GL_kobra","CUP_arifle_CZ805_A2","rhs_weap_M590_5RD","rhs_weap_M590_8RD","rhs_weap_m16a4","rhs_weap_m16a4_carryhandle","rhs_weap_m16a4_carryhandle_grip","rhs_weap_m16a4_carryhandle_grip_pmag","rhs_weap_m16a4_carryhandle_M203","rhs_weap_m16a4_carryhandle_pmag","rhs_weap_m16a4_grip","rhs_weap_m4","rhs_weap_m4_grip2","rhs_weap_m4_carryhandle","rhs_weap_m4_carryhandle_pmag","rhs_weap_m4_grip","rhs_weap_m4_m203","rhs_weap_m4_m320","rhs_weap_m4a1_carryhandle","rhs_weap_m4a1_carryhandle_grip2","rhs_weap_m4a1_carryhandle_pmag","rhs_weap_m4a1_carryhandle_m203","rhs_weap_m4a1","rhs_weap_m4a1_grip2","rhs_weap_m4a1_grip","rhs_weap_m4a1_m203","rhs_weap_m4a1_m320","rhs_weap_m4a1_blockII","rhs_weap_m4a1_blockII_KAC","rhs_weap_m4a1_blockII_grip2","rhs_weap_m4a1_blockII_grip2_KAC","rhs_weap_m4a1_blockII_M203","rhs_weap_mk18","rhs_weap_mk18_KAC","rhs_weap_mk18_grip2","rhs_weap_mk18_grip2_KAC","rhs_weap_mk18_m320","rhs_weap_ak103","rhs_weap_ak103_npz","rhs_weap_ak103_1","rhs_weap_ak74m","rhs_weap_ak74m_2mag","rhs_weap_ak74m_2mag_camo","rhs_weap_ak74m_2mag_npz","rhs_weap_ak74m_camo","rhs_weap_ak74m_desert","rhs_weap_ak74m_desert_npz","rhs_weap_ak74m_desert_folded","rhs_weap_ak74m_plummag_folded","rhs_weap_ak74m_folded","rhs_weap_ak74m_camo_folded","rhs_weap_ak74m_gp25","rhs_weap_ak74m_gp25_npz","rhs_weap_ak74m_npz","rhs_weap_ak74m_plummag","rhs_weap_ak74m_plummag_npz","rhs_weap_akm","rhs_weap_akm_gp25","rhs_weap_akms","rhs_weap_akms_gp25","rhs_weap_asval","rhs_weap_asval_npz","rhs_weap_ak104","rhs_weap_ak104_npz","rhs_weap_ak105","rhs_weap_ak105_npz"};
+	machinegunList[] = {"arifle_MX_SW_Black_F","arifle_MX_SW_F","LMG_Mk200_F","LMG_Zafir_F","MMG_01_hex_F","MMG_01_tan_F","MMG_02_black_F","MMG_02_camo_F","MMG_02_sand_F","CUP_lmg_M249_para","CUP_lmg_Mk48_des","CUP_lmg_Mk48_wdl","CUP_lmg_L110A1","CUP_lmg_Pecheneg","CUP_lmg_UK59","CUP_lmg_L7A2","CUP_lmg_M60A4","CUP_lmg_M240","CUP_lmg_M249","CUP_lmg_PKM","rhs_weap_m249_pip_L","rhs_weap_m249_pip_L_para","rhs_weap_m249_pip_L_vfg","rhs_weap_m249_pip_S","rhs_weap_m249_pip_S_para","rhs_weap_m249_pip_S_vfg","rhs_weap_m240B","rhs_weap_m240B_CAP","rhs_weap_m240G","rhs_weap_pkm","rhs_weap_pkp"};
+	sniperList[] = {"arifle_MXM_Black_F","arifle_MXM_F","srifle_DMR_01_F","srifle_DMR_02_camo_F","srifle_DMR_02_F","srifle_DMR_02_sniper_F","srifle_DMR_03_F","srifle_DMR_03_khaki_F","srifle_DMR_03_multicam_F","srifle_DMR_03_tan_F","srifle_DMR_03_woodland_F","srifle_DMR_04_F","srifle_DMR_04_Tan_F","srifle_DMR_05_blk_F","srifle_DMR_05_hex_F","srifle_DMR_05_tan_f","srifle_DMR_06_camo_F","srifle_DMR_06_olive_F","srifle_EBR_F","srifle_GM6_camo_F","srifle_GM6_F","srifle_LRR_camo_F","srifle_LRR_F","CUP_srifle_SVD_wdl_ghillie","CUP_srifle_SVD_des_ghillie_pso","CUP_srifle_DMR","CUP_srifle_ksvk","CUP_srifle_M110","CUP_srifle_M14","CUP_srifle_M24_des","CUP_srifle_M24_wdl","CUP_srifle_M24_ghillie","CUP_srifle_SVD","CUP_srifle_SVD_des","CUP_srifle_VSSVintorez","CUP_srifle_CZ750","CUP_srifle_Mk12SPR","CUP_srifle_AS50","CUP_srifle_AWM_des","CUP_srifle_AWM_wdl","CUP_srifle_CZ550","CUP_srifle_LeeEnfield","CUP_srifle_M40A3","rhs_weap_sr25","rhs_weap_sr25_ec","rhs_weap_m14ebrri","rhs_weap_XM2010","rhs_weap_XM2010_wd","rhs_weap_XM2010_d","rhs_weap_XM2010_sa","rhs_weap_svd","rhs_weap_svdp_wd","rhs_weap_svdp_wd_npz","rhs_weap_svdp_npz","rhs_weap_svds","rhs_weap_svds_npz","rhs_weap_m110"	};	
 	
 	//AI weapon scope attachment settings. Note: weaponOpticsList will not be read if generateDynamicOptics is enabled.
-	weaponOpticsList[] = {"optic_NVS","optic_SOS","optic_LRPS","optic_AMS","optic_AMS_khk","optic_AMS_snd","optic_KHS_blk","optic_KHS_hex","optic_KHS_old","optic_KHS_tan","optic_DMS","optic_Arco","optic_Hamr","Elcan_Exile","Elcan_reflex_Exile","optic_MRCO","optic_Holosight","optic_Holosight_smg","optic_Aco","optic_ACO_grn","optic_Aco_smg","optic_ACO_grn_smg","optic_Yorris","optic_MRD"};
-	
+	weaponOpticsList[] = {"optic_NVS","optic_SOS","optic_LRPS","optic_AMS","optic_AMS_khk","optic_AMS_snd","optic_KHS_blk","optic_KHS_hex","optic_KHS_old","optic_KHS_tan","optic_DMS","optic_Arco","optic_Hamr","Elcan_Exile","Elcan_reflex_Exile","optic_MRCO","optic_Holosight","optic_Holosight_smg","optic_Aco","optic_ACO_grn","optic_Aco_smg","optic_ACO_grn_smg","optic_Yorris","optic_MRD","CUP_optic_PSO_1","CUP_optic_PSO_3","CUP_optic_Kobra","CUP_optic_NSPU","CUP_optic_PechenegScope","CUP_optic_HoloBlack","CUP_optic_HoloWdl","CUP_optic_HoloDesert","CUP_optic_Eotech533","CUP_optic_Eotech533Grey","CUP_optic_CompM4","CUP_optic_SUSAT","CUP_optic_RCO","CUP_optic_RCO_desert","CUP_optic_CompM2_Woodland2","CUP_optic_CompM2_Woodland","CUP_optic_CompM2_Black","CUP_optic_CompM2_Desert","CUP_optic_ACOG","CUP_optic_SB_3_12x50_PMII","CUP_optic_AN_PVS_4","CUP_optic_AN_PVS_10","CUP_optic_LeupoldMk4","CUP_optic_LeupoldM3LR","CUP_optic_LeupoldMk4_CQ_T","CUP_optic_LeupoldMk4_MRT_tan","CUP_optic_LeupoldMk4_10x40_LRT_Desert","CUP_optic_LeupoldMk4_10x40_LRT_Woodland","CUP_optic_Leupold_VX3","CUP_optic_ElcanM145","CUP_optic_ELCAN_SpecterDR","CUP_optic_SB_11_4x20_PM","CUP_optic_ZDDot","CUP_optic_MRad","CUP_optic_TrijiconRx01_black","CUP_optic_TrijiconRx01_desert","rhsusf_acc_eotech_552","rhsusf_acc_LEUPOLDMK4","rhsusf_acc_ELCAN","rhsusf_acc_ELCAN_pip","rhsusf_acc_ACOG","rhsusf_acc_ACOG_pip","rhs_acc_1pn93_2","rhsusf_acc_ACOG2","rhsusf_acc_ACOG_USMC","rhsusf_acc_ACOG2_USMC","rhsusf_acc_ACOG3_USMC","rhsusf_acc_LEUPOLDMK4_2","rhsusf_acc_EOTECH","rhs_acc_1p29","rhs_acc_1p78","rhs_acc_pkas","rhs_acc_1p63","rhs_acc_ekp1","rhs_acc_pso1m2","rhs_acc_pgo7v","rhs_acc_1pn93_1","rhs_acc_pso1m21"};
+
 	//AI backpack types (for AI levels 0-3). Note: backpackTypes0-3 will not be read if generateDynamicBackpacks is enabled.
 	//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	backpackTypes0[] = {"B_AssaultPack_blk","B_AssaultPack_cbr","B_AssaultPack_dgtl","B_AssaultPack_khk","B_AssaultPack_mcamo","B_AssaultPack_rgr","B_AssaultPack_sgg","B_OutdoorPack_blk","B_OutdoorPack_blu","B_OutdoorPack_tan"};
@@ -695,9 +724,8 @@ class CfgA3XAISettings {
 	// Note: foodLoot will not be read if generateDynamicFood is enabled.
 	// Note: miscLoot will not be read if generateDynamicLoot is enabled.
 	//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	foodLoot[] = {"Exile_Item_GloriousKnakworst","Exile_Item_SausageGravy","Exile_Item_ChristmasTinner","Exile_Item_BBQSandwich","Exile_Item_Surstromming","Exile_Item_Catfood","Exile_Item_PlasticBottleFreshWater","Exile_Item_Beer","Exile_Item_Energydrink"};
-	miscLoot[] = {"Exile_Item_Rope","Exile_Item_DuctTape","Exile_Item_ExtensionCord","Exile_Item_FuelCanisterEmpty","Exile_Item_JunkMetal","Exile_Item_LightBulb","Exile_Item_MetalBoard","Exile_Item_MetalPole","Exile_Item_CamoTentKit"};
-	
+	foodLoot[] = {"Exile_Item_EMRE","Exile_Item_GloriousKnakworst","Exile_Item_Surstromming","Exile_Item_SausageGravy","Exile_Item_Catfood","Exile_Item_ChristmasTinner","Exile_Item_BBQSandwich","Exile_Item_Dogfood","Exile_Item_BeefParts","Exile_Item_Cheathas","Exile_Item_Noodles","Exile_Item_SeedAstics","Exile_Item_Raisins","Exile_Item_Moobar","Exile_Item_InstantCoffee","Exile_Item_PlasticBottleCoffee","Exile_Item_PowerDrink","Exile_Item_PlasticBottleFreshWater","Exile_Item_Beer","Exile_Item_EnergyDrink","Exile_Item_MountainDupe"};
+	miscLoot[] = {"Exile_Item_Rope","Exile_Item_DuctTape","Exile_Item_ExtensionCord","Exile_Item_FuelCanisterEmpty","Exile_Item_JunkMetal","Exile_Item_LightBulb","Exile_Item_MetalBoard","Exile_Item_MetalPole","Exile_Item_CamoTentKit","Exile_Item_Laptop","Exile_Item_BaseCameraKit","Exile_Item_Defibrillator"};
 	
 	//AI toolbelt item types. Toolbelt items are added to AI inventory upon death. Format: [item classname, item probability]
 	//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
