@@ -56,7 +56,7 @@ class CfgA3XAISettings {
 	//1: Generate AI weapons from Exile trader tables (Default)
 	//0: Weapons defined by pistolList, rifleList, machinegunList, sniperList
 	//dynamicWeaponBlacklist: Classnames of weapons to ignore from Exile trader tables
-	generateDynamicWeaponsgenerateDynamicWeapons = 0;
+	generateDynamicWeapons = 0;
 	dynamicWeaponBlacklist[] = {};
 	
 	//1: Use Exile loot table data as whitelist for AI-usable weapon scopes (Default)
@@ -325,7 +325,7 @@ class CfgA3XAISettings {
 	--------------------------------------------------------------------------------------------------------------------*/	
 
 	//Global maximum number of active AI land vehicle patrols. Set at 0 to disable (Default: 0).	
-	maxLandPatrols = 3;
+	maxLandPatrols = 5;
 	
 	//Probability of spawning Level 0/1/2/3 AI land vehicle spawns. Probabilities should add up to 1.00		
 	levelChancesLand[] = {0.00,0.50,0.35,0.15};
