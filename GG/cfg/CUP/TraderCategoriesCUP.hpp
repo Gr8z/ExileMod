@@ -129,7 +129,6 @@
 	"CUP_30Rnd_9x19_EVO",
 	"CUP_20Rnd_B_AA12_Pellets",
 	"CUP_20Rnd_B_AA12_74Slug",
-	"CUP_20Rnd_B_AA12_HE",	
 	"CUP_30Rnd_545x39_AK_M",
 	"CUP_30Rnd_556x45_G36",
 	"CUP_30Rnd_556x45_Stanag",
