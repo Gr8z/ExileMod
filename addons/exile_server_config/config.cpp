@@ -1043,7 +1043,7 @@ class CfgSettings
 	{
 		spawnChancePerBuilding = 90;
 		spawnChancePerPosition = 75;
-		maximumNumberOfLootSpotsPerBuilding = 10;
+		maximumNumberOfLootSpotsPerBuilding = 6;
 		maximumNumberOfItemsPerLootSpot = 2;
 		spawnRadius = 80;
 		visualThreshold = 10;
