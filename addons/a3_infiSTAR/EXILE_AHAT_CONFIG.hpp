@@ -102,7 +102,7 @@ adminUIDandAccess[] =
 			"Teleport On Map Click","Teleport - Target To Me","Teleport - Me To Target","Teleport In Facing Direction (10m steps)",
 			"spectating","Delete Vehicle","FlyUp","ShowGear","Show Server Information",
 			"HealSelf","HealRepairNear","AdminLog","Freeze Target","UnFreeze Target","Restrain","UnRestrain",
-			"==== Loadouts ====","==== Vehicles ====","==== Base Deleter ====","==== WeatherLord ====","Items spawn menu",
+			"==== Vehicles ====","==== Base Deleter ====","Items spawn menu",
 			"Remove Gear","Heal","Restore","Flip Vehicle","Move In My Vehicle","Move In Target Vehicle","Eject","Eject Crew",
 			"Kill","Force Disconnect","Kick (Silent)","Kick (Announce)",
 			"infiSTAR Player ESP","infiSTAR Dead ESP","infiSTAR AI ESP",
@@ -121,9 +121,8 @@ adminUIDandAccess[] =
 		 "0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
 			"spectating","ShowGear","Show Server Information",
-			"Freeze Target","UnFreeze Target","Restrain","UnRestrain",
-			"Remove Gear","Heal","Restore","Flip Vehicle","Eject","Eject Crew",
-			"Kill","Force Disconnect","Kick (Silent)","Kick (Announce)",
+			"Remove Gear","Heal","Restore","Flip Vehicle",
+			"Force Disconnect","Kick (Silent)","Kick (Announce)",
 			"Disable Announces",
 			"Request Steam Name","showinfo","Add / Remove Money","Add / Remove Respect",
 			"UnlockLockVehicle"
