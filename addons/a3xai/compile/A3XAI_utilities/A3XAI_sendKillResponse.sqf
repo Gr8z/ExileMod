@@ -106,7 +106,7 @@ if (A3XAI_enableRespectRewards) then {
 
 
 if (A3XAI_enableDeathMessages) then {
-	_killMessage = format ["%1 was killed by %2", _victim getVariable ["bodyName","Bandit"], (name _killer)];
+	_killMessage = format ["%1 was killed by %2", "AI", (name _killer)];
 
 	if !(_fragAttributes isEqualTo []) then {
 		_killMessage = _killMessage + " (";
