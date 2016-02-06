@@ -1866,12 +1866,12 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// Hatchback (Sport)
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Car_Hatchback_Sport_Red					{ quality = 1; price = 14000; };
-	class Exile_Car_Hatchback_Sport_Blue				{ quality = 1; price = 14000; };
-	class Exile_Car_Hatchback_Sport_Orange				{ quality = 1; price = 14000; };
-	class Exile_Car_Hatchback_Sport_White				{ quality = 1; price = 14000; };
-	class Exile_Car_Hatchback_Sport_Beige				{ quality = 1; price = 14000; };
-	class Exile_Car_Hatchback_Sport_Green				{ quality = 1; price = 14000; };
+	class Exile_Car_Hatchback_Sport_Red					{ quality = 1; price = 4000; };
+	class Exile_Car_Hatchback_Sport_Blue				{ quality = 1; price = 4000; };
+	class Exile_Car_Hatchback_Sport_Orange				{ quality = 1; price = 4000; };
+	class Exile_Car_Hatchback_Sport_White				{ quality = 1; price = 4000; };
+	class Exile_Car_Hatchback_Sport_Beige				{ quality = 1; price = 4000; };
+	class Exile_Car_Hatchback_Sport_Green				{ quality = 1; price = 4000; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// HEMMT
