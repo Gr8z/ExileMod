@@ -1837,7 +1837,6 @@ DMS_Use_Map_Config = true;	// Whether or not to use config overwrites specific t
 											"TRYK_B_FieldPack_Wood",
 											"TRYK_Winter_pack"
 										];
-										];
 	
 	DMS_ai_SupportedClasses =			[							// Allowed AI classes. If you want to create your own class, make sure you define everything as I've defined above, and add it here
 											"assault",
