@@ -292,7 +292,7 @@ blacklistedVariables[] =
 };
 
 
-UVC = true;	/* Use Vehicle Check(s) - recommended but I am not sure if all existing vehicles are already in this white-list below. "EXILE" ones are white-listed anyways */
+UVC = false;	/* Use Vehicle Check(s) - recommended but I am not sure if all existing vehicles are already in this white-list below. "EXILE" ones are white-listed anyways */
 VehicleWhiteList[] =
 {
 	"B_Parachute","B_Parachute_02_F","O_Parachute_02_F","Steerable_Parachute_F",
