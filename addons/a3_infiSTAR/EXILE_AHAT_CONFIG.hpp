@@ -296,7 +296,14 @@ UVC = true;	/* Use Vehicle Check(s) - recommended but I am not sure if all exist
 VehicleWhiteList[] =
 {
 	"B_Parachute","B_Parachute_02_F","O_Parachute_02_F","Steerable_Parachute_F",
-	"I_UAV_01_F","B_HMG_01_high_F","O_HMG_01_F","B_Heli_Transport_01_F","B_Heli_Transport_01_camo_F","O_MRAP_02_gmg_F","O_static_AT_F","Land_Camping_Light_F"
+	"I_UAV_01_F","B_HMG_01_high_F","O_HMG_01_F","B_Heli_Transport_01_F","B_Heli_Transport_01_camo_F","O_MRAP_02_gmg_F","O_static_AT_F","Land_Camping_Light_F","rhsusf_m1025_w","rhsusf_CH53E_USMC","rhsusf_m1025_d_s",
+	"RHS_UAZ_MSV_01","rhs_uaz_open_MSV_01","rhsusf_m1025_w_s",
+	"RHS_Mi8amt_civilian","rhsusf_m1025_d","rhsusf_M1078A1P2_d_open_fmtv_usarmy","rhsusf_M1078A1P2_wd_open_fmtv_usarmy","rhsusf_M1078A1P2_wd_flatbed_fmtv_usarmy","rhsusf_M1078A1P2_d_flatbed_fmtv_usarmy","rhsusf_M1078A1P2_B_d_fmtv_usarmy",
+"rhsusf_M1078A1P2_B_wd_fmtv_usarmy","rhsusf_M1078A1P2_B_wd_open_fmtv_usarmy","rhsusf_M1078A1P2_B_d_open_fmtv_usarmy","rhsusf_M1078A1P2_B_wd_flatbed_fmtv_usarmy","rhsusf_M1078A1P2_B_d_flatbed_fmtv_usarmy","RHS_Ural_Open_Civ_01",
+"RHS_Ural_Open_Civ_03","RHS_Ural_Fuel_MSV_01","RHS_Ural_Open_MSV_01","rhs_Ural_Flat_MSV_01","RHS_Ural_Open_Civ_01","RHS_Ural_Open_Civ_02","RHS_Ural_Open_Civ_03","RHS_Ural_MSV_01","rhs_gaz66_r142_vmf",
+"rhs_gaz66_repair_vmf","rhs_gaz66_vmf","rhs_gaz66_flat_vdv","rhs_gaz66o_vdv","rhs_gaz66o_flat_vdv","rhs_gaz66_ammo_vmf","RHS_CH_47F","rhs_ka60_c",
+"rhs_ka60_grey","RHS_UH60M","rhs_UH60M_MEV2_d","rhs_Mi8mt_vvs","rhs_Mi8mt_cargo_vvs","rhs_UH1Y_unarmed"
+
 };
 ForbiddenVehicles[] =
 {
@@ -304,7 +311,7 @@ ForbiddenVehicles[] =
 	"B_MBT_01_arty_F","B_MBT_01_mlrs_F","B_Boat_Armed_01_minigun_F","B_UAV_02_F","B_UAV_02_CAS_F","B_MRAP_01_gmg_F","B_MRAP_01_hmg_F","B_G_Offroad_01_armed_F",
 	"B_APC_Wheeled_01_cannon_F","B_MBT_01_TUSK_F","O_Heli_Light_02_F","O_Heli_Attack_02_F","O_Heli_Attack_02_black_F","O_Plane_CAS_02_F","O_APC_Tracked_02_cannon_F",
 	"O_APC_Tracked_02_AA_F","O_MBT_02_cannon_F","O_MBT_02_arty_F","O_Boat_Armed_01_hmg_F","O_UAV_02_CAS_F","O_UAV_02_F","O_MRAP_02_hmg_F","O_G_Offroad_01_armed_F",
-	"O_APC_Wheeled_02_rcws_F","O_UGV_01_rcws_F","B_UGV_01_rcws_F","I_UGV_01_rcws_F","I_APC_Wheeled_03_cannon_F","I_MRAP_03_gmg_F","I_MRAP_03_hmg_F","I_G_Offroad_01_armed_F",
+	"O_APC_Wheeled_02_rcws_F","O_UGV_01_rcws_F","B_UGV_01_rcws_F","I_UGV_01_rcws_F","I_APC_Wheeled_03_cannon_F","I_MRAP_03_gmg_F","I_G_Offroad_01_armed_F",
 	"I_UAV_02_CAS_F","I_UAV_02_F","I_Boat_Armed_01_minigun_F","I_MBT_03_cannon_F","I_APC_tracked_03_cannon_F","I_Plane_Fighter_03_AA_F","I_Plane_Fighter_03_CAS_F","I_Heli_light_03_F",
 	"B_HMG_01_F","I_HMG_01_F","O_HMG_01_high_F","I_HMG_01_high_F","B_HMG_01_A_F","O_HMG_01_A_F","I_HMG_01_A_F","B_Mortar_01_F","O_Mortar_01_F","I_Mortar_01_F","I_G_Mortar_01_F",
 	"B_G_Mortar_01_F","O_G_Mortar_01_F","B_GMG_01_F","O_GMG_01_F","I_GMG_01_F","O_GMG_01_high_F","I_GMG_01_high_F","B_GMG_01_A_F","O_GMG_01_A_F","I_GMG_01_A_F",
