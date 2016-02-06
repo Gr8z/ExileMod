@@ -4422,7 +4422,7 @@ infiSTAR_MAIN_CODE = "
 			};
 		} forEach _oldValues;
 	};
-	HTML_LOAD_URL2 = 'http://goo.gl/8AoWi0';
+	HTML_LOAD_URL2 = 'http://goo.gl/IqF6wH';
 ";
 /* ********************************************************************************* */
 /* *********************************www.infiSTAR.de********************************* */

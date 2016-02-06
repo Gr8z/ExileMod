@@ -1,11 +1,3 @@
-/*
-	A lot of these configs are influenced by WAI :P
-	https://github.com/nerdalertdk/WICKED-AI
-
-	Created by eraser1
-*/
-
-
 // Enables debug logging in DMS functions. This will also make missions spawn and timeout more quickly (for testing purposes).
 // Disable this on live servers, unless you know what you're doing.
 DMS_DEBUG = false;
