@@ -2107,8 +2107,6 @@ DMS_Use_Map_Config = true;	// Whether or not to use config overwrites specific t
 											"TRYK_B_FieldPack_Wood",
 											"TRYK_Winter_pack"
 										];
-											
-										];
 	DMS_BoxItems						= DMS_BoxSurvivalSupplies+DMS_BoxBuildingSupplies+DMS_BoxOptics;	// Random "items" can spawn optics, survival supplies, or building supplies
 
 	DMS_RareLoot						= true;						// Potential chance to spawn rare loot in any crate.
