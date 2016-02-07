@@ -127,9 +127,7 @@
     class CUP_8Rnd_B_Beneli_74Slug    						{ quality = 2; price = 25; };
 	class CUP_50Rnd_UK59_762x54R_Tracer						{ quality = 2; price = 50; };
     class CUP_8Rnd_B_Saiga12_74Slug_M    					{ quality = 2; price = 25; };
-    class CUP_AT13_M    									{ quality = 2; price = 50; };
     class CUP_HandGrenade_L109A1_HE    						{ quality = 2; price = 125; };
-    class CUP_Dragon_EP1_M    								{ quality = 2; price = 130; };
     class CUP_FlareGreen_M203    							{ quality = 2; price = 25; };
     class CUP_FlareRed_GP25_M    							{ quality = 2; price = 25; };
     class CUP_FlareWhite_GP25_M    							{ quality = 2; price = 25; };
