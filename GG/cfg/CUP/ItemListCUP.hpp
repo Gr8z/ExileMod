@@ -287,7 +287,7 @@
     class CUP_srifle_VSSVintorez 					{ quality = 1; price = 1100; };
     class CUP_srifle_CZ750 							{ quality = 1; price = 500; };
     class CUP_srifle_Mk12SPR 						{ quality = 1; price = 1700; };
-    class CUP_srifle_AS50 							{ quality = 1; price = 5000; };
+    class CUP_srifle_AS50 							{ quality = 1; price = 11500; };
     class CUP_srifle_AWM_des 						{ quality = 1; price = 2100; };
     class CUP_srifle_AWM_wdl 						{ quality = 1; price = 2100; };
     class CUP_srifle_CZ550 							{ quality = 1; price = 1200; };
