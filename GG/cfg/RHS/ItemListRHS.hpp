@@ -315,8 +315,8 @@
 	///////////////////////////////////////////////////////////////////////////////
 	// VEHICLES
 	///////////////////////////////////////////////////////////////////////////////
-	class     rhsusf_m1025_d                            { quality = 1; price = 2500; };
-	class     rhsusf_m1025_w                            { quality = 1; price = 2500; };
+	class     rhsusf_m1025_d                            { quality = 1; price = 5000; };
+	class     rhsusf_m1025_w                            { quality = 1; price = 5000; };
 	class     rhsusf_m1025_w_s                          { quality = 1; price = 5500; };
 	class     rhsusf_m1025_d_s                          { quality = 1; price = 5500; };
 	class     rhsusf_m998_w_2dr                         { quality = 1; price = 5500; };
@@ -332,12 +332,12 @@
 	class     rhsusf_m998_d_2dr_fulltop                 { quality = 1; price = 5000; };
 	class     RHS_UAZ_MSV_01                            { quality = 1; price = 800; };
 	class     rhs_uaz_open_MSV_01                       { quality = 1; price = 650; };
-	class     rhs_uaz_dshkm_chdkz                       { quality = 1; price = 3500; };
+	class     rhs_uaz_dshkm_chdkz                       { quality = 1; price = 8000; };
 	class     RHS_Ural_Flat_MSV_01                      { quality = 1; price = 4000; };
 	class     RHS_Ural_MSV_01                           { quality = 1; price = 4000; };
 	class     RHS_Ural_Open_Civ_03                      { quality = 1; price = 3500; };
-	class     rhsusf_m1025_w_m2                         { quality = 1; price = 15000; };
-	class     rhsusf_m1025_d_m2                         { quality = 1; price = 15000; };
+	class     rhsusf_m1025_w_m2                         { quality = 1; price = 25000; };
+	class     rhsusf_m1025_d_m2                         { quality = 1; price = 25000; };
 	class     rhsusf_M1078A1P2_B_M2_wd_fmtv_usarmy      { quality = 1; price = 50000; };
 	class     rhsusf_M1078A1P2_B_M2_wd_flatbed_fmtv_usarmy  { quality = 1; price = 50000; };
 	class     rhsusf_M1078A1P2_B_M2_d_fmtv_usarmy  { quality = 1; price = 50000; };
