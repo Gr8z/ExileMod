@@ -3,15 +3,15 @@
 	///////////////////////////////////////////////////////////////////////////////
 	
 	//UNIFORMS
-	class rhs_uniform_cu_ocp						{ quality = 3; price = 60; };
-	class rhs_uniform_cu_ucp						{ quality = 3; price = 60; };
-	class rhs_uniform_cu_ocp_101st                  { quality = 3; price = 60; };
-	class rhs_uniform_emr_patchless					{ quality = 2; price = 60; };
-	class rhs_uniform_flora_patchless				{ quality = 2; price = 60; };
-	class rhs_uniform_flora_patchless_alt			{ quality = 2; price = 60; };
-	class rhs_uniform_mvd_izlom						{ quality = 2; price = 60; };
-	class rhs_uniform_m88_patchless					{ quality = 2; price = 60; };
-	class rhs_uniform_mflora_patchless				{ quality = 2; price = 60; };
+	class rhs_uniform_cu_ocp						{ quality = 3; price = 50; };
+	class rhs_uniform_cu_ucp						{ quality = 3; price = 50; };
+	class rhs_uniform_cu_ocp_101st                  { quality = 3; price = 50; };
+	class rhs_uniform_emr_patchless					{ quality = 2; price = 50; };
+	class rhs_uniform_flora_patchless				{ quality = 2; price = 50; };
+	class rhs_uniform_flora_patchless_alt			{ quality = 2; price = 50; };
+	class rhs_uniform_mvd_izlom						{ quality = 2; price = 50; };
+	class rhs_uniform_m88_patchless					{ quality = 2; price = 50; };
+	class rhs_uniform_mflora_patchless				{ quality = 2; price = 50; };
 	class rhs_uniform_vdv_mflora                    { quality = 2; price = 55; };
 	class rhs_uniform_FROG01_m81					{ quality = 3; price = 65; };
 	class rhs_uniform_FROG01_d						{ quality = 3; price = 65; };
@@ -150,8 +150,8 @@
 	class rhsusf_8Rnd_Slug										{ quality = 3; price = 50; };
 	class rhsusf_20Rnd_762x51_m993_Mag							{ quality = 3; price = 45; };
 	class rhsusf_5Rnd_300winmag_xm2010							{ quality = 3; price = 55; };
-	class rhsusf_8Rnd_HE  										{ quality = 1; price = 100; };
-    class rhsusf_8Rnd_FRAG  									{ quality = 1; price = 100; };
+	class rhsusf_8Rnd_HE  										{ quality = 1; price = 20; };
+    class rhsusf_8Rnd_FRAG  									{ quality = 1; price = 20; };
 	class rhsusf_100Rnd_762x51_m61_ap 							{ quality = 1; price = 100; };							
 	//Russian
 	class rhs_30Rnd_762x39mm									{ quality = 1; price = 20; };
@@ -289,10 +289,10 @@
 	// RHS Mines
 	class rhs_mine_pmn2_mag 						{ quality = 1; price = 1500; };
 	class rhs_mine_tm62m_mag 						{ quality = 1; price = 1500; };
-	class rhsusf_m112_mag 							{ quality = 1; price = 2500; };
+	class rhsusf_m112_mag 							{ quality = 1; price = 2000; };
 	class rhsusf_m112x4_mag							{ quality = 1; price = 6000; };
 	class rhs_mine_m19_mag 							{ quality = 1; price = 1500; };
-	class rhs_weap_rpg7 							{ quality = 1; price = 30000; };
+	class rhs_weap_rpg7 							{ quality = 1; price = 25000; };
 	
 
 	///////////////////////////////////////////////////////////////////////////////
@@ -315,17 +315,17 @@
 	///////////////////////////////////////////////////////////////////////////////
 	// VEHICLES
 	///////////////////////////////////////////////////////////////////////////////
-	class     rhsusf_m1025_d                            { quality = 1; price = 2500; };
-	class     rhsusf_m1025_w                            { quality = 1; price = 2500; };
-	class     rhsusf_m1025_w_s                          { quality = 1; price = 5500; };
-	class     rhsusf_m1025_d_s                          { quality = 1; price = 5500; };
-	class     rhsusf_m998_w_2dr                         { quality = 1; price = 5500; };
-	class     rhsusf_m998_d_s_2dr                       { quality = 1; price = 8000; };
-	class     rhs_tigr_vmf                              { quality = 1; price = 5000; };
-	class     rhs_tigr_3camo_vmf                        { quality = 1; price = 5000; };
-	class     rhs_tigr_ffv_vmf                          { quality = 1; price = 5000; };
-	class     rhs_tigr_ffv_3camo_vdv                    { quality = 1; price = 5000; };
-	class     rhs_tigr_ffv_3camo_vv                     { quality = 1; price = 5000; };
+	class     rhsusf_m1025_d                            { quality = 1; price = 2000; };
+	class     rhsusf_m1025_w                            { quality = 1; price = 2000; };
+	class     rhsusf_m1025_w_s                          { quality = 1; price = 5000; };
+	class     rhsusf_m1025_d_s                          { quality = 1; price = 5000; };
+	class     rhsusf_m998_w_2dr                         { quality = 1; price = 5000; };
+	class     rhsusf_m998_d_s_2dr                       { quality = 1; price = 7000; };
+	class     rhs_tigr_vmf                              { quality = 1; price = 4000; };
+	class     rhs_tigr_3camo_vmf                        { quality = 1; price = 4000; };
+	class     rhs_tigr_ffv_vmf                          { quality = 1; price = 4000; };
+	class     rhs_tigr_ffv_3camo_vdv                    { quality = 1; price = 4000; };
+	class     rhs_tigr_ffv_3camo_vv                     { quality = 1; price = 4000; };
 	class     rhs_tigr_m_msv                            { quality = 1; price = 10000; };
 	class     rhs_tigr_m_3camo_vdv                      { quality = 1; price = 10000; };
 	class     rhsusf_m998_w_2dr_fulltop                 { quality = 1; price = 5000; };
@@ -356,11 +356,11 @@
 	class 	  rhs_ka60_grey								{ quality = 1; price = 14000; };
 	class     RHS_CH_47F                                { quality = 1; price = 50000; };
 	class     RHS_CH_47F_light                          { quality = 1; price = 50000; };
-	class     RHS_UH60M                                 { quality = 1; price = 55000; };
+	class     RHS_UH60M                                 { quality = 1; price = 50000; };
 	class	  RHS_Mi8mt_vvs                             { quality = 1; price = 30000; };
 	class	  RHS_Mi8amt_chdkz                          { quality = 1; price = 8000; };
-	class     RHS_UH1Y                                  { quality = 1; price = 650000; };
+	class     RHS_UH1Y                                  { quality = 1; price = 250000; };
 	class     RHS_Mi24Vt_vvs                            { quality = 1; price = 200000; };
-	class     RHS_C130J                                 { quality = 1; price = 45000; };
-	class     GNT_C185F                                 { quality = 1; price = 5500; };
-	class     rhsusf_CH53E_USMC                         { quality = 1; price = 42000; };
+	class     RHS_C130J                                 { quality = 1; price = 40000; };
+	class     GNT_C185F                                 { quality = 1; price = 5000; };
+	class     rhsusf_CH53E_USMC                         { quality = 1; price = 32000; };
