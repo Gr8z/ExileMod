@@ -2011,7 +2011,6 @@ DMS_Use_Map_Config = true;	// Whether or not to use config overwrites specific t
 											"CUP_optic_PSO_3",
 											"CUP_optic_Kobra",
 											"CUP_optic_GOSHAWK",
-											"CUP_optic_NSPU",
 											"CUP_optic_PechenegScope",
 											"CUP_optic_HoloBlack",
 											"CUP_optic_HoloWdl",
