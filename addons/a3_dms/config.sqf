@@ -1847,12 +1847,12 @@ DMS_Use_Map_Config = true;	// Whether or not to use config overwrites specific t
 	DMS_AI_launcher_ammo_count			= 2;						// How many rockets an AI will get with its launcher
 	DMS_ai_remove_launchers				= true;						// Remove rocket launchers on AI death
 
-	DMS_AI_wep_launchers_AT =			[							// AT Launchers
+	//DMS_AI_wep_launchers_AT =			[							// AT Launchers
 											"launch_NLAW_F",
 											"launch_RPG32_F",
 											"launch_B_Titan_short_F"
 										];
-	DMS_AI_wep_launchers_AA =			[							// AA Launchers
+	//DMS_AI_wep_launchers_AA =			[							// AA Launchers
 											"launch_B_Titan_F"
 										];
 
