@@ -356,6 +356,7 @@
 	class 	  rhs_ka60_grey								{ quality = 1; price = 14000; };
 	class     RHS_CH_47F                                { quality = 1; price = 50000; };
 	class     RHS_CH_47F_light                          { quality = 1; price = 50000; };
+	class     O_Heli_Light_02_v2_F                      { quality = 1; price = 850000; };
 	class     RHS_UH60M                                 { quality = 1; price = 55000; };
 	class	  RHS_Mi8mt_vvs                             { quality = 1; price = 30000; };
 	class	  RHS_Mi8amt_chdkz                          { quality = 1; price = 8000; };
