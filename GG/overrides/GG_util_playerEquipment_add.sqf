@@ -80,7 +80,11 @@ else
 		case "Throw",
 		case "Binocular": 
 		{
-			_player addWeaponGlobal _itemClassName;	 
+			_player addWeaponGlobal _itemClassName;
+			if (_itemType IN ["AssaultRifle","Rifle","SniperRifle","SubmachineGun","MachineGun","MachineGun"]) then
+			{
+			    removeAllPrimaryWeaponItems _player;
+			};
 			_added = true;
 		};
 		case "GPS", 
