@@ -1471,12 +1471,12 @@ class CfgExileArsenal
 	class B_Bergen_mcamo							{ quality = 2; price = 200; };
 	class B_Bergen_rgr								{ quality = 2; price = 200; };
 	class B_Bergen_sgg								{ quality = 2; price = 200; };
-	class B_Carryall_cbr							{ quality = 3; price = 300; };
-	class B_Carryall_khk							{ quality = 3; price = 300; };
-	class B_Carryall_mcamo							{ quality = 3; price = 300; };
-	class B_Carryall_ocamo							{ quality = 3; price = 300; };
-	class B_Carryall_oli							{ quality = 3; price = 300; };
-	class B_Carryall_oucamo							{ quality = 3; price = 300; };
+	class B_Carryall_cbr							{ quality = 3; price = 1000; };
+	class B_Carryall_khk							{ quality = 3; price = 1000; };
+	class B_Carryall_mcamo							{ quality = 3; price = 1000; };
+	class B_Carryall_ocamo							{ quality = 3; price = 1000; };
+	class B_Carryall_oli							{ quality = 3; price = 1000; };
+	class B_Carryall_oucamo							{ quality = 3; price = 1000; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Ammunition
@@ -1918,18 +1918,18 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// Offroad (Armed)
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Car_Offroad_Armed_Guerilla01 			{ quality = 1; price = 25000; };
-	class Exile_Car_Offroad_Armed_Guerilla02 			{ quality = 1; price = 25000; };
-	class Exile_Car_Offroad_Armed_Guerilla03 			{ quality = 1; price = 25000; };
-	class Exile_Car_Offroad_Armed_Guerilla04 			{ quality = 1; price = 25000; };
-	class Exile_Car_Offroad_Armed_Guerilla05 			{ quality = 1; price = 25000; };
-	class Exile_Car_Offroad_Armed_Guerilla06 			{ quality = 1; price = 25000; };
-	class Exile_Car_Offroad_Armed_Guerilla07 			{ quality = 1; price = 25000; };
-	class Exile_Car_Offroad_Armed_Guerilla08 			{ quality = 1; price = 25000; };
-	class Exile_Car_Offroad_Armed_Guerilla09 			{ quality = 1; price = 25000; };
-	class Exile_Car_Offroad_Armed_Guerilla10 			{ quality = 1; price = 25000; };
-	class Exile_Car_Offroad_Armed_Guerilla11 			{ quality = 1; price = 25000; };
-	class Exile_Car_Offroad_Armed_Guerilla12 			{ quality = 1; price = 25000; };
+	class Exile_Car_Offroad_Armed_Guerilla01 			{ quality = 1; price = 22500; };
+	class Exile_Car_Offroad_Armed_Guerilla02 			{ quality = 1; price = 22500; };
+	class Exile_Car_Offroad_Armed_Guerilla03 			{ quality = 1; price = 22500; };
+	class Exile_Car_Offroad_Armed_Guerilla04 			{ quality = 1; price = 22500; };
+	class Exile_Car_Offroad_Armed_Guerilla05 			{ quality = 1; price = 22500; };
+	class Exile_Car_Offroad_Armed_Guerilla06 			{ quality = 1; price = 22500; };
+	class Exile_Car_Offroad_Armed_Guerilla07 			{ quality = 1; price = 22500; };
+	class Exile_Car_Offroad_Armed_Guerilla08 			{ quality = 1; price = 22500; };
+	class Exile_Car_Offroad_Armed_Guerilla09 			{ quality = 1; price = 22500; };
+	class Exile_Car_Offroad_Armed_Guerilla10 			{ quality = 1; price = 22500; };
+	class Exile_Car_Offroad_Armed_Guerilla11 			{ quality = 1; price = 22500; };
+	class Exile_Car_Offroad_Armed_Guerilla12 			{ quality = 1; price = 22500; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Offroad (Repair)
@@ -1976,32 +1976,32 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// Van 
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Car_Van_Black 							{ quality = 1; price = 3000; };
-	class Exile_Car_Van_White 							{ quality = 1; price = 3000; };
-	class Exile_Car_Van_Red 							{ quality = 1; price = 3000; };
-	class Exile_Car_Van_Guerilla01 						{ quality = 1; price = 3000; };
-	class Exile_Car_Van_Guerilla02 						{ quality = 1; price = 3000; };
-	class Exile_Car_Van_Guerilla03 						{ quality = 1; price = 3000; };
-	class Exile_Car_Van_Guerilla04 						{ quality = 1; price = 3000; };
-	class Exile_Car_Van_Guerilla05 						{ quality = 1; price = 3000; };
-	class Exile_Car_Van_Guerilla06 						{ quality = 1; price = 3000; };
-	class Exile_Car_Van_Guerilla07 						{ quality = 1; price = 3000; };
-	class Exile_Car_Van_Guerilla08 						{ quality = 1; price = 3000; };
+	class Exile_Car_Van_Black 							{ quality = 1; price = 2750; };
+	class Exile_Car_Van_White 							{ quality = 1; price = 2750; };
+	class Exile_Car_Van_Red 							{ quality = 1; price = 2750; };
+	class Exile_Car_Van_Guerilla01 						{ quality = 1; price = 2750; };
+	class Exile_Car_Van_Guerilla02 						{ quality = 1; price = 2750; };
+	class Exile_Car_Van_Guerilla03 						{ quality = 1; price = 2750; };
+	class Exile_Car_Van_Guerilla04 						{ quality = 1; price = 2750; };
+	class Exile_Car_Van_Guerilla05 						{ quality = 1; price = 2750; };
+	class Exile_Car_Van_Guerilla06 						{ quality = 1; price = 2750; };
+	class Exile_Car_Van_Guerilla07 						{ quality = 1; price = 2750; };
+	class Exile_Car_Van_Guerilla08 						{ quality = 1; price = 2750; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Van (Box) 
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Car_Van_Box_Black 						{ quality = 1; price = 3000; };
-	class Exile_Car_Van_Box_White 						{ quality = 1; price = 3000; };
-	class Exile_Car_Van_Box_Red 						{ quality = 1; price = 3000; };
-	class Exile_Car_Van_Box_Guerilla01 					{ quality = 1; price = 3000; };
-	class Exile_Car_Van_Box_Guerilla02 					{ quality = 1; price = 3000; };
-	class Exile_Car_Van_Box_Guerilla03 					{ quality = 1; price = 3000; };
-	class Exile_Car_Van_Box_Guerilla04 					{ quality = 1; price = 3000; };
-	class Exile_Car_Van_Box_Guerilla05 					{ quality = 1; price = 3000; };
-	class Exile_Car_Van_Box_Guerilla06 					{ quality = 1; price = 3000; };
-	class Exile_Car_Van_Box_Guerilla07 					{ quality = 1; price = 3000; };
-	class Exile_Car_Van_Box_Guerilla08 					{ quality = 1; price = 3000; };
+	class Exile_Car_Van_Box_Black 						{ quality = 1; price = 3500; };
+	class Exile_Car_Van_Box_White 						{ quality = 1; price = 3500; };
+	class Exile_Car_Van_Box_Red 						{ quality = 1; price = 3500; };
+	class Exile_Car_Van_Box_Guerilla01 					{ quality = 1; price = 3500; };
+	class Exile_Car_Van_Box_Guerilla02 					{ quality = 1; price = 3500; };
+	class Exile_Car_Van_Box_Guerilla03 					{ quality = 1; price = 3500; };
+	class Exile_Car_Van_Box_Guerilla04 					{ quality = 1; price = 3500; };
+	class Exile_Car_Van_Box_Guerilla05 					{ quality = 1; price = 3500; };
+	class Exile_Car_Van_Box_Guerilla06 					{ quality = 1; price = 3500; };
+	class Exile_Car_Van_Box_Guerilla07 					{ quality = 1; price = 3500; };
+	class Exile_Car_Van_Box_Guerilla08 					{ quality = 1; price = 3500; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Van (Fuel) 
