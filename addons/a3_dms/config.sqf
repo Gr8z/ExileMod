@@ -2020,7 +2020,6 @@ DMS_Use_Map_Config = true;	// Whether or not to use config overwrites specific t
 											"CUP_optic_Eotech533Grey",
 											"CUP_optic_CompM4",
 											"CUP_optic_SUSAT",
-											"CUP_optic_CWS",
 											"CUP_optic_RCO",
 											"CUP_optic_RCO_desert",
 											"CUP_optic_CompM2_Woodland2",
