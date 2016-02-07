@@ -404,6 +404,7 @@
 			"RHS_Mi8amt_chdkz",
 			"RHS_UH1Y",
 			"RHS_Mi24Vt_vvs",
+			"O_Heli_Light_02_v2_F",
 			"rhsusf_CH53E_USMC"
 		};
 	};
