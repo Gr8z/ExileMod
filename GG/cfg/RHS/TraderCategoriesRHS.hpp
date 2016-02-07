@@ -393,7 +393,6 @@
 		{			
 			"RHS_UH60M_MEV",
 			"RHS_UH1Y_UNARMED",
-			"RHS_UH1Y_UNARMED_d",
 			"RHS_Mi8mt_cargo_vdv",
 			"RHS_Mi8amt_civilian",
 			"rhs_ka60_c",
