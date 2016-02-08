@@ -41,7 +41,6 @@
 	class CUP_optic_PSO_1 							{ quality = 1; price = 60; };
 	class CUP_optic_PSO_3 							{ quality = 1; price = 60; };
 	class CUP_optic_Kobra 							{ quality = 1; price = 80; };
-	class CUP_optic_NSPU 							{ quality = 1; price = 50; };
 	class CUP_optic_PechenegScope 					{ quality = 1; price = 50; };
 	class CUP_optic_HoloBlack 						{ quality = 1; price = 150; };
 	class CUP_optic_HoloWdl 						{ quality = 1; price = 150; };

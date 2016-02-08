@@ -54,7 +54,6 @@
 	"CUP_optic_PSO_1",
 	"CUP_optic_PSO_3",
 	"CUP_optic_Kobra",
-	"CUP_optic_NSPU",
 	"CUP_optic_PechenegScope",
 	"CUP_optic_HoloBlack",
 	"CUP_optic_HoloWdl",
