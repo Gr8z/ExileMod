@@ -34,6 +34,7 @@ SlotDonor = [
 	"76561198067921127", // Victorio (OD-2016-01-15) #12948
 	"76561198061613021", // James Nunn (EXP-2016-02-16) #
 	"76561197961413637", // CheMiCaL OG (OD-2016-01-15) #12951
+	"76561197960873674", // Hammy (OD-2016-02-11) #13183
 	
 	// Add UIDs above, don't forget the comma
 "0"
