@@ -34,8 +34,8 @@ Box2Items = [
 ['Exile_Item_Matches',1],
 ['Exile_Item_CookingPot',1]
 ];
-box2Cost = 2000;
-box2DonorCost = 1000;
+box2Cost = 6000;
+box2DonorCost = 2000;
 
 _Box3Name = "Pro Drop";
 Box3Items = [
@@ -44,7 +44,7 @@ Box3Items = [
 ['Exile_Item_Laptop',1]
 ];
 box3Cost = 15000;
-box3DonorCost = 1000;
+box3DonorCost = 3000;
 
 if ((_donatorMode) && (getPlayerUID player in _donors)) then {
   box1Cost = box1DonorCost;
