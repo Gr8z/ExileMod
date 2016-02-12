@@ -86,8 +86,53 @@ _userrating ctrlCommit 0;
 _userrating ctrlSetStructuredText (parseText (format ["<t align='center'size='0.8'> Air Drop ID: %2-%3%4 (%1) <br/><br/><br/> Once you buy an Air Drop, The Drop Zone will be marked on the map and announced to every player. We will try our best to send you the random items worth your money.",name player, orderIDcharacters, a1, a2]));
 _userrating ctrlSetBackgroundColor [0.11,0.106,0.125,1];
 
-fnc_buyselected = {
+fnc_okToDrop = {
+  _ok = true;
+
+  _Time = time - lastDrop;
+  _LastUsedTime = 900;
+  _OnlineLimit = 25;
+  if (_Time < _LastUsedTime) then {
+    _msg = format["please wait %1s before calling in another Air Drop!",(round(_Time - _LastUsedTime))];
+    hint _msg;
+    _ok = false;
+  };
+
+  if  ((nearestObject [player,'Exile_Construction_Abstract_Static']) distance player < 75) then {
+    _msg = "You are near a Base and cannot perform that action!";
+    hint _msg;
+    _ok = false;
+  };
+
+  if (_vehicle != player) then {
+    _msg = "You are in a vehicle and cannot perform that action!";
+    hint _msg;
+    _ok = false;
+  };
+
+  if ({((markertype _x) == "ExileTraderZone") && {((getMarkerPos _x) distance2D _pos)<=200}}) then {
+    _msg = "You need to be far away from a Trader to call an Airdrop.";
+    hint _msg;
+    _ok = false;
+  };
+
+  if ((count playableUnits) < _OnlineLimit) then  {
+     _msg = format["Air Drop Failed. Less Than %1 Players online.",_OnlineLimit];
+    hint _msg;
+    _ok = false;
+  };
+
   if (ExileClientPlayerMoney > boxCost) then {
+    _msg = format["%1, Your order has been declined due to insufficient funds",name player];
+    hint _msg;
+    _ok = false;
+  };
+  _ok
+};
+
+fnc_buyselected = {
+  _ok = [] call fnc_okToDrop;
+  if (_ok) then {
     _newPoptabs = ExileClientPlayerMoney - boxCost;
     ENIGMA_UpdateStats = [player,_newPoptabs];
     publicVariableServer "ENIGMA_UpdateStats";
@@ -98,6 +143,10 @@ fnc_buyselected = {
       if (_x >= 2) then {cutText [format ["AIR DROP ARRIVING IN %1s", 101-_x], "PLAIN DOWN"];};
       uiSleep 1;
     };
+
+    lastDrop = time;
+    publicVariable "lastDrop";
+
     _crate = createVehicle ["Exile_Container_StorageCrate", [(_playerPOS select 0),(_playerPOS select 1),((_playerPOS select 2) +300)], [], 0, "FLY"];
     _smokeshell = createVehicle ["SmokeShellRed", [(_playerPOS select 0),(_playerPOS select 1),((_playerPOS select 2) +300)], [], 0, "FLY"];
     clearMagazineCargoGlobal _crate;clearWeaponCargoGlobal _crate;clearItemCargoGlobal _crate;clearBackpackCargoGlobal _crate;
@@ -120,9 +169,6 @@ fnc_buyselected = {
     _crate attachTo [_parachute, [0, 0, 0.1] ];
     _smokeshell attachTo [_crate, [0, 0, 0.1] ];
     hint format["Your Air Drop is Delivered near you!",name player];
-  } else {
-    (findDisplay 24015) closeDisplay 0;
-    hint format["%1, Your order has been declined due to insufficient funds",name player];
   };
 };
 
