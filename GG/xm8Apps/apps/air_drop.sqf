@@ -83,7 +83,7 @@ a2 = _ranNumArr call BIS_fnc_selectRandom;
 _userrating = _display ctrlCreate ["RscStructuredText", 1230];
 _userrating ctrlSetPosition [(20.85 - 3) * (0.025),(6 - 2) * (0.04),(0.32),14 * (0.04)];
 _userrating ctrlCommit 0;
-_userrating ctrlSetStructuredText (parseText (format ["<t align='center'size='0.8'> Air Drop ID: %2-%3%4 (%1) <br/><br/><br/> Once you buy an Air Drop, The Drop Zone will be marked on the map and announced to every player. We will try our best to send you the random items worth you money.",name player, orderIDcharacters, a1, a2]));
+_userrating ctrlSetStructuredText (parseText (format ["<t align='center'size='0.8'> Air Drop ID: %2-%3%4 (%1) <br/><br/><br/> Once you buy an Air Drop, The Drop Zone will be marked on the map and announced to every player. We will try our best to send you the random items worth your money.",name player, orderIDcharacters, a1, a2]));
 _userrating ctrlSetBackgroundColor [0.11,0.106,0.125,1];
 
 fnc_buyselected = {
