@@ -58,5 +58,5 @@ if((LastUsedCheck == 0) || (diag_tickTime - LastUsedCheck > _cooldownTime))then{
   	['Success',[format['There are %1 8G user(s) nearby ',_playersNearby]]] call ExileClient_gui_notification_event_addNotification;
 	};
 } else {
-	["Whoops", [format["You must wait %1s before scaning again!"],(diag_tickTime - LastUsedCheck)]] call ExileClient_gui_notification_event_addNotification;
+	["Whoops",["You must wait 60s before scaning again!"]] call ExileClient_gui_notification_event_addNotification;
 };
