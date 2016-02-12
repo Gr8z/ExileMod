@@ -105,7 +105,7 @@ a2 = _ranNumArr call BIS_fnc_selectRandom;
 _userrating = _display ctrlCreate ["RscStructuredText", 1230];
 _userrating ctrlSetPosition [(20.85 - 3) * (0.025),(6 - 2) * (0.04),(0.32),1.7 * (0.04)];
 _userrating ctrlCommit 0;
-_userrating ctrlSetStructuredText (parseText (format ["<t align='center'size='0.8'> Air Drop ID: %2-%3%4<br/>(%1)",name player, orderIDcharacters, a1, a2]));
+_userrating ctrlSetStructuredText (parseText (format ["<t align='center'size='0.8'> Air Drop ID: %2-%3%4 (%1) <br/><br/><br/> Once you buy an Air Drop, The Drop Zone will be marked on the map and announced to every player. We will try our best to send you the random items worth you money.",name player, orderIDcharacters, a1, a2]));
 _userrating ctrlSetBackgroundColor [0.11,0.106,0.125,1];
 
 fnc_deliverynotify = {
@@ -119,27 +119,33 @@ fnc_ordernotify = {
 
 fnc_buybox1 = {
   if (ExileClientPlayerMoney > box1Cost) then {
-  _newPoptabs = ExileClientPlayerMoney - box1Cost;
-  ENIGMA_UpdateStats = [player,_newPoptabs];
-  publicVariableServer "ENIGMA_UpdateStats";
-call fnc_ordernotify;
-  _playerPOS = getPOSATL player;
-  _crate = createVehicle ["Exile_Container_StorageCrate", [(_playerPOS select 0),(_playerPOS select 1),((_playerPOS select 2) +100)], [], 0, "FLY"];
-  _smokeshell = createVehicle ["SmokeShellRed", [(_playerPOS select 0),(_playerPOS select 1),((_playerPOS select 2) +100)], [], 0, "FLY"];
-  clearMagazineCargoGlobal _crate;
-  clearWeaponCargoGlobal _crate;
-  clearItemCargoGlobal _crate;
-  clearBackpackCargoGlobal _crate;
-  {
-      _crate addItemCargoGlobal [(_x select 0), (_x select 1)];
-  } forEach Box1Items;
+    _newPoptabs = ExileClientPlayerMoney - box1Cost;
+    ENIGMA_UpdateStats = [player,_newPoptabs];
+    publicVariableServer "ENIGMA_UpdateStats";
+    call fnc_ordernotify;
+    
+    for "_x" from 1 to 100 do {
+      if (_x >= 2) then {cutText [format ["AIR DROP ARRIVING IN %1s", 101-_x], "PLAIN DOWN"];};
+      uiSleep 1;
+    };
 
-  _cratePOS = getPOSATL _crate;
-  _parachute = "B_Parachute_02_F" createVehicle (_cratePOS);
-  _parachute setPos _cratePOS;
-  _crate attachTo [_parachute, [0, 0, 0.1] ];
-  _smokeshell attachTo [_crate, [0, 0, 0.1] ];
-[] spawn { call fnc_deliverynotify; };
+    _playerPOS = getPOSATL player;
+    _crate = createVehicle ["Exile_Container_StorageCrate", [(_playerPOS select 0),(_playerPOS select 1),((_playerPOS select 2) +100)], [], 0, "FLY"];
+    _smokeshell = createVehicle ["SmokeShellRed", [(_playerPOS select 0),(_playerPOS select 1),((_playerPOS select 2) +100)], [], 0, "FLY"];
+    clearMagazineCargoGlobal _crate;
+    clearWeaponCargoGlobal _crate;
+    clearItemCargoGlobal _crate;
+    clearBackpackCargoGlobal _crate;
+    {
+        _crate addItemCargoGlobal [(_x select 0), (_x select 1)];
+    } forEach Box1Items;
+
+    _cratePOS = getPOSATL _crate;
+    _parachute = "B_Parachute_02_F" createVehicle (_cratePOS);
+    _parachute setPos _cratePOS;
+    _crate attachTo [_parachute, [0, 0, 0.1] ];
+    _smokeshell attachTo [_crate, [0, 0, 0.1] ];
+    [] spawn { call fnc_deliverynotify; };
   } else {
     (findDisplay 24015) closeDisplay 0;
   hint format["%1, Your order has been declined due to insufficient funds",name player];
@@ -151,7 +157,13 @@ fnc_buybox2 = {
   _newPoptabs = ExileClientPlayerMoney - box2Cost;
   ENIGMA_UpdateStats = [player,_newPoptabs];
   publicVariableServer "ENIGMA_UpdateStats";
-call fnc_ordernotify;
+  call fnc_ordernotify;
+
+  for "_x" from 1 to 100 do {
+    if (_x >= 2) then {cutText [format ["AIR DROP ARRIVING IN %1s", 101-_x], "PLAIN DOWN"];};
+    uiSleep 1;
+  };
+
   _playerPOS = getPOSATL player;
   _crate = createVehicle ["Exile_Container_StorageCrate", [(_playerPOS select 0),(_playerPOS select 1),((_playerPOS select 2) +100)], [], 0, "FLY"];
   _smokeshell = createVehicle ["SmokeShellRed", [(_playerPOS select 0),(_playerPOS select 1),((_playerPOS select 2) +100)], [], 0, "FLY"];
@@ -181,6 +193,12 @@ fnc_buybox3 = {
   ENIGMA_UpdateStats = [player,_newPoptabs];
   publicVariableServer "ENIGMA_UpdateStats";
 call fnc_ordernotify;
+
+  for "_x" from 1 to 100 do {
+    if (_x >= 2) then {cutText [format ["AIR DROP ARRIVING IN %1s", 101-_x], "PLAIN DOWN"];};
+    uiSleep 1;
+  };
+
   _playerPOS = getPOSATL player;
   _crate = createVehicle ["Exile_Container_StorageCrate", [(_playerPOS select 0),(_playerPOS select 1),((_playerPOS select 2) +100)], [], 0, "FLY"];
   _smokeshell = createVehicle ["SmokeShellRed", [(_playerPOS select 0),(_playerPOS select 1),((_playerPOS select 2) +100)], [], 0, "FLY"];
