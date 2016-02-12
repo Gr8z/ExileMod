@@ -26,11 +26,9 @@ _app5Logo = "GG\xm8Apps\images\drop.paa";
 app5_action = { [] execVM "GG\xm8Apps\apps\air_drop.sqf"; };
 
 //App 6
-_app6Text = "SOON";
-_app6Logo = "GG\xm8Apps\images\WIP.paa";
-app6_action = {
-
-};
+_app6Text = "PLAYER SCAN";
+_app6Logo = "GG\xm8Apps\images\radar.paa";
+app6_action = { [] execVM "GG\xm8Apps\apps\playerScan.sqf"; };
 
 //App 7
 _app7Text = "SOON";
