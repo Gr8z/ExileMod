@@ -246,7 +246,7 @@ _GoBackBtn ctrlSetEventHandler ["ButtonClick", "call fnc_goBack"];
 
 fnc_goBack = {
   _display = uiNameSpace getVariable ["RscExileXM8", displayNull];
-  _Ctrls = [1116,851,852,853,854];
+  _Ctrls = [1116,851,852,853,854,1230];
   {
       _ctrl = (_display displayCtrl _x);
       _ctrl ctrlSetFade 1;
