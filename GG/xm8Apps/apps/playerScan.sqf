@@ -11,7 +11,7 @@ _scanDistance = 1000; //area sround player to scan in meters
 //CONFIG END
 /////////////////////////
 if(isNil "LastUsedCheck")then{
-LastUsedCheck = 0;
+	LastUsedCheck = 0;
 };
 
 if !(player getVariable ["ExileXM8IsOnline", false]) exitWith {
@@ -24,8 +24,8 @@ if  ((nearestObject [player,'Exile_Construction_Abstract_Static']) distance play
   ["Whoops", ["Scan Failed, You are near a base."]] call ExileClient_gui_notification_event_addNotification;
 };
 
-if (ExileClientPlayerIsInCombat) exitWith { 
-	findDisplay 24015) closeDisplay 0;
+if (ExileClientPlayerIsInCombat) exitWith {
+	(findDisplay 24015) closeDisplay 0;
  	["Whoops", ["Scan Failed, You are in combat."]] call ExileClient_gui_notification_event_addNotification;
 };
 
