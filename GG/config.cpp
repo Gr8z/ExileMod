@@ -2617,7 +2617,7 @@ class CfgInteractionMenus
 			{
 				title = "Pack Bike";
 				condition = "(!ExilePlayerInSafezone)";
-				action = "deleteVehicle ExileClientInteractionObject;player linkItem 'ItemRadio';['BIKE REMOVED, RADIO ADDED !',0,0.6,2,0] spawn bis_fnc_dynamictext;";
+				action = "deleteVehicle ExileClientInteractionObject;player linkItem 'ItemRadio';hint 'BIKE REMOVED, RADIO ADDED !';";
 			};
 		};
 	};
