@@ -107,6 +107,7 @@ fnc_buyselected = {
       _crate addMagazineCargoGlobal [(BoxConstruction call BIS_fnc_selectRandom), (floor((random 10) + 1))];
       _crate addMagazineCargoGlobal [(BoxTools call BIS_fnc_selectRandom), (floor((random 20) + 1))];
       _crate addMagazineCargoGlobal [(BoxFood call BIS_fnc_selectRandom), (floor((random 5) + 1))];
+      _crate addMagazineCargoGlobal [(rareItem call BIS_fnc_selectRandom), (floor((random 1) + 1))];
       _i = _i + 1;
     };
 
