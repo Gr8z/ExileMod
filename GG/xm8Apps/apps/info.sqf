@@ -14,7 +14,7 @@ _message = _message + "_________________________________________________________
 
 _message = _message + "<t align='center' size='1' shadow='0'>Click this link to get to our website: <a href= 'http://ghostzgamerz.com/' color='#ff9900'>www.GHOSTZGAMERZ.com</a><br/>";
 _message = _message + "Click this link to read full rules: <a href= 'http://ghostzgamerz.com/categories/rules.181/' color='#ff9900'>Rules</a><br/>";
-_message = _message + "Here is our Team Speak address: <a href= 'ts3server://ts.ghostzgamerz.com' color='#ff9900'>ts.ghostzgamerz.com</a><br/><br/><br/>";
+_message = _message + "Here is our Team Speak address: <a href= 'ts3server://ts.ghostzgamerz.com' color='#ff9900'>ts.ghostzgamerz.com</a><br/><br/>";
 _message = _message + "______________________________________________________________________________________<br/><br/>";
 
 _text1 ctrlSetStructuredText (parseText _message);

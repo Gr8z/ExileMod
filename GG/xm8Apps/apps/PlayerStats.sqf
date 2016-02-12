@@ -29,37 +29,37 @@ _stat1 = _display ctrlCreate ["RscText", 861];
 _stat1 ctrlSetPosition [(9.9 - 3) * (0.025), (6.5 - 2) * (0.04), 2.75 * (0.12), 2.75 * (0.02)];
 _stat1 ctrlCommit 0;
 _stat1 ctrlSetFontHeight 0.05;
-_stat1 ctrlSetText Format["Player Name: %1", name player];
+_stat1 ctrlSetText Format["Name: %1", name player];
 
 _stat2 = _display ctrlCreate ["RscText", 862];
 _stat2 ctrlSetPosition [(9.9 - 3) * (0.025), (8.5 - 2) * (0.04), 2.75 * (0.12), 2.75 * (0.02)];
 _stat2 ctrlCommit 0;
 _stat2 ctrlSetFontHeight 0.05;
-_stat2 ctrlSetText Format["Player Money: %1",_playerMoney];
+_stat2 ctrlSetText Format["Money: %1",_playerMoney];
 
 _stat3 = _display ctrlCreate ["RscText", 863];
 _stat3 ctrlSetPosition [(9.9 - 3) * (0.025), (10.5 - 2) * (0.04), 2.75 * (0.12), 2.75 * (0.02)];
 _stat3 ctrlCommit 0;
 _stat3 ctrlSetFontHeight 0.05;
-_stat3 ctrlSetText Format["Player Respect: %1",_playerRespect];
+_stat3 ctrlSetText Format["Respect: %1",_playerRespect];
 
 _stat4 = _display ctrlCreate ["RscText", 864];
 _stat4 ctrlSetPosition [(9.9 - 3) * (0.025), (12.5 - 2) * (0.04), 2.75 * (0.12), 2.75 * (0.02)];
 _stat4 ctrlCommit 0;
 _stat4 ctrlSetFontHeight 0.05;
-_stat4 ctrlSetText Format["Player Kills: %1",_playerKills];
+_stat4 ctrlSetText Format["Kills: %1",_playerKills];
 
 _stat5 = _display ctrlCreate ["RscText", 865];
 _stat5 ctrlSetPosition [(9.9 - 3) * (0.025), (14.5 - 2) * (0.04), 2.75 * (0.12), 2.75 * (0.02)];
 _stat5 ctrlCommit 0;
 _stat5 ctrlSetFontHeight 0.05;
-_stat5 ctrlSetText Format["Player Deaths: %1",_playerDeaths];
+_stat5 ctrlSetText Format["Deaths: %1",_playerDeaths];
 
 _stat6 = _display ctrlCreate ["RscText", 866];
 _stat6 ctrlSetPosition [(29 - 3) * (0.025), (6 - 2) * (0.04), 2.75 * (0.12), 2.75 * (0.06)];
 _stat6 ctrlCommit 0;
-_stat6 ctrlSetFontHeight 0.2;
-_stat6 ctrlSetText Format["KD"];
+_stat6 ctrlSetFontHeight 0.1;
+_stat6 ctrlSetText Format["K/D"];
 
 _stat7 = _display ctrlCreate ["RscStructuredText", 867];
 _stat7 ctrlSetPosition [(29.5 - 3) * (0.025), (10 - 2) * (0.04), 1.19 * (0.12), 2.75 * (0.021)];
