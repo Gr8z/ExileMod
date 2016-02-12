@@ -96,7 +96,7 @@ _BuyBtn = _display ctrlCreate ["RscButtonMenu", 854];
 _BuyBtn ctrlSetPosition [(14 - 3) * (0.025),(10.5 - 2) * (0.04),0.125,1 * (0.04)];
 _BuyBtn ctrlCommit 0;
 _BuyBtn ctrlSetText "Call Now";
-_BuyBtn ctrlSetEventHandler ["ButtonClick", "call fnc_buyselected"];
+_BuyBtn ctrlSetEventHandler ["ButtonClick", "[] spawn fnc_buyselected"];
 
 _ranNumArr = ['1','2','3','4','5','6','7','8','9','0'];
 a1 = _ranNumArr call BIS_fnc_selectRandom;
