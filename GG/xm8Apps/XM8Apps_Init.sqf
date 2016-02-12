@@ -2,7 +2,7 @@ disableSerialization;
 
 //App 1
 _app1Text = "INFO";
-_app1Logo = "\exile_assets\texture\mod\icon.paa";
+_app1Logo = "GG\xm8Apps\images\info.paa";
 app1_action = { [] execVM "GG\xm8Apps\apps\info.sqf"; };
 
 //App 2
@@ -12,7 +12,7 @@ app2_action = { [] execVM "GG\xm8Apps\apps\PlayerStats.sqf"; };
 
 //App 3
 _app3Text = "View Distance";
-_app3Logo = "\A3\Weapons_F\Data\UI\gear_binoculars_CA.paa";
+_app3Logo = "GG\xm8Apps\images\binocs.paa";
 app3_action = { [] call CHVD_fnc_openDialog };
 
 //App 4
