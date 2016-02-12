@@ -2031,6 +2031,7 @@ class CfgExileCustomCode
 	ExileClient_object_player_event_onEnterSafezone = 		"GG\overrides\GG_object_player_event_onEnterSafezone.sqf";
 	ExileClient_object_item_construct= 						"GG\overrides\GG_object_item_construct.sqf";
 	ExileClient_object_player_event_onInventoryOpened = 	"GG\overrides\GG_object_player_event_onInventoryOpened.sqf";
+	ExileClient_gui_xm8_slide_apps_onOpen = 				"GG\overrides\GG_gui_xm8_slide_apps_onOpen.sqf";
 };
 class CfgExileHUD
 {
