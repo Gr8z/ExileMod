@@ -92,6 +92,7 @@ fnc_okToDrop = {
   _Time = time - lastDrop;
   _LastUsedTime = 900;
   _OnlineLimit = 25;
+  _traderZoneNearLimit = 200;
   if (_Time < _LastUsedTime) then {
     (findDisplay 24015) closeDisplay 0;
     _msg = format["please wait %1s before calling in another Air Drop!",(round(_Time - _LastUsedTime))];
@@ -113,12 +114,15 @@ fnc_okToDrop = {
     _ok = false;
   };
 
-  if ({((markertype _x) == "ExileTraderZone") && {((getMarkerPos _x) distance2D _pos)<=200}}) then {
-    (findDisplay 24015) closeDisplay 0;
-    _msg = "You need to be far away from a Trader to call an Airdrop.";
-    hint _msg;
-    _ok = false;
-  };
+  {
+    if ((_traderZoneNearLimit>0) && {((markertype _x) == "ExileTraderZone") && {((getMarkerPos _x) distance2D getPos player)<=_traderZoneNearLimit}}) then
+    {
+      (findDisplay 24015) closeDisplay 0;
+        _msg = "You need to be far away from a Trader to call an Airdrop.";
+        hint _msg;
+        _ok = false;
+    };
+  } forEach allMapMarkers;
 
   if ((count playableUnits) < _OnlineLimit) then  {
     (findDisplay 24015) closeDisplay 0;
