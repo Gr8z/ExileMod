@@ -1,98 +1,70 @@
 disableSerialization;
-/*
-XM8 Apps script made by Shix
-http://www.exilemod.com/profile/4566-shix/
-Use: replaces the server info button in the XM8 and opens a apps page in in a xm8 dialouge
-XM8 Apps can be configured below
-*/
-/////////////////
-//CONFIG
-////////////////
-/*
-Example
-_app1Text = "DeployBike"; //Text what will appear at the bottom of the app button
-_app1Logo = "GG\xm8Apps\images\bikeLog.paa"; //The Logo that will Appear on the app button images MUST be in a .paa format
-app1_action = {
-execVM"custom\deploy_bike.sqf";
-};
-
-If you want to change what button the XM8 Apps appears on edit ExileClient_gui_xm8_slide_apps_onOpen.sqf
-*/
-
 
 //App 1
-_app1Text = "App 1";
-_app1Logo = "";
-app1_action = {
-
-};
+_app1Text = "INFO";
+_app1Logo = "\exile_assets\texture\mod\icon.paa";
+app1_action = { [] execVM "GG\xm8Apps\apps\info.sqf"; };
 
 //App 2
-_app2Text = "App 2";
-_app2Logo = "";
-app2_action = {
-
-};
+_app2Text = "STATS";
+_app2Logo = "GG\xm8Apps\images\Stats.paa";
+app2_action = { [] execVM "GG\xm8Apps\apps\PlayerStats.sqf"; };
 
 //App 3
-_app3Text = "App 3";
-_app3Logo = "";
-app3_action = {
-
-};
+_app3Text = "View Distance";
+_app3Logo = "\A3\Weapons_F\Data\UI\gear_binoculars_CA.paa";
+app3_action = { [] call CHVD_fnc_openDialog };
 
 //App 4
-_app4Text = "App 4";
-_app4Logo = "";
-app4_action = {
-
-};
+_app4Text = "DEPLOY BIKE";
+_app4Logo = "\dbo\dbo_old_bike\data\icon_mmt_ca.paa";
+app4_action = { [] execVM "GG\spawn_bike.sqf"; };
 
 //App 5
-_app5Text = "App 5";
-_app5Logo = "";
+_app5Text = "SOON";
+_app5Logo = "GG\xm8Apps\images\WIP.paa";
 app5_action = {
 
 };
 
 //App 6
-_app6Text = "App 6";
-_app6Logo = "";
+_app6Text = "SOON";
+_app6Logo = "GG\xm8Apps\images\WIP.paa";
 app6_action = {
 
 };
 
 //App 7
-_app7Text = "App 7";
-_app7Logo = "";
+_app7Text = "SOON";
+_app7Logo = "GG\xm8Apps\images\WIP.paa";
 app7_action = {
 
 };
 
 //App 8
-_app8Text = "App 8";
-_app8Logo = "";
+_app8Text = "SOON";
+_app8Logo = "GG\xm8Apps\images\WIP.paa";
 app8_action = {
 
 };
 
 //App 9
-_app9Text = "App 9";
-_app9Logo = "";
+_app9Text = "SOON";
+_app9Logo = "GG\xm8Apps\images\WIP.paa";
 app9_action = {
 
 };
 
 //App 10
-_app10Text = "App 10";
-_app10Logo = "";
+_app10Text = "SOON";
+_app10Logo = "GG\xm8Apps\images\WIP.paa";
 app10_action = {
 
 };
 
 //App 11
-_app11Text = "App 11";
-_app11Logo = "";
+_app11Text = "SOON";
+_app11Logo = "GG\xm8Apps\images\WIP.paa";
 app11_action = {
 
 };
