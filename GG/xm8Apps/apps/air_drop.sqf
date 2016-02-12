@@ -127,13 +127,11 @@ fnc_buybox1 = {
     ENIGMA_UpdateStats = [player,_newPoptabs];
     publicVariableServer "ENIGMA_UpdateStats";
     call fnc_ordernotify;
-    
+    _playerPOS = getPOSATL player;
     for "_x" from 1 to 100 do {
       if (_x >= 2) then {cutText [format ["AIR DROP ARRIVING IN %1s", 101-_x], "PLAIN DOWN"];};
       uiSleep 1;
     };
-
-    _playerPOS = getPOSATL player;
     _crate = createVehicle ["Exile_Container_StorageCrate", [(_playerPOS select 0),(_playerPOS select 1),((_playerPOS select 2) +100)], [], 0, "FLY"];
     _smokeshell = createVehicle ["SmokeShellRed", [(_playerPOS select 0),(_playerPOS select 1),((_playerPOS select 2) +100)], [], 0, "FLY"];
     clearMagazineCargoGlobal _crate;
@@ -162,13 +160,12 @@ fnc_buybox2 = {
   ENIGMA_UpdateStats = [player,_newPoptabs];
   publicVariableServer "ENIGMA_UpdateStats";
   call fnc_ordernotify;
-
+  _playerPOS = getPOSATL player;
   for "_x" from 1 to 100 do {
     if (_x >= 2) then {cutText [format ["AIR DROP ARRIVING IN %1s", 101-_x], "PLAIN DOWN"];};
     uiSleep 1;
   };
 
-  _playerPOS = getPOSATL player;
   _crate = createVehicle ["Exile_Container_StorageCrate", [(_playerPOS select 0),(_playerPOS select 1),((_playerPOS select 2) +100)], [], 0, "FLY"];
   _smokeshell = createVehicle ["SmokeShellRed", [(_playerPOS select 0),(_playerPOS select 1),((_playerPOS select 2) +100)], [], 0, "FLY"];
   clearMagazineCargoGlobal _crate;
@@ -196,14 +193,13 @@ fnc_buybox3 = {
   _newPoptabs = ExileClientPlayerMoney - box3Cost;
   ENIGMA_UpdateStats = [player,_newPoptabs];
   publicVariableServer "ENIGMA_UpdateStats";
-call fnc_ordernotify;
+  _playerPOS = getPOSATL player;
+  call fnc_ordernotify;
 
   for "_x" from 1 to 100 do {
     if (_x >= 2) then {cutText [format ["AIR DROP ARRIVING IN %1s", 101-_x], "PLAIN DOWN"];};
     uiSleep 1;
   };
-
-  _playerPOS = getPOSATL player;
   _crate = createVehicle ["Exile_Container_StorageCrate", [(_playerPOS select 0),(_playerPOS select 1),((_playerPOS select 2) +100)], [], 0, "FLY"];
   _smokeshell = createVehicle ["SmokeShellRed", [(_playerPOS select 0),(_playerPOS select 1),((_playerPOS select 2) +100)], [], 0, "FLY"];
   clearMagazineCargoGlobal _crate;
