@@ -75,21 +75,21 @@ _Box1Btn = _display ctrlCreate ["RscExileXM8AppButton1x1", 851];
 _Box1Btn ctrlSetPosition [(7 - 3) * (0.025), (6 - 2) * (0.04)];
 _Box1Btn ctrlCommit 0;
 _Box1Btn ctrlSetFontHeight 0.05;
-_Box1Btn ctrlSetStructuredText (parseText (format ["%1<br/><img image='\exile_assets\texture\ui\poptab_notification_ca.paa' size='1.0' shadow='true' />%2",_Box1Name, box1Cost]));
+_Box1Btn ctrlSetStructuredText (parseText (format ["<img image='GG\xm8Apps\images\drop.paa' size='1.0' shadow='0' />%1<br/><img image='\exile_assets\texture\ui\poptab_notification_ca.paa' size='1.0' shadow='0' />%2",_Box1Name, box1Cost]));
 _Box1Btn ctrlSetEventHandler ["ButtonClick", "boxselected = 1;"];
 
 _Box2Btn = _display ctrlCreate ["RscExileXM8AppButton1x1", 852];
 _Box2Btn ctrlSetPosition [(7 - 3) * (0.025), (11.5 - 2) * (0.04)];
 _Box2Btn ctrlCommit 0;
 _Box2Btn ctrlSetFontHeight 0.05;
-_Box2Btn ctrlSetStructuredText (parseText (format ["%1<br/><img image='\exile_assets\texture\ui\poptab_notification_ca.paa' size='1.0' shadow='true' />%2",_Box2Name, box2Cost]));
+_Box2Btn ctrlSetStructuredText (parseText (format ["<img image='GG\xm8Apps\images\drop.paa' size='1.0' shadow='0' />%1<br/><img image='\exile_assets\texture\ui\poptab_notification_ca.paa' size='1.0' shadow='0' />%2",_Box2Name, box2Cost]));
 _Box2Btn ctrlSetEventHandler ["ButtonClick", "boxselected = 2;"];
 
 _Box3Btn = _display ctrlCreate ["RscExileXM8AppButton1x1", 853];
 _Box3Btn ctrlSetPosition [(7 - 3) * (0.025), (17 - 2) * (0.04)];
 _Box3Btn ctrlCommit 0;
 _Box3Btn ctrlSetFontHeight 0.05;
-_Box3Btn ctrlSetStructuredText (parseText (format ["%1<br/><img image='\exile_assets\texture\ui\poptab_notification_ca.paa' size='1.0' shadow='true' />%2",_Box3Name, box3Cost]));
+_Box3Btn ctrlSetStructuredText (parseText (format ["<img image='GG\xm8Apps\images\drop.paa' size='1.0' shadow='0' />%1<br/><img image='\exile_assets\texture\ui\poptab_notification_ca.paa' size='1.0' shadow='0' />%2",_Box3Name, box3Cost]));
 _Box3Btn ctrlSetEventHandler ["ButtonClick", "boxselected = 3;"];
 
 _BuyBtn = _display ctrlCreate ["RscButtonMenu", 854];
