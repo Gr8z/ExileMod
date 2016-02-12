@@ -33,37 +33,27 @@ app6_action = { [] execVM "GG\xm8Apps\apps\playerScan.sqf"; };
 //App 7
 _app7Text = "SOON";
 _app7Logo = "GG\xm8Apps\images\WIP.paa";
-app7_action = {
-
-};
+app7_action = { hint "APP COMING SOON" };
 
 //App 8
 _app8Text = "SOON";
 _app8Logo = "GG\xm8Apps\images\WIP.paa";
-app8_action = {
-
-};
+app8_action =  { hint "APP COMING SOON" };
 
 //App 9
 _app9Text = "SOON";
 _app9Logo = "GG\xm8Apps\images\WIP.paa";
-app9_action = {
-
-};
+app9_action = { hint "APP COMING SOON" };
 
 //App 10
 _app10Text = "SOON";
 _app10Logo = "GG\xm8Apps\images\WIP.paa";
-app10_action = {
-
-};
+app10_action = { hint "APP COMING SOON" };
 
 //App 11
 _app11Text = "SOON";
 _app11Logo = "GG\xm8Apps\images\WIP.paa";
-app11_action = {
-
-};
+app11_action = { hint "APP COMING SOON" };
 
 //App 12
 //NOTICE by default the app 12 button is used to go back to the main menu. if you change this you will need to give player a way to return to the main menu

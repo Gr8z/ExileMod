@@ -38,7 +38,7 @@ You can now set what buuton you would like to replace
 */
 _btnToUse = 1;
 
-_AppsLogo = "GG\xm8Apps\images\xm8logofix_ca.paa";
+_AppsLogo = "GG\xm8Apps\images\apps.paa";
 
 if(_btnToUse == 1)then{
 // clear server info button text
