@@ -4,7 +4,7 @@ box1Cost = 5000;
 box1DonorCost = 1000;
 box1WepCount = 1;
 box1RareCount = floor(random 1);
-box1MagCount = floor((random 10) + 1);
+box1MagCount = floor((random 5) + 1);
 box1ItemCount = floor((random 2) + 1);
 
 _Box2Name = "Medium Drop";
@@ -12,16 +12,16 @@ box2Cost = 10000;
 box2DonorCost = 2000;
 box2WepCount = 2;
 box2RareCount = floor((random 2) + 1);
-box2MagCount = floor((random 10) + 10);
+box2MagCount = floor((random 10) + 2);
 box2ItemCount = floor((random 4) + 4);
 
 _Box3Name = "Pro Drop";
 box3Cost = 30000;
 box3DonorCost = 3000;
-box3WepCount = 4;
+box3WepCount = 3;
 box3RareCount = floor((random 2) + 2);
-box3MagCount = floor((random 10) + 20);
-box3ItemCount = floor((random 10) + 8);
+box3MagCount = floor((random 10) + 4);
+box3ItemCount = floor((random 10) + 4);
 
 rareItem = ["Exile_Item_Laptop","Exile_Item_BaseCameraKit","Exile_Item_Defibrillator","Exile_Item_SafeKit","Exile_Item_CodeLock"];
 BoxConstruction = ["Exile_Item_WoodWallKit","Exile_Item_WoodWallHalfKit","Exile_Item_WoodWindowKit","Exile_Item_WorkBenchKit","Exile_Item_WoodFloorPortKit","Exile_Item_WoodFloorKit","Exile_Item_WoodGateKit"];
@@ -105,7 +105,7 @@ fnc_buyselected = {
     _i=0;
     while {_i < boxItemCount} do {
       _crate addMagazineCargoGlobal [(BoxConstruction call BIS_fnc_selectRandom), (floor((random 10) + 1))];
-      _crate addMagazineCargoGlobal [(BoxTools call BIS_fnc_selectRandom), (floor((random 20) + 1))];
+      _crate addMagazineCargoGlobal [(BoxTools call BIS_fnc_selectRandom), (floor((random 5) + 5))];
       _crate addMagazineCargoGlobal [(BoxFood call BIS_fnc_selectRandom), (floor((random 5) + 1))];
       _crate addMagazineCargoGlobal [(rareItem call BIS_fnc_selectRandom), (floor((random 1) + 1))];
       _i = _i + 1;
