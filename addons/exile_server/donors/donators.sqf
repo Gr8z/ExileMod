@@ -35,7 +35,7 @@ SlotDonor = [
 	"76561198061613021", // James Nunn (EXP-2016-02-16) #
 	"76561197961413637", // CheMiCaL OG (OD-2016-01-15) #12951
 	"76561197960873674", // Hammy (OD-2016-02-11) #13183
-	
+	"76561198055969592", // [FRAC] RazeX (OD-2016-02-11) #13188
 	// Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "SlotDonor";
