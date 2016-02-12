@@ -2020,10 +2020,8 @@ class CfgExileArsenal
 };
 class CfgExileCustomCode 
 {
-	ExileClient_gui_inventory_event_onSlotDoubleClick = 	"GG\overrides\GG_gui_inventory_event_onSlotDoubleClick.sqf";
 	ExileClient_object_player_death_startBleedingOut = 		"GG\overrides\GG_object_player_death_startBleedingOut.sqf";
 	ExileClient_object_player_bambiStateBegin =	 			"GG\overrides\GG_object_player_bambiStateBegin.sqf";
-	ExileClient_gui_hud_event_onKeyDown = 					"GG\overrides\GG_gui_hud_event_onKeyDown.sqf";
 	ExileClient_gui_selectSpawnLocation_show = 				"GG\overrides\GG_gui_selectSpawnLocation_show.sqf";
 	ExileClient_object_player_event_onKilled = 				"GG\overrides\GG_object_player_event_onKilled.sqf";
 	ExileClient_object_item_craft = 						"GG\overrides\GG_object_item_craft.sqf";
