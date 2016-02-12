@@ -1,4 +1,3 @@
-[] execVM "GG\HC\init.sqf";
 [] execVM "GG\StatusBar\statusBar.sqf";
 [] execVM "GG\inspectLoop.sqf";
 [] execVM "GG\KillMessages.sqf";
