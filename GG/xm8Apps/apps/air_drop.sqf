@@ -106,7 +106,7 @@ fnc_okToDrop = {
     _ok = false;
   };
 
-  if (_vehicle != player) then {
+  if (vehicle player != player) then {
     (findDisplay 24015) closeDisplay 0;
     _msg = "You are in a vehicle and cannot perform that action!";
     hint _msg;
