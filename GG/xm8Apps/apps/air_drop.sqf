@@ -93,36 +93,42 @@ fnc_okToDrop = {
   _LastUsedTime = 900;
   _OnlineLimit = 25;
   if (_Time < _LastUsedTime) then {
+    (findDisplay 24015) closeDisplay 0;
     _msg = format["please wait %1s before calling in another Air Drop!",(round(_Time - _LastUsedTime))];
     hint _msg;
     _ok = false;
   };
 
   if  ((nearestObject [player,'Exile_Construction_Abstract_Static']) distance player < 75) then {
+    (findDisplay 24015) closeDisplay 0;
     _msg = "You are near a Base and cannot perform that action!";
     hint _msg;
     _ok = false;
   };
 
   if (_vehicle != player) then {
+    (findDisplay 24015) closeDisplay 0;
     _msg = "You are in a vehicle and cannot perform that action!";
     hint _msg;
     _ok = false;
   };
 
   if ({((markertype _x) == "ExileTraderZone") && {((getMarkerPos _x) distance2D _pos)<=200}}) then {
+    (findDisplay 24015) closeDisplay 0;
     _msg = "You need to be far away from a Trader to call an Airdrop.";
     hint _msg;
     _ok = false;
   };
 
   if ((count playableUnits) < _OnlineLimit) then  {
+    (findDisplay 24015) closeDisplay 0;
      _msg = format["Air Drop Failed. Less Than %1 Players online.",_OnlineLimit];
     hint _msg;
     _ok = false;
   };
 
   if (ExileClientPlayerMoney > boxCost) then {
+    (findDisplay 24015) closeDisplay 0;
     _msg = format["%1, Your order has been declined due to insufficient funds",name player];
     hint _msg;
     _ok = false;
