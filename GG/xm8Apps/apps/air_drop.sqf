@@ -131,7 +131,7 @@ fnc_okToDrop = {
     _ok = false;
   };
 
-  if (ExileClientPlayerMoney > boxCost) then {
+  if (ExileClientPlayerMoney < boxCost) then {
     (findDisplay 24015) closeDisplay 0;
     _msg = format["%1, Your order has been declined due to insufficient funds",name player];
     hint _msg;
