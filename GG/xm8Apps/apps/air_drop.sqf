@@ -98,13 +98,6 @@ _BuyBtn ctrlCommit 0;
 _BuyBtn ctrlSetText "Call Now";
 _BuyBtn ctrlSetEventHandler ["ButtonClick", "call fnc_buyselected"];
 
-
-_ItemsList = _display ctrlCreate ["RscListBox", 858];
-_ItemsList ctrlSetPosition [(14 - 3) * (0.025),(8 - 2) * (0.04),(0.32),14 * (0.04)];
-_ItemsList ctrlCommit 0;
-_ItemsList ctrlSetText "Cancel";
-_ItemsList ctrlSetEventHandler ["ButtonClick", "call fnc_goBack"];
-
 _ranNumArr = ['1','2','3','4','5','6','7','8','9','0'];
 a1 = _ranNumArr call BIS_fnc_selectRandom;
 a2 = _ranNumArr call BIS_fnc_selectRandom;
@@ -227,7 +220,7 @@ fnc_buyselected = {
 //Note you do need to add all Idds for all the controlls you have created to the _Ctrls array
 
 _GoBackBtn = _display ctrlCreate ["RscButtonMenu", 1116];
-_GoBackBtn ctrlSetPosition [(21.1 - 3) * (0.025),(13 - 2) * (0.04),4.5 * (0.025),1 * (0.04)];
+_GoBackBtn ctrlSetPosition [(14 - 3) * (0.025),(13 - 2) * (0.04),4.5 * (0.025),1 * (0.04)];
 _GoBackBtn ctrlCommit 0;
 _GoBackBtn ctrlSetText "Cancel";
 _GoBackBtn ctrlSetEventHandler ["ButtonClick", "call fnc_goBack"];
