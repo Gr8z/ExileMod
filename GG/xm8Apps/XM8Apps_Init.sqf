@@ -31,28 +31,28 @@ _app6Logo = "GG\xm8Apps\images\radar.paa";
 app6_action = { [] execVM "GG\xm8Apps\apps\playerScan.sqf"; };
 
 //App 7
-_app7Text = "SOON";
-_app7Logo = "GG\xm8Apps\images\WIP.paa";
+_app7Text = "";
+_app7Logo = "";
 app7_action = { hint "APP COMING SOON" };
 
 //App 8
-_app8Text = "SOON";
-_app8Logo = "GG\xm8Apps\images\WIP.paa";
+_app8Text = "";
+_app8Logo = "";
 app8_action =  { hint "APP COMING SOON" };
 
 //App 9
-_app9Text = "SOON";
-_app9Logo = "GG\xm8Apps\images\WIP.paa";
+_app9Text = "";
+_app9Logo = "";
 app9_action = { hint "APP COMING SOON" };
 
 //App 10
-_app10Text = "SOON";
-_app10Logo = "GG\xm8Apps\images\WIP.paa";
+_app10Text = "";
+_app10Logo = "";
 app10_action = { hint "APP COMING SOON" };
 
 //App 11
-_app11Text = "SOON";
-_app11Logo = "GG\xm8Apps\images\WIP.paa";
+_app11Text = "";
+_app11Logo = "";
 app11_action = { hint "APP COMING SOON" };
 
 //App 12
