@@ -90,12 +90,12 @@ fnc_buyselected = {
     hint format["Thanks for your order! your Air Drop order number is '%2-%3%4'",name player, orderIDcharacters, a1, a2];
     _playerPOS = getPOSATL player;
 
-    for "_x" from 1 to 100 do {
-      if (_x >= 2) then {cutText [format ["AIR DROP ARRIVING IN %1s", 101-_x], "PLAIN DOWN"];};
+    for "_x" from 1 to 10 do {
+      if (_x >= 2) then {cutText [format ["AIR DROP ARRIVING IN %1s", 11-_x], "PLAIN DOWN"];};
       uiSleep 1;
     };
-    _crate = createVehicle ["Exile_Container_StorageCrate", [(_playerPOS select 0),(_playerPOS select 1),((_playerPOS select 2) +300)], [], 0, "FLY"];
-    _smokeshell = createVehicle ["SmokeShellRed", [(_playerPOS select 0),(_playerPOS select 1),((_playerPOS select 2) +300)], [], 0, "FLY"];
+    _crate = createVehicle ["Exile_Container_StorageCrate", [(_playerPOS select 0),(_playerPOS select 1),((_playerPOS select 2) +30)], [], 0, "FLY"];
+    _smokeshell = createVehicle ["SmokeShellRed", [(_playerPOS select 0),(_playerPOS select 1),((_playerPOS select 2) +30)], [], 0, "FLY"];
     clearMagazineCargoGlobal _crate;clearWeaponCargoGlobal _crate;clearItemCargoGlobal _crate;clearBackpackCargoGlobal _crate;
 
     _i=0;
