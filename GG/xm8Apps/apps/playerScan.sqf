@@ -38,7 +38,7 @@ if((LastUsedCheck == 0) || (diag_tickTime - LastUsedCheck > _cooldownTime))then{
   } forEach allPlayers - [player];
   LastUsedCheck = diag_tickTime;
   if (_playersNearby < 1) then {
-  	['Success',['There is nobody around...',]] call ExileClient_gui_notification_event_addNotification;
+  	['Success',['There is nobody around...']] call ExileClient_gui_notification_event_addNotification;
   } else {
   	['Success',[format['There are %1 player(s) nearby ',_playersNearby]]] call ExileClient_gui_notification_event_addNotification;
 	};
