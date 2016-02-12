@@ -78,21 +78,21 @@ _Box1Btn ctrlSetFontHeight 0.05;
 _Box1Btn ctrlSetStructuredText (parseText (format ["%1<br/><img image='\exile_assets\texture\ui\poptab_notification_ca.paa' size='1.0' shadow='true' />%2",_Box1Name, box1Cost]));
 _Box1Btn ctrlSetEventHandler ["ButtonClick", "boxselected = 1;"];
 
-_Box2Btn = _display ctrlCreate ["RscExileXM8AppButton1x1", 853];
+_Box2Btn = _display ctrlCreate ["RscExileXM8AppButton1x1", 852];
 _Box2Btn ctrlSetPosition [(7 - 3) * (0.025), (11.5 - 2) * (0.04)];
 _Box2Btn ctrlCommit 0;
 _Box2Btn ctrlSetFontHeight 0.05;
 _Box2Btn ctrlSetStructuredText (parseText (format ["%1<br/><img image='\exile_assets\texture\ui\poptab_notification_ca.paa' size='1.0' shadow='true' />%2",_Box2Name, box2Cost]));
 _Box2Btn ctrlSetEventHandler ["ButtonClick", "boxselected = 2;"];
 
-_Box3Btn = _display ctrlCreate ["RscExileXM8AppButton1x1", 855];
+_Box3Btn = _display ctrlCreate ["RscExileXM8AppButton1x1", 853];
 _Box3Btn ctrlSetPosition [(7 - 3) * (0.025), (17 - 2) * (0.04)];
 _Box3Btn ctrlCommit 0;
 _Box3Btn ctrlSetFontHeight 0.05;
 _Box3Btn ctrlSetStructuredText (parseText (format ["%1<br/><img image='\exile_assets\texture\ui\poptab_notification_ca.paa' size='1.0' shadow='true' />%2",_Box3Name, box3Cost]));
 _Box3Btn ctrlSetEventHandler ["ButtonClick", "boxselected = 3;"];
 
-_BuyBtn = _display ctrlCreate ["RscButtonMenu", 857];
+_BuyBtn = _display ctrlCreate ["RscButtonMenu", 854];
 _BuyBtn ctrlSetPosition [(14 - 3) * (0.025),(10.5 - 2) * (0.04),0.125,1 * (0.04)];
 _BuyBtn ctrlCommit 0;
 _BuyBtn ctrlSetText "Call Now";
@@ -228,7 +228,7 @@ _GoBackBtn ctrlSetEventHandler ["ButtonClick", "call fnc_goBack"];
 
 fnc_goBack = {
   _display = uiNameSpace getVariable ["RscExileXM8", displayNull];
-  _Ctrls = [1116,851,852,853,854,855,856,857,858];
+  _Ctrls = [1116,851,852,853,854];
   {
       _ctrl = (_display displayCtrl _x);
       _ctrl ctrlSetFade 1;
