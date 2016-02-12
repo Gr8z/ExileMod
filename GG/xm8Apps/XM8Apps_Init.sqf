@@ -21,11 +21,9 @@ _app4Logo = "\dbo\dbo_old_bike\data\icon_mmt_ca.paa";
 app4_action = { [] execVM "GG\xm8Apps\apps\spawn_bike.sqf"; };
 
 //App 5
-_app5Text = "SOON";
-_app5Logo = "GG\xm8Apps\images\WIP.paa";
-app5_action = {
-
-};
+_app5Text = "AIR DROP";
+_app5Logo = "GG\xm8Apps\images\drop.paa";
+app5_action = { [] execVM "GG\xm8Apps\apps\air_drop.sqf"; };
 
 //App 6
 _app6Text = "SOON";
