@@ -70,7 +70,11 @@ _xm8Controlls = [991,881,992,882,993,883,994,884,995,885,996,886,997,887,998,888
 } forEach _xm8Controlls;
 uiSleep 0.2;
 
-
+_Box1Icon = _display ctrlCreate ["RscPicture", 854];
+_Box1Icon ctrlSetPosition [(7.9 - 3) * (0.025), (6.5 - 2) * (0.04), 2.75 * (0.04), 2.75 * (0.04)];
+_Box1Icon ctrlSetFade 1;
+_Box1Icon ctrlCommit 0;
+_Box1Icon ctrlSetStructuredText (parseText (format ["<img image='GG\xm8Apps\images\drop.paa' size='1.0' shadow='true' />"]));
 _Box1Btn = _display ctrlCreate ["RscExileXM8AppButton1x1", 851];
 _Box1Btn ctrlSetPosition [(7 - 3) * (0.025), (6 - 2) * (0.04)];
 _Box1Btn ctrlCommit 0;
