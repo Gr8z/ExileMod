@@ -4,21 +4,21 @@ box1Cost = 3000;
 box1DonorCost = 1000;
 box1WepCount = 1;
 box1MagCount = floor((random 10) + 1);
-box1ItemCount = 1;
+box1ItemCount = floor((random 2) + 1);;
 
 _Box2Name = "Medium Drop";
 box2Cost = 6000;
 box2DonorCost = 2000;
 box2WepCount = 2;
 box2MagCount = floor((random 10) + 10);
-box2ItemCount = 1;
+box2ItemCount = floor((random 4) + 4);;
 
 _Box3Name = "Pro Drop";
 box3Cost = 15000;
 box3DonorCost = 3000;
 box3WepCount = 4;
 box3MagCount = floor((random 20) + 30);
-box3ItemCount = 1;
+box3ItemCount = floor((random 10) + 8);;
 
 BoxConstruction = ["Exile_Item_WoodWallKit","Exile_Item_WoodWallHalfKit","Exile_Item_WoodWindowKit","Exile_Item_WorkBenchKit","Exile_Item_WoodFloorPortKit","Exile_Item_WoodFloorKit","Exile_Item_WoodGateKit"];
 BoxTools = ["Exile_Item_Rope","Exile_Item_DuctTape","Exile_Item_ExtensionCord","Exile_Item_FuelCanisterEmpty","Exile_Item_JunkMetal","Exile_Item_LightBulb","Exile_Item_MetalBoard","Exile_Item_MetalPole","Exile_Item_CamoTentKit","Exile_Item_Laptop","Exile_Item_BaseCameraKit","Exile_Item_Defibrillator"];
@@ -94,8 +94,8 @@ fnc_buyselected = {
       if (_x >= 2) then {cutText [format ["AIR DROP ARRIVING IN %1s", 101-_x], "PLAIN DOWN"];};
       uiSleep 1;
     };
-    _crate = createVehicle ["Exile_Container_StorageCrate", [(_playerPOS select 0),(_playerPOS select 1),((_playerPOS select 2) +100)], [], 0, "FLY"];
-    _smokeshell = createVehicle ["SmokeShellRed", [(_playerPOS select 0),(_playerPOS select 1),((_playerPOS select 2) +100)], [], 0, "FLY"];
+    _crate = createVehicle ["Exile_Container_StorageCrate", [(_playerPOS select 0),(_playerPOS select 1),((_playerPOS select 2) +300)], [], 0, "FLY"];
+    _smokeshell = createVehicle ["SmokeShellRed", [(_playerPOS select 0),(_playerPOS select 1),((_playerPOS select 2) +300)], [], 0, "FLY"];
     clearMagazineCargoGlobal _crate;clearWeaponCargoGlobal _crate;clearItemCargoGlobal _crate;clearBackpackCargoGlobal _crate;
 
     _i=0;
