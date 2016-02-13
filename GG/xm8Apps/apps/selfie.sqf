@@ -23,4 +23,3 @@ waitUntil {camCommitted _camera};
 player enablesimulation true; 
 _camera cameraEffect ["terminate","back"];
 camDestroy _camera;
-showHUD [true,true,true,true,true,true,false,true];
