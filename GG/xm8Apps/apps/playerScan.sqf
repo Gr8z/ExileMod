@@ -32,6 +32,11 @@ if (ExileClientPlayerIsInCombat) exitWith {
 if((LastUsedCheck == 0) || (diag_tickTime - LastUsedCheck > _cooldownTime))then{
   _display = (findDisplay 24015) closeDisplay 0;
 
+   for "_x" from 1 to 10 do {
+      if (_x >= 2) then {cutText [format ["PLEASE WAIT - SCANING 8G USERS 1000M NEAR YOU...", 11-_x], "PLAIN DOWN"];};
+      uiSleep 1;
+    };
+
   _playersNearby = 0;
   _playerPos = getPos player;
   {
