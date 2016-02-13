@@ -165,7 +165,7 @@ for '_j' from 0 to (count (missionConfigFile >> "CfgCraftingRecipes"))-1 do
 		(_display displayCtrl 5501) lbSetData [_lbsize,_RecipeClass];
 	};
 
-	if (!_CheckCategory && _SelectedCategory == "Priceless" && !_CheckInCategoryItems) then
+	if (!_CheckCategory && _SelectedCategory == "Other" && !_CheckInCategoryItems) then
 	{
 		_lbsize = lbSize (_display displayCtrl 5501);
 		(_display displayCtrl 5501) lbAdd Format["%1",_currentRecipeName];
