@@ -110,25 +110,15 @@ class CfgSounds
 	};
 };
 
-#include "GG\SL\global.hpp"
+
 #include "GG\CHVD\dialog.hpp"
 class cfgFunctions
 {
-	class scarCODE
-	{
-		tag = "SC";
-		class serverLogo
-		{
-			file = "GG\SL";
-			class showWatermark { postInit = 1; };
-		};
-	};
 	#include "GG\CHVD\CfgFunctions.hpp"
 };
 
 class RscTitles
 {
-	#include "GG\SL\main.hpp"
 	#include "GG\StatusBar\statusBar.hpp"
 };
 
