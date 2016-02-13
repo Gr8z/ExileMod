@@ -10,7 +10,6 @@ if (ExileClientPlayerIsInCombat) exitWith {
  	["Whoops", ["Selfie Failed, You are in combat."]] call ExileClient_gui_notification_event_addNotification;
 };
 
-playSound "intro";
 (findDisplay 24015) closeDisplay 0;
 player enablesimulation false; 
 showCinemaBorder true;
