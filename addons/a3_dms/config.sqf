@@ -1932,7 +1932,6 @@ DMS_Use_Map_Config = true;	// Whether or not to use config overwrites specific t
 											"CUP_lmg_M249",
 											"CUP_lmg_PKM",
 											"CUP_srifle_SVD_wdl_ghillie",
-											"CUP_srifle_SVD_des_ghillie_pso",
 											"CUP_srifle_DMR",
 											"CUP_srifle_ksvk",
 											"CUP_srifle_M110",
