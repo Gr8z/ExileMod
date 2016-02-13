@@ -166,8 +166,8 @@ fnc_buyselected = {
     lastDrop = time;
     publicVariable "lastDrop";
 
-    _crate = createVehicle ["Exile_Container_StorageCrate", [(_playerPOS select 0),(_playerPOS select 1),((_playerPOS select 2) +300)], [], 0, "FLY"];
-    _smokeshell = createVehicle ["SmokeShellRed", [(_playerPOS select 0),(_playerPOS select 1),((_playerPOS select 2) +300)], [], 0, "FLY"];
+    _crate = createVehicle ["Exile_Container_StorageCrate", [(_playerPOS select 0),(_playerPOS select 1),((_playerPOS select 2) +150)], [], 0, "FLY"];
+    _smokeshell = createVehicle ["SmokeShellRed", [(_playerPOS select 0),(_playerPOS select 1),((_playerPOS select 2) +150)], [], 0, "FLY"];
     clearMagazineCargoGlobal _crate;clearWeaponCargoGlobal _crate;clearItemCargoGlobal _crate;clearBackpackCargoGlobal _crate;
 
     _i=0;

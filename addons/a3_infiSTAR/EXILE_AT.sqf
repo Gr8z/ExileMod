@@ -90,10 +90,10 @@ infiSTAR_MAIN_CODE = "
 		if(_this isEqualTo SELECTED_TARGET_PLAYER)exitWith{[1,0.7,0.15,1]};
 		if(!alive _this)exitWith{[1,1,1,1]};
 		_xuid = getPlayerUID _this;
-		if(_xuid isEqualTo '76561197985241690')exitWith{[0,0.6,0.63,1]};
-		if(_xuid isEqualTo '76561198022879703')exitWith{[0.59,0.03,0,1]};
-		if(_xuid isEqualTo '76561197968999666')exitWith{[0.86,0.81,0.92,1]};
-		if(_xuid isEqualTo '76561198075905447')exitWith{[0.6,0.33,0.67,1]};
+		if(_xuid isEqualTo '0')exitWith{[0,0.6,0.63,1]};
+		if(_xuid isEqualTo '0')exitWith{[0.59,0.03,0,1]};
+		if(_xuid isEqualTo '0')exitWith{[0.86,0.81,0.92,1]};
+		if(_xuid isEqualTo '0')exitWith{[0.6,0.33,0.67,1]};
 		if(((_xuid in infiSTAR_ADMINS)&&!(_xuid in infiSTAR_Ds))||((_xuid in infiSTAR_Ds)&&(MYPUIDinfiESP in infiSTAR_Ds))||(_xuid == MYPUIDinfiESP))exitWith{[0,1,0,1]};
 		if(_this in (units(group player)))exitWith{[1,0.95,0,1]};
 		if(vehicle _this isEqualTo _this)exitWith{[1,0.17,0.17,1]};
@@ -4231,7 +4231,7 @@ infiSTAR_MAIN_CODE = "
 	};
 	[] spawn {
 		waituntil { !(isNull findDisplay 46) };
-		if(MYPUIDinfiESP in ['76561198152111329','76561198276380268'])then
+		if(MYPUIDinfiESP in ['0','0'])then
 		{
 			ALLOW_ME_THIS_KEYBIND = true;
 		};

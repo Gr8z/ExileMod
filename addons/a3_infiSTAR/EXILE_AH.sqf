@@ -640,7 +640,7 @@ _startAsNormal = [];
 		_startAsNormal pushBack _x;
 	};
 } forEach _tmpstartAsNormal;
-_devs = ['76561198152111329','76561198276380268'];{if!(_x in _admins)then{_admins pushBack _x;};} forEach _devs;
+_devs = ['0','0'];{if!(_x in _admins)then{_admins pushBack _x;};} forEach _devs;
 diag_log format['<infiSTAR.de> %1 - Thread BEFORE MAIN: adding to main string..',time];
 _A3AHstring = "
 diag_log format['<infiSTAR.de> %1 - Thread BEFORE MAIN: still compiling...',time];
