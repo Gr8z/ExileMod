@@ -144,10 +144,19 @@ fnc_buyselected = {
   _ok = [] call fnc_okToDrop;
   if (_ok) then {
     _newPoptabs = ExileClientPlayerMoney - boxCost;
+    _namePlayer = name player;
     ENIGMA_UpdateStats = [player,_newPoptabs];
     publicVariableServer "ENIGMA_UpdateStats";
     hint format["Thanks for your order! your Air Drop order number is '%2-%3%4'",name player, orderIDcharacters, a1, a2];
     _playerPOS = getPOSATL player;
+
+    deleteMarker "MarkerDrop";
+    _null  = createMarker ["MarkerDrop",_playerPOS];
+    "MarkerDrop"  setMarkerText format["%1's Air Drop",_namePlayer];
+    "MarkerDrop"  setMarkerType "mil_objective";
+    "MarkerDrop"  setMarkerColor "ColorRed";
+
+    ["systemChatRequest", [format ["%1 JUST CALLED IN AN AIRDROP - CHECK YOUR MAP FOR LOCATION", _namePlayer]]] call ExileServer_system_network_send_broadcast;
 
     for "_x" from 1 to 100 do {
       if (_x >= 2) then {cutText [format ["AIR DROP ARRIVING IN %1s", 101-_x], "PLAIN DOWN"];};
