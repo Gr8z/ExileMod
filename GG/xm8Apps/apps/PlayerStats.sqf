@@ -67,6 +67,13 @@ _stat7 ctrlCommit 0;
 _stat7 ctrlSetFontHeight 0.2;
 _stat7 ctrlSetStructuredText parseText (format["<t size='1.8' align='center'>%1</t>",_playerKD]);
 
+
+_stat8 = _display ctrlCreate ["RscText", 868];
+_stat8 ctrlSetPosition [(9.9 - 3) * (0.025), (16.5 - 2) * (0.04), 2.75 * (0.12), 2.75 * (0.02)];
+_stat8 ctrlCommit 0;
+_stat8 ctrlSetFontHeight 0.05;
+_stat8 ctrlSetStructuredText parseText "<t size='1.2' align='center'><a href='http://ghostzgamerz.com/pages/ExileCherno'>CLICK HERE TO SEE LEADERBOARDS</a></t>";
+
 _GoBackBtn = _display ctrlCreate ["RscButtonMenu", 1116];
 _GoBackBtn ctrlSetPosition [(32 - 3) * (0.025),(20 - 2) * (0.04),6 * (0.025),1 * (0.04)];
 _GoBackBtn ctrlCommit 0;
@@ -75,7 +82,7 @@ _GoBackBtn ctrlSetEventHandler ["ButtonClick", "call fnc_goBack"];
 
 fnc_goBack = {
 	_display = uiNameSpace getVariable ["RscExileXM8", displayNull];
-	_Ctrls = [1116,861,862,863,864,865,866,867];
+	_Ctrls = [1116,861,862,863,864,865,866,867,868];
 	{
 		_ctrl = (_display displayCtrl _x);
 		_ctrl ctrlSetFade 1;
