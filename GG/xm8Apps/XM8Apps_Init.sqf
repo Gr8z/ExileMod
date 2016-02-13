@@ -33,7 +33,7 @@ app6_action = { [] execVM "GG\xm8Apps\apps\playerScan.sqf"; };
 //App 7
 _app7Text = "RECIPES";
 _app7Logo = "GG\xm8Apps\images\crafting.paa";
-app7_action = { [] execVM "GG\xm8App\apps\crafting.sqf"; };
+app7_action = { [] execVM "GG\xm8Apps\apps\crafting.sqf"; };
 
 //App 8
 _app8Text = "";
