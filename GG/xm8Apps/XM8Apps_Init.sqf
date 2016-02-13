@@ -36,9 +36,9 @@ _app7Logo = "GG\xm8Apps\images\crafting.paa";
 app7_action = { [] execVM "GG\xm8Apps\apps\crafting.sqf"; };
 
 //App 8
-_app8Text = "";
-_app8Logo = "";
-app8_action =  { hint "APP COMING SOON" };
+_app8Text = "SELFIE";
+_app8Logo = "GG\xm8Apps\images\selfie.paa";
+app8_action =  { [] execVM "GG\xm8Apps\apps\selfie.sqf"; };
 
 //App 9
 _app9Text = "";
