@@ -31,7 +31,7 @@ fnc_goBack = {
       _ctrl ctrlCommit 0.25;
       ctrlEnable [_x, false];
   } forEach _Ctrls;
-  execVM "xm8Apps\XM8Apps_Init.sqf";
+  execVM "GG\xm8Apps\XM8Apps_Init.sqf";
   //uiSleep 1;
   {
     ctrlDelete ((findDisplay 24015) displayCtrl _x);
