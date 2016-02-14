@@ -162,7 +162,8 @@ DMS_Use_Map_Config = true;	// Whether or not to use config overwrites specific t
 											["thieves",2],
 											["lost_battalion",2],
 											["behindenemylines",2],
-											["mercbase",1]
+											["mercbase",1],
+											["newmedical",5]
 										];
 	
 
