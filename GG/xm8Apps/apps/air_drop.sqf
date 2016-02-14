@@ -1,6 +1,3 @@
-
-GG_Debug = true; // No Countdown, No cooldown, no online player Limit. Only for testing.
-
 orderIDcharacters = "GG";
 _Box1Name = "Starter Drop";
 box1Cost = 5000;
@@ -102,13 +99,8 @@ fnc_okToDrop = {
   _ok = true;
  
   _Time = time - lastDrop;
-  if (GG_Debug) then {
-    _LastUsedTime = 10;
-    _OnlineLimit = 0;
-  }else {
-    _LastUsedTime = 900;
-    _OnlineLimit = 15;
-  };
+  _LastUsedTime = 900;
+  _OnlineLimit = 15;
   _traderZoneNearLimit = 200;
   if (_Time < _LastUsedTime) then {
     (findDisplay 24015) closeDisplay 0;
@@ -175,13 +167,11 @@ fnc_buyselected = {
  
     ["systemChatRequest", [format ["%1 JUST CALLED IN AN AIRDROP - CHECK YOUR MAP FOR LOCATION", _namePlayer]]] call ExileServer_system_network_send_broadcast;
  
-    if !(GG_Debug) then {
-      for "_x" from 1 to 100 do {
-        if (_x >= 2) then {cutText [format ["AIR DROP ARRIVING IN %1s", 101-_x], "PLAIN DOWN"];};
-        uiSleep 1;
-      };
+     for "_x" from 1 to 100 do {
+      if (_x >= 2) then {cutText [format ["AIR DROP ARRIVING IN %1s", 101-_x], "PLAIN DOWN"];};
+      uiSleep 1;
     };
-    
+
     lastDrop = time;
     publicVariable "lastDrop";
  
