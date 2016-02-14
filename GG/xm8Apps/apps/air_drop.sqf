@@ -88,6 +88,8 @@ _crate3Buy ctrlSetEventHandler ["ButtonClick", "boxCost = box3Cost;boxDonorCost 
 _ranNumArr = ['1','2','3','4','5','6','7','8','9','0'];
 a1 = _ranNumArr call BIS_fnc_selectRandom;
 a2 = _ranNumArr call BIS_fnc_selectRandom;
+a3 = _ranNumArr call BIS_fnc_selectRandom;
+a1a2a3 = a1+a2+a3;
  
 _infoBox = _display ctrlCreate ["RscStructuredText", 1230];
 _infoBox ctrlSetPosition [(23 - 3) * (0.025),(6 - 2) * (0.04),(0.32),16 * (0.04)];
@@ -156,15 +158,14 @@ fnc_buyselected = {
     _namePlayer = name player;
     ENIGMA_UpdateStats = [player,_newPoptabs];
     publicVariableServer "ENIGMA_UpdateStats";
-    hint format["Thanks for your order! your Air Drop order number is '%2-%3%4'",name player, orderIDcharacters, a1, a2];
+    hint format["Thanks for your order! your Air Drop order number is '%2-%3%4%5'",name player, orderIDcharacters, a1, a2, a3];
     _playerPOS = getPOSATL player;
  
-    deleteMarker "MarkerDrop";
-    _null  = createMarker ["MarkerDrop",_playerPOS];
-    "MarkerDrop"  setMarkerText format["%1's Air Drop",_namePlayer];
-    "MarkerDrop"  setMarkerType "mil_objective";
-    "MarkerDrop"  setMarkerColor "ColorRed";
- 
+    a1a2a3  = createMarker [a1a2,_playerPOS];
+    a1a2a3  setMarkerText format["%1's Air Drop - %2%3%4",_namePlayer, a1, a2, a3];
+    a1a2a3  setMarkerType "mil_objective";
+    a1a2a3  setMarkerColor "ColorRed";
+
     //["systemChatRequest", [format ["%1 JUST CALLED IN AN AIRDROP - CHECK YOUR MAP FOR LOCATION", _namePlayer]]] call ExileServer_system_network_send_broadcast;
  
      for "_x" from 1 to 100 do {
@@ -197,6 +198,10 @@ fnc_buyselected = {
     _crate attachTo [_parachute, [0, 0, 0.1] ];
     _smokeshell attachTo [_crate, [0, 0, 0.1] ];
     hint format["Your Air Drop Was Successfully Delivered %1!",name player];
+
+    uiSleep 300;
+    deleteMarker a1a2a3;
+    deleteVehicle _crate;
   };
 };
  
