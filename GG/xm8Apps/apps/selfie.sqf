@@ -21,7 +21,8 @@ _camera camCommit 5;
 
 waitUntil {camCommitted _camera};
 cutText ['','WHITE IN'];
-uiSleep 1;
+playSound "cam";
+uiSleep 2;
 player enablesimulation true; 
 _camera cameraEffect ["terminate","back"];
 camDestroy _camera;
