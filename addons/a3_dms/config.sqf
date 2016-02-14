@@ -1845,7 +1845,7 @@ DMS_Use_Map_Config = true;	// Whether or not to use config overwrites specific t
 	DMS_AI_wep_launchers_AT =			[							// AT Launchers
 											"launch_NLAW_F",
 											"launch_RPG32_F",
-											"launch_B_Titan_short_F"
+											"CUP_launch_RPG7V"
 										];
 	DMS_AI_wep_launchers_AA =			[							// AA Launchers
 											"launch_B_Titan_F"
