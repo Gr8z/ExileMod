@@ -52,22 +52,22 @@ _xm8Controlls = [991,881,992,882,993,883,994,884,995,885,996,886,997,887,998,888
 } forEach _xm8Controlls;
 uiSleep 0.2;
  
-_drop1Info = _display ctrlCreate ["RscStructuredText", 1231];
+_drop1Info = _display ctrlCreate ["RscStructuredText", 851];
 _drop1Info ctrlSetPosition [(9.5 - 3) * (0.025),(6 - 2) * (0.04),(0.28),5 * (0.04)];
 _drop1Info ctrlCommit 0;
-_drop1Info ctrlSetStructuredText (parseText (format ["<br/><br/><t align='center'size='2'>Starter Drop<br/>Price = <img image='\exile_assets\texture\ui\poptab_notification_ca.paa' size='0.8' shadow='0' />%1",box1Cost]));
+_drop1Info ctrlSetStructuredText (parseText (format ["<br/><br/><t align='center'size='1.4'>Starter Drop<br/>Price = <img image='\exile_assets\texture\ui\poptab_notification_ca.paa' size='0.8' shadow='0' />%1",box1Cost]));
 _drop1Info ctrlSetBackgroundColor [0.11,0.106,0.125,1];
  
-_drop2Info = _display ctrlCreate ["RscStructuredText", 1231];
+_drop2Info = _display ctrlCreate ["RscStructuredText", 852];
 _drop2Info ctrlSetPosition [(9.5 - 3) * (0.025),(11.5 - 2) * (0.04),(0.28),5 * (0.04)];
 _drop2Info ctrlCommit 0;
-_drop2Info ctrlSetStructuredText (parseText (format ["<br/><br/><t align='center'size='2'>Medium Drop<br/>Price = <img image='\exile_assets\texture\ui\poptab_notification_ca.paa' size='0.8' shadow='0' />%1",box2Cost]));
+_drop2Info ctrlSetStructuredText (parseText (format ["<br/><br/><t align='center'size='1.4'>Medium Drop<br/>Price = <img image='\exile_assets\texture\ui\poptab_notification_ca.paa' size='0.8' shadow='0' />%1",box2Cost]));
 _drop2Info ctrlSetBackgroundColor [0.11,0.106,0.125,1];
  
-_drop3Info = _display ctrlCreate ["RscStructuredText", 1231];
+_drop3Info = _display ctrlCreate ["RscStructuredText", 853];
 _drop3Info ctrlSetPosition [(9.5 - 3) * (0.025),(17 - 2) * (0.04),(0.28),5 * (0.04)];
 _drop3Info ctrlCommit 0;
-_drop3Info ctrlSetStructuredText (parseText (format ["<br/><br/><t align='center'size='2'>Pro Drop<br/>Price = <img image='\exile_assets\texture\ui\poptab_notification_ca.paa' size='0.8' shadow='0' />%1",box3Cost]));
+_drop3Info ctrlSetStructuredText (parseText (format ["<br/><br/><t align='center'size='1.4'>Pro Drop<br/>Price = <img image='\exile_assets\texture\ui\poptab_notification_ca.paa' size='0.8' shadow='0' />%1",box3Cost]));
 _drop3Info ctrlSetBackgroundColor [0.11,0.106,0.125,1];
  
 _crate1Buy = _display ctrlCreate ["RscButtonMenu", 854];
@@ -76,13 +76,13 @@ _crate1Buy ctrlCommit 0;
 _crate1Buy ctrlSetStructuredText (parseText (format ["<t align='center'>CALL STARTER DROP"]));
 _crate1Buy ctrlSetEventHandler ["boxCost = box3Cost;boxDonorCost = box3DonorCost;boxWepCount = box3WepCount;boxMagCount = box3MagCount;boxItemCount = box3ItemCount;boxRareCount = box3RareCount;[] spawn fnc_buyselected;"];
  
-_crate2Buy = _display ctrlCreate ["RscButtonMenu", 854];
+_crate2Buy = _display ctrlCreate ["RscButtonMenu", 855];
 _crate2Buy ctrlSetPosition [(9.5 - 3) * (0.025),(15.5 - 2) * (0.04),0.280,1 * (0.04)];
 _crate2Buy ctrlCommit 0;
 _crate2Buy ctrlSetStructuredText (parseText (format ["<t align='center'>CALL MEDIUM DROP"]));
 _crate2Buy ctrlSetEventHandler ["boxCost = box3Cost;boxDonorCost = box3DonorCost;boxWepCount = box3WepCount;boxMagCount = box3MagCount;boxItemCount = box3ItemCount;boxRareCount = box3RareCount;[] spawn fnc_buyselected;"];
  
-_crate3Buy = _display ctrlCreate ["RscButtonMenu", 854];
+_crate3Buy = _display ctrlCreate ["RscButtonMenu", 856];
 _crate3Buy ctrlSetPosition [(9.5 - 3) * (0.025),(21 - 2) * (0.04),0.280,1 * (0.04)];
 _crate3Buy ctrlCommit 0;
 _crate3Buy ctrlSetStructuredText (parseText (format ["<t align='center'>CALL PRO DROP"]));
@@ -219,7 +219,7 @@ _GoBackBtn ctrlSetEventHandler ["ButtonClick", "call fnc_goBack"];
  
 fnc_goBack = {
   _display = uiNameSpace getVariable ["RscExileXM8", displayNull];
-  _Ctrls = [1116,851,852,853,854,1230];
+  _Ctrls = [1116,851,852,853,854,855,856,1230];
   {
       _ctrl = (_display displayCtrl _x);
       _ctrl ctrlSetFade 1;
