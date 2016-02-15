@@ -161,7 +161,7 @@ fnc_buyselected = {
     hint format["Thanks for your order! your Air Drop order number is '%2-%3%4%5'",name player, orderIDcharacters, a1, a2, a3];
     _playerPOS = getPOSATL player;
  
-    a1a2a3  = createMarker [a1a2,_playerPOS];
+    a1a2a3  = createMarker [a1a2a3,_playerPOS];
     a1a2a3  setMarkerText format["%1's Air Drop - %2%3%4",_namePlayer, a1, a2, a3];
     a1a2a3  setMarkerType "mil_objective";
     a1a2a3  setMarkerColor "ColorRed";
