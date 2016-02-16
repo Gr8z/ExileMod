@@ -160,8 +160,8 @@ fnc_okToDrop = {
  
 fnc_buyselected = {
   _ok = [] call fnc_okToDrop;
-  DropInProgress = true;
   if (_ok) then {
+    DropInProgress = true;
     _newPoptabs = ExileClientPlayerMoney - boxCost;
     _namePlayer = name player;
     ENIGMA_UpdateStats = [player,_newPoptabs];
