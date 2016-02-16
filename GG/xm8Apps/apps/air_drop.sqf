@@ -104,25 +104,32 @@ fnc_okToDrop = {
   _LastUsedTime = 900;
   _OnlineLimit = 15;
   _traderZoneNearLimit = 200;
+
+  if (DropInProgress) then {
+    (findDisplay 24015) closeDisplay 0;
+    _msg = "Please Wait.. An Air Drop is already in progress.";
+    hint _msg;
+    _ok = false;DropInProgress = false;
+  };
   if (_Time < _LastUsedTime) then {
     (findDisplay 24015) closeDisplay 0;
     _msg = format["please wait %1s before calling in another Air Drop!",(round(_Time - _LastUsedTime))];
     hint _msg;
-    _ok = false;
+    _ok = false;DropInProgress = false;
   };
  
   if  ((nearestObject [player,'Exile_Construction_Abstract_Static']) distance player < 75) then {
     (findDisplay 24015) closeDisplay 0;
     _msg = "You are near a Base and cannot perform that action!";
     hint _msg;
-    _ok = false;
+    _ok = false;DropInProgress = false;
   };
  
   if (vehicle player != player) then {
     (findDisplay 24015) closeDisplay 0;
     _msg = "You are in a vehicle and cannot perform that action!";
     hint _msg;
-    _ok = false;
+    _ok = false;DropInProgress = false;
   };
  
   {
@@ -131,7 +138,7 @@ fnc_okToDrop = {
       (findDisplay 24015) closeDisplay 0;
         _msg = "You need to be far away from a Trader to call an Airdrop.";
         hint _msg;
-        _ok = false;
+        _ok = false;DropInProgress = false;
     };
   } forEach allMapMarkers;
  
@@ -139,20 +146,21 @@ fnc_okToDrop = {
     (findDisplay 24015) closeDisplay 0;
      _msg = format["Air Drop Failed. Less Than %1 Players online.",_OnlineLimit];
     hint _msg;
-    _ok = false;
+    _ok = false;DropInProgress = false;
   };
  
   if (ExileClientPlayerMoney < boxCost) then {
     (findDisplay 24015) closeDisplay 0;
     _msg = format["%1, Your order has been declined due to insufficient funds",name player];
     hint _msg;
-    _ok = false;
+    _ok = false;DropInProgress = false;
   };
   _ok
 };
  
 fnc_buyselected = {
   _ok = [] call fnc_okToDrop;
+  DropInProgress = true;
   if (_ok) then {
     _newPoptabs = ExileClientPlayerMoney - boxCost;
     _namePlayer = name player;
@@ -198,9 +206,11 @@ fnc_buyselected = {
     _crate attachTo [_parachute, [0, 0, 0.1] ];
     _smokeshell attachTo [_crate, [0, 0, 0.1] ];
     hint format["Your Air Drop Was Successfully Delivered %1!",name player];
+    DropInProgress = false;
 
-    uiSleep 300;
+    uiSleep 400;
     deleteMarker a1a2a3;
+    uiSleep 300;
     deleteVehicle _crate;
   };
 };
