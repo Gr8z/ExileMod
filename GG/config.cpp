@@ -1266,11 +1266,11 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// Muzzle Attachments
 	///////////////////////////////////////////////////////////////////////////////
-	class muzzle_snds_338_black 					{ quality = 2; price = 50; };
-	class muzzle_snds_338_green 					{ quality = 2; price = 50; };
-	class muzzle_snds_338_sand 						{ quality = 2; price = 50; };
-	class muzzle_snds_93mmg 						{ quality = 2; price = 50; };
-	class muzzle_snds_93mmg_tan 					{ quality = 2; price = 50; };
+	class muzzle_snds_338_black 					{ quality = 2; price = 25; };
+	class muzzle_snds_338_green 					{ quality = 2; price = 25; };
+	class muzzle_snds_338_sand 						{ quality = 2; price = 25; };
+	class muzzle_snds_93mmg 						{ quality = 2; price = 10; };
+	class muzzle_snds_93mmg_tan 					{ quality = 2; price = 10; };
 	class muzzle_snds_acp 							{ quality = 1; price = 10; };
 	class muzzle_snds_B 							{ quality = 1; price = 20; };
 	class muzzle_snds_H 							{ quality = 2; price = 20; };
