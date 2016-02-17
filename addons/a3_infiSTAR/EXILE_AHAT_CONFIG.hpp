@@ -117,6 +117,7 @@ adminUIDandAccess[] =
 	{
 		{ 
 		 "76561197978528230", // Dark
+		 "76561198201637928", // Vex
 		 // Add UID's Above - Don't forget the comma!
 		 "0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
