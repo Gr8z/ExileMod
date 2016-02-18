@@ -2874,7 +2874,7 @@ class CfgTerritories
 	maximumRadius = 80;
 
 	// The above * 2 plus coverving the 20m you can move while placing things
-	minimumDistanceToOtherTerritories = 325; 
+	minimumDistanceToOtherTerritories = 200; 
 
 	// Maximum number of territories a player can own
 	maximumNumberOfTerritoriesPerPlayer = 2;
