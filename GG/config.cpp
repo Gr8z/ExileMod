@@ -2892,8 +2892,8 @@ class CfgTerritories
 	minimumDistanceToSpawnZones = 1000;
 
 	// Amount of pop tabs or respect per object to pay
-	popTabAmountPerObject = 20;
-	respectAmountPerObject = 5;
+	popTabAmountPerObject = 50;
+	respectAmountPerObject = 10;
 };
 class CfgTraderCategories 
 {
