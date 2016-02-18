@@ -2835,11 +2835,11 @@ class CfgPlayer
 	healthDecay = 5.0;
 
 	// Health regen if over BOTH
-	thirstRegen = 90;
-	hungerRegen = 90;
+	thirstRegen = 80;
+	hungerRegen = 80;
 
 	// IF above meet recover HP%/MIN
-	recoveryPerMinute = 2;
+	recoveryPerMinute = 5;
 
 	// Set custom aim precision coefficient for weapon sway
 	// https://community.bistudio.com/wiki/Arma_3_Stamina
@@ -2858,20 +2858,20 @@ class CfgTerritories
 	prices[] = 
 	{
 		// Purchase Price 		Radius 		Number of Objects
-		{5000,					15,			30 					}, // Level 1
-		{10000,					30,			60 					}, // Level 2 
-		{15000,					45,			90 					}, // Level 3
-		{20000,					60,			120					}, // Level 4
-		{25000,					75,			150					}, // Level 5
-		{30000,					90,			180					}, // Level 6
-		{35000,					105,		210					}, // Level 7
-		{40000,					120,		240					}, // Level 8
-		{45000,					135,		270					}, // Level 9
-		{50000,					150,		300					}  // Level 10
+		{5000,					10,			30 					}, // Level 1
+		{10000,					15,			60 					}, // Level 2 
+		{15000,					20,			90 					}, // Level 3
+		{20000,					25,			120					}, // Level 4
+		{25000,					30,			150					}, // Level 5
+		{30000,					40,			180					}, // Level 6
+		{35000,					50,		    210					}, // Level 7
+		{50000,					60,		    240					}, // Level 8
+		{75000,					70,		    270					}, // Level 9
+		{90000,			  		80,		    300					}  // Level 10
 	};
 
 	// A shortcut of the above maximum radius
-	maximumRadius = 150;
+	maximumRadius = 80;
 
 	// The above * 2 plus coverving the 20m you can move while placing things
 	minimumDistanceToOtherTerritories = 325; 
