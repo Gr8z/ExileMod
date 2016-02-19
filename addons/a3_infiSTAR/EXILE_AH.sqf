@@ -926,7 +926,7 @@ _FN_INJECT_ON_CLIENT = {
 				(_display49 displayCtrl 122) ctrlShow false;
 			};
 			"; if(!_BRIEFING_MSG)then{ _A3AHstring = _A3AHstring + "
-				(_display49 displayCtrl 120) ctrlSetText 'infiSTAR.de AntiHack & AdminsTools - [Author: infiSTAR, Contact: infiSTAR23@gmail.com]';
+				(_display49 displayCtrl 120) ctrlSetText '[GG] Ghostz Gamerz - [visit us @ www.ghostzgamerz.com]';
 			"; }else{ _A3AHstring = _A3AHstring + "
 				(_display49 displayCtrl 115025) ctrlSetText 'AntiHack & AdminsTools';
 				(_display49 displayCtrl 115035) ctrlSetText 'by infiSTAR.de';
