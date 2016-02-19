@@ -12,7 +12,7 @@
 	'psychotic_closure@hotmail.com'
 	
 	Last download was on:
-	'18022016';
+	'06022016';
 */
 _found = false;
 diag_log format["<infiSTAR.de> %1 - checking for EXILE_SERVER..",time];
@@ -84,7 +84,6 @@ _LogAdminActions = ["LogAdminActions",true] call fnc_infiSTAR_cfg;
 _enableIngameLogs = ["enableIngameLogs",true] call fnc_infiSTAR_cfg;
 _needAdminNameTag = ["needAdminNameTag",false] call fnc_infiSTAR_cfg;
 _AdminNameTag = ["AdminNameTag","[Admin]"] call fnc_infiSTAR_cfg;
-_chatCommands = ["chatCommands",[]] call fnc_infiSTAR_cfg;
 _startAsNormal = ["startAsNormal",[]] call fnc_infiSTAR_cfg;
 _adminUIDandAccess = ["adminUIDandAccess",[]] call fnc_infiSTAR_cfg;
 _USE_UID_WHITELIST = ["USE_UID_WHITELIST",false] call fnc_infiSTAR_cfg;
@@ -107,7 +106,7 @@ _LVC = ["LVC",true] call fnc_infiSTAR_cfg;
 _CMC = ["CMC",true] call fnc_infiSTAR_cfg;
 _KCM = ["KCM",true] call fnc_infiSTAR_cfg;
 _CAP = ["CAP",false] call fnc_infiSTAR_cfg;
-_RHS_CUP_MOD_ENABLED = ["RHS_CUP_MOD_ENABLED",false] call fnc_infiSTAR_cfg;
+_RHS_MOD_ENABLED = ["RHS_MOD_ENABLED",false] call fnc_infiSTAR_cfg;
 _disconnect_dupe_check = ["disconnect_dupe_check",false] call fnc_infiSTAR_cfg;
 
 _wall_look = ["wall_look",false] call fnc_infiSTAR_cfg;
@@ -120,14 +119,6 @@ _stopSafeGlitch = ["stopSafeGlitch",false] call fnc_infiSTAR_cfg;
 _SpeedHackCheck = ["SpeedHackCheck",false] call fnc_infiSTAR_cfg;
 _TimeToKickForSpeedHack = ["TimeToKickForSpeedHack",60] call fnc_infiSTAR_cfg;
 _SpeedHackCheck = false;
-
-_checkPopTabIncrease = ["checkPopTabIncrease",false] call fnc_infiSTAR_cfg;
-_LogPopTabIncrease = ["LogPopTabIncrease",15000] call fnc_infiSTAR_cfg;
-_checkRespectIncrease = ["checkRespectIncrease",false] call fnc_infiSTAR_cfg;
-_LogRespectIncrease = ["LogRespectIncrease",5000] call fnc_infiSTAR_cfg;
-
-_uniform_and_vest_check = ["uniform_and_vest_check",true] call fnc_infiSTAR_cfg;	
-_log_uniform_and_vest_check_actions = ["log_uniform_and_vest_check_actions",false] call fnc_infiSTAR_cfg;	
 
 _CMM = ["CMM",true] call fnc_infiSTAR_cfg;
 _maxMapMenuEntries = ["maxMapMenuEntries",6] call fnc_infiSTAR_cfg;
