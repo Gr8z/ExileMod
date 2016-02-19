@@ -54,6 +54,17 @@ needAdminNameTag = false;
 AdminNameTag = "[Admin]";
 
 
+/*
+	{chatCommand,text shown to player}
+*/
+chatCommands[] =
+{
+	{"!ts","ts.ghostzgamerz.com"},
+	{"!website","www.ghostzgamerz.com"},
+	{"admin","SUPPORT FORBIDDEN IN SIDECHAT!"}
+};
+
+
 /* "startAsNormal": if you add admin UIDs in here as well, they will start as almost "normal" player instead of with admin menu and such. */
 startAsNormal[] =
 {
@@ -75,7 +86,7 @@ adminUIDandAccess[] =
 			"Teleport On Map Click","Teleport - Target To Me","Teleport - Me To Target","Teleport In Facing Direction (10m steps)",
 			"spectating","AdminConsole","Delete Vehicle","FlyUp","ShowGear","Show Server Information",
 			"HealSelf","HealRepairNear","AdminLog","Freeze Target","UnFreeze Target","Restrain","UnRestrain",
-			"==== Loadouts ====","==== Vehicles ====","==== Base Deleter ====","==== WeatherLord ====","Items spawn menu",
+			"==== Loadouts ====","==== Base Deleter ====","==== WeatherLord ====","Items spawn menu",
 			"Remove Gear","Heal","Restore","Flip Vehicle","Move In My Vehicle","Move In Target Vehicle","Eject","Eject Crew",
 			"Kill","Explode","Force Disconnect","Kick (Silent)","Kick (Announce)",
 			"infiSTAR Player ESP","infiSTAR Dead ESP","infiSTAR AI ESP",
@@ -84,7 +95,8 @@ adminUIDandAccess[] =
 			"Disable Announces","Mass Message","ChangeTime","Spawn Support-Boxes","Change Viewdistance",
 			"Spawn Ammo","Login as Arma Admin","BIS FreeRoam Cam (works with ESP)","FreeRoam Cam (does not work with ESP)",
 			"Request Steam Name","showinfo","Add / Remove Money","Add / Remove Respect",
-			"UnlockLockVehicle"
+			"UnlockLockVehicle",
+			"Spawn Vehicles","Spawn Persistent Vehicles"
 		}
 	},
 	{
@@ -110,7 +122,7 @@ adminUIDandAccess[] =
 			"Disable Announces","ChangeTime","Spawn Support-Boxes",
 			"Spawn Ammo","Login as Arma Admin","BIS FreeRoam Cam (works with ESP)","FreeRoam Cam (does not work with ESP)",
 			"Request Steam Name","showinfo","Add / Remove Money","Add / Remove Respect",
-			"UnlockLockVehicle"
+			"UnlockLockVehicle","Spawn Vehicles","Spawn Persistent Vehicles"
 		}
 	},
 	{
@@ -182,6 +194,14 @@ stopSafeGlitch = true;				/* re-assigning "InventoryOpened" eventhandler to stop
 SpeedHackCheck = false;				/* Use SpeedHackCheck? */
 TimeToKickForSpeedHack = 30;		/* Only if SpeedHackCheck = true: Some people tried using speedHacks to travel faster, instead of teleporting.. */
 
+checkPopTabIncrease = true;
+LogPopTabIncrease = 15000;			/* Only if checkPopTabIncrease = true; logs if poptabs increased by x within ~10 seconds */
+
+checkRespectIncrease = true;
+LogRespectIncrease = 5000;			/* Only if checkRespectIncrease = true; logs if respect increased by x within ~10 seconds */
+
+uniform_and_vest_check = true;		/* In the current version of Arma3 it may happen that the uniform or vest you wear is not shown to other players due to a bug, this will log & fix that issue! */
+log_uniform_and_vest_check_actions = false;
 
 
 /* Check for Map Menu & Map Sub-Menu */
@@ -268,7 +288,7 @@ badIDDsToClose[] =
 {
 	2,3,7,17,19,25,26,27,28,29,30,31,32,37,40,41,43,44,45,51,52,53,56,74,85,
 	106,126,127,132,146,147,150,151,152,153,154,155,159,162,164,262,
-	314,632,1320,2121,148,163,129,169,157,131,69
+	314,632,1320,2121,148,163,129,169,157,131,69,156,165,166,167,312,1321,2727
 };
 
 /* Use IDD White-List ? */ UDW = true;
