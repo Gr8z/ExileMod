@@ -146,13 +146,16 @@ DMS_Use_Map_Config = true;	// Whether or not to use config overwrites specific t
 	/*Mission notification settings*/
 
 	DMS_BanditMissionTypes =			[							//	List of missions with spawn chances. If they add up to 100%, they represent the percentage chance each one will spawn
-											["blackhawkdown",7],
-											["donthasslethehoff",6],
+											["nedmedical1_mission",5],
+											["nedbuilding1_mission",4],
+											["nedguns1_mission",4],
+											["donthasslethehoff",5],
 											["bandits",5],
 											["bauhaus",5],
 											["cardealer",5],
 											["humanitarian",5],
 											["foodtransport",5],
+											["blackhawkdown",4],
 											["construction",4],
 											["walmart",4],
 											["mercenaries",4],
@@ -162,8 +165,7 @@ DMS_Use_Map_Config = true;	// Whether or not to use config overwrites specific t
 											["thieves",2],
 											["lost_battalion",2],
 											["behindenemylines",2],
-											["mercbase",1],
-											["newmedical",5]
+											["mercbase",1]
 										];
 	
 
