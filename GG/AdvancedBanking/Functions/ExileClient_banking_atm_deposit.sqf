@@ -27,9 +27,6 @@ try {
         if (_amount > ExileClientPlayerMoney) then {
             throw "You cannot deposit more than what you have in your wallet";
         };
-        if (_amount > ExileClientPlayerMoney) then {
-            throw "You cannot deposit more than what you have in your wallet";
-        };
         if ((_amount + ExileClientBank) >  1000000) then {
             throw "You cannot deposit more than your 1 Million Bank Limit";
         };
