@@ -126,7 +126,7 @@ class cfgFunctions
 class RscTitles
 {
 	#include "GG\StatusBar\statusBar.hpp"
-	#include "AdvancedBanking\Dialog\AdvBanking_Client_CreditCard.hpp"
+	#include "GG\AdvancedBanking\Dialog\AdvBanking_Client_CreditCard.hpp"
 };
 
 #include "GG\config.cpp"
