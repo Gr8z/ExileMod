@@ -2293,21 +2293,6 @@ class CfgInteractionMenus
 	        };
 	    };
 	};
-	class ATM
-	{
-	    targetType = 2;
-	    target = "atm_01_f.p3d";
-
-	    class Actions
-	    {
-	        class Access: ExileAbstractAction
-	        {
-	            title = "Access ATM";
-	            condition = "true";
-	            action = "createDialog 'AdvBankingATM';";
-	        };
-	    };
-	};
 	class Car 
 	{
 		targetType = 2;
