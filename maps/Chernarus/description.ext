@@ -88,8 +88,7 @@ class CfgRemoteExec
 	{
 		mode = 1;
 		jip = 0;
-	//	remoteExecCall not used for a while
-	//	class fnc_AdminReq { allowedTargets=2; };
+		class fnc_AdminReq { allowedTargets=2; };
 		class ExileServer_system_network_dispatchIncomingMessage { allowedTargets=2; };
 	};
 	class Commands

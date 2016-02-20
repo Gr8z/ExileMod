@@ -54,6 +54,17 @@ needAdminNameTag = false;
 AdminNameTag = "[Admin]";
 
 
+/*
+	{chatCommand,text shown to player}
+*/
+chatCommands[] =
+{
+	{"!ts","ts.ghostzgamerz.com"},
+	{"!website","www.ghostzgamerz.com"},
+	{"admin","SUPPORT FORBIDDEN IN SIDECHAT!"}
+};
+
+
 /* "startAsNormal": if you add admin UIDs in here as well, they will start as almost "normal" player instead of with admin menu and such. */
 startAsNormal[] =
 {
@@ -76,7 +87,7 @@ adminUIDandAccess[] =
 			"Teleport On Map Click","Teleport - Target To Me","Teleport - Me To Target","Teleport In Facing Direction (10m steps)",
 			"spectating","AdminConsole","Delete Vehicle","FlyUp","ShowGear","Show Server Information",
 			"HealSelf","HealRepairNear","AdminLog","Freeze Target","UnFreeze Target","Restrain","UnRestrain",
-			"==== Loadouts ====","==== Vehicles ====","==== Base Deleter ====","==== WeatherLord ====","Items spawn menu",
+			"==== Loadouts ====","==== Base Deleter ====","==== WeatherLord ====","Items spawn menu",
 			"Remove Gear","Heal","Restore","Flip Vehicle","Move In My Vehicle","Move In Target Vehicle","Eject","Eject Crew",
 			"Kill","Explode","Force Disconnect","Kick (Silent)","Kick (Announce)",
 			"infiSTAR Player ESP","infiSTAR Dead ESP","infiSTAR AI ESP",
@@ -85,7 +96,8 @@ adminUIDandAccess[] =
 			"Disable Announces","Mass Message","ChangeTime","Spawn Support-Boxes","Change Viewdistance",
 			"Spawn Ammo","Login as Arma Admin","BIS FreeRoam Cam (works with ESP)","FreeRoam Cam (does not work with ESP)",
 			"Request Steam Name","showinfo","Add / Remove Money","Add / Remove Respect",
-			"UnlockLockVehicle"
+			"UnlockLockVehicle",
+			"Spawn Vehicles","Spawn Persistent Vehicles"
 		}
 	},
 	{
@@ -94,8 +106,6 @@ adminUIDandAccess[] =
 		 "76561197960289679", //TangoWhiskey
 		 "76561198062993387", //Azul
 		 "76561198058099842", //Fap
-		 "76561198056028211", //Nasty
-		 "76561198124203897", //Gambino
 		 "76561198133936962", // Wrice4
 		 "0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
@@ -111,7 +121,7 @@ adminUIDandAccess[] =
 			"Disable Announces","ChangeTime","Spawn Support-Boxes",
 			"Spawn Ammo","Login as Arma Admin","BIS FreeRoam Cam (works with ESP)","FreeRoam Cam (does not work with ESP)",
 			"Request Steam Name","showinfo","Add / Remove Money","Add / Remove Respect",
-			"UnlockLockVehicle"
+			"UnlockLockVehicle","Spawn Vehicles","Spawn Persistent Vehicles"
 		}
 	},
 	{
@@ -171,7 +181,7 @@ LVC = true;		/* Local Vehicle Check */
 CMC = true;		/* Check for custom CommandingMenus */
 KCM = true;		/* Just close ALL CommandingMenus */
 CAP = false;	/* Check Actions Plr - "Actions: xxx/xxx possible scroll menu hack (or you added custom actions..)" */
-RHS_MOD_ENABLED = true;			/* You need to set this option to true if you run RHS mod */
+RHS_CUP_MOD_ENABLED = true;			/* You need to set this option to true if you run RHS mod */
 disconnect_dupe_check = false;		/* checks if player tries to dupe using the "disconnect trick" -> sends a ping to the server whenever a player opens the escape menu */
 wall_look = false;					/* checks if a players tries to look through a wall (if player is allowed to build in that territory, it will not be logged.) */
 wall_glitch_object = true;			/* checks if a players tries to glitch through a wall (if player is allowed to build in that territory, it will not be logged.) */
@@ -183,6 +193,14 @@ stopSafeGlitch = true;				/* re-assigning "InventoryOpened" eventhandler to stop
 SpeedHackCheck = false;				/* Use SpeedHackCheck? */
 TimeToKickForSpeedHack = 30;		/* Only if SpeedHackCheck = true: Some people tried using speedHacks to travel faster, instead of teleporting.. */
 
+checkPopTabIncrease = true;
+LogPopTabIncrease = 15000;			/* Only if checkPopTabIncrease = true; logs if poptabs increased by x within ~10 seconds */
+
+checkRespectIncrease = true;
+LogRespectIncrease = 5000;			/* Only if checkRespectIncrease = true; logs if respect increased by x within ~10 seconds */
+
+uniform_and_vest_check = true;		/* In the current version of Arma3 it may happen that the uniform or vest you wear is not shown to other players due to a bug, this will log & fix that issue! */
+log_uniform_and_vest_check_actions = false;
 
 
 /* Check for Map Menu & Map Sub-Menu */
