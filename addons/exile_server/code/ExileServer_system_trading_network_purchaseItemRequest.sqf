@@ -42,14 +42,18 @@ try
 	{
 		throw 4;
 	};
-	_playerMoney = _playerObject getVariable ["ExileMoney", 0];
+	_playerMoney = _playerObject getVariable ["ExilePurse", 0];
 	if (_playerMoney < _salesPrice) then
 	{
 		throw 5;
 	};
 	_playerMoney = _playerMoney - _salesPrice;
-	_playerObject setVariable ["ExileMoney", _playerMoney];
-	format["setAccountMoney:%1:%2", _playerMoney, (getPlayerUID _playerObject)] call ExileServer_system_database_query_fireAndForget;
+
+    // Advanced Banking
+	_playerObject setVariable ["ExilePurse", _playerMoney];
+	format["updateWallet:%1:%2", _playerMoney, (getPlayerUID _playerObject)] call ExileServer_system_database_query_fireAndForget;
+    // Advanced Banking
+
 	[_sessionID, "purchaseItemResponse", [0, str _playerMoney, _itemClassName, 1, _containerType, _containerNetID]] call ExileServer_system_network_send_to;
 	if !(_vehicleObject isEqualTo objNull) then
 	{

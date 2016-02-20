@@ -51,14 +51,15 @@ try
 	{
 		_vehicleObject call ExileServer_object_vehicle_database_update;
 	};
-	_playerMoney = _playerObject getVariable ["ExileMoney", 0];
+	_playerMoney = _playerObject getVariable ["ExilePurse", 0];
 	_playerMoney = _playerMoney + _revenue;
-	_playerObject setVariable ["ExileMoney", _playerMoney];
+	_playerObject setVariable ["ExilePurse", _playerMoney];
 	_respectGain = _revenue * getNumber (configFile >> "CfgSettings" >> "Respect" >> "tradingRespectFactor");
 	_playerRespect = _playerObject getVariable ["ExileScore", 0];
 	_playerRespect = floor (_playerRespect + _respectGain);
 	_playerObject setVariable ["ExileScore", _playerRespect];
-	format["setAccountMoneyAndRespect:%1:%2:%3", _playerMoney, _playerRespect, (getPlayerUID _playerObject)] call ExileServer_system_database_query_fireAndForget;
+    format["setAccountScore:%1:%2",_playerRespect,(getPlayerUID _playerObject)] call ExileServer_system_database_query_fireAndForget;
+    format["updateWallet:%1:%2",_playerMoney,(getPlayerUID _playerObject)] call ExileServer_system_database_query_fireAndForget;
 	[_sessionID, "wasteDumpResponse", [0, str _playerMoney, str _playerRespect]] call ExileServer_system_network_send_to;
 	_recycleLog = format ["PLAYER: %1:%7 RECYCLED ITEM: %5 FOR %2 POPTABS AND %3 RESPECT WITH %6 CARGO | PLAYER TOTAL MONEY: %4 RESPECT %8",_playerObject,_revenue,_respectGain,_playerMoney,_vehicleObject,_cargo,(getPlayerUID _playerObject),_playerRespect];
     'ARMA_LOG' callExtension format['A3_EXILE_RECYCLELOG:%1',_recycleLog];

@@ -41,9 +41,16 @@ _app8Logo = "GG\xm8Apps\images\selfie.paa";
 app8_action =  { [] execVM "GG\xm8Apps\apps\selfie.sqf"; };
 
 //App 9
-_app9Text = "";
-_app9Logo = "";
-app9_action = { hint "APP COMING SOON" };
+_app9Text = "BANK";
+_app9Logo = "GG\AdvancedBanking\images\BankLogo.paa";
+app9_action = { 
+  if (ExilePlayerInSafezone) then {
+    (findDisplay 24015) closeDisplay 0;
+    createDialog 'AdvBankingATM';
+  } else {
+    ["Whoops", ["No Signal ! You must be in a safezone to use Online Banking!"]] call ExileClient_gui_notification_event_addNotification;
+  };
+};
 
 //App 10
 _app10Text = "";

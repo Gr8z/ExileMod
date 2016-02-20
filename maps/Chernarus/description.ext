@@ -1,4 +1,6 @@
 #include "GG\GG_AdminMenu.hpp"
+#include "GG\AdvancedBanking\Dialog\AdvBanking_Client_Defines.hpp"
+#include "GG\AdvancedBanking\Dialog\AdvBanking_Client_ATMDialog.hpp"
 
 // https://community.bistudio.com/wiki/Description.ext#forceRotorLibSimulation
 forceRotorLibSimulation = 2;
@@ -125,6 +127,7 @@ class cfgFunctions
 class RscTitles
 {
 	#include "GG\StatusBar\statusBar.hpp"
+	#include "GG\AdvancedBanking\Dialog\AdvBanking_Client_CreditCard.hpp"
 };
 
 #include "GG\config.cpp"

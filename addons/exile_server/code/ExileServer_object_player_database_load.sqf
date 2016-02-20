@@ -19,7 +19,6 @@ _position = [_data select 11, _data select 12, _data select 13];
 _direction = _data select 10;
 _group = createGroup independent;
 _player = _group createUnit ["Exile_Unit_Player", _position, [], 0, "CAN_COLLIDE"];
-_player enableSimulation false;
 _player setDir _direction;
 _player setPosATL _position;
 _player disableAI "FSM";
@@ -36,7 +35,14 @@ if !((typeName _clanID) isEqualTo "SCALAR") then
 };
 _player setDamage (_data select 3);
 _player setName _name;
-_player setVariable ["ExileMoney", (_data select 38)];
+
+// Advanced Banking
+private["_advBank"];
+_advBank = format["getStats:%1",_playerUID] call ExileServer_system_database_query_selectSingle;
+_player setVariable ["ExilePurse", (_advBank select 1)];
+_player setVariable ["ExileBank",(_advBank select 2)];
+// Advanced Banking
+
 _player setVariable ["ExileScore", (_data select 39)];
 _player setVariable ["ExileKills", (_data select 40)];
 _player setVariable ["ExileDeaths", (_data select 41)];
@@ -198,23 +204,12 @@ if !(_assignedItems isEqualTo []) then
 	forEach _assignedItems;
 };
 _player addMPEventHandler ["MPKilled", {_this call ExileServer_object_player_event_onMpKilled}];
-
-_tempFix =
-{
-	if (!local _this) then
-	{
-		_this enableSimulation true;
-		[_x select 4] call ExileServer_system_thread_removeTask;
-	};
-};
-[1, _tempFix, _player, true] call ExileServer_system_thread_addTask;
-
 [
 	_sessionID, 
 	"loadPlayerResponse", 
 	[
 		(netId _player),
-		str (_player getVariable ["ExileMoney", 0]),
+		str (_player getVariable ["ExilePurse", 0]),
 		str (_player getVariable ["ExileScore", 0]),
 		(_player getVariable ["ExileKills", 0]),
 		(_player getVariable ["ExileDeaths", 0]),
@@ -223,7 +218,16 @@ _tempFix =
 		(_player getVariable ["ExileAlcohol", 0]),
 		(_player getVariable ["ExileClanName", ""])
 	]
-] 
+]
+call ExileServer_system_network_send_to;
+
+[
+	_sessionID,
+	"updateBankStats",
+	[
+		str (_player getVariable ["ExileBank", 0])
+	]
+]
 call ExileServer_system_network_send_to;
 [_sessionID, _player] call ExileServer_system_session_update;
 true
