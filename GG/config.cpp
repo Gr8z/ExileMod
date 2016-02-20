@@ -2287,7 +2287,7 @@ class CfgInteractionMenus
 	        };
 	        class Collect: ExileAbstractAction
 	        {
-	            title = "Collect Dropped Wallet";
+	            title = "Collect Money";
 	            condition = "((ExileClientInteractionObject getVariable ['DroppedAmount',0]) > 0)";
 	            action = "(ExileClientInteractionObject getVariable ['DroppedAmount',0]) call ExileClient_banking_player_collectMoney";
 	        };
