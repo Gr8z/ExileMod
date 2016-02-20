@@ -211,9 +211,14 @@ forEach
 	['ExileServer_world_loadAllTerritories', 'exile_server\code\ExileServer_world_loadAllTerritories.sqf'],
 	['ExileServer_world_spawnSpawnZoneVehicles', 'exile_server\code\ExileServer_world_spawnSpawnZoneVehicles.sqf'],
 	['ExileServer_world_spawnVehicles', 'exile_server\code\ExileServer_world_spawnVehicles.sqf'],
-	['ExileServer_Donators', 'exile_server\donors\donators.sqf']
-	
-
+	['ExileServer_Donators', 'exile_server\donors\donators.sqf'],
+	['ExileServer_banking_map_placeATM','exile_server\code\ExileServer_banking_map_placeATM.sqf'],
+    ['ExileServer_banking_network_buyRequest','exile_server\code\ExileServer_banking_network_buyRequest.sqf'],
+    ['ExileServer_banking_network_collectionRequest','exile_server\code\ExileServer_banking_network_collectionRequest.sqf'],
+    ['ExileServer_banking_network_depositRequest','exile_server\code\ExileServer_banking_network_depositRequest.sqf'],
+    ['ExileServer_banking_network_saleRequest','exile_server\code\ExileServer_banking_network_saleRequest.sqf'],
+    ['ExileServer_banking_network_withdrawalRequest','exile_server\code\ExileServer_banking_network_withdrawalRequest.sqf'],
+    ['ExileServer_banking_utils_diagLog','exile_server\code\ExileServer_banking_utils_diagLog.sqf']
 ];
 
 call ExileServer_system_process_preInit;

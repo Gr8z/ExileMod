@@ -2030,7 +2030,74 @@ class CfgExileCustomCode
 	ExileClient_object_item_construct= 						"GG\overrides\GG_object_item_construct.sqf";
 	ExileClient_object_player_event_onInventoryOpened = 	"GG\overrides\GG_object_player_event_onInventoryOpened.sqf";
 	ExileClient_gui_xm8_slide_apps_onOpen = 				"GG\overrides\GG_gui_xm8_slide_apps_onOpen.sqf";
+	ExileClient_object_player_event_onPlayerKilled = 		"GG\overrides\ExileClient_object_player_event_onPlayerKilled.sqf";
+    ExileClinet_gui_xm8_slide_players_onOpen = 				"GG\overrides\ExileClient_gui_xm8_slide_players_onOpen.sqf";
+    ExileClient_system_network_dispatchIncomingMessage = 	"GG\overrides\ExileClient_system_network_dispatchIncomingMessage.sqf";
 };
+
+class CfgNetworkMessages {
+    class updateBankStats
+    {
+        module = "banking";
+        parameters[] = {"STRING"};
+    };
+
+    class depositRequest
+    {
+        module = "banking";
+        parameters[] = {"STRING"};
+    };
+
+    class updateATMResponse
+    {
+        module = "banking";
+        parameters[] = {"STRING","STRING"};
+    };
+
+    class withdrawalRequest
+    {
+        module = "banking";
+        parameters[] = {"STRING"};
+    };
+
+    class collectionRequest
+    {
+        module = "banking";
+        parameters[] = {"STRING"};
+    };
+
+    class collectMoneyResponse
+    {
+        module = "banking";
+        parameters[] = {"STRING","STRING"};
+    };
+    class saleRequest
+    {
+        module = "banking";
+        parameters[] = {"STRING"};
+    };
+    class buyRequest
+    {
+        module = "banking";
+        parameters[] = {"STRING"};
+    };
+    class updateWalletStats
+    {
+        module = "banking";
+        parameters[] = {"STRING"};
+    };
+    class handleATMMessage
+    {
+        module = "banking";
+        parameters[] = {"STRING","STRING"};
+    };
+    class youWonTheLottery
+    {
+        module = "banking";
+        parameters[] = {"STRING","STRING"};
+    };
+};
+
 class CfgExileHUD
 {
 	class ShortItemNames
@@ -2204,6 +2271,43 @@ class ExileAbstractAction
  */
 class CfgInteractionMenus
 {
+	// Advance Money
+	class MoneyPile
+	{
+	    targetType = 2;
+	    target = "Land_Money_F";
+
+	    class Actions
+	    {
+	        class Examine: ExileAbstractAction
+	        {
+	            title = "Examine Wallet";
+	            condition = "((ExileClientInteractionObject getVariable ['DroppedAmount',0]) > 0)";
+	            action = "[(ExileClientInteractionObject getVariable ['PileOwner',0]),(ExileClientInteractionObject getVariable ['DroppedAmount',0])] call ExileClient_banking_player_examineMoney";
+	        };
+	        class Collect: ExileAbstractAction
+	        {
+	            title = "Collect Dropped Wallet";
+	            condition = "((ExileClientInteractionObject getVariable ['DroppedAmount',0]) > 0)";
+	            action = "(ExileClientInteractionObject getVariable ['DroppedAmount',0]) call ExileClient_banking_player_collectMoney";
+	        };
+	    };
+	};
+	class ATM
+	{
+	    targetType = 2;
+	    target = "Land_Atm_01_F";
+
+	    class Actions
+	    {
+	        class Access: ExileAbstractAction
+	        {
+	            title = "Access ATM";
+	            condition = "true";
+	            action = "createDialog 'AdvBankingATM';";
+	        };
+	    };
+	};
 	class Car 
 	{
 		targetType = 2;

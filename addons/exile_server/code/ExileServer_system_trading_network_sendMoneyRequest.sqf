@@ -35,23 +35,24 @@ try
 	{
 		throw "You want to send yourself some MONEH, huh?";
 	};
-	_senderAccountBalance = _senderPlayerObject getVariable ["ExileMoney", 0];
-	_receiverAccountBalance = _receiverPlayerObject getVariable ["ExileMoney", 0];
+	_senderAccountBalance = _senderPlayerObject getVariable ["ExileBank", 0];
+	_receiverAccountBalance = _receiverPlayerObject getVariable ["ExileBank", 0];
 	if (_amountToTransfer > _senderAccountBalance) then
 	{
 		throw "You do not have enough pop tabs in your account.";
 	};
 	_senderAccountBalance = _senderAccountBalance - _amountToTransfer;
-	_senderPlayerObject setVariable ["ExileMoney", _senderAccountBalance];
-	format["setAccountMoney:%1:%2", _senderAccountBalance, getPlayerUID _senderPlayerObject] call ExileServer_system_database_query_fireAndForget;
-	[_sessionID, "moneySentRequest", [str _senderAccountBalance, name _receiverPlayerObject]] call ExileServer_system_network_send_to;
+	_senderPlayerObject setVariable ["ExileBank", _senderAccountBalance];
+    format["updateBank:%1:%2", _senderAccountBalance, getPlayerUID _senderPlayerObject] call ExileServer_system_database_query_fireAndForget;
+	[_sessionID, "updateBankStats", [str _senderAccountBalance]] call ExileServer_system_network_send_to;
+	[_sessionID,"handleATMMessage", ["Success","We have successfully processed your transfer"]] call ExileServer_system_network_send_to;
 	_receiverAccountBalance = _receiverAccountBalance + _amountToTransfer;
-	_receiverPlayerObject setVariable ["ExileMoney", _receiverAccountBalance];
-	format["setAccountMoney:%1:%2", _receiverAccountBalance, getPlayerUID _receiverPlayerObject] call ExileServer_system_database_query_fireAndForget;
-	[_receiverPlayerObject, "moneyReceivedRequest", [str _receiverAccountBalance, name _senderPlayerObject]] call ExileServer_system_network_send_to;
+	_receiverPlayerObject setVariable ["ExileBank", _receiverAccountBalance];
+	format["updateBank:%1:%2", _receiverAccountBalance, getPlayerUID _receiverPlayerObject] call ExileServer_system_database_query_fireAndForget;
+	[_receiverPlayerObject, "youWonTheLottery", [str _receiverAccountBalance, name _senderPlayerObject]] call ExileServer_system_network_send_to;
 }
 catch 
 {
-	[_sessionID, "notificationRequest", ["Whoops", [_exception]]] call ExileServer_system_network_send_to;
+	[_sessionID,"handleATMMessage", [0,_exception]] call ExileServer_system_network_send_to;
 	_exception call ExileServer_util_log;
 };

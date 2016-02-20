@@ -34,7 +34,7 @@ try
 	_totalPopTabAmount = _level * _popTabAmountPerObject * _objectsInTerritory;
 	_respectAmountPerObject = getNumber (missionConfigFile >> "CfgTerritories" >> "respectAmountPerObject");
 	_totalRespectAmount = _level * _respectAmountPerObject * _objectsInTerritory;
-	_playerPopTabs = _playerObject getVariable ["ExileMoney", 0];
+	_playerPopTabs = _playerObject getVariable ["ExilePurse", 0];
 	_playerRespect = _playerObject getVariable ["ExileScore", 0];
 	if (_mode isEqualTo 0) then
 	{
@@ -43,8 +43,12 @@ try
 			throw "You do not have enough pop tabs!";
 		};
 		_playerPopTabs = _playerPopTabs - _totalPopTabAmount;
-		_playerObject setVariable ["ExileMoney", _playerPopTabs];
-		format["setAccountMoney:%1:%2", _playerPopTabs, getPlayerUID _playerObject] call ExileServer_system_database_query_fireAndForget;
+
+		// Advanced Banking
+			_playerObject setVariable ["ExilePurse", _playerPopTabs];
+			format["updateWallet:%1:%2", _playerPopTabs, getPlayerUID _playerObject] call ExileServer_system_database_query_fireAndForget;
+		// Advanced Banking
+
 	}
 	else 
 	{

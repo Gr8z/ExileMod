@@ -19,10 +19,26 @@ if !(_uid in ["", "__SERVER__", "__HEADLESS__"]) then
 	if (_isKnownAccount) then
 	{
 		format["startAccountSession:%1:%2", _uid, _name] call ExileServer_system_database_query_fireAndForget;
+
+		// Advance Banking
+		_hasBankAccount = format["hasBankAccount:%1", _uid] call ExileServer_system_database_query_selectSingleField;
+		if (!_hasBankAccount) then {
+			format["createBankAccount:%1:%2",_uid,_name] call ExileServer_system_database_query_fireAndForget;
+			_ExileMoney = format["getAccountMoney:%1",_uid] call ExileServer_system_database_query_selectSingleField;
+			if (_ExileMoney > 0) then {
+				format["updateBank:%1:%2",_ExileMoney,_uid] call ExileServer_system_database_query_fireAndForget;
+				format["setAccountMoney:%1:%2",0,_uid] call ExileServer_system_database_query_fireAndForget;
+			};
+		};
+		// Advance Banking
 	}
 	else 
 	{
 		format["createAccount:%1:%2", _uid, _name] call ExileServer_system_database_query_fireAndForget;
+
+        	// Advanced Banking
+        	format["createBankAccount:%1:%2",_uid,_name] call ExileServer_system_database_query_fireAndForget;
+		// Advanced Banking
 	};
 };
 true
