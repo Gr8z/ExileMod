@@ -2296,7 +2296,7 @@ class CfgInteractionMenus
 	class ATM
 	{
 	    targetType = 2;
-	    target = "Land_Atm_01_F";
+	    target = "atm_01_f.p3d";
 
 	    class Actions
 	    {
