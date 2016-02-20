@@ -160,6 +160,7 @@ fnc_okToDrop = {
  
 fnc_buyselected = {
   _ok = [] call fnc_okToDrop;
+  (findDisplay 24015) closeDisplay 0;
   if (_ok) then {
     DropInProgress = true;
     _newPoptabs = ExileClientPlayerMoney - boxCost;
