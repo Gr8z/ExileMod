@@ -45,6 +45,7 @@ _app9Text = "BANK";
 _app9Logo = "GG\AdvancedBanking\images\BankLogo.paa";
 app9_action = { 
   if (ExilePlayerInSafezone) then {
+    (findDisplay 24015) closeDisplay 0;
     createDialog 'AdvBankingATM';
   } else {
     ["Whoops", ["No Signal ! You must be in a safezone to use Online Banking!"]] call ExileClient_gui_notification_event_addNotification;
