@@ -305,7 +305,8 @@
 	///////////////////////////////////////////////////////////////////////////////
 	// Launcher Ammo
 	///////////////////////////////////////////////////////////////////////////////
-    class CUP_RPG18_M    							{ quality = 2; price = 4500; };
-    class CUP_PG7VL_M    							{ quality = 2; price = 4500; };
-    class CUP_PG7VR_M    							{ quality = 2; price = 4500; };	
-    class CUP_M136_M                                { quality = 2; price = 1500; };
+    class CUP_RPG18_M    							{ quality = 2; price = 8500; };
+    class CUP_PG7VL_M    							{ quality = 2; price = 8500; };
+    class CUP_PG7VR_M    							{ quality = 2; price = 8500; };	
+    class CUP_M136_M                                { quality = 2; price = 2500; };
+    class CUP_Stinger_M                             { quality = 2; price = 100000; };
