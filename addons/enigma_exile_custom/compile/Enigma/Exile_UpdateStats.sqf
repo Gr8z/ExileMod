@@ -8,7 +8,7 @@ diag_log ["%1 Executing Exile_UpdateStats, Adding %2 Poptabs and %3 Respect",_ta
 
 if (_newmoneyvalue > 0) then {
 
-			_target setVariable ['ExileMoney', _newmoneyvalue];
+			_target setVariable ['ExilePurse', _newmoneyvalue];
 
 			_target setVariable['PLAYER_STATS_VAR',[_newmoneyvalue,_target getVariable ['ExileScore', 0]],true];
 			ExileClientPlayerMoney = _newmoneyvalue;
@@ -22,7 +22,7 @@ if (_newscorevalue > 0) then
 
 			_target setVariable ['ExileScore', _newscorevalue];
 
-			_target setVariable['PLAYER_STATS_VAR',[_target getVariable ['ExileMoney', 0],_newscorevalue],true];
+			_target setVariable['PLAYER_STATS_VAR',[_target getVariable ['ExilePurse', 0],_newscorevalue],true];
 			ExileClientPlayerScore = _newscorevalue;
 			(owner _target) publicVariableClient 'ExileClientPlayerScore';
 

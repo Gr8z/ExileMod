@@ -193,7 +193,7 @@ _bambiPlayer addMagazine [_handguntype, _handgunammo]; //fix handgun losing its 
 
 
 _bambiPlayer setName _name;
-_bambiPlayer setVariable ["ExileMoney", (_accountData select 0)];
+_bambiPlayer setVariable ["ExilePurse", (_accountData select 0)];
 _bambiPlayer setVariable ["ExileScore", (_accountData select 1)];
 _bambiPlayer setVariable ["ExileKills", (_accountData select 2)];
 _bambiPlayer setVariable ["ExileDeaths", (_accountData select 3)];
@@ -300,7 +300,7 @@ _extDB2Message call ExileServer_system_database_query_fireAndForget;
 	"loadPlayerResponse",
 	[
 		(netId _player),
-		str (_player getVariable ["ExileMoney", 0]),
+		str (_player getVariable ["ExilePurse", 0]),
 		str (_player getVariable ["ExileScore", 0]),
 		(_player getVariable ["ExileKills", 0]),
 		(_player getVariable ["ExileDeaths", 0]),

@@ -62,7 +62,7 @@ if ((!isNull _playerObj) && {(_playerUID != "") && {_playerObj isKindOf "Exile_U
 
 	if ((_moneyChange!=0) || (_repChange!=0)) then
 	{
-		_playerMoney = _playerObj getVariable ["ExileMoney", 0];
+		_playerMoney = _playerObj getVariable ["ExilePurse", 0];
 		_playerRespect = _playerObj getVariable ["ExileScore", 0];
 
 		if (DMS_DEBUG) then
@@ -77,7 +77,7 @@ if ((!isNull _playerObj) && {(_playerUID != "") && {_playerObj isKindOf "Exile_U
 			// Set client's money
 			// I also make sure that they don't get negative poptabs
 			_playerMoney = (_playerMoney + _moneyChange) max 0;
-			_playerObj setVariable ["ExileMoney",_playerMoney];
+			_playerObj setVariable ["ExilePurse",_playerMoney];
 
 			_msgType = "moneyReceivedRequest";
 			_msgParams = [str _playerMoney, format ["killing a %1 AI",_AIType]];

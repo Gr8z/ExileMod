@@ -65,7 +65,7 @@ if (_devFriendlyMode isEqualTo 1) then
 	_devs = getArray (configFile >> "CfgSettings" >> "ServerSettings" >> "devs");
 	if (_playerUID in _devs) then 
 	{
-		_player setVariable ["ExileMoney", 500000];
+		_player setVariable ["ExilePurse", 500000];
 		_player setVariable ["ExileScore", 100000];
 	};
 };

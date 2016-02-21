@@ -45,7 +45,7 @@ _bambiPlayer disableAI "TARGET";
 _bambiPlayer disableAI "CHECKVISIBLE";
 _bambiPlayer setDir _direction;
 _bambiPlayer setName _name;
-//_bambiPlayer setVariable ["ExileMoney", (_accountData select 0)];
+//_bambiPlayer setVariable ["ExilePurse", (_accountData select 0)];
 _bambiPlayer setVariable ["ExileScore", (_accountData select 1)];
 _bambiPlayer setVariable ["ExileKills", (_accountData select 2)];
 _bambiPlayer setVariable ["ExileDeaths", (_accountData select 3)];
@@ -65,7 +65,7 @@ if (_devFriendlyMode isEqualTo 1) then
 	_devs = getArray (configFile >> "CfgSettings" >> "ServerSettings" >> "devs");
 	if ((getPlayerUID _requestingPlayer) in _devs) then 
 	{
-		_bambiPlayer setVariable ["ExileMoney", 500000];
+		_bambiPlayer setVariable ["ExilePurse", 500000];
 		_bambiPlayer setVariable ["ExileScore", 100000];
 	};
 };

@@ -3263,10 +3263,10 @@ _AdminReqReal = {
 	{
 		_target = objectFromnetId (_array select 1);
 		_value = _array select 2;
-		_playerMoney = _target getVariable['ExileMoney',0];
+		_playerMoney = _target getVariable['ExilePurse',0];
 		if(typeName _playerMoney != 'SCALAR')exitWith{};
 		_newMoney = _playerMoney + _value;
-		_target setVariable['ExileMoney', _newMoney];
+		_target setVariable['ExilePurse', _newMoney];
 		[_newMoney,{ExileClientPlayerMoney = _this;},(owner _target),false] call FN_infiSTAR_S;
 		_target setVariable['PLAYER_STATS_VAR',[_newMoney,_target getVariable['ExileScore',0]],true];
 		format['setAccountMoney:%1:%2', _newMoney, (getPlayerUID _target)] call ExileServer_system_database_query_fireAndForget;
@@ -3280,7 +3280,7 @@ _AdminReqReal = {
 		_newScore = _playerMoney + _value;
 		_target setVariable['ExileScore', _newScore];
 		[_newScore,{ExileClientPlayerScore = _this;},(owner _target),false] call FN_infiSTAR_S;
-		_target setVariable['PLAYER_STATS_VAR',[_target getVariable['ExileMoney',0],_newScore],true];
+		_target setVariable['PLAYER_STATS_VAR',[_target getVariable['ExilePurse',0],_newScore],true];
 		format['setAccountScore:%1:%2', _newScore, (getPlayerUID _target)] call ExileServer_system_database_query_fireAndForget;
 	};
 	if(_option == 13)exitWith
@@ -4202,7 +4202,7 @@ _fn_2 = {
 				};
 			};
 			
-			_ExileMoney = _x getVariable['ExileMoney',0];
+			_ExileMoney = _x getVariable['ExilePurse',0];
 			_ExileScore = _x getVariable['ExileScore',0];
 			_PLAYER_STATS_VAR = _x getVariable['PLAYER_STATS_VAR',[0,0]];
 			_money = _PLAYER_STATS_VAR select 0;
