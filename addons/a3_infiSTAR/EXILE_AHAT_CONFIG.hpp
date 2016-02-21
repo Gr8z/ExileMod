@@ -102,6 +102,7 @@ adminUIDandAccess[] =
 	},
 	{
 		{
+		 "76561197978528230", // Dark
 		 "76561198029881052", //Dirk Verite
 		 "76561197960289679", //TangoWhiskey
 		 "76561198062993387", //Azul
@@ -126,7 +127,6 @@ adminUIDandAccess[] =
 	},
 	{
 		{ 
-		 "76561197978528230", // Dark
 		 "76561198201637928", // Vex
 		 "76561198065937074", // Toxsick
 		 // Add UID's Above - Don't forget the comma!
