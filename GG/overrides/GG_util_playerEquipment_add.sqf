@@ -7,13 +7,13 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_player","_itemClassName","_itemInformation","_itemCategory","_itemType","_added","_compatibleWeaponItems"];
+private["_player","_itemClassName","_bulletCount","_itemInformation","_itemCategory","_itemType","_added","_compatibleWeaponItems"];
 _player = _this select 0;
 _itemClassName = toLower (_this select 1); 
+_bulletCount = [_this, 2, -1] call BIS_fnc_param; 
 _itemInformation = [_itemClassName] call BIS_fnc_itemType;
 _itemCategory = _itemInformation select 0;
 _itemType = _itemInformation select 1;
-diag_log (format["_itemType %1",_itemType]);
 _added = false;
 if (_itemCategory isEqualTo "Magazine") then
 {
@@ -27,9 +27,16 @@ if (_itemCategory isEqualTo "Magazine") then
 					if ((primaryWeaponMagazine _player) isEqualTo []) then 
 					{ 
 						_compatibleWeaponItems = _x call ExileClient_util_gear_getCompatibleWeaponItems;
-						if (_itemClassName in _compatibleWeaponItems) exitWith
+						if (_itemClassName in _compatibleWeaponItems) then
 						{	
-							_player addPrimaryWeaponItem _itemClassName; 
+							if (_bulletCount isEqualTo -1) then 
+							{
+								_player addPrimaryWeaponItem _itemClassName; 
+							}
+							else 
+							{
+								_player addWeaponItem [_x, [_itemClassName, _bulletCount]];
+							};
 							_added = true;
 						};
 					}; 
@@ -39,9 +46,16 @@ if (_itemCategory isEqualTo "Magazine") then
 					if ((secondaryWeaponMagazine _player) isEqualTo []) then 
 					{ 
 						_compatibleWeaponItems = _x call ExileClient_util_gear_getCompatibleWeaponItems;
-						if (_itemClassName in _compatibleWeaponItems) exitWith
+						if (_itemClassName in _compatibleWeaponItems) then
 						{	
-							_player addSecondaryWeaponItem _itemClassName; 
+							if (_bulletCount isEqualTo -1) then 
+							{
+								_player addSecondaryWeaponItem _itemClassName; 
+							}
+							else 
+							{
+								_player addWeaponItem [_x, [_itemClassName, _bulletCount]];
+							};
 							_added = true;
 						};
 					}; 
@@ -51,15 +65,23 @@ if (_itemCategory isEqualTo "Magazine") then
 					if ((handgunMagazine _player) isEqualTo []) then 
 					{ 
 						_compatibleWeaponItems = _x call ExileClient_util_gear_getCompatibleWeaponItems;
-						if (_itemClassName in _compatibleWeaponItems) exitWith
+						if (_itemClassName in _compatibleWeaponItems) then
 						{	
-							_player addHandgunItem _itemClassName; 
+							if (_bulletCount isEqualTo -1) then 
+							{
+								_player addHandgunItem _itemClassName; 
+							}
+							else 
+							{
+								_player addWeaponItem [_x, [_itemClassName, _bulletCount]];
+							};
 							_added = true;
 						};
 					}; 
 				};
 			};
 		};
+		if (_added) exitWith {};
 	}
 	forEach [primaryWeapon _player, secondaryWeapon _player, handgunWeapon _player];
 }
@@ -67,24 +89,30 @@ else
 {
 	switch (_itemType) do 
 	{
-        case "Launcher",
-		case "MissileLauncher",
-		case "GrenadeLauncher", 
 		case "AssaultRifle", 
 		case "Rifle", 
 		case "SniperRifle", 
 		case "SubmachineGun", 
-		case "MachineGun", 
-		case "Handgun", 
+		case "MachineGun",
+	    case "Launcher",
+		case "RocketLauncher",
+		case "MissileLauncher",
+		case "GrenadeLauncher":		
+		{
+			_player addWeaponGlobal _itemClassName;	 
+			removeAllPrimaryWeaponItems _player; 
+			_added = true;
+		};
+		case "Handgun": 
+		{
+			_player addWeaponGlobal _itemClassName;	 
+			_added = true;
+		};
 		case "LaserDesignator", 
 		case "Throw",
 		case "Binocular": 
 		{
-			_player addWeaponGlobal _itemClassName;
-			if (_itemType IN ["AssaultRifle","Rifle","SniperRifle","SubmachineGun","MachineGun","MachineGun"]) then
-			{
-			    removeAllPrimaryWeaponItems _player;
-			};
+			_player addWeaponGlobal _itemClassName;	 
 			_added = true;
 		};
 		case "GPS", 
@@ -122,6 +150,7 @@ else
 						};
 					};
 				};
+				if (_added) exitWith {};
 			}
 			forEach [primaryWeapon _player, secondaryWeapon _player, handgunWeapon _player];
 		};
