@@ -27,9 +27,6 @@ try {
         if (_amount > ExileClientPlayerMoney) then {
             throw "You cannot deposit more than what you have in your wallet";
         };
-        if ((_amount + ExileClientBank) >  1000000) then {
-            throw format["You can only have a max of %1 in your bank",1000000];
-        };
         ["depositRequest",[str(_amount)]] call ExileClient_system_network_send;
     };
 } catch {
