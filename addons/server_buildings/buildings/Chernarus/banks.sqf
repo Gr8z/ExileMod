@@ -23,7 +23,7 @@ if (isServer) then {
 	_marker setMarkerShape "ICON";
 	_marker setMarkerType "loc_Tourism";
 	_marker setMarkerColor "ColorGreen";
-	_marker setMarkerSize [0.6,0.6];
+	_marker setMarkerSize [1,1];
 	_marker setMarkerText "ATM";
 	} foreach _objs;
 };
