@@ -346,7 +346,8 @@
 	"CUP_glaunch_M32",
 	"CUP_glaunch_M79",
 	"CUP_glaunch_Mk13",
-	"CUP_launch_RPG7V"
+	"CUP_launch_RPG7V",
+	"CUP_launch_FIM92Stinger"
 		};
 	};	
 	
