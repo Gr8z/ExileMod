@@ -2271,7 +2271,6 @@ class ExileAbstractAction
  */
 class CfgInteractionMenus
 {
-	// Advance Money
 	class MoneyPile
 	{
 	    targetType = 2;
@@ -2481,7 +2480,21 @@ class CfgInteractionMenus
 			};
 		};
 	};
+	class ATM
+    {
+        targetType = 2;
+        target = "Land_Atm_01_F";
 
+        class Actions
+        {
+            class Access: ExileAbstractAction
+			{
+				title = "Access ATM";
+				condition = "true";
+				action = "createDialog 'AdvBankingATM';";
+			};
+        };
+    };
 	class Laptop
 	{
 		targetType = 2;
