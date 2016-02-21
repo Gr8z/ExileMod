@@ -359,6 +359,7 @@
 		{
 	"CUP_RPG18_M",
 	"CUP_PG7VL_M",
-	"CUP_PG7VR_M"
+	"CUP_PG7VR_M",
+	"CUP_Stinger_M"
 		};
 	};		
