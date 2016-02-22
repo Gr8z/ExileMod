@@ -2478,6 +2478,12 @@ class CfgInteractionMenus
 				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo 0)";
 				action = "_this spawn ExileClient_Object_lock_SetPin";
 			};
+			class Access: ExileAbstractAction
+			{
+				title = "Online Banking";
+				condition = "true";
+				action = "createDialog 'AdvBankingATM';";
+			};
 		};
 	};
 	class ATM
