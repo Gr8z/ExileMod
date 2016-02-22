@@ -14,7 +14,7 @@ if (_newmoneyvalue > 0) then {
 			ExileClientPlayerMoney = _newmoneyvalue;
 			(owner _target) publicVariableClient 'ExileClientPlayerMoney';
 
-			format['setAccountMoney:%1:%2', _newmoneyvalue, (getPlayerUID _target)] call ExileServer_system_database_query_fireAndForget;
+			format['updateWallet:%1:%2', _newmoneyvalue, (getPlayerUID _target)] call ExileServer_system_database_query_fireAndForget;
 		};
 
 if (_newscorevalue > 0) then

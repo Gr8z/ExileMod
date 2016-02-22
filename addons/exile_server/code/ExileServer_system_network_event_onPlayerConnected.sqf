@@ -27,7 +27,7 @@ if !(_uid in ["", "__SERVER__", "__HEADLESS__"]) then
 			_ExileMoney = format["getAccountMoney:%1",_uid] call ExileServer_system_database_query_selectSingleField;
 			if (_ExileMoney > 0) then {
 				format["updateBank:%1:%2",_ExileMoney,_uid] call ExileServer_system_database_query_fireAndForget;
-				format["setAccountMoney:%1:%2",0,_uid] call ExileServer_system_database_query_fireAndForget;
+				format["updateWallet:%1:%2",0,_uid] call ExileServer_system_database_query_fireAndForget;
 			};
 		};
 		// Advance Banking

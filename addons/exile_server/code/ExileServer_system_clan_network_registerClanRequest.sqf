@@ -42,7 +42,7 @@ try
 	};
 	_playerMoney = _playerMoney - _registrationFee;
 	_player setVariable ["ExilePurse", _playerMoney];
-	format["setAccountMoney:%1:%2", _playerMoney, getPlayerUID _player] call ExileServer_system_database_query_fireAndForget;
+	format["updateWallet:%1:%2", _playerMoney, getPlayerUID _player] call ExileServer_system_database_query_fireAndForget;
 	_clanID = format["createClan:%1:%2", getPlayerUID _player, _clanName] call ExileServer_system_database_query_insertSingle;
 	format["setAccountClanLink:%1:%2", _clanID, getPlayerUID _player] call ExileServer_system_database_query_fireAndForget;
 	_player setVariable ["ExileClanID", _clanID];

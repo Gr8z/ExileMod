@@ -3269,7 +3269,7 @@ _AdminReqReal = {
 		_target setVariable['ExilePurse', _newMoney];
 		[_newMoney,{ExileClientPlayerMoney = _this;},(owner _target),false] call FN_infiSTAR_S;
 		_target setVariable['PLAYER_STATS_VAR',[_newMoney,_target getVariable['ExileScore',0]],true];
-		format['setAccountMoney:%1:%2', _newMoney, (getPlayerUID _target)] call ExileServer_system_database_query_fireAndForget;
+		format['updateWallet:%1:%2', _newMoney, (getPlayerUID _target)] call ExileServer_system_database_query_fireAndForget;
 	};
 	if(_option == 122)exitWith
 	{
