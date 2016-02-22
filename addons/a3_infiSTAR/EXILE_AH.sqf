@@ -2137,7 +2137,7 @@ _FN_INJECT_ON_CLIENT = {
 			if(isNil'VERSIONCHECKRESULT')then{VERSIONCHECKRESULT='';};
 			_devLog = format['%1 VERSION: 18022016 infiSTAR.de AHAT (v0033) - server running: %2:1077 - AdminNameTag: "+str _AdminNameTag+"',VERSIONCHECKRESULT,call _GET_TIME_TIME];diag_log _devLog;
 			"; if(!_HIDE_FROM_PLAYERS)then{ _A3AHstring = _A3AHstring + "
-				systemChat format['<infiSTAR.de> %1 - Successfully Loaded In.',call _GET_TIME_TIME];
+				systemChat format['%1 - Successfully Loaded In.',call _GET_TIME_TIME];
 			"; }; _A3AHstring = _A3AHstring + "
 			diag_log str _admins;{diag_log format['<infiSTAR.de> %1',_x];} forEach diag_activeSQFScripts;
 			"; if(_TGV != -1)then{ _A3AHstring = _A3AHstring + "
@@ -2152,7 +2152,7 @@ _FN_INJECT_ON_CLIENT = {
 			"; if(_SVD != -1)then{ _A3AHstring = _A3AHstring + "
 				setObjectViewDistance [getObjectViewDistance select 0,"+str _SVD+"];
 			"; }; _A3AHstring = _A3AHstring + "
-			player createDiaryRecord ['Diary', ['infiSTAR.de AntiHack & AdminTools', '<br/>  Get your own infiSTAR.de AntiHack and AdminTools available on <br/><br/>http://www.infiSTAR.de<br/><br/>']];
+			player createDiaryRecord ['Diary', ['[GG] Ghostz Gamerz', '<br/>  Visit Our Website at <br/><br/>http://www.GhostzGamerz.com<br/><br/>']];
 			_bis_fnc_diagkey = uiNamespace getVariable['bis_fnc_diagkey',{false}];
 			if(!isNil'_bis_fnc_diagkey')then{if!((str _bis_fnc_diagkey) in ['{false}','{}'])then{bis_fnc_diagkeychanged='bis_fnc_diagkeychanged';publicVariableServer'bis_fnc_diagkeychanged';};};
 			"+_AH_RunCheckENDVAR+" = time;
