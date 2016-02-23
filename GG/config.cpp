@@ -2033,6 +2033,14 @@ class CfgExileCustomCode
 	ExileClient_object_player_event_onPlayerKilled = 		"GG\overrides\GG_object_player_event_onPlayerKilled.sqf";
     ExileClient_gui_xm8_slide_players_onOpen = 				"GG\overrides\GG_gui_xm8_slide_players_onOpen.sqf";
     ExileClient_system_network_dispatchIncomingMessage = 	"GG\overrides\GG_system_network_dispatchIncomingMessage.sqf";
+
+    ExileServer_object_construction_network_buildTerritoryRequest 			= "exile_server_custom\ExileServer_object_construction_network_buildTerritoryRequest.sqf";
+	ExileServer_system_lootManager_initialize 								= "exile_server_custom\ExileServer_system_lootManager_initialize.sqf";
+	ExileServer_system_lootManager_spawnLootForPlayer 						= "exile_server_custom\ExileServer_system_lootManager_spawnLootForPlayer.sqf";
+	ExileServer_system_lootManager_thread_spawnLoot 						= "exile_server_custom\ExileServer_system_lootManager_thread_spawnLoot.sqf";
+	ExileServer_system_process_postInit 									= "exile_server_custom\ExileServer_system_process_postInit.sqf";
+	ExileServer_system_territory_database_load 								= "exile_server_custom\ExileServer_system_territory_database_load.sqf";
+
 };
 
 class CfgNetworkMessages {

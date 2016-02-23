@@ -21,8 +21,8 @@ link8[] = {4,2};
 link9[] = {5,2};
 link10[] = {6,2};
 link11[] = {7,2};
-globals[] = {0.000000,0,0,0,0,640,480,1,455,6316128,1,507.138519,1104.597778,441.719635,-113.631027,979,884,1};
-window[] = {2,-1,-1,-1,-1,916,182,1476,182,3,997};
+globals[] = {0.000000,0,0,0,0,640,480,1,455,6316128,1,507.138519,1104.597778,441.719635,-113.631027,979,1004,1};
+window[] = {2,-1,-1,-1,-1,798,-1675,-381,64,3,997};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -118,13 +118,10 @@ class FSM
                                         condition=/*%FSM<CONDITION""">*/"(diag_ticktime - _lootLastTick) >=_lootInterval"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/"_lootLastTick = diag_tickTime;" \n
                                          "" \n
-                                         "//call ExileServer_system_garbageCollector_unscheduled_deleteLoot;" \n
-                                         "" \n
-                                         "_index = - 1;" \n
+                                         "_index = -1;" \n
                                          "{" \n
                                          "	_building = _x;" \n
                                          "	if ((time - (_building getVariable [""ExileLootSpawnedAt"", 0])) < _lootLifeTime) exitWith {};" \n
-                                         "" \n
                                          "	_lootWeaponHolders = _building getVariable [""ExileLootWeaponHolders"", []];" \n
                                          "	{" \n
                                          "		if !(isNull _x) then" \n
@@ -136,12 +133,11 @@ class FSM
                                          "	_building setVariable [""ExileLootSpawnedAt"", nil];" \n
                                          "	_building setVariable [""ExileHasLoot"", false];" \n
                                          "	_building setVariable [""ExileLootWeaponHolders"", []];" \n
-                                         "	_index = _forEachIndex;" \n
+                                         "   _index = _forEachIndex;" \n
                                          "}" \n
                                          "forEach ExileServerBuildingsWithLoot;" \n
                                          "" \n
-                                         "" \n
-                                         "ExileServerBuildingsWithLoot deleteRange [0,(_index + 1)];"/*%FSM</ACTION""">*/;
+                                         "ExileServerBuildingsWithLoot deleteRange [0,(_index+1)];"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                                 /*%FSM<LINK "Groups">*/
@@ -198,7 +194,15 @@ class FSM
                                          "	{" \n
                                          "		if ((time - _diedAt) >= _allDeadLifeTime) then" \n
                                          "		{" \n
-                                         "			_x call ExileServer_system_garbageCollector_deleteObject;" \n
+                                         "			if (_x isKindOf ""TornZ_Base"") then " \n
+                                         "			{" \n
+                                         "				{" \n
+                                         "					deleteVehicle _x;" \n
+                                         "				} forEach (attachedObjects _x);" \n
+                                         "				deleteVehicle _x;" \n
+                                         "			} else {" \n
+                                         "				_x call ExileServer_system_garbageCollector_deleteObject;" \n
+                                         "			};" \n
                                          "		};" \n
                                          "	};" \n
                                          "} forEach allDead;"/*%FSM</ACTION""">*/;
