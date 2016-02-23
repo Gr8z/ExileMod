@@ -5,17 +5,17 @@
  * www.exilemod.com
  * © 2015 Exile Mod Team
  *
- * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
+ * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
- 
+
 private["_territoryID","_data","_id","_owner","_position","_radius","_level","_flagTexture","_flagStolen","_flagStolenBy","_flagStealMessage","_lastPayed","_buildRights","_moderators","_flagObject"];
 _territoryID = _this;
 _data = format ["loadTerritory:%1", _territoryID] call ExileServer_system_database_query_selectSingle;
 _id = _data select 0;
 _owner = _data select 1;
 _name = _data select 2;
-_position = 
+_position =
 [
 	_data select 3,
 	_data select 4,
@@ -43,4 +43,5 @@ _flagObject setVariable ["ExileTerritoryLevel", _level, true];
 _flagObject setVariable ["ExileTerritoryLastPayed", _lastPayed];
 _flagObject call ExileServer_system_territory_maintenance_recalculateDueDate;
 _flagObject setVariable ["ExileTerritoryNumberOfConstructions", _data select 15, true];
+[_position,"FLAG"] call CustomServer_system_loot_disable;
 true
