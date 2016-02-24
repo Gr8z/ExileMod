@@ -5037,4 +5037,9 @@ class CfgLootTables
 		};
 	};
 
+	class zombies
+	{
+		// Nothing for now...
+	};
+
 };
