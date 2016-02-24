@@ -85,14 +85,7 @@ try
 											_cargoType = _itemClassName call ExileClient_util_cargo_getType;
 											if (isNull _lootHolder) then
 											{
-												if ((floor (random 100)) < 50) then
-												{
-													_lootHolder = createVehicle [_presentClasses call BIS_fnc_selectRandom, _lootPosition, [], 0, "CAN_COLLIDE"];
-												}
-												else
-												{
-													_lootHolder = createVehicle ["LootWeaponHolder", _lootPosition, [], 0, "CAN_COLLIDE"];
-												};
+												_lootHolder = createVehicle ["LootWeaponHolder", _lootPosition, [], 0, "CAN_COLLIDE"];
 												_lootHolder setDir (random 360);
 												_lootHolder setPosATL _lootPosition;
 												_lootHolder setVariable ["ExileSpawnedAt", time];
