@@ -1520,7 +1520,7 @@ class CfgExileArsenal
 	class 6Rnd_45ACP_Cylinder 						{ quality = 1; price = 100; };
 	class 6Rnd_GreenSignal_F 						{ quality = 9000; price = 100; };
 	class 6Rnd_RedSignal_F 							{ quality = 9000; price = 100; };
-	class 7Rnd_408_Mag 								{ quality = 1; price = 10; };
+	class 7Rnd_408_Mag 								{ quality = 1; price = 100; };
 	class 9Rnd_45ACP_Mag 							{ quality = 1; price = 6; };
 
 	///////////////////////////////////////////////////////////////////////////////
