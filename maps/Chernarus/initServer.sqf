@@ -7,14 +7,3 @@ if (isDedicated || isServer) then {
 		veh = createVehicle["Exile_Bike_MountainBike", _parameters2 , [] ,0 , "NONE"];
 	};
 };
-
-if (isServer) then {
-    {
-	  [_x,"TRADER"] call CustomServer_system_loot_disable;
-	} forEach [
-	    [6330.98, 7800.99,0],
-	    [4073.33,11677.6,0],
-	    [12147.7,12747.2,0],
-	    [11474.1,11343.2,0]
-	];
-};

@@ -8,12 +8,5 @@ if (isDedicated || isServer) then {
 	};
 };
 if (isServer) then {
-    {
-	  [_x,"TRADER"] call CustomServer_system_loot_disable;
-	} forEach [
-	    [14600,16797.199,0],
-	    [23334.6,24188.9,0],
-	    [2998.0601,18175.5,0],
-	    [20521.777,11037.807,0]
-	];
+    execVM "SearchAndReplace.sqf";
 };
