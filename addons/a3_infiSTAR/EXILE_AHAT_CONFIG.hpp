@@ -129,7 +129,7 @@ adminUIDandAccess[] =
 		{ 
 		 "76561198201637928", // Vex
 		 "76561198065937074", // Toxsick
-		 "76561197979611157 ", // Clanzoucu
+		 "76561197979611157", // Clanzoucu
 		 // Add UID's Above - Don't forget the comma!
 		 "0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
