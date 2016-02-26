@@ -1,7 +1,5 @@
 private ["_pos","_type","_distance","_buildings"];
 
-diag_log format["DEBUG: CustomServer_system_loot_disable: %1", _this];
-
 _pos = _this select 0;
 _type = _this select 1;
 _distance = _this param [2,-1];
@@ -18,6 +16,5 @@ if (_distance <= -1) then {
 
 _buildings = _pos nearObjects ["House", _distance];
 {
-  diag_log format["DEBUG: CustomServer_system_loot_disable: building %1", _x];
   _x setVariable ["ExileLootDisabled",true];
 } forEach _buildings;

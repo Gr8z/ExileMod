@@ -9,7 +9,8 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
 
-private["_playerObject","_spawnRadius","_spawnChancePerPosition","_spawnChancePerBuilding","_maximumNumberOfLootSpotsPerBuilding","_maximumNumberOfItemsPerLootSpot","_spawnedLoot","_presentClasses","_playerPosition","_lastKnownPlayerPosition","_buildings","_building","_buildingType","_buildingConfig","_lootTableName","_localPositions","_spawnedItemClassNames","_lootWeaponHolders","_spawnedLootInThisBuilding","_lootPosition","_numberOfItemsToSpawn","_lootHolder","_n","_itemClassName","_cargoType","_magazineClassNames","_magazineClassName","_numberOfMagazines"];
+private["_playerObject","_spawnRadius","_spawnChancePerPosition","_spawnChancePerBuilding","_maximumNumberOfLootSpotsPerBuilding","_maximumNumberOfItemsPerLootSpot","_spawnedLoot","_playerPosition","_lastKnownPlayerPosition","_buildings","_building","_buildingType","_buildingConfig","_lootTableName","_localPositions","_spawnedItemClassNames","_lootWeaponHolders","_spawnedLootInThisBuilding","_lootPosition","_numberOfItemsToSpawn","_lootHolder","_n","_itemClassName","_cargoType","_magazineClassNames","_magazineClassName","_numberOfMagazines"];
+
 _playerObject = _this;
 _spawnRadius = getNumber (configFile >> "CfgSettings" >> "LootSettings" >> "spawnRadius");
 _spawnChancePerPosition = (getNumber (configFile >> "CfgSettings" >> "LootSettings" >> "spawnChancePerPosition") max 0) min 99;
@@ -17,17 +18,6 @@ _spawnChancePerBuilding = (getNumber (configFile >> "CfgSettings" >> "LootSettin
 _maximumNumberOfLootSpotsPerBuilding = getNumber (configFile >> "CfgSettings" >> "LootSettings" >> "maximumNumberOfLootSpotsPerBuilding");
 _maximumNumberOfItemsPerLootSpot = getNumber (configFile >> "CfgSettings" >> "LootSettings" >> "maximumNumberOfItemsPerLootSpot");
 _spawnedLoot = false;
-_presentClasses =
-[
-	"Exile_Loot_XmasPresent_Blue",
-	"Exile_Loot_XmasPresent_Gold",
-	"Exile_Loot_XmasPresent_Green",
-	"Exile_Loot_XmasPresent_Mint",
-	"Exile_Loot_XmasPresent_Pink",
-	"Exile_Loot_XmasPresent_Purple",
-	"Exile_Loot_XmasPresent_Red",
-	"Exile_Loot_XmasPresent_Magenta"
-];
 try
 {
 	if !(alive _playerObject) then

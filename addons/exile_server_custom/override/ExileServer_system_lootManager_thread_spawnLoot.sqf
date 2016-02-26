@@ -5,10 +5,10 @@
  * www.exilemod.com
  * © 2015 Exile Mod Team
  *
- * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
+ * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
- 
+
 private["_spawnedLootForPlayers","_spawnRadius","_notifyPlayer","_player","_time","_spawnedLoot","_playersInformed"];
 _spawnedLootForPlayers = [];
 _spawnRadius = getNumber (configFile >> "CfgSettings" >> "LootSettings" >> "spawnRadius");
@@ -26,10 +26,11 @@ _notifyPlayer = (getNumber (configFile >> "CfgSettings" >> "LootSettings" >> "no
 			{
 				_spawnedLootForPlayers pushBack _player;
 			};
+	    _player call TornZ_fnc_z_spawnCheck;
 		};
 	};
-}
-forEach allPlayers;
+} forEach allPlayers;
+
 if (_notifyPlayer) then
 {
 	_playersInformed = [];
@@ -40,9 +41,7 @@ if (_notifyPlayer) then
 				[_x, "notificationRequest", ["Success", ["Loot spawned in your area!"]]] call ExileServer_system_network_send_to;
 				_playersInformed pushBack _x;
 			};
-		}
-		forEach ([getPosATL _x, _spawnRadius] call ExileClient_util_world_getAlivePlayerInfantryInRange);
-	}
-	forEach _spawnedLootForPlayers;
+		} forEach ([getPosATL _x, _spawnRadius] call ExileClient_util_world_getAlivePlayerInfantryInRange);
+	} forEach _spawnedLootForPlayers;
 };
 true

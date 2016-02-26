@@ -11,7 +11,7 @@
  
 if (!isNil "PublicServerVersion") then
 {
-  CustomServer_system_loot_disable = compileFinal (preprocessFileLineNumbers "exile_server\code\CustomServer_system_loot_disable.sqf");
+  CustomServer_system_loot_disable = compileFinal (preprocessFileLineNumbers "exile_server_custom\override\CustomServer_system_loot_disable.sqf");
 
 	call ExileClient_system_map_initialize;
 	call ExileServer_system_thread_initialize;
