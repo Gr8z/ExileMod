@@ -150,7 +150,8 @@ if ((!isNull _playerObj) && {(_playerUID != "") && {_playerObj isKindOf "Exile_U
 		};
 
 		// Update client database entry
-		format["setAccountMoneyAndRespect:%1:%2:%3", _playerMoney, _playerRespect, _playerUID] call ExileServer_system_database_query_fireAndForget;
+		format["updateWallet:%1:%2", _playerMoney, _playerUID] call ExileServer_system_database_query_fireAndForget;
+        format["setAccountScore:%1:%2",_playerRespect,_playerUID] call ExileServer_system_database_query_fireAndForget;
 	}
 	else
 	{

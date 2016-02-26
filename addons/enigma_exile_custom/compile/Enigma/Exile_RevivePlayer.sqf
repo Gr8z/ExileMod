@@ -22,6 +22,9 @@ if (!local _requestingPlayer) then {
 
 		_accountData = format["getAccountStats:%1", _requestingPlayerUID] call ExileServer_system_database_query_selectSingle;
 
+		private["_avBank"];
+        _advBank = format["getStats:%1",_requestingPlayerUID] call ExileServer_system_database_query_selectSingle;
+
 			if (_requestingPlayer == _reviver) exitWith {
 				Diag_log format ["Revive - Attempted hack revive by %1",_requestingPlayer];
 				};
@@ -190,10 +193,8 @@ _secondaryWeapon = "";
 
 _bambiPlayer addMagazine [_handguntype, _handgunammo]; //fix handgun losing its ammo! puts mag back into inventory ---Not working... something removes the mag after 10 seconds or so... guessing exile load up!
 
-
-
 _bambiPlayer setName _name;
-_bambiPlayer setVariable ["ExilePurse", (_accountData select 0)];
+_bambiPlayer setVariable ["ExilePurse", (_advBank select 1)];
 _bambiPlayer setVariable ["ExileScore", (_accountData select 1)];
 _bambiPlayer setVariable ["ExileKills", (_accountData select 2)];
 _bambiPlayer setVariable ["ExileDeaths", (_accountData select 3)];
@@ -311,6 +312,16 @@ _extDB2Message call ExileServer_system_database_query_fireAndForget;
 	]
 ]
 call ExileServer_system_network_send_to;
+
+[
+    _sessionID,
+    "updateBankStats",
+    [
+        str (_advBank select 2)
+    ]
+]
+call ExileServer_system_network_send_to;
+
 [_sessionID, _player] call ExileServer_system_session_update;
 
 _requestingPlayer setposatl [0,0,0];

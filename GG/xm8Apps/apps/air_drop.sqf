@@ -163,10 +163,8 @@ fnc_buyselected = {
   (findDisplay 24015) closeDisplay 0;
   if (_ok) then {
     DropInProgress = true;
-    _newPoptabs = ExileClientPlayerMoney - boxCost;
     _namePlayer = name player;
-    ENIGMA_UpdateStats = [player,_newPoptabs];
-    publicVariableServer "ENIGMA_UpdateStats";
+    ["buyRequest",[str(boxCost)]] call ExileClient_system_network_send;
     hint format["Thanks for your order! your Air Drop order number is '%2-%3%4%5'",name player, orderIDcharacters, a1, a2, a3];
     _playerPOS = getPOSATL player;
  
