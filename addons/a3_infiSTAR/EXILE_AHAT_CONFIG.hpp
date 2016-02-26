@@ -75,12 +75,12 @@ adminUIDandAccess[] =
 {
 	{
 		{
-		 "76561198078201908", //GR8
-		 "76561198153784743", //Ghost
-		 "76561198195305425", //Shahzad
-		 "76561198115492831", //BigEgg
-		 "76561198137100220", //Deadskin
-		 "76561198001066546", //Meowmix
+		 "76561198078201908", // GR8
+		 "76561198153784743", // Ghost
+		 "76561198195305425", // Shahzad
+		 "76561198115492831", // BigEgg
+		 "76561198137100220", // Deadskin
+		 "76561198001066546", // Meowmix
 		 //Add UID's Above - Don't forget the comma!
 		"0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
@@ -103,10 +103,11 @@ adminUIDandAccess[] =
 	{
 		{
 		 "76561197978528230", // Dark
-		 "76561198029881052", //Dirk Verite
-		 "76561197960289679", //TangoWhiskey
-		 "76561198062993387", //Azul
+		 "76561198029881052", // Dirk Verite
+		 "76561197960289679", // TangoWhiskey
+		 "76561198062993387", // Azul
 		 "76561198133936962", // Wrice4
+		 "76561198280089554", // Chubby
 		 "0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
 			"Teleport On Map Click","Teleport - Target To Me","Teleport - Me To Target","Teleport In Facing Direction (10m steps)",
