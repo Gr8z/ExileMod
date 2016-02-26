@@ -46,8 +46,7 @@ if (isServer) then {
 	_marker = createMarker ["cashpoint_" + str(_forEachIndex), _x select 1];
 	_marker setMarkerShape "ICON";
 	_marker setMarkerType "loc_Tourism";
-	_marker setMarkerColor "ColorGreen";
-	_marker setMarkerSize [1,1];
-	_marker setMarkerText "ATM";
+	_marker setMarkerColor "ColorWhite";
+	_marker setMarkerSize [1.4,1.4];
 	} foreach _objs;
 };
