@@ -105,7 +105,6 @@ adminUIDandAccess[] =
 		 "76561197978528230", // Dark
 		 "76561198029881052", //Dirk Verite
 		 "76561197960289679", //TangoWhiskey
-		 "76561198062993387", //Azul
 		 "76561198058099842", //Fap
 		 "76561198133936962", // Wrice4
 		 "0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
