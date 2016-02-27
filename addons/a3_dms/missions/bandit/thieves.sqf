@@ -8,13 +8,13 @@ private ["_num", "_side", "_OK", "_group", "_pos", "_difficulty", "_AICount", "_
 _num = DMS_MissionCount;
 
 
-// Set mission side (only "bandit" is supported for now)
+// Set mission side
 _side = "bandit";
 
 
 // This part is unnecessary, but exists just as an example to format the parameters for "DMS_fnc_MissionParams" if you want to explicitly define the calling parameters for DMS_fnc_FindSafePos.
 // It also allows anybody to modify the default calling parameters easily.
-if ((isNil "_this") || {_this isEqualTo [] || {(typeName _this)!="ARRAY"}}) then
+if ((isNil "_this") || {_this isEqualTo [] || {!(_this isEqualType [])}}) then
 {
 	_this =
 	[
@@ -60,23 +60,23 @@ _group =
 _class =
 	if (_extraParams isEqualTo []) then
 	{
-		(DMS_MilitaryVehicles+DMS_TransportTrucks) call BIS_fnc_SelectRandom
+		DMS_CarThievesVehicles call BIS_fnc_SelectRandom
 	}
 	else
 	{
-		if ((typeName _extraParams)=="STRING") then
+		if (_extraParams isEqualType "") then
 		{
 			_extraParams
 		}
 		else
 		{
-			if (((typeName _extraParams)=="ARRAY") && {(typeName (_extraParams select 0))=="STRING"}) then
+			if ((_extraParams isEqualType []) && {(_extraParams select 0) isEqualType ""}) then
 			{
 				_extraParams select 0
 			}
 			else
 			{
-				(DMS_MilitaryVehicles+DMS_TransportTrucks) call BIS_fnc_SelectRandom
+				DMS_CarThievesVehicles call BIS_fnc_SelectRandom
 			};
 		};
 	};
@@ -165,7 +165,7 @@ if !(_added) exitWith
 	} forEach _missionAIUnits;
 
 	_cleanup pushBack ((_missionObjs select 0)+(_missionObjs select 1));
-	
+
 	{
 		_cleanup pushBack (_x select 0);
 	} foreach (_missionObjs select 2);

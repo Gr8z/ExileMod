@@ -28,7 +28,7 @@
 	] call DMS_fnc_GroupReinforcementsManager;
 
 	About "_monitorType" types:
-		
+
 		"playernear":
 			_monitorParams =
 			[
@@ -58,6 +58,14 @@
 				_AICount,				// SCALAR: If the AI Group has fewer than "_AICount" living units, then the group will receive reinforcements.
 				_reinforcementCount,	// SCALAR: The (maximum) number of units to spawn as reinforcements.
 				_increment_AICount,		// SCALAR: After reinforcements, "_AICount" is increased by this amount, so subsequent reinforcements will be spawned for even greater amounts of AI (increasing the number of total AI, until "_maxAICount" is reached).
+				_maxAICount				// (OPTIONAL) SCALAR: Maximum number of AI Units after reinforcements. Default value is equivalent to _AICount. Set to 0 for no limit.
+			]
+
+		"increasing_difficulty":
+			_monitorParams =
+			[
+				_AICount,				// SCALAR: If the AI Group has fewer than "_AICount" living units, then the group will receive reinforcements.
+				_reinforcementCount,	// SCALAR: The (maximum) number of units to spawn as reinforcements.
 				_maxAICount				// (OPTIONAL) SCALAR: Maximum number of AI Units after reinforcements. Default value is equivalent to _AICount. Set to 0 for no limit.
 			]
 
@@ -271,7 +279,7 @@ if (!_reinforcementsDepleted && {(diag_tickTime-_lastUpdated)>_updateDelay}) the
 				diag_log format ["DMS ERROR :: Calling DMS_fnc_GroupReinforcementsManager with invalid _monitorParams: %1 | _monitorType: %2 | Setting _reinforcementsDepleted to true.",_monitorParams,_monitorType];
 			};
 
-			
+
 			if (_remainingUnits<_AICount) then
 			{
 				_maxAICount = if ((count _monitorParams)>2) then {_monitorParams param [2, 0, [0]]} else {_AICount};
@@ -304,6 +312,39 @@ if (!_reinforcementsDepleted && {(diag_tickTime-_lastUpdated)>_updateDelay}) the
 				_unitsToSpawn = _reinforcementCount min ((_maxAICount-_remainingUnits) max 0);
 
 				_monitorParams set [0, _AICount + _increment_AICount];
+			};
+		};
+
+		case "increasing_difficulty":
+		{
+			private ["_AICount", "_reinforcementCount", "_maxAICount"];
+
+			if !(_monitorParams params
+			[
+				["_AICount", 0, [0]],
+				["_reinforcementCount", 0, [0]]
+			])
+			exitWith
+			{
+				_reinforcementsDepleted = true;
+				diag_log format ["DMS ERROR :: Calling DMS_fnc_GroupReinforcementsManager with invalid _monitorParams: %1 | _monitorType: %2 | Setting _reinforcementsDepleted to true.",_monitorParams,_monitorType];
+			};
+
+
+			if (_remainingUnits<_AICount) then
+			{
+				_difficulty =
+					switch (toLower _difficulty) do
+					{
+						case "easy": {"moderate"};
+						case "moderate": {"difficult"};
+						case "difficult";
+						case "hardcore": {"hardcore"};
+					};
+
+				_maxAICount = if ((count _monitorParams)>3) then {_monitorParams param [3, 0, [0]]} else {_AICount};
+
+				_unitsToSpawn = _reinforcementCount min ((_maxAICount-_remainingUnits) max 0);
 			};
 		};
 
@@ -446,7 +487,7 @@ if (!_reinforcementsDepleted && {(diag_tickTime-_lastUpdated)>_updateDelay}) the
 				};
 			};
 		};
-		
+
 		default
 		{
 			_reinforcementsDepleted = true;
@@ -456,12 +497,7 @@ if (!_reinforcementsDepleted && {(diag_tickTime-_lastUpdated)>_updateDelay}) the
 
 	if ((!isNil "_unitsToSpawn") && {_unitsToSpawn>0}) then
 	{
-		private ["_spawnPos", "_units"];
-
-		if (_spawnLocations isEqualTo []) then
-		{
-			_spawnPos = getPosATL (leader _AIGroup);
-		};
+		private ["_spawnPos", "_units", "_spawningLocations"];
 
 		if (_maxReinforcementUnits>0) then
 		{
@@ -479,21 +515,47 @@ if (!_reinforcementsDepleted && {(diag_tickTime-_lastUpdated)>_updateDelay}) the
 
 		_units = [];
 
-		for "_i" from 1 to _unitsToSpawn do
+		if (_spawnLocations isEqualTo []) then
 		{
-			if (isNil "_spawnPos") then
+			// No spawn locations were provided, so we just use the leader of the group as the spawn location.
+			_spawnPos = getPosATL (leader _AIGroup);
+
+			for "_i" from 0 to (_unitsToSpawn-1) do
 			{
-				_spawnPos = _spawnLocations call BIS_fnc_selectRandom;
+				_units pushBack ([_AIGroup,_spawnPos,_class,_difficulty,_side,"Soldier"] call DMS_fnc_SpawnAISoldier);
+			};
+		}
+		else
+		{
+			// Shuffle the original list and make a copy.
+			_spawningLocations = (_spawnLocations call ExileClient_util_array_shuffle) + [];
+			_spawnPos = _spawningLocations select 0;				// Define it for spawning flares
+			_spawningLocations_count = count _spawningLocations;
+
+			// Add extra spawning locations if there are not enough.
+			for "_i" from 0 to (_unitsToSpawn-_spawningLocations_count-1) do
+			{
+				_spawningLocations pushBack (_spawningLocations select floor(random(_spawningLocations_count+_i)));
 			};
 
-			_units pushBack ([_AIGroup,_spawnPos,_class,_difficulty,_side,"Soldier"] call DMS_fnc_SpawnAISoldier);
+			// Now to spawn the AI...
+			for "_i" from 0 to (_unitsToSpawn-1) do
+			{
+				_units pushBack ([_AIGroup,_spawningLocations select _i,_class,_difficulty,_side,"Soldier"] call DMS_fnc_SpawnAISoldier);
+			};
 		};
 
-		_units joinSilent _AIGroup;	// Otherwise they don't like each other...
+		_units joinSilent _AIGroup;		// Otherwise they don't like each other...
 
 		// Update the given reinforcements count.
 		_reinforcementWavesGiven = _reinforcementWavesGiven + 1;
 		_reinforcementUnitsGiven = _reinforcementUnitsGiven + _unitsToSpawn;
+
+		if (DMS_SpawnFlareOnReinforcements) then
+		{
+			playSound3D ["a3\missions_f_beta\data\sounds\Showcase_Night\flaregun_4.wss", objNull, false, (ATLToASL _spawnPos) vectorAdd [0,0,250],2];
+			("F_20mm_Red" createVehicle (_spawnPos vectorAdd [0,0,250])) setVelocity [0,0,-1];
+		};
 
 		if (DMS_DEBUG) then
 		{

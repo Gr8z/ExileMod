@@ -11,13 +11,13 @@ private ["_num", "_group", "_pos", "_side", "_extraParams", "_OK", "_difficulty"
 _num = DMS_MissionCount;
 
 
-// Set mission side (only "bandit" is supported for now)
+// Set mission side
 _side = "bandit";
 
 
 // This part is unnecessary, but exists just as an example to format the parameters for "DMS_fnc_MissionParams" if you want to explicitly define the calling parameters for DMS_fnc_FindSafePos.
 // It also allows anybody to modify the default calling parameters easily.
-if ((isNil "_this") || {_this isEqualTo [] || {(typeName _this)!="ARRAY"}}) then
+if ((isNil "_this") || {_this isEqualTo [] || {!(_this isEqualType [])}}) then
 {
 	_this =
 	[
@@ -102,9 +102,9 @@ _vehicle2 = [_vehClass2, [_pos,5+(random 3),_rndDir+180] call DMS_fnc_SelectOffs
 // Set crate loot values
 _crate_loot_values1 =
 [
-	10,		// Weapons
-	10,		// Items
-	4 		// Backpacks
+	5,		// Weapons
+	5,		// Items
+	2 		// Backpacks
 ];
 
 
@@ -184,7 +184,7 @@ if !(_added) exitWith
 	} forEach _missionAIUnits;
 
 	_cleanup pushBack ((_missionObjs select 0)+(_missionObjs select 1));
-	
+
 	{
 		_cleanup pushBack (_x select 0);
 	} foreach (_missionObjs select 2);

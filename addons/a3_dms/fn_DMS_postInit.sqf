@@ -23,6 +23,54 @@ if (isNil "DMS_DynamicMission") exitWith
 };
 
 
+// This code is NECESSARY for spawning persistent vehicles. DO NOT REMOVE THIS CODE UNLESS YOU KNOW WHAT YOU ARE DOING
+if !("isKnownAccount:DMS_PersistentVehicle" call ExileServer_system_database_query_selectSingleField) then
+{
+	"createAccount:DMS_PersistentVehicle:DMS_PersistentVehicle" call ExileServer_system_database_query_fireAndForget;
+};
+
+
+
+
+
+// Some custom maps don't have the proper safePos config entries.
+// If you are using one and you have an issue with mission spawns, please create an issue on GitHub or post a comment in the DMS thread.
+switch (toLower worldName) do
+{
+	case "altis":										// [16000,16000] w/ radius of 16000 works well for Altis
+	{
+		DMS_MapCenterPos 	= [16000,16000];
+		DMS_MapRadius 		= 16000;
+	};
+	case "bornholm":									// Thanks to thirdhero for testing this info
+	{
+		DMS_MapCenterPos 	= [11265,11265];
+		DMS_MapRadius 		= 12000;
+	};
+	case "esseker":										// Thanks to Flowrider for this info
+	{
+		DMS_MapCenterPos 	= [6275,6350];
+		DMS_MapRadius 		= 5000;
+	};
+	case "taviana";										// Thanks to JamieKG for this info
+	case "tavi":
+	{
+		DMS_MapCenterPos 	= [12800,12800];
+		DMS_MapRadius 		= 12800;
+	};
+	default 											// Use "worldSize" to determine map center/radius (not always very nice).
+	{
+		private "_middle";
+		_middle = worldSize/2;
+		DMS_MapCenterPos 	= [_middle,_middle];
+		DMS_MapRadius 		= _middle;
+	};
+};
+
+// Since we use primarily ATL
+DMS_MapCenterPos set [2,0];
+
+
 
 RESISTANCE setFriend[WEST,0];
 WEST setFriend[RESISTANCE,0];
@@ -78,7 +126,7 @@ DMS_CLIENT_fnc_spawnDynamicText = compileFinal
 	"+str DMS_dynamicText_Duration+",
 	"+str DMS_dynamicText_FadeTime+",
 	0,
-	24358
+	24358+round(random 5)
 ] spawn BIS_fnc_dynamicText;
 ");
 publicVariable "DMS_CLIENT_fnc_spawnDynamicText";
@@ -101,6 +149,11 @@ DMS_CLIENT_fnc_spawnTextTiles = compileFinal
 ");
 publicVariable "DMS_CLIENT_fnc_spawnTextTiles";
 
+DMS_CLIENT_fnc_hintSilent = compileFinal "hintSilent parsetext format['%1',_this];";
+publicVariable "DMS_CLIENT_fnc_hintSilent";
+
+publicVariable "DMS_Version";
+
 
 
 // Add the weighted predefined locations to the list of predefined locations
@@ -118,60 +171,62 @@ DMS_MinMax_X_Coords = [DMS_MinDistFromWestBorder, worldSize - DMS_MinDistFromEas
 DMS_MinMax_Y_Coords = [DMS_MinDistFromSouthBorder, worldSize - DMS_MinDistFromNorthBorder];
 
 
+execFSM "\x\addons\dms\FSM\missions.fsm";
 
-if (DMS_DynamicMission || {DMS_StaticMission}) then
+
+if (DMS_ShowDifficultyColorLegend) then
 {
-	call compileFinal preprocessFileLineNumbers "\x\addons\dms\missions\static_init.sqf";
-
-	call compileFinal preprocessFileLineNumbers "\x\addons\dms\missions\mission_init.sqf";
-
-
-	if (DMS_ShowDifficultyColorLegend) then
+	private "_title";
+	_title = createmarker ["DMS_MissionMarker_DifficultyColorLegend",[-500,-200]];
+	_title setMarkerColor "ColorRed";
+	_title setmarkertext "DMS Mission Difficulties Color Legend";
+	_title setMarkerType "mil_dot";
+	_title setMarkerAlpha 0.5;
 	{
-		private "_title";
-		_title = createmarker ["DMS_MissionMarker_DifficultyColorLegend",[-500,-200]];
-		_title setMarkerColor "ColorRed";
-		_title setmarkertext "DMS Mission Difficulties Color Legend";
-		_title setMarkerType "mil_dot";
-		_title setMarkerAlpha 0.5;
+		private ["_difficulty", "_color", "_num", "_pos", "_circle", "_dot"];
+
+		_difficulty = _x;
+		switch (_difficulty) do
 		{
-			private ["_difficulty", "_color", "_num", "_pos", "_circle", "_dot"];
+			case "easy": 		{_color = "ColorGreen";};
+			case "moderate": 	{_color = "ColorYellow";};
+			case "difficult": 	{_color = "ColorRed";};
+			case "hardcore" : 	{_color = "ColorBlack";};
+		};
 
-			_difficulty = _x;
-			switch (_difficulty) do
-			{
-				case "easy": 		{_color = "ColorGreen";};
-				case "moderate": 	{_color = "ColorYellow";};
-				case "difficult": 	{_color = "ColorRed";};
-				case "hardcore" : 	{_color = "ColorBlack";};
-			};
+		_num = -200 * (_forEachIndex - 0.5);
+		_pos = [100,_num];
 
-			_num = -200 * (_forEachIndex - 0.5);
-			_pos = [100,_num];
+		_circle = createMarker [format ["DMS_MissionMarker_DifficultyColor_%1",_color], _pos];
+		_circle setMarkerColor _color;
+		_circle setMarkerShape "ELLIPSE";
+		_circle setMarkerBrush "Solid";
+		_circle setMarkerSize [100,100];
 
-			_circle = createMarker [format ["DMS_MissionMarker_DifficultyColor_%1",_color], _pos];
-			_circle setMarkerColor _color;
-			_circle setMarkerShape "ELLIPSE";
-			_circle setMarkerBrush "Solid";
-			_circle setMarkerSize [100,100];
-
-			_dot = createMarker [format ["DMS_MissionMarker_Difficulty_%1",_difficulty],_pos];
-			_dot setMarkerColor "ColorWhite";
-			_dot setMarkerType "mil_dot";
-			_dot setMarkerAlpha 0.5;
-			_dot setMarkerText _difficulty;
-		} forEach ["hardcore","difficult","moderate","easy"];
-	};
-
-
-	execFSM "\x\addons\dms\FSM\missions.fsm";
-}
-else
-{
-	diag_log "Enjoy the DMS functions! :)";
+		_dot = createMarker [format ["DMS_MissionMarker_Difficulty_%1",_difficulty],_pos];
+		_dot setMarkerColor "ColorWhite";
+		_dot setMarkerType "mil_dot";
+		_dot setMarkerAlpha 0.5;
+		_dot setMarkerText _difficulty;
+	} forEach ["hardcore","difficult","moderate","easy"];
 };
 
 
-DMS_Version = "November 18 2015";
+{
+	[_x] call DMS_fnc_ImportFromM3E_Static;			// Spawn all of the bases that are supposed to be spawned on server startup.
+} forEach DMS_BasesToImportOnServerStart;
 
-"DMS post-init complete." call DMS_fnc_DebugLog;
+
+{
+	[_x] call DMS_fnc_SpawnBanditMission;
+} forEach DMS_BanditMissionsOnServerStart;
+
+{
+	[_x] call DMS_fnc_SpawnStaticMission;
+} forEach DMS_StaticMissionsOnServerStart;
+
+
+
+
+
+format ["DMS post-init complete. productVersion: %1 | infiSTAR version: %2", productVersion, if (!isNil "INFISTARVERSION") then {INFISTARVERSION} else {"not installed"}] call DMS_fnc_DebugLog;

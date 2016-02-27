@@ -21,7 +21,11 @@
 
 private ["_pos", "_nearestObjectMinDistance", "_waterNearLimit", "_minSurfaceNormal", "_spawnZoneNearLimit", "_traderZoneNearLimit", "_missionNearLimit", "_playerNearLimit", "_territoryNearLimit", "_waterSpawn", "_isValidPos"];
 
-_OK = params
+
+
+_isValidPos = false;
+
+if !(params
 [
 	["_pos", 						[],				[[]],		[0,2,3]],
 	["_waterNearLimit",				DMS_WaterNearBlacklist,		[0] ],
@@ -32,12 +36,8 @@ _OK = params
 	["_playerNearLimit",			DMS_PlayerNearBlacklist,	[0] ],
 	["_territoryNearLimit",			DMS_TerritoryNearBlacklist,	[0]	],
 	["_waterSpawn",					false,						[false]	]
-];
-
-
-_isValidPos = false;
-
-if (!_OK) then
+])
+then
 {
 	diag_log format ["DMS ERROR :: Calling DMS_fnc_isValidPosition with invalid parameters: %1",_this];
 }
@@ -66,7 +66,7 @@ else
 		if (!_waterSpawn) then
 		{
 			// Check for nearby water
-			if ((_waterNearLimit>0) && {[_pos,_waterNearLimit] call DMS_fnc_isNearWater}) then 
+			if ((_waterNearLimit>0) && {[_pos,_waterNearLimit] call DMS_fnc_isNearWater}) then
 			{
 				throw ("water");
 			};
@@ -114,16 +114,16 @@ else
 				throw ("an A3XAI mission");
 			};
 		} forEach (missionNamespace getVariable ["A3XAI_mapMarkerArray",[]]);
-		
+
 		{
 			// Check for nearby spawn points
-			if ((_spawnZoneNearLimit>0) && {((markertype _x) == "ExileSpawnZone") && {((getMarkerPos _x) distance2D _pos)<=_spawnZoneNearLimit}}) then
+			if ((_spawnZoneNearLimit>0) && {((markertype _x) in DMS_SpawnZoneMarkerTypes) && {((getMarkerPos _x) distance2D _pos)<=_spawnZoneNearLimit}}) then
 			{
 				throw ("a spawn zone");
 			};
 
 			// Check for nearby trader zones
-			if ((_traderZoneNearLimit>0) && {((markertype _x) == "ExileTraderZone") && {((getMarkerPos _x) distance2D _pos)<=_traderZoneNearLimit}}) then
+			if ((_traderZoneNearLimit>0) && {((markertype _x) in DMS_TraderZoneMarkerTypes) && {((getMarkerPos _x) distance2D _pos)<=_traderZoneNearLimit}}) then
 			{
 				throw ("a trader zone");
 			};
@@ -144,7 +144,7 @@ else
 			};
 		} forEach allMapMarkers;
 
-		
+
 		// Check for nearby players
 		// This is done last because it is likely to be the most resource intensive.
 		if ((_playerNearLimit>0) && {[_pos,_playerNearLimit] call DMS_fnc_IsPlayerNearby}) then
@@ -157,13 +157,20 @@ else
 			throw ("a territory");
 		};
 
-		
+
 
 		// No exceptions found
 		_isValidPos	= true;
 	}
 	catch
 	{
+		/*
+		_dot = createMarker [format ["DMS_DebugMarker_attempt%1", _pos], _pos];
+		_dot setMarkerColor "ColorWEST";
+		_dot setMarkerType "mil_dot";
+		_dot setMarkerText (format["close to: %1",_exception]);
+		DMS_DebugMarkers pushBack _dot;
+		*/
 		if (DMS_DEBUG) then
 		{
 			(format ["IsValidPosition :: Position %1 is too close to %2!",_pos,_exception]) call DMS_fnc_DebugLog;

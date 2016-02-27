@@ -29,7 +29,7 @@ if (isNull _AI) exitWith
 _AIType = typeName _AI;
 
 
-_pos = if (_AIType=="OBJECT") then {_AI} else {param [1,"",[objNull,[]],[2,3]]};
+_pos = if (_AIType isEqualTo "OBJECT") then {_AI} else {param [1,"",[objNull,[]],[2,3]]};
 
 if (_pos isEqualTo "") exitWith
 {
@@ -50,11 +50,19 @@ _client = objNull;
 
 if (!isNull _client) then
 {
-	_swapped = if (_AIType=="OBJECT") then {_AI setOwner (owner _client)} else {_AI setGroupOwner (owner _client)};
+	_swapped = if (_AIType isEqualTo "OBJECT") then {_AI setOwner (owner _client)} else {_AI setGroupOwner (owner _client)};
 
 	if (!_swapped) then
 	{
 		ExileServerOwnershipSwapQueue pushBack [_AI,_client];
+	};
+
+	if (DMS_ai_offload_notifyClient) then
+	{
+		private "_msg";
+		_msg = format ["DMS :: AI %1 |%2| has been offloaded to you.",_AIType,_AI];
+		_msg remoteExecCall ["systemChat", _client];
+		_msg remoteExecCall ["diag_log", _client];
 	};
 
 	if (DMS_DEBUG) then

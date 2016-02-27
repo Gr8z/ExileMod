@@ -7,6 +7,8 @@ DMS_HC_Object = objNull;
 
 DMS_CleanUpList	= [];
 
+DMS_Version = "February 19 2016";
+
 
 //Load main config
 call compileFinal preprocessFileLineNumbers "\x\addons\dms\config.sqf";
@@ -18,43 +20,7 @@ if (DMS_Use_Map_Config) then
 	call compileFinal preprocessFileLineNumbers (format ["\x\addons\dms\map_configs\%1_config.sqf",toLower worldName]);
 };
 
-
-
-// Some custom maps don't have the proper safePos config entries.
-// If you are using one and you have an issue with mission spawns, please create an issue on GitHub or post a comment in the DMS thread.
-switch (toLower worldName) do
-{ 
-	case "altis":										// [16000,16000] w/ radius of 16000 works well for Altis
-	{
-		DMS_MapCenterPos 	= [16000,16000];
-		DMS_MapRadius 		= 16000;
-	};
-	case "bornholm":									// Thanks to thirdhero for testing this info
-	{
-		DMS_MapCenterPos 	= [11265,11265];
-		DMS_MapRadius 		= 12000;
-	};
-	case "esseker":										// Thanks to Flowrider for this info
-	{
-		DMS_MapCenterPos 	= [6275,6350];
-		DMS_MapRadius 		= 5000;
-	};
-	case "tavi":										// Thanks to JamieKG for this info
-	{
-		DMS_MapCenterPos 	= [12800,12800];
-		DMS_MapRadius 		= 12800;
-	};
-	default 											// Use "worldSize" to determine map center/radius (not always very nice).
-	{
-		private "_middle";
-		_middle = worldSize/2;
-		DMS_MapCenterPos 	= [_middle,_middle];
-		DMS_MapRadius 		= _middle;
-	};
-};
-
-// Since we use primarily ATL
-DMS_MapCenterPos set [2,0];
+DMS_MagRange = DMS_MaximumMagCount - DMS_MinimumMagCount;
 
 /*
 	Original Functions from
@@ -80,15 +46,15 @@ M3E_fnc_getCenter =
 	_xs = 0;
 	_xc = {_xs = _xs + _x; true} count _ax;
 	_xz = _xs / _xc;
-	 
+
 	_ys = 0;
 	_yc = {_ys = _ys + _x; true} count _ay;
 	_yz = _ys / _yc;
-	 
+
 	_zs = 0;
 	_zc = {_zs = _zs + _x; true} count _az;
 	_zz = _zs / _zc;
-	 
+
 	[_xz, _yz, _zz]
 };
 
@@ -105,7 +71,7 @@ M3E_fnc_subArr =
 	} foreach _a1;
 	_a3
 };
- 
+
 DMS_fnc_setRelPositions =
 {
 	private ['_OK','_objects','_newCPos','_center'];
@@ -138,3 +104,8 @@ DMS_fnc_setRelPositions =
 DMS_MaxSurfaceNormal = DMS_MinSurfaceNormal;
 
 DMS_AttemptsUntilThrottle = DMS_AttemptsUntilThrottle + 1;
+
+
+// Initialize mission variables...
+call compileFinal preprocessFileLineNumbers "\x\addons\dms\missions\static_init.sqf";
+call compileFinal preprocessFileLineNumbers "\x\addons\dms\missions\mission_init.sqf";

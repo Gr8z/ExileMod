@@ -51,13 +51,15 @@
 			_msgWIN,
 			_msgLose
 		],
-		[_markerDot,_markerCircle],
+		_markers,
 		_side,
 		_difficulty,
 		_missionEvents,
 		[
-			_onSuccessScripts,			// (OPTIONAL) Array of code or string to be executed on mission completion (in addition to regular code).
-			_onFailScripts				// (OPTIONAL) Array of code or stirng to be executed on mission failure (in addition to regular code).
+			_onSuccessScripts,			// (OPTIONAL) Array of code or string to be executed on mission completion (in addition to regular code). Each element should be an array in the form [_params, _code].
+			_onFailScripts,				// (OPTIONAL) Array of code or string to be executed on mission failure (in addition to regular code). Each element should be an array in the form [_params, _code].
+			_onMonitorStart,			// (OPTIONAL) Code to run when the monitor starts to check the mission status. The passed parameter (_this) is the mission data array itself.
+			_onMonitorEnd				// (OPTIONAL) Code to run when the monitor is done with checking the mission status. The passed parameter (_this) is the mission data array itself.
 		]
 	] call DMS_fnc_AddMissionToMonitor_Static;
 
@@ -65,12 +67,12 @@
 
 */
 
-private ["_added", "_OK", "_pos", "_onEndingScripts", "_completionInfo", "_timeOutInfo", "_units", "_inputUnits", "_missionObjs", "_mines", "_difficulty", "_side", "_messages", "_markers", "_arr", "_timeStarted", "_timeUntilFail", "_buildings", "_vehs", "_crate_info_array", "_missionName", "_msgWIN", "_msgLose", "_markerDot", "_markerCircle", "_missionEvents", "_onSuccessScripts", "_onFailScripts"];
+private ["_added", "_pos", "_onEndingScripts", "_completionInfo", "_timeOutInfo", "_units", "_inputUnits", "_missionObjs", "_mines", "_difficulty", "_side", "_messages", "_markers", "_arr", "_timeStarted", "_timeUntilFail", "_buildings", "_vehs", "_crate_info_array", "_missionName", "_msgWIN", "_msgLose", "_markerDot", "_markerCircle", "_missionEvents", "_onSuccessScripts", "_onFailScripts"];
 
 
 _added = false;
 
-_OK = params
+if !(params
 [
 	["_pos","",[[]],[2,3]],
 	["_completionInfo","",[[]]],
@@ -79,19 +81,18 @@ _OK = params
 	["_inputUnits","",[[]]],
 	["_missionObjs","",[[]],[3,4]],
 	["_messages","",[[]],[3]],
-	["_markers","",[[]],[2]],
+	["_markers","",[[]],[DMS_MissionMarkerCount]],
 	["_side","bandit",[""]],
 	["_difficulty","moderate",[""]],
 	["_missionEvents",[],[[]]]
-];
-
-if (!_OK) exitWith
+])
+exitWith
 {
 	diag_log format ["DMS ERROR :: Calling DMS_fnc_AddMissionToMonitor_Static with invalid parameters: %1",_this];
 	false;
 };
 
-_onEndingScripts = if ((count _this)>10) then {_this select 10} else {[[],[]]};
+_onEndingScripts = if ((count _this)>11) then {_this select 11} else {[[],[],{},{}]};
 
 
 try
@@ -112,24 +113,18 @@ try
 		["_timeUntilFail",DMS_MissionTimeOut call DMS_fnc_SelectRandomVal,[0]]
 	];
 
-	_OK = _missionObjs params
+	if !(_missionObjs params
 	[
 		["_buildings","",[[]]],
 		["_vehs","",[[]]],
 		["_crate_info_array","",[[]]]
-	];
-
-	if (!_OK) then
+	])
+	then
 	{
 		throw format["_missionObjs |%1|",_missionObjs];
 	};
 
-	_mines = [];
-	
-	if ((count _missionObjs)>3) then
-	{
-		_mines = _missionObjs param [3,[],[[]]];
-	};
+	_mines = if ((count _missionObjs)>3) then { _missionObjs param [3,[],[[]]] } else { [] };
 
 	// Don't spawn a minefield if there is one already defined in _missionObjs.
 	if (DMS_SpawnMinefieldForEveryMission && {_mines isEqualTo []}) then
@@ -138,41 +133,31 @@ try
 	};
 
 
-	_OK = _messages params
+	if !(_messages params
 	[
 		["_missionName","",[""]],
 		["_msgWIN",[],[[]],[2]],
 		["_msgLose",[],[[]],[2]]
-	];
-
-	if (!_OK) then
+	])
+	then
 	{
 		throw format["_messages |%1|",_messages];
 	};
 
-	_OK = _markers params
-	[
-		["_markerDot","",[""]],
-		["_markerCircle","",[""]]
-	];
 
-	if (!_OK) then
-	{
-		throw format["_markers |%1|",_markers];
-	};
-
-	_OK = _onEndingScripts params
+	if !(_onEndingScripts params
 	[
 		["_onSuccessScripts", [], [[]]],
-		["_onFailScripts", [], [[]]]
-	];
-
-	if (!_OK) then
+		["_onFailScripts", [], [[]]],
+		["_onMonitorStart", {}, [{}]],
+		["_onMonitorEnd", {}, [{}]]
+	])
+	then
 	{
 		throw format["_onEndingScripts |%1|",_onEndingScripts];
 	};
 
-	_arr = 
+	_arr =
 	[
 		_pos,
 		_completionInfo,
@@ -193,16 +178,15 @@ try
 			_msgWIN,
 			_msgLose
 		],
-		[
-			_markerDot,
-			_markerCircle
-		],
+		_markers,
 		_side,
 		_difficulty,
 		_missionEvents,
 		[
 			_onSuccessScripts,
-			_onFailScripts
+			_onFailScripts,
+			_onMonitorStart,
+			_onMonitorEnd
 		]
 	];
 	DMS_StaticMission_Arr pushBack _arr;
@@ -210,6 +194,7 @@ try
 
 	if (DMS_MarkerText_ShowAICount) then
 	{
+		_markerDot = _markers select 0;
 		_markerDot setMarkerText (format ["%1 (%2 %3 remaining)",markerText _markerDot,count (_inputUnits call DMS_fnc_GetAllUnits),DMS_MarkerText_AIName]);
 	};
 

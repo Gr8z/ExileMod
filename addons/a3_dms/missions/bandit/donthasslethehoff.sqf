@@ -11,13 +11,13 @@ private ["_num", "_side", "_pos", "_OK", "_difficulty", "_AICount", "_group", "_
 _num = DMS_MissionCount;
 
 
-// Set mission side (only "bandit" is supported for now)
+// Set mission side
 _side = "bandit";
 
 
 // This part is unnecessary, but exists just as an example to format the parameters for "DMS_fnc_MissionParams" if you want to explicitly define the calling parameters for DMS_fnc_FindSafePos.
 // It also allows anybody to modify the default calling parameters easily.
-if ((isNil "_this") || {_this isEqualTo [] || {(typeName _this)!="ARRAY"}}) then
+if ((isNil "_this") || {_this isEqualTo [] || {!(_this isEqualType [])}}) then
 {
 	_this =
 	[
@@ -75,7 +75,7 @@ _staticGuns =
 // Create Crates
 _crate1 = ["Box_NATO_Wps_F",_pos] call DMS_fnc_SpawnCrate;
 
-_wreck = createVehicle ["Land_UWreck_Heli_Attack_02_F",[(_pos select 0) - 10, (_pos select 1),-0.2],[], 0, "CAN_COLLIDE"];
+_wreck = createVehicle ["Land_Wreck_Heli_Attack_02_F",[(_pos select 0) - 10, (_pos select 1),-0.2],[], 0, "CAN_COLLIDE"];
 
 _vehClass =
 	if (_extraParams isEqualTo []) then
@@ -105,9 +105,9 @@ _vehicle = [_vehClass,_pos] call DMS_fnc_SpawnNonPersistentVehicle;
 // Set crate loot values
 _crate_loot_values1 =
 [
-	16,		// Weapons
-	8,		// Items
-	4 		// Backpacks
+	8,		// Weapons
+	4,		// Items
+	2 		// Backpacks
 ];
 
 
@@ -187,7 +187,7 @@ if !(_added) exitWith
 	} forEach _missionAIUnits;
 
 	_cleanup pushBack ((_missionObjs select 0)+(_missionObjs select 1));
-	
+
 	{
 		_cleanup pushBack (_x select 0);
 	} foreach (_missionObjs select 2);
