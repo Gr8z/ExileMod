@@ -75,6 +75,7 @@ switch (true) do
     player addItem "Exile_Item_InstaDoc";
     player addItem "Exile_Item_CanOpener";
     player addItem "Exile_Item_PlasticBottleFreshWater";
+    call ExileClient_object_player_bambiStateEnd;
     //  "Your rank is Armed Robber";
    };
    
@@ -99,6 +100,7 @@ switch (true) do
     player addItem "Exile_Item_InstaDoc";
     player addItem "Exile_Item_CanOpener";
     player addItem "Exile_Item_PlasticBottleFreshWater";
+    call ExileClient_object_player_bambiStateEnd;
     //   "Your rank is Gangster";
    };
    
@@ -123,6 +125,7 @@ switch (true) do
     player addItem "Exile_Item_InstaDoc";
     player addItem "Exile_Item_CanOpener";
     player addItem "Exile_Item_PlasticBottleFreshWater";
+    call ExileClient_object_player_bambiStateEnd;
     //  "Your rank is Serial Killer";
    };
    
@@ -147,6 +150,7 @@ switch (true) do
     player addItem "Exile_Item_InstaDoc";
     player addItem "Exile_Item_CanOpener";
     player addItem "Exile_Item_PlasticBottleFreshWater";
+    call ExileClient_object_player_bambiStateEnd;
     //   "Your rank is Hitman";
    };
    
@@ -171,6 +175,7 @@ switch (true) do
     player addItem "Exile_Item_InstaDoc";
     player addItem "Exile_Item_CanOpener";
     player addItem "Exile_Item_PlasticBottleFreshWater";
+    call ExileClient_object_player_bambiStateEnd;
     //  "Your rank is Bounty Hunter"
    };
    
@@ -197,6 +202,7 @@ switch (true) do
     player addItem "Exile_Item_InstaDoc";
     player addItem "Exile_Item_CanOpener";
     player addItem "Exile_Item_PlasticBottleFreshWater";
+    call ExileClient_object_player_bambiStateEnd;
     //   "Your rank is Mercenary";
    };
      case (_respect > 149999 && _respect < 249999):
@@ -225,6 +231,7 @@ switch (true) do
     player addItem "Exile_Item_InstaDoc";
     player addItem "Exile_Item_CanOpener";
     player addItem "Exile_Item_PlasticBottleFreshWater";
+    call ExileClient_object_player_bambiStateEnd;
     //  "Your rank is Assassin";
    };
    
@@ -255,6 +262,7 @@ switch (true) do
     player addItem "Exile_Item_InstaDoc";
     player addItem "Exile_Item_CanOpener";
     player addItem "Exile_Item_PlasticBottleFreshWater";
+    call ExileClient_object_player_bambiStateEnd;
     //  "Your rank is Militant";
    };
    
@@ -285,6 +293,7 @@ switch (true) do
     player addItem "Exile_Item_InstaDoc";
     player addItem "Exile_Item_CanOpener";
     player addItem "Exile_Item_PlasticBottleFreshWater";
+    call ExileClient_object_player_bambiStateEnd;
     //  "Your rank is Terrorist";
    };
    
@@ -314,6 +323,7 @@ switch (true) do
     player addItem "Exile_Item_InstaDoc";
     player addItem "Exile_Item_CanOpener";
     player addItem "Exile_Item_PlasticBottleFreshWater";
+    call ExileClient_object_player_bambiStateEnd;
     //  "Your rank is Warlord";
    };
    
@@ -340,6 +350,7 @@ switch (true) do
     player addItem "Exile_Item_InstaDoc";
     player addItem "Exile_Item_CanOpener";
     player addItem "Exile_Item_PlasticBottleFreshWater";
+    call ExileClient_object_player_bambiStateEnd;
     //  "Your rank is Arms Dealer";
    };
    
@@ -367,6 +378,7 @@ switch (true) do
     player addItem "Exile_Item_InstaDoc";
     player addItem "Exile_Item_CanOpener";
     player addItem "Exile_Item_PlasticBottleFreshWater";
+    call ExileClient_object_player_bambiStateEnd;
     //  "Your rank is God";
    };
     default
