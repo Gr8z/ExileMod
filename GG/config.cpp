@@ -11,9 +11,9 @@
 
 class CfgTornZ_Exile
 {
-    zombies_maxLocal = 12;
-    zombies_maxLocalOverFlow = 24;
-    zombies_maxTotal = 30;
+    zombies_maxLocal = 8;
+    zombies_maxLocalOverFlow = 12;
+    zombies_maxTotal = 20;
     zombies_distance = 150;
     zombies_distanceMax = 250;
     zombies_distanceLosInital = 100;
