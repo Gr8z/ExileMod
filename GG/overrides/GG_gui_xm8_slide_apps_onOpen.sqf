@@ -83,7 +83,7 @@ _bank ctrlSetTooltip Format ["%1",ExileClientBank];
 _sharedBankingBtn = _display ctrlCreate ["RscExileXM8AppButton1x1", 0712, _display displayCtrl 4040];
 _sharedBankingBtn ctrlSetPosition [(17 - 3) * (0.025),(9.5 - 2) * (0.04),0.15, 0.2];
 _sharedBankingBtn ctrlCommit 0.01;
-_sharedBankingBtn ctrlSetEventHandler ["ButtonClick", "['Use an ATM on the map marker to store your money. Money in your wallet will be drop when you die.'] call ExileClient_gui_xm8_showWarning;"];
+_sharedBankingBtn ctrlSetEventHandler ["ButtonClick", "['Use an ATM on the map markers to store your money. Money in your wallet will drop when you die.'] call ExileClient_gui_xm8_showWarning;"];
 _sharedBankingBtn ctrlSetStructuredText (parseText (format ["What's Banks?"]));
 
 //create a shared banking picture
