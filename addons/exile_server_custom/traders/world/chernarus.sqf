@@ -214,7 +214,7 @@ ExileServerCustom_Traders pushBack
     [4046.69,11662.8,0.00140381],
     0
 ];
-[[4076.35,11653.7,0],0,"TRADER"] call CustomServer_system_loot_disable;
+[[4076.35,11653.7,0],"TRADER"] call CustomServer_system_loot_disable;
 ExileServerCustom_Traders pushBack
 [
     "Exile_Trader_Vehicle",
