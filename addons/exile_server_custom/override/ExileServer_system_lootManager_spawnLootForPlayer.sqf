@@ -106,7 +106,7 @@ try
 														_magazineClassNames = getArray(configFile >> "CfgWeapons" >> _itemClassName >> "magazines");
 														if (count(_magazineClassNames) > 0) then
 														{
-															_magazineClassName = _magazineClassNames select (floor(random (count _magazineClassNames)));
+															_magazineClassName = selectRandom _magazineClassNames;
 															_numberOfMagazines = 2 + floor(random 3);
 															_lootHolder addMagazineCargoGlobal [_magazineClassName, _numberOfMagazines];
 														};
