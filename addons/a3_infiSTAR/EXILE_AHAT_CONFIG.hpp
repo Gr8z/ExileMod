@@ -195,10 +195,10 @@ stopSafeGlitch = true;				/* re-assigning "InventoryOpened" eventhandler to stop
 SpeedHackCheck = false;				/* Use SpeedHackCheck? */
 TimeToKickForSpeedHack = 30;		/* Only if SpeedHackCheck = true: Some people tried using speedHacks to travel faster, instead of teleporting.. */
 
-checkPopTabIncrease = true;
+checkPopTabIncrease = false;
 LogPopTabIncrease = 15000;			/* Only if checkPopTabIncrease = true; logs if poptabs increased by x within ~10 seconds */
 
-checkRespectIncrease = true;
+checkRespectIncrease = false;
 LogRespectIncrease = 5000;			/* Only if checkRespectIncrease = true; logs if respect increased by x within ~10 seconds */
 
 uniform_and_vest_check = true;		/* In the current version of Arma3 it may happen that the uniform or vest you wear is not shown to other players due to a bug, this will log & fix that issue! */
