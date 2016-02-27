@@ -11,7 +11,7 @@
 
 class CfgTornZ_Exile
 {
-    zombies_maxLocal = 8;
+    zombies_maxLocal = 6;
     zombies_maxLocalOverFlow = 12;
     zombies_maxTotal = 20;
     zombies_distance = 150;
@@ -19,10 +19,10 @@ class CfgTornZ_Exile
     zombies_distanceLosInital = 100;
     zombies_distanceLosMax = 200;
     zombies_distanceLosInital_EngineOff = 20;
-    zombies_spawnChance = 0.5;
-    zombies_spawnOutsideChance = 0.3;
+    zombies_spawnChance = 0.2;
+    zombies_spawnOutsideChance = 0.1;
     zombies_lootChance = 0.8;
-    zombies_killedScore = 50;
+    zombies_killedScore = 10;
 }; 
 
 class CfgClans
