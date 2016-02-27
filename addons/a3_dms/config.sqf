@@ -214,7 +214,7 @@ DMS_Use_Map_Config = true;	// Whether or not to use config overwrites specific t
 	DMS_AIDistanceCheckFrequency		= 60;						// How often to check within DMS_fnc_TargetsKilled whether or not the AI is out of the maximum radius. Lower values increase frequency and increase server load, greater values decrease frequency and may cause longer delays for "runaway" AI.
 
 	DMS_ai_offload_to_client			= true;						// Offload spawned AI groups to random clients. Helps with server performance.
-	DMS_ai_offload_Only_DMS_AI			= false;					// Do you use other mission systems on your server but still want to offload AI? You should probably enable this then, unless you have tested it for compatibility.
+	DMS_ai_offload_Only_DMS_AI			= true;					// Do you use other mission systems on your server but still want to offload AI? You should probably enable this then, unless you have tested it for compatibility.
 
 	DMS_ai_share_info					= true;						// Share info about killer
 	DMS_ai_share_info_distance			= 300;						// The distance killer's info will be shared to other AI
