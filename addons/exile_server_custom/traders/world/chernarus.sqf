@@ -48,7 +48,7 @@ ExileServerCustom_Traders pushBack
     ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3", "HubBriefing_scratch", "HubBriefing_stretch", "HubBriefing_think", "HubBriefing_lookAround1", "HubBriefing_lookAround2"],
     [11473.2,11340.2,0],7
 ];
-[11473.2,11340.2,0],"TRADER"] call CustomServer_system_loot_disable;
+[[11473.2,11340.2,0],"TRADER"] call CustomServer_system_loot_disable;
 ExileServerCustom_Traders pushBack
 [
     "Exile_Trader_Food",
