@@ -71,7 +71,7 @@ if ((!isNull _playerObj) && {(_playerUID != "") && {_playerObj isKindOf "Exile_U
 
 	if ((_moneyChange!=0) || {_repChange!=0} || {_rankChange!=0}) then
 	{
-		_playerMoney = _playerObj getVariable ["ExileMoney", 0];
+		_playerMoney = _playerObj getVariable ["ExilePurse", 0];
 		_playerRespect = _playerObj getVariable ["ExileScore", 0];
 		_playerRank = _playerObj getVariable ["ExileHumanity", 0];
 		_unitName = name _unit;
@@ -90,7 +90,7 @@ if ((!isNull _playerObj) && {(_playerUID != "") && {_playerObj isKindOf "Exile_U
 			// Set client's money
 			// I also make sure that they don't get negative poptabs
 			_playerMoney = (_playerMoney + _moneyChange) max 0;
-			_playerObj setVariable ["ExileMoney",_playerMoney];
+			_playerObj setVariable ["ExilePurse",_playerMoney];
 
 			_msgType = "moneyReceivedRequest";
 			_msgParams = [str _playerMoney, format ["killed %1",_unitName]];
@@ -186,7 +186,8 @@ if ((!isNull _playerObj) && {(_playerUID != "") && {_playerObj isKindOf "Exile_U
 		};
 
 		// Update client database entry
-		format["setAccountMoneyAndRespect:%1:%2:%3", _playerMoney, _playerRespect, _playerUID] call ExileServer_system_database_query_fireAndForget;
+		format["updateWallet:%1:%2", _playerMoney, _playerUID] call ExileServer_system_database_query_fireAndForget;
+        format["setAccountScore:%1:%2",_playerRespect,_playerUID] call ExileServer_system_database_query_fireAndForget;
 
 		if (DMS_Show_Party_Kill_Notification) then
 		{
