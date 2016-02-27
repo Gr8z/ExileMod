@@ -110,11 +110,11 @@ class Mission {
 				class Item62 { position[] = {13233.1, 17.9664, 11692.9}; id = 62;special = NONE;side = GUER;vehicle = "Exile_Unit_GhostPlayer";player = "PLAY CDG";skill = 0.6;description="REGULAR SLOT";};
 				class Item63 { position[] = {13231, 17.6023, 11693.1}; id = 63;special = NONE;side = GUER;vehicle = "Exile_Unit_GhostPlayer";player = "PLAY CDG";skill = 0.6;description="REGULAR SLOT";};
 				class Item64 { position[] = {13228.8, 17.1714, 11693.2}; id = 64;special = NONE;side = GUER;vehicle = "Exile_Unit_GhostPlayer";player = "PLAY CDG";skill = 0.6;description="REGULAR SLOT";};
-				class Item65 { position[] = {13227.5, 16.8575, 11693.2}; id = 65;special = NONE;side = GUER;vehicle = "Exile_Unit_GhostPlayer";player = "PLAY CDG";skill = 0.6;description="VIP SLOT ($8/mon)";init="null = [this] execVm  'GG\whitelist.sqf';";};
-				class Item66 { position[] = {13225.5, 16.3894, 11693.5}; id = 66;special = NONE;side = GUER;vehicle = "Exile_Unit_GhostPlayer";player = "PLAY CDG";skill = 0.6;description="VIP SLOT ($8/mon)";init="null = [this] execVm  'GG\whitelist.sqf';";};
-				class Item67 { position[] = {13224.1, 16.062, 11693.5}; id = 67;special = NONE;side = GUER;vehicle = "Exile_Unit_GhostPlayer";player = "PLAY CDG";skill = 0.6;description="VIP SLOT ($8/mon)";init="null = [this] execVm  'GG\whitelist.sqf';";};
-				class Item68 { position[] = {13221.9, 15.5862, 11693.6}; id = 68;special = NONE;side = GUER;vehicle = "Exile_Unit_GhostPlayer";player = "PLAY CDG";skill = 0.6;description="VIP SLOT ($8/mon)";init="null = [this] execVm  'GG\whitelist.sqf';";};
-				class Item69 { position[] = {13219.4, 15.0413, 11693.6}; id = 69;special = NONE;side = GUER;vehicle = "Exile_Unit_GhostPlayer";player = "PLAY CDG";skill = 0.6;description="VIP SLOT ($8/mon)";init="null = [this] execVm  'GG\whitelist.sqf';";};
+				class Item65 { position[] = {13227.5, 16.8575, 11693.2}; id = 65;special = NONE;side = GUER;vehicle = "Exile_Unit_GhostPlayer";player = "PLAY CDG";skill = 0.6;description="VIP SLOT ($15/mon)";init="null = [this] execVm  'GG\whitelist.sqf';";};
+				class Item66 { position[] = {13225.5, 16.3894, 11693.5}; id = 66;special = NONE;side = GUER;vehicle = "Exile_Unit_GhostPlayer";player = "PLAY CDG";skill = 0.6;description="VIP SLOT ($15/mon)";init="null = [this] execVm  'GG\whitelist.sqf';";};
+				class Item67 { position[] = {13224.1, 16.062, 11693.5}; id = 67;special = NONE;side = GUER;vehicle = "Exile_Unit_GhostPlayer";player = "PLAY CDG";skill = 0.6;description="VIP SLOT ($15/mon)";init="null = [this] execVm  'GG\whitelist.sqf';";};
+				class Item68 { position[] = {13221.9, 15.5862, 11693.6}; id = 68;special = NONE;side = GUER;vehicle = "Exile_Unit_GhostPlayer";player = "PLAY CDG";skill = 0.6;description="VIP SLOT ($15/mon)";init="null = [this] execVm  'GG\whitelist.sqf';";};
+				class Item69 { position[] = {13219.4, 15.0413, 11693.6}; id = 69;special = NONE;side = GUER;vehicle = "Exile_Unit_GhostPlayer";player = "PLAY CDG";skill = 0.6;description="VIP SLOT ($15/mon)";init="null = [this] execVm  'GG\whitelist.sqf';";};
 			};
 		};
 		class Item1
