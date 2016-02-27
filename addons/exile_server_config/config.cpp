@@ -1080,14 +1080,14 @@ class CfgSettings
 	///////////////////////////////////////////////////////////////////////
 	class LootSettings
 	{
-		spawnChancePerBuilding = 90;
-		spawnChancePerPosition = 75;
+		spawnChancePerBuilding = 80;
+		spawnChancePerPosition = 65;
 		maximumNumberOfLootSpotsPerBuilding = 6;
-		maximumNumberOfItemsPerLootSpot = 2;
+		maximumNumberOfItemsPerLootSpot = 1;
 		spawnRadius = 80;
 		visualThreshold = 10;
 		notifyPlayer = 1;
-		minimumDistanceToTraderZones = 500;
+		minimumDistanceToTraderZones = 200;
 		minimumDistanceToTerritories = 10;
 	};
 
