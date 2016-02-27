@@ -61,7 +61,7 @@ chatCommands[] =
 {
 	{"!ts","ts.ghostzgamerz.com"},
 	{"!website","www.ghostzgamerz.com"},
-	{"admin","SUPPORT FORBIDDEN IN SIDECHAT!"}
+	{"admin","SUPPORT FORBIDDEN IN SIDECHAT! JOIN OUR TEAMSPEAK.."}
 };
 
 
