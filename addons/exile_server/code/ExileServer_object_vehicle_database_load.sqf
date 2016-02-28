@@ -7,6 +7,9 @@
  *
  * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
+ *
+ *
+ * Modified by ynpmoose of ZeroSurvival.com / Vehicle Protection System
  */
  
 private["_vehicleID","_data","_position","_vectorDirection","_vectorUp","_pinCode","_vehicleObject","_lock","_unlockInSafeZonesAfterRestart","_isLocked","_hitpoints","_cargoContainers"];
@@ -37,6 +40,19 @@ if (_isLocked) then
 	_vehicleObject setVariable ["ExileIsLocked", -1];
 	_vehicleObject lock 2;
 	_vehicleObject enableRopeAttach false;
+	
+	// Vehicle Protection System
+	// Start Vehicle Invincible in Authorized Terrority After Restart
+	_vehicleOwner = _vehicleObject getVariable "ExileOwnerUID";   //get vehicle owner ID
+	_vehicleInTerritory = _position call ExileClient_util_world_getTerritoryAtPosition;  //check if the vehicle is in a territory
+		if !(isNull _vehicleInTerritory) then   //if some territory ID is returned
+			{
+				if ((_vehicleOwner) in (_vehicleInTerritory getVariable ["ExileTerritoryBuildRights", []])) then  //check if the vehicle owner has build rights
+					{
+						_vehicleObject allowDamage false;;  //vehicle owner has build rights, vehicle is invinicible
+					};
+			};
+	// End Vehicle Invincible in Authorized Terrority After Restart
 }
 else
 {

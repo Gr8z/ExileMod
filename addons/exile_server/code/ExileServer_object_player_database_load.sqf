@@ -230,4 +230,20 @@ call ExileServer_system_network_send_to;
 ]
 call ExileServer_system_network_send_to;
 [_sessionID, _player] call ExileServer_system_session_update;
+
+
+// Vehicle Protection System
+// Start: Owned Vehicles Vulnerable Upon Login
+	_vehObjects = allMissionObjects "Car" + allMissionObjects "Air" + allMissionObjects "Ship";
+	_ownerCheck = _player getVariable "ExileOwnerUID"; 
+	{
+	_vehicleOwner = _x getVariable "ExileOwnerUID";   //get vehicle owner ID
+	if (_ownerCheck isEqualTo _vehicleOwner) then
+		{
+		_x allowDamage true;  //Allow damage if vehicle is owned
+		};
+	} forEach _vehObjects;
+	
+// End: Owned Vehicles Vulnerable Upon Login
+
 true
