@@ -107,7 +107,6 @@ adminUIDandAccess[] =
 		 "76561197960289679", //TangoWhiskey
 		 "76561198058099842", //Fap
 		 "76561198133936962", // Wrice4
-		 "76561198280089554", // Chubby
 		 "0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
 			"Teleport On Map Click","Teleport - Target To Me","Teleport - Me To Target","Teleport In Facing Direction (10m steps)",
