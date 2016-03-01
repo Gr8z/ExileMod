@@ -138,6 +138,7 @@ Scout3 = [
 	"76561198084864687", // Kozak
 	"76561198195305425", // shaz
 	"76561198001066546", // MeowMix
+	"76561198101663483", // Chubby
 	"76561197978528230", // Dark (player Created these loadouts)
 	"76561198236879848", // Winston (OD-2016-01-13) #12903  
 // Add UIDs above, don't forget the comma
