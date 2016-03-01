@@ -234,6 +234,9 @@ if (isServer) then {
         ["Exile_Sign_WasteDump_Small",[11455.1,11346.1,0],162.273,0,0,false],
         ["Land_HelipadEmpty_F",[1158.43,2478.15,0],0,0,0,false],
         ["Land_HelipadEmpty_F",[11423.3,11334.8,0],0,0,0,false],
+
+        // Boat Traders
+        ["Land_HelipadEmpty_F",[13460.108398,5449.107422,0],0,0,0,false],
 		
 	    //Bash
 		["Land_bags_EP1",[4044.26,11691.4,0],298.182,[[-0.881452,0.472274,0],[0,0,1]],false],
