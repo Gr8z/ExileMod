@@ -167,7 +167,7 @@ class Mission {
 	};
 	
 	class Markers {
-		items = 18;
+		items = 20;
 		
 		class Item0
 		{
@@ -337,6 +337,30 @@ class Mission {
 			name="SpawnZelenogorsk";
 			text="Zelenogorsk";
 			type="ExileSpawnZone";
+		};
+		class Item18
+		{
+			position[]={13459.7,0,5439.48};
+			name="Boat Trader";
+			text="Boat Trader";
+			type="loc_Tree";
+			colorName="ColorWhite";
+			fillName="Vertical";
+			a=3;
+			b=3;
+		};
+		class Item19
+		{
+			position[]={13459.7,0,5439.48};
+			name = "BoatTraderCityMarker";
+			text = "Mafia Trader City";
+			markerType = "ELLIPSE";
+			type = "ExileTraderZone";
+			colorName = "ColorGreen";
+			fillName = "SolidBorder";
+			a = 175;
+			b = 175;
+			drawBorder = 1;
 		};
 	};
 };

@@ -8,4 +8,4 @@ do_MakeBike = [player, _spawnPos, _spawnDir];
 player unlinkItem "ItemRadio";
 publicVariableServer "do_MakeBike";
 uiSleep 1;
-hint "BIKE DEPLOYED, RADIO REMOVED !";
+["Success", ["Bike Deployed! Radio removed!"]] call ExileClient_gui_notification_event_addNotification;

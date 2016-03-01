@@ -377,3 +377,16 @@ ExileServerCustom_Traders pushBack
     ["AidlPercMstpSnonWnonDnon_G01", "AidlPercMstpSnonWnonDnon_G02", "AidlPercMstpSnonWnonDnon_G03", "AidlPercMstpSnonWnonDnon_G04", "AidlPercMstpSnonWnonDnon_G05", "AidlPercMstpSnonWnonDnon_G06"],
     [6316.24,7810.23,0],129.545
 ];
+
+
+///////////////////////////////////////////////////////////////////////////
+// Boat Trader
+///////////////////////////////////////////////////////////////////////////
+[[13434.2,5440.97,0.0113521],"TRADER"] call CustomServer_system_loot_disable;
+ExileServerCustom_Traders pushBack
+[
+    "Exile_Trader_Boat",
+    "WhiteHead_17",
+    ["AidlPercMstpSnonWnonDnon_G01", "AidlPercMstpSnonWnonDnon_G02", "AidlPercMstpSnonWnonDnon_G03", "AidlPercMstpSnonWnonDnon_G04", "AidlPercMstpSnonWnonDnon_G05", "AidlPercMstpSnonWnonDnon_G06"],
+    [13434.2,5440.97,0.0113521],269.545
+];
