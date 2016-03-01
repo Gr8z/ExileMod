@@ -4,6 +4,7 @@
 [] execVM "GG\IgiLoad\IgiLoadInit.sqf";
 [] execVM "GG\money\takegive_poptab_init.sqf";
 [] execVM "GG\service\service_point.sqf";
+[] execVM "GG\ExtraButtons.sqf";
 
 #include "initServer.sqf"
 
