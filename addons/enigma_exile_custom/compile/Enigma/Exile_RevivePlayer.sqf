@@ -22,7 +22,7 @@ if (!local _requestingPlayer) then {
 
 		_accountData = format["getAccountStats:%1", _requestingPlayerUID] call ExileServer_system_database_query_selectSingle;
 
-		private["_avBank"];
+		private["_advBank"];
         _advBank = format["getStats:%1",_requestingPlayerUID] call ExileServer_system_database_query_selectSingle;
 
 			if (_requestingPlayer == _reviver) exitWith {
