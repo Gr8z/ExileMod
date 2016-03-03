@@ -56,3 +56,13 @@ set damage = 0, hitpoints = '[]'
 where hitpoints = '[["'
 OR hitpoints = '[["!'
 and damage = 1;
+
+/* RESET VEHICLE CODE NOT USED IN 5 DAYS */
+UPDATE vehicle_1
+SET pin_code = 0000
+WHERE LastUpdated < DATE_SUB(CURRENT_TIMESTAMP, INTERVAL 3 DAY);
+
+/* UNLOCK VEHICLES NOT USED IN 5 DAYS */
+UPDATE vehicle_1
+SET is_locked = 0
+WHERE pin_code = 0;
