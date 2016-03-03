@@ -3,7 +3,7 @@
 // Being first in the zone starts the timer.
 // Holding a zone  gives you a reward after x Min.
 
-ZCP_dev = false;
+ZCP_dev = true;
 
 ZCP_CapTime = 600; // Seconds to cap an area uncontested
 ZCP_CapRadius = 70; // Meter radius of the capture circle around the first object.
@@ -22,7 +22,7 @@ ZCP_Minimum_Online_Players = 0; // Ammount of players to be online before it all
 
 ZCP_RewardRelativeToPlayersOnline = true; // This will recalculate the crypto reward according the amount of online players.
 ZCP_PoptabReward = 50; // Poptab reward for capping per player online.
-ZCP_ServerMaxPlayers = 100; // Only needed to recalcuate the reward.
+ZCP_ServerMaxPlayers = 75; // Only needed to recalcuate the reward.
 ZCP_MinPoptabReward = 2800; // The Poptab reward can never be recalculated lower then this.
 
 ZCP_ReputationReward = 25; // Respect reward for capping per  player online.
@@ -40,15 +40,16 @@ ZCP_StaticPoints = false; // If true, the missions will use the provided locatio
 // Location is ignored if not using static points. just put [0,0,0] then.
 // valid rewards -> Poptabs , Reputation
 ZCP_CapPoints = [ // [name,[x,y,z],reward, varname,index]
-	["ZCP Alpha",[12538.84,0,8522.3262],"Poptabs","alpha",0] ,
-	["ZCP Bravo",[17229.852,0,14200.47],"Reputation","beta",1],
-	["ZCP Charlie",[8158.2949,0,16988.289],"Reputation","charlie",2],
-	["ZCP Delta",[8158.2949,0,16988.289],"Poptabs","delta",3]
+	["Alpha",[12538.84,0,8522.3262],"Poptabs","alpha",0] ,
+	["Bravo",[17229.852,0,14200.47],"Reputation","beta",1],
+	["Charlie",[8158.2949,0,16988.289],"Reputation","charlie",2],
+	["Delta",[8158.2949,0,16988.289],"Poptabs","delta",3]
 ];
 
 // For every spawned mission,
 ZCP_CapBases = [ // located in capbases folder
-	"base1.sqf"
+//	"base1.sqf",
+	"base2.sqf"
 ];
 
 /* These are arma 3 colors, look up the color naming if you are going to change this */

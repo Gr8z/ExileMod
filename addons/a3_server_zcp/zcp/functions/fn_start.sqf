@@ -55,7 +55,7 @@ _ZCP_baseObjects = _ZCP_baseClasses call ZCP_fnc_createBase;
 if(count _ZCP_baseObjects != 0)then{
 
 	ZCP_Bases set [_ZCP_index , _ZCP_baseObjects];
-	PV_ZCP_zupastic = ["ZCP",format["%1 Capture Point Set Up. Capture Point Lasts For %2 Min!",_ZCP_name, (ZCP_CapTime / 60)],"ZCP_Init"];
+	PV_ZCP_zupastic = ["BATTLE ZONE",format["%1 Capture Point Set Up. Capture Point Lasts For %2 Min!",_ZCP_name, (ZCP_CapTime / 60)],"ZCP_Init"];
 	publicVariable "PV_ZCP_zupastic";
 	diag_log text format ["[ZCP]: %1 started.",_ZCP_name];
 
@@ -96,7 +96,7 @@ if(count _ZCP_baseObjects != 0)then{
 					_ZCP_min = false;
 					_ZCP_currentCapper = _proximityList select 0;
 					(ZCP_Data select _ZCP_index) set[1,1];
-					PV_ZCP_zupastic = ["ZCP",format["%2 Is Capping %1. %3 Min Left to Prevent This.",_ZCP_name,name _ZCP_currentCapper,(ZCP_CapTime / 60)],'ZCP_Capping'];
+					PV_ZCP_zupastic = ["BATTLE ZONE",format["%2 Is Capping %1. %3 Min Left to Prevent This.",_ZCP_name,name _ZCP_currentCapper,(ZCP_CapTime / 60)],'ZCP_Capping'];
 					publicVariable "PV_ZCP_zupastic";
 				};
 				_ZCP_currentGroup = group _ZCP_currentCapper;
@@ -120,13 +120,13 @@ if(count _ZCP_baseObjects != 0)then{
 				};
 
 				if( !_ZCP_Halfway && _ZCP_startContested != 0 && (diag_tickTime - _ZCP_startContested) >  (ZCP_CapTime / 2))then{
-					PV_ZCP_zupastic = ["ZCP",format["%1 Is 50 %4 Captured By %2. %3 Min Left to Prevent This.",_ZCP_name,name _ZCP_currentCapper,(ZCP_CapTime / 2 / 60),"%"], 'ZCP_Capping'];
+					PV_ZCP_zupastic = ["BATTLE ZONE",format["%1 Is 50 %4 Captured By %2. %3 Min Left to Prevent This.",_ZCP_name,name _ZCP_currentCapper,(ZCP_CapTime / 2 / 60),"%"], 'ZCP_Capping'];
 					publicVariable "PV_ZCP_zupastic";
 					_ZCP_Halfway = true;
 				};
 
 				if( !_ZCP_min && _ZCP_startContested != 0 && (diag_tickTime - _ZCP_startContested) >  (ZCP_CapTime - 60))then{
-					PV_ZCP_zupastic = ["ZCP",format["%1 Is Almost Captured By %2. 60 Seconds Left To Prevent This.",_ZCP_name,name _ZCP_currentCapper], 'ZCP_Capping'];
+					PV_ZCP_zupastic = ["BATTLE ZONE",format["%1 Is Almost Captured By %2. 60 Seconds Left To Prevent This.",_ZCP_name,name _ZCP_currentCapper], 'ZCP_Capping'];
 					publicVariable "PV_ZCP_zupastic";
 					_ZCP_min = true;
 				};
