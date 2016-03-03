@@ -40,10 +40,8 @@ ZCP_StaticPoints = false; // If true, the missions will use the provided locatio
 // Location is ignored if not using static points. just put [0,0,0] then.
 // valid rewards -> Poptabs , Reputation
 ZCP_CapPoints = [ // [name,[x,y,z],reward, varname,index]
-	["Alpha",[12538.84,0,8522.3262],"Poptabs","alpha",0] ,
-	["Bravo",[17229.852,0,14200.47],"Reputation","beta",1],
-	["Charlie",[8158.2949,0,16988.289],"Reputation","charlie",2],
-	["Delta",[8158.2949,0,16988.289],"Poptabs","delta",3]
+	["Battle Zone",[12538.84,0,8522.3262],"Poptabs","alpha",0] ,
+	["Battle Zone",[17229.852,0,14200.47],"Reputation","beta",1],
 ];
 
 // For every spawned mission,
