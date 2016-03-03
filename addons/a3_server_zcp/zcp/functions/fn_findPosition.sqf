@@ -21,6 +21,9 @@ while{!_validspot} do {
 		if ([_position,10] call ZCP_fnc_nearWater) then {
 		_validspot = false;
 		};
+		if ([_position,10] call ZCP_fnc_nearTrader) then {
+		_validspot = false;
+		};
 	};
 };
 _position set [2, 0];
