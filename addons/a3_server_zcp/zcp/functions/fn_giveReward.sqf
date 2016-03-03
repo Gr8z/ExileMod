@@ -32,7 +32,7 @@ switch (_reward) do {
 
 		_ZCP_currentCapper call ExileServer_object_player_database_update;
 
-		PV_ZCP_zupastic = ["BATTLE ZONE",format["%2 Captured %1. Received %3 Reputation.",_ZCP_name,name _ZCP_currentCapper,_awardToGive],'ZCP_Capped'];
+		PV_ZCP_zupastic = ["BATTLE ZONE",format["%2 Captured %1. Received %3 Respect.",_ZCP_name,name _ZCP_currentCapper,_awardToGive],'ZCP_Capped'];
 		publicVariable "PV_ZCP_zupastic";
 		diag_log text format ["[ZCP]: %1 won %2, received %3 Reputation",name _ZCP_currentCapper,_ZCP_name,_awardToGive];
 	};
