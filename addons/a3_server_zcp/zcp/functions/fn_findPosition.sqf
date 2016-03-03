@@ -2,10 +2,10 @@ private ["_i","_safepos","_validspot","_position"];
 
 switch(toLower worldName)do{
 	case "altis":{
-		_safepos		= [[15834.2,15787.8,0],0,15000,10,0,80,0];
+		_safepos		= [[15834.2,15787.8,0],0,15000,10,0,20,0];
 	};
 	case "chernarus":{
-		_safepos		= [[7652.9634, 7870.8076,0],0,15000,10,0,80,0];
+		_safepos		= [[7652.9634, 7870.8076,0],0,15000,10,0,20,0];
 	};
 };
 
