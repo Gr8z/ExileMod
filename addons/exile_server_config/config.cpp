@@ -920,7 +920,7 @@ class CfgSettings
 			constructionLifeTime = 2;
 
 			// Remove all vehicles that were not moved/used for X days
-			vehicleLifeTime = 3;
+			vehicleLifeTime = 5;
 		};
 	};
 
