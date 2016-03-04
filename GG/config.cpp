@@ -844,12 +844,12 @@ class Laserdesignator: Exile_AbstractCraftingRecipe
 //NEW WEAPON MAGAZINE CRAFTING
 class 10Rnd_93x64_DMR_05_Mag: Exile_AbstractCraftingRecipe
 {
-    name = "Craft 15 Cyrus Magazines";
+    name = "Craft 5 Cyrus Magazines";
     pictureItem = "10Rnd_93x64_DMR_05_Mag";
     requiredInteractionModelGroup = "WorkBench";
     returnedItems[] =
     {
-        {15, "10Rnd_93x64_DMR_05_Mag"}
+        {5, "10Rnd_93x64_DMR_05_Mag"}
     };
     components[] =
     {
@@ -859,12 +859,12 @@ class 10Rnd_93x64_DMR_05_Mag: Exile_AbstractCraftingRecipe
 
 class 10Rnd_338_Mag: Exile_AbstractCraftingRecipe
 {
-    name = "Craft 13 Mar-10 Magazines";
+    name = "Craft 5 Mar-10 Magazines";
     pictureItem = "10Rnd_338_Mag";
     requiredInteractionModelGroup = "WorkBench";
     returnedItems[] =
     {
-        {13, "10Rnd_338_Mag"}
+        {5, "10Rnd_338_Mag"}
     };
     components[] =
     {
@@ -919,12 +919,12 @@ class 20Rnd_762x51_Mag: Exile_AbstractCraftingRecipe
 
 class 10Rnd_762x54_Mag: Exile_AbstractCraftingRecipe
 {
-    name = "Craft 15 Rahim Magazines";
+    name = "Craft 5 Rahim Magazines";
     pictureItem = "10Rnd_762x54_Mag";
     requiredInteractionModelGroup = "WorkBench";
     returnedItems[] =
     {
-        {15, "10Rnd_762x54_Mag"}
+        {5, "10Rnd_762x54_Mag"}
     };
     components[] =
     {
