@@ -59,15 +59,10 @@ and damage = 1;
 
 /* RESET CONTAINER CODE NOT USED IN 5 DAYS */
 UPDATE container_1
-SET pin_code = 0000
+SET pin_code = 0000,is_locked = 0
 WHERE last_updated_at < DATE_SUB(CURRENT_TIMESTAMP, INTERVAL 6 DAY);
 
 /* RESET VEHICLE CODE NOT USED IN 5 DAYS */
 UPDATE vehicle_1
-SET pin_code = 0000
+SET pin_code = 0000,is_locked = 0
 WHERE LastUpdated < DATE_SUB(CURRENT_TIMESTAMP, INTERVAL 3 DAY);
-
-/* UNLOCK VEHICLES NOT USED IN 5 DAYS */
-UPDATE vehicle_1
-SET is_locked = 0
-WHERE pin_code = 0;
