@@ -21,8 +21,6 @@ private["_currentCapper","_ZCP_continue","_ZCP_flag","_currentGroup","_ZCP_name"
 
 _randomTime = (floor random  100) + ZCP_MinWaitTime ;
 
-ZCP_MinWaitTime = 600;
-
 uiSleep _randomTime;
 diag_log text format ["[ZCP]: Waiting for %1 players to be online.",ZCP_Minimum_Online_Players];
 waitUntil { count( playableUnits ) > ( ZCP_Minimum_Online_Players - 1 ) };

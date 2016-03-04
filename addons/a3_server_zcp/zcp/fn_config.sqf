@@ -3,22 +3,25 @@
 // Being first in the zone starts the timer.
 // Holding a zone  gives you a reward after x Min.
 
-ZCP_dev = false;
+ZCP_dev = true;
 
 ZCP_CapTime = 600; // Seconds to cap an area uncontested
 ZCP_CapRadius = 70; // Meter radius of the capture circle around the first object.
 ZCP_MinWaitTime = 100; // seconds to wait to spawn a new capturepoint when 1 was capped.
 ZCP_BaseCleanupDelay = 100; // seconds to wait to delete a captured base.
 
+ZCP_MaxMissions = 1; // Ammount of cap points at the same time.
+ZCP_Minimum_Online_Players = 5; // Ammount of players to be online before it allows to spawn capture points. !!! O = always
+
 if(ZCP_dev) then {
 	ZCP_CapTime = 10; // Seconds to cap an area uncontested
 	ZCP_CapRadius = 70; // Meter radius of the capture circle around the first object.
 	ZCP_MinWaitTime = 10; // seconds to wait to spawn a new capturepoint when 1 was capped.
 	ZCP_BaseCleanupDelay = 10; // seconds to wait to delete a captured base.
-};
 
-ZCP_MaxMissions = 1; // Ammount of cap points at the same time.
-ZCP_Minimum_Online_Players = 0; // Ammount of players to be online before it allows to spawn capture points. !!! O = always
+	ZCP_MaxMissions = 2; // Ammount of cap points at the same time.
+	ZCP_Minimum_Online_Players = 0; // Ammount of players to be online before it allows to spawn capture points. !!! O = always
+};
 
 ZCP_RewardRelativeToPlayersOnline = true; // This will recalculate the crypto reward according the amount of online players.
 ZCP_PoptabReward = 500; // Poptab reward for capping per player online.
