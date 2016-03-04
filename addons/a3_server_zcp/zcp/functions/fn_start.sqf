@@ -53,7 +53,7 @@ _ZCP_baseObjects = _ZCP_baseClasses call ZCP_fnc_createBase;
 if(count _ZCP_baseObjects != 0)then{
 
 	ZCP_Bases set [_ZCP_index , _ZCP_baseObjects];
-	_message = format["A BATTLE ZONE is Set Up. Defend it for %2 Mins!!",(ZCP_CapTime / 60)];
+	_message = format["A BATTLE ZONE is Set Up. Defend it for %1 Mins!!",(ZCP_CapTime / 60)];
 	[ _ZCP_name, [ "#b30000", _message ] ] call DMS_fnc_BroadcastMissionStatus;
 	diag_log text format ["[ZCP]: %1 started.",_ZCP_name];
 	
