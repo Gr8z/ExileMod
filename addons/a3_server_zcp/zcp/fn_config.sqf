@@ -14,10 +14,9 @@ ZCP_MaxMissions = 1; // Ammount of cap points at the same time.
 ZCP_Minimum_Online_Players = 5; // Ammount of players to be online before it allows to spawn capture points. !!! O = always
 
 if(ZCP_dev) then {
-	ZCP_CapTime = 10; // Seconds to cap an area uncontested
-	ZCP_CapRadius = 70; // Meter radius of the capture circle around the first object.
-	ZCP_MinWaitTime = 10; // seconds to wait to spawn a new capturepoint when 1 was capped.
-	ZCP_BaseCleanupDelay = 10; // seconds to wait to delete a captured base.
+	ZCP_CapTime = 30; // Seconds to cap an area uncontested
+	ZCP_MinWaitTime = 20; // seconds to wait to spawn a new capturepoint when 1 was capped.
+	ZCP_BaseCleanupDelay = 20; // seconds to wait to delete a captured base.
 
 	ZCP_MaxMissions = 2; // Ammount of cap points at the same time.
 	ZCP_Minimum_Online_Players = 0; // Ammount of players to be online before it allows to spawn capture points. !!! O = always
