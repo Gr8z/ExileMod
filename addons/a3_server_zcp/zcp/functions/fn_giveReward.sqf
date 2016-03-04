@@ -13,7 +13,7 @@
 	────────╚╝
 */
 
-private["_ZCP_currentCapper","_ZCP_name","_capturePosition","_reward","_vars","_cIndex","_current_crypto"];
+private["_ZCP_currentCapper","_ZCP_name","_capturePosition","_reward","_vars","_cIndex","_current_crypto","_message"];
 _ZCP_currentCapper = _this select 0;
 _ZCP_name = _this select 1;
 _capturePosition = _this select 2;
@@ -32,8 +32,8 @@ switch (_reward) do {
 
 		_ZCP_currentCapper call ExileServer_object_player_database_update;
 
-		PV_ZCP_zupastic = ["BATTLE ZONE",format["%2 Captured %1. Received %3 Respect.",_ZCP_name,name _ZCP_currentCapper,_awardToGive],'ZCP_Capped'];
-		publicVariable "PV_ZCP_zupastic";
+		_message = format["%2 Captured %1. Received %3 Respect.",_ZCP_name,name _ZCP_currentCapper,_awardToGive];
+		[ _ZCP_name, [ "#b30000", _message ] ] call DMS_fnc_BroadcastMissionStatus;
 		diag_log text format ["[ZCP]: %1 won %2, received %3 Reputation",name _ZCP_currentCapper,_ZCP_name,_awardToGive];
 	};
 	case "Poptabs" : {
@@ -48,8 +48,8 @@ switch (_reward) do {
 
 		_ZCP_currentCapper call ExileServer_object_player_database_update;
 
-		PV_ZCP_zupastic = ["BATTLE ZONE",format["%2 Captured %1. received %3 Poptabs.",_ZCP_name,name _ZCP_currentCapper,_awardToGive], 'ZCP_Capped'];
-		publicVariable "PV_ZCP_zupastic";
+		_message = format["%2 Captured %1. received %3 Poptabs.",_ZCP_name,name _ZCP_currentCapper,_awardToGive];
+		[ _ZCP_name, [ "#b30000", _message ] ] call DMS_fnc_BroadcastMissionStatus;
 		diag_log text format ["[ZCP]: %1 won %2, received %3 Poptabs",name _ZCP_currentCapper,_ZCP_name,_awardToGive];
 	};
 	default {

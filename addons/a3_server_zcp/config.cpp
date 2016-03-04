@@ -19,7 +19,6 @@ class CfgFunctions {
 			file = "x\addons\a3_server_zcp\zcp\functions";
 			class inDebug {};
 			class nearWater {};
-			class nearTrader {};
 			class paraDrop {};
 			class start {};
 			class findPosition {};
@@ -28,6 +27,10 @@ class CfgFunctions {
 			class giveReward {};
 			class keepMarker {};
 			class createBase {};
+			class airstrike {};
+			class airbomb{};
+			class fly{};
+			class nearTrader {};
 		};
 	};
 };

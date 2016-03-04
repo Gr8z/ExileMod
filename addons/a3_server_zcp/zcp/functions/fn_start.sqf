@@ -16,7 +16,7 @@
 private["_currentCapper","_ZCP_continue","_ZCP_flag","_currentGroup","_ZCP_name","_ZCP_baseFile","_ZCP_baseClasses",
 "_ZCP_lastOwnerChange","_proximityList","_ZCP_baseObjects","_theFlagPos","_theFlagX","_theFlagY","_XChange","_YChange",
 "_ZCP_currentCapper","_ZCP_previousCapper","_ZCP_currentGroup","_ZCP_wasContested",
-"_ZCP_startContested","_ZCP_index","_capturePosition","_randomTime","_changedReward","_ZCP_Halfway","_ZCP_min"
+"_ZCP_startContested","_ZCP_index","_capturePosition","_randomTime","_changedReward","_ZCP_Halfway","_ZCP_min","_messageTitle","_message","_messageColor"
 ];
 
 _randomTime = (floor random  100) + ZCP_MinWaitTime ;
@@ -55,10 +55,10 @@ _ZCP_baseObjects = _ZCP_baseClasses call ZCP_fnc_createBase;
 if(count _ZCP_baseObjects != 0)then{
 
 	ZCP_Bases set [_ZCP_index , _ZCP_baseObjects];
-	PV_ZCP_zupastic = ["BATTLE ZONE",format["A %1 is Set Up. Defend it for %2 Mins!",_ZCP_name, (ZCP_CapTime / 60)],"ZCP_Init"];
-	publicVariable "PV_ZCP_zupastic";
+	_message = format["A BATTLE ZONE is Set Up. Defend it for %2 Mins!!",(ZCP_CapTime / 60)];
+	[ _ZCP_name, [ "#b30000", _message ] ] call DMS_fnc_BroadcastMissionStatus;
 	diag_log text format ["[ZCP]: %1 started.",_ZCP_name];
-
+	
 	_ZCP_changedOwner = true;
 	_ZCP_currentCapper = objNull;
 	_ZCP_previousCapper = objNull;
@@ -96,8 +96,8 @@ if(count _ZCP_baseObjects != 0)then{
 					_ZCP_min = false;
 					_ZCP_currentCapper = _proximityList select 0;
 					(ZCP_Data select _ZCP_index) set[1,1];
-					PV_ZCP_zupastic = ["BATTLE ZONE",format["%2 Is Capping %1. %3 Mins Left to Prevent This.",_ZCP_name,name _ZCP_currentCapper,(ZCP_CapTime / 60)],'ZCP_Capping'];
-					publicVariable "PV_ZCP_zupastic";
+					_message = format["%2 Is Capping %1. %3 Mins Left to Prevent This.",_ZCP_name,name _ZCP_currentCapper,(ZCP_CapTime / 60)];
+					[ _ZCP_name, [ "#b30000", _message ] ] call DMS_fnc_BroadcastMissionStatus;
 				};
 				_ZCP_currentGroup = group _ZCP_currentCapper;
 				{
@@ -120,14 +120,14 @@ if(count _ZCP_baseObjects != 0)then{
 				};
 
 				if( !_ZCP_Halfway && _ZCP_startContested != 0 && (diag_tickTime - _ZCP_startContested) >  (ZCP_CapTime / 2))then{
-					PV_ZCP_zupastic = ["BATTLE ZONE",format["%1 Is 50 %4 Captured By %2. %3 Mins Left to Prevent This.",_ZCP_name,name _ZCP_currentCapper,(ZCP_CapTime / 2 / 60),"%"], 'ZCP_Capping'];
-					publicVariable "PV_ZCP_zupastic";
+					_message = format["%1 Is 50 %4 Captured By %2. %3 Mins Left to Prevent This.",_ZCP_name,name _ZCP_currentCapper,(ZCP_CapTime / 2 / 60),"%"];
+					[ _ZCP_name, [ "#b30000", _message ] ] call DMS_fnc_BroadcastMissionStatus;
 					_ZCP_Halfway = true;
 				};
 
 				if( !_ZCP_min && _ZCP_startContested != 0 && (diag_tickTime - _ZCP_startContested) >  (ZCP_CapTime - 60))then{
-					PV_ZCP_zupastic = ["BATTLE ZONE",format["%1 Is Almost Captured By %2. 60 Seconds Left To Prevent This.",_ZCP_name,name _ZCP_currentCapper], 'ZCP_Capping'];
-					publicVariable "PV_ZCP_zupastic";
+					_message = format["%1 Is Almost Captured By %2. 60 Seconds Left To Prevent This.",_ZCP_name,name _ZCP_currentCapper];
+					[ _ZCP_name, [ "#b30000", _message ] ] call DMS_fnc_BroadcastMissionStatus;
 					_ZCP_min = true;
 				};
 
@@ -143,7 +143,7 @@ if(count _ZCP_baseObjects != 0)then{
 	diag_log text format ["[ZCP]: %1 cleaned up and ended.",_ZCP_name];
 	[] spawn ZCP_fnc_missionLooper;
 	uiSleep ZCP_BaseCleanupDelay;
-	_ZCP_baseObjects spawn ZCP_fnc_cleanupBase;
+	[_ZCP_baseObjects,_ZCP_index] spawn ZCP_fnc_airstrike;
 }else{
 	diag_log text "[ZCP]: No correct Basefile found.";
 };
