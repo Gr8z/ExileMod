@@ -4091,6 +4091,7 @@ class CfgTraders
 			"Headgear",
 			"RHSHeadgear",
 			"TRYKHeadgear",
+			"TRYKNVGHeadgear",
 			"Uniforms",
 			"RHSUniforms",
 			"TRYKUniforms",
