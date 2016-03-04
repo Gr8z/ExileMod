@@ -141,7 +141,7 @@ if(count _ZCP_baseObjects != 0)then{
 	diag_log text format ["[ZCP]: %1 cleaned up and ended.",_ZCP_name];
 	[] spawn ZCP_fnc_missionLooper;
 	uiSleep ZCP_BaseCleanupDelay;
-	[_ZCP_baseObjects,_ZCP_index] spawn ZCP_fnc_airstrike;
+	_ZCP_baseObjects spawn ZCP_fnc_cleanupBase;
 }else{
 	diag_log text "[ZCP]: No correct Basefile found.";
 };

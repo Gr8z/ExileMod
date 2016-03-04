@@ -27,9 +27,6 @@ class CfgFunctions {
 			class giveReward {};
 			class keepMarker {};
 			class createBase {};
-			class airstrike {};
-			class airbomb{};
-			class fly{};
 			class nearTrader {};
 		};
 	};
