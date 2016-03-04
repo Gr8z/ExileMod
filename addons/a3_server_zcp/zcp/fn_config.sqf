@@ -3,7 +3,7 @@
 // Being first in the zone starts the timer.
 // Holding a zone  gives you a reward after x Min.
 
-ZCP_dev = false;
+ZCP_dev = true;
 
 ZCP_CapTime = 600; // Seconds to cap an area uncontested
 ZCP_CapRadius = 70; // Meter radius of the capture circle around the first object.
