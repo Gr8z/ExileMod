@@ -21,7 +21,7 @@ private["_currentCapper","_ZCP_continue","_ZCP_flag","_currentGroup","_ZCP_name"
 
 _randomTime = (floor random  100) + ZCP_MinWaitTime ;
 
-ZCP_MinWaitTime = 10;
+ZCP_MinWaitTime = 600;
 
 uiSleep _randomTime;
 diag_log text format ["[ZCP]: Waiting for %1 players to be online.",ZCP_Minimum_Online_Players];
@@ -66,8 +66,8 @@ if(count _ZCP_baseObjects != 0)then{
 	_ZCP_startContested = 0;
 	_ZCP_wasContested = false;
 	_ZCP_continue = true;
-	_ZCP_Halfway = true;
-	_ZCP_min = true;
+	_ZCP_Halfway = false;
+	_ZCP_min = false;
 
 	_this spawn ZCP_fnc_keepMarker;
 
