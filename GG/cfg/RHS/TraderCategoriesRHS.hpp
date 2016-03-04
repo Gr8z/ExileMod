@@ -305,6 +305,8 @@
 			"rhsusf_mag_7x45acp_MHP",
 			"rhs_mag_9x18_12_57N181S",
 			"rhs_mag_9x19_17",
+			"rhsusf_mag_15Rnd_9x19_JHP",
+			"rhsusf_mag_15Rnd_9x19_FMJ",
 			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
 			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",

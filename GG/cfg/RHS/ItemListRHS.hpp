@@ -127,6 +127,8 @@
 	class rhsusf_mag_7x45acp_MHP                    { quality = 1; price = 6; };
 	class rhs_mag_9x18_12_57N181S                   { quality = 1; price = 6; };
 	class rhs_mag_9x19_17                           { quality = 1; price = 6; };
+	class rhsusf_mag_15Rnd_9x19_JHP                 { quality = 1; price = 6; };
+	class rhsusf_mag_15Rnd_9x19_FMJ                 { quality = 1; price = 6; };
 	//US
 	class rhs_mag_30Rnd_556x45_Mk318_Stanag						{ quality = 2; price = 35; };
 	class rhs_mag_30Rnd_556x45_Mk262_Stanag						{ quality = 2; price = 40; };
