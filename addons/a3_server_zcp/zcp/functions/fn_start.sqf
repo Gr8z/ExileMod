@@ -19,7 +19,7 @@ private["_currentCapper","_ZCP_continue","_ZCP_flag","_currentGroup","_ZCP_name"
 "_ZCP_startContested","_ZCP_index","_capturePosition","_randomTime","_changedReward","_ZCP_Halfway","_ZCP_min","_messageTitle","_message","_messageColor"
 ];
 
-_randomTime = (floor random  100) + ZCP_MinWaitTime ;
+_randomTime = (floor random  100) + ZCP_MinWaitTime;
 
 uiSleep _randomTime;
 diag_log text format ["[ZCP]: Waiting for %1 players to be online.",ZCP_Minimum_Online_Players];
