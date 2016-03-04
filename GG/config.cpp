@@ -1385,7 +1385,7 @@ class CfgExileArsenal
 	class Exile_Item_SeedAstics						{ quality = 1; price = 12; }; //20, 40
 	class Exile_Item_Raisins						{ quality = 1; price = 10; }; //15, 30
 	class Exile_Item_Moobar							{ quality = 1; price = 8; }; //10, 30
-	class Exile_Item_InstantCoffee					{ quality = 1; price = 20; }; //5, 10
+	class Exile_Item_InstantCoffee					{ quality = 1; price = 30; }; //5, 10
 	class Exile_Item_Can_Empty						{ quality = 1; price = 1; sellPrice = 1; };
 
 	///////////////////////////////////////////////////////////////////////////////
@@ -1397,7 +1397,7 @@ class CfgExileArsenal
 	class Exile_Item_Beer 							{ quality = 1; price = 50; }; //75, 30
 	class Exile_Item_EnergyDrink					{ quality = 1; price = 40; }; //75, 20
 	class Exile_Item_MountainDupe					{ quality = 1; price = 30; }; //50, 20
-	class Exile_Item_PlasticBottleEmpty				{ quality = 1; price = 4; };
+	class Exile_Item_PlasticBottleEmpty				{ quality = 1; price = 6; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// First Aid
