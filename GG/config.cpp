@@ -1509,7 +1509,7 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	class 100Rnd_65x39_caseless_mag 				{ quality = 1; price = 100; };
 	class 100Rnd_65x39_caseless_mag_Tracer 			{ quality = 2; price = 100; };
-	class 10Rnd_127x54_Mag 							{ quality = 1; price = 100; };
+	class 10Rnd_127x54_Mag 							{ quality = 1; price = 1000; };
 	// Broken in Arma
 	class 10Rnd_338_Mag 							{ quality = 1; price = 100; };
 
@@ -1542,7 +1542,7 @@ class CfgExileArsenal
 	class 30Rnd_65x39_caseless_mag_Tracer 			{ quality = 2; price = 100; };
 	class 30Rnd_9x21_Mag 							{ quality = 1; price = 100; };
 	class 5Rnd_127x108_APDS_Mag 					{ quality = 2; price = 500; };
-	class 5Rnd_127x108_Mag 							{ quality = 1; price = 500; };
+	class 5Rnd_127x108_Mag 							{ quality = 1; price = 600; };
 	class 6Rnd_45ACP_Cylinder 						{ quality = 1; price = 100; };
 	class 6Rnd_GreenSignal_F 						{ quality = 9000; price = 100; };
 	class 6Rnd_RedSignal_F 							{ quality = 9000; price = 100; };
