@@ -25,6 +25,17 @@ class CfgTornZ_Exile
     zombies_killedScore = 10;
 }; 
 
+class CfgNotifications
+{
+    class ZCP
+    {
+        title = "ZCP";
+        iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
+        description = "%1";
+        priority = 7;
+    };
+};
+
 class CfgClans
 {
 	/*
