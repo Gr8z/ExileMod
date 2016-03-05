@@ -105,7 +105,7 @@ fnc_okToDrop = {
   _OnlineLimit = 15;
   _traderZoneNearLimit = 200;
 
-  if (DropInProgress) then {
+  if (!(isNil "DropInProgress") || (DropInProgress)) then {
     (findDisplay 24015) closeDisplay 0;
     _msg = "Please Wait.. An Air Drop is already in progress.";
     hint _msg;
@@ -159,9 +159,9 @@ fnc_okToDrop = {
 };
  
 fnc_buyselected = {
-  _ok = [] call fnc_okToDrop;
+  ok = [] call fnc_okToDrop;
   (findDisplay 24015) closeDisplay 0;
-  if (_ok) then {
+  if (ok) then {
     DropInProgress = true;
     _namePlayer = name player;
     ExileClientPlayerMoney = ExileClientPlayerMoney - boxCost;
