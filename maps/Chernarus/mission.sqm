@@ -358,8 +358,8 @@ class Mission {
 			type = "ExileTraderZone";
 			colorName = "ColorGreen";
 			fillName = "SolidBorder";
-			a = 175;
-			b = 175;
+			a = 40;
+			b = 40;
 			drawBorder = 1;
 		};
 	};
