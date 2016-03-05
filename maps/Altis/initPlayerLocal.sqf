@@ -1,5 +1,4 @@
 [] execVM "GG\StatusBar\statusBar.sqf";
-[] execVM "GG\inspectLoop.sqf";
 [] execVM "GG\KillMessages.sqf";
 [] execVM "GG\IgiLoad\IgiLoadInit.sqf";
 [] execVM "GG\money\takegive_poptab_init.sqf";
