@@ -24,7 +24,7 @@
     class TRYK_ESS_BLKBLK_NV                            { quality = 1; price = 1250; };
     class TRYK_G_Shades_Black_NV                        { quality = 1; price = 1250; };
     class TRYK_G_Shades_Blue_NV                         { quality = 1; price = 1250; };
-    class TRYK_G_bala_ess_NVv                           { quality = 1; price = 1250; };
+    class TRYK_G_bala_ess_NV                            { quality = 1; price = 1250; };
     class TRYK_bandana_NV                               { quality = 1; price = 1250; };
     class TRYK_SPgearG_NV                               { quality = 1; price = 1250; };
     class TRYK_SPgear_PHC1_NV                           { quality = 1; price = 1250; };
