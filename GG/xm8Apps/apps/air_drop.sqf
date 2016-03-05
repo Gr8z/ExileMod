@@ -101,7 +101,7 @@ fnc_okToDrop = {
   _ok = true;
  
   _Time = time - lastDrop;
-  _LastUsedTime = 900;
+  _LastUsedTime = 300;
   _OnlineLimit = 15;
   _traderZoneNearLimit = 200;
 
