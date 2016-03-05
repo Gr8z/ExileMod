@@ -27,7 +27,7 @@ ZCP_PoptabReward = 500; // Poptab reward for capping per player online.
 ZCP_ServerMaxPlayers = 75; // Only needed to recalcuate the reward.
 ZCP_MinPoptabReward = 2800; // The Poptab reward can never be recalculated lower then this.
 
-ZCP_ReputationReward = 250; // Respect reward for capping per  player online.
+ZCP_ReputationReward = 150; // Respect reward for capping per  player online.
 ZCP_MinReputationReward = 1800; // The Respect reward can never be recalculated lower then this.
 
 ZCP_VehicleReward = ["Exile_Car_SUVXL_Black","Exile_Car_Hunter","Exile_Car_Ifrit"]; // Vehicle classes for vehicle reward
