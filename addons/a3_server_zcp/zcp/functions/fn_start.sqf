@@ -141,6 +141,9 @@ if(count _ZCP_baseObjects != 0)then{
 	diag_log text format ["[ZCP]: %1 cleaned up and ended.",_ZCP_name];
 	[] spawn ZCP_fnc_missionLooper;
 	uiSleep ZCP_BaseCleanupDelay;
+	_message = "The BATTLE ZONE is going to despawn in 60 Seconds!";
+	uiSleep 60;
+	[ _ZCP_name, [ "#b30000", _message ] ] call DMS_fnc_BroadcastMissionStatus;
 	_ZCP_baseObjects spawn ZCP_fnc_cleanupBase;
 }else{
 	diag_log text "[ZCP]: No correct Basefile found.";
