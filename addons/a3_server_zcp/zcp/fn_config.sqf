@@ -51,7 +51,8 @@ ZCP_CapPoints = [ // [name,[x,y,z],reward, varname,index]
 // For every spawned mission,
 ZCP_CapBases = [ // located in capbases folder
 	"base1.sqf",
-	"base2.sqf"
+	"base2.sqf",
+	"base3.sqf"
 ];
 
 /* These are arma 3 colors, look up the color naming if you are going to change this */
