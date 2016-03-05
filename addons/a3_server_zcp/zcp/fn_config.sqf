@@ -7,7 +7,7 @@ ZCP_dev = false;
 
 ZCP_CapTime = 600; // Seconds to cap an area uncontested
 ZCP_CapRadius = 130; // Meter radius of the capture circle around the first object.
-ZCP_MinWaitTime = 200; // seconds to wait to spawn a new capturepoint when 1 was capped.
+ZCP_MinWaitTime = 900; // seconds to wait to spawn a new capturepoint when 1 was capped.
 ZCP_BaseCleanupDelay = 500; // seconds to wait to delete a captured base.
 
 ZCP_MaxMissions = 1; // Ammount of cap points at the same time.
