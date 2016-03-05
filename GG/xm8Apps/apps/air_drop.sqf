@@ -105,30 +105,30 @@ fnc_okToDrop = {
   _OnlineLimit = 15;
   _traderZoneNearLimit = 200;
 
-  if (!(isNil "DropInProgress") || (DropInProgress)) then {
+  if (DropInProgress) then {
     (findDisplay 24015) closeDisplay 0;
     _msg = "Please Wait.. An Air Drop is already in progress.";
-    hint _msg;
+    ["Whoops",_msg] call ExileClient_gui_notification_event_addNotification;
     _ok = false;DropInProgress = false;
   };
   if (_Time < _LastUsedTime) then {
     (findDisplay 24015) closeDisplay 0;
     _msg = format["please wait %1s before calling in another Air Drop!",(round(_Time - _LastUsedTime))];
-    hint _msg;
+    ["Whoops",_msg] call ExileClient_gui_notification_event_addNotification;
     _ok = false;DropInProgress = false;
   };
  
   if  ((nearestObject [player,'Exile_Construction_Abstract_Static']) distance player < 75) then {
     (findDisplay 24015) closeDisplay 0;
     _msg = "You are near a Base and cannot perform that action!";
-    hint _msg;
+    ["Whoops",_msg] call ExileClient_gui_notification_event_addNotification;
     _ok = false;DropInProgress = false;
   };
  
   if (vehicle player != player) then {
     (findDisplay 24015) closeDisplay 0;
     _msg = "You are in a vehicle and cannot perform that action!";
-    hint _msg;
+    ["Whoops",_msg] call ExileClient_gui_notification_event_addNotification;
     _ok = false;DropInProgress = false;
   };
  
@@ -137,7 +137,7 @@ fnc_okToDrop = {
     {
       (findDisplay 24015) closeDisplay 0;
         _msg = "You need to be far away from a Trader to call an Airdrop.";
-        hint _msg;
+        ["Whoops",_msg] call ExileClient_gui_notification_event_addNotification;
         _ok = false;DropInProgress = false;
     };
   } forEach allMapMarkers;
@@ -145,14 +145,14 @@ fnc_okToDrop = {
   if ((count playableUnits) < _OnlineLimit) then  {
     (findDisplay 24015) closeDisplay 0;
      _msg = format["Air Drop Failed. Less Than %1 Players online.",_OnlineLimit];
-    hint _msg;
+    ["Whoops",_msg] call ExileClient_gui_notification_event_addNotification;
     _ok = false;DropInProgress = false;
   };
  
   if (ExileClientPlayerMoney < boxCost) then {
     (findDisplay 24015) closeDisplay 0;
     _msg = format["%1, Your order has been declined due to insufficient funds",name player];
-    hint _msg;
+    ["Whoops",_msg] call ExileClient_gui_notification_event_addNotification;
     _ok = false;DropInProgress = false;
   };
   _ok
