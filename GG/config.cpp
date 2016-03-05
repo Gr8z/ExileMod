@@ -3944,7 +3944,6 @@ class CfgTraderCategories
 			"Exile_Chopper_Orca_BlackCustom",
 			"Exile_Chopper_Mohawk_FIA",
 			"Exile_Chopper_Huron_Black",
-			"Exile_Chopper_D_heli_light_02_v2_F",
 			"Exile_Chopper_Hellcat_Green"
 		};
 	};
