@@ -2515,7 +2515,7 @@ class CfgInteractionMenus
 			class Access: ExileAbstractAction
 			{
 				title = "Online Banking";
-				condition = "true";
+				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo 0)";
 				action = "createDialog 'AdvBankingATM';";
 			};
 		};
