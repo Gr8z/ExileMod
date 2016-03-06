@@ -964,7 +964,7 @@ class CfgSettings
 		class Bonus
 		{
 			// Bonus per full 100m 
-			per100mDistance = 10;
+			per100mDistance = 25;
 
 			// First blood after server restart
 			firstBlood = 100;
@@ -978,7 +978,7 @@ class CfgSettings
 			/*
 				Example with killstreak = 50
 
-				Frag  Factor   Bonus
+				Frag  Factor   Bonus	
 				2    * 50      +100
 				3    * 50      +150
 				4    * 50      +200
