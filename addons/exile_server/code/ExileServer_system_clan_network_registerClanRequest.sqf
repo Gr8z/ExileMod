@@ -31,7 +31,7 @@ try
 		throw 2;
 	};
 	_registrationFee = getNumber (missionConfigFile >> "CfgClans" >> "registrationFee");
-	_playerMoney = _player getVariable ["ExilePurse", 0]; 
+	_playerMoney = _player getVariable ["ExileMoney", 0]; 
 	if (_playerMoney < _registrationFee) then
 	{
 		throw 3;
@@ -41,8 +41,8 @@ try
 		throw 4;
 	};
 	_playerMoney = _playerMoney - _registrationFee;
-	_player setVariable ["ExilePurse", _playerMoney];
-	format["updateWallet:%1:%2", _playerMoney, getPlayerUID _player] call ExileServer_system_database_query_fireAndForget;
+	_player setVariable ["ExileMoney", _playerMoney];
+	format["setAccountMoney:%1:%2", _playerMoney, getPlayerUID _player] call ExileServer_system_database_query_fireAndForget;
 	_clanID = format["createClan:%1:%2", getPlayerUID _player, _clanName] call ExileServer_system_database_query_insertSingle;
 	format["setAccountClanLink:%1:%2", _clanID, getPlayerUID _player] call ExileServer_system_database_query_fireAndForget;
 	_player setVariable ["ExileClanID", _clanID];

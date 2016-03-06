@@ -9,8 +9,9 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_isConnected","_result"];
+private["_isConnected","_error","_result"];
 _isConnected = false;
+_error_locked = false;
 ExileServerDatabaseSessionId = "";
 ExileServerRconSessionID = "";
 try 
@@ -25,6 +26,12 @@ try
 		throw "Update extDB2 to version 69 or later";
 	};
 	format ["Installed extDB2 version: %1", _result] call ExileServer_util_log;
+	_result = call compile ("extDB2" callExtension "9:LOCK_STATUS") select 0;
+	if (_result isEqualTo 1) then
+	{
+		_error_locked = true;
+		throw "Error extDB2 is already setup & locked !!!";
+	};
 	_result = call compile ("extDB2" callExtension "9:ADD_DATABASE:exile");
 	if (_result select 0 isEqualTo 0) then
 	{
@@ -44,10 +51,18 @@ try
 }
 catch
 {
-	"MySQL connection error!" call ExileServer_util_log;
-	"Please have a look at @ExileServer/extDB/logs/ to find out what went wrong." call ExileServer_util_log;
-	format ["MySQL Error: %1", _exception]  call ExileServer_util_log;
-	"Server will shutdown now :(" call ExileServer_util_log;
-	"extDB2" callExtension "9:SHUTDOWN";
+	if (!_error_locked) then
+	{
+		"MySQL connection error!" call ExileServer_util_log;
+		"Please have a look at @ExileServer/extDB/logs/ to find out what went wrong." call ExileServer_util_log;
+		format ["MySQL Error: %1", _exception]  call ExileServer_util_log;
+		"Server will shutdown now :(" call ExileServer_util_log;
+		"extDB2" callExtension "9:SHUTDOWN";
+	}
+	else
+	{
+		format ["extDB2: %1", _exception] call ExileServer_util_log;
+		"Check your server rpt for errors, your mission might be stuck a loop restarting" call ExileServer_util_log;
+	};
 };
 _isConnected

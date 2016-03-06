@@ -5,14 +5,13 @@
  * www.exilemod.com
  * © 2015 Exile Mod Team
  *
- * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
+ * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
 if (!isNil "PublicServerVersion") then
 {
-  CustomServer_system_loot_disable = compileFinal (preprocessFileLineNumbers "exile_server_custom\override\CustomServer_system_loot_disable.sqf");
-
+	call ExileServer_system_serverBrowser_update;
 	call ExileClient_system_map_initialize;
 	call ExileServer_system_thread_initialize;
 	call ExileServer_system_playerSaveQueue_initialize;

@@ -48,16 +48,11 @@ try
 			throw format ["Unknown session ID found! Payload: %1", _payload]; 
 		};
 	};
-    	_config = missionConfigFile;
-	if !(isClass (_config >> "CfgNetworkMessages" >> _messageName)) then
+	if !(isClass (configFile >> "CfgNetworkMessages" >> _messageName)) then
 	{
-		_config = ConfigFile;
-		if!(isClass (_config >> "CfgNetworkMessages" >> _messageName)) then
-		{
-			throw format ["Forbidden message name! Payload: %1", _payload];
-		};
+		throw format ["Forbidden message name! Payload: %1", _payload]; 
 	};
-	_allowedParameters = getArray(_config >> "CfgNetworkMessages" >> _messageName >> "parameters");
+	_allowedParameters = getArray(configFile >> "CfgNetworkMessages" >> _messageName >> "parameters");
 	if (count _messageParameters != count _allowedParameters) then
 	{
 		throw format ["Parameter count mismatch! Payload: %1", _payload]; 
@@ -69,7 +64,7 @@ try
 		};
 	}
 	forEach _allowedParameters;
-	_moduleName = getText(_config >> "CfgNetworkMessages" >> _messageName >> "module");
+	_moduleName = getText(configFile >> "CfgNetworkMessages" >> _messageName >> "module");
 	_functionName = format["ExileServer_%1_network_%2", _moduleName, _messageName];
 	_functionCode = missionNamespace getVariable [_functionName,""];
 	if (_functionCode isEqualTo "") then

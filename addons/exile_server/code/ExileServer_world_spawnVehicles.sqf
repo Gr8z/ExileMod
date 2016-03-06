@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_mapsizeX","_mapsizeY","_gridSize","_gridVehicles","_gridSizeOffset","_vehicleCount","_debugMarkers","_vehicleClassNames","_maximumDamage","_damageChance","_xSize","_workingXSize","_ySize","_workingYSize","_position","_spawned","_spawnedPositions","_positionReal","_spawnControl","_vehicleClassName","_vehicle","_hitpoints","_debugMarker"];
+private["_mapsizeX","_mapsizeY","_gridSize","_gridVehicles","_gridSizeOffset","_vehicleCount","_debugMarkers","_vehicleClassNames","_maximumDamage","_damageChance","_xSize","_workingXSize","_ySize","_workingYSize","_position","_spawned","_spawnedPositions","_positionReal","_spawnControl","_vehicleClassName","_vehicle","_hitpointsData","_hitpoints","_debugMarker"];
 _mapsizeX = worldSize; 
 _mapsizeY = worldSize; 
 _gridSize = getNumber(configFile >> "CfgSettings" >> "VehicleSpawn" >> "vehiclesGridSize");
@@ -37,16 +37,20 @@ for "_xSize" from 0 to _mapsizeX step _gridSize do
 			_spawnControl = [[(_positionReal select 0) - 50, (_positionReal select 1) + 50],[(_positionReal select 0) + 50,(_positionReal select 1) - 50]];
 			_spawnedPositions pushBack _spawnControl;
 			_positionReal pushBack 0;
-			_vehicleClassName = _vehicleClassNames select (floor (random (count _vehicleClassNames)));
+			_vehicleClassName = selectRandom _vehicleClassNames;
 			_vehicle = [_vehicleClassName, _positionReal, random 360, true] call ExileServer_object_vehicle_createNonPersistentVehicle;
-			_hitpoints = (getAllHitPointsDamage _vehicle) select 0;
+			_hitpointsData = getAllHitPointsDamage _vehicle;
+			if !(_hitpointsData isEqualTo []) then 
 			{
-			    if ((random 100) < _damageChance) then
-			    {
-			        _vehicle setHitPointDamage [_x, random _maximumDamage];
-			    };
-			}
-			forEach _hitpoints;
+				_hitpoints = _hitpointsData select 0;
+				{
+				    if ((random 100) < _damageChance) then
+				    {
+				        _vehicle setHitPointDamage [_x, random _maximumDamage];
+				    };
+				}
+				forEach _hitpoints;
+			};
 			if (_debugMarkers) then
 			{
 				_debugMarker = createMarker ["vehicleMarker#"+str _vehicleCount, _positionReal];

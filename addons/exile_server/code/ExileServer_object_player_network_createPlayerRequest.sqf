@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_parameters","_requestingPlayer","_spawnLocationMarkerName","_playerUID","_accountData","_bambiPlayer","_cargoType","_respect"];
+private["_sessionID","_parameters","_requestingPlayer","_spawnLocationMarkerName","_playerUID","_accountData","_bambiPlayer","_cargoType"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
 _requestingPlayer = _sessionID call ExileServer_system_session_getPlayerObject;
@@ -28,7 +28,7 @@ try
 	_accountData = format["getAccountStats:%1", _playerUID] call ExileServer_system_database_query_selectSingle;
 	_group = createGroup independent;
 	_bambiPlayer = _group createUnit ["Exile_Unit_Player", [0,0,0], [], 0, "CAN_COLLIDE"];
-
+	removeHeadgear _bambiPlayer;
 	{
 		_cargoType = _x call ExileClient_util_cargo_getType;
 		switch (_cargoType) do

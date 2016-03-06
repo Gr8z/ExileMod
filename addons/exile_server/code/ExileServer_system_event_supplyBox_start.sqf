@@ -9,8 +9,10 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_airportPositions","_filteredAirportPositions","_config","_dropAltitude","_dropRadius","_boxType","_airportPosition","_position","_marker","_box","_itemClassName","_itemCount","_i","_supplySmoke","_parachute"];
+private["_airportPositions","_config","_markerTime","_filteredAirportPositions","_dropAltitude","_dropRadius","_boxType","_airportPosition","_position","_marker","_box","_itemClassName","_itemCount","_i","_supplySmoke","_parachute"];
 _airportPositions = call ExileClient_util_world_getAllAirportPositions;
+_config = configFile >> "CfgSettings" >> "Events" >> "SupplyBox";
+_markerTime = getNumber (_config >> "markerTime");
 if (_airportPositions isEqualTo []) exitWith
 {
 	"The current map has no airports. Skipping supply box drop event." call ExileServer_util_log;
@@ -30,20 +32,19 @@ if (_filteredAirportPositions isEqualTo []) exitWith
 _config = configFile >> "CfgSettings" >> "Events" >> "SupplyBox";
 _dropAltitude = getNumber (_config >> "dropAltitude");
 _dropRadius = getNumber (_config >> "dropRadius");
-_boxType = (getArray (_config >> "types")) call BIS_fnc_selectRandom;
-_airportPosition = _filteredAirportPositions call BIS_fnc_selectRandom;
+_boxType = selectRandom (getArray (_config >> "types"));
+_airportPosition = selectRandom _filteredAirportPositions;
 _airportPosition set [2, 0];
 _position = [_airportPosition, _dropRadius] call ExileClient_util_math_getRandomPositionInCircle;
 _position set [2, _dropAltitude];
 ["standardHintRequest", [format ["Supply crate drop ETA 10 minutes."]]] call ExileServer_system_network_send_broadcast;
 _marker = createMarker [ format["ExileSupplyBox%1", diag_tickTime], _position];
-_marker setMarkerColor "ColorOrange";
-_marker setMarkerType "mil_dot_noShadow";
-uiSleep 60 * 5;
+_marker setMarkerType "ExileHeart";
+uiSleep (60 * 5);
 ["standardHintRequest", [format ["Supply crate drop ETA 5 minutes."]]] call ExileServer_system_network_send_broadcast;
-uiSleep 60 * 4;
+uiSleep (60 * 4);
 ["standardHintRequest", [format ["Supply crate drop ETA 1 minute."]]] call ExileServer_system_network_send_broadcast;
-uiSleep 60 * 1;
+uiSleep (60 * 1);
 _box = createVehicle ["Exile_Container_SupplyBox", [0, 0, 0], [], 0, "CAN_COLLIDE"];
 _box setPosATL _position;
 _box setDir (random 360);
@@ -75,5 +76,5 @@ _position = getPos _box;
 _position set [2, 0];
 _box setPos _position;
 _box setVelocity [0, 0, 0];
-uiSleep 60 * 5;
+uiSleep (60 * _markerTime);
 deleteMarker _marker;

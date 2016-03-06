@@ -9,13 +9,15 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_parameters","_objectNetID","_object","_playerObject","_playerUID","_objectID","_ownerUID","_canMove","_flag","_buildRights","_holderPosition","_holder"];
+private["_sessionID","_parameters","_objectNetID","_object","_objectClassname","_isContainer","_playerObject","_playerUID","_objectID","_ownerUID","_canMove","_flag","_buildRights","_holderPosition","_holder"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
 _objectNetID = _parameters select 0;
 try 
 {
 	_object = objectFromNetId _objectNetID;
+	_objectClassname = typeOf _object;
+	_isContainer = isNumber(configFile >> "CfgVehicles" >> _objectClassname >> "exileContainer");
 	if (isNull _object) then 
 	{
 		throw "Construction object is null!";
@@ -61,13 +63,26 @@ try
 	{
 		throw "You have no permission to move this!";
 	};
-	_object call ExileServer_object_construction_database_delete;
-	if !((_object getVariable ["ExileAccessCode", -1]) isEqualTo -1) then
+	if (_isContainer) then
 	{
-		_holderPosition = getPosATL _playerObject;
-		_holder = createVehicle ["GroundWeaponHolder", _holderPosition, [], 0, "CAN_COLLIDE"];
-		_holder setPosATL _holderPosition;
-		_holder addMagazineCargoGlobal ["Exile_Item_Codelock", 1];
+		ExileContainerCargo =
+		[
+			_object call ExileServer_util_getItemCargo,
+			magazinesAmmoCargo _object,
+			weaponsItemsCargo _object,
+			_object call ExileServer_util_getObjectContainerCargo
+		];
+		_object call ExileServer_object_container_database_delete;
+	} else
+	{
+		if !((_object getVariable ["ExileAccessCode", -1]) isEqualTo -1) then
+		{
+			_holderPosition = getPosATL _playerObject;
+			_holder = createVehicle ["GroundWeaponHolder", _holderPosition, [], 0, "CAN_COLLIDE"];
+			_holder setPosATL _holderPosition;
+			_holder addMagazineCargoGlobal ["Exile_Item_Codelock", 1];
+		};
+		_object call ExileServer_object_construction_database_delete;
 	};
 	[_sessionID, "constructionMoveResponse", [true, typeOf _object]] call ExileServer_system_network_send_to;
 	deleteVehicle _object;

@@ -51,6 +51,8 @@ _data =
 	(getItemCargo vestContainer _player) call ExileClient_util_cargo_getMap,
 	(vestContainer _player) call ExileClient_util_cargo_getMagazineMap,
 	(getWeaponCargo vestContainer _player) call ExileClient_util_cargo_getMap,
+	_player getVariable ["ExileTemperature", 0],
+	_player getVariable ["ExileWetness", 0],
 	_playerID
 ];
 _extDB2Message = ["updatePlayer", _data] call ExileServer_util_extDB2_createMessage;

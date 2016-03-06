@@ -25,7 +25,7 @@ try
 		throw "Fuck off";
 	};
 	_territory = _box call ExileClient_util_world_getTerritoryAtPosition;
-	if (isNull _territory) then 
+	if (isNull _territory) then
 	{
 		throw "Only allowed to install in a territory!";
 	};
@@ -35,8 +35,9 @@ try
 	{
 		throw "Not allowed to install in this territory!";
 	};
+	_box setVariable ["ExileOwnerUID", getPlayerUID _playerObject,true];
 	_containerID = _box call ExileServer_object_container_database_insert;
-	_sessionID,"notificationRequest",["Success",["SupplyBox installed"]] call ExileServer_system_network_send_to;
+	[_sessionID,"notificationRequest",["Success",["SupplyBox installed"]]] call ExileServer_system_network_send_to;
 }
 catch
 {

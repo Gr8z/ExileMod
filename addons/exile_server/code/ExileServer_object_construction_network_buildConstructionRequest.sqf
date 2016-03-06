@@ -33,6 +33,10 @@ try
 		{
 			throw "You are inside enemy territory!";
 		};
+		case 8:
+		{
+			throw "You are in a contaminated zone!";
+		};
 		case 3:
 		{
 			throw "This cannot be placed on roads!";
@@ -48,6 +52,10 @@ try
 		case 6:
 		{
 			throw "Maximum number of objects reached!";
+		};
+		case 7:
+		{
+			throw "This snap location is already being used!";
 		};
 	};
 	_object = createVehicle[_objectClassName, _objectPosition, [], 0, "CAN_COLLIDE"];

@@ -35,6 +35,10 @@ try
 	{
 		throw 2;
 	};
+	if !((owner _vehicleObject) isEqualTo (owner _playerObject)) then 
+	{
+		throw 6;
+	};
 	_cargo = _vehicleObject call ExileClient_util_containerCargo_list;
 	_revenue = _cargo call ExileClient_util_gear_calculateTotalSellPrice;
 	clearBackpackCargoGlobal _vehicleObject;

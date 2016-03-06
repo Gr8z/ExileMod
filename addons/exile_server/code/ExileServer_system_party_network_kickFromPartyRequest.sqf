@@ -13,5 +13,5 @@ private["_sessionID","_parameters","_playerToKick"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
 _playerToKick = objectFromNetId (_parameters select 0);
-[_playerToKick, "kickFromPartyRequest", []] call ExileServer_system_network_send_to;
+[_playerToKick, "kickFromPartyRequest", [""]] call ExileServer_system_network_send_to;
 true

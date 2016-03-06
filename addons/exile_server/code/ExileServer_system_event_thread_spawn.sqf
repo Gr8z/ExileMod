@@ -9,14 +9,16 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_events","_eventKey","_config","_interval","_lastExecutedAt","_minimumPlayersOnline","_type","_function","_functionCode"];
+private["_events","_eventKey","_config","_minTime","_maxTime","_randomTime","_lastExecutedAt","_minimumPlayersOnline","_type","_function","_functionCode"];
 _events = getArray (configFile >> "CfgSettings" >> "Events" >> "enabledEvents");
 {
 	_eventKey = format ["ExileServerEvent%1LastExecutedAt", _x];
 	_config = configFile >> "CfgSettings" >> "Events" >> _x;
-	_interval = getNumber (_config >> "interval") * 60;
+	_minTime = getNumber (_config >> "minTime") * 60;;
+	_maxTime = getNumber (_config >> "maxTime") * 60;;
+	_randomTime = (_minTime max (random _maxTime));
 	_lastExecutedAt = missionNamespace getVariable [_eventKey, 0];
-	if (time - _lastExecutedAt >= _interval) then 
+	if (time - _lastExecutedAt >= _randomTime) then
 	{
 		_minimumPlayersOnline = getNumber (_config >> "minimumPlayersOnline");
 		if ((count allPlayers) >= _minimumPlayersOnline) then 

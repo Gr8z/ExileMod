@@ -103,7 +103,7 @@ try
 catch 
 {
 	_responseCode = _exception;
-	diag_log format ["NOPE: %1", _responseCode];
+	format ["NOPE: %1", _responseCode] call ExileClient_util_log;
 	[_sessionID, "sellItemResponse", [_responseCode, "", "", 0, 0, "", ""]] call ExileServer_system_network_send_to;
 };
 if !(isNull _playerObject) then 

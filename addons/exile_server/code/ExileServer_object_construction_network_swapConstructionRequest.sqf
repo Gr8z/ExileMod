@@ -33,7 +33,7 @@ _toVehicle setVelocity _velocity;
 _toVehicle setVectorDirAndUp [_vectorDirection, _vectorUp];
 _toVehicle setPosATL _position;
 _playerObject = _sessionID call ExileServer_system_session_getPlayerObject;
-_toVehicle setVariable ["ExileOwnerUID",getPlayerUID _playerObject];
+_toVehicle setVariable ["ExileOwnerUID",getPlayerUID _playerObject,true];
 _toVehicle setVariable ["ExileIsPersistent",true];
 _toVehicle call ExileServer_util_vehicle_enableSimulationIfRequired;
 switch (true) do 

@@ -12,7 +12,7 @@
 private["_interval","_keyframes","_keyframeName","_keyframeConfig"];
 _interval = round(getNumber (configFile >> "CfgSettings" >> "Weather" >> "interval") * 60);
 _keyframes = getArray (configFile >> "CfgSettings" >> "Weather" >> "keyframes");
-_keyframeName = _keyframes select (floor (random (count _keyframes)));
+_keyframeName = selectRandom _keyframes;
 _keyframeConfig = configFile >> "CfgSettings" >> "Weather" >> _keyframeName;
 _interval setFog getNumber (_keyframeConfig >> "fogValue"); 
 _interval setFog 

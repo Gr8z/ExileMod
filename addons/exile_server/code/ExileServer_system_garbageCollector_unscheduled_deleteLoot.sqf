@@ -9,25 +9,25 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_lifeTime","_building","_lootWeaponHolderNetIDs","_lootWeaponHolder"];
+private["_lifeTime","_index","_building","_lootWeaponHolderNetIDs","_lootWeaponHolder"];
 _lifeTime = 60 * getNumber (configFile >> "CfgSettings" >> "GarbageCollector" >> "Ingame" >> "Loot" >> "lifeTime");
+_index = -1;
 {
 	_building = objectFromNetId _x;
-	if ((time - (_building getVariable ["ExileLootSpawnedAt", 0])) > _lifeTime) then
+	if ((time - (_building getVariable ["ExileLootSpawnedAt", 0])) < _lifeTime) exitWith {};
+	_lootWeaponHolderNetIDs = _building getVariable ["ExileLootWeaponHolderNetIDs", []];
 	{
-		_lootWeaponHolderNetIDs = _building getVariable ["ExileLootWeaponHolderNetIDs", []];
+		_lootWeaponHolder = objectFromNetId _x;
+		if !(isNull _lootWeaponHolder) then
 		{
-			_lootWeaponHolder = objectFromNetId _x;
-			if !(isNull _lootWeaponHolder) then
-			{
-				deleteVehicle _lootWeaponHolder;
-			};
-		}
-		forEach _lootWeaponHolderNetIDs;
-		_building setVariable ["ExileLootSpawnedAt", nil];
-		_building setVariable ["ExileHasLoot", false];
-		_building setVariable ["ExileLootWeaponHolderNetIDs", []];
-		ExileServerBuildingNetIdsWithLoot deleteAt _forEachIndex;
-	};
+			deleteVehicle _lootWeaponHolder;
+		};
+	}
+	forEach _lootWeaponHolderNetIDs;
+	_building setVariable ["ExileLootSpawnedAt", nil];
+	_building setVariable ["ExileHasLoot", false];
+	_building setVariable ["ExileLootWeaponHolderNetIDs", []];
+   	_index = _forEachIndex;
 }
 forEach ExileServerBuildingNetIdsWithLoot;
+ExileServerBuildingNetIdsWithLoot deleteRange [0,(_index+1)];  

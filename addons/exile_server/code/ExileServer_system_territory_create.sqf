@@ -23,6 +23,7 @@ _flagObject setVariable ["ExileTerritoryBuildRights", [_owner], true];
 _flagObject setVariable ["ExileTerritoryModerators", [_owner], true];
 _flagObject setVariable ["ExileTerritoryLevel", 1, true];
 _flagObject setVariable ["ExileTerritoryName", _territoryName, true];
+_flagObject setVariable ["ExileRadiusShown", false, true];
 _currentTimestamp = call ExileServer_util_time_currentTime;
 _flagObject setVariable ["ExileTerritoryLastPayed", _currentTimestamp];
 _flagObject call ExileServer_system_territory_maintenance_recalculateDueDate;

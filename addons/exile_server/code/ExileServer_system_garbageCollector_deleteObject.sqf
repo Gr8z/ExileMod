@@ -43,4 +43,4 @@ if !(isNull _fliesParticles) then
 	_x call ExileServer_system_garbageCollector_deleteObject;
 }
 forEach (attachedObjects _object);
-deleteVehicle _x;
+deleteVehicle _object;

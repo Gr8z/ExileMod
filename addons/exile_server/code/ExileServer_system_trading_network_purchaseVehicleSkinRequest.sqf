@@ -9,11 +9,11 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_parameters","_vehicleNetID","_skinClassName","_playerObject","_vehicleObject","_vehicleParentClass","_salesPrice","_skinVariations","_availableSkinClassName","_playerMoney","_skinTextures","_skinMaterials","_vehicleID","_responseCode"];
+private["_sessionID","_parameters","_vehicleNetID","_skinTextures","_playerObject","_vehicleObject","_vehicleParentClass","_salesPrice","_skinVariations","_availableSkinTexture","_playerMoney","_skinMaterials","_skinClassName","_vehicleID","_responseCode"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
 _vehicleNetID = _parameters select 0;
-_skinClassName = _parameters select 1;
+_skinTextures = _parameters select 1;
 try 
 {
 	_playerObject = _sessionID call ExileServer_system_session_getPlayerObject;
@@ -43,8 +43,8 @@ try
 	_salesPrice = -1;
 	_skinVariations = getArray(missionConfigFile >> "CfgVehicleCustoms" >> _vehicleParentClass >> "skins");
 	{
-		_availableSkinClassName = _x select 0;
-		if (_availableSkinClassName isEqualTo _skinClassName) exitWith
+		_availableSkinTexture = _x select 3;
+		if (_availableSkinTexture isEqualTo _skinTextures) exitWith
 		{
 			_salesPrice = _x select 1;
 		};
@@ -59,10 +59,9 @@ try
 	{
 		throw 5;
 	};
-	_skinTextures = getArray(configFile >> "CfgVehicles" >> _skinClassName >> "hiddenSelectionsTextures");
 	_skinMaterials = getArray(configFile >> "CfgVehicles" >> _skinClassName >> "hiddenSelectionsMaterials");
 	{
-		_vehicleObject setObjectTextureGlobal [_forEachIndex, _x];
+		_vehicleObject setObjectTextureGlobal [_forEachIndex, _skinTextures select _forEachIndex];
 	}
 	forEach _skinTextures;
 	{
@@ -70,14 +69,12 @@ try
 	}
 	forEach _skinMaterials;
 	_vehicleID = _vehicleObject getVariable ["ExileDatabaseID", -1];
-	format["updateVehicleClass:%1:%2", _skinClassName, _vehicleID] call ExileServer_system_database_query_fireAndForget;
+	format["updateVehicleSkin:%1:%2", _skinTextures, _vehicleID] call ExileServer_system_database_query_fireAndForget;
 	_playerMoney = _playerMoney - _salesPrice;
-
-    // Advanced Banking
+	// Advanced Banking
 	_playerObject setVariable ["ExilePurse", _playerMoney];
 	format["updateWallet:%1:%2", _playerMoney, (getPlayerUID _playerObject)] call ExileServer_system_database_query_fireAndForget;
     // Advanced Banking
-
 	[_sessionID, "purchaseVehicleSkinResponse", [0, str _playerMoney]] call ExileServer_system_network_send_to;
 }
 catch 

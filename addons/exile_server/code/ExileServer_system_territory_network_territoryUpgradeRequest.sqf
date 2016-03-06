@@ -49,7 +49,7 @@ try
 	format ["setTerritorySize:%1:%2",_territoryRange,_databaseID] call ExileServer_system_database_query_fireAndForget;
 	_flag call ExileServer_system_territory_updateNearContainers;
 	_flag call ExileServer_system_territory_updateNearConstructions;
-	[_sessionID,"notificationRequest",["Success",[format ["Territory Upgraded! New Level: %1 New Range :%2",_level + 1,_territoryRange]]]] call ExileServer_system_network_send_to;
+	[_sessionID, "territoryUpgradeResponse", [netId _flag, _level + 1, _territoryRange, str _playerRespect]] call ExileServer_system_network_send_to;
 }
 catch
 {
