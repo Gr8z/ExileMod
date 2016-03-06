@@ -130,6 +130,7 @@ Scout2 = [
 	"0", // ThatEstonian Mod Loadout(Upgraded by MeowMix)
 	"76561197980662311", // ezPK XS PWR #11479
 	"76561198062796125", // ezPK Zephyr #11597
+	"76561197971687271", // H4ppyK1llM0r3 (EXP-2016-04-05) #0000
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout2";
