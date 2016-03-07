@@ -30,6 +30,9 @@ switch (_reward) do {
 
 		format["setAccountScore:%1:%2", _playerScore,getPlayerUID _ZCP_currentCapper] call ExileServer_system_database_query_fireAndForget;
 
+		PV_ZCP_zupastic = ["ZCP",[format["BATTLE ZONE: %1 Successfully captured the Zone and Recieved %2 Respect."],name _ZCP_currentCapper,_awardToGive], 'ZCP_Capped'];
+		owner _ZCP_currentCapper publicVariableClient "PV_ZCP_zupastic";
+
 		[_ZCP_currentCapper, "showFragRequest", [[[format ["Reputation"],_awardToGive]]]] call ExileServer_system_network_send_to;
 
 		ExileClientPlayerScore = _playerScore;
@@ -54,7 +57,7 @@ switch (_reward) do {
 						(owner _x) publicVariableClient "ExileClientPlayerScore";
 						ExileClientPlayerScore = nil;
 
-						[_x, "showFragRequest", [[[format ["ZCP Group Reputation"],ZCP_ReputationRewardForGroup]]]] call ExileServer_system_network_send_to;
+						[_x, "showFragRequest", [[[format ["Battle Zone Group Reputation"],ZCP_ReputationRewardForGroup]]]] call ExileServer_system_network_send_to;
 					}
 				}count (units _capperGroup);
 			};
@@ -74,15 +77,38 @@ switch (_reward) do {
 
 		format["updateWallet:%1:%2", _playerMoney, (getPlayerUID _ZCP_currentCapper)] call ExileServer_system_database_query_fireAndForget;
 
-		PV_ZCP_zupastic = ["ZCP",[format["Poptabs!"]], 'ZCP_Capped'];
+		PV_ZCP_zupastic = ["ZCP",[format["BATTLE ZONE: %1 Successfully captured the Zone and Recieved %2 Pop Tabs."],name _ZCP_currentCapper,_awardToGive], 'ZCP_Capped'];
 		owner _ZCP_currentCapper publicVariableClient "PV_ZCP_zupastic";
+
+		ExileClientPlayerMoney = _newScore;
+		(owner _ZCP_currentCapper) publicVariableClient "ExileClientPlayerMoney";
+		ExileClientPlayerMoney = nil;
 
 		[_ZCP_currentCapper, "moneyReceivedRequest", [str _playerMoney, format ["Poptabs reward"]]] call ExileServer_system_network_send_to;
 
 		diag_log format ["[ZCP]: %1 won %2, received %3 Poptabs and ItemBox",name _ZCP_currentCapper,_ZCP_name,_awardToGive];
 
-		_this set[3, "Reputation"];
-		_this call ZCP_fnc_giveReward;
+		if( ZCP_PopTabsRewardForGroup > 0 ) then {
+			private['_capperGroup'];
+			_capperGroup = group _ZCP_currentCapper;
+			if( _capperGroup != grpNull ) then {
+				{
+					if (_x != _ZCP_currentCapper && _x distance2D _ZCP_currentCapper < 200 ) then {
+						_newScore = (_x getVariable ["ExilePurse", 0]) + _awardToGive;
+						_x setVariable ["ExilePurse", _newScore ];
+						_x setVariable['PLAYER_STATS_VAR', _newScore, [_x getVariable ['ExileScore', 0]],true];
+						format["updateWallet:%1:%2", _newScore, getPlayerUID _x] call ExileServer_system_database_query_fireAndForget;
+						_x call ExileServer_object_player_database_update;
+
+						ExileClientPlayerMoney = _newScore;
+						(owner _x) publicVariableClient "ExileClientPlayerMoney";
+						ExileClientPlayerMoney = nil;
+
+						[_x, "showFragRequest", [[[format ["Battle Zone Group Pop Tabs"],ZCP_PopTabsRewardForGroup]]]] call ExileServer_system_network_send_to;
+					}
+				}count (units _capperGroup);
+			};
+		};
 	};
 	case "BuildBox" : {
 

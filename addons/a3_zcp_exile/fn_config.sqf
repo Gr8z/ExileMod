@@ -20,6 +20,7 @@ ZCP_Minimum_Online_Players = 15; // Amount of players to be online before it all
 ZCP_RewardRelativeToPlayersOnline = true; // This will recalculate the crypto reward according the amount of online players.
 ZCP_PoptabReward = 500; // Poptab reward for capping per player online. ( When poptab reward is selected or randomly chosen ).
 ZCP_MinPoptabReward = 1000; // Poptabreward is added to this number
+ZCP_ReputationRewardForGroup = 1000;
 
 /* Reputation is ALWAYS given as addition on the normal reward.*/
 ZCP_ReputationReward = 150; // Respect reward for capping per  player online.
