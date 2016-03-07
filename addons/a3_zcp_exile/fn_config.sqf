@@ -38,7 +38,7 @@ ZCP_UseSpecificNamesForCappers = true; // Use the player name, if false it say '
 // Location is ignored if not using static points. just put [0,0,0] then. activate static buy using isStatic = true
 // valid rewards -> Random, Poptabs, Vehicle, Buildingbox, WeaponBox
 ZCP_CapPoints = [ // [name,[x,y,z],reward, varname,index, spanwnAI, isStatic]
-	["Battle Zone",[0,0,0],"Random","alpha",0, true, false],
+	["Battle Zone",[0,0,0],"Random","alpha",0, true, false]
 ];
 
 ZCP_MaxMissions = count ZCP_CapPoints; // Amount of cap points at the same time.
