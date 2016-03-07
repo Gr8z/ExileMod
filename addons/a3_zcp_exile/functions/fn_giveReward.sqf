@@ -26,7 +26,7 @@ switch (_reward) do {
 		_playerScore = _playerScore + _awardToGive;
 
 		_ZCP_currentCapper setVariable ["ExileScore",_playerScore];
-		_ZCP_currentCapper setVariable['PLAYER_STATS_VAR', [_ZCP_currentCapper getVariable ['ExileMoney', 0], _playerScore],true];
+		_ZCP_currentCapper setVariable['PLAYER_STATS_VAR', [_ZCP_currentCapper getVariable ['ExilePurse', 0], _playerScore],true];
 
 		format["setAccountScore:%1:%2", _playerScore,getPlayerUID _ZCP_currentCapper] call ExileServer_system_database_query_fireAndForget;
 
@@ -46,7 +46,7 @@ switch (_reward) do {
 					if (_x != _ZCP_currentCapper && _x distance2D _ZCP_currentCapper < 200 ) then {
 						_newScore = (_x getVariable ["ExileScore", 0]) + ZCP_ReputationRewardForGroup;
 						_x setVariable ["ExileScore", _newScore ];
-						_x setVariable['PLAYER_STATS_VAR', [_x getVariable ['ExileMoney', 0], _newScore],true];
+						_x setVariable['PLAYER_STATS_VAR', [_x getVariable ['ExilePurse', 0], _newScore],true];
 						format["setAccountScore:%1:%2", _newScore, getPlayerUID _x] call ExileServer_system_database_query_fireAndForget;
 						_x call ExileServer_object_player_database_update;
 
@@ -66,7 +66,7 @@ switch (_reward) do {
 		if(ZCP_RewardRelativeToPlayersOnline) then {
 				_awardToGive = _awardToGive + (ZCP_PoptabReward) * (count playableUnits);
 		};
-		_playerMoney = _ZCP_currentCapper getVariable ["ExileMoney", 0];
+		_playerMoney = _ZCP_currentCapper getVariable ["ExilePurse", 0];
 		_playerMoney = _playerMoney + _awardToGive;
 
 		_ZCP_currentCapper setVariable ["ExilePurse", _playerMoney];
