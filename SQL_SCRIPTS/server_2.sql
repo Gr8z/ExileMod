@@ -56,11 +56,6 @@ where hitpoints = '[["'
 OR hitpoints = '[["!'
 and damage = 1;
 
-/* RESET CONTAINER CODE NOT USED IN 5 DAYS */
-UPDATE container_2
-SET pin_code = 0000,is_locked = 0
-WHERE last_updated_at < DATE_SUB(CURRENT_TIMESTAMP, INTERVAL 6 DAY);
-
 /* RESET VEHICLE CODE NOT USED IN 5 DAYS */
 UPDATE vehicle_2
 SET pin_code = 0000,is_locked = 0
