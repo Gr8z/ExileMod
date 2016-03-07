@@ -180,12 +180,12 @@ ZCP_DMS_BoxWeapons =					[							// List of weapons that can spawn in a crate
 										];
 ZCP_DMS_BoxFood =						[							// List of food that can spawn in a crate.
 										"Exile_Item_GloriousKnakworst_Cooked",
-											"Exile_Item_Surstromming_Cooked",
-											"Exile_Item_SausageGravy_Cooked",
-											"Exile_Item_ChristmasTinner_Cooked",
-											"Exile_Item_BBQSandwich_Cooked",
-											"Exile_Item_Catfood_Cooked",
-											"Exile_Item_DogFood_Cooked"
+										"Exile_Item_Surstromming_Cooked",
+										"Exile_Item_SausageGravy_Cooked",
+										"Exile_Item_ChristmasTinner_Cooked",
+										"Exile_Item_BBQSandwich_Cooked",
+										"Exile_Item_Catfood_Cooked",
+										"Exile_Item_DogFood_Cooked"
 									];
 ZCP_DMS_BoxDrinks =						[
 										"Exile_Item_PlasticBottleCoffee",
