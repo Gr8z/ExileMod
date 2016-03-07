@@ -1335,7 +1335,7 @@ class CfgSettings
 		/*
 			Support for custom server FSM if wanted
 		*/
-		serverFSM = "exile_server_custom\fsm\main.fsm";
+		serverFSM = "exile_server\fsm\main.fsm";
 
 		/*
 			If this is enabled, Exile developers will spawn with a ton of pop tabs.
