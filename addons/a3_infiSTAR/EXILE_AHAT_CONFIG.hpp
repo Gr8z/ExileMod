@@ -131,7 +131,7 @@ adminUIDandAccess[] =
 			"spectating","ShowGear",
 			"HealSelf","HealRepairNear","AdminLog","Freeze Target","UnFreeze Target",
 			"Remove Gear","Heal","Restore","Flip Vehicle",
-			"Kill","Kick (Silent)","Kick (Announce)"
+			"Kill","Kick (Silent)","Kick (Announce)",
 			"Request Steam Name","showinfo","Change Money","Change Respect",
 			"UnlockLockVehicle"
 		}
