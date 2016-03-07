@@ -58,7 +58,7 @@ _listItemIndex = _listBox lbAdd "Medic Level 3";
 _listItemIndex = _listBox lbAdd "Engineer Level 1";
 _listItemIndex = _listBox lbAdd "Engineer Level 2";
 _listItemIndex = _listBox lbAdd "Engineer Level 3";
-systemChat 'These Loadouts are not forsale until they are approved- Being Reworked';
+systemChat 'These Loadouts are not for sale until they are approved- Being Reworked';
 waitUntil {!isNil "Soldier3"};
 FNC_GET_ACTUAL_LOADOUT = {
 	waitUntil {typeOf player isEqualTo 'Exile_Unit_Player'};
@@ -72,14 +72,14 @@ FNC_GET_ACTUAL_LOADOUT = {
 			if !(_puid in Scout1 + Scout2 + Scout3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Scout Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Scout Loadout 1</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
 
-			player forceAddUniform "U_B_CTRG_2";
-			player addHeadgear "H_Booniehat_oli";
-			player addGoggles "G_Bandanna_khk";
-			player addBackpack "B_FieldPack_oli";
-			player addWeapon "hgun_Pistol_heavy_01_F";
-			player addHandgunItem "muzzle_snds_acp";
-			player addHandgunItem "optic_MRD";
-			for "_i" from 1 to 3 do {player addItemToUniform "11Rnd_45ACP_Mag";};
+			player forceAddUniform "TRYK_U_denim_jersey_blu";
+			player addVest "V_Chestrig_blk";
+			player addBackpack "B_TacticalPack_blk";
+			player addWeapon "CUP_hgun_Phantom";
+			player addHandgunItem "muzzle_snds_L";
+            player addHandgunItem "CUP_acc_CZ_M3X";
+			for "_i" from 1 to 4 do {this addItemToBackpack "CUP_18Rnd_9x19_Phantom";};
+			player addWeapon "Binocular";
 			player addItemToUniform "Exile_Magazine_Swing";
 			player linkItem "ItemGPS";
 			player addItemToBackpack "Exile_Item_Bandage";
@@ -93,19 +93,18 @@ FNC_GET_ACTUAL_LOADOUT = {
 			if !(_puid in Scout2 + Scout3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Scout Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Scout Loadout 2</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
 
-			player forceAddUniform "U_B_CTRG_3";
-			player addHeadgear "H_Booniehat_oli";
-			player addGoggles "G_Bandanna_khk";
-			player addVest "V_Rangemaster_belt";
-			player addBackpack "B_FieldPack_oli";
-			player addWeapon "hgun_PDW2000_F";
-			player addWeapon "hgun_Pistol_heavy_01_F";
-			player addPrimaryWeaponItem "muzzle_snds_L";
-			player addPrimaryWeaponItem "optic_Holosight_smg";
-			player addHandgunItem "muzzle_snds_acp";
-			player addHandgunItem "optic_MRD";
-			for "_i" from 1 to 2 do {player addItemToUniform "30Rnd_9x21_Mag";};
-			for "_i" from 1 to 3 do {player addItemToUniform "11Rnd_45ACP_Mag";};
+			player forceAddUniform "TRYK_U_pad_j_blk";
+			player addHeadgear "TRYK_r_cap_blk_Glasses";
+			player addVest "V_Chestrig_blk";
+			player addBackpack "TRYK_B_Coyotebackpack_BLK";
+			player addWeapon "CUP_srifle_CZ550_rail";
+			player addWeapon "CUP_hgun_Phantom";
+			player addPrimaryWeaponItem "optic_MRCO";
+			player addHandgunItem "muzzle_snds_L";
+			player addHandgunItem "CUP_acc_CZ_M3X";
+			player addWeapon "Binocular";
+			for "_i" from 1 to 4 do {this addItemToBackpack "CUP_18Rnd_9x19_Phantom";};
+            for "_i" from 1 to 5 do {this addItemToBackpack "CUP_5x_22_LR_17_HMR_M";};
 			player addItemToUniform "Exile_Magazine_Swing";
 			player linkItem "ItemGPS";
 			player addItemToVest "Exile_Item_Vishpirin";
@@ -119,60 +118,65 @@ FNC_GET_ACTUAL_LOADOUT = {
 			if !(_puid in Scout3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Scout Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Scout Loadout 3</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
 
-			player forceAddUniform "rhs_uniform_FROG01_m81";
-			player addHeadgear "H_ShemagOpen_tan";
-			player addVest "V_TacVest_camo";
-			player addBackpack "B_FieldPack_oli";
-			player addWeapon "arifle_MXM_Black_F";
-			player addWeapon "hgun_Pistol_heavy_01_F";
-			player addPrimaryWeaponItem "muzzle_snds_H";
-			player addPrimaryWeaponItem "optic_MRCO";
+			player forceAddUniform "TRYK_U_denim_jersey_blk";
+			player addHeadgear "TRYK_r_cap_blk_Glasses";
+			player addVest "V_PlateCarrier1_blk";
+			player addBackpack "TRYK_B_Coyotebackpack_BLK";
+			player addWeapon "CUP_srifle_M14_DMR";
+			player addWeapon "CUP_hgun_Phantom";
+			player addPrimaryWeaponItem "muzzle_snds_B";
+			player addPrimaryWeaponItem "optic_KHS_old";
 			player addPrimaryWeaponItem "bipod_01_F_blk";
-			player addHandgunItem "muzzle_snds_acp";
-			player addHandgunItem "optic_MRD";
-			for "_i" from 1 to 2 do {player addItemToUniform "30Rnd_65x39_caseless_mag";};
-			for "_i" from 1 to 3 do {player addItemToUniform "11Rnd_45ACP_Mag";};
+			player addHandgunItem "muzzle_snds_L";
+			player addHandgunItem "CUP_acc_CZ_M3X";
+			player addWeapon "Binocular";
+			for "_i" from 1 to 4 do {this addItemToBackpack "CUP_18Rnd_9x19_Phantom";};
+			for "_i" from 1 to 4 do {this addItemToBackpack "CUP_20Rnd_762x51_DMR";};
 			player addItemToUniform "Exile_Magazine_Swing";
 			player linkItem "ItemGPS";
 			player addItemToVest "Exile_Item_InstaDoc";
-			player addItemToVest "Exile_Item_PlasticBottleCoffee ";
+			player addItemToVest "Exile_Item_PlasticBottleCoffee";
 			player addItemToVest "Exile_Item_EMRE";
 			player addItemToVest "Exile_Item_Matches";
 			player addItemToVest "Exile_Item_CanOpener";
 			player addWeapon "Exile_Melee_Axe";
+			player linkItem "TRYK_G_Shades_Black_NV";
 			call ExileClient_object_player_bambiStateEnd; };
 		};
 		case 4:{
 			if !(_puid in Marksman1 + Marksman2 + Marksman3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Marksman Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Marksman Loadout 1</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
 
-			player forceAddUniform "U_I_G_resistanceLeader_F";
-			player addHeadgear "H_Bandanna_sgg";
-			player addBackpack "B_AssaultPack_khk";
-			player addWeapon "hgun_ACPC2_F";
-			player addHandgunItem "muzzle_snds_acp";
-			for "_i" from 1 to 3 do {player addItemToUniform "9Rnd_45ACP_Mag";};
+			player forceAddUniform "TRYK_U_B_AOR2_OD_CombatUniform";
+			player addVest "V_Chestrig_oli";
+			player addHeadgear "TRYK_r_cap_od_Glasses";
+			player addBackpack "CUP_B_CivPack_WDL";
+			player addWeapon "CUP_hgun_M9";
+			for "_i" from 1 to 4 do {this addItemToBackpack "CUP_15Rnd_9x19_M9";};
 			player addItemToUniform "Exile_Magazine_Swing";
 			player addItemToBackpack "Exile_Item_MountainDupe";
 			player addItemToBackpack "Exile_Item_Cheathas";
 			player addItemToBackpack "Exile_Item_CanOpener";
+			player addWeapon "Binocular";
 			player addWeapon "Exile_Melee_Axe";
+			player linkItem "ItemGPS";
 			call ExileClient_object_player_bambiStateEnd; };
 		};
 		case 5:{
 			if !(_puid in Marksman2 + Marksman3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Marksman Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Marksman Loadout 2</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
 
-			player forceAddUniform "U_I_G_resistanceLeader_F";
-			player addHeadgear "H_Bandanna_sgg";
-			player addVest "V_Rangemaster_belt";
-			player addBackpack "B_AssaultPack_khk";
+			player forceAddUniform "TRYK_U_B_AOR2_BLK_CombatUniform";
+			player addHeadgear "TRYK_r_cap_od_Glasses";
+			player addVest "V_Chestrig_oli";
+			player addBackpack "CUP_B_CivPack_WDL";
 			player addWeapon "Binocular";
-			player addWeapon "hgun_PDW2000_F";
-			player addWeapon "hgun_ACPC2_F";
-			player addPrimaryWeaponItem "optic_ACO_grn_smg";
-			for "_i" from 1 to 2 do {player addItemToUniform "30Rnd_9x21_Mag";};
-			for "_i" from 1 to 3 do {player addItemToUniform "9Rnd_45ACP_Mag";};
+			player addWeapon "CUP_srifle_LeeEnfield_rail";
+			player addWeapon "CUP_hgun_M9";
+			player addPrimaryWeaponItem "CUP_optic_ZDDot";
+			player addPrimaryWeaponItem "bipod_02_F_blk";
+			for "_i" from 1 to 4 do {this addItemToBackpack "CUP_15Rnd_9x19_M9";};
+			for "_i" from 1 to 3 do {this addItemToBackpack "CUP_10x_303_M";};
 			player addItemToUniform "Exile_Magazine_Swing";
 			player linkItem "ItemGPS";
 			player addItemToVest "Exile_Item_Vishpirin";
@@ -186,23 +190,26 @@ FNC_GET_ACTUAL_LOADOUT = {
 			if !(_puid in Marksman3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Marksman Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Marksman Loadout 3</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
 
-			player forceAddUniform "U_B_FullGhillie_lsh";
-			player addVest "V_TacVest_camo";
-			player addBackpack "B_FieldPack_khk";
-			player addWeapon "Rangefinder";
-			player addWeapon "srifle_DMR_03_multicam_F";
-			player addWeapon "hgun_ACPC2_F";
-			player addPrimaryWeaponItem "optic_MRCO";
+			player forceAddUniform "TRYK_U_B_ARO2_CombatUniform";
+			player addVest "V_PlateCarrier1_rgr";
+			player addBackpack "CUP_B_HikingPack_Civ";
+			player addWeapon "CUP_srifle_M110";
+			player addWeapon "CUP_hgun_M9";
+			player addPrimaryWeaponItem "optic_AMS";
+			player addHeadgear "TRYK_H_ghillie_over_green";
 			player addPrimaryWeaponItem "bipod_02_F_hex";
-			player addHandgunItem "optic_MRD";
-			for "_i" from 1 to 2 do {player addItemToUniform "20Rnd_762x51_Mag";};
-			for "_i" from 1 to 3 do {player addItemToUniform "9Rnd_45ACP_Mag";};
+			player addHandgunItem "CUP_muzzle_snds_M9";
+			for "_i" from 1 to 4 do {this addItemToBackpack "CUP_15Rnd_9x19_M9";};
+			for "_i" from 1 to 4 do {this addItemToBackpack "CUP_20Rnd_762x51_B_M110";};
 			player addItemToUniform "Exile_Magazine_Swing";
 			player addItemToVest "Exile_Item_InstaDoc";
-			player addItemToVest "Exile_Item_PlasticBottleCoffee ";
+			player addItemToVest "Exile_Item_PlasticBottleCoffee";
 			player addItemToVest "Exile_Item_EMRE";
 			player addItemToVest "Exile_Item_Matches";
+			player linkItem "TRYK_ShemaghESSOD_NV";
 			player addItemToVest "Exile_Item_CanOpener";
+			player linkItem "ItemGPS";
+			player addWeapon "Binocular";
 			player addWeapon "Exile_Melee_Axe";
 			call ExileClient_object_player_bambiStateEnd; };
 		};
@@ -210,17 +217,19 @@ FNC_GET_ACTUAL_LOADOUT = {
 			if !(_puid in Soldier1 + Soldier2 + Soldier3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Soldier Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Soldier Loadout 1</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
 
-			player forceAddUniform "U_B_CombatUniform_mcam_tshirt";
-			player addHeadgear "H_HelmetB";
-			player addBackpack "B_AssaultPack_khk";
-			player addWeapon "NVGoggles";
-			player addWeapon "rhsusf_weap_m1911a1";
-			for "_i" from 1 to 3 do {player addItemToUniform "rhsusf_mag_7x45acp_MHP";};
+			player forceAddUniform "rhs_uniform_cu_ucp";
+			player addVest "rhsusf_iotv_ucp_Grenadier";
+			player addHeadgear "rhsusf_patrolcap_ucp";
+			player addBackpack "rhsusf_assault_eagleaiii_ucp";
+			player addWeapon "CUP_hgun_Colt1911";
+			for "_i" from 1 to 3 do {this addItemToBackpack "CUP_7Rnd_45ACP_1911";};
 			player addItemToUniform "Exile_Magazine_Swing";
 			player addItemToBackpack "Exile_Item_Bandage";
 			player addItemToBackpack "Exile_Item_MountainDupe";
 			player addItemToBackpack "Exile_Item_Cheathas";
 			player addItemToBackpack "Exile_Item_CanOpener";
+			player linkItem "ItemGPS";
+			player addWeapon "Binocular";
 			player addWeapon "Exile_Melee_Axe";
 			call ExileClient_object_player_bambiStateEnd; };
 		};
@@ -228,16 +237,17 @@ FNC_GET_ACTUAL_LOADOUT = {
 			if !(_puid in Soldier2 + Soldier3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Soldier Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Soldier Loadout 2</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
 
-			player forceAddUniform "U_B_CombatUniform_mcam";
-			player addHeadgear "H_HelmetB";
-			player addVest "V_Rangemaster_belt";
-			player addBackpack "B_AssaultPack_khk";
+			player forceAddUniform "rhs_uniform_cu_ucp";
+			player addHeadgear "rhsusf_patrolcap_ucp";
+			player addVest "rhsusf_iotv_ucp_Grenadier";
+			player addBackpack "rhsusf_assault_eagleaiii_ucp";
 			player addWeapon "SMG_02_F";
-			player addWeapon "NVGoggles";
-			player addWeapon "rhsusf_weap_m1911a1";
-			player addPrimaryWeaponItem "optic_Aco_smg";
-			for "_i" from 1 to 2 do {player addItemToUniform "30Rnd_9x21_Mag";};
-			for "_i" from 1 to 3 do {player addItemToUniform "rhsusf_mag_7x45acp_MHP";};
+			player addPrimaryWeaponItem "rhsusf_acc_compm4";
+			player addWeapon "Binocular";
+			player linkItem "ItemGPS";
+			player addWeapon "CUP_hgun_Colt1911";
+			for "_i" from 1 to 3 do {this addItemToBackpack "CUP_7Rnd_45ACP_1911";};
+			for "_i" from 1 to 4 do {this addItemToBackpack "30Rnd_9x21_Mag";};
 			player addItemToUniform "Exile_Magazine_Swing";
 			player addItemToVest "Exile_Item_Vishpirin";
 			player addItemToVest "Exile_Item_EnergyDrink";
@@ -250,22 +260,25 @@ FNC_GET_ACTUAL_LOADOUT = {
 			if !(_puid in Soldier3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Soldier Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Soldier Loadout 3</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
 
-			player forceAddUniform "rhs_uniform_FROG01_wd";
-			player addVest "V_PlateCarrier1_rgr";
-			player addHeadgear "rhsusf_lwh_helmet_marpatwd";
-			player addBackpack "B_AssaultPack_rgr";
-			player addWeapon "NVGoggles";
-			player addWeapon "rhs_weap_m4_grip";
-			player addWeapon "rhsusf_weap_m1911a1";
-			player addPrimaryWeaponItem "rhsusf_acc_ACOG_wd";
-			for "_i" from 1 to 2 do {player addItemToUniform "rhs_mag_30Rnd_556x45_Mk318_Stanag";};
-			for "_i" from 1 to 3 do {player addItemToUniform "rhsusf_mag_7x45acp_MHP";};
+			player forceAddUniform "rhs_uniform_cu_ucp";
+			player addVest "rhsusf_iotv_ucp_Grenadier";
+			player addHeadgear "rhsusf_ach_helmet_headset_ucp";
+			player addBackpack "rhsusf_assault_eagleaiii_ucp";
+			player addWeapon "Binocular";
+			player addWeapon "CUP_arifle_M4A1_desert";
+			player addWeapon "CUP_hgun_Colt1911";
+			player addPrimaryWeaponItem "CUP_acc_ANPEQ_2_desert";
+			player addPrimaryWeaponItem "CUP_optic_CompM2_Desert";
+			for "_i" from 1 to 3 do {this addItemToBackpack "CUP_7Rnd_45ACP_1911";};
+			for "_i" from 1 to 4 do {this addItemToBackpack "CUP_30Rnd_556x45_Stanag";};
 			player addItemToUniform "Exile_Magazine_Swing";
 			player addItemToVest "Exile_Item_InstaDoc";
 			player addItemToVest "Exile_Item_PlasticBottleCoffee";
 			player addItemToVest "Exile_Item_EMRE";
 			player addItemToVest "Exile_Item_Matches";
 			player addItemToVest "Exile_Item_CanOpener";
+			player linkItem "ItemGPS";
+			player linkItem "TRYK_TAC_SET_NV_MESH_2";
 			player addWeapon "Exile_Melee_Axe";
 			call ExileClient_object_player_bambiStateEnd; };
 		};
@@ -275,10 +288,12 @@ FNC_GET_ACTUAL_LOADOUT = {
 
 			player forceAddUniform "U_C_Scientist";
 			player addHeadgear "H_Beret_02";
-			player addBackpack "B_FieldPack_oucamo";
-			player addWeapon "hgun_Pistol_heavy_01_F";
+			player addVest "TRYK_V_ArmorVest_Winter";
+			player addBackpack "TRYK_B_Coyotebackpack_WH";
+			player addWeapon "CUP_hgun_Glock17";
+			player addHandgunItem "CUP_acc_Glock17_Flashlight";
 			player addHandgunItem "optic_MRD";
-			for "_i" from 1 to 3 do {player addItemToUniform "11Rnd_45ACP_Mag";};
+			for "_i" from 1 to 4 do {this addItemToBackpack "CUP_17Rnd_9x19_glock17";};
 			player addItemToUniform "Exile_Magazine_Swing";
 			player addItemToBackpack "Exile_Item_Bandage";
 			player addItemToBackpack "Exile_Item_MountainDupe";
@@ -286,6 +301,8 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToBackpack "Exile_Item_CanOpener";
 			for "_i" from 1 to 2 do {player addItemToBackpack "Exile_Item_Vishpirin";};
 			player addWeapon "Exile_Melee_Axe";
+			player linkItem "ItemGPS";
+			player addWeapon "Binocular";
 			call ExileClient_object_player_bambiStateEnd; };
 		};
 		case 11:{
@@ -294,14 +311,14 @@ FNC_GET_ACTUAL_LOADOUT = {
 
 			player forceAddUniform "U_C_Scientist";
 			player addHeadgear "H_Beret_02";
-			player addVest "V_Rangemaster_belt";
-			player addBackpack "B_FieldPack_oucamo";
-			player addWeapon "SMG_01_F";
-			player addWeapon "hgun_Pistol_heavy_01_F";
-			player addPrimaryWeaponItem "optic_Holosight_smg";
+			player addVest "TRYK_V_ArmorVest_Winter";
+			player addBackpack "TRYK_B_Coyotebackpack_WH";
+			player addWeapon "CUP_smg_MP5A5";
+			player addWeapon "CUP_hgun_Glock17";
 			player addHandgunItem "optic_MRD";
-			for "_i" from 1 to 2 do {player addItemToUniform "30Rnd_45ACP_Mag_SMG_01";};
-			for "_i" from 1 to 3 do {player addItemToVest "11Rnd_45ACP_Mag";};
+			player addHandgunItem "CUP_acc_Glock17_Flashlight";
+			for "_i" from 1 to 4 do {this addItemToBackpack "CUP_17Rnd_9x19_glock17";};
+			for "_i" from 1 to 4 do {this addItemToBackpack "CUP_30Rnd_9x19_MP5";};
 			player addItemToUniform "Exile_Magazine_Swing";
 			player addItemToBackpack "Exile_Item_EnergyDrink";
 			player addItemToBackpack "Exile_Item_InstaDoc";
@@ -309,22 +326,25 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToBackpack "Exile_Item_GloriousKnakworst";
 			player addItemToBackpack "Exile_Item_CanOpener";
 			player addWeapon "Exile_Melee_Axe";
+			player linkItem "ItemGPS";
+			player addWeapon "Binocular";
 			call ExileClient_object_player_bambiStateEnd; };
 		};
 		case 12:{
 			if !(_puid in Medic3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Medic Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Medic Loadout 3</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
 
-			player forceAddUniform "rhs_uniform_flora_patchless";
-			player addVest "rhs_6b23_medic";
-			player addHeadgear "rhs_fieldcap_digi";
-			player addBackpack "B_FieldPack_oli";
-			player addWeapon "rhs_weap_ak74m_camo_folded";
-			player addWeapon "hgun_Pistol_heavy_01_F";
-			player addPrimaryWeaponItem "optic_Holosight";
+			player forceAddUniform "U_C_Scientist";
+			player addVest "TRYK_V_ArmorVest_Winter";
+			player addHeadgear "H_Beret_Colonel";
+			player addBackpack "TRYK_V_ArmorVest_Winter";
+			player addWeapon "CUP_arifle_CZ805_A1";
+			player addWeapon "CUP_hgun_Glock17";
+			player addPrimaryWeaponItem "optic_Hamr";
+			player addHandgunItem "CUP_acc_Glock17_Flashlight";
 			player addHandgunItem "optic_MRD";
-			for "_i" from 1 to 2 do {player addItemToUniform "rhs_30Rnd_545x39_AK";};
-			for "_i" from 1 to 3 do {player addItemToVest "11Rnd_45ACP_Mag";};
+			for "_i" from 1 to 4 do {this addItemToBackpack "CUP_17Rnd_9x19_glock17";};
+			for "_i" from 1 to 4 do {this addItemToBackpack "CUP_30Rnd_556x45_Stanag";};
 			player addItemToUniform "Exile_Magazine_Swing";
 			player addItemToVest "Exile_Item_PlasticBottleCoffee";
 			player addItemToVest "Exile_Item_EMRE";
@@ -333,42 +353,46 @@ FNC_GET_ACTUAL_LOADOUT = {
 			for "_i" from 1 to 2 do {player addItemToBackpack "Exile_Item_Vishpirin";};
 			for "_i" from 1 to 2 do {player addItemToBackpack "Exile_Item_InstaDoc";};
 			player addWeapon "Exile_Melee_Axe";
+			player linkItem "ItemGPS";
+			player addWeapon "Binocular";
 			call ExileClient_object_player_bambiStateEnd; };
 		};
 		case 13:{
 			if !(_puid in Engineer1 + Engineer2 + Engineer3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Engineer Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Engineer Loadout 1</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
 
-			player forceAddUniform "U_I_pilotCoveralls";
-			player addHeadgear "H_Cap_blk";
-			player addBackpack "B_FieldPack_oli";
-			player addWeapon "hgun_Pistol_heavy_01_F";
-			player addItemToUniform "MiniGrenade";
-			player addHandgunItem "optic_MRD";
-			for "_i" from 1 to 3 do {player addItemToUniform "11Rnd_45ACP_Mag";};
+			player forceAddUniform "TRYK_OVERALL_SAGE_BLKboots_nk_blk2";
+			player addHeadgear "TRYK_ESS_CAP_OD";
+			player addVest "V_Chestrig_oli";
+			player addBackpack "CUP_B_CivPack_WDL";
+			player addItemToVest "rhs_mag_mk3a2";
+			player addItemToVest "CUP_HandGrenade_M67";
+			player addWeapon "CUP_hgun_Compact";
+			for "_i" from 1 to 4 do {this addItemToVest "CUP_10Rnd_9x19_Compact";};
 			player addItemToUniform "Exile_Magazine_Swing";
 			player addItemToBackpack "Exile_Item_Bandage";
 			player addItemToBackpack "Exile_Item_MountainDupe";
 			player addItemToBackpack "Exile_Item_BeefParts";
 			player addItemToBackpack "Exile_Item_CanOpener";
 			player addWeapon "Exile_Melee_Axe";
+			player linkItem "ItemGPS";
+			player addWeapon "Binocular";
 			call ExileClient_object_player_bambiStateEnd; };
 		};
 		case 14:{
 			if !(_puid in Engineer2 + Engineer3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Engineer Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Engineer Loadout 2</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
 
-			player forceAddUniform "U_I_pilotCoveralls";
-			player addHeadgear "H_Cap_blk";
-			player addVest "V_Rangemaster_belt";
-			player addBackpack "B_FieldPack_oli";
-			player addWeapon "SMG_02_F";
-			player addWeapon "hgun_Pistol_heavy_01_F";
-			player addPrimaryWeaponItem "optic_ACO_grn";
-			player addHandgunItem "optic_MRD";
-			for "_i" from 1 to 2 do {player addItemToUniform "30Rnd_9x21_Mag";};
-			for "_i" from 1 to 3 do {player addItemToVest "11Rnd_45ACP_Mag";};
-			for "_i" from 1 to 2 do {player addItemToVest "MiniGrenade";};
+			player forceAddUniform "TRYK_OVERALL_SAGE_BLKboots_nk_blk2";
+			player addHeadgear "TRYK_ESS_CAP_OD";
+			player addVest "rhs_6b23_engineer";
+			player addBackpack "CUP_B_CivPack_WDL";
+			player addWeapon "CUP_arifle_AKS74U";
+			player addPrimaryWeaponItem "CUP_optic_Kobra";
+			player addWeapon "CUP_hgun_Compact";
+			player addItemToVest "CUP_HandGrenade_M67";
+			for "_i" from 1 to 3 do {this addItemToBackpack "CUP_10Rnd_9x19_Compact";};
+			for "_i" from 1 to 4 do {this addItemToBackpack "CUP_30Rnd_545x39_AK_M";};
 			player addItemToUniform "Exile_Magazine_Swing";
 			player addItemToBackpack "Exile_Item_EnergyDrink";
 			player addItemToBackpack "Exile_Item_InstaDoc";
@@ -376,25 +400,25 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToBackpack "Exile_Item_Vishpirin";
 			player addItemToBackpack "Exile_Item_CanOpener";
 			player addWeapon "Exile_Melee_Axe";
+			player linkItem "ItemGPS";
+			player addWeapon "Binocular";
 			call ExileClient_object_player_bambiStateEnd; };
 		};
 		case 15:{
 			if !(_puid in Engineer3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Engineer Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Engineer Loadout 3</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
 
-			player forceAddUniform "U_O_PilotCoveralls";
-			player addVest "V_TacVest_khk";
-			player addHeadgear "H_Cap_brn_SPECOPS";
-			player addBackpack "B_FieldPack_ocamo";
-			player addWeapon "NVGoggles";
-			player addWeapon "arifle_MX_SW_F";
-			player addWeapon "hgun_Pistol_heavy_01_F";
-			player addPrimaryWeaponItem "optic_Holosight";
-			player addPrimaryWeaponItem "bipod_01_F_snd";
-			player addHandgunItem "optic_MRD";
-			for "_i" from 1 to 2 do {player addItemToUniform "100Rnd_65x39_caseless_mag_Tracer";};
-			for "_i" from 1 to 3 do {player addItemToUniform "11Rnd_45ACP_Mag";};
-			for "_i" from 1 to 3 do {player addItemToVest "MiniGrenade";};
+			player forceAddUniform "TRYK_OVERALL_SAGE_BLKboots";
+			player addVest "V_PlateCarrierSpec_rgr";
+			player addHeadgear "TRYK_ESS_CAP";
+			player addBackpack "CUP_B_ACRPara_m95";
+			player addWeapon "CUP_arifle_AK74M_GL";
+			player addWeapon "CUP_hgun_Phantom";
+			player addHandgunItem "CUP_acc_CZ_M3X";
+			player addItemToVest "CUP_HandGrenade_M67";
+			for "_i" from 1 to 3 do {this addItemToBackpack "CUP_IlumFlareGreen_GP25_M";};
+            for "_i" from 1 to 4 do {this addItemToBackpack "CUP_30Rnd_545x39_AK_M";};
+            for "_i" from 1 to 4 do {this addItemToBackpack "CUP_18Rnd_9x19_Phantom";};
 			player addItemToUniform "Exile_Magazine_Swing";
 			player addItemToVest "Exile_Item_InstaDoc";
 			player addItemToVest "Exile_Item_PlasticBottleCoffee";
@@ -402,6 +426,9 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToVest "Exile_Item_EMRE";
 			player addItemToVest "Exile_Item_Matches";
 			player addItemToVest "Exile_Item_CanOpener";
+			player linkItem "TRYK_Shemagh_G_NV";
+			player linkItem "ItemGPS";
+			player addWeapon "Binocular";
 			player addWeapon "Exile_Melee_Axe";
 			call ExileClient_object_player_bambiStateEnd; };
 		};
