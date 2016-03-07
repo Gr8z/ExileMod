@@ -86,10 +86,9 @@ try
 	_playerRespect = _playerObject getVariable ["ExileScore", 0];
 	_playerRespect = floor (_playerRespect + _respectGain);
 	_playerObject setVariable ["ExileScore", _playerRespect];
-    	format["updateWallet:%1:%2", _playerMoney, (getPlayerUID _playerObject)] call ExileServer_system_database_query_fireAndForget;
-    	format["setAccountScore:%1:%2",_playerRespect,(getPlayerUID _playerObject)] call ExileServer_system_database_query_fireAndForget;
-	//format["setAccountMoneyAndRespect:%1:%2:%3", _playerMoney, _playerRespect, (getPlayerUID _playerObject)] call ExileServer_system_database_query_fireAndForget;
-
+    format["updateWallet:%1:%2", _playerMoney, (getPlayerUID _playerObject)] call ExileServer_system_database_query_fireAndForget;
+    format["setAccountScore:%1:%2",_playerRespect,(getPlayerUID _playerObject)] call ExileServer_system_database_query_fireAndForget;
+    
 	[_sessionID, "sellItemResponse", [0, str _playerMoney, _itemClassName, 1, _containerType, _containerNetID, str _playerRespect]] call ExileServer_system_network_send_to;
 	if !(_vehicleObject isEqualTo objNull) then
 	{

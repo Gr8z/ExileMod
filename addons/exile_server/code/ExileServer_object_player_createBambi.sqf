@@ -34,13 +34,13 @@ _name = name _requestingPlayer;
 _clanID = (_accountData select 4);
 _clanName = (_accountData select 5);
 
-// Advanced Banking
-private["_advBank","_playerUID"];
-_playerUID = getPlayerUID _requestingPlayer;
-_advBank = format["getStats:%1",_playerUID] call ExileServer_system_database_query_selectSingle;
-_bambiPlayer setVariable ["ExilePurse", (_advBank select 1)]; //Grim this is for you. ;)
-_bambiPlayer setVariable ["ExileBank",(_advBank select 2)];
-// Advanced Banking
+    // Advanced Banking
+    private["_advBank","_playerUID"];
+    _playerUID = getPlayerUID _requestingPlayer;
+    _advBank = format["getStats:%1",_playerUID] call ExileServer_system_database_query_selectSingle;
+    _bambiPlayer setVariable ["ExilePurse", (_advBank select 1)]; //Grim this is for you. ;)
+    _bambiPlayer setVariable ["ExileBank",(_advBank select 2)];
+    // Advanced Banking
 
 if !((typeName _clanID) isEqualTo "SCALAR") then
 {
@@ -113,7 +113,7 @@ _bambiPlayer call ExileServer_object_player_database_update;
 	[
 		_bambiPlayer, 
 		_parachuteNetID, 
-		str (_accountData select 0),
+		str (_advBank select 1),
 		str (_accountData select 1),
 		(_accountData select 2),
 		(_accountData select 3),
