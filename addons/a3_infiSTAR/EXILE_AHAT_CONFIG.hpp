@@ -109,7 +109,7 @@ adminUIDandAccess[] =
 			"HealSelf","HealRepairNear","AdminLog","Freeze Target","UnFreeze Target","Restrain","UnRestrain",
 			"==== Base Deleter ====","Items spawn menu",
 			"Remove Gear","Heal","Restore","Flip Vehicle","Move In My Vehicle","Move In Target Vehicle","Eject","Eject Crew",
-			"Kill","Force Disconnect","Kick (Silent)","Kick (Announce)"
+			"Kill","Force Disconnect","Kick (Silent)","Kick (Announce)",
 			"infiSTAR Player ESP","infiSTAR Dead ESP","infiSTAR AI ESP",
 			"infiSTAR MapIcons","Vehicle Marker","Flag Marker (with radius)","DeadPlayer Marker",
 			"God Mode","Vehicle God Mode","Stealth / Invisible",
