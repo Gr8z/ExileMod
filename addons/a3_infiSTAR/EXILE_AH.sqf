@@ -3652,15 +3652,15 @@ _AdminReqReal = {
 		_option = _array select 3;
 		if(_option isEqualTo 0)then
 		{
-			_playerMoney = _target getVariable['ExileMoney',0];
+			_playerMoney = _target getVariable['ExilePurse',0];
 			_newMoney = _playerMoney + _value;
-			_target setVariable['ExileMoney', _newMoney];
+			_target setVariable['ExilePurse', _newMoney];
 			[_newMoney,{ExileClientPlayerMoney = _this;},(owner _target),false] call FN_infiSTAR_S;
 			
 			_PLAYER_STATS_VAR = _target getVariable ['PLAYER_STATS_VAR',[0,0,0]];
 			_PLAYER_STATS_VAR set [0,_newMoney];
 			_target setVariable['PLAYER_STATS_VAR',_PLAYER_STATS_VAR,true];
-			format['setAccountMoney:%1:%2', _newMoney, (getPlayerUID _target)] call ExileServer_system_database_query_fireAndForget;
+			format['updateWallet:%1:%2', _newMoney, (getPlayerUID _target)] call ExileServer_system_database_query_fireAndForget;
 		};
 		"; if(_AdvBanking_Server)then{ _A3AHstring = _A3AHstring + "
 		if(_option isEqualTo 1)then
