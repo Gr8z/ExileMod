@@ -1365,8 +1365,8 @@ class CfgSettings
 			*/
 			type = "spawn";
 			function = "ExileServer_system_event_supplyBox_start";
-			minTime = 15; // minutes
-			maxTime = 30; // minutes
+			minTime = 60; // minutes
+			maxTime = 130; // minutes
 			minimumPlayersOnline = 15;
 			dropRadius = 500; // 500m around an airport (including the main airport on Altis!)
 			dropAltitude = 150; // altitude of the drop
@@ -1386,13 +1386,13 @@ class CfgSettings
 				{
 					items[] = 
 					{
-						{"Exile_Item_WoodWallKit",10},
-						{"Exile_Item_WoodWallHalfKit",5},
-						{"Exile_Item_WoodWindowKit",5},
+						{"Exile_Item_WoodWallKit",5},
+						{"Exile_Item_WoodWallHalfKit",2},
+						{"Exile_Item_WoodWindowKit",2},
 						{"Exile_Item_WorkBenchKit",2},
-						{"Exile_Item_WoodFloorPortKit",5},
-						{"Exile_Item_WoodFloorKit",10},
-						{"Exile_Item_WoodGateKit",5}
+						{"Exile_Item_WoodFloorPortKit",2},
+						{"Exile_Item_WoodFloorKit",5},
+						{"Exile_Item_WoodGateKit",1}
 					};
 				};
 
@@ -1408,32 +1408,15 @@ class CfgSettings
 						{"srifle_LRR_F",1},
 						{"srifle_DMR_02_F",1},
 						{"MMG_01_tan_F",1},
-						{"MMG_02_camo_F",1},
-						{"MMG_02_black_F",1},
-						{"MMG_02_sand_F",1},
 						{"srifle_DMR_03_F",1},
 						{"srifle_DMR_03_khaki_F",1},
 						{"srifle_DMR_03_tan_F",1},
 						{"srifle_DMR_04_F",1},
-						{"srifle_DMR_04_Tan_F",1},
-						{"srifle_DMR_05_blk_F",1},
-						{"srifle_DMR_05_tan_F",1},
-						{"srifle_DMR_05_hex_F",1},
-						{"srifle_DMR_06_camo_F",1},
-						{"srifle_DMR_06_olive_F",1},
 						{"srifle_LRR_camo_F",1},
-						{"srifle_GM6_camo_F",1},
 						{"CUP_lmg_M249_para",1},
 						{"CUP_lmg_Mk48_des",1},
-						{"CUP_lmg_Mk48_wdl",1},
-						{"CUP_lmg_L110A1",1},
 						{"CUP_lmg_Pecheneg",1},
 						{"CUP_lmg_UK59",1},
-						{"CUP_lmg_L7A2",1},
-						{"CUP_lmg_M60A4",1},
-						{"CUP_lmg_M240",1},
-						{"CUP_lmg_M249",1},
-						{"CUP_lmg_PKM",1},
 						{"CUP_srifle_DMR",1},
 						{"CUP_srifle_ksvk",1},
 						{"CUP_srifle_M110",1},
@@ -1446,9 +1429,6 @@ class CfgSettings
 						{"CUP_srifle_VSSVintorez",1},
 						{"CUP_srifle_CZ750",1},
 						{"CUP_srifle_Mk12SPR",1},
-						{"CUP_srifle_AS50",1},
-						{"CUP_srifle_AWM_des",1},
-						{"CUP_srifle_AWM_wdl",1},
 						{"CUP_srifle_CZ550",1},
 						{"CUP_srifle_LeeEnfield",1},
 						{"CUP_srifle_M40A3",1}
