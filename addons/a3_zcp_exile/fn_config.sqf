@@ -3,7 +3,7 @@
 // Being first in the zone starts the timer.
 // Holding a zone  gives you a reward after x Min.
 
-ZCP_dev = true; // Devmode for shorter development capture times
+ZCP_dev = false; // Devmode for shorter development capture times
 
 ZCP_DMS_doIUseDMS = true; // Use DMS to spawn AI IF CapturePoint has spawnAI = true
 ZCP_Min_AI_Amount = 4; // Min ammount of AI at a ZCP
@@ -364,7 +364,7 @@ ZCP_DMS_RareLootChance	= 10;						// Percentage Chance to spawn rare loot in any
 ZCP_DMS_ArmedVehicles =					[							// List of armed vehicles that can spawn
 										"Exile_Car_Offroad_Armed_Guerilla01"
 									];
-									
+
 ZCP_VehicleReward = ZCP_DMS_ArmedVehicles;
 ZCP_DMS_DEBUG = false;
 
