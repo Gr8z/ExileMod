@@ -1,28 +1,5 @@
-/*
-	Author: Chris(tian) "infiSTAR" Lorenzen
-	Contact: infiSTAR23@gmail.com // www.infiSTAR.de
-	
-	Copyright infiSTAR - 2011 - 2016. All rights reserved.
-	Christian (Chris) L. (infiSTAR23@gmail.com) Developer of infiSTAR
-	
-	Description:
-	Arma AntiHack & AdminTools - infiSTAR.de
-	
-	UPDATEEMAIL for http://update.infiSTAR.de is:
-	'psychotic_closure@hotmail.com'
-	
-	Last download was on:
-	'06022016';
-*/
 class Cfg_infiSTAR_settings {
-/*
-	"serverCommandPassword" is serverCommandPassword - in your servers config.cfg, needed for servercommands from client
-	
-	This is   VERY IMPORTANT   as it is needed to KICK & BAN people.
-	
-	It will try to get this password from "@ExileServer\addons\exile_server_config" first. If you did not set a password there (config.cpp),
-	then it will take what you put here.
-*/
+
 serverCommandPassword = "penis1234";
 
 /*
@@ -65,8 +42,27 @@ chatCommands[] =
 };
 
 
+/*
+	If admin has rights to "Create Billboard", he will have new options to create a Billboard ingame with one of the following textures
+	{"name shown in adminmenu","path to texture"}
+*/
+pathToCustomBillBoardTextures[] =
+{
+	{"Doggy","exile_assets\texture\flag\flag_mate_21dmd_co.paa"},
+	{"Spawny","exile_assets\texture\flag\flag_mate_spawny_co.paa"},
+	{"Dickbutt","exile_assets\texture\flag\flag_misc_dickbutt_co.paa"},
+	{"Vish","exile_assets\texture\flag\flag_mate_vish_co.paa"}
+};
+
+
 /* "startAsNormal": if you add admin UIDs in here as well, they will start as almost "normal" player instead of with admin menu and such. */
 startAsNormal[] =
+{
+	"UID1","UID2","UID3","..."
+};
+
+/* "hiddenSuperAdmin": These admins are seen as normal players by normal admins, their actions are not logged either (to keep an eye out on your admins) */
+hiddenSuperAdmin[] =
 {
 	"UID1","UID2","UID3","..."
 };
@@ -89,13 +85,13 @@ adminUIDandAccess[] =
 			"HealSelf","HealRepairNear","AdminLog","Freeze Target","UnFreeze Target","Restrain","UnRestrain",
 			"==== Loadouts ====","==== Base Deleter ====","==== WeatherLord ====","Items spawn menu",
 			"Remove Gear","Heal","Restore","Flip Vehicle","Move In My Vehicle","Move In Target Vehicle","Eject","Eject Crew",
-			"Kill","Explode","Force Disconnect","Kick (Silent)","Kick (Announce)",
+			"Kill","Explode","Force Disconnect","Kick (Silent)","Kick (Announce)","Ban (Silent)","Ban (Announce)",
 			"infiSTAR Player ESP","infiSTAR Dead ESP","infiSTAR AI ESP",
 			"infiSTAR MapIcons","Vehicle Marker","Flag Marker (with radius)","DeadPlayer Marker",
 			"God Mode","Vehicle God Mode","Lower Terrain","Vehboost","UnlimAmmo","noRecoil","FastFire","Stealth / Invisible",
-			"Disable Announces","Mass Message","ChangeTime","Spawn Support-Boxes","Change Viewdistance",
+			"Disable Announces","Mass Message","Change Time","Spawn Support-Boxes","Create Billboard","Change ViewDistance",
 			"Spawn Ammo","Login as Arma Admin","BIS FreeRoam Cam (works with ESP)","FreeRoam Cam (does not work with ESP)",
-			"Request Steam Name","showinfo","Add / Remove Money","Add / Remove Respect",
+			"Request Steam Name","showinfo","Change Money","Change Respect",
 			"UnlockLockVehicle",
 			"Spawn Vehicles","Spawn Persistent Vehicles"
 		}
@@ -109,18 +105,19 @@ adminUIDandAccess[] =
 		 "0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
 			"Teleport On Map Click","Teleport - Target To Me","Teleport - Me To Target","Teleport In Facing Direction (10m steps)",
-			"spectating","Delete Vehicle","FlyUp","ShowGear","Show Server Information",
+			"spectating","Delete Vehicle","FlyUp","ShowGear",
 			"HealSelf","HealRepairNear","AdminLog","Freeze Target","UnFreeze Target","Restrain","UnRestrain",
-			"==== Vehicles ====","==== Base Deleter ====","Items spawn menu",
+			"==== Base Deleter ====","Items spawn menu",
 			"Remove Gear","Heal","Restore","Flip Vehicle","Move In My Vehicle","Move In Target Vehicle","Eject","Eject Crew",
-			"Kill","Force Disconnect","Kick (Silent)","Kick (Announce)",
+			"Kill","Force Disconnect","Kick (Silent)","Kick (Announce)"
 			"infiSTAR Player ESP","infiSTAR Dead ESP","infiSTAR AI ESP",
 			"infiSTAR MapIcons","Vehicle Marker","Flag Marker (with radius)","DeadPlayer Marker",
 			"God Mode","Vehicle God Mode","Stealth / Invisible",
-			"Disable Announces","ChangeTime","Spawn Support-Boxes",
-			"Spawn Ammo","Login as Arma Admin","BIS FreeRoam Cam (works with ESP)","FreeRoam Cam (does not work with ESP)",
-			"Request Steam Name","showinfo","Add / Remove Money","Add / Remove Respect",
-			"UnlockLockVehicle","Spawn Vehicles","Spawn Persistent Vehicles"
+			"Disable Announces","Spawn Support-Boxes","Change ViewDistance",
+			"Spawn Ammo","BIS FreeRoam Cam (works with ESP)","FreeRoam Cam (does not work with ESP)",
+			"Request Steam Name","showinfo","Change Money","Change Respect",
+			"UnlockLockVehicle",
+			"Spawn Vehicles","Spawn Persistent Vehicles"
 		}
 	},
 	{
@@ -131,11 +128,11 @@ adminUIDandAccess[] =
 		 // Add UID's Above - Don't forget the comma!
 		 "0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
-			"spectating","ShowGear","Show Server Information",
+			"spectating","ShowGear",
+			"HealSelf","HealRepairNear","AdminLog","Freeze Target","UnFreeze Target",
 			"Remove Gear","Heal","Restore","Flip Vehicle",
-			"Force Disconnect","Kick (Silent)","Kick (Announce)",
-			"Disable Announces",
-			"Request Steam Name","showinfo","Add / Remove Money","Add / Remove Respect",
+			"Kill","Kick (Silent)","Kick (Announce)"
+			"Request Steam Name","showinfo","Change Money","Change Respect",
 			"UnlockLockVehicle"
 		}
 	}
@@ -152,11 +149,13 @@ UID_WHITELIST[] =
 	"UID1","UID2","UID3","..."
 };
 
+ExileDevFriendlyMode = false;	/* adds Exile Devs to your AdminList - makes it easier for them to debug their mod live */
+
 
 /* What ESCAPE Menu shows */
 ESCMNUTOP = "[GG] Ghostz Gamerz";
 ESCMNUBOT = "www.GHOSTZGAMERZ.com";
-BRIEFING_MSG = true;	/* use mission briefing message: if   "BRIEFING_MSG = false;"   then the message will be replaced by infiSTAR */
+BRIEFING_MSG = false;	/* use mission briefing message: if   "BRIEFING_MSG = false;"   then the message will be replaced by infiSTAR */
 HTML_LOAD_URL = "";	/* HTML_LOAD_URL = ""; == disabled and if you set a url it will be shown in ESCAPE menu. HTML in Arma/this is limited. Try it :) example: "http://goo.gl/gb0o7b" */
 
 
@@ -166,7 +165,7 @@ RESTART_TIME_IN_M = 120;			/* restart time in minutes (default: 180min == 3 hour
 SHOW_TIMER_IN_MIN[] = {1,2,3,5,10};	/* minutes before restart, when message is shown */
 USE_RESTART_TIMER_SHUTDOWN = false;	/* #shutdown the server after RESTART_TIME_IN_M minutes */
 
-/* The following 3 options can be disabled by putting the value to -1. For example "TGV = -1;" */
+/* The following 4 options can be disabled by putting the value to -1. For example "TGV = -1;" */
 /* Terrain Grid Value   */ TGV = -1;	/* 50, 25, 12.5  */	/* if set to 50 grass will be very low for better client FPS.. default is 25 ~35 is good performance and grass :) */
 /* ViewDistance Value   */ VDV = -1;
 /* ObjectViewDistance   */ VOV = -1;
@@ -176,22 +175,25 @@ USE_RESTART_TIMER_SHUTDOWN = false;	/* #shutdown the server after RESTART_TIME_I
 /*            many checks should be set to true instead of false.                    */
 /* ********************************************************************************* */
 VDN = true;		/* Allow Player to vote Day/Night by typing vote day / vote night in Chat*/
-URC = true;		/* Check unitRecoilCoefficient and reset default unitRecoilCoefficient */
-LVC = true;		/* Local Vehicle Check */
+URC = false;		/* Check unitRecoilCoefficient and reset default unitRecoilCoefficient */
+LVC = false;		/* Local Vehicle Check */
 CMC = true;		/* Check for custom CommandingMenus */
 KCM = true;		/* Just close ALL CommandingMenus */
 CAP = false;	/* Check Actions Plr - "Actions: xxx/xxx possible scroll menu hack (or you added custom actions..)" */
-RHS_CUP_MOD_ENABLED = true;			/* You need to set this option to true if you run RHS mod */
+
+RHS_CUP_MOD_ENABLED = true;			/* You need to set this option to true if you run RHS OR CUP mod */
 disconnect_dupe_check = false;		/* checks if player tries to dupe using the "disconnect trick" -> sends a ping to the server whenever a player opens the escape menu */
 wall_look = false;					/* checks if a players tries to look through a wall (if player is allowed to build in that territory, it will not be logged.) */
-wall_glitch_object = true;			/* checks if a players tries to glitch through a wall (if player is allowed to build in that territory, it will not be logged.) */
-wall_glitch_vehicle = false;		/* stops players from glitching into bases using "eject" or "getout" of a vehicle.. */
+wall_glitch_object = false;			/* checks if a players tries to glitch through a wall (if player is allowed to build in that territory, it will not be logged.) */
+wall_glitch_vehicle = true;		/* stops players from glitching into bases using "eject" or "getout" of a vehicle.. */
 forceWalk_near_enemyBase = false;	/* forcing players to walk when near an enemy base */
+checkHiddenObjects = true;			/* checks if there is hidden objects close to the player (hidden objects could be walked through..) */
 
 stopSafeGlitch = true;				/* re-assigning "InventoryOpened" eventhandler to stop glitch open a locked safe */
-
-SpeedHackCheck = false;				/* Use SpeedHackCheck? */
-TimeToKickForSpeedHack = 30;		/* Only if SpeedHackCheck = true: Some people tried using speedHacks to travel faster, instead of teleporting.. */
+checkKeyDown = false;				/* check for custom "KeyDown" (used to open or navigate in hackmenus) */
+checkKeyDownMax = 2;				/* max KeyDown handlers allowed */
+checkKeyUp = false;					/* check for custom "KeyUp" (used to open or navigate in hackmenus) */
+checkKeyUpMax = 2;					/* max KeyUp handlers allowed */
 
 checkPopTabIncrease = false;
 LogPopTabIncrease = 15000;			/* Only if checkPopTabIncrease = true; logs if poptabs increased by x within ~10 seconds */
@@ -200,7 +202,11 @@ checkRespectIncrease = false;
 LogRespectIncrease = 5000;			/* Only if checkRespectIncrease = true; logs if respect increased by x within ~10 seconds */
 
 uniform_and_vest_check = true;		/* In the current version of Arma3 it may happen that the uniform or vest you wear is not shown to other players due to a bug, this will log & fix that issue! */
-log_uniform_and_vest_check_actions = false;
+
+
+slingload_check = true;		/* forbid sling loading / rope attaching a vehicle with a crew */
+attach_to_check = true;		/* logs and detaches attached vehicles that are close.. basically completely disallow attaching of vehicles! */
+
 
 
 /* Check for Map Menu & Map Sub-Menu */
@@ -274,7 +280,7 @@ badChat[] = {"nigger","get cancer"};
 badNames[] = {"admin","thirtysix","adolf","le hippo"};
 
 /* Not allowed Group Names on server. Example: badGroupNames[] = {"THE"}; would rename all groups with names like "the car" as it includes "THE" (not case sensitive) */
-badGroupNames[] = {"admin"};
+badGroupNames[] = {"admin","Ghostz Gamerz"};
 
 
 
@@ -287,7 +293,7 @@ badIDDsToClose[] =
 {
 	2,3,7,17,19,25,26,27,28,29,30,31,32,37,40,41,43,44,45,51,52,53,56,74,85,
 	106,126,127,132,146,147,150,151,152,153,154,155,159,162,164,262,
-	314,632,1320,2121,148,163,129,169,157,131,69
+	314,632,1320,2121,148,163,129,169,157,69,156,165,166,167,312,1321,2727
 };
 
 /* Use IDD White-List ? */ UDW = true;
@@ -295,9 +301,22 @@ badIDDsToClose[] =
 allowedIDDs[] =
 {
 	8457,	// http://www.exilemod.com/topic/9040-xm8-apps/
-	0,4,5,6,8,12,18,24,46,49,54,55,63,70,160,174,602,999,
+	65431,	//r3f menu fix
+	6666,	//Paintshop
+	0711,	//Advanced Banking
+	5501,5502,5503,5504,5505,5506,5507,	//BRAma Cookbook
+	-1339,-1340,	// custom infiSTAR dialogs (some editor & a private chat menu)
+	
+	/* default & exile idds */
+	0,4,5,6,8,12,18,24,46,49,54,55,63,70,160,174,602,999,131,
 	20023,24001,24002,24004,24005,24006,24007,24008,24009,24010,24011,24012,
 	24013,24014,24015,20016,20017,20018,20019,20020,20021,24025,2900,0711
+	
+	/* R3F ?! */
+	/*
+	,65430,65432,65433,65434,65435,65436,65437,65438,65439,65440,66361,66362,66363,66364,66461,66462,66463,66464,
+	66465,66466,66467,66468,66469,66470,66471,66472,66473,66474,66475,66476,66477,66478
+	*/
 };
 
 
@@ -306,35 +325,40 @@ allowedIDDs[] =
 /* blacklistedVariables: The AntiHack will check if one of these variables is existing for the client */
 blacklistedVariables[] =
 {
-	"arsenalOpened","BIS_fnc_arsenal_fullArsenal","bis_fnc_camera_target"
+	"arsenalOpened","BIS_fnc_arsenal_fullArsenal","bis_fnc_camera_target","babecore_escM_mousepos"
 };
 
 
-UVC = false;	/* Use Vehicle Check(s) - recommended but I am not sure if all existing vehicles are already in this white-list below. "EXILE" ones are white-listed anyways */
+
+UVC_adminspawn = false;	/* use vehicle check(s) on vehicles spawned by infiSTAR.de admin? */
+/*
+	Use vehicle white list? (everything not on white-list will be flagged as BadVehicle and deleted!)
+	"EXILE" vehicles are white-listed by default!
+*/
+VehicleWhiteList_check = false;
 VehicleWhiteList[] =
 {
 	"B_Parachute","B_Parachute_02_F","O_Parachute_02_F","Steerable_Parachute_F",
-	"I_UAV_01_F","B_HMG_01_high_F","O_HMG_01_F","B_Heli_Transport_01_F","B_Heli_Transport_01_camo_F","O_MRAP_02_gmg_F","O_static_AT_F","Land_Camping_Light_F","rhsusf_m1025_w","rhsusf_CH53E_USMC","rhsusf_m1025_d_s",
-	"RHS_UAZ_MSV_01","rhs_uaz_open_MSV_01","rhsusf_m1025_w_s",
-	"RHS_Mi8amt_civilian","rhsusf_m1025_d","rhsusf_M1078A1P2_d_open_fmtv_usarmy","rhsusf_M1078A1P2_wd_open_fmtv_usarmy","rhsusf_M1078A1P2_wd_flatbed_fmtv_usarmy","rhsusf_M1078A1P2_d_flatbed_fmtv_usarmy","rhsusf_M1078A1P2_B_d_fmtv_usarmy",
-"rhsusf_M1078A1P2_B_wd_fmtv_usarmy","rhsusf_M1078A1P2_B_wd_open_fmtv_usarmy","rhsusf_M1078A1P2_B_d_open_fmtv_usarmy","rhsusf_M1078A1P2_B_wd_flatbed_fmtv_usarmy","rhsusf_M1078A1P2_B_d_flatbed_fmtv_usarmy","RHS_Ural_Open_Civ_01",
-"RHS_Ural_Open_Civ_03","RHS_Ural_Fuel_MSV_01","RHS_Ural_Open_MSV_01","rhs_Ural_Flat_MSV_01","RHS_Ural_Open_Civ_01","RHS_Ural_Open_Civ_02","RHS_Ural_Open_Civ_03","RHS_Ural_MSV_01","rhs_gaz66_r142_vmf",
-"rhs_gaz66_repair_vmf","rhs_gaz66_vmf","rhs_gaz66_flat_vdv","rhs_gaz66o_vdv","rhs_gaz66o_flat_vdv","rhs_gaz66_ammo_vmf","RHS_CH_47F","rhs_ka60_c",
-"rhs_ka60_grey","RHS_UH60M","rhs_UH60M_MEV2_d","rhs_Mi8mt_vvs","rhs_Mi8mt_cargo_vvs","rhs_UH1Y_unarmed"
-
+	"I_UAV_01_F","B_HMG_01_high_F","O_HMG_01_F","B_Heli_Transport_01_F","B_Heli_Transport_01_camo_F","O_MRAP_02_gmg_F","O_static_AT_F","Land_Camping_Light_F"
 };
+
+/*
+	Use forbidden vehicle check? (everything in the ForbiddenVehicles will be flagged as BadVehicle and deleted (even when it is on the white-list)!)
+*/
+ForbiddenVehicles_check = false;
 ForbiddenVehicles[] =
 {
 	"B_Heli_Light_01_armed_F","B_Heli_Attack_01_F","B_Plane_CAS_01_F","B_APC_Tracked_01_rcws_F","B_APC_Tracked_01_CRV_F","B_APC_Tracked_01_AA_F","B_MBT_01_cannon_F",
-	"B_MBT_01_arty_F","B_MBT_01_mlrs_F","B_Boat_Armed_01_minigun_F","B_UAV_02_F","B_UAV_02_CAS_F","B_MRAP_01_gmg_F","B_G_Offroad_01_armed_F",
+	"B_MBT_01_arty_F","B_MBT_01_mlrs_F","B_Boat_Armed_01_minigun_F","B_UAV_02_F","B_UAV_02_CAS_F","B_MRAP_01_gmg_F","B_MRAP_01_hmg_F","B_G_Offroad_01_armed_F",
 	"B_APC_Wheeled_01_cannon_F","B_MBT_01_TUSK_F","O_Heli_Light_02_F","O_Heli_Attack_02_F","O_Heli_Attack_02_black_F","O_Plane_CAS_02_F","O_APC_Tracked_02_cannon_F",
 	"O_APC_Tracked_02_AA_F","O_MBT_02_cannon_F","O_MBT_02_arty_F","O_Boat_Armed_01_hmg_F","O_UAV_02_CAS_F","O_UAV_02_F","O_MRAP_02_hmg_F","O_G_Offroad_01_armed_F",
-	"O_APC_Wheeled_02_rcws_F","O_UGV_01_rcws_F","B_UGV_01_rcws_F","I_UGV_01_rcws_F","I_APC_Wheeled_03_cannon_F","I_MRAP_03_gmg_F","I_G_Offroad_01_armed_F",
+	"O_APC_Wheeled_02_rcws_F","O_UGV_01_rcws_F","B_UGV_01_rcws_F","I_UGV_01_rcws_F","I_APC_Wheeled_03_cannon_F","I_MRAP_03_gmg_F","I_MRAP_03_hmg_F","I_G_Offroad_01_armed_F",
 	"I_UAV_02_CAS_F","I_UAV_02_F","I_Boat_Armed_01_minigun_F","I_MBT_03_cannon_F","I_APC_tracked_03_cannon_F","I_Plane_Fighter_03_AA_F","I_Plane_Fighter_03_CAS_F","I_Heli_light_03_F",
 	"B_HMG_01_F","I_HMG_01_F","O_HMG_01_high_F","I_HMG_01_high_F","B_HMG_01_A_F","O_HMG_01_A_F","I_HMG_01_A_F","B_Mortar_01_F","O_Mortar_01_F","I_Mortar_01_F","I_G_Mortar_01_F",
 	"B_G_Mortar_01_F","O_G_Mortar_01_F","B_GMG_01_F","O_GMG_01_F","I_GMG_01_F","O_GMG_01_high_F","I_GMG_01_high_F","B_GMG_01_A_F","O_GMG_01_A_F","I_GMG_01_A_F",
 	"B_static_AA_F","O_static_AA_F","I_static_AA_F","B_static_AT_F","I_static_AT_F","B_GMG_01_high_F"
 };
+
 
 
 UFI = false;	/* Use "ForbiddenItems"/Item Check(s) */

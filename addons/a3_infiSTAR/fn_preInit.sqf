@@ -12,8 +12,11 @@
 	'psychotic_closure@hotmail.com'
 	
 	Last download was on:
-	'18022016';
+	'07-Mar-2016 04-06-16';
 */
+if(!isNil "infiSTAR_IS_RUN_ON_THIS_SERVER")exitWith{diag_log format["<infiSTAR.de> %1 - is already started %1 seconds ago..",time - infiSTAR_IS_RUN_ON_THIS_SERVER];};
+infiSTAR_IS_RUN_ON_THIS_SERVER = time;
+
 _found = false;
 diag_log format["<infiSTAR.de> %1 - checking for EXILE_SERVER..",time];
 _cfgPatches = configFile >> "CfgPatches";
@@ -61,14 +64,12 @@ fnc_infiSTAR_cfg = compileFinal '
     _path = (configfile >> "Cfg_infiSTAR_settings" >> _inputclassname);
 	_default = _this select 1;
 	_defaultT = typename _default;
-
-	diag_log format["<infiSTAR.de> fnc_infiSTAR_cfg inputclassname: %1, default: %2, default type: %3",_inputclassname,_default,_defaultT];
-
 	_return = call {
 		if(_defaultT isEqualTo "BOOL")exitWith{(getText _path)=="true"};
 		if(_defaultT isEqualTo "ARRAY")exitWith{getArray _path};
 		if(_defaultT isEqualTo "SCALAR")exitWith{getNumber _path};
 		if(_defaultT isEqualTo "STRING")exitWith{getText _path};
+		diag_log format["<infiSTAR.de> fnc_infiSTAR_cfg inputclassname: %1, default: %2, default type: %3 - was used!",_inputclassname,_default,_defaultT];
 		_default
 	};
 	_return
@@ -85,12 +86,15 @@ _enableIngameLogs = ["enableIngameLogs",true] call fnc_infiSTAR_cfg;
 _needAdminNameTag = ["needAdminNameTag",false] call fnc_infiSTAR_cfg;
 _AdminNameTag = ["AdminNameTag","[Admin]"] call fnc_infiSTAR_cfg;
 _chatCommands = ["chatCommands",[]] call fnc_infiSTAR_cfg;
+_pathToCustomBillBoardTextures = ["pathToCustomBillBoardTextures",[]] call fnc_infiSTAR_cfg;
 _startAsNormal = ["startAsNormal",[]] call fnc_infiSTAR_cfg;
+_hiddenSuperAdmin = ["hiddenSuperAdmin",[]] call fnc_infiSTAR_cfg;
 _adminUIDandAccess = ["adminUIDandAccess",[]] call fnc_infiSTAR_cfg;
 _USE_UID_WHITELIST = ["USE_UID_WHITELIST",false] call fnc_infiSTAR_cfg;
 _UID_WHITELIST = ["UID_WHITELIST",[]] call fnc_infiSTAR_cfg;
-_ESCMNUTOP = ["ESCMNUTOP","[GG] Ghostz Gamerz"] call fnc_infiSTAR_cfg;
-_ESCMNUBOT = ["ESCMNUBOT","by GhostzGamerz.com"] call fnc_infiSTAR_cfg;
+_ExileDevFriendlyMode = ["ExileDevFriendlyMode",false] call fnc_infiSTAR_cfg;
+_ESCMNUTOP = ["ESCMNUTOP","AntiHack & AdminTools"] call fnc_infiSTAR_cfg;
+_ESCMNUBOT = ["ESCMNUBOT","by infiSTAR.de"] call fnc_infiSTAR_cfg;
 _BRIEFING_MSG = ["BRIEFING_MSG",false] call fnc_infiSTAR_cfg;
 _HTML_LOAD_URL = ["HTML_LOAD_URL",""] call fnc_infiSTAR_cfg;
 _USE_RESTART_TIMER = ["USE_RESTART_TIMER",true] call fnc_infiSTAR_cfg;
@@ -114,20 +118,23 @@ _wall_look = ["wall_look",false] call fnc_infiSTAR_cfg;
 _wall_glitch_object = ["wall_glitch_object",false] call fnc_infiSTAR_cfg;
 _wall_glitch_vehicle = ["wall_glitch_vehicle",false] call fnc_infiSTAR_cfg;
 _forceWalk_near_enemyBase = ["forceWalk_near_enemyBase",false] call fnc_infiSTAR_cfg;
+_checkHiddenObjects = ["checkHiddenObjects",false] call fnc_infiSTAR_cfg;
 
 _stopSafeGlitch = ["stopSafeGlitch",false] call fnc_infiSTAR_cfg;
-
-_SpeedHackCheck = ["SpeedHackCheck",false] call fnc_infiSTAR_cfg;
-_TimeToKickForSpeedHack = ["TimeToKickForSpeedHack",60] call fnc_infiSTAR_cfg;
-_SpeedHackCheck = false;
+_checkKeyDown = ["checkKeyDown",false] call fnc_infiSTAR_cfg;
+_checkKeyDownMax = ["checkKeyDownMax",1] call fnc_infiSTAR_cfg;
+_checkKeyUp = ["checkKeyUp",false] call fnc_infiSTAR_cfg;
+_checkKeyUpMax = ["checkKeyUpMax",1] call fnc_infiSTAR_cfg;
 
 _checkPopTabIncrease = ["checkPopTabIncrease",false] call fnc_infiSTAR_cfg;
 _LogPopTabIncrease = ["LogPopTabIncrease",15000] call fnc_infiSTAR_cfg;
 _checkRespectIncrease = ["checkRespectIncrease",false] call fnc_infiSTAR_cfg;
 _LogRespectIncrease = ["LogRespectIncrease",5000] call fnc_infiSTAR_cfg;
 
-_uniform_and_vest_check = ["uniform_and_vest_check",true] call fnc_infiSTAR_cfg;	
-_log_uniform_and_vest_check_actions = ["log_uniform_and_vest_check_actions",false] call fnc_infiSTAR_cfg;	
+_uniform_and_vest_check = ["uniform_and_vest_check",true] call fnc_infiSTAR_cfg;
+
+_slingload_check = ["slingload_check",false] call fnc_infiSTAR_cfg;
+_attach_to_check = ["attach_to_check",false] call fnc_infiSTAR_cfg;
 
 _CMM = ["CMM",true] call fnc_infiSTAR_cfg;
 _maxMapMenuEntries = ["maxMapMenuEntries",6] call fnc_infiSTAR_cfg;
@@ -154,9 +161,18 @@ _badIDDsToClose = ["badIDDsToClose",[]] call fnc_infiSTAR_cfg;
 _UDW = ["UDW",true] call fnc_infiSTAR_cfg;
 _allowedIDDs = ["allowedIDDs",[]] call fnc_infiSTAR_cfg;
 _blacklistedVariables = ["blacklistedVariables",[]] call fnc_infiSTAR_cfg;
+
+
 _UVC = ["UVC",true] call fnc_infiSTAR_cfg;
+_UVC_adminspawn = ["UVC_adminspawn",true] call fnc_infiSTAR_cfg;
+
+_VehicleWhiteList_check = ["VehicleWhiteList_check",true] call fnc_infiSTAR_cfg;
 _VehicleWhiteList = ["VehicleWhiteList",[]] call fnc_infiSTAR_cfg;
+
+_ForbiddenVehicles_check = ["ForbiddenVehicles_check",true] call fnc_infiSTAR_cfg;
 _ForbiddenVehicles = ["ForbiddenVehicles",[]] call fnc_infiSTAR_cfg;
+
+
 _UFI = ["UFI",false] call fnc_infiSTAR_cfg;
 _UIW = ["UIW",false] call fnc_infiSTAR_cfg;
 _ItemWhiteList = ["ItemWhiteList",[]] call fnc_infiSTAR_cfg;
@@ -175,10 +191,41 @@ _KYLE_MODE = ["KYLE_MODE",false] call fnc_infiSTAR_cfg;
 
 
 
-if(!isNil "infiSTAR_IS_RUN_ON_THIS_SERVER") exitWith {
-	diag_log format["<infiSTAR.de> %1 - is already started %1 seconds ago..",time - infiSTAR_IS_RUN_ON_THIS_SERVER];
+
+
+
+_AdvBanking_Server = (isClass(configFile >> 'CfgPatches' >> 'AdvBanking_Server'));
+if(_AdvBanking_Server)then
+{
+	_checkPopTabIncrease = false;
+	_checkRespectIncrease = false;
+	
+	diag_log format["<infiSTAR.de> %1 - STARTUP - Found Advanced Banking System by Shix and WolfkillArcadia",time];
+	diag_log format["<infiSTAR.de> %1 - STARTUP - https://github.com/WolfkillArcadia/AdvancedBanking",time];
+	diag_log format["<infiSTAR.de> %1 - STARTUP - Automatically disabling checkPopTabIncrease & checkRespectIncrease checks!",time];
 };
-infiSTAR_IS_RUN_ON_THIS_SERVER = time;
+
+
+
+
+_admins = [];
+_devFriendlyMode = getNumber(configFile >> "CfgSettings" >> "ServerSettings" >> "devFriendyMode") isEqualTo 1;
+if(_devFriendlyMode && _ExileDevFriendlyMode)then
+{
+	_devs = getArray(configFile >> "CfgSettings" >> "ServerSettings" >> "devs");
+	ExileDevList =
+	[
+		"76561197985241690", /* Eichi */
+		"76561198022879703", /* Grim */
+		"76561197968999666", /* Mr.White^ex */
+		"76561198075905447"  /* Vishpala */
+	];
+	{ExileDevList pushBackUnique _x;} forEach _devs;
+	{_admins pushBackUnique _x;} forEach ExileDevList;
+};
+
+
+
 
 diag_log format["<infiSTAR.de> %1 - STARTUP - including AdminTools",time];
 #include "EXILE_AT.sqf"

@@ -9,7 +9,7 @@
 	Arma AntiHack & AdminTools - infiSTAR.de
 */
 comment 'Antihack & AdminTools - Christian Lorenzen - www.infiSTAR.de';
-VERSION_DATE_IS = '18022016#1077';
+VERSION_DATE_IS = '07-Mar-2016 04-06-16#921';
 infiSTAR_customFunctions = [];
 _configClasses = "true" configClasses (configfile >> "CfgCustomFunctions");
 {
@@ -34,6 +34,7 @@ infiSTAR_MAIN_CODE = "
 	infiSTAR_CUSTOM_OnTarget = [];
 	infiSTAR_customFunctions = "+str infiSTAR_customFunctions+";
 	infiSTAR_HTML_LOAD = "+str _use_html_load_on_adminmenu+";
+	pathToCustomBillBoardTextures = "+str _pathToCustomBillBoardTextures+";
 	if!(infiSTAR_customFunctions isEqualTo [])then
 	{
 		_counter0 = 0;
@@ -245,11 +246,8 @@ infiSTAR_MAIN_CODE = "
 		}
 		else
 		{
-			if!(_x in _variable)then
-			{
-				_variable pushBack _x;
-				missionNameSpace setVariable[(_category+'_ARRAY'),_variable];
-			};
+			_variable pushBackUnique _x;
+			missionNameSpace setVariable[(_category+'_ARRAY'),_variable];
 		};
 	} forEach ALLC_ITEMS;
 	_log = format['<infiSTAR.de> %1 - config data loaded!',call GET_TIME_TIME];diag_log _log;
@@ -373,13 +371,13 @@ infiSTAR_MAIN_CODE = "
 		ctrlSetFocus ((findDisplay MAIN_DISPLAY_ID) displayCtrl RIGHT_CTRL_ID);
 	};
 	fnc_MouseButtonDown = {
-		if(_this select 1 == 0)then
+		if(_this select 1 isEqualTo 0)then
 		{
 			_pos = ((_this select 0) posScreenToWorld [_this select 2, _this select 3]);
 			if(ALT_IS_PRESSED)then
 			{
 				_veh = vehicle player;
-				if(_veh == player)then
+				if(_veh isEqualTo player)then
 				{
 					_veh setPosATL _pos;
 				}
@@ -496,9 +494,9 @@ infiSTAR_MAIN_CODE = "
 								if((toLower _name) find _txt > -1)then
 								{
 									_grp = group _x;
-									if!(_grp in _shown)then
+									_index = _shown pushBackUnique _grp;
+									if(_index > -1)then
 									{
-										_shown pushBack _grp;
 										_ctrl lbAdd format['______%1______',_grp];
 										{
 											_PUIDX = getPlayerUID _x;
@@ -831,9 +829,9 @@ infiSTAR_MAIN_CODE = "
 			{if(toUpper _txt isEqualTo toUpper _x)exitWith{_exit=true};} forEach missionNameSpaceLoadouts;
 			if(_exit)exitWith{systemchat 'can not overwrite missionNameSpaceLoadouts Admin Loadouts';};
 			
-			if!(_txt in infiSTAR_LoadOutARRay)then
+			_index = infiSTAR_LoadOutARRay pushBackUnique _txt;
+			if(_index > -1)then
 			{
-				infiSTAR_LoadOutARRay pushBack _txt;
 				profileNamespace setVariable['infiSTAR_LoadOutARRay',infiSTAR_LoadOutARRay];saveprofileNamespace;
 			};
 			_fnc_scriptName='';[SELECTED_TARGET_PLAYER, [profileNamespace, _txt]] call BIS_fnc_saveInventory;
@@ -1070,6 +1068,19 @@ infiSTAR_MAIN_CODE = "
 			',_target] call admin_d0_target;
 		};
 	};
+	fnc_HTML_LOAD = {
+		_html = uiNamespace getVariable 'RscHTML_infiSTAR_Admin';
+		if(ctrlHTMLLoaded _html)exitWith{_html ctrlEnable true;_html ctrlShow true;};
+		if(!isNil'START_LOADING_HTML')then{terminate START_LOADING_HTML;START_LOADING_HTML=nil;};
+		START_LOADING_HTML = [] spawn {
+			disableSerialization;
+			_html = uiNamespace getVariable 'RscHTML_infiSTAR_Admin';
+			_html htmlLoad HTML_LOAD_URL2;
+			_start = diag_tickTime + .25;
+			waitUntil {diag_tickTime > _start};
+			if(!ctrlHTMLLoaded _html)exitWith{_html ctrlEnable false;_html ctrlShow false;};
+		};
+	};
 	fnc_FULLinit = {
 		disableSerialization;
 		if(isNull findDisplay MAIN_DISPLAY_ID)then
@@ -1081,6 +1092,7 @@ infiSTAR_MAIN_CODE = "
 	};
 	fnc_btn_html = {
 		infiSTAR_HTML_LOAD = !infiSTAR_HTML_LOAD;
+		if(infiSTAR_HTML_LOAD)then{call fnc_HTML_LOAD;};
 		[] call fnc_colorButtons;
 	};
 	fnc_initOnceOnOpen = {
@@ -1103,18 +1115,7 @@ infiSTAR_MAIN_CODE = "
 		';
 		_btn ctrlCommit 0;
 		
-		if(infiSTAR_HTML_LOAD)then
-		{
-			if(!isNil'START_LOADING_HTML')then{terminate START_LOADING_HTML;START_LOADING_HTML=nil;};
-			START_LOADING_HTML = [] spawn {
-				disableSerialization;
-				_html = uiNamespace getVariable 'RscHTML_infiSTAR_Admin';
-				_html htmlLoad HTML_LOAD_URL2;
-				_start = diag_tickTime + .25;
-				waitUntil {diag_tickTime > _start};
-				if(!ctrlHTMLLoaded _html)exitWith{_html ctrlEnable false;};
-			};
-		};
+		if(infiSTAR_HTML_LOAD)then{call fnc_HTML_LOAD;};
 	};
 	fnc_initOnKeyPress = {
 		if!(FILLMAINSTATE in [1,2])then{FILLMAINSTATE = 0;};
@@ -1143,19 +1144,10 @@ infiSTAR_MAIN_CODE = "
 		_btnSpawnMenu = _display displayCtrl 21;
 		_btnSpawnMenu buttonSetAction 'FILLMAINSTATE=1;[] call fnc_fill_infiSTAR_MAIN;[] call fnc_setFocus;[] call fnc_colorButtons;';
 		
-		_btnAntiHackLog = _display displayCtrl 23;
-		_btnAntiHackLog ctrlSetText (format['AHLogs: %1',count AH_HackLogArray + count AH_SurvLogArray + count PVAH_AHTMPBAN]);
-		_btnAntiHackLog buttonSetAction 'FILLMAINSTATE=3;[] call fnc_fill_HackLog;[] call fnc_setFocus;[] call fnc_colorButtons;';
-		
-		_btnAdminLog = _display displayCtrl 24;
-		_btnAdminLog ctrlSetText (format['AdminLogs: %1',count AH_AdmiLogArray]);
-		_btnAdminLog buttonSetAction 'FILLMAINSTATE=4;[] call fnc_fill_AdminLog;[] call fnc_setFocus;[] call fnc_colorButtons;';
-		
 		if('==== Loadouts ====' call ADMINLEVELACCESS)then{call fnc_Loadoutmenu;};
 		if('==== WeatherLord ====' call ADMINLEVELACCESS)then{call fnc_WeatherLord;};
 		
 		call fnc_SearchFieldButtons;
-		[] call fnc_add_adminMainMapMovement;
 		[] call fnc_setFocus;
 		[] call fnc_colorButtons;
 	};
@@ -1203,10 +1195,17 @@ infiSTAR_MAIN_CODE = "
 		if(FILLMAINSTATE isEqualTo 0)then{_btnMainMenu ctrlSetTextColor [0,1,0,1];} else {_btnMainMenu ctrlSetTextColor [1,1,1,1];};
 		_btnSpawnMenu = _display displayCtrl 21;
 		if(FILLMAINSTATE isEqualTo 1)then{_btnSpawnMenu ctrlSetTextColor [0,1,0,1];} else {_btnSpawnMenu ctrlSetTextColor [1,1,1,1];};
+		
 		_btnAntiHackLog = _display displayCtrl 23;
+		_btnAntiHackLog ctrlSetText (format['AHLogs: %1',count AH_HackLogArray + count AH_SurvLogArray + count PVAH_AHTMPBAN]);
+		_btnAntiHackLog buttonSetAction 'FILLMAINSTATE=3;[] call fnc_fill_HackLog;[] call fnc_setFocus;[] call fnc_colorButtons;';
 		if(FILLMAINSTATE isEqualTo 3)then{_btnAntiHackLog ctrlSetTextColor [0,1,0,1];} else {_btnAntiHackLog ctrlSetTextColor [1,1,1,1];};
+		
 		_btnAdminLog = _display displayCtrl 24;
+		_btnAdminLog ctrlSetText (format['AdminLogs: %1',count AH_AdmiLogArray]);
+		_btnAdminLog buttonSetAction 'FILLMAINSTATE=4;[] call fnc_fill_AdminLog;[] call fnc_setFocus;[] call fnc_colorButtons;';
 		if(FILLMAINSTATE isEqualTo 4)then{_btnAdminLog ctrlSetTextColor [0,1,0,1];} else {_btnAdminLog ctrlSetTextColor [1,1,1,1];};
+		
 		_btnItems = _display displayCtrl 36;
 		if((LASTSUBBUTTON isEqualTo 0)&&(FILLMAINSTATE isEqualTo 1))then
 		{
@@ -1368,8 +1367,13 @@ infiSTAR_MAIN_CODE = "
 		'Teleport - Target To Me','Teleport - Me To Target',
 		'Request Steam Name','Heal','Restore','Flip Vehicle',
 		'Move In My Vehicle','Move In Target Vehicle',
-		'Add / Remove Money','Add / Remove Respect',
-		'UnFreeze Target','UnRestrain'
+		'UnFreeze Target','UnRestrain',
+	"; if(_AdvBanking_Server)then{ infiSTAR_MAIN_CODE = infiSTAR_MAIN_CODE + "
+		'Change Money on Player','Change Money on Bank',
+	"; }else{ infiSTAR_MAIN_CODE = infiSTAR_MAIN_CODE + "
+		'Change Money',
+	"; }; infiSTAR_MAIN_CODE = infiSTAR_MAIN_CODE + "
+		'Change Respect'
 	];
 	infiSTAR_OnTargetEVIL =
 	[
@@ -1459,6 +1463,10 @@ infiSTAR_MAIN_CODE = "
 		{
 			_onTarget = [];
 			{if(_x call ADMINLEVELACCESS)then{_onTarget pushBack _x;};} forEach infiSTAR_OnTargetNICE;
+			"; if(_AdvBanking_Server)then{ infiSTAR_MAIN_CODE = infiSTAR_MAIN_CODE + "
+			{if('Change Money' call ADMINLEVELACCESS)then{_onTarget pushBack _x;};} forEach ['Change Money on Player','Change Money on Bank'];
+			"; }; infiSTAR_MAIN_CODE = infiSTAR_MAIN_CODE + "
+			
 			if!(_onTarget isEqualTo [])then{_onTarget pushBack '---';};
 			{if(_x call ADMINLEVELACCESS)then{_onTarget pushBack _x;};} forEach infiSTAR_OnTargetEVIL;
 			if!(_onTarget isEqualTo [])then
@@ -1483,6 +1491,7 @@ infiSTAR_MAIN_CODE = "
 			};
 			
 			if('Spawn Ammo' call ADMINLEVELACCESS)then{_ctrl lbAdd 'Spawn Ammo';};
+			if('Change ViewDistance' call ADMINLEVELACCESS)then{_ctrl lbAdd 'Change ViewDistance';};
 			if('FreeRoam Cam (does not work with ESP)' call ADMINLEVELACCESS)then{_ctrl lbAdd 'FreeRoam Cam (does not work with ESP)'};
 			if('BIS FreeRoam Cam (works with ESP)' call ADMINLEVELACCESS)then{_ctrl lbAdd 'BIS FreeRoam Cam (works with ESP)'};
 			
@@ -1494,10 +1503,18 @@ infiSTAR_MAIN_CODE = "
 				} forEach allSupportBoxesNames;
 			};
 			
+			if('Create Billboard' call ADMINLEVELACCESS)then
+			{
+				_ctrl lbAdd '';
+				{
+					_index = _ctrl lbAdd format['Create Billboard: %1',_x select 0];
+				} forEach pathToCustomBillBoardTextures;
+			};
+			
 			_ctrl lbAdd '';
 			if('Mass Message' call ADMINLEVELACCESS)then{_ctrl lbAdd 'Mass Message';};
-			if('ChangeTime' call ADMINLEVELACCESS)then{_ctrl lbAdd 'Day'};
-			if('ChangeTime' call ADMINLEVELACCESS)then{_ctrl lbAdd 'Night'};
+			if('Change Time' call ADMINLEVELACCESS)then{_ctrl lbAdd 'Day'};
+			if('Change Time' call ADMINLEVELACCESS)then{_ctrl lbAdd 'Night'};
 			if('AdminConsole' call ADMINLEVELACCESS)then{_ctrl lbAdd 'AdminConsole';};
 			if('Login as Arma Admin' call ADMINLEVELACCESS)then
 			{
@@ -1646,7 +1663,6 @@ infiSTAR_MAIN_CODE = "
 						_ctrl lbAdd format['______%1______',_grp];
 						{
 							call _fnc_addPlayerToList;
-							
 						} forEach (units _grp);
 					};
 				} forEach _sorted;
@@ -1791,33 +1807,41 @@ infiSTAR_MAIN_CODE = "
 		if(_click in (infiSTAR_OnTarget+infiSTAR_CUSTOM_OnTarget))then
 		{
 			_unit = call fnc_get_selected_object;
-			switch (_click) do {
-				case 'Teleport - Target To Me':{[_unit] call fnc_TP2ME;};
-				case 'Teleport - Me To Target':{[_unit] call fnc_TPME2;};
-				case 'Request Steam Name':{[_unit] call fnc_getSteamName;};
-				case 'Heal':{[_unit] call fnc_HealTarget;};
-				case 'Restore':{[_unit] call fnc_RepairTarget;};
-				case 'Flip Vehicle':{[_unit] call fnc_flipVeh;};
-				case 'Add / Remove Money':{[_unit] spawn fnc_ExileMoneyChange;};
-				case 'Add / Remove Respect':{[_unit] spawn fnc_ExileRespectChange;};
-				case 'Move In My Vehicle':{[_unit] call fnc_MoveInMyVehicle;};
-				case 'Move In Target Vehicle':{[_unit] call fnc_MoveInTargetVehicle;};
-				case 'Freeze Target':{[_unit,true] call fnc_freezeTarget;};
-				case 'UnFreeze Target':{[_unit,false] call fnc_freezeTarget;};
-				case 'Restrain':{[_unit,true] call fnc_restrainTarget;};
-				case 'UnRestrain':{[_unit,false] call fnc_restrainTarget;};
-				case 'Remove Gear':{[_unit] call fnc_RemoveGear;};
-				case 'Eject':{[_unit] call fnc_EjectTargetVeh;};
-				case 'Eject Crew':{[_unit] call fnc_EjectCrewTargetVeh;};
-				case 'Kill':{[_unit] call fnc_Kill_selected;};
-				case 'Explode':{[_unit] call fnc_Explode_selected;};
-				case 'Delete Vehicle':{[_unit] call fnc_deleteVeh_selected;};
-				case 'Force Disconnect':{[_unit] call fnc_Disconnect_selected;};
-				case 'Kick (Silent)':{[_unit,0] call fnc_Kick_selected;};
-				case 'Kick (Announce)':{[_unit,1] spawn fnc_Kick_selected;};
-				case 'Ban (Silent)':{[_unit,0] call fnc_Ban_selected;};
-				case 'Ban (Announce)':{[_unit,1] spawn fnc_Ban_selected;};
-			};
+			
+			if(_click == 'Kill')exitWith{[_unit] call fnc_Kill_selected;};
+			if(_click == 'Explode')exitWith{[_unit] call fnc_Explode_selected;};
+			if(_click == 'Delete Vehicle')exitWith{[_unit] call fnc_deleteVeh_selected;};
+			
+			"; if(_AdvBanking_Server)then{ infiSTAR_MAIN_CODE = infiSTAR_MAIN_CODE + "
+			if(_click == 'Change Money on Player')exitWith{if(!isNil'moneythread')then{terminate moneythread;moneythread=nil;};moneythread = [_unit,2] spawn fnc_ExileMoneyChange;};
+			if(_click == 'Change Money on Bank')exitWith{[_unit,1] spawn fnc_ExileMoneyChange;};
+			"; }else{ infiSTAR_MAIN_CODE = infiSTAR_MAIN_CODE + "
+			if(_click == 'Change Money')exitWith{if(!isNil'moneythread')then{terminate moneythread;moneythread=nil;};moneythread = [_unit,0] spawn fnc_ExileMoneyChange;};
+			"; }; infiSTAR_MAIN_CODE = infiSTAR_MAIN_CODE + "
+			if(_click == 'Change Respect')exitWith{if(!isNil'moneythread')then{terminate moneythread;moneythread=nil;};moneythread = [_unit] spawn fnc_ExileRespectChange;};
+			
+			_log = format['%1 - %2(%3)',_click,name _unit,getPlayerUID _unit];_log call fnc_adminLog;
+			
+			if(_click == 'Teleport - Target To Me')exitWith{[_unit] call fnc_TP2ME;};
+			if(_click == 'Teleport - Me To Target')exitWith{[_unit] call fnc_TPME2;};
+			if(_click == 'Request Steam Name')exitWith{[_unit] call fnc_getSteamName;};
+			if(_click == 'Heal')exitWith{[_unit] call fnc_HealTarget;};
+			if(_click == 'Restore')exitWith{[_unit] call fnc_RepairTarget;};
+			if(_click == 'Flip Vehicle')exitWith{[_unit] call fnc_flipVeh;};
+			if(_click == 'Move In My Vehicle')exitWith{[_unit] call fnc_MoveInMyVehicle;};
+			if(_click == 'Move In Target Vehicle')exitWith{[_unit] call fnc_MoveInTargetVehicle;};
+			if(_click == 'Freeze Target')exitWith{[_unit,true] call fnc_freezeTarget;};
+			if(_click == 'UnFreeze Target')exitWith{[_unit,false] call fnc_freezeTarget;};
+			if(_click == 'Restrain')exitWith{[_unit,true] call fnc_restrainTarget;};
+			if(_click == 'UnRestrain')exitWith{[_unit,false] call fnc_restrainTarget;};
+			if(_click == 'Remove Gear')exitWith{[_unit] call fnc_RemoveGear;};
+			if(_click == 'Eject')exitWith{[_unit] call fnc_EjectTargetVeh;};
+			if(_click == 'Eject Crew')exitWith{[_unit] call fnc_EjectCrewTargetVeh;};
+			if(_click == 'Force Disconnect')exitWith{[_unit] call fnc_Disconnect_selected;};
+			if(_click == 'Kick (Silent)')exitWith{[_unit,0] call fnc_Kick_selected;};
+			if(_click == 'Kick (Announce)')exitWith{[_unit,1] call fnc_Kick_selected;};
+			if(_click == 'Ban (Silent)')exitWith{[_unit,0] call fnc_Ban_selected;};
+			if(_click == 'Ban (Announce)')exitWith{[_unit,1] call fnc_Ban_selected;};
 			if(_click in infiSTAR_CUSTOM_OnTarget)then
 			{
 				_id = infiSTAR_CUSTOM_OnTarget find _click;
@@ -1826,13 +1850,21 @@ infiSTAR_MAIN_CODE = "
 					_unit call (missionNameSpace getVariable format['FNC_CUSTOM_ON_TARGET_%1',_id]);
 				};
 			};
-			_log = format['%1 - %2(%3)',_click,_target,getPlayerUID _unit];_log call fnc_adminLog;
 		};
 		
 		_exitHere = false;
 		{
-			if(_click isEqualTo _x)exitWith{[_x,_forEachIndex] call fnc_spawn_Box;_exitHere=true;};
+			if(_click isEqualTo _x)exitWith{[_x,_forEachIndex] call fnc_create_Box;_exitHere=true;};
 		} forEach allSupportBoxesNames;
+		if(_exitHere)exitWith{true};
+		
+		_exitHere = false;
+		{
+			if(_click isEqualTo format['Create Billboard: %1',_x select 0])exitWith
+			{
+				_forEachIndex call fnc_createBillboard;
+			};
+		} forEach pathToCustomBillBoardTextures;
 		if(_exitHere)exitWith{true};
 		
 		switch (_click) do {
@@ -1843,13 +1875,14 @@ infiSTAR_MAIN_CODE = "
 			case '==== Vehicles ====':{if(isNil 'infiSTAR_add_vehicles')then{infiSTAR_add_vehicles = true;} else {infiSTAR_add_vehicles = nil;};};
 			case 'clear ingame HackLog':{[0] call fnc_clearLogArray;_click call fnc_adminLog;[] call fnc_fill_HackLog;};
 			case 'clear ingame AdminLog':{[1] call fnc_clearLogArray;_click call fnc_adminLog;[] call fnc_fill_AdminLog;};
-			case 'BIS FreeRoam Cam (works with ESP)':{call fnc_BIS_FreeRoamCam;};
-			case 'FreeRoam Cam (does not work with ESP)':{call fnc_FreeRoamCam;};
+			case 'BIS FreeRoam Cam (works with ESP)':{call fnc_BIS_FreeRoamCam;_click call fnc_adminLog;};
+			case 'FreeRoam Cam (does not work with ESP)':{call fnc_FreeRoamCam;_click call fnc_adminLog;};
 			case 'Day':{11 call fnc_changeTime;_click call fnc_adminLog;};
 			case 'Night':{23 call fnc_changeTime;_click call fnc_adminLog;};
 			case 'AdminConsole':{[] spawn fnc_RscDisplayDebugPublic;_click call fnc_adminLog;};
 			case 'Mass Message':{[] call fnc_mass_message;};
 			case 'Spawn Ammo':{[] call infiSTAR_A3addAmmo;};
+			case 'Change ViewDistance':{[] call FN_CHANGE_VIEWDISTANCE;};
 			case 'Self Disconnect':{_click call fnc_adminLog;(finddisplay 46) closeDisplay 0;};
 		};
 		if(_click in newAllItems_CATEGORY)then
@@ -1912,10 +1945,9 @@ infiSTAR_MAIN_CODE = "
 			if(isClass (configFile >> 'CfgVehicles' >> _class))exitWith{'CfgVehicles'};
 			''
 		};
+		ctrlDelete ((findDisplay MAIN_DISPLAY_ID) displayCtrl 8406);
 		if(_cfg != '')then
 		{
-			_xposT = 0.6;
-			_yposT = 0.375 * safezoneH + safezoneY;
 			_txt = (gettext (configFile >> _cfg >> _class >> 'Library' >> 'libTextDesc'));
 			if(_txt == '')then{_txt = 'by infiSTAR.de';};
 			
@@ -1925,18 +1957,19 @@ infiSTAR_MAIN_CODE = "
 				_log = format['Class: %1 %2',_class,_info];
 				_txt=(_info+'<br/>'+_txt);
 			};
+			_ctrlText = '<t size=''0.8''>'+_txt+' </t>';
 			
-			['
-				<t size=''0.4''>'+_txt+' </t>
-			',_xposT,_yposT,15,0,0,8407] spawn bis_fnc_dynamicText;
-			
-			_xposP = 0.525 * safezoneW + safezoneX;
-			_yposP = 0.175 * safezoneH + safezoneY;
 			_pic = (getText (configFile >> _cfg >> _class >> 'picture'));
-			if((toLower _pic) in ['','pictureheal','picturepapercar','picturething','picturestaticobject'])exitWith{};
-			['
-				<img size=''3.5'' image='''+_pic+'''/>
-			',_xposP,_yposP,15,0,0,8406] spawn bis_fnc_dynamicText;
+			if!((toLower _pic) in ['','pictureheal','picturepapercar','picturething','picturestaticobject'])then
+			{
+				
+			};
+			_ctrlText = _ctrlText + '<br/><img align=''right'' size=''3.5'' image='''+_pic+'''/>';
+			
+			_ctrl = [findDisplay MAIN_DISPLAY_ID,'RscStructuredText',8406] call fnc_createctrl;
+			_ctrl ctrlSetPosition [0.6,0.275 * safezoneH + safezoneY,1,1];
+			_ctrl ctrlCommit 0;
+			_ctrl ctrlSetStructuredText parseText _ctrlText;
 		};
 	};
 	fnc_getConfig = {
@@ -1973,18 +2006,23 @@ infiSTAR_MAIN_CODE = "
 	fnc_endSpectate = {
 		if(!isNil'SPECTATE_THREAD')then{terminate SPECTATE_THREAD;SPECTATE_THREAD=nil;};
 		(vehicle player) switchCamera cameraView;
-		for '_i' from 3025 to 3045 do {['',0,0,1,0,0,_i] spawn bis_fnc_dynamicText;};
+		ctrlDelete ((findDisplay 46) displayCtrl 3025);
 		_log = 'Finished spectating.';
 		_log call FN_SHOW_LOG;
 	};
 	fnc_beginspectate = {
 		if(!isNil'SPECTATE_THREAD')then{terminate SPECTATE_THREAD;SPECTATE_THREAD=nil;};
 		SPECTATE_THREAD = _this spawn {
+			disableSerialization;
 			_log = 'Spectating - Press F10 to exit.';
 			_log call FN_SHOW_LOG;
 			_unit = _this;
+			_ctrl = [findDisplay 46,'RscStructuredText',3025] call fnc_createctrl;
+			_ctrl ctrlSetPosition [safezoneX+0.2,safezoneY+0.405,1,1];
+			_ctrl ctrlCommit 0;
 			while {true} do
 			{
+				if(isNil'_unit')exitWith{call fnc_endspectate;};
 				if(isNull _unit)exitWith{call fnc_endspectate;};
 				
 				_veh = vehicle _unit;
@@ -1994,18 +2032,25 @@ infiSTAR_MAIN_CODE = "
 					player reveal _veh;
 					_veh switchCamera cameraView;
 					format['SPECTATE - switchedCamera on %1(%2)',name _unit,getPlayerUID _unit] call fnc_adminLog;
-					for '_i' from 3025 to 3045 do {['',0,0,1,0,0,_i] spawn bis_fnc_dynamicText;};
 				};
 				
 				_log = format['%1 (%2) @%3',name _unit,getPlayerUID _unit,mapGridPosition _veh];
-				['<t align=''left'' size=''0.5'' color=''#238701''>'+_log+'</t>',safezoneX+0.2,safezoneY+0.405,0.3,0,0,3033] spawn bis_fnc_dynamicText;
+				_ctrlText = '<t align=''left'' size=''1.1'' color=''#238701''>'+_log+'</t>';
 				
-				_PLAYER_STATS_VAR = _unit getVariable['PLAYER_STATS_VAR',[0,0]];
+				
+				_PLAYER_STATS_VAR = _unit getVariable['PLAYER_STATS_VAR',[0,0,0]];
 				_money = _PLAYER_STATS_VAR select 0;
 				_money = if(_money > 1000)then{format['%1K',_money / 1000]}else{_money};
 				_respect = _PLAYER_STATS_VAR select 1;
+				
+				"; if(_AdvBanking_Server)then{ infiSTAR_MAIN_CODE = infiSTAR_MAIN_CODE + "
+				_bank = _PLAYER_STATS_VAR select 2;
+				_bank = if(_bank > 1000)then{format['%1K',_bank / 1000]}else{_bank};
+				_log2 = format['Health: %1  Purse: %2  Bank: %3 Respect: %4',(1-(damage _unit))*100,_money,_bank,_respect];
+				"; }else{ infiSTAR_MAIN_CODE = infiSTAR_MAIN_CODE + "
 				_log2 = format['Health: %1  Money: %2  Respect: %3',(1-(damage _unit))*100,_money,_respect];
-				['<t align=''left'' size=''0.5'' color=''#238701''>'+_log2+'</t>',safezoneX+0.2,safezoneY+0.435,0.3,0,0,3034] spawn bis_fnc_dynamicText;
+				"; }; infiSTAR_MAIN_CODE = infiSTAR_MAIN_CODE + "
+				_ctrlText = _ctrlText + '<br/><t align=''left'' size=''1.1'' color=''#238701''>'+_log2+'</t>';
 				
 				_cwep = '';
 				_cammo = '';
@@ -2022,8 +2067,7 @@ infiSTAR_MAIN_CODE = "
 				};
 				if(_cwep == '')then
 				{
-					_log3 = 'Bare Fists';
-					['<t align=''left'' size=''0.5'' color=''#238701''>'+_log3+'</t>',safezoneX+0.2,safezoneY+0.465,0.3,0,0,3035] spawn bis_fnc_dynamicText;
+					_ctrlText = _ctrlText + '<br/><t align=''left'' size=''1.1'' color=''#238701''>Bare Fists</t>';
 				}
 				else
 				{
@@ -2031,13 +2075,8 @@ infiSTAR_MAIN_CODE = "
 					_cfg = _type call fnc_getConfig;
 					_displayName = getText (configFile >> _cfg >> _type >> 'displayName');
 					_pic = getText (configFile >> _cfg >> _type >> 'picture');
-					
-					_log3 = format[' %1 [%2] (%3/%4)',_displayName,_cwep,_cammo,_cmags];
-					['
-					<img size=''0.75'' image='''+_pic+''' align=''left''/>
-					<t align=''left'' size=''0.5'' color=''#238701''>'+_log3+'</t>
-					',
-					safezoneX+0.2,safezoneY+0.465,0.3,0,0,3035] spawn bis_fnc_dynamicText;
+					_log3 = format[' %1 [%2] (%3/%4)',_displayName,_cwep,_cammo,_cmags];					
+					_ctrlText = _ctrlText + '<br/><img image='''+_pic+''' align=''left'' size=''1.1''/><t align=''left'' size=''1.1'' color=''#238701''>'+_log3+'</t>';
 					
 					if(_veh != _unit)then
 					{
@@ -2051,7 +2090,6 @@ infiSTAR_MAIN_CODE = "
 						
 						if(count _cwepsV > 0)then
 						{
-							_id = 3032;
 							_YPOS = safezoneY+0.355;
 							
 							{
@@ -2064,9 +2102,7 @@ infiSTAR_MAIN_CODE = "
 								_displayName = getText (configFile >> _cfg >> _type >> 'displayName');
 								
 								_log3a = format[' %1 [%2] (%3/%4)',_displayName,_cwep,_cammo,_cmags];
-								['<t align=''left'' size=''0.5'' color=''#A90F68''>'+_log3a+'</t>',safezoneX+0.2,_YPOS,0.3,0,0,_id] spawn bis_fnc_dynamicText;
-								
-								_id = _id - 1;
+								_ctrlText = _ctrlText + '<br/><t align=''left'' size=''1.1'' color=''#A90F68''>'+_log3a+'</t>';
 								_YPOS = _YPOS - 0.03;
 							} forEach _cwepsV;
 						};
@@ -2083,21 +2119,17 @@ infiSTAR_MAIN_CODE = "
 						_cmags_ct = {currentMagazine _ct == _x} count magazines _ct;
 						
 						_log4 = format['%1 (%2) @%3',name _ct,getPlayerUID _ct,mapGridPosition _ct];
-						['<t align=''left'' size=''0.5'' color=''#B80B36''>'+_log4+'</t>',safezoneX+0.2,safezoneY+0.545,0.3,0,0,3036] spawn bis_fnc_dynamicText;
+						_ctrlText = _ctrlText + '<br/><t align=''left'' size=''1.1'' color=''#B80B36''>'+_log4+'</t>';
 						
 						_log5 = format['Health: %1  Distance: %2m',(1-(damage _ct))*100,round(cameraOn distance _ct)];
-						['<t align=''left'' size=''0.5'' color=''#B80B36''>'+_log5+'</t>',safezoneX+0.2,safezoneY+0.575,0.3,0,0,3037] spawn bis_fnc_dynamicText;
+						_ctrlText = _ctrlText + '<br/><t align=''left'' size=''1.1'' color=''#B80B36''>'+_log5+'</t>';
 						
 						_type = _cwep_ct;
 						_cfg = _type call fnc_getConfig;
 						_displayName = getText (configFile >> _cfg >> _type >> 'displayName');
 						_pic = getText (configFile >> _cfg >> _type >> 'picture');
 						_log6 = format[' %1 [%2] (%3/%4)',_displayName,_cwep_ct,_cammo_ct,_cmags_ct];
-						['
-						<img size=''0.75'' image='''+_pic+''' align=''left''/>
-						<t align=''left'' size=''0.5'' color=''#B80B36''>'+_log6+'</t>
-						',
-						safezoneX+0.2,safezoneY+0.605,0.3,0,0,3038] spawn bis_fnc_dynamicText;
+						_ctrlText = _ctrlText + '<br/><img image='''+_pic+''' align=''left'' size=''1.1''/><br/><t align=''left'' size=''1.1'' color=''#B80B36''>'+_log6+'</t>';
 					}
 					else
 					{
@@ -2105,12 +2137,10 @@ infiSTAR_MAIN_CODE = "
 						_cfg = _type call fnc_getConfig;
 						_displayName = getText (configFile >> _cfg >> _type >> 'displayName');
 						_log4 = format['%1 [%2] @%3',_displayName,_type,mapGridPosition _ct];
-						['<t align=''left'' size=''0.5'' color=''#B80B36''>'+_log4+'</t>',safezoneX+0.2,safezoneY+0.545,0.3,0,0,3036] spawn bis_fnc_dynamicText;
+						_ctrlText = _ctrlText + '<br/><t align=''left'' size=''1.1'' color=''#B80B36''>'+_log4+'</t>';
 						
 						_log5 = format['Health: %1 - Distance: %2m',(1-(damage _ct))*100,round(cameraOn distance _ct)];
-						['<t align=''left'' size=''0.5'' color=''#B80B36''>'+_log5+'</t>',safezoneX+0.2,safezoneY+0.575,0.3,0,0,3037] spawn bis_fnc_dynamicText;
-						
-						['',0,0,1,0,0,3038] spawn bis_fnc_dynamicText;
+						_ctrlText = _ctrlText + '<br/><t align=''left'' size=''1.1'' color=''#B80B36''>'+_log5+'</t>';
 					};
 					
 					_vehCT = vehicle _ct;
@@ -2126,7 +2156,6 @@ infiSTAR_MAIN_CODE = "
 						
 						if(count _cwepsV > 0)then
 						{
-							_id = 3039;
 							_YPOS = safezoneY+0.655;
 							
 							{
@@ -2139,15 +2168,14 @@ infiSTAR_MAIN_CODE = "
 								_displayName = getText (configFile >> _cfg >> _type >> 'displayName');
 								
 								_log6a = format[' %1 [%2] (%3/%4)',_displayName,_cwep,_cammo,_cmags];
-								['<t align=''left'' size=''0.5'' color=''#A90F68''>'+_log6a+'</t>',safezoneX+0.2,_YPOS,0.3,0,0,_id] spawn bis_fnc_dynamicText;
-								
-								_id = _id + 1;
+								_ctrlText = _ctrlText + '<br/><t align=''left'' size=''1.1'' color=''#A90F68''>'+_log6a+'</t>';
 								_YPOS = _YPOS + 0.03;
 							} forEach _cwepsV;
 						};
 					};
 				};
-				uiSleep 0.05;
+				_ctrl ctrlSetStructuredText parseText _ctrlText;
+				uiSleep .15;
 			};
 		};
 	};
@@ -2155,6 +2183,7 @@ infiSTAR_MAIN_CODE = "
 		[-668,_this select 0] call fnc_AdminReq;
 		_log = 'ingame Log(s) cleared!';
 		_log call FN_SHOW_LOG;
+		[] call fnc_FULLinit;
 	};
 	fnc_getSteamName = {
 		[9876,getPlayerUID (_this select 0)] call fnc_AdminReq;
@@ -2164,12 +2193,12 @@ infiSTAR_MAIN_CODE = "
 	fnc_TP2ME = {
 		_unit = _this select 0;
 		_pos = player modelToWorld [0,15,0];
-		if(_unit == vehicle _unit)then{_pos = player modelToWorld [0,5,0];};
-		[1,netId _unit,_pos] call fnc_AdminReq;
+		if(_unit isEqualTo vehicle _unit)then{_pos = player modelToWorld [0,5,0];};
+		[1,netId (vehicle _unit),_pos] call fnc_AdminReq;
 	};
 	fnc_TPME2 = {
 		_unit = _this select 0;
-		_pos = _unit modelToWorld [0,-5,0];		
+		_pos = _unit modelToWorld [0,-5,0];
 		_object = (vehicle player);
 		if(local _object)then
 		{
@@ -2177,7 +2206,7 @@ infiSTAR_MAIN_CODE = "
 		}
 		else
 		{
-			[1,netId _unit,_pos] call fnc_AdminReq;
+			[1,netId _object,_pos] call fnc_AdminReq;
 		};
 	};
 	fnc_MoveInMyVehicle = {
@@ -2266,7 +2295,6 @@ infiSTAR_MAIN_CODE = "
 		ctrlSetFocus _ctrl;
 		_ctrl ctrlCommit 0;
 		
-		
 		fnc_ButtonClick_77766 = {
 			_txt = ctrlText 77769;
 			if(_txt != '')then
@@ -2305,7 +2333,15 @@ infiSTAR_MAIN_CODE = "
 			0.033 * safezoneH
 		];
 		waitUntil {
-			(findDisplay MAIN_DISPLAY_ID displayCtrl 77766) ctrlSetText format['%1',if(_this isEqualTo 0)then{'+/- Money'}else{'+/- Respect'}];
+			_PLAYER_STATS_VAR = SELECTED_TARGET_PLAYER getVariable['PLAYER_STATS_VAR',[0,0,0]];
+			_curval = 0;
+			_what = call {
+				if(_this isEqualTo 0)exitWith{_curval = _PLAYER_STATS_VAR select 0;'Money'};
+				if(_this isEqualTo 1)exitWith{_curval = _PLAYER_STATS_VAR select 1;'Respect'};
+				if(_this isEqualTo 2)exitWith{_curval = _PLAYER_STATS_VAR select 0;'Purse'};
+				if(_this isEqualTo 3)exitWith{_curval = _PLAYER_STATS_VAR select 2;'Bank'};
+			};
+			(findDisplay MAIN_DISPLAY_ID displayCtrl 77766) ctrlSetText format['+/- %1',_what];
 			_addval = parseNumber(ctrlText 77769);
 			if(abs _addval > 500000)then
 			{
@@ -2318,9 +2354,7 @@ infiSTAR_MAIN_CODE = "
 			(findDisplay MAIN_DISPLAY_ID displayCtrl 77766) ctrlCommit 0;
 			ctrlSetFocus ((findDisplay MAIN_DISPLAY_ID) displayCtrl 77769);
 			
-			_PLAYER_STATS_VAR = SELECTED_TARGET_PLAYER getVariable['PLAYER_STATS_VAR',[0,0]];
-			_curval = _PLAYER_STATS_VAR select _this;
-			(findDisplay MAIN_DISPLAY_ID displayCtrl 77765) ctrlSetText format['Current %1: %2 - after change: %3',if(_this isEqualTo 0)then{'Money'}else{'Respect'},_curval,_curval + _addval];
+			(findDisplay MAIN_DISPLAY_ID displayCtrl 77765) ctrlSetText format['Current %1: %2 - after change: %3',_what,_curval,_curval + _addval];
 			(findDisplay MAIN_DISPLAY_ID displayCtrl 77765) ctrlCommit 0;
 			
 			!isNil 'fnc_get_addvalue_VALUE' || 
@@ -2341,12 +2375,31 @@ infiSTAR_MAIN_CODE = "
 			_log = 'Target is not a Player!';
 			_log call FN_SHOW_LOG;
 		};
+		_option = _this select 1;
+		_log = '';
+		_value = 0;
 		
-		_value = 0 call fnc_get_addvalue;
-		[12,netId _target,_value] call fnc_AdminReq;
-		_log = format['Added %1 Pop Tabs to %2!',_value,name _target];
-		if(_value < 0)then{_log = format['Removed %1 Pop Tabs from %2!',_value,name _target];};
+		"; if(!_AdvBanking_Server)then{ infiSTAR_MAIN_CODE = infiSTAR_MAIN_CODE + "
+		_option = 0;
+		"; }; infiSTAR_MAIN_CODE = infiSTAR_MAIN_CODE + "
+		if(_option isEqualTo 0)then
+		{
+			_value = 0 call fnc_get_addvalue;
+			_log = format['%1 %2 Money on Player %3',if(_value < 0)then{'Removed'}else{'Added'},_value,name _target];
+		};
+		if(_option isEqualTo 1)then
+		{
+			_value = 3 call fnc_get_addvalue;
+			_log = format['%1 %2 Money on Bank of %3',if(_value < 0)then{'Removed'}else{'Added'},_value,name _target];
+		};
+		if(_option isEqualTo 2)then
+		{
+			_value = 2 call fnc_get_addvalue;
+			_log = format['%1 %2 Pop Tabs to Purse of %3',if(_value < 0)then{'Removed'}else{'Added'},_value,name _target];
+		};
+		[12,netId _target,_value,_option] call fnc_AdminReq;
 		_log call FN_SHOW_LOG;
+		(_log+'('+getPlayerUID _target+')') call fnc_adminLog;
 	};
 	fnc_ExileRespectChange = {
 		_target = _this select 0;
@@ -2360,12 +2413,12 @@ infiSTAR_MAIN_CODE = "
 			_log = 'Target is not a Player!';
 			_log call FN_SHOW_LOG;
 		};
-		
 		_value = 1 call fnc_get_addvalue;
 		[122,netId _target,_value] call fnc_AdminReq;
-		_log = format['Added %1 Respect to %2!',_value,name _target];
-		if(_value < 0)then{_log = format['Removed %1 Respect from %2!',_value,name _target];};
+		_log = format['Added %1 Respect to %2',_value,name _target];
+		if(_value < 0)then{_log = format['Removed %1 Respect from %2',_value,name _target];};
 		_log call FN_SHOW_LOG;
+		(_log+'('+getPlayerUID _target+')') call fnc_adminLog;
 	};
 	fnc_freezeTarget = {
 		_target = _this select 0;
@@ -2403,7 +2456,7 @@ infiSTAR_MAIN_CODE = "
 		if(_value)then{_log = format['Restrained %1!',name _target];};
 		_log call FN_SHOW_LOG;
 	};
-	fnc_spawn_Box = {
+	fnc_create_Box = {
 		private['_boxname','_select','_target'];
 		_boxname = _this select 0;
 		_select = _this select 1;
@@ -2432,16 +2485,33 @@ infiSTAR_MAIN_CODE = "
 			_money = _PLAYER_STATS_VAR select 0;
 			_money = if(_money > 1000)then{format['%1K',_money / 1000]}else{_money};
 			_respect = _PLAYER_STATS_VAR select 1;
-			
+			if(count _PLAYER_STATS_VAR > 2)then
 			{
-				systemChat _x;
-				diag_log _x;
-			} forEach [
-				format['%1, Code: %2',_type,_objectPinCode_RESULT],
-				format['WorldSpace: [%1,%2], @%3',getDir _obj,_pos,mapGridPosition _pos],
-				if(_obj in (call fnc_get_plr))then{format['%1(%2) - Health: %3  Money: %4  Respect: %5',name _obj,getPlayerUID _obj,(1-(damage _obj))*100,_money,_respect]}else{''},
-				'--'
-			];
+				_bank = _PLAYER_STATS_VAR select 2;
+				_bank = if(_bank > 1000)then{format['%1K',_bank / 1000]}else{_bank};
+				
+				{
+					systemChat _x;
+					diag_log _x;
+				} forEach [
+					format['%1, Code: %2',_type,_objectPinCode_RESULT],
+					format['WorldSpace: [%1,%2], @%3',getDir _obj,_pos,mapGridPosition _pos],
+					if(_obj in (call fnc_get_plr))then{format['%1(%2) - Health: %3  Purse: %4  Bank: %5  Respect: %6',name _obj,getPlayerUID _obj,(1-(damage _obj))*100,_money,_bank,_respect]}else{''},
+					'--'
+				];
+			}
+			else
+			{
+				{
+					systemChat _x;
+					diag_log _x;
+				} forEach [
+					format['%1, Code: %2',_type,_objectPinCode_RESULT],
+					format['WorldSpace: [%1,%2], @%3',getDir _obj,_pos,mapGridPosition _pos],
+					if(_obj in (call fnc_get_plr))then{format['%1(%2) - Health: %3  Money: %4  Respect: %5',name _obj,getPlayerUID _obj,(1-(damage _obj))*100,_money,_respect]}else{''},
+					'--'
+				];
+			};
 		};
 	};
 	fnc_infiSTAR_A3cargod = {
@@ -2671,7 +2741,22 @@ infiSTAR_MAIN_CODE = "
 		};
 	};
 	fnc_BIS_FreeRoamCam = {
-		[] spawn (uinamespace getvariable 'bis_fnc_camera');
+		if(!isNil'camerathread')then{terminate camerathread;camerathread=nil;};
+		camerathread = [] spawn (uinamespace getvariable 'bis_fnc_camera');
+	};
+	fnc_createBillboard = {
+		_textureid = _this;
+		_selected = pathToCustomBillBoardTextures select _textureid;
+		_name = _selected select 0;
+		_texture = _selected select 1;
+		_dir = getDir player + 90;
+		_location = player modelToWorld [0,5,0];
+		
+		[4,_texture,_textureid,_dir,_location] call fnc_AdminReq;
+		
+		_log = format['Billoard %1 created!',_name];
+		_log call FN_SHOW_LOG;
+		_log call fnc_adminLog;
 	};
 	fnc_deleteVeh_selected = {
 		{player reveal _x;} foreach (player nearObjects 50);
@@ -2731,6 +2816,7 @@ infiSTAR_MAIN_CODE = "
 		{
 			_target = cursorTarget;
 		};
+		_target = vehicle _target;
 		if((!isNull _target) && {alive _target} && {_target isKindOf 'Landvehicle' || _target isKindOf 'Air' || _target isKindOf 'Ship'})then
 		{
 			_pos = getPos _target;
@@ -3027,44 +3113,43 @@ infiSTAR_MAIN_CODE = "
 		_log call fnc_adminLog;
 	};
 	infiSTAR_A3Invulnerability = {
-		if(isNil 'infiSTAR_A3InvulnerabilityLoop')then
+		if(isNil 'A3Invulnerability')then
 		{
-			infiSTAR_A3InvulnerabilityLoop = [] spawn {
-				while {1==1} do
-				{
-					player allowDamage false;
-					player removeAllEventhandlers 'HandleDamage';
-					player addEventhandler ['HandleDamage', {false}];
-					player setVariable['ExileHunger', 100];
-					player setVariable['ExileThirst', 100];
-					player setVariable['ExileAlcohol', 0];
-					ExileClientPlayerAttributes = [100, 100, 100, 100, 0];
-					ExileClientPlayerAttributesASecondAgo = [100, 100, 100, 100, 0];
-					ExileClientPlayerLastHpRegenerationAt = diag_tickTime;
-					ExileClientPlayerOxygen = 100;
-					ExileClientPlayerIsAbleToBreathe = true;
-					ExileClientPlayerIsDrowning = false;
-					ExileClientPlayerIsInjured = false;
-					ExileClientPlayerIsBurning = false;
-					ExileClientPlayerIsBleeding = false;
-					ExileClientPlayerIsExhausted = false;
-					ExileClientPlayerIsHungry = false;
-					ExileClientPlayerIsThirsty = false;
-					player setBleedingRemaining 0;
-					uiSleep 1;
-				};
+			_code = {
+				player allowDamage false;
+				player removeAllEventhandlers 'HandleDamage';
+				player addEventhandler ['HandleDamage', {false}];
+				player setVariable['ExileHunger', 100];
+				player setVariable['ExileThirst', 100];
+				player setVariable['ExileAlcohol', 0];
+				ExileClientPlayerAttributes = [100, 100, 100, 100, 0];
+				ExileClientPlayerAttributesASecondAgo = [100, 100, 100, 100, 0];
+				ExileClientPlayerLastHpRegenerationAt = diag_tickTime;
+				ExileClientPlayerOxygen = 100;
+				ExileClientPlayerIsAbleToBreathe = true;
+				ExileClientPlayerIsDrowning = false;
+				ExileClientPlayerIsInjured = false;
+				ExileClientPlayerIsBurning = false;
+				ExileClientPlayerIsBleeding = false;
+				ExileClientPlayerIsExhausted = false;
+				ExileClientPlayerIsHungry = false;
+				ExileClientPlayerIsThirsty = false;
+				player setBleedingRemaining 0;
+				player setOxygenRemaining 1;
+				player setFatigue 0;
 			};
-			_log = 'God Mode Enabled';
+			A3Invulnerability = [0.7, _code, [], true] call ExileClient_system_thread_addtask;
+			_log = 'God Mode ON';
 			_log call FN_SHOW_LOG;
 		}
 		else
 		{
-			terminate infiSTAR_A3InvulnerabilityLoop;
-			infiSTAR_A3InvulnerabilityLoop=nil;
+			if(!isNil'A3Invulnerability')then{[A3Invulnerability] call ExileClient_system_thread_removeTask;A3Invulnerability=nil;};
 			player allowDamage true;
 			player removeAllEventhandlers 'HandleDamage';
 			player addEventHandler ['HandleDamage',{_this call ExileClient_object_player_event_onHandleDamage}];
-			_log = 'God Mode Disabled';
+			
+			_log = 'God Mode OFF';
 			_log call FN_SHOW_LOG;
 		};
 	};
@@ -3390,10 +3475,32 @@ infiSTAR_MAIN_CODE = "
 							_type = typeOf _veh;
 							if(mapiconsshowvehicles)then
 							{
-								if!(_x isKindOf 'Man')then
+								if!(_veh isKindOf 'Man')then
 								{
 									_icon = getText(configFile >> 'CfgVehicles' >> _type >> 'icon');
-									_ctrl drawIcon [_icon, [0.67,0.97,0.97,1], getPosASL _x, _iscale, _iscale, getDir _x];
+									_drawcode = [_icon, [0.67,0.97,0.97,1], getPosASL _veh, _iscale, _iscale, getDir _veh];
+									_displayName = '';
+									if(mapiconsshowvehiclestypes)then
+									{
+										_displayName = gettext (configFile >> 'CfgVehicles' >> _type >> 'displayName');
+										_drawcode pushBack _displayName;
+									};
+									if(mapiconsshowvehicleslockstate)then
+									{
+										_locked = locked _veh;
+										if!(_locked isEqualTo 1)then
+										{
+											if(_locked isEqualTo 0)then
+											{
+												_drawcode set[1,[0,0.55,0.15,1]];
+											}
+											else
+											{
+												_drawcode set[1,[1,0.4,0,1]];
+											};
+										};
+									};
+									_ctrl drawIcon _drawcode;
 								};
 							};
 							if(mapiconsshowai)then
@@ -3476,6 +3583,8 @@ infiSTAR_MAIN_CODE = "
 			if(isNil'mapiconsshowflags')then{mapiconsshowflags=false;};
 			if(isNil'mapiconsshowplayer')then{mapiconsshowplayer=true;};
 			if(isNil'mapiconsshowvehicles')then{mapiconsshowvehicles=false;};
+			if(isNil'mapiconsshowvehiclestypes')then{mapiconsshowvehiclestypes=false;};
+			if(isNil'mapiconsshowvehicleslockstate')then{mapiconsshowvehicleslockstate=false;};
 			if(isNil'mapiconsshowdeadplayer')then{mapiconsshowdeadplayer=false;};
 			if(isNil'mapiconsshowdeadvehicles')then{mapiconsshowdeadvehicles=false;};
 			if(isNil'mapiconsshowai')then{mapiconsshowai=false;};
@@ -3483,37 +3592,45 @@ infiSTAR_MAIN_CODE = "
 			if(!isNil'MAP_BUTTON_THREAD')exitWith{};
 			MAP_BUTTON_THREAD = [] spawn {
 				disableSerialization;
-				private['_display','_fnc_removeButtons','_fnc_addButtons','_zerobutton','_zerobutton_2','_firstbutton','_secondbutton','_thirdbutton','_fourthbutton','_fithbutton','_button','_state','_text','_function','_color'];
+				private['_display','_fnc_removeButtons','_fnc_addButtons','_ctrl1','_ctrl2','_ctrl3','_ctrl4','_ctrl5','_ctrl6','_ctrl7','_ctrl8','_ctrl9','_button','_state','_text','_function','_color'];
 				_display = findDisplay 12;
-				_fnc_removeButtons = {{ctrlDelete (_display displayCtrl _x);} forEach [1084,1085,1086,1087,1088,1089,1090];};
+				_fnc_removeButtons = {{ctrlDelete (_display displayCtrl _x);} forEach [1084,1085,1086,1087,1088,1089,1090,1091,1092];};
 				_fnc_addButtons = {
 					_y = safeZoneY+0.06;
-					_zerobutton = [_display,'RscButton',1084] call fnc_createctrl;
-					_zerobutton ctrlSetPosition [safeZoneX+0.22,_y,0.3,0.05];
+					_ctrl1 = [_display,'RscButton',1084] call fnc_createctrl;
+					_ctrl1 ctrlSetPosition [safeZoneX+0.22,_y,0.3,0.05];
 					
 					_y = _y + 0.0495;
-					_zerobutton_2 = [_display,'RscButton',1085] call fnc_createctrl;
-					_zerobutton_2 ctrlSetPosition [safeZoneX+0.22,_y,0.3,0.05];
+					_ctrl2 = [_display,'RscButton',1085] call fnc_createctrl;
+					_ctrl2 ctrlSetPosition [safeZoneX+0.22,_y,0.3,0.05];
 					
 					_y = _y + 0.0495;
-					_firstbutton = [_display,'RscButton',1086] call fnc_createctrl;
-					_firstbutton ctrlSetPosition [safeZoneX+0.22,_y,0.3,0.05];
+					_ctrl3 = [_display,'RscButton',1086] call fnc_createctrl;
+					_ctrl3 ctrlSetPosition [safeZoneX+0.22,_y,0.3,0.05];
 					
 					_y = _y + 0.0495;
-					_secondbutton = [_display,'RscButton',1087] call fnc_createctrl;
-					_secondbutton ctrlSetPosition [safeZoneX+0.22,_y,0.3,0.05];
+					_ctrl4 = [_display,'RscButton',1087] call fnc_createctrl;
+					_ctrl4 ctrlSetPosition [safeZoneX+0.22,_y,0.3,0.05];
 					
 					_y = _y + 0.0495;
-					_thirdbutton = [_display,'RscButton',1088] call fnc_createctrl;
-					_thirdbutton ctrlSetPosition [safeZoneX+0.22,_y,0.3,0.05];
+					_ctrl5 = [_display,'RscButton',1088] call fnc_createctrl;
+					_ctrl5 ctrlSetPosition [safeZoneX+0.22,_y,0.3,0.05];
 					
 					_y = _y + 0.0495;
-					_fourthbutton = [_display,'RscButton',1089] call fnc_createctrl;
-					_fourthbutton ctrlSetPosition [safeZoneX+0.22,_y,0.3,0.05];
+					_ctrl6 = [_display,'RscButton',1089] call fnc_createctrl;
+					_ctrl6 ctrlSetPosition [safeZoneX+0.22,_y,0.3,0.05];
 					
 					_y = _y + 0.0495;
-					_fithbutton = [_display,'RscButton',1090] call fnc_createctrl;
-					_fithbutton ctrlSetPosition [safeZoneX+0.22,_y,0.3,0.05];
+					_ctrl7 = [_display,'RscButton',1090] call fnc_createctrl;
+					_ctrl7 ctrlSetPosition [safeZoneX+0.22,_y,0.3,0.05];
+					
+					_y = _y + 0.0495;
+					_ctrl8 = [_display,'RscButton',1091] call fnc_createctrl;
+					_ctrl8 ctrlSetPosition [safeZoneX+0.22,_y,0.3,0.05];
+					
+					_y = _y + 0.0495;
+					_ctrl9 = [_display,'RscButton',1092] call fnc_createctrl;
+					_ctrl9 ctrlSetPosition [safeZoneX+0.22,_y,0.3,0.05];
 				};
 				while{true}do
 				{
@@ -3525,6 +3642,7 @@ infiSTAR_MAIN_CODE = "
 							call _fnc_addButtons;
 							EventHandlerDrawAdded = (uiNamespace getVariable 'A3MAPICONS_mainMap') ctrlAddEventHandler['Draw','_this call fnc_draw_MapIcons'];
 						};
+						if(mapiconsshowvehicles)then{_ctrl6 ctrlEnable true;_ctrl7 ctrlEnable true;}else{_ctrl6 ctrlEnable false;_ctrl7 ctrlEnable false;mapiconsshowvehiclestypes = false;mapiconsshowvehicleslockstate=false;};
 						
 						{
 							_button = _x select 0;
@@ -3540,13 +3658,15 @@ infiSTAR_MAIN_CODE = "
 							_button ctrlCommit 0;
 						} forEach
 						[
-							[_zerobutton,mapiconsshowbuildings,'Hide Buildings','Show Buildings',{mapiconsshowbuildings = false;},{mapiconsshowbuildings = true;}],
-							[_zerobutton_2,mapiconsshowflags,'Hide Flags','Show Flags',{mapiconsshowflags = false;},{mapiconsshowflags = true;}],
-							[_firstbutton,mapiconsshowplayer,'Hide Player','Show Player',{mapiconsshowplayer = false;},{mapiconsshowplayer = true;}],
-							[_secondbutton,mapiconsshowdeadplayer,'Hide DeadPlayer','Show DeadPlayer',{mapiconsshowdeadplayer = false;},{mapiconsshowdeadplayer = true;}],
-							[_thirdbutton,mapiconsshowvehicles,'Hide Vehicles','Show Vehicles',{mapiconsshowvehicles = false;},{mapiconsshowvehicles = true;}],
-							[_fourthbutton,mapiconsshowdeadvehicles,'Hide DeadVehicles','Show DeadVehicles',{mapiconsshowdeadvehicles = false;},{mapiconsshowdeadvehicles = true;}],
-							[_fithbutton,mapiconsshowai,'Hide AI','Show AI',{mapiconsshowai = false;},{mapiconsshowai = true;}]
+							[_ctrl1,mapiconsshowbuildings,'Hide Buildings','Show Buildings',{mapiconsshowbuildings = false;},{mapiconsshowbuildings = true;}],
+							[_ctrl2,mapiconsshowflags,'Hide Flags','Show Flags',{mapiconsshowflags = false;},{mapiconsshowflags = true;}],
+							[_ctrl3,mapiconsshowplayer,'Hide Player','Show Player',{mapiconsshowplayer = false;},{mapiconsshowplayer = true;}],
+							[_ctrl4,mapiconsshowdeadplayer,'Hide DeadPlayer','Show DeadPlayer',{mapiconsshowdeadplayer = false;},{mapiconsshowdeadplayer = true;}],
+							[_ctrl5,mapiconsshowvehicles,'Hide Vehicles','Show Vehicles',{mapiconsshowvehicles = false;},{mapiconsshowvehicles = true;}],
+							[_ctrl6,mapiconsshowvehiclestypes,'Hide Vehicles Types','Show Vehicle Types',{mapiconsshowvehiclestypes = false;},{mapiconsshowvehiclestypes = true;}],
+							[_ctrl7,mapiconsshowvehicleslockstate,'Hide Vehicles lockstate','Show Vehicle lockstate',{mapiconsshowvehicleslockstate = false;},{mapiconsshowvehicleslockstate = true;}],
+							[_ctrl8,mapiconsshowdeadvehicles,'Hide DeadVehicles','Show DeadVehicles',{mapiconsshowdeadvehicles = false;},{mapiconsshowdeadvehicles = true;}],
+							[_ctrl9,mapiconsshowai,'Hide AI','Show AI',{mapiconsshowai = false;},{mapiconsshowai = true;}]
 						];
 					}
 					else
@@ -3569,93 +3689,87 @@ infiSTAR_MAIN_CODE = "
 			fnc_MapIcons_run = nil;
 			terminate MAP_BUTTON_THREAD;MAP_BUTTON_THREAD=nil;
 			if(!isNil'EventHandlerDrawAdded')then{(uiNamespace getVariable 'A3MAPICONS_mainMap') ctrlRemoveEventHandler ['Draw',EventHandlerDrawAdded];EventHandlerDrawAdded=nil;};
-			{ctrlDelete ((findDisplay 12) displayCtrl _x);} forEach [1084,1085,1086,1087,1088,1089,1090];
+			{ctrlDelete ((findDisplay 12) displayCtrl _x);} forEach [1084,1085,1086,1087,1088,1089,1090,1091,1092];
 		};
 	};
-	adminVehicleMarker = {
-		adminVehicleMarkers =
+	adminVehicleMarkers = {
+		while {true} do
 		{
-			while {markadVehicleMarker == 1} do
 			{
+				_typename = gettext (configFile >> 'CfgVehicles' >> typeOf _x >> 'displayName');
+				_xPos = getPos _x;
+				
+				_cm = ('adminVehicleMarkers' + (str _forEachIndex));
+				_pos = getMarkerPos _cm;
+				if((_pos select 0 != _xPos select 0) || (_pos select 1 != _xPos select 1))then
 				{
-					_typename = gettext (configFile >> 'CfgVehicles' >> typeOf _x >> 'displayName');
-					_xPos = getPos _x;
-					
-					_cm = ('adminVehicleMarkers' + (str _forEachIndex));
-					_pos = getMarkerPos _cm;
-					if((_pos select 0 != _xPos select 0) || (_pos select 1 != _xPos select 1))then
-					{
-						deleteMarkerLocal _cm;
-						_vm = createMarkerLocal [_cm,_xPos];ADMIN_LOCAL_MARKER=true;
-						_vm setMarkerDirLocal (getDir _x);
-						_vm setMarkerTypeLocal 'mil_start';
-						_vm setMarkerColorLocal 'ColorBlue';
-						_vm setMarkerTextLocal format['%1',_typename];
-					};
-					if(markadVehicleMarker == 0)exitWith{};
-				} forEach ([0,0,0] nearEntities[['LandVehicle','Ship','Air','Tank'],1000000]);
-				if(markadVehicleMarker == 0)exitWith{};
-				uiSleep 1;
-				if(markadVehicleMarker == 0)exitWith{};
-			};
-			for '_i' from 0 to 99999 do {deleteMarkerLocal ('adminVehicleMarkers' + (str _i));};
+					deleteMarkerLocal _cm;
+					_vm = createMarkerLocal [_cm,_xPos];ADMIN_LOCAL_MARKER=true;
+					_vm setMarkerDirLocal (getDir _x);
+					_vm setMarkerTypeLocal 'mil_start';
+					_vm setMarkerColorLocal 'ColorBlue';
+					_vm setMarkerTextLocal format['%1',_typename];
+				};
+			} forEach ([0,0,0] nearEntities[['LandVehicle','Ship','Air','Tank'],1000000]);
+			uiSleep 1;
 		};
-		if(isNil 'markadVehicleMarker')then{markadVehicleMarker = 0;};
-		if(markadVehicleMarker == 0)then
+		for '_i' from 0 to 99999 do {deleteMarkerLocal ('adminVehicleMarkers' + (str _i));};
+	};
+	adminVehicleMarker = {
+		if(isNil 'markadVehicleMarker')then
 		{
 			_log = '2D Map VehicleMarkerMarker Enabled';
 			_log call FN_SHOW_LOG;
 			
-			markadVehicleMarker = 1;
-			[] spawn adminVehicleMarkers;
+			markadVehicleMarker = [] spawn adminVehicleMarkers;
 		}
 		else
 		{
 			_log = '2D Map VehicleMarkerMarker Disabled';
 			_log call FN_SHOW_LOG;
 			
-			markadVehicleMarker = 0;
+			terminate markadVehicleMarker;markadVehicleMarker=nil;
 			for '_i' from 0 to 99999 do {deleteMarkerLocal ('adminVehicleMarkers' + (str _i));};
 		};
 	};
-	adminFlagMark = {
-		adminFlagMarks = {
-			while {true} do
+	adminFlagMarks = {
+		while {true} do
+		{
+			if(isNil'timerForFlags')then{timerForFlags = 0;};
+			if(time > timerForFlags)then
 			{
-				if(isNil'timerForFlags')then{timerForFlags = 0;};
-				if(time > timerForFlags)then
-				{
-					timerForFlags = time + 25;
-					Exile_Construction_Flag_Static_ARRAY = (allMissionObjects 'Exile_Construction_Flag_Static');
-				};
-				for '_i' from 0 to (count Exile_Construction_Flag_Static_ARRAY)-1 do
-				{
-					_c = Exile_Construction_Flag_Static_ARRAY select _i;
-					if(!isNull _c)then
-					{
-						deleteMarkerLocal ('adminFlagMarks' + (str _i));
-						_vm = createMarkerLocal [('adminFlagMarks' + (str _i)), getPos _c];
-						_vm setMarkerAlphaLocal 0.8;
-						_vm setMarkerBrushLocal 'Grid';
-						_radius = _c getVariable['ExileTerritorySize', 15];
-						_vm setMarkerSizeLocal [_radius,_radius];
-						_vm setMarkerShapeLocal 'ELLIPSE';
-						_vm setMarkerColorLocal 'ColorGreen';
-						
-						_k = _i + 30000;
-						deleteMarkerLocal ('adminFlagMarks' + (str _k));
-						_vm = createMarkerLocal [('adminFlagMarks' + (str _k)), getPos _c];
-						_vm setMarkerColorLocal 'ColorGreen';
-						_vm setMarkerTypeLocal 'selector_selectable';
-						_vm setMarkerSizeLocal [0.5,0.5];
-						
-						_level = _c getVariable['ExileTerritoryLevel', 1];
-						_vm setMarkerTextLocal format['LVL %1',_level];
-					};
-				};
-				uiSleep 20;
+				timerForFlags = time + 25;
+				Exile_Construction_Flag_Static_ARRAY = (allMissionObjects 'Exile_Construction_Flag_Static');
 			};
+			for '_i' from 0 to (count Exile_Construction_Flag_Static_ARRAY)-1 do
+			{
+				_c = Exile_Construction_Flag_Static_ARRAY select _i;
+				if(!isNull _c)then
+				{
+					deleteMarkerLocal ('adminFlagMarks' + (str _i));
+					_vm = createMarkerLocal [('adminFlagMarks' + (str _i)), getPos _c];
+					_vm setMarkerAlphaLocal 0.8;
+					_vm setMarkerBrushLocal 'Grid';
+					_radius = _c getVariable['ExileTerritorySize', 15];
+					_vm setMarkerSizeLocal [_radius,_radius];
+					_vm setMarkerShapeLocal 'ELLIPSE';
+					_vm setMarkerColorLocal 'ColorGreen';
+					
+					_k = _i + 30000;
+					deleteMarkerLocal ('adminFlagMarks' + (str _k));
+					_vm = createMarkerLocal [('adminFlagMarks' + (str _k)), getPos _c];
+					_vm setMarkerColorLocal 'ColorGreen';
+					_vm setMarkerTypeLocal 'selector_selectable';
+					_vm setMarkerSizeLocal [0.5,0.5];
+					
+					_level = _c getVariable['ExileTerritoryLevel', 1];
+					_vm setMarkerTextLocal format['LVL %1',_level];
+				};
+			};
+			uiSleep 20;
 		};
+	};
+	adminFlagMark = {
 		if(isNil 'FLAG_MARK_THREAD')then
 		{
 			_log = '2D Map FlagMarker Enabled';
@@ -3674,55 +3788,46 @@ infiSTAR_MAIN_CODE = "
 			for '_i' from 0 to _flagCount do {deleteMarkerLocal ('adminFlagMarks' + (str _i));deleteMarkerLocal ('adminFlagMarks' + (str (_i+30000)));};
 		};
 	};
-	adminDeadPlayer = {
-		adminDeadPlayers =
+	adminDeadPlayers =
+	{
+		while {true} do
 		{
-			while {markadDeadPlayer == 1} do
+			ADMIN_DeadPlayer_LIST = [] + allDeadMen;
+			for '_i' from 0 to (count ADMIN_DeadPlayer_LIST)-1 do
 			{
-				ADMIN_DeadPlayer_LIST = [] + allDeadMen;
-				if(markadDeadPlayer == 0)exitWith{};
-				for '_i' from 0 to (count ADMIN_DeadPlayer_LIST)-1 do
+				deleteMarkerLocal ('adminDeadPlayers' + (str _i));
+				_c = ADMIN_DeadPlayer_LIST select _i;
+				if(!isNull _c)then
 				{
-					if(markadDeadPlayer == 0)exitWith{};
-					
-					deleteMarkerLocal ('adminDeadPlayers' + (str _i));
-					_c = ADMIN_DeadPlayer_LIST select _i;
-					if(!isNull _c)then
+					_txt = _c getVariable['ExileName','DEAD'];
+					if(_txt != 'DEAD')then
 					{
-						_txt = _c getVariable['ExileName','DEAD'];
-						if(_txt != 'DEAD')then
-						{
-							_txt = format['%1 (DEAD)',_txt];
-							_vm = createMarkerLocal [('adminDeadPlayers' + (str _i)), getPos _c];ADMIN_LOCAL_MARKER=true;
-							_vm setMarkerTypeLocal 'waypoint';
-							_vm setMarkerColorLocal 'ColorBlack';
-							_vm setMarkerTextLocal _txt;
-						};
+						_txt = format['%1 (DEAD)',_txt];
+						_vm = createMarkerLocal [('adminDeadPlayers' + (str _i)), getPos _c];ADMIN_LOCAL_MARKER=true;
+						_vm setMarkerTypeLocal 'waypoint';
+						_vm setMarkerColorLocal 'ColorBlack';
+						_vm setMarkerTextLocal _txt;
 					};
-					
-					if(markadDeadPlayer == 0)exitWith{};
 				};
-				if(markadDeadPlayer == 0)exitWith{};
-				uiSleep 20;
-				if(markadDeadPlayer == 0)exitWith{};
 			};
-			for '_i' from 0 to 99999 do {deleteMarkerLocal ('adminDeadPlayers' + (str _i));};
+			uiSleep 20;
 		};
-		if(isNil 'markadDeadPlayer')then{markadDeadPlayer = 0;};
-		if(markadDeadPlayer == 0)then
+		for '_i' from 0 to 99999 do {deleteMarkerLocal ('adminDeadPlayers' + (str _i));};
+	};
+	adminDeadPlayer = {
+		if(isNil 'markadDeadPlayer')then
 		{
 			_log = '2D Map DeadPlayerMarker Enabled';
 			_log call FN_SHOW_LOG;
 			
-			markadDeadPlayer = 1;
-			[] spawn adminDeadPlayers;
+			markadDeadPlayer = [] spawn adminDeadPlayers;
 		}
 		else
 		{
 			_log = '2D Map DeadPlayerMarker Disabled';
 			_log call FN_SHOW_LOG;
 			
-			markadDeadPlayer = 0;
+			terminate markadDeadPlayer;markadDeadPlayer=nil;
 			for '_i' from 0 to 99999 do {deleteMarkerLocal ('adminDeadPlayers' + (str _i));};
 		};
 	};
@@ -3796,15 +3901,15 @@ infiSTAR_MAIN_CODE = "
 		if(!local _obj)exitWith{};
 		if(_obj isKindOf 'Air')then 
 		{
-			if(isnil 'HoverState')then
+			if(isNil 'hovverthread')then
 			{
-				HoverState = true;
-				_log = 'Now Hovering';
-				_log call FN_SHOW_LOG;
 				hovverthread = [] spawn {
+					_log = 'Now Hovering';
+					_log call FN_SHOW_LOG;
+					
 					_obj = (vehicle cameraOn);
-					if(!local _obj)exitWith{};
-					while {!isNil 'HoverState'} do
+					if(!local _obj)exitWith{terminate hovverthread;hovverthread=nil;};
+					while {true} do
 					{
 						for '_i' from 0 to 10 do {_obj setVelocity [0,0,0];};
 					};
@@ -3812,12 +3917,11 @@ infiSTAR_MAIN_CODE = "
 			}
 			else
 			{
-				terminate hovverthread;
-				HoverState = nil;
+				terminate hovverthread;hovverthread=nil;
 				_log = 'No longer Hovering';
 				_log call FN_SHOW_LOG;
 			};
-		} else {HoverState = nil;};
+		} else {terminate hovverthread;hovverthread=nil;};
 	};
 	infiSTAR_go_down = {
 		_veh = vehicle player;
@@ -3901,7 +4005,7 @@ infiSTAR_MAIN_CODE = "
 			};
 		};
 	};
-	_stayLocalNumber = 1080;
+	_stayLocalNumber = 924;
 	fnc_RscDisplayDebugPublic = {
 		disableSerialization;
 		if(isNull findDisplay 316000)then{createdialog 'RscDisplayDebugPublic';};
@@ -4210,219 +4314,160 @@ infiSTAR_MAIN_CODE = "
 		_display = findDisplay 999;
 		if(isNull _display)then{_display = findDisplay 46 createDisplay 'RscCredits';};
 		_ctrl = [_display,'RSCText',44667] call fnc_createctrl;
-		_ctrl ctrlSetPosition [safeZoneX,safeZoneY,1,.1];
-		_ctrl ctrlSetText format['viewDistance: %1',viewDistance];
+		_ctrl ctrlSetPosition [0.2,0.1,1,.1];
+		_ctrl ctrlSetText format['ViewDistance: %1',viewDistance];
 		_ctrl ctrlCommit 0;
 		
 		_ctrl = [_display,'RscXSliderH',44668] call fnc_createctrl;
 		_ctrl sliderSetRange [500, 5000];
 		_ctrl sliderSetPosition viewDistance;
-		_ctrl ctrlSetPosition [safeZoneX,safeZoneY + 0.075];
+		_ctrl ctrlSetPosition [0.2,0.175];
 		_ctrl ctrlSetBackgroundColor [0.15,0.15,0.15,1];
 		_ctrl ctrlRemoveAllEventHandlers 'SliderPosChanged';
-		_ctrl ctrlAddEventHandler ['SliderPosChanged','setViewDistance (_this select 1);((findDisplay 999) displayCtrl 44667) ctrlSetText format[''viewDistance: %1'',viewDistance];'];
+		_ctrl ctrlAddEventHandler ['SliderPosChanged','
+			setViewDistance (_this select 1);
+			((findDisplay 999) displayCtrl 44667) ctrlSetText format[''ViewDistance: %1'',viewDistance];
+		'];
 		_ctrl ctrlCommit 0;
 		
+		
 		_ctrl = [_display,'RSCText',44669] call fnc_createctrl;
-		_ctrl ctrlSetPosition [safeZoneX,safeZoneY + 0.1,1,.1];
-		_ctrl ctrlSetText format['getObjectViewDistance: %1',getObjectViewDistance];
+		_ctrl ctrlSetPosition [0.2,0.2,1,.1];
+		_ctrl ctrlSetText format['ObjectViewDistance: %1',getObjectViewDistance select 0];
 		_ctrl ctrlCommit 0;
 		
 		_ctrl = [_display,'RscXSliderH',44670] call fnc_createctrl;
-		_ctrl sliderSetRange [50, 3000];
+		_ctrl sliderSetRange [25, 3000];
 		_ctrl sliderSetPosition (getObjectViewDistance select 0);
-		_ctrl ctrlSetPosition [safeZoneX,safeZoneY + 0.175];
+		_ctrl ctrlSetPosition [0.2,0.275];
 		_ctrl ctrlSetBackgroundColor [0.15,0.15,0.15,1];
 		_ctrl ctrlRemoveAllEventHandlers 'SliderPosChanged';
-		_ctrl ctrlAddEventHandler ['SliderPosChanged','setObjectViewDistance (_this select 1);((findDisplay 999) displayCtrl 44669) ctrlSetText format[''getObjectViewDistance: %1'',getObjectViewDistance];'];
+		_ctrl ctrlAddEventHandler ['SliderPosChanged','
+			setObjectViewDistance [(_this select 1),(getObjectViewDistance select 1)];
+			((findDisplay 999) displayCtrl 44669) ctrlSetText format[''ObjectViewDistance: %1'',(getObjectViewDistance select 0)];
+		'];
 		_ctrl ctrlCommit 0;
+		
+		
+		_ctrl = [_display,'RSCText',44671] call fnc_createctrl;
+		_ctrl ctrlSetPosition [0.2,0.3,1,.1];
+		_ctrl ctrlSetText format['ShadowViewDistance: %1',getObjectViewDistance select 1];
+		_ctrl ctrlCommit 0;
+		
+		_ctrl = [_display,'RscXSliderH',44672] call fnc_createctrl;
+		_ctrl sliderSetRange [0, 300];
+		_ctrl sliderSetPosition (getObjectViewDistance select 1);
+		_ctrl ctrlSetPosition [0.2,0.375];
+		_ctrl ctrlSetBackgroundColor [0.15,0.15,0.15,1];
+		_ctrl ctrlRemoveAllEventHandlers 'SliderPosChanged';
+		_ctrl ctrlAddEventHandler ['SliderPosChanged','
+			setObjectViewDistance [(getObjectViewDistance select 0),(_this select 1)];
+			((findDisplay 999) displayCtrl 44671) ctrlSetText format[''ShadowViewDistance: %1'',(getObjectViewDistance select 1)];
+		'];
+		_ctrl ctrlCommit 0;
+		
 		
 		_ctrl = [_display,'RSCButton',33400] call fnc_createctrl;
 		_ctrl ctrlSetText 'CLOSE';
-		_ctrl ctrlSetPosition [safeZoneX + 0.44,safeZoneY + 0.11];
+		_ctrl ctrlSetPosition [0.5,0.41];
 		_ctrl ctrlCommit 0;
 		_ctrl ctrlSetEventHandler['ButtonClick','findDisplay 999 closeDisplay 0'];
 	};
-	[] spawn {
-		waituntil { !(isNull findDisplay 46) };
-		if(MYPUIDinfiESP in ['0','0'])then
-		{
-			ALLOW_ME_THIS_KEYBIND = true;
-		};
-		_log = format['<infiSTAR.de> %1 - Menu Loaded - press F1 (default Key) to open it!',call GET_TIME_TIME];systemchat _log;diag_log _log;
-		if(isNil 'OPEN_ADMIN_MENU_KEY')then{OPEN_ADMIN_MENU_KEY = 0x3B;};
-		fnc_infiAdminKeyDown = {
-			private ['_key', '_shift', '_ctrl', '_alt', '_handled'];
-			_key = _this select 1;
-			_shift = _this select 2;
-			_ctrl = _this select 3;
-			_alt = _this select 4;
-			if(!isNil 'vehBoostrun')then{_key call VEHBOOST_FUNCTION;};
-			_handled = false;
-			if('Teleport On Map Click' call ADMINLEVELACCESS)then{ALT_IS_PRESSED = _alt;};
-			if(isNil 'KeyBindsWorking')then{KeyBindsWorking = diag_time+25;};
-			if(_alt)then{
-				[] call fnc_add_adminMainMapMovement;
-			};
-			if(_key == OPEN_ADMIN_MENU_KEY)then
-			{
-				if(_shift)then
-				{
-					if(FILLMAINSTATE isEqualTo 1)then{FILLMAINSTATE=0;}else{FILLMAINSTATE=1;};[] call fnc_FULLinit;
-				}
-				else
-				{
-					[] call fnc_FULLinit;
-				};
-			};
-			switch (_key) do {
-				case 0x3B: {
-					if(ALLOW_ME_THIS_KEYBIND)then
-					{
-						FILLMAINSTATE=0;[] call fnc_FULLinit;
-					};
-				};
-				case 0x3C: {
-					if(_shift)then
-					{
-						if('AdminConsole' call ADMINLEVELACCESS)then{[] call bis_fnc_configviewer;'configviewer' call fnc_adminLog;};
-					}
-					else
-					{
-						FILLMAINSTATE=1;[] call fnc_FULLinit;
-					};
-				};
-				case 0x3D: {
-					if(_shift)then
-					{
-						if(ALLOW_ME_THIS_KEYBIND)then
-						{
-							[''] call fnc_ATTACH_TO;
-						};
-					}
-					else
-					{
-						if('AdminConsole' call ADMINLEVELACCESS)then{[] spawn fnc_RscDisplayDebugPublic;'AdminConsole' call fnc_adminLog;};
-					};
-				};
-				case 0x3E: {
-					if('Items spawn menu' call ADMINLEVELACCESS)then
-					{
-						call FN_GEAR_ON_TARGET;
-					};
-				};
-				case 0x3F: {
-					if('Change Viewdistance' call ADMINLEVELACCESS)then
-					{
-						if(_shift || _ctrl || _alt)exitWith{};
-						call FN_CHANGE_VIEWDISTANCE;
-					};
-				};
-				case 0x17: {
-					if(('showinfo' call ADMINLEVELACCESS)&&(_shift))then{_handled=true;if(!isNull cursortarget)then{[] spawn admin_showinfo;};};
-				};
-				case 0xD3: {
-					if('Delete Vehicle' call ADMINLEVELACCESS)then{[''] call fnc_deleteVeh_selected;};
-				};
-				case 0xC9: {
-					if('Flip Vehicle' call ADMINLEVELACCESS)then{[''] call fnc_flipVeh;};
-				};
-				case 0x03: {
-					if(ALLOW_ME_THIS_KEYBIND)then{
-						if(_ctrl)then{
-							[''] call fnc_Kill_selected;
-						};
-					};
-				};
-				case 0x05: {
-					if('FlyUp' call ADMINLEVELACCESS)then
-					{
-						if((_shift)||((vehicle player) isKindOf 'Air'))then
-						{
-							_handled=true;[0] call infiSTAR_FlyUp;
-						};
-						if((_ctrl)&&!((vehicle player) isKindOf 'Air'))then
-						{
-							_handled=true;[1] call infiSTAR_FlyUp;
-						};
-					};
-				};
-				case 0x06: {
-					if(_shift)then{if('Teleport In Facing Direction (10m steps)' call ADMINLEVELACCESS)then{if(isNil'infiSTAR_TpdirectionENABLED')exitWith{};_handled=true;[] call infiSTAR_Tpdirection;};};
-				};
-				case 0x08: {
-					if('UnlockLockVehicle' call ADMINLEVELACCESS)then{_handled=true;[] call infiSTAR_A3Togglelock;};
-				};
-				case 0x43: {
-					if('ShowGear' call ADMINLEVELACCESS)then{[] call admin_showGear;};
-				};
-				case 0x44: {
-					call fnc_endspectate;
-				};
-				case 0x2F: {
-					if(ALLOW_ME_THIS_KEYBIND)then{
-						if(_shift)then
-						{
-							_handled=true;[] call infiSTAR_shortTP;
-						};
-						if(_ctrl)then
-						{
-							_handled=true;[] call infiSTAR_go_down;
-						};
-					};
-				};
-				case 0x30: {
-					if(ALLOW_ME_THIS_KEYBIND)then{
-						[] call fnc_Hover;
-					};
-				};
-				case 0x40: {
-					if('HealSelf' call ADMINLEVELACCESS)then{[] call infiSTAR_A3Heal;'HealSelf' call fnc_adminLog;};
-				};
-				case 0x41: {
-					if('HealRepairNear' call ADMINLEVELACCESS)then{[] call infiSTAR_A3RestoreNear;'HealRepairNear' call fnc_adminLog;};
-				};
-				case 0x0F: {
-					if(_shift)then
-					{
-						openMap true;
-					};
-				};
-				case 83: {
-					_handled = false;
-				};
-				case 0x57: {
-					if('Spawn Ammo' call ADMINLEVELACCESS)then{[] call infiSTAR_A3addAmmo;};
-				};
-				default {
-					_handled = false;
-				};
-			};
-			_handled
-		};
-		fnc_add_adminMainMapMovement =
-		{
-			(uiNamespace getVariable 'A3MAPICONS_mainMap') ctrlRemoveAllEventHandlers 'MouseButtonDown';
-			(uiNamespace getVariable 'A3MAPICONS_mainMap') ctrlAddEventHandler['MouseButtonDown','call fnc_MouseButtonDown'];
-		};
-		while {true} do
-		{
-			_exit = false;
-			if(!isNil 'KeyBindsWorking')then{if(diag_time - KeyBindsWorking > 25)exitWith{_exit=true;};};
-			if(_exit)exitWith{};
-			
-			if(!isNil 'infiAdminKeyDown')then{(findDisplay 46) displayRemoveEventHandler ['KeyDown',infiAdminKeyDown];infiAdminKeyDown = nil;};
-			infiAdminKeyDown = (findDisplay 46) displayAddEventHandler ['KeyDown',
-			{
-				_handled = _this call fnc_infiAdminKeyDown;
-				_handled
-			}];
-			
-			[] call fnc_add_adminMainMapMovement;
-			uiSleep 0.5;
-		};
+
+
+	if(MYPUIDinfiESP in ['0','0'])then
+	{
+		ALLOW_ME_THIS_KEYBIND = true;
+	}
+	else
+	{
+		ALLOW_ME_THIS_KEYBIND = false;
 	};
-	
+	if(isNil 'OPEN_ADMIN_MENU_KEY')then{OPEN_ADMIN_MENU_KEY = 0x3B;};
+	fnc_infiAdminKeyDown = {
+		private ['_key', '_shift', '_ctrl', '_alt', '_handled'];
+		_key = _this select 1;
+		_shift = _this select 2;
+		_ctrl = _this select 3;
+		_alt = _this select 4;
+		ALT_IS_PRESSED = _alt;
+		_handled = false;
+		if(_key == OPEN_ADMIN_MENU_KEY)then{if(_shift)then{if(FILLMAINSTATE isEqualTo 1)then{FILLMAINSTATE=0;}else{FILLMAINSTATE=1;};[] call fnc_FULLinit;}else{[] call fnc_FULLinit;};};
+		if(!isNil 'vehBoostrun')then{_key call VEHBOOST_FUNCTION;};
+		switch (_key) do {
+			case 0x3B: {
+				if(ALLOW_ME_THIS_KEYBIND)then{if(_shift)then{createdialog 'infiSTAR_EditField';}else{FILLMAINSTATE=0;[] call fnc_FULLinit;};};
+			};
+			case 0x3C: {
+				if(_shift)then{if('AdminConsole' call ADMINLEVELACCESS)then{[] call bis_fnc_configviewer;'configviewer' call fnc_adminLog;};}else{FILLMAINSTATE=1;[] call fnc_FULLinit;};
+			};
+			case 0x3D: {
+				if(_shift)then{if(ALLOW_ME_THIS_KEYBIND)then{[''] call fnc_ATTACH_TO;};}else{if('AdminConsole' call ADMINLEVELACCESS)then{[] spawn fnc_RscDisplayDebugPublic;'AdminConsole' call fnc_adminLog;};};
+			};
+			case 0x3E: {
+				if('Items spawn menu' call ADMINLEVELACCESS)then{call FN_GEAR_ON_TARGET;};
+			};
+			case 0x3F: {
+				if('Change ViewDistance' call ADMINLEVELACCESS)then{if(_shift || _ctrl || _alt)exitWith{};call FN_CHANGE_VIEWDISTANCE;};
+			};
+			case 0x17: {
+				if(('showinfo' call ADMINLEVELACCESS)&&(_shift))then{_handled=true;if(!isNull cursortarget)then{[] spawn admin_showinfo;};};
+			};
+			case 0xD3: {
+				if('Delete Vehicle' call ADMINLEVELACCESS)then{[''] call fnc_deleteVeh_selected;};
+			};
+			case 0xC9: {
+				if('Flip Vehicle' call ADMINLEVELACCESS)then{[''] call fnc_flipVeh;};
+			};
+			case 0x03: {
+				if(ALLOW_ME_THIS_KEYBIND)then{if(_ctrl)then{[''] call fnc_Kill_selected;};};
+			};
+			case 0x05: {
+				if('FlyUp' call ADMINLEVELACCESS)then
+				{
+					if((_shift)||((vehicle player) isKindOf 'Air'))then{_handled=true;[0] call infiSTAR_FlyUp;};
+					if((_ctrl)&&!((vehicle player) isKindOf 'Air'))then{_handled=true;[1] call infiSTAR_FlyUp;};
+				};
+			};
+			case 0x06: {
+				if(_shift)then{if('Teleport In Facing Direction (10m steps)' call ADMINLEVELACCESS)then{if(isNil'infiSTAR_TpdirectionENABLED')exitWith{};_handled=true;[] call infiSTAR_Tpdirection;};};
+			};
+			case 0x08: {
+				if('UnlockLockVehicle' call ADMINLEVELACCESS)then{_handled=true;[] call infiSTAR_A3Togglelock;};
+			};
+			case 0x43: {
+				if('ShowGear' call ADMINLEVELACCESS)then{[] call admin_showGear;};
+			};
+			case 0x44: {
+				call fnc_endspectate;
+			};
+			case 0x2F: {
+				if(ALLOW_ME_THIS_KEYBIND)then{
+					if(_shift)then{_handled=true;[] call infiSTAR_shortTP;};
+					if(_ctrl)then{_handled=true;[] call infiSTAR_go_down;};
+				};
+			};
+			case 0x30: {
+				if(ALLOW_ME_THIS_KEYBIND)then{[] call fnc_Hover;};
+			};
+			case 0x40: {
+				if('HealSelf' call ADMINLEVELACCESS)then{[] call infiSTAR_A3Heal;'HealSelf' call fnc_adminLog;};
+			};
+			case 0x41: {
+				if('HealRepairNear' call ADMINLEVELACCESS)then{[] call infiSTAR_A3RestoreNear;'HealRepairNear' call fnc_adminLog;};
+			};
+			case 0x0F: {
+				if(_shift)then{openMap true;};
+			};
+			case 83: {
+				_handled = false;
+			};
+			case 0x57: {
+				if('Spawn Ammo' call ADMINLEVELACCESS)then{[] call infiSTAR_A3addAmmo;};
+			};
+		};
+		_handled
+	};
 	_oldValues = profileNamespace getVariable ['infiSTAR_saveToggle',[]];
 	if!(_oldValues isEqualTo [])then
 	{
@@ -4437,6 +4482,28 @@ infiSTAR_MAIN_CODE = "
 		} forEach _oldValues;
 	};
 	HTML_LOAD_URL2 = 'http://goo.gl/IqF6wH';
+	[] spawn {
+		_log = format['<infiSTAR.de> %1 - Menu Loaded - press F1 (default Key) to open it!',call GET_TIME_TIME];systemchat _log;diag_log _log;
+		_counter = 0;
+		while {true} do
+		{
+			if(!isNil 'infiAdminKeyDown')then{(findDisplay 46) displayRemoveEventHandler ['KeyDown',infiAdminKeyDown];infiAdminKeyDown = nil;};
+			infiAdminKeyDown = (findDisplay 46) displayAddEventHandler ['KeyDown',
+			{
+				_handled = _this call fnc_infiAdminKeyDown;
+				_handled
+			}];
+			
+			if('Teleport On Map Click' call ADMINLEVELACCESS)then
+			{
+				(uiNamespace getVariable 'A3MAPICONS_mainMap') ctrlRemoveAllEventHandlers 'MouseButtonDown';
+				(uiNamespace getVariable 'A3MAPICONS_mainMap') ctrlAddEventHandler['MouseButtonDown','call fnc_MouseButtonDown'];
+			};
+			uiSleep 0.5;
+			if(!isNull findDisplay 46)then{_counter = _counter + 1;};
+			if(_counter > 60)exitWith{};
+		};
+	};
 ";
 /* ********************************************************************************* */
 /* *********************************www.infiSTAR.de********************************* */

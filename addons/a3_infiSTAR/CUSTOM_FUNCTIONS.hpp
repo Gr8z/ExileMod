@@ -16,7 +16,7 @@
 	
 	name = name shown in the admin menu (this is also what has to be put in the EXILE_AHAT_CONFIG.sqf as Admin Power!)
 	
-	code = code to execute
+	code = code to execute - if you have a linebreak within the code, you need to put a \ at the end of each line!
 	
 	
 	

@@ -13,13 +13,13 @@ class CfgPatches
 {
 	class a3_infiSTAR_Exile
 	{
-		requiredVersion = 0.1077;
+		requiredVersion = 0.921;
 		requiredAddons[] = {};
 		units[] = {};
 		weapons[] = {};
 		magazines[] = {};
 		ammo[] = {};
-		a3_infiSTAR_Exile_version = 0.1077;
+		a3_infiSTAR_Exile_version = 0.921;
 		author[]= {"Chris(tian) 'infiSTAR' Lorenzen"};
 	};
 };
