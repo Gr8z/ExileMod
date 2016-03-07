@@ -30,7 +30,7 @@ switch (_reward) do {
 
 		format["setAccountScore:%1:%2", _playerScore,getPlayerUID _ZCP_currentCapper] call ExileServer_system_database_query_fireAndForget;
 
-		[_ZCP_currentCapper, "showFragRequest", [[[format ["ZCP Reputation"],_awardToGive]]]] call ExileServer_system_network_send_to;
+		[_ZCP_currentCapper, "showFragRequest", [[[format ["Reputation"],_awardToGive]]]] call ExileServer_system_network_send_to;
 
 		ExileClientPlayerScore = _playerScore;
 		(owner _ZCP_currentCapper) publicVariableClient "ExileClientPlayerScore";
@@ -74,12 +74,10 @@ switch (_reward) do {
 
 		format["updateWallet:%1:%2", _playerMoney, (getPlayerUID _ZCP_currentCapper)] call ExileServer_system_database_query_fireAndForget;
 
-		PV_ZCP_zupastic = ["ZCP",[format["Package delivered, eyes on the sky! Poptabs on bank!"]], 'ZCP_Capped'];
+		PV_ZCP_zupastic = ["ZCP",[format["Poptabs!"]], 'ZCP_Capped'];
 		owner _ZCP_currentCapper publicVariableClient "PV_ZCP_zupastic";
 
-		[_ZCP_currentCapper, "moneyReceivedRequest", [str _playerMoney, format ["ZCP Poptabs reward"]]] call ExileServer_system_network_send_to;
-
-		[_capturePosition,'FoodBox'] spawn ZCP_fnc_spawnCrate;
+		[_ZCP_currentCapper, "moneyReceivedRequest", [str _playerMoney, format ["Poptabs reward"]]] call ExileServer_system_network_send_to;
 
 		diag_log format ["[ZCP]: %1 won %2, received %3 Poptabs and ItemBox",name _ZCP_currentCapper,_ZCP_name,_awardToGive];
 
