@@ -38,10 +38,11 @@ ZCP_UseSpecificNamesForCappers = true; // Use the player name, if false it say '
 // Location is ignored if not using static points. just put [0,0,0] then. activate static buy using isStatic = true
 // valid rewards -> Random, Poptabs, Vehicle, Buildingbox, WeaponBox
 ZCP_CapPoints = [ // [name,[x,y,z],reward, varname,index, spanwnAI, isStatic]
-	["Battle Zone",[0,0,0],"Random","alpha",0, true, false]
+	["Battle Zone",[0,0,0],"Poptabs","alpha",0, true, false],
+	["Battle Zone",[0,0,0],"Reputation","beta",1, true, false]
 ];
 
-ZCP_MaxMissions = count ZCP_CapPoints; // Amount of cap points at the same time.
+ZCP_MaxMissions = 1; // Amount of cap points at the same time.
 
 // For every spawned mission,
 ZCP_CapBases = [ // located in capbases folder
@@ -363,83 +364,8 @@ ZCP_DMS_RareLootChance	= 10;						// Percentage Chance to spawn rare loot in any
 ZCP_DMS_ArmedVehicles =					[							// List of armed vehicles that can spawn
 										"Exile_Car_Offroad_Armed_Guerilla01"
 									];
-
-ZCP_DMS_MilitaryVehicles =				[							// List of military vehicles that can spawn
-										"Exile_Car_Strider",
-										"Exile_Car_Hunter",
-										"Exile_Car_Ifrit",
-										"rhsusf_M1078A1P2_wd_fmtv_usarmy",
-										"rhsusf_M1078A1P2_d_fmtv_usarmy",
-										"rhsusf_M1078A1P2_wd_open_fmtv_usarmy",
-										"rhsusf_M1078A1P2_d_open_fmtv_usarmy",
-										"rhsusf_M1078A1P2_wd_flatbed_fmtv_usarmy",
-										"rhsusf_M1078A1P2_d_flatbed_fmtv_usarmy",
-										"rhsusf_M1078A1P2_B_d_fmtv_usarmy",
-										"rhsusf_M1078A1P2_B_wd_fmtv_usarmy",
-										"rhsusf_M1078A1P2_B_wd_open_fmtv_usarmy",
-										"rhsusf_M1078A1P2_B_d_open_fmtv_usarmy",
-										"rhsusf_M1078A1P2_B_wd_flatbed_fmtv_usarmy",
-										"rhsusf_M1078A1P2_B_d_flatbed_fmtv_usarmy"
-									];
-
-ZCP_DMS_TransportTrucks =				[							// List of transport trucks that can spawn
-										"Exile_Car_Van_Guerilla01",
-										"Exile_Car_Zamak",
-										"Exile_Car_Tempest",
-										"Exile_Car_HEMMT",
-										"RHS_Ural_Open_Civ_01",
-										"RHS_Ural_Open_Civ_02",
-										"RHS_Ural_Open_Civ_03",
-										"RHS_Ural_MSV_01",
-										"RHS_Ural_Fuel_MSV_01",
-										"RHS_Ural_Open_MSV_01",
-										"rhs_Ural_Flat_MSV_01"
-									];
-
-ZCP_DMS_RefuelTrucks =					[							// List of refuel trucks that can spawn
-										"Exile_Car_Van_Fuel_Black",
-										"Exile_Car_Van_Fuel_White",
-										"Exile_Car_Van_Fuel_Red",
-										"Exile_Car_Van_Fuel_Guerilla01",
-										"Exile_Car_Van_Fuel_Guerilla02",
-										"Exile_Car_Van_Fuel_Guerilla03"
-									];
-
-ZCP_DMS_CivilianVehicles =				[							// List of civilian vehicles that can spawn
-										"Exile_Car_SUV_Red",
-										"Exile_Car_Hatchback_Rusty1",
-										"Exile_Car_Hatchback_Rusty2",
-										"Exile_Car_Hatchback_Sport_Red",
-										"Exile_Car_SUV_Red",
-										"Exile_Car_Offroad_Rusty2",
-										"Exile_Bike_QuadBike_Fia",
-										"rhs_gaz66_r142_vmf",
-										"rhs_gaz66_repair_vmf",
-										"rhs_gaz66_vmf",
-										"rhs_gaz66_flat_vdv",
-										"rhs_gaz66o_vdv",
-										"rhs_gaz66o_flat_vdv",
-										"rhs_gaz66_ammo_vmf"
-									];
-
-ZCP_DMS_TransportHelis =				[							// List of transport helis that can spawn
-										"Exile_Chopper_Hummingbird_Green",
-										"Exile_Chopper_Orca_BlackCustom",
-										"Exile_Chopper_Mohawk_FIA",
-										"Exile_Chopper_Huron_Black",
-										"Exile_Chopper_Hellcat_Green",
-										"Exile_Chopper_Taru_Transport_Black",
-										"RHS_CH_47F",
-										"rhs_ka60_c",
-										"rhs_ka60_grey",
-										"RHS_UH60M",
-										"rhs_UH60M_MEV2_d",
-										"rhs_Mi8mt_vvs",
-										"rhs_Mi8mt_cargo_vvs",
-										"rhs_UH1Y_unarmed"
-									];
-
-ZCP_VehicleReward = ZCP_DMS_TransportTrucks;
+									
+ZCP_VehicleReward = ZCP_DMS_ArmedVehicles;
 ZCP_DMS_DEBUG = false;
 
 
