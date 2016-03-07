@@ -15,7 +15,7 @@ ZCP_MinWaitTime = 600; // seconds to wait to spawn a new capturepoint when 1 was
 ZCP_MaxWaitTime = 900; // random between 0 and THIS number added to the ZCP_MinWaitTime to counter spawning points at the same time
 ZCP_BaseCleanupDelay = 500; // seconds to wait to delete a captured base.
 
-ZCP_Minimum_Online_Players = 5; // Amount of players to be online before it allows to spawn capture points. !!! O = always
+ZCP_Minimum_Online_Players = 15; // Amount of players to be online before it allows to spawn capture points. !!! O = always
 
 ZCP_RewardRelativeToPlayersOnline = true; // This will recalculate the crypto reward according the amount of online players.
 ZCP_PoptabReward = 500; // Poptab reward for capping per player online. ( When poptab reward is selected or randomly chosen ).
