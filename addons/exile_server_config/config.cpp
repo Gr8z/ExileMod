@@ -1367,9 +1367,9 @@ class CfgSettings
 			function = "ExileServer_system_event_supplyBox_start";
 			minTime = 15; // minutes
 			maxTime = 30; // minutes
-			minimumPlayersOnline = 0;
+			minimumPlayersOnline = 15;
 			dropRadius = 500; // 500m around an airport (including the main airport on Altis!)
-			dropAltitude = 100; // altitude of the drop
+			dropAltitude = 150; // altitude of the drop
 			markerTime = 10; // minutes
 
 			/*
@@ -1378,65 +1378,80 @@ class CfgSettings
 				The type of box is chosen randomly from the following list.
 				Add a type multiple times to increase the chance of being used.
 			*/
-			types[] = {"Beer", "Beer", "Tools", "Food", "Food", "RepairParts", "Nades"};
+			types[] = {"Building","Weapons"};
 
 			class BoxTypes
 			{
-				class Beer 
+				class Building 
 				{
 					items[] = 
 					{
-						{"Exile_Item_Beer", 24}
+						{"Exile_Item_WoodWallKit",10},
+						{"Exile_Item_WoodWallHalfKit",5},
+						{"Exile_Item_WoodWindowKit",5},
+						{"Exile_Item_WorkBenchKit",2},
+						{"Exile_Item_WoodFloorPortKit",5},
+						{"Exile_Item_WoodFloorKit",10},
+						{"Exile_Item_WoodGateKit",5}
 					};
 				};
 
-				class Nades 
+				class Weapons 
 				{
 					items[] = 
 					{
-						{"Exile_Item_Beer", 10}
-					};
-				};
-
-				class Food 
-				{
-					items[] = 
-					{
-						{"Exile_Item_BBQSandwich", 5},
-						{"Exile_Item_Catfood", 5},
-						{"Exile_Item_ChristmasTinner", 5},
-						{"Exile_Item_GloriousKnakworst", 5},
-						{"Exile_Item_SausageGravy", 5},
-						{"Exile_Item_Surstromming", 5},
-						{"Exile_Item_CanOpener", 1},
-						{"Exile_Item_CookingPot", 1},
-						{"Exile_Item_Matches", 1}
-					};
-				};
-
-				class Tools 
-				{
-					items[] = 
-					{
-						{"Exile_Item_Wrench", 1},
-						{"Exile_Item_Shovel", 1},
-						{"Exile_Item_Screwdriver", 1},
-						{"Exile_Item_Pliers", 1},
-						{"Exile_Item_Handsaw", 1},
-						{"Exile_Item_FireExtinguisher", 1},
-						{"Exile_Item_DuctTape", 1}
-					};
-				};
-
-				class RepairParts 
-				{
-					items[] = 
-					{
-						{"Exile_Item_CarWheel", 8},
-						{"Exile_Item_FuelCanisterFull", 4},
-						{"Exile_Item_OilCanister", 1},
-						{"Exile_Item_Grinder", 1},
-						{"Exile_Item_CordlessScrewdriver", 1}
+						{"LMG_Zafir_F",1},
+						{"MMG_01_hex_F",1},
+						{"srifle_EBR_F",1},
+						{"srifle_DMR_01_F",1},
+						{"srifle_GM6_F",1},
+						{"srifle_LRR_F",1},
+						{"srifle_DMR_02_F",1},
+						{"MMG_01_tan_F",1},
+						{"MMG_02_camo_F",1},
+						{"MMG_02_black_F",1},
+						{"MMG_02_sand_F",1},
+						{"srifle_DMR_03_F",1},
+						{"srifle_DMR_03_khaki_F",1},
+						{"srifle_DMR_03_tan_F",1},
+						{"srifle_DMR_04_F",1},
+						{"srifle_DMR_04_Tan_F",1},
+						{"srifle_DMR_05_blk_F",1},
+						{"srifle_DMR_05_tan_F",1},
+						{"srifle_DMR_05_hex_F",1},
+						{"srifle_DMR_06_camo_F",1},
+						{"srifle_DMR_06_olive_F",1},
+						{"srifle_LRR_camo_F",1},
+						{"srifle_GM6_camo_F",1},
+						{"CUP_lmg_M249_para",1},
+						{"CUP_lmg_Mk48_des",1},
+						{"CUP_lmg_Mk48_wdl",1},
+						{"CUP_lmg_L110A1",1},
+						{"CUP_lmg_Pecheneg",1},
+						{"CUP_lmg_UK59",1},
+						{"CUP_lmg_L7A2",1},
+						{"CUP_lmg_M60A4",1},
+						{"CUP_lmg_M240",1},
+						{"CUP_lmg_M249",1},
+						{"CUP_lmg_PKM",1},
+						{"CUP_srifle_DMR",1},
+						{"CUP_srifle_ksvk",1},
+						{"CUP_srifle_M110",1},
+						{"CUP_srifle_M14",1},
+						{"CUP_srifle_M24_des",1},
+						{"CUP_srifle_M24_wdl",1},
+						{"CUP_srifle_M24_ghillie",1},
+						{"CUP_srifle_SVD",1},
+						{"CUP_srifle_SVD_des",1},
+						{"CUP_srifle_VSSVintorez",1},
+						{"CUP_srifle_CZ750",1},
+						{"CUP_srifle_Mk12SPR",1},
+						{"CUP_srifle_AS50",1},
+						{"CUP_srifle_AWM_des",1},
+						{"CUP_srifle_AWM_wdl",1},
+						{"CUP_srifle_CZ550",1},
+						{"CUP_srifle_LeeEnfield",1},
+						{"CUP_srifle_M40A3",1}
 					};
 				};
 			};
