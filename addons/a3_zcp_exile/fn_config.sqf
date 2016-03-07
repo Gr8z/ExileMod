@@ -450,6 +450,7 @@ if(ZCP_dev) then {
 	ZCP_MaxWaitTime = 80;
 	ZCP_BaseCleanupDelay = 50;
 	ZCP_Minimum_Online_Players = 0;
+	ZCP_DMS_doIUseDMS = false;
 };
 
 /* Do not change this*/
