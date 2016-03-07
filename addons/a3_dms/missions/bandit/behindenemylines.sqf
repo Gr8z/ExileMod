@@ -68,9 +68,9 @@ _wreck = createVehicle ["Land_BagBunker_Tower_F",[(_pos select 0) - 10, (_pos se
 // Set crate loot values
 _crate_loot_values1 =
 [
-	5,		// Weapons
-	3,		// Items
-	2 		// Backpacks
+	10,		// Weapons
+	6,		// Items
+	4 		// Backpacks
 ];
 
 

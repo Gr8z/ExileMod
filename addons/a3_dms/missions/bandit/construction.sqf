@@ -95,9 +95,9 @@ _vehicle = [_vehClass,_pos] call DMS_fnc_SpawnNonPersistentVehicle;
 // Set crate loot values
 _crate_loot_values =
 [
-	3,		// Weapons
-	[25,DMS_BoxBuildingSupplies],		// Items
-	2 		// Backpacks
+	6,		// Weapons
+	[50,DMS_BoxBuildingSupplies],		// Items
+	4 		// Backpacks
 ];
 
 

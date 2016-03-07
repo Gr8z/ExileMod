@@ -102,9 +102,9 @@ _vehicle2 = [_vehClass2, [_pos,5+(random 3),_rndDir+180] call DMS_fnc_SelectOffs
 // Set crate loot values
 _crate_loot_values1 =
 [
-	5,		// Weapons
-	5,		// Items
-	2 		// Backpacks
+	10,		// Weapons
+	10,		// Items
+	4 		// Backpacks
 ];
 
 
