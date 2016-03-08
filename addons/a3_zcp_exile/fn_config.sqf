@@ -3,7 +3,7 @@
 // Being first in the zone starts the timer.
 // Holding a zone  gives you a reward after x Min.
 
-ZCP_dev = false; // Devmode for shorter development capture times
+ZCP_dev = true; // Devmode for shorter development capture times
 
 ZCP_DMS_doIUseDMS = true; // Use DMS to spawn AI IF CapturePoint has spawnAI = true
 ZCP_Min_AI_Amount = 4; // Min ammount of AI at a ZCP
@@ -46,9 +46,9 @@ ZCP_MaxMissions = 1; // Amount of cap points at the same time.
 
 // For every spawned mission,
 ZCP_CapBases = [ // located in capbases folder
-	["base1.sqf", 60]
-	"base2.sqf",
-	"base3.sqf"
+	["base1.sqf", 130],
+	["base2.sqf", 130],
+	["base3.sqf" 130]
 ];
 
 ZCP_TerrainGradient = 40; // Max meter terrain gradient ( height difference)
