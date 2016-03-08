@@ -30,7 +30,7 @@ switch (_reward) do {
 
 		format["setAccountScore:%1:%2", _playerScore,getPlayerUID _ZCP_currentCapper] call ExileServer_system_database_query_fireAndForget;
 
-		PV_ZCP_zupastic = ["ZCP",[format["BATTLE ZONE: %1 Successfully captured the Zone and Recieved %2 Respect."],name _ZCP_currentCapper,_awardToGive], 'ZCP_Capped'];
+		PV_ZCP_zupastic = ["ZCP",[format["BATTLE ZONE: %1 Successfully captured the Zone and Recieved %2 Respect.",name _ZCP_currentCapper,_awardToGive]], 'ZCP_Capped'];
 		owner _ZCP_currentCapper publicVariableClient "PV_ZCP_zupastic";
 
 		[_ZCP_currentCapper, "showFragRequest", [[[format ["Reputation"],_awardToGive]]]] call ExileServer_system_network_send_to;
@@ -77,7 +77,7 @@ switch (_reward) do {
 
 		format["updateWallet:%1:%2", _playerMoney, (getPlayerUID _ZCP_currentCapper)] call ExileServer_system_database_query_fireAndForget;
 
-		PV_ZCP_zupastic = ["ZCP",[format["BATTLE ZONE: %1 Successfully captured the Zone and Recieved %2 Pop Tabs."],name _ZCP_currentCapper,_awardToGive], 'ZCP_Capped'];
+		PV_ZCP_zupastic = ["ZCP",[format["BATTLE ZONE: %1 Successfully captured the Zone and Recieved %2 Pop Tabs.",name _ZCP_currentCapper,_awardToGive]], 'ZCP_Capped'];
 		owner _ZCP_currentCapper publicVariableClient "PV_ZCP_zupastic";
 
 		ExileClientPlayerMoney = _newScore;
