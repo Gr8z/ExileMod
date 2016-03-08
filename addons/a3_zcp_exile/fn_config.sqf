@@ -46,7 +46,7 @@ ZCP_MaxMissions = 1; // Amount of cap points at the same time.
 
 // For every spawned mission,
 ZCP_CapBases = [ // located in capbases folder
-	["base1.sqf", 130],
+	["base1.sqf", 80],
 	["base2.sqf", 90],
 	["base3.sqf", 40]
 ];
