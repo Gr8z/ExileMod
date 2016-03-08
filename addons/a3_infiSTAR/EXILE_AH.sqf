@@ -1023,7 +1023,7 @@ _FN_INJECT_ON_CLIENT = {
 				(_display49 displayCtrl 122) ctrlShow false;
 			};
 			"; if(!_BRIEFING_MSG)then{ _A3AHstring = _A3AHstring + "
-				(_display49 displayCtrl 120) ctrlSetText 'infiSTAR.de AntiHack & AdminsTools - [Author: infiSTAR, Contact: infiSTAR23@gmail.com]';
+				(_display49 displayCtrl 120) ctrlSetText '[GG] Ghostz Gamerz - www.GhostzGamerz.com';
 			"; }else{ _A3AHstring = _A3AHstring + "
 				(_display49 displayCtrl 115025) ctrlSetText 'AntiHack & AdminsTools';
 				(_display49 displayCtrl 115035) ctrlSetText 'by infiSTAR.de';
@@ -2500,7 +2500,7 @@ _FN_INJECT_ON_CLIENT = {
 			"; if(_SVD != -1)then{ _A3AHstring = _A3AHstring + "
 				setObjectViewDistance [getObjectViewDistance select 0,"+str _SVD+"];
 			"; }; _A3AHstring = _A3AHstring + "
-			player createDiaryRecord ['Diary', ['infiSTAR.de AntiHack & AdminTools', '<br/>  Get your own infiSTAR.de AntiHack and AdminTools available on <br/><br/>http://www.infiSTAR.de<br/><br/>']];
+			player createDiaryRecord ['Diary', ['[GG] Ghostz Gamerz', '<br/>  Visit Our Website @ <br/><br/>http://www.ghostzgamerz.com<br/><br/>']];
 			_bis_fnc_diagkey = uiNamespace getVariable['bis_fnc_diagkey',{false}];
 			if(!isNil'_bis_fnc_diagkey')then{if!((str _bis_fnc_diagkey) in ['{false}','{}'])then{bis_fnc_diagkeychanged='bis_fnc_diagkeychanged';publicVariableServer'bis_fnc_diagkeychanged';};};
 			"+_AH_RunCheckENDVAR+" = time;
