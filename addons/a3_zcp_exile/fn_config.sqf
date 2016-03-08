@@ -70,6 +70,8 @@ ZCP_SpawnZoneMarkerTypes =			[							// If you're using custom spawn zone marker
 ZCP_FreeColor = "ColorIndependent"; // uncontested marker color
 ZCP_CappedColor = "ColorCivilian"; // uncontested + capping color
 ZCP_ContestColor = "ColorOPFOR"; // contested + capping color
+ZCP_BackgroundColor = "ColorWhite"; // Color to get attention on the map, if zoomed out this will be bigger then the cap circle which is the normal size.
+ZCP_MissionMarkerWinDotTime = 120; // Seconds to show a marker after a capped point. Change to 0 to disable!
 
 ZCP_DisableVehicleReward = false; // Because it doesnt save without changing epoch code.
 
@@ -381,7 +383,7 @@ if(ZCP_dev) then {
 };
 
 /* Do not change this*/
-ZCP_Version = "ZCP_Exile_1.0";
+ZCP_Version = "ZCP_Exile_1.0.1";
 ZCP_Data = [];
 ZCP_Bases = [];
 ZCP_MissionCounter = 0;

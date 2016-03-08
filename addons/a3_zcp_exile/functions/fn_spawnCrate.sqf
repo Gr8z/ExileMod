@@ -18,9 +18,9 @@ switch (_type) do {
       [
         _box,
         [
-          10 + floor random 3,		// Weapons
-          [25 + (floor random 15),DMS_BoxBuildingSupplies],		// Items
-          5 + floor random 3 		// Backpacks
+          1 + floor random 3,		// Weapons
+          [10 + (floor random 15),DMS_BoxBuildingSupplies],		// Items
+          1 + floor random 3 		// Backpacks
         ],
         ZCP_DMS_RareLootChance
       ]call ZCP_fnc_fillCrate;
@@ -29,9 +29,9 @@ switch (_type) do {
       diag_log format['%1', _type];
       private["_loot","_random"];
       _loot = [
-        20 + (floor random 10),		// Weapons
+        6 + (floor random 10),		// Weapons
         4 + (floor random 4) ,		// Items
-        6 + (floor random 2) 		// Backpacks
+        1 + (floor random 2) 		// Backpacks
       ];
       [
         _box,

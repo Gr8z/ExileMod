@@ -24,14 +24,6 @@ if !(isServer) exitWith
 
 diag_log text format ["[ZCP]: Giving server some time to boot."];
 
-/*
-// This code is NECESSARY for spawning persistent vehicles. DO NOT REMOVE THIS CODE UNLESS YOU KNOW WHAT YOU ARE DOING
-if !("isKnownAccount:DMS_PersistentVehicle" call ExileServer_system_database_query_selectSingleField) then
-{
-	"createAccount:DMS_PersistentVehicle:DMS_PersistentVehicle" call ExileServer_system_database_query_fireAndForget;
-};
-*/
-
 ZCP_MapCenterPos =  [8500,8500];
 ZCP_MapRadius = 8500;
 
@@ -59,6 +51,11 @@ switch (toLower worldName) do
 	{
 		ZCP_MapCenterPos 	= [12800,12800];
 		ZCP_MapRadius 		= 12800;
+	};
+	case "namalsk":
+	{
+		ZCP_MapCenterPos 	= [6000,4000];
+		ZCP_MapRadius 		= 6000;
 	};
 	default 											// Use "worldSize" to determine map center/radius (not always very nice).
 	{
