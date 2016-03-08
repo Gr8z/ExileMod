@@ -10,7 +10,6 @@ ZCP_Min_AI_Amount = 4; // Min ammount of AI at a ZCP
 ZCP_Random_AI_Max = 8; // so min 4 and max 12 (4+8) AI
 
 ZCP_CapTime = 600; // Seconds to cap an area uncontested
-ZCP_CapRadius = 130; // Meter radius of the capture circle around the first object.
 ZCP_MinWaitTime = 600; // seconds to wait to spawn a new capturepoint when 1 was capped.
 ZCP_MaxWaitTime = 900; // random between 0 and THIS number added to the ZCP_MinWaitTime to counter spawning points at the same time
 ZCP_BaseCleanupDelay = 500; // seconds to wait to delete a captured base.
@@ -47,7 +46,7 @@ ZCP_MaxMissions = 1; // Amount of cap points at the same time.
 
 // For every spawned mission,
 ZCP_CapBases = [ // located in capbases folder
-	"base1.sqf",
+	["base1.sqf", 60]
 	"base2.sqf",
 	"base3.sqf"
 ];
