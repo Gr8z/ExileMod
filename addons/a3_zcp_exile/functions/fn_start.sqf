@@ -225,8 +225,8 @@ if(count _ZCP_baseObjects != 0)then{
 				};
 	};
 
-	PV_ZCP_zupastic = ["ZCP",[format["%1 is captured. %2.",_ZCP_name,_finishText]], 'ZCP_Capped'];
-	publicVariable "PV_ZCP_zupastic";
+//	PV_ZCP_zupastic = ["ZCP",[format["%1 is captured. %2.",_ZCP_name,_finishText]], 'ZCP_Capped'];
+//	publicVariable "PV_ZCP_zupastic";
 	[_ZCP_currentCapper,_ZCP_name,_capturePosition,_this select 2] call ZCP_fnc_giveReward;
 	(ZCP_Data select _ZCP_index) set[0,false];
 	(ZCP_Data select _ZCP_index) set[1,0];
