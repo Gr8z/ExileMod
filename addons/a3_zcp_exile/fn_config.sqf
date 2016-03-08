@@ -48,7 +48,7 @@ ZCP_MaxMissions = 1; // Amount of cap points at the same time.
 ZCP_CapBases = [ // located in capbases folder
 	["base1.sqf", 130],
 	["base2.sqf", 130],
-	["base3.sqf" 130]
+	["base3.sqf", 130]
 ];
 
 ZCP_TerrainGradient = 40; // Max meter terrain gradient ( height difference)
