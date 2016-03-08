@@ -156,7 +156,7 @@ ExileDevFriendlyMode = false;	/* adds Exile Devs to your AdminList - makes it ea
 ESCMNUTOP = "[GG] Ghostz Gamerz";
 ESCMNUBOT = "www.GHOSTZGAMERZ.com";
 BRIEFING_MSG = false;	/* use mission briefing message: if   "BRIEFING_MSG = false;"   then the message will be replaced by infiSTAR */
-HTML_LOAD_URL = "http://goo.gl/IqF6wH";	/* HTML_LOAD_URL = ""; == disabled and if you set a url it will be shown in ESCAPE menu. HTML in Arma/this is limited. Try it :) example: "http://goo.gl/gb0o7b" */
+HTML_LOAD_URL = "http://ghostzgamerz.com/esc.php";	/* HTML_LOAD_URL = ""; == disabled and if you set a url it will be shown in ESCAPE menu. HTML in Arma/this is limited. Try it :) example: "http://goo.gl/gb0o7b" */
 
 
 /* shows RESTART IN X MINS */
