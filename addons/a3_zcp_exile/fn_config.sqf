@@ -3,7 +3,7 @@
 // Being first in the zone starts the timer.
 // Holding a zone  gives you a reward after x Min.
 
-ZCP_dev = false; // Devmode for shorter development capture times
+ZCP_dev = true; // Devmode for shorter development capture times
 
 ZCP_DMS_doIUseDMS = true; // Use DMS to spawn AI IF CapturePoint has spawnAI = true
 ZCP_Min_AI_Amount = 4; // Min ammount of AI at a ZCP
@@ -34,6 +34,18 @@ ZCP_FlyHeight = 150; // Height of the flying plane;
 
 ZCP_UseSpecificNamesForCappers = true; // Use the player name, if false it say 'A player'
 
+ZCP_RewardWeightForRandomChoice = [
+	["Poptabs", 6],
+	["BuildBox", 3],
+	["WeaponBox", 5],
+	["Vehicle", 2]
+];
+// How does this work ( 6 + 3 + 5 + 2 = 16)
+// 6/16 = 37.50 %
+// 3/16 = 18.75 %
+// 5/16 = 31.25 %
+// 2/16 = 12.50 %
+
 // Server will keep as many missions up as ZCP_MaxMissions, And they will be randomly choosen from the following list
 // Location is ignored if not using static points. just put [0,0,0] then. activate static buy using isStatic = true
 // valid rewards -> Random, Poptabs, Vehicle, Buildingbox, WeaponBox
@@ -45,7 +57,7 @@ ZCP_CapPoints = [ // [name,[x,y,z],reward, varname,index, spanwnAI, isStatic]
 ZCP_MaxMissions = 1; // Amount of cap points at the same time.
 
 // For every spawned mission,
-ZCP_CapBases = [ // located in capbases folder
+ZCP_CapBases = [ // located in capbases folder [filename, capradius]
 	["base1.sqf", 80],
 	["base2.sqf", 90],
 	["base3.sqf", 40]
@@ -54,7 +66,12 @@ ZCP_CapBases = [ // located in capbases folder
 ZCP_TerrainGradient = 60; // Max meter terrain gradient ( height difference)
 ZCP_MinDistanceFromObject = 60; // Missions needs an open spot. You can lower it but it might collide with other objects ( not always a problem)
 
+ZCP_Blacklist = [ // [ [x,y,z], radius ];
+	[[-999,-999,0] , 500],
+	[[-999,-999,0] , 500]
+];
 // Same as DMS -> Credits DMS
+ZCP_DistanceBetweenMissions = 500;
 ZCP_SpawnZoneDistance = 500;
 ZCP_TradeZoneDistance = 500;
 ZCP_TraderZoneMarkerTypes =			[							// If you're using custom trader markers, make sure you define them here. CASE SENSITIVE!!!
@@ -66,7 +83,7 @@ ZCP_SpawnZoneMarkerTypes =			[							// If you're using custom spawn zone marker
 
 
 /* These are arma 3 colors, look up the color naming if you are going to change this */
-ZCP_FreeColor = "ColorIndependent"; // uncontested marker color
+ZCP_FreeColor = "ColorIndependent"; // uncontested marker color -> also correct size
 ZCP_CappedColor = "ColorCivilian"; // uncontested + capping color
 ZCP_ContestColor = "ColorOPFOR"; // contested + capping color
 ZCP_BackgroundColor = "ColorWhite"; // Color to get attention on the map, if zoomed out this will be bigger then the cap circle which is the normal size.
@@ -75,8 +92,8 @@ ZCP_MissionMarkerWinDotTime = 120; // Seconds to show a marker after a capped po
 ZCP_DisableVehicleReward = false; // Because it doesnt save without changing epoch code.
 
 /** Uses DMS system, why make one if it already excist? Credits DMS **/
-ZCP_DMS_MinimumMagCount					= 3;						// Minimum number of magazines for weapons.
-ZCP_DMS_MaximumMagCount					= 5;						// Maximum number of magazines for weapons.
+ZCP_DMS_MinimumMagCount					= 2;						// Minimum number of magazines for weapons.
+ZCP_DMS_MaximumMagCount					= 4;						// Maximum number of magazines for weapons.
 ZCP_DMS_CrateCase_Sniper =				[							// If you pass "Sniper" in _lootValues, then it will spawn these weapons/items/backpacks
 										[
 											["Rangefinder",1],
@@ -117,70 +134,28 @@ ZCP_DMS_CrateCase_Sniper =				[							// If you pass "Sniper" in _lootValues, th
 										]
 									];
 ZCP_DMS_BoxWeapons =					[							// List of weapons that can spawn in a crate
-											"Exile_Melee_Axe",
-											"arifle_Katiba_GL_F",
-											"arifle_MX_GL_Black_F",
-											"arifle_Mk20_GL_F",
-											"arifle_TRG21_GL_F",
-											"arifle_Katiba_F",
-											"arifle_MX_Black_F",
-											"arifle_TRG21_F",
-											"arifle_TRG20_F",
-											"arifle_Mk20_plain_F",
-											"arifle_Mk20_F",
-											"LMG_Zafir_F",
-											"MMG_01_hex_F",
-											"srifle_EBR_F",
-											"srifle_DMR_01_F",
-											"srifle_GM6_F",
-											"srifle_LRR_F",
-											"srifle_DMR_02_F",
-											"MMG_01_tan_F",
-											"MMG_02_camo_F",
-											"MMG_02_black_F",
-											"MMG_02_sand_F",
-											"srifle_DMR_03_F",
-											"srifle_DMR_03_khaki_F",
-											"srifle_DMR_03_tan_F",
-											"srifle_DMR_04_F",
-											"srifle_DMR_04_Tan_F",
-											"srifle_DMR_05_blk_F",
-											"srifle_DMR_05_tan_F",
-											"srifle_DMR_05_hex_F",
-											"srifle_DMR_06_camo_F",
-											"srifle_DMR_06_olive_F",
-											"srifle_LRR_camo_F",
-											"srifle_GM6_camo_F",
-											"CUP_lmg_M249_para",
-											"CUP_lmg_Mk48_des",
-											"CUP_lmg_Mk48_wdl",
-											"CUP_lmg_L110A1",
-											"CUP_lmg_Pecheneg",
-											"CUP_lmg_UK59",
-											"CUP_lmg_L7A2",
-											"CUP_lmg_M60A4",
-											"CUP_lmg_M240",
-											"CUP_lmg_M249",
-											"CUP_lmg_PKM",
-											"CUP_srifle_DMR",
-											"CUP_srifle_ksvk",
-											"CUP_srifle_M110",
-											"CUP_srifle_M14",
-											"CUP_srifle_M24_des",
-											"CUP_srifle_M24_wdl",
-											"CUP_srifle_M24_ghillie",
-											"CUP_srifle_SVD",
-											"CUP_srifle_SVD_des",
-											"CUP_srifle_VSSVintorez",
-											"CUP_srifle_CZ750",
-											"CUP_srifle_Mk12SPR",
-											"CUP_srifle_AS50",
-											"CUP_srifle_AWM_des",
-											"CUP_srifle_AWM_wdl",
-											"CUP_srifle_CZ550",
-											"CUP_srifle_LeeEnfield",
-											"CUP_srifle_M40A3"	
-										];
+										"Exile_Melee_Axe",
+										"arifle_Katiba_GL_F",
+										"arifle_MX_GL_Black_F",
+										"arifle_Mk20_GL_F",
+										"arifle_TRG21_GL_F",
+										"arifle_Katiba_F",
+										"arifle_MX_Black_F",
+										"arifle_TRG21_F",
+										"arifle_TRG20_F",
+										"arifle_Mk20_plain_F",
+										"arifle_Mk20_F",
+										"LMG_Zafir_F",
+										"LMG_Mk200_F",
+										"arifle_MX_SW_Black_F",
+										"srifle_EBR_F",
+										"srifle_DMR_01_F",
+										"srifle_GM6_F",
+										"srifle_LRR_F",
+										"arifle_MXM_F",
+										"arifle_MXM_Black_F",
+										"srifle_DMR_02_F"
+									];
 ZCP_DMS_BoxFood =						[							// List of food that can spawn in a crate.
 										"Exile_Item_GloriousKnakworst_Cooked",
 										"Exile_Item_Surstromming_Cooked",
@@ -206,8 +181,7 @@ ZCP_DMS_BoxSurvivalSupplies	=			[							//List of survival supplies (food/drink/
 										"Exile_Item_Matches",
 										"Exile_Item_CookingPot",
 										"Exile_Melee_Axe",
-										"Exile_Item_CanOpener",
-										"Exile_Item_DuctTape"
+										"Exile_Item_CanOpener"
 									] + ZCP_DMS_BoxFood + ZCP_DMS_BoxDrinks + ZCP_DMS_BoxMeds;
 ZCP_DMS_BoxBaseParts =					[
 										"Exile_Item_CamoTentKit",
@@ -242,67 +216,8 @@ ZCP_DMS_BoxOptics =						[							// List of optics that can spawn in a crate
 										"optic_MRCO",
 										"optic_SOS",
 										"optic_DMS",
-										"optic_LRPS",
-										"optic_Nightstalker",
-										"rhsusf_acc_eotech_552",
-										"rhsusf_acc_LEUPOLDMK4",
-										"rhsusf_acc_ELCAN",
-										"rhsusf_acc_ELCAN_pip",
-										"rhsusf_acc_ACOG",
-										"rhsusf_acc_ACOG_pip",
-										"rhs_acc_1pn93_2",
-										"rhsusf_acc_ACOG2",
-										"rhsusf_acc_ACOG_USMC",
-										"rhsusf_acc_ACOG2_USMC",
-										"rhsusf_acc_ACOG3_USMC",
-										"rhsusf_acc_LEUPOLDMK4_2",
-										"rhsusf_acc_EOTECH",
-										"rhs_acc_1p29",
-										"rhs_acc_1p78",
-										"rhs_acc_pkas",
-										"rhs_acc_1p63",
-										"rhs_acc_ekp1",
-										"rhs_acc_pso1m2",
-										"rhs_acc_pgo7v",
-										"rhs_acc_1pn93_1",
-										"CUP_optic_PSO_1",
-										"CUP_optic_PSO_3",
-										"CUP_optic_Kobra",
-										"CUP_optic_GOSHAWK",
-										"CUP_optic_PechenegScope",
-										"CUP_optic_HoloBlack",
-										"CUP_optic_HoloWdl",
-										"CUP_optic_HoloDesert",
-										"CUP_optic_Eotech533",
-										"CUP_optic_Eotech533Grey",
-										"CUP_optic_CompM4",
-										"CUP_optic_SUSAT",
-										"CUP_optic_RCO",
-										"CUP_optic_RCO_desert",
-										"CUP_optic_CompM2_Woodland2",
-										"CUP_optic_CompM2_Woodland",
-										"CUP_optic_CompM2_Black",
-										"CUP_optic_CompM2_Desert",
-										"CUP_optic_ACOG",
-										"CUP_optic_SB_3_12x50_PMII",
-										"CUP_optic_AN_PAS_13c2",
-										"CUP_optic_AN_PVS_4",
-										"CUP_optic_AN_PVS_10",
-										"CUP_optic_LeupoldMk4",
-										"CUP_optic_LeupoldM3LR",
-										"CUP_optic_LeupoldMk4_CQ_T",
-										"CUP_optic_LeupoldMk4_MRT_tan",
-										"CUP_optic_LeupoldMk4_10x40_LRT_Desert",
-										"CUP_optic_LeupoldMk4_10x40_LRT_Woodland",
-										"CUP_optic_Leupold_VX3",
-										"CUP_optic_ElcanM145",
-										"CUP_optic_ELCAN_SpecterDR",
-										"CUP_optic_AN_PAS_13c1",
-										"CUP_optic_SB_11_4x20_PM",
-										"CUP_optic_ZDDot",
-										"CUP_optic_MRad",
-										"CUP_optic_TrijiconRx01_black",
-										"CUP_optic_TrijiconRx01_desert"
+										"optic_LRPS"
+										//"optic_Nightstalker"			// Nightstalker scope lost thermal in Exile v0.9.4
 									];
 ZCP_DMS_BoxBackpacks =					[							//List of backpacks that can spawn in a crate
 										"B_Bergen_rgr",
@@ -311,54 +226,14 @@ ZCP_DMS_BoxBackpacks =					[							//List of backpacks that can spawn in a crate
 										"B_Carryall_cbr",
 										"B_FieldPack_oucamo",
 										"B_FieldPack_cbr",
-										"B_Bergen_blk",
-										"TRYK_B_AssaultPack_UCP",
-										"TRYK_B_AssaultPack_Type2camo",
-										"TRYK_B_AssaultPack_MARPAT_Desert",
-										"TRYK_B_AssaultPack_MARPAT_Wood",
-										"TRYK_B_Kitbag_Base",
-										"TRYK_B_Kitbag_blk",
-										"TRYK_B_Kitbag_aaf",
-										"TRYK_B_Carryall_blk",
-										"TRYK_B_Carryall_wh",
-										"TRYK_B_Carryall_wood",
-										"TRYK_B_Carryall_JSDF",
-										"TRYK_B_Kitbag_Base_JSDF",
-										"TRYK_B_Coyotebackpack",
-										"TRYK_B_Coyotebackpack_OD",
-										"TRYK_B_Coyotebackpack_BLK",
-										"TRYK_B_Coyotebackpack_WH",
-										"TRYK_B_Alicepack",
-										"TRYK_B_Medbag",
-										"TRYK_B_Medbag_OD",
-										"TRYK_B_Medbag_BK",
-										"TRYK_B_Medbag_ucp",
-										"TRYK_B_Belt",
-										"TRYK_B_Belt_BLK",
-										"TRYK_B_Belt_CYT",
-										"TRYK_B_Belt_tan",
-										"TRYK_B_Belt_br",
-										"TRYK_B_Belt_GR",
-										"TRYK_B_Belt_AOR1",
-										"TRYK_B_Belt_AOR2",
-										"TRYK_B_BAF_BAG_BLK",
-										"TRYK_B_BAF_BAG_CYT",
-										"TRYK_B_BAF_BAG_OD",
-										"TRYK_B_BAF_BAG_rgr",
-										"TRYK_B_BAF_BAG_mcamo",
-										"TRYK_B_tube_cyt",
-										"TRYK_B_tube_od",
-										"TRYK_B_tube_blk",
-										"TRYK_B_FieldPack_Wood",
-										"TRYK_Winter_pack"
+										"B_Bergen_blk"
 									];
 ZCP_DMS_BoxItems						= ZCP_DMS_BoxSurvivalSupplies+ZCP_DMS_BoxBuildingSupplies+ZCP_DMS_BoxOptics;	// Random "items" can spawn optics, survival supplies, or building supplies
 
 ZCP_DMS_RareLoot						= true;						// Potential chance to spawn rare loot in any crate.
 ZCP_DMS_RareLootList =					[							// List of rare loot to spawn
 										"Exile_Item_SafeKit",
-										"Exile_Item_CodeLock",
-										"Exile_Item_Defibrillator"
+										"Exile_Item_CodeLock"
 									];
 ZCP_DMS_RareLootChance	= 10;						// Percentage Chance to spawn rare loot in any crate | Default: 10%
 
@@ -367,9 +242,72 @@ ZCP_DMS_ArmedVehicles =					[							// List of armed vehicles that can spawn
 										"Exile_Car_Offroad_Armed_Guerilla01"
 									];
 
-ZCP_VehicleReward = ZCP_DMS_ArmedVehicles;
+ZCP_DMS_MilitaryVehicles =				[							// List of military vehicles that can spawn
+										"Exile_Car_Strider",
+										"Exile_Car_Hunter",
+										"Exile_Car_Ifrit"
+									];
+
+ZCP_DMS_TransportTrucks =				[							// List of transport trucks that can spawn
+										"Exile_Car_Van_Guerilla01",
+										"Exile_Car_Zamak",
+										"Exile_Car_Tempest",
+										"Exile_Car_HEMMT",
+										"Exile_Car_Ural_Open_Military",
+										"Exile_Car_Ural_Covered_Military"
+									];
+
+ZCP_DMS_RefuelTrucks =					[							// List of refuel trucks that can spawn
+										"Exile_Car_Van_Fuel_Black",
+										"Exile_Car_Van_Fuel_White",
+										"Exile_Car_Van_Fuel_Red",
+										"Exile_Car_Van_Fuel_Guerilla01",
+										"Exile_Car_Van_Fuel_Guerilla02",
+										"Exile_Car_Van_Fuel_Guerilla03"
+									];
+
+ZCP_DMS_CivilianVehicles =				[							// List of civilian vehicles that can spawn
+										"Exile_Car_SUV_Red",
+										"Exile_Car_Hatchback_Rusty1",
+										"Exile_Car_Hatchback_Rusty2",
+										"Exile_Car_Hatchback_Sport_Red",
+										"Exile_Car_SUV_Red",
+										"Exile_Car_Offroad_Rusty2",
+										"Exile_Bike_QuadBike_Fia"
+									];
+
+ZCP_DMS_TransportHelis =				[							// List of transport helis that can spawn
+										"Exile_Chopper_Hummingbird_Green",
+										"Exile_Chopper_Orca_BlackCustom",
+										"Exile_Chopper_Mohawk_FIA",
+										"Exile_Chopper_Huron_Black",
+										"Exile_Chopper_Hellcat_Green",
+										"Exile_Chopper_Taru_Transport_Black"
+									];
+
+ZCP_VehicleReward = ZCP_DMS_TransportTrucks;
 ZCP_DMS_DEBUG = false;
 
+
+ZCP_Translations = [ // ['original','original in your language'] the %1 %2 and so on are Variables!
+	['%1 capbase set up. Capture for %2 min!' , '%1 capbase set up. Capture for %2 min!'], // ZCP Alpha capbase set up. Capture for 10 min!
+	['%2 is capping %1. %3min left!' , '%2 is capping %1. %3min left!'], // Zupa is capping ZCP alpha, 5min left.
+	['A player' , 'A player'], // A player
+	['%1 is 50%4 captured by %2. %3min left!', '%1 is 50%4 captured by %2. %3min left!'], // ZCP Alpha is 50% captured by Zupa/A player. 2min left!
+	['%1 is almost captured by %2. 60s left!', '%1 is almost captured by %2. 60s left!'], // ZCP Alpha is almost captured by Zupa/A player. 60s left!
+	['%1 is captured. %2.', '%1 is captured. %2.'], // ZCP Alpha is captured. (%2 is on of the 2 following translations, so leave the variable there!
+	['Bombing in %1s!', 'Bombing in %1s!'], // Bombing in 600s
+	['Cleanup in %1s!', 'Cleanup in %1s!'], // Cleanup in 600s
+	['Captured point', 'Captured point'], // Captured point
+	['Reputation', 'Respect'], // Reputation
+	['Group Reputation', 'Group Respect'], // Group reputation
+	['Package delivered, eyes on the sky!', 'Package delivered, eyes on the sky!'], // Package delivered, eyes on the sky!
+	['Package delivered, eyes on the sky! Poptabs on bank!', 'Package delivered, eyes on the sky! Poptabs on bank!'], // Package delivered, eyes on the sky! Poptabs on bank!
+	['Battle Zone is contested!', 'Battle Zone is contested!'], // Package delivered, eyes on the sky! Poptabs on bank!
+	['Battle Zone is no longer contested!', 'Battle Zone is no longer contested!'] // Capture point is contested!
+];
+
+ZCP_CurrentMod = "Exile"; // Exile, ( Epoch coming soon again)
 
 if(ZCP_dev) then {
 	ZCP_CapTime = 60;
@@ -387,3 +325,4 @@ ZCP_Data = [];
 ZCP_Bases = [];
 ZCP_MissionCounter = 0;
 ZCP_DMS_MagRange = ZCP_DMS_MaximumMagCount - ZCP_DMS_MinimumMagCount;
+diag_log format["ZCP: Config loaded succesfull"];
