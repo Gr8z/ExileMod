@@ -1423,7 +1423,6 @@ class CfgSettings
 						{"CUP_srifle_M14",1},
 						{"CUP_srifle_M24_des",1},
 						{"CUP_srifle_M24_wdl",1},
-						{"CUP_srifle_M24_ghillie",1},
 						{"CUP_srifle_SVD",1},
 						{"CUP_srifle_SVD_des",1},
 						{"CUP_srifle_VSSVintorez",1},

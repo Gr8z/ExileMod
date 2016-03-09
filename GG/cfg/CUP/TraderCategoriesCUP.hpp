@@ -309,7 +309,6 @@
 	"CUP_srifle_M14",
 	"CUP_srifle_M24_des",
 	"CUP_srifle_M24_wdl",
-	"CUP_srifle_M24_ghillie",
 	"CUP_srifle_SVD",
 	"CUP_srifle_SVD_des",
 	"CUP_srifle_VSSVintorez",

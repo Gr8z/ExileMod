@@ -279,7 +279,6 @@
     class CUP_srifle_M14 							{ quality = 1; price = 1200; };
     class CUP_srifle_M24_des 						{ quality = 1; price = 1200; };
     class CUP_srifle_M24_wdl 						{ quality = 1; price = 1200; };
-    class CUP_srifle_M24_ghillie 					{ quality = 1; price = 1200; };
     class CUP_srifle_SVD 							{ quality = 1; price = 1200; };
     class CUP_srifle_SVD_des 						{ quality = 1; price = 1200; };
     class CUP_srifle_VSSVintorez 					{ quality = 1; price = 1100; };
