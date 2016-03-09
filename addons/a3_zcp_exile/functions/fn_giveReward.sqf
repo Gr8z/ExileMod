@@ -61,6 +61,7 @@ switch (_reward) do {
 				}count (units _capperGroup);
 			};
 		};
+		diag_log format ["[ZCP]: %1 won %2, received %3 Reputation",name _ZCP_currentCapper,_ZCP_name,_awardToGive];
 	};
 	case "Poptabs" : {
 		private['_awardToGive','_playerMoney'];
@@ -75,7 +76,7 @@ switch (_reward) do {
 		_ZCP_currentCapper setVariable['PLAYER_STATS_VAR', [_playerMoney, _ZCP_currentCapper getVariable ['ExileScore', 0]],true];
 
 		format["updateWallet:%1:%2", _playerMoney, (getPlayerUID _ZCP_currentCapper)] call ExileServer_system_database_query_fireAndForget;
-		
+
 		['Notification', ["ZCP",[format["%1 Successfully captured the Zone and Recieved %2 Pop Tabs.", name _ZCP_currentCapper,_awardToGive]],"ZCP_Init"]] call ZCP_fnc_showNotification;
 
 		['PersonalNotification', ["Battle Zone",[format[[12] call ZCP_fnc_translate]], 'ZCP_Capped'], _ZCP_currentCapper] call ZCP_fnc_showNotification;
