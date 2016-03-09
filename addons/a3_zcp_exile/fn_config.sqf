@@ -325,4 +325,4 @@ ZCP_Data = [];
 ZCP_Bases = [];
 ZCP_MissionCounter = 0;
 ZCP_DMS_MagRange = ZCP_DMS_MaximumMagCount - ZCP_DMS_MinimumMagCount;
-diag_log format["ZCP: Config loaded succesfull"];
+diag_log format["[ZCP]: Config loaded succesfull"];
