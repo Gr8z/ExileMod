@@ -74,9 +74,9 @@ switch (_reward) do {
 		_ZCP_currentCapper setVariable ["ExilePurse", _playerMoney];
 		_ZCP_currentCapper setVariable['PLAYER_STATS_VAR', [_playerMoney, _ZCP_currentCapper getVariable ['ExileScore', 0]],true];
 
-		format["setAccountMoney:%1:%2", _playerMoney, (getPlayerUID _ZCP_currentCapper)] call ExileServer_system_database_query_fireAndForget;
+		format["updateWallet:%1:%2", _playerMoney, (getPlayerUID _ZCP_currentCapper)] call ExileServer_system_database_query_fireAndForget;
 
-		['Money',[_ZCP_currentCapper, "moneyReceivedRequest", [str _playerMoney, format ["Battle Zone Poptabs reward"]]]] call ZCP_fnc_showNotification;
+		['Money',[_ZCP_currentCapper, "moneyReceivedRequest", [str _playerMoney, format ["Battle Zone"]]]] call ZCP_fnc_showNotification;
 
 		['Notification', ["ZCP",[format["%1 Successfully captured the Zone and Recieved %2 Pop Tabs.", name _ZCP_currentCapper,_awardToGive]], 'ZCP_Capped']] call ZCP_fnc_showNotification;
 
