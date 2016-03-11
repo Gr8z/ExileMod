@@ -298,7 +298,7 @@ ZCP_Translations = [ // ['original','original in your language'] the %1 %2 and s
 	['%1 is captured. %2.', '%1 is captured. %2.'], // ZCP Alpha is captured. (%2 is on of the 2 following translations, so leave the variable there!
 	['Bombing in %1s!', 'Bombing in %1s!'], // Bombing in 600s
 	['Cleanup in %1s!', 'Cleanup in %1s!'], // Cleanup in 600s
-	['Captured point', 'Captured point'], // Captured point
+	['Captured point', 'Captured Zone'], // Captured point
 	['Reputation', 'Respect'], // Reputation
 	['Group Reputation', 'Group Respect'], // Group reputation
 	['Package delivered, eyes on the sky!', 'Package delivered, eyes on the sky!'], // Package delivered, eyes on the sky!
