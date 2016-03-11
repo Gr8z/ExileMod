@@ -169,6 +169,7 @@ Soldier3 = [
 	"76561198195305425", // shaz
 	"76561198001066546", // MeowMix
 	"76561198072478428", // Featherlite (EXP-2016-02-27) #13076
+	"76561198078726531", // [TFT]Trinity (OD-2015-09-23) #11776 
 	"76561197978528230", // Dark (player Created these loadouts)
 // Add UIDs above, don't forget the comma
 "0"
