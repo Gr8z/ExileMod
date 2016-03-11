@@ -33,8 +33,8 @@ switch (toLower worldName) do
 {
 	case "altis":										// [16000,16000] w/ radius of 16000 works well for Altis
 	{
-		ZCP_MapCenterPos 	= [16000,16000];
-		ZCP_MapRadius 		= 16000;
+		ZCP_MapCenterPos 	= [15834.2,15787.8];
+		ZCP_MapRadius 		= 15000;
 	};
 	case "bornholm":									// Thanks to thirdhero for testing this info
 	{
