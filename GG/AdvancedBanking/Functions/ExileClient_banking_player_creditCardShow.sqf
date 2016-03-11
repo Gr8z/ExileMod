@@ -16,6 +16,7 @@ private ["_display","_ctrls","_slideLeft","_curPos","_newPosX","_slideLeft","_pl
 cutRsc ["AdvBankingCreditCard", "PLAIN", 0, true];
 disableSerialization;
 _display = uiNameSpace getVariable ["AdvBankingCreditCard", displayNull];
+if (ADVBANKING_CLIENT_DEBUG) then {[format["Showing credit card for player"],"CreditCardShow"] call ExileClient_banking_utils_diagLog;};
 
 //Hide the creddit card
 _ctrls = [1200,1201,1100,1101,1102,1103,1104,1105];

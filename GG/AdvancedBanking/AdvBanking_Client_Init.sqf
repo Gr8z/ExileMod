@@ -6,6 +6,17 @@
  * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
+ 
+if (!hasInterface || isServer) exitWith {};
+
+ // START CONFIGURATION //
+
+ // Warning: Setting this to true will cause a lot of RPT messages.
+ // Only use this if you are having an issue.
+ ADVBANKING_CLIENT_DEBUG = false;
+
+ // END CONFIGURATION //
+
 private ['_code', '_function', '_file'];
 
 {

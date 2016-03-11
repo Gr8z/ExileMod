@@ -26,6 +26,7 @@ if (_playerNetID isEqualTo (netId player)) then {
 	if (_amount > ExileClientBank) then {
 		["Failed","You can't send more than what you have in your bank!"] call ExileClient_banking_network_handleATMMessage;
 	} else {
+		if (ADVBANKING_CLIENT_DEBUG) then {[format["Transferring request sent to server. Amount: %1",_amount],"transferToPlayer"] call ExileClient_banking_utils_diagLog;};
 		["sendMoneyRequest", [str _amount, _playerNetID]] call ExileClient_system_network_send;
 	};
 };

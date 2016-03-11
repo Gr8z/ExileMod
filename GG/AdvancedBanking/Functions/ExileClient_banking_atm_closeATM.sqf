@@ -23,4 +23,5 @@ _ctrls = [2202,2201,2203,1100,1101,1102,2210,2011,2204,2205,1105,1600,1106,1607,
 } forEach _ctrls;
 uiSleep 0.5;
 (findDisplay 0711) closeDisplay 0;
+if (ADVBANKING_CLIENT_DEBUG) then {[format["ATM was closed"],"CloseATM"] call ExileClient_banking_utils_diagLog;};
 ATMOpen = false;

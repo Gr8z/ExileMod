@@ -16,6 +16,7 @@ private ["_esc","_display","_loadingCtrls","_hide","_advCtrls","_setLoadingText"
 
 disableSerialization;
 _display = uiNameSpace getVariable ["AdvBankingATM", displayNull];
+if (ADVBANKING_CLIENT_DEBUG) then {[format["ATM Opened"],"onATMLoad"] call ExileClient_banking_utils_diagLog;};
 
     //hide the player list and send poptabs button
     _list = (_display displayCtrl 1500);

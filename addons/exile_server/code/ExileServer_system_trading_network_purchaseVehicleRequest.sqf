@@ -82,9 +82,10 @@ try
 	_playerMoney = _playerMoney - _salesPrice;
 
     // Advance Banking
-	_playerObject setVariable ["ExilePurse", _playerMoney];
-	format["updateWallet:%1:%2", _playerMoney, (getPlayerUID _playerObject)] call ExileServer_system_database_query_fireAndForget;
-    // Advance Banking
+   _playerObject setVariable ["ExilePurse", _playerMoney];
+   format["updateWallet:%1:%2", _playerMoney, (getPlayerUID _playerObject)] call ExileServer_system_database_query_fireAndForget;
+   if (ADVBANKING_SERVER_DEBUG) then {[format["%1 purchased a vehicle",_playerObject],"VehicleRequest"] call ExileServer_banking_utils_diagLog;};
+   // Advance Banking
 
 	[_sessionID, "purchaseVehicleResponse", [0, netId _vehicleObject, str _playerMoney]] call ExileServer_system_network_send_to;
 }

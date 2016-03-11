@@ -1,4 +1,6 @@
 /**
+ * ExileClient_gui_xm8_slide_apps_onOpen
+ *
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team
@@ -7,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
 
-private["_display","_health","_popTabsValue","_popTabs","_respectValue","_respect", "_serverInfo", "_newControl"];
+private["_display","_health","_popTabsValue","_popTabs","_respectValue","_respect", "_serverInfo", "_newControl","_8gNetworkPic","_8gNetworkBtn","_walletValue","_wallet","_bankValue","_sharedBankingBtn","_sharedBankingPic"];
 disableSerialization;
 
 _display = uiNameSpace getVariable ["RscExileXM8", displayNull];
