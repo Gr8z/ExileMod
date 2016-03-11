@@ -78,7 +78,9 @@ switch (_reward) do {
 
 		['Money',[_ZCP_currentCapper, "moneyReceivedRequest", [str _playerMoney, format ["Battle Zone Poptabs reward"]]]] call ZCP_fnc_showNotification;
 
-		diag_log format ["[ZCP]: %1 won %2, received %3 Poptabs and ItemBox",name _ZCP_currentCapper,_ZCP_name,_awardToGive];
+		['Notification', ["ZCP",[format["%1 Successfully captured the Zone and Recieved %2 Pop Tabs.", name _ZCP_currentCapper,_awardToGive]], 'ZCP_Capped']] call ZCP_fnc_showNotification;
+
+		diag_log format ["[ZCP]: %1 won %2, received %3 Poptabs",name _ZCP_currentCapper,_ZCP_name,_awardToGive];
 
 	};
 	case "BuildBox" : {
