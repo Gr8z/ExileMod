@@ -80,7 +80,20 @@ switch (_reward) do {
 
 		['Notification', ["ZCP",[format["%1 Successfully captured the Zone and Recieved %2 Pop Tabs.", name _ZCP_currentCapper,_awardToGive]], 'ZCP_Capped']] call ZCP_fnc_showNotification;
 
-		diag_log format ["[ZCP]: %1 won %2, received %3 Poptabs",name _ZCP_currentCapper,_ZCP_name,_awardToGive];
+		if( ZCP_PopTabsRewardForGroup > 0 ) then {
+			private['_capperGroup'];
+			_capperGroup = group _ZCP_currentCapper;
+			if( _capperGroup != grpNull ) then {
+				{
+					if (_x != _ZCP_currentCapper && _x distance2D _ZCP_currentCapper < 200 ) then {
+						_newScore = (_x getVariable ["ExilePurse", 0]) + ZCP_PopTabsRewardForGroup;
+						_x setVariable ["ExilePurse", _newScore ];
+						_x setVariable['PLAYER_STATS_VAR', _newScore, [_x getVariable ['ExileScore', 0]],true];
+						format["updateWallet:%1:%2", _newScore, getPlayerUID _x] call ExileServer_system_database_query_fireAndForget;
+					}
+				}count (units _capperGroup);
+			};
+		};
 
 	};
 	case "BuildBox" : {
