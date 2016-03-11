@@ -79,7 +79,7 @@ switch (_reward) do {
 
 		['Notification', ["ZCP",[format["%1 Successfully captured the Zone and Recieved %2 Pop Tabs.", name _ZCP_currentCapper,_awardToGive]],"ZCP_Init"]] call ZCP_fnc_showNotification;
 
-		['PersonalNotification', ["Battle Zone",[format[[12] call ZCP_fnc_translate]], 'ZCP_Capped'], _ZCP_currentCapper] call ZCP_fnc_showNotification;
+		['PersonalNotification', ["ZCP",[format[[12] call ZCP_fnc_translate]], 'ZCP_Capped'], _ZCP_currentCapper] call ZCP_fnc_showNotification;
 
 		['Money',[_ZCP_currentCapper, "moneyReceivedRequest", [str _playerMoney, format ["Battle Zone Poptabs reward"]]]] call ZCP_fnc_showNotification;
 
@@ -87,7 +87,7 @@ switch (_reward) do {
 		(owner _ZCP_currentCapper) publicVariableClient "ExileClientPlayerMoney";
 		ExileClientPlayerMoney = nil;
 
-		f( ZCP_PopTabsRewardForGroup > 0 ) then {
+		if( ZCP_PopTabsRewardForGroup > 0 ) then {
 			private['_capperGroup'];
 			_capperGroup = group _ZCP_currentCapper;
 			if( _capperGroup != grpNull ) then {
