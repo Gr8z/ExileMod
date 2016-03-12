@@ -13,7 +13,7 @@ if (!hasInterface || isServer) exitWith {};
 
  // Warning: Setting this to true will cause a lot of RPT messages.
  // Only use this if you are having an issue.
- ADVBANKING_CLIENT_DEBUG = true;
+ ADVBANKING_CLIENT_DEBUG = false;
 
  // END CONFIGURATION //
 
