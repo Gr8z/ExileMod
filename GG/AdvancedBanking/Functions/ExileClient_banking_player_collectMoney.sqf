@@ -21,8 +21,7 @@ try {
     if (_worth < 0) then {
         throw "Instructions unclear, received zero, expected millions.";
     };
-    player playMove "AinvPknlMstpSnonWnonDr_medic5";
-    uiSleep 10;
+    uiSleep 1;
     ["collectionRequest",[str(_worth),_objectNetId]] call ExileClient_system_network_send;
     if (ADVBANKING_CLIENT_DEBUG) then {[format["Collect some Money. Package: %1",_worth],"CollectMoney"] call ExileClient_banking_utils_diagLog;};
 } catch {
