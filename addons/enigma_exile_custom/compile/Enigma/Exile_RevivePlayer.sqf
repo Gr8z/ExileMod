@@ -1,3 +1,9 @@
+/*
+Exile_RevivePlayer.sqf
+[_ZEN_] Happydayz
+© 2016 Enigma Team
+*/
+
 private["_handguntype","_handgunammo","_player","_playerID","_playerPos","_reviveused","_reviverownerID","_bambiPlayerID","_playerPos","_data","_extDB2Message","_revivername","_msg","_reviveused","_ind","_playerID","_sessionID","_requestingPlayer", "_requestingPlayerUID", "_items", "_dir", "_location", "_type", "_weapon", "_attachments", "_currWeap", "_itemSlot", "_itemqtys", "_goggles", "_headgear", "_vest", "_backpack", "_uniform", "_weapons", "_magazinesAmmo", "_itemsplayer", "_weaponsplayer", "_group", "_primaryWeapon", "_secondaryWeapon", "_attachment", "_equipped", "_wMags", "_requestingPlayerGroup", "_droppedWeapons", "_bambiPlayer", "_ownerID", "_reviver"];
 
 _requestingPlayer = _this select 0;
@@ -21,12 +27,11 @@ if (!local _requestingPlayer) then {
 	if (!isNil "_requestingPlayerUID" && !alive _requestingPlayer) then {
 
 		_accountData = format["getAccountStats:%1", _requestingPlayerUID] call ExileServer_system_database_query_selectSingle;
-
 		private["_advBank"];
-        _advBank = format["getStats:%1",_requestingPlayerUID] call ExileServer_system_database_query_selectSingle;
+    	_advBank = format["getStats:%1",_requestingPlayerUID] call ExileServer_system_database_query_selectSingle;
 
 			if (_requestingPlayer == _reviver) exitWith {
-				Diag_log format ["Revive - Attempted hack revive by %1",_requestingPlayer];
+				Diag_log format ["Enigma Revive - Attempted hack revive by %1",_requestingPlayer];
 				};
 
 				_ind = ((count ReviveChk_cache) - 1);
@@ -80,23 +85,11 @@ if (!local _requestingPlayer) then {
 
 					_handguntype = handgunWeapon _requestingPlayer;
 
-
-
-/*
-
-Todo: Need to delete any items dropped on ground around me as they are duping for a few seconds after revive!!!
-
-*/
-
-
-
-
 _primaryWeapon = "";
 _secondaryWeapon = "";
 
 				_itemsplayer = [getItemCargo(uniformContainer _requestingPlayer), getItemCargo(vestContainer _requestingPlayer), getItemCargo(backpackContainer _requestingPlayer)];
 				_weaponsplayer = [getWeaponCargo(uniformContainer _requestingPlayer), getWeaponCargo(vestContainer _requestingPlayer), getWeaponCargo(backpackContainer _requestingPlayer)];
-				//_weapons = [currentWeapon _requestingPlayer, ((weaponsItems _requestingPlayer) + _droppedWeapons), [_primaryWeapon, _secondaryWeapon, handgunWeapon _requestingPlayer]];
 				_weapons = [currentWeapon _requestingPlayer, (weaponsItems _requestingPlayer), [_primaryWeapon, _secondaryWeapon, handgunWeapon _requestingPlayer]];
 				hideObjectGlobal _requestingPlayer;
 				_group = grpNull;
@@ -117,8 +110,6 @@ _secondaryWeapon = "";
 				_bambiPlayer setDamage DamageWhenRevived;
 				_bambiPlayer setDir _dir;
 				_bambiPlayer setPosATL _location;
-
-
 
 				if (_uniform != "") then {_bambiPlayer addUniform _uniform;};
 				if (_backpack != "") then {_bambiPlayer addBackpack _backpack;};
@@ -193,22 +184,36 @@ _secondaryWeapon = "";
 
 _bambiPlayer addMagazine [_handguntype, _handgunammo]; //fix handgun losing its ammo! puts mag back into inventory ---Not working... something removes the mag after 10 seconds or so... guessing exile load up!
 
+
+
 _bambiPlayer setName _name;
+
+if (GR8HumanityInstalled) then {
+_bambiPlayer setVariable ["ExilePurse", (_advBank select 1)];
+_bambiPlayer setVariable ["ExileScore", (_accountData select 1)];
+_bambiPlayer setVariable ["ExileHumanity", (_accountData select 2)];
+_bambiPlayer setVariable ["ExileKills", (_accountData select 3)];
+_bambiPlayer setVariable ["ExileDeaths", (_accountData select 4)];
+} else {
 _bambiPlayer setVariable ["ExilePurse", (_advBank select 1)];
 _bambiPlayer setVariable ["ExileScore", (_accountData select 1)];
 _bambiPlayer setVariable ["ExileKills", (_accountData select 2)];
 _bambiPlayer setVariable ["ExileDeaths", (_accountData select 3)];
+};
+
 _bambiPlayer setVariable ["ExileClanID", _clanID];
 _bambiPlayer setVariable ["ExileClanName", _clanName];
-_bambiPlayer setVariable ["ExileHunger", 50];//set to 50% as shouldnt be expect to be full fit and healthy after a defib!
-_bambiPlayer setVariable ["ExileThirst", 50];//set to 50% as shouldnt be expect to be full fit and healthy after a defib!
-_bambiPlayer setVariable ["ExileAlcohol", 0.1]; //testing making player a little "drunk" after the defib ;)
-_bambiPlayer setVariable ["ExileName", _name];
-_bambiPlayer setVariable ["ExileOwnerUID", getPlayerUID _requestingPlayer];
-_bambiPlayer setVariable ["ExileIsBambi", false];
+_bambiPlayer setVariable ["ExileHunger", 50]; //ur hungry
+_bambiPlayer setVariable ["ExileThirst", 50]; //ur thirsty
+_bambiPlayer setVariable ["ExileTemperature", 36]; //ur cold and clammy from death!
+_bambiPlayer setVariable ["ExileWetness", 0];
+_bambiPlayer setVariable ["ExileAlcohol", 0.1]; //ur a little woozy 
+_bambiPlayer setVariable ["ExileName", _name]; 
+_bambiPlayer setVariable ["ExileOwnerUID", getPlayerUID _requestingPlayer]; 
+_bambiPlayer setVariable ["ExileIsBambi", true];
 _bambiPlayer setVariable ["ExileXM8IsOnline", false, true];
 
-diag_log format ["Bambiplayer = %1 --- _sessionID = %2",_bambiPlayer,_sessionID];
+//diag_log format ["Bambiplayer = %1 --- _sessionID = %2",_bambiPlayer,_sessionID];
 
 
 private["_player","_playerID","_playerPos","_data","_extDB2Message"];
@@ -256,6 +261,8 @@ _data =
 	(getItemCargo vestContainer _player) call ExileClient_util_cargo_getMap,
 	(vestContainer _player) call ExileClient_util_cargo_getMagazineMap,
 	(getWeaponCargo vestContainer _player) call ExileClient_util_cargo_getMap,
+	_player getVariable ["ExileTemperature", 0],
+	_player getVariable ["ExileWetness", 0],
 	_playerID
 ];
 _extDB2Message = ["updatePlayer", _data] call ExileServer_util_extDB2_createMessage;
@@ -288,13 +295,13 @@ _extDB2Message call ExileServer_system_database_query_fireAndForget;
 									EnigmaReviveMSG = [_msg]; //sends message to reviver!
 									_reviverownerID publicVariableClient "EnigmaReviveMSG";
 
-							_newScore = _requestingPlayer getVariable ["ExileScore", 0];
-							_newScore = _newScore + 100;
-							_requestingPlayer setVariable ["ExileScore", _newScore];
-						format["setAccountScore:%1:%2", _newScore, getPlayerUID _requestingPlayer] call ExileServer_system_database_query_fireAndForget;
+									
+if (GR8HumanityInstalled) then {
 
-						_player addMPEventHandler ["MPKilled", {_this call ExileServer_object_player_event_onMpKilled}];
-
+_newScore = _requestingPlayer getVariable ["ExileHumanity", 0];
+_newScore = _newScore;
+_requestingPlayer setVariable ["ExileHumanity", _newScore];
+format["setAccountHumanity:%1:%2", _newScore, getPlayerUID _requestingPlayer] call ExileServer_system_database_query_fireAndForget;
 
 [
 	_sessionID,
@@ -303,34 +310,76 @@ _extDB2Message call ExileServer_system_database_query_fireAndForget;
 		(netId _player),
 		str (_player getVariable ["ExilePurse", 0]),
 		str (_player getVariable ["ExileScore", 0]),
+		str (_player getVariable ["ExileHumanity", 0]),		
 		(_player getVariable ["ExileKills", 0]),
 		(_player getVariable ["ExileDeaths", 0]),
 		(_player getVariable ["ExileHunger", 100]),
 		(_player getVariable ["ExileThirst", 100]),
 		(_player getVariable ["ExileAlcohol", 0]),
-		(_player getVariable ["ExileClanName", ""])
+		(_player getVariable ["ExileClanName", ""]),
+		(_player getVariable ["ExileTemperature", 0]),
+		(_player getVariable ["ExileWetness", 0])
+	]
+]
+call ExileServer_system_network_send_to;
+[_sessionID, _player] call ExileServer_system_session_update;
+
+
+} else {
+
+
+_newScore = _requestingPlayer getVariable ["ExileScore", 0];
+_newScore = _newScore + 100;
+_requestingPlayer setVariable ["ExileScore", _newScore];
+format["setAccountScore:%1:%2", _newScore, getPlayerUID _requestingPlayer] call ExileServer_system_database_query_fireAndForget;
+
+[
+	_sessionID,
+	"loadPlayerResponse",
+	[
+		(netId _player),
+		str (_player getVariable ["ExileMoney", 0]),
+		str (_player getVariable ["ExileScore", 0]),
+		(_player getVariable ["ExileKills", 0]),
+		(_player getVariable ["ExileDeaths", 0]),
+		(_player getVariable ["ExileHunger", 100]),
+		(_player getVariable ["ExileThirst", 100]),
+		(_player getVariable ["ExileAlcohol", 0]),
+		(_player getVariable ["ExileClanName", ""]),
+		(_player getVariable ["ExileTemperature", 0]),
+		(_player getVariable ["ExileWetness", 0])
 	]
 ]
 call ExileServer_system_network_send_to;
 
-[
-    _sessionID,
-    "updateBankStats",
     [
-        str (_advBank select 2)
+        _sessionID,
+        "updateBankStats",
+        [
+            str (_advBank select 2)
+        ]
     ]
-]
-call ExileServer_system_network_send_to;
+    call ExileServer_system_network_send_to;
 
 [_sessionID, _player] call ExileServer_system_session_update;
 
-_requestingPlayer setposatl [0,0,0];
+};							
+		
+
+_player addMPEventHandler ["MPKilled", {_this call ExileServer_object_player_event_onMpKilled}];
+
+
+
+
+_corpseGroup = createGroup independent; //test to prevent dead body still being in players group under certain circumstances
+[_requestingPlayer] joinSilent _corpseGroup;
 deleteVehicle _requestingPlayer;
+
   EnigmaRevive = [];
 	_ownerID publicVariableClient "EnigmaRevive";
 
-
-
+_player allowDamage true;		//test to fix players having god mode against AI after revive	
+				
 			};
 
 	};

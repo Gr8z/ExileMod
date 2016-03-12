@@ -2089,6 +2089,7 @@ class CfgExileCustomCode
 	ExileClient_gui_xm8_slide_apps_onOpen = 				"GG\overrides\GG_gui_xm8_slide_apps_onOpen.sqf";
 	ExileClient_object_player_event_onPlayerKilled = 		"GG\overrides\GG_object_player_event_onPlayerKilled.sqf";
     ExileClient_gui_xm8_slide_players_onOpen = 				"GG\overrides\GG_gui_xm8_slide_players_onOpen.sqf";
+    ExileClient_object_player_event_onInventoryOpened = 	"GG\overrides\GG_object_player_event_onInventoryOpened.sqf";
 };
 
 class CfgNetworkMessages {
