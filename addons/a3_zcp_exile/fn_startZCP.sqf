@@ -18,7 +18,7 @@ if !(isServer) exitWith
 {
 	for "_i" from 0 to 99 do
 	{
-		diag_log "Not a fucking server CUNT";
+		diag_log "[ZCP]: Not a server";
 	};
 };
 
@@ -33,8 +33,8 @@ switch (toLower worldName) do
 {
 	case "altis":										// [16000,16000] w/ radius of 16000 works well for Altis
 	{
-		ZCP_MapCenterPos 	= [15834.2,15787.8];
-		ZCP_MapRadius 		= 15000;
+		ZCP_MapCenterPos 	= [16000,16000];
+		ZCP_MapRadius 		= 16000;
 	};
 	case "bornholm":									// Thanks to thirdhero for testing this info
 	{
@@ -66,7 +66,6 @@ switch (toLower worldName) do
 	};
 };
 
-// Since we use primarily ATL
 ZCP_MapCenterPos set [2,0];
 
 diag_log text format ["[ZCP]: Initiate Zupa's Capture Points"];
