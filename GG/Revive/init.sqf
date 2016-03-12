@@ -97,7 +97,6 @@ player setVariable["antidupe", 1, true];
 	};
 	waitUntil { uiSleep 0.5; !isNull(findDisplay 46); };
 	sleep 10;
-	systemChat "Loading: Enigma Exile Revive"; //Please leave this line as a way of saying thanks to me! :D HAPPYD
 };
 
 
