@@ -54,8 +54,8 @@ ZCP_RewardWeightForRandomChoice = [
 // baseFile -> Random or the basefile name. Random will chose from ZCP_CapBases
 // capradius -> 0 for Random, real number for Static base files.
 ZCP_CapPoints = [ // [name,[x,y,z],reward, unique varname,index, spanwnAI, isStatic, baseFile, capradius, baseFileType, max terrainGradient ( only used if it has staticbaseFile)]
-	["ZCP Alpha",[0,0,0],"Poptabs","alpha",0, true, false, 'Random', 0, 'Random', 2],
-	["ZCP Bravo",[0,0,0],"Reputation","beta",1, true, false, 'Random', 0, 'Random', 2]
+	["Battle Zone",[0,0,0],"Poptabs","alpha",0, true, false, 'Random', 0, 'Random', 2],
+	["Battle Zone",[0,0,0],"Reputation","beta",1, true, false, 'Random', 0, 'Random', 2]
 	// example -> ["ZCP Charlie",[3598,5888,0],"Random","charlie",2, true, true, 'm3e_base1.sqf', 60, 'm3e', 10]    // A base on always the same location with always the same base
 	// example -> ["ZCP Delta",[0,0,0],"Random","delta",3, true, false, 'xcam_milPoint.sqf', 100, 'xcam', 15] 			// A base on random location with always the same base
 	// example -> ["ZCP Echo",[1455,8888,0],"Random","echo",4, true, true, 'Random', 0, 'Random', 10] 					// A base on on always the same location with a random base

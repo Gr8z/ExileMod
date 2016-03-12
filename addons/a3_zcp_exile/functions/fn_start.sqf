@@ -248,17 +248,6 @@ if(count _ZCP_baseObjects != 0)then{
 		uiSleep 1;
 	};
 
-  _finishText = '';
-
-	if(ZCP_CleanupBase)then{
-				if(ZCP_CleanupBaseWithAIBomber)then{
-					_finishText = format [[6] call ZCP_fnc_translate,ZCP_BaseCleanupDelay];
-				}else{
-					_finishText = format [[7] call ZCP_fnc_translate,ZCP_BaseCleanupDelay];
-				};
-	};
-
-	['Notification', ["ZCP",[format[[5] call ZCP_fnc_translate,_ZCP_name,_finishText]], 'ZCP_Capped']] call ZCP_fnc_showNotification;
 	[_ZCP_currentCapper,_ZCP_name,_capturePosition,_this select 2, _ZCP_baseRadius] call ZCP_fnc_giveReward;
 	(ZCP_Data select _ZCP_index) set[0,false];
 	(ZCP_Data select _ZCP_index) set[1,0];
