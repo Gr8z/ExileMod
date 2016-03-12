@@ -6,8 +6,8 @@
 ZCP_dev = false; // Devmode for shorter development capture times
 
 ZCP_DMS_doIUseDMS = true; // Use DMS to spawn AI IF CapturePoint has spawnAI = true
-ZCP_Min_AI_Amount = 4; // Min ammount of AI at a ZCP
-ZCP_Random_AI_Max = 8; // so min 4 and max 12 (4+8) AI
+ZCP_Min_AI_Amount = 1; // Min ammount of AI at a ZCP
+ZCP_Random_AI_Max = 4; // so min 4 and max 12 (4+8) AI
 
 ZCP_CapTime = 600; // Seconds to cap an area uncontested
 ZCP_MinWaitTime = 600; // seconds to wait to spawn a new capturepoint when 1 was capped.
