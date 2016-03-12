@@ -19,6 +19,7 @@ _package = _this select 1;
 _amount = parseNumber(_package select 0);
 
 try {
+    if (ADVBANKING_SERVER_DEBUG) then {[format["Sale Requested enacted. Package: %1",_package],"SaleRequest"] call ExileServer_banking_utils_diagLog;};
     _playerObject = _sessionID call ExileServer_system_session_getPlayerObject;
     if (isNull _playerObject) then
 	{

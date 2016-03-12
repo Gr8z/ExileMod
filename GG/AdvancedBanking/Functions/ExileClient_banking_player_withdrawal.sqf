@@ -27,6 +27,7 @@ try {
         if (_amount > ExileClientBank) then {
             throw "You cannot withdrawal more than what you have in your bank";
         };
+        if (ADVBANKING_CLIENT_DEBUG) then {[format["Withdrawal request sent to server. Package: %1",_amount],"Withdrawal"] call ExileClient_banking_utils_diagLog;};
         ["withdrawalRequest",[str(_amount)]] call ExileClient_system_network_send;
     };
 } catch {

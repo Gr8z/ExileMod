@@ -18,6 +18,7 @@ _parameters = _this select 1;
 _moneyRequest = parseNumber (_parameters select 0);
 
 try {
+    if (ADVBANKING_SERVER_DEBUG) then {[format["Withdrawal Request enacted. Package: %1",_parameters],"WithdrawalRequest"] call ExileServer_banking_utils_diagLog;};
     _playerObject = _sessionID call ExileServer_system_session_getPlayerObject;
     if (isNull _playerObject) then
 	{

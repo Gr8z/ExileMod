@@ -13,5 +13,5 @@
 
 */
 private ["_msg"];
-_msg = format["ADVANCE BANKING: [%1] : %2",(_this select 1),(_this select 0)];
+_msg = format["ADVANCED BANKING: [%1] : %2",(_this select 1),(_this select 0)];
 diag_log _msg;

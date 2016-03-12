@@ -5,13 +5,13 @@
  * www.exilemod.com
  * © 2015 Exile Mod Team
  *
- * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
+ * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
- 
+
 private["_payload","_sessionId","_messageName","_messageParameters","_playerBySessionId","_sessionID","_ExileSessionID","_allowedParameters","_moduleName","_functionName","_functionCode"];
 _payload = _this;
-try 
+try
 {
 	if (isNil "_payload") then
 	{
@@ -23,7 +23,7 @@ try
 	};
 	if (count _payload != 3) then
 	{
-		throw format ["Wrong envelope field count! Payload: %1", _payload]; 
+		throw format ["Wrong envelope field count! Payload: %1", _payload];
 	};
 	_sessionId = _payload select 0;
 	_messageName = _payload select 1;
@@ -41,17 +41,17 @@ try
 	{
 		if (count _sessionId != 8) then
 		{
-			throw format ["Invalid session ID found! Payload: %1", _payload]; 
+			throw format ["Invalid session ID found! Payload: %1", _payload];
 		};
 		if !(_sessionId call ExileServer_system_session_isRegisteredId) then
 		{
-			throw format ["Unknown session ID found! Payload: %1", _payload]; 
+			throw format ["Unknown session ID found! Payload: %1", _payload];
 		};
 	};
-	_config = configFile;
+    _config = missionConfigFile;
 	if !(isClass (_config >> "CfgNetworkMessages" >> _messageName)) then
 	{
-		_config = missionConfigFile;
+		_config = ConfigFile;
 		if!(isClass (_config >> "CfgNetworkMessages" >> _messageName)) then
 		{
 			throw format ["Forbidden message name! Payload: %1", _payload];
@@ -60,7 +60,7 @@ try
 	_allowedParameters = getArray(_config >> "CfgNetworkMessages" >> _messageName >> "parameters");
 	if (count _messageParameters != count _allowedParameters) then
 	{
-		throw format ["Parameter count mismatch! Payload: %1", _payload]; 
+		throw format ["Parameter count mismatch! Payload: %1", _payload];
 	};
 	{
 		if (_x != typeName (_messageParameters select _forEachIndex)) then
