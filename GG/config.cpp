@@ -2093,68 +2093,67 @@ class CfgExileCustomCode
 };
 
 class CfgNetworkMessages {
-	class updateBankStats
-	{
-		module = "banking";
-		parameters[] = {"STRING"};
-	};
+    class updateBankStats
+    {
+        module = "banking";
+        parameters[] = {"STRING"};
+    };
 
-	class depositRequest
-	{
-		module = "banking";
-		parameters[] = {"STRING"};
-	};
+    class depositRequest
+    {
+        module = "banking";
+        parameters[] = {"STRING"};
+    };
 
-	class updateATMResponse
-	{
-		module = "banking";
-		parameters[] = {"STRING","STRING"};
-	};
+    class updateATMResponse
+    {
+        module = "banking";
+        parameters[] = {"STRING","STRING"};
+    };
 
-	class withdrawalRequest
-	{
-		module = "banking";
-		parameters[] = {"STRING"};
-	};
+    class withdrawalRequest
+    {
+        module = "banking";
+        parameters[] = {"STRING"};
+    };
 
-	class collectionRequest
-	{
-		module = "banking";
-		parameters[] = {"STRING","STRING"};
-	};
+    class collectionRequest
+    {
+        module = "banking";
+        parameters[] = {"STRING"};
+    };
 
-	class collectMoneyResponse
-	{
-		module = "banking";
-		parameters[] = {"STRING","STRING"};
-	};
-	class saleRequest
-	{
-		module = "banking";
-		parameters[] = {"STRING"};
-	};
-	class buyRequest
-	{
-		module = "banking";
-		parameters[] = {"STRING"};
-	};
-	class updateWalletStats
-	{
-		module = "banking";
-		parameters[] = {"STRING"};
-	};
-	class handleATMMessage
-	{
-		module = "banking";
-		parameters[] = {"STRING","STRING"};
-	};
-	class youWonTheLottery
-	{
-		module = "banking";
-		parameters[] = {"STRING","STRING"};
-	};
+    class collectMoneyResponse
+    {
+        module = "banking";
+        parameters[] = {"STRING","STRING"};
+    };
+    class saleRequest
+    {
+        module = "banking";
+        parameters[] = {"STRING"};
+    };
+    class buyRequest
+    {
+        module = "banking";
+        parameters[] = {"STRING"};
+    };
+    class updateWalletStats
+    {
+        module = "banking";
+        parameters[] = {"STRING"};
+    };
+    class handleATMMessage
+    {
+        module = "banking";
+        parameters[] = {"STRING","STRING"};
+    };
+    class youWonTheLottery
+    {
+        module = "banking";
+        parameters[] = {"STRING","STRING"};
+    };
 };
-
 
 class CfgExileEnvironment
 {
@@ -2627,6 +2626,27 @@ class ExileAbstractAction
  */
 class CfgInteractionMenus
 {
+	class MoneyPile
+	{
+	    targetType = 2;
+	    target = "Land_Money_F";
+
+	    class Actions
+	    {
+	        class Examine: ExileAbstractAction
+	        {
+	            title = "Examine Wallet";
+	            condition = "((ExileClientInteractionObject getVariable ['DroppedAmount',0]) > 0)";
+	            action = "[(ExileClientInteractionObject getVariable ['PileOwner',0]),(ExileClientInteractionObject getVariable ['DroppedAmount',0])] call ExileClient_banking_player_examineMoney";
+	        };
+	        class Collect: ExileAbstractAction
+	        {
+	            title = "Collect Money";
+	            condition = "((ExileClientInteractionObject getVariable ['DroppedAmount',0]) > 0)";
+	            action = "(ExileClientInteractionObject getVariable ['DroppedAmount',0]) call ExileClient_banking_player_collectMoney";
+	        };
+	    };
+	};
 	class Car 
 	{
 		targetType = 2;
@@ -3116,24 +3136,19 @@ class CfgInteractionMenus
 				condition = "(alive ExileClientInteractionObject) && (ExileClientInteractionObject getVariable ['ExileIsHandcuffed', false]) && !ExileClientIsHandcuffed";
 				action = "_this call ExileClient_object_handcuffs_searchGear";
 			};
-			class Examine: ExileAbstractAction
-           {
-               title = "Examine Body";
-               condition = "!(alive ExileClientInteractionObject) && ((ExileClientInteractionObject getVariable ['ExileName','']) != '')";
-               action = "[(ExileClientInteractionObject getVariable ['ExileName','']),(ExileClientInteractionObject getVariable ['DroppedAmount',0])] call ExileClient_banking_player_examineMoney";
-           };
+
+			class Identify: ExileAbstractAction
+			{
+				title = "Identify Body";
+				condition = "!(alive ExileClientInteractionObject)";
+				action = "_this call ExileClient_object_player_identifyBody";
+			};
 			class Revive: ExileAbstractAction
 	        {
 	            title = "Revive Player";
 	            condition = "(!(alive ExileClientInteractionObject) && (ExileClientInteractionObject getVariable ['EnigmaRevivePermitted', true]))";
 	            action = "_this spawn Enigma_RevivePlyr";
 	        };
-	        class Collect: ExileAbstractAction
-           {
-               title = "Collect Pop Tabs";
-               condition = "!(alive ExileClientInteractionObject) && ((ExileClientInteractionObject getVariable ['DroppedAmount',0]) > 0)";
-               action = "[ExileClientInteractionObject,(ExileClientInteractionObject getVariable ['DroppedAmount',0])] call ExileClient_banking_player_collectMoney";
-           };
 		};
 	};
 };

@@ -45,7 +45,6 @@ _sendPopTabsButton ctrlCommit 0;
 _sendPopTabsButton ctrlEnable false; 
 _popTabsInputBox = _display displayCtrl 4116;
 _popTabsInputBox ctrlSetText "0";
-ctrlEnable [4116,false];
 _territoryDropDown = _display displayCtrl 4114;
 _ourUID = getPlayerUID player;
 _hasTerritories = false;

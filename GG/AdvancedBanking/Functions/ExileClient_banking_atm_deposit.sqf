@@ -27,7 +27,6 @@ try {
         if (_amount > ExileClientPlayerMoney) then {
             throw "You cannot deposit more than what you have in your wallet";
         };
-        if (ADVBANKING_CLIENT_DEBUG) then {[format["Deposit request sent to sever. Package: %1",_amount],"ATMDeposit"] call ExileClient_banking_utils_diagLog;};
         ["depositRequest",[str(_amount)]] call ExileClient_system_network_send;
     };
 } catch {

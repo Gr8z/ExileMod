@@ -5,16 +5,16 @@
  * www.exilemod.com
  * © 2015 Exile Mod Team
  *
- * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
+ * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
-
+ 
 private["_sessionID","_parameters","_vehicleNetID","_mode","_vehicleObject","_playerObject","_cargo","_revenue","_playerMoney","_respectGain","_playerRespect","_responseCode"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
 _vehicleNetID = _parameters select 0;
 _mode = _parameters select 1;
-try
+try 
 {
 	_vehicleObject = objectFromNetId _vehicleNetID;
 	if (isNull _vehicleObject) then
@@ -35,7 +35,7 @@ try
 	{
 		throw 2;
 	};
-	if !((owner _vehicleObject) isEqualTo (owner _playerObject)) then
+	if !((owner _vehicleObject) isEqualTo (owner _playerObject)) then 
 	{
 		throw 6;
 	};
@@ -51,7 +51,7 @@ try
 		_vehicleObject call ExileServer_object_vehicle_remove;
 		deleteVehicle _vehicleObject;
 	}
-	else
+	else 
 	{
 		_vehicleObject call ExileServer_object_vehicle_database_update;
 	};
@@ -65,7 +65,8 @@ try
     format["setAccountScore:%1:%2",_playerRespect,(getPlayerUID _playerObject)] call ExileServer_system_database_query_fireAndForget;
     format["updateWallet:%1:%2",_playerMoney,(getPlayerUID _playerObject)] call ExileServer_system_database_query_fireAndForget;
 	[_sessionID, "wasteDumpResponse", [0, str _playerMoney, str _playerRespect]] call ExileServer_system_network_send_to;
-    if (ADVBANKING_SERVER_DEBUG) then {[format["%1 processed Waste Dump",_playerObject],"WasteDumpRequest"] call ExileServer_banking_utils_diagLog;};
+	_recycleLog = format ["PLAYER: %1:%7 RECYCLED ITEM: %5 FOR %2 POPTABS AND %3 RESPECT WITH %6 CARGO | PLAYER TOTAL MONEY: %4 RESPECT %8",_playerObject,_revenue,_respectGain,_playerMoney,_vehicleObject,_cargo,(getPlayerUID _playerObject),_playerRespect];
+    'ARMA_LOG' callExtension format['A3_EXILE_RECYCLELOG:%1',_recycleLog];
 }
 catch
 {
