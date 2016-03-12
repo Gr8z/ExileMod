@@ -1,3 +1,18 @@
+/*
+	Zupa's Capture Points
+	Configuration of ZCP
+	Capture points and earn rewards.
+
+	╔════╗─────────╔═══╗────────╔╗─────────────╔╗
+	╚══╗═║─────────╚╗╔╗║────────║║────────────╔╝╚╗
+	──╔╝╔╬╗╔╦══╦══╗─║║║╠══╦╗╔╦══╣║╔══╦╗╔╦══╦═╗╚╗╔╬══╗
+	─╔╝╔╝║║║║╔╗║╔╗║─║║║║║═╣╚╝║║═╣║║╔╗║╚╝║║═╣╔╗╗║║║══╣
+	╔╝═╚═╣╚╝║╚╝║╔╗║╔╝╚╝║║═╬╗╔╣║═╣╚╣╚╝║║║║║═╣║║║║╚╬══║
+	╚════╩══╣╔═╩╝╚╝╚═══╩══╝╚╝╚══╩═╩══╩╩╩╩══╩╝╚╝╚═╩══╝
+	────────║║
+	────────╚╝
+*/
+
 // First person in the Cap zone is the capper (If he leaves, the closest on of the group is the new capper but time is reset!).
 // When multiple people are in the zone and not in the same group, the zone is contested.
 // Being first in the zone starts the timer.
@@ -9,32 +24,31 @@ ZCP_DMS_doIUseDMS = true; // Use DMS to spawn AI IF CapturePoint has spawnAI = t
 ZCP_Min_AI_Amount = 4; // Min ammount of AI at a ZCP
 ZCP_Random_AI_Max = 8; // so min 4 and max 12 (4+8) AI
 
-ZCP_CapTime = 600; // Seconds to cap an area uncontested
-ZCP_MinWaitTime = 600; // seconds to wait to spawn a new capturepoint when 1 was capped.
-ZCP_MaxWaitTime = 900; // random between 0 and THIS number added to the ZCP_MinWaitTime to counter spawning points at the same time
-ZCP_BaseCleanupDelay = 500; // seconds to wait to delete a captured base.
+ZCP_CapTime = 300; // Seconds to cap an area uncontested
+ZCP_MinWaitTime = 120; // seconds to wait to spawn a new capturepoint when 1 was capped.
+ZCP_MaxWaitTime = 120; // random between 0 and THIS number added to the ZCP_MinWaitTime to counter spawning points at the same time
+ZCP_BaseCleanupDelay = 120; // seconds to wait to delete a captured base.
 
-ZCP_Minimum_Online_Players = 15; // Amount of players to be online before it allows to spawn capture points. !!! O = always
+ZCP_Minimum_Online_Players = 0; // Amount of players to be online before it allows to spawn capture points. !!! O = always
 
 ZCP_RewardRelativeToPlayersOnline = true; // This will recalculate the crypto reward according the amount of online players.
-ZCP_PoptabReward = 500; // Poptab reward for capping per player online. ( When poptab reward is selected or randomly chosen ).
+ZCP_PoptabReward = 25; // Poptab reward for capping per player online. ( When poptab reward is selected or randomly chosen ).
 ZCP_MinPoptabReward = 1000; // Poptabreward is added to this number
-ZCP_PopTabsRewardForGroup = 1000;
 
 /* Reputation is ALWAYS given as addition on the normal reward.*/
-ZCP_ReputationReward = 150; // Respect reward for capping per  player online.
-ZCP_MinReputationReward = 500; // ZCP_ReputationReward is added to this number
+ZCP_ReputationReward = 25; // Respect reward for capping per  player online.
+ZCP_MinReputationReward = 1000; // ZCP_ReputationReward is added to this number
 ZCP_ReputationRewardForGroup = 500; // Each group members gets this amount of reputation ( for the trouble).
 ZCP_MinGroupDistance = 200; // meters to be close to the capper to get the group award
 
 ZCP_CleanupBase = true; // Let the base dissappear after completing
-ZCP_CleanupBaseWithAIBomber = false; // Cleanup with a airstrike
+ZCP_CleanupBaseWithAIBomber = true; // Cleanup with a airstrike
 ZCP_CleanupAIVehicleClasses = ['B_Plane_CAS_01_F']; // Any flying vehicle in arma (default B_Plane_CAS_01_F = A10)
 ZCP_FlyHeight = 150; // Height of the flying plane;
 
 ZCP_UseSpecificNamesForCappers = true; // Use the player name, if false it say 'A player'
 
-ZCP_giveSurvivalBoxWithPoptabsReward = false;
+ZCP_giveSurvivalBoxWithPoptabsReward = true;
 ZCP_RewardWeightForRandomChoice = [
 	["Poptabs", 5],
 	["BuildBox", 3],
@@ -54,22 +68,20 @@ ZCP_RewardWeightForRandomChoice = [
 // baseFile -> Random or the basefile name. Random will chose from ZCP_CapBases
 // capradius -> 0 for Random, real number for Static base files.
 ZCP_CapPoints = [ // [name,[x,y,z],reward, unique varname,index, spanwnAI, isStatic, baseFile, capradius, baseFileType, max terrainGradient ( only used if it has staticbaseFile)]
-	["ZCP Alpha",[0,0,0],"Poptabs","alpha",0, true, false, 'Random', 0, 'Random', 2],
-	["ZCP Bravo",[0,0,0],"Reputation","beta",1, true, false, 'Random', 0, 'Random', 2]
+	["ZCP Alpha",[0,0,0],"Random","alpha",0, true, false, 'Random', 0, 'Random', 2] ,
+	["ZCP Bravo",[0,0,0],"Random","beta",1, true, false, 'Random', 0, 'Random', 2]
 	// example -> ["ZCP Charlie",[3598,5888,0],"Random","charlie",2, true, true, 'm3e_base1.sqf', 60, 'm3e', 10]    // A base on always the same location with always the same base
 	// example -> ["ZCP Delta",[0,0,0],"Random","delta",3, true, false, 'xcam_milPoint.sqf', 100, 'xcam', 15] 			// A base on random location with always the same base
 	// example -> ["ZCP Echo",[1455,8888,0],"Random","echo",4, true, true, 'Random', 0, 'Random', 10] 					// A base on on always the same location with a random base
 	// example -> ["ZCP Foxtrot",[0,0,0],"Random","foxtrot",5, true, false, 'Random', 0, 'Random', 10] 					// Random base on random location
 ];
 
-ZCP_MaxMissions = 1; // Amount of cap points at the same time.
+ZCP_MaxMissions = count ZCP_CapPoints; // Amount of cap points at the same time.
 
 // For every spawned mission,
 // buildeditor currenty supported -> m3e, xcam
 ZCP_CapBases = [ // located in capbases folder [filename, capradius, buildeditor, max terraingradient (if not overwritten by staticbasefile)]
 	["m3e_base1.sqf", 60, "m3e", 10],
-	["m3e_base2.sqf", 90, "m3e", 15],
-	["m3e_base3.sqf", 40, "m3e", 5],
 	["m3e_smallBase1.sqf", 40, "m3e", 5],
 	["m3e_village.sqf", 50, "m3e", 2],
 	["xcam_milPoint.sqf", 50, "xcam", 5]
@@ -304,32 +316,29 @@ ZCP_DMS_DEBUG = false;
 
 ZCP_Translations = [ // ['original','original in your language'] the %1 %2 and so on are Variables!
 	['%1 capbase set up. Capture for %2 min!' , '%1 capbase set up. Capture for %2 min!'], // ZCP Alpha capbase set up. Capture for 10 min!
-	['%2 is capping The %1. %3min left!' , '%2 is capping %1. %3min left!'], // Zupa is capping ZCP alpha, 5min left.
+	['%2 is capping %1. %3min left!' , '%2 is capping %1. %3min left!'], // Zupa is capping ZCP alpha, 5min left.
 	['A player' , 'A player'], // A player
 	['%1 is 50%4 captured by %2. %3min left!', '%1 is 50%4 captured by %2. %3min left!'], // ZCP Alpha is 50% captured by Zupa/A player. 2min left!
 	['%1 is almost captured by %2. 60s left!', '%1 is almost captured by %2. 60s left!'], // ZCP Alpha is almost captured by Zupa/A player. 60s left!
 	['%1 is captured. %2.', '%1 is captured. %2.'], // ZCP Alpha is captured. (%2 is on of the 2 following translations, so leave the variable there!
 	['Bombing in %1s!', 'Bombing in %1s!'], // Bombing in 600s
 	['Cleanup in %1s!', 'Cleanup in %1s!'], // Cleanup in 600s
-	['Captured point', 'Captured Zone'], // Captured point
-	['Reputation', 'Respect'], // Reputation
-	['Group Reputation', 'Group Respect'], // Group reputation
+	['Captured point', 'Captured point'], // Captured point
+	['Reputation', 'Reputation'], // Reputation
+	['Group Reputation', 'Group Reputation'], // Group reputation
 	['Package delivered, eyes on the sky!', 'Package delivered, eyes on the sky!'], // Package delivered, eyes on the sky!
 	['Package delivered, eyes on the sky! Poptabs on bank!', 'Package delivered, eyes on the sky! Poptabs on bank!'], // Package delivered, eyes on the sky! Poptabs on bank!
-	['Battle Zone is contested!', 'Battle Zone is beign contested!'], // Package delivered, eyes on the sky! Poptabs on bank!
-	['Battle Zone is no longer contested!', 'Battle Zone is no longer beign contested!'] // Capture point is contested!
+	['Capture point is contested!', 'Capture point is contested!'], // Package delivered, eyes on the sky! Poptabs on bank!
+	['Capture point is contested is no longer contested!', 'Capture point is no longer contested!'] // Capture point is contested!
 ];
 
 ZCP_CurrentMod = "Exile"; // Exile, ( Epoch coming soon again)
 
 if(ZCP_dev) then {
-	ZCP_CapTime = 60;
-	ZCP_CapRadius = 60;
-	ZCP_MinWaitTime = 60;
-	ZCP_MaxWaitTime = 20;
-	ZCP_BaseCleanupDelay = 30;
-	ZCP_Minimum_Online_Players = 0;
-	ZCP_DMS_doIUseDMS = false;
+	ZCP_CapTime = 20;
+	ZCP_MinWaitTime = 10;
+	ZCP_MaxWaitTime = 1;
+	ZCP_BaseCleanupDelay = 1;
 };
 
 /* Do not change this*/
@@ -338,4 +347,4 @@ ZCP_Data = [];
 ZCP_Bases = [];
 ZCP_MissionCounter = 0;
 ZCP_DMS_MagRange = ZCP_DMS_MaximumMagCount - ZCP_DMS_MinimumMagCount;
-diag_log format["[ZCP]: Config loaded succesfull"];
+diag_log format["ZCP: Config loaded succesfull"];
