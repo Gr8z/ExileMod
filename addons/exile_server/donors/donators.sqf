@@ -90,6 +90,7 @@ Marksman3 = [
 	"76561197996933894", // zarouzky (EXP-2016-03-16) #12955  
 	"76561198136452891", // Panda (OD-2016-01-17) #12979
 	"76561198045206827", // Rhodes (OD-2016-01-17) #12973
+	"76561198062993387", // Azul (OD-2016-03-12) #13283
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Marksman3";
