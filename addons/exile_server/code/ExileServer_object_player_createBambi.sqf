@@ -67,7 +67,7 @@ _bambiPlayer setVariable ["ExileAlcohol", 0];
 _bambiPlayer setVariable ["ExileName", _name];
 _bambiPlayer setVariable ["ExileOwnerUID", getPlayerUID _requestingPlayer];
 _bambiPlayer setVariable ["ExileIsBambi", true];
-_bambiPlayer setVariable ["ExileXM8IsOnline", true, true];
+_bambiPlayer setVariable ["ExileXM8IsOnline", false, true];
 _devFriendlyMode = getNumber (configFile >> "CfgSettings" >> "ServerSettings" >> "devFriendyMode");
 if (_devFriendlyMode isEqualTo 1) then
 {
