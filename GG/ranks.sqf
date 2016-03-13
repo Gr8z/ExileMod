@@ -57,7 +57,6 @@ switch (true) do
     case (_respect > 19999 && _respect < 29999):
    {
     _rank = "Armed Robber";  
-    call ExileClient_object_player_bambiStateEnd;
    [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,30000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
     player forceAddUniform "TRYK_shirts_OD_PAD_BK";
     for "_i" from 1 to 2 do {player addItemToUniform "CUP_8Rnd_9x18_Makarov_M";};
@@ -82,7 +81,6 @@ switch (true) do
     case (_respect > 29999 && _respect < 39999):
    {
    _rank = "Gangster";
-   call ExileClient_object_player_bambiStateEnd;
    [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,40000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
     player forceAddUniform "TRYK_U_B_PCUGs_BLK";
     for "_i" from 1 to 2 do {player addItemToUniform "CUP_8Rnd_9x18_Makarov_M";};
@@ -107,7 +105,6 @@ switch (true) do
     case (_respect > 39999 && _respect < 49999):
    {
     _rank = "Serial Killer";  
-  call ExileClient_object_player_bambiStateEnd;
     [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,50000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
     player forceAddUniform "TRYK_U_Bts_PCUs";
     for "_i" from 1 to 2 do {player addItemToUniform "16Rnd_9x21_Mag";};
@@ -132,7 +129,6 @@ switch (true) do
     case (_respect > 49999 && _respect < 69999):
    {
     _rank = "Hitman";  
-  call ExileClient_object_player_bambiStateEnd;
      [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,70000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
     player forceAddUniform "TRYK_U_B_PCUODHs";
     for "_i" from 1 to 2 do {player addItemToUniform "CUP_18Rnd_9x19_Phantom";};
@@ -157,7 +153,6 @@ switch (true) do
     case (_respect > 69999 && _respect < 89999):
    {
     _rank = "Bounty Hunter";  
-  call ExileClient_object_player_bambiStateEnd;
      [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,90000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
     player forceAddUniform "TRYK_hoodie_Wood";
     for "_i" from 1 to 2 do {player addItemToUniform "CUP_15Rnd_9x19_M9";};
@@ -182,7 +177,6 @@ switch (true) do
      case (_respect > 89999 && _respect < 149999):
    {
     _rank = "Mercenary";  
-  call ExileClient_object_player_bambiStateEnd;
      [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,150000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
     player forceAddUniform "TRYK_U_B_WOOD_MARPAT_CombatUniformTshirt";
     for "_i" from 1 to 2 do {player addItemToUniform "CUP_30Rnd_556x45_Stanag";};
@@ -208,7 +202,6 @@ switch (true) do
      case (_respect > 149999 && _respect < 249999):
    {
     _rank = "Assassin";  
-  call ExileClient_object_player_bambiStateEnd;
      [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,250000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
     player forceAddUniform "TRYK_U_B_MARPAT_Wood_Tshirt";
     for "_i" from 1 to 2 do {player addItemToUniform "CUP_100Rnd_TE1_Green_Tracer_556x45_BetaCMag";};
@@ -238,7 +231,6 @@ switch (true) do
     case (_respect > 249999 && _respect < 349999):
    {
     _rank = "Militant";  
-  call ExileClient_object_player_bambiStateEnd;
      [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,350000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
     player forceAddUniform "TRYK_U_B_MARPAT_Wood_Tshirt";
     for "_i" from 1 to 2 do {player addItemToUniform "CUP_100Rnd_TE1_Green_Tracer_556x45_BetaCMag";};
@@ -269,7 +261,6 @@ switch (true) do
     case (_respect > 349999 && _respect < 499999):
    {
     _rank = "Terrorist";  
-  call ExileClient_object_player_bambiStateEnd;
      [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,500000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
     player forceAddUniform "TRYK_U_taki_BLK";
     for "_i" from 1 to 2 do {player addItemToUniform "CUP_30Rnd_Sa58_M_TracerR";};
@@ -300,7 +291,6 @@ switch (true) do
     case (_respect > 499999 && _respect < 749999):
    {
     _rank = "Warlord";  
-  call ExileClient_object_player_bambiStateEnd;
      [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,750000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
     player forceAddUniform "TRYK_U_B_Woodland";
     for "_i" from 1 to 2 do {player addItemToUniform "CUP_30Rnd_Sa58_M_TracerG";};
@@ -330,7 +320,6 @@ switch (true) do
     case (_respect > 749999 && _respect < 999999):
    {
     _rank = "Arms Dealer";  
-  call ExileClient_object_player_bambiStateEnd;
      [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,1000000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
     player forceAddUniform "TRYK_SUITS_BLK_F";
     for "_i" from 1 to 2 do {player addItemToUniform "CUP_6Rnd_45ACP_M";};
@@ -357,7 +346,6 @@ switch (true) do
     case (_respect > 999999):
    {
     _rank = "God";  
-  call ExileClient_object_player_bambiStateEnd;
      [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,1000000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
     player forceAddUniform "TRYK_U_B_BLKBLK_CombatUniform";
     for "_i" from 1 to 2 do {player addItemToUniform "CUP_6Rnd_45ACP_M";};
