@@ -164,7 +164,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addHeadgear "TRYK_r_cap_od_Glasses";
 			player addBackpack "CUP_B_CivPack_WDL";
 			player addWeapon "CUP_hgun_M9";
-			for "_i" from 1 to 4 do {this addItemToUniform "CUP_15Rnd_9x19_M9";};
+			for "_i" from 1 to 4 do {player addItemToUniform "CUP_15Rnd_9x19_M9";};
 			player addItemToUniform "Exile_Magazine_Swing";
 			player addItemToBackpack "Exile_Item_MountainDupe";
 			player addItemToBackpack "Exile_Item_Cheathas";
