@@ -2130,12 +2130,12 @@ class CfgNetworkMessages {
 	class saleRequest
 	{
 		module = "banking";
-		parameters[] = {"STRING"};
+		parameters[] = {"STRING","STRING"};
 	};
 	class buyRequest
 	{
 		module = "banking";
-		parameters[] = {"STRING"};
+		parameters[] = {"STRING","STRING"};
 	};
 	class updateWalletStats
 	{
