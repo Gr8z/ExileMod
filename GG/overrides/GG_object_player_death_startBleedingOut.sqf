@@ -19,9 +19,7 @@ if (player getVariable["REVIVE", true]) then {
 _descriptions =
 [
 	"KNOCKED OUT",
-	"CRITICALLY WOUNDED",
-	"BLEEDING OUT",
-	"ON DEATHS DOOR"
+	"BLEEDING OUT"
 	];
 
 player setVariable ['EnigmaRevivePermitted', true, true]; //adds action to be revived
@@ -77,30 +75,8 @@ _layer = "BIS_fnc_respawnCounter" call bis_fnc_rscLayer;
 _layer cutText ["", "plain"];
 _descriptions = 
 [
-	"WRECKED",
-	"REKT",
-	"STOMPED",
-	"WASTED",
-	"SCREWED",
-	"TOASTED",
-	"REST IN PIECES", 
-	"TERMINATED",
 	"KILLED",
-	"EXILED",
-	"ANNIHILATED",
-	"HAMMERED",
-	"NEUTRALIZED",
-	"DUMPED",
-	"ZAPPED",
-	"SLAIN",
-	"FRIED",
-	"WIPED OUT",
-	"VANQUISHED",
-	"BUSTED",
-	"PULVERIZED",
-	"SMASHED",
-	"SHREDDED",
-	"CRUSHED"
+	"DEAD"
 ];
 missionnamespace setvariable ["RscRespawnCounter_description", format ["<t size='2' align='center'>%1</t>",selectRandom _descriptions]];
 missionnamespace setvariable ["RscRespawnCounter_colorID", 0];
