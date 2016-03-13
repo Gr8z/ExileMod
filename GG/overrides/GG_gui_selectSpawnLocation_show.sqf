@@ -70,7 +70,10 @@ FNC_GET_ACTUAL_LOADOUT = {
 		};
 		case 1:{
 			if !(_puid in Scout1 + Scout2 + Scout3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Scout Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Scout Loadout 1</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
+
+			_cost = 294;
+			["buyRequest",["BANK",str(_cost)]] call ExileClient_system_network_send;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Scout Loadout 1</t><br/><img size='1.0' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "TRYK_U_denim_jersey_blu";
 			player addVest "V_Chestrig_blk";
@@ -91,7 +94,10 @@ FNC_GET_ACTUAL_LOADOUT = {
 		};
 		case 2:{
 			if !(_puid in Scout2 + Scout3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Scout Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Scout Loadout 2</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
+			
+			_cost = 394;
+			["buyRequest",["BANK",str(_cost)]] call ExileClient_system_network_send;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Scout Loadout 2</t><br/><img size='1.0' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "TRYK_U_pad_j_blk";
 			player addHeadgear "TRYK_r_cap_blk_Glasses";
@@ -116,7 +122,10 @@ FNC_GET_ACTUAL_LOADOUT = {
 		};
 		case 3:{
 			if !(_puid in Scout3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Scout Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Scout Loadout 3</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
+			
+			_cost = 1259;
+			["buyRequest",["BANK",str(_cost)]] call ExileClient_system_network_send;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Scout Loadout 3</t><br/><img size='1.0' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "TRYK_U_denim_jersey_blk";
 			player addHeadgear "TRYK_r_cap_blk_Glasses";
@@ -145,7 +154,10 @@ FNC_GET_ACTUAL_LOADOUT = {
 		};
 		case 4:{
 			if !(_puid in Marksman1 + Marksman2 + Marksman3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Marksman Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Marksman Loadout 1</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
+			
+			_cost = 302;
+			["buyRequest",["BANK",str(_cost)]] call ExileClient_system_network_send;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Marksman Loadout 1</t><br/><img size='1.0' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "TRYK_U_B_AOR2_OD_CombatUniform";
 			player addVest "V_Chestrig_oli";
@@ -164,7 +176,10 @@ FNC_GET_ACTUAL_LOADOUT = {
 		};
 		case 5:{
 			if !(_puid in Marksman2 + Marksman3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Marksman Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Marksman Loadout 2</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
+			
+			_cost = 362;
+			["buyRequest",["BANK",str(_cost)]] call ExileClient_system_network_send;	
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Marksman Loadout 2</t><br/><img size='1.0' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "TRYK_U_B_AOR2_BLK_CombatUniform";
 			player addHeadgear "TRYK_r_cap_od_Glasses";
@@ -188,7 +203,10 @@ FNC_GET_ACTUAL_LOADOUT = {
 		};
 		case 6:{
 			if !(_puid in Marksman3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Marksman Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Marksman Loadout 3</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
+			
+			_cost = 1819;
+			["buyRequest",["BANK",str(_cost)]] call ExileClient_system_network_send;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Marksman Loadout 3</t><br/><img size='1.0' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "TRYK_U_B_ARO2_CombatUniform";
 			player addVest "V_PlateCarrier1_rgr";
@@ -215,7 +233,10 @@ FNC_GET_ACTUAL_LOADOUT = {
 		};
 		case 7:{
 			if !(_puid in Soldier1 + Soldier2 + Soldier3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Soldier Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Soldier Loadout 1</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
+			
+			_cost = 162;
+			["buyRequest",["BANK",str(_cost)]] call ExileClient_system_network_send;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Soldier Loadout 1</t><br/><img size='1.0' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "rhs_uniform_cu_ucp";
 			player addVest "rhsusf_iotv_ucp_Grenadier";
@@ -235,7 +256,10 @@ FNC_GET_ACTUAL_LOADOUT = {
 		};
 		case 8:{
 			if !(_puid in Soldier2 + Soldier3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Soldier Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Soldier Loadout 2</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
+			
+			_cost = 262;
+			["buyRequest",["BANK",str(_cost)]] call ExileClient_system_network_send;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Soldier Loadout 2</t><br/><img size='1.0' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "rhs_uniform_cu_ucp";
 			player addHeadgear "rhsusf_patrolcap_ucp";
@@ -258,7 +282,10 @@ FNC_GET_ACTUAL_LOADOUT = {
 		};
 		case 9:{
 			if !(_puid in Soldier3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Soldier Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Soldier Loadout 3</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
+			
+			_cost = 1169;
+			["buyRequest",["BANK",str(_cost)]] call ExileClient_system_network_send;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Soldier Loadout 3</t><br/><img size='1.0' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "rhs_uniform_cu_ucp";
 			player addVest "rhsusf_iotv_ucp_Grenadier";
@@ -284,7 +311,10 @@ FNC_GET_ACTUAL_LOADOUT = {
 		};
 		case 10:{
 			if !(_puid in Medic1 + Medic2 + Medic3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Medic Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Medic Loadout 1</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
+			
+			_cost = 259;
+			["buyRequest",["BANK",str(_cost)]] call ExileClient_system_network_send;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Medic Loadout 1</t><br/><img size='1.0' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "U_C_Scientist";
 			player addHeadgear "H_Beret_02";
@@ -307,7 +337,10 @@ FNC_GET_ACTUAL_LOADOUT = {
 		};
 		case 11:{
 			if !(_puid in Medic2 + Medic3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Medic Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Medic Loadout 2</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
+			
+			_cost = 434;
+			["buyRequest",["BANK",str(_cost)]] call ExileClient_system_network_send;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Medic Loadout 2</t><br/><img size='1.0' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "U_C_Scientist";
 			player addHeadgear "H_Beret_02";
@@ -332,7 +365,10 @@ FNC_GET_ACTUAL_LOADOUT = {
 		};
 		case 12:{
 			if !(_puid in Medic3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Medic Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Medic Loadout 3</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
+			
+			_cost = 735;
+			["buyRequest",["BANK",str(_cost)]] call ExileClient_system_network_send;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Medic Loadout 3</t><br/><img size='1.0' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "U_C_Scientist";
 			player addVest "TRYK_V_ArmorVest_Winter";
@@ -359,7 +395,10 @@ FNC_GET_ACTUAL_LOADOUT = {
 		};
 		case 13:{
 			if !(_puid in Engineer1 + Engineer2 + Engineer3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Engineer Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Engineer Loadout 1</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
+			
+			_cost = 464;
+			["buyRequest",["BANK",str(_cost)]] call ExileClient_system_network_send;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Engineer Loadout 1</t><br/><img size='1.0' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "TRYK_OVERALL_SAGE_BLKboots_nk_blk2";
 			player addHeadgear "TRYK_ESS_CAP_OD";
@@ -381,7 +420,10 @@ FNC_GET_ACTUAL_LOADOUT = {
 		};
 		case 14:{
 			if !(_puid in Engineer2 + Engineer3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Engineer Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Engineer Loadout 2</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
+			
+			_cost = 753;
+			["buyRequest",["BANK",str(_cost)]] call ExileClient_system_network_send;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Engineer Loadout 2</t><br/><img size='1.0' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "TRYK_OVERALL_SAGE_BLKboots_nk_blk2";
 			player addHeadgear "TRYK_ESS_CAP_OD";
@@ -406,7 +448,10 @@ FNC_GET_ACTUAL_LOADOUT = {
 		};
 		case 15:{
 			if !(_puid in Engineer3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Engineer Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Engineer Loadout 3</t>"],0,0,10,0] spawn bis_fnc_dynamictext;
+			
+			_cost = 889;
+			["buyRequest",["BANK",str(_cost)]] call ExileClient_system_network_send;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Engineer Loadout 3</t><br/><img size='1.0' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "TRYK_OVERALL_SAGE_BLKboots";
 			player addVest "V_PlateCarrierSpec_rgr";

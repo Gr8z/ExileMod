@@ -165,7 +165,7 @@ fnc_buyselected = {
     DropInProgress = true;
     _namePlayer = name player;
     ExileClientPlayerMoney = ExileClientPlayerMoney - boxCost;
-    ["buyRequest",[str(boxCost)]] call ExileClient_system_network_send;
+    ["buyRequest",["WALLET",str(boxCost)]] call ExileClient_system_network_send;
     hint format["Thanks for your order! your Air Drop order number is '%2-%3%4%5'",name player, orderIDcharacters, a1, a2, a3];
     _playerPOS = getPOSATL player;
  
