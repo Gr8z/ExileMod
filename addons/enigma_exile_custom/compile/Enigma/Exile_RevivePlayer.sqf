@@ -211,7 +211,7 @@ _bambiPlayer setVariable ["ExileAlcohol", 0.1]; //ur a little woozy
 _bambiPlayer setVariable ["ExileName", _name]; 
 _bambiPlayer setVariable ["ExileOwnerUID", getPlayerUID _requestingPlayer]; 
 _bambiPlayer setVariable ["ExileIsBambi", true];
-_bambiPlayer setVariable ["ExileXM8IsOnline", false, true];
+_bambiPlayer setVariable ["ExileXM8IsOnline", true, true];
 
 //diag_log format ["Bambiplayer = %1 --- _sessionID = %2",_bambiPlayer,_sessionID];
 

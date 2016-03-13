@@ -55,7 +55,7 @@ _player setVariable ["ExileAlcohol", _data select 6];
 _player setVariable ["ExileTemperature", _data select 44];
 _player setVariable ["ExileWetness", _data select 45];
 _player setVariable ["ExileIsBambi", false];
-_player setVariable ["ExileXM8IsOnline", false, true];
+_player setVariable ["ExileXM8IsOnline", true, true];
 _player setOxygenRemaining (_data select 7);
 _player setBleedingRemaining (_data select 8);
 [_player, _data select 9] call ExileClient_util_player_applyHitPointMap;
