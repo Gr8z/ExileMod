@@ -392,7 +392,8 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player forceAddUniform "U_C_Scientist";
 			player addVest "TRYK_V_ArmorVest_Winter";
 			player addHeadgear "H_Beret_Colonel";
-			player addBackpack "TRYK_V_ArmorVest_Winter";
+			player addVest "TRYK_V_ArmorVest_Winter";
+			player addBackpack "TRYK_B_Coyotebackpack_WH";
 			player addWeapon "CUP_arifle_CZ805_A1";
 			player addWeapon "CUP_hgun_Glock17";
 			player addPrimaryWeaponItem "optic_Hamr";
