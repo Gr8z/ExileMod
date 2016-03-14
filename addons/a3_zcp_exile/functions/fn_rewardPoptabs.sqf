@@ -1,4 +1,9 @@
-private['_awardToGive','_playerMoney'];
+private['_awardToGive','_playerMoney','_capturePosition','_ZCP_currentCapper','_ZCP_name'];
+
+_ZCP_currentCapper = _this select 0;
+_ZCP_name = _this select 1;
+_capturePosition = _this select 2;
+
 _awardToGive = ZCP_MinPoptabReward;
 if(ZCP_RewardRelativeToPlayersOnline) then {
 		_awardToGive = _awardToGive + (ZCP_PoptabReward) * (count playableUnits);

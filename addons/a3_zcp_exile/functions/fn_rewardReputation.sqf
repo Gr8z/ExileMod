@@ -1,4 +1,8 @@
-private['_awardToGive','_playerScore'];
+private['_awardToGive','_playerScore','_ZCP_currentCapper','_ZCP_name','_capturePosition'];
+
+_ZCP_currentCapper = _this select 0;
+_ZCP_name = _this select 1;
+
 _awardToGive = ZCP_MinReputationReward + (ZCP_ReputationReward) * (count playableUnits);
 _playerScore = _ZCP_currentCapper getVariable ["ExileScore", 0];
 _playerScore = _playerScore + _awardToGive;
@@ -19,7 +23,7 @@ ExileClientPlayerScore = nil;
 _ZCP_currentCapper call ExileServer_object_player_database_update;
 
 if( ZCP_ReputationRewardForGroup > 0 ) then {
-  private['_capperGroup'];
+  private['_capperGroup','_newScore'];
   _capperGroup = group _ZCP_currentCapper;
   if( _capperGroup != grpNull ) then {
     {

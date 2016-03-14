@@ -56,10 +56,6 @@ ZCP_RewardWeightForRandomChoice = [
 ZCP_CapPoints = [ // [name,[x,y,z],reward, unique varname,index, spanwnAI, isStatic, baseFile, capradius, baseFileType, max terrainGradient ( only used if it has staticbaseFile)]
 	["Battle Zone",[0,0,0],"Poptabs","alpha",0, true, false, 'Random', 0, 'Random', 2],
 	["Battle Zone",[0,0,0],"Reputation","beta",1, true, false, 'Random', 0, 'Random', 2]
-	// example -> ["ZCP Charlie",[3598,5888,0],"Random","charlie",2, true, true, 'm3e_base1.sqf', 60, 'm3e', 10]    // A base on always the same location with always the same base
-	// example -> ["ZCP Delta",[0,0,0],"Random","delta",3, true, false, 'xcam_milPoint.sqf', 100, 'xcam', 15] 			// A base on random location with always the same base
-	// example -> ["ZCP Echo",[1455,8888,0],"Random","echo",4, true, true, 'Random', 0, 'Random', 10] 					// A base on on always the same location with a random base
-	// example -> ["ZCP Foxtrot",[0,0,0],"Random","foxtrot",5, true, false, 'Random', 0, 'Random', 10] 					// Random base on random location
 ];
 
 ZCP_MaxMissions = 1; // Amount of cap points at the same time.
@@ -67,21 +63,40 @@ ZCP_MaxMissions = 1; // Amount of cap points at the same time.
 // For every spawned mission,
 // buildeditor currenty supported -> m3e, xcam
 ZCP_CapBases = [ // located in capbases folder [filename, capradius, buildeditor, max terraingradient (if not overwritten by staticbasefile)]
-	["m3e_base1.sqf", 60, "m3e", 10],
-	["m3e_base2.sqf", 90, "m3e", 15],
+	["m3e_base1.sqf", 60, "m3e", 3],
+	["m3e_base2.sqf", 90, "m3e", 5],
 	["m3e_base3.sqf", 40, "m3e", 5],
-	["m3e_smallBase1.sqf", 40, "m3e", 5],
+	["m3e_smallBase1.sqf", 40, "m3e", 3],
 	["m3e_village.sqf", 50, "m3e", 2],
-	["xcam_milPoint.sqf", 50, "xcam", 5]
+	["xcam_milPoint.sqf", 50, "xcam", 5],
+	["ec_audacity.sqf", 30, "EdenConverted", 5],
+	["ec_bravery.sqf", 35, "EdenConverted", 5],
+	["ec_courage.sqf", 25, "EdenConverted", 5],
+	["ec_defiance.sqf", 20, "EdenConverted", 5],
+	["ec_endurance.sqf", 20, "EdenConverted", 5],
+	["ec_fortitude.sqf", 25, "EdenConverted", 5]
 ];
 
 // ZCP_TerrainGradient = 10; // Now defined per base or overwritten when using staticbaseFile for a cappoint
 ZCP_MinDistanceFromObject = 60; // Missions needs an open spot. You can lower it but it might collide with other objects ( not always a problem)
 
+
 ZCP_Blacklist = [ // [ [x,y,z], radius ];
 	[[-999,-999,0] , 500],
 	[[-999,-999,0] , 500]
 ];
+
+ZCP_createVirtualCircle = true;
+ZCP_changeCircleColor = false;
+ZCP_circleNeutralColor = "#(rgb,8,8,3)color(0,1,0,1)";
+ZCP_circleCappingColor = "#(rgb,8,8,3)color(0.70,0.11,0.70,1)";
+ZCP_circleContestedColor = "#(rgb,8,8,3)color(1,0,0,1)";
+
+//Boxtypes
+ZCP_SurvivalBox = "O_supplyCrate_F";
+ZCP_BuildingBox = "O_CargoNet_01_ammo_F";
+ZCP_WeaponBox = "I_CargoNet_01_ammo_F";
+
 // Same as DMS -> Credits DMS
 ZCP_DistanceBetweenMissions = 500;
 ZCP_SpawnZoneDistance = 500;
@@ -333,9 +348,9 @@ if(ZCP_dev) then {
 };
 
 /* Do not change this*/
-ZCP_Version = "ZCP_Exile_1.0.2";
+ZCP_Version = "ZCP_Exile_1.1";
 ZCP_Data = [];
 ZCP_Bases = [];
 ZCP_MissionCounter = 0;
 ZCP_DMS_MagRange = ZCP_DMS_MaximumMagCount - ZCP_DMS_MinimumMagCount;
-diag_log format["[ZCP]: Config loaded succesfull"];
+diag_log format["ZCP: Config loaded succesfull"];
