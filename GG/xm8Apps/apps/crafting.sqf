@@ -1,4 +1,3 @@
- 
 disableSerialization;
 _display = uiNameSpace getVariable ["RscExileXM8", displayNull];
 
@@ -12,6 +11,7 @@ _xm8Controlls = [991,881,992,882,993,883,994,884,995,885,996,886,997,887,998,888
 {
     ctrlDelete ((findDisplay 24015) displayCtrl _x);
 } forEach _xm8Controlls;
+//uiSleep 0.2;
 
 
 //Created the go back button and add the button click event handeler to it
@@ -32,6 +32,7 @@ fnc_goBack = {
       ctrlEnable [_x, false];
   } forEach _Ctrls;
   execVM "GG\xm8Apps\XM8Apps_Init.sqf";
+  //uiSleep 1;
   {
     ctrlDelete ((findDisplay 24015) displayCtrl _x);
   } forEach _Ctrls;
@@ -57,6 +58,7 @@ _RecipeCategories = _display ctrlCreate ["RscCombo", 5505];
 _RecipeCategories ctrlSetPosition [0.085,0.18,0.38,0.04];
 _RecipeCategories ctrlSetEventHandler ["LBSelChanged", "_this call fnc_recipe_Load"];
 _RecipeCategories ctrlCommit 0;
+_RecipeCategories ctrlSetText "Recipe Categories";
 
 _RecipeTitle = _display ctrlCreate ["RscText", 5506];
 _RecipeTitle ctrlSetPosition [0.085,0.14,0.38,0.04];
@@ -69,8 +71,8 @@ _RecipePic ctrlCommit 0;
 _RecipePic ctrlSetText "\exile_assets\texture\mod\icon.paa";
 
 /***********************
- * Gather Categories From Recipe Config
- * otherwise put in Priceless category if set
+ * Gather Categories Based Traders who sell
+ * otherwise put in Priceless category if not sold
  ***********************/	
 	 
 _RecipeCategories = [];
@@ -79,12 +81,26 @@ for '_j' from 0 to (count (missionConfigFile >> "CfgCraftingRecipes"))-1 do
 {
 	_CategoryConfig = (missionConfigFile >> "CfgCraftingRecipes") select _j;
 	
-	_RecipeCategory = getText(_CategoryConfig >> "category");	
+	_pictureItemClassName = getText(_CategoryConfig >> "pictureItem");
+	
+	for '_i' from 0 to (count (missionConfigFile >> "CfgTraderCategories"))-1 do
+	{
+		_TraderCategoryConfig = (missionConfigFile >> "CfgTraderCategories") select _i;
+		_TraderCategoryClass = configName _TraderCategoryConfig;		
+		_RecipeCategory = gettext(missionConfigFile >> "CfgTraderCategories" >> _TraderCategoryClass >> "name");		
+				
+		_CategoryItems = getarray(missionConfigFile >> "CfgTraderCategories" >> _TraderCategoryClass >> "items");		
 
-	if!(_RecipeCategory in _RecipeCategories)then{_RecipeCategories pushBack _RecipeCategory;};		
-	_RecipeCategory = "Uncategorised";
-	if!(_RecipeCategory in _RecipeCategories)then{_RecipeCategories pushBack _RecipeCategory;};
-
+		if(_pictureItemClassName in _CategoryItems) then 
+		{	
+			if!(_RecipeCategory in _RecipeCategories)then{_RecipeCategories pushBack _RecipeCategory;};		
+		} 
+		else 
+		{	_RecipeCategory = "Other";
+			if!(_RecipeCategory in _RecipeCategories)then{_RecipeCategories pushBack _RecipeCategory;};
+		};
+		
+	};
 };
 
 	{
@@ -109,29 +125,53 @@ for '_j' from 0 to (count (missionConfigFile >> "CfgCraftingRecipes"))-1 do
 {
 	_CategoryConfig = (missionConfigFile >> "CfgCraftingRecipes") select _j;	
 	_pictureItemClassName = getText(_CategoryConfig >> "pictureItem");
-	_RecipeCategory = getText(_CategoryConfig >> "category");
-	_RecipeClass = configName _CategoryConfig;	
-	_currentRecipeName = getText(_CategoryConfig >> "name");	
+	
+	_RecipeConfig = (missionConfigFile >> "CfgCraftingRecipes") select _j;
+	_RecipeClass = configName _RecipeConfig;
+	
+	_currentRecipeName = getText(_RecipeConfig >> "name");
+	_pictureItemClassName = getText(_RecipeConfig >> "pictureItem");
 	_pictureItemConfig = configFile >> "CfgMagazines" >> _pictureItemClassName;
 	_recipePicture = getText(_pictureItemConfig >> "picture");	
+	_CheckCategory = false;
+	_CheckInCategoryItems = false;
+	
+	for '_i' from 0 to (count (missionConfigFile >> "CfgTraderCategories"))-1 do
+	{
+		_TraderCategoryConfig = (missionConfigFile >> "CfgTraderCategories") select _i;
+		_TraderCategoryClass = configName _TraderCategoryConfig;
 
-	if (_RecipeCategory == _SelectedCategory) then
+		_RecipeCategory = gettext(missionConfigFile >> "CfgTraderCategories" >> _TraderCategoryClass >> "name");		
+		_CategoryItems = getarray(missionConfigFile >> "CfgTraderCategories" >> _TraderCategoryClass >> "items");
+				
+		if(_pictureItemClassName in _CategoryItems) then 
+		{		
+			_CheckInCategoryItems = true;
+			if (_SelectedCategory == _RecipeCategory) then
+			{
+				_CheckCategory = true;
+			};
+						
+		};
+	
+	};	
+		
+	
+	if (_CheckCategory) then
 	{
 		_lbsize = lbSize (_display displayCtrl 5501);
 		(_display displayCtrl 5501) lbAdd Format["%1",_currentRecipeName];
 		(_display displayCtrl 5501) lbSetPicture [_lbsize,_recipePicture];
 		(_display displayCtrl 5501) lbSetData [_lbsize,_RecipeClass];
-	}
-	else 
-	{
-		if (_SelectedCategory == "Uncategorised" && _RecipeCategory == "") then
-		{
-			_lbsize = lbSize (_display displayCtrl 5501);
-			(_display displayCtrl 5501) lbAdd Format["%1",_currentRecipeName];
-			(_display displayCtrl 5501) lbSetPicture [_lbsize,_recipePicture];
-			(_display displayCtrl 5501) lbSetData [_lbsize,_RecipeClass];
-		};		
 	};
+
+	if (!_CheckCategory && _SelectedCategory == "Other" && !_CheckInCategoryItems) then
+	{
+		_lbsize = lbSize (_display displayCtrl 5501);
+		(_display displayCtrl 5501) lbAdd Format["%1",_currentRecipeName];
+		(_display displayCtrl 5501) lbSetPicture [_lbsize,_recipePicture];
+		(_display displayCtrl 5501) lbSetData [_lbsize,_RecipeClass];
+	};	
 		
 };
 	
