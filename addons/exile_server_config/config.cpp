@@ -1378,7 +1378,7 @@ class CfgSettings
 				The type of box is chosen randomly from the following list.
 				Add a type multiple times to increase the chance of being used.
 			*/
-			types[] = {"Building","Weapons"};
+			types[] = {"Building","Weapons","Medical"};
 
 			class BoxTypes
 			{
@@ -1392,7 +1392,22 @@ class CfgSettings
 						{"Exile_Item_WorkBenchKit",2},
 						{"Exile_Item_WoodFloorPortKit",2},
 						{"Exile_Item_WoodFloorKit",5},
-						{"Exile_Item_WoodGateKit",1}
+						{"Exile_Item_WoodGateKit",1},s
+						{"Exile_Item_Flag",1}
+						{"Exile_Item_SafeKit",1}
+					};
+				};
+
+				class Medical 
+				{
+					items[] = 
+					{
+						{"Exile_Item_Defibrillator",1},
+						{"Exile_Magazine_Battery",2},
+						{"Exile_Item_InstaDoc",3},
+						{"Exile_Item_Bandage",2},
+						{"Exile_Item_Vishpirin",2},
+						{"Exile_Item_Heatpack",2}
 					};
 				};
 
