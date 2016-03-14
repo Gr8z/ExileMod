@@ -1392,8 +1392,8 @@ class CfgSettings
 						{"Exile_Item_WorkBenchKit",2},
 						{"Exile_Item_WoodFloorPortKit",2},
 						{"Exile_Item_WoodFloorKit",5},
-						{"Exile_Item_WoodGateKit",1},s
-						{"Exile_Item_Flag",1}
+						{"Exile_Item_WoodGateKit",1},
+						{"Exile_Item_Flag",1},
 						{"Exile_Item_SafeKit",1}
 					};
 				};
