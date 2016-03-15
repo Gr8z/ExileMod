@@ -2102,6 +2102,9 @@ class CfgExileCustomCode
 	ExileClient_gui_xm8_slide_apps_onOpen = 				"GG\overrides\GG_gui_xm8_slide_apps_onOpen.sqf";
     ExileClient_gui_xm8_slide_players_onOpen = 				"GG\overrides\GG_gui_xm8_slide_players_onOpen.sqf";
     ExileClient_object_player_event_onInventoryOpened = 	"GG\overrides\GG_object_player_event_onInventoryOpened.sqf";
+    ExileClient_construction_handleAbort = 					"GG\overrides\GG_construction_handleAbort.sqf";
+    ExileClient_object_item_consume = 						"GG\overrides\GG_object_item_consume.sqf";
+    ExileClient_system_lootManager_thread_spawn = 			"GG\overrides\GG_system_lootManager_thread_spawn.sqf";
 };
 
 class CfgNetworkMessages {
