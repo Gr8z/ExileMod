@@ -1,13 +1,3 @@
-////////////////////////////////////////////////////////////////////////
-//
-//		Server Occupation script by second_coming
-//		http://www.exilemod.com/profile/60-second_coming/
-//
-//		This script uses the fantastic DMS by Defent and eraser1
-//
-//		http://www.exilemod.com/topic/61-dms-defents-mission-system/
-//
-////////////////////////////////////////////////////////////////////////
 
 if (!isServer) exitWith {};
 diag_log format ["[OCCUPATION]:: Starting Occupation Monitor"];
@@ -15,6 +5,7 @@ diag_log format ["[OCCUPATION]:: Starting Occupation Monitor"];
 _middle = worldSize/2;
 _spawnCenter 	= [_middle,_middle,0];
 _max = _middle;
+_useLaunchers = DMS_ai_use_launchers;
 
 _maxAIcount = 100; // the maximum amount of AI, if the AI count is above this then additional AI won't spawn
 _minFPS = 15; // any lower than 15fps on the server and additional AI won't spawn
@@ -59,6 +50,9 @@ _locations = (nearestLocations [_spawnCenter, ["NameVillage","NameCity", "NameCi
 		_nearestMarker = [allMapMarkers, _pos] call BIS_fnc_nearestPosition; // Nearest Marker to the Location		
 		_posNearestMarker = getMarkerPos _nearestMarker;
 		if(_pos distance _posNearestMarker < 500) exitwith { _okToSpawn = false; if(_debug) then { diag_log format ["[OCCUPATION]:: %1 is too close to a %2",_locationName,_nearestMarker];}; };
+	
+		// Don't spawn additional AI if there are players in range
+		if([_pos, 100] call ExileClient_util_world_isAlivePlayerInRange) exitwith { _okToSpawn = false; if(_debug) then { diag_log format ["[OCCUPATION]:: %1 has players too close",_locationName];}; };
 		
 		// Don't spawn additional AI if there are already AI in range
 		_aiNear = count(_pos nearEntities ["O_recon_F", 500]);
@@ -83,7 +77,7 @@ _locations = (nearestLocations [_spawnCenter, ["NameVillage","NameCity", "NameCi
 			
 			DMS_ai_use_launchers = false;
 			_group = [_spawnPosition, _aiCount, _difficulty, "random", _side] call DMS_fnc_SpawnAIGroup;
-			DMS_ai_use_launchers = true;
+			DMS_ai_use_launchers = _useLaunchers;
 						
 			// Get the AI to shut the fuck up :)
 			enableSentences false;
