@@ -946,7 +946,19 @@ class SpillSaltWater: Exile_AbstractCraftingRecipe
 		{1, "Exile_Item_PlasticBottleSaltWater"}
 	};
 };
-//NEW MAGAZINE CRAFTING END
+class CraftBandage: Exile_AbstractCraftingRecipe
+{
+	name = "Craft Bandage";
+	pictureItem = "Exile_Item_Bandage";
+	returnedItems[] =
+	{
+		{1, "Exile_Item_Bandage"}
+	};
+	components[] = 
+	{
+		{1, "Exile_Item_ToiletPaper"}
+	};
+};
 };
 class CfgExileArsenal
 {
@@ -1288,8 +1300,9 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	class O_HMG_01_weapon_F 						{ quality = 3; price = 50000; };
 	class O_HMG_01_support_F 						{ quality = 3; price = 10000; };
-	// Does not seem to work with HMG01, only the lower version does
-	//class O_HMG_01_support_high_F 					{ quality = 3; price = 5000; };
+
+	class O_HMG_01_high_weapon_F 					{ quality = 3; price = 60000; };
+	class O_HMG_01_support_high_F 					{ quality = 3; price = 20000; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Optic Attachments
@@ -3793,8 +3806,9 @@ class CfgTraderCategories
 		items[] = 
 		{
 			"O_HMG_01_support_F",
-			//"O_HMG_01_support_high_F", // Does not seem to work with HMG01, only the lower version does
-			"O_HMG_01_weapon_F"
+			"O_HMG_01_support_high_F",
+			"O_HMG_01_weapon_F",
+			"O_HMG_01_high_weapon_F"
 		};
 	};
 
