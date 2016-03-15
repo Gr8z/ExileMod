@@ -47,9 +47,9 @@ _locations = (nearestLocations [_spawnCenter, ["NameVillage","NameCity", "NameCi
 		if (!isNil "_nearBase") exitwith { _okToSpawn = false; if(_debug) then { diag_log format ["[OCCUPATION]:: %1 is too close to player base",_locationName];};};
 		
 		// Don't spawn AI near traders and spawn zones
-		_nearestMarker = [allMapMarkers, _pos] call BIS_fnc_nearestPosition; // Nearest Marker to the Location		
+		_nearestMarker = ["ExileTraderZone", _pos] call BIS_fnc_nearestPosition; // Nearest Marker to the Location		
 		_posNearestMarker = getMarkerPos _nearestMarker;
-		if(_pos distance _posNearestMarker < 500) exitwith { _okToSpawn = false; if(_debug) then { diag_log format ["[OCCUPATION]:: %1 is too close to a %2",_locationName,_nearestMarker];}; };
+		if(_pos distance _posNearestMarker < 1000) exitwith { _okToSpawn = false; if(_debug) then { diag_log format ["[OCCUPATION]:: %1 is too close to a %2",_locationName,_nearestMarker];}; };
 	
 		// Don't spawn additional AI if there are players in range
 		if([_pos, 100] call ExileClient_util_world_isAlivePlayerInRange) exitwith { _okToSpawn = false; if(_debug) then { diag_log format ["[OCCUPATION]:: %1 has players too close",_locationName];}; };
