@@ -3805,10 +3805,10 @@ class CfgTraderCategories
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
-			"O_HMG_01_support_F",
-			"O_HMG_01_support_high_F",
 			"O_HMG_01_weapon_F",
-			"O_HMG_01_high_weapon_F"
+			"O_HMG_01_support_F",
+			"O_HMG_01_high_weapon_F",
+			"O_HMG_01_support_high_F"
 		};
 	};
 
