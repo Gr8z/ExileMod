@@ -125,6 +125,7 @@ adminUIDandAccess[] =
 		 "76561198201637928", // Vex
 		 "76561198065937074", // Toxsick
 		 "76561198088251390", // SIX
+		 "76561198101663483", // Chubby/spider
 		 "76561198074948727", // Sifi_link
 		 "76561197979611157", // Clanzoucu
 		 // Add UID's Above - Don't forget the comma!
