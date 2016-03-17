@@ -34,7 +34,6 @@ SlotDonor = [
 	"76561197979611157", // Clanzocu (OD-2015-12-31) #   
 	"76561198210181637", // Adam Nantz (OD-2016-03-26) #13256
 	"76561198073495490", // Adam Kadom (EXP-2016-03-16) #
-	"76561198074948727", // Sifi Link (OD-2016-02-29) #13271
 	// Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "SlotDonor";
@@ -145,6 +144,7 @@ Scout3 = [
 	"76561197978528230", // Dark (player Created these loadouts)
 	"76561198236879848", // Winston (OD-2016-01-13) #12903 
 	"76561197971687271", // H4ppyK1llM0r3 (EXP-2016-04-05) #0000
+	"76561198074948727", // Sifi Link (OD-2016-02-29) #13271
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout3";
