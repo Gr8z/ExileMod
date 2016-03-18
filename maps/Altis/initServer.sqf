@@ -7,6 +7,3 @@ if (isDedicated || isServer) then {
 		veh = createVehicle["Exile_Bike_MountainBike", _parameters2 , [] ,0 , "NONE"];
 	};
 };
-if (isServer) then {
-    execVM "SearchAndReplace.sqf";
-};
