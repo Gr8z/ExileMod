@@ -90,6 +90,7 @@ Marksman3 = [
 	"76561198136452891", // Panda (OD-2016-01-17) #12979
 	"76561198045206827", // Rhodes (OD-2016-01-17) #12973
 	"76561198062993387", // Azul (OD-2016-03-12) #13283
+	"76561198074948727", // Sifi Link (OD-2016-02-29) #13271
 	"76561198101663483", // Chubby
 // Add UIDs above, don't forget the comma
 "0"
@@ -144,7 +145,6 @@ Scout3 = [
 	"76561197978528230", // Dark (player Created these loadouts)
 	"76561198236879848", // Winston (OD-2016-01-13) #12903 
 	"76561197971687271", // H4ppyK1llM0r3 (EXP-2016-04-05) #0000
-	"76561198074948727", // Sifi Link (OD-2016-02-29) #13271
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout3";
