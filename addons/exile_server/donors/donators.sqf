@@ -71,7 +71,7 @@ Marksman1 = [
 ];publicVariable "Marksman1";
 
 Marksman2 = [
-	"0", // NAME (OD-00-00-0000) #0000
+	"76561198210181637", // Adam Nantz (OD-2016-03-18) #13322
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Marksman2";
@@ -144,6 +144,7 @@ Scout3 = [
 	"76561198001066546", // MeowMix
 	"76561197978528230", // Dark (player Created these loadouts)
 	"76561198236879848", // Winston (OD-2016-01-13) #12903 
+	"76561198078726531", // Franklin D. Roosevelt (OD-2016-03-18) #13325 
 	"76561197971687271", // H4ppyK1llM0r3 (EXP-2016-04-05) #0000
 // Add UIDs above, don't forget the comma
 "0"
