@@ -51,14 +51,14 @@ class CfgNotifications
   };
 	class ZCP_Init
 	{
-		description = "%1";
-		title = "Battle Zone Spawned";
-		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
-		iconText = "";
-		color[] = {0.7, 0.93, 0, 1};
-		duration = 5;
-		priority = 0;
-		difficulty[] = {};
+			description = "%1";
+			title = "Battle Zone Spawned";
+			iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
+			iconText = "";
+			color[] = {0.7, 0.93, 0, 1};
+			duration = 5;
+			priority = 0;
+			difficulty[] = {};
 	};
 	class ZCP_Capped
 	{
