@@ -174,6 +174,7 @@ Soldier3 = [
 	"76561198072478428", // Featherlite (EXP-2016-02-27) #13076
 	"76561198078726531", // [TFT]Trinity (OD-2015-09-23) #11776 
 	"76561198020480005", // Grimm (OD-2016-03-18) #13327 
+	"76561198088251390", // Six 
 	"76561197978528230", // Dark (player Created these loadouts)
 // Add UIDs above, don't forget the comma
 "0"
