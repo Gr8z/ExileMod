@@ -72,6 +72,7 @@ Marksman1 = [
 
 Marksman2 = [
 	"76561198210181637", // Adam Nantz (OD-2016-03-18) #13322
+	"76561198079094954", // Afromerican (EXP-2016-04-19) #0000
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Marksman2";
