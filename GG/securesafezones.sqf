@@ -15,3 +15,5 @@ GG_vehicleEnter		= true; // Set this to true to make sure all vehicles driven in
 GG_vehicleDump		= true; // Set this to true to prevent other people from selling your claimed vehicle at the Waste Dump.
 
 GG_vehiclePenalty	= 10; 	// Time in seconds to freeze a player when he/she enters an enemy vehicle.
+
+GG_onContainerOpened = compileFinal (preprocessFileLineNumbers "GG\overrides\GG_onContainerOpened.sqf");
