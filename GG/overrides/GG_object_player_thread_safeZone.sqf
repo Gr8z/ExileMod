@@ -73,10 +73,10 @@ else
 			if !(player in _ownerGroup) then {
 				["Whoops", ["Cannot Enter! You are in a vehicle owned by another player"]] call ExileClient_gui_notification_event_addNotification;
 				player action ['getOut', ExileClientSafeZoneVehicle];
-				disableUserInput false;
+				disableUserInput true;
 				cutText ["DO NOT GET IN OTHER VEHICLES IN SAFEZONES","WHITE IN", 5];
 				uiSleep 10;
-				disableUserInput true;
+				disableUserInput false;
 			};
 		};
 		// GR8's Anti Steal
