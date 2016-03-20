@@ -2097,7 +2097,6 @@ class CfgExileCustomCode
 	ExileClient_object_player_bambiStateBegin =	 			"GG\overrides\GG_object_player_bambiStateBegin.sqf";
 	ExileClient_gui_selectSpawnLocation_show = 				"GG\overrides\GG_gui_selectSpawnLocation_show.sqf";
 	ExileClient_util_playerEquipment_add = 					"GG\overrides\GG_util_playerEquipment_add.sqf";
-	ExileClient_object_player_event_onEnterSafezone = 		"GG\overrides\GG_object_player_event_onEnterSafezone.sqf";
 	ExileClient_object_item_construct= 						"GG\overrides\GG_object_item_construct.sqf";
 	ExileClient_gui_xm8_slide_apps_onOpen = 				"GG\overrides\GG_gui_xm8_slide_apps_onOpen.sqf";
     ExileClient_gui_xm8_slide_players_onOpen = 				"GG\overrides\GG_gui_xm8_slide_players_onOpen.sqf";
@@ -2105,6 +2104,9 @@ class CfgExileCustomCode
     ExileClient_construction_handleAbort = 					"GG\overrides\GG_construction_handleAbort.sqf";
     ExileClient_object_item_consume = 						"GG\overrides\GG_object_item_consume.sqf";
     ExileClient_system_lootManager_thread_spawn = 			"GG\overrides\GG_system_lootManager_thread_spawn.sqf";
+    ExileClient_object_player_thread_safeZone = 			"GG\overrides\GG_object_player_thread_safeZone.sqf";
+    ExileClient_object_player_event_onEnterSafezone = 		"GG\overrides\GG_object_player_event_onEnterSafezone.sqf";
+    ExileClient_object_player_event_onLeaveSafezone = 		"GG\overrides\GG_object_player_event_onLeaveSafezone.sqf";
 };
 
 class CfgNetworkMessages {
