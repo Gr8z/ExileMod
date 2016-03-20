@@ -9,9 +9,12 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_cancelEvent","_container"];
+private["_cancelEvent","_container","_vehicleOwner","_ownerGroup"];
 _cancelEvent = false;
 _container = _this select 1;
+_vehicleOwner = _container getVariable ['GR8owner', objNull];
+_ownerGroup = units group _vehicleOwner;
+
 if (ExileClientIsHandcuffed) then 
 {
 	_cancelEvent = true;
@@ -42,8 +45,14 @@ else
 				}
 				else 
 				{
-					ExileClientInventoryOpened = true;
-					ExileClientCurrentInventoryContainer = _container;
+					if !(_unit in _ownerGroup) then
+					{
+						_cancelEvent = true;
+						["Whoops", ["Cannot access gear! You do not own this vehicle."]] call ExileClient_gui_notification_event_addNotification;
+					} else {
+						ExileClientInventoryOpened = true;
+						ExileClientCurrentInventoryContainer = _container;
+					};
 				};
 			};
 		};

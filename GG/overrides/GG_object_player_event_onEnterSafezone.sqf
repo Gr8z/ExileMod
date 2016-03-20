@@ -14,28 +14,6 @@ private["_vehicle","_attachedObjects","_position"];
 if (ExilePlayerInSafezone) exitWith { false };
 ExilePlayerInSafezone = true;
 
-GG_cancelAction = {
-	waitUntil {!isnull (findDisplay 602)};
-	closeDialog 0;closeDialog 0;closeDialog 0;
-};
-
-GG_onContainerOpened = {
-	private["_veh","_unit","_vehicleOwner"];
-	_veh = _this select 0;
-	_unit = _this select 1;
-	_vehicleOwner = _veh getVariable ['GR8owner', objNull];
-	_ownerGroup = units group _vehicleOwner;
-
-	systemChat "EVENT HANDLER WORKING";
-
-	if !(_unit in _ownerGroup) then
-	{
-		_unit action ["CancelAction", _unit];
-		[] spawn GG_cancelAction;
-		["Whoops", ["Cannot access gear! You are near another player's vehicle."]] call ExileClient_gui_notification_event_addNotification;
-	};
-};
-
 if (alive player) then
 {
 	player allowDamage false;
@@ -68,7 +46,6 @@ if !(_vehicle isEqualTo player) then
 	if ((player == driver ExileClientSafeZoneVehicle) && (GG_vehicleEnter)) then {
 		ExileClientSafeZoneVehicle setVariable ['GR8owner', player, true];
 	};
-	GG_onContainerOpenedEventHandler = ExileClientSafeZoneVehicle addEventHandler ["ContainerOpened", {_this call GG_onContainerOpened}];
 	 // GR8's Anti Steal
 	ExileClientSafeZoneVehicleFiredEventHandler = _vehicle addEventHandler ["Fired", {_this call ExileClient_object_player_event_onFiredSafeZoneVehicle}];
 };

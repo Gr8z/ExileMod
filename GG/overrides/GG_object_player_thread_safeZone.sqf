@@ -40,10 +40,6 @@ else
 		ExileClientSafeZoneVehicleFiredEventHandler = _vehicle addEventHandler ["Fired", {_this call ExileClient_object_player_event_onFiredSafeZoneVehicle}];
 
 		// GR8's Anti Steal
-
-		if (GG_gearSteal) then {
-			GG_onContainerOpenedEventHandler = ExileClientSafeZoneVehicle addEventHandler ["ContainerOpened", {_this call GG_onContainerOpened}];
-		};
 		if (GG_vehicleSteal) then {
 			_playerDriver = player == driver ExileClientSafeZoneVehicle;
 			_vehicleOwner = ExileClientSafeZoneVehicle getVariable ['GR8owner', objNull];
