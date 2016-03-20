@@ -31,12 +31,10 @@ GG_onContainerOpened = {
 	if !(_unit in _ownerGroup) then
 	{
 		_unit action ["CancelAction", _unit];
-		spawn GG_cancelAction;
-		waitUntil {!isnull (findDisplay 602)};
-		closeDialog 0;closeDialog 0;closeDialog 0;
+		[] spawn GG_cancelAction;
 		["Whoops", ["Cannot access gear! You are near another player's vehicle."]] call ExileClient_gui_notification_event_addNotification;
 	};
-	};
+};
 
 if (alive player) then
 {
