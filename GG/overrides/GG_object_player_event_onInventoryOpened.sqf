@@ -15,6 +15,7 @@ _unit = _this select 0;
 _container = _this select 1;
 _vehicleOwner = _container getVariable ['GR8owner', objNull];
 _ownerGroup = units group _vehicleOwner;
+if (isNil '_vehicleOwner') then {_ownerGroup = player;};
 
 if (ExileClientIsHandcuffed) then 
 {
@@ -46,7 +47,7 @@ else
 				}
 				else 
 				{
-					if (!(_unit in _ownerGroup) && (GG_gearSteal) && (ExilePlayerInSafezone) && !(isNil  "_vehicleOwner")) then {
+					if (!((_unit in _ownerGroup) && (isNil  "_vehicleOwner")) && (GG_gearSteal) && (ExilePlayerInSafezone)) then {
 						_cancelEvent = true;
 						["Whoops", ["Cannot access gear! You do not own this vehicle."]] call ExileClient_gui_notification_event_addNotification;
 					} else {
