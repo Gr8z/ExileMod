@@ -71,10 +71,10 @@ else
 			};
 		} else {
 			if !(player in _ownerGroup) then {
-				["Whoops", ["Cannot Enter! You are in a vehicle owned by another player"]] call ExileClient_gui_notification_event_addNotification;
+				["Whoops", ["Cannot Enter This Vehicle"]] call ExileClient_gui_notification_event_addNotification;
 				player action ['getOut', ExileClientSafeZoneVehicle];
 				disableUserInput true;
-				cutText ["DO NOT GET IN OTHER VEHICLES IN SAFEZONES","WHITE IN", 5];
+				cutText ["YOU DO NOT OWN THIS VEHICLE !","WHITE IN", 5];
 				uiSleep 10;
 				disableUserInput false;
 			};
