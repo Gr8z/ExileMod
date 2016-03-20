@@ -42,11 +42,15 @@ if !(_vehicle isEqualTo player) then
 		forEach _attachedObjects;
 	};
 	ExileClientSafeZoneVehicle = _vehicle;
-	ExileClientSafeZoneVehicle setVariable ['GR8owner', player, true]; // GR8's Anti Steal
+	 // GR8's Anti Steal
+	if ((player == driver ExileClientSafeZoneVehicle) && (GG_vehicleEnter)) then {
+		ExileClientSafeZoneVehicle setVariable ['GR8owner', player, true];
+		ExileClientSafeZoneVehicle addEventHandler ["ContainerOpened", {_this call GG_onContainerOpened}];
+	};
+	 // GR8's Anti Steal
 	ExileClientSafeZoneVehicleFiredEventHandler = _vehicle addEventHandler ["Fired", {_this call ExileClient_object_player_event_onFiredSafeZoneVehicle}];
 };
 ExileClientSafeZoneESPEventHandler = addMissionEventHandler ["Draw3D", {20 call ExileClient_gui_safezone_safeESP}];
 ["SafezoneEnter"] call ExileClient_gui_notification_event_addNotification;
-['Beware of thieves, protect your vehicles!',0,0.6,2,0] spawn bis_fnc_dynamictext;
 ExileClientSafeZoneUpdateThreadHandle = [1, ExileClient_object_player_thread_safeZone, [], true] call ExileClient_system_thread_addtask;
 true

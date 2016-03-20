@@ -21,23 +21,6 @@ if (_vehicle isEqualTo player) then
 		ExileClientSafeZoneVehicle = objNull;
 		ExileClientSafeZoneVehicleFiredEventHandler = nil;
 	};
-
-	// GR8's Anti Steal
-	_friends = units group player;
-	_near = [];
-	_around = player nearEntities [['LandVehicle','Air','ship'],25];_near = [];
-	{if (player distance _x < ((sizeOf typeOf _x)/2) + 3) then {_near = _near + [_x];};} forEach _around;
-	_countNear = count _near;
-	_countNearMine = {
-		_owner = _x getVariable ['GR8owner',objNull];
-		_owner in _friends
-	} count _near;
-	if (_countNear > _countNearMine && !isNull findDisplay 602) then {
-		(findDisplay 602) closedisplay 0;
-		closeDialog 0;closeDialog 0;closeDialog 0;
-		["Whoops", ["Cannot access gear! You are near another player's vehicle."]] call ExileClient_gui_notification_event_addNotification;
-	};
-	// GR8's Anti Steal
 }
 else 
 {
@@ -57,26 +40,34 @@ else
 		ExileClientSafeZoneVehicleFiredEventHandler = _vehicle addEventHandler ["Fired", {_this call ExileClient_object_player_event_onFiredSafeZoneVehicle}];
 
 		// GR8's Anti Steal
-		_playerDriver = player == driver ExileClientSafeZoneVehicle;
-		_vehicleOwner = ExileClientSafeZoneVehicle getVariable ['GR8owner', objNull];
-		_ownerGroup = units group _vehicleOwner;
-		if (isNull _vehicleOwner) then {
-			if (_playerDriver) then {
-				ExileClientSafeZoneVehicle setVariable ['GR8owner', player, true]; _vehicleOwner = player;
+
+		if (GG_gearSteal) then {
+			ExileClientSafeZoneVehicle addEventHandler ["ContainerOpened", {_this call GG_onContainerOpened}];
+		};
+		if (GG_vehicleSteal) then {
+			_playerDriver = player == driver ExileClientSafeZoneVehicle;
+			_vehicleOwner = ExileClientSafeZoneVehicle getVariable ['GR8owner', objNull];
+			if (GG_vehicleGroup) then {_ownerGroup = units group _vehicleOwner;} else {_ownerGroup = _vehicleOwner;};
+			if (isNull _vehicleOwner) then {
+				if (GG_vehicleClaim) then {
+					if (_playerDriver) then {
+						ExileClientSafeZoneVehicle setVariable ['GR8owner', player, true]; _vehicleOwner = player;
+					} else {
+						if !(player in _ownerGroup) then {
+							cutText [format['SECURESAFEZONES: %1, This is an abondoned vehicle. Enter in the driver/pilot seat to claim this vehicle.',name player],'PLAIN'];
+							player action ['getOut', ExileClientSafeZoneVehicle];
+						};
+					};
+				};
 			} else {
 				if !(player in _ownerGroup) then {
-					cutText [format['%1, This is an abondoned vehicle. Enter in the driver/pilot seat to claim this vehicle.',name player],'PLAIN'];
+					["Whoops", ["Cannot Enter This Vehicle"]] call ExileClient_gui_notification_event_addNotification;
 					player action ['getOut', ExileClientSafeZoneVehicle];
+					disableUserInput true;
+					cutText ["SECURESAFEZONES: YOU DO NOT OWN THIS VEHICLE !","WHITE IN", 5];
+					uiSleep GG_vehiclePenalty;
+					disableUserInput false;
 				};
-			};
-		} else {
-			if !(player in _ownerGroup) then {
-				["Whoops", ["Cannot Enter This Vehicle"]] call ExileClient_gui_notification_event_addNotification;
-				player action ['getOut', ExileClientSafeZoneVehicle];
-				disableUserInput true;
-				cutText ["YOU DO NOT OWN THIS VEHICLE !","WHITE IN", 5];
-				uiSleep 10;
-				disableUserInput false;
 			};
 		};
 		// GR8's Anti Steal
