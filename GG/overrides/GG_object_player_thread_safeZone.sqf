@@ -42,7 +42,7 @@ else
 		// GR8's Anti Steal
 
 		if (GG_gearSteal) then {
-			ExileClientSafeZoneVehicle addEventHandler ["ContainerOpened", {_this call GG_onContainerOpened}];
+			GG_onContainerOpenedEventHandler = ExileClientSafeZoneVehicle addEventHandler ["ContainerOpened", {_this call GG_onContainerOpened}];
 		};
 		if (GG_vehicleSteal) then {
 			_playerDriver = player == driver ExileClientSafeZoneVehicle;
