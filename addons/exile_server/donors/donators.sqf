@@ -34,6 +34,7 @@ SlotDonor = [
 	"76561197979611157", // Clanzocu (OD-2015-12-31) #   
 	"76561198210181637", // Adam Nantz (OD-2016-03-26) #13256
 	"76561198073495490", // Adam Kadom (EXP-2016-03-16) #
+	"76561198042335279", // Dean Winchester (OD-2016-03-20) #13336
 	// Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "SlotDonor";
@@ -94,6 +95,7 @@ Marksman3 = [
 	"76561198074948727", // Sifi Link (OD-2016-02-29) #13271
 	"76561198135739831", // Davey (3/19/2016 repaid)
 	"76561198101663483", // Chubby
+	"76561198042335279", // Dean Winchester (OD-2016-03-20) #13334
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Marksman3";
