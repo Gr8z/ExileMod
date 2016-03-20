@@ -14,7 +14,7 @@ systemChat "EVENT HANDLER WORKING";
 if !(_unit in _ownerGroup) then
 {
 	_unit action ["CancelAction", _unit];
-	(findDisplay 602) closedisplay 0;
+	waitUntil {!isnull (findDisplay 602)};
 	closeDialog 0;closeDialog 0;closeDialog 0;
 	["Whoops", ["Cannot access gear! You are near another player's vehicle."]] call ExileClient_gui_notification_event_addNotification;
 };
