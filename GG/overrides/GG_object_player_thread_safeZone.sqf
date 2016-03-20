@@ -10,7 +10,7 @@
  * MODIFIED BY GR8's Anti Steal
  */
  
-private["_vehicle"];
+private["_vehicle","_playerDriver","_vehicleOwner","_ownerGroup","_friends","_near","_around","_countNear","_countNearMine"];
 _vehicle = vehicle player;
 if (!ExilePlayerInSafezone) exitWith {false}; 
 if (_vehicle isEqualTo player) then 
@@ -60,8 +60,6 @@ else
 		_playerDriver = player == driver ExileClientSafeZoneVehicle;
 		_vehicleOwner = ExileClientSafeZoneVehicle getVariable ['GR8owner', objNull];
 		_ownerGroup = units group _vehicleOwner;
-		_ownerGroupTag = _vehicleOwner getVariable ["friendlies",[]];
-		_playerID = player getVariable ["CharacterID","0"];
 		if (isNull _vehicleOwner) then {
 			if (_playerDriver) then {
 				ExileClientSafeZoneVehicle setVariable ['GR8owner', player, true]; _vehicleOwner = player;

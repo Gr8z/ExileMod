@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
 
-private["_sessionID","_parameters","_vehicleNetID","_mode","_vehicleObject","_playerObject","_cargo","_revenue","_playerMoney","_respectGain","_playerRespect","_responseCode"];
+private["_sessionID","_parameters","_vehicleNetID","_mode","_vehicleObject","_playerObject","_cargo","_revenue","_playerMoney","_respectGain","_playerRespect","_responseCode","_ownerGroup","_vehicleOwner"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
 _vehicleNetID = _parameters select 0;
@@ -34,6 +34,13 @@ try
 	if !(alive _playerObject) then
 	{
 		throw 2;
+	};
+	_vehicleOwner = _vehicleObject getVariable ['GR8owner', objNull];
+	_ownerGroup = units group _vehicleOwner;
+	if !(isNull _vehicleOwner) then {
+		if !(player in _ownerGroup) then {
+			throw 6;
+		};
 	};
 	if !((owner _vehicleObject) isEqualTo (owner _playerObject)) then
 	{
