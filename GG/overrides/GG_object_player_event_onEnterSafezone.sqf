@@ -7,11 +7,13 @@
  *
  * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
+ * MODIFIED BY GR8's Anti Steal
  */
  
 private["_vehicle","_attachedObjects","_position"];
 if (ExilePlayerInSafezone) exitWith { false };
 ExilePlayerInSafezone = true;
+
 if (alive player) then
 {
 	player allowDamage false;
@@ -20,6 +22,7 @@ if (alive player) then
 _vehicle = vehicle player;
 if !(_vehicle isEqualTo player) then 
 {
+
 	if (local _vehicle) then 
 	{
 		_vehicle allowDamage false;
@@ -39,6 +42,7 @@ if !(_vehicle isEqualTo player) then
 		forEach _attachedObjects;
 	};
 	ExileClientSafeZoneVehicle = _vehicle;
+	ExileClientSafeZoneVehicle setVariable ['GR8owner', player, true]; // GR8's Anti Steal
 	ExileClientSafeZoneVehicleFiredEventHandler = _vehicle addEventHandler ["Fired", {_this call ExileClient_object_player_event_onFiredSafeZoneVehicle}];
 };
 ExileClientSafeZoneESPEventHandler = addMissionEventHandler ["Draw3D", {20 call ExileClient_gui_safezone_safeESP}];
