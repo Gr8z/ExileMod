@@ -28,10 +28,10 @@ if !(isNull ExileClientSafeZoneVehicle) then
 		ExileClientSafeZoneVehicle setVariable ['GR8owner', objNull, true];
 	};
 	ExileClientSafeZoneVehicle removeEventHandler ["Fired", ExileClientSafeZoneVehicleFiredEventHandler];
-	ExileClientSafeZoneVehicle removeEventHandler ["ContainerOpened", GG_onContainerOpened];	
+	ExileClientSafeZoneVehicle removeEventHandler ["ContainerOpened", GG_onContainerOpenedEventHandler];	
 	ExileClientSafeZoneVehicle = objNull;
 	ExileClientSafeZoneVehicleFiredEventHandler = nil;
-	GG_onContainerOpened = nil;
+	GG_onContainerOpenedEventHandler = nil;
 };
 _vehicle = vehicle player; 
 if !(_vehicle isEqualTo player) then 
