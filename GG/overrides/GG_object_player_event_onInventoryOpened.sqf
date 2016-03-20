@@ -9,8 +9,9 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_cancelEvent","_container","_vehicleOwner","_ownerGroup"];
+private["_cancelEvent","_container","_vehicleOwner","_ownerGroup","_unit"];
 _cancelEvent = false;
+_unit = _this select 0;
 _container = _this select 1;
 _vehicleOwner = _container getVariable ['GR8owner', objNull];
 _ownerGroup = units group _vehicleOwner;
