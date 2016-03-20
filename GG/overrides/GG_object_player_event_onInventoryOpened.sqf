@@ -46,7 +46,7 @@ else
 				}
 				else 
 				{
-					if (!(_unit in _ownerGroup) && (GG_gearSteal) && (ExilePlayerInSafezone) && (isNil  "_vehicleOwner")) then {
+					if (!(_unit in _ownerGroup) && (GG_gearSteal) && (ExilePlayerInSafezone) && !(isNil  "_vehicleOwner")) then {
 						_cancelEvent = true;
 						["Whoops", ["Cannot access gear! You do not own this vehicle."]] call ExileClient_gui_notification_event_addNotification;
 					} else {
