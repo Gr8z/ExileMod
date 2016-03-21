@@ -14,7 +14,7 @@ _cancelEvent = false;
 _unit = _this select 0;
 _container = _this select 1;
 _vehicleOwner = _container getVariable ['GR8owner', objNull];
-_ownerGroup = units group _vehicleOwner;
+if (GG_vehicleGroup) then {_ownerGroup = units group _vehicleOwner;} else {_ownerGroup = _vehicleOwner;};
 if (isNil '_vehicleOwner') then {_ownerGroup = player;};
 
 if (ExileClientIsHandcuffed) then 

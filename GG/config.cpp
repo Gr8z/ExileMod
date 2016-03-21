@@ -2107,6 +2107,7 @@ class CfgExileCustomCode
     ExileClient_object_player_thread_safeZone = 			"GG\overrides\GG_object_player_thread_safeZone.sqf";
     ExileClient_object_player_event_onEnterSafezone = 		"GG\overrides\GG_object_player_event_onEnterSafezone.sqf";
     ExileClient_object_player_event_onLeaveSafezone = 		"GG\overrides\GG_object_player_event_onLeaveSafezone.sqf";
+    ExileClient_object_vehicle_network_lockResponse = 		"GG\overrides\GG_object_vehicle_network_lockResponse.sqf";
 };
 
 class CfgNetworkMessages {
