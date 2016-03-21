@@ -2,10 +2,11 @@
 	ExileMod Secure Safezones
 	Made by GR8
 */
+/*
 if (!hasInterface && isServer) exitWith {
 	Diag_log "[GG]: Initializing Secure Safezones";
 };
-
+*/
 private ["_code","_function","_file","_compiles"];
 
 
