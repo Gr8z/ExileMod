@@ -2103,6 +2103,10 @@ class CfgExileCustomCode
     ExileClient_construction_handleAbort = 					"GG\overrides\GG_construction_handleAbort.sqf";
     ExileClient_object_item_consume = 						"GG\overrides\GG_object_item_consume.sqf";
     ExileClient_system_lootManager_thread_spawn = 			"GG\overrides\GG_system_lootManager_thread_spawn.sqf";
+    ExileClient_object_player_thread_safeZone = 			"GG\SecureSafezones\compiles\GG_safeZone.sqf";
+    ExileClient_object_player_event_onEnterSafezone = 		"GG\SecureSafezones\compiles\GG_onEnterSafezone.sqf";
+    ExileClient_object_player_event_onLeaveSafezone = 		"GG\SecureSafezones\compiles\GG_onLeaveSafezone.sqf";
+    ExileClient_object_player_event_onInventoryOpened = 	"GG\SecureSafezones\compiles\GG_onInventoryOpened.sqf";
 };
 
 class CfgNetworkMessages {
