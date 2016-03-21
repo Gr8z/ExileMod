@@ -20,11 +20,11 @@ GG_vehicleDump		= true; // Set this to true to prevent other people from selling
 GG_vehiclePenalty	= 10; 	// Time in seconds to freeze a player when he/she enters an enemy vehicle.
 
 _compiles = [				// If you want to - change the file names here, but check to see if you have duplicates from other scripts.
-	['ExileClient_object_player_thread_safeZone',			'SecureSafezones\GG_safeZone.sqf'],
-	['ExileClient_object_player_event_onEnterSafezone',		'SecureSafezones\GG_onEnterSafezone.sqf'],
-	['ExileClient_object_player_event_onLeaveSafezone',		'SecureSafezones\GG_onLeaveSafezone.sqf'],
-	['ExileServer_system_trading_network_wasteDumpRequest',	'SecureSafezones\GG_wasteDumpRequest.sqf'],
-	['ExileClient_object_player_event_onInventoryOpened',	'SecureSafezones\GG_onInventoryOpened.sqf']
+	['ExileClient_object_player_thread_safeZone',			'GG\SecureSafezones\compiles\GG_safeZone.sqf'],
+	['ExileClient_object_player_event_onEnterSafezone',		'GG\SecureSafezones\compiles\GG_onEnterSafezone.sqf'],
+	['ExileClient_object_player_event_onLeaveSafezone',		'GG\SecureSafezones\compiles\GG_onLeaveSafezone.sqf'],
+	['ExileServer_system_trading_network_wasteDumpRequest',	'GG\SecureSafezones\compiles\GG_wasteDumpRequest.sqf'],
+	['ExileClient_object_player_event_onInventoryOpened',	'GG\SecureSafezones\compiles\GG_onInventoryOpened.sqf']
 ];
 
 // END OF CONFIG - Dont touch this if you dont know what you are doing.
