@@ -2,7 +2,10 @@
 	ExileMod Secure Safezones
 	Made by GR8
 */
-if (!hasInterface || isServer) exitWith {};
+if (!hasInterface && isServer) exitWith {
+	Diag_log "[GG]: Initializing Secure Safezones";
+};
+
 private ["_code","_function","_file","_compiles"];
 
 
@@ -23,7 +26,6 @@ _compiles = [				// If you want to - change the file names here, but check to se
 	['ExileClient_object_player_thread_safeZone',			'GG\SecureSafezones\compiles\GG_safeZone.sqf'],
 	['ExileClient_object_player_event_onEnterSafezone',		'GG\SecureSafezones\compiles\GG_onEnterSafezone.sqf'],
 	['ExileClient_object_player_event_onLeaveSafezone',		'GG\SecureSafezones\compiles\GG_onLeaveSafezone.sqf'],
-	['ExileServer_system_trading_network_wasteDumpRequest',	'GG\SecureSafezones\compiles\GG_wasteDumpRequest.sqf'],
 	['ExileClient_object_player_event_onInventoryOpened',	'GG\SecureSafezones\compiles\GG_onInventoryOpened.sqf']
 ];
 
@@ -37,4 +39,5 @@ _compiles = [				// If you want to - change the file names here, but check to se
 }
 forEach _compiles;
 
+systemChat "SECURE SAFEZONES LOADED";
 // Made by GR8
