@@ -36,8 +36,7 @@ _compiles = [				// If you want to - change the file names here, but check to se
     _file = _x select 1;
     _code = compileFinal (preprocessFileLineNumbers _file);
     missionNamespace setVariable [_function, _code];
-}
-forEach _compiles;
+} forEach _compiles;
 
-systemChat "SECURE SAFEZONES LOADED";
+systemChat "SECURE SAFEZONES LOADED"; // You may remove this line safely
 // Made by GR8
