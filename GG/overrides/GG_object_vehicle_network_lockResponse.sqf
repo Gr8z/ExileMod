@@ -7,6 +7,7 @@
  *
  * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
+ * MODIFIED BY GR8's Anti Steal
  */
  
 private["_message","_mode","_vehicleID","_pincode","_lockedState","_vehicle","_vehicleOwner","_ownerGroup"];
@@ -23,9 +24,14 @@ if !(_lockedState isEqualTo -1) then
 	[_vehicle, _lockedState] spawn ExileClient_object_vehicle_chirpChirp;
 	_vehicle setVariable ["ExileAlreadyKnownCode", _pincode];
 
-	if !(player in _ownerGroup) then {
-		_vehicle setVariable ['GR8owner', player, true]; _vehicleOwner = player;
+	// GR8's Anti Steal
+	if (GG_UnlockClaim) then {
+		if !(player in _ownerGroup) then {
+			_vehicle setVariable ['GR8owner', player, true]; _vehicleOwner = player;
+		};
 	};
+	// GR8's Anti Steal
+	
 };
 if (_mode isEqualTo true) then 
 {
