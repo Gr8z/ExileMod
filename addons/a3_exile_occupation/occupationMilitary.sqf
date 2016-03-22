@@ -53,11 +53,8 @@ if(_aiActive > _maxAIcount) exitWith { diag_log format ["[OCCUPATION Military]::
 
 for [{_i = 0},{_i < (count _buildings)},{_i =_i + 1}] do
 {
-	diag_log format ["[OCCUPATION Military]:: scanning nearObjects started at %1",time];
 	
 	_building = _areaToScan nearObjects [_buildings select _i, 1000];
-	
-	diag_log format ["[OCCUPATION Military]:: scanning nearObjects finished at %1",time];
 	
     uiSleep 1;
     for [{_n = 0},{_n < (count _building)},{_n =_n + 1}] do
