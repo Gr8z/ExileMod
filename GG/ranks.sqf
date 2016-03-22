@@ -330,9 +330,9 @@ switch (true) do
     player forceAddUniform "TRYK_SUITS_BLK_F";
     for "_i" from 1 to 2 do {player addItemToUniform "CUP_30Rnd_9x19_UZI";};
     player addVest "V_PlateCarrierGL_blk";
+	player addBackpack "TRYK_B_Carryall_blk";
     for "_i" from 1 to 2 do {player addItemToVest "CUP_30Rnd_9x19_UZI";};
     for "_i" from 1 to 4 do {player addItemToBackpack "CUP_20Rnd_762x51_FNFAL_M";};
-    player addBackpack "TRYK_B_Carryall_blk";
     player addHeadgear "TRYK_H_headsetcap_blk_Glasses";
     player addWeaponGlobal "CUP_arifle_FNFAL_railed";
     player addWeaponGlobal "CUP_hgun_MicroUzi";
