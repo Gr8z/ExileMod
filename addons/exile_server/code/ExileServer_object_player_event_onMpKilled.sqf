@@ -209,6 +209,7 @@ else
 						_killer setVariable ["ExileLastKillAt", time];
 					};
 					_distance = floor(_victim distance _killer);
+					if (_distance > 3000) then {_distance = 0;};
 					_fragAttributes pushBack (format ["%1m Distance", _distance]);
 					_distanceBonus = (floor ((_distance min 3000) / 100)) * getNumber (configFile >> "CfgSettings" >> "Respect" >> "Bonus" >> "per100mDistance");
 					if (_distanceBonus > 0) then
