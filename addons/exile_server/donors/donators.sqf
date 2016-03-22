@@ -96,6 +96,7 @@ Marksman3 = [
 	"76561198135739831", // Davey (3/19/2016 repaid)
 	"76561198101663483", // Chubby
 	"76561198042335279", // Dean Winchester (OD-2016-03-20) #13334
+	"76561198078011082", // Jesse Mason1 (OD-2016-03-21) #13340 
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Marksman3";
