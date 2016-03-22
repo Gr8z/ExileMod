@@ -3,8 +3,8 @@ uiSleep 30;
 diag_log format ["[OCCUPATION]:: Initialised at %1",time];
 // Shared Config for each occupation monitor
 
-maxAIcount 		= 100;									// the maximum amount of AI, if the AI count is above this then additional AI won't spawn
-minFPS 			= 4;									// any lower than minFPS on the server and additional AI won't spawn
+maxAIcount 		= 50;									// the maximum amount of AI, if the AI count is above this then additional AI won't spawn
+minFPS 			= 8;									// any lower than minFPS on the server and additional AI won't spawn
 scaleAI 		= 10; 									// any more than _scaleAI players on the server and _maxAIcount is reduced for each extra player
 useWaypoints	= false;								// When spawning AI create waypoints to make them enter buildings (can affect performance when the AI is spawned and the waypoints are calculated)
 debug 			= false;								// set to true for debug log information and map markers
@@ -14,13 +14,13 @@ _occupyMilitary 	= true;								// true if you want military buildings patrolled
 _occupyStatic	 	= false;								// true if you want to garrison AI in specific locations (not working yet)
 
 // Settings for roaming ground vehicle AI
-_occupyVehicle	 	= true;									// true if you want to have roaming AI vehicles
+_occupyVehicle	 	= false;									// true if you want to have roaming AI vehicles
 VehicleClassToUse 	= "Exile_Car_LandRover_Green";			// class name of the ground vehicle to use
 liveVehicles 		= 0;									// leave as zero
 maxNumberofVehicles = 3;									// Number of roaming vehicles required
 publicVariable "liveVehicles";
 
-_occupySky		= true;									// true if you want to have roaming AI helis
+_occupySky		= false;									// true if you want to have roaming AI helis
 HeliClassToUse 		= "Exile_Chopper_Huey_Armed_Green";		// class name of the air vehicle to use
 liveHelis	 	= 0;									// leave as zero
 maxNumberofHelis	= 1;									// Number of roaming vehicles required
