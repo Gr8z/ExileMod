@@ -225,7 +225,12 @@ forEach
     ['ExileServer_banking_network_depositRequest','exile_server\code\ExileServer_banking_network_depositRequest.sqf'],
     ['ExileServer_banking_network_saleRequest','exile_server\code\ExileServer_banking_network_saleRequest.sqf'],
     ['ExileServer_banking_network_withdrawalRequest','exile_server\code\ExileServer_banking_network_withdrawalRequest.sqf'],
-    ['ExileServer_banking_utils_diagLog','exile_server\code\ExileServer_banking_utils_diagLog.sqf']
+    ['ExileServer_banking_utils_diagLog','exile_server\code\ExileServer_banking_utils_diagLog.sqf'],
+    ['ExileServer_VirtualGarage_network_GetStoredVehiclesRequest','exile_server\code\ExileServer_VirtualGarage_network_GetStoredVehiclesRequest.sqf'],
+    ['ExileServer_VirtualGarage_network_RetrieveVehicleRequest','exile_server\code\ExileServer_VirtualGarage_network_RetrieveVehicleRequest.sqf'],
+    ['ExileServer_VirtualGarage_network_SpawnRequestedVehicle','exile_server\code\ExileServer_VirtualGarage_network_SpawnRequestedVehicle.sqf'],
+    ['ExileServer_VirtualGarage_network_StoreVehicleRequest','exile_server\code\ExileServer_VirtualGarage_network_StoreVehicleRequest.sqf'],
+    ['ExileServer_VirtualGarage_utils_diagLog','exile_server\code\ExileServer_VirtualGarage_utils_diagLog.sqf']
 ];
 
 call ExileServer_system_process_preInit;
