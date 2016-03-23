@@ -2935,12 +2935,6 @@ class CfgInteractionMenus
 				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo 0)";
 				action = "_this spawn ExileClient_object_lock_setPin";
 			};
-			class Access: ExileAbstractAction
-			{
-				title = "Online Banking";
-				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo 0)";
-				action = "createDialog 'AdvBankingATM';";
-			};
 		};
 	};
 	class ATM
@@ -2976,6 +2970,12 @@ class CfgInteractionMenus
 			  title = "Access Virtual Garage";
 			  condition = "((ExileClientInteractionObject animationPhase 'LaptopLidRotation') >= 0.5)";
 			  action = "call ExileClient_VirtualGarage_AccessGarage";
+			};
+			class Access: ExileAbstractAction
+			{
+				title = "Online Banking";
+				condition = "((ExileClientInteractionObject animationPhase 'LaptopLidRotation') >= 0.5)";
+				action = "createDialog 'AdvBankingATM';";
 			};
 		};
 	};
