@@ -98,6 +98,8 @@ Marksman3 = [
 	"76561198042335279", // Dean Winchester (OD-2016-03-20) #13334
 	"76561198078011082", // Jesse Mason1 (OD-2016-03-21) #13340 
 	"76561198168174204", // BMT (OD-2016-03-22) #13345 
+	"76561198099779936", // Shades (OD-2016-03-23) #13353  
+	"76561198072044107", // McBear (OD-2016-03-23) #13351  
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Marksman3";
@@ -180,6 +182,7 @@ Soldier3 = [
 	"76561198078726531", // [TFT]Trinity (OD-2015-09-23) #11776 
 	"76561198020480005", // Grimm (OD-2016-03-18) #13327 
 	"76561197979611157", // clanzocu (OD-2016-03-22) #13346 
+	"76561198133141952", // Charlie Burns (OD-2016-03-23) #13355  
 	"76561198088251390", // Six 
 	"76561197978528230", // Dark (player Created these loadouts)
 // Add UIDs above, don't forget the comma
