@@ -10,6 +10,8 @@
 
 if (!hasInterface || isServer) exitWith {};
 
+[] execVM "GG\fn_advancedTowingInit.sqf";
+
 _pic = "GG\images\logo.paa";
 [
     '<img align=''left'' size=''1.0'' shadow=''1'' image='+(str(_pic))+' />',
