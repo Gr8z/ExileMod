@@ -77,7 +77,7 @@ _listItemIndex = _listBox lbSetTooltip [14, "$8.90 / month"];
 _listItemIndex = _listBox lbAdd "Engineer Level 3 Loadout";
 _listItemIndex = _listBox lbSetTooltip [15, "$15.00 / month"];
 
-systemChat 'Donor Loadouts Are coming SOON !';
+systemChat 'DONOR LOADOUTS CAN BE PURCHASED FROM GHOSTZGAMERZ.COM';
 waitUntil {!isNil "Soldier3"};
 FNC_GET_ACTUAL_LOADOUT = {
 	waitUntil {typeOf player isEqualTo 'Exile_Unit_Player'};
