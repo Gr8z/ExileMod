@@ -3203,7 +3203,7 @@ class CfgInteractionMenus
 			class Pack: ExileAbstractAction
 			{
 				title = "Pack Bike";
-				condition = "(!ExilePlayerInSafezone)";
+				condition = "true";
 				action = "deleteVehicle ExileClientInteractionObject;player linkItem 'ItemRadio';['Success',['Bike packed! Radio added!']] call ExileClient_gui_notification_event_addNotification;";
 			};
 		};

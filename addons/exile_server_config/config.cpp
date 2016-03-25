@@ -940,7 +940,7 @@ class CfgSettings
 		*
 		* Default: Get 1 respect for every 10 pop tabs 
 		*/
-		tradingRespectFactor = 0.001;
+		tradingRespectFactor = 0.01;
 
 		/**
 		* Defines the amount of respect earned/lost for certain types of frags
