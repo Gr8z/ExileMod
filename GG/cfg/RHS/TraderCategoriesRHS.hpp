@@ -123,8 +123,6 @@
 			"rhsusf_acc_SR25S",
 			"rhsusf_acc_M2010S",
 			"rhs_acc_dtk4short",
-			"rhs_acc_dtk4long",
-			"rhs_acc_dtk4screws",
 			"rhs_acc_tgpa",
 			"rhs_acc_pbs1",
 			"rhs_acc_dtk3",

@@ -3054,7 +3054,7 @@ class CfgLootTables
 			{4733.95189294842, "rhs_weap_m249_pip_S_vfg"}, // 0.20%
 			{4753.69035828274, "rhs_weap_pkp"}, // 0.20%
 			{4773.42882361706, "rhs_weap_pkm"}, // 0.20%
-			{4793.16728895138, "rhs_weap_m32"}, // 0.20%
+			{4793.16728895138, "CUP_glaunch_M32"}, // 0.20%
 			{4812.60363491834, "1Rnd_SmokeBlue_Grenade_shell"}, // 0.19%
 			{4832.0399808853, "1Rnd_SmokeGreen_Grenade_shell"}, // 0.19%
 			{4851.47632685226, "1Rnd_SmokeOrange_Grenade_shell"}, // 0.19%

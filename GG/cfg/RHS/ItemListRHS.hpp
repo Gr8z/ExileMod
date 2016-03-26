@@ -89,8 +89,6 @@
 	class rhs_acc_dtk								{ quality = 1; price = 40; };
 	class rhs_acc_dtk1								{ quality = 1; price = 40; };
 	class rhs_acc_dtk3								{ quality = 1; price = 40; };
-	class rhs_acc_dtk4screws						{ quality = 2; price = 80; };
-	class rhs_acc_dtk4long							{ quality = 2; price = 80; };
 	class rhs_acc_dtk4short							{ quality = 2; price = 80; };
 	class rhs_acc_tgpa								{ quality = 2; price = 80; };
 	class rhs_acc_dtk1l								{ quality = 1; price = 40; };
