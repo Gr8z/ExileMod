@@ -63,7 +63,7 @@ class VirtualGarageSettings
 	/**
 	 * Give the player the pin code when the retrive the vehicle
 	 */
-	VirtualGarage_GivePlayerPicCode = 1;
+	VirtualGarage_GivePlayerPinCode = 1;
 
 	/**
 	 * How many cars can the virtual garage hold at each level ?

@@ -12,10 +12,3 @@ if (VirtualGarage3DIconVisible) then
 	_icon = "\exile_assets\texture\ui\snap_blue_ca.paa";
 	drawIcon3D [_icon, [1, 1, 1, 1], _position, 1, 1, 0];
 };
-
-[]spawn {
-	_sleepTime = getNumber (missionconfigfile >> "VirtualGarageSettings" >> "VirtualGarage_3DTime");
-	uiSleep _sleepTime;
-	removeMissionEventHandler ["Draw3D", VirtualGarageDraw3DIcon];
-	VirtualGarage3DIconVisible = false;
-};

@@ -56,9 +56,9 @@ try
 			}forEach _vehicleHitPoints;
 		};
 	};
-	_GivePlayerPinCode = getNumber (missionconfigfile >> "VirtualGarageSettings" >> "VirtualGarage_GivePlayerPicCode");
+	_GivePlayerPinCode = getNumber (missionconfigfile >> "VirtualGarageSettings" >> "VirtualGarage_GivePlayerPinCode");
 	if (_GivePlayerPinCode == 1) then {
-		_msg = Format["Vehicle Successfully Retrieved PIC Code:%1",_pinCode];
+		_msg = Format["Vehicle Successfully Retrieved PIN Code:%1",_pinCode];
 		[_sessionID, "notificationRequest", ["Success", [_msg]]] call ExileServer_system_network_send_to;
 	}
 	else
