@@ -25,6 +25,7 @@ SlotDonor = [
 	"76561198210181637", // Adam Nantz (OD-2016-03-26) #13256
 	"76561198042335279", // Dean Winchester (OD-2016-03-20) #13336
 	"76561198024060811", // Topoiler (OD-2016-03-25) #13368
+	"76561198065287457", // John Lash (OD-2016-03-25) #13372 
 	// Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "SlotDonor";
@@ -89,6 +90,7 @@ Marksman3 = [
 	"76561198099779936", // Shades (OD-2016-03-23) #13353  
 	"76561198072044107", // McBear (OD-2016-03-23) #13351  
 	"76561198051054305", // Miguel (OD-2016-03-25) #13364  
+	"76561198047560175", // FatherDagon (OD-2016-03-26) #13379   
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Marksman3";
