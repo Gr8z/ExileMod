@@ -66,6 +66,7 @@ Marksman2 = [
 	"76561198210181637", // Adam Nantz (OD-2016-03-18) #13322
 	"76561198079094954", // Afromerican (EXP-2016-04-19) #0000
 	"76561198090140009", // BigTimeDude (OD-2016-03-24) #13360 
+	"76561198009839259", // pealandco (OD-2016-03-28) #13387  
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Marksman2";
@@ -91,6 +92,8 @@ Marksman3 = [
 	"76561198072044107", // McBear (OD-2016-03-23) #13351  
 	"76561198051054305", // Miguel (OD-2016-03-25) #13364  
 	"76561198047560175", // FatherDagon (OD-2016-03-26) #13379   
+	"76561197961413637", // CheMiCaL OG (OD-2016-03-27) #13385    
+	"76561198054562521", // SKIP (OD-2016-03-27) #13383     
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Marksman3";
