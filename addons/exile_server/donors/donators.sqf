@@ -94,6 +94,7 @@ Marksman3 = [
 	"76561198047560175", // FatherDagon (OD-2016-03-26) #13379   
 	"76561197961413637", // CheMiCaL OG (OD-2016-03-27) #13385    
 	"76561198054562521", // SKIP (OD-2016-03-27) #13383     
+	"76561198009839259", // pealandco (OD-2016-03-28) #13392      
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Marksman3";
@@ -174,6 +175,7 @@ Soldier3 = [
 	"76561198020480005", // Grimm (OD-2016-03-18) #13327 
 	"76561197979611157", // clanzocu (OD-2016-03-22) #13346 
 	"76561198133141952", // Charlie Burns (OD-2016-03-23) #13355  
+	"76561197974945508", // Jacob (OD-2016-03-28) #13394   
 	"76561198088251390", // Six 
 	"76561197978528230", // Dark (player Created these loadouts)
 // Add UIDs above, don't forget the comma
