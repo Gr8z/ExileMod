@@ -1,4 +1,4 @@
-SlotDonor = [
+cSlotDonor = [
 	// VIP RESERVED SLOTS
 	"76561198078201908", // Gr8 
 	"76561198153784743", // Ghost
@@ -26,6 +26,7 @@ SlotDonor = [
 	"76561198042335279", // Dean Winchester (OD-2016-03-20) #13336
 	"76561198024060811", // Topoiler (OD-2016-03-25) #13368
 	"76561198065287457", // John Lash (OD-2016-03-25) #13372 
+	"76561197983495282", // Bobby Analog(OD-2016-03-29) #13404 
 	// Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "SlotDonor";
@@ -95,6 +96,7 @@ Marksman3 = [
 	"76561197961413637", // CheMiCaL OG (OD-2016-03-27) #13385    
 	"76561198054562521", // SKIP (OD-2016-03-27) #13383     
 	"76561198009839259", // pealandco (OD-2016-03-28) #13392      
+	"76561198146744943", // eG_massacre (OD-2016-03-29) #13402       
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Marksman3";
