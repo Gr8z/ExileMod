@@ -152,7 +152,7 @@ Scout3 = [
 	"76561198074948727", // Sifi Link (OD-2016-02-29) #13271
 	"76561198220007828", // Nick (OD-2016-02-29) #13398 
 	"76561198203629136", // Brian (OD-2016-02-29) #13400 
-	"76561198088251390", // Six (OD-2016-03-30) #13400 (paid to months in advanced)
+	"76561198088251390", // Six (OD-2016-03-30) #13400 (paid three months in advanced)
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout3";
