@@ -1,4 +1,4 @@
-cSlotDonor = [
+SlotDonor = [
 	// VIP RESERVED SLOTS
 	"76561198078201908", // Gr8 
 	"76561198153784743", // Ghost
