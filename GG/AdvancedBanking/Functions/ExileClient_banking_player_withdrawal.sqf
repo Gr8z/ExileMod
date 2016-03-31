@@ -24,6 +24,9 @@ try {
         if (_amount == 0) then {
             throw "Requested amount equals 0";
         };
+        if (_amount < 0) then {
+            throw "Requested amount equals negetive";
+        };
         if (_amount > ExileClientBank) then {
             throw "You cannot withdrawal more than what you have in your bank";
         };
