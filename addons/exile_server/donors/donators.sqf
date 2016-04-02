@@ -96,7 +96,8 @@ Marksman3 = [
 	"76561197961413637", // CheMiCaL OG (OD-2016-03-27) #13385    
 	"76561198054562521", // SKIP (OD-2016-03-27) #13383     
 	"76561198009839259", // pealandco (OD-2016-03-28) #13392      
-	"76561198146744943", // eG_massacre (OD-2016-03-29) #13402       
+	"76561198146744943", // eG_massacre (OD-2016-03-29) #13402
+	"76561197971655623", // Robbie Digital (Lifetime loadout for Promo Vid)  
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Marksman3";
