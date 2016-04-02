@@ -27,6 +27,7 @@ SlotDonor = [
 	"76561198024060811", // Topoiler (OD-2016-03-25) #13368
 	"76561198065287457", // John Lash (OD-2016-03-25) #13372 
 	"76561197983495282", // Bobby Analog(OD-2016-03-29) #13404 
+	"76561198075036133", // flipside (OD-2016-04-01) #13415  
 	// Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "SlotDonor";
@@ -97,6 +98,8 @@ Marksman3 = [
 	"76561198054562521", // SKIP (OD-2016-03-27) #13383     
 	"76561198009839259", // pealandco (OD-2016-03-28) #13392      
 	"76561198146744943", // eG_massacre (OD-2016-03-29) #13402
+	"76561198075036133", // flipside (OD-2016-04-01) #13417 
+	"76561197961021355", // =UN= Emilio (OD-2016-04-01) #13419  
 	"76561197971655623", // Robbie Digital (Lifetime loadout for Promo Vid)  
 // Add UIDs above, don't forget the comma
 "0"
@@ -182,6 +185,8 @@ Soldier3 = [
 	"76561197979611157", // clanzocu (OD-2016-03-22) #13346 
 	"76561198133141952", // Charlie Burns (OD-2016-03-23) #13355  
 	"76561197974945508", // Jacob (OD-2016-03-28) #13394   
+	"76561198094001482", // ProfoundGenius (OD-2016-03-31) #13409    
+	"76561198170640910", // WOC H.Meehan (OD-2016-04-02) #13421     
 	"76561198088251390", // Six 
 	"76561197978528230", // Dark (player Created these loadouts)
 // Add UIDs above, don't forget the comma
