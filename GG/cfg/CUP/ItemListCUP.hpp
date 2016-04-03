@@ -299,7 +299,7 @@
     class CUP_glaunch_M79 							{ quality = 1; price = 15000; };
     class CUP_glaunch_Mk13                          { quality = 1; price = 15000; };
     class CUP_launch_RPG7V      					{ quality = 1; price = 25000; };
-    class CUP_launch_FIM92Stinger      				{ quality = 1; price = 180000; };
+    class CUP_launch_FIM92Stinger      				{ quality = 1; price = 70000; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Launcher Ammo
@@ -308,4 +308,4 @@
     class CUP_PG7VL_M    							{ quality = 2; price = 8500; };
     class CUP_PG7VR_M    							{ quality = 2; price = 8500; };	
     class CUP_M136_M                                { quality = 2; price = 2500; };
-    class CUP_Stinger_M                             { quality = 2; price = 100000; };
+    class CUP_Stinger_M                             { quality = 2; price = 30000; };
