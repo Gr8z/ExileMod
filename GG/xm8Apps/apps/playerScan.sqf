@@ -20,7 +20,9 @@ if(isNil "LastUsedCheck")then
 {
   LastUsedCheck = 0;
 };
- 
+
+(findDisplay 24015) closeDisplay 0; 
+
 if((LastUsedCheck == 0) || (diag_tickTime - LastUsedCheck > _cooldownTime)) then
 {
   if ("ItemGPS" in (assigneditems player)) then
@@ -73,7 +75,7 @@ if((LastUsedCheck == 0) || (diag_tickTime - LastUsedCheck > _cooldownTime)) then
     LastUsedCheck = diag_tickTime;
     ['Success',[format['There are %1 player(s) nearby ',_playersNearby]]] call ExileClient_gui_notification_event_addNotification;
     uiSleep 3;
-    titleText [format ["Found %1 active 8G signals in your area", _playersNearby], "PLAIN",7];
+    titleText [format ["Found %1 active 8G signals in your area", _playersNearby], "PLAIN",2];
  
   }
   else
