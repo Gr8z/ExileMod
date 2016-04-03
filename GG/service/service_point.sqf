@@ -6,8 +6,8 @@ private ["_folder","_servicePointClasses","_maxDistance","_costsFree","_message"
  
 //====================== general settings
 _folder = "GG\service\"; // folder where the service point scripts are saved, relative to the mission file
-_servicePointClasses = ["O_Truck_03_covered_F","Land_CarService_F","Land_fs_roof_F","Land_fs_feed_F","CargoNet_01_barrels_F","Exile_Trader_Vehicle","Land_A_FuelStation_Feed","Land_A_FuelStation_Shed"]; // service point classes (can be house, vehicle and unit classes)
-_maxDistance = 15; // maximum distance from a service point for the options to be shown
+_servicePointClasses = ["Land_HelipadSquare_F","Land_HelipadEmpty_F","O_Truck_03_covered_F","Land_CarService_F","Land_fs_roof_F","Land_fs_feed_F","CargoNet_01_barrels_F","Exile_Trader_Vehicle","Land_A_FuelStation_Feed","Land_A_FuelStation_Shed"]; // service point classes (can be house, vehicle and unit classes)
+_maxDistance = 20; // maximum distance from a service point for the options to be shown
 _costsFree = "free"; // text for no costs
 _message = "-- Vehicle Service Point --"; // message to be shown when in range of a service point (set to "" to disable)
 _actionColour = "#0096ff"; //the colour of the scroll action Blue: "#0096ff"
