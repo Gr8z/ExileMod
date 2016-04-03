@@ -297,6 +297,13 @@ fnc_buyselected = {
         _para = createVehicle ["B_Parachute_02_F", _objectPosDrop, [], 0, ""];
         _object attachTo [_para,[0,0,-1.5]];
 
+        deleteMarker a1a2a3;
+        _posObject = getPos _object;
+        a1a2a3  = createMarker [a1a2a3,_posObject];
+        a1a2a3  setMarkerText format["%1's Air Drop - %2%3%4",_namePlayer, a1, a2, a3];
+        a1a2a3  setMarkerType "mil_objective";
+        a1a2a3  setMarkerColor "ColorRed";
+
         _smoke1= "SmokeShellGreen" createVehicle getPos _object;
         _smoke1 attachto [_object,[0,0,-0.5]];
         _flare1= "F_40mm_Green" createVehicle getPos _object;
@@ -306,12 +313,8 @@ fnc_buyselected = {
     WaitUntil {((((position _object) select 2) < 1) || (isNil "_para"))};
         detach _object;
         _smoke2= "SmokeShellGreen" createVehicle getPos _object;
-        //_smoke2 attachto [_object,[0,0,-0.5]]; ////Enable this line if you want the smoke attached to the object.
         _flare2= "F_40mm_Green" createVehicle getPos _object;
-        //_flare2 attachto [_object,[0,0,-0.5]]; //Enable this line if you want the flare attached to the object.  Pretty fun at night to watch it drive away lit up
 
-
-    
     hint format["Your Air Drop Was Successfully Delivered %1!",name player];
     DropInProgress = false;
 
