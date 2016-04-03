@@ -70,7 +70,7 @@ chatCommandsP[] =
 	Example:	
 	{-1, -1, 4, 0.6, 0, 0, "#ff0000", "Welcome to our server"}
 */
-ENABLE_NOTIFICATION_MESSAGES = true;
+ENABLE_NOTIFICATION_MESSAGES = false;
 NOTIFY_MSG_ARRAY[] =
 {
 	{-1, -1, 6, 0.6, 0, 0, "#ff0000", "Welcome to our server"},
