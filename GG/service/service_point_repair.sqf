@@ -20,6 +20,7 @@ _veh = vehicle player;
 if (_wallet < _costs) exitWith {cutText [format["You need %1 Pop tab to Repair %2", _costs,_name], "PLAIN DOWN"];};
  
 if(_costs > 0)then{
+        ExileClientPlayerMoney = ExileClientPlayerMoney - _costs;
         ["buyRequest",["WALLET",str(_costs)]] call ExileClient_system_network_send;
 };
 

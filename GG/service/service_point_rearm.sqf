@@ -31,6 +31,7 @@ if(_magscount > _ammoMAX)exitWith{cutText [format["You already have %1 magazine(
 if(_ammocount > _ammoMIN)exitWith{cutText [format["You already have %1 magazine(s) of %2 in %3\nTotal of %4 magazine(s)",_ammocount,_ammoName,_weaponName,_magscount], "PLAIN DOWN"];};
  
 if(_costs > 0)then{
+		ExileClientPlayerMoney = ExileClientPlayerMoney - _costs;
         ["buyRequest",["WALLET",str(_costs)]] call ExileClient_system_network_send;
 };
  
