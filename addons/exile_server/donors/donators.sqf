@@ -52,6 +52,7 @@ Engineer3 = [
 	"76561198001066546", // MeowMix
 	"76561197978528230", // Dark (player Created these loadouts)
 	"76561198072044107", // McBear (OD-2016-03-24) #13358 
+	"76561198050684486", // novaman54 (OD-2016-04-02) #13427  
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Engineer3";
@@ -139,8 +140,9 @@ Scout1 = [
 
 Scout2 = [
 	"0", // ThatEstonian Mod Loadout(Upgraded by MeowMix)
-	"76561197980662311", // ezPK XS PWR #11479
-	"76561198062796125", // ezPK Zephyr #11597
+	"76561197980662311", // ezPK XS PWR (OD-2015-09-15) #11479
+	"76561198062796125", // ezPK Zephyr (OD-2015-09-15) #11597
+	"76561198194022719", //  bUSTAH (OD-2016-04-03) #13429 
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout2";
