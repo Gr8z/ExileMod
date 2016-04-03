@@ -101,6 +101,7 @@ Marksman3 = [
 	"76561198075036133", // flipside (OD-2016-04-01) #13417 
 	"76561197961021355", // =UN= Emilio (OD-2016-04-01) #13419  
 	"76561197971655623", // Robbie Digital (Lifetime loadout for Promo Vid)  
+	"76561198094001482", // ProfoundGenius (OD-2016-04-02) #13423 
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Marksman3";
