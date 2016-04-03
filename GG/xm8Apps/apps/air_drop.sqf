@@ -195,7 +195,7 @@ fnc_buyselected = {
     _dropSpot = [(_pos select 0),(_pos select 1),_flyHeight];
     _heliDirection = random 360;
     _flyHeight = 200;  //Distance from ground that heli will fly at
-    _heliStartDistance = 5000;
+    _heliStartDistance = 500;
     _spos=[(_dropSpot select 0) - (sin _heliDirection) * _heliStartDistance, (_dropSpot select 1) - (cos _heliDirection) * _heliStartDistance, (_flyHeight+200)];
 
     _heli = createVehicle [_heliType, _spos, [], 0, "FLY"];
