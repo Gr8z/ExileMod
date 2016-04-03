@@ -1,4 +1,4 @@
-#include "GG\GG_AdminMenu.hpp"
+#include "GG\GG_Exile_AdminMenu.hpp"
 #include "GG\AdvancedBanking\Dialog\AdvBanking_Client_Defines.hpp"
 #include "GG\AdvancedBanking\Dialog\AdvBanking_Client_ATMDialog.hpp"
 #include "GG\VirtualGarage\Dialog\VirtualGarage_Client_Defines.hpp"

