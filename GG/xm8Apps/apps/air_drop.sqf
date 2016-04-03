@@ -101,8 +101,8 @@ fnc_okToDrop = {
   _ok = true;
  
   _Time = time - lastDrop;
-  _LastUsedTime = 300;
-  _OnlineLimit = 15;
+  _LastUsedTime = 10;
+  _OnlineLimit = 0;
   _traderZoneNearLimit = 200;
 
   if (DropInProgress) then {
