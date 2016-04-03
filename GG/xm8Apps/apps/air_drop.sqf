@@ -302,8 +302,6 @@ fnc_buyselected = {
         _flare1= "F_40mm_Green" createVehicle getPos _object;
         _flare1 attachto [_object,[0,0,-0.5]];
 
-        if (_DropType == "vehicle") then {_object allowDamage true;}; //Turn on damage for vehicles once they're in the 'chute.  Could move this until they hit the ground.  Admins choice.
-
     //Drop some flares and smokes on the ground when the object lands
     WaitUntil {((((position _object) select 2) < 1) || (isNil "_para"))};
         detach _object;

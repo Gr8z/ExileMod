@@ -27,7 +27,6 @@ class CfgRemoteExec
 		class SA_Hint_Success  										{ allowedTargets=1; }; 
 		class SA_Hint_Whoops  										{ allowedTargets=1; };
 		class SA_Hide_Object_Global  								{ allowedTargets=2; };
-		class APOC_srv_startAirdrop 								{ allowedTargets=2; };
 	};
 	class Commands
 	{
