@@ -200,8 +200,6 @@ fnc_buyselected = {
 
     _heli = createVehicle [_heliType, _spos, [], 0, "FLY"];
     _heli allowDamage false;
-    //_heli setVariable ["R3F_LOG_disabled", true, true];
-    //[_heli] call vehicleSetup;
 
     //So, apppppparently the heli needs a pilot.  Let's grab one from the BIS ranks
     _crew = _grp createUnit ["O_recon_F", _spos, [], 0, "NONE"];
