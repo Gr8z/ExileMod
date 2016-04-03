@@ -231,7 +231,7 @@ fnc_buyselected = {
     _heli flyInHeight _flyHeight;
 
     //////// Create Purchased Object //////////////////////////////////////////////
-    _crate = createVehicle ["Exile_Container_SupplyBox", [(_spos select 0), (_spos select 1), (_spos select 2) - 5], [], 0, "FLY"];
+    _object = createVehicle ["Exile_Container_SupplyBox", [(_spos select 0), (_spos select 1), (_spos select 2) - 5], [], 0, "FLY"];
 
     _i=0;
     while {_i < boxItemCount} do {
