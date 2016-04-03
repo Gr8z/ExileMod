@@ -210,7 +210,7 @@ fnc_buyselected = {
 
     _heli setCaptive true;  //Let's not let everyone else go after this guy, make him invisible to other Ai
 
-    _heliDistance = 5000;
+    _heliDistance = 500;
     _dir = ((_dropSpot select 0) - (_spos select 0)) atan2 ((_dropSpot select 1) - (_spos select 1));
     _flySpot = [(_dropSpot select 0) + (sin _dir) * _heliDistance, (_dropSpot select 1) + (cos _dir) * _heliDistance, _flyHeight];
 
