@@ -2523,7 +2523,7 @@ _FN_INJECT_ON_CLIENT = {
 			if(isNil'VERSIONCHECKRESULT')then{VERSIONCHECKRESULT='';};
 			_devLog = format['infiSTAR.de AHAT %1 - 03-Apr-2016 23-22-35 - v0044 - server running: %2:2111 - AdminNameTag: "+str _AdminNameTag+"',VERSIONCHECKRESULT,call _GET_TIME_TIME];diag_log _devLog;
 			"; if(!_HIDE_FROM_PLAYERS)then{ _A3AHstring = _A3AHstring + "
-				systemChat format['<infiSTAR.de> %1 - Successfully Loaded In.',call _GET_TIME_TIME];
+				systemChat format['%1 - Successfully Loaded In.',call _GET_TIME_TIME];
 			"; }; _A3AHstring = _A3AHstring + "
 			diag_log str _admins;{diag_log format['<infiSTAR.de> %1',_x];} forEach diag_activeSQFScripts;
 			"; if(_TGV != -1)then{ _A3AHstring = _A3AHstring + "
