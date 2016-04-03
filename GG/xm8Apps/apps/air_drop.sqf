@@ -168,7 +168,7 @@ fnc_buyselected = {
     ["buyRequest",["WALLET",str(boxCost)]] call ExileClient_system_network_send;
     hint format["Thanks for your order! your Air Drop order number is '%2-%3%4%5'",name player, orderIDcharacters, a1, a2, a3];
     _playerPOS = getPOSATL player;
- 
+    _pos = position player;
     a1a2a3  = createMarker [a1a2a3,_playerPOS];
     a1a2a3  setMarkerText format["%1's Air Drop - %2%3%4",_namePlayer, a1, a2, a3];
     a1a2a3  setMarkerType "mil_objective";
@@ -192,7 +192,7 @@ fnc_buyselected = {
     _grp = createGroup civilian;
     if(isNil("_grp2"))then{_grp2 = createGroup civilian;}else{_grp2 = _grp2;};
     _flyHeight = 350;
-    _dropSpot = [(position _player select 0),(position _player select 1),_flyHeight];
+    _dropSpot = [(_pos select 0),(_pos select 1),_flyHeight];
     _heliDirection = random 360;
     _flyHeight = 200;  //Distance from ground that heli will fly at
     _heliStartDistance = 5000;
