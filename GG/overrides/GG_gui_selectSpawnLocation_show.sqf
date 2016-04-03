@@ -223,7 +223,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 6:{
 			if !(_puid in Marksman3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Marksman Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			
-			_cost = 1819;
+			_cost = 1899;
 			["buyRequest",["BANK",str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Marksman Loadout 3</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
@@ -246,7 +246,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player linkItem "TRYK_ShemaghESSOD_NV";
 			player addItemToVest "Exile_Item_CanOpener";
 			player linkItem "ItemGPS";
-			player addWeapon "Binocular";
+			player addWeapon "Rangefinder";
 			player addWeapon "Exile_Melee_Axe";
 			call ExileClient_object_player_bambiStateEnd; };
 		};
@@ -469,7 +469,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 15:{
 			if !(_puid in Engineer3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Engineer Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			
-			_cost = 889;
+			_cost = 1049;
 			["buyRequest",["BANK",str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Engineer Loadout 3</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
@@ -484,6 +484,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			for "_i" from 1 to 3 do {player addItemToVest "CUP_IlumFlareGreen_GP25_M";};
             for "_i" from 1 to 4 do {player addItemToVest "CUP_30Rnd_545x39_AK_M";};
             for "_i" from 1 to 4 do {player addItemToUniform "CUP_18Rnd_9x19_Phantom";};
+            for "_i" from 1 to 2 do {player addItemToBackpack "Exile_Item_DuctTape";};
 			player addItemToUniform "Exile_Magazine_Swing";
 			player addItemToVest "Exile_Item_InstaDoc";
 			player addItemToVest "Exile_Item_PlasticBottleCoffee";

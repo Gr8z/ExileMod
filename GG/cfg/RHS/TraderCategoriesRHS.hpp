@@ -381,6 +381,7 @@
 			"rhsusf_M1078A1P2_B_M2_wd_flatbed_fmtv_usarmy",
 			"rhsusf_M1078A1P2_B_M2_d_fmtv_usarmy",
 			"rhsusf_M1078A1P2_B_M2_d_flatbed_fmtv_usarmy",
+			"rhsusf_m113_usarmy",
 			"rhs_btr60_chdkz"
 		};
 	};

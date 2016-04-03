@@ -343,6 +343,7 @@
 	class     rhsusf_M1078A1P2_B_M2_d_fmtv_usarmy  { quality = 1; price = 50000; };
 	class     rhsusf_M1078A1P2_B_M2_d_flatbed_fmtv_usarmy  { quality = 1; price = 50000; };
 	class 	  rhs_btr60_chdkz 							{ quality = 1; price = 75000; };
+	class 	  rhsusf_m113_usarmy 							{ quality = 1; price = 62500; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// AIR 
