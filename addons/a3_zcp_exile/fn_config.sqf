@@ -22,8 +22,8 @@ ZCP_MinPoptabReward = 1000; // Poptabreward is added to this number
 ZCP_PopTabsRewardForGroup = 1000;
 
 /* Reputation is ALWAYS given as addition on the normal reward.*/
-ZCP_ReputationReward = 150; // Respect reward for capping per  player online.
-ZCP_MinReputationReward = 500; // ZCP_ReputationReward is added to this number
+ZCP_ReputationReward = 250; // Respect reward for capping per  player online.
+ZCP_MinReputationReward = 1000; // ZCP_ReputationReward is added to this number
 ZCP_ReputationRewardForGroup = 500; // Each group members gets this amount of reputation ( for the trouble).
 ZCP_MinGroupDistance = 200; // meters to be close to the capper to get the group award
 
@@ -54,7 +54,6 @@ ZCP_RewardWeightForRandomChoice = [
 // baseFile -> Random or the basefile name. Random will chose from ZCP_CapBases
 // capradius -> 0 for Random, real number for Static base files.
 ZCP_CapPoints = [ // [name,[x,y,z],reward, unique varname,index, spanwnAI, isStatic, baseFile, capradius, baseFileType, max terrainGradient ( only used if it has staticbaseFile)]
-	["Battle Zone",[0,0,0],"Poptabs","alpha",0, true, false, 'Random', 0, 'Random', 2],
 	["Battle Zone",[0,0,0],"Reputation","beta",1, true, false, 'Random', 0, 'Random', 2]
 ];
 

@@ -250,29 +250,29 @@ DMS_Add_AIKill2DB = false;  // Adds killstat for player in the database ;)
 	DMS_Show_Party_Kill_Notification	= true;						// Whether or not to show in chat when a party member kills an AI.
 
 	DMS_Bandit_Soldier_MoneyGain		= 50;						// The amount of Poptabs gained for killing a bandit soldier
-	DMS_Bandit_Soldier_RepGain			= 20;						// The amount of Respect gained for killing a bandit soldier
+	DMS_Bandit_Soldier_RepGain			= 200;						// The amount of Respect gained for killing a bandit soldier
 	DMS_Bandit_Soldier_RankGain			= 30;
 	DMS_Bandit_Static_MoneyGain			= 75;						// The amount of Poptabs gained for killing a bandit static gunner
-	DMS_Bandit_Static_RepGain			= 30;						// The amount of Respect gained for killing a bandit static gunner
+	DMS_Bandit_Static_RepGain			= 300;						// The amount of Respect gained for killing a bandit static gunner
 	DMS_Bandit_Static_RankGain			= 30;
 	DMS_Bandit_Vehicle_MoneyGain		= 100;						// The amount of Poptabs gained for killing a bandit vehicle crew member
-	DMS_Bandit_Vehicle_RepGain			= 50;						// The amount of Respect gained for killing a bandit vehicle crew member
-	DMS_Bandit_Vehicle_RankGain			= 50;
+	DMS_Bandit_Vehicle_RepGain			= 500;						// The amount of Respect gained for killing a bandit vehicle crew member
+	DMS_Bandit_Vehicle_RankGain			= 50;	
 /* DonkeyPunchDMS Custom Settings for Hero AI*/	
 	DMS_Hero_Soldier_MoneyGain			= 100;						// The amount of Poptabs gained for killing a hero soldier
-	DMS_Hero_Soldier_RepGain			= 40;						// The amount of Respect gained for killing a hero soldier
+	DMS_Hero_Soldier_RepGain			= 400;						// The amount of Respect gained for killing a hero soldier
 	DMS_Hero_Soldier_RankGain			= -30;	
 	DMS_Hero_Static_MoneyGain			= 120;						// The amount of Poptabs gained for killing a hero static gunner
-	DMS_Hero_Static_RepGain			= 60;						// The amount of Respect gained for killing a hero static gunner
+	DMS_Hero_Static_RepGain				= 600;						// The amount of Respect gained for killing a hero static gunner
 	DMS_Hero_Static_RankGain			= -60;
 	DMS_Hero_Vehicle_MoneyGain			= 200;						// The amount of Poptabs gained for killing a hero vehicle crew member
-	DMS_Hero_Vehicle_RepGain			= 50;						// The amount of Respect gained for killing a hero vehicle crew member
+	DMS_Hero_Vehicle_RepGain			= 500;						// The amount of Respect gained for killing a hero vehicle crew member
 	DMS_Hero_Vehicle_RankGain			= -100;
 /* DonkeyPunchDMS Custom Settings for Survivor AI*/	
 	DMS_Survivor_Soldier_MoneyGain		= -100;						// The amount of Poptabs gained for killing a Survivor soldier
 	DMS_Survivor_Soldier_RepGain		= -100;						// The amount of Respect gained for killing a Survivor soldier
 	DMS_Survivor_Soldier_RankGain		= -250;
-	DMS_Survivor_Static_MoneyGain			= -100;						// The amount of Poptabs gained for killing a Survivor static gunner
+	DMS_Survivor_Static_MoneyGain		= -100;						// The amount of Poptabs gained for killing a Survivor static gunner
 	DMS_Survivor_Static_RepGain			= -100;						// The amount of Respect gained for killing a Survivor static gunner
 	DMS_Survivor_Static_RankGain		= -400;
 	DMS_Survivor_Vehicle_MoneyGain		= -500;						// The amount of Poptabs gained for killing a Survivor vehicle crew member
@@ -294,13 +294,13 @@ DMS_Add_AIKill2DB = false;  // Adds killstat for player in the database ;)
 	DMS_Bandit_Vehicle_RoadkillRank		= 50;
 /* DonkeyPunchDMS Custom RoadKill Settings for Hero AI*/	
 	DMS_Hero_Soldier_RoadkillMoney		= 20;						// The amount of Poptabs gained/lost for running over a hero soldier
-	DMS_Hero_Soldier_RoadkillRep		= 20;						// The amount of Respect gained/lost for running over a hero soldier
+	DMS_Hero_Soldier_RoadkillRep		= 200;						// The amount of Respect gained/lost for running over a hero soldier
 	DMS_Hero_Soldier_RoadkillRank		= -40;
 	DMS_Hero_Static_RoadkillMoney		= 20;						// The amount of Poptabs gained/lost for running over a hero static gunner
-	DMS_Hero_Static_RoadkillRep			= 20;						// The amount of Respect gained/lost for running over a hero static gunner
+	DMS_Hero_Static_RoadkillRep			= 200;						// The amount of Respect gained/lost for running over a hero static gunner
 	DMS_Hero_Static_RoadkillRank		= -60;
 	DMS_Hero_Vehicle_RoadkillMoney		= 20;						// The amount of Poptabs gained/lost for running over a hero vehicle crew member
-	DMS_Hero_Vehicle_RoadkillRep		= 20;						// The amount of Respect gained/lost for running over a hero vehicle crew member
+	DMS_Hero_Vehicle_RoadkillRep		= 200;						// The amount of Respect gained/lost for running over a hero vehicle crew member
 	DMS_Hero_Vehicle_RoadkillRank		= -100;
 /* DonkeyPunchDMS Custom Roadkill Settings for Survivor AI*/	
 	DMS_Survivor_Soldier_RoadkillMoney	= -200;						// The amount of Poptabs gained/lost for running over a Survivor soldier

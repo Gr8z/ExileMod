@@ -973,7 +973,7 @@ class CfgSettings
 			per100mDistance = 25;
 
 			// First blood after server restart
-			firstBlood = 100;
+			firstBlood = 500;
 
 			// If you kill someone while you are in your own territory
 			homie = 20;
