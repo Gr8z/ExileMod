@@ -2,7 +2,7 @@
 	private["_eligible","_reward"];
 	waitUntil{player == player};
 	sleep 10;
-	_eligible = _victim getVariable ["ExileReward", false];
+	_eligible = player getVariable ["ExileReward", false];
 	_reward = 1000;
 	if (_eligible) then {
 		[parseText format["
