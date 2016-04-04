@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
 
-private["_data","_oldPlayerObject","_playerUID","_sessionID","_position","_direction","_player","_clanID","_clanName","_devFriendlyMode","_devs","_headgear","_goggles","_binocular","_primaryWeapon","_handgunWeapon","_secondaryWeapon","_currentWeapon","_uniform","_vest","_backpack","_uniformContainer","_vestContainer","_backpackContainer","_assignedItems"];
+private["_playerRespect","_newBank","_data","_oldPlayerObject","_playerUID","_sessionID","_position","_direction","_player","_clanID","_clanName","_devFriendlyMode","_devs","_headgear","_goggles","_binocular","_primaryWeapon","_handgunWeapon","_secondaryWeapon","_currentWeapon","_uniform","_vest","_backpack","_uniformContainer","_vestContainer","_backpackContainer","_assignedItems"];
 _data = _this select 0;
 _oldPlayerObject = _this select 1;
 _playerUID = _this select 2;
@@ -42,6 +42,18 @@ _player setVariable ["ExilePurse", (_advBank select 1)];
 _player setVariable ["ExileBank",(_advBank select 2)];
 // Advanced Banking
 _player setVariable ["ExileScore", (_data select 39)];
+
+_playerRespect = _player getVariable ["ExileScore",0];
+_CheckDailyRespect = format["CheckDailyRespect:%1", _playerUID] call ExileServer_system_database_query_selectSingleField;
+If (_CheckDailyRespect) then {
+	_playerBank = _player getVariable ["ExileScore",0];
+	_newBank = (_player getVariable ["ExileScore",0]) + 1000;
+	_player setVariable ["ExileScore", _newBank];
+	_player setVariable ["ExileReward", true];
+
+	format["setRewardSession:%1", _playerUID] call ExileServer_system_database_query_fireAndForget;
+};
+
 _player setVariable ["ExileKills", (_data select 40)];
 _player setVariable ["ExileDeaths", (_data select 41)];
 _player setVariable ["ExileClanID", _clanID];
@@ -59,16 +71,7 @@ _player setVariable ["ExileXM8IsOnline", false, true];
 _player setOxygenRemaining (_data select 7);
 _player setBleedingRemaining (_data select 8);
 [_player, _data select 9] call ExileClient_util_player_applyHitPointMap;
-_devFriendlyMode = getNumber (configFile >> "CfgSettings" >> "ServerSettings" >> "devFriendyMode");
-if (_devFriendlyMode isEqualTo 1) then
-{
-	_devs = getArray (configFile >> "CfgSettings" >> "ServerSettings" >> "devs");
-	if (_playerUID in _devs) then
-	{
-		_player setVariable ["ExileMoney", 500000];
-		_player setVariable ["ExileScore", 100000];
-	};
-};
+
 _player call ExileClient_util_playerCargo_clear;
 _headgear = _data select 23;
 if (_headgear != "") then
