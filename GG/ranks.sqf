@@ -335,6 +335,7 @@ switch (true) do
     for "_i" from 1 to 4 do {player addItemToBackpack "CUP_20Rnd_762x51_FNFAL_M";};
     player addHeadgear "TRYK_H_headsetcap_blk_Glasses";
     player addWeaponGlobal "CUP_arifle_FNFAL_railed";
+	player addPrimaryWeaponItem "CUP_optic_CompM4";
     player addWeaponGlobal "CUP_hgun_MicroUzi";
     player addHandgunItem "CUP_muzzle_snds_MicroUzi";
     for "_i" from 1 to 2 do {player addItemToBackpack "CUP_HandGrenade_M67";};
@@ -361,7 +362,8 @@ switch (true) do
     player addBackpack "TRYK_B_Carryall_blk";
     player addHeadgear "TRYK_H_PASGT_BLK";
     player addWeaponGlobal "CUP_arifle_FNFAL_railed";
-    player addPrimaryWeaponItem "CUP_optic_CompM2_Black";
+	player addPrimaryWeaponItem "muzzle_snds_B";
+    player addPrimaryWeaponItem "CUP_optic_CompM4";
     player addWeaponGlobal "CUP_hgun_MicroUzi";
     player addHandgunItem "CUP_muzzle_snds_MicroUzi";
     for "_i" from 1 to 2 do {player addItemToBackpack "CUP_HandGrenade_M67";};
