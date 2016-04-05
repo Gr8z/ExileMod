@@ -50,7 +50,7 @@ If (_CheckDailyRespect) then {
 	_newBank = (_player getVariable ["ExileScore",0]) + 1000;
 	_player setVariable ["ExileScore", _newBank];
 	ExileReward = true;
-	publicVariableClient "ExileReward";
+	owner _player publicVariableClient "ExileReward";
 
 	format["setRewardSession:%1", _playerUID] call ExileServer_system_database_query_fireAndForget;
 };
