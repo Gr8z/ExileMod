@@ -309,7 +309,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player forceAddUniform "rhs_uniform_cu_ucp";
 			player addVest "rhsusf_iotv_ucp_Grenadier";
 			player addHeadgear "rhsusf_ach_helmet_headset_ucp";
-			player addBackpack "rhsusf_assault_eagleaiii_ucp";
+			player addBackpack "B_Carryall_cbr";
 			player addWeapon "Binocular";
 			player addWeapon "CUP_arifle_M4A1_BUIS_desert_GL";
 			player addWeapon "CUP_hgun_Colt1911";
@@ -482,11 +482,9 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addWeapon "CUP_hgun_Phantom";
 			player addHandgunItem "CUP_acc_CZ_M3X";
 			player addItemToVest "CUP_HandGrenade_M67";
-			for "_i" from 1 to 3 do {player addItemToVest "CUP_IlumFlareGreen_GP25_M";};
-            for "_i" from 1 to 4 do {player addItemToVest "CUP_30Rnd_545x39_AK_M";};
             for "_i" from 1 to 4 do {player addItemToUniform "CUP_18Rnd_9x19_Phantom";};
             for "_i" from 1 to 2 do {player addItemToBackpack "Exile_Item_DuctTape";};
-			player addItemToBackpack "CUP_100Rnd_TE4_Green_Tracer_556x45_M249";
+			for "_i" from 1 to 2 do {this addItemToBackpack "CUP_200Rnd_TE4_Red_Tracer_556x45_M249";};
 			player addItemToUniform "Exile_Magazine_Swing";
 			player addItemToVest "Exile_Item_InstaDoc";
 			player addItemToVest "Exile_Item_PlasticBottleCoffee";
