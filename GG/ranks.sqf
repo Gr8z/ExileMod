@@ -309,7 +309,7 @@ switch (true) do
     player addHandgunItem "CUP_muzzle_snds_MicroUzi";
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
-    for "_i" from 1 to 3 do {player addItemToBackpack "CUP_30Rnd_Sa58_M_TracerG";};
+    for "_i" from 1 to 2 do {player addItemToBackpack "CUP_30Rnd_Sa58_M_TracerG";};
     for "_i" from 1 to 2 do {player addItemToVest "CUP_30Rnd_9x19_UZI";};
     for "_i" from 1 to 2 do {player addItemToBackpack "CUP_HandGrenade_M67";};
     player addWeaponGlobal "Exile_Melee_Axe";
@@ -327,7 +327,7 @@ switch (true) do
     _rank = "Arms Dealer";  
   call ExileClient_object_player_bambiStateEnd;
      [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,1000000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
-    player forceAddUniform "TRYK_SUITS_BLK_F";
+    player forceAddUniform "TRYK_U_B_BLK";
     for "_i" from 1 to 2 do {player addItemToUniform "CUP_30Rnd_9x19_UZI";};
     player addVest "V_PlateCarrierGL_blk";
 	player addBackpack "TRYK_B_Carryall_blk";
@@ -363,7 +363,7 @@ switch (true) do
     player addHeadgear "TRYK_H_PASGT_BLK";
     player addWeaponGlobal "CUP_arifle_FNFAL_railed";
 	player addPrimaryWeaponItem "muzzle_snds_B";
-    player addPrimaryWeaponItem "CUP_optic_CompM4";
+    player addPrimaryWeaponItem "optic_DMS";
     player addWeaponGlobal "CUP_hgun_MicroUzi";
     player addHandgunItem "CUP_muzzle_snds_MicroUzi";
     for "_i" from 1 to 2 do {player addItemToBackpack "CUP_HandGrenade_M67";};
