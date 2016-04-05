@@ -1,9 +1,8 @@
 [] spawn {  
 	private["_eligible","_reward"];
 	waitUntil {!isNull findDisplay 46 && !isNil 'ExileClientLoadedIn' && getPlayerUID player != ''};
-	waitUntil {!isNil "ExileReward"};
 	sleep 10;
-	_eligible = ExileReward;
+	_eligible = player getVariable ["ExileReward", false];
 	_reward = 1000;
 	if (!(isNil "_eligible") && (_eligible)) then {
 		[parseText format["
