@@ -40,34 +40,18 @@ try {
         [_sessionID,"updateBankStats",[str(_bank)]] call ExileServer_system_network_send_to;
         [format["Buy Request Invoked: Previous Player Bank: %1 Amount to be Removed: %2 Final Bank Amount: %3",(_bank + _amount),_amount,_bank],"BuyRequest"] call ExileServer_banking_utils_diagLog;
     } else {
-        if (_choice isEqualTo "WALLET") then {
-            _wallet = _playerObject getVariable ["ExilePurse",0];
-            if (_amount > _wallet) then {
-                throw 4;
-            };
-            _wallet = _wallet - _amount;
-            if (_wallet < 0) then {
-                throw 5;
-            };
-            _playerObject setVariable ["ExilePurse",_wallet];
-            format["updateWallet:%1:%2",_wallet,(getPlayerUID _playerObject)] call ExileServer_system_database_query_fireAndForget;
-            [_sessionID,"updateWalletStats",[str(_wallet)]] call ExileServer_system_network_send_to;
-            [format["Buy Request Invoked: Previous Player Wallet: %1 Amount to be Removed: %2 Final Wallet Amount: %3",(_wallet + _amount),_amount,_wallet],"BuyRequest"] call ExileServer_banking_utils_diagLog;
-        } else {
-            if (_choice isEqualTo "RESPECT") then {
-               _playerRespect = _playerObject getVariable ["ExileScore",0];
-               _CheckDailyRespect = format["CheckDailyRespect:%1", _playerUID] call ExileServer_system_database_query_selectSingleField;
-               If (_CheckDailyRespect) then {
-                   _playerRespect = _playerObject getVariable ["ExileScore",0];
-                   _newBank = _playerRespect + _amount;
-                   _playerObject setVariable ["ExileScore", _newBank];
-                   format["setRewardSession:%1", _playerUID] call ExileServer_system_database_query_fireAndForget;
-                   [_sessionID,"notificationRequest", ["Success", ["Daily Reward of 1000 Respect Received"]]]] call ExileServer_system_network_send_to;
-               } else {
-                    throw 4;
-                };
-          };
+        _wallet = _playerObject getVariable ["ExilePurse",0];
+        if (_amount > _wallet) then {
+            throw 4;
         };
+        _wallet = _wallet - _amount;
+        if (_wallet < 0) then {
+            throw 5;
+        };
+        _playerObject setVariable ["ExilePurse",_wallet];
+        format["updateWallet:%1:%2",_wallet,(getPlayerUID _playerObject)] call ExileServer_system_database_query_fireAndForget;
+        [_sessionID,"updateWalletStats",[str(_wallet)]] call ExileServer_system_network_send_to;
+        [format["Buy Request Invoked: Previous Player Wallet: %1 Amount to be Removed: %2 Final Wallet Amount: %3",(_wallet + _amount),_amount,_wallet],"BuyRequest"] call ExileServer_banking_utils_diagLog;
     };
 } catch {
     [_sessionID,"notificationRequest", ["Whoops", [format["%1",_exception]]]] call ExileServer_system_network_send_to;

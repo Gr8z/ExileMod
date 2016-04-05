@@ -43,6 +43,17 @@ _player setVariable ["ExileBank",(_advBank select 2)];
 // Advanced Banking
 _player setVariable ["ExileScore", (_data select 39)];
 
+_playerRespect = _player getVariable ["ExileScore",0];
+_CheckDailyRespect = format["CheckDailyRespect:%1", _playerUID] call ExileServer_system_database_query_selectSingleField;
+If (_CheckDailyRespect) then {
+	_playerBank = _player getVariable ["ExileScore",0];
+	_newBank = (_player getVariable ["ExileScore",0]) + 1000;
+	_player setVariable ["ExileScore", _newBank];
+	_player setVariable ["ExileReward", true];
+
+	format["setRewardSession:%1", _playerUID] call ExileServer_system_database_query_fireAndForget;
+};
+
 _player setVariable ["ExileKills", (_data select 40)];
 _player setVariable ["ExileDeaths", (_data select 41)];
 _player setVariable ["ExileClanID", _clanID];
