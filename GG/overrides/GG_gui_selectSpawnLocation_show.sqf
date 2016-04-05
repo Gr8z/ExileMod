@@ -153,7 +153,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addWeapon "CUP_srifle_M14_DMR";
 			player addWeapon "CUP_hgun_Phantom";
 			player addPrimaryWeaponItem "muzzle_snds_B";
-			player addPrimaryWeaponItem "optic_KHS_old";
+			player addPrimaryWeaponItem "optic_KHS_blk";
 			player addPrimaryWeaponItem "bipod_01_F_blk";
 			player addHandgunItem "muzzle_snds_L";
 			player addHandgunItem "CUP_acc_CZ_M3X";
@@ -311,12 +311,13 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addHeadgear "rhsusf_ach_helmet_headset_ucp";
 			player addBackpack "rhsusf_assault_eagleaiii_ucp";
 			player addWeapon "Binocular";
-			player addWeapon "CUP_arifle_M4A1_desert";
+			player addWeapon "CUP_arifle_M4A1_BUIS_desert_GL";
 			player addWeapon "CUP_hgun_Colt1911";
 			player addPrimaryWeaponItem "CUP_acc_ANPEQ_2_desert";
 			player addPrimaryWeaponItem "CUP_optic_CompM2_Desert";
 			for "_i" from 1 to 3 do {player addItemToUniform "CUP_7Rnd_45ACP_1911";};
 			for "_i" from 1 to 4 do {player addItemToVest "CUP_30Rnd_556x45_Stanag";};
+			for "_i" from 1 to 3 do {this addItemToBackpack "1Rnd_HE_Grenade_shell";};
 			player addItemToUniform "Exile_Magazine_Swing";
 			player addItemToVest "Exile_Item_InstaDoc";
 			player addItemToVest "Exile_Item_PlasticBottleCoffee";
@@ -476,7 +477,8 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addVest "V_PlateCarrierSpec_rgr";
 			player addHeadgear "TRYK_ESS_CAP";
 			player addBackpack "CUP_B_ACRPara_m95";
-			player addWeapon "CUP_arifle_AK74M_GL";
+			player addWeapon "CUP_lmg_m249_SQuantoon";
+			player addPrimaryWeaponItem "CUP_optic_HoloBlack";
 			player addWeapon "CUP_hgun_Phantom";
 			player addHandgunItem "CUP_acc_CZ_M3X";
 			player addItemToVest "CUP_HandGrenade_M67";
@@ -484,6 +486,7 @@ FNC_GET_ACTUAL_LOADOUT = {
             for "_i" from 1 to 4 do {player addItemToVest "CUP_30Rnd_545x39_AK_M";};
             for "_i" from 1 to 4 do {player addItemToUniform "CUP_18Rnd_9x19_Phantom";};
             for "_i" from 1 to 2 do {player addItemToBackpack "Exile_Item_DuctTape";};
+			player addItemToBackpack "CUP_100Rnd_TE4_Green_Tracer_556x45_M249";
 			player addItemToUniform "Exile_Magazine_Swing";
 			player addItemToVest "Exile_Item_InstaDoc";
 			player addItemToVest "Exile_Item_PlasticBottleCoffee";
