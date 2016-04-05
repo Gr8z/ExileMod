@@ -317,7 +317,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addPrimaryWeaponItem "CUP_optic_CompM2_Desert";
 			for "_i" from 1 to 3 do {player addItemToUniform "CUP_7Rnd_45ACP_1911";};
 			for "_i" from 1 to 4 do {player addItemToVest "CUP_30Rnd_556x45_Stanag";};
-			for "_i" from 1 to 3 do {this addItemToBackpack "1Rnd_HE_Grenade_shell";};
+			for "_i" from 1 to 3 do {player addItemToBackpack "CUP_1Rnd_HE_M203";};
 			player addItemToUniform "Exile_Magazine_Swing";
 			player addItemToVest "Exile_Item_InstaDoc";
 			player addItemToVest "Exile_Item_PlasticBottleCoffee";
@@ -484,7 +484,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToVest "CUP_HandGrenade_M67";
             for "_i" from 1 to 4 do {player addItemToUniform "CUP_18Rnd_9x19_Phantom";};
             for "_i" from 1 to 2 do {player addItemToBackpack "Exile_Item_DuctTape";};
-			for "_i" from 1 to 2 do {this addItemToBackpack "CUP_200Rnd_TE4_Red_Tracer_556x45_M249";};
+			for "_i" from 1 to 2 do {player addItemToBackpack "CUP_200Rnd_TE4_Red_Tracer_556x45_M249";};
 			player addItemToUniform "Exile_Magazine_Swing";
 			player addItemToVest "Exile_Item_InstaDoc";
 			player addItemToVest "Exile_Item_PlasticBottleCoffee";
