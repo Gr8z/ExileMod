@@ -687,13 +687,13 @@ fnc_VoteTimeServer = compileFinal "
 						VOTETIME_LVT = time;
 					};
 					
-					_txt = format['%1 of %2 (%3) Players voted - %4 for Day and %5 for Night',_cntVoted,_cntAll,(str (_rateAll*100)+'%'),_cntday,_cntnight];
+					_txt = format['%1 of %2 (%3) Players voted - %4 for Day and %5 for Night',_cntVoted,_cntAll,(ceil (str (_rateAll*100))+'%'),_cntday,_cntnight];
 					_msg = ['<t size=''0.55'' font =''OrbitronLight'' color=''#00B1CC''>'+(_txt)+'</t>',safeZoneXAbs/safeZoneWAbs/4,SafeZoneY+0.02,10,0,0,3079];
 					[_msg,-2] call fnc_serverMassMessage;
 				}
 				else
 				{
-					_txt = format['%1 of %2 (%3) Players voted (in chat type /vote day or /vote night)',_cntVoted,_cntAll,(str (_rateAll*100)+'%')];
+					_txt = format['%1 of %2 (%3) Players voted (in chat type /vote day or /vote night)',_cntVoted,_cntAll,(ceil (str (_rateAll*100))+'%')];
 					_msg = ['<t size=''0.55'' font =''OrbitronLight'' color=''#00B1CC''>'+(_txt)+'</t>',safeZoneXAbs/safeZoneWAbs/4,SafeZoneY+0.02,10,0,0,3079];
 					[_msg,-2] call fnc_serverMassMessage;
 				};
