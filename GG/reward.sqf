@@ -1,12 +1,11 @@
 [] spawn {  
-	private["_eligible","_reward","_uid"];
+	private["_eligible","_reward"];
 	waitUntil {!isNull findDisplay 46 && !isNil 'ExileClientLoadedIn' && getPlayerUID player != ''};
 	waitUntil {!isNil "ExileReward"};
 	sleep 10;
-	_uid = getPlayerUID player;
 	_eligible = ExileReward;
 	_reward = 1000;
-	if (_uid in _eligible) then {
+	if (!(isNil "_eligible") && (_eligible)) then {
 		[parseText format["
 		<img size='2' shadow='0' image='GG\images\logo.paa'/><br/>
 		<t size='0.7'font='OrbitronLight'>Daily Rewards</t><br/>
