@@ -28,7 +28,8 @@ SlotDonor = [
 	"76561197983495282", // Bobby Analog(OD-2016-03-29) #13404 
 	"76561198075036133", // flipside (OD-2016-04-01) #13415  
 	"76561197961413637", // CheMiCaL OG (OD-2016-04-03) #13431  
-	"76561198059945472", //  Danny (OD-2016-04-04) #13433  
+	"76561198059945472", // Danny (OD-2016-04-04) #13433
+	"76561197971687271", // H4ppyK1llM0r3 (OD-2016-04-05) Paid one month
 	// Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "SlotDonor";
