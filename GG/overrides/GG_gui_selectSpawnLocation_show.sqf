@@ -335,10 +335,10 @@ FNC_GET_ACTUAL_LOADOUT = {
 			["buyRequest",["BANK",str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Medic Loadout 1</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
-			player forceAddUniform "U_C_Scientist";
-			player addHeadgear "H_Beret_02";
-			player addVest "TRYK_V_ArmorVest_Winter";
-			player addBackpack "TRYK_B_Coyotebackpack_WH";
+			player forceAddUniform "rhs_uniform_emr_patchless";
+			player addHeadgear "rhs_fieldcap_digi";
+			player addVest "rhs_6b23_digi_medic";
+			player addBackpack "rhs_assault_umbts";
 			player addWeapon "CUP_hgun_Glock17";
 			player addHandgunItem "CUP_acc_Glock17_Flashlight";
 			player addHandgunItem "optic_MRD";
@@ -361,10 +361,10 @@ FNC_GET_ACTUAL_LOADOUT = {
 			["buyRequest",["BANK",str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Medic Loadout 2</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
-			player forceAddUniform "U_C_Scientist";
-			player addHeadgear "H_Beret_02";
-			player addVest "TRYK_V_ArmorVest_Winter";
-			player addBackpack "TRYK_B_Coyotebackpack_WH";
+			player forceAddUniform "rhs_uniform_emr_patchless";
+			player addHeadgear "rhs_fieldcap_digi";
+			player addVest "rhs_6b23_digi_medic";
+			player addBackpack "B_Kitbag_sgg";
 			player addWeapon "CUP_smg_MP5A5";
 			player addWeapon "CUP_hgun_Glock17";
 			player addHandgunItem "optic_MRD";
@@ -389,11 +389,10 @@ FNC_GET_ACTUAL_LOADOUT = {
 			["buyRequest",["BANK",str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Medic Loadout 3</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
-			player forceAddUniform "U_C_Scientist";
-			player addVest "TRYK_V_ArmorVest_Winter";
-			player addHeadgear "H_Beret_Colonel";
-			player addVest "TRYK_V_ArmorVest_Winter";
-			player addBackpack "TRYK_B_Coyotebackpack_WH";
+			player forceAddUniform "rhs_uniform_emr_patchless";
+			player addVest "rhs_6b23_digi_medic";
+			player addHeadgear "rhs_fieldcap_digi";
+			player addBackpack "B_Carryall_oli";
 			player addWeapon "CUP_arifle_CZ805_A1";
 			player addWeapon "CUP_hgun_Glock17";
 			player addPrimaryWeaponItem "optic_Hamr";
