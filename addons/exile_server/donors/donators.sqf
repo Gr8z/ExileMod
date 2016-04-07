@@ -30,8 +30,8 @@ SlotDonor = [
 	"76561198075036133", // flipside (OD-2016-04-01) #13415  
 	"76561197961413637", // CheMiCaL OG (OD-2016-04-03) #13431  
 	"76561198059945472", // Danny (OD-2016-04-04) #13433
-	"76561197971687271", // H4ppyK1llM0r3 (OD-2016-04-05) Paid one month
-	"76561197971687271", // H4ppyK1llM0r3 (OD-2016-04-05) 
+	"76561197971687271", // H4ppyK1llM0r3 (EXP-2016-06-05) Paid one month
+	"76561197985318459", // WirelessPillow (OD-2016-04-06) #13443
 	// Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "SlotDonor";
@@ -74,6 +74,7 @@ Marksman2 = [
 	"76561198079094954", // Afromerican (EXP-2016-04-19) #0000
 	"76561198090140009", // BigTimeDude (OD-2016-03-24) #13360 
 	"76561198009839259", // pealandco (OD-2016-03-28) #13387  
+	"76561198288682543", // John (OD-2016-04-05) #13441  
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Marksman2";
@@ -198,6 +199,7 @@ Soldier3 = [
 	"76561198059945472", // Danny (OD-2016-04-04) #13435     
 	"76561198147277989", // Jay (OD-2016-04-05) #13437     
 	"76561198076816202", // Bradley (OD-2016-04-05) #13439     
+	"76561198013441877", // Weenig (OD-2016-04-07) #13446     
 	"76561198088251390", // Six 
 	"76561197978528230", // Dark (player Created these loadouts)
 // Add UIDs above, don't forget the comma
