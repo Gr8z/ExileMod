@@ -156,6 +156,7 @@ Scout3 = [
 	"76561198153784743", // Ghost
 	"76561198084864687", // Kozak
 	"76561198001066546", // MeowMix
+	"76561197979611157", // ClanZocu (1 Month Reward)
 	"76561197978528230", // Dark (player Created these loadouts)
 	"76561198236879848", // Winston (OD-2016-01-13) #12903 
 	"76561198078726531", // Franklin D. Roosevelt (OD-2016-03-18) #13325 
