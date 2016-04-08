@@ -227,13 +227,13 @@ FNC_GET_ACTUAL_LOADOUT = {
 			["buyRequest",["BANK",str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Marksman Loadout 3</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
-			player forceAddUniform "TRYK_U_B_ARO2_CombatUniform";
+			player forceAddUniform "U_I_GhillieSuit";
 			player addVest "V_PlateCarrier1_rgr";
 			player addBackpack "CUP_B_HikingPack_Civ";
 			player addWeapon "CUP_srifle_M110";
 			player addWeapon "CUP_hgun_M9";
 			player addPrimaryWeaponItem "optic_AMS";
-			player addHeadgear "TRYK_H_ghillie_over_green";
+			player addHeadgear "TRYK_H_headsetcap_blk_Glasses";
 			player addPrimaryWeaponItem "bipod_02_F_hex";
 			player addHandgunItem "CUP_muzzle_snds_M9";
 			for "_i" from 1 to 4 do {player addItemToUniform "CUP_15Rnd_9x19_M9";};
