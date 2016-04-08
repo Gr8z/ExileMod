@@ -1420,6 +1420,8 @@ class CfgExileArsenal
 	class Exile_Item_LightBulb						{ quality = 1; price = 20; };
 	class Exile_Item_MetalBoard						{ quality = 1; price = 600; };
 	//class Exile_Item_MetalHedgehogKit				{ quality = 1; price = 1200; };
+	class Exile_Item_FloodLightKit					{ quality = 1; price = 700; };
+	class Exile_Item_PortableGeneratorKit			{ quality = 1; price = 2500; };
 	class Exile_Item_SafeKit						{ quality = 3; price = 10000; };
 	class Exile_Item_CodeLock						{ quality = 2; price = 5000; };
 	class Exile_Item_Laptop						{ quality = 2; price = 9000; };
@@ -3983,6 +3985,8 @@ class CfgTraderCategories
 			"Exile_Item_JunkMetal",
 			"Exile_Item_LightBulb",
 			"Exile_Item_MetalBoard",
+			"Exile_Item_FloodLightKit",
+			"Exile_Item_PortableGeneratorKit",
 			"Exile_Item_MetalPole",
 			"Exile_Item_SafeKit",
 			"Exile_Item_CamoTentKit",
