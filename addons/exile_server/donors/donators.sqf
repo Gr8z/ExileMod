@@ -78,6 +78,7 @@ Marksman2 = [
 	"76561198090140009", // BigTimeDude (OD-2016-03-24) #13360 
 	"76561198009839259", // pealandco (OD-2016-03-28) #13387  
 	"76561198288682543", // John (OD-2016-04-05) #13441  
+	"76561198090813740", // Celty (OD-2016-04-07) #13448   
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Marksman2";
@@ -203,6 +204,7 @@ Soldier3 = [
 	"76561198147277989", // Jay (OD-2016-04-05) #13437     
 	"76561198076816202", // Bradley (OD-2016-04-05) #13439     
 	"76561198013441877", // Weenig (OD-2016-04-07) #13446     
+	"76561198076381992", // Poptart (OD-2016-04-08) #13452      
 	"76561198088251390", // Six 
 	"76561197978528230", // Dark (player Created these loadouts)
 	"76561197973663364", // v4vdrjoker (OD-2016-04-09) (paid one month in advance)
