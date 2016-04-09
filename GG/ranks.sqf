@@ -116,8 +116,8 @@ switch (true) do
 	player addWeapon "CUP_smg_MP5SD6";
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
-    for "_i" from 1 to 3 do {player addItemToVest "16Rnd_9x21_Mag";};
-	for "_i" from 1 to 2 do {player addItemToBackpack "16Rnd_9x21_Mag";};
+    for "_i" from 1 to 2 do {player addItemToBackpack "CUP_30Rnd_9x19_MP5";};
+	for "_i" from 1 to 3 do {player addItemToBackpack "16Rnd_9x21_Mag";};
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
     player addItem "Exile_Item_BBQSandwich";
