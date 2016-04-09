@@ -202,6 +202,7 @@ Soldier3 = [
 	"76561198013441877", // Weenig (OD-2016-04-07) #13446     
 	"76561198088251390", // Six 
 	"76561197978528230", // Dark (player Created these loadouts)
+	"76561197973663364", // v4vdrjoker (OD-2016-04-09) (paid one month in advance)
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Soldier3";
