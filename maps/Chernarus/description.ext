@@ -108,6 +108,7 @@ class CfgSounds
 class cfgFunctions
 {
 	#include "GG\CHVD\CfgFunctions.hpp"
+	#include "GG\Halo\config.cpp"
 };
 
 class RscTitles
