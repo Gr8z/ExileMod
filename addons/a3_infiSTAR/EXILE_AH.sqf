@@ -634,7 +634,7 @@ fnc_VoteTimeServer = compileFinal "
 			{
 				_cntday = 0;
 				_cntnight = 0;
-				_rateAll = ceil (_cntVoted / _cntAll);
+				_rateAll = _cntVoted / _cntAll;
 				if(_rateAll >= VOTETIME_MVP)then
 				{
 					_oUIDs = [];
