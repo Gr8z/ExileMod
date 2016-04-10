@@ -73,7 +73,8 @@ ZCP_CapBases = [ // located in capbases folder [filename, capradius, buildeditor
 	["ec_courage.sqf", 25, "EdenConverted", 5],
 	["ec_defiance.sqf", 20, "EdenConverted", 5],
 	["ec_endurance.sqf", 20, "EdenConverted", 5],
-	["ec_fortitude.sqf", 25, "EdenConverted", 5]
+	["ec_fortitude.sqf", 25, "EdenConverted", 5],
+	["ec_maze.sqf", 35, "EdenConverted", 5]
 ];
 
 // ZCP_TerrainGradient = 10; // Now defined per base or overwritten when using staticbaseFile for a cappoint
