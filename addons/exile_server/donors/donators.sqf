@@ -35,6 +35,7 @@ SlotDonor = [
 	"76561198059945472", // Danny (OD-2016-04-04) #13433
 	"76561197971687271", // H4ppyK1llM0r3 (EXP-2016-06-05) Paid one month
 	"76561197985318459", // WirelessPillow (OD-2016-04-06) #13443
+	"76561198146083701", // America (OD-2016-04-09) #13456 
 	// Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "SlotDonor";
@@ -169,6 +170,7 @@ Scout3 = [
 	"76561198074948727", // Sifi Link (OD-2016-02-29) #13271
 	"76561198220007828", // Nick (OD-2016-02-29) #13398 
 	"76561198203629136", // Brian (OD-2016-02-29) #13400 
+	"76561198283983169", // Jake (OD-2016-04-10) #13458  
 	"76561198088251390", // Six (OD-2016-03-30) #13400 (paid three months in advanced)
 // Add UIDs above, don't forget the comma
 "0"
