@@ -1249,7 +1249,7 @@ class CfgLootTables
 			{9834.50362250085, "CUP_arifle_XM8_Carbine_FG"}, // 0.02%
 			{9836.17812210455, "CUP_arifle_Sa58V"}, // 0.02%
 			{9837.85262170825, "CUP_arifle_Sa58P"}, // 0.02%
-			{9839.52712131195, "CUP_arifle_M4A1_Aim"}, // 0.02%
+			{9839.52712131195, "CUP_arifle_M4A1_camo"}, // 0.02%
 			{9841.20162091566, "CUP_arifle_M4A1_camo"}, // 0.02%
 			{9842.87612051936, "CUP_arifle_M4A1"}, // 0.02%
 			{9844.55062012306, "CUP_arifle_Mk16_CQC"}, // 0.02%
@@ -3298,7 +3298,7 @@ class CfgLootTables
 			{7455.06328042293, "CUP_srifle_M107_Base"}, // 0.07%
 			{7461.84179253952, "CUP_srifle_ksvk"}, // 0.07%
 			{7468.62030465611, "CUP_srifle_AS50"}, // 0.07%
-			{7475.031245996, "CUP_arifle_M4A1_Aim"}, // 0.06%
+			{7475.031245996, "CUP_arifle_M4A1_camo"}, // 0.06%
 			{7481.44218733589, "rhs_weap_m16a4_carryhandle_M203"}, // 0.06%
 			{7487.85312867577, "rhs_weap_m16a4_carryhandle"}, // 0.06%
 			{7494.26407001566, "rhs_weap_m16a4"}, // 0.06%
