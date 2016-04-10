@@ -153,7 +153,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addWeapon "CUP_srifle_M14_DMR";
 			player addWeapon "CUP_hgun_Phantom";
 			player addPrimaryWeaponItem "muzzle_snds_B";
-			player addPrimaryWeaponItem "optic_SOS";
+			player addPrimaryWeaponItem "optic_KHS_blk";
 			player addPrimaryWeaponItem "bipod_01_F_blk";
 			player addHandgunItem "muzzle_snds_L";
 			player addHandgunItem "CUP_acc_CZ_M3X";
