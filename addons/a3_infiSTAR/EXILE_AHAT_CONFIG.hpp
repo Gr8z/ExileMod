@@ -150,6 +150,7 @@ adminUIDandAccess[] =
 		 "76561198088251390", // SIX
 		 "76561197979611157", // Clanzoucu
 		 "76561198074948727", // Sifi_link
+		 "76561198056028211", // Nasty
 		 "76561198065188130", // Nacho
 		 "76561198073495490", // Adam Kadmon
 		 "0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
@@ -179,7 +180,6 @@ adminUIDandAccess[] =
 		{ 
 		 "76561198201637928", // Vex
 		 "76561198101663483", // Chubby/spider
-		 "76561198056028211", // Nasty
 		 "76561198129318411 ", // FriendlyFire
 		 // Add UID's Above - Don't forget the comma!
 		 "0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
