@@ -180,7 +180,7 @@ adminUIDandAccess[] =
 		{ 
 		 "76561198201637928", // Vex
 		 "76561198101663483", // Chubby/spider
-		 "76561198129318411 ", // FriendlyFire
+		 "76561198129318411", // FriendlyFire
 		 // Add UID's Above - Don't forget the comma!
 		 "0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
