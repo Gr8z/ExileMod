@@ -11,7 +11,6 @@ SlotDonor = [
 	"76561198088251390", // Six 
 	"76561198073495490", // Adam Kadmon 
 	"76561198065188130", // Nacho 
-	"76561197979611157", // Clan  
 	"76561197978528230", // Dark (OD-2016-01-02) #12634 
 	"76561198115568415", // Makos (OD-2016-01-02) #12683  	
 	"76561198055516450", // Viper (OD-2016-01-02) #12701  
@@ -210,6 +209,7 @@ Soldier3 = [
 	"76561198088251390", // Six 
 	"76561197978528230", // Dark (player Created these loadouts)
 	"76561197973663364", // v4vdrjoker (OD-2016-04-09) (paid one month in advance)
+	"76561198091159573", // NoName (OD-2016-04-11) #13465
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Soldier3";
