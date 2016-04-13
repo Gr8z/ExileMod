@@ -2602,7 +2602,7 @@ class CfgExileLootSettings
 	 * Interval in seconds when the client searches for
 	 * new buildings to spawn loot in
 	 */
-	spawnInterval = 30;
+	spawnInterval = 60;
 
 	/**
 	 * This is a percentage value to determine how many loot
@@ -2616,7 +2616,7 @@ class CfgExileLootSettings
 	 *
 	 * You can also cap it at a maximum value. See below.
 	 */
-	maximumPositionCoverage = 10;
+	maximumPositionCoverage = 6;
 
  	/**
  	 * Limit the number of loot positions per building. If the 
@@ -2626,7 +2626,7 @@ class CfgExileLootSettings
  	 * This results in 30 loot positions and that is too much. So we
  	 * cap this at 10
  	 */
-	maximumNumberOfLootSpotsPerBuilding = 5;
+	maximumNumberOfLootSpotsPerBuilding = 3;
 
 	/**
 	 * Exile spawns a random number of items per loot spot. This 
