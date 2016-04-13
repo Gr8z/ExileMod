@@ -79,7 +79,8 @@
 	// Ammunition
 	///////////////////////////////////////////////////////////////////////////////
 	class CUP_100Rnd_556x45_BetaCMag    					{ quality = 2; price = 25; };
-    class CUP_100Rnd_TE4_Green_Tracer_556x45_M249    		{ quality = 2; price = 50; };
+    class CUP_100Rnd_TE4_Green_Tracer_556x45_M249           { quality = 2; price = 50; };
+    class CUP_100Rnd_TE4_LRT4_White_Tracer_762x51_Belt_M    { quality = 2; price = 50; };
     class CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M    	{ quality = 2; price = 70; };
     class CUP_100Rnd_TE4_LRT4_762x54_PK_Tracer_Green_M    	{ quality = 2; price = 70; };
     class CUP_10Rnd_762x51_CZ750    						{ quality = 2; price = 2; };
@@ -109,7 +110,8 @@
 	class CUP_20Rnd_B_AA12_74Slug    						{ quality = 2; price = 50; };
     class CUP_30Rnd_545x39_AK_M    							{ quality = 2; price = 25; };
     class CUP_30Rnd_556x45_G36    							{ quality = 2; price = 20; };
-    class CUP_30Rnd_556x45_Stanag    						{ quality = 2; price = 15; };
+    class CUP_30Rnd_556x45_Stanag                           { quality = 2; price = 15; };
+    class CUP_20Rnd_762x51_L129_M    						{ quality = 2; price = 15; };
     class CUP_30Rnd_762x39_AK47_M    						{ quality = 2; price = 25; };
     class CUP_30Rnd_Sa58_M    								{ quality = 2; price = 15; };
     class CUP_30Rnd_9x19_MP5    							{ quality = 2; price = 25; };
@@ -158,7 +160,8 @@
     class CUP_hgun_Duty 							{ quality = 1; price = 125; };
     class CUP_hgun_Phantom 							{ quality = 1; price = 125; };
     class CUP_hgun_PB6P9 							{ quality = 1; price = 125; };
-    class CUP_hgun_Glock17 							{ quality = 1; price = 125; };	
+    class CUP_hgun_Glock17                          { quality = 1; price = 125; };  
+    class CUP_hgun_BallisticShield_Armed 			{ quality = 1; price = 1100; };	
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Sub Machine Guns
@@ -219,7 +222,9 @@
     class CUP_arifle_M4A1_black 					{ quality = 1; price = 850; };
     class CUP_arifle_M4A1_desert 					{ quality = 1; price = 850; };
     class CUP_arifle_L85A2 							{ quality = 1; price = 850; };
-    class CUP_arifle_L85A2_GL 						{ quality = 1; price = 850; };
+    class CUP_arifle_L85A2_GL                       { quality = 1; price = 850; };
+    class CUP_srifle_L129A1_HG                      { quality = 1; price = 850; };
+    class CUP_srifle_L129A1 						{ quality = 1; price = 850; };
     class CUP_arifle_L86A2 							{ quality = 1; price = 850; };
     class CUP_arifle_FNFAL_railed 					{ quality = 1; price = 1200; };
     class CUP_arifle_AK107_GL 						{ quality = 1; price = 850; };
@@ -309,3 +314,30 @@
     class CUP_PG7VR_M    							{ quality = 2; price = 8500; };	
     class CUP_M136_M                                { quality = 2; price = 2500; };
     class CUP_Stinger_M                             { quality = 2; price = 30000; };
+
+    ///////////////////////////////////////////////////////////////////////////////
+    // Backpacks
+    ///////////////////////////////////////////////////////////////////////////////
+    class CUP_B_AlicePack_Khaki                     { quality = 1; price = 100; };
+    class CUP_B_AlicePack_Bedroll                   { quality = 1; price = 100; };
+    class CUP_B_AssaultPack_ACU                     { quality = 1; price = 100; };
+    class CUP_B_AssaultPack_Black                   { quality = 1; price = 100; };
+    class CUP_B_AssaultPack_Coyote                  { quality = 1; price = 100; };
+    class CUP_B_Bergen_BAF                          { quality = 1; price = 100; };
+    class CUP_B_CivPack_WDL                         { quality = 1; price = 100; };
+    class CUP_B_GER_Medic_Desert                    { quality = 1; price = 100; };
+    class CUP_B_GER_Medic_FLecktarn                 { quality = 1; price = 100; };
+    class CUP_B_GER_Medic_Tropentarn                { quality = 1; price = 100; };
+    class CUP_B_GER_Pack_Flecktarn                  { quality = 1; price = 100; };
+    class CUP_B_GER_Pack_Tropentarn                 { quality = 1; price = 100; };
+    class CUP_B_HikingPack_Civ                      { quality = 1; price = 100; };
+    class CUP_B_MedicPack_ACU                       { quality = 1; price = 100; };
+    class CUP_B_RPGPack_Khaki                       { quality = 1; price = 100; };
+    class CUP_B_RUS_Backpack                        { quality = 1; price = 100; };
+    class CUP_B_SLA_Medicbag                        { quality = 1; price = 100; };
+    class CUP_B_TK_Medic_Desert                     { quality = 1; price = 100; };
+    class CUP_B_USMC_AssaultPack                    { quality = 1; price = 100; };
+    class CUP_B_USMC_MOLLE                          { quality = 1; price = 100; };
+    class CUP_B_USMC_MOLLE_WDL                      { quality = 1; price = 100; };
+    class CUP_B_USPack_Black                        { quality = 1; price = 100; };
+    class CUP_B_USPack_Coyote                       { quality = 1; price = 100; };

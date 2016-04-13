@@ -4614,6 +4614,7 @@ class CfgTraders
 			"TRYKVests",
 			"Backpacks",
 			"TRYKBackpacks",
+			"CUPBackpacks",
 			"FirstAid"
 		};
 	};

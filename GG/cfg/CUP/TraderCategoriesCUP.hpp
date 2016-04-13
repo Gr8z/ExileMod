@@ -128,6 +128,8 @@
 	"CUP_30Rnd_545x39_AK_M",
 	"CUP_30Rnd_556x45_G36",
 	"CUP_30Rnd_556x45_Stanag",
+	"CUP_20Rnd_762x51_L129_M",
+	"CUP_100Rnd_TE4_LRT4_White_Tracer_762x51_Belt_M",
 	"CUP_30Rnd_762x39_AK47_M",
 	"CUP_30Rnd_Sa58_M",
 	"CUP_30Rnd_9x19_MP5",
@@ -175,7 +177,8 @@
 	"CUP_hgun_Duty",
 	"CUP_hgun_Phantom",
 	"CUP_hgun_PB6P9",
-	"CUP_hgun_Glock17"
+	"CUP_hgun_Glock17",
+	"CUP_hgun_BallisticShield_Armed"
 		};
 	};
 
@@ -245,6 +248,8 @@
 	"CUP_arifle_M4A1_desert",
 	"CUP_arifle_L85A2",
 	"CUP_arifle_L85A2_GL",
+	"CUP_srifle_L129A1_HG",
+	"CUP_srifle_L129A1",
 	"CUP_arifle_L86A2",
 	"CUP_arifle_FNFAL_railed",
 	"CUP_arifle_AK107_GL",
@@ -360,5 +365,38 @@
 	"CUP_PG7VL_M",
 	"CUP_PG7VR_M",
 	"CUP_Stinger_M"
+		};
+	};		
+
+
+	class CUPBackpacks 
+	{
+		name = "CUP Backpacks";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\backpack_ca.paa";
+		items[] = 
+		{
+			"CUP_B_AlicePack_Khaki",
+			"CUP_B_AlicePack_Bedroll",
+			"CUP_B_AssaultPack_ACU",
+			"CUP_B_AssaultPack_Black",
+			"CUP_B_AssaultPack_Coyote",
+			"CUP_B_Bergen_BAF",
+			"CUP_B_CivPack_WDL",
+			"CUP_B_GER_Medic_Desert",
+			"CUP_B_GER_Medic_FLecktarn",
+			"CUP_B_GER_Medic_Tropentarn",
+			"CUP_B_GER_Pack_Flecktarn",
+			"CUP_B_GER_Pack_Tropentarn",
+			"CUP_B_HikingPack_Civ",
+			"CUP_B_MedicPack_ACU",
+			"CUP_B_RPGPack_Khaki",
+			"CUP_B_RUS_Backpack",
+			"CUP_B_SLA_Medicbag",
+			"CUP_B_TK_Medic_Desert",
+			"CUP_B_USMC_AssaultPack",
+			"CUP_B_USMC_MOLLE",
+			"CUP_B_USMC_MOLLE_WDL",
+			"CUP_B_USPack_Black",
+			"CUP_B_USPack_Coyote"
 		};
 	};		
