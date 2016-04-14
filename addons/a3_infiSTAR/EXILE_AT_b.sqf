@@ -9,7 +9,7 @@
 	Arma AntiHack & AdminTools - infiSTAR.de
 */
 comment 'Antihack & AdminTools - Christian Lorenzen - www.infiSTAR.de';
-VERSION_DATE_IS = '14-Apr-2016 02-07-29#2111';
+VERSION_DATE_IS = '03-Apr-2016 23-22-35#2111';
 infiSTAR_customFunctions = [];
 _configClasses = "true" configClasses (configfile >> "CfgCustomFunctions");
 {
@@ -79,30 +79,7 @@ infiSTAR_MAIN_CODE = "
 	if(isNil 'SERVER_THREADS')then{SERVER_THREADS = '';};
 	if(isNil 'infiSTAR_toggled_A')then{infiSTAR_toggled_A = ['==== OnTarget ====','==== Toggleable ====','==== Custom Functions ===='];};
 	if(isNil 'infiSTAR_loop_array')then{infiSTAR_loop_array = [];};
-	if(isNil'FN_SHOW_LOGID')then{FN_SHOW_LOGID = 554466;};
-	FN_SHOW_LOG =
-	{
-		disableSerialization;
-		_ctrl = [findDisplay 46,'RSCText',FN_SHOW_LOGID] call fnc_createctrl;
-		_ctrl ctrlSetPosition [
-			-0.3,
-			safeZoneH + safeZoneY - 0.23,
-			1.3,
-			0.5
-		];
-		_ctrl ctrlSetText format['<infiSTAR.de> %1',_this];
-		_ctrl ctrlCommit 0;
-		_ctrl ctrlSetPosition [
-			-0.3,
-			safeZoneY,
-			1.3,
-			0.5
-		];
-		_ctrl ctrlCommit 5;
-		_ctrl ctrlSetFade 1;
-		_ctrl ctrlCommit 10;
-		FN_SHOW_LOGID = FN_SHOW_LOGID + 1;
-	};
+	FN_SHOW_LOG = {cutText [format['infiSTAR.de:\n%1',_this], 'PLAIN'];};
 	fnc_get_selected_object = {
 		_target = lbtext[LEFT_CTRL_ID,(lbCurSel LEFT_CTRL_ID)];
 		if(_target isEqualTo '')then
@@ -1098,7 +1075,7 @@ infiSTAR_MAIN_CODE = "
 		START_LOADING_HTML = [] spawn {
 			disableSerialization;
 			_html = uiNamespace getVariable 'RscHTML_infiSTAR_Admin';
-			_html htmlLoad HTML_LOAD_URL_EXILE;
+			_html htmlLoad HTML_LOAD_URL2;
 			_start = diag_tickTime + .25;
 			waitUntil {diag_tickTime > _start};
 			if(!ctrlHTMLLoaded _html)exitWith{_html ctrlEnable false;_html ctrlShow false;};
@@ -1999,8 +1976,10 @@ infiSTAR_MAIN_CODE = "
 			_pic = (getText (configFile >> _cfg >> _class >> 'picture'));
 			if!((toLower _pic) in ['','pictureheal','picturepapercar','picturething','picturestaticobject'])then
 			{
-				_ctrlText = _ctrlText + '<br/><img align=''right'' size=''3.5'' image='''+_pic+'''/>';
+				
 			};
+			_ctrlText = _ctrlText + '<br/><img align=''right'' size=''3.5'' image='''+_pic+'''/>';
+			
 			_ctrl = [findDisplay MAIN_DISPLAY_ID,'RscStructuredText',8406] call fnc_createctrl;
 			_ctrl ctrlSetPosition [0.6,0.275 * safezoneH + safezoneY,1,1];
 			_ctrl ctrlCommit 0;
@@ -3136,7 +3115,10 @@ infiSTAR_MAIN_CODE = "
 				if(damage player > 0)then{player setDamage 0;};
 				if(!isNil'ExileRadiationThreadHandle')then
 				{
-					[] call ExileClient_system_radiation_event_onPlayerDied;
+					ExilePostProcessing_RadiationChroma ppEffectEnable false;
+					ExilePostProcessing_RadiationColor ppEffectEnable false;
+					ExilePostProcessing_RadiationFilm ppEffectEnable false;
+					[ExileRadiationThreadHandle] call ExileClient_system_thread_removeTask;
 					ExilePlayerRadiation = 0;
 					ExilePlayerRadiationLastCheck = 0;
 				};
@@ -3149,7 +3131,6 @@ infiSTAR_MAIN_CODE = "
 			player allowDamage true;
 			player removeAllEventhandlers 'HandleDamage';
 			player addEventHandler ['HandleDamage',{_this call ExileClient_object_player_event_onHandleDamage}];
-			[] call ExileClient_system_radiation_event_onPlayerSpawned;
 		};
 	};
 	infiSTAR_A3Invulnerability2 = {
@@ -4163,8 +4144,8 @@ infiSTAR_MAIN_CODE = "
 				private['_timer1','_timer2','_code','_ALL','_allMissionObjects','_allMissionObjectsTypeAll','_ObjectsSimulated','_Exile_Construction','_Exile_Flag','_Vehicles','_LandVehicleAirShipStatic','_allDead','_allDeadMen','_DeadPlayers','_Players','_AI','_SERVERTHREADS','_FPS','_MissionRunningTime','_nearestObject','_nearestObjectHealth','_nearestObjects','_LootWeaponHolder','_GroundWeaponHolder','_WeaponHolderSimulated','_Exile_Flag150m','_Exile_Construction150m','_LootWeaponHolder150m','_GroundWeaponHolder150m','_WeaponHolderSimulated150m','_ctrlTXT'];
 				disableSerialization;
 				_ctrlTXT = [findDisplay 46,'RscStructuredText',5555313] call fnc_createctrl;
-				_ctrlTXT ctrlSetPosition [safeZoneX+safeZoneW-0.6,safeZoneY+0.1,0.55,1.2];
-				_ctrlTXT ctrlCommit 0;
+				_ctrlTXT ctrlSetPosition [safeZoneX+safeZoneW-0.55,safeZoneY+0.1,1,1.2];
+				_ctrlTXT ctrlSetBackgroundColor [0.15,0.15,0.15,0.5];
 				
 				_timer1 = 0;
 				_timer2 = 0;
@@ -4215,36 +4196,36 @@ infiSTAR_MAIN_CODE = "
 						};
 					}forEach _nearestObjects;
 					_txt = format['
-	<t align=''left'' size=''.75'' color=''#44CD00''>Exile_Flags on Map: </t><t align=''left'' size=''.75'' color=''#5FBEDE''>%1</t><br/>
-	<t align=''left'' size=''.75'' color=''#44CD00''>Exile_Constructions on Map: </t><t align=''left'' size=''.75'' color=''#5FBEDE''>%2</t><br/>
-	<t align=''left'' size=''.75'' color=''#44CD00''>LootWeaponHolder on Map: </t><t align=''left'' size=''.75'' color=''#5FBEDE''>%20</t><br/>
-	<t align=''left'' size=''.75'' color=''#44CD00''>GroundWeaponHolder on Map: </t><t align=''left'' size=''.75'' color=''#5FBEDE''>%21</t><br/>
-	<t align=''left'' size=''.75'' color=''#44CD00''>WeaponHolderSimulated on Map: </t><t align=''left'' size=''.75'' color=''#5FBEDE''>%22</t><br/>
-	<br/>
-	<t align=''left'' size=''.75'' color=''#44CD00''>Exile_Flags in 150m: </t><t align=''left'' size=''.75'' color=''#5FBEDE''>%3</t><br/>
-	<t align=''left'' size=''.75'' color=''#44CD00''>Exile_Constructions in 150m: </t><t align=''left'' size=''.75'' color=''#5FBEDE''>%27</t><br/>
-	<t align=''left'' size=''.75'' color=''#44CD00''>LootWeaponHolder in 150m: </t><t align=''left'' size=''.75'' color=''#5FBEDE''>%23</t><br/>
-	<t align=''left'' size=''.75'' color=''#44CD00''>GroundWeaponHolder in 150m: </t><t align=''left'' size=''.75'' color=''#5FBEDE''>%24</t><br/>
-	<t align=''left'' size=''.75'' color=''#44CD00''>WeaponHolderSimulated in 150m: </t><t align=''left'' size=''.75'' color=''#5FBEDE''>%25</t><br/>
-	<br/>
-	<t align=''left'' size=''.75'' color=''#44CD00''>allMissionObjects: </t><t align=''left'' size=''.75'' color=''#5FBEDE''>%4</t><br/>
-	<t align=''left'' size=''.75'' color=''#44CD00''>Vehicles: </t><t align=''left'' size=''.75'' color=''#5FBEDE''>%6</t><br/>
-	<t align=''left'' size=''.75'' color=''#44CD00''>LandVehicleAirShipStatic: </t><t align=''left'' size=''.75'' color=''#5FBEDE''>%7</t><br/>
-	<t align=''left'' size=''.75'' color=''#44CD00''>ObjectsSimulated: </t><t align=''left'' size=''.75'' color=''#5FBEDE''>%5</t><br/>
-	<br/>
-	<t align=''left'' size=''.75'' color=''#44CD00''>Players: </t><t align=''left'' size=''.75'' color=''#5FBEDE''>%11</t><br/>
-	<t align=''left'' size=''.75'' color=''#44CD00''>DeadPlayers: </t><t align=''left'' size=''.75'' color=''#5FBEDE''>%10</t><br/>
-	<t align=''left'' size=''.75'' color=''#44CD00''>allDeadMen: </t><t align=''left'' size=''.75'' color=''#5FBEDE''>%9</t><br/>
-	<t align=''left'' size=''.75'' color=''#44CD00''>allDead: </t><t align=''left'' size=''.75'' color=''#5FBEDE''>%8</t><br/>
-	<t align=''left'' size=''.75'' color=''#44CD00''>AI: </t><t align=''left'' size=''.75'' color=''#5FBEDE''>%12</t><br/>
-	<br/>
-	<t align=''left'' size=''.75'' color=''#44CD00''>MissionRunningTime: </t><t align=''left'' size=''.75'' color=''#5FBEDE''>%14</t><br/>
-	<t align=''left'' size=''.75'' color=''#44CD00''>SERVER: </t><t align=''left'' size=''.75'' color=''#5FBEDE''>[FPS: %15|THREADS: %13]</t><br/>
-	<t align=''left'' size=''.75'' color=''#44CD00''>CLIENT: </t><t align=''left'' size=''.75'' color=''#5FBEDE''>[FPS: %16|THREADS: %26]</t><br/>
-	<br/>
-	<t align=''left'' size=''.75'' color=''#44CD00''>TARGET TYPE: </t><t align=''left'' size=''.75'' color=''#5FBEDE''>%17</t><br/>
-	<t align=''left'' size=''.75'' color=''#44CD00''>TARGET DISTANCE: </t><t align=''left'' size=''.75'' color=''#5FBEDE''>%18</t><br/>
-	<t align=''left'' size=''.75'' color=''#44CD00''>TARGET HEALTH: </t><t align=''left'' size=''.75'' color=''#5FBEDE''>%19</t><br/>
+						<t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#44CD00''>Exile_Flags on Map: </t><t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#5FBEDE''>%1</t><br/>
+						<t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#44CD00''>Exile_Constructions on Map: </t><t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#5FBEDE''>%2</t><br/>
+						<t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#44CD00''>LootWeaponHolder on Map: </t><t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#5FBEDE''>%20</t><br/>
+						<t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#44CD00''>GroundWeaponHolder on Map: </t><t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#5FBEDE''>%21</t><br/>
+						<t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#44CD00''>WeaponHolderSimulated on Map: </t><t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#5FBEDE''>%22</t><br/>
+						<br/>
+						<t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#44CD00''>Exile_Flags in 150m: </t><t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#5FBEDE''>%3</t><br/>
+						<t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#44CD00''>Exile_Constructions in 150m: </t><t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#5FBEDE''>%27</t><br/>
+						<t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#44CD00''>LootWeaponHolder in 150m: </t><t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#5FBEDE''>%23</t><br/>
+						<t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#44CD00''>GroundWeaponHolder in 150m: </t><t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#5FBEDE''>%24</t><br/>
+						<t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#44CD00''>WeaponHolderSimulated in 150m: </t><t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#5FBEDE''>%25</t><br/>
+						<br/>
+						<t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#44CD00''>allMissionObjects: </t><t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#5FBEDE''>%4</t><br/>
+						<t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#44CD00''>Vehicles: </t><t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#5FBEDE''>%6</t><br/>
+						<t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#44CD00''>LandVehicleAirShipStatic: </t><t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#5FBEDE''>%7</t><br/>
+						<t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#44CD00''>ObjectsSimulated: </t><t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#5FBEDE''>%5</t><br/>
+						<br/>
+						<t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#44CD00''>Players: </t><t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#5FBEDE''>%11</t><br/>
+						<t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#44CD00''>DeadPlayers: </t><t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#5FBEDE''>%10</t><br/>
+						<t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#44CD00''>allDeadMen: </t><t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#5FBEDE''>%9</t><br/>
+						<t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#44CD00''>allDead: </t><t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#5FBEDE''>%8</t><br/>
+						<t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#44CD00''>AI: </t><t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#5FBEDE''>%12</t><br/>
+						<br/>
+						<t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#44CD00''>MissionRunningTime: </t><t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#5FBEDE''>%14</t><br/>
+						<t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#44CD00''>SERVER: </t><t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#5FBEDE''>[FPS: %15|THREADS: %13]</t><br/>
+						<t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#44CD00''>CLIENT: </t><t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#5FBEDE''>[FPS: %16|THREADS: %26]</t><br/>
+						<br/>
+						<t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#44CD00''>TARGET TYPE: </t><t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#5FBEDE''>%17</t><br/>
+						<t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#44CD00''>TARGET DISTANCE: </t><t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#5FBEDE''>%18</t><br/>
+						<t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#44CD00''>TARGET HEALTH: </t><t align=''left''size=''.85'' font=''EtelkaMonospaceProBold'' color=''#5FBEDE''>%19</t><br/>
 					',
 						_Exile_Flag,
 						_Exile_Construction,
@@ -4275,6 +4256,7 @@ infiSTAR_MAIN_CODE = "
 						_Exile_Construction150m
 					];
 					_ctrlTXT ctrlSetStructuredText parseText _txt;
+					_ctrlTXT ctrlCommit 0;
 					uiSleep .5;
 				};
 			};
@@ -4510,7 +4492,7 @@ infiSTAR_MAIN_CODE = "
 			};
 		} forEach _oldValues;
 	};
-	HTML_LOAD_URL_EXILE = 'http://ghostzgamerz.com/news.php';
+	HTML_LOAD_URL2 = 'http://goo.gl/IqF6wH';
 	[] spawn {
 		_log = format['<infiSTAR.de> %1 - Menu Loaded - press F1 (default Key) to open it!',call GET_TIME_TIME];systemchat _log;diag_log _log;
 		_counter = 0;
