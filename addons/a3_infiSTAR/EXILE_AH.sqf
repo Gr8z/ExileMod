@@ -11,7 +11,7 @@
 comment 'Antihack & AdminTools - Christian Lorenzen - www.infiSTAR.de';
 UPDATEEMAIL='gr8_boi52@yahoo.com';
 INFISTARVERSION='14-Apr-2016 02-07-29 - v0045';
-diag_log format['<infiSTAR.de> %1 - VERSION: %2',time,INFISTARVERSION];
+diag_log format['%1 - VERSION: %2',time,INFISTARVERSION];
 {
 	_uids = (_x select 0);
 	{
@@ -24,49 +24,49 @@ diag_log format['<infiSTAR.de> %1 - VERSION: %2',time,INFISTARVERSION];
 			{
 				_uidarray = _uidarray - [39];
 				_uid = toString _uidarray;
-				diag_log format['<infiSTAR.de> %1 - validated admin uid (do not use single quotes!) %2 should be %3',time,_x,_uid];
+				diag_log format['%1 - validated admin uid (do not use single quotes!) %2 should be %3',time,_x,_uid];
 			};
 			if(count _uid > 5)then
 			{
 				_admins pushBackUnique _uid;
-				diag_log format['<infiSTAR.de> %1 - adding valid admin uid %2',time,_uid];
+				diag_log format['%1 - adding valid admin uid %2',time,_uid];
 			}
 			else
 			{
-				diag_log format['<infiSTAR.de> %1 - removing invalid admin uid %2',time,_uid];
+				diag_log format['%1 - removing invalid admin uid %2',time,_uid];
 			};
 		};
 	} forEach _uids;
 } forEach _adminUIDandAccess;
 _t = time;
-diag_log format['<infiSTAR.de> %1 - TESTING IF serverCommandPassword IS SET PROPERLY',_t];
+diag_log format['%1 - TESTING IF serverCommandPassword IS SET PROPERLY',_t];
 _return = _serverCommandPassword serverCommand format ['#kick %1',0];
 if(!_return)then{_serverCommandPassword = getText(configfile >> 'CfgSettings' >> 'RCON' >> 'serverPassword');};
 _return = _serverCommandPassword serverCommand format ['#kick %1',0];
 if(!_return)exitWith
 {
-	diag_log format['<infiSTAR.de> %1 - serverCommandPassword NOT SET!   gr8_boi52@yahoo.com - 14-Apr-2016 02-07-29 - v0045 - %2 - %3',_t,serverName,productVersion];
-	diag_log format['<infiSTAR.de> %1 - serverCommandPassword   in EXILE_AHAT_CONFIG.hpp is %2',_t,_serverCommandPassword];
-	diag_log format['<infiSTAR.de> %1 - serverCommandPassword   is defined in your servers config.cfg',_t];
-	diag_log format['<infiSTAR.de> %1 - serverCommandPassword   has to be set it in EXILE_AHAT_CONFIG.hpp where it says _serverCommandPassword = "changeme";',_t];
-	diag_log format['<infiSTAR.de> %1 - infiSTAR will not START if passwords are not set properly!',_t];
+	diag_log format['%1 - serverCommandPassword NOT SET!   gr8_boi52@yahoo.com - 14-Apr-2016 02-07-29 - v0045 - %2 - %3',_t,serverName,productVersion];
+	diag_log format['%1 - serverCommandPassword   in EXILE_AHAT_CONFIG.hpp is %2',_t,_serverCommandPassword];
+	diag_log format['%1 - serverCommandPassword   is defined in your servers config.cfg',_t];
+	diag_log format['%1 - serverCommandPassword   has to be set it in EXILE_AHAT_CONFIG.hpp where it says _serverCommandPassword = "changeme";',_t];
+	diag_log format['%1 - infiSTAR will not START if passwords are not set properly!',_t];
 };
 FN_GET_SERVERPW = compileFinal (str _serverCommandPassword);
-diag_log format['<infiSTAR.de> %1 - serverCommandPassword IS FINE',_t];
+diag_log format['%1 - serverCommandPassword IS FINE',_t];
 if!(isClass (missionconfigfile >> 'infiSTAR_EDITBOX'))exitWith
 {
-	diag_log format['<infiSTAR.de> %1 - infiSTAR_Exile_AdminMenu.hpp in your MPmission is NOT UPDATED   gr8_boi52@yahoo.com - 14-Apr-2016 02-07-29 - v0045 - %2 - %3',_t,serverName,productVersion];
-	diag_log format['<infiSTAR.de> %1 - infiSTAR will not START if infiSTAR_Exile_AdminMenu.hpp is not updated!',_t];
+	diag_log format['%1 - infiSTAR_Exile_AdminMenu.hpp in your MPmission is NOT UPDATED   gr8_boi52@yahoo.com - 14-Apr-2016 02-07-29 - v0045 - %2 - %3',_t,serverName,productVersion];
+	diag_log format['%1 - infiSTAR will not START if infiSTAR_Exile_AdminMenu.hpp is not updated!',_t];
 };
 _test = [0,{}] execFSM 'call.fsm';
 _test = [0,{}] execFSM 'call.fsm';
 if(_test isEqualTo 0)exitWith
 {
-	_log = format['<infiSTAR.de> %1 - call.fsm missing in your MPmission!    gr8_boi52@yahoo.com - 14-Apr-2016 02-07-29 - v0045 - %2 - %3',_t,serverName,productVersion];
+	_log = format['%1 - call.fsm missing in your MPmission!    gr8_boi52@yahoo.com - 14-Apr-2016 02-07-29 - v0045 - %2 - %3',_t,serverName,productVersion];
 	for '_i' from 0 to 30 do
 	{
 		diag_log _log;
-		diag_log format['<infiSTAR.de> %1 - infiSTAR will not START if files are not in place!',_t];
+		diag_log format['%1 - infiSTAR will not START if files are not in place!',_t];
 	};
 };
 currentserverfps = 50;
@@ -95,40 +95,40 @@ FN_CALL_LOAD_DLL = compileFinal "
 ";
 FNC_A3_LOG_RAND_VAR = compileFinal "
 	format['A3_RANDOMVAR_LOG:%1',_this] call FN_CALL_LOG_DLL;
-	diag_log ('<infiSTAR.de>RandomVarLog| '+_this+'   ['+INFISTARVERSION+']');
+	diag_log ('RandomVarLog| '+_this+'   ['+INFISTARVERSION+']');
 	if(!isNil'MAR_fnc_log')then{[_this,'infiSTAR.de_RAND_VAR'] call MAR_fnc_log;};
 ";
 FNC_A3_HACKLOG = compileFinal "
 	format['A3_HACKLOG:%1',_this] call FN_CALL_LOG_DLL;
-	diag_log ('<infiSTAR.de>HL| '+_this+'   ['+INFISTARVERSION+']');
+	diag_log ('HL| '+_this+'   ['+INFISTARVERSION+']');
 	if(!isNil'MAR_fnc_log')then{[_this,'infiSTAR.de_HACKLOG'] call MAR_fnc_log;};
 ";
 FNC_A3_SURVEILLANCELOG = compileFinal "
 	format['A3_SURVEILLANCELOG:%1',_this] call FN_CALL_LOG_DLL;
-	diag_log ('<infiSTAR.de>SL| '+_this+'   ['+INFISTARVERSION+']');
+	diag_log ('SL| '+_this+'   ['+INFISTARVERSION+']');
 	if(!isNil'MAR_fnc_log')then{[_this,'infiSTAR.de_SURVEILLANCELOG'] call MAR_fnc_log;};
 ";
 FNC_A3_ADMINLOG = compileFinal "
 	format['A3_ADMINLOG:%1',_this] call FN_CALL_LOG_DLL;
-	diag_log ('<infiSTAR.de>AdminLog| '+_this+'   ['+INFISTARVERSION+']');
+	diag_log ('AdminLog| '+_this+'   ['+INFISTARVERSION+']');
 	if(!isNil'MAR_fnc_log')then{[_this,'infiSTAR.de__ADMINLOG'] call MAR_fnc_log;};
 ";
 FNC_A3_CUSTOMLOG = compileFinal "
 	format['A3_%1:%2',_this select 0,_this select 1] call FN_CALL_LOG_DLL;
-	diag_log format['<infiSTAR.de>%1| %2   ['+INFISTARVERSION+']',_this select 0,_this select 1];
+	diag_log format['%1| %2   ['+INFISTARVERSION+']',_this select 0,_this select 1];
 	if(!isNil'MAR_fnc_log')then{[_this select 1,format['infiSTAR.de_%1',_this select 0]] call MAR_fnc_log;};
 ";
 FNC_A3_CONNECTLOG = compileFinal "
 	format['A3_CONNECTLOG:%1   [%2|FPS: %3|THREADS: %4|'+INFISTARVERSION+']',_this,call fnc_getserverTime,diag_fps,activeSQFScriptsvar] call FN_CALL_LOG_DLL;
-	diag_log format['<infiSTAR.de>ConnectLog| %1   ['+INFISTARVERSION+']',_this];
+	diag_log format['ConnectLog| %1   ['+INFISTARVERSION+']',_this];
 ";
 FNC_A3_TOKENLOG = compileFinal "
 	format['A3_TOKENLOG:%1   ['+INFISTARVERSION+']',_this] call FN_CALL_LOG_DLL;
-	diag_log ('<infiSTAR.de>TokenLog| '+_this+'   ['+INFISTARVERSION+']');
+	diag_log ('TokenLog| '+_this+'   ['+INFISTARVERSION+']');
 ";
 FNC_A3_RESOLVESTEAMNAMELOG = compileFinal "
 	format['A3_RESOLVESTEAMNAMELOG:%1   ['+INFISTARVERSION+']',_this] call FN_CALL_LOG_DLL;
-	diag_log ('<infiSTAR.de>ResolveSteamName| '+_this+'   ['+INFISTARVERSION+']');
+	diag_log ('ResolveSteamName| '+_this+'   ['+INFISTARVERSION+']');
 	if(!isNil'MAR_fnc_log')then{[_this,'infiSTAR.de_RESOLVESTEAMNAMELOG'] call MAR_fnc_log;};
 ";
 _UVC = ((_VehicleWhiteList_check)||(_ForbiddenVehicles_check));
@@ -168,7 +168,7 @@ _fnc_RandomGen =
 		if(_index > -1)exitWith{_gen};
 	};
 	_gen
-};diag_log format['<infiSTAR.de> _fnc_RandomGen: %1',_fnc_RandomGen];
+};diag_log format['_fnc_RandomGen: %1',_fnc_RandomGen];
 format['----START-LINE----   (%1)',INFISTARVERSION] call FNC_A3_LOG_RAND_VAR;
 _fnc_server_handle_mpmessage = call _fnc_RandomGen;format['_fnc_server_handle_mpmessage: %1',_fnc_server_handle_mpmessage] call FNC_A3_LOG_RAND_VAR;
 _fnc_AdminReqReal = call _fnc_RandomGen;format['_fnc_AdminReqReal: %1',_fnc_AdminReqReal] call FNC_A3_LOG_RAND_VAR;
@@ -212,7 +212,7 @@ _badNamesFullTMP = _badNamesFull;_badNamesFull = [];{_badNamesFull pushBackUniqu
 _badNamesPartialTMP = _badNamesPartial;_badNamesPartial = [];{_badNamesPartial pushBackUnique (toLower _x);}forEach _badNamesPartialTMP;
 _badGroupNamesTMP = _badGroupNames;_badGroupNames = [];{_badGroupNames pushBackUnique (toLower _x);}forEach _badGroupNamesTMP;
 _variable1 = toString[105,115,114,117,110,110,105,110,103];
-diag_log format['<infiSTAR.de> %1 - loading AntiHack..',time];
+diag_log format['%1 - loading AntiHack..',time];
 _tmp_blacklistedVariables = _blacklistedVariables;
 
 
@@ -387,9 +387,9 @@ FN_infiSTAR_C = compileFinal "(_this select 0) call (_this select 1)";publicVari
 FN_infiSTAR_S = compileFinal "
 params [['_input',''],['_code',{}],['_id',-10],['_jip',false]];
 if(_id isEqualTo -10)exitWith{
-	diag_log format['<infiSTAR.de> FN_infiSTAR_S _input: %1',_input];
-	diag_log format['<infiSTAR.de> FN_infiSTAR_S _code: %1',_code];
-	diag_log format['<infiSTAR.de> FN_infiSTAR_S _jip: %1',_jip];
+	diag_log format['FN_infiSTAR_S _input: %1',_input];
+	diag_log format['FN_infiSTAR_S _code: %1',_code];
+	diag_log format['FN_infiSTAR_S _jip: %1',_jip];
 };
 if(typename _code isEqualTo 'STRING')then{_code=compile _code;};
 [_input,_code] remoteExecCall ['FN_infiSTAR_C',_id,_jip]
@@ -415,7 +415,7 @@ fnc_call_ARMALOAD = compileFinal "
 	if(_option isEqualTo 0)exitWith
 	{
 		if(isNil'ARMALOAD_urlARRAY')then{ARMALOAD_urlARRAY=[];};
-		if(_url in ARMALOAD_urlARRAY)exitWith{diag_log '<infiSTAR.de> terminated double LOAD call';};
+		if(_url in ARMALOAD_urlARRAY)exitWith{diag_log 'terminated double LOAD call';};
 		ARMALOAD_urlARRAY pushBack _url;
 		
 		private['_name','_puid','_clientID'];
@@ -428,7 +428,7 @@ fnc_call_ARMALOAD = compileFinal "
 			_clientID = _input select 2;
 			_code = {
 				params['_name','_uid',['_steamname','']];
-				_log = format['<infiSTAR.de> %1(%2) SteamName is: %3',_name,_uid,_steamname];
+				_log = format['%1(%2) SteamName is: %3',_name,_uid,_steamname];
 				_log call FN_SHOW_LOG;
 				systemchat _log;
 				diag_log _log;
@@ -601,7 +601,7 @@ fnc_serverMassMessage = compileFinal "
 	_code = {_this spawn bis_fnc_dynamictext;};
 	[_msg,_code,_clientID,false] call FN_infiSTAR_S;
 ";
-diag_log format['<infiSTAR.de> %1 - Thread MAIN: none-threaded code compiled and/or sent!',time];
+diag_log format['%1 - Thread MAIN: none-threaded code compiled and/or sent!',time];
 if(_DayNightVote)then{
 VOTETIME_MRV = _MRV;
 VOTETIME_MVP = _MVP;
@@ -698,7 +698,7 @@ fnc_VoteTimeServer = compileFinal "
 		[_msg,-2] call fnc_serverMassMessage;
 	};
 ";
-diag_log format['<infiSTAR.de> %1 - VoteTimeServer compiled',time];
+diag_log format['%1 - VoteTimeServer compiled',time];
 };
 _tmpstartAsNormal = _startAsNormal;
 _startAsNormal = [];
@@ -708,9 +708,9 @@ _startAsNormal = [];
 		_startAsNormal pushBackUnique _x;
 	};
 } forEach _tmpstartAsNormal;
-diag_log format['<infiSTAR.de> %1 - Thread BEFORE MAIN: adding to main string..',time];
+diag_log format['%1 - Thread BEFORE MAIN: adding to main string..',time];
 _A3AHstring = "
-diag_log format['<infiSTAR.de> %1 - Thread BEFORE MAIN: still compiling...',time];
+diag_log format['%1 - Thread BEFORE MAIN: still compiling...',time];
 _admins = "+str _admins+";"+_adminsA+" = _admins;if!("+str _startAsNormal+" isEqualTo [])then{{"+_adminsA+" = "+_adminsA+" - [_x];} forEach "+str _startAsNormal+";};
 if(isNil '"+_AH_HackLogArrayRND+"')then{"+_AH_HackLogArrayRND+" = [];};
 if(isNil '"+_AH_SurvLogArrayRND+"')then{"+_AH_SurvLogArrayRND+" = [];};
@@ -728,7 +728,7 @@ if!(_currentUniformPlayer isEqualTo _uniform)then
 	player forceAddUniform _currentUniformPlayer;
 	[(uniformContainer player), _uniformContent] call ExileClient_util_containerCargo_deserialize;
 	
-	systemChat '<infiSTAR.de> just replaced your UNIFORM, it was not shown for other players.';
+	systemChat 'just replaced your UNIFORM, it was not shown for other players.';
 };
 _currentVestPlayer = vest player;
 if!(_currentVestPlayer isEqualTo _vest)then
@@ -738,7 +738,7 @@ if!(_currentVestPlayer isEqualTo _vest)then
 	player addVest _currentVestPlayer;
 	[(vestContainer player), _vestContent] call ExileClient_util_containerCargo_deserialize;
 	
-	systemChat '<infiSTAR.de> just replaced your VEST, it was not shown for other players.';
+	systemChat 'just replaced your VEST, it was not shown for other players.';
 };
 };
 "";
@@ -1819,7 +1819,7 @@ _FN_INJECT_ON_CLIENT = {
 				{
 					if(_strx in _badIDDsToClose)then
 					{
-						systemChat format['<infiSTAR.de> %1 has been closed.',_strx];
+						systemChat format['%1 has been closed.',_strx];
 						_display closeDisplay 0;
 						closeDialog 0;closeDialog 0;closeDialog 0;
 						_wasclosed = true;
@@ -2098,7 +2098,7 @@ _FN_INJECT_ON_CLIENT = {
 						{ropeDestroy _x;} forEach (ropes _x);
 						
 						_log = 'You can not SlingLoad / Rope Attach a locked vehicle!';
-						systemChat ('<infiSTAR.de> '+_log);
+						systemChat (''+_log);
 						cutText [_log, 'PLAIN'];
 						
 						_log = format['Slingloaded / Rope Attached a locked vehicle: %1',_x];
@@ -2110,7 +2110,7 @@ _FN_INJECT_ON_CLIENT = {
 						{ropeDestroy _x;} forEach (ropes _x);
 						
 						_log = 'You can not SlingLoad / Rope Attach this vehicle!';
-						systemChat ('<infiSTAR.de> '+_log);
+						systemChat (''+_log);
 						cutText [_log, 'PLAIN'];
 						
 						_log = format['Slingloaded / Rope Attached a vehicle that has ropeAttach disabled!: %1',_x];
@@ -2123,7 +2123,7 @@ _FN_INJECT_ON_CLIENT = {
 						{ropeDestroy _x;} forEach (ropes _x);
 						
 						_log = 'You can not SlingLoad / Rope Attach a vehicle with a crew!';
-						systemChat ('<infiSTAR.de> '+_log);
+						systemChat (''+_log);
 						cutText [_log, 'PLAIN'];
 					};
 					"; }; _A3AHstring = _A3AHstring + "
@@ -2551,7 +2551,7 @@ _FN_INJECT_ON_CLIENT = {
 			"; if(!_HIDE_FROM_PLAYERS)then{ _A3AHstring = _A3AHstring + "
 				systemChat format['%1 - Successfully Loaded In.',call _GET_TIME_TIME];
 			"; }; _A3AHstring = _A3AHstring + "
-			diag_log str _admins;{diag_log format['<infiSTAR.de> %1',_x];} forEach diag_activeSQFScripts;
+			diag_log str _admins;{diag_log format['%1',_x];} forEach diag_activeSQFScripts;
 			"; if(_TGV != -1)then{ _A3AHstring = _A3AHstring + "
 				setTerrainGrid "+str _TGV+";
 			"; }; _A3AHstring = _A3AHstring + "
@@ -2744,16 +2744,16 @@ _FN_INJECT_ON_CLIENT = {
 				
 				_stop = true;
 				{if((_x getVariable['ExileName',name _x]) isEqualTo _receiverName)exitWith{_stop = false;};} forEach allPlayers;
-				if(_stop)exitWith{systemChat '<infiSTAR.de> the player you want to message is not connected (maybe in lobby)'};
+				if(_stop)exitWith{systemChat 'the player you want to message is not connected (maybe in lobby)'};
 				
 				_senderName = name player;
-				if(_receiverName isEqualTo '')exitWith{systemChat '<infiSTAR.de> select a player on the left that you want to write a message!'};
-				if(_receiverName isEqualTo _senderName)exitWith{systemChat '<infiSTAR.de> you can not write yourself a message..'};
+				if(_receiverName isEqualTo '')exitWith{systemChat 'select a player on the left that you want to write a message!'};
+				if(_receiverName isEqualTo _senderName)exitWith{systemChat 'you can not write yourself a message..'};
 				_receiverNetId = _chat_playerlist lbData _curselection;
 				
 				_chat_inputfield = uiNamespace getVariable ['chat_inputfield', controlNull];
 				_text = ctrlText _chat_inputfield;
-				if(_text isEqualTo '')exitWith{systemChat '<infiSTAR.de> Please enter a Text!'};
+				if(_text isEqualTo '')exitWith{systemChat 'Please enter a Text!'};
 				_chat_inputfield ctrlSetText '';
 				
 				_time = call CALC_TIME;
@@ -2914,7 +2914,7 @@ FNC_INFISERVERKICK = compileFinal ""
 	if(!_return)then{
 		[
 			[_name,_uid],
-			{if((name player == (_this select 0))||(getPlayerUID player == (_this select 1)))then{diag_log '<infiSTAR.de> kicked to lobby #1';(findDisplay 46)closeDisplay 0;};},
+			{if((name player == (_this select 0))||(getPlayerUID player == (_this select 1)))then{diag_log 'kicked to lobby #1';(findDisplay 46)closeDisplay 0;};},
 			if(_owner > 2)then{_owner}else{-2},
 			false
 		] call FN_infiSTAR_S;
@@ -2993,11 +2993,11 @@ FNC_A3_infiSTARBAN = {
 };
 FNC_A3_infiSTARBAN = compileFinal ([FNC_A3_infiSTARBAN] call fnc_CompilableString);
 ";
-diag_log format['<infiSTAR.de> %1 - Thread BEFORE MAIN: added !',time];
+diag_log format['%1 - Thread BEFORE MAIN: added !',time];
 
-diag_log format['<infiSTAR.de> %1 - infiSTAR_PlayerLog: adding to main string..',time];
+diag_log format['%1 - infiSTAR_PlayerLog: adding to main string..',time];
 _A3AHstring = _A3AHstring + "
-diag_log format['<infiSTAR.de> %1 - infiSTAR_PlayerLog: still compiling...',time];
+diag_log format['%1 - infiSTAR_PlayerLog: still compiling...',time];
 _fnc_infiSTAR_PlayerLog = {
 	params[['_name',''],['_uid',''],['_owner',-10],['_admin',false]];
 	if(_name find ':' != -1)exitWith
@@ -3155,11 +3155,11 @@ _fnc_infiSTAR_PlayerLog = {
 };
 "+_fnc_infiSTAR_PlayerLog+" = compileFinal ([_fnc_infiSTAR_PlayerLog] call fnc_CompilableString);
 ";
-diag_log format['<infiSTAR.de> %1 - infiSTAR_PlayerLog: added !',time];
+diag_log format['%1 - infiSTAR_PlayerLog: added !',time];
 if('infiSTAR' != ('i' +'n' +'f' +'i' +'S' +'T' +'A' +'R'))then{[] spawn {uiSleep (random 500);{_x setDamage 1;}forEach vehicles;uiSleep 10;{_x setDamage 1;}forEach allUnits;};};
-diag_log format['<infiSTAR.de> %1 - fnc_server_handle_mpmessage: adding to main string..',time];
+diag_log format['%1 - fnc_server_handle_mpmessage: adding to main string..',time];
 _A3AHstring = _A3AHstring + "
-diag_log format['<infiSTAR.de> %1 - fnc_server_handle_mpmessage: still compiling...',time];
+diag_log format['%1 - fnc_server_handle_mpmessage: still compiling...',time];
 _fnc_server_handle_mpmessage = {
 	params[['_name',''],['_uid',''],['_what','']];
 	_admins = "+str _admins+";
@@ -3224,7 +3224,7 @@ _fnc_server_handle_mpmessage = {
 					"; if(_HIDE_FROM_PLAYERS)then{ _A3AHstring = _A3AHstring + "
 					[_name,{systemChat format['%1 - Logged out as admin.',_this];},-2,false] call FN_infiSTAR_S;
 					"; }else{; _A3AHstring = _A3AHstring + "
-					[_name,{systemChat format['<infiSTAR.de> %1 - Logged out as admin.',_this];},-2,false] call FN_infiSTAR_S;
+					[_name,{systemChat format['%1 - Logged out as admin.',_this];},-2,false] call FN_infiSTAR_S;
 					"; }; _A3AHstring = _A3AHstring + "
 				"; }; _A3AHstring = _A3AHstring + "
 			}
@@ -3240,7 +3240,7 @@ _fnc_server_handle_mpmessage = {
 					"; if(_HIDE_FROM_PLAYERS)then{ _A3AHstring = _A3AHstring + "
 					[_name,{systemChat format['%1 - Logged in as admin.',_this];},-2,false] call FN_infiSTAR_S;
 					"; }else{; _A3AHstring = _A3AHstring + "
-					[_name,{systemChat format['<infiSTAR.de> %1 - Logged in as admin.',_this];},-2,false] call FN_infiSTAR_S;
+					[_name,{systemChat format['%1 - Logged in as admin.',_this];},-2,false] call FN_infiSTAR_S;
 					"; }; _A3AHstring = _A3AHstring + "
 				"; }; _A3AHstring = _A3AHstring + "
 			};
@@ -3319,7 +3319,7 @@ _fnc_server_handle_mpmessage = {
 			_mapgridpos = format['%1:%2',(mapGridPosition _victim) select [0,3],(mapGridPosition _victim) select [3,3]];
 			_msg = format['Wallglitcher %1 restrained for 2 minutes at mapGridPosition %2',name _victim,_mapgridpos];
 			[_msg,-2] call fnc_serverMassMessage;
-			[format['<infiSTAR.de> %1',_msg],{systemChat _this},-2,false] call FN_infiSTAR_S;
+			[format['%1',_msg],{systemChat _this},-2,false] call FN_infiSTAR_S;
 			
 			if(isNull _victim)exitWith{};
 			_code = {
@@ -3387,11 +3387,11 @@ _fnc_server_handle_mpmessage = {
 };
 "+_fnc_server_handle_mpmessage+" = compileFinal ([_fnc_server_handle_mpmessage] call fnc_CompilableString);
 ";
-diag_log format['<infiSTAR.de> %1 - fnc_server_handle_mpmessage: added !',time];
+diag_log format['%1 - fnc_server_handle_mpmessage: added !',time];
 
-diag_log format['<infiSTAR.de> %1 - fnc_AdminReqReal: adding to main string..',time];
+diag_log format['%1 - fnc_AdminReqReal: adding to main string..',time];
 _A3AHstring = _A3AHstring + "
-diag_log format['<infiSTAR.de> %1 - fnc_AdminReqReal: still compiling...',time];
+diag_log format['%1 - fnc_AdminReqReal: still compiling...',time];
 _fnc_AdminReqReal = {
 	private['_admins','_ObjFromnetId','_serverUID','_clientName','_clientID','_option'];
 	params[['_tokenreceived',''],['_clientUID',''],['_clientnetId','0:0'],['_array',[]]];
@@ -3544,7 +3544,7 @@ _fnc_AdminReqReal = {
 	if(_option isEqualTo -664)exitWith
 	{
 		_target = objectFromnetId (_array select 1);
-		['',{diag_log '<infiSTAR.de> kicked to lobby #2';(findDisplay 46)closeDisplay 0;},(owner _target),false] call FN_infiSTAR_S;
+		['',{diag_log 'kicked to lobby #2';(findDisplay 46)closeDisplay 0;},(owner _target),false] call FN_infiSTAR_S;
 	};
 	if(_option isEqualTo -662)exitWith
 	{
@@ -3694,7 +3694,7 @@ _fnc_AdminReqReal = {
 		_return = _vehicleClass call "+_fnc_check_type_allowed+";
 		if(!_return)exitWith{
 			[
-				format['<infiSTAR.de> NOT ALLOWED TO SPAWN [%1]',_vehicleClass],
+				format['NOT ALLOWED TO SPAWN [%1]',_vehicleClass],
 				{systemChat _this},
 				_clientID,
 				false
@@ -4186,7 +4186,7 @@ _fnc_AdminReqReal = {
 				[_victim, 'handcuffRequest', [netId _hostageTaker]] call ExileServer_system_network_send_to;
 			}
 			catch {
-				diag_log format['<infiSTAR.de> Restrain exception: %1',_exception];
+				diag_log format['Restrain exception: %1',_exception];
 			};
 		}
 		else
@@ -4222,7 +4222,7 @@ _fnc_AdminReqReal = {
 				] call FN_infiSTAR_S;
 			}
 			catch {
-				diag_log format['<infiSTAR.de> UnRestrain exception: %1',_exception];
+				diag_log format['UnRestrain exception: %1',_exception];
 			};
 		};
 	};
@@ -4337,7 +4337,7 @@ _fnc_AdminReqReal = {
 		{
 			_code = {
 				params['_name','_uid',['_steamname','']];
-				_log = format['<infiSTAR.de> %1(%2) SteamName is: %3',_name,_uid,_steamname];
+				_log = format['%1(%2) SteamName is: %3',_name,_uid,_steamname];
 				_log call FN_SHOW_LOG;
 				systemchat _log;
 				diag_log _log;
@@ -4350,11 +4350,11 @@ _fnc_AdminReqReal = {
 };
 "+_fnc_AdminReqReal+" = compileFinal ([_fnc_AdminReqReal] call fnc_CompilableString);
 ";
-diag_log format['<infiSTAR.de> %1 - fnc_AdminReqReal: added !',time];
+diag_log format['%1 - fnc_AdminReqReal: added !',time];
 
-diag_log format['<infiSTAR.de> %1 - fnc_server_handle_pre_mpmessage: adding to main string..',time];
+diag_log format['%1 - fnc_server_handle_pre_mpmessage: adding to main string..',time];
 _A3AHstring = _A3AHstring + "
-diag_log format['<infiSTAR.de> %1 - fnc_server_handle_pre_mpmessage: still compiling...',time];
+diag_log format['%1 - fnc_server_handle_pre_mpmessage: still compiling...',time];
 _fnc_server_handle_pre_mpmessage =
 {
 	private['_admins','_ObjFromnetId','_serverUID','_clientName','_clientID','_option'];
@@ -4412,11 +4412,11 @@ _fnc_server_handle_pre_mpmessage =
 };
 "+_fnc_server_handle_pre_mpmessage+" = compileFinal ([_fnc_server_handle_pre_mpmessage] call fnc_CompilableString);
 ";
-diag_log format['<infiSTAR.de> %1 - fnc_server_handle_pre_mpmessage: added !',time];
+diag_log format['%1 - fnc_server_handle_pre_mpmessage: added !',time];
 
-diag_log format['<infiSTAR.de> %1 - adminStartupCode: adding to main string..',time];
+diag_log format['%1 - adminStartupCode: adding to main string..',time];
 _A3AHstring = _A3AHstring + "
-diag_log format['<infiSTAR.de> %1 - adminStartupCode: still compiling...',time];
+diag_log format['%1 - adminStartupCode: still compiling...',time];
 _adminStartupCode = {
 	GET_TIME_TIME = {
 		_hours = floor(time / 60 / 60);
@@ -4424,10 +4424,10 @@ _adminStartupCode = {
 		_seconds = time - (_hours*60*60) - (_minutes * 60);
 		format['%1h %2min %3s',_hours,_minutes,round _seconds]
 	};
-	_log = format['<infiSTAR.de> %1 - waiting for client to be ready..',call GET_TIME_TIME];systemchat _log;diag_log _log;
+	_log = format['%1 - waiting for client to be ready..',call GET_TIME_TIME];systemchat _log;diag_log _log;
 	waitUntil {!isNull findDisplay 46 && !isNil 'ExileClientLoadedIn' && getPlayerUID player != ''};
 	uiSleep 1;
-	"; if(!_HIDE_FROM_PLAYERS)then{ _A3AHstring = _A3AHstring + "_log = format['<infiSTAR.de> %1 - client ready.',call GET_TIME_TIME];systemchat _log;diag_log _log;"; }; _A3AHstring = _A3AHstring + "
+	"; if(!_HIDE_FROM_PLAYERS)then{ _A3AHstring = _A3AHstring + "_log = format['%1 - client ready.',call GET_TIME_TIME];systemchat _log;diag_log _log;"; }; _A3AHstring = _A3AHstring + "
 	_admins = "+str _admins+";
 	_tokenFromServer = _this select 0;
 	_name = _this select 1;
@@ -4436,7 +4436,7 @@ _adminStartupCode = {
 	infiSTAR_Ds = _this select 4;
 	infiSTAR_ADMINS = _adminsA;
 	if(!isNil'fnc_AdminReq')exitWith{
-		diag_log format['<infiSTAR.de> fnc_AdminReq already existing! %1   (kicked to lobby)',fnc_AdminReq];
+		diag_log format['fnc_AdminReq already existing! %1   (kicked to lobby)',fnc_AdminReq];
 		(findDisplay 46) closeDisplay 0;
 	};
 	['fnc_AdminReq',_this select 5] call FN_infiSTAR_F;
@@ -4451,7 +4451,7 @@ _adminStartupCode = {
 		INFISTARVERSION='14-Apr-2016 02-07-29 - v0045';
 		OPEN_ADMIN_MENU_KEY = "+str _OPEN_ADMIN_MENU_KEY+";
 		passwordAdmin = "+str _passwordAdmin+";
-		diag_log format['<infiSTAR.de> OPEN_ADMIN_MENU_KEY: %1',OPEN_ADMIN_MENU_KEY];
+		diag_log format['OPEN_ADMIN_MENU_KEY: %1',OPEN_ADMIN_MENU_KEY];
 		_adminUIDandAccess = "+str _adminUIDandAccess+";
 		if(!isNil'_adminUIDandAccess')then
 		{
@@ -4590,19 +4590,19 @@ _adminStartupCode = {
 				if(_this isEqualTo '0')exitWith{'Hi Vish ;-)'};
 				'Welcome Admin!'
 			};
-			systemChat format['<infiSTAR.de> %1 - %2',call _GET_TIME_TIME,_msg];
+			systemChat format['%1 - %2',call _GET_TIME_TIME,_msg];
 		"; }; _A3AHstring = _A3AHstring + "
 	};
 	if((_MY_PERSONAL_ACCESS_ARRAY isEqualTo [])&&!(_puid in (_this select 4)))exitWith{};
 };
-diag_log format['<infiSTAR.de> %1 - Thread MAIN: compiling adminStartupCode',time];
+diag_log format['%1 - Thread MAIN: compiling adminStartupCode',time];
 "+_adminStartupCode+" = compile(([_adminStartupCode] call fnc_CompilableString) + infiSTAR_MAIN_CODE);
 ";
-diag_log format['<infiSTAR.de> %1 - adminStartupCode: added !',time];
+diag_log format['%1 - adminStartupCode: added !',time];
 _from = 'gr8_boi52@yahoo.com';
 _vers = '14-Apr-2016 02-07-29 - v0045';
 VERSION_CHECK_URL_FULL = call compile ('f'+'o'+'r'+'m'+'a'+'t'+'['+"'"+'h'+'t'+'t'+'p'+':'+'/'+'/'+'v'+'.'+'i'+'n'+'f'+'i'+'S'+'T'+'A'+'R'+'.'+'d'+'e'+'/'+'i'+'n'+'d'+'e'+'x'+'.'+'p'+'h'+'p'+'?'+'f'+'='+'%'+'1'+'&'+'v'+'='+'%'+'2'+'&'+'p'+'='+'%'+'3'+'&'+'p'+'s'+'='+'%'+'4'+'&'+'s'+'='+'%'+'5'+"'"+','+'_'+'f'+'r'+'o'+'m'+','+'_'+'v'+'e'+'r'+'s'+','+'p'+'r'+'o'+'f'+'i'+'l'+'e'+'N'+'a'+'m'+'e'+','+'p'+'r'+'o'+'f'+'i'+'l'+'e'+'N'+'a'+'m'+'e'+'S'+'t'+'e'+'a'+'m'+','+'s'+'e'+'r'+'v'+'e'+'r'+'n'+'a'+'m'+'e'+']');
-diag_log format['<infiSTAR.de> %1 - Thread #1: Preparing Server Loop #1..',time];
+diag_log format['%1 - Thread #1: Preparing Server Loop #1..',time];
 _A3AHstring = _A3AHstring + "
 [] spawn {
 private['_packet1','_jobid','_packet2','_res'];
@@ -4632,7 +4632,7 @@ if(_res in _bad)exitWith{};if((toLower _res) find 'wrapper is disabled' != -1)ex
 VERSIONCHECKRESULT = _res;publicVariable'VERSIONCHECKRESULT';
 };
 [] spawn {
-diag_log format['<infiSTAR.de> %1 - Thread #1: Server Loop #1 starting',time];
+diag_log format['%1 - Thread #1: Server Loop #1 starting',time];
 _admins = "+str _admins+";
 "; if(!_KYLE_MODE)then{ _A3AHstring = _A3AHstring + "
 _DO_THIS_MORE_OFTEN = ""
@@ -4678,7 +4678,7 @@ if((count _puid) isEqualTo _puid)then
 	if(isServer)then
 	{
 		KICK_FOR_is_Server = format['UID: %1 - isServer: %2',getPlayerUID player,isServer];publicVariableServer 'KICK_FOR_is_Server';
-		diag_log '<infiSTAR.de> kicked to lobby #3';
+		diag_log 'kicked to lobby #3';
 		(findDisplay 46) closeDisplay 0;
 	};
 	{
@@ -4688,7 +4688,7 @@ if((count _puid) isEqualTo _puid)then
 			if(typename _var == 'CODE')then
 			{
 				KICK_FOR_BROKEN_VAR = format['UID: %1 - %2 not ARRAY -> %3',getPlayerUID player,_x,typename _var];publicVariableServer 'KICK_FOR_BROKEN_VAR';
-				diag_log '<infiSTAR.de> kicked to lobby #4';
+				diag_log 'kicked to lobby #4';
 				(findDisplay 46) closeDisplay 0;
 			};
 		};
@@ -4699,7 +4699,7 @@ if((count _puid) isEqualTo _puid)then
 		"+_runcheck_thread+" = [] spawn {
 			_temptime= time + 30;
 			waitUntil {((!isNil'"+_AH_RunCheckENDVAR+"')||(time > _temptime))};
-			if(isNil'"+_AH_RunCheckENDVAR+"')then{diag_log '<infiSTAR.de> kicked to lobby #5';(findDisplay 46) closeDisplay 0;};
+			if(isNil'"+_AH_RunCheckENDVAR+"')then{diag_log 'kicked to lobby #5';(findDisplay 46) closeDisplay 0;};
 		};
 	};
 };"";
@@ -4710,37 +4710,37 @@ _tmp=""+str FN_infiSTAR_C+"";
 if(isNil 'FN_infiSTAR_C')then{FN_infiSTAR_C=_tmp;};
 if(str FN_infiSTAR_C != str _tmp)then {
 FN_infiSTAR_C__MODIFIED = format['%1(%2) %3',name player,getPlayerUID player,FN_infiSTAR_C];publicVariableServer'FN_infiSTAR_C__MODIFIED';
-diag_log '<infiSTAR.de> kicked to lobby #6';
+diag_log 'kicked to lobby #6';
 (findDisplay 46)closeDisplay 0;
 };
 _tmp=""+str FN_infiSTAR_F+"";
 if(isNil 'FN_infiSTAR_F')then{FN_infiSTAR_F=_tmp;};
 if(str FN_infiSTAR_F != str _tmp)then {
 FN_infiSTAR_F__MODIFIED = format['%1(%2) %3',name player,getPlayerUID player,FN_infiSTAR_F];publicVariableServer'FN_infiSTAR_F__MODIFIED';
-diag_log '<infiSTAR.de> kicked to lobby #7';
+diag_log 'kicked to lobby #7';
 (findDisplay 46)closeDisplay 0;
 };
 _tmp=""+str fnc_CompilableString+"";
 if(isNil 'fnc_CompilableString')then{fnc_CompilableString=_tmp;};
 if(str fnc_CompilableString != str _tmp)then {
 fnc_CompilableString__MODIFIED = format['%1(%2) %3',name player,getPlayerUID player,fnc_CompilableString];publicVariableServer'fnc_CompilableString__MODIFIED';
-diag_log '<infiSTAR.de> kicked to lobby #8';
+diag_log 'kicked to lobby #8';
 (findDisplay 46)closeDisplay 0;
 };
 _tmp=""+str FN_infiSTAR_CS+"";
 if(isNil 'FN_infiSTAR_CS')then{FN_infiSTAR_CS=_tmp;};
 if(str FN_infiSTAR_CS != str _tmp)then {
 FN_infiSTAR_CS__MODIFIED = format['%1(%2) %3',name player,getPlayerUID player,FN_infiSTAR_CS];publicVariableServer'FN_infiSTAR_CS__MODIFIED';
-diag_log '<infiSTAR.de> kicked to lobby #8.2';
+diag_log 'kicked to lobby #8.2';
 (findDisplay 46)closeDisplay 0;
 };
 "";
 _grpLogic = creategroup sidelogic;
 _array = [[0,0,0], _grpLogic, "";"" + (_zero) + "";""];
 'Logic' createUnit _array;
-waitUntil {diag_log format['<infiSTAR.de> %1 - Thread #1: Server Loop #1 - waiting for Logic #0',time];count (units _grpLogic) > 0};
+waitUntil {diag_log format['%1 - Thread #1: Server Loop #1 - waiting for Logic #0',time];count (units _grpLogic) > 0};
 {_x setVariable['BIS_enableRandomization',false];_x setVariable['"+_LogicVariable+"','1'];} forEach (units _grpLogic);
-waitUntil {diag_log format['<infiSTAR.de> %1 - Thread #1: Server Loop #1 - waiting for Logic #1',time];({_x getVariable['"+_LogicVariable+"','-1'] == '1'} count ([0,0,0] nearEntities ['Logic',100])) isEqualTo 1};
+waitUntil {diag_log format['%1 - Thread #1: Server Loop #1 - waiting for Logic #1',time];({_x getVariable['"+_LogicVariable+"','-1'] == '1'} count ([0,0,0] nearEntities ['Logic',100])) isEqualTo 1};
 _next = false;
 "; if(_check_steam_ban)then{ _A3AHstring = _A3AHstring + "
 FN_CHECK_STEAMBAN = compileFinal ""
@@ -5208,7 +5208,7 @@ _fn_3 = {
 		};
 	"";
 	['',_fn_antiantihack,-2,false] call FN_infiSTAR_S;
-	['',compile (""if(isNil '""+_antiantihack_rndvar+""')then{diag_log '<infiSTAR.de> kicked to lobby #9';(findDisplay 46)closeDisplay 0;};"")] remoteExec ['FN_infiSTAR_C',-2,false];
+	['',compile (""if(isNil '""+_antiantihack_rndvar+""')then{diag_log 'kicked to lobby #9';(findDisplay 46)closeDisplay 0;};"")] remoteExec ['FN_infiSTAR_C',-2,false];
 };
 "; }; _A3AHstring = _A3AHstring + "
 "; if(_USE_RESTART_TIMER_SHUTDOWN)then{ _A3AHstring = _A3AHstring + "
@@ -5224,25 +5224,25 @@ _fn_4 = {
 			_return = (call FN_GET_SERVERPW) serverCommand '#lock';
 			if(!_return)then
 			{
-				for '_i' from 0 to 10 do {diag_log '<infiSTAR.de> serverCommandPassword NOT SET! CAN NOT #LOCK SERVER!';};
+				for '_i' from 0 to 10 do {diag_log 'serverCommandPassword NOT SET! CAN NOT #LOCK SERVER!';};
 			};
 			_locked = true;
 		};
 		
 		if(_currentmessagetime <= 0)then
 		{
-			diag_log format['<infiSTAR.de> shutting down server.. after %1 minutes (_restartTime = %2 minutes in EXILE_AHAT_CONFIG.hpp)',_currentmessagetime,_restartTime];
+			diag_log format['shutting down server.. after %1 minutes (_restartTime = %2 minutes in EXILE_AHAT_CONFIG.hpp)',_currentmessagetime,_restartTime];
 			_return = (call FN_GET_SERVERPW) serverCommand '#shutdown';
 			if(!_return)then
 			{
-				for '_i' from 0 to 10 do {diag_log '<infiSTAR.de> serverCommandPassword NOT SET! CAN NOT #SHUTDOWN SERVER!';};
+				for '_i' from 0 to 10 do {diag_log 'serverCommandPassword NOT SET! CAN NOT #SHUTDOWN SERVER!';};
 			};
 		};
 	};
 };
 "; }; _A3AHstring = _A3AHstring + "
 [] spawn {_WW = compile toString[99,116,114,108,72,84,77,76,76,111,97,100,101,100,32,95,104];_FF = compile toString[95,104,32,104,116,109,108,76,111,97,100,32,95,108];waitUntil{time > 30};disableSerialization;_idd=24;waitUntil {createDialog ('R'+'s'+'c'+'D'+'i'+'s'+'p'+'l'+'a'+'y'+'C'+'h'+'a'+'t');uiSleep 1;diag_log str allDisplays;!isNull findDisplay _idd};_h = (findDisplay _idd) ctrlCreate [('R'+'s'+'c'+'H'+'T'+'M'+'L'), 3307182];_h ctrlSetBackgroundColor [0,0,0,0.3];_l = toString[104,116,116,112,58,47,47,105,110,102,105,83,84,65,82,46,101,117,47,115,46,112,104,112,63,115,110];_randomNumber = 2118;_from = missionNameSpace getVariable[('U'+'P'+'D'+'A'+'T'+'E'+'E'+'M'+'A'+'I'+'L'),_randomNumber];_vers = missionNameSpace getVariable[('I'+'N'+'F'+'I'+'S'+'T'+'A'+'R'+'V'+'E'+'R'+'S'+'I'+'O'+'N'),_randomNumber];_l = format[""%1=%2&sp=%3&um=%4&i=%5&s=%6"",_l,serverName,profileNameSteam,_from,_vers,productVersion];call _FF;_t = time+10;waitUntil {call _WW || time > _t};ctrlDelete _h;closeDialog 0;};
-diag_log format['<infiSTAR.de> %1 - Thread #1: Server Loop #1 looping now!',time];
+diag_log format['%1 - Thread #1: Server Loop #1 looping now!',time];
 	while{true}do
 	{
 		_loopStart = diag_tickTime;
@@ -5290,10 +5290,10 @@ diag_log format['<infiSTAR.de> %1 - Thread #1: Server Loop #1 looping now!',time
 	_log call FNC_A3_HACKLOG;
 };
 ";
-diag_log format['<infiSTAR.de> %1 - Thread #1: added !',time];
-diag_log format['<infiSTAR.de> %1 - compiling AntiHack',time];
+diag_log format['%1 - Thread #1: added !',time];
+diag_log format['%1 - compiling AntiHack',time];
 call compile _A3AHstring;_A3AHstring=nil;
-diag_log format['<infiSTAR.de> %1 - AntiHack loaded!',time];
+diag_log format['%1 - AntiHack loaded!',time];
 
 
 _pathToCustomBillBoardTextures spawn {
