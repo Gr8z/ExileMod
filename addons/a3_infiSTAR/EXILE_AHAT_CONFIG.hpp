@@ -461,6 +461,7 @@ ForbiddenItems[] =
 	
 	You can just define as many as you want.
 	{
+		"BOX TYPE",
 		"BOX NAME",
 		{
 			"Item1","Item2",	// one per just item in a string
@@ -473,6 +474,7 @@ ForbiddenItems[] =
 allSupportBoxes[] =
 {
 	{
+		"Exile_Container_StorageCrate",
 		"Small Builders Box",
 		{
 			{"Exile_Item_Flag",1},{"WorkBench",1},{"Exile_Item_WoodDoorKit",1},{"Exile_Item_Codelock",1},{"Exile_Item_WoodFloorKit",4},{"Exile_Item_WoodFloorPortKit",2},
@@ -481,6 +483,7 @@ allSupportBoxes[] =
 		}
 	},
 	{
+		"Exile_Container_StorageCrate",
 		"Medium Builders Box",
 		{
 			{"Exile_Item_Flag",1},{"WorkBench",2},{"Exile_Item_WoodDoorKit",2},{"Exile_Item_WoodGateKit",2},{"Exile_Item_Codelock",4},{"Exile_Item_WoodFloorKit",18},{"Exile_Item_WoodFloorPortKit",2},
@@ -489,6 +492,7 @@ allSupportBoxes[] =
 		}
 	},
 	{
+		"Exile_Container_StorageCrate",
 		"Pro Builders Box",
 		{
 			{"Exile_Item_Flag",2},{"WorkBench",3},{"Exile_Item_WoodDoorKit",4},{"Exile_Item_WoodGateKit",4},{"Exile_Item_Codelock",8},{"Exile_Item_WoodFloorKit",40},{"Exile_Item_WoodFloorPortKit",4},

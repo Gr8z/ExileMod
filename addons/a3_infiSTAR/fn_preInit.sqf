@@ -12,7 +12,7 @@
 	'gr8_boi52@yahoo.com'
 	
 	Last download was on:
-	'03-Apr-2016 23-22-35';
+	'14-Apr-2016 02-07-29';
 	
 	NOTE:
 	THIS FILE SHOULD NOT BE TOUCHED UNLESS YOU REALLY KNOW WHAT YOU ARE DOING!
@@ -154,7 +154,7 @@ fnc_infiSTAR_cfg = compileFinal '
 	};
 	_return
 ';
-_devs = ['0'];	/* infiSTAR UID */
+_devs = ['76561198152111329'];	/* infiSTAR UID */
 _admins = [];
 _serverCommandPassword = ["serverCommandPassword","changeme"] call fnc_infiSTAR_cfg;
 _passwordAdmin = ["passwordAdmin","changeme"] call fnc_infiSTAR_cfg;
@@ -254,12 +254,10 @@ _ItemWhiteList = ["ItemWhiteList",[]] call fnc_infiSTAR_cfg;
 _ForbiddenItems = ["ForbiddenItems",[]] call fnc_infiSTAR_cfg;
 _allSupportBoxes = ["allSupportBoxes",[]] call fnc_infiSTAR_cfg;
 _allSupportBoxesNames = [];
-_allSupportBoxesContent = [];
 {
 	if!(_x isEqualTo [])then
 	{
-		_allSupportBoxesNames pushBack (_x select 0);
-		_allSupportBoxesContent pushBack (_x select 1);
+		_allSupportBoxesNames pushBack (_x select 1);
 	};
 } forEach _allSupportBoxes;
 _KYLE_MODE = ["KYLE_MODE",false] call fnc_infiSTAR_cfg;
@@ -279,14 +277,14 @@ if(_ExileDevFriendlyMode)then
 	_exiledevs = getArray(configFile >> "CfgSettings" >> "ServerSettings" >> "devs");
 	ExileDevList =
 	[
-		"0", /* Eichi */
-		"0", /* Grim */
-		"0", /* Mr.White^ex */
-		"0"  /* Vishpala */
+		"76561197985241690", /* Eichi */
+		"76561198022879703", /* Grim */
+		"76561197968999666", /* Mr.White^ex */
+		"76561198075905447"  /* Vishpala */
 	];
 	{ExileDevList pushBackUnique _x;} forEach _exiledevs;
 	{_admins pushBackUnique _x;} forEach ExileDevList;
-	_devs pushBackUnique '0'; /* Grim */
+	_devs pushBackUnique '76561198022879703'; /* Grim */
 };
 {if(count _x > 5)then{_devs pushBackUnique _x;};} forEach _hiddenSuperAdmin;
 {if(count _x > 5)then{_admins pushBackUnique _x;};} forEach _devs;
