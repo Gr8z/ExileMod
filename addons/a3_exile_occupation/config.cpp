@@ -1,4 +1,5 @@
-class CfgPatches {
+class CfgPatches
+{
 	class a3_exile_occupation {
 		units[] = {};
 		weapons[] = {};
@@ -6,6 +7,7 @@ class CfgPatches {
 		author[]= {"second_coming"};
 	};
 };
+
 class CfgFunctions {
 	class yorkshire {
 		class main {			
@@ -17,4 +19,3 @@ class CfgFunctions {
 		};
 	};
 };
-
