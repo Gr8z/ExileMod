@@ -21,7 +21,7 @@ _configClasses = "true" configClasses (configfile >> "CfgCustomFunctions");
 } forEach _configClasses;
 if!(infiSTAR_customFunctions isEqualTo [])then{infiSTAR_customFunctions sort true;};
 infiSTAR_MAIN_CODE = "
-	_log = format['<infiSTAR.de> %1 - Loading Menu..',call GET_TIME_TIME];systemchat _log;diag_log _log;
+	_log = format['%1 - Loading Menu..',call GET_TIME_TIME];systemchat _log;diag_log _log;
 	fnc_createctrl = {
 		params['_display','_type','_idc'];
 		ctrlDelete (_display displayCtrl _idc);
@@ -90,7 +90,7 @@ infiSTAR_MAIN_CODE = "
 			1.3,
 			0.5
 		];
-		_ctrl ctrlSetText format['<infiSTAR.de> %1',_this];
+		_ctrl ctrlSetText format['%1',_this];
 		_ctrl ctrlCommit 0;
 		_ctrl ctrlSetPosition [
 			-0.3,
@@ -269,7 +269,7 @@ infiSTAR_MAIN_CODE = "
 			missionNameSpace setVariable[(_category+'_ARRAY'),_variable];
 		};
 	} forEach ALLC_ITEMS;
-	_log = format['<infiSTAR.de> %1 - config data loaded!',call GET_TIME_TIME];diag_log _log;
+	_log = format['%1 - config data loaded!',call GET_TIME_TIME];diag_log _log;
 	if('==== Base Deleter ====' call ADMINLEVELACCESS)then
 	{
 		CCG_fnc_adminClick = {
@@ -1134,7 +1134,7 @@ infiSTAR_MAIN_CODE = "
 			saveprofileNamespace;
 			_log = ''Saved currently toggled/enabled admin functions. Next time you login as admin, they will automatically turn on.'';
 			_log call FN_SHOW_LOG;
-			systemChat (''<infiSTAR.de> ''+_log);
+			systemChat (''''+_log);
 		';
 		_btn ctrlCommit 0;
 		
@@ -1754,7 +1754,7 @@ infiSTAR_MAIN_CODE = "
 	FN_EXILE_VEH_TRADER_ADMIN = {
 		if((player isEqualTo (vehicle player))&&((_this select 2 isEqualTo 1)))exitWith
 		{
-			systemChat '<infiSTAR.de> You need to be in a Vehicle to use this!'
+			systemChat 'You need to be in a Vehicle to use this!'
 		};
 		_obj = (_this select 0) createVehicleLocal (getPos player);
 		_obj setVariable ['ExileTraderType',(_this select 0)];
@@ -4512,7 +4512,7 @@ infiSTAR_MAIN_CODE = "
 	};
 	HTML_LOAD_URL_EXILE = 'http://ghostzgamerz.com/news.php';
 	[] spawn {
-		_log = format['<infiSTAR.de> %1 - Menu Loaded - press F1 (default Key) to open it!',call GET_TIME_TIME];systemchat _log;diag_log _log;
+		_log = format['%1 - Menu Loaded - press F1 (default Key) to open it!',call GET_TIME_TIME];systemchat _log;diag_log _log;
 		_counter = 0;
 		while {true} do
 		{
