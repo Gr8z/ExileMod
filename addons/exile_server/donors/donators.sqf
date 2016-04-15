@@ -185,7 +185,7 @@ Soldier1 = [
 ];publicVariable "Soldier1";
 
 Soldier2 = [
-	"0", // NAME (OD-00-00-0000) #0000
+	"76561197999049562", // Ace (OD-2016-04-13) #13473 
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Soldier2";
@@ -211,6 +211,7 @@ Soldier3 = [
 	"76561197978528230", // Dark (player Created these loadouts)
 	"76561197973663364", // v4vdrjoker (OD-2016-04-09) (paid one month in advance)
 	"76561198091159573", // NoName (OD-2016-04-11) #13465
+	"76561197987069300", // ShroomBear (OD-2016-04-14) #13465
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Soldier3";
