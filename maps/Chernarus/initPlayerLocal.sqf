@@ -477,3 +477,28 @@ _trader =
 ]
 call ExileClient_object_trader_create;
 _trader setVariable ["ExileTraderType", "Exile_Trader_Boat"];
+
+
+
+///////////////////////////////////////////////////////////////////////////
+// Bor Trader
+///////////////////////////////////////////////////////////////////////////
+
+private _traders = [
+    ["Exile_Trader_Vehicle",[3445.86,3809.13,0.00143433],26.0452,"Exile_Trader_Vehicle","AfricanHead_03"],
+    ["Exile_Trader_Armory",[3453.15,3800.56,0.00143433],113.564,"Exile_Trader_Armory","WhiteHead_02"],
+    ["Exile_Trader_Food",[3436.21,3801.89,-0.00193787],228.131,"Exile_Trader_Food","WhiteHead_03"],
+    ["Exile_Trader_Hardware",[3439.49,3798.05,-0.00178528],234.32,"Exile_Trader_Hardware","AfricanHead_03"],
+    ["Exile_Trader_Equipment",[3443.19,3794.25,-0.00259399],225.137,"Exile_Trader_Equipment","WhiteHead_17"],
+    ["Exile_Trader_WasteDump",[3441.01,3815.87,0.00143433],77.7069,"Exile_Trader_WasteDump","WhiteHead_03"]
+];
+{
+    private _trader = [
+        _x select 0,
+        _x select 4,
+        ["HubStanding_idle1"],
+        _x select 1,
+        _x select 2
+    ] call ExileClient_object_trader_create;
+    _trader setVariable ["ExileTraderType", _x select 3];
+} forEach _traders;

@@ -165,7 +165,7 @@ class Mission {
 	};
 	
 	class Markers {
-		items = 20;
+		items = 22;
 		
 		class Item0
 		{
@@ -358,6 +358,31 @@ class Mission {
 			fillName = "SolidBorder";
 			a = 40;
 			b = 40;
+			drawBorder = 1;
+		};
+
+		class Item20
+		{
+			position[]={{3444.4487,0,3803.5161};
+			name="Bor Trader";
+			text="Bor Trader";
+			type="loc_Tree";
+			colorName="ColorWhite";
+			fillName="Vertical";
+			a=3;
+			b=3;
+		};
+		class Item21
+		{
+			position[]={{3444.4487,0,3803.5161};
+			name = "BorTraderCityMarker";
+			text = "Mafia Trader City";
+			markerType = "ELLIPSE";
+			type = "ExileTraderZone";
+			colorName = "ColorGreen";
+			fillName = "SolidBorder";
+			a = 100;
+			b = 100;
 			drawBorder = 1;
 		};
 	};

@@ -1,6 +1,6 @@
-diag_log "Waiting for Bornholm Custom Buildings";
+diag_log "Waiting for Chernarus Custom Buildings";
 if (isServer) then {
-	diag_log "Spawning Bornholm Custom Buildings";
+	diag_log "Spawning Chernarus Custom Buildings";
 	private ["_objs"];
 	_objs = [
 		//Stary Trader
