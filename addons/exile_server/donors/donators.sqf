@@ -213,6 +213,7 @@ Soldier3 = [
 	"76561198091159573", // NoName (OD-2016-04-11) #13465
 	"76561197987069300", // ShroomBear (OD-2016-04-14) #13479 
 	"76561198118195554", // Ace Rogelio (OD-2016-04-14) #13475  
+	"76561197987069300", // ShroomBear (OD-2016-04-15) #13479
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Soldier3";
