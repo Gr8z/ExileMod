@@ -171,6 +171,7 @@ Scout3 = [
 	"76561198203629136", // Brian (OD-2016-02-29) #13400 
 	"76561198283983169", // Jake (OD-2016-04-10) #13458  
 	"76561198164216380", // DirtyLobster5 (OD-2016-04-12) #13468   
+	"76561198065667653", // Quantum (OD-2016-04-11) #13462     
 	"76561198088251390", // Six (OD-2016-03-30) #13400 (paid three months in advanced)
 // Add UIDs above, don't forget the comma
 "0"
@@ -213,6 +214,9 @@ Soldier3 = [
 	"76561198091159573", // NoName (OD-2016-04-11) #13465
 	"76561198234142064", // ShroomBear (OD-2016-04-14) #13479 
 	"76561198118195554", // Ace Rogelio (OD-2016-04-14) #13475  
+	"76561198234142064", // Dpt A Molina (OD-2016-04-15) #13476   
+	"76561197992354127", // Creme Fraiche (OD-2016-04-15) #13486    
+	"76561198158550520", // BeerculesFG (OD-2016-04-16) #13489     
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Soldier3";
