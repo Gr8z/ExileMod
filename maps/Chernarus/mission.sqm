@@ -360,10 +360,9 @@ class Mission {
 			b = 40;
 			drawBorder = 1;
 		};
-
 		class Item20
 		{
-			position[]={{3444.4487,0,3803.5161};
+			position[]={3444.4487,0,3803.5161};
 			name="Bor Trader";
 			text="Bor Trader";
 			type="loc_Tree";
@@ -374,7 +373,7 @@ class Mission {
 		};
 		class Item21
 		{
-			position[]={{3444.4487,0,3803.5161};
+			position[]={3444.4487,0,3803.5161};
 			name = "BorTraderCityMarker";
 			text = "Mafia Trader City";
 			markerType = "ELLIPSE";
