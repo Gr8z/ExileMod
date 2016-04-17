@@ -389,16 +389,6 @@ ZCP_Translations = [ // ['original','original in your language'] the %1 %2 and s
 
 ZCP_CurrentMod = "Exile"; // Exile, ( Epoch coming soon again)
 
-if(ZCP_dev) then {
-	ZCP_CapTime = 60;
-	ZCP_CapRadius = 60;
-	ZCP_MinWaitTime = 60;
-	ZCP_MaxWaitTime = 20;
-	ZCP_BaseCleanupDelay = 30;
-	ZCP_Minimum_Online_Players = 0;
-	ZCP_DMS_doIUseDMS = false;
-};
-
 /* Do not change this*/
 diag_log format["[ZCP]: Config loaded succesfull"];
 ZCP_ConfigLoaded = true;
