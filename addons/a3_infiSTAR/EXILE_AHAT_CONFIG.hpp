@@ -164,7 +164,7 @@ adminUIDandAccess[] =
 			"Player ESP","Dead ESP","AI ESP",
 			"Vehicle Marker","Flag Marker (with radius)","DeadPlayer Marker",
 			"God Mode","Vehicle God Mode","Stealth / Invisible",
-			"Disable Announces","Spawn Support-Boxes","Change ViewDistance",
+			"Disable Announces","Mass Message","Spawn Support-Boxes","Change ViewDistance",
 			"Spawn Ammo","BIS FreeRoam Cam (works with ESP)","FreeRoam Cam (does not work with ESP)",
 			"Request Steam Name","showinfo","Change Money","Change Respect",
 			"UnlockLockVehicle",
