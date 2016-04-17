@@ -113,7 +113,7 @@ class CfgNotifications
       title = "Success";
       iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
       iconText = "";
-      color[] = {0.7, 0.93, 0, 1};
+      color[] = {0.01,0.61,0.94,1};
       duration = 5;
       priority = 0;
       difficulty[] = {};
@@ -124,7 +124,7 @@ class CfgNotifications
       title = "Error";
       iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
       iconText = "";
-      color[] = {0.7, 0.93, 0, 1};
+      color[] = {0.01,0.61,0.94,1};
       duration = 5;
       priority = 0;
       difficulty[] = {};
@@ -135,7 +135,7 @@ class CfgNotifications
 		title = "Battle Zone Spawned";
 		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
 		iconText = "";
-		color[] = {0.7, 0.93, 0, 1};
+		color[] = {0.01,0.61,0.94,1};
 		duration = 5;
 		priority = 0;
 		difficulty[] = {};
@@ -146,7 +146,7 @@ class CfgNotifications
 		title = "Battle Zone Capped";
 		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
 		iconText = "";
-		color[] = {0.7, 0.93, 0, 1};
+		color[] = {0.01,0.61,0.94,1};
 		duration = 5;
 		priority = 0;
 		difficulty[] = {};
@@ -157,7 +157,7 @@ class CfgNotifications
 		title = "Battle Zone alert";
 		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
 		iconText = "";
-		color[] = {0.7, 0.93, 0, 1};
+		color[] = {0.01,0.61,0.94,1};
 		duration = 5;
 		priority = 0;
 		difficulty[] = {};
