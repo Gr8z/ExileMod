@@ -5,6 +5,8 @@
 [] execVM "GG\ExtraButtons.sqf";
 [] execVM "GG\SecureSafezones\config.sqf";
 
+call compileFinal preprocessFileLineNumbers 'GG\TRYKfix.sqf';
+
 #include "initServer.sqf"
 
 if (!hasInterface || isServer) exitWith {};
