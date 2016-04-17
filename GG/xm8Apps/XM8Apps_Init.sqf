@@ -41,9 +41,9 @@ _app8Logo = "GG\xm8Apps\images\selfie.paa";
 app8_action =  { [] execVM "GG\xm8Apps\apps\selfie.sqf"; };
 
 //App 9
-_app9Text = "";
-_app9Logo = "";
-app9_action = { hint "APP COMING SOON" };
+_app9Text = "TERRITORY";
+_app9Logo = "GG\xm8Apps\images\territory.paa";
+app9_action = { [] execVM "GG\xm8Apps\apps\territory.sqf"; };
 
 //App 10
 _app10Text = "";
