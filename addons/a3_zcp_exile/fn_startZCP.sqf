@@ -22,8 +22,6 @@ if !(isServer) exitWith
 	};
 };
 
-diag_log text format ["[ZCP]: Giving server some time to boot."];
-
 ZCP_MapCenterPos =  [8500,8500];
 ZCP_MapRadius = 8500;
 
@@ -70,15 +68,18 @@ ZCP_MapCenterPos set [2,0];
 
 diag_log text format ["[ZCP]: Initiate Zupa's Capture Points"];
 call ZCP_fnc_config;
+
+if ( isNil 'ZCP_ConfigLoaded' ) exitWith {
+	for "_i" from 0 to 99 do
+	{
+		diag_log "[ZCP]: Typo or missing symbol in config file!";
+	};
+};
+
 call ZCP_fnc_initCPData;
 
-ZCP_RandomReward = [];
-
-{
-	for "_i" from 0 to ((_x select 1) - 1) do {
-		_nil = ZCP_RandomReward pushBack (_x select 0);
-	};
-}count ZCP_RewardWeightForRandomChoice;
-
-[] spawn ZCP_fnc_missionLooper;
+diag_log text format ["[ZCP]: World: %1 | Center: %2 | Radius: %3", worldName, ZCP_MapCenterPos, ZCP_MapRadius];
 diag_log text format ["[ZCP]: Capture Points is fully running."];
+diag_log text format ["[ZCP]: Waiting %1s for first mission.", ZCP_ServerStartWaitTime];
+uiSleep ZCP_ServerStartWaitTime;
+[] spawn ZCP_fnc_missionLooper;

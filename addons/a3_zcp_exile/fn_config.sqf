@@ -5,11 +5,13 @@
 
 ZCP_dev = false; // Devmode for shorter development capture times
 
-ZCP_DMS_doIUseDMS = true; // Use DMS to spawn AI IF CapturePoint has spawnAI = true
+ZCP_AI_Type = 'DMS'; // NONE | DMS | FUMS
 ZCP_Min_AI_Amount = 1; // Min ammount of AI at a ZCP
 ZCP_Random_AI_Max = 4; // so min 4 and max 12 (4+8) AI
+ZCP_MessagePlayersBeforeWaves = true; // True -> Inform for an icoming wave of AI, false is not inform the players inside.
 
-ZCP_CapTime = 600; // Seconds to cap an area uncontested
+//ZCP_CapTime = 600; // Seconds to cap an area uncontested
+ZCP_ServerStartWaitTime = 120;
 ZCP_MinWaitTime = 600; // seconds to wait to spawn a new capturepoint when 1 was capped.
 ZCP_MaxWaitTime = 900; // random between 0 and THIS number added to the ZCP_MinWaitTime to counter spawning points at the same time
 ZCP_BaseCleanupDelay = 500; // seconds to wait to delete a captured base.
@@ -53,46 +55,92 @@ ZCP_RewardWeightForRandomChoice = [
 // valid rewards -> Random, Poptabs, Vehicle, Buildingbox, WeaponBox
 // baseFile -> Random or the basefile name. Random will chose from ZCP_CapBases
 // capradius -> 0 for Random, real number for Static base files.
-ZCP_CapPoints = [ // [name,[x,y,z],reward, unique varname,index, spanwnAI, isStatic, baseFile, capradius, baseFileType, max terrainGradient ( only used if it has staticbaseFile)]
-	["Battle Zone",[0,0,0],"Reputation","beta",1, true, false, 'Random', 0, 'Random', 2]
+ZCP_CapPoints = [ ["Battle Zone",[0,0,0],"Reputation","beta",1, true, false, 'Random', 0, 'Random', 2]
+	[
+		"Battle Zone", // name
+		[0,0,0], // [x,y,z] if using static location
+		"Reputation", // Reward -> Random, Poptabs, Vehicle, Buildingbox, WeaponBox
+		"alpha", // unique varname
+		0, // unique index
+		true, // spawnAI on start
+		false, // isStatic location ( if true it will take the location specified earlier)
+		'Random', // baseFile -> Random or the name of the sqf file
+		0, // capradius of you use a specific static basefile.
+		'Random', // baseFileType -> the editor where the base was build in: m3e , EdenConverted, xcam , Random (for Random base)
+		999, // max terrainGradient -> when specific static basefile is used
+		40, // distancefromojects -> when specific static basefile is used
+		600, // captime in seconds for this mission
+		true, // use Waves of AI to attack the base when a player is capping
+		[ // array of waves of AI ()
+			[
+				15, // procentage of the cap time to start attack (50 = 50% of the total captime)
+				3, // Amount of AI units in a group
+				2, // Amount of AI groups
+				200, // distance in meter form ZCP for the ai to spawn
+				true // false -> all groups from 1 random location, true -> all groups from their own random location
+			]
+			,
+			[
+				45, // procentage of the cap time to start attack (50 = 50% of the total captime)
+				3, // Amount of AI units in a group
+				3, // Amount of AI groups
+				200, // distance in meter form ZCP for the ai to spawn
+				false // false -> all groups from 1 random location, true -> all groups from their own random location
+			]
+			,
+			[
+				60, // procentage of the cap time to start attack (50 = 50% of the total captime)
+				2, // Amount of AI units in a group
+				4, // Amount of AI groups
+				200, // distance in meter form ZCP for the ai to spawn
+				true // false -> all groups from 1 random location, true -> all groups from their own random location
+			]
+		]
+	]
+	// the examples are old examples: u can see how the static location or static base file work. But don't use them like this because they miss data.
+	// example -> ["ZCP Charlie",[3598,5888,0],"Random","charlie",2, true, true, 'm3e_base1.sqf', 60, 'm3e', 10]    // A base on always the same location with always the same base
+	// example -> ["ZCP Delta",[0,0,0],"Random","delta",3, true, false, 'xcam_milPoint.sqf', 100, 'xcam', 15] 			// A base on random location with always the same base
+	// example -> ["ZCP Echo",[1455,8888,0],"Random","echo",4, true, true, 'Random', 0, 'Random', 10] 					// A base on on always the same location with a random base
+	// example -> ["ZCP Foxtrot",[0,0,0],"Random","foxtrot",5, true, false, 'Random', 0, 'Random', 10] 					// Random base on random location
 ];
 
 ZCP_MaxMissions = 1; // Amount of cap points at the same time.
 
 // For every spawned mission,
 // buildeditor currenty supported -> m3e, xcam
-ZCP_CapBases = [ // located in capbases folder [filename, capradius, buildeditor, max terraingradient (if not overwritten by staticbasefile)]
-	["m3e_base1.sqf", 60, "m3e", 3],
-	["m3e_base2.sqf", 90, "m3e", 5],
-	["m3e_base3.sqf", 40, "m3e", 5],
-	["m3e_smallBase1.sqf", 40, "m3e", 3],
-	["m3e_village.sqf", 50, "m3e", 2],
-	["xcam_milPoint.sqf", 50, "xcam", 5],
-	["ec_audacity.sqf", 30, "EdenConverted", 5],
-	["ec_bravery.sqf", 35, "EdenConverted", 5],
-	["ec_courage.sqf", 25, "EdenConverted", 5],
-	["ec_defiance.sqf", 20, "EdenConverted", 5],
-	["ec_endurance.sqf", 20, "EdenConverted", 5],
-	["ec_fortitude.sqf", 25, "EdenConverted", 5],
-	["ec_maze.sqf", 35, "EdenConverted", 5],
-	["ec_battlefield.sqf", 65, "EdenConverted", 5],
-	["ec_urban.sqf", 65, "EdenConverted", 5]
+ZCP_CapBases = [ // located in capbases folder [filename, capradius, buildeditor, max terraingradient (if not overwritten by staticbasefile), radius of open space for it to spawn base]
+	["m3e_base1.sqf", 60, "m3e", 90, 60],
+	["m3e_village.sqf", 50, "m3e", 90, 50],
+	["xcam_milPoint.sqf", 50, "xcam", 90, 50],
+	["ec_audacity.sqf", 30, "EdenConverted", 90, 30],
+	["ec_bravery.sqf", 35, "EdenConverted", 90, 35],
+	["ec_courage.sqf", 25, "EdenConverted", 90, 25],
+	["ec_defiance.sqf", 20, "EdenConverted", 90, 20],
+	["ec_endurance.sqf", 20, "EdenConverted", 90, 20],
+	["ec_fortitude.sqf", 25, "EdenConverted", 90, 25],
+	["ec_maze.sqf", 35, "EdenConverted", 90, 20],
+	["ec_battlefield.sqf", 65, "EdenConverted", 90, 20],
+	["ec_urban.sqf", 65, "EdenConverted", 90, 20],
+	["m3e_base2.sqf", 90, "m3e", 90, 20],
+	["m3e_base3.sqf", 40, "m3e", 90, 20],
+	["m3e_smallBase1.sqf", 40, "m3e", 90, 20]
 ];
 
-// ZCP_TerrainGradient = 10; // Now defined per base or overwritten when using staticbaseFile for a cappoint
-ZCP_MinDistanceFromObject = 60; // Missions needs an open spot. You can lower it but it might collide with other objects ( not always a problem)
+// ZCP_TerrainGradient = 10; // Now defined per base or overwritten when using staticbaseFile for a cappoint	=
+//ZCP_MinDistanceFromObject = 60; // now defined per base.
 
 
 ZCP_Blacklist = [ // [ [x,y,z], radius ];
+	[[23644,18397,0] , 1200],
 	[[-999,-999,0] , 500],
 	[[-999,-999,0] , 500]
 ];
 
 ZCP_createVirtualCircle = true;
-ZCP_changeCircleColor = false;
-ZCP_circleNeutralColor = "#(rgb,8,8,3)color(0,1,0,1)";
-ZCP_circleCappingColor = "#(rgb,8,8,3)color(0.70,0.11,0.70,1)";
-ZCP_circleContestedColor = "#(rgb,8,8,3)color(1,0,0,1)";
+
+ZCP_circleNeutralColor = "#(rgb,8,8,3)color(0,1,0,1)"; // green
+ZCP_circleCappingColor = "#(rgb,8,8,3)color(0,0,1,1)"; // blue
+ZCP_circleContestedColor = "#(rgb,8,8,3)color(1,0,0,1)"; // red
 
 //Boxtypes
 ZCP_SurvivalBox = "O_supplyCrate_F";
@@ -104,6 +152,7 @@ ZCP_DistanceBetweenMissions = 500;
 ZCP_SpawnZoneDistance = 500;
 ZCP_TradeZoneDistance = 500;
 ZCP_DistanceFromWater = 100;
+ZCP_DistanceFromPlayers = 200;
 ZCP_TraderZoneMarkerTypes =			[							// If you're using custom trader markers, make sure you define them here. CASE SENSITIVE!!!
 										"ExileTraderZone"
 									];
@@ -113,9 +162,9 @@ ZCP_SpawnZoneMarkerTypes =			[							// If you're using custom spawn zone marker
 
 
 /* These are arma 3 colors, look up the color naming if you are going to change this */
-ZCP_FreeColor = "ColorIndependent"; // uncontested marker color -> also correct size
-ZCP_CappedColor = "ColorCivilian"; // uncontested + capping color
-ZCP_ContestColor = "ColorOPFOR"; // contested + capping color
+ZCP_FreeColor = "ColorGreen"; // uncontested marker color -> also correct size
+ZCP_CappedColor = "ColorBlue"; // uncontested + capping color
+ZCP_ContestColor = "ColorRed"; // contested + capping color
 ZCP_BackgroundColor = "ColorWhite"; // Color to get attention on the map, if zoomed out this will be bigger then the cap circle which is the normal size.
 ZCP_MissionMarkerWinDotTime = 120; // Seconds to show a marker after a capped point. Change to 0 to disable!
 
@@ -333,8 +382,9 @@ ZCP_Translations = [ // ['original','original in your language'] the %1 %2 and s
 	['Group Reputation', 'Group Respect'], // Group reputation
 	['Package delivered, eyes on the sky!', 'Package delivered, eyes on the sky!'], // Package delivered, eyes on the sky!
 	['Package delivered, eyes on the sky! Poptabs on bank!', 'Package delivered, eyes on the sky! Poptabs on bank!'], // Package delivered, eyes on the sky! Poptabs on bank!
-	['Battle Zone is contested!', 'Battle Zone is being contested!'], // Package delivered, eyes on the sky! Poptabs on bank!
-	['Battle Zone is no longer contested!', 'Battle Zone is no longer being contested!'] // Capture point is contested!
+	['Battle Zone is contested!', 'Battle Zone is being contested!'], // Package delivered, eyes on the sky! Poptabs on bank!	
+	['Battle Zone is no longer contested!', 'Battle Zone is no longer being contested!'], // Capture point is contested!
+	['AI Wave incoming to retake %1.', 'AI Wave incoming to retake %1.'] // Capture point is contested!
 ];
 
 ZCP_CurrentMod = "Exile"; // Exile, ( Epoch coming soon again)
@@ -350,9 +400,5 @@ if(ZCP_dev) then {
 };
 
 /* Do not change this*/
-ZCP_Version = "ZCP_Exile_1.1";
-ZCP_Data = [];
-ZCP_Bases = [];
-ZCP_MissionCounter = 0;
-ZCP_DMS_MagRange = ZCP_DMS_MaximumMagCount - ZCP_DMS_MinimumMagCount;
-diag_log format["ZCP: Config loaded succesfull"];
+diag_log format["[ZCP]: Config loaded succesfull"];
+ZCP_ConfigLoaded = true;
