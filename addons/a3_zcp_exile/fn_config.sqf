@@ -55,7 +55,7 @@ ZCP_RewardWeightForRandomChoice = [
 // valid rewards -> Random, Poptabs, Vehicle, Buildingbox, WeaponBox
 // baseFile -> Random or the basefile name. Random will chose from ZCP_CapBases
 // capradius -> 0 for Random, real number for Static base files.
-ZCP_CapPoints = [ ["Battle Zone",[0,0,0],"Reputation","beta",1, true, false, 'Random', 0, 'Random', 2]
+ZCP_CapPoints = [
 	[
 		"Battle Zone", // name
 		[0,0,0], // [x,y,z] if using static location
