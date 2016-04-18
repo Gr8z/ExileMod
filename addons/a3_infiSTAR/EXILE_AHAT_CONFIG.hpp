@@ -104,18 +104,16 @@ startAsNormal[] =
 /* "hiddenSuperAdmin": These admins are seen as normal players by normal admins, their actions are not logged either (to keep an eye out on your admins) */
 hiddenSuperAdmin[] =
 {
-	"UID1","UID2","UID3","..."
+	"76561198078201908", // Gr8
+	"76561198153784743", // Ghost
+	"76561198137100220", // Deadskin
 };
 
 adminUIDandAccess[] =
 {
 	{
 		{
-		 "76561198078201908", // GR8
-		 "76561198153784743", // Ghost
-		 "76561198195305425", // Shahzad
 		 "76561198115492831", // BigEgg
-		 "76561198137100220", // Deadskin
 		 "76561198001066546", // Meowmix
 		 //Add UID's Above - Don't forget the comma!
 		"0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
