@@ -35,6 +35,7 @@ SlotDonor = [
 	"76561197971687271", // H4ppyK1llM0r3 (EXP-2016-06-05) Paid one month
 	"76561197985318459", // WirelessPillow (OD-2016-04-06) #13443
 	"76561198146083701", // America (OD-2016-04-09) #13456 
+	"76561198158550520", // Beercules FG (OD-2016-04-17) #13492 
 	// Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "SlotDonor";
@@ -217,6 +218,8 @@ Soldier3 = [
 	"76561198234142064", // Dpt A Molina (OD-2016-04-15) #13476   
 	"76561197992354127", // Creme Fraiche (OD-2016-04-15) #13486    
 	"76561198158550520", // BeerculesFG (OD-2016-04-16) #13489     
+	"76561198187457311", // rocky (OD-2016-04-17) #13494     
+	"76561198065712189", // Luisnext (OD-2016-04-18) #13491     
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Soldier3";
