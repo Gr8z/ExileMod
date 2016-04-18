@@ -29,7 +29,7 @@ try
   };
   if !((owner _vehicle) isEqualTo (owner _player)) then
   {
-    throw "The player does now onw the vehicle";
+    throw "The player does not own the vehicle";
   };
   if(_vehicle getVariable "ExileIsPersistent" isEqualTo false) then
   {
@@ -47,9 +47,32 @@ try
   _pincode = _vehicle getVariable ["ExileAccessCode",""];
   _fuel = fuel _vehicle;
   _damage = damage _vehicle;
-  _vehicleID = format ["insertVehicleToVG:%1:%2:%3:%4:%5:%6", typeOf _vehicle,_ownerUID,_fuel,_damage,_vehicleHitpoints,_pincode] call ExileServer_system_database_query_selectFull;
+  _position = getPosATL _vehicle;
+  _vectorDirection = vectorDir _vehicle;
+  _vectorUp = vectorUp _vehicle;
+  _textures = getObjectTextures _vehicle;
+  _data =
+  [
+  	typeOf _vehicle,
+  	_ownerUID,
+  	_fuel,
+  	_damage,
+  	_vehicleHitpoints,
+  	_pincode,
+  	_position select 0,
+  	_position select 1,
+  	_position select 2,
+  	_vectorDirection select 0,
+  	_vectorDirection select 1,
+  	_vectorDirection select 2,
+  	_vectorUp select 0,
+    _vectorUp select 1,
+    _vectorUp select 2,
+    _textures
+  ];
+  _extDB2Message = ["insertVehicleToVG", _data] call ExileServer_util_extDB2_createMessage;
+  _vehicleID = _extDB2Message call ExileServer_system_database_query_selectFull;
   deleteVehicle _vehicle;
-
   [_sessionID,"StoreVehicleResponse",["true"]] call ExileServer_system_network_send_to;
   format ["deleteVehicle:%1", _vehicleDBID] call ExileServer_system_database_query_fireAndForget;
 } catch {

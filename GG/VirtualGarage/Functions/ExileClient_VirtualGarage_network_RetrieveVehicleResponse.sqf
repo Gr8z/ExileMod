@@ -1,9 +1,9 @@
 /*
 
-  Name: ExileClient_VirtualGarge_RetrieveVehicleResponse.sqf
-  Author(s): Shix
+ 	Name: ExileClient_VirtualGarge_RetrieveVehicleResponse.sqf
+ 	Author(s): Shix
     Copyright (c) 2016 Shix
-  Description: Handles the client Retrival a vehicle from the virtual garage.
+ 	Description: Handles the client Retrival a vehicle from the virtual garage.
 */
 private ["_response","_this","_vehicleNetID"];
 _response = _this select 0;

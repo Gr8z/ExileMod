@@ -16,6 +16,16 @@ _vehicleFuel = _parameters select 2;
 _vehicleDamage = _parameters select 3;
 _vehicleHitPoints = _parameters select 4;
 _vehicleDatabaseID = _parameters select 5;
+_vehiclePosX = _parameters select 6;
+_vehiclePosY = _parameters select 7;
+_vehiclePosZ = _parameters select 8;
+_vehicleVectorDirX = _parameters select 9;
+_vehicleVectorDirY = _parameters select 10;
+_vehicleVectorDirZ = _parameters select 11;
+_vehicleVectorUpX = _parameters select 12;
+_vehicleVectorUpY = _parameters select 13;
+_vehicleVectorUpZ = _parameters select 14;
+_textures = _parameters select 15;
 try
 {
 	_playerObject = _sessionID call ExileServer_system_session_getPlayerObject;
@@ -31,13 +41,23 @@ try
 	{
 		throw "The pin code is does not equal 4 chars";
 	};
-	_position = (getPos _playerObject) findEmptyPosition [10, 175, _vehicleClass];
+	_position = (getPos _playerObject) findEmptyPosition [20, 175, _vehicleClass];
+	_direction = (random 360);
+	_SpawnPos = getNumber (missionconfigfile >> "VirtualGarageSettings" >> "VirtualGarage_VehicleSpawnPos");
+	if (_SpawnPos == 1) then {
+	    _position = [_vehiclePosX,_vehiclePosY,_vehiclePosZ];
+		_direction = [[_vehicleVectorDirX,_vehicleVectorDirY,_vehicleVectorDirZ],[_vehicleVectorUpX,_vehicleVectorUpY,_vehicleVectorUpZ]];
+	};
 	if (_position isEqualTo []) then
 	{
 			throw "Position is not defined";
 	};
-	_vehicleObject = [_vehicleClass, _position, (random 360), true, _pinCode] call ExileServer_object_vehicle_createPersistentVehicle;
+	_vehicleObject = [_vehicleClass, _position, _direction, true, _pinCode] call ExileServer_object_vehicle_createPersistentVehicle;
 	_vehicleObject setVariable ["ExileOwnerUID", (getPlayerUID _playerObject)];
+	for '_i' from 0 to (count _textures)-1 do {
+		_tex = _textures select _i;
+	    _vehicleObject setObjectTextureGlobal [_i, _tex];
+	};
 	_vehSpawnState = getNumber (missionconfigfile >> "VirtualGarageSettings" >> "VirtualGarage_VehicleSpawnState");
 	if (_vehSpawnState == 1) then
 	{
@@ -70,6 +90,9 @@ try
 	_vehicleObject call ExileServer_object_vehicle_database_update;
 	[_sessionID, "RetrieveVehicleResponse", ["true",netId _vehicleObject]] call ExileServer_system_network_send_to;
 	format ["deleteVehicleFromVG:%1", _vehicleDatabaseID] call ExileServer_system_database_query_fireAndForget;
+	_vehicleDBID = _vehicleObject getVariable ["ExileDatabaseID",0];
+	_skinTextures = getObjectTextures _vehicleObject;
+	format["updateVehicleSkin:%1:%2", _skinTextures, _vehicleDBID] call ExileServer_system_database_query_fireAndForget;
 }
 catch
 {
