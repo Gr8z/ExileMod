@@ -149,7 +149,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player forceAddUniform "TRYK_U_denim_jersey_blk";
 			player addHeadgear "TRYK_r_cap_blk_Glasses";
 			player addVest "V_PlateCarrier1_blk";
-			player addBackpack "TRYK_B_Coyotebackpack_BLK";
+			player addBackpack "TRYK_B_Carryall_blk";
 			player addWeapon "CUP_srifle_M110";
 			player addWeapon "CUP_hgun_Phantom";
 			player addPrimaryWeaponItem "CUP_muzzle_snds_M110";
