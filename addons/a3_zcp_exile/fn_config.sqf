@@ -8,7 +8,7 @@ ZCP_dev = false; // Devmode for shorter development capture times
 ZCP_AI_Type = 'DMS'; // NONE | DMS | FUMS
 ZCP_Min_AI_Amount = 1; // Min ammount of AI at a ZCP
 ZCP_Random_AI_Max = 4; // so min 4 and max 12 (4+8) AI
-ZCP_MessagePlayersBeforeWaves = true; // True -> Inform for an icoming wave of AI, false is not inform the players inside.
+ZCP_MessagePlayersBeforeWaves = false; // True -> Inform for an icoming wave of AI, false is not inform the players inside.
 
 //ZCP_CapTime = 600; // Seconds to cap an area uncontested
 ZCP_ServerStartWaitTime = 120;
@@ -75,23 +75,15 @@ ZCP_CapPoints = [
 			[
 				15, // procentage of the cap time to start attack (50 = 50% of the total captime)
 				3, // Amount of AI units in a group
-				2, // Amount of AI groups
-				200, // distance in meter form ZCP for the ai to spawn
+				1, // Amount of AI groups
+				100, // distance in meter form ZCP for the ai to spawn
 				true // false -> all groups from 1 random location, true -> all groups from their own random location
-			]
-			,
-			[
-				45, // procentage of the cap time to start attack (50 = 50% of the total captime)
-				3, // Amount of AI units in a group
-				3, // Amount of AI groups
-				200, // distance in meter form ZCP for the ai to spawn
-				false // false -> all groups from 1 random location, true -> all groups from their own random location
 			]
 			,
 			[
 				60, // procentage of the cap time to start attack (50 = 50% of the total captime)
 				2, // Amount of AI units in a group
-				4, // Amount of AI groups
+				2, // Amount of AI groups
 				200, // distance in meter form ZCP for the ai to spawn
 				true // false -> all groups from 1 random location, true -> all groups from their own random location
 			]
