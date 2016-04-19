@@ -2,7 +2,6 @@
 [] execVM "GG\KillMessages.sqf";
 [] execVM "GG\IgiLoad\IgiLoadInit.sqf";
 [] execVM "GG\service\service_point.sqf";
-[] execVM "GG\ExtraButtons.sqf";
 [] execVM "GG\SecureSafezones\config.sqf";
 
 call compileFinal preprocessFileLineNumbers 'GG\TRYKfix.sqf';
