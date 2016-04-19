@@ -118,7 +118,7 @@ fnc_okToDrop = {
     _ok = false;DropInProgress = false;
   };
  
-  if  ((nearestObject [player,'Exile_Construction_Abstract_Static']) distance player < 75) then {
+  if  ([(posision player),75] call ExileClient_util_world_isTerritoryInRange) then {
     (findDisplay 24015) closeDisplay 0;
     _msg = "You are near a Base and cannot perform that action!";
     ["Whoops",_msg] call ExileClient_gui_notification_event_addNotification;
@@ -133,14 +133,12 @@ fnc_okToDrop = {
   };
  
   {
-    if ((_traderZoneNearLimit>0) && {((markertype _x) == "ExileTraderZone") && {((getMarkerPos _x) distance2D getPos player)<=_traderZoneNearLimit}}) then
-    {
+    if ([(position player), 200] call ExileClient_util_world_isTraderZoneInRange) then {
       (findDisplay 24015) closeDisplay 0;
         _msg = "You need to be far away from a Trader to call an Airdrop.";
         ["Whoops",_msg] call ExileClient_gui_notification_event_addNotification;
         _ok = false;DropInProgress = false;
     };
-  } forEach allMapMarkers;
  
   if ((count playableUnits) < _OnlineLimit) then  {
     (findDisplay 24015) closeDisplay 0;
