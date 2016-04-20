@@ -96,7 +96,7 @@ if (!isDedicated) then {
 		VictimNameColor,
 		DistanceColor
 		];
-		[_dyntxt,[safezoneX + 0.01 * safezoneW,2.0],[safezoneY + 0.01 * safezoneH + safeOffset,0.3],10,0.5,0,_lvl] spawn BIS_fnc_dynamicText;
+		[_dyntxt,[safezoneX + 0.01 * safezoneW,2.0],[safezoneY + 0.01 * safezoneH + safeOffset,0.3],20,0.5,0,_lvl] spawn BIS_fnc_dynamicText;
 		if (ShowHintText) then {
 			_message = parseText format ["
 				<t color='%5'>%1</t>
