@@ -29,6 +29,8 @@ VictimNameColor	 = "#C70000"; // Text Color of the Victim's Name.
 WeaponNameColor	 = "#FFCC00"; // Text Color of the Weapon's Name. Only Works in Halv's Style
 DistanceColor	 = "#FFCC00"; // Text Color of the kill Distance number.
 
+line0=0;line1=0;line2=0;line3=0;line4=0;line5=0;line6=0;line7=0;line8=0;
+
 if (!isDedicated) then {
 	"Gr8s_kill_msg"		addPublicVariableEventHandler {
 		_id = (_this select 1);
