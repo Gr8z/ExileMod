@@ -43,34 +43,34 @@ if (!isDedicated) then {
 		_time = diag_tickTime;
 		_check = (_time - 9);
 		if (line8 > _check) then {
-		        line0 = _time; _lvl = 6000; _safeOffset = 0;
+		        line0 = _time; _lvl = 6000; safeOffset = 0;
 		        line1 = 0; line2 = 0; line3 = 0; line4 = 0; line5 = 0; line6 = 0; line7 = 0; line8 = 0;
 		} else {
 		        if (line7 > _check) then {
-		                line8 = _time; _lvl = 6008; _safeOffset = 0.4;
+		                line8 = _time; _lvl = 6008; safeOffset = 0.4;
 		        } else {
 		                if (line6 > _check) then {
-		                        line7 = _time; _lvl = 6007; _safeOffset = 0.35;
+		                        line7 = _time; _lvl = 6007; safeOffset = 0.35;
 		                } else {
 		                        if (line5 > _check) then {
-		                                line6 = _time; _lvl = 6006; _safeOffset = 0.3;
+		                                line6 = _time; _lvl = 6006; safeOffset = 0.3;
 		                        } else {
 		                                if (line4 > _check) then {
-		                                        line5 = _time; _lvl = 6005; _safeOffset = 0.25;
+		                                        line5 = _time; _lvl = 6005; safeOffset = 0.25;
 		                                } else {
 		                                        if (line3 > _check) then {
-		                                                line4 = _time; _lvl = 6004; _safeOffset = 0.2;
+		                                                line4 = _time; _lvl = 6004; safeOffset = 0.2;
 		                                        } else {
 		                                                if (line2 > _check) then {
-		                                                        line3 = _time; _lvl = 6003; _safeOffset = 0.15;
+		                                                        line3 = _time; _lvl = 6003; safeOffset = 0.15;
 		                                                } else {
 		                                                        if (line1 > _check) then {
-		                                                                line2 = _time; _lvl = 6002; _safeOffset = 0.10;
+		                                                                line2 = _time; _lvl = 6002; safeOffset = 0.10;
 		                                                        } else {
 		                                                                if (line0 > _check) then {
-		                                                                        line1 = _time; _lvl = 6001; _safeOffset = 0.05;
+		                                                                        line1 = _time; _lvl = 6001; safeOffset = 0.05;
 		                                                                } else {
-		                                                                        line0 = _time; _lvl = 6000; _safeOffset = 0;
+		                                                                        line0 = _time; _lvl = 6000; safeOffset = 0;
 		                                                                };
 		                                                        };
 		                                                };
@@ -95,7 +95,7 @@ if (!isDedicated) then {
 		VictimNameColor,
 		DistanceColor
 		];
-		[_dyntxt,[safezoneX + 0.01 * safezoneW,2.0],[safezoneY + 0.01 * safezoneH + _safeOffset,0.3],30,0.5] spawn BIS_fnc_dynamicText;
+		[_dyntxt,[safezoneX + 0.01 * safezoneW,2.0],[safezoneY + 0.01 * safezoneH + safeOffset,0.3],30,0.5] spawn BIS_fnc_dynamicText;
 		if (ShowHintText) then {
 			_message = parseText format ["
 				<t color='%5'>%1</t>
