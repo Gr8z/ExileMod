@@ -33,6 +33,7 @@ line0=0;line1=0;line2=0;line3=0;line4=0;line5=0;line6=0;line7=0;line8=0;
 
 if (!isDedicated) then {
 	"Gr8s_kill_msg"		addPublicVariableEventHandler {
+		private["_lvl","_time"];
 		_id = (_this select 1);
 		_killerName = _id select 0;
 		_pic		= _id select 1;
@@ -95,7 +96,7 @@ if (!isDedicated) then {
 		VictimNameColor,
 		DistanceColor
 		];
-		[_dyntxt,[safezoneX + 0.01 * safezoneW,2.0],[safezoneY + 0.01 * safezoneH + safeOffset,0.3],30,0.5] spawn BIS_fnc_dynamicText;
+		[_dyntxt,[safezoneX + 0.01 * safezoneW,2.0],[safezoneY + 0.01 * safezoneH + safeOffset,0.3],10,0.5,,4,1,0,_lvl] spawn BIS_fnc_dynamicText;
 		if (ShowHintText) then {
 			_message = parseText format ["
 				<t color='%5'>%1</t>
