@@ -30,113 +30,71 @@ WeaponNameColor	 = "#FFCC00"; // Text Color of the Weapon's Name. Only Works in 
 DistanceColor	 = "#FFCC00"; // Text Color of the kill Distance number.
 
 if (!isDedicated) then {
-	if (ShowDynamicText) then {
-		if (halvStyle) then {
-			"Gr8s_kill_msg"		addPublicVariableEventHandler {
-				_id = (_this select 1);
-				_killerName = _id select 0;
-				_pic		= _id select 1;
-				_victimName = _id select 2;
-				_distance 	= _id select 3;
-				_weapon 	= _id select 4;
-				_dyntxt = format["
-				<t size='0.15'align='left'shadow='1'color='%6'>%1</t>
-				<t size='0.15'align='left'shadow='1'>  Killed  </t>
-				<t size='0.15'align='left'shadow='1'color='%7'>%2</t><br/>
-				<t size='0.15'align='left'shadow='1'> With: </t>
-				<t size='0.15'align='left'shadow='1'color='%8'>%3</t>
-				<t size='0.15'align='left'shadow='1'> - Distance: </t>
-				<t size='0.15'align='left'shadow='1'color='%9'>%4m</t><br/>
-				<img size='0.5' align='left'shadow='1'image='%5'/>
-				",
-				_killerName,
-				_victimName,
-				_weapon,
-				_distance,
-				_pic,
-				KillerNameColor,
-				VictimNameColor,
-				WeaponNameColor,
-				DistanceColor
-				];
-				[_dyntxt,[safezoneX + 0.01 * safezoneW,2.0],[safezoneY + 0.01 * safezoneH,0.3],30,0.5] spawn BIS_fnc_dynamicText;
-				if (ShowHintText) then {
-					_message = parseText format ["
-						<t color='%5'>%1</t>
-						<t>Killed </t>
-						<t color='%6'>%2</t>
-						<t>With </t>
-						<t color='%7'>%3</t>
-						<t>from </t>
-						<t color='%8'>%4m</t>
-						",
-						_killerName,
-						_victimName,
-						_weapon,
-						_distance,
-						KillerNameColor,
-						VictimNameColor,
-						WeaponNameColor,
-						DistanceColor
-					];
-					hintSilent _message;
-				};
-			};
+	"Gr8s_kill_msg"		addPublicVariableEventHandler {
+		_id = (_this select 1);
+		_killerName = _id select 0;
+		_pic		= _id select 1;
+		_victimName = _id select 2;
+		_distance 	= _id select 3;
+		_weapon 	= _id select 4;
+
+		_time = diag_tickTime;
+		_check = (_time - 9);
+		if (line8 > _check) then {
+		        line0 = _time; _lvl = 6000; _safeOffset = 0;
+		        line1 = 0; line2 = 0; line3 = 0; line4 = 0; line5 = 0; line6 = 0; line7 = 0; line8 = 0;
 		} else {
-			"Gr8s_kill_msg"		addPublicVariableEventHandler {
-				_id = (_this select 1);
-				_killerName = _id select 0;
-				_pic		= _id select 1;
-				_victimName = _id select 2;
-				_distance 	= _id select 3;
-				_weapon 	= _id select 4;
-				_dyntxt = format["
-				<t align='left'size='0.6'color='%5'>%1 </t>
-				<img size='0.8'align='left' image='%2'/>
-				<t align='left'size='0.6'color='%6'> %3 </t>
-				<t align='left'size='0.6'color='%7'>[%4m]</t>
-				",
-				_killerName,
-				_pic,
-				_victimName,
-				_distance,
-				KillerNameColor,
-				VictimNameColor,
-				DistanceColor
-				];
-				[_dyntxt,[safezoneX + 0.01 * safezoneW,2.0],[safezoneY + 0.01 * safezoneH,0.3],30,0.5] spawn BIS_fnc_dynamicText;
-				if (ShowHintText) then {
-					_message = parseText format ["
-						<t color='%5'>%1</t>
-						<t>Killed </t>
-						<t color='%6'>%2</t>
-						<t>With </t>
-						<t color='%7'>%3</t>
-						<t>from </t>
-						<t color='%8'>%4m</t>
-						",
-						_killerName,
-						_victimName,
-						_weapon,
-						_distance,
-						KillerNameColor,
-						VictimNameColor,
-						WeaponNameColor,
-						DistanceColor
-					];
-					hintSilent _message;
-				};
-			};
+		        if (line7 > _check) then {
+		                line8 = _time; _lvl = 6008; _safeOffset = 0.4;
+		        } else {
+		                if (line6 > _check) then {
+		                        line7 = _time; _lvl = 6007; _safeOffset = 0.35;
+		                } else {
+		                        if (line5 > _check) then {
+		                                line6 = _time; _lvl = 6006; _safeOffset = 0.3;
+		                        } else {
+		                                if (line4 > _check) then {
+		                                        line5 = _time; _lvl = 6005; _safeOffset = 0.25;
+		                                } else {
+		                                        if (line3 > _check) then {
+		                                                line4 = _time; _lvl = 6004; _safeOffset = 0.2;
+		                                        } else {
+		                                                if (line2 > _check) then {
+		                                                        line3 = _time; _lvl = 6003; _safeOffset = 0.15;
+		                                                } else {
+		                                                        if (line1 > _check) then {
+		                                                                line2 = _time; _lvl = 6002; _safeOffset = 0.10;
+		                                                        } else {
+		                                                                if (line0 > _check) then {
+		                                                                        line1 = _time; _lvl = 6001; _safeOffset = 0.05;
+		                                                                } else {
+		                                                                        line0 = _time; _lvl = 6000; _safeOffset = 0;
+		                                                                };
+		                                                        };
+		                                                };
+		                                        };
+		                                };
+		                        };
+		                };
+		        };
 		};
-	};
-	if ((ShowHintText) && !(ShowDynamicText)) then {
-		"Gr8s_kill_msg"		addPublicVariableEventHandler {
-			_id = (_this select 1);
-			_killerName = _id select 0;
-			_pic		= _id select 1;
-			_victimName = _id select 2;
-			_distance 	= _id select 3;
-			_weapon 	= _id select 4;
+
+		_dyntxt = format["
+		<t align='left'size='0.6'color='%5'>%1 </t>
+		<img size='0.8'align='left' image='%2'/>
+		<t align='left'size='0.6'color='%6'> %3 </t>
+		<t align='left'size='0.6'color='%7'>[%4m]</t>
+		",
+		_killerName,
+		_pic,
+		_victimName,
+		_distance,
+		KillerNameColor,
+		VictimNameColor,
+		DistanceColor
+		];
+		[_dyntxt,[safezoneX + 0.01 * safezoneW,2.0],[safezoneY + 0.01 * safezoneH + _safeOffset,0.3],30,0.5] spawn BIS_fnc_dynamicText;
+		if (ShowHintText) then {
 			_message = parseText format ["
 				<t color='%5'>%1</t>
 				<t>Killed </t>
