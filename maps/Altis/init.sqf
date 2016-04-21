@@ -3,3 +3,5 @@
 [] execVM "GG\zcp.sqf";
 [] execVM "GG\VirtualGarage\VirtualGarage_Client_Init.sqf";
 [] execVM "GG\reward.sqf";
+
+call ExileClient_system_map_initialize;
