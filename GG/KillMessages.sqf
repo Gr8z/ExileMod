@@ -42,7 +42,7 @@ if (!isDedicated) then {
 		_weapon 	= _id select 4;
 
 		_time = diag_tickTime;
-		_check = (_time - 9);
+		_check = (_time - 20);
 		if (line8 > _check) then {
 		        line0 = _time; _lvl = 6000; safeOffset = 0;
 		        line1 = 0; line2 = 0; line3 = 0; line4 = 0; line5 = 0; line6 = 0; line7 = 0; line8 = 0;
