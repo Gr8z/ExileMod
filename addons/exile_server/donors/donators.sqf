@@ -34,6 +34,7 @@ SlotDonor = [
 	"76561198059945472", // Danny (OD-2016-04-04) #13433
 	"76561197971687271", // H4ppyK1llM0r3 (EXP-2016-06-05) Paid one month
 	"76561197985318459", // WirelessPillow (OD-2016-04-06) #13443
+	"76561198140807016", // Pool (OD-2016-04-20) #13512 
 	"76561198146083701", // America (OD-2016-04-09) #13456 
 	"76561198158550520", // Beercules FG (OD-2016-04-17) #13492 
 	// Add UIDs above, don't forget the comma
@@ -154,6 +155,7 @@ Scout2 = [
 	"76561197980662311", // ezPK XS PWR (OD-2015-09-15) #11479
 	"76561198062796125", // ezPK Zephyr (OD-2015-09-15) #11597
 	"76561198194022719", //  bUSTAH (OD-2016-04-03) #13429 
+	"76561198145760616", //  Mattie (OD-2016-04-21) #13515  
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout2";
@@ -221,6 +223,7 @@ Soldier3 = [
 	"76561198158550520", // BeerculesFG (OD-2016-04-16) #13489     
 	"76561198187457311", // rocky (OD-2016-04-17) #13494     
 	"76561198065712189", // Luisnext (OD-2016-04-18) #13491     
+	"76561198174214191", // Blake (OD-2016-04-22) #13518      
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Soldier3";
