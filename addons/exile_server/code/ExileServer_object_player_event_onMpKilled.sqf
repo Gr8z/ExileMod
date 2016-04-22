@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
 
-private["_victim","_killer","_victimPosition","_addDeathStat","_addKillStat","_normalkill","_killerRespectPoints","_fragAttributes","_player","_grpvictim","_grpkiller","_log","_lastVictims","_victimUID","_vehicleRole","_vehicle","_lastKillAt","_killStack","_distance","_distanceBonus","_flagNextToKiller","_homieBonus","_flagNextToVictim","_raidBonus","_overallRespectChange","_newKillerScore","_killMessage","_newKillerFrags","_newVictimDeaths","_weapon","_txt","_pic"];
+private["_locationNames","_victimNear","_victim","_killer","_victimPosition","_addDeathStat","_addKillStat","_normalkill","_killerRespectPoints","_fragAttributes","_player","_grpvictim","_grpkiller","_log","_lastVictims","_victimUID","_vehicleRole","_vehicle","_lastKillAt","_killStack","_distance","_distanceBonus","_flagNextToKiller","_homieBonus","_flagNextToVictim","_raidBonus","_overallRespectChange","_newKillerScore","_killMessage","_newKillerFrags","_newVictimDeaths","_weapon","_txt","_pic"];
 if (!isServer || hasInterface) exitWith {};
 _victim = _this select 0;
 _killer = _this select 1;
@@ -17,6 +17,7 @@ if( isNull _victim ) exitWith {};
 _victim setVariable ["ExileDiedAt", time];
 if !(isPlayer _victim) exitWith {};
 _victimPosition = getPos _victim;
+_locationNames = nearestLocations [_victimPosition, ["ExileTerritory","NameCityCapital","NameCity","NameVillage","NameLocal","Hill","NameMarine"], 4000];   
 format["insertPlayerHistory:%1:%2:%3:%4:%5", getPlayerUID _victim, name _victim, _victimPosition select 0, _victimPosition select 1, _victimPosition select 2] call ExileServer_system_database_query_fireAndForget;
 format["deletePlayer:%1", _victim getVariable ["ExileDatabaseId", -1]] call ExileServer_system_database_query_fireAndForget;
 _victim setVariable ["ExileIsDead", true];
@@ -258,13 +259,20 @@ else
 					_weapon = currentWeapon _killer;
 					_txt = (gettext (configFile >> 'cfgWeapons' >> _weapon >> 'displayName'));
 					_pic = (gettext (configFile >> 'cfgWeapons' >> _weapon >> 'picture'));
+					if (_weapon isKindOf "StaticWeapon") then {
+						_weapon = typeOf (vehicle _killer);
+					    _pic = (getText (configFile >> 'cfgVehicles' >> _weapon >> 'picture'));
+					    _txt = (getText (configFile >> 'cfgVehicles' >> _weapon >> 'displayName'));
+					};
 					if (_pic == "") then {
 					    _weapon = typeOf (vehicle _killer);
 					    _pic = (getText (configFile >> 'cfgVehicles' >> _weapon >> 'picture'));
 					    _txt = (getText (configFile >> 'cfgVehicles' >> _weapon >> 'displayName'));
 					};
 					format["setAccountScore:%1:%2", _newKillerScore,getPlayerUID _killer] call ExileServer_system_database_query_fireAndForget;
-					_killMessage = format ["%1 was killed by %2", (name _victim), (name _killer)];
+
+					_victimNear = text (_locationNames select 0);
+					_killMessage = format ["%1 was killed by %2 with %3 near %4", (name _victim), (name _killer), (text _weapon), (text _victimNear)];
 
 					Gr8s_kill_msg = [(name _killer), _pic, (name _victim), floor(_victim distance _killer), _txt, nil, nil];
 					if (LogPlayerKills) then {format["logGr8Kill:%1:%2:%3:%4:%5:%6:%7", (name _killer), getPlayerUID _killer, (name _victim), getPlayerUID _victim, _txt, floor(_victim distance _killer), _overallRespectChange] call ExileServer_system_database_query_insertSingle;};
