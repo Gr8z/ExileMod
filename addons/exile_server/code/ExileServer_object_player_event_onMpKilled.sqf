@@ -272,7 +272,7 @@ else
 					format["setAccountScore:%1:%2", _newKillerScore,getPlayerUID _killer] call ExileServer_system_database_query_fireAndForget;
 
 					_victimNear = text (_locationNames select 0);
-					_killMessage = format ["%1 was killed by %2 with %3 near %4", (name _victim), (name _killer), (text _weapon), (text _victimNear)];
+					_killMessage = format ["%1 was killed by %2 with %3 near %4", (name _victim), (name _killer), (text _txt), (text _victimNear)];
 
 					Gr8s_kill_msg = [(name _killer), _pic, (name _victim), floor(_victim distance _killer), _txt, nil, nil];
 					if (LogPlayerKills) then {format["logGr8Kill:%1:%2:%3:%4:%5:%6:%7", (name _killer), getPlayerUID _killer, (name _victim), getPlayerUID _victim, _txt, floor(_victim distance _killer), _overallRespectChange] call ExileServer_system_database_query_insertSingle;};
