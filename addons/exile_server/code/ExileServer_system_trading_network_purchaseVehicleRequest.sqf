@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_parameters","_vehicleClass","_pinCode","_playerObject","_salesPrice","_playerMoney","_position","_vehicleObject","_responseCode","_nObject", "_position3d","_position2d"];
+private["_sessionID","_parameters","_vehicleClass","_pinCode","_playerObject","_salesPrice","_playerMoney","_position","_vehicleObject","_responseCode"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
 _vehicleClass = _parameters select 0;
@@ -50,29 +50,17 @@ try
 	};
 	if (_vehicleClass isKindOf "Ship") then 
 	{
-		_nObject = nearestObject [(getPosATL _playerObject), "Land_HelipadEmpty_F"];
-	    if ( isNull _nObject ) then { throw 13; };
-	    _position = getPos _nObject;
-	    _position set [2, 0.0];
-		_vehicleObject = [_vehicleClass, _position, (random 360), true, _pinCode] call ExileServer_object_vehicle_createPersistentVehicle;
+		_position = [(getPosATL _playerObject), 80, 10] call ExileClient_util_world_findWaterPosition;
+		_vehicleObject = [_vehicleClass, _position, (random 360), false, _pinCode] call ExileServer_object_vehicle_createPersistentVehicle;
 	}
 	else 
 	{
-		 if (_vehicleClass isKindOf "Air") then 
-		   {
-		     _nObject = nearestObject [(getPosATL _playerObject), "Land_HelipadSquare_F"];
-		     if ( isNull _nObject ) then { throw 13; };
-		     _position3d = getPos _nObject;
-		     _position2d = [_position3d select 0, _position3d select 1];
-		   }
-		   else 
-		   {
-		     _nObject = nearestObject [(getPosATL _playerObject), "Land_HelipadEmpty_F"];
-		     if ( isNull _nObject ) then { throw 13; };
-		     _position3d = getPos _nObject;
-		     _position2d = [_position3d select 0, _position3d select 1];
-		   };
-		_vehicleObject = [_vehicleClass, _position3d, (random 360), true, _pinCode] call ExileServer_object_vehicle_createPersistentVehicle;
+		_position = (getPos _playerObject) findEmptyPosition [10, 175, _vehicleClass];
+		if (_position isEqualTo []) then 
+		{
+			throw 13;
+		};
+		_vehicleObject = [_vehicleClass, _position, (random 360), true, _pinCode] call ExileServer_object_vehicle_createPersistentVehicle;
 	};	
 	_vehicleObject setVariable ["ExileOwnerUID", (getPlayerUID _playerObject)];
 	_vehicleObject setVariable ["ExileIsLocked",0];
@@ -80,7 +68,7 @@ try
 	_vehicleObject call ExileServer_object_vehicle_database_insert;
 	_vehicleObject call ExileServer_object_vehicle_database_update;
 	_playerMoney = _playerMoney - _salesPrice;
-
+	
     // Advance Banking
    _playerObject setVariable ["ExilePurse", _playerMoney];
    format["updateWallet:%1:%2", _playerMoney, (getPlayerUID _playerObject)] call ExileServer_system_database_query_fireAndForget;
