@@ -277,7 +277,6 @@ _trader =
     "WhiteHead_17",
     ["LHD_krajPaluby"],
     [4045.31,11660.9,0.0014],258.577
-    0
 ]
 call ExileClient_object_trader_create;
 _trader setVariable ["ExileTraderType", "Exile_Trader_Aircraft"];
