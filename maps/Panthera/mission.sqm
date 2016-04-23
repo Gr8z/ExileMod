@@ -166,7 +166,7 @@ class Mission {
 	
 	class Markers
 	{
-		items=9;
+		items=11;
 		class Item0
 		{
 			position[]={982.15198,10.451057,689.38965};
@@ -241,6 +241,22 @@ class Mission {
 			colorName="ColorBlue";
 			a=120;
 			b=120;
+		};
+		class Item9
+		{
+			position[]={4200.3047,-29.77,9793.2842};
+			name="Website";
+			text="www.GHOSTZGAMERZ.com";
+			type="mil_pickup";
+			colorName="ColorYellow";
+		};
+		class Item10
+		{
+			position[]={4200.3047,-29.77,9468.0898};
+			name="Teamspeak";
+			text="TS.GHOSTZGAMERZ.COM";
+			type="mil_pickup";
+			colorName="ColorYellow";
 		};
 	};
 };
