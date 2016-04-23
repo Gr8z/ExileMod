@@ -113,7 +113,6 @@ Marksman3 = [
 	"76561198146744943", // eG_massacre (OD-2016-03-29) #13402
 	"76561198075036133", // flipside (OD-2016-04-01) #13417 
 	"76561197961021355", // =UN= Emilio (OD-2016-04-01) #13419  
-	"76561197971655623", // Robbie Digital (Lifetime loadout for Promo Vid)  
 	"76561198094001482", // ProfoundGenius (OD-2016-04-02) #13423 
 	"76561198130561905", // LewE (OD-2016-04-22) #13521  
 	"76561198133852474", // Chief (OD-2016-04-23) #13529   
@@ -182,6 +181,7 @@ Scout3 = [
 	"76561198182107266", // Jarjar (OD-2016-04-22) #13525       
 	"76561198229309284", // Mikey (OD-2016-04-22) #13520        
 	"76561198088251390", // Six (OD-2016-03-30) #13400 (paid three months in advanced)
+	"76561197971655623", // Robbie Digital (Lifetime loadout for Promo Vid)  
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout3";
