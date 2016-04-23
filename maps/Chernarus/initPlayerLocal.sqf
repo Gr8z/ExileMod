@@ -273,6 +273,17 @@ _trader setVariable ["ExileTraderType", "Exile_Trader_Aircraft"];
 
 _trader =
 [
+    "Exile_Trader_Aircraft",
+    "WhiteHead_17",
+    ["LHD_krajPaluby"],
+    [4045.31,11660.9,0.0014],258.577
+    0
+]
+call ExileClient_object_trader_create;
+_trader setVariable ["ExileTraderType", "Exile_Trader_Aircraft"];
+
+_trader =
+[
     "Exile_Trader_AircraftCustoms",
     "GreekHead_A3_07",
     ["HubStandingUC_idle1", "HubStandingUC_idle2", "HubStandingUC_idle3", "HubStandingUC_move1", "HubStandingUC_move2"],
