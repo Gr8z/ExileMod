@@ -1275,6 +1275,21 @@ class CfgExileArsenal
 	class H_StrawHat_dark							{ quality = 1; price = 6; };
 
 	///////////////////////////////////////////////////////////////////////////////
+	// Racing Helmets
+	///////////////////////////////////////////////////////////////////////////////
+	class H_RacingHelmet_1_F						{ quality = 1; price = 600; };
+	class H_RacingHelmet_2_F						{ quality = 1; price = 600; };
+	class H_RacingHelmet_3_F						{ quality = 1; price = 600; };
+	class H_RacingHelmet_4_F						{ quality = 1; price = 600; };
+	class H_RacingHelmet_1_black_F					{ quality = 1; price = 600; };	
+	class H_RacingHelmet_1_blue_F					{ quality = 1; price = 600; };	
+	class H_RacingHelmet_1_green_F					{ quality = 1; price = 600; };	
+	class H_RacingHelmet_1_red_F					{ quality = 1; price = 600; };	
+	class H_RacingHelmet_1_white_F					{ quality = 1; price = 600; };	
+	class H_RacingHelmet_1_yellow_F					{ quality = 1; price = 600; };	
+	class H_RacingHelmet_1_orange_F					{ quality = 1; price = 600; };	
+
+	///////////////////////////////////////////////////////////////////////////////
 	// Berets
 	///////////////////////////////////////////////////////////////////////////////
 	class H_Beret_02								{ quality = 1; price = 6; };
@@ -1547,6 +1562,21 @@ class CfgExileArsenal
 	class H_PilotHelmetFighter_B					{ quality = 2; price = 150; };
 	class H_PilotHelmetFighter_I					{ quality = 2; price = 150; };
 	class H_PilotHelmetFighter_O					{ quality = 2; price = 150; };
+
+	///////////////////////////////////////////////////////////////////////////////
+	// DLC Driver Uniforms
+	///////////////////////////////////////////////////////////////////////////////
+	class U_C_Driver_1								{ quality = 3; price = 150; };
+	class U_C_Driver_2								{ quality = 3; price = 150; };
+	class U_C_Driver_3								{ quality = 3; price = 150; };
+	class U_C_Driver_4								{ quality = 3; price = 150; };
+	class U_C_Driver_1_black						{ quality = 3; price = 300; };
+	class U_C_Driver_1_blue							{ quality = 3; price = 300; };
+	class U_C_Driver_1_green						{ quality = 3; price = 300; };
+	class U_C_Driver_1_red							{ quality = 3; price = 300; };
+	class U_C_Driver_1_white						{ quality = 3; price = 300; };
+	class U_C_Driver_1_yellow						{ quality = 3; price = 300; };
+	class U_C_Driver_1_orange						{ quality = 3; price = 300; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Backpacks
@@ -3774,7 +3804,18 @@ class CfgTraderCategories
 			"U_I_HeliPilotCoveralls",
 			"U_B_PilotCoveralls",
 			"U_I_pilotCoveralls",
-			"U_O_PilotCoveralls"
+			"U_O_PilotCoveralls",
+			"U_C_Driver_1",
+			"U_C_Driver_2",
+			"U_C_Driver_3",
+			"U_C_Driver_4",
+			"U_C_Driver_1_black",
+			"U_C_Driver_1_blue",
+			"U_C_Driver_1_green",
+			"U_C_Driver_1_red",
+			"U_C_Driver_1_white",
+			"U_C_Driver_1_yellow",
+			"U_C_Driver_1_orange"
 		};
 	};
 
@@ -3937,7 +3978,18 @@ class CfgTraderCategories
 			"H_PilotHelmetHeli_B",
 			"H_PilotHelmetHeli_I",
 			"H_PilotHelmetHeli_O",
-			"Exile_Headgear_SantaHat"
+			"Exile_Headgear_SantaHat",
+			"H_RacingHelmet_1_F",
+			"H_RacingHelmet_2_F",
+			"H_RacingHelmet_3_F",
+			"H_RacingHelmet_4_F",
+			"H_RacingHelmet_1_black_F",
+			"H_RacingHelmet_1_blue_F",
+			"H_RacingHelmet_1_green_F",
+			"H_RacingHelmet_1_red_F	",
+			"H_RacingHelmet_1_white_F",
+			"H_RacingHelmet_1_yellow_F",
+			"H_RacingHelmet_1_orange_F"
 		};
 	};
 
