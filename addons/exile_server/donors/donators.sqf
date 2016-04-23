@@ -180,6 +180,7 @@ Scout3 = [
 	"76561198065667653", // Quantum (OD-2016-04-11) #13462     
 	"76561198158550520", // Beercules FG (OD-2016-04-23) #13527      
 	"76561198182107266", // Jarjar (OD-2016-04-22) #13525       
+	"76561198229309284", // Mikey (OD-2016-04-22) #13520        
 	"76561198088251390", // Six (OD-2016-03-30) #13400 (paid three months in advanced)
 // Add UIDs above, don't forget the comma
 "0"
