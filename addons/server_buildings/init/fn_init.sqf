@@ -20,5 +20,6 @@ switch(toLower worldName)do{
 	case "panthera3":{
 		diag_log "Loading Panthera Custom Buildings";
 		call compile preprocessFileLineNumbers "x\addons\a3_epoch_server_building\buildings\Panthera\traders.sqf";
+		call compile preprocessFileLineNumbers "x\addons\a3_epoch_server_building\buildings\Panthera\banks.sqf";
 	};
 };
