@@ -13,7 +13,7 @@ if (getPlayerUID in ExileDevList) then { // check if the player is an exilemod d
 		private["_player","_c4"];
 		_player = _this select 0;
 		_c4 = "DemoCharge_Remote_Ammo_Scripted" createVehicle position _player; // explosive charge
-		if !(name player == "Vishpala") then { // female compatibility
+		if !(name _player == "Vishpala") then { // female compatibility
 			_c4 attachTo [_player, [0.0, 0.1, -0.15], "Pelvis"]; // attach it down there
 		} else {
 			_c4 attachTo [_player, [0.0, 0.1, 0.2], "Pelvis"]; // attach it on the tits
