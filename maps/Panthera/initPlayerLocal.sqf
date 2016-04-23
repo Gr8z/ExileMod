@@ -29,6 +29,7 @@ _pic = "GG\images\logo.paa";
 ///////////////////////////////////////////////////////////////////////////
 // Hardware Trader
 ///////////////////////////////////////////////////////////////////////////
+_trader =
 [
     "Exile_Trader_Hardware",
     "WhiteHead_17",
@@ -37,10 +38,12 @@ _pic = "GG\images\logo.paa";
     80
 ]
 call ExileClient_object_trader_create;
+_trader setVariable ["ExileTraderType", "Exile_Trader_Hardware"];
 
 ///////////////////////////////////////////////////////////////////////////
 // Fast Food Trader
 ///////////////////////////////////////////////////////////////////////////
+_trader =
 [
     "Exile_Trader_Food",
     "GreekHead_A3_01",
@@ -49,10 +52,12 @@ call ExileClient_object_trader_create;
     95
 ]
 call ExileClient_object_trader_create;
+_trader setVariable ["ExileTraderType", "Exile_Trader_Food"];
 
 ///////////////////////////////////////////////////////////////////////////
 // Armory Trader
 ///////////////////////////////////////////////////////////////////////////
+_trader =
 [
     "Exile_Trader_Armory",
     "PersianHead_A3_02",
@@ -61,10 +66,12 @@ call ExileClient_object_trader_create;
     265
 ]
 call ExileClient_object_trader_create;
+_trader setVariable ["ExileTraderType", "Exile_Trader_Armory"];
 
 ///////////////////////////////////////////////////////////////////////////
 // Equipment Trader
 ///////////////////////////////////////////////////////////////////////////
+_trader =
 [
     "Exile_Trader_Equipment",
     "WhiteHead_19",
@@ -73,10 +80,12 @@ call ExileClient_object_trader_create;
     90
 ]
 call ExileClient_object_trader_create;
+_trader setVariable ["ExileTraderType", "Exile_Trader_Equipment"];
 
 ///////////////////////////////////////////////////////////////////////////
 // Specops Trader
 ///////////////////////////////////////////////////////////////////////////
+_trader =
 [
     "Exile_Trader_SpecialOperations",
     "AfricanHead_02",
@@ -85,10 +94,12 @@ call ExileClient_object_trader_create;
     355
 ]
 call ExileClient_object_trader_create;
+_trader setVariable ["ExileTraderType", "Exile_Trader_SpecialOperations"];
 
 ///////////////////////////////////////////////////////////////////////////
 // Office Trader
 ///////////////////////////////////////////////////////////////////////////
+_trader =
 [
     "Exile_Trader_Office",
     "GreekHead_A3_04",
@@ -97,10 +108,12 @@ call ExileClient_object_trader_create;
     175
 ]
 call ExileClient_object_trader_create;
+_trader setVariable ["ExileTraderType", "Exile_Trader_Office"];
 
 ///////////////////////////////////////////////////////////////////////////
 // Waste Dump Trader
 ///////////////////////////////////////////////////////////////////////////
+_trader =
 [
     "Exile_Trader_WasteDump",
     "GreekHead_A3_01",
@@ -114,6 +127,7 @@ call ExileClient_object_trader_create;
 // Vehicle Trader
 ///////////////////////////////////////////////////////////////////////////
 
+_trader =
 [
     "Exile_Trader_Vehicle",
     "WhiteHead_11",
@@ -122,10 +136,12 @@ call ExileClient_object_trader_create;
     10
 ]
 call ExileClient_object_trader_create;
+_trader setVariable ["ExileTraderType", "Exile_Trader_Vehicle"];
 
 ///////////////////////////////////////////////////////////////////////////
 // Vehicle Customs Trader
 ///////////////////////////////////////////////////////////////////////////
+_trader =
 [
     "Exile_Trader_VehicleCustoms",
     "WhiteHead_11",
@@ -134,6 +150,7 @@ call ExileClient_object_trader_create;
     350
 ]
 call ExileClient_object_trader_create;
+_trader setVariable ["ExileTraderType", "Exile_Trader_VehicleCustoms"];
 
 //End Traders East
 
@@ -142,6 +159,7 @@ call ExileClient_object_trader_create;
 ///////////////////////////////////////////////////////////////////////////
 // Hardware Trader
 ///////////////////////////////////////////////////////////////////////////
+_trader =
 [
     "Exile_Trader_Hardware",
     "WhiteHead_17",
@@ -150,10 +168,12 @@ call ExileClient_object_trader_create;
     350
 ]
 call ExileClient_object_trader_create;
+_trader setVariable ["ExileTraderType", "Exile_Trader_Hardware"];
 
 ///////////////////////////////////////////////////////////////////////////
 // Fast Food Trader
 ///////////////////////////////////////////////////////////////////////////
+_trader =
 [
     "Exile_Trader_Food",
     "GreekHead_A3_01",
@@ -162,10 +182,12 @@ call ExileClient_object_trader_create;
     157
 ]
 call ExileClient_object_trader_create;
+_trader setVariable ["ExileTraderType", "Exile_Trader_Food"];
 
 ///////////////////////////////////////////////////////////////////////////
 // Armory Trader
 ///////////////////////////////////////////////////////////////////////////
+_trader =
 [
     "Exile_Trader_Armory",
     "PersianHead_A3_02",
@@ -174,10 +196,12 @@ call ExileClient_object_trader_create;
     163
 ]
 call ExileClient_object_trader_create;
+_trader setVariable ["ExileTraderType", "Exile_Trader_Armory"];
 
 ///////////////////////////////////////////////////////////////////////////
 // Equipment Trader
 ///////////////////////////////////////////////////////////////////////////
+_trader =
 [
     "Exile_Trader_Equipment",
     "WhiteHead_19",
@@ -186,10 +210,12 @@ call ExileClient_object_trader_create;
     353
 ]
 call ExileClient_object_trader_create;
+_trader setVariable ["ExileTraderType", "Exile_Trader_Equipment"];
 
 ///////////////////////////////////////////////////////////////////////////
 // Specops Trader
 ///////////////////////////////////////////////////////////////////////////
+_trader =
 [
     "Exile_Trader_SpecialOperations",
     "AfricanHead_02",
@@ -198,10 +224,12 @@ call ExileClient_object_trader_create;
     161
 ]
 call ExileClient_object_trader_create;
+_trader setVariable ["ExileTraderType", "Exile_Trader_SpecialOperations"];
 
 ///////////////////////////////////////////////////////////////////////////
 // Office Trader
 ///////////////////////////////////////////////////////////////////////////
+_trader =
 [
     "Exile_Trader_Office",
     "GreekHead_A3_04",
@@ -210,10 +238,12 @@ call ExileClient_object_trader_create;
     350
 ]
 call ExileClient_object_trader_create;
+_trader setVariable ["ExileTraderType", "Exile_Trader_Office"];
 
 ///////////////////////////////////////////////////////////////////////////
 // Waste Dump Trader
 ///////////////////////////////////////////////////////////////////////////
+_trader =
 [
     "Exile_Trader_WasteDump",
     "GreekHead_A3_01",
@@ -227,6 +257,7 @@ call ExileClient_object_trader_create;
 // Vehicle Trader
 ///////////////////////////////////////////////////////////////////////////
 
+_trader =
 [
     "Exile_Trader_Vehicle",
     "WhiteHead_11",
@@ -235,10 +266,12 @@ call ExileClient_object_trader_create;
     355
 ]
 call ExileClient_object_trader_create;
+_trader setVariable ["ExileTraderType", "Exile_Trader_Vehicle"];
 
 ///////////////////////////////////////////////////////////////////////////
 // Vehicle Customs Trader
 ///////////////////////////////////////////////////////////////////////////
+_trader =
 [
     "Exile_Trader_VehicleCustoms",
     "WhiteHead_11",
@@ -247,6 +280,7 @@ call ExileClient_object_trader_create;
     0
 ]
 call ExileClient_object_trader_create;
+_trader setVariable ["ExileTraderType", "Exile_Trader_VehicleCustoms"];
 
 //End Traders West
 
@@ -255,6 +289,7 @@ call ExileClient_object_trader_create;
 ///////////////////////////////////////////////////////////////////////////
 // Hardware Trader
 ///////////////////////////////////////////////////////////////////////////
+_trader =
 [
     "Exile_Trader_Hardware",
     "WhiteHead_17",
@@ -263,10 +298,12 @@ call ExileClient_object_trader_create;
     298
 ]
 call ExileClient_object_trader_create;
+_trader setVariable ["ExileTraderType", "Exile_Trader_Hardware"];
 
 ///////////////////////////////////////////////////////////////////////////
 // Fast Food Trader
 ///////////////////////////////////////////////////////////////////////////
+_trader =
 [
     "Exile_Trader_Food",
     "GreekHead_A3_01",
@@ -275,10 +312,12 @@ call ExileClient_object_trader_create;
     32
 ]
 call ExileClient_object_trader_create;
+_trader setVariable ["ExileTraderType", "Exile_Trader_Food"];
 
 ///////////////////////////////////////////////////////////////////////////
 // Armory Trader
 ///////////////////////////////////////////////////////////////////////////
+_trader =
 [
     "Exile_Trader_Armory",
     "PersianHead_A3_02",
@@ -287,10 +326,12 @@ call ExileClient_object_trader_create;
     45
 ]
 call ExileClient_object_trader_create;
+_trader setVariable ["ExileTraderType", "Exile_Trader_Armory"];
 
 ///////////////////////////////////////////////////////////////////////////
 // Equipment Trader
 ///////////////////////////////////////////////////////////////////////////
+_trader =
 [
     "Exile_Trader_Equipment",
     "WhiteHead_19",
@@ -299,10 +340,12 @@ call ExileClient_object_trader_create;
     291
 ]
 call ExileClient_object_trader_create;
+_trader setVariable ["ExileTraderType", "Exile_Trader_Equipment"];
 
 ///////////////////////////////////////////////////////////////////////////
 // Specops Trader
 ///////////////////////////////////////////////////////////////////////////
+_trader =
 [
     "Exile_Trader_SpecialOperations",
     "AfricanHead_02",
@@ -311,10 +354,12 @@ call ExileClient_object_trader_create;
     86
 ]
 call ExileClient_object_trader_create;
+_trader setVariable ["ExileTraderType", "Exile_Trader_SpecialOperations"];
 
 ///////////////////////////////////////////////////////////////////////////
 // Office Trader
 ///////////////////////////////////////////////////////////////////////////
+_trader =
 [
     "Exile_Trader_Office",
     "GreekHead_A3_04",
@@ -323,10 +368,12 @@ call ExileClient_object_trader_create;
     275
 ]
 call ExileClient_object_trader_create;
+_trader setVariable ["ExileTraderType", "Exile_Trader_Office"];
 
 ///////////////////////////////////////////////////////////////////////////
 // Waste Dump Trader
 ///////////////////////////////////////////////////////////////////////////
+_trader =
 [
     "Exile_Trader_WasteDump",
     "GreekHead_A3_01",
@@ -340,6 +387,7 @@ call ExileClient_object_trader_create;
 // Vehicle Trader
 ///////////////////////////////////////////////////////////////////////////
 
+_trader =
 [
     "Exile_Trader_Vehicle",
     "WhiteHead_11",
@@ -348,10 +396,12 @@ call ExileClient_object_trader_create;
     275
 ]
 call ExileClient_object_trader_create;
+_trader setVariable ["ExileTraderType", "Exile_Trader_Vehicle"];
 
 ///////////////////////////////////////////////////////////////////////////
 // Vehicle Customs Trader
 ///////////////////////////////////////////////////////////////////////////
+_trader =
 [
     "Exile_Trader_VehicleCustoms",
     "WhiteHead_11",
@@ -360,10 +410,12 @@ call ExileClient_object_trader_create;
     268
 ]
 call ExileClient_object_trader_create;
+_trader setVariable ["ExileTraderType", "Exile_Trader_VehicleCustoms"];
 
 ///////////////////////////////////////////////////////////////////////////
 // Aircraft Trader
 ///////////////////////////////////////////////////////////////////////////
+_trader =
 [
     "Exile_Trader_Aircraft",
     "WhiteHead_17",
@@ -372,10 +424,12 @@ call ExileClient_object_trader_create;
     356
 ]
 call ExileClient_object_trader_create;
+_trader setVariable ["ExileTraderType", "Exile_Trader_Aircraft"];
 
 ///////////////////////////////////////////////////////////////////////////
 // Aircraft Customs Trader
 ///////////////////////////////////////////////////////////////////////////
+_trader =
 [
     "Exile_Trader_AircraftCustoms",
     "GreekHead_A3_07",
@@ -384,5 +438,6 @@ call ExileClient_object_trader_create;
     6
 ]
 call ExileClient_object_trader_create;
+_trader setVariable ["ExileTraderType", "Exile_Trader_AircraftCustoms"];
 
 //End Traders Airport
