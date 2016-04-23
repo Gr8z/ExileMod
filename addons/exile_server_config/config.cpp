@@ -41,12 +41,6 @@ class CfgBuildings
 		positions[] = {{-5.74805, 11.0859, -3.75002}, {0.789063, -2.94336, -11.0953}, {1.07813, -2.83008, 5.39755}};
 	};
 
-	class Land_Lighthouse_small_F
-	{
-		table = "Tourist";
-		positions[] = {{-0.369141, 1.18555, -3.39546}, {4.32617, -0.462891, -3.39546}};
-	};
-
 	class Land_Castle_01_tower_F
 	{
 		table = "Tourist";
