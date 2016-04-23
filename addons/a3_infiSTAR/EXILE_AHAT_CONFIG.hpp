@@ -114,7 +114,6 @@ adminUIDandAccess[] =
 	{
 		{
 		 "76561198115492831", // BigEgg
-		 "76561198001066546", // Meowmix
 		 //Add UID's Above - Don't forget the comma!
 		"0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
