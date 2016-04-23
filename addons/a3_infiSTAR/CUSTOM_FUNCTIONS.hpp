@@ -22,6 +22,6 @@ class CfgCustomFunctions {
 	class custom1 {
 		type = 0;	// just execute
 		name = "Delete all player mapmarkers";
-		code = "{private "_a";_a = toArray _x;_a resize 15;if (toString _a == "_USER_DEFINED #") then {deleteMarker _x;}} forEach allMapMarkers;";
+		code = "{private '_a';_a = toArray _x;_a resize 15;if (toString _a == '_USER_DEFINED #') then {deleteMarker _x;}} forEach allMapMarkers;";
 	};
 };
