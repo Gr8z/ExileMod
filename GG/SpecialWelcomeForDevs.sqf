@@ -7,7 +7,7 @@ ExileDevList =
 ];
 
 waitUntil {!isNull findDisplay 46 && !isNil 'ExileClientLoadedIn' && getPlayerUID player != ''}; // wait till they are loaded in
-if (getPlayerUID in ExileDevList) then { // check if the player is an exilemod dev
+if (getPlayerUID player in ExileDevList) then { // check if the player is an exilemod dev
 	uiSleep 10; // Give em sometime to parachute in.
 	[player] spawn {
 		private["_player","_c4"];
