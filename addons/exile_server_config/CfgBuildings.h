@@ -1,4 +1,3 @@
-
 class Tourist {
  table = "Tourist";
 };
@@ -1605,11 +1604,6 @@ class Land_i_House_Small_02_V3_F : CivillianUpperClass {
     {3.60645, 0.225098, -0.735188},
     {-0.376465, 0.177734, -0.735188},
     {-2.93262, -1.70117, -0.735188}
-  };
-};
-class Land_LifeguardTower_01_F : Military {
-  positions[] = {
-    {-0.472656, -0.210938, 1.11835}
   };
 };
 class Land_i_Shop_01_V1_F : CivillianUpperClass {
