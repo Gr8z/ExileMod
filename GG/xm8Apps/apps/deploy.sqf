@@ -72,9 +72,6 @@ _infoBox ctrlSetBackgroundColor [0.11,0.106,0.125,1];
  
 fnc_okToDeploy = {
   _ok = true;
- 
-  _Time = time - lastDeploy;
-  _LastUsedTime = 120;
 
   if (ExileClientPlayerIsInCombat) then { 
     (findDisplay 24015) closeDisplay 0;
@@ -93,13 +90,6 @@ fnc_okToDeploy = {
   if (!("ItemRadio" in (items player) || "ItemRadio" in (assigneditems player)) && !(donorVeh)) then {
     (findDisplay 24015) closeDisplay 0;
     _msg = "You need a radio to deploy a vehicle !";
-    ["Whoops",_msg] call ExileClient_gui_notification_event_addNotification;
-    _ok = false;
-  };
-
-  if (_Time < _LastUsedTime) then {
-    (findDisplay 24015) closeDisplay 0;
-    _msg = format["please wait %1s before deploying another vehicle!",(round(_Time - _LastUsedTime))];
     ["Whoops",_msg] call ExileClient_gui_notification_event_addNotification;
     _ok = false;
   };
@@ -128,8 +118,6 @@ fnc_deployselected = {
     _spawnDir = (getDir player) -90;
     _veh = createVehicle[VehicleClassName, _spawnPos , [] ,0 , "NONE"];
     _veh setDir _spawnDir;
-
-    lastDeploy = time;
 
     if !(donorVeh) then {
       player unlinkItem "ItemRadio";

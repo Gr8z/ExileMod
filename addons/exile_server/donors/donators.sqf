@@ -41,6 +41,14 @@ SlotDonor = [
 "0"
 ];publicVariable "SlotDonor";
 
+vehicleDonor = [
+	// VIP RESERVED SLOTS
+	"76561198078201908", // Gr8 
+	"76561198153784743", // Ghost
+	// Add UIDs above, don't forget the comma
+"0"
+];publicVariable "vehicleDonor";
+
 /////////// Engineer Class ///////
 Engineer1 = [
 	"0", // NAME (OD-00-00-0000) #0000
