@@ -109,13 +109,6 @@ _playerUID = getPlayerUID player;
 			_dueDateDis ctrlSetFontHeight 0.05;
 			_dueDateDis ctrlSetText Format["Due Date: %1",_dueDate];
 			
-			_payDis = _display ctrlCreate ["RscButtonMenu", 866];
-			_payDis ctrlSetPosition [(9.9 - 3) * (0.025), (20 - 2) * (0.04), 2.5 * (0.12), 1 * (0.04)];
-			_payDis ctrlCommit 0;
-			_payDis ctrlSetFontHeight 0.05;
-			_payDis ctrlSetText "Pay Protection Money";
-			_payDis ctrlSetEventHandler ["ButtonClick", "call ExileClient_gui_payTerritoryProtectionMoneyDialog_show"];
-			
 			_GoBackBtn = _display ctrlCreate ["RscButtonMenu", 1116];
 			_GoBackBtn ctrlSetPosition [(32 - 3) * (0.025),(20 - 2) * (0.04),6 * (0.025),1 * (0.04)];
 			_GoBackBtn ctrlCommit 0;
