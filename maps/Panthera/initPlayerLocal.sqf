@@ -480,3 +480,16 @@ _trader = [
 ]
 call ExileClient_object_trader_create;
 _trader setVariable ["ExileTraderType", "Exile_Trader_Boat"];
+
+/////////////////////////////
+// Boat Dealer Volkovo     //
+/////////////////////////////
+_trader = [
+    "Exile_Trader_Boat",
+    "WhiteHead_10",
+    ["HubStandingUA_idle1"],
+    [3833.29,7581.96,14.2599],
+    18.419
+]
+call ExileClient_object_trader_create;
+_trader setVariable ["ExileTraderType", "Exile_Trader_Boat"];

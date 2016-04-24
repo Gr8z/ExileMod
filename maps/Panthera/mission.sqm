@@ -268,7 +268,7 @@ class Mission {
 		{
 			position[] = {2293.6211,26.885509,3157.9854};
 			name = "Boriana Trader City";
-			text="Boriana Trader City";
+			text="Trader City Boriana";
 			type = "loc_Tree";
 			colorName = "ColorGreen";
 			fillName = "Vertical";
@@ -279,7 +279,7 @@ class Mission {
 		{
 			position[] = {4177.73,3.0899999,7467.1201};
 			name="Trader City Airport";
-			text="Trader City Airport";
+			text="Trader City Arnoldstein";
 			type = "loc_Tree";
 			colorName = "ColorGreen";
 			fillName = "Vertical";
@@ -296,6 +296,90 @@ class Mission {
 			fillName = "Vertical";
 			a = 3;
 			b = 3;
+		};
+		class Item9
+		{
+			position[]={9109.99,0,9930.22,3.90446};
+			name="North Docks";
+			text="Boat Dealer";
+			type="mil_triangle";
+			colorName = "ColorYellow";	
+		};	
+		class Item10
+		{
+			position[] = {9109.99,0,9930.22,3.90446};
+			name = "NorthDocks111";
+			text = "";
+			markerType = "ELLIPSE";
+			type = "ExileTraderZone";
+			colorName = "ColorYellow";
+			fillName = "SolidBorder";
+			a = 100;
+			b = 100;
+			drawBorder = 1;
+		};
+		class Item11
+		{
+			position[]={2936.03,0,1215.46,6.60139};
+			name="Port Rontus";
+			text="Boat Dealer";
+			type="mil_triangle";
+			colorName = "ColorYellow";	
+		};
+		class Item12
+		{
+			position[]={2936.03,0,1215.46,6.60139};
+			name="PortRontus111";
+			text="";
+			markerType = "ELLIPSE";
+			type = "ExileTraderZone";
+			colorName = "ColorYellow";
+			fillName = "SolidBorder";
+			a = 100;
+			b = 100;
+			drawBorder = 1;
+		};
+		class Item13
+		{
+			position[]={1873.65,0,7876.93,26.0192};
+			name="Volkovo";
+			text="Boat Dealer";
+			type="mil_triangle";
+			colorName = "ColorYellow";	
+		};
+		class Item14
+		{
+			position[]={1873.65,0,7876.93,26.0192};
+			name="Volkovo111";
+			text="";
+			markerType = "ELLIPSE";
+			type = "ExileTraderZone";
+			colorName = "ColorYellow";
+			fillName = "SolidBorder";
+			a = 100;
+			b = 100;
+			drawBorder = 1;
+		};
+		class Item13
+		{
+			position[]={3833.29,0,7581.96};
+			name="Volkovo";
+			text="Boat Dealer";
+			type="mil_triangle";
+			colorName = "ColorYellow";	
+		};
+		class Item14
+		{
+			position[]={3833.29,0,7581.96};
+			name="Volkovo111";
+			text="";
+			markerType = "ELLIPSE";
+			type = "ExileTraderZone";
+			colorName = "ColorYellow";
+			fillName = "SolidBorder";
+			a = 100;
+			b = 100;
+			drawBorder = 1;
 		};
 	};
 };
