@@ -166,7 +166,7 @@ class Mission {
 	
 	class Markers
 	{
-		items=11;
+		items=14;
 		class Item0
 		{
 			position[]={982.15198,10.451057,689.38965};
@@ -216,9 +216,11 @@ class Mission {
 			text="Boriana Trader City";
 			markerType="ELLIPSE";
 			type="ExileTraderZone";
-			colorName="ColorBlue";
+			colorName = "ColorGreen";
+			fillName = "SolidBorder";
 			a=120;
 			b=120;
+			drawBorder = 1;
 		};
 		class Item7
 		{
@@ -227,9 +229,11 @@ class Mission {
 			text="Airport Traders";
 			markerType="ELLIPSE";
 			type="ExileTraderZone";
-			colorName="ColorBlue";
+			colorName = "ColorGreen";
+			fillName = "SolidBorder";
 			a=120;
 			b=120;
+			drawBorder = 1;
 		};
 		class Item8
 		{
@@ -238,9 +242,11 @@ class Mission {
 			text="Porto Ritmo Traders";
 			markerType="ELLIPSE";
 			type="ExileTraderZone";
-			colorName="ColorBlue";
+			colorName = "ColorGreen";
+			fillName = "SolidBorder";
 			a=120;
 			b=120;
+			drawBorder = 1;
 		};
 		class Item9
 		{
@@ -257,6 +263,39 @@ class Mission {
 			text="TS.GHOSTZGAMERZ.COM";
 			type="mil_pickup";
 			colorName="ColorYellow";
+		};
+		class Item11
+		{
+			position[] = {2293.6211,26.885509,3157.9854};
+			name = "Boriana Trader City";
+			text="Boriana Trader City";
+			type = "loc_Tree";
+			colorName = "ColorGreen";
+			fillName = "Vertical";
+			a = 3;
+			b = 3;
+		};
+		class Item12
+		{
+			position[] = {4177.73,3.0899999,7467.1201};
+			name="Trader City Airport";
+			text="Trader City Airport";
+			type = "loc_Tree";
+			colorName = "ColorGreen";
+			fillName = "Vertical";
+			a = 3;
+			b = 3;
+		};
+		class Item13
+		{
+			position[]={8727.4307,10.253727,2309.5342};
+			name="Trader City Porto";
+			text="Trader City Porto";
+			type = "loc_Tree";
+			colorName = "ColorGreen";
+			fillName = "Vertical";
+			a = 3;
+			b = 3;
 		};
 	};
 };
