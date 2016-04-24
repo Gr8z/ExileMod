@@ -16,9 +16,9 @@ _app3Logo = "GG\xm8Apps\images\binocs.paa";
 app3_action = { [] call CHVD_fnc_openDialog };
 
 //App 4
-_app4Text = "DEPLOY BIKE";
+_app4Text = "DEPLOY VEHICLES";
 _app4Logo = "\dbo\dbo_old_bike\data\icon_mmt_ca.paa";
-app4_action = { [] execVM "GG\xm8Apps\apps\spawn_bike.sqf"; };
+app4_action = { [] execVM "GG\xm8Apps\apps\deploy.sqf"; };
 
 //App 5
 _app5Text = "AIR DROP";
