@@ -3402,6 +3402,7 @@ class CfgInteractionModels
 			"Land_WaterCooler_01_new_F",
 			"Land_WaterCooler_01_old_F",
 			"Land_pumpa",
+			"kasna_new.p3d",
 			// Namalsk
 			"wellpump",
 			"Land_jhad_stand_water",
@@ -3485,7 +3486,10 @@ class CfgInteractionModels
 			"fuel_tank_stairs.p3d",
 			"a_fuelstation_feed.p3d",
 			"ind_tanksmall.p3d",
-			"ind_tanksmall2.p3d"
+			"ind_tanksmall2.p3d",
+			"benzina_schenell.p3d",
+			"fuelstation_army.p3d",
+			"fuelstation.p3d"
 		};	
 	};
 
