@@ -441,3 +441,42 @@ call ExileClient_object_trader_create;
 _trader setVariable ["ExileTraderType", "Exile_Trader_AircraftCustoms"];
 
 //End Traders Airport
+
+/////////////////////////////
+// Boat Dealer North Docks //
+/////////////////////////////
+_trader = [
+    "Exile_Trader_Boat",
+    "WhiteHead_10",
+    ["HubStandingUA_idle1"],
+    [9109.99,9930.22,3.90446],
+    185
+]
+call ExileClient_object_trader_create;
+_trader setVariable ["ExileTraderType", "Exile_Trader_Boat"];
+
+/////////////////////////////
+// Boat Dealer Port Rontus //
+/////////////////////////////
+_trader = [
+    "Exile_Trader_Boat",
+    "WhiteHead_10",
+    ["HubStandingUA_idle1"],
+    [2936.03,1215.46,6.60139],
+    250
+]
+call ExileClient_object_trader_create;
+_trader setVariable ["ExileTraderType", "Exile_Trader_Boat"];
+
+/////////////////////////////
+// Boat Dealer Volkovo     //
+/////////////////////////////
+_trader = [
+    "Exile_Trader_Boat",
+    "WhiteHead_10",
+    ["HubStandingUA_idle1"],
+    [1873.65,7876.93,26.0192],
+    85
+]
+call ExileClient_object_trader_create;
+_trader setVariable ["ExileTraderType", "Exile_Trader_Boat"];
