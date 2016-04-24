@@ -67,7 +67,7 @@ _crate3Buy ctrlSetEventHandler ["ButtonClick", "VehicleName = _Vehicle3Name;Vehi
 _infoBox = _display ctrlCreate ["RscStructuredText", 1230];
 _infoBox ctrlSetPosition [(23 - 3) * (0.025),(6 - 2) * (0.04),(0.32),16 * (0.04)];
 _infoBox ctrlCommit 0;
-_infoBox ctrlSetStructuredText (parseText (format ["<t align='center'size='0.8'> Deploy Vehicles<br/>(%1)<br/><br/>You can buy vehicles from your xm8 through this app. You can deploy one anywhere you want but some vehicles are only allowed to Donators. Money will be deducted from your bank if you pick a boat or a Quad.<br/><img image='\dbo\dbo_old_bike\data\icon_mmt_ca.paa' size='8.0' shadow='0' />",name player, orderIDcharacters, a1, a2]));
+_infoBox ctrlSetStructuredText (parseText (format ["<t align='center'size='0.8'> Deploy Vehicles<br/>(%1)<br/><br/>You can buy vehicles from your xm8 through this app. You can deploy one anywhere you want but some vehicles are only allowed to Donators. Money will be deducted from your bank if you pick a boat or a Quad.<br/><img image='\dbo\dbo_old_bike\data\icon_mmt_ca.paa' size='8.0' shadow='0' />",name player]));
 _infoBox ctrlSetBackgroundColor [0.11,0.106,0.125,1];
  
 fnc_okToDeploy = {
