@@ -4,8 +4,8 @@ if (ExileClientPlayerIsInCombat) exitWith { hint "You cannot deploy a bike in co
 (findDisplay 24015) closeDisplay 0;
 _spawnPos = player modelToWorld [0,2,0];
 _spawnDir = (getDir player) -90;
-do_MakeBike = [player, _spawnPos, _spawnDir];
 player unlinkItem "ItemRadio";
-publicVariableServer "do_MakeBike";
-uiSleep 1;
+_veh = createVehicle["Exile_Bike_MountainBike", _spawnPos , [] ,0 , "NONE"];
+_veh setDir _spawnDir;
 ["Success", ["Bike Deployed! Radio removed!"]] call ExileClient_gui_notification_event_addNotification;
+_veh addEventHandler ["getin", "'down' cutText ['WARNING: Deployed Bikes do not save through restarts','PLAIN DOWN'];"];
