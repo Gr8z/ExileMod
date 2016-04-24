@@ -142,7 +142,6 @@ adminUIDandAccess[] =
 	{
 		{
 		 "76561197960289679", //TangoWhiskey
-		 "76561198058099842", //Fap
 		 "76561198133936962", // Wrice4
 		 "76561198088251390", // SIX
 		 "76561197979611157", // Clanzoucu
@@ -150,6 +149,7 @@ adminUIDandAccess[] =
 		 "76561198056028211", // Nasty
 		 "76561198065188130", // Nacho
 		 "76561198073495490", // Adam Kadmon
+		 "76561198129318411", // FriendlyFire
 		 "0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
 			"Teleport On Map Click","Teleport - Target To Me","Teleport - Me To Target","Teleport In Facing Direction (10m steps)",
@@ -177,7 +177,6 @@ adminUIDandAccess[] =
 		{ 
 		 "76561198201637928", // Vex
 		 "76561198101663483", // Chubby/spider
-		 "76561198129318411", // FriendlyFire
 		 "76561198056745227", // Dexter
 		 "76561198078011082", // Jesse
 		 "76561198060389676", // Powerwolf
