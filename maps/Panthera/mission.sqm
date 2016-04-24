@@ -166,7 +166,7 @@ class Mission {
 	
 	class Markers
 	{
-		items=14;
+		items=22;
 		class Item0
 		{
 			position[]={982.15198,10.451057,689.38965};
@@ -297,7 +297,7 @@ class Mission {
 			a = 3;
 			b = 3;
 		};
-		class Item9
+		class Item14
 		{
 			position[]={9109.99,0,9930.22,3.90446};
 			name="North Docks";
@@ -305,7 +305,7 @@ class Mission {
 			type="mil_triangle";
 			colorName = "ColorYellow";	
 		};	
-		class Item10
+		class Item15
 		{
 			position[] = {9109.99,0,9930.22,3.90446};
 			name = "NorthDocks111";
@@ -318,7 +318,7 @@ class Mission {
 			b = 100;
 			drawBorder = 1;
 		};
-		class Item11
+		class Item16
 		{
 			position[]={2936.03,0,1215.46,6.60139};
 			name="Port Rontus";
@@ -326,7 +326,7 @@ class Mission {
 			type="mil_triangle";
 			colorName = "ColorYellow";	
 		};
-		class Item12
+		class Item17
 		{
 			position[]={2936.03,0,1215.46,6.60139};
 			name="PortRontus111";
@@ -339,7 +339,7 @@ class Mission {
 			b = 100;
 			drawBorder = 1;
 		};
-		class Item13
+		class Item18
 		{
 			position[]={1873.65,0,7876.93,26.0192};
 			name="Volkovo";
@@ -347,7 +347,7 @@ class Mission {
 			type="mil_triangle";
 			colorName = "ColorYellow";	
 		};
-		class Item14
+		class Item19
 		{
 			position[]={1873.65,0,7876.93,26.0192};
 			name="Volkovo111";
@@ -360,7 +360,7 @@ class Mission {
 			b = 100;
 			drawBorder = 1;
 		};
-		class Item13
+		class Item20
 		{
 			position[]={3833.29,0,7581.96};
 			name="Volkovo";
@@ -368,7 +368,7 @@ class Mission {
 			type="mil_triangle";
 			colorName = "ColorYellow";	
 		};
-		class Item14
+		class Item21
 		{
 			position[]={3833.29,0,7581.96};
 			name="Volkovo111";
