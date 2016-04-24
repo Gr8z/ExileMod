@@ -1046,6 +1046,21 @@ class CraftBandage: Exile_AbstractCraftingRecipe
 		{1, "Exile_Item_ToiletPaper"}
 	};
 };
+class CraftPopTabs: Exile_AbstractCraftingRecipe
+{
+	name = "Make Money";
+	pictureItem = "CUP_item_Money";
+	returnedItems[] =
+	{
+		{1, "	"}
+	};
+	components[] = 
+	{
+		{1, "Exile_Item_Magazine01"},
+		{1, "Exile_Item_Magazine02"},
+		{1, "Exile_Item_Magazine03"}
+	};
+};
 };
 class CfgExileArsenal
 {
@@ -1392,10 +1407,9 @@ class CfgExileArsenal
 	class muzzle_snds_M 							{ quality = 1; price = 10; };
 
 	///////////////////////////////////////////////////////////////////////////////
-	// UAVS
+	// Money
 	///////////////////////////////////////////////////////////////////////////////
-//	class I_UavTerminal								{ quality = 3; price = 750; };
-//	class I_UAV_01_backpack_F						{ quality = 3; price = 5000; };
+	class CUP_item_Money							{ quality = 3; price = 100000; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Static MGs
@@ -1475,6 +1489,8 @@ class CfgExileArsenal
 	class Exile_Item_Raisins						{ quality = 1; price = 10; }; //15, 30
 	class Exile_Item_Moobar							{ quality = 1; price = 8; }; //10, 30
 	class Exile_Item_InstantCoffee					{ quality = 1; price = 30; }; //5, 10
+	class Exile_Item_CockONut						{ quality = 1; price = 60; }; //5, 10
+	class Exile_Item_DsNuts							{ quality = 1; price = 70; }; //5, 10
 	class Exile_Item_Can_Empty						{ quality = 1; price = 1; sellPrice = 1; };
 
 	///////////////////////////////////////////////////////////////////////////////
@@ -4135,7 +4151,9 @@ class CfgTraderCategories
 			"Exile_Item_SeedAstics",
 			"Exile_Item_Raisins",
 			"Exile_Item_Moobar",
-			"Exile_Item_InstantCoffee"
+			"Exile_Item_InstantCoffee",
+			"Exile_Item_CockONut",
+			"Exile_Item_DsNuts"
 		};
 	};
 
