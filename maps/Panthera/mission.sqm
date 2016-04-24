@@ -24,7 +24,7 @@ class Mission {
 	randomSeed = 8080942;
 	
 	class Intel {
-		briefingName="[GG] Ghostz Gamerz ExileMod Chernarus";
+		briefingName="[GG] Ghostz Gamerz ExileMod Panthera";
 		overviewText="[GG] Ghostz Gamerz | Web: GHOSTZGAMERZ.com | TS: ts.ghostzgamerz.com";
 		timeOfChanges = 1800;
 		startWeather = 0.3;
@@ -303,15 +303,11 @@ class Mission {
 class Intro {
 	addOns[]=
 	{
-		"A3_Characters_F_Civil",
-		"a3_characters_f",
-		"aia_chernarus_config"
+		"a3_map_panthera3"
 	};
 	addOnsAuto[]=
 	{
-		"A3_Characters_F_Civil",
-		"a3_characters_f",
-		"aia_chernarus_config"
+		"a3_map_panthera3"
 	};
 	randomSeed = 3611332;
 	
