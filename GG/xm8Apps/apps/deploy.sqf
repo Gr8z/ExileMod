@@ -73,7 +73,7 @@ _infoBox ctrlSetBackgroundColor [0.11,0.106,0.125,1];
 fnc_okToDeploy = {
   _ok = true;
  
-  _Time = time - lastDrop;
+  _Time = time - lastDeploy;
   _LastUsedTime = 120;
 
   if (ExileClientPlayerIsInCombat) then { 
@@ -128,6 +128,9 @@ fnc_deployselected = {
     _spawnDir = (getDir player) -90;
     _veh = createVehicle[VehicleClassName, _spawnPos , [] ,0 , "NONE"];
     _veh setDir _spawnDir;
+
+    lastDeploy = time;
+
     if !(donorVeh) then {
       player unlinkItem "ItemRadio";
       ["Success",[format["%1 Deployed! Radio removed...",VehicleName]]] call ExileClient_gui_notification_event_addNotification;
