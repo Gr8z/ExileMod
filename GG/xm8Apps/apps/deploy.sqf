@@ -80,35 +80,42 @@ fnc_okToDeploy = {
     (findDisplay 24015) closeDisplay 0;
     _msg = "You cannot deploy a vehicle in combat";
     ["Whoops",_msg] call ExileClient_gui_notification_event_addNotification;
-    _ok = false;DropInProgress = false;
+    _ok = false;
   };
 
-  if (!("ItemRadio" in (items player) || "ItemRadio" in (assigneditems player))) then {
+  if ((donorVeh) && !(getPlayerUID player in vehicleDonor)) then {
+    (findDisplay 24015) closeDisplay 0;
+    _msg = "You have not donated for this perk.";
+    ["Whoops",_msg] call ExileClient_gui_notification_event_addNotification;
+    _ok = false;
+  };
+
+  if (!("ItemRadio" in (items player) || "ItemRadio" in (assigneditems player)) && !(donorVeh)) then {
     (findDisplay 24015) closeDisplay 0;
     _msg = "You need a radio to deploy a vehicle !";
     ["Whoops",_msg] call ExileClient_gui_notification_event_addNotification;
-    _ok = false;DropInProgress = false;
+    _ok = false;
   };
 
   if (_Time < _LastUsedTime) then {
     (findDisplay 24015) closeDisplay 0;
     _msg = format["please wait %1s before deploying another vehicle!",(round(_Time - _LastUsedTime))];
     ["Whoops",_msg] call ExileClient_gui_notification_event_addNotification;
-    _ok = false;DropInProgress = false;
+    _ok = false;
   };
  
   if (vehicle player != player) then {
     (findDisplay 24015) closeDisplay 0;
     _msg = "You are in a vehicle and cannot perform that action!";
     ["Whoops",_msg] call ExileClient_gui_notification_event_addNotification;
-    _ok = false;DropInProgress = false;
+    _ok = false;
   };
 
   if (ExileClientPlayerMoney < VehicleCost) then {
     (findDisplay 24015) closeDisplay 0;
     _msg = format["%1, Your order has been declined due to insufficient funds",name player];
     ["Whoops",_msg] call ExileClient_gui_notification_event_addNotification;
-    _ok = false;DropInProgress = false;
+    _ok = false;
   };
   _ok
 };
