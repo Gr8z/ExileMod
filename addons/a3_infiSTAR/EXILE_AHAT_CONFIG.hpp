@@ -114,6 +114,7 @@ adminUIDandAccess[] =
 	{
 		{
 		 "76561198115492831", // BigEgg
+		 "76561197978528230", // Dark
 		 //Add UID's Above - Don't forget the comma!
 		"0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
@@ -140,7 +141,6 @@ adminUIDandAccess[] =
 	},
 	{
 		{
-		 "76561197978528230", // Dark
 		 "76561197960289679", //TangoWhiskey
 		 "76561198058099842", //Fap
 		 "76561198133936962", // Wrice4
@@ -179,6 +179,8 @@ adminUIDandAccess[] =
 		 "76561198101663483", // Chubby/spider
 		 "76561198129318411", // FriendlyFire
 		 "76561198056745227", // Dexter
+		 "76561198078011082", // Jesse
+		 "76561198060389676", // Powerwolf
 		 // Add UID's Above - Don't forget the comma!
 		 "0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
