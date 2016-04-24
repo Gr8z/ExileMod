@@ -115,6 +115,7 @@ Marksman3 = [
 	"76561197961021355", // =UN= Emilio (OD-2016-04-01) #13419  
 	"76561198094001482", // ProfoundGenius (OD-2016-04-02) #13423 
 	"76561198130561905", // LewE (OD-2016-04-22) #13521    
+	"76561198082829958", // BlueFalcon (OD-2016-04-24) #13543    
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Marksman3";
@@ -231,6 +232,7 @@ Soldier3 = [
 	"76561198187457311", // rocky (OD-2016-04-17) #13494     
 	"76561198065712189", // Luisnext (OD-2016-04-18) #13491     
 	"76561198174214191", // Blake (OD-2016-04-22) #13518      
+	"76532298015716211", // [UN]MSgt. H. Lennar (OD-2016-04-24) #13547
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Soldier3";
