@@ -412,6 +412,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			for "_i" from 1 to 2 do {player addItemToVest "Exile_Item_InstaDoc";};
 			player addWeapon "Exile_Melee_Axe";
 			player linkItem "ItemGPS";
+			player linkItem "TRYK_TAC_SET_NV_MESH_2";
 			player addWeapon "Binocular";
 			call ExileClient_object_player_bambiStateEnd; };
 		};
