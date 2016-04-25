@@ -31,26 +31,26 @@ uiSleep 0.2;
 _drop1Info = _display ctrlCreate ["RscStructuredText", 851];
 _drop1Info ctrlSetPosition [(9.5 - 3) * (0.025),(6 - 2) * (0.04),(0.28),5 * (0.04)];
 _drop1Info ctrlCommit 0;
-_drop1Info ctrlSetStructuredText (parseText (format ["<br/><t align='center'size='1.4'>%2</t><br/><t align='center'size='0.8'>Price = <img image='a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa' size='0.8' shadow='0' />%1</t>",_Vehicle1Cost,_Vehicle1Name]));
+_drop1Info ctrlSetStructuredText (parseText (format ["<br/><t align='center'size='1.4'>%2</t><br/><t align='center'size='0.8'>Price = <img image='a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa' size='0.8' shadow='0' />%1</t>",Vehicle1Cost,Vehicle1Name]));
 _drop1Info ctrlSetBackgroundColor [0.11,0.106,0.125,1];
  
 _drop2Info = _display ctrlCreate ["RscStructuredText", 852];
 _drop2Info ctrlSetPosition [(9.5 - 3) * (0.025),(11.5 - 2) * (0.04),(0.28),5 * (0.04)];
 _drop2Info ctrlCommit 0;
-_drop2Info ctrlSetStructuredText (parseText (format ["<br/><t align='center'size='1.4'>%2</t><br/><t align='center'size='0.8'>Price = <img image='\exile_assets\texture\ui\poptab_notification_ca.paa' size='0.8' shadow='0' />%1</t>",_Vehicle2Cost,_Vehicle2Name]));
+_drop2Info ctrlSetStructuredText (parseText (format ["<br/><t align='center'size='1.4'>%2</t><br/><t align='center'size='0.8'>Price = <img image='\exile_assets\texture\ui\poptab_notification_ca.paa' size='0.8' shadow='0' />%1</t>",Vehicle2Cost,Vehicle2Name]));
 _drop2Info ctrlSetBackgroundColor [0.11,0.106,0.125,1];
  
 _drop3Info = _display ctrlCreate ["RscStructuredText", 853];
 _drop3Info ctrlSetPosition [(9.5 - 3) * (0.025),(17 - 2) * (0.04),(0.28),5 * (0.04)];
 _drop3Info ctrlCommit 0;
-_drop3Info ctrlSetStructuredText (parseText (format ["<br/><t align='center'size='1.4'>%2</t><br/><t align='center'size='0.8'>Price = <img image='\exile_assets\texture\ui\poptab_notification_ca.paa' size='0.8' shadow='0' />%1</t>",_Vehicle3Cost,_Vehicle3Name]));
+_drop3Info ctrlSetStructuredText (parseText (format ["<br/><t align='center'size='1.4'>%2</t><br/><t align='center'size='0.8'>Price = <img image='\exile_assets\texture\ui\poptab_notification_ca.paa' size='0.8' shadow='0' />%1</t>",Vehicle3Cost,Vehicle3Name]));
 _drop3Info ctrlSetBackgroundColor [0.11,0.106,0.125,1];
  
 _crate1Buy = _display ctrlCreate ["RscButtonMenu", 854];
 _crate1Buy ctrlSetPosition [(9.5 - 3) * (0.025),(10 - 2) * (0.04),0.280,1 * (0.04)];
 _crate1Buy ctrlCommit 0;
 _crate1Buy ctrlSetStructuredText (parseText (format ["<t align='center'>DEPLOY"]));
-_crate1Buy ctrlSetEventHandler ["ButtonClick", "VehicleName = Vehicle1Name;VehicleClassName = Vehicle1ClassName;VehicleCost = Vehicle1Cost;[] spawn fnc_deployselected;"];
+_crate1Buy ctrlSetEventHandler ["ButtonClick", "VehicleName = Vehicle1Name;VehicleClassName = Vehicle1ClassName;VehicleCost = Vehicle1Cost;donorVeh = false;[] spawn fnc_deployselected;"];
  
 _crate2Buy = _display ctrlCreate ["RscButtonMenu", 855];
 _crate2Buy ctrlSetPosition [(9.5 - 3) * (0.025),(15.5 - 2) * (0.04),0.280,1 * (0.04)];
