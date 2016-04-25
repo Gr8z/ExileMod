@@ -1,14 +1,14 @@
-_Vehicle1Name = "Mountain Bike";
-_Vehicle1ClassName = "Exile_Bike_MountainBike";
-_Vehicle1Cost = "1 Radio";
+Vehicle1Name = "Mountain Bike";
+Vehicle1ClassName = "Exile_Bike_MountainBike";
+Vehicle1Cost = "1 Radio";
  
-_Vehicle2Name = "Quad Bike";
-_Vehicle2ClassName = "Exile_Bike_QuadBike_Blue";
-_Vehicle2Cost = 250;
+Vehicle2Name = "Quad Bike";
+Vehicle2ClassName = "Exile_Bike_QuadBike_Blue";
+Vehicle2Cost = 250;
  
-_Vehicle3Name = "Boat";
-_Vehicle3ClassName = "Exile_Boat_RubberDuck_CSAT";
-_Vehicle3Cost = 800;
+Vehicle3Name = "Boat";
+Vehicle3ClassName = "Exile_Boat_RubberDuck_CSAT";
+Vehicle3Cost = 800;
  
 disableSerialization;
 _display = uiNameSpace getVariable ["RscExileXM8", displayNull];
@@ -50,19 +50,19 @@ _crate1Buy = _display ctrlCreate ["RscButtonMenu", 854];
 _crate1Buy ctrlSetPosition [(9.5 - 3) * (0.025),(10 - 2) * (0.04),0.280,1 * (0.04)];
 _crate1Buy ctrlCommit 0;
 _crate1Buy ctrlSetStructuredText (parseText (format ["<t align='center'>DEPLOY"]));
-_crate1Buy ctrlSetEventHandler ["ButtonClick", "VehicleName = _Vehicle1Name;VehicleClassName = _Vehicle1ClassName;VehicleCost = _Vehicle1Cost;[] spawn fnc_deployselected;"];
+_crate1Buy ctrlSetEventHandler ["ButtonClick", "VehicleName = Vehicle1Name;VehicleClassName = Vehicle1ClassName;VehicleCost = Vehicle1Cost;[] spawn fnc_deployselected;"];
  
 _crate2Buy = _display ctrlCreate ["RscButtonMenu", 855];
 _crate2Buy ctrlSetPosition [(9.5 - 3) * (0.025),(15.5 - 2) * (0.04),0.280,1 * (0.04)];
 _crate2Buy ctrlCommit 0;
 _crate2Buy ctrlSetStructuredText (parseText (format ["<t align='center'>DEPLOY"]));
-_crate2Buy ctrlSetEventHandler ["ButtonClick", "VehicleName = _Vehicle2Name;VehicleClassName = _Vehicle2ClassName;VehicleCost = _Vehicle2Cost;donorVeh = true;[] spawn fnc_deployselected;"];
+_crate2Buy ctrlSetEventHandler ["ButtonClick", "VehicleName = Vehicle2Name;VehicleClassName = Vehicle2ClassName;VehicleCost = Vehicle2Cost;donorVeh = true;[] spawn fnc_deployselected;"];
  
 _crate3Buy = _display ctrlCreate ["RscButtonMenu", 856];
 _crate3Buy ctrlSetPosition [(9.5 - 3) * (0.025),(21 - 2) * (0.04),0.280,1 * (0.04)];
 _crate3Buy ctrlCommit 0;
 _crate3Buy ctrlSetStructuredText (parseText (format ["<t align='center'>DEPLOY"]));
-_crate3Buy ctrlSetEventHandler ["ButtonClick", "VehicleName = _Vehicle3Name;VehicleClassName = _Vehicle3ClassName;VehicleCost = _Vehicle3Cost;donorVeh = true;[] spawn fnc_deployselected;"];
+_crate3Buy ctrlSetEventHandler ["ButtonClick", "VehicleName = Vehicle3Name;VehicleClassName = Vehicle3ClassName;VehicleCost = Vehicle3Cost;donorVeh = true;[] spawn fnc_deployselected;"];
  
 _infoBox = _display ctrlCreate ["RscStructuredText", 1230];
 _infoBox ctrlSetPosition [(23 - 3) * (0.025),(6 - 2) * (0.04),(0.32),16 * (0.04)];
