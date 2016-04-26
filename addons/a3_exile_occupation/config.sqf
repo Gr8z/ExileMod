@@ -27,7 +27,7 @@ SC_useWaypoints			    = false;					// When spawning AI create waypoints to make 
 
                                                     // Occupation Places (towns, villages & cities roaming AI)
 SC_occupyPlaces 			= true;				    // true if you want villages,towns,cities patrolled by bandits
-SC_occupyPlacesSurvivors	= true;	                // true if you want a chance to spawn survivor AI as well as bandits (SC_occupyPlaces must be true to use this option)
+SC_occupyPlacesSurvivors	= false;	                // true if you want a chance to spawn survivor AI as well as bandits (SC_occupyPlaces must be true to use this option)
 
                                                     // Occupation Military (roaming AI near military buildings)
 SC_occupyMilitary 		    = true;			    // true if you want military buildings patrolled (specify which types of building below)
