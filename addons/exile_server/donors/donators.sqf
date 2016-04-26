@@ -193,6 +193,7 @@ Scout3 = [
 	"76561198088251390", // Six (OD-2016-03-30) #13400 (paid three months in advanced)
 	"76561197971655623", // Robbie Digital (Lifetime loadout for Promo Vid)  
 	"76561198124203897", // Panda {OD-2016-04-23) #13538 
+	"76561198036004541", // Demen {OD-2016-04-25) #13573
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout3";
