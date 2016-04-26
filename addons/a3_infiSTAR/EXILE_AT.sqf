@@ -9,7 +9,7 @@
 	Arma AntiHack & AdminTools - infiSTAR.de
 */
 comment 'Antihack & AdminTools - Christian Lorenzen - www.infiSTAR.de';
-VERSION_DATE_IS = '14-Apr-2016 02-07-29#2111';
+VERSION_DATE_IS = '27-Apr-2016 01-23-58#2111';
 infiSTAR_customFunctions = [];
 _configClasses = "true" configClasses (configfile >> "CfgCustomFunctions");
 {
@@ -79,30 +79,45 @@ infiSTAR_MAIN_CODE = "
 	if(isNil 'SERVER_THREADS')then{SERVER_THREADS = '';};
 	if(isNil 'infiSTAR_toggled_A')then{infiSTAR_toggled_A = ['==== OnTarget ====','==== Toggleable ====','==== Custom Functions ===='];};
 	if(isNil 'infiSTAR_loop_array')then{infiSTAR_loop_array = [];};
-	if(isNil'FN_SHOW_LOGID')then{FN_SHOW_LOGID = 554466;};
-	FN_SHOW_LOG =
+
+
+FN_SHOW_LOGID = 554466;
+FN_SHOWN_LOGIDS = [];
+FN_SHOW_LOG =
+{
+	disableSerialization;
+	_del = {FN_SHOWN_LOGIDS = FN_SHOWN_LOGIDS - [_this];ctrlDelete _this;};
 	{
-		disableSerialization;
-		_ctrl = [findDisplay 46,'RSCText',FN_SHOW_LOGID] call fnc_createctrl;
-		_ctrl ctrlSetPosition [
-			-0.3,
-			safeZoneH + safeZoneY - 0.23,
+		if(_forEachIndex < 3)then
+		{
+			if(count FN_SHOWN_LOGIDS > 40)then{_x call _del;};
+		}
+		else
+		{
+			if(ctrlFade _x > 0.9)then{_x call _del;};
+		};
+	} forEach FN_SHOWN_LOGIDS;
+
+	_ctrl = [findDisplay 46,'RSCText',FN_SHOW_LOGID] call fnc_createctrl;
+	FN_SHOW_LOGID = FN_SHOW_LOGID + 1;
+	FN_SHOWN_LOGIDS pushBackUnique _ctrl;
+	
+	{
+		_x ctrlSetPosition [
+			0,
+			(safeZoneY + (_forEachIndex / 30)),
 			1.3,
-			0.5
+			0.2
 		];
-		_ctrl ctrlSetText format['%1',_this];
-		_ctrl ctrlCommit 0;
-		_ctrl ctrlSetPosition [
-			-0.3,
-			safeZoneY,
-			1.3,
-			0.5
-		];
-		_ctrl ctrlCommit 5;
-		_ctrl ctrlSetFade 1;
-		_ctrl ctrlCommit 10;
-		FN_SHOW_LOGID = FN_SHOW_LOGID + 1;
-	};
+		_x ctrlCommit 0;
+	} forEach FN_SHOWN_LOGIDS;
+
+	_ctrl ctrlSetText format['%1',_this];
+	_ctrl ctrlSetFade 1;
+	_ctrl ctrlCommit 5;
+};
+
+
 	fnc_get_selected_object = {
 		_target = lbtext[LEFT_CTRL_ID,(lbCurSel LEFT_CTRL_ID)];
 		if(_target isEqualTo '')then
@@ -1036,6 +1051,7 @@ infiSTAR_MAIN_CODE = "
 	fnc_reallyAdditem = {
 		params[['_target',player],['_class','']];
 		if(_class == '')exitWith{systemChat 'No Item selected!';};
+		
 		if(local _target)then
 		{
 			_added = [_target, _class] call ExileClient_util_playerEquipment_add;
@@ -1063,32 +1079,58 @@ infiSTAR_MAIN_CODE = "
 		}
 		else
 		{
-			['
-				_target = player;
+			_toserver = '
+				_target = (objectFromNetId '+str (netId _target)+');
 				_class = '+str _class+';
-				_added = [_target, _class] call ExileClient_util_playerEquipment_add;
-				if(!_added)then
+				
+				_driver = driver _target;
+				if(isPlayer _driver)then
 				{
-					_itemInformation = [_class] call BIS_fnc_itemType;
-					_itemCategory = _itemInformation select 0;
-					_itemType = _itemInformation select 1;
-					if(_itemCategory isEqualTo ''Magazine'')then
+					_target setOwner (owner _driver);
+				}
+				else
+				{
+					_crew = crew _target;
+					if!(_crew isEqualTo [])then
 					{
-						_target addMagazine _class;
-					}
-					else
-					{
-						if(_itemCategory isEqualTo ''Weapon'')then
 						{
-							_target addWeapon _class;
+							if(isPlayer _x)exitWith
+							{
+								_target setOwner (owner _x);
+							};
+						} forEach _crew;
+					};
+				};
+				
+				_owner = owner _target;
+				_code = {
+					params[''_target'',''_class''];
+					_added = [_target, _class] call ExileClient_util_playerEquipment_add;
+					if(!_added)then
+					{
+						_itemInformation = [_class] call BIS_fnc_itemType;
+						_itemCategory = _itemInformation select 0;
+						_itemType = _itemInformation select 1;
+						if(_itemCategory isEqualTo ''Magazine'')then
+						{
+							_target addMagazine _class;
 						}
 						else
 						{
-							_target addItem _class;
+							if(_itemCategory isEqualTo ''Weapon'')then
+							{
+								_target addWeapon _class;
+							}
+							else
+							{
+								_target addItem _class;
+							};
 						};
 					};
 				};
-			',_target] call admin_d0_target;
+				[[_target,_class],_code,_owner,false] call FN_infiSTAR_S;
+			';
+			[_toserver] call admin_d0_server;
 		};
 	};
 	fnc_HTML_LOAD = {
@@ -2526,7 +2568,12 @@ infiSTAR_MAIN_CODE = "
 	};
 	admin_showinfo = {
 		_obj = cursortarget;
-		if(!isNull _obj)then{[14,netId _obj] call fnc_AdminReq;};
+		if(!isNull _obj)then
+		{
+			[14,netId _obj] call fnc_AdminReq;
+			_log = format['used showinfo on: %1 @%2',typeOf _obj,mapGridPosition _obj];
+			_log call fnc_adminLog;
+		};
 	};
 	fnc_infiSTAR_A3cargod = {
 		if(isNil 'A3carGodRun')then
@@ -2823,6 +2870,8 @@ infiSTAR_MAIN_CODE = "
 		{
 			if(alive _target)then
 			{
+				if(_target getVariable ['killed',false])exitWith{};
+				
 				_log = format['Killing %1 @%2',typeOf _target,mapGridPosition _target];
 				if(getPlayerUID _target != '')then
 				{
@@ -2831,18 +2880,9 @@ infiSTAR_MAIN_CODE = "
 				_log call FN_SHOW_LOG;
 				
 				_log call fnc_adminLog;
+				_target setVariable ['killed',true];
 				[-2,netId _target] call fnc_AdminReq;
-			}
-			else
-			{
-				_log = 'target is dead';
-				_log call FN_SHOW_LOG;
 			};
-		}
-		else
-		{
-			_log = 'target does not exist';
-			_log call FN_SHOW_LOG;
 		};
 	};
 	fnc_Explode_selected = {
@@ -3172,7 +3212,7 @@ infiSTAR_MAIN_CODE = "
 		};
 	};
 	fnc_draw3dhandlerPLAYER1 = ""
-		_shown = [];
+		_shown = [player];
 		_iconTextSize = 380 * pixelH;
 		_nameTextSize = 16 * pixelH;
 		_shadow = 0;
@@ -4473,10 +4513,10 @@ infiSTAR_MAIN_CODE = "
 				if(ALLOW_ME_THIS_KEYBIND)then{[] call fnc_Hover;};
 			};
 			case 0x40: {
-				if('HealSelf' call ADMINLEVELACCESS)then{[] call infiSTAR_A3Heal;'HealSelf' call fnc_adminLog;};
+				if('HealSelf' call ADMINLEVELACCESS)then{[] call infiSTAR_A3Heal;'HealSelf' call fnc_adminLog;playsound 'AddItemOK';};
 			};
 			case 0x41: {
-				if('HealRepairNear' call ADMINLEVELACCESS)then{[] call infiSTAR_A3RestoreNear;'HealRepairNear' call fnc_adminLog;};
+				if('HealRepairNear' call ADMINLEVELACCESS)then{[] call infiSTAR_A3RestoreNear;'HealRepairNear' call fnc_adminLog;playsound 'AddItemOK';};
 			};
 			case 0x0F: {
 				if(_shift)then{openMap true;};

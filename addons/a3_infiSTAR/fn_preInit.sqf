@@ -12,7 +12,7 @@
 	'gr8_boi52@yahoo.com'
 	
 	Last download was on:
-	'14-Apr-2016 02-07-29';
+	'27-Apr-2016 01-23-58';
 	
 	NOTE:
 	THIS FILE SHOULD NOT BE TOUCHED UNLESS YOU REALLY KNOW WHAT YOU ARE DOING!
@@ -220,6 +220,7 @@ _LogPopTabIncrease = ["LogPopTabIncrease",15000] call fnc_infiSTAR_cfg;
 _checkRespectIncrease = ["checkRespectIncrease",false] call fnc_infiSTAR_cfg;
 _LogRespectIncrease = ["LogRespectIncrease",5000] call fnc_infiSTAR_cfg;
 _uniform_and_vest_check = ["uniform_and_vest_check",true] call fnc_infiSTAR_cfg;
+_checkFilePatchingEnabled = ["checkFilePatchingEnabled",true] call fnc_infiSTAR_cfg;
 _CMM = ["CMM",true] call fnc_infiSTAR_cfg;
 _maxMapMenuEntries = ["maxMapMenuEntries",6] call fnc_infiSTAR_cfg;
 _check_steam_ban = ["check_steam_ban",false] call fnc_infiSTAR_cfg;
@@ -241,7 +242,18 @@ _badIDDsToKick = ["badIDDsToKick",[]] call fnc_infiSTAR_cfg;
 _badIDDsToClose = ["badIDDsToClose",[]] call fnc_infiSTAR_cfg;
 _UDW = ["UDW",true] call fnc_infiSTAR_cfg;
 _allowedIDDs = ["allowedIDDs",[]] call fnc_infiSTAR_cfg;
-_blacklistedVariables = ["blacklistedVariables",[]] call fnc_infiSTAR_cfg;
+
+
+
+_checkMissionEventhandler = ["checkMissionEventhandler",false] call fnc_infiSTAR_cfg;
+_missionEventhandlers = [];
+if(_checkMissionEventhandler)then{_missionEventhandlers = ["missionEventhandlers",[]] call fnc_infiSTAR_cfg;};
+
+
+_useBlacklistedVariableCheck = ["useBlacklistedVariableCheck",false] call fnc_infiSTAR_cfg;
+_blacklistedVariables = [];
+if(_useBlacklistedVariableCheck)then{_blacklistedVariables = ["blacklistedVariables",[]] call fnc_infiSTAR_cfg;};
+
 _UVC = ["UVC",true] call fnc_infiSTAR_cfg;
 _UVC_adminspawn = ["UVC_adminspawn",true] call fnc_infiSTAR_cfg;
 _VehicleWhiteList_check = ["VehicleWhiteList_check",true] call fnc_infiSTAR_cfg;

@@ -212,7 +212,7 @@ ESCMNUTOP = "[GG] Ghostz Gamerz";
 ESCMNUBOT = "www.GHOSTZGAMERZ.com";
 BRIEFING_MSG = false;	/* use mission briefing message: if   "BRIEFING_MSG = false;"   then the message will be replaced by infiSTAR */
 HTML_LOAD_URL = "http://ghostzgamerz.com/esc.php";	/* HTML_LOAD_URL = ""; == disabled and if you set a url it will be shown in ESCAPE menu. HTML in Arma/this is limited. Try it :) example: "http://goo.gl/gb0o7b" */
-
+ENABLE_PRIVATE_CHAT_MENU = true; /* players can open it by typing !chat in chat or by  custom controls -> "Use Action 3" */
 
 /* shows RESTART IN X MINS */
 USE_RESTART_TIMER = true;			/* show time left to next restart */
@@ -254,10 +254,6 @@ attach_to_check = false;			/* logs and detaches attached vehicles that are close
 slingload_check = false;				/* forbid sling loading / rope attaching a vehicle with a crew */
 
 stopSafeGlitch = true;				/* re-assigning "InventoryOpened" eventhandler to stop glitch open a locked safe */
-checkKeyDown = false;				/* check for custom "KeyDown" (used to open or navigate in hackmenus) */
-checkKeyDownMax = 2;				/* max KeyDown handlers allowed */
-checkKeyUp = false;					/* check for custom "KeyUp" (used to open or navigate in hackmenus) */
-checkKeyUpMax = 2;					/* max KeyUp handlers allowed */
 
 checkPopTabIncrease = false;
 LogPopTabIncrease = 15000;			/* Only if checkPopTabIncrease = true; logs if poptabs increased by x within ~10 seconds */
@@ -266,7 +262,7 @@ checkRespectIncrease = false;
 LogRespectIncrease = 5000;			/* Only if checkRespectIncrease = true; logs if respect increased by x within ~10 seconds */
 
 uniform_and_vest_check = true;		/* In the current version of Arma3 it may happen that the uniform or vest you wear is not shown to other players due to a bug, this will log & fix that issue! */
-
+checkFilePatchingEnabled = true;	/* checks if filepatching is enabled on the client (if it is, the client could inject any script based hack easily) */
 
 
 /* Check for Map Menu & Map Sub-Menu */
@@ -363,7 +359,7 @@ badIDDsToClose[] =
 {
 	2,3,7,17,19,25,26,27,28,29,30,31,32,37,40,41,43,44,45,51,52,53,56,74,85,
 	106,126,127,132,146,147,150,151,152,153,154,155,159,162,164,262,
-	314,632,1320,2121,148,163,169,157,69,156,165,166,167,312,1321,2727
+	314,632,1320,2121,148,163,129,169,157,69,156,165,166,167,312,1321,2727
 };
 
 /* Use IDD White-List ? */ UDW = false;
@@ -393,11 +389,46 @@ allowedIDDs[] =
 
 
 
+/*
+	shows "MissionEventhandler added! NAME - ID" in the logs.
+	
+	if your logs show:
+	26-04-2016 04:17:51 infiSTAR.de | TEMPBANNED | SomeDude(SomeUIDxx) MissionEventhandler added! Loaded - 1
+	That means that you had {"Loaded",0} and it needs to be put to {"Loaded",1} to allow 1 of these handlers 
+*/
+checkMissionEventhandler = true;
+missionEventhandlers[] =
+{
+	{"Ended",1},{"Loaded",1},
+	{"HandleDisconnect",0},{"EntityRespawned",0},{"EntityKilled",0},{"EachFrame",0},{"MapSingleClick",0},
+	{"HCGroupSelectionChanged",0},{"CommandModeChanged",0},{"GroupIconClick",0},{"GroupIconOverEnter",0},
+	{"GroupIconOverLeave",0},{"PlayerConnected",0},{"PlayerDisconnected",0},{"TeamSwitch",0},{"PreloadStarted",0},
+	{"PreloadFinished",0}
+};
 
-/* blacklistedVariables: The AntiHack will check if one of these variables is existing for the client */
+
+/*
+	it is highly recommended to have this check turned on (useBlacklistedVariableCheck = true;)
+	shows "BadVariable in xxxxxxxx " in the logs.
+*/
+useBlacklistedVariableCheck = true;
 blacklistedVariables[] =
 {
-	"arsenalOpened","BIS_fnc_arsenal_fullArsenal","babecore_escM_mousepos"
+	"arsenalOpened","BIS_fnc_arsenal_fullArsenal","babecore_escM_mousepos",
+	"BIS_fnc_dbg_reminder_value","BIS_fnc_dbg_reminder","BIS_MENU_GroupCommunication","BIS_fnc_addCommMenuItem_menu",
+	"rscspectator","rscspectator_hints","rscspectator_display","rscspectator_playericon",
+	"rscspectator_view","rscspectator_map","rscspectator_vision","rscspectator_keys",
+	"rscspectator_interface","bis_fnc_camera_target",
+	"time","serverTime","myplayeruid","hhahaaaaar","CharlieSheenkeybinds","KickOFF","yolo","runonce","notakeybind","action1","Supa_Licenses","autokick","wallaisseikun","MainMenu",
+	"GEFClose","GEFWhite","GEFRed","GEFGreen","GEFCyan","FirstHint","new_queued","fn_Exec","FND_fnc_select","fnx3","ANTIHACKKICK","tele","dmap","GOLDENS_GLOBAL_SHIT_YEAH","GLASS911_Run",
+	"gearDialog_create","lystoKeypress","ThirtySix","LY_SwaggerLikeUs","Jkeyszz","n2","boxofmagic","MainScripts","DMC_fnc_4danews","INFISTARBYPASS","EXEC_TEXT","vehicle_dblclick","init_main",
+	"ESP_Count","Nute_Dat_Bomber","s_cash100k","XposPlayer","ly_re_onetime","SKAR_checkA","MainScriptsV4","ViewDistance","check_load","already_load","meins","f1","Dummy","Plane_Jump",
+	"c_player","MouseClickEH","distp","nec2","Menu_I_Run_Color_LP","GLASSv1nce_BindHandler","thecar","FastAnimes","GetinPassenger","iaimon","DMC_Re_onetime","func_execOnServer","fnc_serverKickNice",
+	"Kick_Admins","DASMOKEON","hovering","r_kelly_be_flying","VinceLOL_ALTISLIFE","life_fnc_byassSkaroAH","AH_fnc_MP","jayRE","fn_newsbanner","Hack_News","TrollFuncs",
+	"Fanatic_InfiPass","keybindings_xxx","AndysClosed","UserFuncs","AltisFuncs","RemExe","BB_nofatigue","bis_fnc_diagkey_var_code","First_PAGE","Get_in_D","i_t_s__m_e_o","smissles","Whippy_ESP",
+	"TargetFuncs2","life_fnc_antiFreeeeze","LY_keyForward","TY_re_onetime","life_fnc_XaAxAA","mein1","GodDamnVehiclesXD","Mystic_FNC_ESP_distance","Esp_Id_setter","DummyMen","whipbut","UserFuncs",
+	"KrohdoFreedom","selectedPlayer","Lmenu1","ggplayer","throx_menu_item","lvl1","Init_Menu_Slew","D_B_R_T_Y_Slew","V6_GEF","xasfjisisafudmmyx","kekse","UPDATED_RE_36","first","second",
+	"SNI_PRZ_ZZZ_TargetPlayer","healit","O_fnc_ArmA","MLRN_EXEC","running_threads","catchemall123","killtarget","GMToggle","t1"
 };
 
 
