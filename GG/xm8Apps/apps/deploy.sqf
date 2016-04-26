@@ -101,11 +101,13 @@ fnc_okToDeploy = {
     _ok = false;
   };
 
-  if (ExileClientPlayerMoney < VehicleCost) then {
-    (findDisplay 24015) closeDisplay 0;
-    _msg = format["%1, Your order has been declined due to insufficient funds",name player];
-    ["Whoops",_msg] call ExileClient_gui_notification_event_addNotification;
-    _ok = false;
+  if (donorVeh) then {
+    if (ExileClientPlayerMoney < VehicleCost) then {
+        (findDisplay 24015) closeDisplay 0;
+        _msg = format["%1, Your order has been declined due to insufficient funds",name player];
+        ["Whoops",_msg] call ExileClient_gui_notification_event_addNotification;
+        _ok = false;
+    };
   };
   _ok
 };
