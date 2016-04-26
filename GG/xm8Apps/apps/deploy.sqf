@@ -79,14 +79,14 @@ fnc_okToDeploy = {
     ["Whoops",_msg] call ExileClient_gui_notification_event_addNotification;
     _ok = false;
   };
-
+  /*
   if ((donorVeh) && !(getPlayerUID player in vehicleDonor)) then {
     (findDisplay 24015) closeDisplay 0;
     _msg = "You have not donated for this perk.";
     ["Whoops",_msg] call ExileClient_gui_notification_event_addNotification;
     _ok = false;
   };
-
+  */
   if (!("ItemRadio" in (items player) || "ItemRadio" in (assigneditems player)) && !(donorVeh)) then {
     (findDisplay 24015) closeDisplay 0;
     _msg = "You need a radio to deploy a vehicle !";
