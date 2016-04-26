@@ -107,6 +107,7 @@ hiddenSuperAdmin[] =
 	"76561198078201908", // Gr8
 	"76561198153784743", // Ghost
 	"76561198137100220", // Deadskin
+	"76561197978528230", // Dark
 };
 
 adminUIDandAccess[] =
@@ -114,7 +115,6 @@ adminUIDandAccess[] =
 	{
 		{
 		 "76561198115492831", // BigEgg
-		 "76561197978528230", // Dark
 		 //Add UID's Above - Don't forget the comma!
 		"0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
