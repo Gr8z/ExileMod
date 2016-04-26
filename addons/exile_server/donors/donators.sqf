@@ -131,7 +131,7 @@ Marksman3 = [
 
 /////// Medic Class ///////////
 Medic1 = [
-	"0", // NAME (OD-00-00-0000) #0000
+	"76561198126348047", // [TF]Mr. Bandit (OD-2016-04-26) #13578
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Medic1";
