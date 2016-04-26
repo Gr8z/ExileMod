@@ -139,6 +139,7 @@ switch (true) do
     player addHeadgear "H_Cap_oli_hs";
     player addWeaponGlobal "CUP_hgun_Phantom";
 	player addWeapon "CUP_arifle_AK74";
+	player addPrimaryWeaponItem "CUP_optic_Kobra";
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
     for "_i" from 1 to 3 do {player addItemToVest "CUP_18Rnd_9x19_Phantom";};
@@ -164,7 +165,7 @@ switch (true) do
     player addHeadgear "TRYK_H_Bandana_H";
     player addWeaponGlobal "CUP_hgun_M9";
 	player addWeapon "CUP_arifle_AK74";
-	player addPrimaryWeaponItem "rhs_acc_1p63";
+	player addPrimaryWeaponItem "rhs_acc_pkas";
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
     for "_i" from 1 to 3 do {player addItemToVest "CUP_15Rnd_9x19_M9";};
