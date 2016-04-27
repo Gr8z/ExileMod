@@ -387,7 +387,7 @@ switch (true) do
     player forceAddUniform "TRYK_U_B_AOR2_OD_CombatUniform";
     for "_i" from 1 to 2 do {player addItemToUniform "CUP_30Rnd_9x19_UZI";};
     player addVest "V_PlateCarrierGL_rgr";
-    player addBackpack "TRYK_B_Carryall_oli";
+    player addBackpack "TRYK_B_Carryall_JSDF";
     player addHeadgear "rhs_6b26_ess_bala";
     player addWeaponGlobal "CUP_arifle_Sa58RIS2_camo";
     player addPrimaryWeaponItem "CUP_optic_CompM2_Woodland2";
