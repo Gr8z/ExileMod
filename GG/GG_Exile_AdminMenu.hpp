@@ -251,7 +251,7 @@ w = 0.670423 * safezoneW;
 h = 0.0330055 * safezoneH;
 colorText[]={1,1,1,0.9};
 colorBackground[] = {0,0,0,0.4};
-text = "Chatpartner";
+text = "Private Chat";
 onLoad="uiNamespace setVariable ['chat_text1', _this select 0];";
 };
 };

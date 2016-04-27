@@ -2828,7 +2828,7 @@ _GetOutMan = ""
 				_curselection = lbCurSel _chat_playerlist;
 				_receiverName = _chat_playerlist lbText _curselection;
 				
-				_chat_text1 ctrlSetText format['Chatpartner: %1',_receiverName];
+				_chat_text1 ctrlSetText format['Private Chat: %1',_receiverName];
 			};
 			['fnc_chat_onLBSelChanged',[fnc_chat_onLBSelChanged] call fnc_CompilableString] call FN_infiSTAR_F;
 			fnc_chat_onKeyDown = {
