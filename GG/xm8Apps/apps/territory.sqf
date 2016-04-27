@@ -140,7 +140,7 @@ fnc_goBack = {
 		};
 		
 		case 1:{
-			 _Ctrls = [1116,860,861,862,863,864,865,866];
+			 _Ctrls = [1116,860,861,862,863,864,865];
 			{
 				_ctrl = (_display displayCtrl _x);
 				_ctrl ctrlSetFade 1;
