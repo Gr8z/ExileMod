@@ -8,8 +8,6 @@ switch (true) do
      [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,5000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
     player forceAddUniform "TRYK_U_B_Denim_T_BG_BK";
     player addBackpack "TRYK_B_tube_blk";
-	player addWeaponGlobal "CUP_hgun_Makarov";
-	for "_i" from 1 to 2 do {player addItemToBackpack "CUP_8Rnd_9x18_Makarov_M";};
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
@@ -26,8 +24,6 @@ switch (true) do
     player forceAddUniform "TRYK_U_denim_hood_blk";
     player addVest "V_BandollierB_blk";
     player addBackpack "B_AssaultPack_blk";
-	player addWeaponGlobal "CUP_hgun_Makarov";
-	for "_i" from 1 to 2 do {player addItemToBackpack "CUP_8Rnd_9x18_Makarov_M";};
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
