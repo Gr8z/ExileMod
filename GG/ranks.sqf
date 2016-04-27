@@ -191,9 +191,9 @@ switch (true) do
   call ExileClient_object_player_bambiStateEnd;
      [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,140000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
     player forceAddUniform "TRYK_U_B_WOOD_MARPAT_CombatUniformTshirt";
-    for "_i" from 1 to 2 do {player addItemToUniform "CUP_30Rnd_556x45_Stanag";};
     player addVest "V_TacVest_camo";
     player addBackpack "CUP_B_USPack_Black";
+	for "_i" from 1 to 2 do {player addItemToBackpack "CUP_30Rnd_556x45_Stanag";};
     player addHeadgear "TRYK_r_cap_od_Glasses";
     player addWeaponGlobal "CUP_arifle_M4A3_desert";
 	player addPrimaryWeaponItem "CUP_optic_HoloDesert";
