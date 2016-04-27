@@ -46,9 +46,9 @@ _app9Logo = "GG\xm8Apps\images\territory.paa";
 app9_action = { [] execVM "GG\xm8Apps\apps\territory.sqf"; };
 
 //App 10
-_app10Text = "";
-_app10Logo = "";
-app10_action = { hint "APP COMING SOON" };
+_app10Text = "CHAT";
+_app10Logo = "GG\xm8Apps\images\chat.paa";
+app10_action = { if(!isNil'fnc_chat_send')then{if(isNull (findDisplay -1340))then{createdialog 'infiSTAR_CHAT';};};true };
 
 //App 11
 _app11Text = "";
