@@ -2298,7 +2298,10 @@ DMS_Add_AIKill2DB = false;  // Adds killstat for player in the database ;)
 	DMS_RareLootList =					[							// List of rare loot to spawn
 											"Exile_Item_SafeKit",
 											"Exile_Item_CodeLock",
-											"Exile_Item_Defibrillator"
+											"Exile_Item_Defibrillator",
+											"Exile_Item_Magazine01",
+											"Exile_Item_Magazine02",
+											"Exile_Item_Magazine03"
 										];
 	DMS_RareLootChance					= 10;						// Percentage Chance to spawn rare loot in any crate | Default: 10%
 
