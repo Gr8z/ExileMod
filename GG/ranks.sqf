@@ -42,7 +42,7 @@ switch (true) do
     player addHeadgear "TRYK_H_woolhat_cu";
     player addVest "V_BandollierB_rgr";
     player addBackpack "B_AssaultPack_mcamo";
-	player addWeapon "CUP_hgun_Makarov";
+	player addWeaponGlobal "CUP_hgun_Makarov";
 	for "_i" from 1 to 3 do {player addItemToVest "CUP_8Rnd_9x18_Makarov_M";};
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
@@ -66,7 +66,7 @@ switch (true) do
     player addVest "V_BandollierB_blk";
     player addBackpack "TRYK_B_FieldPack_Wood";
     player addHeadgear "TRYK_R_CAP_BLK";
-	player addWeapon "rhs_weap_M590_5RD";
+	player addWeaponGlobal "rhs_weap_M590_5RD";
     player addWeaponGlobal "CUP_hgun_Makarov";
     player addItemToVest "CUP_8Rnd_9x18_Makarov_M";
 	for "_i" from 1 to 2 do {player addItemToBackpack "rhsusf_5Rnd_Slug";};
@@ -94,8 +94,8 @@ switch (true) do
     player addHeadgear "TRYK_H_woolhat";
     for "_i" from 1 to 3 do {player addItemToVest "CUP_8Rnd_9x18_Makarov_M";};
 	for "_i" from 1 to 2 do {player addItemToBackpack "CUP_30Rnd_9x19_MP5";};
-    player addWeapon "CUP_hgun_Makarov";
-	player addWeapon "CUP_smg_MP5A5";
+    player addWeaponGlobal "CUP_hgun_Makarov";
+	player addWeaponGlobal "CUP_smg_MP5A5";
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
@@ -118,7 +118,7 @@ switch (true) do
     player addBackpack "B_FieldPack_khk";
     player addHeadgear "H_Cap_tan_specops_US";
     player addWeaponGlobal "CUP_hgun_Duty";
-	player addWeapon "CUP_smg_MP5SD6";
+	player addWeaponGlobal "CUP_smg_MP5SD6";
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
     for "_i" from 1 to 2 do {player addItemToBackpack "CUP_30Rnd_9x19_MP5";};
@@ -143,7 +143,7 @@ switch (true) do
     player addBackpack "CUP_B_CivPack_WDL";
     player addHeadgear "H_Cap_oli_hs";
     player addWeaponGlobal "CUP_hgun_Phantom";
-	player addWeapon "CUP_arifle_AK74";
+	player addWeaponGlobal "CUP_arifle_AK74";
 	player addPrimaryWeaponItem "CUP_optic_Kobra";
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
@@ -169,7 +169,7 @@ switch (true) do
     player addBackpack "TRYK_B_BAF_BAG_OD";
     player addHeadgear "TRYK_H_Bandana_H";
     player addWeaponGlobal "CUP_hgun_M9";
-	player addWeapon "CUP_arifle_AK74";
+	player addWeaponGlobal "CUP_arifle_AK74";
 	player addPrimaryWeaponItem "rhs_acc_pkas";
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
@@ -246,7 +246,7 @@ switch (true) do
     player addVest "V_PlateCarrierIA2_dgtl";
     player addBackpack "CUP_B_ACRPara_m95";
     player addHeadgear "TRYK_H_Booniehat_MARPAT_WOOD";
-    player addWeapon "CUP_arifle_M16A4_Base";
+    player addWeaponGlobal "CUP_arifle_M16A4_Base";
 	player addPrimaryWeaponItem "CUP_muzzle_snds_M16";
 	player addPrimaryWeaponItem "optic_MRCO";
     player addWeaponGlobal "CUP_hgun_MicroUzi";
@@ -275,7 +275,7 @@ switch (true) do
     player addVest "V_PlateCarrierIAGL_dgtl";
     player addBackpack "B_Carryall_oli";
     player addHeadgear "TRYK_r_cap_od_Glasses";
-    player addWeapon "arifle_MX_Black_F";
+    player addWeaponGlobal "arifle_MX_Black_F";
 	player addPrimaryWeaponItem "CUP_optic_HoloBlack";
     for "_i" from 1 to 2 do {player addItemToUniform "CUP_30Rnd_9x19_UZI";};
     player addWeaponGlobal "CUP_hgun_MicroUzi";
@@ -500,7 +500,7 @@ switch (true) do
     player addBackpack "TRYK_B_Carryall_blk";
     player addHeadgear "H_HelmetSpecO_blk";
     player addWeaponGlobal "CUP_lmg_Mk48_wdl";
-    player addPrimaryWeaponItem "CUP_optic_HoloWdl";
+    player addPrimaryWeaponItem "optic_AMS_khk";
     player addWeaponGlobal "CUP_hgun_MicroUzi";
     player addHandgunItem "CUP_muzzle_snds_MicroUzi";
 	player addItemToVest "SmokeShellYellow";
