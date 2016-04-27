@@ -373,7 +373,7 @@ switch (true) do
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
     for "_i" from 1 to 2 do {player addItemToVest "CUP_30Rnd_9x19_UZI";};
-    for "_i" from 1 to 4 do {player addItemToBackpack "CUP_30Rnd_Sa58_M_TracerR";};
+    for "_i" from 1 to 4 do {player addItemToBackpack "CUP_30Rnd_Sa58_M";};
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
     player addItem "Exile_Item_GloriousKnakworst";
@@ -400,7 +400,7 @@ switch (true) do
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
     for "_i" from 1 to 2 do {player addItemToVest "CUP_30Rnd_9x19_UZI";};
-    for "_i" from 1 to 4 do {player addItemToBackpack "CUP_30Rnd_Sa58_M_TracerR";};
+    for "_i" from 1 to 4 do {player addItemToBackpack "CUP_30Rnd_Sa58_M";};
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
     player addItem "Exile_Item_GloriousKnakworst";
