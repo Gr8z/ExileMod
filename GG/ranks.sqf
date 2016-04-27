@@ -42,6 +42,8 @@ switch (true) do
     player addHeadgear "TRYK_H_woolhat_cu";
     player addVest "V_BandollierB_rgr";
     player addBackpack "B_AssaultPack_mcamo";
+	player addWeapon "CUP_hgun_Makarov";
+	for "_i" from 1 to 3 do {player addItemToVest "CUP_8Rnd_9x18_Makarov_M";};
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
@@ -64,8 +66,11 @@ switch (true) do
     player addVest "V_BandollierB_blk";
     player addBackpack "TRYK_B_FieldPack_Wood";
     player addHeadgear "TRYK_R_CAP_BLK";
+	player addWeapon "rhs_weap_M590_5RD";
     player addWeaponGlobal "CUP_hgun_Makarov";
     player addItemToVest "CUP_8Rnd_9x18_Makarov_M";
+	for "_i" from 1 to 2 do {player addItemToBackpack "rhsusf_5Rnd_Slug";};
+    for "_i" from 1 to 2 do {player addItemToBackpack "rhsusf_5Rnd_00Buck";};
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
@@ -180,17 +185,18 @@ switch (true) do
     //  "Your rank is Bounty Hunter"
    };
    
-     case (_respect > 89999 && _respect < 149999):
+     case (_respect > 89999 && _respect < 139999):
    {
     _rank = "Mercenary";  
   call ExileClient_object_player_bambiStateEnd;
-     [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,150000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
+     [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,140000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
     player forceAddUniform "TRYK_U_B_WOOD_MARPAT_CombatUniformTshirt";
     for "_i" from 1 to 2 do {player addItemToUniform "CUP_30Rnd_556x45_Stanag";};
     player addVest "V_TacVest_camo";
     player addBackpack "CUP_B_USPack_Black";
     player addHeadgear "TRYK_r_cap_od_Glasses";
     player addWeaponGlobal "CUP_arifle_M4A3_desert";
+	player addPrimaryWeaponItem "CUP_optic_HoloDesert";
     player addWeaponGlobal "CUP_hgun_Colt1911";
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
@@ -204,17 +210,16 @@ switch (true) do
     player addItem "Exile_Item_PlasticBottleFreshWater";
     //   "Your rank is Mercenary";
    };
-     case (_respect > 149999 && _respect < 249999):
+     case (_respect > 139999 && _respect < 179999):
    {
     _rank = "Assassin";  
   call ExileClient_object_player_bambiStateEnd;
-     [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,250000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
+     [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,180000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
     player forceAddUniform "TRYK_U_B_MARPAT_Wood_Tshirt";
     player addVest "V_PlateCarrierIA2_dgtl";
     player addBackpack "CUP_B_USPack_Black";
     player addHeadgear "TRYK_H_Booniehat_MARPAT_WOOD";
     player addWeaponGlobal "CUP_arifle_M4A3_desert";
-    player addPrimaryWeaponItem "CUP_muzzle_snds_M16";
     player addPrimaryWeaponItem "CUP_optic_CompM2_Desert";
     for "_i" from 1 to 2 do {player addItemToUniform "CUP_30Rnd_9x19_UZI";};
     player addWeaponGlobal "CUP_hgun_MicroUzi";
@@ -222,7 +227,6 @@ switch (true) do
     player linkItem "ItemGPS";
     for "_i" from 1 to 2 do {player addItemToVest "CUP_30Rnd_556x45_Stanag";};
     for "_i" from 1 to 2 do {player addItemToVest "CUP_30Rnd_9x19_UZI";};
-    for "_i" from 1 to 2 do {player addItemToBackpack "CUP_HandGrenade_M67";};
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
     player addItem "Exile_Item_BBQSandwich";
@@ -233,23 +237,24 @@ switch (true) do
     //  "Your rank is Assassin";
    };
    
-    case (_respect > 249999 && _respect < 349999):
+    case (_respect > 179999 && _respect < 219999):
    {
     _rank = "Militant";  
   call ExileClient_object_player_bambiStateEnd;
-     [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,350000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
+     [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,220000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
     player forceAddUniform "TRYK_U_B_MARPAT_Wood_Tshirt";
     player addVest "V_PlateCarrierIA2_dgtl";
     player addBackpack "CUP_B_ACRPara_m95";
     player addHeadgear "TRYK_H_Booniehat_MARPAT_WOOD";
-    player addWeapon "CUP_arifle_Sa58P_des";
+    player addWeapon "CUP_arifle_M16A4_Base";
+	player addPrimaryWeaponItem "CUP_muzzle_snds_M16";
+	player addPrimaryWeaponItem "optic_MRCO";
     player addWeaponGlobal "CUP_hgun_MicroUzi";
     player addHandgunItem "CUP_muzzle_snds_MicroUzi";
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
     for "_i" from 1 to 3 do {player addItemToVest "CUP_30Rnd_9x19_UZI";};
-    for "_i" from 1 to 2 do {player addItemToBackpack "CUP_HandGrenade_M67";};
-	for "_i" from 1 to 2 do {player addItemToBackpack "CUP_30Rnd_Sa58_M_TracerG";};
+	for "_i" from 1 to 2 do {player addItemToBackpack "CUP_30Rnd_556x45_Stanag";};
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
     player addItem "Exile_Item_BBQSandwich";
@@ -260,26 +265,24 @@ switch (true) do
     //  "Your rank is Militant";
    };
    
-    case (_respect > 349999 && _respect < 499999):
+    case (_respect > 219999 && _respect < 289999):
    {
     _rank = "Terrorist";  
   call ExileClient_object_player_bambiStateEnd;
-     [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,500000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
+     [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,290000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
     player forceAddUniform "TRYK_U_taki_BLK";
-    for "_i" from 1 to 2 do {player addItemToUniform "CUP_30Rnd_Sa58_M_TracerR";};
+    for "_i" from 1 to 2 do {player addItemToUniform "30Rnd_65x39_caseless_mag";};
     player addVest "V_PlateCarrierIAGL_dgtl";
     player addBackpack "B_Carryall_oli";
     player addHeadgear "TRYK_r_cap_od_Glasses";
-    player addWeaponGlobal "CUP_arifle_Sa58RIS2_camo";
-    player addPrimaryWeaponItem "CUP_optic_CompM2_Woodland2";
+    player addWeapon "arifle_MX_Black_F";
+	player addPrimaryWeaponItem "CUP_optic_HoloBlack";
     for "_i" from 1 to 2 do {player addItemToUniform "CUP_30Rnd_9x19_UZI";};
     player addWeaponGlobal "CUP_hgun_MicroUzi";
     player addHandgunItem "CUP_muzzle_snds_MicroUzi";
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
-    player addItemToVest "CUP_30Rnd_Sa58_M_TracerR";
-    for "_i" from 1 to 2 do {player addItemToVest "CUP_30Rnd_Sa58_M_TracerG";};
-    for "_i" from 1 to 2 do {player addItemToBackpack "CUP_HandGrenade_M67";};
+    for "_i" from 1 to 2 do {player addItemToVest "30Rnd_65x39_caseless_mag";};
     player addItemToVest "CUP_30Rnd_9x19_UZI";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
@@ -291,27 +294,25 @@ switch (true) do
     //  "Your rank is Terrorist";
    };
    
-    case (_respect > 499999 && _respect < 749999):
+    case (_respect > 289999 && _respect < 359999):
    {
     _rank = "Warlord";  
   call ExileClient_object_player_bambiStateEnd;
-     [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,750000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
+     [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,360000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
     player forceAddUniform "TRYK_U_B_Woodland";
-    for "_i" from 1 to 2 do {player addItemToUniform "CUP_30Rnd_Sa58_M_TracerG";};
+    for "_i" from 1 to 2 do {player addItemToUniform "30Rnd_65x39_caseless_mag";};
     player addVest "V_PlateCarrierIAGL_oli";
     player addBackpack "B_Carryall_oli";
     player addHeadgear "H_Shemag_olive";
-    player addWeaponGlobal "CUP_arifle_Sa58RIS1_des";
-    player addPrimaryWeaponItem "CUP_muzzle_snds_SCAR_H";
-    player addPrimaryWeaponItem "CUP_optic_CompM2_Woodland2";
+    player addWeaponGlobal "arifle_MX_Black_F";
+    player addPrimaryWeaponItem "CUP_optic_CompM2_Black";
     for "_i" from 1 to 2 do {player addItemToUniform "CUP_30Rnd_9x19_UZI";};
     player addWeaponGlobal "CUP_hgun_MicroUzi";
     player addHandgunItem "CUP_muzzle_snds_MicroUzi";
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
-    for "_i" from 1 to 2 do {player addItemToBackpack "CUP_30Rnd_Sa58_M_TracerG";};
+    for "_i" from 1 to 2 do {player addItemToBackpack "30Rnd_65x39_caseless_mag";};
     for "_i" from 1 to 2 do {player addItemToVest "CUP_30Rnd_9x19_UZI";};
-    for "_i" from 1 to 2 do {player addItemToBackpack "CUP_HandGrenade_M67";};
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
     player addItem "Exile_Item_BBQSandwich";
@@ -322,23 +323,23 @@ switch (true) do
     //  "Your rank is Warlord";
    };
    
-    case (_respect > 749999 && _respect < 999999):
+    case (_respect > 359999 && _respect < 429999):
    {
     _rank = "Arms Dealer";  
   call ExileClient_object_player_bambiStateEnd;
-     [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,1000000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
+     [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,430000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
     player forceAddUniform "TRYK_U_B_BLK";
     for "_i" from 1 to 2 do {player addItemToUniform "CUP_30Rnd_9x19_UZI";};
     player addVest "V_PlateCarrierGL_blk";
 	player addBackpack "TRYK_B_Carryall_blk";
     for "_i" from 1 to 2 do {player addItemToVest "CUP_30Rnd_9x19_UZI";};
-    for "_i" from 1 to 4 do {player addItemToBackpack "CUP_20Rnd_762x51_FNFAL_M";};
+    for "_i" from 1 to 4 do {player addItemToBackpack "30Rnd_65x39_caseless_green";};
     player addHeadgear "TRYK_H_headsetcap_blk_Glasses";
-    player addWeaponGlobal "CUP_arifle_FNFAL_railed";
-	player addPrimaryWeaponItem "CUP_optic_CompM4";
+    player addWeaponGlobal "arifle_Katiba_F";
+	player addPrimaryWeaponItem "muzzle_snds_H";
+	player addPrimaryWeaponItem "optic_MRCO";
     player addWeaponGlobal "CUP_hgun_MicroUzi";
     player addHandgunItem "CUP_muzzle_snds_MicroUzi";
-    for "_i" from 1 to 2 do {player addItemToBackpack "CUP_HandGrenade_M67";};
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
@@ -351,26 +352,24 @@ switch (true) do
     //  "Your rank is Arms Dealer";
    };
    
-    case (_respect > 999999 && _respect < 1999999):
+    case (_respect > 429999 && _respect < 509999):
    {
-    _rank = "God";  
+    _rank = "Destroyer";  
   call ExileClient_object_player_bambiStateEnd;
-     [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,2000000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
+     [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,510000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
     player forceAddUniform "TRYK_U_B_BLKBLK_CombatUniform";
     for "_i" from 1 to 2 do {player addItemToUniform "CUP_30Rnd_9x19_UZI";};
     player addVest "V_PlateCarrierGL_blk";
     player addBackpack "TRYK_B_Carryall_blk";
     player addHeadgear "TRYK_H_PASGT_BLK";
-    player addWeaponGlobal "CUP_arifle_FNFAL_railed";
-	player addPrimaryWeaponItem "muzzle_snds_B";
-    player addPrimaryWeaponItem "optic_DMS";
+    player addWeaponGlobal "CUP_arifle_Sa58RIS2_camo";
+	player addPrimaryWeaponItem "CUP_optic_HoloWdl";
     player addWeaponGlobal "CUP_hgun_MicroUzi";
     player addHandgunItem "CUP_muzzle_snds_MicroUzi";
-    for "_i" from 1 to 2 do {player addItemToBackpack "CUP_HandGrenade_M67";};
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
     for "_i" from 1 to 2 do {player addItemToVest "CUP_30Rnd_9x19_UZI";};
-    for "_i" from 1 to 4 do {player addItemToBackpack "CUP_20Rnd_762x51_FNFAL_M";};
+    for "_i" from 1 to 4 do {player addItemToBackpack "CUP_30Rnd_Sa58_M_TracerR";};
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
     player addItem "Exile_Item_GloriousKnakworst";
@@ -378,56 +377,26 @@ switch (true) do
     player addItem "Exile_Item_InstaDoc";
     player addItem "Exile_Item_CanOpener";
     player addItem "Exile_Item_PowerDrink";
-    //  "Your rank is God";
+    //  "Your rank is Destroyer";
    };
    
-    case (_respect > 1999999 && _respect < 3499999):
+    case (_respect > 509999 && _respect < 599999):
    {
-    _rank = "Destroyer";     
-   [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,3500000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
+    _rank = "Conqueror";     
+   [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,600000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
     player forceAddUniform "TRYK_U_B_AOR2_OD_CombatUniform";
     for "_i" from 1 to 2 do {player addItemToUniform "CUP_30Rnd_9x19_UZI";};
     player addVest "V_PlateCarrierGL_rgr";
     player addBackpack "TRYK_B_Carryall_oli";
     player addHeadgear "rhs_6b26_ess_bala";
-    player addWeaponGlobal "rhs_weap_sr25_ec";
-    player addPrimaryWeaponItem "rhsusf_acc_harris_bipod";
-    player addPrimaryWeaponItem "CUP_optic_CompM2_Black";
+    player addWeaponGlobal "CUP_arifle_Sa58RIS2_camo";
+    player addPrimaryWeaponItem "CUP_optic_CompM2_Woodland2";
     player addWeaponGlobal "CUP_hgun_MicroUzi";
     player addHandgunItem "CUP_muzzle_snds_MicroUzi";
-    for "_i" from 1 to 2 do {player addItemToBackpack "HandGrenade";};
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
     for "_i" from 1 to 2 do {player addItemToVest "CUP_30Rnd_9x19_UZI";};
-    for "_i" from 1 to 4 do {player addItemToBackpack "rhsusf_20Rnd_762x51_m118_special_Mag";};
-    player addWeaponGlobal "Exile_Melee_Axe";
-    player addMagazine "Exile_Magazine_Swing";
-    player addItem "Exile_Item_GloriousKnakworst";
-    player addItem "Exile_Item_PowerDrink";
-    player addItem "Exile_Item_InstaDoc";
-    player addItem "Exile_Item_CanOpener";
-    player addItem "Exile_Item_PowerDrink";
-   //    "Your rank is Destroyer";
-   };
-       case (_respect > 3499999 && _respect < 4999999):
-   {
-    _rank = "Conqueror";     
-   [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,5000000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
-    player forceAddUniform "TRYK_U_B_Woodland";
-    for "_i" from 1 to 2 do {player addItemToUniform "CUP_30Rnd_9x19_UZI";};
-    player addVest "V_PlateCarrierGL_rgr";
-    player addBackpack "TRYK_B_Carryall_wood";
-    player addHeadgear "rhs_6b26_ess_bala";
-    player addWeaponGlobal "rhs_weap_sr25_ec";
-    player addPrimaryWeaponItem "rhsusf_acc_harris_bipod";
-    player addPrimaryWeaponItem "optic_MRCO";
-    player addWeaponGlobal "CUP_hgun_MicroUzi";
-    player addHandgunItem "CUP_muzzle_snds_MicroUzi";
-    for "_i" from 1 to 2 do {player addItemToBackpack "HandGrenade";};
-    player addItem "Exile_Item_Matches";
-    player linkItem "ItemGPS";
-    for "_i" from 1 to 2 do {player addItemToVest "CUP_30Rnd_9x19_UZI";};
-    for "_i" from 1 to 4 do {player addItemToBackpack "rhsusf_20Rnd_762x51_m118_special_Mag";};
+    for "_i" from 1 to 4 do {player addItemToBackpack "CUP_30Rnd_Sa58_M_TracerR";};
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
     player addItem "Exile_Item_GloriousKnakworst";
@@ -437,21 +406,77 @@ switch (true) do
     player addItem "Exile_Item_PowerDrink";
    //    "Your rank is Conqueror";
    };
-       case (_respect > 4999999 && _respect < 7499999):
+       case (_respect > 599999 && _respect < 699999):
    {
     _rank = "Vanquisher";     
-   [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,7500000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
+   [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,700000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
+    player forceAddUniform "TRYK_U_B_Woodland";
+    for "_i" from 1 to 2 do {player addItemToUniform "CUP_30Rnd_9x19_UZI";};
+    player addVest "V_PlateCarrierGL_rgr";
+    player addBackpack "TRYK_B_Carryall_wood";
+    player addHeadgear "rhs_6b26_ess_bala";
+    player addWeaponGlobal "CUP_arifle_Sa58RIS1_des";
+    player addPrimaryWeaponItem "muzzle_snds_B";
+    player addPrimaryWeaponItem "optic_MRCO";
+    player addWeaponGlobal "CUP_hgun_MicroUzi";
+    player addHandgunItem "CUP_muzzle_snds_MicroUzi";
+    player addItem "Exile_Item_Matches";
+    player linkItem "ItemGPS";
+    for "_i" from 1 to 2 do {player addItemToVest "CUP_30Rnd_9x19_UZI";};
+    for "_i" from 1 to 4 do {player addItemToBackpack "CUP_30Rnd_Sa58_M";};
+    player addWeaponGlobal "Exile_Melee_Axe";
+    player addMagazine "Exile_Magazine_Swing";
+    player addItem "Exile_Item_GloriousKnakworst";
+    player addItem "Exile_Item_PowerDrink";
+    player addItem "Exile_Item_InstaDoc";
+    player addItem "Exile_Item_CanOpener";
+    player addItem "Exile_Item_PowerDrink";
+   //    "Your rank is Vanquisher";
+   };
+       case (_respect > 699999 && _respect < 799999):
+   {
+    _rank = "Master";     
+   [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,800000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
     player forceAddUniform "TRYK_U_B_TANOCP_CombatUniform";
     for "_i" from 1 to 2 do {player addItemToUniform "CUP_30Rnd_9x19_UZI";};
     player addVest "V_PlateCarrierGL_mtp";
     player addBackpack "B_Carryall_cbr";
     player addHeadgear "rhs_6b27m_ML_ess_bala";
-    player addWeaponGlobal "srifle_DMR_03_tan_F";
-    player addPrimaryWeaponItem "CUP_optic_Eotech533";
-    player addPrimaryWeaponItem "bipod_02_F_hex";
+    player addWeaponGlobal "CUP_arifle_Sa58RIS2_gl";
+    player addPrimaryWeaponItem "muzzle_snds_B";
+    player addPrimaryWeaponItem "optic_MRCO";
     player addWeaponGlobal "CUP_hgun_MicroUzi";
     player addHandgunItem "CUP_muzzle_snds_MicroUzi";
-    for "_i" from 1 to 2 do {player addItemToBackpack "HandGrenade";};
+    player addItem "Exile_Item_Matches";
+    player linkItem "ItemGPS";
+    for "_i" from 1 to 2 do {player addItemToVest "CUP_30Rnd_9x19_UZI";};
+    for "_i" from 1 to 4 do {player addItemToBackpack "CUP_30Rnd_Sa58_M";};
+	for "_i" from 1 to 2 do {player addItemToBackpack "CUP_1Rnd_HE_M203";};
+    player addWeaponGlobal "Exile_Melee_Axe";
+    player addMagazine "Exile_Magazine_Swing";
+    player addItem "Exile_Item_GloriousKnakworst";
+    player addItem "Exile_Item_PowerDrink";
+    player addItem "Exile_Item_InstaDoc";
+    player addItem "Exile_Item_CanOpener";
+    player addItem "Exile_Item_PowerDrink";
+   //    "Your rank is Master";
+   };
+       case (_respect > 799999 && _respect < 959999):
+   {
+    _rank = "Sniper Legend";     
+   [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,960000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
+    player forceAddUniform "TRYK_U_B_TANOCP_CombatUniform";
+    for "_i" from 1 to 2 do {player addItemToUniform "CUP_30Rnd_9x19_UZI";};
+    player addVest "V_PlateCarrierGL_mtp";
+    player addBackpack "B_Carryall_cbr";
+    player addHeadgear "rhsusf_ach_helmet_ocp_norotos";
+    player addWeaponGlobal "srifle_EBR_F";
+    player addPrimaryWeaponItem "muzzle_snds_B";
+    player addPrimaryWeaponItem "optic_KHS_old";
+    player addPrimaryWeaponItem "bipod_01_F_blk";
+    player addWeaponGlobal "CUP_hgun_MicroUzi";
+    player addHandgunItem "CUP_muzzle_snds_MicroUzi";
+	player addItemToVest "SmokeShellRed";
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
     for "_i" from 1 to 2 do {player addItemToVest "CUP_30Rnd_9x19_UZI";};
@@ -463,83 +488,26 @@ switch (true) do
     player addItem "Exile_Item_InstaDoc";
     player addItem "Exile_Item_CanOpener";
     player addItem "Exile_Item_PowerDrink";
-   //    "Your rank is Vanquisher";
+   //    "Your rank is Sniper Legend";
    };
-       case (_respect > 7499999 && _respect < 9999999):
+       case (_respect > 959999 && _respect < 1249999):
    {
-    _rank = "Master";     
-   [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,10000000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
-    player forceAddUniform "TRYK_U_B_TANOCP_CombatUniform";
-    for "_i" from 1 to 2 do {player addItemToUniform "CUP_30Rnd_9x19_UZI";};
-    player addVest "V_PlateCarrierGL_mtp";
-    player addBackpack "B_Carryall_cbr";
-    player addHeadgear "rhsusf_ach_helmet_ocp_norotos";
-    player addWeaponGlobal "srifle_DMR_03_tan_F";
-    player addPrimaryWeaponItem "optic_Arco";
-    player addPrimaryWeaponItem "bipod_02_F_hex";
-    player addPrimaryWeaponItem "muzzle_snds_B";
-    player addWeaponGlobal "CUP_hgun_MicroUzi";
-    player addHandgunItem "CUP_muzzle_snds_MicroUzi";
-    for "_i" from 1 to 2 do {player addItemToBackpack "HandGrenade";};
-    player addItem "Exile_Item_Matches";
-    player linkItem "ItemGPS";
-    for "_i" from 1 to 2 do {player addItemToVest "CUP_30Rnd_9x19_UZI";};
-    for "_i" from 1 to 4 do {player addItemToBackpack "CUP_20Rnd_762x51_FNFAL_M";};
-    player addWeaponGlobal "Exile_Melee_Axe";
-    player addMagazine "Exile_Magazine_Swing";
-    player addItem "Exile_Item_GloriousKnakworst";
-    player addItem "Exile_Item_PowerDrink";
-    player addItem "Exile_Item_InstaDoc";
-    player addItem "Exile_Item_CanOpener";
-    player addItem "Exile_Item_PowerDrink";
-   //    "Your rank is Master";
-   };
-       case (_respect > 9999999 && _respect < 24999999):
-   {
-    _rank = "Legend";     
-   [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,25000000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
-    player forceAddUniform "TRYK_U_B_BLKBLK_CombatUniform";
-    for "_i" from 1 to 2 do {player addItemToUniform "CUP_30Rnd_9x19_UZI";};
-    player addVest "V_PlateCarrierGL_blk";
-    player addBackpack "TRYK_B_Carryall_blk";
-    player addHeadgear "H_HelmetSpecO_blk";
-    player addWeaponGlobal "CUP_arifle_Mk20";
-    player addPrimaryWeaponItem "CUP_optic_ELCAN_SpecterDR";
-    player addPrimaryWeaponItem "bipod_01_F_snd";
-    player addWeaponGlobal "CUP_hgun_MicroUzi";
-    player addHandgunItem "CUP_muzzle_snds_MicroUzi";
-    for "_i" from 1 to 2 do {player addItemToBackpack "HandGrenade";};
-    player addItem "Exile_Item_Matches";
-    player linkItem "ItemGPS";
-    for "_i" from 1 to 2 do {player addItemToVest "CUP_30Rnd_9x19_UZI";};
-    for "_i" from 1 to 4 do {player addItemToBackpack "CUP_20Rnd_762x51_B_SCAR";};
-    player addWeaponGlobal "Exile_Melee_Axe";
-    player addMagazine "Exile_Magazine_Swing";
-    player addItem "Exile_Item_GloriousKnakworst";
-    player addItem "Exile_Item_PowerDrink";
-    player addItem "Exile_Item_InstaDoc";
-    player addItem "Exile_Item_CanOpener";
-    player addItem "Exile_Item_PowerDrink";
-   //    "Your rank is Legend";
-   };
-       case (_respect > 24999999):
-   {
-    _rank = "Blood God";     
-   [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,10000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
+    _rank = "LMG Legend";     
+   [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,1250000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
     player forceAddUniform "TRYK_U_B_BLKBLK_CombatUniform";
     for "_i" from 1 to 2 do {player addItemToUniform "CUP_30Rnd_9x19_UZI";};
     player addVest "V_PlateCarrierGL_blk";
     player addBackpack "TRYK_B_Carryall_blk";
     player addHeadgear "H_HelmetSpecO_blk";
     player addWeaponGlobal "CUP_lmg_Mk48_wdl";
-    player addPrimaryWeaponItem "CUP_optic_CompM2_Woodland";
+    player addPrimaryWeaponItem "CUP_optic_HoloWdl";
     player addWeaponGlobal "CUP_hgun_MicroUzi";
     player addHandgunItem "CUP_muzzle_snds_MicroUzi";
-    for "_i" from 1 to 2 do {player addItemToBackpack "HandGrenade";};
+	player addItemToVest "SmokeShellYellow";
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
     for "_i" from 1 to 2 do {player addItemToVest "CUP_30Rnd_9x19_UZI";};
-    for "_i" from 1 to 2 do {player addItemToBackpack "CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M";};
+    for "_i" from 1 to 2 do {player addItemToBackpack "CUP_100Rnd_TE4_LRT4_White_Tracer_762x51_Belt_M";};
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
     player addItem "Exile_Item_GloriousKnakworst";
@@ -547,7 +515,34 @@ switch (true) do
     player addItem "Exile_Item_InstaDoc";
     player addItem "Exile_Item_CanOpener";
     player addItem "Exile_Item_PowerDrink";
-   //    "Your rank is Blood God";
+   //    "Your rank is LMG Legend";
+   };
+       case (_respect > 1249999):
+   {
+    _rank = "Elite";     
+   [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,1250000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
+    player forceAddUniform "TRYK_U_B_BLKBLK_CombatUniform";
+    for "_i" from 1 to 2 do {player addItemToUniform "CUP_30Rnd_9x19_UZI";};
+    player addVest "V_PlateCarrierGL_blk";
+    player addBackpack "TRYK_B_Carryall_blk";
+    player addHeadgear "H_HelmetSpecO_blk";
+    player addWeaponGlobal "CUP_sgun_AA12";
+    player addWeaponGlobal "CUP_hgun_MicroUzi";
+    player addHandgunItem "CUP_muzzle_snds_MicroUzi";
+    for "_i" from 1 to 2 do {player addItemToBackpack "HandGrenade";};
+    player addItem "Exile_Item_Matches";
+    player linkItem "ItemGPS";
+    for "_i" from 1 to 2 do {player addItemToVest "CUP_30Rnd_9x19_UZI";};
+    for "_i" from 1 to 2 do {player addItemToBackpack "CUP_20Rnd_B_AA12_74Slug";};
+    for "_i" from 1 to 2 do {player addItemToBackpack "CUP_20Rnd_B_AA12_Pellets";};
+    player addWeaponGlobal "Exile_Melee_Axe";
+    player addMagazine "Exile_Magazine_Swing";
+    player addItem "Exile_Item_GloriousKnakworst";
+    player addItem "Exile_Item_PowerDrink";
+    player addItem "Exile_Item_InstaDoc";
+    player addItem "Exile_Item_CanOpener";
+    player addItem "Exile_Item_PowerDrink";
+   //    "Your rank is Elite";
    };
     default
     {   
