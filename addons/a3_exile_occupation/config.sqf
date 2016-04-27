@@ -59,7 +59,7 @@ SC_LootCrateGuardsRandomize = true;                 // Use a random number of gu
 SC_occupyLootCratesMarkers	= true;					// true if you want to have markers on the loot crate spawns
 
 
-SC_occupyHeliCrashes		= true;					// true if you want to have Dayz style helicrashes
+SC_occupyHeliCrashes		= false;					// true if you want to have Dayz style helicrashes
 SC_numberofHeliCrashes      = 5;                    // if SC_occupyHeliCrashes = true spawn this many loot crates (overrided below for Namalsk)
 
 SC_statics                  = [	[[1178,2524,0],8,250,true]	];      //[[pos],ai count,radius,search buildings]
