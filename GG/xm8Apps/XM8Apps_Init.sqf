@@ -48,7 +48,7 @@ app9_action = { [] execVM "GG\xm8Apps\apps\territory.sqf"; };
 //App 10
 _app10Text = "CHAT";
 _app10Logo = "GG\xm8Apps\images\chat.paa";
-app10_action = { if(!isNil'fnc_chat_send')then{if(isNull (findDisplay -1340))then{createdialog 'infiSTAR_CHAT';};};true };
+app10_action = { if(!isNil'fnc_chat_send')then{createdialog 'infiSTAR_CHAT';};true };
 
 //App 11
 _app11Text = "";
