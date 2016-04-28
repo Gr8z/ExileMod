@@ -476,6 +476,7 @@ switch (true) do
     player addPrimaryWeaponItem "bipod_01_F_blk";
     player addWeaponGlobal "CUP_hgun_MicroUzi";
     player addHandgunItem "CUP_muzzle_snds_MicroUzi";
+	for "_i" from 1 to 2 do {player addItemToBackpack "HandGrenade";};
 	player addItemToVest "SmokeShellRed";
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
@@ -503,6 +504,7 @@ switch (true) do
     player addPrimaryWeaponItem "optic_AMS_khk";
     player addWeaponGlobal "CUP_hgun_MicroUzi";
     player addHandgunItem "CUP_muzzle_snds_MicroUzi";
+	for "_i" from 1 to 2 do {player addItemToBackpack "HandGrenade";};
 	player addItemToVest "SmokeShellYellow";
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
