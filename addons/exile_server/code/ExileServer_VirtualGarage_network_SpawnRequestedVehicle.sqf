@@ -39,7 +39,7 @@ try
 	};
 	if !((count _pinCode) isEqualTo 4) then
 	{
-		throw "The pin code is does not equal 4 chars";
+		throw "The pin code does not equal 4 chars";
 	};
 	_position = (getPos _playerObject) findEmptyPosition [20, 175, _vehicleClass];
 	_direction = (random 360);
