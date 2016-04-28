@@ -20,6 +20,8 @@ DMS_Enable_RankChange = false; // Whether or not to use Rank Changes.
 
 DMS_Add_AIKill2DB = false;  // Adds killstat for player in the database ;)
 
+DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a scheduled environment. Setting to true may help with lag when certain missions spawn.
+
 /* Mission System Settings */
 	/*General settings for dynamic missions*/
 	DMS_DynamicMission					= true;						// Enable/disable dynamic mission system.
@@ -2009,6 +2011,11 @@ DMS_Add_AIKill2DB = false;  // Adds killstat for player in the database ;)
 											"launch_B_Titan_F"
 										];
 
+	DMS_RHeli_Height					= 500;						// Altitude of the heli when flying to drop point.
+	DMS_RHeli_MinDistFromDrop			= 500;						// Minimum distance for the reinforcement heli to spawn from drop point.
+	DMS_RHeli_MaxDistFromDrop			= 5000;						// Maximum distance for the reinforcement heli to spawn from drop point.
+	DMS_RHeli_MinDistFromPlayers		= 1000;						// Minimum distance for the reinforcement heli to spawn from players.
+
 /* AI Settings */
 
 
@@ -2295,6 +2302,7 @@ DMS_Add_AIKill2DB = false;  // Adds killstat for player in the database ;)
 	DMS_BoxItems						= DMS_BoxSurvivalSupplies+DMS_BoxBuildingSupplies+DMS_BoxOptics;	// Random "items" can spawn optics, survival supplies, or building supplies
 
 	DMS_RareLoot						= true;						// Potential chance to spawn rare loot in any crate.
+	DMS_RareLootAmount					= 1;						// How many rare loot items to add.
 	DMS_RareLootList =					[							// List of rare loot to spawn
 											"Exile_Item_SafeKit",
 											"Exile_Item_CodeLock",
@@ -2384,6 +2392,10 @@ DMS_Add_AIKill2DB = false;  // Adds killstat for player in the database ;)
 											"rhs_Mi8mt_cargo_vvs",
 											"rhs_UH1Y_unarmed"
 										];
+
+	DMS_ReinforcementHelis =			[							// List of helis that can spawn for AI paratrooper reinforcements.
+											//"B_Heli_Transport_01_camo_F"		// Ghosthawk: You'll have to whitelist this in infistar if you want to use it.
+										] + DMS_TransportHelis;
 
 	DMS_CarThievesVehicles =			[							// List of vehicles that can spawn in the "car thieves" mission. By default, it's just "DMS_MilitaryVehicles" and "DMS_TransportTrucks".
 											//"Exile_Car_Offroad_Armed_Guerilla01"
