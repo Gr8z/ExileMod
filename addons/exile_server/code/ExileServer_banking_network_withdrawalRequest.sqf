@@ -40,8 +40,7 @@ try {
     _playerBank = _playerBank - _moneyRequest;
     _playerObject setVariable ["ExilePurse", _playerWallet];
     _playerObject setVariable ["ExileBank",_playerBank];
-    format["updateWallet:%1:%2:%3",_playerWallet,(getPlayerUID _playerObject)] call ExileServer_system_database_query_fireAndForget;
-    format["updateBank:%1:%2:%3",_playerBank,(getPlayerUID _playerObject)] call ExileServer_system_database_query_fireAndForget;
+    format["setStats:%1:%2:%3",_playerWallet,_playerBank,(getPlayerUID _playerObject)] call ExileServer_system_database_query_fireAndForget;
     [_sessionID,"updateATMResponse",[str(_playerWallet),str(_playerBank)]] call ExileServer_system_network_send_to;
 } catch {
     [_sessionID,"handleATMMessage", ["Error",_exception]] call ExileServer_system_network_send_to;
