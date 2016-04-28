@@ -38,7 +38,7 @@ _clanName = (_accountData select 5);
    _playerUID = getPlayerUID _requestingPlayer;
 	_advBank = format["getBank:%1",_playerUID] call ExileServer_system_database_query_selectSingle;
 	_bambiPlayer setVariable ["ExilePurse", 0];
-	_bambiPlayer setVariable ["ExileBank",(_advBank select 0)];
+	_bambiPlayer setVariable ["ExileBank",_advBank];
    // Advanced Banking
 if !((typeName _clanID) isEqualTo "SCALAR") then
 {
