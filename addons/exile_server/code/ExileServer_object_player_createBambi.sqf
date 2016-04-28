@@ -111,7 +111,7 @@ _bambiPlayer call ExileServer_object_player_database_update;
 	[
 		_bambiPlayer,
 		_parachuteNetID,
-		str (_advBank select 1),
+		0,
 		str (_accountData select 1),
 		(_accountData select 2),
 		(_accountData select 3),
@@ -128,7 +128,7 @@ call ExileServer_system_network_send_to;
     _sessionID,
     "updateBankStats",
     [
-        str (_advBank select 2)
+        _advBank
     ]
 ]
 call ExileServer_system_network_send_to;
