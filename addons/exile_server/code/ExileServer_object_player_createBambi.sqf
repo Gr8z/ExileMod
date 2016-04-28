@@ -111,7 +111,7 @@ _bambiPlayer call ExileServer_object_player_database_update;
 	[
 		_bambiPlayer,
 		_parachuteNetID,
-		0,
+		"0",
 		str (_accountData select 1),
 		(_accountData select 2),
 		(_accountData select 3),
