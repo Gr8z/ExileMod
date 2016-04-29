@@ -194,6 +194,7 @@ Scout3 = [
 	"76561197971655623", // Robbie Digital (Lifetime loadout for Promo Vid)  
 	"76561198124203897", // Panda {OD-2016-04-23) #13538 
 	"76561198036004541", // Demen {OD-2016-04-25) #13573
+	"76561198085610474", // Torsin {OD-2016-04-28) #13594
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout3";
