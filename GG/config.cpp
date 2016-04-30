@@ -1012,7 +1012,7 @@ class CraftPopTabs: Exile_AbstractCraftingRecipe
 	pictureItem = "CUP_item_Money";
 	returnedItems[] =
 	{
-		{1, "	"}
+		{1, "CUP_item_Money"}
 	};
 	components[] = 
 	{
