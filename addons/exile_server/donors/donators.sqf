@@ -196,6 +196,7 @@ Scout3 = [
 	"76561198124203897", // Panda {OD-2016-04-23) #13538 
 	"76561198036004541", // Demen {OD-2016-04-25) #13573
 	"76561198085610474", // Torsin {OD-2016-04-28) #13594
+	"76561198248925078", // humanslide {OD-2016-04-30) #13605
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout3";
@@ -249,6 +250,7 @@ Soldier3 = [
 	"76561198207955129", // scotty (OD-2016-04-25) #13575
 	"76561198021389971", // Thirdhero (OD-2016-04-28) #13575
 	"76561198058120259", // [UN] Lt. K. O'Brien (OD-2016-04-28) #13586
+	"76561198173451651", // Reed Buish (OD-2016-04-30) #13603
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Soldier3";
