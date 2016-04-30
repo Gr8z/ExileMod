@@ -58,7 +58,7 @@ _group =
 
 
 // Create Crate
-_crate = ["Box_NATO_Wps_F",_pos] call DMS_fnc_SpawnCrate;
+_crate = ["Exile_Container_SupplyBox",_pos] call DMS_fnc_SpawnCrate;
 
 // Check to see if a special vehicle class is defined in "_extraParams", and make sure it's valid, otherwise use the default (Offroad Armed)
 _vehClass =

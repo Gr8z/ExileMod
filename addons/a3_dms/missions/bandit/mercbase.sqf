@@ -99,7 +99,7 @@ _baseObjs =
 
 
 // Create Crate
-_crate = ["Box_NATO_AmmoOrd_F",_pos] call DMS_fnc_SpawnCrate;
+_crate = ["Exile_Container_SupplyBox",_pos] call DMS_fnc_SpawnCrate;
 
 // Pink Crate ;)
 _crate setObjectTextureGlobal [0,"#(rgb,8,8,3)color(1,0.08,0.57,1)"];

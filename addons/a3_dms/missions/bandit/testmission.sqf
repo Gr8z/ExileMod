@@ -70,7 +70,7 @@ _staticGuns =
 
 
 // Create Crate
-_crate = ["Box_NATO_Wps_F",_pos] call DMS_fnc_SpawnCrate;
+_crate = ["Exile_Container_SupplyBox",_pos] call DMS_fnc_SpawnCrate;
 
 // Spawn vehicle
 _vehicle = ["Exile_Car_Offroad_Armed_Guerilla01",[_pos,3+random 10,_dir+90] call DMS_fnc_SelectOffsetPos] call DMS_fnc_SpawnNonPersistentVehicle;

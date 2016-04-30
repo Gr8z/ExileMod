@@ -58,7 +58,7 @@ _group =
 
 
 // Create Crate
-_crate = ["Box_NATO_Wps_F",_pos] call DMS_fnc_SpawnCrate;
+_crate = ["Exile_Container_SupplyBox",_pos] call DMS_fnc_SpawnCrate;
 
 _building = createVehicle ["Land_Medevac_HQ_V1_F",[(_pos select 0) - 10, (_pos select 1),-0.1],[], 0, "CAN_COLLIDE"];
 
