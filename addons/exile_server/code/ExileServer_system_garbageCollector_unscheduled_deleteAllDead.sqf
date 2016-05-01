@@ -9,16 +9,21 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_lifeTime","_diedAt"];
+private["_lifeTime","_diedAt","_deadPos"];
 _lifeTime = 60 * getNumber (configFile >> "CfgSettings" >> "GarbageCollector" >> "Ingame" >> "AllDead" >> "lifeTime");
 {
 	_diedAt = _x getVariable ["ExileDiedAt", -1];
+	_deadPos = getPos _x;
 	if (_diedAt isEqualTo -1) then 
 	{
 		_x setVariable ["ExileDiedAt", time];
 	}
 	else 
 	{
+		if ([_deadPos, 250] call ExileClient_util_world_isSpawnZoneInRange) then 
+		{
+			_lifeTime = 600;
+		};
 		if ((time - _diedAt) >= _lifeTime) then
 		{
 			_x call ExileServer_system_garbageCollector_deleteObject;
