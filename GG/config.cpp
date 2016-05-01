@@ -2203,8 +2203,8 @@ class CfgExileCustomCode
     ExileClient_object_player_event_onLeaveSafezone = 		"GG\SecureSafezones\compiles\GG_onLeaveSafezone.sqf";
     ExileClient_object_vehicle_network_lockResponse = 		"GG\SecureSafezones\compiles\GG_lockResponse.sqf";
     ExileClient_object_player_event_onInventoryOpened = 	"GG\overrides\GG_object_player_event_onInventoryOpened.sqf";
-    ExileClient_util_world_canBuildHere = 					"GG\overrides\GG_util_world_canBuildHere.sqf.sqf";
-
+    ExileClient_util_world_canBuildHere.sqf = 	"GG\overrides\GG_util_world_canBuildHere.sqf.sqf";
+    
 };
 
 class CfgNetworkMessages {
