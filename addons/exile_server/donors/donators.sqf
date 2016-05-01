@@ -205,7 +205,7 @@ Scout3 = [
 
 /////// Soldier Class ///////////
 Soldier1 = [
-	"0", // NAME (OD-00-00-0000) #0000
+	"76561198061171673", // Puncake (OD-2016-04-30) #13614
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Soldier1";
