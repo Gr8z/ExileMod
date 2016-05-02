@@ -20,7 +20,7 @@ _lifeTime = 60 * getNumber (configFile >> "CfgSettings" >> "GarbageCollector" >>
 	}
 	else 
 	{
-		if ([_deadPos, 250] call ExileClient_util_world_isSpawnZoneInRange) then 
+		if ([_deadPos, 500] call ExileClient_util_world_isSpawnZoneInRange) then 
 		{
 			_lifeTime = 600;
 		};
