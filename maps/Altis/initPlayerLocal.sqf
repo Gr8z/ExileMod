@@ -353,7 +353,7 @@ _trader =
     130.535
 ]
 call ExileClient_object_trader_create;
-
+_trader setVariable ["ExileTraderType", "Exile_Trader_Equipment"];
 
 ///////////////////////////////////////////////////////////////////////////
 // Western Armory Trader
