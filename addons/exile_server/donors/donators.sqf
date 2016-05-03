@@ -200,6 +200,7 @@ Scout3 = [
 	"76561198248925078", // humanslide {OD-2016-04-30) #13605
 	"76561198135739831", // Davey (3/19/2016 repaid)
 	"76561198075036133", // flipside (OD-2016-04-30) #13612
+	"76561198079421593", // TgM.Floofy (OD-2016-05-02) #13628
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout3";
