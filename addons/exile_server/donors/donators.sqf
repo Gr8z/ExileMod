@@ -201,6 +201,7 @@ Scout3 = [
 	"76561198135739831", // Davey (3/19/2016 repaid)
 	"76561198075036133", // flipside (OD-2016-04-30) #13612
 	"76561198079421593", // TgM.Floofy (OD-2016-05-02) #13628
+	"76561198078011082", // Jesse Mason1 (OD-2016-05-03) #13633
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout3";
@@ -215,6 +216,7 @@ Soldier1 = [
 
 Soldier2 = [
 	"76561197999049562", // Ace (OD-2016-04-13) #13473 
+	"76561197999049562", // Bhum (OD-2016-05-02) #13631 
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Soldier2";
