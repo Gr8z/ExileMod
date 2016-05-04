@@ -202,6 +202,7 @@ Scout3 = [
 	"76561198075036133", // flipside (OD-2016-04-30) #13612
 	"76561198079421593", // TgM.Floofy (OD-2016-05-02) #13628
 	"76561198078011082", // Jesse Mason1 (OD-2016-05-03) #13633
+	"76561198068704294", // HajiaLaBajia (OD-2016-05-03) #13636
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout3";
@@ -216,7 +217,7 @@ Soldier1 = [
 
 Soldier2 = [
 	"76561197999049562", // Ace (OD-2016-04-13) #13473 
-	"76561197999049562", // Bhum (OD-2016-05-02) #13631 
+	"76561197991652949", // Bhum (OD-2016-05-02) #13631 
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Soldier2";
@@ -259,6 +260,7 @@ Soldier3 = [
 	"76561198173451651", // Reed Buish (OD-2016-04-30) #13603
 	"76561197994565116", // Bee (OD-2016-04-30) #13608
 	"76561198056745227", // Dexter (OD-2016-05-01) #13621
+	"76561198069454294", // TgM.Purplecheese (OD-2016-05-03) #13639
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Soldier3";
