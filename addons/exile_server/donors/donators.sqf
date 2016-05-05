@@ -127,6 +127,7 @@ Marksman3 = [
 	"76561198082829958", // BlueFalcon (OD-2016-04-24) #13543    
 	"76561198001181027", // Hibbityhooblah (OD-2016-05-01) #13619    
 	"76561198069812769", // TgM.Brendel (OD-2016-05-04) #13647  
+	"76561198069454294", // TgM.Purplecheese (OD-2016-05-04) #13646
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Marksman3";
