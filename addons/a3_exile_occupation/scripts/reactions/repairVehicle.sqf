@@ -57,13 +57,6 @@ if(_damagedWheels > 0 OR _engineDamage OR _fueltankDamage) then
         _driver disableAI "SUPPRESSION";              
         sleep 1;
         _driver action ["getOut", _vehicle];
-        
-        if(SC_debug) then
-        {
-            _tag = createVehicle ["Sign_Arrow_Green_F", position _driver, [], 0, "CAN_COLLIDE"];
-            _tag attachTo [_driver,[0,0,0.6],"Head"];  
-        };
-        sleep 0.2;  
         _driver doMove (position _vehicle);    	        
 		_driverDir = _driver getDir _vehicle;
         _driver setUnitPos "MIDDLE";  	

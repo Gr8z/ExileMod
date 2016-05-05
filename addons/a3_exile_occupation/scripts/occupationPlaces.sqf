@@ -17,12 +17,6 @@ _side               = "bandit";
 
 if(SC_occupyPlacesSurvivors) then 
 { 
-    // Make survivors friendly to players and enemies to bandit AI
-    RESISTANCE setFriend[WEST,1];
-    WEST setFriend[RESISTANCE,1];
-    WEST setFriend[EAST,0];
-    EAST setFriend[WEST,0];
-    
     if(!isNil "DMS_Enable_RankChange") then { DMS_Enable_RankChange = true;  };
 };
 
@@ -44,7 +38,7 @@ if(diag_fps < _minFPS) exitWith
     };
 };
 
-_aiActive = {alive _x && (side _x == EAST OR side _x == WEST)} count allUnits;
+_aiActive = {alive _x && (side _x == SC_BanditSide OR side _x == SC_SurvivorSide)} count allUnits;
 if(_aiActive > _maxAIcount) exitWith 
 { 
     if(SC_extendedLogging) then 
@@ -95,18 +89,37 @@ _locations = (nearestLocations [_spawnCenter, ["NameVillage","NameCity", "NameCi
         };
 		
 		// Don't spawn AI near traders and spawn zones
-		_nearestMarker = [allMapMarkers, _pos] call BIS_fnc_nearestPosition; // Nearest Marker to the Location		
-		_posNearestMarker = getMarkerPos _nearestMarker;
-		if(_pos distance _posNearestMarker < 500) exitwith 
-        { 
-            _okToSpawn = false; 
-            if(SC_extendedLogging) then 
-            { 
-                _logDetail = format ["[OCCUPATION:Places]:: %1 is too close to a %2",_locationName,_nearestMarker];
-                [_logDetail] call SC_fnc_log;
-            }; 
-        };
-	
+        {
+            switch (getMarkerType _x) do 
+            {
+                case "ExileSpawnZone":
+                {
+                    if(_pos distance (getMarkerPos _x) < SC_minDistanceToSpawnZones) exitWith
+                    {
+                        _okToSpawn = false; 
+                        if(SC_extendedLogging) then 
+                        { 
+                            _logDetail = format ["[OCCUPATION:Places]:: %1 is too close to a Spawn Zone",_locationName];
+                            [_logDetail] call SC_fnc_log;
+                        };                         
+                    };
+                };
+                case "ExileTraderZone": 
+                {
+                    if(_pos distance (getMarkerPos _x) < SC_minDistanceToTraders) exitWith
+                    {
+                        _okToSpawn = false; 
+                        if(SC_extendedLogging) then 
+                        { 
+                            _logDetail = format ["[OCCUPATION:Places]:: %1 is too close to a Trader Zone",_locationName];
+                            [_logDetail] call SC_fnc_log;
+                        };                         
+                    };
+                };
+            };
+        }
+        forEach allMapMarkers;
+        
 		// Don't spawn additional AI if there are players in range
 		if([_pos, 250] call ExileClient_util_world_isAlivePlayerInRange) exitwith 
         { 
@@ -117,48 +130,40 @@ _locations = (nearestLocations [_spawnCenter, ["NameVillage","NameCity", "NameCi
                 [_logDetail] call SC_fnc_log;
             }; 
         };
-	
-
     
 		// Don't spawn additional AI if there are already AI in range
-		_aiNear = count(_pos nearEntities ["O_recon_F", 500]);
-		if(_aiNear > 0) then 
+        _nearBanditAI = { side _x == SC_BanditSide AND _x distance _pos < 500 } count allUnits;
+        _nearSurvivorAI = { side _x == SC_SurvivorSide AND _x distance _pos < 500 } count allUnits;
+
+        if(_nearBanditAI > 0 AND _nearSurvivorAI > 0) then 
         { 
-            _nearEastAI = { side _x == EAST AND _x distance _pos < 500 } count allUnits;
-            _nearWestAI = { side _x == WEST AND _x distance _pos < 500 } count allUnits;
-            
-            if(_nearEastAI == 0 AND _nearWestAI == 0) then 
+            _okToSpawn = false; 
+            if(SC_extendedLogging) then 
+            { 
+                _logDetail = format ["[OCCUPATION:Places]:: %1 already has active AI patrolling",_locationName];
+                [_logDetail] call SC_fnc_log;
+            }; 
+        }
+        else
+        {
+            if(_nearSurvivorAI == 0) then 
             { 
                 _sideToSpawn = random 100; 
-                if(_sideToSpawn < 50) then  
+                if(_sideToSpawn <= SC_SurvivorsChance) then  
                 { 
-                    _side = "bandit"; 
+                    _side = "survivor";   
                 }
                 else
                 { 
-                    _side = "survivor"; 
+                    _side = "bandit";           
                 };
-            };
-            if(_nearEastAI > 0 AND _nearWestAI == 0) then 
-            { 
-                _side = "survivor";
-            };   
-            if(_nearEastAI == 0 AND _nearWestAI > 0) then 
-            { 
-                _side = "bandit";
-            };  
-            if(_nearEastAI > 0 AND _nearWestAI > 0) then 
-            { 
-                _okToSpawn = false; 
-                if(SC_extendedLogging) then 
-                { 
-                    _logDetail = format ["[OCCUPATION:Places]:: %1 already has %2 active AI patrolling",_locationName,_aiNear];
-                    [_logDetail] call SC_fnc_log;
-                }; 
-            };                     
-
+            }
+            else
+            {
+                _side = "bandit"; 
+            };            
         };
-		
+
 		if(_okToSpawn) then
 		{
 			if(!SC_occupyPlacesSurvivors) then { _side = "bandit"; };
@@ -177,44 +182,34 @@ _locations = (nearestLocations [_spawnCenter, ["NameVillage","NameCity", "NameCi
 			_spawnPos = [_pos,10,100,5,0,20,0] call BIS_fnc_findSafePos;		
 			_spawnPosition = [_spawnPos select 0, _spawnPos select 1,0];
 			
-			DMS_ai_use_launchers = false;
-			_initialGroup = [_spawnPosition, _aiCount, "randomEasy", "assault", _side] call DMS_fnc_SpawnAIGroup;
-			DMS_ai_use_launchers = _useLaunchers;
+
             
-            _group = createGroup EAST;
+            _group = createGroup SC_BanditSide;
             if(_side == "survivor") then 
             { 
                 deleteGroup _group;
-                _group = createGroup WEST; 
+                _group = createGroup SC_SurvivorSide;              
             };
+            
+			DMS_ai_use_launchers = false;           
+            for "_i" from 1 to _aiCount do
+            {		
+                _loadOut = [_side] call SC_fnc_selectGear;
+                _unit = [_group,_spawnPosition,"custom","random",_side,"soldier",_loadOut] call DMS_fnc_SpawnAISoldier; 
+            };            
+			DMS_ai_use_launchers = _useLaunchers;            
+            
             
             _group setVariable ["DMS_LockLocality",nil];
             _group setVariable ["DMS_SpawnedGroup",true];
             _group setVariable ["DMS_Group_Side", _side];
             
             {	
-                _unit = _x;
+                _unit = _x;           
                 [_unit] joinSilent grpNull;
-                [_unit] joinSilent _group;
-                if(_side == "survivor") then
-                {
-                    removeUniform _unit;
-                    _unit forceAddUniform "Exile_Uniform_BambiOverall";     
-                    if(SC_debug) then
-                    {
-                        _tag = createVehicle ["Sign_Arrow_Green_F", position _unit, [], 0, "CAN_COLLIDE"];
-                        _tag attachTo [_unit,[0,0,0.6],"Head"];  
-                    };          
-                }
-                else
-                {
-                    if(SC_debug) then
-                    {
-                        _tag = createVehicle ["Sign_Arrow_F", position _unit, [], 0, "CAN_COLLIDE"];
-                        _tag attachTo [_unit,[0,0,0.6],"Head"];  
-                    };                      
-                };
-            }foreach units _initialGroup;
+                [_unit] joinSilent _group;        
+                [_side,_unit] call SC_fnc_addMarker;
+            }foreach units _group;
 						
 			// Get the AI to shut the fuck up :)
 			enableSentences false;
@@ -269,16 +264,21 @@ _locations = (nearestLocations [_spawnCenter, ["NameVillage","NameCity", "NameCi
 
 			if(_locationType isEqualTo "NameCityCapital") then
 			{
-				DMS_ai_use_launchers = false;
-				_initialGroup2 = [_spawnPosition, 5, _difficulty, "random", _side] call DMS_fnc_SpawnAIGroup;
-				DMS_ai_use_launchers = _useLaunchers;
-
-                _group2 = createGroup EAST;
+                _group2 = createGroup SC_BanditSide;
                 if(_side == "survivor") then 
-                { 
+                {                   
                     deleteGroup _group2;
-                    _group2 = createGroup WEST; 
+                    _group2 = createGroup SC_SurvivorSide;
                 };
+                
+                
+                DMS_ai_use_launchers = false;           
+                for "_i" from 1 to 5 do
+                {		
+                    _loadOut = ["bandit"] call SC_fnc_selectGear;
+                    _unit = [_group2,_spawnPosition,"custom","random",_side,"soldier",_loadOut] call DMS_fnc_SpawnAISoldier; 
+                };            
+                DMS_ai_use_launchers = _useLaunchers;                 
                          
                 _group2 setVariable ["DMS_LockLocality",nil];
                 _group2 setVariable ["DMS_SpawnedGroup",true];
@@ -292,53 +292,62 @@ _locations = (nearestLocations [_spawnCenter, ["NameVillage","NameCity", "NameCi
                     _unit = _x;
                     [_unit] joinSilent grpNull;
                     [_unit] joinSilent _group2;
-                    if(_side == "survivor") then
-                    {
-                        removeUniform _unit;
-                        _unit forceAddUniform "Exile_Uniform_BambiOverall";     
-                        if(SC_debug) then
-                        {
-                            _tag = createVehicle ["Sign_Arrow_Green_F", position _unit, [], 0, "CAN_COLLIDE"];
-                            _tag attachTo [_unit,[0,0,0.6],"Head"];  
-                        }
-                        else
-                        {
-                            if(SC_debug) then
-                            {
-                                _tag = createVehicle ["Sign_Arrow_F", position _unit, [], 0, "CAN_COLLIDE"];
-                                _tag attachTo [_unit,[0,0,0.6],"Head"];  
-                            };                      
-                        };          
-                    };
-                }foreach units _initialGroup2;
+                    [_side,_unit] call SC_fnc_addMarker;
+                }foreach units _group2;
                 
 				[_group2, _pos, _groupRadius] call bis_fnc_taskPatrol;
 				_group2 setBehaviour "AWARE";
 				_group2 setCombatMode "RED";
 			};
 			//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+            _markerName = "Occupation Area";
+            _markerColour = "ColorOrange";
 			
 			if(SC_mapMarkers) then 
 			{
-				_marker = createMarker [format ["%1", _spawnPosition],_pos];
+				deleteMarker format ["%1", _spawnPosition];   
+                _nearBanditAI = { side _x == SC_BanditSide AND _x distance _pos < 500 } count allUnits;
+                _nearSurvivorAI = { side _x == SC_SurvivorSide AND _x distance _pos < 500 } count allUnits;  
+                
+                if(_nearBanditAI > 0 && _nearSurvivorAI > 0) then
+                {
+                    _markerName = "Survivors and Bandits"; 
+                    _markerColour = "ColorOrange";   
+                };  
+                if(_nearBanditAI == 0 && _nearSurvivorAI > 0) then
+                {
+                    _markerName = "Survivors"; 
+                    _markerColour = "ColorGreen";   
+                }; 
+                if(_nearBanditAI > 0 && _nearSurvivorAI == 0) then
+                {
+                    _markerName = "Bandits"; 
+                    _markerColour = "ColorRed";   
+                };                                          
+                
+                _marker = createMarker [format ["%1", _spawnPosition],_pos];
 				_marker setMarkerShape "Icon";
 				_marker setMarkerSize [3,3];
 				_marker setMarkerType "mil_dot";
 				_marker setMarkerBrush "Solid";
+                _marker setMarkerText _markerName;
+                _marker setMarkerColor _markerColour;
 				_marker setMarkerAlpha 0.5;
-				_marker setMarkerColor "ColorOrange";
-				_marker setMarkerText "Occupied Area";	
-			};			
-			
-			if(_side == 'survivor') then 
-            {
-                _logDetail = format ["[OCCUPATION:Places]:: Spawning %2 survivor AI in at %3 to patrol %1",_locationName,_aiCount,_spawnPosition];                  
-            }
-            else
-            {
-                _logDetail = format ["[OCCUPATION:Places]:: Spawning %2 bandit AI in at %3 to patrol %1",_locationName,_aiCount,_spawnPosition];    
-            };
-            [_logDetail] call SC_fnc_log;
+					
+                
+                if(_side == "survivor") then 
+                {
+                    _logDetail = format ["[OCCUPATION:Places]:: Spawning %2 survivor AI in at %3 to patrol %1",_locationName,_aiCount,_spawnPosition];                  
+                }
+                else
+                {
+                    _logDetail = format ["[OCCUPATION:Places]:: Spawning %2 bandit AI in at %3 to patrol %1",_locationName,_aiCount,_spawnPosition];    
+                };
+                [_logDetail] call SC_fnc_log;
+                _logDetail = format ["[OCCUPATION:Places]:: %1 Bandits:%2  Survivors:%3 Marker Colour:%4 Marker Name:%5",_locationName,_nearBanditAI,_nearSurvivorAI,_markerColour,_markerName];
+                [_logDetail] call SC_fnc_log;
+            };			
 			_okToSpawn = false;		
 		};
 	

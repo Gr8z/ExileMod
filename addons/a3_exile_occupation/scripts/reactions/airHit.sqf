@@ -53,11 +53,11 @@ if(_heliDamage > 0.2 && _damagedEssentials > 0 && !_crewEjected && _ejectChance 
             _logDetail = format ["[OCCUPATION:Sky]:: Air unit %2 ejecting passengers at %3 (time: %1)",time,_veh,_heliPosition]; 
             [_logDetail] call SC_fnc_log;	
         };
+        _cargo = assignedCargo _veh;
 		{				
-            _unit = _x;
-            _unit joinSilent _group2;
-			_unit action ["EJECT", _veh];
-		} forEach (assignedCargo  _veh);
+            _x joinSilent _group2;
+			_x action ["EJECT", _veh];
+		} forEach _cargo;
         
         _target = _this select 1;
         _group2 reveal [_target,1.5];
@@ -77,7 +77,7 @@ if(_heliDamage > 0.2 && _damagedEssentials > 0 && !_crewEjected && _ejectChance 
         _group2 setCombatMode "RED";	
 	};
 	_heli setVariable ["SC_crewEjected", true,true];
-	_heli addMPEventHandler ["mphit", "_this call SC_fnc_airHit;"];	
+		
 };
 	
 
@@ -115,3 +115,5 @@ if(_heliDamage > 0.7 && _damagedEssentials > 0) then
     _group2 setBehaviour "COMBAT";
     _group2 setCombatMode "RED";
 };
+
+_heli addMPEventHandler ["mphit", "_this call SC_fnc_airHit;"];

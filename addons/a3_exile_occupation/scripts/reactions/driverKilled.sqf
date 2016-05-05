@@ -8,9 +8,8 @@ if(SC_extendedLogging) then
 };
 
 _deadDriver	= _this select 0;
-_deadDriver removeAllMPEventHandlers  "mpkilled";
+//_deadDriver removeAllMPEventHandlers  "mpkilled";
 _vehicle = _deadDriver getVariable "SC_drivenVehicle";
-
 
 if(SC_debug) then
 {
@@ -48,29 +47,24 @@ if(count units _group > 0) then
     _driver setVariable ["SC_drivenVehicle", _vehicle,true];	 
     _vehicle setVariable ["SC_assignedDriver", _driver,true];        
     _vehicle addMPEventHandler ["mphit", "_this call SC_fnc_repairVehicle;"];
+    _driver removeAllMPEventHandlers  "mphit";
     _driver addMPEventHandler ["mpkilled", "_this call SC_fnc_driverKilled;"];
 
     if(SC_debug) then
     {
-        _tag = createVehicle ["Sign_Arrow_Green_F", position _driver, [], 0, "CAN_COLLIDE"];
+        _tag = createVehicle ["Sign_Arrow_Yellow_F", position _driver, [], 0, "CAN_COLLIDE"];
         _tag attachTo [_driver,[0,0,0.6],"Head"];  
     };
 
     _driver doMove (position _vehicle);   	
     _driver action ["movetodriver", _vehicle];
     
-
     if(SC_extendedLogging) then 
     {
         _logDetail = format ["[OCCUPATION:Vehicle]:: Replacement Driver found (%1) for vehicle %2",_driver,_vehicle]; 
         [_logDetail] call SC_fnc_log;
     };
 
-    if(damage _vehicle > 0) then 
-    {
-        [_vehicle] call SC_fnc_repairVehicle;
-        
-    };  
 }
 else
 {

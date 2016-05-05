@@ -7,8 +7,8 @@ for "_i" from 1 to SC_numberofLootCrates do
 	
 	if(!isNil "_pos") then
 	{
-		_nearPlayers = (count (_pos nearEntities [['Exile_Unit_Player'],15]));
-		if(_nearPlayers > 0) then 
+		
+		if([_pos, 15] call ExileClient_util_world_isAlivePlayerInRange) then
 		{ 
 			deleteMarker _markerName; 
 			_logDetail =  format ["[OCCUPATION:LootCrates]:: marker %1 removed at %2",_markerName,time];
@@ -16,4 +16,14 @@ for "_i" from 1 to SC_numberofLootCrates do
 		};
 		
 	};
+};
+
+if(SC_removeUserMapMarkers) then
+{
+	{
+		if(_x find '_USER_DEFINED' > -1)then 
+		{
+			deleteMarker _x;
+		} 
+	} forEach allMapMarkers;	
 };

@@ -2,7 +2,7 @@
 
 _logDetail = _this select 0;
 
-if(SC_infiSTAR_log) then
+if(SC_infiSTAR_log && !isNil "INFISTARVERSION") then
 {
     ['A3_EXILE_OCCUPATION',_logDetail] call FNC_A3_CUSTOMLOG;    
 }

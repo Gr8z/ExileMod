@@ -4,6 +4,7 @@ private["_wp","_wp2","_wp3"];
 _logDetail = format ["[OCCUPATION Military]:: Starting Monitor"];
 [_logDetail] call SC_fnc_log;
 
+_maxDistance 	    = 500;			            // Max radius to scan
 _maxAIcount 		= SC_maxAIcount;
 _minFPS 			= SC_minFPS;
 _useLaunchers 		= DMS_ai_use_launchers;
@@ -18,9 +19,6 @@ if(_currentPlayerCount > _scaleAI) then
 	_maxAIcount = _maxAIcount - (_currentPlayerCount - _scaleAI) ;
 };
 
-// Select an area to scan as nearObjects on the entire map is slooooooooow
-_areaToScan = [ 0, 900, 1, 500, 500, 0, 0, 0, true, false ] call DMS_fnc_findSafePos;
-
 // Don't spawn additional AI if the server fps is below 8
 if(diag_fps < _minFPS) exitWith 
 { 
@@ -28,31 +26,32 @@ if(diag_fps < _minFPS) exitWith
     [_logDetail] call SC_fnc_log;
 };
 
-_aiActive = {alive _x && (side _x == EAST OR side _x == WEST)} count allUnits;
+_aiActive = {alive _x && (side _x == SC_BanditSide OR side _x == SC_SurvivorSide)} count allUnits;
 
-//_aiActive = count(_spawnCenter nearEntities ["O_recon_F", _maxDistance+1000]);
 if(_aiActive > _maxAIcount) exitWith 
 { 
     _logDetail = format ["[OCCUPATION Military]:: %1 active AI, so not spawning AI this time",_aiActive]; 
     [_logDetail] call SC_fnc_log;
 };
 
-for [{_i = 0},{_i < (count _buildings)},{_i =_i + 1}] do
+// Select an area to scan as nearObjects on the entire map is slooooooooow
+_areaToScan = [ 0, 900, 1, 500, 500, 0, 0, 0, true, false ] call DMS_fnc_findSafePos;
+
 {
 	_logDetail = format ["[OCCUPATION Military]:: scanning buildings around %2 started at %1",time,_areaToScan];
     [_logDetail] call SC_fnc_log;
 	
-    _currentBuilding = _buildings select _i;
-	_building = _areaToScan nearObjects [_currentBuilding, 750];
+    _currentBuilding = _x;
+	_building = _areaToScan nearObjects [_currentBuilding, _maxDistance];
 	
 	_logDetail = format ["[OCCUPATION Military]:: scan for %2 building finished at %1",time,_currentBuilding];
     [_logDetail] call SC_fnc_log;
 	
-    for [{_n = 0},{_n < (count _building)-1},{_n =_n + 1}] do
+
     {
 		_okToSpawn = true;
 		Sleep 0.1;
-        _foundBuilding = (_building select _n);
+        _foundBuilding = _x;
 		_location = getPos _foundBuilding;
 		_pos = [_location select 0, _location select 1, 0];
 		
@@ -64,9 +63,9 @@ for [{_i = 0},{_i < (count _buildings)},{_i =_i + 1}] do
 		
 		while{_okToSpawn} do
 		{			
-			// Percentage chance to spawn (roll 60 or more to spawn AI)
+			// Percentage chance to spawn (roll 70 or more to spawn AI)
 			_spawnChance = round (random 100);
-			if(_spawnChance < 60) exitWith 
+			if(_spawnChance < 70) exitWith 
             { 
                 _okToSpawn = false; 
                 if(SC_extendedLogging) then 
@@ -114,7 +113,7 @@ for [{_i = 0},{_i < (count _buildings)},{_i =_i + 1}] do
             };
 
 			// Don't spawn additional AI if there are players in range
-			if([_pos, 200] call ExileClient_util_world_isAlivePlayerInRange) exitwith 
+			if([_pos, 250] call ExileClient_util_world_isAlivePlayerInRange) exitwith 
             { 
                 _okToSpawn = false; 
                 if(SC_extendedLogging) then 
@@ -129,10 +128,10 @@ for [{_i = 0},{_i < (count _buildings)},{_i =_i + 1}] do
 				//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 				// Get AI to patrol the area
 				//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-				_aiCount = 2 + (round (random 3)); 
+				_aiCount = 2 + (round (random 1)); 
 				_groupRadius = 100;
 				_difficulty = "random";
-				_side = "bandit";
+				_side = SC_BanditSide;
 				_spawnPosition = _pos;				
 										
 				// Get the AI to shut the fuck up :)
@@ -142,7 +141,7 @@ for [{_i = 0},{_i < (count _buildings)},{_i =_i + 1}] do
 				if(!SC_useWaypoints) then
 				{
 					DMS_ai_use_launchers = false;
-					_group = [_spawnPosition, _aiCount, _difficulty, "random", _side] call DMS_fnc_SpawnAIGroup;
+					_group = [_spawnPosition, _aiCount, _difficulty, "random", "bandit"] call DMS_fnc_SpawnAIGroup;
 					DMS_ai_use_launchers = true;
 
 					[_group, _pos, _groupRadius] call bis_fnc_taskPatrol;
@@ -153,13 +152,18 @@ for [{_i = 0},{_i < (count _buildings)},{_i =_i + 1}] do
 				{
 									
 					DMS_ai_use_launchers = false;
-					_group = [_spawnPosition, _aiCount, _difficulty, "random", _side] call DMS_fnc_SpawnAIGroup;
+					_group = [_spawnPosition, _aiCount, _difficulty, "random", "bandit"] call DMS_fnc_SpawnAIGroup;
 					DMS_ai_use_launchers = true;
 
                     {	
                         _unit = _x;
                         [_unit] joinSilent grpNull;
                         [_unit] joinSilent _group;
+                        if(SC_debug) then
+                        {
+                            _tag = createVehicle ["Sign_Arrow_Blue_F", position _unit, [], 0, "CAN_COLLIDE"];
+                            _tag attachTo [_unit,[0,0,0.6],"Head"];  
+                        }; 
                     }foreach units _group;
 
 					[ _group,_pos,_difficulty,"COMBAT" ] call DMS_fnc_SetGroupBehavior;
@@ -218,7 +222,7 @@ for [{_i = 0},{_i < (count _buildings)},{_i =_i + 1}] do
 				_okToSpawn = false;			
 			};	
 		};
-    };
-};
+    }foreach _building;
+}foreach _buildings;
 _logDetail = "[OCCUPATION Military]: Ended";
 [_logDetail] call SC_fnc_log;

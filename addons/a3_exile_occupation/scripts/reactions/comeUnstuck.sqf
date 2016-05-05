@@ -68,3 +68,17 @@ if(count(crew _vehicle) > 0)then
     _vehicle setVariable["vehPos",_newPos];
 };
 
+_group = group _vehicle;
+
+// Remove dead units from the group
+{
+    if(!alive _x) then { [_x] join grpNull; };     
+}forEach units _group;
+
+if(count units _group > 0) then
+{
+    _vehicle lock 0;			
+    _vehicle setVehicleLock "UNLOCKED";
+    _vehicle setVariable ["ExileIsLocked", 0, true];      
+};
+

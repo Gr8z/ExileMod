@@ -6,6 +6,7 @@ _logDetail = format['[OCCUPATION:Sky] Started'];
 // more than _scaleAI players on the server and the max AI count drops per additional player
 _currentPlayerCount = count playableUnits;
 _maxAIcount 		= SC_maxAIcount;
+_side				= "bandit";
 
 if(_currentPlayerCount > SC_scaleAI) then 
 {
@@ -19,7 +20,7 @@ if(diag_fps < SC_minFPS) exitWith
     [_logDetail] call SC_fnc_log; 
 };
 
-_aiActive = {alive _x && (side _x == EAST OR side _x == WEST)} count allUnits;
+_aiActive = {alive _x && (side _x == SC_BanditSide OR side _x == SC_SurvivorSide)} count allUnits;
 if(_aiActive > _maxAIcount) exitWith 
 { 
     _logDetail = format ["[OCCUPATION:Sky]:: %1 active AI, so not spawning AI this time",_aiActive]; 
@@ -68,7 +69,7 @@ for "_i" from 1 to _vehiclesToSpawn do
 	_height = 350 + (round (random 200));
 	_spawnLocation = [_safePos select 0, _safePos select 1, _height];
    
-    _group = createGroup east;
+    _group = createGroup SC_BanditSide;
     _VehicleClassToUse = SC_HeliClassToUse call BIS_fnc_selectRandom;
     _vehicle = createVehicle [_VehicleClassToUse, _spawnLocation, [], 0, "NONE"];
     _group addVehicle _vehicle;
@@ -90,39 +91,54 @@ for "_i" from 1 to _vehiclesToSpawn do
     _vehicle setVariable ["ExileIsLocked", 0, true];
     _vehicle action ["LightOn", _vehicle];
     	
-      
-        
-    // Calculate the crew requried
+	// Calculate the number of seats in the vehicle and fill the required amount
+	_crewRequired = SC_minimumCrewAmount;
+	if(SC_maximumCrewAmount > SC_minimumCrewAmount) then 
+	{ 
+		_crewRequired = floor(random[SC_minimumCrewAmount,SC_maximumCrewAmount-SC_minimumCrewAmount,SC_maximumCrewAmount]); 
+	};       
+	_amountOfCrew = 0;
+	_unitPlaced = false;
     _vehicleRoles = (typeOf _vehicle) call bis_fnc_vehicleRoles;
     {
-        _vehicleRole = _x select 0;
+        _unitPlaced = false;
+		_vehicleRole = _x select 0;
         _vehicleSeat = _x select 1;
         if(_vehicleRole == "Driver") then
         {
-            _unit = [_group,_spawnLocation,"assault","random","bandit","Vehicle"] call DMS_fnc_SpawnAISoldier;   
+            _loadOut = ["bandit"] call SC_fnc_selectGear;
+			_unit = [_group,_spawnLocation,"custom","random","bandit","Vehicle",_loadOut] call DMS_fnc_SpawnAISoldier; 
+			_amountOfCrew = _amountOfCrew + 1;  
             _unit assignAsDriver _vehicle;
             _unit moveInDriver _vehicle;
             //_vehicle lockDriver true;
             _unit setVariable ["DMS_AssignedVeh",_vehicle]; 
             removeBackpackGlobal _unit;
             _unit addBackpackGlobal "B_Parachute";
+			_unitPlaced = true;
         };
         if(_vehicleRole == "Turret") then
         {
-            _unit = [_group,_spawnLocation,"assault","random","bandit","Vehicle"] call DMS_fnc_SpawnAISoldier;   
+            _loadOut = ["bandit"] call SC_fnc_selectGear;
+			_unit = [_group,_spawnLocation,"custom","random","bandit","Vehicle",_loadOut] call DMS_fnc_SpawnAISoldier;  
+			_amountOfCrew = _amountOfCrew + 1; 
             _unit moveInTurret [_vehicle, _vehicleSeat];
             _unit setVariable ["DMS_AssignedVeh",_vehicle]; 
             removeBackpackGlobal _unit;
             _unit addBackpackGlobal "B_Parachute";
+			_unitPlaced = true;
         };
-        if(_vehicleRole == "CARGO") then
+        if(_vehicleRole == "CARGO" && _amountOfCrew < _crewRequired) then
         {
-            _unit = [_group,_spawnLocation,"assault","random","bandit","Vehicle"] call DMS_fnc_SpawnAISoldier;   
+            _loadOut = ["bandit"] call SC_fnc_selectGear;
+			_unit = [_group,_spawnLocation,"custom","random","bandit","Vehicle",_loadOut] call DMS_fnc_SpawnAISoldier;   
+			_amountOfCrew = _amountOfCrew + 1;
             _unit assignAsCargo _vehicle; 
             _unit moveInCargo _vehicle;
             _unit setVariable ["DMS_AssignedVeh",_vehicle];
             removeBackpackGlobal _unit;
             _unit addBackpackGlobal "B_Parachute";
+			_unitPlaced = true;
         };  
         if(SC_extendedLogging) then 
         { 
@@ -137,13 +153,11 @@ for "_i" from 1 to _vehiclesToSpawn do
         [_unit] joinSilent _group;
     }foreach units _group;
 
-	if(SC_infiSTAR_log) then 
+	if(SC_extendedLogging && _unitPlaced) then 
 	{ 
 		_logDetail = format['[OCCUPATION:Sky] %1 spawned @ %2',_VehicleClassToUse,_spawnLocation];	
 		[_logDetail] call SC_fnc_log;
 	};
-
-
 	
 	clearMagazineCargoGlobal _vehicle;
 	clearWeaponCargoGlobal _vehicle;

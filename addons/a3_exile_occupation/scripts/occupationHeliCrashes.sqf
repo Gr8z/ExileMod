@@ -16,14 +16,9 @@ for "_i" from 1 to SC_numberofHeliCrashes do
 	while{!_validspot} do 
 	{
 		sleep 0.2;
-		_position = [ 0, 50, 1, 500, 500, 200, 200, 200, true, false ] call DMS_fnc_findSafePos;
+		_position = [ 10, 50, 1, 750, 750, 200, 200, 200, true, false ] call DMS_fnc_findSafePos;
 		_validspot	= true;
 	
-		// Check for nearby spawn points and traders
-		_nearestMarker = [allMapMarkers, _position] call BIS_fnc_nearestPosition;
-		_posNearestMarker = getMarkerPos _nearestMarker;
-		if(_position distance _posNearestMarker < 750) then { _validspot = false; };
-
 		//Check if near another heli crash site
 		_nearOtherCrash = (nearestObjects [_position,["Land_UWreck_MV22_F"],750]) select 0;	
 		if (!isNil "_nearOtherCrash") then { _validspot = false; };
@@ -31,11 +26,7 @@ for "_i" from 1 to SC_numberofHeliCrashes do
 		//Check if near another loot crate site
 		_nearOtherCrate = (nearestObjects [_position,["CargoNet_01_box_F"],500]) select 0;	
 		if (!isNil "_nearOtherCrate") then { _validspot = false; };
-		
-		//Check if near player base
-        _nearBase = (nearestObjects [_position,["Exile_Construction_Flag_Static"],500]) select 0;
-        if (!isNil "_nearBase") then { _validspot = false;  };	
-		
+				
 	};	
 	
 	_logDetail = format['[OCCUPATION:HeliCrashes] Crash %1 : Location %2',_i,_position];
@@ -56,26 +47,48 @@ for "_i" from 1 to SC_numberofHeliCrashes do
 	_box enableRopeAttach false;
 	_box setVariable ["permaLoot",true];
 	_box allowDamage false;
-	_box addMagazineCargoGlobal ["HandGrenade", (random 2)];
-	_box addMagazineCargoGlobal ["APERSBoundingMine_Range_Mag", (random 2)];
-	_box addBackpackCargoGlobal   ["B_Parachute", 1 + (random 1)];
-	_box addItemCargoGlobal  ["H_CrewHelmetHeli_B", 1 + (random 1)];
-	_box addItemCargoGlobal  ["U_B_HeliPilotCoveralls", 1 + (random 1)];
-	_box addItemCargoGlobal  ["ItemGPS", (random 1)];
-	_box addItemCargoGlobal  ["Exile_Item_InstaDoc", (random 1)];
-	_box addItemCargoGlobal ["Exile_Item_PlasticBottleFreshWater", 2 + (random 2)];
-	_box addItemCargoGlobal ["Exile_Item_EMRE", 2 + (random 2)];
+
+	{
+		_item = _x select 0;
+		_amount = _x select 1;
+		_randomAmount = _x select 2;
+		_amount = _amount + (random _randomAmount);
+		_itemType = _x call BIS_fnc_itemType;
+		
+		
+		if((_itemType select 0) == "Weapon") then
+		{
+			_box addWeaponCargoGlobal [_item, _amount];	
+		};
+		if((_itemType select 0) == "Magazine") then
+		{
+			_box addMagazineCargoGlobal [_item, _amount];	
+		};
+		if((_itemType select 0) == "Item") then
+		{
+			_box addItemCargoGlobal [_item, _amount];	
+		};
+		if((_itemType select 0) == "Equipment") then
+		{
+			_box addItemCargoGlobal [_item, _amount];	
+		};	
+		if((_itemType select 0) == "Backpack") then
+		{
+			_box addBackpackCargoGlobal [_item, _amount];	
+		};					
+	}forEach SC_HeliCrashItems;	
     
 	// Add weapons with ammo to the Box
-	_possibleWeapons = ["srifle_DMR_02_camo_F","srifle_DMR_03_woodland_F","srifle_DMR_04_F","srifle_DMR_05_hex_F"];
-	_amountOfWeapons = 1 + (random 3);
-	
+	_possibleWeapons = SC_HeliCrashWeapons;
+	_amountOfWeapons = (SC_HeliCrashWeaponsAmount select 0) + round random (SC_HeliCrashWeaponsAmount select 1);
+
     for "_i" from 1 to _amountOfWeapons do
     {
         _weaponToAdd = _possibleWeapons call BIS_fnc_selectRandom;
         _box addWeaponCargoGlobal [_weaponToAdd,1];
        
         _magazinesToAdd = getArray (configFile >> "CfgWeapons" >> _weaponToAdd >> "magazines");
+		_magazineAmount = (SC_HeliCrashMagazinesAmount select 0) + round random (SC_HeliCrashMagazinesAmount select 1);					
         _box addMagazineCargoGlobal [(_magazinesToAdd select 0),round random 5];
     };
 	
