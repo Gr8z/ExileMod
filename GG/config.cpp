@@ -3332,12 +3332,6 @@ class CfgInteractionMenus
                condition = "!(alive ExileClientInteractionObject) && ((ExileClientInteractionObject getVariable ['ExileName','']) != '')";
                action = "[(ExileClientInteractionObject getVariable ['ExileName','']),(ExileClientInteractionObject getVariable ['DroppedAmount',0])] call ExileClient_banking_player_examineMoney";
            };
-			class Revive: ExileAbstractAction
-	        {
-	            title = "Revive Player";
-	            condition = "(!(alive ExileClientInteractionObject) && (ExileClientInteractionObject getVariable ['EnigmaRevivePermitted', true]))";
-	            action = "_this spawn Enigma_RevivePlyr";
-	        };
 	        class Collect: ExileAbstractAction
            {
                title = "Collect Pop Tabs";
