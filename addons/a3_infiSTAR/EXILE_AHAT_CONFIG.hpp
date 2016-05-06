@@ -145,7 +145,6 @@ adminUIDandAccess[] =
 		 "76561198133936962", // Wrice4
 		 "76561198088251390", // SIX
 		 "76561197979611157", // Clanzoucu
-		 "76561198074948727", // Sifi_link
 		 "76561198056028211", // Nasty
 		 "76561198073495490", // Adam Kadmon
 		 "76561198129318411", // FriendlyFire
@@ -181,6 +180,7 @@ adminUIDandAccess[] =
 		 "76561198274767971", // CanadianFrodo
 		 "76561198060389676", // Powerwolf
 		 "76561198065188130", // Nacho
+		 "76561198074948727", // Sifi_link
 		 // Add UID's Above - Don't forget the comma!
 		 "0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
