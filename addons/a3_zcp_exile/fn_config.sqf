@@ -76,8 +76,8 @@ ZCP_CapPoints = [
 		-1, // max terrainGradient -> when specific static basefile is used (9) -> put -1 if you want to use the corresponding one from the ZCP_Capbasses array).
 		-1, // distancefromojects -> when specific static basefile is used (10) -> put -1 if you want to use the corresponding one from the ZCP_Capbasses array).
 		300, // captime in seconds for this mission (11)
-		4, // Minimum amount of AI at the start of mission (12)
-		8, // Maximum amount of AI at start of mission ( If you want it to always be a number change MIN and MAX to the same number. )
+		2, // Minimum amount of AI at the start of mission (12)
+		4, // Maximum amount of AI at start of mission ( If you want it to always be a number change MIN and MAX to the same number. )
 		false, // deploy smoke on the circle border when mission is finished (14)
 		0, // ammount of seconds to wait before deploying the smokescreen (15)
 		0, // ammount of meters outside the circle to place the smoke sources ( 0 is ON the circle border, 50 would be 50 meter outside the border)
@@ -85,7 +85,7 @@ ZCP_CapPoints = [
 		[ // array of waves of AI () (18)
 			[
 				15, // procentage of the cap time to start attack (50 = 50% of the total captime)
-				3, // Amount of AI units in a group
+				2, // Amount of AI units in a group
 				1, // Amount of AI groups
 				150, // distance in meter form ZCP for the ai to spawn
 				true // false -> all groups from 1 random location, true -> all groups from their own random location
