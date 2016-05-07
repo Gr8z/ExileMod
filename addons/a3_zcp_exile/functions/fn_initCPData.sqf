@@ -9,9 +9,10 @@ if(ZCP_dev) then {
 	ZCP_MaxWaitTime = 20;
 	ZCP_BaseCleanupDelay = 30;
 	ZCP_Minimum_Online_Players = 0;
+	ZCP_ServerStartWaitTime = 20;
 };
 
-ZCP_Version = "ZCP_Exile_2";
+ZCP_Version = "ZCP_Exile_2.1";
 ZCP_Data = [];
 ZCP_MissionTriggerData = [];
 ZCP_MissionCounter = 0;
@@ -31,7 +32,7 @@ ZCP_RandomReward = [];
 	_x set [4, _forEachIndex];
 	_x set [3, format['%1%2',(_x select 3),_forEachIndex]];
 	if(ZCP_dev) then {
-		_x set [12, 120]; // dev time to 60 seconds
+		_x set [11, 120]; // dev time to 60 seconds
 	};
 } forEach ZCP_CapPoints;
 
