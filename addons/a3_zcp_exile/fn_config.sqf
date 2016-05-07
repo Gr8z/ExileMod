@@ -7,9 +7,6 @@ ZCP_dev = false; // Devmode for shorter development capture times
 
 ZCP_AI_Type = 'DMS'; // NONE | DMS | FUMS
 
-// ZCP_Min_AI_Amount = 4; Not used anymore
-// ZCP_Random_AI_Max = 8; Not used anymore
-
 ZCP_MessagePlayersBeforeWaves = false; // True -> Inform for an icoming wave of AI, false is not inform the players inside.
 
 // ZCP_CapTime = 300; // Now defined for each mission seperate
