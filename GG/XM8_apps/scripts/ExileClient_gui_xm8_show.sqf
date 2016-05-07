@@ -143,9 +143,9 @@ _sideAppsPic ctrlCommit 0;
 
 {
 	//We dont have configured slides, thus we create it via scripting. We do that by executing slide creating scripts.
-	call (missionNamespace getVariable _slideOnLoadScript);
+	_slideOnLoadScript = getText (_x >> "onLoadScript");
 	if (!isNil "_slideOnLoadScript") then {
-		call (missionNamespace getVariable _slideOnLoadScript);
+		call compile preprocessFileLineNumbers _slideOnLoadScript;
 	};
 	
 	_slideControlID = getNumber (_x >> "controlID");

@@ -23,11 +23,3 @@ XM8_airDrop_DropInProgress = false;
 ];
 
 call compile preProcessFileLineNumbers format ["%1%2",_pathToAppFolder, "XM8_airDrop_Config.sqf"];
-
-
-
-
-
-
-
-
