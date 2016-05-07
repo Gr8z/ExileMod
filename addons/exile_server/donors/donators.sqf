@@ -210,6 +210,7 @@ Scout3 = [
 	"76561198144923334", // Harry (OD-2016-05-05) #13657
 	"76561198160058129", // Hawkeye (OD-2016-05-06) #13659
 	"76561198125759293", // Brown.G (OD-2016-05-06) #13664 
+	"76561198160058129", // Brian Bandoodle (Streamer)
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout3";
