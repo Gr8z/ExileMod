@@ -24,7 +24,6 @@ _lifeTime = 60 * getNumber (configFile >> "CfgSettings" >> "GarbageCollector" >>
 		    if ((time - _diedAt) >= 300) then
 		    {
 		        _x call ExileServer_system_garbageCollector_deleteObject;
-		        diag_log "The dead body is in a spawn zone";
 		    };
 		} else {
 		    if ((time - _diedAt) >= _lifeTime) then
