@@ -10,7 +10,7 @@ XM8_playerStats_playerStatsSlideIDCmap = [];
 
 {
 	if (isNil _x) then {
-		_code = compileFinal (preprocessFileLineNumbers (format (["%1GG\XM8_apps\apps\XM8_playerStats\scripts\%2.sqf",_pathToAppFolder,_x])));
+		_code = compileFinal (preprocessFileLineNumbers (format (["%1scripts\%2.sqf",_pathToAppFolder,_x])));
 		if (isNil "_code") then {_code = compileFinal ""};
 		missionNamespace setVariable [_x, _code];
 	};
