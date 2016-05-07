@@ -92,7 +92,7 @@ ZCP_CapPoints = [
 				50, // procentage of the cap time to start attack (50 = 50% of the total captime)
 				2, // Amount of AI units in a group
 				2, // Amount of AI groups
-				70, // distance in meter form ZCP for the ai to spawn
+				100, // distance in meter form ZCP for the ai to spawn
 				true // false -> all groups from 1 random location, true -> all groups from their own random location
 			]
 		]
