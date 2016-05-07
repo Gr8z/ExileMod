@@ -181,6 +181,7 @@ adminUIDandAccess[] =
 		 "76561198060389676", // Powerwolf
 		 "76561198065188130", // Nacho
 		 "76561198074948727", // Sifi_link
+		 "76561198036004541", // Demen
 		 // Add UID's Above - Don't forget the comma!
 		 "0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
