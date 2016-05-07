@@ -11,12 +11,13 @@ _ZCP_RR_currentCapper setVariable['PLAYER_STATS_VAR', [_ZCP_RR_currentCapper get
 
 format["setAccountScore:%1:%2", _ZCP_RR_playerScore,getPlayerUID _ZCP_RR_currentCapper] call ExileServer_system_database_query_fireAndForget;
 
-['Reputation',[_ZCP_RR_currentCapper, "showFragRequest", [[[format ["Battlezone %1", [9] call ZCP_fnc_translate],_ZCP_RR_awardToGive]]]]] call ZCP_fnc_showNotification;
+['Reputation',[_ZCP_RR_currentCapper, "showFragRequest", [[[format ["Battle Zone %1", [9] call ZCP_fnc_translate],_ZCP_RR_awardToGive]]]]] call ZCP_fnc_showNotification;
 
 ExileClientPlayerScore = _ZCP_RR_playerScore;
 (owner _ZCP_RR_currentCapper) publicVariableClient "ExileClientPlayerScore";
 ExileClientPlayerScore = nil;
 
+['Notification', ["ZCP",[format["%1 Successfully captured the Zone and Recieved %2 Respect.", name _ZCP_currentCapper
 _ZCP_RR_currentCapper call ExileServer_object_player_database_update;
 
 if( ZCP_ReputationRewardForGroup > 0 ) then {
@@ -35,7 +36,7 @@ if( ZCP_ReputationRewardForGroup > 0 ) then {
         (owner _x) publicVariableClient "ExileClientPlayerScore";
         ExileClientPlayerScore = nil;
 
-        ['Reputation', [_x, "showFragRequest", [[[format ["Battlezone %1", [10] call ZCP_fnc_translate],ZCP_ReputationRewardForGroup]]]]] call ZCP_fnc_showNotification;
+        ['Reputation', [_x, "showFragRequest", [[[format ["Battle Zone %1", [10] call ZCP_fnc_translate],ZCP_ReputationRewardForGroup]]]]] call ZCP_fnc_showNotification;
       }
     }count (units _ZCP_RR_capperGroup);
   };
