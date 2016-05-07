@@ -98,7 +98,7 @@ class CfgSounds
 	class cam
 	{
 		name = "cam";
-		sound[] = {"\GG\xm8Apps\cam.ogg", 1, 1};
+		sound[] = {"\GG\XM8_apps\sounds\cam.ogg", 1, 1};
 		titles[] = {};
 	};
 };
