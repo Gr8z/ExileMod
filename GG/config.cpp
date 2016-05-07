@@ -883,6 +883,7 @@ class IEDLandSmall_Remote_Mag: Exile_AbstractCraftingRecipe
         {1, "Exile_Item_ExtensionCord"},
         {1, "Exile_Item_DuctTape"}
     };
+    category = "Craftables";
 };
 class IEDLandbig_Remote_Mag: Exile_AbstractCraftingRecipe
 {
@@ -902,6 +903,7 @@ class IEDLandbig_Remote_Mag: Exile_AbstractCraftingRecipe
         {2, "Exile_Item_ExtensionCord"},
         {2, "Exile_Item_DuctTape"}
     };
+    category = "Craftables";
 };
 
 class Exile_Item_CookingPot: Exile_AbstractCraftingRecipe
@@ -918,6 +920,7 @@ class Exile_Item_CookingPot: Exile_AbstractCraftingRecipe
     {
         {1, "Exile_Item_JunkMetal"}
     };
+    category = "Food/Drinks";
 };
 
 class Exile_melee_Axe: Exile_AbstractCraftingRecipe
@@ -935,6 +938,7 @@ class Exile_melee_Axe: Exile_AbstractCraftingRecipe
         {2, "Exile_Item_JunkMetal"},
         {1, "Exile_Item_WoodLog"}
     };
+    category = "Craftables";
 };
 
 class Exile_Item_SafeKit: Exile_AbstractCraftingRecipe
@@ -953,6 +957,7 @@ class Exile_Item_SafeKit: Exile_AbstractCraftingRecipe
         {4, "Exile_Item_MetalBoard"},
         {1, "Exile_Item_Codelock"}
     };
+    category = "Building";
 };
 
 class Exile_Item_Camo_TentKit: Exile_AbstractCraftingRecipe
@@ -971,6 +976,7 @@ class Exile_Item_Camo_TentKit: Exile_AbstractCraftingRecipe
         {4, "Exile_Item_WoodPlank"},
         {2, "Exile_Item_Rope"}
     };
+    category = "Craftables";
 };
 
 class Laserdesignator: Exile_AbstractCraftingRecipe
@@ -988,6 +994,7 @@ class Laserdesignator: Exile_AbstractCraftingRecipe
         {1, "Exile_Item_JunkMetal"},
         {1, "Exile_Item_ThermalScannerPro"}
     };
+    category = "Craftables";
 };
 //NEW CRAFTING RECIPIES END
 //NEW WEAPON MAGAZINE CRAFTING
@@ -1003,6 +1010,7 @@ class SpillDirtyWater: Exile_AbstractCraftingRecipe
 	{
 		{1, "Exile_Item_PlasticBottleDirtyWater"}
 	};
+	category = "Food/Drinks";
 };
 class SpillSaltWater: Exile_AbstractCraftingRecipe
 {
@@ -1016,6 +1024,7 @@ class SpillSaltWater: Exile_AbstractCraftingRecipe
 	{
 		{1, "Exile_Item_PlasticBottleSaltWater"}
 	};
+	category = "Food/Drinks";
 };
 class CraftBandage: Exile_AbstractCraftingRecipe
 {
@@ -1029,6 +1038,7 @@ class CraftBandage: Exile_AbstractCraftingRecipe
 	{
 		{1, "Exile_Item_ToiletPaper"}
 	};
+	category = "Craftables";
 };
 class CraftPopTabs: Exile_AbstractCraftingRecipe
 {
@@ -1044,6 +1054,7 @@ class CraftPopTabs: Exile_AbstractCraftingRecipe
 		{1, "Exile_Item_Magazine02"},
 		{1, "Exile_Item_Magazine03"}
 	};
+	category = "Craftables";
 };
 };
 class CfgExileArsenal
