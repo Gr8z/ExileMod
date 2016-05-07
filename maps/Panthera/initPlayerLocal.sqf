@@ -3,7 +3,7 @@
 [] execVM "GG\SpecialWelcomeForDevs.sqf";
 [] execVM "GG\service\service_point.sqf";
 [] execVM "GG\SecureSafezones\config.sqf";
-
+"" execVM "GG\XM8_apps\scripts\XM8_apps_init.sqf";
 
 call compileFinal preprocessFileLineNumbers 'GG\TRYKfix.sqf';
 
