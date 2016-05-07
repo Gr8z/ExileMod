@@ -17,7 +17,7 @@ ExileClientPlayerScore = _ZCP_RR_playerScore;
 (owner _ZCP_RR_currentCapper) publicVariableClient "ExileClientPlayerScore";
 ExileClientPlayerScore = nil;
 
-['Notification', ["ZCP",[format["%1 Successfully captured the Zone and Recieved %2 Respect.", name _ZCP_currentCapper
+['Notification', ["ZCP",[format["%1 Successfully captured the Zone and Recieved %2 Respect.", name _ZCP_RR_currentCapper,_ZCP_RR_awardToGive]], 'ZCP_Capped']] call ZCP_fnc_showNotification;
 _ZCP_RR_currentCapper call ExileServer_object_player_database_update;
 
 if( ZCP_ReputationRewardForGroup > 0 ) then {
