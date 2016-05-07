@@ -128,6 +128,8 @@ Marksman3 = [
 	"76561198001181027", // Hibbityhooblah (OD-2016-05-01) #13619    
 	"76561198069812769", // TgM.Brendel (OD-2016-05-04) #13647  
 	"76561198069454294", // TgM.Purplecheese (OD-2016-05-04) #13646
+	"76561197977797550", // Doctor (OD-2016-05-06) #13666 
+	"76561198059948255", // [KS] Omniscient (OD-2016-05-06) #13662  
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Marksman3";
@@ -207,6 +209,7 @@ Scout3 = [
 	"76561198068704294", // HajiaLaBajia (OD-2016-05-03) #13636
 	"76561198144923334", // Harry (OD-2016-05-05) #13657
 	"76561198160058129", // Hawkeye (OD-2016-05-06) #13659
+	"76561198125759293", // Brown.G (OD-2016-05-06) #13664 
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout3";
