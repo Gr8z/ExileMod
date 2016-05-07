@@ -76,13 +76,6 @@ if ((!isNull _playerObj) && {(_playerUID != "") && {_playerObj isKindOf "Exile_U
 		_playerRank = _playerObj getVariable ["ExileHumanity", 0];
 		_unitName = name _unit;
 
-		/*
-		if (DMS_DEBUG) then
-		{
-			format ["PlayerAwardOnAIKill :: Attempting to give %1 (%2) %3 poptabs and %4 respect and %5 rank. Player currently has %6 tabs and %7 respect and &8 rank.", name _playerObj, _playerUID, _moneyChange, _repChange, _rankChange,_playerMoney, _playerRespect,_playerRank] call DMS_fnc_DebugLog;
-		};
-		*/
-
 		if (_moneyChange!=0) then
 		{
 			private ["_msgType", "_msgParams", "_distance", "_attributes", "_distanceBonus"];
@@ -93,7 +86,7 @@ if ((!isNull _playerObj) && {(_playerUID != "") && {_playerObj isKindOf "Exile_U
 			_playerObj setVariable ["ExilePurse",_playerMoney];
 
 			_msgType = "moneyReceivedRequest";
-			_msgParams = [str _playerMoney, format ["killed %1",_unitName]];
+			_msgParams = [str _playerMoney,"killed NPC"];
 
 			if (_moneyChange<0) then
 			{
@@ -126,7 +119,7 @@ if ((!isNull _playerObj) && {(_playerUID != "") && {_playerObj isKindOf "Exile_U
 
 		if (_repChange!=0) then
 		{
-			_attributes = ["KILLED NPC",_repChange]];
+			_attributes = [["KILLED NPC"],_repChange]];
 
 			if (DMS_AIKill_DistanceBonusCoefficient>0) then
 			{
