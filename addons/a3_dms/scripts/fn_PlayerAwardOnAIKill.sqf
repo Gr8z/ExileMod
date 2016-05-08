@@ -119,7 +119,7 @@ if ((!isNull _playerObj) && {(_playerUID != "") && {_playerObj isKindOf "Exile_U
 
 		if (_repChange!=0) then
 		{
-			_attributes = [["KILLED NPC"],_repChange]];
+			_attributes = [[format ["KILLED %1",toUpper(_unitName)],_repChange]];
 
 			if (DMS_AIKill_DistanceBonusCoefficient>0) then
 			{
@@ -192,7 +192,7 @@ if ((!isNull _playerObj) && {(_playerUID != "") && {_playerObj isKindOf "Exile_U
 			{
 				_msg = format
 				[
-					"%1 killed an NPC from %3 meters away and received %4 poptabs, %5 respect and %6 rank.",
+					"%1 killed %2 from %3 meters away and received %4 poptabs, %5 respect and %6 rank.",
 					name _playerObj,
 					_unitName,
 					if !(isNil "_distance") then {_distance} else {floor(_unit distance _playerObj)},
