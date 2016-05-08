@@ -4,27 +4,6 @@
 	Original idea by Shix.
 */
 
-/*
-Example
-XM8_apps_app1 = [
-	"Deploy Bike", //Text displayed on app button
-	"deployBike\bikeIcon.paa", //Icon displayd on app button
-	{execVM "deployBike\deploy_bike.sqf";}, //Script executed when app button pressed
-	FALSE, //FALSE if this is legacy app. TRUE if this app is compatible with Improved XM8 apps.
-	"" //Empty string ("") for legacy apps. Path to scripts init file for applications, compatible with Improved XM8 apps
-];
-XM8_apps_app2 = [
-	"Example app",
-	"XM8_apps\apps\XM8_exampleApp\icons\exampleIcon.paa",
-	{["exampleSlide_1", 0] call ExileClient_gui_xm8_slide},
-	TRUE,
-	"XM8_apps\apps\XM8_exampleApp\scripts\XM8_exampleApp_init.sqf"
-];
-Comment out apps, that you dont use.
-If you dont have icon, use default one "XM8_apps\icons\generic_app.paa"
-Always use full path from mission root folder
-*/
-
 XM8_apps_app1 = [
 	"TERRITORY",
 	"GG\XM8_apps\apps\XM8_territory\icons\territory.paa",
