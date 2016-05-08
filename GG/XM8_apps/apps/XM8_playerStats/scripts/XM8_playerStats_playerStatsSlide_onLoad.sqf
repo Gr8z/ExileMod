@@ -90,5 +90,5 @@ if (_playerPrimary != "") then {
 };
 
 _ctrl = [_thisSlide, ("" call _getNextIDC), [0*_pW,14*_pH,34*_pW,2*_pH], "","PuristaSemiBold",2,"#FFFFFFFF","center",1] call _makeStructuredText;
-_ctrl ctrlSetStructuredText parseText "<t size='1.2' align='center'><a href='http://ghostzgamerz.com/pages/ExileCherno'>CLICK HERE TO SEE LEADERBOARDS</a></t>";
+_ctrl ctrlSetStructuredText parseText "<t size='1.2' align='center'><a href='http://ghostzgamerz.com/pages/ExileA3'>VIEW LEADERBOARD</a></t>";
 _ctrl ctrlEnable true;
