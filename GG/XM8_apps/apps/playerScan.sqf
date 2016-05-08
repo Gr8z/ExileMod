@@ -20,17 +20,14 @@ if(isNil "LastUsedCheck")then
 };
 
 if !(player getVariable ["ExileXM8IsOnline", false]) exitWith {
-  (findDisplay 24015) closeDisplay 0;
   ["RepairFailedWarning", ["San Failed, Your 8G Network Is Offline"]] call ExileClient_gui_notification_event_addNotification;
 };
 
 if  ((nearestObject [player,'Exile_Construction_Abstract_Static']) distance player < 75) exitWith {
-  (findDisplay 24015) closeDisplay 0;
   ["RepairFailedWarning", ["Scan Failed, You are near a base."]] call ExileClient_gui_notification_event_addNotification;
 };
 
 if (ExileClientPlayerIsInCombat) exitWith {
-  (findDisplay 24015) closeDisplay 0;
   ["RepairFailedWarning", ["Scan Failed, You are in combat."]] call ExileClient_gui_notification_event_addNotification;
 };
 
