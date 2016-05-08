@@ -74,7 +74,7 @@ if ((!isNull _playerObj) && {(_playerUID != "") && {_playerObj isKindOf "Exile_U
 		_playerMoney = _playerObj getVariable ["ExilePurse", 0];
 		_playerRespect = _playerObj getVariable ["ExileScore", 0];
 		_playerRank = _playerObj getVariable ["ExileHumanity", 0];
-		_unitName = name _unit;
+		_unitName = "NPC";
 
 		/*
 		if (DMS_DEBUG) then
