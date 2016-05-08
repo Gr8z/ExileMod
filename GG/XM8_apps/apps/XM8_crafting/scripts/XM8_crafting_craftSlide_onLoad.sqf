@@ -127,7 +127,7 @@ for '_j' from 0 to (count (missionConfigFile >> "CfgCraftingRecipes"))-1 do {
 	_CategoryConfig = (missionConfigFile >> "CfgCraftingRecipes") select _j;
 	_RecipeCategory = getText(_CategoryConfig >> "category");	
 	if!(_RecipeCategory in _RecipeCategories)then{_RecipeCategories pushBack _RecipeCategory;};		
-	_RecipeCategory = "Uncategorised";
+	_RecipeCategory = "Uncategorized";
 	if!(_RecipeCategory in _RecipeCategories)then{_RecipeCategories pushBack _RecipeCategory;};
 };
 _catCombo = "categoriesCombo" call _getControl;
