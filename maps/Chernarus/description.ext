@@ -3,6 +3,7 @@
 #include "GG\AdvancedBanking\Dialog\AdvBanking_Client_ATMDialog.hpp"
 #include "GG\VirtualGarage\Dialog\VirtualGarage_Client_Defines.hpp"
 #include "GG\VirtualGarage\Dialog\VirtualGarage_Client_Dialog.hpp"
+#include "GG\XM8_apps\XM8_apps_sliders.hpp"
 
 // https://community.bistudio.com/wiki/Description.ext#forceRotorLibSimulation
 forceRotorLibSimulation = 2;
@@ -98,7 +99,7 @@ class CfgSounds
 	class cam
 	{
 		name = "cam";
-		sound[] = {"\GG\xm8Apps\cam.ogg", 1, 1};
+		sound[] = {"\GG\XM8_apps\sounds\cam.ogg", 1, 1};
 		titles[] = {};
 	};
 };

@@ -31,7 +31,7 @@ _inventory = [] spawn {
 		
 	_button1 ctrlCommit 0;
 	_button1 ctrlSetText "DEPLOY BIKE";
-	_button1 buttonSetAction "[] execVM 'GG\xm8Apps\apps\spawn_bike.sqf'";
+	_button1 buttonSetAction "[] execVM 'GG\XM8_apps\apps\spawn_bike.sqf'";
 		
 	_button2 = (findDisplay 602) ctrlCreate ["RscButtonMenu",44928];
 	_button2 ctrlSetPosition  [30*(((safezoneW/safezoneH)min 1.2)/40)+(safezoneX+(safezoneW-((safezoneW/safezoneH)min 1.2))/2),
