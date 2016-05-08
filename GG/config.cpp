@@ -2240,6 +2240,7 @@ class CfgExileCustomCode
     ExileClient_gui_xm8_show = 								"GG\XM8_apps\scripts\ExileClient_gui_xm8_show.sqf";
     ExileClient_gui_xm8_slide_apps_onOpen = 				"GG\XM8_apps\scripts\ExileClient_gui_xm8_slide_apps_onOpen.sqf";
     ExileClient_gui_xm8_slide = 							"GG\XM8_apps\scripts\ExileClient_gui_xm8_slide.sqf";
+    ExileClient_gui_xm8_slide_server_onOpen = 				"GG\overrides\GG_gui_xm8_slide_server_onOpen.sqf";
 };
 
 class CfgNetworkMessages {
