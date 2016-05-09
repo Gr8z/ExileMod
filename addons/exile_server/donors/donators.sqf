@@ -127,7 +127,6 @@ Marksman3 = [
 	"76561198082829958", // BlueFalcon (OD-2016-04-24) #13543    
 	"76561198001181027", // Hibbityhooblah (OD-2016-05-01) #13619    
 	"76561198069812769", // TgM.Brendel (OD-2016-05-04) #13647  
-	"76561198069454294", // TgM.Purplecheese (OD-2016-05-04) #13646
 	"76561197977797550", // Doctor (OD-2016-05-06) #13666 
 	"76561198059948255", // [KS] Omniscient (OD-2016-05-06) #13662  
 // Add UIDs above, don't forget the comma
@@ -213,6 +212,7 @@ Scout3 = [
 	"76561198200657414", // subpar (OD-2016-05-07) #13671  
 	"76561198124941785", // Lindsay (OD-2016-05-09) #13684  
 	"76561197972153280", // Brian Bandoodle (Streamer)
+	"76561198069454294", // TgM.Purplecheese (OD-2016-05-04) #13646
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout3";
