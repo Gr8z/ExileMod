@@ -94,6 +94,7 @@ Marksman2 = [
 	"76561198200667619", // Daniel Fernandez (OD-2016-04-30) #13601   
 	"76561198041297338", // Alvarez (OD-2016-05-01) #13616   
 	"76561198206283752", // Corey (OD-2016-05-07) #13672    
+	"76561198041528102", // Jay (OD-2016-05-08) #13679    
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Marksman2";
@@ -212,6 +213,7 @@ Scout3 = [
 	"76561198160058129", // Hawkeye (OD-2016-05-06) #13659
 	"76561198125759293", // Brown.G (OD-2016-05-06) #13664 
 	"76561198200657414", // subpar (OD-2016-05-07) #13671  
+	"76561198124941785", // Lindsay (OD-2016-05-09) #13684  
 	"76561197972153280", // Brian Bandoodle (Streamer)
 // Add UIDs above, don't forget the comma
 "0"
