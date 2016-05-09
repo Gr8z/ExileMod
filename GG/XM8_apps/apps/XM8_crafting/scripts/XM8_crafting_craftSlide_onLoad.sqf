@@ -111,7 +111,7 @@ _thisSlide = _display ctrlCreate ["RscExileXM8Slide",("craftSlide" call _getNext
 */
 [_thisSlide, ("componentsList" call _getNextIDC), [0.4*_pW,4*_pH,15.2*_pW,7*_pH], "call XM8_crafting_componentsLoad", ""] call _makeList;
 [_thisSlide, ("recipeList" call _getNextIDC), [16.2*_pW,4*_pH,16.8*_pW,14.25*_pH], "", ""] call _makeList;
-[_thisSlide, ("craftButton" call _getNextIDC),[16.2*_pW,2.5*_pH,8.3*_pW,1*_pH],"","Craft",""] call _makeButton;
+[_thisSlide, ("craftButton" call _getNextIDC),[16.2*_pW,2.5*_pH,8.3*_pW,1*_pH],"SelectedRecipe call ExileClient_gui_crafting_show","Craft",""] call _makeButton;
 [_thisSlide, ("categoriesCombo" call _getNextIDC), [0.4*_pW,2.5*_pH,15.2*_pW,1*_pH], "call XM8_crafting_recipeLoad", ""] call _makeCombo;
 [
 	_thisSlide, ("text" call _getNextIDC), [0.4*_pW,1.5*_pH,15.2*_pW,1*_pH], 
