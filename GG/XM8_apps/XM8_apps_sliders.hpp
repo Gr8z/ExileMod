@@ -29,4 +29,10 @@ class CfgXM8 {
 		title = "Player stats";
 		onLoadScript = "GG\XM8_apps\apps\XM8_playerStats\scripts\XM8_playerStats_playerStatsSlide_onLoad.sqf";
 	};
+	//This slide use IDCs from 352500 to 
+	class mainVGSlide {
+		controlID = 352500;
+		title = "Virtual Garage";
+		onLoadScript = "GG\XM8_apps\apps\XM8_VG\scripts\XM8_VG_mainVGSlide_onLoad.sqf";
+	};
 };

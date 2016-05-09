@@ -1,8 +1,6 @@
 #include "GG\GG_Exile_AdminMenu.hpp"
 #include "GG\AdvancedBanking\Dialog\AdvBanking_Client_Defines.hpp"
 #include "GG\AdvancedBanking\Dialog\AdvBanking_Client_ATMDialog.hpp"
-#include "GG\VirtualGarage\Dialog\VirtualGarage_Client_Defines.hpp"
-#include "GG\VirtualGarage\Dialog\VirtualGarage_Client_Dialog.hpp"
 #include "GG\XM8_apps\XM8_apps_sliders.hpp"
 
 // https://community.bistudio.com/wiki/Description.ext#forceRotorLibSimulation
@@ -108,6 +106,7 @@ class CfgSounds
 #include "GG\CHVD\dialog.hpp"
 class cfgFunctions
 {
+	#include "GG\ExAdClient\CfgFunctions.cpp"
 	#include "GG\CHVD\CfgFunctions.hpp"
 };
 

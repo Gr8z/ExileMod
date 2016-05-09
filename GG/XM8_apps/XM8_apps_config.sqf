@@ -70,14 +70,15 @@ XM8_apps_app9 = [
 	""
 ];
 
-/*
-XM8_apps_app10 = [
-	"App 10",
-	"",
-	{},
-	false,
-	""
+XM8_apps_app1 = [
+	"ExAd Virtual Garage",
+	"GG\XM8_apps\apps\XM8_VG\Icons\apps_icon.paa",
+	{call XM8_VG_checkNearByFlags},
+	TRUE,
+	"GG\XM8_apps\apps\XM8_VG\scripts\XM8_VG_init.sqf"
 ];
+
+/*
 XM8_apps_app11 = [
 	"App 11",
 	"",
