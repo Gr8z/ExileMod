@@ -1,17 +1,6 @@
 waituntil{hasInterface};
-private["_glasses","_removeTRYK"];
-_removeTRYK=[
-
-"TRYK_H_ghillie_top_headless3glass",
-"TRYK_kio_balaclava_WH"
-
-];
-{
-	player unassignItem _x;
-	player removeItem _x;
-	_glasses = goggles player;
-	if(_glasses isEqualTo _x )then{
-		removeGoggles player;
-	};
-	
-}forEach _removeTRYK;
+waitUntil{player == player};
+_glasses = goggles player;
+if(_glasses isEqualTo "TRYK_H_ghillie_top_headless3glass" )then{
+	removeGoggles player;
+};
