@@ -27,6 +27,9 @@ class CfgRemoteExec
 		class SA_Hint_Success  										{ allowedTargets=1; }; 
 		class SA_Hint_Whoops  										{ allowedTargets=1; };
 		class SA_Hide_Object_Global  								{ allowedTargets=2; };
+		class ExAd_fnc_incomingRequest 								{ allowedTargets=2; };
+		class ExAd_fnc_loadVGDetailView 							{ allowedTargets=2; };
+		class ExAdServer_fnc_clientRequest 							{ allowedTargets=2; };
 	};
 	class Commands
 	{
@@ -35,43 +38,6 @@ class CfgRemoteExec
 	};
 };
 
-class CfgTornZ_Exile
-{
-    zombies_maxLocal = 6;
-    zombies_maxLocalOverFlow = 12;
-    zombies_maxTotal = 20;
-    zombies_distance = 150;
-    zombies_distanceMax = 250;
-    zombies_distanceLosInital = 100;
-    zombies_distanceLosMax = 200;
-    zombies_distanceLosInital_EngineOff = 20;
-    zombies_spawnChance = 0.2;
-    zombies_spawnOutsideChance = 0.1;
-    zombies_lootChance = 0.8;
-    zombies_killedScore = 10;
-}; 
-class VirtualGarageSettings
-{
-	VirtualGarage_PlayerHasToBeOnFlag = 1;
-	VirtualGarage_MovePlayerInVehicleOnSpawn = 0;
-	VirtualGarage_VehicleSpawnState = 1;
-    VirtualGarage_VehicleSpawnPos = 2;
-	VirtualGarage_3DMarkerOnVehicleOnSpawn = 1;
-	VirtualGarage_3DTime = 20;
-	VirtualGarage_ReapplyDamage = 1;
-	VirtualGarage_GivePlayerPinCode = 1;
-
-	VirtualGarage_FlagLevel1Limit = 2;
- 	VirtualGarage_FlagLevel2Limit = 4;
- 	VirtualGarage_FlagLevel3Limit = 6;
- 	VirtualGarage_FlagLevel4Limit = 8;
- 	VirtualGarage_FlagLevel5Limit = 10;
- 	VirtualGarage_FlagLevel6Limit = 12;
- 	VirtualGarage_FlagLevel7Limit = 14;
- 	VirtualGarage_FlagLevel8Limit = 16;
- 	VirtualGarage_FlagLevel9Limit = 18;
- 	VirtualGarage_FlagLevel10Limit = 20;
-};
 class CfgNotifications
 {
   class Success
@@ -2241,6 +2207,7 @@ class CfgExileCustomCode
     ExileClient_gui_xm8_slide_apps_onOpen = 				"GG\XM8_apps\scripts\ExileClient_gui_xm8_slide_apps_onOpen.sqf";
     ExileClient_gui_xm8_slide = 							"GG\XM8_apps\scripts\ExileClient_gui_xm8_slide.sqf";
     ExileClient_gui_xm8_slide_server_onOpen = 				"GG\overrides\GG_gui_xm8_slide_server_onOpen.sqf";
+    ExileServer_system_territory_database_load = 			"GG\ExAdClient\VirtualGarage\CustomCode\ExileServer_system_territory_database_load.sqf";
 };
 
 class CfgNetworkMessages {
@@ -2304,39 +2271,13 @@ class CfgNetworkMessages {
 		module = "banking";
 		parameters[] = {"STRING","STRING"};
 	};
-	class GetStoredVehiclesRequest
+	class AdvancedHint
 	{
-		module = "VirtualGarage";
-		parameters[] = {"STRING"};
+		parameters[] = {"STRING","ARRAY"};
 	};
-
-	class GetStoredVehiclesResponse
+	class Call
 	{
-		module = "VirtualGarage";
-		parameters[] = {"ARRAY"};
-	};
-
-	class RetrieveVehicleRequest
-	{
-		module = "VirtualGarage";
-		parameters[] = {"STRING"};
-	};
-	class RetrieveVehicleResponse
-	{
-		module = "VirtualGarage";
-		parameters[] = {"STRING","STRING"};
-	};
-
-	class StoreVehicleRequest
-	{
-		module = "VirtualGarage";
-		parameters[] = {"STRING","STRING"};
-	};
-
-	class StoreVehicleResponse
-	{
-		module = "VirtualGarage";
-		parameters[] = {"STRING"};
+		parameters[] = {"CODE"};
 	};
 };
 
@@ -3100,17 +3041,17 @@ class CfgInteractionMenus
 				condition = "((ExileClientInteractionObject animationPhase 'LaptopLidRotation') >= 0.5)";
 				action = "_this call ExileClient_gui_baseCamera_show";
 			};
-			class VirtualGarage: ExileAbstractAction
-			{
-			  title = "Access Virtual Garage";
-			  condition = "((ExileClientInteractionObject animationPhase 'LaptopLidRotation') >= 0.5)";
-			  action = "call ExileClient_VirtualGarage_AccessGarage";
-			};
 			class Access: ExileAbstractAction
 			{
 				title = "Online Banking";
 				condition = "((ExileClientInteractionObject animationPhase 'LaptopLidRotation') >= 0.5)";
 				action = "createDialog 'AdvBankingATM';";
+			};
+			class VG : ExileAbstractAction
+			{
+				title = "Virtual Garage";
+				condition = "(([_object, getPlayerUID player] call ExileClient_util_territory_getAccessLevel) select 0) >= ExAd_VG_ACCESS_LEVEL";
+				action = "[] spawn {[] call ExileClient_gui_xm8_show; UISleep 1; call XM8_VG_checkNearByFlags}";
 			};
 		};
 	};
