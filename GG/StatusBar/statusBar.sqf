@@ -42,6 +42,39 @@ StatusEnabled = true;
 			_hours = (floor(_time/60));
 			_minutes = (_time - (_hours * 60));
 
+			if (_dir >= 330 || _dir < 30) then
+			{
+				_dir = "N";
+			};
+			if (_dir >= 30 && _dir < 73) then
+			{
+				_dir = "NE";
+			};
+			if (_dir >= 73 && _dir < 118) then
+			{
+				_dir = "E";
+			};
+			if (_dir >= 118 && _dir < 163) then
+			{
+				_dir = "SE";
+			};
+			if (_dir >= 163 && _dir < 208) then
+			{
+				_dir = "S";
+			};
+			if (_dir >= 208 && _dir < 253) then
+			{
+				_dir = "SW";
+			};
+			if (_dir >= 253 && _dir < 298) then
+			{
+				_dir = "W";
+			};
+			if (_dir >= 298 && _dir < 330) then
+			{
+				_dir = "NW";
+			};
+			
 			switch(_minutes) do
 			{
 				case 9: {_minutes = "09"};
