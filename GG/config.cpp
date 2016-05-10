@@ -3050,7 +3050,7 @@ class CfgInteractionMenus
 			class VG : ExileAbstractAction
 			{
 				title = "Virtual Garage";
-				condition = "(([_object, getPlayerUID player] call ExileClient_util_territory_getAccessLevel) select 0) >= ExAd_VG_ACCESS_LEVEL";
+				condition = "(((ExileClientInteractionObject animationPhase 'LaptopLidRotation') >= 0.5) && ((([_object, getPlayerUID player] call ExileClient_util_territory_getAccessLevel) select 0) >= ExAd_VG_ACCESS_LEVEL))";
 				action = "[] spawn {[] call ExileClient_gui_xm8_show; UISleep 1; call XM8_VG_checkNearByFlags}";
 			};
 		};
