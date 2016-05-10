@@ -27,6 +27,9 @@ class CfgRemoteExec
 		class SA_Hint_Success  										{ allowedTargets=1; }; 
 		class SA_Hint_Whoops  										{ allowedTargets=1; };
 		class SA_Hide_Object_Global  								{ allowedTargets=2; };
+		class ExAd_fnc_incomingRequest 								{ allowedTargets=2; };
+		class ExAd_fnc_loadVGDetailView 							{ allowedTargets=2; };
+		class ExAdServer_fnc_clientRequest 							{ allowedTargets=2; };
 	};
 	class Commands
 	{
