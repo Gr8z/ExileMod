@@ -9,13 +9,13 @@ private ["_flags","_flag"];
 _flags = nearestObjects [player,["Exile_Construction_Flag_Static"],150];
 
 if(count _flags == 0)exitWith{
-	["Whoops", ["No connetion to a Virtual Garage"]] call ExileClient_gui_notification_event_addNotification;
+	["Whoops", ["You must be near a territory to use The Virtual Garage."]] call ExileClient_gui_notification_event_addNotification;
 	["sideApps", 1] call ExileClient_gui_xm8_slide
 };
 
 _flag = _flags select 0;
 if((player distance _flag) > (_flag getVariable ["ExileTerritorySize", 50]))exitWith{
-	["Whoops", ["No connetion to a Virtual Garage"]] call ExileClient_gui_notification_event_addNotification;
+	["Whoops", ["You must be near a territory to use The Virtual Garage."]] call ExileClient_gui_notification_event_addNotification;
 	["sideApps", 1] call ExileClient_gui_xm8_slide
 };
 

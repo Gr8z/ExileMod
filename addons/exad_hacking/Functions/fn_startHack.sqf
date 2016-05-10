@@ -92,7 +92,7 @@ _player removeItem "Exile_Item_Laptop";
 		if(_object isKindOf "Exile_Construction_Flag_Static")then{
 			if(!isClass(configFile >> "CfgPatches" >> "ExAd_VG"))then{
 				["startHack", "You are missing the ExAd_VG dependenci to run this function.", true] call ExAd_fnc_debugHandler;
-				"This server isn't using the ExAd Virtual Garage, tell the admins to get a grip!!"
+				"This server isn't using the Virtual Garage"
 			}else{			
 				private ["_vehList","_objId","_vehObj","_extDB2Message","_pos"];
 				_vehList = _object getVariable ["ExAdVGVeh", []];
