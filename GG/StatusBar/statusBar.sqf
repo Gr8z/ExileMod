@@ -44,7 +44,7 @@ StatusEnabled = true;
 
 			if (_dir >= 330 || _dir < 30) then
 			{
-				GG_dir = "N";
+				GG_dir = " N";
 			};
 			if (_dir >= 30 && _dir < 73) then
 			{
@@ -52,7 +52,7 @@ StatusEnabled = true;
 			};
 			if (_dir >= 73 && _dir < 118) then
 			{
-				GG_dir = "E";
+				GG_dir = " E";
 			};
 			if (_dir >= 118 && _dir < 163) then
 			{
@@ -60,7 +60,7 @@ StatusEnabled = true;
 			};
 			if (_dir >= 163 && _dir < 208) then
 			{
-				GG_dir = "S";
+				GG_dir = " S";
 			};
 			if (_dir >= 208 && _dir < 253) then
 			{
@@ -68,7 +68,7 @@ StatusEnabled = true;
 			};
 			if (_dir >= 253 && _dir < 298) then
 			{
-				GG_dir = "W";
+				GG_dir = " W";
 			};
 			if (_dir >= 298 && _dir < 330) then
 			{
