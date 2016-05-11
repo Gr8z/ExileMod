@@ -213,6 +213,7 @@ Scout3 = [
 	"76561198124941785", // Lindsay (OD-2016-05-09) #13684  
 	"76561197972153280", // Brian Bandoodle (Streamer)
 	"76561198069454294", // TgM.Purplecheese (OD-2016-05-04) #13646
+	"76561198118830505", // Syphilis (OD-2016-05-10) #13694
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout3";
@@ -271,6 +272,7 @@ Soldier3 = [
 	"76561197994565116", // Bee (OD-2016-04-30) #13608
 	"76561198056745227", // Dexter (OD-2016-05-01) #13621
 	"76561198069454294", // TgM.Purplecheese (OD-2016-05-03) #13639
+	"76561198001181027", // Hibbityhoobla (OD-2016-05-10) #13692
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Soldier3";
