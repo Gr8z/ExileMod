@@ -181,6 +181,8 @@ Scout3 = [
 	"76561197972153280", // Brian Bandoodle (Streamer)
 	"76561198069454294", // TgM.Purplecheese (EXP-2016-06-04) #13646
 	"76561198118830505", // Syphilis (OD-2016-05-10) #13694
+	"76561197987069300", // ShroomBear (OD-2016-05-10) #13697 
+	"76561197971687271", // H4ppyK1llM0r3 (OD-2016-05-11) #13699  
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout3";
