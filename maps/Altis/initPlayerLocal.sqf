@@ -5,8 +5,6 @@
 [] execVM "GG\SecureSafezones\config.sqf";
 "" execVM "GG\XM8_apps\scripts\XM8_apps_init.sqf";
 
-call compileFinal preprocessFileLineNumbers 'GG\TRYKfix.sqf';
-
 #include "initServer.sqf"
 
 if (!hasInterface || isServer) exitWith {};
