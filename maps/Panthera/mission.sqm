@@ -12,7 +12,9 @@ class Mission {
 		"aia_misc_config",
 		"cabuildings_misc",
 		"A3_Characters_F",
-		"CUP_Weapons_Makarov"
+		"CUP_Weapons_Makarov",
+		"rhs_weapons",
+		"rhsusf_weapons"
 	};
 	addOnsAuto[]=
 	{
