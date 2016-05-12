@@ -12,9 +12,10 @@ class Mission {
 		"aia_misc_config",
 		"cabuildings_misc",
 		"A3_Characters_F",
-		"CUP_Weapons_Makarov",
+		"CUP_Weapons_WeaponsCore",
 		"rhs_weapons",
-		"rhsusf_weapons"
+		"rhsusf_weapons",
+		"tryk_backpack"
 	};
 	addOnsAuto[]=
 	{
