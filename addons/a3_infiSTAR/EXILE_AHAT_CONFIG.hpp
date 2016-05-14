@@ -108,13 +108,13 @@ hiddenSuperAdmin[] =
 	"76561198153784743", // Ghost
 	"76561198137100220", // Deadskin
 	"76561197978528230", // Dark
+	"76561198115492831", // BigEgg
 };
 
 adminUIDandAccess[] =
 {
 	{
 		{
-		 "76561198115492831", // BigEgg
 		 //Add UID's Above - Don't forget the comma!
 		"0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
@@ -148,6 +148,8 @@ adminUIDandAccess[] =
 		 "76561198056028211", // Nasty
 		 "76561198073495490", // Adam Kadmon
 		 "76561198129318411", // FriendlyFire
+		 "76561198274767971", // CanadianFrodo
+		 "76561198074948727", // Sifi_link
 		 "0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
 			"Teleport On Map Click","Teleport - Target To Me","Teleport - Me To Target","Teleport In Facing Direction (10m steps)",
@@ -177,10 +179,8 @@ adminUIDandAccess[] =
 		 "76561198101663483", // Chubby/spider
 		 "76561198056745227", // Dexter
 		 "76561198078011082", // Jesse
-		 "76561198274767971", // CanadianFrodo
 		 "76561198060389676", // Powerwolf
 		 "76561198065188130", // Nacho
-		 "76561198074948727", // Sifi_link
 		 "76561198036004541", // Demen
 		 // Add UID's Above - Don't forget the comma!
 		 "0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
