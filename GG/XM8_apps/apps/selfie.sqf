@@ -11,6 +11,7 @@ if (ExileClientPlayerIsInCombat) exitWith {
 };
 
 (findDisplay 24015) closeDisplay 0;
+StatusEnabled = false;
 player enablesimulation false; 
 showCinemaBorder true;
 _camera = "camera" camCreate (player modelToWorld [1,1,2]);
@@ -23,6 +24,7 @@ waitUntil {camCommitted _camera};
 cutText ['','WHITE IN'];
 playSound "cam";
 uiSleep 2;
-player enablesimulation true; 
+player enablesimulation true;
+StatusEnabled = false;
 _camera cameraEffect ["terminate","back"];
 camDestroy _camera;
