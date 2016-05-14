@@ -184,7 +184,8 @@ Scout3 = [
 	"76561197987069300", // ShroomBear (OD-2016-05-10) #13697 
 	"76561197971687271", // H4ppyK1llM0r3 (OD-2016-05-11) #13699  
 	"76561198101800747", // Perald (OD-2016-05-12) #13702   
-	"76561198050228690", // TIM (EXP-2016-06-13)    
+	"76561198050228690", // TIM (EXP-2016-06-13)
+	"76561198082829958", // BlueFalcon (OD-2016-05-13) #13715
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout3";
@@ -236,6 +237,7 @@ Soldier3 = [
 	"76561198069454294", // TgM.Purplecheese (EXP-2016-06-03) #13639
 	"76561198001181027", // Hibbityhoobla (EXP-2016-06-10) #13692
 	"76561198045725366", // Darg (OD-2016-05-14) #13718
+	"76561198071285526", // Nick Evans (OD-2016-05-14)
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Soldier3";
