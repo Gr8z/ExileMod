@@ -38,16 +38,9 @@ if(_aiActive > _maxAIcount) exitWith
 _areaToScan = [ 0, 900, 1, 500, 500, 0, 0, 0, true, false ] call DMS_fnc_findSafePos;
 
 {
-	_logDetail = format ["[OCCUPATION Military]:: scanning buildings around %2 started at %1",time,_areaToScan];
-    [_logDetail] call SC_fnc_log;
-	
     _currentBuilding = _x;
 	_building = _areaToScan nearObjects [_currentBuilding, _maxDistance];
 	
-	_logDetail = format ["[OCCUPATION Military]:: scan for %2 building finished at %1",time,_currentBuilding];
-    [_logDetail] call SC_fnc_log;
-	
-
     {
 		_okToSpawn = true;
 		Sleep 0.1;
