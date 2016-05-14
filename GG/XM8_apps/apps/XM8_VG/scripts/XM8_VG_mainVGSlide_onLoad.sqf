@@ -154,4 +154,4 @@ _idcStoredVehList = "StoreVehList" call _getNextIDC;
 _idcNearVehList = "NearVehicleList" call _getNextIDC;
 [_thisSlide,_idcNearVehList,[_leftCol * _pW, 11.5 * _pH, _leftColW * _pW, 5 * _pH],"",""] call _makeList;
 
-[_thisSlide,("storeButton" call _getNextIDC),[_leftCol * _pW, 16.5 * _pH, _leftColW * _pW, 1 * _pH],format["if(call ExAd_fnc_allowVGStore)then{disableUserInput true;['VGStore', %1] call ExAd_fnc_onBtnClickVG}else{['Whoops', ['%2']] call ExileClient_gui_notification_event_addNotification}",_idcNearVehList,localize "STR_ExAd_VIRTUALGARAGE_NOTI_FULL"],"Store",""] call _makeButton;
+[_thisSlide,("storeButton" call _getNextIDC),[_leftCol * _pW, 16.5 * _pH, _leftColW * _pW, 1 * _pH],format["if(call ExAd_fnc_allowVGStore)then{disableUserInput true;['VGStore', %1] call ExAd_fnc_onBtnClickVG}else{['Whoops', ['%2']] call ExileClient_gui_notification_event_addNotification}",_idcNearVehList, "Your garage is full!"],"Store",""] call _makeButton;

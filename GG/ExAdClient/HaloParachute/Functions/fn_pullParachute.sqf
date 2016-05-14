@@ -18,9 +18,11 @@
 
 private ["_parachuteObject"];
 
-waitUntil {sleep 0.1; {player distance _x < 10 max (sizeOf typeOf _x)} count (player nearEntities ["Helicopter_Base_F", 20]) == 0};
+waitUntil {sleep 0.1; ({player distance _x < (10 max (sizeOf typeOf _x))} count (player nearEntities ["Air", 20])) == 0};
 
 if (!alive player || vehicle player != player) exitWith {};
+
+if(backpack player == "B_Parachute")then{removeBackpack player};
 
 _parachuteObject = createVehicle ["Steerable_Parachute_F", getPosATL player, [], 0, "CAN_COLLIDE"];
 _parachuteObject setDir getDir player;
@@ -37,7 +39,7 @@ if(ExAd_HALOPARACHUTE_SAFE_MODE)then{
 	[ExAd_PARACHUTE_SAFE_THREAD] call ExileClient_system_thread_removeTask;
 };
 
-if(ExAd_HALOPARACHUTE_DETACH_PARACHUTE_MODE)then{
+if(ExAd_HALOPARACHUTE_USE_KEY_ACTIONS)then{
 	hint "You can eject from parachute with: Alt Shift x"
 };
 
