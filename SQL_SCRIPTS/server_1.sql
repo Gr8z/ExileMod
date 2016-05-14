@@ -47,7 +47,8 @@ and damage = 1;
 /* RESET VEHICLE CODE NOT USED IN 5 DAYS */
 UPDATE vehicle
 SET pin_code = '0000',is_locked = 0
-WHERE last_updated_at < DATE_SUB(CURRENT_TIMESTAMP, INTERVAL 3 DAY);
+WHERE last_updated_at < DATE_SUB(CURRENT_TIMESTAMP, INTERVAL 3 DAY)
+AND territory_id IS NULL;
 
 /* Censor territory names */
 UPDATE territory
