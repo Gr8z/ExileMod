@@ -10,7 +10,7 @@ StatusEnabled = true;
 
 	while {true} do
 	{
-		uisleep 1;
+		uisleep 0.5;
 		if !(StatusEnabled) then
 		{
 			_rscLayer = "RscExileStatusBar" call BIS_fnc_rscLayer;
