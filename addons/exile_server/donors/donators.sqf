@@ -101,6 +101,7 @@ Marksman3 = [
 	"76561198069812769", // TgM.Brendel (OD-2016-05-04) #13647  
 	"76561197977797550", // Doctor (OD-2016-05-06) #13666 
 	"76561198059948255", // [KS] Omniscient (OD-2016-05-06) #13662  
+	"76561197990133898", // Stalker (OD-2016-05-14) #13726  
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Marksman3";
@@ -234,6 +235,7 @@ Soldier3 = [
 	"76561198045725366", // Darg (OD-2016-05-14) #13718
 	"76561198071285526", // Nick Evans (OD-2016-05-14) #13720
 	"76561198140074059", // Beau Rebel (OD-2016-05-14) #13722
+	"76561198078726531", // John Greco (OD-2016-05-14) #13724
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Soldier3";
