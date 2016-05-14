@@ -65,7 +65,7 @@ _makeStructuredText = {
 _makeList = {
 	params ["_parent","_idc","_position","_actionOnSelChanged","_tooltip"];
 	private ["_ctrl"];
-	_ctrl = _display ctrlCreate ["RscListBox",_idc,_parent];
+	_ctrl = _display ctrlCreate ["RscExileItemListBox",_idc,_parent];
 	_ctrl ctrlSetPosition _position;
 	_ctrl ctrlSetEventHandler ["LBSelChanged",_actionOnSelChanged];
 	_ctrl ctrlSetTooltip _tooltip;
