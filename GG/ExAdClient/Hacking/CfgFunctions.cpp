@@ -17,13 +17,12 @@
 */
 
 
-class ExAd
+class Hacking
 {
-	tag = "ExAd";
-	#include "Core\CfgFunctions.cpp"
-	#include "VirtualGarage\CfgFunctions.cpp"
-	//#include "AdminEvents\CfgFunctions.cpp"
-	#include "Hacking\CfgFunctions.cpp"
-	//#include "Grinding\CfgFunctions.cpp"
-	#include "HaloParachute\CfgFunctions.cpp"	
+	file = "ExAdClient\Hacking\Functions";
+	class canHackSafe {};
+	class canHackVG {};
+	class startHack {};
+	class stopHack {};
+	class postInitHacking {file = "ExAdClient\Hacking\postInit.sqf"; postInit = 1;};
 };

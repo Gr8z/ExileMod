@@ -1,6 +1,6 @@
 /*  
-	CfgFunctions.cpp
-
+	fn_canHackSafe.sqf
+	
 	Copyright 2016 Jan Babor
 
 	Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,14 +16,4 @@
 	limitations under the License.
 */
 
-
-class ExAd
-{
-	tag = "ExAd";
-	#include "Core\CfgFunctions.cpp"
-	#include "VirtualGarage\CfgFunctions.cpp"
-	//#include "AdminEvents\CfgFunctions.cpp"
-	#include "Hacking\CfgFunctions.cpp"
-	//#include "Grinding\CfgFunctions.cpp"
-	#include "HaloParachute\CfgFunctions.cpp"	
-};
+(('Exile_Item_Laptop' in (magazines player)) && ((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo -1) && (({alive _x}count playableUnits) >= ExAd_HACKING_MIN_PLAYERS_ONLINE))

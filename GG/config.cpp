@@ -4504,6 +4504,12 @@ class CfgInteractionMenus
 				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo 0)";
 				action = "_this spawn ExileClient_object_lock_setPin";
 			};
+			class HackSafe : ExileAbstractAction
+			{
+				title = "Hack Safe";
+				condition = "call ExAd_fnc_canHackSafe";
+				action = "_this spawn ExAd_fnc_startHack";
+			};
 		};
 	};
 	class ATM
@@ -4698,6 +4704,12 @@ class CfgInteractionMenus
 				condition = "(((ExileClientInteractionObject animationPhase 'LaptopLidRotation') >= 0.5) && ((([_object, getPlayerUID player] call ExileClient_util_territory_getAccessLevel) select 0) >= ExAd_VG_ACCESS_LEVEL))";
 				action = "[] spawn {[] call ExileClient_gui_xm8_show; UISleep 1; call XM8_VG_checkNearByFlags}";
 			};
+			class StopHack: ExileAbstractAction
+			{
+				title = "Interupt Hack";
+				condition = "(ExileClientInteractionObject getVariable ['ExAd_HACKING_IN_PROGRESS', false])";
+				action = "_this spawn ExAd_fnc_stopHack";
+			};
 		};
 	};
 
@@ -4839,6 +4851,12 @@ class CfgInteractionMenus
 				title = "Upgrade";
 				condition = "true";
 				action = "_this call ExileClient_gui_upgradeterritoryDialog_request";
+			};
+			class HackVG : ExileAbstractAction
+			{
+				title = "Hack Virtual Garage";
+				condition = "call ExAd_fnc_canHackVG";
+				action = "_this spawn ExAd_fnc_startHack";
 			};
 		};
 	};
