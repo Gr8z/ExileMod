@@ -1697,25 +1697,6 @@ class SmallShed: Exile_AbstractCraftingRecipe
 	tools[] = {"Exile_Item_Wrench"}; // Change
 };
 
-class FuelstationShed: Exile_AbstractCraftingRecipe
-{
-	name = "Fuelstation Shed";
-	pictureItem = "Land_FuelStation_Shed_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_FuelStation_Shed_F_Kit"}
-	};
-	requiresFire = 1;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{2, "Exile_Item_MetalBoard"},
-		{2, "Exile_Item_MetalPole"},
-		{5, "Exile_Item_WoodPlank"},
-	};
-	category = "Extended Base Items";
-};
-
 class CNCWallType2: Exile_AbstractCraftingRecipe
 {
 	name = "CNC Wall Type 2";
