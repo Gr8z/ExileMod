@@ -18,7 +18,7 @@
 
 ExAd_HACKING_MIN_PLAYERS_ONLINE = 25;			//SCALAR - Minimun allowed players online to initalize a hack.
 
-ExAd_HACKING_ALLOWED_HACKS = 0;					//SCALAR - Simultaneous hacks allowed.
+ExAd_HACKING_ALLOWED_HACKS = 1;					//SCALAR - Simultaneous hacks allowed.
 
 ExAd_HACKING_MAX_TIME = 1200;					//SCALAR - Time to complete a hack
 
