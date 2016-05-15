@@ -1752,11 +1752,20 @@
 4, Exile_Item_CamoTentKit
 7, Exile_Item_Grinder
 0.5, Exile_Item_Knife
+10, Exile_Item_CordlessScrewdriver
+10, Exile_Item_Hammer
+10, Exile_Item_Screwdriver
+10, Exile_Item_Shovel
+10, Exile_Item_Wrench
+4, Exile_Item_Cement
+5, Exile_Item_Sand
+4, Exile_Item_MetalScrew
 
 > Vehicle
 40, Exile_Item_FuelCanisterFull
 50, Exile_Item_FuelCanisterEmpty
 10, Exile_Item_DuctTape
+30, Exile_Item_OilCanister
 
 > Chemlights
 25, Chemlight_blue
