@@ -1043,6 +1043,7 @@ class Shabbylamp: Exile_AbstractCraftingRecipe
 		{2, "Exile_Item_ExtensionCord"},
 		{1, "Exile_Item_LightBulb"},
 	};
+	category = "Extended Base Items";
 };
 
 class Sunshade: Exile_AbstractCraftingRecipe
@@ -1060,6 +1061,7 @@ class Sunshade: Exile_AbstractCraftingRecipe
 		{1, "Exile_Item_Woodlog"},
 		{1, "Exile_Item_Rope"},
 	};
+	category = "Extended Base Items";
 };
 
 class Sunchair: Exile_AbstractCraftingRecipe
@@ -1077,6 +1079,7 @@ class Sunchair: Exile_AbstractCraftingRecipe
 		{2, "Exile_Item_Woodlog"},
 		{2, "Exile_Item_Rope"},
 	};
+	category = "Extended Base Items";
 };
 
 class MetalShed: Exile_AbstractCraftingRecipe
@@ -1095,6 +1098,7 @@ class MetalShed: Exile_AbstractCraftingRecipe
 		{2, "Exile_Item_Woodlog"},
 		{1, "Exile_Item_Rope"},
 	};
+	category = "Extended Base Items";
 };
 
 class StreetLamp: Exile_AbstractCraftingRecipe
@@ -1113,6 +1117,7 @@ class StreetLamp: Exile_AbstractCraftingRecipe
 		{4, "Exile_Item_ExtensionCord"},
 		{1, "Exile_Item_LightBulb"},
 	};
+	category = "Extended Base Items";
 };
 
 class SeaWall: Exile_AbstractCraftingRecipe
@@ -1130,6 +1135,7 @@ class SeaWall: Exile_AbstractCraftingRecipe
 		{2, "Exile_Item_Cement"},
 		{2, "Exile_Item_Sand"},
 	};
+	category = "Extended Base Items";
 };
 
 class Industryfence3pts: Exile_AbstractCraftingRecipe
@@ -1146,6 +1152,7 @@ class Industryfence3pts: Exile_AbstractCraftingRecipe
 	{
 		{3, "Exile_Item_Cement"},
 	};
+	category = "Extended Base Items";
 };
 
 class Industryfence: Exile_AbstractCraftingRecipe
@@ -1162,6 +1169,7 @@ class Industryfence: Exile_AbstractCraftingRecipe
 	{
 		{1, "Exile_Item_Cement"},
 	};
+	category = "Extended Base Items";
 };	
 
 class CargoContainerSmall: Exile_AbstractCraftingRecipe
@@ -1179,6 +1187,7 @@ class CargoContainerSmall: Exile_AbstractCraftingRecipe
 		{2, "Exile_Item_MetalBoard"},
 		{2, "Exile_Item_JunkMetal"},
 	};
+	category = "Extended Base Items";
 };	
 
 class BlockConcrete: Exile_AbstractCraftingRecipe
@@ -1195,6 +1204,7 @@ class BlockConcrete: Exile_AbstractCraftingRecipe
 	{
 		{4, "Exile_Item_Cement"},
 	};
+	category = "Extended Base Items";
 };	
 
 class Chair: Exile_AbstractCraftingRecipe
@@ -1211,6 +1221,7 @@ class Chair: Exile_AbstractCraftingRecipe
 	{
 		{5, "Exile_Item_WoodPlank"},
 	};
+	category = "Extended Base Items";
 };	
 
 class Pierbox: Exile_AbstractCraftingRecipe
@@ -1228,6 +1239,7 @@ class Pierbox: Exile_AbstractCraftingRecipe
 		{2, "Land_CncWall4_F_Kit"},
 		{5, "Exile_Item_WoodPlank"},
 	};
+	category = "Extended Base Items";
 };	
 
 class Toiletbox: Exile_AbstractCraftingRecipe
@@ -1245,6 +1257,7 @@ class Toiletbox: Exile_AbstractCraftingRecipe
 		{4, "Exile_Item_WoodPlank"},
 		{1, "Exile_Item_JunkMetal"},
 	};
+	category = "Extended Base Items";
 };	
 		
 class Table: Exile_AbstractCraftingRecipe
@@ -1262,6 +1275,7 @@ class Table: Exile_AbstractCraftingRecipe
 		{10, "Exile_Item_WoodPlank"},
 		{1, "Exile_Item_MetalBoard"},
 	};
+	category = "Extended Base Items";
 };			
 
 class Slumplane: Exile_AbstractCraftingRecipe
@@ -1278,6 +1292,7 @@ class Slumplane: Exile_AbstractCraftingRecipe
 		{4, "Exile_Item_Woodlog"},
 		{2, "Exile_Item_Rope"},
 	};
+	category = "Extended Base Items";
 };		
 
 class Radarsmall: Exile_AbstractCraftingRecipe
@@ -1296,6 +1311,7 @@ class Radarsmall: Exile_AbstractCraftingRecipe
 		{2, "Exile_Item_JunkMetal"},
 		{5, "Exile_Item_ExtensionCord"},
 	};
+	category = "Extended Base Items";
 };
 		
 class Floodlightdouble: Exile_AbstractCraftingRecipe
@@ -1314,6 +1330,7 @@ class Floodlightdouble: Exile_AbstractCraftingRecipe
 		{2, "Exile_Item_JunkMetal"},
 		{2, "Exile_Item_ExtensionCord"},
 	};
+	category = "Extended Base Items";
 };
 
 class CncWallSmall8m: Exile_AbstractCraftingRecipe
@@ -1331,6 +1348,7 @@ class CncWallSmall8m: Exile_AbstractCraftingRecipe
 		{2, "Exile_Item_Cement"},
 		{2, "Exile_Item_Sand"},
 	};
+	category = "Extended Base Items";
 };
 
 class CncWallSmall4m: Exile_AbstractCraftingRecipe
@@ -1348,6 +1366,7 @@ class CncWallSmall4m: Exile_AbstractCraftingRecipe
 		{1, "Exile_Item_Cement"},
 		{1, "Exile_Item_Sand"},
 	};
+	category = "Extended Base Items";
 };
 
 class MilitaryVehicle: Exile_AbstractCraftingRecipe
@@ -1365,6 +1384,7 @@ class MilitaryVehicle: Exile_AbstractCraftingRecipe
 		{1, "Exile_Item_MetalPole"},
 		{1, "Exile_Item_WoodPlank"},
 	};
+	category = "Extended Base Items";
 };
 
 class MilSignSmall: Exile_AbstractCraftingRecipe
@@ -1382,6 +1402,7 @@ class MilSignSmall: Exile_AbstractCraftingRecipe
 		{1, "Exile_Item_MetalPole"},
 		{1, "Exile_Item_WoodPlank"},
 	};
+	category = "Extended Base Items";
 };
 
 class Watersource: Exile_AbstractCraftingRecipe
@@ -1399,6 +1420,7 @@ class Watersource: Exile_AbstractCraftingRecipe
 		{1, "Exile_Item_MetalPole"},
 		{3, "Exile_Item_Cement"},
 	};
+	category = "Extended Base Items";
 };
 
 class TouristShelter: Exile_AbstractCraftingRecipe
@@ -1417,6 +1439,7 @@ class TouristShelter: Exile_AbstractCraftingRecipe
 		{2, "Exile_Item_Cement"},
 		{5, "Exile_Item_WoodPlank"},
 	};
+	category = "Extended Base Items";
 };
 
 class crashbarrier: Exile_AbstractCraftingRecipe
@@ -1433,6 +1456,7 @@ class crashbarrier: Exile_AbstractCraftingRecipe
 	{
 		{2, "Exile_Item_JunkMetal"},
 	};
+	category = "Extended Base Items";
 };
 
 class cncbarriermedium: Exile_AbstractCraftingRecipe
@@ -1449,6 +1473,7 @@ class cncbarriermedium: Exile_AbstractCraftingRecipe
 	{
 		{1, "Exile_Item_Cement"},
 	};
+	category = "Extended Base Items";
 };
 
 class cncbarrier1: Exile_AbstractCraftingRecipe
@@ -1464,7 +1489,7 @@ class cncbarrier1: Exile_AbstractCraftingRecipe
 	components[] = 
 	{
 		{1, "Exile_Item_Cement"},
-	};
+	};category = "Extended Base Items";
 };
 
 class Airportlamp: Exile_AbstractCraftingRecipe
@@ -1484,7 +1509,7 @@ class Airportlamp: Exile_AbstractCraftingRecipe
 		{3, "Exile_Item_MetalPole"},
 	};
 	tools[] = {"Exile_Item_Screwdriver", "Exile_Item_Pliers"}; // Change
-	
+	category = "Extended Base Items";
 };
 
 class LampHalogen: Exile_AbstractCraftingRecipe
@@ -1503,6 +1528,7 @@ class LampHalogen: Exile_AbstractCraftingRecipe
 		{5, "Exile_Item_ExtensionCord"}, // Change
 		{3, "Exile_Item_MetalPole"},
 	};
+	category = "Extended Base Items";
 	tools[] = {"Exile_Item_Screwdriver", "Exile_Item_Pliers"}; // Change
 };
 
@@ -1522,6 +1548,7 @@ class TentHangar: Exile_AbstractCraftingRecipe
 		{1, "Exile_Item_MetalPole"},
 		{5, "Exile_Item_Rope"},
 	};
+	category = "Extended Base Items";
 };
 
 class TentDome: Exile_AbstractCraftingRecipe
@@ -1538,6 +1565,7 @@ class TentDome: Exile_AbstractCraftingRecipe
 		{2, "Exile_Item_Woodlog"},
 		{2, "Exile_Item_Rope"},
 	};
+	category = "Extended Base Items";
 };
 
 class Platform: Exile_AbstractCraftingRecipe
@@ -1554,6 +1582,7 @@ class Platform: Exile_AbstractCraftingRecipe
 	{
 		{2, "Exile_Item_Cement"},
 	};
+	category = "Extended Base Items";
 };
 
 class Garage: Exile_AbstractCraftingRecipe
@@ -1572,6 +1601,7 @@ class Garage: Exile_AbstractCraftingRecipe
 		{1, "Exile_Item_Cement"},
 		{2, "Exile_Item_WoodPlank"},
 	};
+	category = "Extended Base Items";
 };
 
 class CNCStairs: Exile_AbstractCraftingRecipe
@@ -1588,6 +1618,7 @@ class CNCStairs: Exile_AbstractCraftingRecipe
 	{
 		{2, "Exile_Item_Cement"},
 	};
+	category = "Extended Base Items";
 };
 
 class CargoContainerSandSmall: Exile_AbstractCraftingRecipe
@@ -1605,6 +1636,7 @@ class CargoContainerSandSmall: Exile_AbstractCraftingRecipe
 		{2, "Exile_Item_MetalBoard"},
 		{2, "Exile_Item_JunkMetal"},
 	};
+	category = "Extended Base Items";
 };
 
 class Brokenshed: Exile_AbstractCraftingRecipe
@@ -1623,6 +1655,7 @@ class Brokenshed: Exile_AbstractCraftingRecipe
 		{2, "Exile_Item_Cement"},
 		{2, "Exile_Item_WoodPlank"},
 	};
+	category = "Extended Base Items";
 };
 
 class Razorwire: Exile_AbstractCraftingRecipe
@@ -1640,6 +1673,7 @@ class Razorwire: Exile_AbstractCraftingRecipe
 		{3, "Exile_Item_JunkMetal"},
 		{6, "Exile_Item_ExtensionCord"},
 	};
+	category = "Extended Base Items";
 };
 
 class SmallShed: Exile_AbstractCraftingRecipe
@@ -1660,6 +1694,7 @@ class SmallShed: Exile_AbstractCraftingRecipe
 		{2, "Exile_Item_Cement"},
 		{2, "Exile_Item_MetalScrews"}, // Change
 	};
+	category = "Extended Base Items";
 	tools[] = {"Exile_Item_Wrench"}; // Change
 };
 
@@ -1679,6 +1714,7 @@ class FuelstationShed: Exile_AbstractCraftingRecipe
 		{2, "Exile_Item_MetalPole"},
 		{5, "Exile_Item_WoodPlank"},
 	};
+	category = "Extended Base Items";
 };
 
 class CNCWallType2: Exile_AbstractCraftingRecipe
@@ -1695,6 +1731,7 @@ class CNCWallType2: Exile_AbstractCraftingRecipe
 	{
 		{2, "Exile_Item_Cement"},
 	};
+	category = "Extended Base Items";
 };
 
 class CNCWall: Exile_AbstractCraftingRecipe
@@ -1711,6 +1748,7 @@ class CNCWall: Exile_AbstractCraftingRecipe
 	{
 		{2, "Exile_Item_Cement"},
 	};
+	category = "Extended Base Items";
 };
 
 
@@ -1728,6 +1766,7 @@ class CNCShelter: Exile_AbstractCraftingRecipe
 	{
 		{1, "Exile_Item_Cement"},
 	};
+	category = "Extended Base Items";
 };
 
 
@@ -1746,6 +1785,7 @@ class SlumContainer: Exile_AbstractCraftingRecipe
 		{2, "Exile_Item_JunkMetal"},
 		{1, "Exile_Item_MetalBoard"},
 	};
+	category = "Extended Base Items";
 };
 class ShootingPos: Exile_AbstractCraftingRecipe
 {
@@ -1760,6 +1800,7 @@ class ShootingPos: Exile_AbstractCraftingRecipe
 	{
 		{4, "Exile_Item_Woodlog"},
 	};
+	category = "Extended Base Items";
 };
 
 class BagBunkerBig: Exile_AbstractCraftingRecipe
@@ -1779,6 +1820,7 @@ class BagBunkerBig: Exile_AbstractCraftingRecipe
 		{1, "Exile_Item_Cement"},  // Change
 		{2, "Exile_Item_WoodPlank"},  // Change
 	};
+	category = "Extended Base Items";
 };
 
 
@@ -1800,6 +1842,7 @@ class Pumpstation: Exile_AbstractCraftingRecipe
 		{1, "Exile_Item_MetalScrews"}, // Change
 	};
 	tools[] = {"Exile_Item_CordlessScrewdriver"}; // Change
+	category = "Extended Base Items";
 };
 
 class MetalShelf: Exile_AbstractCraftingRecipe
@@ -1817,6 +1860,7 @@ class MetalShelf: Exile_AbstractCraftingRecipe
 		{3, "Exile_Item_MetalBoard"},
 		{5, "Exile_Item_WoodPlank"},
 	};
+	category = "Extended Base Items";
 };
 
 class RustyTank: Exile_AbstractCraftingRecipe
@@ -1836,6 +1880,7 @@ class RustyTank: Exile_AbstractCraftingRecipe
 		{1, "Exile_Item_MetalScrews"}, // Change
 	};
 	tools[] = {"Exile_Item_CordlessScrewdriver"}; // Change
+	category = "Extended Base Items";
 };
 
 class Steelfence: Exile_AbstractCraftingRecipe
@@ -1852,6 +1897,7 @@ class Steelfence: Exile_AbstractCraftingRecipe
 	{
 		{2, "Exile_Item_MetalBoard"},
 	};
+	category = "Extended Base Items";
 };
 
 class Pier: Exile_AbstractCraftingRecipe
@@ -1868,6 +1914,7 @@ class Pier: Exile_AbstractCraftingRecipe
 	{
 		{10, "Exile_Item_Woodlog"},
 	};
+	category = "Extended Base Items";
 };
 
 class CncWallMil4M: Exile_AbstractCraftingRecipe
@@ -1885,6 +1932,7 @@ class CncWallMil4M: Exile_AbstractCraftingRecipe
 		{2, "Exile_Item_JunkMetal"},
 		{2, "Exile_Item_WoodPlank"},
 	};
+	category = "Extended Base Items";
 };
 
 class MilitaryArea: Exile_AbstractCraftingRecipe
@@ -1902,6 +1950,7 @@ class MilitaryArea: Exile_AbstractCraftingRecipe
 		{2, "Exile_Item_JunkMetal"},
 		{2, "Exile_Item_WoodPlank"},
 	};
+	category = "Extended Base Items";
 };
 
 
@@ -1923,6 +1972,7 @@ class Icebox: Exile_AbstractCraftingRecipe
 		{1, "Exile_Item_ExtensionCord"}, // Change
 	};
 	tools[] = {"Exile_Item_CordlessScrewdriver"}; // Change
+	category = "Extended Base Items";
 };
 
 class Bargate: Exile_AbstractCraftingRecipe
@@ -1940,6 +1990,7 @@ class Bargate: Exile_AbstractCraftingRecipe
 		{1, "Exile_Item_MetalBoard"},
 		{3, "Exile_Item_MetalPole"},
 	};
+	category = "Extended Base Items";
 };
 
 class Citygate: Exile_AbstractCraftingRecipe
@@ -1958,6 +2009,7 @@ class Citygate: Exile_AbstractCraftingRecipe
 		{1, "Exile_Item_MetalPole"},
 		{1, "Exile_Item_Cement"}
 	};
+	category = "Extended Base Items";
 };
 
 class Rack: Exile_AbstractCraftingRecipe
@@ -1975,6 +2027,7 @@ class Rack: Exile_AbstractCraftingRecipe
 		{4, "Exile_Item_WoodPlank"},
 		{2, "Exile_Item_JunkMetal"},
 	};
+	category = "Extended Base Items";
 };
 
 class HeliPad: Exile_AbstractCraftingRecipe
@@ -1993,6 +2046,7 @@ class HeliPad: Exile_AbstractCraftingRecipe
 		{2, "Exile_Item_Sand"},
 		{2, "Exile_Item_MetalBoard"},
 	};
+	category = "Extended Base Items";
 };
 
 class ConcreteWall8m: Exile_AbstractCraftingRecipe
@@ -2009,6 +2063,7 @@ class ConcreteWall8m: Exile_AbstractCraftingRecipe
 	{
 		{4, "Exile_Item_Cement"},
 	};
+	category = "Extended Base Items";
 };
 
 class ConcreteWall4m: Exile_AbstractCraftingRecipe
@@ -2025,6 +2080,7 @@ class ConcreteWall4m: Exile_AbstractCraftingRecipe
 	{
 		{2, "Exile_Item_Cement"},
 	};
+	category = "Extended Base Items";
 };
 
 class ConcreteWall1: Exile_AbstractCraftingRecipe
@@ -2041,6 +2097,7 @@ class ConcreteWall1: Exile_AbstractCraftingRecipe
 	{
 		{3, "Exile_Item_Cement"},
 	};
+	category = "Extended Base Items";
 };
 
 class ConcreteRamp: Exile_AbstractCraftingRecipe
@@ -2057,6 +2114,7 @@ class ConcreteRamp: Exile_AbstractCraftingRecipe
 	{
 		{3, "Exile_Item_Cement"},
 	};
+	category = "Extended Base Items";
 };
 
 class SandbagBarrierBigCorner: Exile_AbstractCraftingRecipe
@@ -2073,6 +2131,7 @@ class SandbagBarrierBigCorner: Exile_AbstractCraftingRecipe
 	{
 		{3, "Exile_Item_Sand"},
 	};
+	category = "Extended Base Items";
 };
 
 class BagBunkerSmall: Exile_AbstractCraftingRecipe
@@ -2091,6 +2150,7 @@ class BagBunkerSmall: Exile_AbstractCraftingRecipe
 		{1, "Exile_Item_Cement"},
 		{4, "Exile_Item_WoodPlank"},
 	};
+	category = "Extended Base Items";
 };
 
 class MetalWoodenRack: Exile_AbstractCraftingRecipe
@@ -2109,6 +2169,7 @@ class MetalWoodenRack: Exile_AbstractCraftingRecipe
 		{1, "Exile_Item_MetalPole"},
 		{3, "Exile_Item_WoodPlank"},
 	};
+	category = "Extended Base Items";
 };
 
 class SandbagTower: Exile_AbstractCraftingRecipe
@@ -2128,6 +2189,7 @@ class SandbagTower: Exile_AbstractCraftingRecipe
 		{1, "Exile_Item_MetalBoard"},
 		{1, "Exile_Item_MetalPole"},
 	};
+	category = "Extended Base Items";
 };
 
 class SandbagsLong: Exile_AbstractCraftingRecipe
@@ -2144,6 +2206,7 @@ class SandbagsLong: Exile_AbstractCraftingRecipe
 	{
 		{1, "Exile_Item_Sand"},
 	};
+	category = "Extended Base Items";
 };
 
 class SandbagCorner: Exile_AbstractCraftingRecipe
@@ -2160,6 +2223,7 @@ class SandbagCorner: Exile_AbstractCraftingRecipe
 	{
 		{1, "Exile_Item_Sand"},
 	};
+	category = "Extended Base Items";
 };
 
 class LandContainer: Exile_AbstractCraftingRecipe
@@ -2176,6 +2240,7 @@ class LandContainer: Exile_AbstractCraftingRecipe
 	{
 		{6, "Exile_Item_MetalBoard"},
 	};
+	category = "Extended Base Items";
 };
 
 class Ammobox: Exile_AbstractCraftingRecipe
@@ -2194,6 +2259,7 @@ class Ammobox: Exile_AbstractCraftingRecipe
 		{1, "Exile_Item_StorageCrateKit"},
 		{2, "Exile_Item_JunkMetal"},
 	};
+	category = "Extended Base Items";
 };
 
 class Watercooler: Exile_AbstractCraftingRecipe
@@ -2211,6 +2277,7 @@ class Watercooler: Exile_AbstractCraftingRecipe
 		{4, "Exile_Item_MetalBoard"},
 		{1, "Exile_Item_WaterBarrelKit"},
 	};
+	category = "Extended Base Items";
 };
 
 class CncBarrier: Exile_AbstractCraftingRecipe
@@ -2228,6 +2295,7 @@ class CncBarrier: Exile_AbstractCraftingRecipe
 		{1, "Exile_Item_Cement"},
 		{1, "Exile_Item_Sand"},
 	};
+	category = "Extended Base Items";
 };
 
 class Stonewall: Exile_AbstractCraftingRecipe
@@ -2245,6 +2313,7 @@ class Stonewall: Exile_AbstractCraftingRecipe
 		{1, "Exile_Item_Cement"},
 		{1, "Exile_Item_Sand"},
 	};
+	category = "Extended Base Items";
 };
 
 class Stonegate: Exile_AbstractCraftingRecipe
@@ -2264,6 +2333,7 @@ class Stonegate: Exile_AbstractCraftingRecipe
 		{1, "Exile_Item_Cement"},
 		{1, "Exile_Item_Sand"},
 	};
+	category = "Extended Base Items";
 };
 
 class PierLadder: Exile_AbstractCraftingRecipe
@@ -2281,6 +2351,7 @@ class PierLadder: Exile_AbstractCraftingRecipe
 		{3, "Exile_Item_MetalPole"},
 		{2, "Exile_Item_JunkMetal"},
 	};
+	category = "Extended Base Items";
 };
 
 class CamoNetOPFORopen: Exile_AbstractCraftingRecipe
@@ -2297,6 +2368,7 @@ class CamoNetOPFORopen: Exile_AbstractCraftingRecipe
 	{
 		{2, "Exile_Item_MetalPole"},
 	};
+	category = "Extended Base Items";
 };
 
 class CamoNetINDPopen: Exile_AbstractCraftingRecipe
@@ -2313,6 +2385,7 @@ class CamoNetINDPopen: Exile_AbstractCraftingRecipe
 	{
 		{2, "Exile_Item_MetalPole"},
 	};
+	category = "Extended Base Items";
 };
 
 class CamoNetBLUFORopen: Exile_AbstractCraftingRecipe
@@ -2329,6 +2402,7 @@ class CamoNetBLUFORopen: Exile_AbstractCraftingRecipe
 	{
 		{2, "Exile_Item_MetalPole"},
 	};
+	category = "Extended Base Items";
 };
 
 class Barrier1: Exile_AbstractCraftingRecipe  //thank you MrDynamite for sharing better Receipideas :)
@@ -2345,6 +2419,7 @@ class Barrier1: Exile_AbstractCraftingRecipe  //thank you MrDynamite for sharing
     {
         {2, "Exile_Item_Sand"}, // Change
     };
+    category = "Extended Base Items";
 };
 
 class Barrier3: Exile_AbstractCraftingRecipe
@@ -2361,6 +2436,7 @@ class Barrier3: Exile_AbstractCraftingRecipe
     {
         {1, "Land_HBarrier_1_F_Kit"}, {1, "Exile_Item_Sand"}, // Change
     };
+    category = "Extended Base Items";
 };
 
 class Barrier5: Exile_AbstractCraftingRecipe
@@ -2377,6 +2453,7 @@ class Barrier5: Exile_AbstractCraftingRecipe
     {
         {1, "Land_HBarrier_3_F_Kit"}, {1, "Exile_Item_Sand"}, // Change
     };
+    category = "Extended Base Items";
 };
 
 class SandbagBarrierBig4m: Exile_AbstractCraftingRecipe
@@ -2393,6 +2470,7 @@ class SandbagBarrierBig4m: Exile_AbstractCraftingRecipe
     {
         {1, "Land_HBarrier_3_F_Kit"}, {2, "Exile_Item_Sand"}, // Change
     };
+    category = "Extended Base Items";
 };
 
 class SandbagBarrierBig6m: Exile_AbstractCraftingRecipe
@@ -2409,6 +2487,7 @@ class SandbagBarrierBig6m: Exile_AbstractCraftingRecipe
     {
         {1, "Land_HBarrierWall4_F_Kit"},{2, "Exile_Item_Sand"}, // Change
     };
+    category = "Extended Base Items";
 };
 
 
@@ -2429,6 +2508,7 @@ class BagBunker: Exile_AbstractCraftingRecipe
 		{2, "Exile_Item_MetalPole"},
 		{2, "Exile_Item_WoodPlank"}
 	};
+	category = "Extended Base Items";
 };
 
 };
@@ -4441,36 +4521,6 @@ class CfgInteractionMenus
 			};
         };
     };
-    class DomeBig
-	{
-		targetType = 2;
-		target = "Land_Dome_Big_F";
-		
-		class Actions 
-		{
-			// Locks a vehicle
-			class Lock : ExileAbstractAction
-			{
-				title = "Lock";
-				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo 0)";
-				action = "true spawn ExileClient_object_lock_toggle";
-			};
-
-			class Unlock : ExileAbstractAction
-			{
-				title = "Unlock";
-				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo -1)";
-				action = "false spawn ExileClient_object_lock_toggle";
-			};
-
-			class SetPinCode : ExileAbstractAction
-			{
-				title = "Set PIN";
-				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo 0)";
-				action = "_this spawn ExileClient_object_lock_setPin";
-			};
-		};
-	};
 	
 	class CargoSmall
 	{
