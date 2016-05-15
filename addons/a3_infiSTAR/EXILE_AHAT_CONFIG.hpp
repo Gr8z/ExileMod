@@ -124,7 +124,7 @@ adminUIDandAccess[] =
 			"==== Loadouts ====","==== Base Deleter ====","==== WeatherLord ====","Items spawn menu",
 			"Remove Gear","Heal","Restore","Flip Vehicle","Move In My Vehicle","Move In Target Vehicle","Eject","Eject Crew",
 			"Kill","Explode","Force Disconnect","Kick (Silent)","Kick (Announce)","Ban (Silent)","Ban (Announce)",
-			"Player ESP","AI ESP","Dead ESP","Loot ESP",
+			"Player ESP","Player ESP (safezone style)","AI ESP","Dead ESP","Loot ESP",
 			"Vehicle Marker","Flag Marker (with radius)","DeadPlayer Marker",
 			"God Mode","God Mode (no stats change)","Vehicle God Mode","Lower Terrain","Vehboost","UnlimAmmo","noRecoil","FastFire","Stealth / Invisible",
 			"Disable Announces","Mass Message","Change Time","Spawn Support-Boxes","Create Billboard","Change ViewDistance",
@@ -158,7 +158,7 @@ adminUIDandAccess[] =
 			"==== Base Deleter ====","Items spawn menu",
 			"Remove Gear","Heal","Restore","Flip Vehicle","Move In My Vehicle","Move In Target Vehicle","Eject","Eject Crew",
 			"Kill","Force Disconnect","Kick (Silent)","Kick (Announce)",
-			"Player ESP","Dead ESP","AI ESP",
+			"Player ESP","Player ESP (safezone style)","Dead ESP","AI ESP",
 			"Vehicle Marker","Flag Marker (with radius)","DeadPlayer Marker",
 			"God Mode","Vehicle God Mode","Stealth / Invisible",
 			"Disable Announces","Mass Message","Spawn Support-Boxes","Change ViewDistance",
@@ -215,6 +215,7 @@ ESCMNUBOT = "www.GHOSTZGAMERZ.com";
 BRIEFING_MSG = false;	/* use mission briefing message: if   "BRIEFING_MSG = false;"   then the message will be replaced by infiSTAR */
 HTML_LOAD_URL = "http://ghostzgamerz.com/esc.php";	/* HTML_LOAD_URL = ""; == disabled and if you set a url it will be shown in ESCAPE menu. HTML in Arma/this is limited. Try it :) example: "http://goo.gl/gb0o7b" */
 ENABLE_PRIVATE_CHAT_MENU = true; /* players can open it by typing !chat in chat or by  custom controls -> "Use Action 3" */
+PRIVATE_CHAT_MENU_8GNETWORK = true;	/* if this is true - players will only be able to use private chat if they enable 8GNetwork in their xm8 */
 
 /* shows RESTART IN X MINS */
 USE_RESTART_TIMER = true;			/* show time left to next restart */
@@ -241,15 +242,20 @@ VCT = 300;	/* if "DayNightVote = true;" - Time (in seconds) to wait until nex vo
 /* ********************************************************************************* */
 URC = false;		/* Check unitRecoilCoefficient and reset default unitRecoilCoefficient */
 LVC = false;		/* Local Vehicle Check */
-CMC = true;		/* Check for custom CommandingMenus */
-KCM = true;		/* Just close ALL CommandingMenus */
 CAP = false;	/* Check Actions Plr - "Actions: xxx/xxx possible scroll menu hack (or you added custom actions..)" */
+
+
+KCM = false;		/* Just close ALL CommandingMenus */
+CMC = true;		/* Check for CommandingMenus that are not in the allowedCommandingMenus array */
+allowedCommandingMenus[] = {"#user:example","#user:example2"};
+
 
 check_Notifications = false;			/* checks if BIS_fnc_showNotification was used, as it is used with many hacks - some custom addons however use them too. */
 disconnect_dupe_check = false;		/* checks if player tries to dupe using the "disconnect trick" -> sends a ping to the server whenever a player opens the escape menu */
 wall_look = false;					/* checks if a players tries to look through a wall (if player is allowed to build in that territory, it will not be logged.) */
 wall_glitch_object = false;			/* checks if a players tries to glitch through a wall (if player is allowed to build in that territory, it will not be logged.) */
 wall_glitch_vehicle = true;		/* stops players from glitching into bases using "eject" or "getout" of a vehicle.. */
+check_doors_n_gates = true;			/* check if a door is locked but still being opened */
 forceWalk_near_enemyBase = false;	/* forcing players to walk when near an enemy base */
 checkHiddenObjects = false;			/* checks if there is hidden objects close to the player (hidden objects could be walked through..) */
 attach_to_check = false;			/* logs and detaches attached vehicles that are close.. basically completely disallow attaching of vehicles! */
@@ -263,7 +269,6 @@ LogPopTabIncrease = 15000;			/* Only if checkPopTabIncrease = true; logs if popt
 checkRespectIncrease = false;
 LogRespectIncrease = 5000;			/* Only if checkRespectIncrease = true; logs if respect increased by x within ~10 seconds */
 
-uniform_and_vest_check = true;		/* In the current version of Arma3 it may happen that the uniform or vest you wear is not shown to other players due to a bug, this will log & fix that issue! */
 checkFilePatchingEnabled = true;	/* checks if filepatching is enabled on the client (if it is, the client could inject any script based hack easily) */
 
 
@@ -398,7 +403,7 @@ allowedIDDs[] =
 	26-04-2016 04:17:51 infiSTAR.de | TEMPBANNED | SomeDude(SomeUIDxx) MissionEventhandler added! Loaded - 1
 	That means that you had {"Loaded",0} and it needs to be put to {"Loaded",1} to allow 1 of these handlers 
 */
-checkMissionEventhandler = true;
+checkMissionEventhandler = false;
 missionEventhandlers[] =
 {
 	{"Ended",1},{"Loaded",1},

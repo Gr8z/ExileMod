@@ -1,4 +1,4 @@
-class RscListBox_infiSTAR {
+RscListBox_infiSTAR {
 access=0;
 type=5;
 style=0;
@@ -159,6 +159,18 @@ style=16;
 sizeEx="0.65 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 show=1;
 };
+class RscEdit_infiSTAR_ss:RscEdit_infiSTAR {
+x=0;
+y=(safeZoneY + 0.01)+1;
+w=1;
+h=0.05;
+idc=1380;
+font="EtelkaMonospacePro";
+colorText[]={0.95,0.95,0.95,1};
+sizeEx="0.65 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+show=1;
+autocomplete="scripting";
+};
 class infiSTAR_EDITBOX
 {
 idd=-1341;
@@ -172,8 +184,21 @@ x=0.25;
 y=0.25;
 w=0.5;
 h=0.5;
-colorBackground[]={0,0,0,1};
+colorBackground[]={0,0,0,0.5};
 };
+};
+};
+class infiSTAR_EDITBOX2
+{
+idd=-1341;
+movingenable=true;
+class controls
+{
+class RscEditMultiSTAR:RscEdit_infiSTAR_multi{autocomplete="scripting";};
+class RscEditSingle1STAR:RscEdit_infiSTAR_ss{idc=1380;};
+class RscEditSingle2STAR:RscEdit_infiSTAR_ss{idc=1381;};
+class RscEditSingle3STAR:RscEdit_infiSTAR_ss{idc=1382;};
+class RscEditSingle4STAR:RscEdit_infiSTAR_ss{idc=1383;};
 };
 };
 class infiSTAR_CHAT
@@ -299,7 +324,7 @@ h=0.945999 * safezoneH;
 class infi_EDIT1: RscEdit_infiSTAR
 {
 idc=100;
-text="Search";
+text="";
 x=0.1964 * safezoneW + safezoneX;
 y=0.125933 * safezoneH + safezoneY;
 w=0.326563 * safezoneW;

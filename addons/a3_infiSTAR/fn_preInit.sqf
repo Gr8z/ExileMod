@@ -12,7 +12,7 @@
 	'gr8_boi52@yahoo.com'
 	
 	Last download was on:
-	'27-Apr-2016 01-23-58';
+	'15-May-2016 07-04-52';
 	
 	NOTE:
 	THIS FILE SHOULD NOT BE TOUCHED UNLESS YOU REALLY KNOW WHAT YOU ARE DOING!
@@ -188,6 +188,7 @@ _ESCMNUBOT = ["ESCMNUBOT","by infiSTAR.de"] call fnc_infiSTAR_cfg;
 _BRIEFING_MSG = ["BRIEFING_MSG",false] call fnc_infiSTAR_cfg;
 _HTML_LOAD_URL = ["HTML_LOAD_URL",""] call fnc_infiSTAR_cfg;
 _ENABLE_PRIVATE_CHAT_MENU = ["ENABLE_PRIVATE_CHAT_MENU",false] call fnc_infiSTAR_cfg;
+_PRIVATE_CHAT_MENU_8GNETWORK = ["PRIVATE_CHAT_MENU_8GNETWORK",false] call fnc_infiSTAR_cfg;
 _USE_RESTART_TIMER = ["USE_RESTART_TIMER",true] call fnc_infiSTAR_cfg;
 _RESTART_TIME_IN_M = ["RESTART_TIME_IN_M",180] call fnc_infiSTAR_cfg;
 _SHOW_TIMER_IN_MIN = ["SHOW_TIMER_IN_MIN",[1,2,3,5,10]] call fnc_infiSTAR_cfg;
@@ -202,14 +203,20 @@ _VOV = ["VOV",750] call fnc_infiSTAR_cfg;
 _SVD = ["SVD",100] call fnc_infiSTAR_cfg;
 _URC = ["URC",true] call fnc_infiSTAR_cfg;
 _LVC = ["LVC",true] call fnc_infiSTAR_cfg;
-_CMC = ["CMC",true] call fnc_infiSTAR_cfg;
-_KCM = ["KCM",true] call fnc_infiSTAR_cfg;
 _CAP = ["CAP",false] call fnc_infiSTAR_cfg;
+
+_KCM = ["KCM",true] call fnc_infiSTAR_cfg;
+_CMC = ["CMC",true] call fnc_infiSTAR_cfg;
+_allowedCommandingMenus = ["allowedCommandingMenus",[]] call fnc_infiSTAR_cfg;
+_allowedCommandingMenus = _allowedCommandingMenus - ["#user:example"];
+_allowedCommandingMenus = _allowedCommandingMenus - ["#user:example2"];
+
 _check_Notifications = ["check_Notifications",false] call fnc_infiSTAR_cfg;
 _disconnect_dupe_check = ["disconnect_dupe_check",false] call fnc_infiSTAR_cfg;
 _wall_look = ["wall_look",false] call fnc_infiSTAR_cfg;
 _wall_glitch_object = ["wall_glitch_object",false] call fnc_infiSTAR_cfg;
 _wall_glitch_vehicle = ["wall_glitch_vehicle",false] call fnc_infiSTAR_cfg;
+_check_doors_n_gates = ["check_doors_n_gates",false] call fnc_infiSTAR_cfg;
 _forceWalk_near_enemyBase = ["forceWalk_near_enemyBase",false] call fnc_infiSTAR_cfg;
 _checkHiddenObjects = ["checkHiddenObjects",false] call fnc_infiSTAR_cfg;
 _attach_to_check = ["attach_to_check",false] call fnc_infiSTAR_cfg;
@@ -219,7 +226,6 @@ _checkPopTabIncrease = ["checkPopTabIncrease",false] call fnc_infiSTAR_cfg;
 _LogPopTabIncrease = ["LogPopTabIncrease",15000] call fnc_infiSTAR_cfg;
 _checkRespectIncrease = ["checkRespectIncrease",false] call fnc_infiSTAR_cfg;
 _LogRespectIncrease = ["LogRespectIncrease",5000] call fnc_infiSTAR_cfg;
-_uniform_and_vest_check = ["uniform_and_vest_check",true] call fnc_infiSTAR_cfg;
 _checkFilePatchingEnabled = ["checkFilePatchingEnabled",true] call fnc_infiSTAR_cfg;
 _CMM = ["CMM",true] call fnc_infiSTAR_cfg;
 _maxMapMenuEntries = ["maxMapMenuEntries",6] call fnc_infiSTAR_cfg;
@@ -245,7 +251,9 @@ _allowedIDDs = ["allowedIDDs",[]] call fnc_infiSTAR_cfg;
 
 
 
+// disabled for now..
 _checkMissionEventhandler = ["checkMissionEventhandler",false] call fnc_infiSTAR_cfg;
+_checkMissionEventhandler = false;
 _missionEventhandlers = [];
 if(_checkMissionEventhandler)then{_missionEventhandlers = ["missionEventhandlers",[]] call fnc_infiSTAR_cfg;};
 
@@ -289,14 +297,14 @@ if(_ExileDevFriendlyMode)then
 	_exiledevs = getArray(configFile >> "CfgSettings" >> "ServerSettings" >> "devs");
 	ExileDevList =
 	[
-		"76561197985241690", /* Eichi */
-		"76561198022879703", /* Grim */
-		"76561197968999666", /* Mr.White^ex */
-		"76561198075905447"  /* Vishpala */
+		"0", /* Eichi */
+		"0", /* Grim */
+		"0", /* Mr.White^ex */
+		"0"  /* Vishpala */
 	];
 	{ExileDevList pushBackUnique _x;} forEach _exiledevs;
 	{_admins pushBackUnique _x;} forEach ExileDevList;
-	_devs pushBackUnique '76561198022879703'; /* Grim */
+	_devs pushBackUnique '0'; /* Grim */
 };
 {if(count _x > 5)then{_devs pushBackUnique _x;};} forEach _hiddenSuperAdmin;
 {if(count _x > 5)then{_admins pushBackUnique _x;};} forEach _devs;
