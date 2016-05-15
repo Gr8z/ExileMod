@@ -1,4 +1,4 @@
-RscListBox_infiSTAR {
+class RscListBox_infiSTAR {
 access=0;
 type=5;
 style=0;
