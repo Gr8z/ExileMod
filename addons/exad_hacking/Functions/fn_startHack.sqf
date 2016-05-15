@@ -52,14 +52,14 @@ _player removeItem "Exile_Item_Laptop";
 	params ["_object","_player","_laptop"];
 	UISleep 2;
 	
-	(parseText (format["<t color='%1' size='%2' font='%3'>%4</t><br/><t color='%5' size='%6' font='%7'>%8</t>", ExAd_Hint_Title_Color, ExAd_Hint_Title_Size, ExAd_Hint_Title_Font,STR_ExAd_HACKING_HINT_TITLE, ExAd_Hint_Msg_Color, ExAd_Hint_Msg_Size, ExAd_Hint_Msg_Font, STR_ExAd_HACKING_HINT_HACK_START])) remoteExec ["hint", -2];
-	
 	if(ExAd_HACKS_IN_PROGRESS >= ExAd_HACKING_ALLOWED_HACKS)exitWith{
 		_laptop setVariable ["ExAd_HACKING_IN_PROGRESS", false, true];
 		_laptop setDamage 1;
 		[format[STR_ExAd_HACKING_NOTI_MAX_SIM_HACKS],0,0.6,2,0] remoteExec ["BIS_fnc_dynamicText",owner _player];
 		false
 	};
+
+	(parseText (format["<t color='%1' size='%2' font='%3'>%4</t><br/><t color='%5' size='%6' font='%7'>%8</t>", ExAd_Hint_Title_Color, ExAd_Hint_Title_Size, ExAd_Hint_Title_Font,STR_ExAd_HACKING_HINT_TITLE, ExAd_Hint_Msg_Color, ExAd_Hint_Msg_Size, ExAd_Hint_Msg_Font, STR_ExAd_HACKING_HINT_HACK_START])) remoteExec ["hint", -2];
 	
 	ExAd_HACKS_IN_PROGRESS = ExAd_HACKS_IN_PROGRESS + 1;
 	
