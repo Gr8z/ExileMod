@@ -1441,6 +1441,23 @@ class crashbarrier: Exile_AbstractCraftingRecipe
 	category = "Extended Base Items";
 };
 
+class HugeContainer: Exile_AbstractCraftingRecipe
+{
+	name = "Huge Container";
+	pictureItem = "Land_Cargo40_light_green_F_Kit";
+	returnedItems[] = 
+	{
+		{1, "Land_Cargo40_light_green_F_Kit"}
+	};
+	requiresFire = 1;
+	requiredInteractionModelGroup = "WorkBench";
+	components[] = 
+	{
+		{6, "Exile_Item_JunkMetal"},
+		{6, "Exile_Item_MetalBoard"},
+	};
+};
+
 class cncbarriermedium: Exile_AbstractCraftingRecipe
 {
 	name = "CNC Barrier Medium";
