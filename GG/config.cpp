@@ -1079,25 +1079,6 @@ class Sunchair: Exile_AbstractCraftingRecipe
 	};
 };
 
-class SolarTower: Exile_AbstractCraftingRecipe
-{
-	name = "Solar Tower";
-	pictureItem = "Land_spp_Tower_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_spp_Tower_F_Kit"}
-	};
-	requiresFire = 1;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{2, "Exile_Item_MetalPole"},
-		{2, "Exile_Item_Cement"},
-		{4, "Exile_Item_LightBulb"},
-		{2, "Exile_Item_JunkMetal"},
-	};
-};
-
 class MetalShed: Exile_AbstractCraftingRecipe
 {
 	name = "Metal Shed";
@@ -1116,42 +1097,6 @@ class MetalShed: Exile_AbstractCraftingRecipe
 	};
 };
 
-class AirplaneHangar: Exile_AbstractCraftingRecipe
-{
-	name = "Airplane Hangar";
-	pictureItem = "Land_Hangar_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_Hangar_F_Kit"}
-	};
-	requiresFire = 1;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{2, "Exile_Item_MetalPole"},
-		{2, "Exile_Item_MetalBoard"},
-		{4, "Exile_Item_Rope"},
-	};
-};
-
-class BigDome: Exile_AbstractCraftingRecipe
-{
-	name = "Big Dome";
-	pictureItem = "Land_Dome_Big_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_Dome_Big_F_Kit"}
-	};
-	requiresFire = 1;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{2, "Exile_Item_MetalPole"},
-		{4, "Exile_Item_MetalBoard"},
-		{4, "Exile_Item_Rope"},
-	};
-};
-
 class StreetLamp: Exile_AbstractCraftingRecipe
 {
 	name = "Street Lamp";
@@ -1167,40 +1112,6 @@ class StreetLamp: Exile_AbstractCraftingRecipe
 		{2, "Exile_Item_MetalPole"},
 		{4, "Exile_Item_ExtensionCord"},
 		{1, "Exile_Item_LightBulb"},
-	};
-};
-
-class TavernMiddle: Exile_AbstractCraftingRecipe
-{
-	name = "Tavern middle";
-	pictureItem = "Land_i_Addon_03mid_V1_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_i_Addon_03mid_V1_F_Kit"}
-	};
-	requiresFire = 1;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{10, "Exile_Item_WoodPlank"},
-		{5, "Exile_Item_JunkMetal"},
-	};
-};
-
-class Tavern: Exile_AbstractCraftingRecipe
-{
-	name = "Tavern";
-	pictureItem = "Land_i_Addon_03_V1_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_i_Addon_03_V1_F_Kit"}
-	};
-	requiresFire = 1;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{10, "Exile_Item_WoodPlank"},
-		{5, "Exile_Item_JunkMetal"},
 	};
 };
 
@@ -1505,23 +1416,6 @@ class TouristShelter: Exile_AbstractCraftingRecipe
 		{2, "Exile_Item_Sand"},
 		{2, "Exile_Item_Cement"},
 		{5, "Exile_Item_WoodPlank"},
-	};
-};
-
-class BigShed: Exile_AbstractCraftingRecipe
-{
-	name = "Big Shed";
-	pictureItem = "Land_Shed_Big_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_Shed_Big_F_Kit"}
-	};
-	requiresFire = 1;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{4, "Exile_Item_MetalPole"},
-		{2, "Exile_Item_MetalBoard"},
 	};
 };
 
@@ -1853,41 +1747,6 @@ class SlumContainer: Exile_AbstractCraftingRecipe
 		{1, "Exile_Item_MetalBoard"},
 	};
 };
-
-class HugeContainer: Exile_AbstractCraftingRecipe
-{
-	name = "Huge Container";
-	pictureItem = "Land_Cargo40_light_green_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_Cargo40_light_green_F_Kit"}
-	};
-	requiresFire = 1;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{6, "Exile_Item_JunkMetal"},
-		{6, "Exile_Item_MetalBoard"},
-	};
-};
-
-/*class CargoHouse: Exile_AbstractCraftingRecipe
-{
-	name = "Military Cargo House";
-	pictureItem = "Land_Cargo_House_V2_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_Cargo_House_V2_F_Kit"}
-	};
-	requiresFire = 1;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{6, "Exile_Item_MetalBoard"},
-		{3, "Exile_Item_JunkMetal"},
-	};
-};*/
-
 class ShootingPos: Exile_AbstractCraftingRecipe
 {
 	name = "Shooting Pos";
@@ -1942,23 +1801,6 @@ class Pumpstation: Exile_AbstractCraftingRecipe
 	};
 	tools[] = {"Exile_Item_CordlessScrewdriver"}; // Change
 };
-
-/*class CargoTowerBig: Exile_AbstractCraftingRecipe
-{
-	name = "Cargo Tower Big";
-	pictureItem = "Land_Cargo_Tower_V2_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_Cargo_Tower_V2_F_Kit"}
-	};
-	requiresFire = 1;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{3, "Exile_Item_MetalBoard"},
-		{2, "Exile_Item_MetalPole"},
-	};
-};*/
 
 class MetalShelf: Exile_AbstractCraftingRecipe
 {
@@ -2027,24 +1869,6 @@ class Pier: Exile_AbstractCraftingRecipe
 		{10, "Exile_Item_Woodlog"},
 	};
 };
-
-/*class LandCargoPatrol: Exile_AbstractCraftingRecipe
-{
-	name = "Land Cargo Patrol";
-	pictureItem = "Land_Cargo_Patrol_V2_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_Cargo_Patrol_V2_F_Kit"}
-	};
-	requiresFire = 0;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{1, "Exile_Item_JunkMetal"},
-		{2, "Exile_Item_MetalBoard"},
-		{4, "Exile_Item_MetalPole"},
-	};
-};*/
 
 class CncWallMil4M: Exile_AbstractCraftingRecipe
 {
@@ -2153,8 +1977,7 @@ class Rack: Exile_AbstractCraftingRecipe
 	};
 };
 
-
-/*class HeliPad: Exile_AbstractCraftingRecipe
+class HeliPad: Exile_AbstractCraftingRecipe
 {
 	name = "Helipad";
 	pictureItem = "Land_HelipadCivil_F_Kit";
@@ -2170,7 +1993,7 @@ class Rack: Exile_AbstractCraftingRecipe
 		{2, "Exile_Item_Sand"},
 		{2, "Exile_Item_MetalBoard"},
 	};
-};*/
+};
 
 class ConcreteWall8m: Exile_AbstractCraftingRecipe
 {
@@ -2251,24 +2074,6 @@ class SandbagBarrierBigCorner: Exile_AbstractCraftingRecipe
 		{3, "Exile_Item_Sand"},
 	};
 };
-
-/*class BunkerHuge: Exile_AbstractCraftingRecipe
-{
-	name = "Bunker HUGE";
-	pictureItem = "Land_Bunker_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_Bunker_F_Kit"}
-	};
-	requiresFire = 0;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{4, "Land_Stone_4m_F_Kit"},
-		{2, "Exile_Item_MetalBoard"},
-	};
-};
-*/
 
 class BagBunkerSmall: Exile_AbstractCraftingRecipe
 {
@@ -2525,8 +2330,6 @@ class CamoNetBLUFORopen: Exile_AbstractCraftingRecipe
 		{2, "Exile_Item_MetalPole"},
 	};
 };
-
-
 
 class Barrier1: Exile_AbstractCraftingRecipe  //thank you MrDynamite for sharing better Receipideas :)
 {
