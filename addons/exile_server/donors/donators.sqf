@@ -139,7 +139,7 @@ Scout1 = [
 Scout2 = [
 	"76561197980662311", // ezPK XS PWR (OD-2015-09-15) #11479
 	"76561198062796125", // ezPK Zephyr (OD-2015-09-15) #11597
-	"76561198145760616", //  Mattie (OD-2016-04-21) #13515  
+	"76561198145760616", //  Mattie (OD-2016-04-21) #13515
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout2";
@@ -183,6 +183,7 @@ Scout3 = [
 	"76561198101800747", // Perald (OD-2016-05-12) #13702   
 	"76561198050228690", // TIM (EXP-2016-06-13)
 	"76561198082829958", // BlueFalcon (OD-2016-05-13) #13715
+	"76561198127745082", // Adesso (OD-2016-05-14) #13730
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout3";
