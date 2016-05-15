@@ -17,7 +17,7 @@
 
 */
 
-execVM "ExAdClient\Hacking\customize.sqf";
+execVM "GG\ExAdClient\Hacking\customize.sqf";
 
 if(isNil "ExAd_HACKING_MIN_PLAYERS_ONLINE")then{ExAd_HACKING_MIN_PLAYERS_ONLINE = 30;};
 if(isNil "ExAd_HACKING_ALLOWED_HACKS")then{ExAd_HACKING_ALLOWED_HACKS = 1;};
