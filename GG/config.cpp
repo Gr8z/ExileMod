@@ -1120,24 +1120,6 @@ class StreetLamp: Exile_AbstractCraftingRecipe
 	category = "Extended Base Items";
 };
 
-class SeaWall: Exile_AbstractCraftingRecipe
-{
-	name = "Sea Wall";
-	pictureItem = "Land_Sea_Wall_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_Sea_Wall_F_Kit"}
-	};
-	requiresFire = 0;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{2, "Exile_Item_Cement"},
-		{2, "Exile_Item_Sand"},
-	};
-	category = "Extended Base Items";
-};
-
 class Industryfence3pts: Exile_AbstractCraftingRecipe
 {
 	name = "Industryfence 3pts";
