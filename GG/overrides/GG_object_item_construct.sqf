@@ -16,10 +16,10 @@ _cantBuildNear = [
     "Land_Airport_Tower_F","Land_i_Barracks_V1_F","Land_i_Barracks_V2_F","Land_u_Barracks_V2_F","Land_Cargo_House_V1_F","Land_Cargo_House_V2_F","Land_Cargo_House_V3_F","Land_Cargo_HQ_V1_F","Land_Cargo_HQ_V2_F",
     "Land_Cargo_HQ_V3_F","Land_Cargo_Patrol_V1_F","Land_Cargo_Patrol_V2_F","Land_Cargo_Patrol_V3_F","Land_Cargo_Tower_V1_F","Land_Cargo_Tower_V1_No1_F","Land_Cargo_Tower_V1_No2_F","Land_Cargo_Tower_V1_No3_F",
     "Land_Cargo_Tower_V1_No4_F","Land_Cargo_Tower_V1_No5_F","Land_Cargo_Tower_V1_No6_F","Land_Cargo_Tower_V1_No7_F","Land_Cargo_Tower_V2_F","Land_Cargo_Tower_V3_F","Land_Medevac_house_V1_F","Land_Medevac_HQ_V1_F",
-    "Land_HBarrierTower_F","Land_MilOffices_V1_F","Land_Dome_Big_F","Land_Dome_Small_F","Land_Research_house_V1_F","Land_Research_HQ_F","Land_FuelStation_Shed_F","Land_fs_roof_F","Land_fs_feed_F","Land_FuelStation_Feed_F",
+    "Land_HBarrierTower_F","Land_MilOffices_V1_F","Land_Dome_Big_F","Land_Dome_Small_F","Land_Research_house_V1_F","Land_Research_HQ_F","Land_FuelStation_Shed_F","Land_fs_roof_F","Land_fs_feed_F","Land_bo_A_Office01"
     "Land_Atm_01_F""Land_Strazni_vez","Land_Posed","Land_GuardShed","Land_Army_hut3_long_int","Land_Army_hut_int","Land_Hospital","Land_Mil_House","Land_A_Villa_EP1","Land_i_House_Small_02_V1_F","Land_dp_smallFactory_F",
     "Land_Majak2","Land_Vez","Land_Mil_Barracks_i","Land_Mil_Barracks_L","Land_Mil_Barracks","Land_Hlidac_budka","Land_Ss_hangar","Land_Mil_ControlTower","Land_a_stationhouse","Land_Farm_WTower","Land_Mil_Guardhouse",
-    "Land_A_TVTower_Base","Land_Ind_Pec_03b","Land_TentHangar_V1_F","Land_bo_A_Office01"
+    "Land_A_TVTower_Base","Land_Ind_Pec_03b","Land_TentHangar_V1_F"
 ];
 _cantBuildDist = 200;
 
