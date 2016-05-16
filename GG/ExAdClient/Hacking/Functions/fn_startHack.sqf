@@ -16,7 +16,7 @@
 	limitations under the License.
 */
 
-if (("Exile_Item_Laptop" in (magazines player)) exitWith {
+if ("Exile_Item_Laptop" in (magazines player)) exitWith {
 	["Whoops", ["You need a laptop in your inventory to start hacking"]] call ExileClient_gui_notification_event_addNotification;
 };
 
