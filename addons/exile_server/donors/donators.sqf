@@ -10,6 +10,7 @@ SlotDonor = [
 	"76561198088251390", // Six 
 	"76561198073495490", // Adam Kadmon 
 	"76561198074948727", // Sifi Link
+	"76561198065188130", // Nacho (EXP-2016-07-15) Paid for 6 months
 	"76561197978528230", // Dark (OD-2016-01-02) #12634 
 	"76561198115568415", // Makos (OD-2016-01-02) #12683  	
 	"76561198076274176", // Melee (OD-2016-1-1) #12636       	 
@@ -23,6 +24,7 @@ SlotDonor = [
 	"76561198140807016", // Pool (OD-2016-04-20) #13512 
 	"76561198146083701", // America (OD-2016-04-09) #13456 
 	"76561198158550520", // Beercules FG (EXP-2016-05-17) #13492 
+	"76561198098304954", // Rusty Fastcar (EXP-2016-05-17) #13737
 	// Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "SlotDonor";
@@ -76,6 +78,7 @@ Marksman2 = [
 	"76561198041297338", // Alvarez (EXP-2016-06-01) #13616   
 	"76561198206283752", // Corey (OD-2016-05-07) #13672    
 	"76561198041528102", // Jay (OD-2016-05-08) #13679    
+	"76561198064823672", // Mr Deadly Aim (OD-2016-05-15) #13735    
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Marksman2";
@@ -185,6 +188,7 @@ Scout3 = [
 	"76561198050228690", // TIM (EXP-2016-06-13)
 	"76561198082829958", // BlueFalcon (OD-2016-05-13) #13715
 	"76561198127745082", // Adesso (OD-2016-05-14) #13730
+	"76561198053962268", // Dolus (OD-2016-05-15) #13741
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout3";
@@ -238,6 +242,8 @@ Soldier3 = [
 	"76561198071285526", // Nick Evans (OD-2016-05-14) #13720
 	"76561198140074059", // Beau Rebel (OD-2016-05-14) #13722
 	"76561198078726531", // John Greco (OD-2016-05-14) #13724
+	"76561198053962268", // Dolus (OD-2016-05-15) #13739
+	"76561198035414981", // Sabre (OD-2016-05-15) #13733
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Soldier3";
