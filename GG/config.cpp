@@ -1531,25 +1531,6 @@ class LampHalogen: Exile_AbstractCraftingRecipe
 	tools[] = {"Exile_Item_Screwdriver", "Exile_Item_Pliers"}; // Change
 };
 
-class TentHangar: Exile_AbstractCraftingRecipe
-{
-	name = "Tent Hangar";
-	pictureItem = "Land_TentHangar_V1_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_TentHangar_V1_F_Kit"}
-	};
-	requiresFire = 1;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{5, "Exile_Item_Woodlog"},
-		{1, "Exile_Item_MetalPole"},
-		{5, "Exile_Item_Rope"},
-	};
-	category = "Extended Base Items";
-};
-
 class TentDome: Exile_AbstractCraftingRecipe
 {
 	name = "Tent Dome";
