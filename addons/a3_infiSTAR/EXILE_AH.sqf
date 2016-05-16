@@ -1459,6 +1459,7 @@ inGameUISetEventHandler ['Action','false'];
 								hint _log;
 								systemChat _log;
 								1 cutText [_log,'WHITE IN'];
+								player setDamage (((damage player) + 0.05) max 0);
 							}
 							else
 							{
