@@ -1,16 +1,6 @@
 /*
 
  	Name: ExileClient_banking_atm_onATMLoad.sqf
-
- 	Author(s): Shix and WolfkillArcadia
-    Copyright (c) 2016 Shix and WolfkillArcadia
-
-    This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
-    To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
-
- 	Description:
-    Handles loading of the ATM machine
-
 */
 private ["_esc","_display","_loadingCtrls","_hide","_advCtrls","_setLoadingText","_progressBar","_curLoadingBarPos","_playerName","_setPlayerName","_setAdvancedBanking","_wallet","_setBanlance","_setSharedBalance","_bank","_setPersonalBalance","_setAccountInUse"];
 

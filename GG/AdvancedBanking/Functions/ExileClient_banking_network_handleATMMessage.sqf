@@ -1,15 +1,7 @@
 /*
 
  	Name: ExileClient_banking_network_handleATMMessage.sqf
-
- 	Author(s): Shix and WolfkillArcadia
-    Copyright (c) 2016 Shix and WolfkillArcadia
-
-    This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
-    To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
-
- 	Description:
-    Handles messages based on dumbassery
+    
 */
 private ["_package","_message","_display","_messageBox","_messageType"];
 _messageType = _this select 0;

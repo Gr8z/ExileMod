@@ -2,15 +2,6 @@
 
  	Name: ExileClient_banking_xm8_slide_sharedBankingOnOpen.sqf
 
- 	Author(s): Shix and WolfkillArcadia
-    Copyright (c) 2016 Shix and WolfkillArcadia
-
-    This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
-    To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
-
- 	Description:
-    Handles loading of the shared banking XM8 App
-
 */
 private["_display","_esc","_appsSlide","_ctrl","_ctrls","_SharedAccountOwner","_SharedAccountMembers","_PlayersList","_InvPlayerBtn","_kickPlayerBtn","_GoBackBtn","_ABctrls","_hide","_invText","_AcceptText","_DeclineText","_AcceptButton","_DeclineButton","_ctrlArray","_appsSlide"];
 

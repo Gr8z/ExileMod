@@ -2,15 +2,6 @@
 
  	Name: ExileClient_banking_player_creditCardShow.sqf
 
- 	Author(s): Shix and WolfkillArcadia
-    Copyright (c) 2016 Shix and WolfkillArcadia
-
-    This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
-    To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
-
- 	Description:
-    Handles creating of the credit card and fills in the info
-
 */
 private ["_display","_ctrls","_slideLeft","_curPos","_newPosX","_slideLeft","_playerWallet","_setPlayerName","_setInamte","_setWalletHeader","_setPlayerWallet","_setAccountNum","_setTransDate","_charArray","_numArray","_a1","_a2","_a3","_a4","_a5","_a6","_a7","_compiledAccNum"];
 cutRsc ["AdvBankingCreditCard", "PLAIN", 0, true];

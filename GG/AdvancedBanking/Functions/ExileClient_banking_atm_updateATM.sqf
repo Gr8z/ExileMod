@@ -1,16 +1,6 @@
 /*
 
  	Name: ExileClient_banking_atm_updateATM.sqf
-
- 	Author(s): Shix and WolfkillArcadia
-    Copyright (c) 2016 Shix and WolfkillArcadia
-
-    This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
-    To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
-
- 	Description:
-    Handles updateing the ATM when a player withdraws or deposits money
-
 */
 private["_display","_wallet","_setBanlance","_setSharedBalance","_bank","_setPersonalBalance","_setAccountInUse","_inputBox"];
 
