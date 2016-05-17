@@ -211,7 +211,7 @@ else
 					};
 					_distance = floor(_victim distance _killer);
 					if (_distance > 3000) then {_distance = 0;};
-					_fragAttributes pushBack (format ["%1m Distance", _distance]);
+					_fragAttributes pushBack (format ["%1m", _distance]);
 					_distanceBonus = (floor ((_distance min 3000) / 100)) * getNumber (configFile >> "CfgSettings" >> "Respect" >> "Bonus" >> "per100mDistance");
 					if (_distanceBonus > 0) then
 					{
@@ -304,7 +304,7 @@ else
 				   _pic = (getText (configFile >> 'cfgVehicles' >> _weapon >> 'picture'));
 				   _txt = (getText (configFile >> 'cfgVehicles' >> _weapon >> 'displayName'));
 				};
-				["systemChatRequest", [format["%1 was killed by an NPC! (%2m Distance)", (name _victim), floor(_victim distance _killer)]]] call ExileServer_object_player_event_killfeed;
+				["systemChatRequest", [format["%1 was killed by an NPC! (%2m)", (name _victim), floor(_victim distance _killer)]]] call ExileServer_object_player_event_killfeed;
 				// KILL MESSAGES BY GR8
 				Gr8s_kill_msg = ["NPC", _pic, (name _victim), floor(_victim distance _killer), _txt, nil, nil];
 				if (LogAIKills) then {format["logGr8Kill:%1:%2:%3:%4:%5:%6:%7", "NPC", getPlayerUID _killer, (name _victim), getPlayerUID _victim, _txt, floor(_victim distance _killer), 0] call ExileServer_system_database_query_insertSingle;};
