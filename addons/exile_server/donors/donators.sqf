@@ -87,6 +87,7 @@ Marksman3 = [
 	"76561198078201908", // Gr8
 	"76561198153784743", // Ghost
 	"76561198084864687", // Kozak
+	"76561198124875371", // Jiggly John (Cuzin)
 	"76561198133936962", // Wrice4 (Staff of the week)
 	"76561197978528230", // Dark (player Created these loadouts)
 	"76561198038610323", // Kamron (OD-2016-01-14) #12923 
