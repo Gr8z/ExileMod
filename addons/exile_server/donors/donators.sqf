@@ -192,6 +192,7 @@ Scout3 = [
 	"76561198082829958", // BlueFalcon (OD-2016-05-13) #13715
 	"76561198127745082", // Adesso (OD-2016-05-14) #13730
 	"76561198053962268", // Dolus (OD-2016-05-15) #13741
+	"76561198042269606", // Vintus (OD-2016-05-17) #13758
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout3";
