@@ -28,6 +28,6 @@ ExAd_HACKING_TERRITORY_MAX = 2;					//SCALAR - Maximun times a territory can get
 
 ExAd_HACKING_MARKER_COLOR = "ColorOrange";		//STRING - What color should the map marker have.
 
-ExAd_HACKING_MARKER_TITLE = "Base Hacker";		//STRING - What title should the map marker have.
+ExAd_HACKING_MARKER_TITLE = "Base Raid";		//STRING - What title should the map marker have.
 
 ExAd_HACKING_FAILED_HACK = 0.15;				//SCALAR - 0-1 The possability for the hack to fail once finished.
