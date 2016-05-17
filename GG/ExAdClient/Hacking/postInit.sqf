@@ -40,3 +40,5 @@ STR_ExAd_HACKING_NOTI_VG_NO_VEH = "Hack successful! No vehicles were stored in t
 STR_ExAd_HACKING_NOTI_SAFE_SUCCESS = "Hack successful! The safe is now unlocked.";
 STR_ExAd_HACKING_NOTI_INTERUPTED = "Hack has been interupted";
 STR_ExAd_HACKING_NOTI_FAILED = "Hack failed! Circuits overloaded!";
+STR_ExAd_HACKING_HINT_SUCCESS = "The Hack on the territory has been successfully completed!";
+STR_ExAd_HACKING_HINT_FAILED = "The Hack on the territory has failed!";

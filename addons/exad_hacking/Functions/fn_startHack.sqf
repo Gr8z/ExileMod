@@ -87,6 +87,7 @@ _player removeItem "Exile_Item_Laptop";
 	_destroy = false;
 	
 	_msg = if(_success && ((random 1) > ExAd_HACKING_FAILED_HACK))then{
+		(parseText (format["<t color='%1' size='%2' font='%3'>%4</t><br/><t color='%5' size='%6' font='%7'>%8</t>", ExAd_Hint_Title_Color, ExAd_Hint_Title_Size, ExAd_Hint_Title_Font,STR_ExAd_HACKING_HINT_TITLE, ExAd_Hint_Msg_Color, ExAd_Hint_Msg_Size, ExAd_Hint_Msg_Font, STR_ExAd_HACKING_HINT_SUCCESS])) remoteExec ["hint", -2];
 		_flag = ((getPos _object) nearObjects ["Exile_Construction_Flag_Static", 150]) select 0;
 		_flag setVariable ["ExAd_HACKS_SUCCEEDED", (_flag getVariable ["ExAd_HACKS_SUCCEEDED",0]) + 1];
 		if(_object isKindOf "Exile_Construction_Flag_Static")then{
@@ -124,6 +125,7 @@ _player removeItem "Exile_Item_Laptop";
 			STR_ExAd_HACKING_NOTI_SAFE_SUCCESS
 		}
 	}else{
+		(parseText (format["<t color='%1' size='%2' font='%3'>%4</t><br/><t color='%5' size='%6' font='%7'>%8</t>", ExAd_Hint_Title_Color, ExAd_Hint_Title_Size, ExAd_Hint_Title_Font,STR_ExAd_HACKING_HINT_TITLE, ExAd_Hint_Msg_Color, ExAd_Hint_Msg_Size, ExAd_Hint_Msg_Font, STR_ExAd_HACKING_HINT_FAILED])) remoteExec ["hint", -2];
 		if(_laptop getVariable ["ExAd_HACK_INTERUPTED",false])then{
 			STR_ExAd_HACKING_NOTI_INTERUPTED
 		}else{

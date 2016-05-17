@@ -18,7 +18,7 @@
 
 ExAd_Debug = true; 						//BOOLEAN - If you want the ExAd code to generate debug logs. 
 
-ExAd_Hint_Title_Color = "#E48A36";		//STRING - Hint message color
+ExAd_Hint_Title_Color = "#37A9E0";		//STRING - Hint message color
 ExAd_Hint_Title_Size = 1.5;				//SCALAR - Hint title size
 ExAd_Hint_Title_Font = "TahomaB";		//STRING - Hint title font
 
