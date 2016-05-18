@@ -184,6 +184,7 @@ adminUIDandAccess[] =
 		 "76561198065188130", // Nacho
 		 "76561198036004541", // Demen
 		 "76561198062993387", // Azul
+		 "76561197987069300", // Shroombear
 		 // Add UID's Above - Don't forget the comma!
 		 "0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
