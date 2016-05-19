@@ -233,7 +233,6 @@
 10, rhs_weap_ak103
 10, rhs_weap_ak103_1
 10, rhs_weap_ak103_2
-10, rhs_weap_ak103_gp25
 10, rhs_weap_ak104
 10, rhs_weap_ak105
 10, rhs_weap_ak74m
