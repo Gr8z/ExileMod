@@ -31,14 +31,6 @@ SlotDonor = [
 "0"
 ];publicVariable "SlotDonor";
 
-vehicleDonor = [
-	// VIP RESERVED SLOTS
-	"76561198078201908", // Gr8 
-	"76561198153784743", // Ghost
-	// Add UIDs above, don't forget the comma
-"0"
-];publicVariable "vehicleDonor";
-
 /////////// Engineer Class ///////
 Engineer1 = [
 	"0", // NAME (OD-00-00-0000) #0000
@@ -193,6 +185,7 @@ Scout3 = [
 	"76561198127745082", // Adesso (OD-2016-05-14) #13730
 	"76561198053962268", // Dolus (OD-2016-05-15) #13741
 	"76561198042269606", // Vintus (OD-2016-05-17) #13758
+	"76561198113363338", // GuiltyZen (OD-2016-05-18) #13766
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout3";
