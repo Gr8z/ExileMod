@@ -51,6 +51,7 @@ Engineer3 = [
 	"76561197979611157", // ClanZocu
 	"76561197978528230", // Dark (player Created these loadouts)
 	"76561198274767971", // CanadianFrodo
+	"76561198021389971", // Third
 	"76561198072044107", // McBear (OD-2016-03-24) #13358
 // Add UIDs above, don't forget the comma
 "0"
