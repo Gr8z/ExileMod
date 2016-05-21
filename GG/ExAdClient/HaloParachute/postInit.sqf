@@ -21,8 +21,8 @@ if(isNil "ExAd_ACTION_EJECT_HEIGHT")then{ExAd_ACTION_EJECT_HEIGHT = 0;};
 		waitUntil{alive player};
 		
 		if(ExAd_HALOPARACHUTE_USE_ACTIONS)then{
-			ExAd_ACTION_PARACHUTE = player addaction [format["<t color='#E48A36'><img image='\a3\ui_f\data\gui\cfg\CommunicationMenu\supplydrop_ca.paa' />%1</t>", "Open Parachute"], {[] spawn ExAd_fnc_pullParachute}, [], 6, true, true, "", "call ExAd_fnc_showParachute"];
-			ExAd_ACTION_EJECT = player addaction [format["<t color='#E48A36'><img image='\a3\ui_f\data\gui\cfg\CommunicationMenu\supplydrop_ca.paa' />%1</t>", "Halo Jump"], {call ExAd_fnc_ejectPlayer}, [], 6, false, true, "", "call ExAd_fnc_showEject;"];
+			ExAd_ACTION_PARACHUTE = player addaction [format["<t color='#36A9E0'><img image='\a3\ui_f\data\gui\cfg\CommunicationMenu\supplydrop_ca.paa' />%1</t>", "Open Parachute"], {[] spawn ExAd_fnc_pullParachute}, [], 6, true, true, "", "call ExAd_fnc_showParachute"];
+			ExAd_ACTION_EJECT = player addaction [format["<t color='#36A9E0'><img image='\a3\ui_f\data\gui\cfg\CommunicationMenu\supplydrop_ca.paa' />%1</t>", "Halo Jump"], {call ExAd_fnc_ejectPlayer}, [], 6, false, true, "", "call ExAd_fnc_showEject;"];
 		};
 		
 		if(ExAd_HALOPARACHUTE_USE_KEY_ACTIONS)then{
