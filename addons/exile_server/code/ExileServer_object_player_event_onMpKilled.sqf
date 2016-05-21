@@ -259,11 +259,6 @@ else
 					_weapon = currentWeapon _killer;
 					_txt = (gettext (configFile >> 'cfgWeapons' >> _weapon >> 'displayName'));
 					_pic = (gettext (configFile >> 'cfgWeapons' >> _weapon >> 'picture'));
-					if (_weapon isKindOf "StaticWeapon") then {
-						_weapon = typeOf (vehicle _killer);
-					    _pic = (getText (configFile >> 'cfgVehicles' >> _weapon >> 'picture'));
-					    _txt = (getText (configFile >> 'cfgVehicles' >> _weapon >> 'displayName'));
-					};
 					if (_pic == "") then {
 					    _weapon = typeOf (vehicle _killer);
 					    _pic = (getText (configFile >> 'cfgVehicles' >> _weapon >> 'picture'));
