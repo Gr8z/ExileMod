@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
 
-private["_locationNames","_victimNear","_victim","_killer","_victimPosition","_addDeathStat","_addKillStat","_normalkill","_killerRespectPoints","_fragAttributes","_player","_grpvictim","_grpkiller","_log","_lastVictims","_victimUID","_vehicleRole","_vehicle","_lastKillAt","_killStack","_distance","_distanceBonus","_flagNextToKiller","_homieBonus","_flagNextToVictim","_raidBonus","_overallRespectChange","_newKillerScore","_killMessage","_newKillerFrags","_newVictimDeaths","_weapon","_txt","_pic"];
+private["_locationNames","_victimNear","_victim","_killer","_victimPosition","_addDeathStat","_addKillStat","_normalkill","_killerRespectPoints","_fragAttributes","_player","_grpvictim","_grpkiller","_log","_lastVictims","_victimUID","_vehicleRole","_vehicle","_lastKillAt","_killStack","_distance","_distanceBonus","_flagNextToKiller","_homieBonus","_flagNextToVictim","_raidBonus","_overallRespectChange","_newKillerScore","_killMessage","_newKillerFrags","_newVictimDeaths","_weapon","_txt","_pic","_vehicleKillerType"];
 if (!isServer || hasInterface) exitWith {};
 _victim = _this select 0;
 _killer = _this select 1;
@@ -257,13 +257,18 @@ else
 				{
 					_killer setVariable ["ExileScore", _newKillerScore];
 					_weapon = currentWeapon _killer;
+					_vehicleKillerType = typeOf(vehicle _killer);
 					_txt = (gettext (configFile >> 'cfgWeapons' >> _weapon >> 'displayName'));
 					_pic = (gettext (configFile >> 'cfgWeapons' >> _weapon >> 'picture'));
-					if (_pic == "") then {
-					    _weapon = typeOf (vehicle _killer);
-					    _pic = (getText (configFile >> 'cfgVehicles' >> _weapon >> 'picture'));
-					    _txt = (getText (configFile >> 'cfgVehicles' >> _weapon >> 'displayName'));
-					};
+					{
+						if(_vehicleKillerType isKindOf _x) then {
+							_pic = (gettext (configFile >> 'CfgVehicles' >> _vehicleKillerType >> 'picture'));
+							if(_killer isEqualTo (driver(vehicle _killer)))then{
+								_txt = (gettext (configFile >> 'CfgVehicles' >> _vehicleKillerType >> 'displayName'));
+							};
+						};
+					}count ["LandVehicle","Air","Ship"];
+
 					format["setAccountScore:%1:%2", _newKillerScore,getPlayerUID _killer] call ExileServer_system_database_query_fireAndForget;
 
 					_victimNear = text (_locationNames select 0);
