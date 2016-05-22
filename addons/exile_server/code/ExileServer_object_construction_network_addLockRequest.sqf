@@ -19,15 +19,15 @@ try
 	_playerObject = _sessionID call ExileServer_system_session_getPlayerObject;
 	if !("Exile_Item_Codelock" in (_playerObject call ExileClient_util_playerCargo_list)) then 
 	{
-		throw "No Can do!";
+		throw "You dont have a code lock!";
 	};
 	if !(isNumber(configFile >> "CfgVehicles" >> (typeOf _door) >> "ExileIsDoor")) then 
 	{
-		throw "Really no can do!";
+		throw "That is not a door!";
 	};
 	if !((_door getVariable ["ExileIsLocked",""]) isEqualTo "") then 
 	{
-		throw "Really really no can do";
+		throw "Door is already locked";
 	};
 	if !((count _pincode) isEqualTo 4) then 
 	{
