@@ -49,7 +49,7 @@ Engineer3 = [
 	"76561198153784743", // Ghost
 	"76561198084864687", // Kozak
 	"76561197979611157", // ClanZocu
-	"76561197978528230", // Dark (player Created these loadouts)
+	"76561197978528230", // Dark
 	"76561198274767971", // CanadianFrodo
 	"76561198021389971", // Third
 	"76561198072044107", // McBear (OD-2016-03-24) #13358
@@ -84,7 +84,7 @@ Marksman3 = [
 	"76561198084864687", // Kozak
 	"76561198124875371", // Jiggly John (Cuzin)
 	"76561198133936962", // Wrice4 (Staff of the week)
-	"76561197978528230", // Dark (player Created these loadouts)
+	"76561197978528230", // Dark
 	"76561198038610323", // Kamron (OD-2016-01-14) #12923 
 	"76561198058824453", // Nahr Royalic (OD-2016-01-15) #12941 
 	"76561198078011082", // Jesse Mason1 (EXP-2016-05-21) #13340 
@@ -125,7 +125,7 @@ Medic3 = [
 	"76561198078201908", // Gr8
 	"76561198153784743", // Ghost
 	"76561198084864687", // Kozak
-	"76561197978528230", // Dark (player Created these loadouts)
+	"76561197978528230", // Dark
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Medic3";
@@ -151,7 +151,7 @@ Scout3 = [
 	"76561198084864687", // Kozak
 	"76561198088251390", // SIX
 	"76561197979611157", // ClanZocu (1 Month Reward)
-	"76561197978528230", // Dark (player Created these loadouts)
+	"76561197978528230", // Dark
 	"76561198074948727", // Sifi Link (OD-2016-02-29) #13271
 	"76561198062993387", // Azul (OD-2016-03-12) #13283
 	"76561198220007828", // Nick (OD-2016-02-29) #13398 
