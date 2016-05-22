@@ -275,8 +275,8 @@ else
 					_killMessage = format ["%1 was killed by %2 with %3 near %4", (name _victim), (name _killer), (text _txt), (text _victimNear)];
 
 					Gr8s_kill_msg = [(name _killer), _pic, (name _victim), floor(_victim distance _killer), _txt, nil, nil];
-					if (LogPlayerKills) then {format["logGr8Kill:%1:%2:%3:%4:%5:%6:%7", (name _killer), getPlayerUID _killer, (name _victim), getPlayerUID _victim, _txt, floor(_victim distance _killer), _overallRespectChange] call ExileServer_system_database_query_insertSingle;};
-					if (ShowPlayerKills) then {publicVariable "Gr8s_kill_msg";};
+					format["logGr8Kill:%1:%2:%3:%4:%5:%6:%7", (name _killer), getPlayerUID _killer, (name _victim), getPlayerUID _victim, _txt, floor(_victim distance _killer), _overallRespectChange] call ExileServer_system_database_query_insertSingle;
+					publicVariable "Gr8s_kill_msg";
 
 					if !(count _fragAttributes isEqualTo 0) then
 					{
@@ -297,18 +297,22 @@ else
 			else
 			{
 				_weapon = currentWeapon _killer;
+				_vehicleKillerType = typeOf(vehicle _killer);
 				_txt = (gettext (configFile >> 'cfgWeapons' >> _weapon >> 'displayName'));
 				_pic = (gettext (configFile >> 'cfgWeapons' >> _weapon >> 'picture'));
-				if (_pic == "") then {
-				   _weapon = typeOf (vehicle _killer);
-				   _pic = (getText (configFile >> 'cfgVehicles' >> _weapon >> 'picture'));
-				   _txt = (getText (configFile >> 'cfgVehicles' >> _weapon >> 'displayName'));
-				};
+				{
+					if(_vehicleKillerType isKindOf _x) then {
+						_pic = (gettext (configFile >> 'CfgVehicles' >> _vehicleKillerType >> 'picture'));
+						if(_killer isEqualTo (driver(vehicle _killer)))then{
+							_txt = (gettext (configFile >> 'CfgVehicles' >> _vehicleKillerType >> 'displayName'));
+						};
+					};
+				}count ["LandVehicle","Air","Ship"];
 				["systemChatRequest", [format["%1 was killed by an NPC! (%2m Distance)", (name _victim), floor(_victim distance _killer)]]] call ExileServer_object_player_event_killfeed;
 				// KILL MESSAGES BY GR8
 				Gr8s_kill_msg = ["NPC", _pic, (name _victim), floor(_victim distance _killer), _txt, nil, nil];
-				if (LogAIKills) then {format["logGr8Kill:%1:%2:%3:%4:%5:%6:%7", "NPC", getPlayerUID _killer, (name _victim), getPlayerUID _victim, _txt, floor(_victim distance _killer), 0] call ExileServer_system_database_query_insertSingle;};
-				if (ShowAIKills) then {publicVariable "Gr8s_kill_msg";};    
+				format["logGr8Kill:%1:%2:%3:%4:%5:%6:%7", "NPC", getPlayerUID _killer, (name _victim), getPlayerUID _victim, _txt, floor(_victim distance _killer), 0] call ExileServer_system_database_query_insertSingle;
+				publicVariable "Gr8s_kill_msg";
 			};
 		};
 	};
