@@ -34,7 +34,7 @@ if !(_cargoContainers isEqualTo []) then
 {
 	[_containerObject, (_cargoContainers select 0)] call ExileServer_util_fill_fillContainers;
 };
-if (!(_abandoned isEqualTo "") && (typeOf _containerObject isEqualTo "Exile_Container_Safe")) then
+if !(_abandoned isEqualTo "") then
 {
 	format ["ExileServer - Adding Container %1 to Abandonded Safes", _containerID] call ExileClient_util_log;
 	ExileAbandondedSafes pushBack _containerObject;
