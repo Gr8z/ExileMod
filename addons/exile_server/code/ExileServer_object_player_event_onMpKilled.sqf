@@ -269,6 +269,10 @@ else
 						};
 					}count ["LandVehicle","Air","Ship"];
 
+					if(_weapon in ["Horn","MiniCarHorn","SportCarHorn","TruckHorn2","TruckHorn","BikeHorn","CarHorn","TruckHorn3"])then{
+						_txt = (gettext (configFile >> 'CfgVehicles' >> _vehicleKillerType >> 'displayName'));
+					};
+
 					format["setAccountScore:%1:%2", _newKillerScore,getPlayerUID _killer] call ExileServer_system_database_query_fireAndForget;
 
 					_victimNear = text (_locationNames select 0);
