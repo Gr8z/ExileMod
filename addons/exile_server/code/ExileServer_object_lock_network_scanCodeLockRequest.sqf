@@ -26,15 +26,15 @@ try
 	};
 	if ((_player distance _object) > 5) then 
 	{
-		throw "NOPE"; 
+		throw "You are too far away"; 
 	};
 	if !("Exile_Item_ThermalScannerPro" in (magazines _player)) then 
 	{
-		throw "NOPE"; 
+		throw "You do not have a Thermal Scanner!"; 
 	};
 	if (_object call ExileClient_util_world_isInTraderZone) then 
 	{
-		throw "NOPE"; 
+		throw "You are in a Safezone"; 
 	};
 	_lastToggleAt = _object getVariable ["ExileLastLockToggleAt", -1];
 	if (_lastToggleAt isEqualTo -1) then 

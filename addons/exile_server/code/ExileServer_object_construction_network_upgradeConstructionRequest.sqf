@@ -21,7 +21,7 @@ try
 	_flags = nearestObjects [_playerObject,["Exile_Construction_Flag_Static"],_maxRange];
 	if (_flags isEqualTo []) then 
 	{
-		throw "You are retarded!";
+		throw "No flags nearby!";
 	};
 	_flags = _flags select 0;
 	_buildRights = _flags getVariable ["ExileTerritoryBuildRights",[]];
@@ -32,7 +32,7 @@ try
 	_playerGear = _playerObject call ExileClient_util_playerCargo_list;
 	if !("Exile_Item_FortificationUpgrade" in _playerGear) then 
 	{
-		throw "Really?";
+		throw "You do not have a upgrade kit!";
 	};
 	_objectConfig =
 	"

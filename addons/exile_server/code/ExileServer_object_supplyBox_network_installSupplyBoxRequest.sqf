@@ -22,7 +22,7 @@ try
 	};
 	if !((typeOf _box) isEqualTo "Exile_Container_SupplyBox") then 
 	{
-		throw "Fuck off";
+		throw "That is not a container!";
 	};
 	_territory = _box call ExileClient_util_world_getTerritoryAtPosition;
 	if (isNull _territory) then
