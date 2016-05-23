@@ -269,7 +269,7 @@ else
 						};
 					}count ["LandVehicle","Air","Ship"];
 
-					if(_weapon in ["Horn","MiniCarHorn","SportCarHorn","TruckHorn2","TruckHorn","BikeHorn","CarHorn","TruckHorn3"])then{
+					if(_weapon in ["Horn","MiniCarHorn","SportCarHorn","TruckHorn2","TruckHorn","BikeHorn","CarHorn","TruckHorn3","Put")then{
 						_txt = (gettext (configFile >> 'CfgVehicles' >> _vehicleKillerType >> 'displayName'));
 					};
 
