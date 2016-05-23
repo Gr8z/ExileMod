@@ -5095,26 +5095,6 @@ _buttonYpos = _startYpos;
 		if(_key isEqualTo 0x0F)then{ if(_shift)then{openMap true;}; };
 		if(_key isEqualTo 0x57)then{ if('Spawn Ammo' call ADMINLEVELACCESS)then{[] call infiSTAR_A3addAmmo;}; };
 		if(_key isEqualTo 0x0E)then{ if(!isNil'prevLoc')then{[1,netId (vehicle player),prevLoc] call fnc_AdminReq;prevLoc = nil;}; };
-		if(_key isEqualTo 83)then
-		{
-			_id = player getVariable ['arsenal_action_id',-1];
-			if(_id > -1)then
-			{
-				player removeAction _id;
-				_id = -1;
-				_log = 'Arsenal Action removed from player.';
-				systemChat (''+_log);
-				_log call fnc_adminLog;
-			}
-			else
-			{
-				_id = player addAction ['Arsenal',{['Open',true] call BIS_fnc_arsenal;}];
-				_log = 'Arsenal Action added to player.';
-				systemChat (''+_log);
-				_log call fnc_adminLog;
-			};
-			player setVariable ['arsenal_action_id',_id];
-		};
 		false
 	};
 	_oldValues = profileNamespace getVariable ['infiSTAR_saveToggle',[]];
