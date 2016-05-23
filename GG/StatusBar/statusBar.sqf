@@ -167,6 +167,7 @@ disableSerialization;
 			<t color='%10'><img size='1.6' image='GG\images\icons\hunger.paa' color='%19'/> %5%1</t> 
 			<t color='%10'><img size='1.6' image='GG\images\icons\thirst.paa' color='%19'/> %6%1</t> 
 			<t color='%10'><img size='1.0' image='GG\images\icons\exile.paa' color='%19'/> %9</t>
+			<t color='%10'>FPS:  %7</t>
 			<t color='%10'><img size='1.6' image='GG\images\icons\restart.paa' color='%19'/>%17:%18</t>",
 			
 					"%", 
