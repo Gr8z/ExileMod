@@ -235,7 +235,7 @@ VCT = 300;	/* if "DayNightVote = true;" - Time (in seconds) to wait until nex vo
 
 
 /* The following 4 options can be disabled by putting the value to -1. For example "TGV = -1;" */
-/* Terrain Grid Value   */ TGV = -1;	/* 50, 25, 12.5  */	/* if set to 50 grass will be very low for better client FPS.. default is 25 ~35 is good performance and grass :) */
+/* Terrain Grid Value   */ TGV = 50;	/* 50, 25, 12.5  */	/* if set to 50 grass will be very low for better client FPS.. default is 25 ~35 is good performance and grass :) */
 /* ViewDistance Value   */ VDV = -1;
 /* ObjectViewDistance   */ VOV = -1;
 /* ShadowViewDistance   */ SVD = -1;
