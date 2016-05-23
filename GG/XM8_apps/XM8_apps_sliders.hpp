@@ -35,4 +35,9 @@ class CfgXM8 {
 		title = "Virtual Garage";
 		onLoadScript = "GG\XM8_apps\apps\XM8_VG\scripts\XM8_VG_mainVGSlide_onLoad.sqf";
 	};
+	class IGUViewDistance {
+		controlID = 352500;
+		title = "IGU View Distance";
+		onLoadScript = "GG\XM8_apps\apps\IGUViewDistance\scripts\XM8_ViewDistance_Slide1_onLoad.sqf";
+	};
 };

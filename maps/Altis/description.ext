@@ -102,11 +102,9 @@ class CfgSounds
 	};
 };
 
-#include "GG\CHVD\dialog.hpp"
 class cfgFunctions
 {
 	#include "GG\ExAdClient\CfgFunctions.cpp"
-	#include "GG\CHVD\CfgFunctions.hpp"
 };
 
 class RscTitles

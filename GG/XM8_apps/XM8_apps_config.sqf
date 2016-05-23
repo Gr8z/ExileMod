@@ -58,10 +58,11 @@ XM8_apps_app7 = [
 XM8_apps_app8 = [
 	"VIEW DISTANCE",
 	"GG\XM8_apps\icons\binocs.paa",
-	{[] call CHVD_fnc_openDialog;},
-	false,
-	""
+	{["IGUViewDistance", 0] call ExileClient_gui_xm8_slide},
+	true,
+	"GG\XM8_apps\apps\IGUViewDistance\scripts\XM8_ViewDistance_init.sqf"
 ];
+
 XM8_apps_app9 = [
 	"PRIVATE CHAT",
 	"GG\XM8_apps\icons\chat.paa",
