@@ -188,6 +188,7 @@ Scout3 = [
 	"76561198113363338", // GuiltyZen (OD-2016-05-18) #13766
 	"76561198110974972", // Irush Luck (OD-2016-05-21) #13777
 	"76561198065712189", // Verus PC (OD-2016-05-22) #13780
+	"76561198079744086", // Specter/A Very Bad Player (EXP-2016-06-24) #13780
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout3";
