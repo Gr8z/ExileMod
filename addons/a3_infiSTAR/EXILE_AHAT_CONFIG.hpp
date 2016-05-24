@@ -150,7 +150,6 @@ adminUIDandAccess[] =
 		 "76561198073495490", // Adam Kadmon
 		 "76561198129318411", // FriendlyFire
 		 "76561198274767971", // CanadianFrodo
-		 "76561198074948727", // Sifi_link
 		 "0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
 			"Teleport On Map Click","Teleport - Target To Me","Teleport - Me To Target","Teleport In Facing Direction (10m steps)",
