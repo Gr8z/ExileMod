@@ -6,7 +6,7 @@
 */
 
 XM8_ViewDistance_minObjectDistance = 800;
-XM8_ViewDistance_maxObjectDistance = 3000;
+XM8_ViewDistance_maxObjectDistance = 5000;
 
 XM8_ViewDistance_minTerrainDistance = 800;
-XM8_ViewDistance_maxTerrainDistance = 3000;
+XM8_ViewDistance_maxTerrainDistance = 5000;
