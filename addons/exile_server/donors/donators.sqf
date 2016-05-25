@@ -74,6 +74,7 @@ Marksman2 = [
 	"76561198206283752", // Corey (OD-2016-05-07) #13672    
 	"76561198041528102", // Jay (OD-2016-05-08) #13679    
 	"76561198064823672", // Mr Deadly Aim (OD-2016-05-15) #13735    
+	"76561198282309996", // Blake (OD-2016-05-24) #13796    
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Marksman2";
