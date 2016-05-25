@@ -79,11 +79,11 @@ _listItemIndex = _listBox lbSetTooltip [15, "$15.00 / month"];
 
 systemChat 'DONOR LOADOUTS CAN BE PURCHASED FROM GHOSTZGAMERZ.COM';
 waitUntil {!isNil "Soldier3"};
-_noMoneyText = [parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>You do not have the money for the Loadout.</t>"],0,0,10,0];
 FNC_GET_ACTUAL_LOADOUT = {
 	waitUntil {typeOf player isEqualTo 'Exile_Unit_Player'};
 	uiSleep 3;
 	_puid = getPlayerUID player;
+	_noMoneyText = [parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>You do not have the money for the Loadout.</t>"],0,0,10,0];
 	switch (_this) do {
 		case 0:{
 			execVM "GG\ranks.sqf";
