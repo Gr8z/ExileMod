@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
 
-private["_playerRespect","_newBank","_data","_oldPlayerObject","_playerUID","_sessionID","_position","_direction","_player","_clanID","_clanName","_devFriendlyMode","_devs","_headgear","_goggles","_binocular","_primaryWeapon","_handgunWeapon","_secondaryWeapon","_currentWeapon","_uniform","_vest","_backpack","_uniformContainer","_vestContainer","_backpackContainer","_assignedItems"];
+private["_data","_playerRespect","_newBank","_data","_oldPlayerObject","_playerUID","_sessionID","_position","_direction","_player","_clanID","_clanName","_devFriendlyMode","_devs","_headgear","_goggles","_binocular","_primaryWeapon","_handgunWeapon","_secondaryWeapon","_currentWeapon","_uniform","_vest","_backpack","_uniformContainer","_vestContainer","_backpackContainer","_assignedItems"];
 _data = _this select 0;
 _oldPlayerObject = _this select 1;
 _playerUID = _this select 2;
@@ -38,9 +38,9 @@ _player setName _name;
 // Advanced Banking
 private["_advBank"];
 _advBank = format["getStats:%1",_playerUID] call ExileServer_system_database_query_selectSingle;
-_player setVariable ["ExilePurse", (_advBank select 1)];
-_player setVariable ["ExileBank",(_advBank select 2)];
+_player setVariable ["ExileBank",(_advBank select 1)];
 // Advanced Banking
+_player setVariable ["ExileMoney", (_data select 38)];
 _player setVariable ["ExileScore", (_data select 39)];
 
 _playerRespect = _player getVariable ["ExileScore",0];
@@ -212,7 +212,7 @@ _player addMPEventHandler ["MPKilled", {_this call ExileServer_object_player_eve
 	"loadPlayerResponse",
 	[
 		(netId _player),
-		str (_player getVariable ["ExilePurse", 0]),
+		str (_player getVariable ["ExileMoney", 0]),
 		str (_player getVariable ["ExileScore", 0]),
 		(_player getVariable ["ExileKills", 0]),
 		(_player getVariable ["ExileDeaths", 0]),
@@ -233,7 +233,7 @@ call ExileServer_system_network_send_to;
     ]
 ]
 call ExileServer_system_network_send_to;
-if (ADVBANKING_SERVER_DEBUG) then {["Database processed with Advanced Banking","DatabaseLoad"] call ExileServer_banking_utils_diagLog;};    
+if (ADVBANKING_SERVER_DEBUG) then {["Database processed with Advanced Banking","DatabaseLoad"] call ExileServer_banking_utils_diagLog;};
 [_sessionID, _player] call ExileServer_system_session_update;
 
 // Vehicle Protection System

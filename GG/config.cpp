@@ -3683,6 +3683,12 @@ class CfgNetworkMessages {
 		parameters[] = {"STRING","STRING"};
 	};
 
+	class updateATMMessage
+	{
+		module = "banking";
+		parameters[] = {"SCALAR","STRING","STRING"};
+	};
+
 	class withdrawalRequest
 	{
 		module = "banking";
@@ -3714,11 +3720,6 @@ class CfgNetworkMessages {
 	{
 		module = "banking";
 		parameters[] = {"STRING"};
-	};
-	class handleATMMessage
-	{
-		module = "banking";
-		parameters[] = {"STRING","STRING"};
 	};
 	class youWonTheLottery
 	{
@@ -4473,21 +4474,6 @@ class CfgInteractionMenus
 			};
 		};
 	};
-	class ATM
-    {
-        targetType = 2;
-        target = "Land_Atm_01_F";
-
-        class Actions
-        {
-            class Access: ExileAbstractAction
-			{
-				title = "Access ATM";
-				condition = "true";
-				action = "createDialog 'AdvBankingATM';";
-			};
-        };
-    };
 	
 	class CargoSmall
 	{
@@ -4929,20 +4915,31 @@ class CfgInteractionMenus
 				condition = "(alive ExileClientInteractionObject) && (ExileClientInteractionObject getVariable ['ExileIsHandcuffed', false]) && !ExileClientIsHandcuffed";
 				action = "_this call ExileClient_object_handcuffs_searchGear";
 			};
-			class Examine: ExileAbstractAction
-           {
-               title = "Examine Body";
-               condition = "!(alive ExileClientInteractionObject) && ((ExileClientInteractionObject getVariable ['ExileName','']) != '')";
-               action = "[(ExileClientInteractionObject getVariable ['ExileName','']),(ExileClientInteractionObject getVariable ['DroppedAmount',0])] call ExileClient_banking_player_examineMoney";
-           };
-	        class Collect: ExileAbstractAction
-           {
-               title = "Collect Pop Tabs";
-               condition = "!(alive ExileClientInteractionObject) && ((ExileClientInteractionObject getVariable ['DroppedAmount',0]) > 0)";
-               action = "[ExileClientInteractionObject,(ExileClientInteractionObject getVariable ['DroppedAmount',0])] call ExileClient_banking_player_collectMoney";
-           };
 		};
 	};
+	// Advanced Banking
+	class Grave
+	{
+	   targetType = 2;
+	   target = "Land_Suitcase_F";
+
+	   class Actions
+	   {
+		   class Examine: ExileAbstractAction
+		   {
+			   title = "Examine Wallet";
+			   condition = "((ExileClientInteractionObject getVariable ['ExileName','']) != '')";
+			   action = "[(ExileClientInteractionObject getVariable ['ExileName','']),(ExileClientInteractionObject getVariable ['DroppedAmount',0])] call ExileClient_banking_player_examineMoney";
+		   };
+		   class Collect: ExileAbstractAction
+		   {
+			   title = "Collect Dropped Wallet";
+			   condition = "((ExileClientInteractionObject getVariable ['DroppedAmount',0]) > 0)";
+			   action = "[ExileClientInteractionObject,(ExileClientInteractionObject getVariable ['DroppedAmount',0])] call ExileClient_banking_player_collectMoney";
+		   };
+	   };
+	};
+	// Advanced Banking
 };
 /**
  * Classname is used for reference

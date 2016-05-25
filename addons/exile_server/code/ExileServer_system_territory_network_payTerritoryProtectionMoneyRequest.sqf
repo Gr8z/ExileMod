@@ -5,16 +5,16 @@
  * www.exilemod.com
  * © 2015 Exile Mod Team
  *
- * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
+ * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
-
+ 
 private["_sessionID","_parameters","_flagNetID","_mode","_playerObject","_flagObject","_territoryDatabaseID","_radius","_level","_objectsInTerritory","_popTabAmountPerObject","_totalPopTabAmount","_respectAmountPerObject","_totalRespectAmount","_playerPopTabs","_playerRespect","_currentTimestamp"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
 _flagNetID = _parameters select 0;
 _mode = _parameters select 1;
-try
+try 
 {
 	_playerObject = _sessionID call ExileServer_system_session_getPlayerObject;
 	if (isNull _playerObject) then
@@ -34,7 +34,7 @@ try
 	_totalPopTabAmount = _level * _popTabAmountPerObject * _objectsInTerritory;
 	_respectAmountPerObject = getNumber (missionConfigFile >> "CfgTerritories" >> "respectAmountPerObject");
 	_totalRespectAmount = _level * _respectAmountPerObject * _objectsInTerritory;
-	_playerPopTabs = _playerObject getVariable ["ExilePurse", 0];
+	_playerPopTabs = _playerObject getVariable ["ExileMoney", 0];
 	_playerRespect = _playerObject getVariable ["ExileScore", 0];
 	if (_mode isEqualTo 0) then
 	{
@@ -43,12 +43,10 @@ try
 			throw "You do not have enough pop tabs!";
 		};
 		_playerPopTabs = _playerPopTabs - _totalPopTabAmount;
-        // Advanced Banking
-       _playerObject setVariable ["ExilePurse", _playerPopTabs];
-       format["updateWallet:%1:%2", _playerPopTabs, getPlayerUID _playerObject] call ExileServer_system_database_query_fireAndForget;
-       // Advanced Banking
-    }
-	else
+		_playerObject setVariable ["ExileMoney", _playerPopTabs];
+		format["setAccountMoney:%1:%2", _playerPopTabs, getPlayerUID _playerObject] call ExileServer_system_database_query_fireAndForget;
+	}
+	else 
 	{
 		if (_playerRespect < _totalRespectAmount) then
 		{
@@ -63,7 +61,6 @@ try
 	_flagObject call ExileServer_system_territory_maintenance_recalculateDueDate;
 	format["maintainTerritory:%1", _territoryDatabaseID] call ExileServer_system_database_query_fireAndForget;
 	[_sessionID, "payTerritoryProtectionMoneyResponse", [str _playerPopTabs, str _playerRespect]] call ExileServer_system_network_send_to;
-    if (ADVBANKING_SERVER_DEBUG) then {["Pay Territory Protection Enacted","PayTerritoryProtection"] call ExileServer_banking_utils_diagLog;};
 }
 catch
 {

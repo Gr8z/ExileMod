@@ -39,7 +39,7 @@ try
 	{
 		throw 4;
 	};
-	_playerMoney = _playerObject getVariable ["ExilePurse", 0];
+	_playerMoney = _playerObject getVariable ["ExileMoney", 0];
 	if (_playerMoney < _salesPrice) then
 	{
 		throw 5;
@@ -68,13 +68,8 @@ try
 	_vehicleObject call ExileServer_object_vehicle_database_insert;
 	_vehicleObject call ExileServer_object_vehicle_database_update;
 	_playerMoney = _playerMoney - _salesPrice;
-	
-    // Advance Banking
-   _playerObject setVariable ["ExilePurse", _playerMoney];
-   format["updateWallet:%1:%2", _playerMoney, (getPlayerUID _playerObject)] call ExileServer_system_database_query_fireAndForget;
-   if (ADVBANKING_SERVER_DEBUG) then {[format["%1 purchased a vehicle",_playerObject],"VehicleRequest"] call ExileServer_banking_utils_diagLog;};
-   // Advance Banking
-
+	_playerObject setVariable ["ExileMoney", _playerMoney];
+	format["setAccountMoney:%1:%2", _playerMoney, (getPlayerUID _playerObject)] call ExileServer_system_database_query_fireAndForget;
 	[_sessionID, "purchaseVehicleResponse", [0, netId _vehicleObject, str _playerMoney]] call ExileServer_system_network_send_to;
 }
 catch 

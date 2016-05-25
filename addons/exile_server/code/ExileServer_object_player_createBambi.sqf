@@ -34,12 +34,12 @@ _name = name _requestingPlayer;
 _clanID = (_accountData select 4);
 _clanName = (_accountData select 5);
 // Advanced Banking
-   private["_advBank","_playerUID"];
-   _playerUID = getPlayerUID _requestingPlayer;
-	_advBank = format["getBank:%1",_playerUID] call ExileServer_system_database_query_selectSingle;
-	_bambiPlayer setVariable ["ExilePurse", 0];
-	_bambiPlayer setVariable ["ExileBank",(_advBank select 1)];
-   // Advanced Banking
+private["_advBank","_playerUID"];
+_playerUID = getPlayerUID _requestingPlayer;
+_advBank = format["getStats:%1",_playerUID] call ExileServer_system_database_query_selectSingle;
+
+_bambiPlayer setVariable ["ExileBank",(_advBank select 1)];
+// Advanced Banking
 if !((typeName _clanID) isEqualTo "SCALAR") then
 {
 	_clanID = -1;
@@ -53,7 +53,7 @@ _bambiPlayer disableAI "TARGET";
 _bambiPlayer disableAI "CHECKVISIBLE";
 _bambiPlayer setDir _direction;
 _bambiPlayer setName _name;
-//_bambiPlayer setVariable ["ExileMoney", (_accountData select 0)];
+_bambiPlayer setVariable ["ExileMoney", (_accountData select 0)];
 _bambiPlayer setVariable ["ExileScore", (_accountData select 1)];
 _bambiPlayer setVariable ["ExileKills", (_accountData select 2)];
 _bambiPlayer setVariable ["ExileDeaths", (_accountData select 3)];
@@ -111,7 +111,7 @@ _bambiPlayer call ExileServer_object_player_database_update;
 	[
 		_bambiPlayer,
 		_parachuteNetID,
-		"0",
+		str (_accountData select 0),
 		str (_accountData select 1),
 		(_accountData select 2),
 		(_accountData select 3),

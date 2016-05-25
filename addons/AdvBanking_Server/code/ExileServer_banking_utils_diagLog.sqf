@@ -1,6 +1,6 @@
 /*
 
- 	Name: ExileClient_banking_utils_diagLog.sqf
+ 	Name: AdvBanking_Server_DiagLog.sqf
 
  	Author(s): Shix and WolfkillArcadia
     Copyright (c) 2016 Shix and WolfkillArcadia
@@ -9,10 +9,9 @@
     To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
 
  	Description:
-    Handles writing messages to the clients logs
+    Handles writing messages to the server logs
 
 */
-private["_msg"];
-
+private ["_msg"];
 _msg = format["ADVANCED BANKING: [%1] : %2",(_this select 1),(_this select 0)];
 diag_log _msg;
