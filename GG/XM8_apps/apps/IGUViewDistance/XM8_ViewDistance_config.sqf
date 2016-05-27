@@ -10,3 +10,6 @@ XM8_ViewDistance_maxObjectDistance = 5000;
 
 XM8_ViewDistance_minTerrainDistance = 800;
 XM8_ViewDistance_maxTerrainDistance = 5000;
+
+XM8_terrainQuality_minterrainQuality = 1;
+XM8_terrainQuality_maxterrainQuality = 50;

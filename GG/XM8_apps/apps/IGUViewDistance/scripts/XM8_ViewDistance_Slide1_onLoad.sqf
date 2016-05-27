@@ -40,7 +40,6 @@ _makeSlider = {
 	_ctrl sliderSetSpeed [100, 2];
 	_ctrl sliderSetPosition _sliderPosition;
 };
-
 _getNextIDC = {
 	params ["_key"];
 	private ["_slideClassName","_baseIDC","_result","_map"];
@@ -49,8 +48,6 @@ _getNextIDC = {
 	_result = _baseIDC + (_map pushBack _key);
 	_result;
 };
-
-
 
 _pW = 0.025;
 _pH = 0.04;
@@ -132,6 +129,23 @@ _IGUViewDistance = _display ctrlCreate [
 	"#FFFFFFFF"
 ] call _makeStructuredText;
 
+[
+	_IGUViewDistance,
+	("currentterrainQuality" call _getNextIDC),
+	[
+		11*_pW, //pos horizontal
+		10.5*_pH, //pos vertical
+		12*_pW, //Width
+		1*_pH	//Height
+	],
+	parseText format["Terrain quality: %1", XM8_terrainQuality],
+	"PuristaMedium",
+	1.0,
+	"#FFFFFFFF",
+	"center",
+	0,
+	"#FFFFFFFF"
+] call _makeStructuredText;
 
 [
 	_IGUViewDistance,
@@ -145,7 +159,7 @@ _IGUViewDistance = _display ctrlCreate [
 	XM8_ViewDistance, //Slider Position
 	XM8_ViewDistance_minTerrainDistance, //Min Slider Ammount
 	XM8_ViewDistance_MaxTerrainDistance, //Max Slider Ammount
-	"_this call UpdateViewDistance"
+	"_this call XM8_ViewDistance_UpdateViewDistance"
 ] call _makeSlider;
 
 
@@ -161,6 +175,23 @@ _IGUViewDistance = _display ctrlCreate [
 	XM8_ObjectDistance,	 //Slider Position
 	XM8_ViewDistance_minObjectDistance, //Min Slider Ammount
 	XM8_ViewDistance_maxObjectDistance, //Max Slider Ammount
-	"_this call UpdateObjectDistance"
+	"_this call XM8_ViewDistance_UpdateObjectDistance"
 
 ] call _makeSlider;
+
+_ctrl = [
+	_IGUViewDistance,
+	("terrainQualitySlider" call _getNextIDC),
+	[
+		5*_pW, //pos horizontal
+		8.5*_pH, //pos vertical
+		24*_pW, //Width
+	  1*_pH	//Height
+	],
+	XM8_terrainQuality,	 //Slider Position
+	XM8_terrainQuality_minterrainQuality, //Min Slider Ammount
+	XM8_terrainQuality_maxterrainQuality, //Max Slider Ammount
+	"_this call XM8_ViewDistance_UpdateterrainQuality"
+
+] call _makeSlider;
+_ctrl ctrlSetTooltip "Lower value -> better quality";
