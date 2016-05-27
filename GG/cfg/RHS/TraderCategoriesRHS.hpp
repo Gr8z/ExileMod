@@ -346,8 +346,7 @@
 			"rhs_45Rnd_545X39_AK_Green",
 			"rhs_100Rnd_762x54mmR",
 			"rhs_100Rnd_762x54mmR_green",
-			"rhs_10Rnd_762x54mmR_7N1"
-			"rhsusf_mag_10Rnd_STD_50BMG_mk211"
+			"rhs_10Rnd_762x54mmR_7N1",
 			"rhsusf_mag_10Rnd_STD_50BMG_M33"
 		};
 	};
