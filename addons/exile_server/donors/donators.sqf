@@ -248,6 +248,7 @@ Soldier3 = [
 	"76561198078155567", // Shelby Geary (OD-2016-05-16) #13752
 	"76561198150076748", // Bobby Dan Jones (OD-2016-05-17) #13755
 	"76561198144923334", // Harry (OD-2016-05-10) #13696 
+	"76561198135611591", // Turnip (OD-2016-05-26) #13802
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Soldier3";
