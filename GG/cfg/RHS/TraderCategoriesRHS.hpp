@@ -290,8 +290,8 @@
 			"rhs_weap_svdp_npz",
 			"rhs_weap_svds",
 			"rhs_weap_svds_npz",
-			"rhs_weap_m110"
-			"rhs_weap_M107_w"
+			"rhs_weap_m110",
+			"rhs_weap_M107_w",
 			"rhs_weap_M107_d"
 		};
 	};
