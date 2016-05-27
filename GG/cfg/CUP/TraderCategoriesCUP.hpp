@@ -211,6 +211,7 @@
 	"CUP_lmg_M60A4",
 	"CUP_lmg_M240",
 	"CUP_lmg_M249",
+	"CUP_lmg_M60E4",
 	"CUP_lmg_PKM"	
 		};
 	};

@@ -291,6 +291,8 @@
 			"rhs_weap_svds",
 			"rhs_weap_svds_npz",
 			"rhs_weap_m110"
+			"rhs_weap_M107_w"
+			"rhs_weap_M107_d"
 		};
 	};
 	
@@ -345,6 +347,8 @@
 			"rhs_100Rnd_762x54mmR",
 			"rhs_100Rnd_762x54mmR_green",
 			"rhs_10Rnd_762x54mmR_7N1"
+			"rhsusf_mag_10Rnd_STD_50BMG_mk211"
+			"rhsusf_mag_10Rnd_STD_50BMG_M33"
 		};
 	};
 	
@@ -382,6 +386,9 @@
 			"rhsusf_M1078A1P2_B_M2_d_fmtv_usarmy",
 			"rhsusf_M1078A1P2_B_M2_d_flatbed_fmtv_usarmy",
 			"rhsusf_m113_usarmy",
+			"rhsusf_M977A4_BKIT_M2_usarmy_wd",
+			"rhsusf_m113_usarmy_M240",
+			"rhsusf_m113_usarmy_unarmed",
 			"rhs_btr60_chdkz"
 		};
 	};

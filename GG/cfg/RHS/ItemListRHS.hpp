@@ -153,6 +153,8 @@
 	class rhsusf_8Rnd_HE  										{ quality = 1; price = 100; };
     class rhsusf_8Rnd_FRAG  									{ quality = 1; price = 100; };
 	class rhsusf_100Rnd_762x51_m61_ap 							{ quality = 1; price = 100; };							
+	class rhsusf_mag_10Rnd_STD_50BMG_M33						{ quality = 3; price = 500; };							
+	class rhsusf_mag_10Rnd_STD_50BMG_mk211						{ quality = 3; price = 500; };							
 	//Russian
 	class rhs_30Rnd_762x39mm									{ quality = 1; price = 20; };
 	class rhs_30Rnd_762x39mm_tracer								{ quality = 1; price = 20; };
@@ -277,6 +279,8 @@
 	class rhs_weap_XM2010_wd						{ quality = 3; price = 1250; };
 	class rhs_weap_XM2010_d							{ quality = 3; price = 1250; };
 	class rhs_weap_XM2010_sa						{ quality = 3; price = 1250; };
+	class rhs_weap_M107_w 						    { quality = 3; price = 12000; };
+	class rhs_weap_M107_d 						    { quality = 3; price = 12000; };
 	class rhs_weap_m110                             { quality = 1; price = 850; };
 	//Russian
 	class rhs_weap_svd								{ quality = 3; price = 1000; };
@@ -343,7 +347,10 @@
 	class     rhsusf_M1078A1P2_B_M2_d_fmtv_usarmy  { quality = 1; price = 50000; };
 	class     rhsusf_M1078A1P2_B_M2_d_flatbed_fmtv_usarmy  { quality = 1; price = 50000; };
 	class 	  rhs_btr60_chdkz 							{ quality = 1; price = 75000; };
-	class 	  rhsusf_m113_usarmy 							{ quality = 1; price = 62500; };
+	class 	  rhsusf_m113_usarmy 						{ quality = 1; price = 62500; };
+	class 	  rhsusf_m113_usarmy_M240 					{ quality = 1; price = 50000; };
+	class 	  rhsusf_m113_usarmy_unarmed				{ quality = 1; price = 30000; };
+	class 	  rhsusf_M977A4_BKIT_M2_usarmy_wd			{ quality = 1; price = 53000; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// AIR 

@@ -185,6 +185,7 @@
     class CUP_lmg_M240 								{ quality = 1; price = 2500; };
     class CUP_lmg_M249 								{ quality = 1; price = 2500; };
     class CUP_lmg_PKM 								{ quality = 1; price = 2500; };	
+    class CUP_lmg_M60E4								{ quality = 1; price = 2500; };	
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Explosive and Shotgun
