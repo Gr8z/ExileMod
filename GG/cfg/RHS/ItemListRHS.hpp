@@ -153,7 +153,7 @@
 	class rhsusf_8Rnd_HE  										{ quality = 1; price = 100; };
     class rhsusf_8Rnd_FRAG  									{ quality = 1; price = 100; };
 	class rhsusf_100Rnd_762x51_m61_ap 							{ quality = 1; price = 100; };							
-	class rhsusf_mag_10Rnd_STD_50BMG_M33						{ quality = 3; price = 500; };														
+	class rhsusf_mag_10Rnd_STD_50BMG_M33						{ quality = 3; price = 1000; };														
 	//Russian
 	class rhs_30Rnd_762x39mm									{ quality = 1; price = 20; };
 	class rhs_30Rnd_762x39mm_tracer								{ quality = 1; price = 20; };
