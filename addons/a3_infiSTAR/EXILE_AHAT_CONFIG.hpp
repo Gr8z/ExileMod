@@ -252,13 +252,13 @@ allowedCommandingMenus[] = {"#user:example","#user:example2"};
 check_Notifications = false;			/* checks if BIS_fnc_showNotification was used, as it is used with many hacks - some custom addons however use them too. */
 disconnect_dupe_check = false;		/* checks if player tries to dupe using the "disconnect trick" -> sends a ping to the server whenever a player opens the escape menu */
 wall_look = false;					/* checks if a players tries to look through a wall (if player is allowed to build in that territory, it will not be logged.) */
-wall_glitch_object = false;			/* checks if a players tries to glitch through a wall (if player is allowed to build in that territory, it will not be logged.) */
+wall_glitch_object = true;			/* checks if a players tries to glitch through a wall (if player is allowed to build in that territory, it will not be logged.) */
 wall_glitch_vehicle = true;		/* stops players from glitching into bases using "eject" or "getout" of a vehicle.. */
 check_doors_n_gates = true;			/* check if a door is locked but still being opened */
 forceWalk_near_enemyBase = false;	/* forcing players to walk when near an enemy base */
 checkHiddenObjects = false;			/* checks if there is hidden objects close to the player (hidden objects could be walked through..) */
 attach_to_check = false;			/* logs and detaches attached vehicles that are close.. basically completely disallow attaching of vehicles! */
-slingload_check = false;				/* forbid sling loading / rope attaching a vehicle with a crew */
+slingload_check = true;				/* forbid sling loading / rope attaching a vehicle with a crew */
 
 stopSafeGlitch = true;				/* re-assigning "InventoryOpened" eventhandler to stop glitch open a locked safe */
 
