@@ -331,10 +331,10 @@
 	class     rhs_tigr_ffv_3camo_vv                     { quality = 1; price = 5000; };
 	class     rhs_tigr_m_msv                            { quality = 1; price = 10000; };
 	class     rhs_tigr_m_3camo_vdv                      { quality = 1; price = 10000; };
-	class     rhsusf_rg33_d                             { quality = 1; price = 30000; };
-	class     rhsusf_rg33_wd                            { quality = 1; price = 30000; };
-	class     rhsusf_rg33_m2_d                          { quality = 1; price = 50000; };
-	class     rhsusf_rg33_m2_wd                         { quality = 1; price = 50000; };
+	class     rhsusf_rg33_d                             { quality = 1; price = 20000; };
+	class     rhsusf_rg33_wd                            { quality = 1; price = 20000; };
+	class     rhsusf_rg33_m2_d                          { quality = 1; price = 45000; };
+	class     rhsusf_rg33_m2_wd                         { quality = 1; price = 45000; };
 	class     rhsusf_m998_w_2dr_fulltop                 { quality = 1; price = 5000; };
 	class     rhsusf_m998_d_2dr_fulltop                 { quality = 1; price = 5000; };
 	class     RHS_UAZ_MSV_01                            { quality = 1; price = 7000; };
