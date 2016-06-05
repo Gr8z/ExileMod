@@ -109,7 +109,8 @@ hiddenSuperAdmin[] =
 	"76561198137100220", // Deadskin
 	"76561197978528230", // Dark
 	"76561198115492831", // BigEgg
-	"76561198056028211" // Nasty
+	"76561198056028211", // Nasty
+	"76561198021389971" // thirdhero
 };
 
 adminUIDandAccess[] =
@@ -179,7 +180,6 @@ adminUIDandAccess[] =
 		{
 		 "76561198060389676", // Powerwolf
 		 "76561197987069300", // Shroombear
-		 "76561198021389971", // thirdhero
 		 "76561198107350158", // 778
 		 // Add UID's Above - Don't forget the comma!
 		 "0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
