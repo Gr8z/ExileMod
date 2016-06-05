@@ -139,7 +139,7 @@ adminUIDandAccess[] =
 			"MapIcons: Buildings","MapIcons: Flags",
 			"MapIcons: Player","MapIcons: DeadPlayer","MapIcons: Vehicles",
 			"MapIcons: Vehicle Types","MapIcons: Vehicle lockstate","MapIcons: DeadVehicles",
-			"MapIcons: AI"
+			"MapIcons: AI","Delete all player mapmarkers"
 		}
 	},
 	{
@@ -173,7 +173,7 @@ adminUIDandAccess[] =
 			"MapIcons: Buildings","MapIcons: Flags",
 			"MapIcons: Player","MapIcons: DeadPlayer","MapIcons: Vehicles",
 			"MapIcons: Vehicle Types","MapIcons: Vehicle lockstate","MapIcons: DeadVehicles",
-			"MapIcons: AI"
+			"MapIcons: AI","Delete all player mapmarkers"
 		}
 	},
 	{
