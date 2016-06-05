@@ -4,13 +4,6 @@ class Mission {
 	addOns[]=
 	{
 		"exile_client",
-		"aia_chernarus_config",
-		"aia_buildings_config",
-		"aia_misc3_config",
-		"aia_misc_e_config",
-		"aia_desert2_config",
-		"aia_misc_config",
-		"cabuildings_misc",
 		"A3_Characters_F",
 		"CUP_Weapons_WeaponsCore",
 		"rhs_weapons",
@@ -22,7 +15,6 @@ class Mission {
 	{
 		"exile_client",
 		"A3_Characters_F",
-		"aia_chernarus_config"
 	};
 	randomSeed = 8080942;
 	
