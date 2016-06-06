@@ -386,14 +386,12 @@ class Intro {
 	addOns[]=
 	{
 		"A3_Characters_F_Civil",
-		"a3_characters_f",
-		"aia_chernarus_config"
+		"a3_characters_f"
 	};
 	addOnsAuto[]=
 	{
 		"A3_Characters_F_Civil",
-		"a3_characters_f",
-		"aia_chernarus_config"
+		"a3_characters_f"
 	};
 	randomSeed = 3611332;
 	
@@ -420,14 +418,12 @@ class OutroWin {
 	addOns[]=
 	{
 		"A3_Characters_F_Civil",
-		"a3_characters_f",
-		"aia_chernarus_config"
+		"a3_characters_f"
 	};
 	addOnsAuto[]=
 	{
 		"A3_Characters_F_Civil",
-		"a3_characters_f",
-		"aia_chernarus_config"
+		"a3_characters_f"
 	};
 	randomSeed = 15572598;
 	
@@ -454,14 +450,12 @@ class OutroLoose {
 	addOns[]=
 	{
 		"A3_Characters_F_Civil",
-		"a3_characters_f",
-		"aia_chernarus_config"
+		"a3_characters_f"
 	};
 	addOnsAuto[]=
 	{
 		"A3_Characters_F_Civil",
-		"a3_characters_f",
-		"aia_chernarus_config"
+		"a3_characters_f"
 	};
 	randomSeed = 13194853;
 	
