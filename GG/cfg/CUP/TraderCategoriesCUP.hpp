@@ -325,8 +325,7 @@
 	"CUP_srifle_AWM_wdl",
 	"CUP_srifle_CZ550",
 	"CUP_srifle_LeeEnfield",
-	"CUP_srifle_M40A3",
-	"CUP_srifle_AWM_wdl_SBPMll"	
+	"CUP_srifle_M40A3"
 		};
 	};
 
