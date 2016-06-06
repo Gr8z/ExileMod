@@ -258,16 +258,16 @@ _trader =
     ["HubStandingUA_move1", "HubStandingUA_move2", "HubStandingUA_idle1", "HubStandingUA_idle2", "HubStandingUA_idle3"],
     [4092.82,11677.2,0],243.676
 ]
-call ExileClient_object_trader_create;
-
-_trader =
-[
-    "Exile_Trader_Aircraft",
-    "WhiteHead_17",
-    ["LHD_krajPaluby"],
-    [12062.33,12638.48,0.05],
-    0
-]
+//call ExileClient_object_trader_create;
+//
+//_trader =
+//[
+//    "Exile_Trader_Aircraft",
+//    "WhiteHead_17",
+//    ["LHD_krajPaluby"],
+//    [12062.33,12638.48,0.05],
+//    0
+//]
 call ExileClient_object_trader_create;
 _trader setVariable ["ExileTraderType", "Exile_Trader_Aircraft"];
 
