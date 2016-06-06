@@ -7060,9 +7060,9 @@ class CfgVehicleCustoms
 		skins[] = 
 		{
 			
-			{"rhs_btr70_vv",		1000, "BTR 70 VV"},	
-			{"rhs_btr70_vmt",		1000, "BTR 70 VMT"},
-			{"rhs_btr70_msv",		1000, "BTR 70 MSV"}
+			{"rhs_btr70_vv",		1000},	
+			{"rhs_btr70_vmt",		1000},
+			{"rhs_btr70_msv",		1000}
 		};
 	};
 };
