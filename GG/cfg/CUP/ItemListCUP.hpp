@@ -296,7 +296,6 @@
     class CUP_srifle_CZ550 							{ quality = 1; price = 1200; };
     class CUP_srifle_LeeEnfield 					{ quality = 1; price = 1200; };
     class CUP_srifle_M40A3 							{ quality = 1; price = 1200; };	
-    class CUP_srifle_AWM_wdl_SBPMll 				{ quality = 1; price = 7500; };	
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Launchers
