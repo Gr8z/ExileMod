@@ -7052,6 +7052,19 @@ class CfgVehicleCustoms
 			{"Exile_Car_Hunter",		1000, "Exile Black",			{"exile_assets\texture\vehicle\Exile_Hunter_Black_co.paa","exile_assets\texture\vehicle\Exile_Hunter_Black_Back_co.paa"};}
 		};
 	};
+	///////////////////////////////////////////////////////////////////////////////
+	// BTR70
+	///////////////////////////////////////////////////////////////////////////////
+	class rhs_btr70
+	{
+		skins[] = 
+		{
+			
+			{"rhs_btr70_vv",		1000, "BTR 70 VV"},	
+			{"rhs_btr70_vmt",		1000, "BTR 70 VMT"},
+			{"rhs_btr70_msv",		1000, "BTR 70 MSV"}
+		};
+	};
 };
 class CfgVehicleTransport 
 {
