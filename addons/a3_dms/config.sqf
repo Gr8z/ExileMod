@@ -1089,7 +1089,7 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 											"CUP_lmg_Pecheneg",
 											"CUP_lmg_UK59",
 											"CUP_lmg_L7A2",
-											"CUP_lmg_M60A4",
+											"CUP_lmg_M60E4",
 											"CUP_lmg_M240",
 											"CUP_lmg_M249",
 											"CUP_lmg_PKM"
@@ -2106,7 +2106,7 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 											"CUP_lmg_Pecheneg",
 											"CUP_lmg_UK59",
 											"CUP_lmg_L7A2",
-											"CUP_lmg_M60A4",
+											"CUP_lmg_M60E4",
 											"CUP_lmg_M240",
 											"CUP_lmg_M249",
 											"CUP_lmg_PKM",
