@@ -181,11 +181,10 @@
     class CUP_lmg_Pecheneg 							{ quality = 1; price = 2500; };
     class CUP_lmg_UK59 								{ quality = 1; price = 2500; };
     class CUP_lmg_L7A2 								{ quality = 1; price = 2500; };
-    class CUP_lmg_M60A4 							{ quality = 1; price = 2500; };
+    class CUP_lmg_M60E4 							{ quality = 1; price = 2500; };
     class CUP_lmg_M240 								{ quality = 1; price = 2500; };
     class CUP_lmg_M249 								{ quality = 1; price = 2500; };
     class CUP_lmg_PKM 								{ quality = 1; price = 2500; };	
-    class CUP_lmg_M60E4								{ quality = 1; price = 2500; };	
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Explosive and Shotgun
@@ -296,7 +295,6 @@
     class CUP_srifle_CZ550 							{ quality = 1; price = 1200; };
     class CUP_srifle_LeeEnfield 					{ quality = 1; price = 1200; };
     class CUP_srifle_M40A3 							{ quality = 1; price = 1200; };	
-    class CUP_srifle_AWM_wdl_SBPMll 				{ quality = 1; price = 7500; };	
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Launchers

@@ -392,7 +392,8 @@
 			"rhsusf_M977A4_BKIT_M2_usarmy_wd",
 			"rhsusf_m113_usarmy_M240",
 			"rhsusf_m113_usarmy_unarmed",
-			"rhs_btr60_chdkz"
+			"rhs_btr60_chdkz",
+			"rhs_btr70_msv"
 		};
 	};
 	

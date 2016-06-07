@@ -7052,6 +7052,24 @@ class CfgVehicleCustoms
 			{"Exile_Car_Hunter",		1000, "Exile Black",			{"exile_assets\texture\vehicle\Exile_Hunter_Black_co.paa","exile_assets\texture\vehicle\Exile_Hunter_Black_Back_co.paa"};}
 		};
 	};
+	///////////////////////////////////////////////////////////////////////////////
+	// BTR70
+	///////////////////////////////////////////////////////////////////////////////
+	class rhs_btr70_vmf
+	{
+		skins[] = 
+		{
+			
+			{"rhs_btr70_msv",		1500, "BTR-70 Sand", {"rhsafrf\addons\rhs_btr70_camo\data\btr70_1_sand_co.paa","rhsafrf\addons\rhs_btr70_camo\data\btr70_2_sand_co.paa"};},	
+			{"rhs_btr70_msv",		1500, "BTR-70 Desert", {"rhsafrf\addons\rhs_btr70_camo\data\btr70_des_1_co.paa","rhsafrf\addons\rhs_btr70_camo\data\btr70_des_2_co.paa"};},
+			{"rhs_btr70_msv",		1500, "BTR-70 Mar", {"rhsafrf\addons\rhs_btr70_camo\data\btr70_mar_1_co.paa","rhsafrf\addons\rhs_btr70_camo\data\btr70_mar_2_co.paa"};},
+			{"rhs_btr70_msv",		1500, "BTR-70 MC", {"rhsafrf\addons\rhs_btr70_camo\data\btr70_MC_1_co.paa","rhsafrf\addons\rhs_btr70_camo\data\btr70_MC_2_co.paa"};},
+			{"rhs_btr70_msv",		1500, "BTR-70 Omon 1", {"rhsafrf\addons\rhs_btr70_camo\data\btr70_omon1_1_co.paa","rhsafrf\addons\rhs_btr70_camo\data\btr70_omon1_2_co.paa"};},
+			{"rhs_btr70_msv",		1500, "BTR-70 Omon 2", {"rhsafrf\addons\rhs_btr70_camo\data\btr70_omon2_1_co.paa","rhsafrf\addons\rhs_btr70_camo\data\btr70_omon2_2_co.paa"};},
+			{"rhs_btr70_msv",		1500, "BTR-70 Camo", {"rhsafrf\addons\rhs_btr70_camo\data\btr70_tri1_1_co.paa","rhsafrf\addons\rhs_btr70_camo\data\btr70_tri1_2_co.paa"};},
+			{"rhs_btr70_msv",		1500, "BTR-70 Camo 2", {"rhsafrf\addons\rhs_btr70_camo\data\btr70_tri2_1_co.paa","rhsafrf\addons\rhs_btr70_camo\data\btr70_tri2_2_co.paa"};}
+		};
+	};
 };
 class CfgVehicleTransport 
 {
