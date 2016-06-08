@@ -145,6 +145,7 @@ Scout2 = [
 	"76561197980662311", // ezPK XS PWR (OD-2015-09-15) #11479
 	"76561198062796125", // ezPK Zephyr (OD-2015-09-15) #11597
 	"76561198145760616", //  Mattie (OD-2016-04-21) #13515
+	"76561198258605036", //  Graham Broadbelt (OD-2016-06-07) #13850 
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout2";
@@ -256,6 +257,7 @@ Soldier3 = [
 	"76561198046284076", // Mook (OD-2016-05-30) #13813
 	"76561198210181637", // Rick(OD-2016-06-05) #13838  
 	"76561198016648100", // Adam Nantz (OD-2016-06-03) #13830 
+	"76561198026731659", // Gump (OD-2016-06-06) #13845  
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Soldier3";

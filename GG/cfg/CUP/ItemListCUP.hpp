@@ -116,6 +116,7 @@
     class CUP_30Rnd_Sa58_M    								{ quality = 2; price = 15; };
     class CUP_30Rnd_9x19_MP5    							{ quality = 2; price = 25; };
     class CUP_5Rnd_127x108_KSVK_M    						{ quality = 2; price = 400; };
+	class CUP_10Rnd_127x99_m107   						    { quality = 2; price = 800; };
     class CUP_5Rnd_127x99_as50_M    						{ quality = 2; price = 500; };
     class CUP_5Rnd_762x51_M24    							{ quality = 2; price = 40; };
     class CUP_5Rnd_86x70_L115A1    							{ quality = 2; price = 400; };
@@ -303,14 +304,18 @@
     class CUP_glaunch_M79 							{ quality = 1; price = 15000; };
     class CUP_glaunch_Mk13                          { quality = 1; price = 15000; };
     class CUP_launch_RPG7V      					{ quality = 1; price = 25000; };
+	class CUP_launch_RPG18     					    { quality = 1; price = 30000; };
     class CUP_launch_FIM92Stinger      				{ quality = 1; price = 70000; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Launcher Ammo
 	///////////////////////////////////////////////////////////////////////////////
-    class CUP_RPG18_M    							{ quality = 2; price = 8500; };
+    class CUP_RPG18_M    							{ quality = 2; price = 10000; };
     class CUP_PG7VL_M    							{ quality = 2; price = 8500; };
-    class CUP_PG7VR_M    							{ quality = 2; price = 8500; };	
+    class CUP_PG7VR_M    							{ quality = 2; price = 8500; };
+	class CUP_OG7_M    							    { quality = 2; price = 8500; };
+	class CUP_rpg7_PG7VL_mag    					{ quality = 2; price = 8500; };
+	class CUP_TBG7V_M	  					        { quality = 2; price = 8500; };
     class CUP_M136_M                                { quality = 2; price = 2500; };
     class CUP_Stinger_M                             { quality = 2; price = 30000; };
 
