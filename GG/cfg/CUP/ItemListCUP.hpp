@@ -314,7 +314,8 @@
     class CUP_PG7VL_M    							{ quality = 2; price = 8500; };
     class CUP_PG7VR_M    							{ quality = 2; price = 8500; };
 	class CUP_OG7_M    							    { quality = 2; price = 8500; };
-	class CUP_rpg7_PG7VL_mag    					{ quality = 2; price = 8500; };	
+	class CUP_rpg7_PG7VL_mag    					{ quality = 2; price = 8500; };
+	class CUP_TBG7V_M	  					        { quality = 2; price = 8500; };
     class CUP_M136_M                                { quality = 2; price = 2500; };
     class CUP_Stinger_M                             { quality = 2; price = 30000; };
 
