@@ -130,6 +130,7 @@ Medic3 = [
 	"76561198084864687", // Kozak
 	"76561197978528230", // Dark
 	"76561198061910471", // Frank (OD-2016-05-23) #13788 
+	"76561198050613311", // Matt is back (OD-2016-06-08) #13854
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Medic3";
