@@ -2850,7 +2850,7 @@ class CfgExileArsenal
 	class optic_KHS_hex								{ quality = 3; price = 300; };
 	class optic_KHS_old								{ quality = 3; price = 300; };
 	class optic_KHS_tan								{ quality = 3; price = 300; };
-	class optic_LRPS								{ quality = 2; price = 300; };
+	class optic_LRPS								{ quality = 2; price = 400; };
 	class optic_MRCO								{ quality = 1; price = 100; };
 	class optic_MRD									{ quality = 1; price = 10; };
 	class optic_SOS									{ quality = 2; price = 200; };
@@ -3158,6 +3158,11 @@ class CfgExileArsenal
 	class SLAMDirectionalMine_Wire_Mag				{ quality = 3; price = 7000; };
 
 	///////////////////////////////////////////////////////////////////////////////
+	// Launcher Ammo
+	///////////////////////////////////////////////////////////////////////////////
+	class RPG32_F									{ quality = 3; price = 15000; };
+	
+	///////////////////////////////////////////////////////////////////////////////
 	// Pistols
 	///////////////////////////////////////////////////////////////////////////////
 	class hgun_ACPC2_F 								{ quality = 1; price = 50; };
@@ -3216,9 +3221,9 @@ class CfgExileArsenal
 	class arifle_MXM_Black_F 						{ quality = 1; price = 550; };
 	class arifle_MXM_F 								{ quality = 1; price = 550; };
 	class srifle_DMR_01_F 							{ quality = 2; price = 600; };
-	class srifle_DMR_02_camo_F 						{ quality = 3; price = 800; };
-	class srifle_DMR_02_F 							{ quality = 3; price = 800; };
-	class srifle_DMR_02_sniper_F 					{ quality = 3; price = 800; };
+	class srifle_DMR_02_camo_F 						{ quality = 3; price = 2500; };
+	class srifle_DMR_02_F 							{ quality = 3; price = 2500; };
+	class srifle_DMR_02_sniper_F 					{ quality = 3; price = 2500; };
 	class srifle_DMR_03_F 							{ quality = 3; price = 750; };
 	class srifle_DMR_03_khaki_F 					{ quality = 3; price = 750; };
 	class srifle_DMR_03_multicam_F 					{ quality = 3; price = 750; };
@@ -3226,9 +3231,9 @@ class CfgExileArsenal
 	class srifle_DMR_03_woodland_F 					{ quality = 3; price = 750; };
 	class srifle_DMR_04_F 							{ quality = 3; price = 700; };
 	class srifle_DMR_04_Tan_F 						{ quality = 3; price = 700; };
-	class srifle_DMR_05_blk_F 						{ quality = 3; price = 850; };
-	class srifle_DMR_05_hex_F 						{ quality = 3; price = 850; };
-	class srifle_DMR_05_tan_f 						{ quality = 3; price = 850; };
+	class srifle_DMR_05_blk_F 						{ quality = 3; price = 3500; };
+	class srifle_DMR_05_hex_F 						{ quality = 3; price = 3500; };
+	class srifle_DMR_05_tan_f 						{ quality = 3; price = 3500; };
 	class srifle_DMR_06_camo_F 						{ quality = 3; price = 800; };
 	class srifle_DMR_06_olive_F 					{ quality = 3; price = 800; };
 	class srifle_EBR_F 								{ quality = 2; price = 700; };

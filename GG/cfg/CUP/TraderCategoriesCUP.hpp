@@ -134,6 +134,7 @@
 	"CUP_30Rnd_Sa58_M",
 	"CUP_30Rnd_9x19_MP5",
 	"CUP_5Rnd_127x108_KSVK_M",
+	"CUP_10Rnd_127x99_m107",
 	"CUP_5Rnd_127x99_as50_M",
 	"CUP_5Rnd_762x51_M24",
 	"CUP_5Rnd_86x70_L115A1",
@@ -350,6 +351,7 @@
 	"CUP_glaunch_M79",
 	"CUP_glaunch_Mk13",
 	"CUP_launch_RPG7V",
+	"CUP_launch_RPG18", 
 	"CUP_launch_FIM92Stinger"
 		};
 	};	
@@ -360,6 +362,7 @@
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
+	"RPG32_F",//unsure if this'll work
 	"CUP_RPG18_M",
 	"CUP_PG7VL_M",
 	"CUP_PG7VR_M",

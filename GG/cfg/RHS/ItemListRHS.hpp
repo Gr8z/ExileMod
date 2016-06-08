@@ -36,10 +36,10 @@
 	class rhs_vydra_3m                              { quality = 1; price = 30; };
     class rhs_6b13                            	  { quality = 2; price = 700; };
     class rhs_6b13_EMR                    	      { quality = 2; price = 700; };
-    class rhsusf_iotv_ocp                   	    { quality = 2; price = 750; };
-    class rhsusf_iotv_ocp_Rifleman         	     { quality = 2; price = 1300; };
-    class rhsusf_iotv_ocp_Squadleader           { quality = 2; price = 1300; };
-	class rhsusf_spc_rifleman                   { quality = 2; price = 6000; };
+    class rhsusf_iotv_ocp                   	    { quality = 2; price = 350; };
+    class rhsusf_iotv_ocp_Rifleman         	     { quality = 2; price = 400; };
+    class rhsusf_iotv_ocp_Squadleader           { quality = 2; price = 600; };
+	class rhsusf_spc_rifleman                   { quality = 2; price = 200; };
 	
 	//HELMETS
 	class rhs_6b26                                  { quality = 2; price = 60; };
@@ -153,7 +153,7 @@
 	class rhsusf_8Rnd_HE  										{ quality = 1; price = 100; };
     class rhsusf_8Rnd_FRAG  									{ quality = 1; price = 100; };
 	class rhsusf_100Rnd_762x51_m61_ap 							{ quality = 1; price = 100; };							
-	class rhsusf_mag_10Rnd_STD_50BMG_M33						{ quality = 3; price = 1000; };														
+	class rhsusf_mag_10Rnd_STD_50BMG_M33						{ quality = 3; price = 700; };														
 	//Russian
 	class rhs_30Rnd_762x39mm									{ quality = 1; price = 20; };
 	class rhs_30Rnd_762x39mm_tracer								{ quality = 1; price = 20; };
@@ -199,6 +199,7 @@
 	class rhs_rpg7_PG7VR_mag						{ quality = 2; price = 3500; };
 	class rhs_rpg7_TBG7V_mag						{ quality = 2; price = 3500; };
 	class rhs_rpg7_OG7V_mag							{ quality = 2; price = 3500; };
+
 	//ASSAULT RIFLES
 	//US
 	class rhs_weap_M590_5RD							{ quality = 3; price = 350; };
@@ -278,8 +279,8 @@
 	class rhs_weap_XM2010_wd						{ quality = 3; price = 1250; };
 	class rhs_weap_XM2010_d							{ quality = 3; price = 1250; };
 	class rhs_weap_XM2010_sa						{ quality = 3; price = 1250; };
-	class rhs_weap_M107_w 						    { quality = 3; price = 12000; };
-	class rhs_weap_M107_d 						    { quality = 3; price = 12000; };
+	class rhs_weap_M107_w 						    { quality = 3; price = 8000; };
+	class rhs_weap_M107_d 						    { quality = 3; price = 8000; };
 	class rhs_weap_m110                             { quality = 1; price = 850; };
 	//Russian
 	class rhs_weap_svd								{ quality = 3; price = 1000; };
@@ -293,7 +294,7 @@
 	class rhs_mine_pmn2_mag 						{ quality = 1; price = 1500; };
 	class rhs_mine_tm62m_mag 						{ quality = 1; price = 1500; };
 	class rhsusf_m112_mag 							{ quality = 1; price = 2500; };
-	class rhsusf_m112x4_mag							{ quality = 1; price = 6000; };
+	class rhsusf_m112x4_mag							{ quality = 1; price = 10000; };
 	class rhs_mine_m19_mag 							{ quality = 1; price = 1500; };
 	class rhs_weap_rpg7 							{ quality = 1; price = 30000; };
 	
