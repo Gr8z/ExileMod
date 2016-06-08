@@ -207,8 +207,8 @@ class Mission {
 		class Item6
 		{
 			position[]={12546.252,9.5938053,9774.4521};
-			name="SpawnBerenzino";
-			text="Berenzino";
+			name="SpawnBerezino";
+			text="Berezino";
 			type="ExileSpawnZone";
 		};
 		class Item7
