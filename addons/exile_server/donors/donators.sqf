@@ -197,6 +197,7 @@ Scout3 = [
 	"76561198065712189", // Verus PC (OD-2016-05-22) #13780
 	"76561198048881454", // FaroeNoob (OD-2016-05-27) #13807 
 	"76561198079744086", // Specter/A Very Bad Player (EXP-2016-06-24) #0000
+	"76561198120619027", // eastcoastspud (OD-2016-06-08) #13858
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout3";
@@ -259,6 +260,8 @@ Soldier3 = [
 	"76561198210181637", // Rick(OD-2016-06-05) #13838  
 	"76561198016648100", // Adam Nantz (OD-2016-06-03) #13830 
 	"76561198026731659", // Gump (OD-2016-06-06) #13845  
+	"76561197963242443", // Joo (OD-2016-06-08) #13863  
+	"76561198108262768", // Zanthyn (OD-2016-06-08) #13861
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Soldier3";
