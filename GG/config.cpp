@@ -7065,6 +7065,7 @@ class CfgVehicleCustoms
 		skins[] = 
 		{
 			
+			{"rhs_btr70_msv",		1500, "BTR-70 Stock", {"rhsafrf\addons\rhs_btr70\data\btr70_1_co.paa","rhsafrf\addons\rhs_btr70\data\btr70_2_co.paa"};},	
 			{"rhs_btr70_msv",		1500, "BTR-70 Sand", {"rhsafrf\addons\rhs_btr70_camo\data\btr70_1_sand_co.paa","rhsafrf\addons\rhs_btr70_camo\data\btr70_2_sand_co.paa"};},	
 			{"rhs_btr70_msv",		1500, "BTR-70 Desert", {"rhsafrf\addons\rhs_btr70_camo\data\btr70_des_1_co.paa","rhsafrf\addons\rhs_btr70_camo\data\btr70_des_2_co.paa"};},
 			{"rhs_btr70_msv",		1500, "BTR-70 Mar", {"rhsafrf\addons\rhs_btr70_camo\data\btr70_mar_1_co.paa","rhsafrf\addons\rhs_btr70_camo\data\btr70_mar_2_co.paa"};},
