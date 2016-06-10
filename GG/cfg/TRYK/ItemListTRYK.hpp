@@ -240,7 +240,7 @@
     class TRYK_U_B_wh_blk_Rollup_CombatUniform          { quality = 1; price = 100; };
     class TRYK_U_B_BLK_tan_Rollup_CombatUniform         { quality = 1; price = 100; };
     class TRYK_U_B_BLK_OD_Rollup_CombatUniform          { quality = 1; price = 100; };
-    class TRYK_U_B_NATO_UCP_GRY_Combatniform            { quality = 1; price = 100; };
+    class TRYK_U_B_NATO_UCP_GRY_CombatUniform           { quality = 1; price = 100; };
     class TRYK_U_B_NATO_UCP_GRY_R_CombatUniform         { quality = 1; price = 100; };
     class TRYK_U_B_NATO_UCP_CombatUniform               { quality = 1; price = 100; };
     class TRYK_U_B_NATO_UCP_R_CombatUniform             { quality = 1; price = 100; };
@@ -545,9 +545,9 @@
     class TRYK_V_Sheriff_BA_TL                          { quality = 1; price = 100; };
     class TRYK_V_Sheriff_BA_TBL                         { quality = 1; price = 100; };
     class TRYK_V_Sheriff_BA_TCL                         { quality = 1; price = 100; };
-    class TRYK_V_Sheriff_BA_TL2                         { quality = 1; price = 100; };
-    class TRYK_V_Sheriff_BA_TBL2                        { quality = 1; price = 100; };
-    class TRYK_V_Sheriff_BA_TCL2                        { quality = 1; price = 100; };
+    class TRYK_V_Sheriff_BA_TL2                         { quality = 1; price = 400; };
+    class TRYK_V_Sheriff_BA_TBL2                        { quality = 1; price = 400; };
+    class TRYK_V_Sheriff_BA_TCL2                        { quality = 1; price = 400; };
     class TRYK_V_Sheriff_BA_T                           { quality = 1; price = 100; };
     class TRYK_V_Sheriff_BA_TB                          { quality = 1; price = 100; };
     class TRYK_V_Sheriff_BA_T2                          { quality = 1; price = 100; };
@@ -575,10 +575,10 @@
     class TRYK_B_Kitbag_Base                            { quality = 2; price = 120; };
     class TRYK_B_Kitbag_blk                             { quality = 2; price = 120; };
     class TRYK_B_Kitbag_aaf                             { quality = 2; price = 120; };
-    class TRYK_B_Carryall_blk                           { quality = 3; price = 300; };
-    class TRYK_B_Carryall_wh                            { quality = 3; price = 300; };
-    class TRYK_B_Carryall_wood                          { quality = 3; price = 300; };
-    class TRYK_B_Carryall_JSDF                          { quality = 3; price = 300; };
+    class TRYK_B_Carryall_blk                           { quality = 3; price = 800; };
+    class TRYK_B_Carryall_wh                            { quality = 3; price = 800; };
+    class TRYK_B_Carryall_wood                          { quality = 3; price = 800; };
+    class TRYK_B_Carryall_JSDF                          { quality = 3; price = 800; };
     class TRYK_B_Kitbag_Base_JSDF                       { quality = 1; price = 100; };
     class TRYK_B_Coyotebackpack                         { quality = 1; price = 100; };
     class TRYK_B_Coyotebackpack_OD                      { quality = 1; price = 100; };
