@@ -182,6 +182,18 @@
 	"CUP_hgun_BallisticShield_Armed"
 		};
 	};
+	
+		class CUPShotguns
+	{
+		name = "CUP Shotguns";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] = 
+		{
+	"CUP_sgun_AA12",
+	"CUP_sgun_M1014",
+	"CUP_sgun_Saiga12K"
+		};
+	};
 
 	class CUPSubMachineGuns 
 	{
@@ -329,15 +341,14 @@
 		};
 	};
 
-	class CUPExplosive
+		class CUPExplosives
 	{
-		name = "CUP Explosive Weapons";
+		name = "CUP Explosives";
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{	
-	"CUP_sgun_AA12",
-	"CUP_sgun_M1014",
-	"CUP_sgun_Saiga12K"
+	"CUP_Mine_M",
+	"CUP_PipeBomb_M"
 		};
 	};	
 	
