@@ -2031,6 +2031,8 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 												["srifle_EBR_F",2],
 												["rhs_weap_sr25",1],
 												["rhs_weap_sr25_ec",1]
+
+
 											],
 											[
 												["ItemGPS",1],
@@ -2297,7 +2299,7 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 											"TRYK_B_FieldPack_Wood",
 											"TRYK_Winter_pack"
 										];
-	DMS_Custom1=					[
+	DMS_Custom1 =					[
 										[
 											["MMG_01_hex_F", 2],
 											["MMG_02_camo_F", 2],
@@ -2326,7 +2328,7 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 											["Laserdesignator", 1]
 											["Exile_Uniform_Woodland", 2],
 											["U_I_FullGhillie_ard", 2],
-											["NVGoggles". 2]
+											["NVGoggles", 2]
 										],
 										[
 											["B_Carryall_cbr", 4]
