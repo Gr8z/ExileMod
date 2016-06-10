@@ -5945,12 +5945,12 @@ class CfgTraderCategories
 			"3Rnd_SmokeOrange_Grenade_shell",
 			"3Rnd_SmokePurple_Grenade_shell",
 			"3Rnd_SmokeRed_Grenade_shell",
-			"3Rnd_SmokeYellow_Grenade_shell"
+			"3Rnd_SmokeYellow_Grenade_shell",
 			"CUP_1Rnd_SMOKE_GP25_M",
 			"CUP_1Rnd_Smoke_M203",
 			"CUP_1Rnd_SmokeGreen_M203",
 			"CUP_1Rnd_SmokeRed_M203",
-			"CUP_1Rnd_SmokeYellow_M203"
+			"CUP_1Rnd_SmokeYellow_M203",
 			"CUP_6Rnd_Smoke_M203"
 		};
 	};	
