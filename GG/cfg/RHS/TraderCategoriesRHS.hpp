@@ -332,6 +332,7 @@
 			"rhs_mag_9x19_17",
 			"rhsusf_mag_15Rnd_9x19_JHP",
 			"rhsusf_mag_15Rnd_9x19_FMJ",
+			"rhsusf_mag_40Rnd_46x30_FMJ",
 			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
 			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -411,7 +412,7 @@
 	
 	class RHSArmedVehicles
 	{
-		name = "RHS Vehicles";
+		name = "RHS Armed Vehicles";
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[]=
 		{
