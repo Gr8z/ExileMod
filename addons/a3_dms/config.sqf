@@ -2303,7 +2303,7 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 											["MMG_02_camo_F", 2],
 											["srifle_EBR_F", 1],
 											["CUP_lmg_Mk48_des", 2],
-											["CUP_glaunch_M32", 1],
+											["CUP_glaunch_M32", 1]
 										],
 										[
 											["150Rnd_93x64_Mag", 4],
