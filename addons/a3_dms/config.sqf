@@ -2026,13 +2026,11 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 	DMS_CrateCase_Sniper =				[							// If you pass "Sniper" in _lootValues, then it will spawn these weapons/items/backpacks
 											[
 												["Rangefinder",1],
-												["srifle_GM6_F",1],
-												["srifle_LRR_F",1],
-												["srifle_EBR_F",1],
+												["srifle_GM6_F",2],
+												["srifle_LRR_F",2],
+												["srifle_EBR_F",2],
 												["rhs_weap_sr25",1],
-												["rhs_weap_sr25_ec",1],
-												["hgun_Pistol_heavy_01_F",1],
-												["hgun_PDW2000_F",1]
+												["rhs_weap_sr25_ec",1]
 											],
 											[
 												["ItemGPS",1],
@@ -2299,6 +2297,41 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 											"TRYK_B_FieldPack_Wood",
 											"TRYK_Winter_pack"
 										];
+	DMS_Custom1=					[
+										[
+											["MMG_01_hex_F", 2],
+											["MMG_02_camo_F", 2],
+											["srifle_EBR_F", 1],
+											["CUP_lmg_Mk48_des", 2],
+											["CUP_glaunch_M32", 1],
+										],
+										[
+											["150Rnd_93x64_Mag", 4],
+											["130Rnd_338_Mag", 4],
+											["CUP_100Rnd_TE4_LRT4_White_Tracer_762x51_Belt_M", 4],
+											["CUP_6Rnd_HE_M203", 3],
+											["20Rnd_762x51_Mag", 5],
+											["optic_DMS", 2],
+											["optic_Hamr", 2],
+											["optic_Holosight", 3],
+											["IEDLandSmall_Remote_Mag", 2],
+											["optic_tws_mg", 1],
+											["Exile_Item_InstaDoc", 2],
+											["Exile_Item_BBQSandwich_Cooked", 4],
+											["Exile_Item_PlasticBottleCoffee", 4],
+											["CUP_optic_AN_PAS_13c2", 1],
+											["V_PlateCarrierSpec_rgr", 1],
+											["V_PlateCarrierSpec_blk", 1],
+											["V_PlateCarrierSpec_mtp", 1],
+											["Laserdesignator", 1]
+											["Exile_Uniform_Woodland", 2],
+											["U_I_FullGhillie_ard", 2],
+											["NVGoggles". 2]
+										],
+										[
+											["B_Carryall_cbr", 4]
+										]
+									];
 	DMS_BoxItems						= DMS_BoxSurvivalSupplies+DMS_BoxBuildingSupplies+DMS_BoxOptics;	// Random "items" can spawn optics, survival supplies, or building supplies
 
 	DMS_RareLoot						= true;						// Potential chance to spawn rare loot in any crate.

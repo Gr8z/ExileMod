@@ -113,11 +113,12 @@ _missionAIUnits =
 ];
 
 // Define mission-spawned objects and loot values
+_lootarray = ["Sniper", DMS_Custom1] call BIS_fnc_selectRandom;
 _missionObjs =
 [
 	_staticGuns+_baseObjs+[_veh],			// armed AI vehicle, base objects, and static gun
 	[],
-	[[_crate,"Sniper"]]
+	[[_crate,_lootarray]]
 ];
 
 // Define Mission Start message
