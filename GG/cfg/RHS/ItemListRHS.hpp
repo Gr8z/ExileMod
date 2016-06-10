@@ -6,6 +6,7 @@
 	class rhs_uniform_cu_ocp						{ quality = 3; price = 60; };
 	class rhs_uniform_cu_ucp						{ quality = 3; price = 60; };
 	class rhs_uniform_cu_ocp_101st                  { quality = 3; price = 60; };
+	class rhs_uniform_df15                  		{ quality = 3; price = 60; };
 	class rhs_uniform_emr_patchless					{ quality = 2; price = 60; };
 	class rhs_uniform_flora_patchless				{ quality = 2; price = 60; };
 	class rhs_uniform_flora_patchless_alt			{ quality = 2; price = 60; };
@@ -127,6 +128,7 @@
 	class rhs_mag_9x19_17                           { quality = 1; price = 6; };
 	class rhsusf_mag_15Rnd_9x19_JHP                 { quality = 1; price = 6; };
 	class rhsusf_mag_15Rnd_9x19_FMJ                 { quality = 1; price = 6; };
+	class rhsusf_mag_40Rnd_46x30_FMJ                { quality = 1; price = 25; };
 	//US
 	class rhs_mag_30Rnd_556x45_Mk318_Stanag						{ quality = 2; price = 35; };
 	class rhs_mag_30Rnd_556x45_Mk262_Stanag						{ quality = 2; price = 40; };
@@ -179,6 +181,16 @@
 	class rhsusf_weap_glock17g4                     { quality = 1; price = 60; };
 	class rhsusf_weap_m9                            { quality = 1; price = 60; };
 	
+	//SHOTGUNS
+	class rhs_weap_M590_5RD							{ quality = 3; price = 350; };
+	class rhs_weap_M590_8RD							{ quality = 3; price = 350; };
+	
+	//SMG
+	class rhsusf_weap_MP7A1_base_f					{ quality = 3; price = 400; };
+	class rhsusf_weap_MP7A1_aor1					{ quality = 3; price = 400; };
+	class rhsusf_weap_MP7A1_desert					{ quality = 3; price = 400; };
+	class rhsusf_weap_MP7A1_winter					{ quality = 3; price = 400; };
+	
 	//LMG
 	//US
 	class rhs_weap_m249_pip_L						{ quality = 3; price = 850; };
@@ -202,8 +214,10 @@
 
 	//ASSAULT RIFLES
 	//US
-	class rhs_weap_M590_5RD							{ quality = 3; price = 350; };
-	class rhs_weap_M590_8RD							{ quality = 3; price = 350; };
+	class rhs_weap_hk416d10							{ quality = 3; price = 350; };
+	class rhs_weap_hk416d10_m320					{ quality = 3; price = 450; };
+	class rhs_weap_hk416d145						{ quality = 3; price = 350; };
+	class rhs_weap_hk416d145_m320					{ quality = 3; price = 450; };
 	class rhs_weap_m16a4							{ quality = 1; price = 350; };
 	class rhs_weap_m16a4_carryhandle				{ quality = 1; price = 350; };
 	class rhs_weap_m16a4_carryhandle_grip			{ quality = 2; price = 400; };

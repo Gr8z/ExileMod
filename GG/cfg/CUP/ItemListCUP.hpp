@@ -115,11 +115,11 @@
     class CUP_30Rnd_762x39_AK47_M    						{ quality = 2; price = 25; };
     class CUP_30Rnd_Sa58_M    								{ quality = 2; price = 15; };
     class CUP_30Rnd_9x19_MP5    							{ quality = 2; price = 25; };
-    class CUP_5Rnd_127x108_KSVK_M    						{ quality = 2; price = 400; };
+    class CUP_5Rnd_127x108_KSVK_M    						{ quality = 2; price = 500; };
 	class CUP_10Rnd_127x99_m107   						    { quality = 2; price = 800; };
     class CUP_5Rnd_127x99_as50_M    						{ quality = 2; price = 500; };
     class CUP_5Rnd_762x51_M24    							{ quality = 2; price = 40; };
-    class CUP_5Rnd_86x70_L115A1    							{ quality = 2; price = 400; };
+    class CUP_5Rnd_86x70_L115A1    							{ quality = 2; price = 300; };
     class CUP_5x_22_LR_17_HMR_M    							{ quality = 2; price = 25; };
     class CUP_64Rnd_9x19_Bizon_M    						{ quality = 2; price = 35; };
     class CUP_6Rnd_45ACP_M    								{ quality = 2; price = 35; };
@@ -140,7 +140,7 @@
 	class CUP_6Rnd_HE_M203    								{ quality = 2; price = 125; };
 	class CUP_1Rnd_HE_M203    								{ quality = 2; price = 25; };
     class CUP_Mine_M   										{ quality = 2; price = 12000; };
-    class CUP_PipeBomb_M    								{ quality = 2; price = 25000; };	
+    class CUP_PipeBomb_M    								{ quality = 2; price = 10000; };	
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Flares AND SMOKES
@@ -190,7 +190,7 @@
 	///////////////////////////////////////////////////////////////////////////////
 	// Explosive and Shotgun
 	///////////////////////////////////////////////////////////////////////////////
-	class CUP_sgun_AA12 							{ quality = 1; price = 3500; };
+	class CUP_sgun_AA12 							{ quality = 1; price = 2000; };
     class CUP_sgun_M1014 							{ quality = 1; price = 750; };
     class CUP_sgun_Saiga12K 						{ quality = 1; price = 750; };
 
@@ -280,7 +280,7 @@
     class CUP_srifle_SVD_wdl_ghillie 				{ quality = 1; price = 2600; };
     class CUP_srifle_SVD_des_ghillie_pso 			{ quality = 1; price = 2600; };
     class CUP_srifle_DMR 							{ quality = 1; price = 1200; };
-    class CUP_srifle_ksvk 							{ quality = 1; price = 11500; };
+    class CUP_srifle_ksvk 							{ quality = 1; price = 10000; };
     class CUP_srifle_M110 							{ quality = 1; price = 1500; };
     class CUP_srifle_M14 							{ quality = 1; price = 1200; };
     class CUP_srifle_M24_des 						{ quality = 1; price = 1200; };
@@ -288,11 +288,11 @@
     class CUP_srifle_SVD 							{ quality = 1; price = 1200; };
     class CUP_srifle_SVD_des 						{ quality = 1; price = 1200; };
     class CUP_srifle_VSSVintorez 					{ quality = 1; price = 1100; };
-    class CUP_srifle_CZ750 							{ quality = 1; price = 500; };
+    class CUP_srifle_CZ750 							{ quality = 1; price = 1500; };
     class CUP_srifle_Mk12SPR 						{ quality = 1; price = 1700; };
     class CUP_srifle_AS50 							{ quality = 1; price = 13500; };
-    class CUP_srifle_AWM_des 						{ quality = 1; price = 2100; };
-    class CUP_srifle_AWM_wdl 						{ quality = 1; price = 2100; };
+    class CUP_srifle_AWM_des 						{ quality = 1; price = 3000; };
+    class CUP_srifle_AWM_wdl 						{ quality = 1; price = 3000; };
     class CUP_srifle_CZ550 							{ quality = 1; price = 1200; };
     class CUP_srifle_LeeEnfield 					{ quality = 1; price = 1200; };
     class CUP_srifle_M40A3 							{ quality = 1; price = 1200; };	
@@ -301,7 +301,7 @@
 	// Launchers
 	///////////////////////////////////////////////////////////////////////////////
     class CUP_glaunch_M32 							{ quality = 1; price = 15000; };
-    class CUP_glaunch_M79 							{ quality = 1; price = 15000; };
+    class CUP_glaunch_M79 							{ quality = 1; price = 10000; };
     class CUP_glaunch_Mk13                          { quality = 1; price = 15000; };
     class CUP_launch_RPG7V      					{ quality = 1; price = 25000; };
 	class CUP_launch_RPG18     					    { quality = 1; price = 30000; };

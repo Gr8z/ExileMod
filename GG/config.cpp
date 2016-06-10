@@ -5569,7 +5569,7 @@ class CfgTraderCategories
 			"H_RacingHelmet_1_black_F",
 			"H_RacingHelmet_1_blue_F",
 			"H_RacingHelmet_1_green_F",
-			"H_RacingHelmet_1_red_F	",
+			"H_RacingHelmet_1_red_F",
 			"H_RacingHelmet_1_white_F",
 			"H_RacingHelmet_1_yellow_F",
 			"H_RacingHelmet_1_orange_F"
@@ -5905,7 +5905,17 @@ class CfgTraderCategories
 			"3Rnd_UGL_FlareGreen_F",
 			"3Rnd_UGL_FlareRed_F",
 			"3Rnd_UGL_FlareWhite_F",
-			"3Rnd_UGL_FlareYellow_F"
+			"3Rnd_UGL_FlareYellow_F",
+			"CUP_FlareGreen_M203",
+			"CUP_FlareRed_GP25_M",
+			"CUP_FlareWhite_GP25_M",
+			"CUP_FlareWhite_M203",
+			"rhs_VG40MD_Green",
+			"rhs_VG40MD_Red",
+			"rhs_VG40MD_White",
+			"rhs_VG40OP_green",
+			"rhs_VG40OP_red",
+			"rhs_VG40OP_white"
 		};
 	};
 
@@ -5935,13 +5945,19 @@ class CfgTraderCategories
 			"3Rnd_SmokeOrange_Grenade_shell",
 			"3Rnd_SmokePurple_Grenade_shell",
 			"3Rnd_SmokeRed_Grenade_shell",
-			"3Rnd_SmokeYellow_Grenade_shell"
+			"3Rnd_SmokeYellow_Grenade_shell",
+			"CUP_1Rnd_SMOKE_GP25_M",
+			"CUP_1Rnd_Smoke_M203",
+			"CUP_1Rnd_SmokeGreen_M203",
+			"CUP_1Rnd_SmokeRed_M203",
+			"CUP_1Rnd_SmokeYellow_M203",
+			"CUP_6Rnd_Smoke_M203"
 		};
 	};	
 
 	class Explosives
 	{
-		name = "Explosives";
+		name = "Explosives and Explosive Ammo";
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\cargothrow_ca.paa";
 		items[] = 
 		{
@@ -5963,19 +5979,20 @@ class CfgTraderCategories
 			"IEDUrbanSmall_Remote_Mag",
 			"SatchelCharge_Remote_Mag",
 			"SLAMDirectionalMine_Wire_Mag",
-			"CUP_Mine_M",
-			"CUP_PipeBomb_M",
+			"CUP_HandGrenade_L109A1_HE",
+			"CUP_HandGrenade_RGD5",
+			"CUP_HandGrenade_M67",
+			"rhsusf_8Rnd_HE",
+			"rhsusf_8Rnd_FRAG",
+			"CUP_1Rnd_HE_GP25_M",
+			"CUP_1Rnd_HEDP_M203",
+			"CUP_1Rnd_HE_M203",
+			"CUP_6Rnd_HE_M203",
 			"rhs_mag_m4009",
 			"rhs_mag_m576",
 			"rhs_VOG25",
 			"rhs_VG40SZ",
-			"rhs_VG40TB",
-			"rhs_VG40MD_Green",
-			"rhs_VG40MD_Red",
-			"rhs_VG40MD_White",
-			"rhs_VG40OP_green",
-			"rhs_VG40OP_red",
-			"rhs_VG40OP_white"
+			"rhs_VG40TB"
 		};
 	};
 
@@ -6269,7 +6286,10 @@ class CfgTraders
 			"Pistols",
 			"RHSPistols",
 			"CUPPistols",
+			"RHSShotguns",
+			"CUPShotguns",
 			"SubMachineGuns",
+			"RHSSubMachineGuns",
 			"CUPSubMachineGuns",
 			"LightMachineGuns",
 			"RHSLightMachineGuns",
@@ -6298,8 +6318,8 @@ class CfgTraders
 			"Explosives",
 			"CUPLaunchers",
 			"CUPLauncherAmmo",
-			"CUPExplosive",
-			"RHSMines",
+			"CUPExplosives",
+			"RHSExplosives",
 			"Navigation"
 		};
 	};
@@ -6368,10 +6388,9 @@ class CfgTraders
 		categories[] = 
 		{
 			"Cars",
-			"CUPUnarmed",
 			"Trucks",
 			"RHSVehicles",
-			"CUPArmed"
+			"RHSArmedVehicles"
 		};
 	};
 

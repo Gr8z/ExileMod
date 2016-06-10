@@ -61,7 +61,7 @@
 			"rhs_6b26",
 			"rhs_6b26_ess",
 			"rhs_6b26_bala_green",
-			"rhs_6b27m ",
+			"rhs_6b27m",
 			"rhs_6b27m_ml",
 			"rhs_6b27m_green_ess",
 			"rhs_6b28_flora",
@@ -177,6 +177,30 @@
 		};
 	};
 	
+	class RHSShotguns
+	{
+		name = "RHS Shotguns";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[]=
+		{
+			"rhs_weap_M590_5RD",
+			"rhs_weap_M590_8RD"
+		};
+	};
+	
+	class RHSSubMachineGuns
+	{
+		name = "RHS Sub Machine Guns";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[]=
+		{
+			"rhsusf_weap_MP7A1_base_f",
+			"rhsusf_weap_MP7A1_aor1",
+			"rhsusf_weap_MP7A1_desert",
+			"rhsusf_weap_MP7A1_winter"
+		};
+	};
+	
 	class RHSLightMachineGuns
 	{
 		name = "RHS Light Machine Guns";
@@ -203,8 +227,10 @@
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[]=
 		{
-			"rhs_weap_M590_5RD",
-			"rhs_weap_M590_8RD",
+			"rhs_weap_hk416d10",
+			"rhs_weap_hk416d10_m320",
+			"rhs_weap_hk416d145",
+			"rhs_weap_hk416d145_m320",
 			"rhs_weap_m16a4",
 			"rhs_weap_m16a4_carryhandle",
 			"rhs_weap_m16a4_carryhandle_grip",
@@ -306,6 +332,7 @@
 			"rhs_mag_9x19_17",
 			"rhsusf_mag_15Rnd_9x19_JHP",
 			"rhsusf_mag_15Rnd_9x19_FMJ",
+			"rhsusf_mag_40Rnd_46x30_FMJ",
 			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
 			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -328,8 +355,6 @@
 			"rhsusf_8Rnd_Slug",
 			"rhsusf_20Rnd_762x51_m993_Mag",
 			"rhsusf_5Rnd_300winmag_xm2010",
-			"rhsusf_8Rnd_HE",
-			"rhsusf_8Rnd_FRAG",
 			"rhsusf_100Rnd_762x51_m61_ap",
 			"rhs_30Rnd_762x39mm",
 			"rhs_30Rnd_762x39mm_tracer",
@@ -350,7 +375,7 @@
 		};
 	};
 	
-	class RHSVehicles
+		class RHSVehicles
 	{
 		name = "RHS Vehicles";
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
@@ -371,8 +396,6 @@
 			"rhs_tigr_m_3camo_vdv",
 			"rhsusf_rg33_d",
 			"rhsusf_rg33_wd",
-			"rhsusf_rg33_m2_d",
-			"rhsusf_rg33_m2_wd",
 			"rhsusf_m998_w_2dr_fulltop",
 			"rhsusf_m998_d_2dr_fulltop",
 			"RHS_UAZ_MSV_01",
@@ -381,6 +404,18 @@
 			"RHS_Ural_Flat_MSV_01",
 			"RHS_Ural_MSV_01",
 			"RHS_Ural_Open_Civ_03",
+			"rhsusf_m113_usarmy_unarmed"
+		};
+	};
+	
+	class RHSArmedVehicles
+	{
+		name = "RHS Armed Vehicles";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[]=
+		{
+			"rhsusf_rg33_m2_d",
+			"rhsusf_rg33_m2_wd",
 			"rhsusf_m1025_w_m2",
 			"rhsusf_m1025_d_m2",
 			"rhsusf_M1078A1P2_B_M2_wd_fmtv_usarmy",
@@ -390,7 +425,6 @@
 			"rhsusf_m113_usarmy",
 			"rhsusf_M977A4_BKIT_M2_usarmy_wd",
 			"rhsusf_m113_usarmy_M240",
-			"rhsusf_m113_usarmy_unarmed",
 			"rhs_btr60_chdkz",
 			"rhs_btr70_msv"
 		};
@@ -419,9 +453,9 @@
 		};
 	};
 	
-	class RHSMines
+	class RHSExplosives
 	{
-		name = "RHS Mines";
+		name = "RHS Explosives";
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\cargothrow_ca.paa";
 		items[]=
 		{

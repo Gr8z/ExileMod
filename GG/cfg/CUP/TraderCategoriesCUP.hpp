@@ -108,13 +108,6 @@
 	"CUP_15Rnd_9x19_M9",
 	"CUP_17Rnd_9x19_glock17",
 	"CUP_18Rnd_9x19_Phantom",
-	"CUP_1Rnd_HE_GP25_M",
-	"CUP_1Rnd_HEDP_M203",
-	"CUP_1Rnd_SMOKE_GP25_M",
-	"CUP_1Rnd_Smoke_M203",
-	"CUP_1Rnd_SmokeGreen_M203",
-	"CUP_1Rnd_SmokeRed_M203",
-	"CUP_1Rnd_SmokeYellow_M203",
 	"CUP_200Rnd_TE4_Green_Tracer_556x45_L110A1",
 	"CUP_200Rnd_TE4_Green_Tracer_556x45_M249",
 	"CUP_20Rnd_762x51_DMR",
@@ -147,17 +140,7 @@
 	"CUP_8Rnd_9x18_MakarovSD_M",
 	"CUP_8Rnd_B_Beneli_74Slug",
 	"CUP_50Rnd_UK59_762x54R_Tracer",
-	"CUP_8Rnd_B_Saiga12_74Slug_M",
-	"CUP_HandGrenade_L109A1_HE",
-	"CUP_FlareGreen_M203",
-	"CUP_FlareRed_GP25_M",
-	"CUP_FlareWhite_GP25_M",
-	"CUP_FlareWhite_M203",
-	"CUP_HandGrenade_RGD5",
-	"CUP_HandGrenade_M67",
-	"CUP_6Rnd_HE_M203",
-	"CUP_1Rnd_HE_M203",
-	"CUP_6Rnd_Smoke_M203"	
+	"CUP_8Rnd_B_Saiga12_74Slug_M"
 		};
 	};
 
@@ -180,6 +163,18 @@
 	"CUP_hgun_PB6P9",
 	"CUP_hgun_Glock17",
 	"CUP_hgun_BallisticShield_Armed"
+		};
+	};
+	
+		class CUPShotguns
+	{
+		name = "CUP Shotguns";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] = 
+		{
+	"CUP_sgun_AA12",
+	"CUP_sgun_M1014",
+	"CUP_sgun_Saiga12K"
 		};
 	};
 
@@ -329,15 +324,14 @@
 		};
 	};
 
-	class CUPExplosive
+		class CUPExplosives
 	{
-		name = "CUP Explosive Weapons";
+		name = "CUP Explosives";
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{	
-	"CUP_sgun_AA12",
-	"CUP_sgun_M1014",
-	"CUP_sgun_Saiga12K"
+	"CUP_Mine_M",
+	"CUP_PipeBomb_M"
 		};
 	};	
 	
