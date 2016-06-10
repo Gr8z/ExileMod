@@ -301,7 +301,7 @@
 	// Launchers
 	///////////////////////////////////////////////////////////////////////////////
     class CUP_glaunch_M32 							{ quality = 1; price = 15000; };
-    class CUP_glaunch_M79 							{ quality = 1; price = 15000; };
+    class CUP_glaunch_M79 							{ quality = 1; price = 10000; };
     class CUP_glaunch_Mk13                          { quality = 1; price = 15000; };
     class CUP_launch_RPG7V      					{ quality = 1; price = 25000; };
 	class CUP_launch_RPG18     					    { quality = 1; price = 30000; };
