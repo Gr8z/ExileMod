@@ -6289,7 +6289,7 @@ class CfgTraders
 			"RHSShotguns",
 			"CUPShotguns",
 			"SubMachineGuns",
-			"RHSSubMachineGuns"
+			"RHSSubMachineGuns",
 			"CUPSubMachineGuns",
 			"LightMachineGuns",
 			"RHSLightMachineGuns",
