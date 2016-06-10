@@ -355,8 +355,6 @@
 			"rhsusf_8Rnd_Slug",
 			"rhsusf_20Rnd_762x51_m993_Mag",
 			"rhsusf_5Rnd_300winmag_xm2010",
-			"rhsusf_8Rnd_HE",
-			"rhsusf_8Rnd_FRAG",
 			"rhsusf_100Rnd_762x51_m61_ap",
 			"rhs_30Rnd_762x39mm",
 			"rhs_30Rnd_762x39mm_tracer",
