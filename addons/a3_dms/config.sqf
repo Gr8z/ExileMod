@@ -2299,7 +2299,7 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 											"TRYK_B_FieldPack_Wood",
 											"TRYK_Winter_pack"
 										];
-	DMS_Custom1 =					[
+	DMS_CrateCase_Custom1 =					[
 										[
 											["MMG_01_hex_F", 2],
 											["MMG_02_camo_F", 2],
