@@ -118,7 +118,7 @@ _missionObjs =
 [
 	_staticGuns+_baseObjs+[_veh],			// armed AI vehicle, base objects, and static gun
 	[],
-	[[_crate,_lootarray]]
+	[[_crate,str(_lootarray)]]
 ];
 
 // Define Mission Start message
