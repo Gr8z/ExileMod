@@ -2325,7 +2325,7 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 											["V_PlateCarrierSpec_rgr", 1],
 											["V_PlateCarrierSpec_blk", 1],
 											["V_PlateCarrierSpec_mtp", 1],
-											["Laserdesignator", 1]
+											["Laserdesignator", 1],
 											["Exile_Uniform_Woodland", 2],
 											["U_I_FullGhillie_ard", 2],
 											["NVGoggles", 2]
