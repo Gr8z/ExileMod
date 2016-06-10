@@ -187,23 +187,23 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 	/*Mission notification settings*/
 
 	DMS_BanditMissionTypes =			[							//	List of missions with spawn chances. If they add up to 100%, they represent the percentage chance each one will spawn
-											["donthasslethehoff",5],
-											["bandits",5],
-											["bauhaus",5],
-											["cardealer",5],
-											["humanitarian",5],
-											["foodtransport",5],
-											["blackhawkdown",4],
-											["construction",4],
-											["walmart",4],
-											["mercenaries",4],
-											["guntransport",4],
-											["beertransport",3],
-											["roguenavyseals",3],
-											["thieves",2],
-											["lost_battalion",2],
-											["behindenemylines",2],
-											["mercbase",1]
+											//["donthasslethehoff",5],
+											//["bandits",5],
+										//	["bauhaus",5],
+										//	["cardealer",5],
+										//	["humanitarian",5],
+										//	["foodtransport",5],
+										//	["blackhawkdown",4],
+										//	["construction",4],
+										//	["walmart",4],
+										//	["mercenaries",4],
+										//	["guntransport",4],
+										//	["beertransport",3],
+										//	["roguenavyseals",3],
+										//	["thieves",2],
+										//	["lost_battalion",2],
+										//	["behindenemylines",2],
+											["mercbase",100]
 										];
 
 
