@@ -30,9 +30,16 @@ if ((isNil "_this") || {_this isEqualTo [] || {!(_this isEqualType [])}}) then
 // This mission doesn't use "_extraParams" in any way currently.
 _OK = (_this call DMS_fnc_MissionParams) params
 [
+
 	["_pos",[],[[]],[3]],
 	["_extraParams",[]]
-];
+	_numbers = floor(random 2) + 1;
+
+	if (_numbers == 1) then 
+			{_boxname1 = """Sniper"""} 
+	else 
+			{_boxname1 = """Custom1"""};
+	];
 
 if !(_OK) exitWith
 {
@@ -113,12 +120,7 @@ _missionAIUnits =
 ];
 
 // Define mission-spawned objects and loot values
-_numbers = floor(random 2) + 1;
 
-if (_numbers == 1) then 
-		{_boxname1 = """Sniper"""} 
-else 
-		{_boxname1 = """Custom1"""};
 
 _missionObjs =
 [
