@@ -116,20 +116,19 @@ _missionAIUnits =
 _numbers = floor(random 2) + 1;
 
 if (_numbers == 1) then 
-		{boxname1 = "Sniper"} 
+		{_boxname = """Sniper"""} 
 else 
-		{boxname1 = "Custom1"};
+		{_boxname = """Custom1"""};
 
-boxname = """"" + boxname1 + """"";
 _missionObjs =
 [
 	_staticGuns+_baseObjs+[_veh],			// armed AI vehicle, base objects, and static gun
 	[],
-	[[_crate,boxname]]
+	[[_crate,_boxname]]
 ];
 
 // Define Mission Start message
-_msgStart = ['#FFFF00',format ["A mercenary base has been located at %1! There are reports of a dandy crate inside of it...",mapGridPosition _pos]];
+_msgStart = ['#FFFF00',format ["A mercenary base has been located at %1! There are reports of a dandy crate inside of it...",_boxname ,mapGridPosition _pos]];
 
 // Define Mission Win message
 _msgWIN = ['#0080ff',"Convicts have successfully assaulted the Mercenary Base and obtained the dandy crate!"];
