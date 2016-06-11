@@ -263,6 +263,8 @@ Soldier3 = [
 	"76561197963242443", // Joo (OD-2016-06-08) #13863  
 	"76561198108262768", // Zanthyn (OD-2016-06-08) #13861
 	"76561198094779063", // Brandon Blackwater (OD-2016-06-10) #13870
+	"76561198082227396", // Shootin Putin (OD-2016-06-11) #13879
+	"76561198187158570", // {BP} Deadwood (OD-2016-06-10) #13872
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Soldier3";
