@@ -116,10 +116,11 @@ _missionAIUnits =
 _numbers = floor(random 2) + 1;
 
 if (_numbers == 1) then 
-		{boxname = """Sniper"""} 
+		{boxname1 = "Sniper"} 
 else 
-		{boxname = """Custom1"""};
+		{boxname1 = "Custom1"};
 
+boxname = """"" + boxname1 + """"";
 _missionObjs =
 [
 	_staticGuns+_baseObjs+[_veh],			// armed AI vehicle, base objects, and static gun
