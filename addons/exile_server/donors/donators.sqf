@@ -35,6 +35,7 @@ SlotDonor = [
 /////////// Engineer Class ///////
 Engineer1 = [
 	"0", // NAME (OD-00-00-0000) #0000
+	"76561198091055808", // KaoruGZ (OD-2016-06-11) #13886 
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Engineer1";
@@ -138,6 +139,7 @@ Medic3 = [
 /////// Scout Class ///////////
 Scout1 = [
 	"0", // NAME (OD-00-00-0000) #0000
+	"76561198091055808", // KaoruGZ (OD-2016-06-11) #13884 
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout1";
@@ -212,6 +214,7 @@ Soldier1 = [
 
 Soldier2 = [
 	"76561197991652949", // Bhum (OD-2016-05-02) #13631 
+	"76561197994499310", // Comrade Karl (OD-2016-06-11) #13888  
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Soldier2";
@@ -265,6 +268,8 @@ Soldier3 = [
 	"76561198094779063", // Brandon Blackwater (OD-2016-06-10) #13870
 	"76561198082227396", // Shootin Putin (OD-2016-06-11) #13879
 	"76561198187158570", // {BP} Deadwood (OD-2016-06-10) #13872
+	"76561198000716716", // Kritikal (OD-2016-06-11) #13890 
+	"76561197960534180", // RunGunsLV (OD-2016-06-11) #13892  
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Soldier3";
