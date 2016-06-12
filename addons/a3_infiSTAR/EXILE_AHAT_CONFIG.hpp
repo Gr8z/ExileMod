@@ -105,11 +105,7 @@ startAsNormal[] =
 hiddenSuperAdmin[] =
 {
 	"76561198078201908", // Gr8
-	"76561198153784743", // Ghost
-	"76561198137100220", // Deadskin
-	"76561197978528230", // Dark
-	"76561198115492831", // BigEgg
-	"76561198056028211"  // Nasty
+	"76561198153784743" // Ghost
 };
 
 adminUIDandAccess[] =
@@ -118,6 +114,10 @@ adminUIDandAccess[] =
 		{
 		 "76561198064953664", //mind
 		 "76561198021389971", // thirdhero
+		 "76561198137100220", // Deadskin
+		 "76561197978528230", // Dark
+		 "76561198115492831", // BigEgg
+		 "76561198056028211"  // Nasty
 		 //Add UID's Above - Don't forget the comma!
 		"0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
