@@ -27,6 +27,7 @@ SlotDonor = [
 	"76561197979379565", // crackerslats (OD-2016-05-08) #13677 
 	"76561198075518327", // crash09er (EXP-2016-06-23) #13791  
 	"76561198155652757", // Boston (EXP-2016-06-27) #0000  
+	"76561197969022250", // fbj (OD-2016-06-13) #13900 
 	// Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "SlotDonor";
@@ -199,6 +200,7 @@ Scout3 = [
 	"76561198048881454", // FaroeNoob (OD-2016-05-27) #13807 
 	"76561198079744086", // Specter/A Very Bad Player (EXP-2016-06-24) #0000
 	"76561198120619027", // eastcoastspud (OD-2016-06-08) #13858
+	"76561198006564526", // Hybrid Black (OD-2016-06-13) #13897
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout3";
