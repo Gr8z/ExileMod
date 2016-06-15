@@ -30,16 +30,9 @@ if ((isNil "_this") || {_this isEqualTo [] || {!(_this isEqualType [])}}) then
 // This mission doesn't use "_extraParams" in any way currently.
 _OK = (_this call DMS_fnc_MissionParams) params
 [
-
 	["_pos",[],[[]],[3]],
 	["_extraParams",[]]
-	_numbers = floor(random 2) + 1;
-
-	if (_numbers == 1) then 
-			{_boxname1 = """Sniper"""} 
-	else 
-			{_boxname1 = """Custom1"""};
-	];
+];
 
 if !(_OK) exitWith
 {
@@ -52,7 +45,7 @@ _difficulty = "hardcore";
 
 
 // Create AI
-_AICount = 6 + (round (random 2));
+_AICount = 14 + (round (random 4));
 
 _group =
 [
@@ -104,7 +97,6 @@ _baseObjs =
 	_pos
 ] call DMS_fnc_ImportFromM3E;
 
-
 // Create Crate
 _crate = ["Exile_Container_SupplyBox",_pos] call DMS_fnc_SpawnCrate;
 
@@ -121,12 +113,11 @@ _missionAIUnits =
 
 // Define mission-spawned objects and loot values
 
-
 _missionObjs =
 [
 	_staticGuns+_baseObjs+[_veh],			// armed AI vehicle, base objects, and static gun
 	[],
-	[[_crate,_boxname1]]
+	[[_crate,"Custom1"]]
 ];
 
 // Define Mission Start message

@@ -2056,7 +2056,6 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 												["5Rnd_127x108_APDS_Mag",3],
 												["7Rnd_408_Mag",3],
 												["20Rnd_762x51_Mag",5],
-												["11Rnd_45ACP_Mag",3],
 												["30Rnd_9x21_Mag",3]
 											],
 											[
@@ -2303,9 +2302,11 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 										[
 											["MMG_01_hex_F",2],
 											["MMG_02_camo_F",2],
-											["srifle_EBR_F",1],
+											["srifle_EBR_F",2],
 											["CUP_lmg_Mk48_des",2],
 											["CUP_glaunch_M32",1],
+											["srifle_GM6_F",1],
+											["srifle_LRR_F",1],
 											["Laserdesignator",1]
 										],
 										[
@@ -2313,7 +2314,9 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 											["130Rnd_338_Mag",4],
 											["CUP_100Rnd_TE4_LRT4_White_Tracer_762x51_Belt_M",4],
 											["CUP_6Rnd_HE_M203",3],
-											["20Rnd_762x51_Mag",5],
+											["20Rnd_762x51_Mag",6],
+											["5Rnd_127x108_APDS_Mag",3],
+											["7Rnd_408_Mag",3],
 											["optic_DMS",2],
 											["optic_Hamr",2],
 											["optic_Holosight",3],
