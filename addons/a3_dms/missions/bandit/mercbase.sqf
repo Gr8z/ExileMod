@@ -121,7 +121,7 @@ _missionObjs =
 ];
 
 // Define Mission Start message
-_msgStart = ['#FFFF00',format ["A mercenary base has been located at %1! There are reports of a dandy crate inside of it..."+ _boxname,mapGridPosition _pos]];
+_msgStart = ['#FFFF00',format ["A mercenary base has been located at %1! There are reports of a dandy crate inside of it...",mapGridPosition _pos]];
 
 // Define Mission Win message
 _msgWIN = ['#0080ff',"Convicts have successfully assaulted the Mercenary Base and obtained the dandy crate!"];
