@@ -19,7 +19,7 @@ DMS_MissionNearBlacklist			= 2500;
 DMS_WaterNearBlacklist				= 500;
 
 // Altis is pretty flat, so we can make the min surfaceNormal ... stricter? more strict? Who cares, you get the idea.
-DMS_MinSurfaceNormal				= 0.95;
+DMS_MinSurfaceNormal				= 0.98;
 
 
 // Making these configs below as strict as possible will help in reducing the number of attempts taken to find a valid position, and as a result, improve performance.
