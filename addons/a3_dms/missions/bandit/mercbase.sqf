@@ -95,7 +95,7 @@ _baseObjs =
 [
 	"base2",
 	_pos
-] call DMS_fnc_ImportFromM3E;
+] call DMS_fnc_ImportFromM3E_Convert;
 
 // Create Crate
 _crate = ["Exile_Container_SupplyBox",_pos] call DMS_fnc_SpawnCrate;
