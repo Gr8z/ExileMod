@@ -1,11 +1,12 @@
 _logDetail = format['[OCCUPATION:Traders] starting @ %1',time]; 
 [_logDetail] call SC_fnc_log;
 { 
-    _traderName = _x select 0;
-    _traderPos = _x select 1;
-    _createSafezone = _x select 2;
-    
-    _traderBaseFile = call compile preprocessFileLineNumbers "x\addons\a3_exile_occupation\trader\trader.sqf";
+    _traderName 		= _x select 0;
+    _traderPos 		= _x select 1;
+	_fileName 		= _x select 2;
+    _createSafezone 	= _x select 3;
+    _filePath = format ["x\addons\a3_exile_occupation\trader\%1",_fileName];
+    _traderBaseFile = call compile preprocessFileLineNumbers _filePath;
 
     _traderObjects = _traderBaseFile apply
     {
@@ -57,54 +58,51 @@ _logDetail = format['[OCCUPATION:Traders] starting @ %1',time];
     _group = createGroup resistance;
     _group setCombatMode "BLUE";
 
-    {
-        
-    }forEach tradersToAdd;
     
+    // Weapon Trader
     _traderPosition = _traderPos findEmptyPosition [0,25];
     "Exile_Trader_CommunityCustoms" createUnit [_traderPosition, _group, "trader = this;"];
     trader setVariable ["ExileTraderType", "Exile_Trader_CommunityCustoms",true];
-
-    trader allowDamage false; 
-    trader disableAI 'AUTOTARGET'; 
-    trader disableAI 'TARGET'; 
-    trader disableAI 'SUPPRESSION';
-    trader disableAI "MOVE";
-    removeGoggles trader;
-    trader forceAddUniform "U_IG_Guerilla3_1";
-    trader addWeapon "srifle_DMR_06_olive_F";
-    trader addVest "V_TacVest_blk_POLICE";
-    trader addBackpack "B_FieldPack_oli";
-    trader addHeadgear "H_Cap_blk";
-    trader addGoggles "TRYK_TAC_SET_OD";
-    trader setCaptive true;  
+    
     _traderDir = trader getDir _traderPos;
     trader setDir _traderDir;
     [trader,"HubStandingUA_idle2"] call BIS_fnc_ambientAnim;
     
-    
+    // Equipment Trader
     _traderPosition = _traderPos findEmptyPosition [0,25];
     "Exile_Trader_CommunityCustoms" createUnit [_traderPosition, _group, "trader = this;"];
     trader setVariable ["ExileTraderType", "Exile_Trader_CommunityCustoms",true];
-
-    trader allowDamage false; 
-    trader disableAI 'AUTOTARGET'; 
-    trader disableAI 'TARGET'; 
-    trader disableAI 'SUPPRESSION';
-    trader disableAI "MOVE";
-    removeGoggles trader;
-    trader forceAddUniform "U_IG_Guerilla3_1";
-    trader addWeapon "srifle_DMR_06_olive_F";
-    trader addVest "V_TacVest_blk_POLICE";
-    trader addBackpack "B_FieldPack_oli";
-    trader addHeadgear "H_Cap_blk";
-    trader addGoggles "TRYK_TAC_SET_OD";
-    trader setCaptive true;  
+  
     _traderDir = trader getDir _traderPos;
     trader setDir _traderDir;
     [trader,"HubStanding_idle1"] call BIS_fnc_ambientAnim;
     
         
-    
+    {	
+        _unit = _x;
+        _unitName = ["bandit"] call SC_fnc_selectName;
+        if(!isNil "_unitName") then { _unit setName _unitName; }; 
+        _unit allowDamage false; 
+        _unit disableAI 'AUTOTARGET'; 
+        _unit disableAI 'TARGET'; 
+        _unit disableAI 'SUPPRESSION';
+        _unit disableAI "MOVE";
+        removeGoggles _unit;
+        
+        
+        _uniform  = SC_BanditUniforms call BIS_fnc_selectRandom;
+        _vest  = SC_BanditVests call BIS_fnc_selectRandom; 
+        _headgear  = SC_BanditHeadgear call BIS_fnc_selectRandom;
+        _weapon  = SC_BanditWeapon call BIS_fnc_selectRandom;        
+        _backpack  = SC_BanditBackpack call BIS_fnc_selectRandom;
+        
+        _unit forceAddUniform _uniform;
+        _unit addWeapon _weapon";
+        _unit addVest _vest;
+        _unit addBackpack _backpack;
+        _unit addHeadgear _headgear;
+        _unit setCaptive true; 
+
+    }foreach units _group;    
     
 } foreach SC_occupyTraderDetails;

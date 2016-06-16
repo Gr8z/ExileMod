@@ -3,7 +3,7 @@ if (!isServer) exitWith {};
 _logDetail = format ["[OCCUPATION:LootCrates]:: Starting Occupation Loot Crates"];
 [_logDetail] call SC_fnc_log;
 
-_logDetail = format['[OCCUPATION:LootCrates]::  worldname: %1 crates to spawn: %2',worldName,SC_numberofLootCrates];
+_logDetail = format["[OCCUPATION:LootCrates]:: worldname: %1 crates to spawn: %2",worldName,SC_numberofLootCrates];
 [_logDetail] call SC_fnc_log;
 
 private['_position'];
@@ -14,7 +14,7 @@ for "_i" from 1 to SC_numberofLootCrates do
 	while{!_validspot} do 
 	{
 		sleep 0.2;
-		_position = [ 10, 50, 1, 750, 750, 200, 200, 200, true, false ] call DMS_fnc_findSafePos;
+		_position = [ false, false ] call SC_fnc_findsafePos;
 		_validspot	= true;
 		
 		//Check if near another crate site
@@ -49,18 +49,37 @@ for "_i" from 1 to SC_numberofLootCrates do
 	{
 		_spawnPosition = [_position select 0, _position select 1, 0];
 		
-		_group = createGroup SC_BanditSide;
-	
+		_initialGroup = createGroup SC_BanditSide;
+		_initialGroup setCombatMode "BLUE";
+        _initialGroup setBehaviour "SAFE";
+		
         for "_i" from 1 to _AICount do
         {		
 			_loadOut = ["bandit"] call SC_fnc_selectGear;
-			_unit = [_group,_spawnPosition,"custom","random","bandit","soldier",_loadOut] call DMS_fnc_SpawnAISoldier; 
+			_unit = [_initialGroup,_spawnPosition,"custom","random","bandit","soldier",_loadOut] call DMS_fnc_SpawnAISoldier; 
+			_unitName = ["bandit"] call SC_fnc_selectName;
+			if(!isNil "_unitName") then { _unit setName _unitName; }; 
+			reload _unit;
 		};
 		
 		// Get the AI to shut the fuck up :)
 		enableSentences false;
 		enableRadio false;
 
+	      
+		_group = createGroup SC_BanditSide;           
+		_group setVariable ["DMS_LockLocality",nil];
+		_group setVariable ["DMS_SpawnedGroup",true];
+		_group setVariable ["DMS_Group_Side", SC_BanditSide];
+
+		{	
+			_unit = _x;           
+			[_unit] joinSilent grpNull;
+			[_unit] joinSilent _group;
+			_unit setCaptive false;                               
+		}foreach units _initialGroup;  		
+		
+		
 		[_group, _spawnPosition, 100] call bis_fnc_taskPatrol;
 		_group setBehaviour "AWARE";
 		_group setCombatMode "RED";
@@ -81,7 +100,7 @@ for "_i" from 1 to SC_numberofLootCrates do
 	clearWeaponCargoGlobal _box;
 	clearItemCargoGlobal _box;
 	
-	_box enableRopeAttach false; 			// Stop people airlifting the crate
+	_box enableRopeAttach SC_ropeAttach; 	// Stop people airlifting the crate
 	_box setVariable ["permaLoot",true]; 	// Crate stays until next server restart
 	_box allowDamage false; 				// Stop crates taking damage
 

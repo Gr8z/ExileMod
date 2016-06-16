@@ -63,7 +63,7 @@ _pistolAttachmentsChance = round (random 100);
 if(_pistolAttachmentsChance < 50) then { _pistolAttachments = [""]; };
 
 _backpackChance = round (random 100);
-if(_backpackChance < 40) then { _backpack = ""; };
+if(_backpackChance < 30) then { _backpack = ""; };
 
 _launcherChance = round (random 100);
 if(_launcherChance < 40 OR isNil "_launcher") then { _launcher = ""; };
@@ -72,7 +72,7 @@ if(_launcherChance < 40 OR isNil "_launcher") then { _launcher = ""; };
 if(_weapon != "") then
 {
     _weaponMagazinesToAdd = getArray (configFile >> "CfgWeapons" >> _weapon >> "magazines");
-    _weaponMagazineAmount = 1 + round random (1);	
+    _weaponMagazineAmount = 2 + round random (1);	
     _magazines pushBack [_weaponMagazinesToAdd select 0,_weaponMagazineAmount];    
 };
 
@@ -80,7 +80,7 @@ if(_weapon != "") then
 if(_pistol != "") then
 {
     _pistolMagazinesToAdd = getArray (configFile >> "CfgWeapons" >> _pistol >> "magazines");
-    _pistolMagazineAmount = 1 + round random (1);
+    _pistolMagazineAmount = 2 + round random (1);
     _magazines pushBack [_pistolMagazinesToAdd select 0,_pistolMagazineAmount]; 
 };
 

@@ -19,9 +19,11 @@ switch (_side) do
     };    
 };
 
-if(SC_debug) then
+if((vehicle _unit != _unit) && SC_debug) then
 {
     _tag = createVehicle [_arrowClass, position _unit, [], 0, "CAN_COLLIDE"];
-    _tag attachTo [_unit,[0,0,0.6],"Head"];          
-}; 
-_unit addMPEventHandler ["mpkilled", "_this call SC_fnc_unitMPKilled;"]; 
+    _tag attachTo [_unit,[0,0,0.6],"Head"];        
+};
+
+_unit addMPEventHandler ["mpkilled", "_this call SC_fnc_unitMPKilled;"];
+//_unit addEventHandler ["Fired", "_this call SC_fnc_unitFired;"];

@@ -34,7 +34,7 @@ if(_side == "survivor") then { _currentSide = SC_SurvivorSide };
             _okToSpawn = false; 
             if(_debug) then 
             { 
-                _logDetail = format ["[OCCUPATION Static]:: %1 already has %2 active AI patrolling",_spawnPosition,_nearAI];
+                _logDetail = format ["[OCCUPATION Static]:: %1 already has active AI patrolling",_spawnPosition];
                 [_logDetail] call SC_fnc_log;
             };			
 		};
@@ -65,7 +65,9 @@ if(_side == "survivor") then { _currentSide = SC_SurvivorSide };
             for "_i" from 1 to _aiCount do
             {		
                 _loadOut = [_side] call SC_fnc_selectGear;
-                _unit = [_initialGroup,_spawnPosition,"custom","random",_side,"soldier",_loadOut] call DMS_fnc_SpawnAISoldier; 
+                _unit = [_initialGroup,_spawnPosition,"custom","random",_side,"soldier",_loadOut] call DMS_fnc_SpawnAISoldier;
+                _unitName = [_side] call SC_fnc_selectName;
+                if(!isNil "_unitName") then { _unit setName _unitName; }; 				 
 				_unit setVariable ["SC_staticUID",_staticUID];
 				_unit setVariable ["SC_staticSpawnPos",_spawnPosition];
 				_unit addMPEventHandler ["mpkilled", "_this call SC_fnc_staticUnitMPKilled;"];
@@ -86,7 +88,8 @@ if(_side == "survivor") then { _currentSide = SC_SurvivorSide };
                 _unit = _x;           
                 [_unit] joinSilent grpNull;
                 [_unit] joinSilent _group;
-                [_side,_unit] call SC_fnc_addMarker;                                 
+                [_side,_unit] call SC_fnc_addMarker; 
+				_unit setCaptive false;                               
             }foreach units _initialGroup;            
 				
 						
@@ -102,6 +105,8 @@ if(_side == "survivor") then { _currentSide = SC_SurvivorSide };
 			}
 			else
 			{
+				_group setBehaviour "AWARE";
+				_group setCombatMode "RED";
 				_buildings = _spawnPosition nearObjects ["building", _groupRadius];
 				{
 					_isEnterable = [_x] call BIS_fnc_isBuildingEnterable;
@@ -122,8 +127,9 @@ if(_side == "survivor") then { _currentSide = SC_SurvivorSide };
 						_wpPosition = _highest;
 						diag_log format ["Static Patrol %3 waypoint added - building: %1 position: %2",_y,_highest,_group];
 						_i = _buildingPositions find _wpPosition;
-						_wp = _group addWaypoint [_wpPosition, 0] ;
+						_wp = _group addWaypoint [_wpPosition, 5] ;
 						_wp setWaypointBehaviour "AWARE";
+						_wp setWaypointSpeed "NORMAL";
 						_wp setWaypointCombatMode "RED";
 						_wp setWaypointCompletionRadius 1;
 						_wp waypointAttachObject _y;
@@ -132,10 +138,15 @@ if(_side == "survivor") then { _currentSide = SC_SurvivorSide };
 
 					};
 				} foreach _buildings;
-				if(count _buildings > 0 && !isNil "_wp") then
+				if(count _buildings > 1 && !isNil "_wp") then
 				{
 					_wp setWaypointType "CYCLE";
-				};			
+				}
+				else
+				{
+					_group setBehaviour "AWARE";
+					_group setCombatMode "RED";												
+				};
 			};
 
 			//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -144,7 +155,7 @@ if(_side == "survivor") then { _currentSide = SC_SurvivorSide };
 
 			if(SC_mapMarkers && !isNil "_foundBuilding") then 
 			{
-				_marker = createMarker [format ["%1", _foundBuilding],_spawnPosition];
+				_marker = createMarker [format ["%1", _staticUID],_spawnPosition];
 				_marker setMarkerShape "Icon";
 				_marker setMarkerSize [3,3];
 				_marker setMarkerType "mil_dot";

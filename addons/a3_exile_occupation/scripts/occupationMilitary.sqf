@@ -26,7 +26,7 @@ if(diag_fps < _minFPS) exitWith
     [_logDetail] call SC_fnc_log;
 };
 
-_aiActive = {alive _x && (side _x == SC_BanditSide OR side _x == SC_SurvivorSide)} count allUnits;
+_aiActive = { !isPlayer _x } count allunits;
 
 if(_aiActive > _maxAIcount) exitWith 
 { 
@@ -35,12 +35,19 @@ if(_aiActive > _maxAIcount) exitWith
 };
 
 // Select an area to scan as nearObjects on the entire map is slooooooooow
-_areaToScan = [ 0, 900, 1, 500, 500, 0, 0, 0, true, false ] call DMS_fnc_findSafePos;
+_areaToScan = [ false, false ] call SC_fnc_findsafePos;
 
 {
+	_logDetail = format ["[OCCUPATION Military]:: scanning buildings around %2 started at %1",time,_areaToScan];
+    [_logDetail] call SC_fnc_log;
+	
     _currentBuilding = _x;
 	_building = _areaToScan nearObjects [_currentBuilding, _maxDistance];
 	
+	_logDetail = format ["[OCCUPATION Military]:: scan for %2 building finished at %1",time,_currentBuilding];
+    [_logDetail] call SC_fnc_log;
+	
+
     {
 		_okToSpawn = true;
 		Sleep 0.1;
@@ -135,7 +142,21 @@ _areaToScan = [ 0, 900, 1, 500, 500, 0, 0, 0, true, false ] call DMS_fnc_findSaf
 				{
 					DMS_ai_use_launchers = false;
 					_group = [_spawnPosition, _aiCount, _difficulty, "random", "bandit"] call DMS_fnc_SpawnAIGroup;
-					DMS_ai_use_launchers = true;
+					DMS_ai_use_launchers = _useLaunchers;
+
+                    {	
+                        _unit = _x;
+                        [_unit] joinSilent grpNull;
+                        [_unit] joinSilent _group;
+						_unitName = ["bandit"] call SC_fnc_selectName;
+						if(!isNil "_unitName") then { _unit setName _unitName; }; 
+						reload _unit;						
+                        if(SC_debug) then
+                        {
+                            _tag = createVehicle ["Sign_Arrow_Blue_F", position _unit, [], 0, "CAN_COLLIDE"];
+                            _tag attachTo [_unit,[0,0,0.6],"Head"];  
+                        }; 
+                    }foreach units _group;
 
 					[_group, _pos, _groupRadius] call bis_fnc_taskPatrol;
 					_group setBehaviour "COMBAT";
@@ -146,12 +167,14 @@ _areaToScan = [ 0, 900, 1, 500, 500, 0, 0, 0, true, false ] call DMS_fnc_findSaf
 									
 					DMS_ai_use_launchers = false;
 					_group = [_spawnPosition, _aiCount, _difficulty, "random", "bandit"] call DMS_fnc_SpawnAIGroup;
-					DMS_ai_use_launchers = true;
+					DMS_ai_use_launchers = _useLaunchers;
 
                     {	
                         _unit = _x;
                         [_unit] joinSilent grpNull;
                         [_unit] joinSilent _group;
+						_unitName = ["bandit"] call SC_fnc_selectName;
+						if(!isNil "_unitName") then { _unit setName _unitName; }; 						
                         if(SC_debug) then
                         {
                             _tag = createVehicle ["Sign_Arrow_Blue_F", position _unit, [], 0, "CAN_COLLIDE"];
