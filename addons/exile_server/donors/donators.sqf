@@ -26,8 +26,7 @@ SlotDonor = [
 	"76561198146083701", // America (OD-2016-04-09) #13456 
 	"76561197979379565", // crackerslats (OD-2016-05-08) #13677 
 	"76561198075518327", // crash09er (EXP-2016-06-23) #13791  
-	"76561198155652757", // Boston (EXP-2016-06-27) #0000  
-	"76561197969022250", // fbj (OD-2016-06-13) #13900 
+	"76561198155652757", // Boston (EXP-2016-06-27) #0000   
 	// Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "SlotDonor";
@@ -57,6 +56,7 @@ Engineer3 = [
 	"76561198021389971", // Third
 	"76561198072044107", // McBear (OD-2016-03-24) #13358
 	"76561198155652757", // Boston (EXP-2016-06-27) #0000  
+	"76561197969022250", // fbj (OD-2016-06-13) #13900
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Engineer3";
