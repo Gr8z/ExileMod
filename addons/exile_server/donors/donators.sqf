@@ -26,8 +26,7 @@ SlotDonor = [
 	"76561198146083701", // America (OD-2016-04-09) #13456 
 	"76561197979379565", // crackerslats (OD-2016-05-08) #13677 
 	"76561198075518327", // crash09er (EXP-2016-06-23) #13791  
-	"76561198155652757", // Boston (EXP-2016-06-27) #0000  
-	"76561197969022250", // fbj (OD-2016-06-13) #13900 
+	"76561198155652757", // Boston (EXP-2016-06-27) #0000   
 	// Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "SlotDonor";
@@ -57,6 +56,7 @@ Engineer3 = [
 	"76561198021389971", // Third
 	"76561198072044107", // McBear (OD-2016-03-24) #13358
 	"76561198155652757", // Boston (EXP-2016-06-27) #0000  
+	"76561197969022250", // fbj (OD-2016-06-13) #13900
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Engineer3";
@@ -201,6 +201,7 @@ Scout3 = [
 	"76561198079744086", // Specter/A Very Bad Player (EXP-2016-06-24) #0000
 	"76561198120619027", // eastcoastspud (OD-2016-06-08) #13858
 	"76561198006564526", // Hybrid Black (OD-2016-06-13) #13897
+	"76561198084922099", // ^UG^ MegaWaffle (OD-2016-06-15) #13917
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout3";
@@ -266,6 +267,7 @@ Soldier3 = [
 	"76561198000716716", // Kritikal (OD-2016-06-11) #13890 
 	"76561197960534180", // RunGunsLV (OD-2016-06-11) #13892  
 	"76561198067291900", // its me (OD-2016-06-12) #13895 
+	"76561198187374643", // Adam (OD-2016-06-15) #13840
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Soldier3";
