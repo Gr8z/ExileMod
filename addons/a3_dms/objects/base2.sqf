@@ -1,5 +1,4 @@
-private ["_objs"];
-_objs = [
+[
 	["Land_HBarrierWall6_F",[3942.32,4141.8,0],0,[[0,1,0],[0,0,1]],false],
 	["Land_HBarrierWall_corridor_F",[3935.64,4144.38,0],90,[[1,-4.37114e-008,0],[0,-0,1]],false],
 	["Land_HBarrierWall6_F",[3929.2,4141.6,0],0,[[0,1,0],[0,0,1]],false],
@@ -52,16 +51,4 @@ _objs = [
 	["Land_CncWall4_F",[3943.7,4079.67,3.45322],0,[[0,1,0],[0,0,1]],false],
 	["Land_CncWall4_F",[3938.67,4136.77,0],180,[[-8.74228e-008,-1,0],[-0,0,1]],false],
 	["Land_CncWall4_F",[3933.41,4136.77,0],180,[[-8.74228e-008,-1,0],[-0,0,1]],false]
-];
-
-{
-	private ["_obj"];
-	_obj = createVehicle [_x select 0, [0,0,0], [], 0, "CAN_COLLIDE"];
-	if (_x select 4) then {
-		_obj setDir (_x select 2);
-		_obj setPos (_x select 1);
-	} else {
-		_obj setPosATL (_x select 1);
-		_obj setVectorDirAndUp (_x select 3);
-	};
-} foreach _objs;
+]
