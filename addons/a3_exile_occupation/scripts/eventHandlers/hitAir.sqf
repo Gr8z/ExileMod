@@ -109,11 +109,12 @@ if(_heliDamage > 0.7 && _damagedEssentials > 0) then
 	_wp setWaypointBehaviour "COMBAT";
 	_wp setWaypointCombatMode "RED";
 	_wp setWaypointCompletionRadius 10;
-	_wp setWaypointType "GETOUT";    
+	//_wp setWaypointType "GETOUT"; 
+    _wp setWaypointType "TR Unload";    
     
 	[_group2, _destination, 250] call bis_fnc_taskPatrol;
     _group2 setBehaviour "COMBAT";
     _group2 setCombatMode "RED";
 };
 
-_heli addMPEventHandler ["mphit", "_this call SC_fnc_airHit;"];
+_heli addMPEventHandler ["mphit", "_this call SC_fnc_hitAir;"];

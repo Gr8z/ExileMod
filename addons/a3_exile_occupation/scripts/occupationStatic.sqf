@@ -27,7 +27,8 @@ if(diag_fps < _minFPS) exitWith
     [_logDetail] call SC_fnc_log;    
 };
 
-_aiActive = {alive _x && (side _x == SC_BanditSide OR side _x == SC_SurvivorSide)} count allUnits;
+_aiActive = { !isPlayer _x } count allunits;
+
 if(_aiActive > _maxAIcount) exitWith 
 { 
     _logDetail = format ["[OCCUPATION Static]:: %1 active AI, so not spawning AI this time",_aiActive]; 

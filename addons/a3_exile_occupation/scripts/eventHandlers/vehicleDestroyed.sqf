@@ -1,6 +1,3 @@
-// SC_liveVehicles = count of vehicle
-// SC_liveVehiclesArray = array of active vehicles
-
 _vehicle = _this select 0;
 _vehicle removeAllMPEventHandlers  "mphit";
 _vehicle removeAllMPEventHandlers  "mpkilled";

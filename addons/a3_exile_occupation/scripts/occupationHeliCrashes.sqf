@@ -16,7 +16,7 @@ for "_i" from 1 to SC_numberofHeliCrashes do
 	while{!_validspot} do 
 	{
 		sleep 0.2;
-		_position = [ 10, 50, 1, 750, 750, 200, 200, 200, true, false ] call DMS_fnc_findSafePos;
+		_position = [ false, false ] call SC_fnc_findsafePos;
 		_validspot	= true;
 	
 		//Check if near another heli crash site
@@ -34,7 +34,15 @@ for "_i" from 1 to SC_numberofHeliCrashes do
     
 	_helicopter = "Land_UWreck_MV22_F";
 	_vehHeli = _helicopter createVehicle [0,0,0];
-	_heliFire = "test_EmptyObjectForFireBig" createVehicle (position _vehHeli);  
+	
+	_effect = "test_EmptyObjectForSmoke";  
+	
+	if(SC_numberofHeliCrashesFire) then 
+	{
+		_effect = "test_EmptyObjectForFireBig";	
+	};
+
+	_heliFire = _effect createVehicle (position _vehHeli);   
 	_heliFire attachto [_vehHeli, [0,0,-1]];
 	_vehHeli setPos _position;
 		
@@ -44,7 +52,7 @@ for "_i" from 1 to SC_numberofHeliCrashes do
 	clearMagazineCargoGlobal _box;
 	clearWeaponCargoGlobal _box;
 	clearItemCargoGlobal _box;
-	_box enableRopeAttach false;
+	_box enableRopeAttach SC_ropeAttach;
 	_box setVariable ["permaLoot",true];
 	_box allowDamage false;
 
@@ -77,7 +85,41 @@ for "_i" from 1 to SC_numberofHeliCrashes do
 			_box addBackpackCargoGlobal [_item, _amount];	
 		};					
 	}forEach SC_HeliCrashItems;	
-    
+
+	{
+		_spawnChance = round (random 100);		
+		if(_spawnChance <= SC_HeliCrashRareItemChance) then
+		{
+			_item = _x select 0;
+			_amount = _x select 1;
+			_randomAmount = _x select 2;
+			_amount = _amount + (random _randomAmount);
+			_itemType = _x call BIS_fnc_itemType;
+			
+			
+			if((_itemType select 0) == "Weapon") then
+			{
+				_box addWeaponCargoGlobal [_item, _amount];	
+			};
+			if((_itemType select 0) == "Magazine") then
+			{
+				_box addMagazineCargoGlobal [_item, _amount];	
+			};
+			if((_itemType select 0) == "Item") then
+			{
+				_box addItemCargoGlobal [_item, _amount];	
+			};
+			if((_itemType select 0) == "Equipment") then
+			{
+				_box addItemCargoGlobal [_item, _amount];	
+			};	
+			if((_itemType select 0) == "Backpack") then
+			{
+				_box addBackpackCargoGlobal [_item, _amount];	
+			};			
+		};						
+	}forEach SC_HeliCrashRareItems;	
+	
 	// Add weapons with ammo to the Box
 	_possibleWeapons = SC_HeliCrashWeapons;
 	_amountOfWeapons = (SC_HeliCrashWeaponsAmount select 0) + round random (SC_HeliCrashWeaponsAmount select 1);

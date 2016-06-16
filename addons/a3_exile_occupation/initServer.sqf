@@ -2,7 +2,6 @@
 //
 //		Server Occupation script by second_coming
 //
-SC_occupationVersion = "v31 (04-05-2016) Roll back";
 //
 //		http://www.exilemod.com/profile/60-second_coming/
 //
@@ -19,6 +18,8 @@ SC_occupationVersion = "v31 (04-05-2016) Roll back";
 //		second_coming 2016
 //
 ////////////////////////////////////////////////////////////////////////////////////////////
+
+SC_occupationVersion = getText (configFile >> "CfgPatches" >> "a3_exile_occupation" >> "a3_exile_occupation_version");
 
 [] spawn 
 {
@@ -37,26 +38,33 @@ SC_occupationVersion = "v31 (04-05-2016) Roll back";
     SC_fnc_log			            = compile preprocessFileLineNumbers "\x\addons\a3_exile_occupation\scripts\occupationLog.sqf";
 
     // EventHandlers for AI reactions & player interactions
-    SC_fnc_repairVehicle 			= compile preprocessFileLineNumbers "\x\addons\a3_exile_occupation\scripts\reactions\repairVehicle.sqf";
-    SC_fnc_vehicleDestroyed     	= compile preprocessFileLineNumbers "\x\addons\a3_exile_occupation\scripts\reactions\vehicleDestroyed.sqf"; 
-    SC_fnc_reactUnit 				= compile preprocessFileLineNumbers "\x\addons\a3_exile_occupation\scripts\reactions\reactUnit.sqf";
-    SC_fnc_driverKilled 			= compile preprocessFileLineNumbers "\x\addons\a3_exile_occupation\scripts\reactions\driverKilled.sqf";
-    SC_fnc_airHit 			        = compile preprocessFileLineNumbers "\x\addons\a3_exile_occupation\scripts\reactions\airHit.sqf";
-    SC_fnc_boatHit 			        = compile preprocessFileLineNumbers "\x\addons\a3_exile_occupation\scripts\reactions\boatHit.sqf";
-    SC_fnc_getIn			    	= compile preprocessFileLineNumbers "\x\addons\a3_exile_occupation\scripts\reactions\getIn.sqf";
-    SC_fnc_getOut			    	= compile preprocessFileLineNumbers "\x\addons\a3_exile_occupation\scripts\reactions\getOut.sqf";
-    SC_fnc_refuel               	= compile preprocessFileLineNumbers "\x\addons\a3_exile_occupation\scripts\reactions\refuel.sqf";
-    SC_fnc_comeUnstuck          	= compile preprocessFileLineNumbers "\x\addons\a3_exile_occupation\scripts\reactions\comeUnstuck.sqf";
-    SC_fnc_unitMPHit            	= compile preprocessFileLineNumbers "\x\addons\a3_exile_occupation\scripts\reactions\unitMPHit.sqf";
-    SC_fnc_unitMPKilled        	    = compile preprocessFileLineNumbers "\x\addons\a3_exile_occupation\scripts\reactions\unitMPKilled.sqf";
-    SC_fnc_staticUnitMPKilled		= compile preprocessFileLineNumbers "\x\addons\a3_exile_occupation\scripts\reactions\staticUnitMPKilled.sqf";
-    SC_fnc_getOnBus			        = compile preprocessFileLineNumbers "\x\addons\a3_exile_occupation\scripts\reactions\getOnBus.sqf";
-    SC_fnc_getOffBus				= compile preprocessFileLineNumbers "\x\addons\a3_exile_occupation\scripts\reactions\getOffBus.sqf";
+    SC_fnc_hitAir 			        = compile preprocessFileLineNumbers "\x\addons\a3_exile_occupation\scripts\eventHandlers\hitAir.sqf";
+    SC_fnc_hitLand 			        = compile preprocessFileLineNumbers "\x\addons\a3_exile_occupation\scripts\eventHandlers\hitLand.sqf";
+    SC_fnc_hitSea 			        = compile preprocessFileLineNumbers "\x\addons\a3_exile_occupation\scripts\eventHandlers\hitSea.sqf";
+       
+          
+    SC_fnc_driverKilled 			= compile preprocessFileLineNumbers "\x\addons\a3_exile_occupation\scripts\eventHandlers\driverKilled.sqf";
+    SC_fnc_vehicleDestroyed     	= compile preprocessFileLineNumbers "\x\addons\a3_exile_occupation\scripts\eventHandlers\vehicleDestroyed.sqf";
+
+    SC_fnc_getIn			    	= compile preprocessFileLineNumbers "\x\addons\a3_exile_occupation\scripts\eventHandlers\getIn.sqf";
+    SC_fnc_getOut			    	= compile preprocessFileLineNumbers "\x\addons\a3_exile_occupation\scripts\eventHandlers\getOut.sqf";
+ 
+    SC_fnc_getOffBus				= compile preprocessFileLineNumbers "\x\addons\a3_exile_occupation\scripts\eventHandlers\getOffBus.sqf";
+    SC_fnc_getOnBus			        = compile preprocessFileLineNumbers "\x\addons\a3_exile_occupation\scripts\eventHandlers\getOnBus.sqf";
+    SC_fnc_locationUnitMPKilled     = compile preprocessFileLineNumbers "\x\addons\a3_exile_occupation\scripts\eventHandlers\locationUnitMPKilled.sqf";
+    SC_fnc_staticUnitMPKilled		= compile preprocessFileLineNumbers "\x\addons\a3_exile_occupation\scripts\eventHandlers\staticUnitMPKilled.sqf";    
+    SC_fnc_unitMPHit            	= compile preprocessFileLineNumbers "\x\addons\a3_exile_occupation\scripts\eventHandlers\unitMPHit.sqf";
+    SC_fnc_unitMPKilled        	    = compile preprocessFileLineNumbers "\x\addons\a3_exile_occupation\scripts\eventHandlers\unitMPKilled.sqf";
+    SC_fnc_unitFired        	    = compile preprocessFileLineNumbers "\x\addons\a3_exile_occupation\scripts\eventHandlers\unitFired.sqf";
     
     SC_fnc_addMarker				= compile preprocessFileLineNumbers "\x\addons\a3_exile_occupation\scripts\functions\fnc_addMarker.sqf";
-    SC_fnc_spawnstatics				= compile preprocessFileLineNumbers "\x\addons\a3_exile_occupation\scripts\functions\fnc_spawnStatics.sqf";
+    SC_fnc_findsafePos              = compile preprocessFileLineNumbers "\x\addons\a3_exile_occupation\scripts\functions\fnc_findsafePos.sqf";
+    SC_fnc_isSafePos                = compile preprocessFileLineNumbers "\x\addons\a3_exile_occupation\scripts\functions\fnc_isSafePos.sqf";  
     SC_fnc_selectGear               = compile preprocessFileLineNumbers "\x\addons\a3_exile_occupation\scripts\functions\fnc_selectGear.sqf";
-    
+    SC_fnc_selectName               = compile preprocessFileLineNumbers "\x\addons\a3_exile_occupation\scripts\functions\fnc_selectName.sqf";
+    SC_fnc_spawnstatics				= compile preprocessFileLineNumbers "\x\addons\a3_exile_occupation\scripts\functions\fnc_spawnStatics.sqf";
+    SC_fnc_unstick          	    = compile preprocessFileLineNumbers "\x\addons\a3_exile_occupation\scripts\functions\fnc_unstick.sqf"; 
+
 
     _logDetail = "=============================================================================================================";
     [_logDetail] call SC_fnc_log;
