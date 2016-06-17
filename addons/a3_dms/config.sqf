@@ -26,8 +26,8 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 	/*General settings for dynamic missions*/
 	DMS_DynamicMission					= true;						// Enable/disable dynamic mission system.
 	DMS_MaxBanditMissions				= 2;						// Maximum number of Bandit Missions running at the same time
-	DMS_TimeToFirstMission				= [180,420];				// [Minimum,Maximum] time between first mission spawn. | DEFAULT: 3-7 minutes.
-	DMS_TimeBetweenMissions				= [600,900];				// [Minimum,Maximum] time between missions (if mission limit is not reached) | DEFAULT: 10-15 mins
+	DMS_TimeToFirstMission				= [5,10];				// [Minimum,Maximum] time between first mission spawn. | DEFAULT: 3-7 minutes.
+	DMS_TimeBetweenMissions				= [5,10];				// [Minimum,Maximum] time between missions (if mission limit is not reached) | DEFAULT: 10-15 mins
 	DMS_MissionTimeOut					= [900,1800]; 				// [Minimum,Maximum] time it will take for a mission to timeout | DEFAULT: 15-30 mins
 	DMS_MissionTimeoutResetRange		= 1500;						// If a player is this close to a mission then it won't time-out. Set to 0 to disable this check.
 	DMS_MissionTimeoutResetFrequency	= 180;						// How often (in seconds) to check for nearby players and reset the mission timeout.
@@ -2303,8 +2303,6 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 											["MMG_01_hex_F",2],
 											["MMG_02_camo_F",2],
 											["srifle_EBR_F",2],
-											["CUP_lmg_Mk48_des",2],
-											["CUP_glaunch_M32",1],
 											["srifle_GM6_F",1],
 											["srifle_LRR_F",1],
 											["Laserdesignator",1]
@@ -2312,8 +2310,6 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 										[
 											["150Rnd_93x64_Mag",4],
 											["130Rnd_338_Mag",4],
-											["CUP_100Rnd_TE4_LRT4_White_Tracer_762x51_Belt_M",4],
-											["CUP_6Rnd_HE_M203",3],
 											["20Rnd_762x51_Mag",6],
 											["5Rnd_127x108_APDS_Mag",3],
 											["7Rnd_408_Mag",3],
