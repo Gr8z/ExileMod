@@ -37,7 +37,6 @@
 	["Land_HBarrierWall_corridor_F",[34.7227,-0.510311,0],0],
 	["Land_Razorwire_F",[35.7227,-6.63531,1.90735e-006],103.46],
 	["Land_Razorwire_F",[35.7227,5.86469,0],77.6516],
-	["ContainmentArea_01_forest_F",[-3.30954,8.82574,-3.542],90],
 	["Land_Shoot_House_Panels_F",[33.7227,6.11469,4.76837e-006],89.9146],
 	["Land_Shoot_House_Panels_F",[33.7227,-6.88531,0],89.9146],
 	["Land_Shoot_House_Panels_F",[33.7227,-4.88531,0],89.9146],
@@ -46,6 +45,7 @@
 	["Land_Shoot_House_Panels_F",[33.7227,-3.88531,9.53674e-007],89.9146],
 	["ContainmentArea_01_forest_F",[-13.9683,8.87969,3.542],90],
 	["ContainmentArea_01_forest_F",[-24.5109,8.8797,3.542],90],
+	["ContainmentArea_01_forest_F",[-3.30954,8.82574,3.542],90],
 	["ContainmentArea_01_forest_F",[-24.5202,-8.53532,3.542],90],
 	["ContainmentArea_01_forest_F",[-14.0793,-8.53399,3.542],90],
 	["ContainmentArea_01_forest_F",[-3.43222,-8.64577,3.542],90]
