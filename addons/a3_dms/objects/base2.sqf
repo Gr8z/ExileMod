@@ -44,15 +44,9 @@
 	["Land_Shoot_House_Panels_F",[33.7227,4.11469,0],89.9146],
 	["Land_Shoot_House_Panels_F",[33.7227,2.73969,0],89.9146],
 	["Land_Shoot_House_Panels_F",[33.7227,-3.88531,9.53674e-007],89.9146],
-	["ContainmentArea_01_forest_F",[-13.9683,8.87969,-3.542],90],
-	["ContainmentArea_01_forest_F",[-24.5109,8.8797,-3.542],90],
-	["ContainmentArea_01_forest_F",[-24.5202,-8.53532,-3.55579],90],
-	["ContainmentArea_01_forest_F",[-14.0793,-8.53399,-3.5558],90],
-	["ContainmentArea_01_forest_F",[-3.43222,-8.64577,-3.55579],90],
-	["FootBridge_0_ACR",[-6.01742,-0.00123376,-3.87968],0],
-	["FootBridge_0_ACR",[-0.779303,0.1428,-3.79903],0],
-	["FootBridge_0_ACR",[-17.0856,0.27262,-3.72883],0],
-	["FootBridge_0_ACR",[-11.5927,0.157239,-3.72624],0],
-	["FootBridge_0_ACR",[-26.7516,0.228789,-3.87968],0],
-	["FootBridge_0_ACR",[-21.6075,0.25611,-3.87968],0]
+	["ContainmentArea_01_forest_F",[-13.9683,8.87969,3.542],90],
+	["ContainmentArea_01_forest_F",[-24.5109,8.8797,3.542],90],
+	["ContainmentArea_01_forest_F",[-24.5202,-8.53532,3.542],90],
+	["ContainmentArea_01_forest_F",[-14.0793,-8.53399,3.542],90],
+	["ContainmentArea_01_forest_F",[-3.43222,-8.64577,3.542],90]
 ]
