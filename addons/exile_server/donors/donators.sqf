@@ -40,7 +40,7 @@ Engineer1 = [
 ];publicVariable "Engineer1";
 
 Engineer2 = [
-	"0", // NAME (OD-00-00-0000) #0000
+	"76561198059890709", // NarstyNate (OD-2016-06-16) #13919
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Engineer2";
@@ -268,6 +268,8 @@ Soldier3 = [
 	"76561197960534180", // RunGunsLV (OD-2016-06-11) #13892  
 	"76561198067291900", // its me (OD-2016-06-12) #13895 
 	"76561198187374643", // Adam (OD-2016-06-15) #13840
+	"76561198036644006", // [MSFT]Soren (OD-2016-06-16) #13921
+	"76561198155900335", // Andrew (OD-2016-06-16) #13924
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Soldier3";
