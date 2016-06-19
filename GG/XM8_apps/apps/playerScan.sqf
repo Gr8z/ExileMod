@@ -21,17 +21,17 @@ if(isNil "LastUsedCheck")then
 
 if !(player getVariable ["ExileXM8IsOnline", false]) exitWith {
   (findDisplay 24015) closeDisplay 0;
-  ["RepairFailedWarning", ["San Failed, Your 8G Network Is Offline"]] call ExileClient_gui_notification_event_addNotification;
+  ["RepairFailedWarning", ["Scan failed, your 8G network is offline."]] call ExileClient_gui_notification_event_addNotification;
 };
 
 if  ((nearestObject [player,'Exile_Construction_Abstract_Static']) distance player < 75) exitWith {
   (findDisplay 24015) closeDisplay 0;
-  ["RepairFailedWarning", ["Scan Failed, You are near a base."]] call ExileClient_gui_notification_event_addNotification;
+  ["RepairFailedWarning", ["Scan failed, you're near a base."]] call ExileClient_gui_notification_event_addNotification;
 };
 
 if (ExileClientPlayerIsInCombat) exitWith {
   (findDisplay 24015) closeDisplay 0;
-  ["RepairFailedWarning", ["Scan Failed, You are in combat."]] call ExileClient_gui_notification_event_addNotification;
+  ["RepairFailedWarning", ["Scan failed, you're in combat."]] call ExileClient_gui_notification_event_addNotification;
 };
 
 (findDisplay 24015) closeDisplay 0; 
@@ -42,7 +42,7 @@ if((LastUsedCheck == 0) || (diag_tickTime - LastUsedCheck > _cooldownTime)) then
   { 
    
     for "_x" from 1 to 10 do {
-      if (_x >= 2) then {cutText [format ["PLEASE WAIT - SCANING 8G USERS 1000M NEAR YOU...", 11-_x], "PLAIN DOWN"];};
+      if (_x >= 2) then {cutText [format ["PLEASE WAIT - SCANNING FOR 8G USERS WITHIN 1000M...", 11-_x], "PLAIN DOWN"];};
       uiSleep 1;
     };
  
@@ -71,11 +71,11 @@ if((LastUsedCheck == 0) || (diag_tickTime - LastUsedCheck > _cooldownTime)) then
   }
   else
   {
-    ["RepairFailedWarning", ["Scan Failed, You require a GPS"]] call ExileClient_gui_notification_event_addNotification;
+    ["RepairFailedWarning", ["Scan failed, you don't have a GPS."]] call ExileClient_gui_notification_event_addNotification;
   };
  
 }
 else
 {
-  ["RepairFailedWarning", ["Scan Failed, The 8G Scan is cooling down"]] call ExileClient_gui_notification_event_addNotification;
+  ["RepairFailedWarning", ["Scan failed, the 8G scan is on cooldown."]] call ExileClient_gui_notification_event_addNotification;
 };
