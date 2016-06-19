@@ -80,17 +80,17 @@ _veh =
 _staticGuns =
 [
 	[
-		[_pos,[-34.128,9.027,0]] call DMS_fnc_CalcPos
-		[_pos,[-33.935,-9.433,0]] call DMS_fnc_CalcPos
-		[_pos,[-14.432,-8.813,3.628]] call DMS_fnc_CalcPos
-		[_pos,[-14.174,9.815,3.642]] call DMS_fnc_CalcPos
-		[_pos,[-10.710,-13.930,3.628]] call DMS_fnc_CalcPos
-		[_pos,[-0.005,-14.284,3.628]] call DMS_fnc_CalcPos
-		[_pos,[9.932,-14.283,3.628]] call DMS_fnc_CalcPos
-		[_pos,[13.525,-9.536,3.628]] call DMS_fnc_CalcPos
-		[_pos,[13.542,8.644,3.642]] call DMS_fnc_CalcPos
-		[_pos,[10.640,13.330,3.642]] call DMS_fnc_CalcPos
-		[_pos,[0.176,13.279,3.642]] call DMS_fnc_CalcPos
+		[_pos,[-34.128,9.027,0]] call DMS_fnc_CalcPos,
+		[_pos,[-33.935,-9.433,0]] call DMS_fnc_CalcPos,
+		[_pos,[-14.432,-8.813,3.628]] call DMS_fnc_CalcPos,
+		[_pos,[-14.174,9.815,3.642]] call DMS_fnc_CalcPos,
+		[_pos,[-10.710,-13.930,3.628]] call DMS_fnc_CalcPos,
+		[_pos,[-0.005,-14.284,3.628]] call DMS_fnc_CalcPos,
+		[_pos,[9.932,-14.283,3.628]] call DMS_fnc_CalcPos,
+		[_pos,[13.525,-9.536,3.628]] call DMS_fnc_CalcPos,
+		[_pos,[13.542,8.644,3.642]] call DMS_fnc_CalcPos,
+		[_pos,[10.640,13.330,3.642]] call DMS_fnc_CalcPos,
+		[_pos,[0.176,13.279,3.642]] call DMS_fnc_CalcPos,
 		[_pos,[-10.568,13.343,3.642]] call DMS_fnc_CalcPos
 	],
 	_group,
@@ -103,8 +103,8 @@ _staticGuns =
 _staticGuns2 =
 [
 	[
-		[_pos,[-22.049,6.181,0]] call DMS_fnc_CalcPos
-		[_pos,[-22.41,-7.782,0]] call DMS_fnc_CalcPos
+		[_pos,[-22.049,6.181,0]] call DMS_fnc_CalcPos,
+		[_pos,[-22.41,-7.782,0]] call DMS_fnc_CalcPos,
 		[_pos,[-32.597,0.391,0]] call DMS_fnc_CalcPos
 	],
 	_group,
@@ -125,6 +125,7 @@ _baseObjs =
 ] call DMS_fnc_ImportFromM3E;
 
 // Create Crate
+_crate = ["Exile_Container_SupplyBox",[9,728,10.083,0]] call DMS_fnc_SpawnCrate;
 
 // Pink Crate ;)
 _crate setObjectTextureGlobal [0,"#(rgb,8,8,3)color(1,0.08,0.57,1)"];
