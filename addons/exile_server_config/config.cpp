@@ -680,22 +680,6 @@ class CfgSettings
 		};
 
 		/**
-		 * Enables or disables nightvision optics on ALL vehicles
-		 *
-		 * 0 = off
-		 * 1 = on
-		 */
-		nightVision = 1;
-
-		/**
-		 * Enables or disables thermal optics on ALL vehicles
-		 *
-		 * 0 = off
-		 * 1 = on
-		 */
-		thermalVision = 0;
-
-		/**
 		 * Set this to 1 to unlock vehicles on server boot if they are in safe zones
 		 *
 		 * 0 = off
