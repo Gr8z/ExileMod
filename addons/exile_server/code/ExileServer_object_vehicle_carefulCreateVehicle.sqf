@@ -53,12 +53,4 @@ if (_vehicleClassName isKindOf "I_UGV_01_F") then
 {
 	createVehicleCrew _vehicleObject;
 };
-if (getNumber (configFile >> "CfgSettings" >> "VehicleSpawn" >> "nightVision") isEqualTo 0) then 
-{
-	_vehicleObject disableNVGEquipment true;
-};
-if (getNumber (configFile >> "CfgSettings" >> "VehicleSpawn" >> "thermalVision") isEqualTo 0) then 
-{
-	_vehicleObject disableTIEquipment true;
-};
 _vehicleObject
