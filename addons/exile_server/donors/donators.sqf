@@ -41,7 +41,6 @@ Engineer1 = [
 
 Engineer2 = [
 	"76561198059890709", // NarstyNate (OD-2016-06-16) #13919
-	"76561197972037463", // *[MA]* Get Smashed (OD-2016-06-16) #13929
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Engineer2";
@@ -135,6 +134,7 @@ Medic3 = [
 	"76561198056028211", // Nasty
 	"76561198061910471", // Frank (OD-2016-05-23) #13788 
 	"76561198050613311", // Matt is back (EXP-2016-07-08) #13854
+	"76561198166817787", // [WD] Sgt.Spicy Indian (EXP-2016-06-19) #13939 
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Medic3";
