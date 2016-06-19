@@ -2,7 +2,7 @@
 	Sample mission (duplicate for testing purposes)
 */
 
-private ["_num", "_side", "_OK", "_group", "_pos", "_difficulty", "_AICount", "_veh", "_staticGuns", "_baseObjs", "_crate", "_missionAIUnits", "_missionObjs", "_msgStart", "_msgWIN", "_msgLOSE", "_missionName", "_markers", "_time", "_added", "_cleanup"];
+private ["_num", "_side", "_OK", "_group", "_pos", "_difficulty", "_AICount", "_veh", "_staticGuns","_staticGuns2", "_baseObjs", "_crate", "_missionAIUnits", "_missionObjs", "_msgStart", "_msgWIN", "_msgLOSE", "_missionName", "_markers", "_time", "_added", "_cleanup"];
 
 // For logging purposes
 _num = DMS_MissionCount;
@@ -45,7 +45,7 @@ _difficulty = "hardcore";
 
 
 // Create AI
-_AICount = 14 + (round (random 4));
+_AICount = 25 + (round (random 5));
 
 _group =
 [
@@ -65,7 +65,8 @@ _veh =
 	_group,
 	"assault",
 	_difficulty,
-	_side
+	_side,
+	"I_MRAP_03_hmg_f"
 ] call DMS_fnc_SpawnAIVehicle;
 
 
@@ -79,7 +80,18 @@ _veh =
 _staticGuns =
 [
 	[
-		[_pos,[-6.29138,3.9917,0]] call DMS_fnc_CalcPos
+		[_pos,[-34.128,9.027,0]] call DMS_fnc_CalcPos
+		[_pos,[-33.935,-9.433,0]] call DMS_fnc_CalcPos
+		[_pos,[-14.432,-8.813,3.628]] call DMS_fnc_CalcPos
+		[_pos,[-14.174,9.815,3.642]] call DMS_fnc_CalcPos
+		[_pos,[-10.710,-13.930,3.628]] call DMS_fnc_CalcPos
+		[_pos,[-0.005,-14.284,3.628]] call DMS_fnc_CalcPos
+		[_pos,[9.932,-14.283,3.628]] call DMS_fnc_CalcPos
+		[_pos,[13.525,-9.536,3.628]] call DMS_fnc_CalcPos
+		[_pos,[13.542,8.644,3.642]] call DMS_fnc_CalcPos
+		[_pos,[10.640,13.330,3.642]] call DMS_fnc_CalcPos
+		[_pos,[0.176,13.279,3.642]] call DMS_fnc_CalcPos
+		[_pos,[-10.568,13.343,3.642]] call DMS_fnc_CalcPos
 	],
 	_group,
 	"assault",
@@ -88,8 +100,23 @@ _staticGuns =
 	"O_HMG_01_high_F"
 ] call DMS_fnc_SpawnAIStaticMG;
 
-(_staticGuns select 0) setDir 15;
+_staticGuns2 =
+[
+	[
+		[_pos,[-22.049,6.181,0]] call DMS_fnc_CalcPos
+		[_pos,[-22.41,-7.782,0]] call DMS_fnc_CalcPos
+		[_pos,[-32.597,0.391,0]] call DMS_fnc_CalcPos
+	],
+	_group,
+	"assault",
+	"hardcore",
+	"bandit",
+	"O_static_AA_F"
+] call DMS_fnc_SpawnAIStaticMG;
 
+(_staticGuns2 select 0) setDir 0;
+(_staticGuns2 select 1) setDir 180;
+(_staticGuns2 select 2) setDir 90;
 
 _baseObjs =
 [
@@ -115,7 +142,7 @@ _missionAIUnits =
 
 _missionObjs =
 [
-	_staticGuns+_baseObjs+[_veh],			// armed AI vehicle, base objects, and static gun
+	_staticGuns+_staticGuns2+_baseObjs+[_veh],			// armed AI vehicle, base objects, and static gun
 	[],
 	[[_crate,"Custom1"]]
 ];
