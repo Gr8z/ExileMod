@@ -45,7 +45,7 @@ _difficulty = "hardcore";
 
 
 // Create AI
-_AICount = 25 + (round (random 5));
+_AICount = 20 + (round (random 5));
 
 _group =
 [
@@ -80,18 +80,12 @@ _veh =
 _staticGuns =
 [
 	[
-		[_pos,[-34.128,9.027,0]] call DMS_fnc_CalcPos,
-		[_pos,[-33.935,-9.433,0]] call DMS_fnc_CalcPos,
-		[_pos,[-14.432,-8.813,3.628]] call DMS_fnc_CalcPos,
-		[_pos,[-14.174,9.815,3.642]] call DMS_fnc_CalcPos,
-		[_pos,[-10.710,-13.930,3.628]] call DMS_fnc_CalcPos,
-		[_pos,[-0.005,-14.284,3.628]] call DMS_fnc_CalcPos,
-		[_pos,[9.932,-14.283,3.628]] call DMS_fnc_CalcPos,
-		[_pos,[13.525,-9.536,3.628]] call DMS_fnc_CalcPos,
-		[_pos,[13.542,8.644,3.642]] call DMS_fnc_CalcPos,
-		[_pos,[10.640,13.330,3.642]] call DMS_fnc_CalcPos,
-		[_pos,[0.176,13.279,3.642]] call DMS_fnc_CalcPos,
-		[_pos,[-10.568,13.343,3.642]] call DMS_fnc_CalcPos
+		[_pos,[-13.9683,8.87969,3.642]] call DMS_fnc_CalcPos,
+		[_pos,[-24.5109,8.8797,3.642]] call DMS_fnc_CalcPos,
+		[_pos,[-3.30954,8.82574,3.642]] call DMS_fnc_CalcPos,
+		[_pos,[-24.5202,-8.53532,3.642]] call DMS_fnc_CalcPos,
+		[_pos,[-14.0793,-8.53399,3.642]] call DMS_fnc_CalcPos,
+		[_pos,[-3.43222,-8.64577,3.642]] call DMS_fnc_CalcPos
 	],
 	_group,
 	"assault",
@@ -125,7 +119,7 @@ _baseObjs =
 ] call DMS_fnc_ImportFromM3E;
 
 // Create Crate
-_crate = ["Exile_Container_SupplyBox",[9,728,10.083,0]] call DMS_fnc_SpawnCrate;
+_crate = ["Exile_Container_SupplyBox",_pos] call DMS_fnc_SpawnCrate;
 
 // Pink Crate ;)
 _crate setObjectTextureGlobal [0,"#(rgb,8,8,3)color(1,0.08,0.57,1)"];
