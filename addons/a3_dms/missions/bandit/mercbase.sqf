@@ -2,7 +2,7 @@
 	Sample mission (duplicate for testing purposes)
 */
 
-private ["_num", "_side", "_OK", "_group", "_pos", "_difficulty", "_AICount", "_veh", "_staticGuns","_staticGuns2", "_baseObjs", "_crate", "_missionAIUnits", "_missionObjs", "_msgStart", "_msgWIN", "_msgLOSE", "_missionName", "_markers", "_time", "_added", "_cleanup"];
+private ["_num", "_side", "_OK", "_group", "_pos", "_difficulty", "_AICount", "_veh", "_staticGuns", "_baseObjs", "_crate", "_missionAIUnits", "_missionObjs", "_msgStart", "_msgWIN", "_msgLOSE", "_missionName", "_markers", "_time", "_added", "_cleanup"];
 
 // For logging purposes
 _num = DMS_MissionCount;
@@ -80,12 +80,12 @@ _veh =
 _staticGuns =
 [
 	[
-		[_pos,[-13.9683,8.87969,3.642]] call DMS_fnc_CalcPos,
-		[_pos,[-24.5109,8.8797,3.642]] call DMS_fnc_CalcPos,
-		[_pos,[-3.30954,8.82574,3.642]] call DMS_fnc_CalcPos,
-		[_pos,[-24.5202,-8.53532,3.642]] call DMS_fnc_CalcPos,
-		[_pos,[-14.0793,-8.53399,3.642]] call DMS_fnc_CalcPos,
-		[_pos,[-3.43222,-8.64577,3.642]] call DMS_fnc_CalcPos
+		[_pos,[-13.9683,8.87969,0]] call DMS_fnc_CalcPos,
+		[_pos,[-24.5109,8.8797,0]] call DMS_fnc_CalcPos,
+		[_pos,[-3.30954,8.82574,0]] call DMS_fnc_CalcPos,
+		[_pos,[-24.5202,-8.53532,0]] call DMS_fnc_CalcPos,
+		[_pos,[-14.0793,-8.53399,0]] call DMS_fnc_CalcPos,
+		[_pos,[-3.43222,-8.64577,0]] call DMS_fnc_CalcPos
 	],
 	_group,
 	"assault",
@@ -93,24 +93,6 @@ _staticGuns =
 	"bandit",
 	"O_HMG_01_high_F"
 ] call DMS_fnc_SpawnAIStaticMG;
-
-_staticGuns2 =
-[
-	[
-		[_pos,[-22.049,6.181,0]] call DMS_fnc_CalcPos,
-		[_pos,[-22.41,-7.782,0]] call DMS_fnc_CalcPos,
-		[_pos,[-32.597,0.391,0]] call DMS_fnc_CalcPos
-	],
-	_group,
-	"assault",
-	"hardcore",
-	"bandit",
-	"O_static_AA_F"
-] call DMS_fnc_SpawnAIStaticMG;
-
-(_staticGuns2 select 0) setDir 0;
-(_staticGuns2 select 1) setDir 180;
-(_staticGuns2 select 2) setDir 90;
 
 _baseObjs =
 [
@@ -136,7 +118,7 @@ _missionAIUnits =
 
 _missionObjs =
 [
-	_staticGuns+_staticGuns2+_baseObjs+[_veh],			// armed AI vehicle, base objects, and static gun
+	_staticGuns+_baseObjs+[_veh],			// armed AI vehicle, base objects, and static gun
 	[],
 	[[_crate,"Custom1"]]
 ];
