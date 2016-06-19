@@ -270,6 +270,7 @@ Soldier3 = [
 	"76561198187374643", // Adam (OD-2016-06-15) #13840
 	"76561198036644006", // [MSFT]Soren (OD-2016-06-16) #13921
 	"76561198155900335", // Andrew (OD-2016-06-16) #13924
+	"76561198145289881", // [WD] Lt. Squeaker Squad (OD-2016-06-18) #13932 
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Soldier3";
