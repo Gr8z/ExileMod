@@ -148,13 +148,13 @@ _missionObjs =
 ];
 
 // Define Mission Start message
-_msgStart = ['#FFFF00',format ["A mercenary base has been located at %1! There are reports of a dandy crate inside of it...",mapGridPosition _pos]];
+_msgStart = ['#FFFF00',format ["Reports from survivors mention a mercenary base with stolen military equipment located at %1! ",mapGridPosition _pos]];
 
 // Define Mission Win message
-_msgWIN = ['#0080ff',"Convicts have successfully assaulted the Mercenary Base and obtained the dandy crate!"];
+_msgWIN = ['#0080ff',"Convicts have successfully assaulted the mercenary base and obtained the crate!"];
 
 // Define Mission Lose message
-_msgLOSE = ['#FF0000',"Seems like the Mercenaries packed up and drove away..."];
+_msgLOSE = ['#FF0000',"Seems like the mercenaries burned down the base and covered their tracks..."];
 
 // Define mission name (for map marker and logging)
 _missionName = "Mercenary Base";
