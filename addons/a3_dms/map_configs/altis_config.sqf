@@ -8,18 +8,18 @@
 
 DMS_findSafePosBlacklist =
 [
-//	[[22500,19420],[24870,16725]]		// Salt flats are blacklisted for Altis by default.
+	[[22500,19420],[24870,16725]]		// Salt flats are blacklisted for Altis by default.
 ];
 
 // These configs are the default values from the main config. Just included here as an example.
-DMS_PlayerNearBlacklist				= 2000;
-DMS_SpawnZoneNearBlacklist			= 2500;
-DMS_TraderZoneNearBlacklist			= 2500;
-DMS_MissionNearBlacklist			= 2500;
+DMS_PlayerNearBlacklist				= 1000;
+DMS_SpawnZoneNearBlacklist			= 1250;
+DMS_TraderZoneNearBlacklist			= 1250;
+DMS_MissionNearBlacklist			= 1250;
 DMS_WaterNearBlacklist				= 500;
 
 // Altis is pretty flat, so we can make the min surfaceNormal ... stricter? more strict? Who cares, you get the idea.
-DMS_MinSurfaceNormal				= 0.96;
+DMS_MinSurfaceNormal				= 0.95;
 
 
 // Making these configs below as strict as possible will help in reducing the number of attempts taken to find a valid position, and as a result, improve performance.
