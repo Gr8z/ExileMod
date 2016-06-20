@@ -738,7 +738,7 @@ class CfgSettings
 		{
 			fogValue = 0.1;
 			fogDecay = 0.2;
-			fogBase = 5;
+			fogBase = 0;
 			overcast = 0.2;
 			waves = 0.2;
 			wind = 0.25;
@@ -752,7 +752,7 @@ class CfgSettings
 		{
 			fogValue = 0.2;
 			fogDecay = 0.1;
-			fogBase = 5;
+			fogBase = 0;
 			overcast = 0.4;
 			waves = 0.4;
 			wind = 0.25;
@@ -766,7 +766,7 @@ class CfgSettings
 		{
 			fogValue = 0.7;
 			fogDecay = 0.2;
-			fogBase = 5;
+			fogBase = 0;
 			overcast = 1;
 			waves = 1;
 			wind = 0.25;

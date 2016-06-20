@@ -135,8 +135,6 @@
 2, DLCSupressor
 2, Bipods
 3, Explosives
-1, Launchers
-1, Launcherammo
 0.01, Magazine03
 
 ///////////////////////////////////////////////////////////////////////////////

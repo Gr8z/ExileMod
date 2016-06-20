@@ -25,12 +25,12 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 /* Mission System Settings */
 	/*General settings for dynamic missions*/
 	DMS_DynamicMission					= true;						// Enable/disable dynamic mission system.
-	DMS_MaxBanditMissions				= 2;						// Maximum number of Bandit Missions running at the same time
+	DMS_MaxBanditMissions				= 3;						// Maximum number of Bandit Missions running at the same time
 	DMS_TimeToFirstMission				= [180,420];				// [Minimum,Maximum] time between first mission spawn. | DEFAULT: 3-7 minutes.
 	DMS_TimeBetweenMissions				= [600,900];				// [Minimum,Maximum] time between missions (if mission limit is not reached) | DEFAULT: 10-15 mins
 	DMS_MissionTimeOut					= [900,1800]; 				// [Minimum,Maximum] time it will take for a mission to timeout | DEFAULT: 15-30 mins
 	DMS_MissionTimeoutResetRange		= 1500;						// If a player is this close to a mission then it won't time-out. Set to 0 to disable this check.
-	DMS_MissionTimeoutResetFrequency	= 180;						// How often (in seconds) to check for nearby players and reset the mission timeout.
+	DMS_MissionTimeoutResetFrequency	= 180;					// How often (in seconds) to check for nearby players and reset the mission timeout.
 	/*General settings for dynamic missions*/
 
 	/*General settings for static missions*/
@@ -106,9 +106,9 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 	DMS_ThrottleCoefficient				= 0.9;						// How much the parameters are throttled. The parameters are multiplied by the coefficient, so 0.9 means 90% of whatever the parameter was.
 	DMS_MinThrottledDistance			= 100;						// The minimum distance to which it will throttle. If the throttled value is less than this, then this value is used instead.
 	DMS_PlayerNearBlacklist				= 2000;						// Missions won't spawn in a position this many meters close to a player
-	DMS_SpawnZoneNearBlacklist			= 2500;						// Missions won't spawn in a position this many meters close to a spawn zone
-	DMS_TraderZoneNearBlacklist			= 2500;						// Missions won't spawn in a position this many meters close to a trader zone
-	DMS_MissionNearBlacklist			= 2500;						// Missions won't spawn in a position this many meters close to another mission
+	DMS_SpawnZoneNearBlacklist			= 1250;						// Missions won't spawn in a position this many meters close to a spawn zone
+	DMS_TraderZoneNearBlacklist			= 1250;						// Missions won't spawn in a position this many meters close to a trader zone
+	DMS_MissionNearBlacklist			= 1250;						// Missions won't spawn in a position this many meters close to another mission
 	DMS_WaterNearBlacklist				= 500;						// Missions won't spawn in a position this many meters close to water
 	DMS_TerritoryNearBlacklist			= 100;						// Missions won't spawn in a position this many meters close to a territory flag
 	DMS_MinSurfaceNormal				= 0.9;						// Missions won't spawn in a position where its surfaceNormal is less than this amount. The lower the value, the steeper the location. Greater values means flatter locations. Values can range from 0-1, with 0 being sideways, and 1 being perfectly flat. For reference: SurfaceNormal of about 0.7 is when you are forced to walk up a surface. If you want to convert surfaceNormal to degrees, use the arc-cosine of the surfaceNormal. 0.9 is about 25 degrees. Google "(arccos 0.9) in degrees"
@@ -186,7 +186,7 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 
 	/*Mission notification settings*/
 
-	DMS_BanditMissionTypes =			[							//	List of missions with spawn chances. If they add up to 100%, they represent the percentage chance each one will spawn
+		DMS_BanditMissionTypes =			[							//	List of missions with spawn chances. If they add up to 100%, they represent the percentage chance each one will spawn
 											["donthasslethehoff",5],
 											["bandits",5],
 											["bauhaus",5],
@@ -401,159 +401,14 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 											"arifle_TRG21_F",
 											"arifle_TRG20_F",
 											"arifle_Mk20_plain_F",
-											"arifle_Mk20_F",
-											"rhs_weap_m16a4",
-											"rhs_weap_m16a4_carryhandle",
-											"rhs_weap_m16a4_carryhandle_grip",
-											"rhs_weap_m16a4_carryhandle_grip_pmag",
-											"rhs_weap_m16a4_carryhandle_M203",
-											"rhs_weap_m16a4_carryhandle_pmag",
-											"rhs_weap_m16a4_grip",
-											"rhs_weap_m4",
-											"rhs_weap_m4_grip2",
-											"rhs_weap_m4_carryhandle",
-											"rhs_weap_m4_carryhandle_pmag",
-											"rhs_weap_m4_grip",
-											"rhs_weap_m4_m203",
-											"rhs_weap_m4_m320",
-											"rhs_weap_m4a1_carryhandle",
-											"rhs_weap_m4a1_carryhandle_grip2",
-											"rhs_weap_m4a1_carryhandle_pmag",
-											"rhs_weap_m4a1_carryhandle_m203",
-											"rhs_weap_m4a1",
-											"rhs_weap_m4a1_grip2",
-											"rhs_weap_m4a1_grip",
-											"rhs_weap_m4a1_m203",
-											"rhs_weap_m4a1_m320",
-											"rhs_weap_m4a1_blockII",
-											"rhs_weap_m4a1_blockII_KAC",
-											"rhs_weap_m4a1_blockII_grip2",
-											"rhs_weap_m4a1_blockII_grip2_KAC",
-											"rhs_weap_m4a1_blockII_M203",
-											"rhs_weap_mk18",
-											"rhs_weap_mk18_KAC",
-											"rhs_weap_mk18_grip2",
-											"rhs_weap_mk18_grip2_KAC",
-											"rhs_weap_mk18_m320",
-											"rhs_weap_ak103",
-											"rhs_weap_ak103_npz",
-											"rhs_weap_ak103_1",
-											"rhs_weap_ak74m",
-											"rhs_weap_ak74m_2mag",
-											"rhs_weap_ak74m_2mag_camo",
-											"rhs_weap_ak74m_2mag_npz",
-											"rhs_weap_ak74m_camo",
-											"rhs_weap_ak74m_desert",
-											"rhs_weap_ak74m_desert_npz",
-											"rhs_weap_ak74m_desert_folded",
-											"rhs_weap_ak74m_plummag_folded",
-											"rhs_weap_ak74m_folded",
-											"rhs_weap_ak74m_camo_folded",
-											"rhs_weap_ak74m_gp25",
-											"rhs_weap_ak74m_gp25_npz",
-											"rhs_weap_ak74m_npz",
-											"rhs_weap_ak74m_plummag",
-											"rhs_weap_ak74m_plummag_npz",
-											"rhs_weap_akm",
-											"rhs_weap_akm_gp25",
-											"rhs_weap_akms",
-											"rhs_weap_akms_gp25",
-											"CUP_arifle_Mk16_CQC_FG",
-											"CUP_arifle_Mk16_CQC_SFG",
-											"CUP_arifle_Mk16_CQC_EGLM",
-											"CUP_arifle_Mk16_STD",
-											"CUP_arifle_Mk16_STD_FG",
-											"CUP_arifle_Mk16_STD_SFG",
-											"CUP_arifle_Mk16_STD_EGLM",
-											"CUP_arifle_Mk16_SV",
-											"CUP_arifle_Mk17_CQC",
-											"CUP_arifle_Mk17_CQC_FG",
-											"CUP_arifle_Mk17_CQC_SFG",
-											"CUP_arifle_Mk17_CQC_EGLM",
-											"CUP_arifle_Mk17_STD",
-											"CUP_arifle_Mk17_STD_FG",
-											"CUP_arifle_Mk17_STD_SFG",
-											"CUP_arifle_Mk17_STD_EGLM",
-											"CUP_arifle_Mk20",
-											"CUP_arifle_XM8_Compact_Rail",
-											"CUP_arifle_XM8_Railed",
-											"CUP_arifle_M16A4_Base",
-											"CUP_arifle_M4A1_BUIS_GL",
-											"CUP_arifle_M4A1_BUIS_camo_GL",
-											"CUP_arifle_M4A1_BUIS_desert_GL",
-											"CUP_arifle_M4A1_black",
-											"CUP_arifle_M4A1_desert",
-											"CUP_arifle_L85A2",
-											"CUP_arifle_L85A2_GL",
-											"CUP_arifle_L86A2",
-											"CUP_arifle_FNFAL_railed",
-											"CUP_arifle_AK107_GL",
-											"CUP_arifle_Sa58P_des",
-											"CUP_arifle_Sa58V_camo",
-											"CUP_arifle_Sa58RIS1",
-											"CUP_arifle_Sa58RIS1_des",
-											"CUP_arifle_Sa58RIS2",
-											"CUP_arifle_Sa58RIS2_camo",
-											"CUP_arifle_CZ805_A1",
-											"CUP_arifle_CZ805_GL",
-											"CUP_arifle_CZ805_B_GL",
-											"CUP_arifle_CZ805_B",
-											"CUP_arifle_XM8_Carbine",
-											"CUP_arifle_XM8_Carbine_FG",
-											"CUP_arifle_XM8_Carbine_GL",
-											"CUP_arifle_XM8_Compact",
-											"CUP_arifle_xm8_SAW",
-											"CUP_arifle_xm8_sharpshooter",
-											"CUP_arifle_Mk16_CQC",
-											"CUP_arifle_Sa58P",
-											"CUP_arifle_Sa58V",
-											"CUP_arifle_M16A2",
-											"CUP_arifle_M16A2_GL",
-											"CUP_arifle_M16A4_GL",
-											"CUP_arifle_M4A1",
-											"CUP_arifle_M4A1_camo",
-											"CUP_arifle_FNFAL",
-											"CUP_arifle_G36A",
-											"CUP_arifle_G36A_camo",
-											"CUP_arifle_G36K",
-											"CUP_arifle_G36K_camo",
-											"CUP_arifle_G36C",
-											"CUP_arifle_G36C_camo",
-											"CUP_arifle_MG36",
-											"CUP_arifle_MG36_camo",
-											"CUP_arifle_AK74",
-											"CUP_arifle_AK107",
-											"CUP_arifle_AKS74",
-											"CUP_arifle_AKS74U",
-											"CUP_arifle_AK74_GL",
-											"CUP_arifle_AKM",
-											"CUP_arifle_AKS",
-											"CUP_arifle_AKS_Gold",
-											"CUP_arifle_RPK74",
-											"CUP_arifle_AK74_GL_kobra",
-											"CUP_arifle_CZ805_A2"
+											"arifle_Mk20_F"
 										];
 	DMS_assault_pistols =				[							// Pistols for Assault Class (Set to empty array if you don't want to give them any pistols)
 											"hgun_ACPC2_F",
 											"hgun_Rook40_F",
 											"hgun_P07_F",
 											"hgun_Pistol_heavy_01_F",
-											"hgun_Pistol_heavy_02_F",
-											"rhs_weap_pya",
-											"rhs_weap_makarov_pmm",
-											"rhsusf_weap_m1911a1",
-											"CUP_hgun_Colt1911",
-											"CUP_hgun_Compact",
-											"CUP_hgun_Makarov",
-											"CUP_hgun_MicroUzi",
-											"CUP_hgun_TaurusTracker455",
-											"CUP_hgun_TaurusTracker455_gold",
-											"CUP_hgun_M9",
-											"CUP_hgun_SA61",
-											"CUP_hgun_Duty",
-											"CUP_hgun_Phantom",
-											"CUP_hgun_PB6P9",
-											"CUP_hgun_Glock17"
+											"hgun_Pistol_heavy_02_F"
 										];
 	DMS_assault_optics =				[							// Optics for Assault Class
 											"optic_Arco",
@@ -561,28 +416,7 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 											"optic_Aco",
 											"optic_Holosight",
 											"optic_MRCO",
-											"optic_DMS",
-											"rhsusf_acc_eotech_552",
-											"rhsusf_acc_LEUPOLDMK4",
-											"rhsusf_acc_ELCAN",
-											"rhsusf_acc_ELCAN_pip",
-											"rhsusf_acc_ACOG",
-											"rhsusf_acc_ACOG_pip",
-											"rhs_acc_1pn93_2",
-											"rhsusf_acc_ACOG2",
-											"rhsusf_acc_ACOG_USMC",
-											"rhsusf_acc_ACOG2_USMC",
-											"rhsusf_acc_ACOG3_USMC",
-											"rhsusf_acc_LEUPOLDMK4_2",
-											"rhsusf_acc_EOTECH",
-											"rhs_acc_1p29",
-											"rhs_acc_1p78",
-											"rhs_acc_pkas",
-											"rhs_acc_1p63",
-											"rhs_acc_ekp1",
-											"rhs_acc_pso1m2",
-											"rhs_acc_pgo7v",
-											"rhs_acc_1pn93_1"
+											"optic_DMS"
 										];
 	DMS_assault_optic_chance			= 75;						// Percentage chance that an Assault Class AI will get an optic
 	DMS_assault_bipod_chance			= 25;						// Percentage chance that an Assault Class AI will get a bipod
@@ -1070,78 +904,20 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 											"LMG_Zafir_F",
 											"LMG_Mk200_F",
 											"arifle_MX_SW_Black_F",
-											"MMG_01_hex_F",
-											"rhs_weap_m249_pip_L",
-											"rhs_weap_m249_pip_L_para",
-											"rhs_weap_m249_pip_L_vfg",
-											"rhs_weap_m249_pip_S",
-											"rhs_weap_m249_pip_S_para",
-											"rhs_weap_m249_pip_S_vfg",
-											"rhs_weap_m240B",
-											"rhs_weap_m240B_CAP",
-											"rhs_weap_m240G",
-											"rhs_weap_pkm",
-											"rhs_weap_pkp",
-											"CUP_lmg_M249_para",
-											"CUP_lmg_Mk48_des",
-											"CUP_lmg_Mk48_wdl",
-											"CUP_lmg_L110A1",
-											"CUP_lmg_Pecheneg",
-											"CUP_lmg_UK59",
-											"CUP_lmg_L7A2",
-											"CUP_lmg_M60E4",
-											"CUP_lmg_M240",
-											"CUP_lmg_M249",
-											"CUP_lmg_PKM"
+											"MMG_01_hex_F"
 										];
 	DMS_MG_pistols =					[							// Pistols for MG Class (Set to empty array if you don't want to give them any pistols)
 											"hgun_ACPC2_F",
 											"hgun_Rook40_F",
 											"hgun_P07_F",
 											"hgun_Pistol_heavy_01_F",
-											"hgun_Pistol_heavy_02_F",
-											"rhs_weap_pya",
-											"rhs_weap_makarov_pmm",
-											"rhsusf_weap_m1911a1",
-											"CUP_hgun_Colt1911",
-											"CUP_hgun_Compact",
-											"CUP_hgun_Makarov",
-											"CUP_hgun_MicroUzi",
-											"CUP_hgun_TaurusTracker455",
-											"CUP_hgun_TaurusTracker455_gold",
-											"CUP_hgun_M9",
-											"CUP_hgun_SA61",
-											"CUP_hgun_Duty",
-											"CUP_hgun_Phantom",
-											"CUP_hgun_PB6P9",
-											"CUP_hgun_Glock17"
+											"hgun_Pistol_heavy_02_F"
 										];
 	DMS_MG_optics =						[							//	Optics for MG Class
 											"optic_Hamr",
 											"optic_Aco",
 											"optic_Holosight",
-											"optic_MRCO",
-											"rhsusf_acc_eotech_552",
-											"rhsusf_acc_LEUPOLDMK4",
-											"rhsusf_acc_ELCAN",
-											"rhsusf_acc_ELCAN_pip",
-											"rhsusf_acc_ACOG",
-											"rhsusf_acc_ACOG_pip",
-											"rhs_acc_1pn93_2",
-											"rhsusf_acc_ACOG2",
-											"rhsusf_acc_ACOG_USMC",
-											"rhsusf_acc_ACOG2_USMC",
-											"rhsusf_acc_ACOG3_USMC",
-											"rhsusf_acc_LEUPOLDMK4_2",
-											"rhsusf_acc_EOTECH",
-											"rhs_acc_1p29",
-											"rhs_acc_1p78",
-											"rhs_acc_pkas",
-											"rhs_acc_1p63",
-											"rhs_acc_ekp1",
-											"rhs_acc_pso1m2",
-											"rhs_acc_pgo7v",
-											"rhs_acc_1pn93_1"
+											"optic_MRCO"
 										];
 	DMS_MG_optic_chance					= 50;						// Percentage chance that an MG Class AI will get an optic
 	DMS_MG_bipod_chance					= 90;						// Percentage chance that an MG Class AI will get a bipod
@@ -1639,119 +1415,19 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 											"srifle_LRR_F",
 											"arifle_MXM_F",
 											"arifle_MXM_Black_F",
-											"srifle_DMR_02_F",
-											"rhs_weap_sr25",
-											"rhs_weap_sr25_ec",
-											"rhs_weap_m14ebrri",
-											"rhs_weap_XM2010",
-											"rhs_weap_XM2010_wd",
-											"rhs_weap_XM2010_d",
-											"rhs_weap_XM2010_sa",
-											"rhs_weap_svd",
-											"rhs_weap_svdp_wd",
-											"rhs_weap_svds",
-											"CUP_srifle_DMR",
-											"CUP_srifle_ksvk",
-											"CUP_srifle_M110",
-											"CUP_srifle_M14",
-											"CUP_srifle_M24_des",
-											"CUP_srifle_M24_wdl",
-											"CUP_srifle_SVD",
-											"CUP_srifle_SVD_des",
-											"CUP_srifle_VSSVintorez",
-											"CUP_srifle_CZ750",
-											"CUP_srifle_Mk12SPR",
-											"CUP_srifle_AS50",
-											"CUP_srifle_AWM_des",
-											"CUP_srifle_AWM_wdl",
-											"CUP_srifle_CZ550",
-											"CUP_srifle_LeeEnfield",
-											"CUP_srifle_M40A3"	
+											"srifle_DMR_02_F"
 										];
 	DMS_sniper_pistols =				[							// Pistols for Sniper Class (Set to empty array if you don't want to give them any pistols)
 											"hgun_ACPC2_F",
 											"hgun_Rook40_F",
 											"hgun_P07_F",
 											"hgun_Pistol_heavy_01_F",
-											"hgun_Pistol_heavy_02_F",
-											"rhs_weap_pya",
-											"rhs_weap_makarov_pmm",
-											"rhsusf_weap_m1911a1",
-											"CUP_hgun_Colt1911",
-											"CUP_hgun_Compact",
-											"CUP_hgun_Makarov",
-											"CUP_hgun_MicroUzi",
-											"CUP_hgun_TaurusTracker455",
-											"CUP_hgun_TaurusTracker455_gold",
-											"CUP_hgun_M9",
-											"CUP_hgun_SA61",
-											"CUP_hgun_Duty",
-											"CUP_hgun_Phantom",
-											"CUP_hgun_PB6P9",
-											"CUP_hgun_Glock17"
+											"hgun_Pistol_heavy_02_F"
 										];
 	DMS_sniper_optics =					[							// Optics for Sniper Class
 											"optic_SOS",
 											"optic_DMS",
-											"optic_LRPS",
-											"rhsusf_acc_eotech_552",
-											"rhsusf_acc_LEUPOLDMK4",
-											"rhsusf_acc_ELCAN",
-											"rhsusf_acc_ELCAN_pip",
-											"rhsusf_acc_ACOG",
-											"rhsusf_acc_ACOG_pip",
-											"rhs_acc_1pn93_2",
-											"rhsusf_acc_ACOG2",
-											"rhsusf_acc_ACOG_USMC",
-											"rhsusf_acc_ACOG2_USMC",
-											"rhsusf_acc_ACOG3_USMC",
-											"rhsusf_acc_LEUPOLDMK4_2",
-											"rhsusf_acc_EOTECH",
-											"rhs_acc_1p29",
-											"rhs_acc_1p78",
-											"rhs_acc_pkas",
-											"rhs_acc_1p63",
-											"rhs_acc_ekp1",
-											"rhs_acc_pso1m2",
-											"rhs_acc_pgo7v",
-											"rhs_acc_1pn93_1",
-											"CUP_optic_PSO_1",
-											"CUP_optic_PSO_3",
-											"CUP_optic_Kobra",
-											"CUP_optic_GOSHAWK",
-											"CUP_optic_NSPU",
-											"CUP_optic_PechenegScope",
-											"CUP_optic_HoloBlack",
-											"CUP_optic_HoloWdl",
-											"CUP_optic_HoloDesert",
-											"CUP_optic_Eotech533",
-											"CUP_optic_Eotech533Grey",
-											"CUP_optic_CompM4",
-											"CUP_optic_SUSAT",
-											"CUP_optic_RCO",
-											"CUP_optic_RCO_desert",
-											"CUP_optic_CompM2_Woodland2",
-											"CUP_optic_CompM2_Woodland",
-											"CUP_optic_CompM2_Black",
-											"CUP_optic_CompM2_Desert",
-											"CUP_optic_ACOG",
-											"CUP_optic_SB_3_12x50_PMII",
-											"CUP_optic_AN_PVS_4",
-											"CUP_optic_AN_PVS_10",
-											"CUP_optic_LeupoldMk4",
-											"CUP_optic_LeupoldM3LR",
-											"CUP_optic_LeupoldMk4_CQ_T",
-											"CUP_optic_LeupoldMk4_MRT_tan",
-											"CUP_optic_LeupoldMk4_10x40_LRT_Desert",
-											"CUP_optic_LeupoldMk4_10x40_LRT_Woodland",
-											"CUP_optic_Leupold_VX3",
-											"CUP_optic_ElcanM145",
-											"CUP_optic_ELCAN_SpecterDR",
-											"CUP_optic_SB_11_4x20_PM",
-											"CUP_optic_ZDDot",
-											"CUP_optic_MRad",
-											"CUP_optic_TrijiconRx01_black",
-											"CUP_optic_TrijiconRx01_desert"	
+											"optic_LRPS"	
 										];
 	DMS_sniper_optic_chance				= 100;						// Percentage chance that a Sniper Class AI will get an optic
 	DMS_sniper_bipod_chance				= 90;						// Percentage chance that a Sniper Class AI will get a bipod
@@ -2004,8 +1680,7 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 
 	DMS_AI_wep_launchers_AT =			[							// AT Launchers
 											"launch_NLAW_F",
-											"launch_RPG32_F",
-											"CUP_launch_RPG7V"
+											"launch_RPG32_F"
 										];
 	DMS_AI_wep_launchers_AA =			[							// AA Launchers
 											"launch_B_Titan_F"
@@ -2026,13 +1701,11 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 	DMS_CrateCase_Sniper =				[							// If you pass "Sniper" in _lootValues, then it will spawn these weapons/items/backpacks
 											[
 												["Rangefinder",1],
-												["srifle_GM6_F",1],
-												["srifle_LRR_F",1],
-												["srifle_EBR_F",1],
-												["rhs_weap_sr25",1],
-												["rhs_weap_sr25_ec",1],
-												["hgun_Pistol_heavy_01_F",1],
-												["hgun_PDW2000_F",1]
+												["srifle_GM6_F",2],
+												["srifle_LRR_F",2],
+												["srifle_EBR_F",2]
+
+
 											],
 											[
 												["ItemGPS",1],
@@ -2056,7 +1729,6 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 												["5Rnd_127x108_APDS_Mag",3],
 												["7Rnd_408_Mag",3],
 												["20Rnd_762x51_Mag",5],
-												["11Rnd_45ACP_Mag",3],
 												["30Rnd_9x21_Mag",3]
 											],
 											[
@@ -2098,35 +1770,7 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 											"srifle_DMR_06_camo_F",
 											"srifle_DMR_06_olive_F",
 											"srifle_LRR_camo_F",
-											"srifle_GM6_camo_F",
-											"CUP_lmg_M249_para",
-											"CUP_lmg_Mk48_des",
-											"CUP_lmg_Mk48_wdl",
-											"CUP_lmg_L110A1",
-											"CUP_lmg_Pecheneg",
-											"CUP_lmg_UK59",
-											"CUP_lmg_L7A2",
-											"CUP_lmg_M60E4",
-											"CUP_lmg_M240",
-											"CUP_lmg_M249",
-											"CUP_lmg_PKM",
-											"CUP_srifle_DMR",
-											"CUP_srifle_ksvk",
-											"CUP_srifle_M110",
-											"CUP_srifle_M14",
-											"CUP_srifle_M24_des",
-											"CUP_srifle_M24_wdl",
-											"CUP_srifle_SVD",
-											"CUP_srifle_SVD_des",
-											"CUP_srifle_VSSVintorez",
-											"CUP_srifle_CZ750",
-											"CUP_srifle_Mk12SPR",
-											"CUP_srifle_AS50",
-											"CUP_srifle_AWM_des",
-											"CUP_srifle_AWM_wdl",
-											"CUP_srifle_CZ550",
-											"CUP_srifle_LeeEnfield",
-											"CUP_srifle_M40A3"	
+											"srifle_GM6_camo_F"	
 										];
 	DMS_BoxFood =						[							// List of food that can spawn in a crate.
 											"Exile_Item_GloriousKnakworst_Cooked",
@@ -2190,66 +1834,7 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 											"optic_SOS",
 											"optic_DMS",
 											"optic_LRPS",
-											"optic_Nightstalker",
-											"rhsusf_acc_eotech_552",
-											"rhsusf_acc_LEUPOLDMK4",
-											"rhsusf_acc_ELCAN",
-											"rhsusf_acc_ELCAN_pip",
-											"rhsusf_acc_ACOG",
-											"rhsusf_acc_ACOG_pip",
-											"rhs_acc_1pn93_2",
-											"rhsusf_acc_ACOG2",
-											"rhsusf_acc_ACOG_USMC",
-											"rhsusf_acc_ACOG2_USMC",
-											"rhsusf_acc_ACOG3_USMC",
-											"rhsusf_acc_LEUPOLDMK4_2",
-											"rhsusf_acc_EOTECH",
-											"rhs_acc_1p29",
-											"rhs_acc_1p78",
-											"rhs_acc_pkas",
-											"rhs_acc_1p63",
-											"rhs_acc_ekp1",
-											"rhs_acc_pso1m2",
-											"rhs_acc_pgo7v",
-											"rhs_acc_1pn93_1",
-											"CUP_optic_PSO_1",
-											"CUP_optic_PSO_3",
-											"CUP_optic_Kobra",
-											"CUP_optic_GOSHAWK",
-											"CUP_optic_PechenegScope",
-											"CUP_optic_HoloBlack",
-											"CUP_optic_HoloWdl",
-											"CUP_optic_HoloDesert",
-											"CUP_optic_Eotech533",
-											"CUP_optic_Eotech533Grey",
-											"CUP_optic_CompM4",
-											"CUP_optic_SUSAT",
-											"CUP_optic_RCO",
-											"CUP_optic_RCO_desert",
-											"CUP_optic_CompM2_Woodland2",
-											"CUP_optic_CompM2_Woodland",
-											"CUP_optic_CompM2_Black",
-											"CUP_optic_CompM2_Desert",
-											"CUP_optic_ACOG",
-											"CUP_optic_SB_3_12x50_PMII",
-											"CUP_optic_AN_PAS_13c2",
-											"CUP_optic_AN_PVS_4",
-											"CUP_optic_AN_PVS_10",
-											"CUP_optic_LeupoldMk4",
-											"CUP_optic_LeupoldM3LR",
-											"CUP_optic_LeupoldMk4_CQ_T",
-											"CUP_optic_LeupoldMk4_MRT_tan",
-											"CUP_optic_LeupoldMk4_10x40_LRT_Desert",
-											"CUP_optic_LeupoldMk4_10x40_LRT_Woodland",
-											"CUP_optic_Leupold_VX3",
-											"CUP_optic_ElcanM145",
-											"CUP_optic_ELCAN_SpecterDR",
-											"CUP_optic_AN_PAS_13c1",
-											"CUP_optic_SB_11_4x20_PM",
-											"CUP_optic_ZDDot",
-											"CUP_optic_MRad",
-											"CUP_optic_TrijiconRx01_black",
-											"CUP_optic_TrijiconRx01_desert"
+											"optic_Nightstalker"
 										];
 	DMS_BoxBackpacks =					[							//List of backpacks that can spawn in a crate
 											"B_Bergen_rgr",
@@ -2299,6 +1884,40 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 											"TRYK_B_FieldPack_Wood",
 											"TRYK_Winter_pack"
 										];
+	DMS_CrateCase_Custom1 =					[
+										[
+											["MMG_01_hex_F",2],
+											["MMG_02_camo_F",2],
+											["srifle_EBR_F",2],
+											["srifle_GM6_F",1],
+											["srifle_LRR_F",1],
+											["Laserdesignator",1]
+										],
+										[
+											["150Rnd_93x64_Mag",4],
+											["130Rnd_338_Mag",4],
+											["20Rnd_762x51_Mag",6],
+											["5Rnd_127x108_APDS_Mag",3],
+											["7Rnd_408_Mag",3],
+											["optic_DMS",2],
+											["optic_Hamr",2],
+											["optic_Holosight",3],
+											["IEDLandSmall_Remote_Mag",2],
+											["optic_tws_mg",1],
+											["Exile_Item_InstaDoc",2],
+											["Exile_Item_BBQSandwich_Cooked",4],
+											["Exile_Item_PlasticBottleCoffee",4],
+											["V_PlateCarrierSpec_rgr",1],
+											["V_PlateCarrierSpec_blk",1],
+											["V_PlateCarrierSpec_mtp",1],
+											["Exile_Uniform_Woodland",2],
+											["U_I_FullGhillie_ard",2],
+											["NVGoggles",2]
+										],
+										[
+											["B_Carryall_cbr",4]
+										]
+									];
 	DMS_BoxItems						= DMS_BoxSurvivalSupplies+DMS_BoxBuildingSupplies+DMS_BoxOptics;	// Random "items" can spawn optics, survival supplies, or building supplies
 
 	DMS_RareLoot						= true;						// Potential chance to spawn rare loot in any crate.
@@ -2321,33 +1940,14 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 	DMS_MilitaryVehicles =				[							// List of military vehicles that can spawn
 											"Exile_Car_Strider",
 											"Exile_Car_Hunter",
-											"Exile_Car_Ifrit",
-											"rhsusf_M1078A1P2_wd_fmtv_usarmy",
-											"rhsusf_M1078A1P2_d_fmtv_usarmy",
-											"rhsusf_M1078A1P2_wd_open_fmtv_usarmy",
-											"rhsusf_M1078A1P2_d_open_fmtv_usarmy",
-											"rhsusf_M1078A1P2_wd_flatbed_fmtv_usarmy",
-											"rhsusf_M1078A1P2_d_flatbed_fmtv_usarmy",
-											"rhsusf_M1078A1P2_B_d_fmtv_usarmy",
-											"rhsusf_M1078A1P2_B_wd_fmtv_usarmy",
-											"rhsusf_M1078A1P2_B_wd_open_fmtv_usarmy",
-											"rhsusf_M1078A1P2_B_d_open_fmtv_usarmy",
-											"rhsusf_M1078A1P2_B_wd_flatbed_fmtv_usarmy",
-											"rhsusf_M1078A1P2_B_d_flatbed_fmtv_usarmy"
+											"Exile_Car_Ifrit"
 										];
 
 	DMS_TransportTrucks =				[							// List of transport trucks that can spawn
 											"Exile_Car_Van_Guerilla01",
 											"Exile_Car_Zamak",
 											"Exile_Car_Tempest",
-											"Exile_Car_HEMMT",
-											"RHS_Ural_Open_Civ_01",
-											"RHS_Ural_Open_Civ_02",
-											"RHS_Ural_Open_Civ_03",
-											"RHS_Ural_MSV_01",
-											"RHS_Ural_Fuel_MSV_01",
-											"RHS_Ural_Open_MSV_01",
-											"rhs_Ural_Flat_MSV_01"
+											"Exile_Car_HEMMT"
 										];
 
 	DMS_RefuelTrucks =					[							// List of refuel trucks that can spawn
@@ -2366,14 +1966,7 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 											"Exile_Car_Hatchback_Sport_Red",
 											"Exile_Car_SUV_Red",
 											"Exile_Car_Offroad_Rusty2",
-											"Exile_Bike_QuadBike_Fia",
-											"rhs_gaz66_r142_vmf",
-											"rhs_gaz66_repair_vmf",
-											"rhs_gaz66_vmf",
-											"rhs_gaz66_flat_vdv",
-											"rhs_gaz66o_vdv",
-											"rhs_gaz66o_flat_vdv",
-											"rhs_gaz66_ammo_vmf"
+											"Exile_Bike_QuadBike_Fia"
 										];
 
 	DMS_TransportHelis =				[							// List of transport helis that can spawn
@@ -2382,15 +1975,7 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 											"Exile_Chopper_Mohawk_FIA",
 											"Exile_Chopper_Huron_Black",
 											"Exile_Chopper_Hellcat_Green",
-											"Exile_Chopper_Taru_Transport_Black",
-											"RHS_CH_47F",
-											"rhs_ka60_c",
-											"rhs_ka60_grey",
-											"RHS_UH60M",
-											"rhs_UH60M_MEV2_d",
-											"rhs_Mi8mt_vvs",
-											"rhs_Mi8mt_cargo_vvs",
-											"rhs_UH1Y_unarmed"
+											"Exile_Chopper_Taru_Transport_Black"
 										];
 
 	DMS_ReinforcementHelis =			[							// List of helis that can spawn for AI paratrooper reinforcements.

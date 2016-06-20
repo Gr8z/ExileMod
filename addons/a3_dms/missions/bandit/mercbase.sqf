@@ -45,7 +45,7 @@ _difficulty = "hardcore";
 
 
 // Create AI
-_AICount = 6 + (round (random 2));
+_AICount = 20 + (round (random 5));
 
 _group =
 [
@@ -65,7 +65,8 @@ _veh =
 	_group,
 	"assault",
 	_difficulty,
-	_side
+	_side,
+	"I_MRAP_03_hmg_f"
 ] call DMS_fnc_SpawnAIVehicle;
 
 
@@ -79,7 +80,12 @@ _veh =
 _staticGuns =
 [
 	[
-		[_pos,[-6.29138,3.9917,0]] call DMS_fnc_CalcPos
+		[_pos,[-13.9683,8.87969,0]] call DMS_fnc_CalcPos,
+		[_pos,[-24.5109,8.8797,0]] call DMS_fnc_CalcPos,
+		[_pos,[-3.30954,8.82574,0]] call DMS_fnc_CalcPos,
+		[_pos,[-24.5202,-8.53532,0]] call DMS_fnc_CalcPos,
+		[_pos,[-14.0793,-8.53399,0]] call DMS_fnc_CalcPos,
+		[_pos,[-3.43222,-8.64577,0]] call DMS_fnc_CalcPos
 	],
 	_group,
 	"assault",
@@ -88,15 +94,11 @@ _staticGuns =
 	"O_HMG_01_high_F"
 ] call DMS_fnc_SpawnAIStaticMG;
 
-(_staticGuns select 0) setDir 15;
-
-
 _baseObjs =
 [
-	"base1",
+	"base2",
 	_pos
 ] call DMS_fnc_ImportFromM3E;
-
 
 // Create Crate
 _crate = ["Exile_Container_SupplyBox",_pos] call DMS_fnc_SpawnCrate;
@@ -113,21 +115,22 @@ _missionAIUnits =
 ];
 
 // Define mission-spawned objects and loot values
+
 _missionObjs =
 [
 	_staticGuns+_baseObjs+[_veh],			// armed AI vehicle, base objects, and static gun
 	[],
-	[[_crate,"Sniper"]]
+	[[_crate,"Custom1"]]
 ];
 
 // Define Mission Start message
-_msgStart = ['#FFFF00',format ["A mercenary base has been located at %1! There are reports of a dandy crate inside of it...",mapGridPosition _pos]];
+_msgStart = ['#FFFF00',format ["Reports from survivors mention a mercenary base with stolen military equipment located at %1! ",mapGridPosition _pos]];
 
 // Define Mission Win message
-_msgWIN = ['#0080ff',"Convicts have successfully assaulted the Mercenary Base and obtained the dandy crate!"];
+_msgWIN = ['#0080ff',"Convicts have successfully assaulted the mercenary base and obtained the crate!"];
 
 // Define Mission Lose message
-_msgLOSE = ['#FF0000',"Seems like the Mercenaries packed up and drove away..."];
+_msgLOSE = ['#FF0000',"Seems like the mercenaries burned down the base and covered their tracks..."];
 
 // Define mission name (for map marker and logging)
 _missionName = "Mercenary Base";
