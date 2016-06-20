@@ -5207,8 +5207,6 @@ class CfgTerritories
 };
 class CfgTraderCategories 
 {
-	#include "cfg\RHS\TraderCategoriesRHS.hpp"
-	#include "cfg\CUP\TraderCategoriesCUP.hpp"
 	#include "cfg\TRYK\TraderCategoriesTRYK.hpp"
 	
 	class Community
@@ -5905,17 +5903,7 @@ class CfgTraderCategories
 			"3Rnd_UGL_FlareGreen_F",
 			"3Rnd_UGL_FlareRed_F",
 			"3Rnd_UGL_FlareWhite_F",
-			"3Rnd_UGL_FlareYellow_F",
-			"CUP_FlareGreen_M203",
-			"CUP_FlareRed_GP25_M",
-			"CUP_FlareWhite_GP25_M",
-			"CUP_FlareWhite_M203",
-			"rhs_VG40MD_Green",
-			"rhs_VG40MD_Red",
-			"rhs_VG40MD_White",
-			"rhs_VG40OP_green",
-			"rhs_VG40OP_red",
-			"rhs_VG40OP_white"
+			"3Rnd_UGL_FlareYellow_F"
 		};
 	};
 
@@ -5945,13 +5933,7 @@ class CfgTraderCategories
 			"3Rnd_SmokeOrange_Grenade_shell",
 			"3Rnd_SmokePurple_Grenade_shell",
 			"3Rnd_SmokeRed_Grenade_shell",
-			"3Rnd_SmokeYellow_Grenade_shell",
-			"CUP_1Rnd_SMOKE_GP25_M",
-			"CUP_1Rnd_Smoke_M203",
-			"CUP_1Rnd_SmokeGreen_M203",
-			"CUP_1Rnd_SmokeRed_M203",
-			"CUP_1Rnd_SmokeYellow_M203",
-			"CUP_6Rnd_Smoke_M203"
+			"3Rnd_SmokeYellow_Grenade_shell"
 		};
 	};	
 
@@ -5978,21 +5960,7 @@ class CfgTraderCategories
 			"IEDUrbanBig_Remote_Mag",
 			"IEDUrbanSmall_Remote_Mag",
 			"SatchelCharge_Remote_Mag",
-			"SLAMDirectionalMine_Wire_Mag",
-			"CUP_HandGrenade_L109A1_HE",
-			"CUP_HandGrenade_RGD5",
-			"CUP_HandGrenade_M67",
-			"rhsusf_8Rnd_HE",
-			"rhsusf_8Rnd_FRAG",
-			"CUP_1Rnd_HE_GP25_M",
-			"CUP_1Rnd_HEDP_M203",
-			"CUP_1Rnd_HE_M203",
-			"CUP_6Rnd_HE_M203",
-			"rhs_mag_m4009",
-			"rhs_mag_m576",
-			"rhs_VOG25",
-			"rhs_VG40SZ",
-			"rhs_VG40TB"
+			"SLAMDirectionalMine_Wire_Mag"
 		};
 	};
 
@@ -6239,21 +6207,7 @@ class CfgTraderCategories
 		"ItemRadio",
 		"ItemGPS",
 		"NVGoggles",
-		"Exile_Item_InstaDoc",
-		"rhs_weap_sr25",
-		"rhs_weap_sr25_ec",
-		"rhs_weap_m14ebrri",
-		"rhs_weap_XM2010",
-		"rhs_weap_XM2010_wd",
-		"rhs_weap_XM2010_d",
-		"rhs_weap_XM2010_sa",
-		"rhs_weap_svd",
-		"rhs_weap_svdp_wd",
-		"rhs_weap_svdp_wd_npz",
-		"rhs_weap_svdp_npz",
-		"rhs_weap_svds",
-		"rhs_weap_svds_npz"
-
+		"Exile_Item_InstaDoc"
     };
   };
 };
@@ -6270,36 +6224,15 @@ class CfgTraders
 		categories[] = 
 		{
 			"PointerAttachments",
-			"RHSPointerAttachments",
-			"CUPPointerAttachments",
 			"BipodAttachments",
-			"RHSBipodAttachments",
 			"MuzzleAttachments",
-			"RHSMuzzleAttachments",
-			"CUPMuzzleAttachments",
 			"OpticAttachments",
-			"RHSOpticAttachments",
-			"CUPOpticAttachments",
 			"Ammunition",
-			"RHSAmmo",
-			"CUPAmmunition",
 			"Pistols",
-			"RHSPistols",
-			"CUPPistols",
-			"RHSShotguns",
-			"CUPShotguns",
 			"SubMachineGuns",
-			"RHSSubMachineGuns",
-			"CUPSubMachineGuns",
 			"LightMachineGuns",
-			"RHSLightMachineGuns",
-			"CUPLightMachineGuns",
 			"AssaultRifles",
-			"RHSAssaultRifles",
-			"CUPAssaultRifles",
-			"SniperRifles",
-			"RHSSniperRifles",
-			"CUPSniperRifles"
+			"SniperRifles"
 		};
 	};
 
@@ -6316,10 +6249,6 @@ class CfgTraders
 			"Smokes",
 			"StaticMGs",
 			"Explosives",
-			"CUPLaunchers",
-			"CUPLauncherAmmo",
-			"CUPExplosives",
-			"RHSExplosives",
 			"Navigation"
 		};
 	};
@@ -6334,18 +6263,14 @@ class CfgTraders
 		categories[] = 
 		{
 			"Headgear",
-			"RHSHeadgear",
 			"TRYKHeadgear",
 			"TRYKNVGHeadgear",
 			"Uniforms",
-			"RHSUniforms",
 			"TRYKUniforms",
 			"Vests",
-			"RHSVests",
 			"TRYKVests",
 			"Backpacks",
 			"TRYKBackpacks",
-			"CUPBackpacks",
 			"FirstAid"
 		};
 	};
@@ -6388,9 +6313,7 @@ class CfgTraders
 		categories[] = 
 		{
 			"Cars",
-			"Trucks",
-			"RHSVehicles",
-			"RHSArmedVehicles"
+			"Trucks"
 		};
 	};
 
@@ -6403,8 +6326,6 @@ class CfgTraders
 		showWeaponFilter = 0;
 		categories[] = 
 		{
-			"RHSHelicopters",
-			"RHSPlanes",
 			"Choppers", 
 			"Planes"
 		};
@@ -7074,25 +6995,6 @@ class CfgVehicleCustoms
 			{"Exile_Car_Hunter",		1000, "Exile White Edition",	{"exile_assets\texture\vehicle\Exile_Hunter_Snow_co.paa","exile_assets\texture\vehicle\Exile_Hunter_Snow_Back_co.paa"};},
 			{"Exile_Car_Hunter",		1000, "Exile Hex",				{"exile_assets\texture\vehicle\Exile_Hunter_Hex_co.paa","exile_assets\texture\vehicle\Exile_Hunter_Black_Back_co.paa"};},
 			{"Exile_Car_Hunter",		1000, "Exile Black",			{"exile_assets\texture\vehicle\Exile_Hunter_Black_co.paa","exile_assets\texture\vehicle\Exile_Hunter_Black_Back_co.paa"};}
-		};
-	};
-	///////////////////////////////////////////////////////////////////////////////
-	// BTR70
-	///////////////////////////////////////////////////////////////////////////////
-	class rhs_btr70_vmf
-	{
-		skins[] = 
-		{
-			
-			{"rhs_btr70_msv",		1500, "BTR-70 Stock", {"rhsafrf\addons\rhs_btr70\data\btr70_1_co.paa","rhsafrf\addons\rhs_btr70\data\btr70_2_co.paa"};},	
-			{"rhs_btr70_msv",		1500, "BTR-70 Sand", {"rhsafrf\addons\rhs_btr70_camo\data\btr70_1_sand_co.paa","rhsafrf\addons\rhs_btr70_camo\data\btr70_2_sand_co.paa"};},	
-			{"rhs_btr70_msv",		1500, "BTR-70 Desert", {"rhsafrf\addons\rhs_btr70_camo\data\btr70_des_1_co.paa","rhsafrf\addons\rhs_btr70_camo\data\btr70_des_2_co.paa"};},
-			{"rhs_btr70_msv",		1500, "BTR-70 Mar", {"rhsafrf\addons\rhs_btr70_camo\data\btr70_mar_1_co.paa","rhsafrf\addons\rhs_btr70_camo\data\btr70_mar_2_co.paa"};},
-			{"rhs_btr70_msv",		1500, "BTR-70 MC", {"rhsafrf\addons\rhs_btr70_camo\data\btr70_MC_1_co.paa","rhsafrf\addons\rhs_btr70_camo\data\btr70_MC_2_co.paa"};},
-			{"rhs_btr70_msv",		1500, "BTR-70 Omon 1", {"rhsafrf\addons\rhs_btr70_camo\data\btr70_omon1_1_co.paa","rhsafrf\addons\rhs_btr70_camo\data\btr70_omon1_2_co.paa"};},
-			{"rhs_btr70_msv",		1500, "BTR-70 Omon 2", {"rhsafrf\addons\rhs_btr70_camo\data\btr70_omon2_1_co.paa","rhsafrf\addons\rhs_btr70_camo\data\btr70_omon2_2_co.paa"};},
-			{"rhs_btr70_msv",		1500, "BTR-70 Camo", {"rhsafrf\addons\rhs_btr70_camo\data\btr70_tri1_1_co.paa","rhsafrf\addons\rhs_btr70_camo\data\btr70_tri1_2_co.paa"};},
-			{"rhs_btr70_msv",		1500, "BTR-70 Camo 2", {"rhsafrf\addons\rhs_btr70_camo\data\btr70_tri2_1_co.paa","rhsafrf\addons\rhs_btr70_camo\data\btr70_tri2_2_co.paa"};}
 		};
 	};
 };
