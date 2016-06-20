@@ -3919,7 +3919,7 @@ class CfgInteractionMenus
 			};
 			class HackSafe : ExileAbstractAction
 			{
-				title = "Hack Safe";
+				title = "Hack Container";
 				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo -1)";
 				action = "_this spawn ExAd_fnc_startHack";
 			};
@@ -3955,7 +3955,7 @@ class CfgInteractionMenus
 			};
 			class HackSafe : ExileAbstractAction
 			{
-				title = "Hack Safe";
+				title = "Hack Container";
 				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo -1)";
 				action = "_this spawn ExAd_fnc_startHack";
 			};
@@ -3991,7 +3991,7 @@ class CfgInteractionMenus
 			};
 			class HackSafe : ExileAbstractAction
 			{
-				title = "Hack Safe";
+				title = "Hack Container";
 				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo -1)";
 				action = "_this spawn ExAd_fnc_startHack";
 			};
@@ -4027,7 +4027,7 @@ class CfgInteractionMenus
 			};
 			class HackSafe : ExileAbstractAction
 			{
-				title = "Hack Safe";
+				title = "Hack Container";
 				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo -1)";
 				action = "_this spawn ExAd_fnc_startHack";
 			};
