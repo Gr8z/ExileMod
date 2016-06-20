@@ -3892,7 +3892,7 @@ class CfgInteractionMenus
 	class CargoSmall
 	{
 		targetType = 2;
-		target = "Land_CargoBox_V1_F_Kit";
+		target = "Land_CargoBox_V1_F";
 		
 		class Actions 
 		{
@@ -3916,6 +3916,12 @@ class CfgInteractionMenus
 				title = "Set PIN";
 				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo 0)";
 				action = "_this spawn ExileClient_object_lock_setPin";
+			};
+			class HackSafe : ExileAbstractAction
+			{
+				title = "Hack Safe";
+				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo -1)";
+				action = "_this spawn ExAd_fnc_startHack";
 			};
 		};
 	};	
@@ -3947,6 +3953,12 @@ class CfgInteractionMenus
 				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo 0)";
 				action = "_this spawn ExileClient_object_lock_setPin";
 			};
+			class HackSafe : ExileAbstractAction
+			{
+				title = "Hack Safe";
+				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo -1)";
+				action = "_this spawn ExAd_fnc_startHack";
+			};
 		};
 	};
 	class Cargo40
@@ -3976,6 +3988,12 @@ class CfgInteractionMenus
 				title = "Set PIN";
 				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo 0)";
 				action = "_this spawn ExileClient_object_lock_setPin";
+			};
+			class HackSafe : ExileAbstractAction
+			{
+				title = "Hack Safe";
+				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo -1)";
+				action = "_this spawn ExAd_fnc_startHack";
 			};
 		};
 	};
@@ -4007,6 +4025,12 @@ class CfgInteractionMenus
 				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo 0)";
 				action = "_this spawn ExileClient_object_lock_setPin";
 			};
+			class HackSafe : ExileAbstractAction
+			{
+				title = "Hack Safe";
+				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo -1)";
+				action = "_this spawn ExAd_fnc_startHack";
+			};
 		};
 	};
 	
@@ -4037,6 +4061,12 @@ class CfgInteractionMenus
 				title = "Set PIN";
 				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo 0)";
 				action = "_this spawn ExileClient_object_lock_setPin";
+			};
+			class HackSafe : ExileAbstractAction
+			{
+				title = "Hack Safe";
+				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo -1)";
+				action = "_this spawn ExAd_fnc_startHack";
 			};
 		};
 	};
