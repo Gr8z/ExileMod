@@ -30,9 +30,6 @@ class CfgRemoteExec
 		class ExAd_fnc_incomingRequest 								{ allowedTargets=2; };
 		class ExAd_fnc_loadVGDetailView 							{ allowedTargets=2; };
 		class ExAdServer_fnc_clientRequest 							{ allowedTargets=2; };
-		class AVS_fnc_rearmVehicle									{ allowedTargets=2; };
-        class AVS_fnc_refuelVehicle									{ allowedTargets=2; };
-		class AVS_fnc_fillCanister									{ allowedTargets=2; };
 	};
 	class Commands
 	{
