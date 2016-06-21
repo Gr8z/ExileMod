@@ -84,9 +84,7 @@
 	"optic_mas_kobra", 
 	"optic_mas_kobra_c", 
 	"optic_mas_nspu", 
-	"optic_mas_goshawk", 
-	"optic_mas_PSO_kv", 
-	"optic_mas_PSO_kv_c"	
+	"optic_mas_goshawk",	
 		};
 	};
 
@@ -122,9 +120,6 @@
 	//AA-12
 	"20Rnd_mas_12Guage_Slug", 		//slug
 	"20Rnd_mas_12Guage_Pellets", 	//pellets
-	//M107 ammo
-	"5Rnd_mas_127x99_Stanag",
-	"5Rnd_mas_127x99_T_Stanag",		//tracer
 	//M24 ammo
 	"5Rnd_mas_762x51sd_Stanag", 	//SD
 	//LRR AWM ammo
@@ -171,10 +166,6 @@
 	"30Rnd_mas_9x39_mag",
 	"30Rnd_mas_9x39sd_mag",			//SD
 	"30Rnd_mas_9x39d_mag",			//underwater
-	//KSVK ammo
-	"5Rnd_mas_127x108_mag",
-	//"5Rnd_mas_127x108_dem_mag",	//explosive
-	"5Rnd_mas_127x108_T_mag",		//tracer
 	//RPK ammo
 	"100Rnd_mas_545x39_mag",
 	"100Rnd_mas_545x39_T_mag",		//tracer
@@ -456,15 +447,8 @@
 	"srifle_mas_svd",			// stock
 	//Zastava M91
 	"srifle_mas_m91",			// stock
-	//KSVK
-	"srifle_mas_ksvk",			// stock
-	"srifle_mas_ksvk_c",		// camo
 	//LRR AWM
-	"srifle_mas_lrr",			// stock
-	//M107
-	"srifle_mas_m107",			// stock
-	"srifle_mas_m107_v",		// camo
-	"srifle_mas_m107_d"		// desert
+	"srifle_mas_lrr"			// stock
 		};
 	};
 
@@ -475,8 +459,7 @@
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
-	"mas_launch_RPG7_F",
-	"mas_launch_RPG18_F", 
+	"mas_launch_RPG7_F", 
 	"mas_launch_Stinger_F"
 		};
 	};	
@@ -487,7 +470,6 @@
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
-	"mas_PG18",
 	"mas_PG7V", 
 	"mas_OG7", 
 	"mas_PG7L", 
@@ -504,6 +486,6 @@
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\backpack_ca.paa";
 		items[] = 
 		{
-
+	"B_mas_m_Bergen_us" 
 		};
 	};		
