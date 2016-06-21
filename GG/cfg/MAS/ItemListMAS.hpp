@@ -189,11 +189,11 @@
     class arifle_mas_m16a2_gl 						{ quality = 1; price = 6000; };
     class arifle_mas_g36c 							{ quality = 1; price = 6000; };
     class arifle_mas_m4 							{ quality = 1; price = 6000; };
-    class arifle_mas_m4_gl							{ quality = 1; price = 1000; };
+    class arifle_mas_m4_gl							{ quality = 1; price = 8000; };
     class arifle_mas_m4_m203						{ quality = 1; price = 6000; };
     class arifle_mas_m4_v 							{ quality = 1; price = 6000; };
-    class arifle_mas_m4_gl_v 						{ quality = 1; price = 1000; };
-    class arifle_mas_m4_m203_v 						{ quality = 1; price = 1000; };
+    class arifle_mas_m4_gl_v 						{ quality = 1; price = 8000; };
+    class arifle_mas_m4_m203_v 						{ quality = 1; price = 7000; };
     class arifle_mas_m4_d 							{ quality = 1; price = 6000; };
     class arifle_mas_m4_gl_d						{ quality = 1; price = 8000; };
     class arifle_mas_m4_m203_d 						{ quality = 1; price = 7000; };
