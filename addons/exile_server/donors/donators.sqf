@@ -150,7 +150,8 @@ Scout1 = [
 Scout2 = [
 	"76561197980662311", // ezPK XS PWR (OD-2015-09-15) #11479
 	"76561198062796125", // ezPK Zephyr (OD-2015-09-15) #11597
-	"76561198258605036", //  Graham Broadbelt (OD-2016-06-07) #13850 
+	"76561198258605036", //  Graham Broadbelt (OD-2016-06-07) #13850
+	"76561198090813740", // Celty (OD-2016-06-19) #13943	
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout2";
@@ -273,6 +274,8 @@ Soldier3 = [
 	"76561198155900335", // Andrew (OD-2016-06-16) #13924
 	"76561198145289881", // [WD] Lt. Squeaker Squad (OD-2016-06-18) #13932 
 	"76561197972037463", // *[MA]* Get Smashed (OD-2016-06-19) #13937  
+	"76561198126852115", // Ferg (OD-2016-06-19) #13941
+	"76561198194014225", // [BHJ]Raul (OD-2016-06-20) #13945
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Soldier3";

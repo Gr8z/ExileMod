@@ -1,11 +1,11 @@
 if !((vehicle player) isEqualTo player) exitWith {};
-if (!("ItemRadio" in (items player) || "ItemRadio" in (assigneditems player))) exitWith { hint "You need a radio to deploy a bike !";};
-if (ExileClientPlayerIsInCombat) exitWith { hint "You cannot deploy a bike in combat !";};
+if (!("ItemRadio" in (items player) || "ItemRadio" in (assigneditems player))) exitWith { hint "You need a radio to deploy a quadbike !";};
+if (ExileClientPlayerIsInCombat) exitWith { hint "You cannot deploy a quadbike in combat !";};
 (findDisplay 24015) closeDisplay 0;
 _spawnPos = player modelToWorld [0,2,0];
 _spawnDir = (getDir player) -90;
 player unlinkItem "ItemRadio";
-_veh = createVehicle["Exile_Bike_MountainBike", _spawnPos , [] ,0 , "NONE"];
+_veh = createVehicle["Exile_Bike_QuadBike_Black", _spawnPos , [] ,0 , "NONE"];
 _veh setDir _spawnDir;
-["Success", ["Bike Deployed! Radio removed!"]] call ExileClient_gui_notification_event_addNotification;
-_veh addEventHandler ["getin", "'down' cutText ['WARNING: Deployed Bikes do not save through restarts','PLAIN DOWN'];"];
+["Success", ["Quadbike Deployed! Radio removed!"]] call ExileClient_gui_notification_event_addNotification;
+_veh addEventHandler ["getin", "'down' cutText ['WARNING: Deployed Quadbikes do not save through restarts','PLAIN DOWN'];"];
