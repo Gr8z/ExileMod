@@ -2637,17 +2637,9 @@ class CfgExileArsenal
 	class srifle_LRR_camo_F 						{ quality = 3; price = 10000; };
 	class srifle_LRR_F 								{ quality = 3; price = 10000; };
 
-	
-	///////////////////////////////////////////////////////////////////////////////
-	// BIKES
-	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Bike_OldBike 						{ quality = 1; price = 40; };
-	class Exile_Bike_MountainBike 					{ quality = 1; price = 50; };
-
 	///////////////////////////////////////////////////////////////////////////////
 	// QUAD BIKES
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Bike_QuadBike_Black					{ quality = 1; price = 250; };
 	class Exile_Bike_QuadBike_Blue					{ quality = 1; price = 250; };
 	class Exile_Bike_QuadBike_Red					{ quality = 1; price = 250; };
 	class Exile_Bike_QuadBike_White					{ quality = 1; price = 250; };
@@ -4320,7 +4312,7 @@ class CfgInteractionMenus
 	class Bikes
 	{
 		targetType = 2;
-		target = "Bicycle";
+		target = "Exile_Bike_QuadBike_Black";
 
 		class Actions
 		{
@@ -4332,9 +4324,9 @@ class CfgInteractionMenus
 			};
 			class Pack: ExileAbstractAction
 			{
-				title = "Pack Bike";
+				title = "Pack Quadbike";
 				condition = "true";
-				action = "deleteVehicle ExileClientInteractionObject;player linkItem 'ItemRadio';['Success',['Bike packed! Radio added!']] call ExileClient_gui_notification_event_addNotification;";
+				action = "deleteVehicle ExileClientInteractionObject;player linkItem 'ItemRadio';['Success',['Quadbike packed! Radio added!']] call ExileClient_gui_notification_event_addNotification;";
 			};
 		};
 	};
@@ -5494,17 +5486,6 @@ class CfgTraderCategories
 		};
 	};
 
-	class Bikes
-	{
-		name = "Bikes";
-		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
-		items[] = 
-		{
-			"Exile_Bike_OldBike",
-			"Exile_Bike_MountainBike"
-		};
-	};
-
 	class Cars
 	{
 		name = "Cars";
@@ -5512,7 +5493,6 @@ class CfgTraderCategories
 		items[] = 
 		{
 			"Exile_Car_Kart_Black",
-			"Exile_Bike_QuadBike_Black",
 			"Exile_Car_OldTractor_Red",
 			"Exile_Car_TowTractor_White",
 			"Exile_Car_Tractor_Red",
