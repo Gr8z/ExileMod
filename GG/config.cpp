@@ -1872,8 +1872,6 @@ class CfgExileArsenal
 {
 	class Exile_Uniform_BambiOverall				{ quality = 1; price = 1; sellPrice = 1; };
 
-	#include "cfg\RHS\ItemListRHS.hpp"
-	#include "cfg\CUP\ItemListCUP.hpp"
 	#include "cfg\MAS\ItemListMAS.hpp"
 	#include "cfg\TRYK\ItemListTRYK.hpp"
 	
