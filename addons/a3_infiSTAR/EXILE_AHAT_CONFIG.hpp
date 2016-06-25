@@ -153,6 +153,7 @@ adminUIDandAccess[] =
 		 "76561198274767971", // CanadianFrodo
 		 "76561198065188130", // Nacho
 		 "76561198036004541", // Demen
+		 "76561197987069300", // Shroombear
 		 "0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
 			"Teleport On Map Click","Teleport - Target To Me","Teleport - Me To Target","Teleport In Facing Direction (10m steps)",
@@ -179,7 +180,6 @@ adminUIDandAccess[] =
 	{
 		{
 		 "76561198060389676", // Powerwolf
-		 "76561197987069300", // Shroombear
 		 // Add UID's Above - Don't forget the comma!
 		 "0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
