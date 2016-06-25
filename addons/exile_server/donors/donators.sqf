@@ -205,6 +205,7 @@ Scout3 = [
 	"76561198006564526", // Hybrid Black (OD-2016-06-13) #13897
 	"76561198084922099", // ^UG^ MegaWaffle (OD-2016-06-15) #13917
 	"76561198135611591", // Turnip (OD-2016-05-26) #13802
+	"76561198000588916", // howwl (OD-2016-06-24) #13960
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout3";
