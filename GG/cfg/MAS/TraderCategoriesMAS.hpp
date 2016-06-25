@@ -455,7 +455,7 @@
 	
 	class MASLaunchers 
 	{
-		name = "Launchers";
+		name = "MAS Launchers";
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
@@ -466,7 +466,7 @@
 	
 	class MASLauncherAmmo 
 	{
-		name = "Launcher Ammo";
+		name = "MAS Launcher Ammo";
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
@@ -475,7 +475,6 @@
 	"mas_PG7L", 
 	"mas_PG7VR", 
 	"mas_TBG7V",
-	"RPG32_F",
 	"mas_Stinger"
 		};
 	};		
