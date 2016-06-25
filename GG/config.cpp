@@ -5163,7 +5163,7 @@ class CfgTraderCategories
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
-			"Exile_Melee_Axe"
+			"Exile_Melee_Axe",
 			"Exile_Item_Matches",
 			"Exile_Item_CookingPot",
 			"Exile_Item_CanOpener",
