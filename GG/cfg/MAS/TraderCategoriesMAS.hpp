@@ -19,7 +19,7 @@
 
 	class MASMuzzleAttachments 
 	{
-		name = "MAS Suppressor Attachments";
+		name = "MAS Muzzle Attachments";
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemmuzzle_ca.paa";
 		items[] = 
 		{
@@ -455,7 +455,7 @@
 	
 	class MASLaunchers 
 	{
-		name = "MAS Launchers";
+		name = "Launchers";
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
@@ -466,7 +466,7 @@
 	
 	class MASLauncherAmmo 
 	{
-		name = "MAS Launcher Ammo";
+		name = "Launcher Ammo";
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
@@ -475,6 +475,7 @@
 	"mas_PG7L", 
 	"mas_PG7VR", 
 	"mas_TBG7V",
+	"RPG32_F",
 	"mas_Stinger"
 		};
 	};		
