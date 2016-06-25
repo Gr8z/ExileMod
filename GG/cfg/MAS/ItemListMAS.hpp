@@ -65,7 +65,7 @@
 	class optic_mas_PSO_nv_eo_c 					{ quality = 1; price = 250; };
 	class optic_mas_PSO_day 						{ quality = 1; price = 200; };
 	class optic_mas_PSO_nv_day 						{ quality = 1; price = 250; };
-	class optic_mas_term 							{ quality = 1; price = 100; }; //needs to checked
+	class optic_mas_term 							{ quality = 1; price = 5000; }; //needs to checked
 	class optic_mas_MRD 							{ quality = 1; price = 25; };
 	class optic_mas_LRPS 							{ quality = 1; price = 500; };	
 	class optic_mas_kobra							{ quality = 1; price = 150; };
