@@ -65,6 +65,7 @@ Engineer3 = [
 // Marksman Class  /////////
 Marksman1 = [
 	"76561198106890529", // Englishman (OD-2016-05-10) #13687
+	"76561198090941099", // Josh (OD-2016-06-25) #13963
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Marksman1";
