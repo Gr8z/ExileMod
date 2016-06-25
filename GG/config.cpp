@@ -5693,7 +5693,7 @@ class CfgTraders
 			"TRYKVests",
 			"Backpacks",
 			"TRYKBackpacks",
-			"MASBackpacks"
+			"MASBackpacks",
 			"FirstAid"
 		};
 	};
