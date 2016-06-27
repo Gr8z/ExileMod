@@ -98,7 +98,10 @@ pathToCustomBillBoardTextures[] =
 /* "startAsNormal": if you add admin UIDs in here as well, they will start as almost "normal" player instead of with admin menu and such. */
 startAsNormal[] =
 {
-	"76561198021389971","76561198065188130","UID3","..."
+	"76561198021389971", //Thirdhero
+	"76561198065188130", //Nacho?
+	"UID3", 
+	"..."
 };
 
 /* "hiddenSuperAdmin": These admins are seen as normal players by normal admins, their actions are not logged either (to keep an eye out on your admins) */
