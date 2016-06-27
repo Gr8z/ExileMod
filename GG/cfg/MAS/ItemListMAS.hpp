@@ -76,6 +76,7 @@
 	///////////////////////////////////////////////////////////////////////////////
 	// Ammunition
 	///////////////////////////////////////////////////////////////////////////////
+	class 12Rnd_mas_45acp_Mag						{ quality = 2; price = 175; };
 	class 30Rnd_mas_556x45_Stanag    				{ quality = 2; price = 150; };
     class 30Rnd_mas_556x45sd_Stanag           		{ quality = 2; price = 150; };
     class 30Rnd_mas_556x45_T_Stanag    				{ quality = 2; price = 150; };
@@ -135,12 +136,14 @@
 	///////////////////////////////////////////////////////////////////////////////
 	// Pistols
 	///////////////////////////////////////////////////////////////////////////////
+	class hgun_mas_acp_F							{ quality = 1; price = 800; sellPrice = 160; };
+	class hgun_mas_usp_F							{ quality = 1; price = 800; sellPrice = 160; };
     class hgun_mas_mak_F 							{ quality = 1; price = 700; };
-    class hgun_mas_uzi_F 							{ quality = 1; price = 1500; };
+    class hgun_mas_uzi_F 							{ quality = 1; price = 1500; sellPrice = 300; };
     class hgun_mas_m9_F 							{ quality = 1; price = 800; };
-    class hgun_mas_bhp_F 							{ quality = 1; price = 800; };
+    class hgun_mas_bhp_F 							{ quality = 1; price = 800; sellPrice = 160; };
     class hgun_mas_glock_F 							{ quality = 1; price = 925; };
-    class hgun_mas_p226_F 							{ quality = 1; price = 800; };
+    class hgun_mas_p226_F 							{ quality = 1; price = 800; sellPrice = 160; };
     class hgun_mas_grach_F 							{ quality = 1; price = 800; };
     class hgun_mas_sa61_F 							{ quality = 1; price = 1500; };
     class hgun_mas_mp7p_F 							{ quality = 1; price = 4000; };
@@ -156,22 +159,22 @@
 	// Sub Machine Guns
 	///////////////////////////////////////////////////////////////////////////////
     class arifle_mas_mp40							{ quality = 1; price = 2500; };
-    class arifle_mas_mp40_o 						{ quality = 1; price = 2500; };
-    class arifle_mas_mp5 							{ quality = 1; price = 2500; };
+    class arifle_mas_mp40_o 						{ quality = 1; price = 2500; sellPrice = 500; };
+    class arifle_mas_mp5 							{ quality = 1; price = 2500; sellPrice = 500; };
     class arifle_mas_mp5_v 							{ quality = 1; price = 2500; };
     class arifle_mas_mp5_d							{ quality = 1; price = 2500; };
     class arifle_mas_mp5sd 							{ quality = 1; price = 3000; };
     class arifle_mas_mp5sd_ds 						{ quality = 1; price = 2500; };
-    class arifle_mas_bizon							{ quality = 1; price = 3000; };
-    class hgun_mas_mp7_F							{ quality = 1; price = 4000; };
+    class arifle_mas_bizon							{ quality = 1; price = 3000; sellPrice = 600; };
+    class hgun_mas_mp7_F							{ quality = 1; price = 4000; sellPrice = 800; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Light Machine Guns
 	///////////////////////////////////////////////////////////////////////////////
     class LMG_mas_MK200_F							{ quality = 1; price = 8000; };
-    class LMG_mas_M249_F_v							{ quality = 1; price = 8000; };
+    class LMG_mas_M249_F_v							{ quality = 1; price = 8000; sellPrice = 1600; };
     class LMG_mas_Mk48_F 							{ quality = 1; price = 9500; };
-    class LMG_mas_Mk48_F_v 							{ quality = 1; price = 9500; };
+    class LMG_mas_Mk48_F_v 							{ quality = 1; price = 9500; sellPrice = 1900; };
     class LMG_mas_Mk48_F_d							{ quality = 1; price = 9500; };
     class LMG_mas_m240_F							{ quality = 1; price = 9500; };
     class LMG_mas_mg3_F 							{ quality = 1; price = 9500; };
@@ -184,7 +187,7 @@
 	///////////////////////////////////////////////////////////////////////////////
 	// Assault Rifles
 	///////////////////////////////////////////////////////////////////////////////	
-    class arifle_mas_m16 							{ quality = 1; price = 6000; };
+    class arifle_mas_m16 							{ quality = 1; price = 6000; sellPrice = 1200; };
     class arifle_mas_m16a2 							{ quality = 1; price = 6000; };
     class arifle_mas_m16_gl 						{ quality = 1; price = 6000; };
     class arifle_mas_m16a2_gl 						{ quality = 1; price = 6000; };
@@ -198,7 +201,7 @@
     class arifle_mas_m4_d 							{ quality = 1; price = 6000; };
     class arifle_mas_m4_gl_d						{ quality = 1; price = 8000; };
     class arifle_mas_m4_m203_d 						{ quality = 1; price = 7000; };
-    class arifle_mas_m4vlt							{ quality = 1; price = 6000; };
+    class arifle_mas_m4vlt							{ quality = 1; price = 6000; sellPrice = 1200; };
     class arifle_mas_m4c 							{ quality = 1; price = 6000; };
     class arifle_mas_m4_m203c 						{ quality = 1; price = 7000; };
     class arifle_mas_m4c_v 							{ quality = 1; price = 6000; };
@@ -216,7 +219,7 @@
     class arifle_mas_hk416_m203_d					{ quality = 1; price = 7000; };
     class arifle_mas_hk416c 						{ quality = 1; price = 6000; };
     class arifle_mas_hk416_m203c 					{ quality = 1; price = 7000; };
-    class arifle_mas_hk416c_v 						{ quality = 1; price = 6000; };
+    class arifle_mas_hk416c_v 						{ quality = 1; price = 6000; sellPrice = 1200; };
     class arifle_mas_hk416_m203c_v 					{ quality = 1; price = 7000; };
     class arifle_mas_hk416c_d 						{ quality = 1; price = 6000; };
     class arifle_mas_hk416_m203c_d 					{ quality = 1; price = 7000; };
@@ -241,7 +244,7 @@
     class arifle_mas_mk16_l 						{ quality = 1; price = 6000; };
     class arifle_mas_mk16_l_gl 						{ quality = 1; price = 8000; };
     class arifle_mas_m27 							{ quality = 1; price = 6500; };
-    class arifle_mas_m27m 							{ quality = 1; price = 6500; };
+    class arifle_mas_m27m 							{ quality = 1; price = 6500; sellPrice = 1300; };
     class arifle_mas_m27_v 							{ quality = 1; price = 6500; };
     class arifle_mas_m27m_v 						{ quality = 1; price = 6500; };
     class arifle_mas_m27_d							{ quality = 1; price = 6500; };
@@ -288,14 +291,14 @@
     class arifle_mas_g3s 							{ quality = 1; price = 8000; };
     class arifle_mas_g3s_m203 						{ quality = 1; price = 9000; };
     class arifle_mas_fal							{ quality = 1; price = 8000; };
-    class arifle_mas_fal_m203						{ quality = 1; price = 9500; };
+    class arifle_mas_fal_m203						{ quality = 1; price = 9500; sellPrice = 1900; };
     class arifle_mas_m14 							{ quality = 1; price = 8000; };
     class arifle_mas_ppsh 							{ quality = 1; price = 8000; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Sniper Rifles
 	///////////////////////////////////////////////////////////////////////////////	
-    class arifle_mas_lee 							{ quality = 1; price = 8000; };
+    class arifle_mas_lee 							{ quality = 1; price = 8000; sellPrice = 1600; };
     class srifle_mas_vss 							{ quality = 1; price = 3000; };
     class arifle_mas_asval 							{ quality = 1; price = 3000; };
     class arifle_mas_asval_ds 						{ quality = 1; price = 4000; };
@@ -303,12 +306,12 @@
     class srifle_mas_sr25 							{ quality = 1; price = 10000; };
     class srifle_mas_sr25_v 						{ quality = 1; price = 10000; };
     class srifle_mas_sr25_d 						{ quality = 1; price = 10000; };
-    class srifle_mas_m110 							{ quality = 1; price = 10000; };
+    class srifle_mas_m110 							{ quality = 1; price = 10000; sellPrice = 2000; };
     class srifle_mas_mk17s 							{ quality = 1; price = 12000; };
     class srifle_mas_m24 							{ quality = 1; price = 8000; };
     class srifle_mas_m24_v							{ quality = 1; price = 8000; };
     class srifle_mas_m24_d 							{ quality = 1; price = 8000; };
-    class srifle_mas_svd 							{ quality = 1; price = 10000; };
+    class srifle_mas_svd 							{ quality = 1; price = 10000; sellPrice = 2000; };
     class srifle_mas_m91 							{ quality = 1; price = 10000; };
     class srifle_mas_lrr							{ quality = 1; price = 16000; };		
 	

@@ -93,6 +93,8 @@
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{	
+			//.45 ammo
+			"12Rnd_mas_45acp_Mag",
 			//Hk 416 ammo
 			"30Rnd_mas_556x45_Stanag",
 			"30Rnd_mas_556x45sd_Stanag", 	//SD
@@ -192,6 +194,10 @@
 		{
 			//Makarov
 			"hgun_mas_mak_F",			// stock
+			//ACP
+			"hgun_mas_acp_F";			// stock
+			//USP
+			"hgun_mas_usp_F",			// stock
 			//Micro UZI
 			"hgun_mas_uzi_F",			// stock
 			//M9
