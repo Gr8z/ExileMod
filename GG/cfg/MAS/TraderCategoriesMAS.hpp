@@ -256,6 +256,8 @@
 		{
 			//Stoner LMG (mk200)
 			"LMG_mas_MK200_F",			// stock
+			//M249 LMG 5.56
+			"LMG_mas_M249_F_v",
 			//Mk48
 			"LMG_mas_Mk48_F",			// stock
 			"LMG_mas_Mk48_F_v",			// camo

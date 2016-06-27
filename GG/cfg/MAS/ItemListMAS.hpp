@@ -169,6 +169,7 @@
 	// Light Machine Guns
 	///////////////////////////////////////////////////////////////////////////////
     class LMG_mas_MK200_F							{ quality = 1; price = 8000; };
+    class LMG_mas_M249_F_v							{ quality = 1; price = 8000; };
     class LMG_mas_Mk48_F 							{ quality = 1; price = 9500; };
     class LMG_mas_Mk48_F_v 							{ quality = 1; price = 9500; };
     class LMG_mas_Mk48_F_d							{ quality = 1; price = 9500; };
