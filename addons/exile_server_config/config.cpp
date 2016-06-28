@@ -952,7 +952,25 @@ class CfgSettings
 						{"srifle_DMR_03_khaki_F",1},
 						{"srifle_DMR_03_tan_F",1},
 						{"srifle_DMR_04_F",1},
-						{"srifle_LRR_camo_F",1}
+						{"srifle_LRR_camo_F",1},
+						{"CUP_lmg_M249_para",1},
+						{"CUP_lmg_Mk48_des",1},
+						{"CUP_lmg_Pecheneg",1},
+						{"CUP_lmg_UK59",1},
+						{"CUP_srifle_DMR",1},
+						{"CUP_srifle_ksvk",1},
+						{"CUP_srifle_M110",1},
+						{"CUP_srifle_M14",1},
+						{"CUP_srifle_M24_des",1},
+						{"CUP_srifle_M24_wdl",1},
+						{"CUP_srifle_SVD",1},
+						{"CUP_srifle_SVD_des",1},
+						{"CUP_srifle_VSSVintorez",1},
+						{"CUP_srifle_CZ750",1},
+						{"CUP_srifle_Mk12SPR",1},
+						{"CUP_srifle_CZ550",1},
+						{"CUP_srifle_LeeEnfield",1},
+						{"CUP_srifle_M40A3",1}
 					};
 				};
 			};
