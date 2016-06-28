@@ -485,7 +485,7 @@
 	
 	class MASLauncherAmmo 
 	{
-		name = "Launcher Ammo";
+		name = "MAS Launcher Ammo";
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
