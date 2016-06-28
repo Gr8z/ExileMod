@@ -87,14 +87,6 @@
     class 150Rnd_mas_556x45_Stanag    				{ quality = 2; price = 350; };
     class 150Rnd_mas_556x45_T_Stanag    			{ quality = 2; price = 350; };
 	class 12Rnd_mas_45acp_Mag						{ quality = 2; price = 175; };
-	class 30Rnd_mas_556x45_Stanag    				{ quality = 2; price = 150; };
-    class 30Rnd_mas_556x45sd_Stanag           		{ quality = 2; price = 150; };
-    class 30Rnd_mas_556x45_T_Stanag    				{ quality = 2; price = 150; };
-    class 20Rnd_mas_762x51_Stanag    				{ quality = 2; price = 500; };
-    class 20Rnd_mas_762x51sd_Stanag    				{ quality = 2; price = 500; };
-    class 20Rnd_mas_762x51_T_Stanag    				{ quality = 2; price = 500; };
-    class 150Rnd_mas_556x45_Stanag    				{ quality = 2; price = 500; };
-    class 150Rnd_mas_556x45_T_Stanag    			{ quality = 2; price = 500; };
     class 30Rnd_mas_9x21_Stanag    					{ quality = 2; price = 100; };
     class 30Rnd_mas_9x21sd_Stanag   				{ quality = 2; price = 100; };
     class 30Rnd_mas_9x21d_Stanag    				{ quality = 2; price = 100; };
