@@ -4624,7 +4624,6 @@ class CfgTerritories
 class CfgTraderCategories 
 {
 	#include "cfg\TRYK\TraderCategoriesTRYK.hpp"
-	#include "cfg\MAS\TraderCategoriesMAS.hpp"
 	
 	class Community
 	{
