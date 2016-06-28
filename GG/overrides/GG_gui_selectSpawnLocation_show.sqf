@@ -472,7 +472,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addWeapon "arifle_mas_m27m";
 			player addPrimaryWeaponItem "optic_mas_Holosight_blk";
 			player addPrimaryWeaponItem "bipod_03_F_blk";
-			player addWeapon "hgun_mas_acp_F";
+			player addWeapon "CUP_hgun_Compact";
 			player addHandgunItem "optic_mas_MRD";
 			player addItemToUniform "Exile_Magazine_Swing";
 			player addItemToBackpack "Exile_Item_Bandage";
