@@ -91,6 +91,7 @@
 10, 30Rnd_45ACP_Mag_SMG_01					// Vermin SMG
 10, 30Rnd_45ACP_Mag_SMG_01_Tracer_Green		// Vermin SMG
 10, 30Rnd_mas_9x21_Stanag
+10, 30Rnd_mas_9x21_Stanag
 10, 30Rnd_mas_9x21sd_Stanag
 10, 30Rnd_mas_9x21d_Stanag
 10, 40Rnd_mas_46x30_Mag
@@ -254,10 +255,15 @@
 10, 20Rnd_mas_762x51_T_Stanag
 10, 150Rnd_mas_556x45_Stanag
 10, 150Rnd_mas_556x45_T_Stanag
+10, 20Rnd_mas_762x51_Stanag
+10, 20Rnd_mas_762x51sd_Stanag
+10, 20Rnd_mas_762x51_T_Stanag
 10, 71Rnd_mas_762x25_mag
 10, 30Rnd_mas_545x39_mag
 10, 30Rnd_mas_545x39sd_mag
 10, 30Rnd_mas_545x39_T_mag
+10, 150Rnd_mas_556x45_Stanag
+10, 150Rnd_mas_556x45_T_Stanag
 10, 10Rnd_mas_12Gauge_Slug
 10, 10Rnd_mas_12Gauge_Pellets
 10, 20Rnd_mas_12Gauge_Slug
