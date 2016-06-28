@@ -78,7 +78,6 @@
 	///////////////////////////////////////////////////////////////////////////////
 	// Ammunition
 	///////////////////////////////////////////////////////////////////////////////
-
 	class 30Rnd_mas_556x45_Stanag    				{ quality = 2; price = 200; };
     class 30Rnd_mas_556x45sd_Stanag           		{ quality = 2; price = 200; };
     class 30Rnd_mas_556x45_T_Stanag    				{ quality = 2; price = 200; };
@@ -87,7 +86,6 @@
     class 20Rnd_mas_762x51_T_Stanag    				{ quality = 2; price = 300; };
     class 150Rnd_mas_556x45_Stanag    				{ quality = 2; price = 350; };
     class 150Rnd_mas_556x45_T_Stanag    			{ quality = 2; price = 350; };
-
 	class 12Rnd_mas_45acp_Mag						{ quality = 2; price = 175; };
 	class 30Rnd_mas_556x45_Stanag    				{ quality = 2; price = 150; };
     class 30Rnd_mas_556x45sd_Stanag           		{ quality = 2; price = 150; };
@@ -97,7 +95,6 @@
     class 20Rnd_mas_762x51_T_Stanag    				{ quality = 2; price = 500; };
     class 150Rnd_mas_556x45_Stanag    				{ quality = 2; price = 500; };
     class 150Rnd_mas_556x45_T_Stanag    			{ quality = 2; price = 500; };
-
     class 30Rnd_mas_9x21_Stanag    					{ quality = 2; price = 100; };
     class 30Rnd_mas_9x21sd_Stanag   				{ quality = 2; price = 100; };
     class 30Rnd_mas_9x21d_Stanag    				{ quality = 2; price = 100; };
@@ -150,7 +147,6 @@
 	///////////////////////////////////////////////////////////////////////////////
 	// Pistols
 	///////////////////////////////////////////////////////////////////////////////
-
     class hgun_mas_mak_F 							{ quality = 1; price = 600; };
     class hgun_mas_uzi_F 							{ quality = 1; price = 1500; };
     class hgun_mas_m9_F 							{ quality = 1; price = 600; };
@@ -159,7 +155,6 @@
     class hgun_mas_glock_F 							{ quality = 1; price = 600; };
     class hgun_mas_p226_F 							{ quality = 1; price = 600; };
     class hgun_mas_grach_F 							{ quality = 1; price = 600; };
-
 	class hgun_mas_acp_F							{ quality = 1; price = 800; sellPrice = 160; };
 	class hgun_mas_usp_F							{ quality = 1; price = 800; sellPrice = 160; };
     class hgun_mas_mak_F 							{ quality = 1; price = 700; };
@@ -169,7 +164,6 @@
     class hgun_mas_glock_F 							{ quality = 1; price = 925; };
     class hgun_mas_p226_F 							{ quality = 1; price = 800; sellPrice = 160; };
     class hgun_mas_grach_F 							{ quality = 1; price = 800; };
-
     class hgun_mas_sa61_F 							{ quality = 1; price = 1500; };
     class hgun_mas_mp7p_F 							{ quality = 1; price = 3500; };
 	class hgun_mas_glocksf_F						{ quality = 1; price = 600; };
@@ -187,7 +181,6 @@
 	// Sub Machine Guns
 	///////////////////////////////////////////////////////////////////////////////
     class arifle_mas_mp40							{ quality = 1; price = 2500; };
-
     class arifle_mas_mp40_o 						{ quality = 1; price = 2500; };
     class arifle_mas_mp5 							{ quality = 1; price = 3500; };
     class arifle_mas_mp5_v 							{ quality = 1; price = 3500; };
@@ -197,7 +190,6 @@
     class arifle_mas_bizon							{ quality = 1; price = 3500; };
     class hgun_mas_mp7_F							{ quality = 1; price = 3500; };
 	class arifle_mas_sten							{ quality = 1; price = 2500; };
-
     class arifle_mas_mp40_o 						{ quality = 1; price = 2500; sellPrice = 500; };
     class arifle_mas_mp5 							{ quality = 1; price = 2500; sellPrice = 500; };
     class arifle_mas_mp5_v 							{ quality = 1; price = 2500; };
@@ -207,7 +199,6 @@
     class arifle_mas_bizon							{ quality = 1; price = 3000; sellPrice = 600; };
     class hgun_mas_mp7_F							{ quality = 1; price = 4000; sellPrice = 800; };
 
-	
 	///////////////////////////////////////////////////////////////////////////////
 	// Light Machine Guns
 	///////////////////////////////////////////////////////////////////////////////
@@ -231,12 +222,10 @@
 	///////////////////////////////////////////////////////////////////////////////
 	// Assault Rifles
 	///////////////////////////////////////////////////////////////////////////////	
-
     class arifle_mas_m16 							{ quality = 1; price = 5000; };
     class arifle_mas_m16a2 							{ quality = 1; price = 5000; };
     class arifle_mas_m16_gl 						{ quality = 1; price = 5500; };
     class arifle_mas_m16a2_gl 						{ quality = 1; price = 5500; };
-
     class arifle_mas_m16 							{ quality = 1; price = 6000; sellPrice = 1200; };
     class arifle_mas_m16a2 							{ quality = 1; price = 6000; };
     class arifle_mas_m16_gl 						{ quality = 1; price = 6000; };
@@ -385,7 +374,6 @@
     class mas_launch_RPG7_F							{ quality = 1; price = 50000; };
     class mas_launch_Stinger_F						{ quality = 1; price = 100000; };
 
-	
 	///////////////////////////////////////////////////////////////////////////////
 	// Launcher Ammo
 	///////////////////////////////////////////////////////////////////////////////
