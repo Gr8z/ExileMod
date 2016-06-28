@@ -8,7 +8,8 @@ class Mission {
 		"CUP_Weapons_WeaponsCore",
 		"rhs_weapons",
 		"rhsusf_weapons",
-		"tryk_backpack"
+		"tryk_backpack",
+		"extendedbase"
 	};
 	addOnsAuto[]=
 	{
