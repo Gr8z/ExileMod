@@ -5387,7 +5387,7 @@ class CfgTraderCategories
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\cargothrow_ca.paa";
 		items[] = 
 		{
-			"RPG32_Fg"
+			"RPG32_F"
 		};
 	};
 
