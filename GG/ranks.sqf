@@ -146,8 +146,8 @@ switch (true) do
 	for "_i" from 1 to 3 do {player addItemToVest "11Rnd_45ACP_Mag";};
 	for "_i" from 1 to 2 do {player addItemToVest "30Rnd_mas_9x21_Stanag";};
     player addHeadgear "H_Cap_oli_hs";
-    player addWeaponGlobal "hgun_Pistol_heavy_01_F";
 	player addWeaponGlobal "arifle_mas_mp5_v";
+    player addWeaponGlobal "hgun_Pistol_heavy_01_F";
 	player addPrimaryWeaponItem "muzzle_mas_snds_C";
 	player addPrimaryWeaponItem "optic_mas_aim_c";
     player addItem "Exile_Item_Matches";
@@ -173,8 +173,8 @@ switch (true) do
 	for "_i" from 1 to 3 do {player addItemToVest "11Rnd_45ACP_Mag";};
 	for "_i" from 1 to 2 do {player addItemToBackpack "30Rnd_mas_545x39_mag";};
     player addHeadgear "TRYK_H_Bandana_H";
-    player addWeaponGlobal "hgun_Pistol_heavy_01_F";
 	player addWeaponGlobal "arifle_mas_aks74u_c";
+    player addWeaponGlobal "hgun_Pistol_heavy_01_F";
 	player addPrimaryWeaponItem "optic_mas_kobra_c";
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
