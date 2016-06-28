@@ -98,7 +98,10 @@ pathToCustomBillBoardTextures[] =
 /* "startAsNormal": if you add admin UIDs in here as well, they will start as almost "normal" player instead of with admin menu and such. */
 startAsNormal[] =
 {
-	"76561198021389971","76561198065188130","UID3","..."
+	"76561198021389971", //Thirdhero
+	"76561198065188130", //Nacho?
+	"UID3", 
+	"..."
 };
 
 /* "hiddenSuperAdmin": These admins are seen as normal players by normal admins, their actions are not logged either (to keep an eye out on your admins) */
@@ -117,6 +120,7 @@ adminUIDandAccess[] =
 		 "76561197978528230", // Dark
 		 "76561198115492831", // BigEgg
 		 "76561198056028211",  // Nasty
+		 "76561198133936962", // Wrice4
 		 //Add UID's Above - Don't forget the comma!
 		"0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
@@ -144,7 +148,6 @@ adminUIDandAccess[] =
 	{
 		{
 		 "76561197960289679", //TangoWhiskey
-		 "76561198133936962", // Wrice4
 		 "76561198088251390", // SIX
 		 "76561197979611157", // Clanzoucu
 		 "76561198073495490", // Adam Kadmon
