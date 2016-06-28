@@ -144,7 +144,7 @@ switch (true) do
     player addVest "TRYK_V_ArmorVest_Ranger";
     player addBackpack "B_FieldPack_blk";
 	for "_i" from 1 to 3 do {player addItemToVest "11Rnd_45ACP_Mag";};
-	for "_i" from 1 to 2 do {player addItemToBackpack "30Rnd_mas_9x21_Stanag";};
+	for "_i" from 1 to 2 do {player addItemToVest "30Rnd_mas_9x21_Stanag";};
     player addHeadgear "H_Cap_oli_hs";
     player addWeaponGlobal "hgun_Pistol_heavy_01_F";
 	player addWeaponGlobal "arifle_mas_mp5_v";
