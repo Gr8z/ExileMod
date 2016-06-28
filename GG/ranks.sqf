@@ -43,8 +43,8 @@ switch (true) do
     player addHeadgear "TRYK_H_woolhat_cu";
     player addVest "V_BandollierB_rgr";
     player addBackpack "B_AssaultPack_mcamo";
-	for "_i" from 1 to 3 do {player addItemToVest "8Rnd_mas_9x18_Mag";};
 	player addWeaponGlobal "hgun_mas_mak_F";
+	for "_i" from 1 to 3 do {player addItemToVest "8Rnd_mas_9x18_Mag";};
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
@@ -66,12 +66,12 @@ switch (true) do
     for "_i" from 1 to 2 do {player addItemToUniform "8Rnd_mas_9x18_Mag";};
     player addVest "V_BandollierB_blk";
     player addBackpack "TRYK_B_FieldPack_Wood";
-	for "_i" from 1 to 2 do {player addItemToBackpack "7Rnd_mas_12Gauge_Slug";};
-    for "_i" from 1 to 2 do {player addItemToBackpack "7Rnd_mas_12Gauge_Pellets";};
     player addHeadgear "TRYK_R_CAP_BLK";
 	player addWeaponGlobal "arifle_mas_m1014";
     player addWeaponGlobal "hgun_mas_mak_F";
     player addItemToVest "8Rnd_mas_9x18_Mag";
+	for "_i" from 1 to 2 do {player addItemToBackpack "7Rnd_mas_12Gauge_Slug";};
+    for "_i" from 1 to 2 do {player addItemToBackpack "7Rnd_mas_12Gauge_Pellets";};
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
@@ -95,8 +95,8 @@ switch (true) do
     player addHeadgear "TRYK_H_woolhat";
     for "_i" from 1 to 3 do {player addItemToVest "8Rnd_mas_9x18_Mag";};
 	for "_i" from 1 to 2 do {player addItemToBackpack "40Rnd_mas_46x30_Mag";};
-    player addWeaponGlobal "hgun_mas_mp7_F";
-	player addWeaponGlobal "hgun_mas_mak_F";
+    player addWeaponGlobal "hgun_mas_mak_F";
+	player addWeaponGlobal "hgun_mas_mp7_F";
 	player addPrimaryWeaponItem "optic_Aco_smg";
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
@@ -121,8 +121,8 @@ switch (true) do
 	for "_i" from 1 to 2 do {player addItemToBackpack "30Rnd_mas_9x21_Stanag";};
 	for "_i" from 1 to 3 do {player addItemToBackpack "15Rnd_mas_9x21_Mag";};
     player addHeadgear "H_Cap_tan_specops_US";
-	player addWeaponGlobal "arifle_mas_mp40_o";
     player addWeaponGlobal "hgun_mas_m9_F";
+	player addWeaponGlobal "arifle_mas_mp40_o";
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
@@ -220,10 +220,10 @@ switch (true) do
      [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,180000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
     player forceAddUniform "TRYK_U_B_MARPAT_Wood_Tshirt";
     player addVest "V_PlateCarrierIA2_dgtl";
-	player addBackpack "B_mas_Kitbag_rng";
 	for "_i" from 1 to 2 do {player addItemToUniform "12Rnd_mas_45acp_Mag";};
 	for "_i" from 1 to 2 do {player addItemToVest "30Rnd_mas_556x45_Stanag";};
     for "_i" from 1 to 2 do {player addItemToVest "12Rnd_mas_45acp_Mag";};
+    player addBackpack "B_mas_Kitbag_rng";
     player addHeadgear "TRYK_H_Booniehat_MARPAT_WOOD";
     player addWeaponGlobal "arifle_mas_m4c";
     player addPrimaryWeaponItem "optic_mas_aim";
