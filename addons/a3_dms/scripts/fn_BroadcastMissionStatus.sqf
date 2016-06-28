@@ -2,8 +2,6 @@
 	DMS_fnc_BroadcastMissionStatus
 	Created by eraser1
 
-	https://github.com/Defent/DMS_Exile/wiki/DMS_fnc_BroadcastMissionStatus
-
 	Usage:
 	[
 		_messageTitle,
@@ -16,10 +14,14 @@
 	Returns nothing
 */
 
+
+private ["_missionName", "_messageInfo", "_titleColor", "_message"];
+
+
 if !(params
 [
-	"_messageTitle",
-	"_messageInfo"
+	["_missionName","",[""]],
+	["_messageInfo",[],[[]],[2]]
 ])
 exitWith
 {
@@ -28,8 +30,8 @@ exitWith
 
 _messageInfo params
 [
-	"_titleColor",
-	"_message"
+	["_titleColor","#FFFF00",[""]],
+	["_message","",[""]]
 ];
 
 if (DMS_DEBUG) then
@@ -45,11 +47,13 @@ if !(_message isEqualType "") then
 if (_message isEqualTo "") exitWith {};
 
 {
+	private "_args";
+
 	switch (toLower _x) do
 	{
 		case "systemchatrequest":
 		{
-			format["%1: %2",toUpper _messageTitle,_message] remoteExecCall ["systemChat",-2];
+			format["%1: %2",toUpper _missionName,_message] remoteExecCall ["systemChat",-2];
 		};
 
 		case "standardhintrequest":
@@ -60,7 +64,7 @@ if (_message isEqualTo "") exitWith {};
 				_titleColor,
 				DMS_standardHint_Title_Size,
 				DMS_standardHint_Title_Font,
-				_messageTitle,
+				_missionName,
 				DMS_standardHint_Message_Color,
 				DMS_standardHint_Message_Size,
 				DMS_standardHint_Message_Font,
@@ -76,7 +80,7 @@ if (_message isEqualTo "") exitWith {};
 				_titleColor,
 				DMS_dynamicText_Title_Size,
 				DMS_dynamicText_Title_Font,
-				_messageTitle,
+				_missionName,
 				DMS_dynamicText_Message_Color,
 				DMS_dynamicText_Message_Size,
 				DMS_dynamicText_Message_Font,
@@ -92,7 +96,7 @@ if (_message isEqualTo "") exitWith {};
 				_titleColor,
 				DMS_textTiles_Title_Size,
 				DMS_textTiles_Title_Font,
-				_messageTitle,
+				_missionName,
 				DMS_textTiles_Message_Color,
 				DMS_textTiles_Message_Size,
 				DMS_textTiles_Message_Font,

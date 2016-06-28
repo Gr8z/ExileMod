@@ -46,9 +46,9 @@
 {
     if !(_x params
     [
-        "_heli",
-        "_dropPoint",
-        "_remainAsGunship"
+        ["_heli", objNull, [objNull]],
+        ["_dropPoint", 0, [[], objNull], [2,3]],
+        ["_remainAsGunship", false, [false]]
     ])
     exitWith
     {
@@ -70,9 +70,9 @@
 
     if ((_heli distance2D _dropPoint)<200) then
     {
-        private _groupOwner = [];
+        private["_groupOwner","_AIGroup"];
 
-        private _AIGroup = group _heli;
+        _AIGroup = group _heli;
 
         // Grab and lock locality to control AI if necessary.
         if !(local _AIGroup) then
@@ -89,7 +89,8 @@
             {
                 /*
                 moveOut _unit;
-                private _parachute = createVehicle ["Steerable_Parachute_F", (getPosATL _unit), [], 0, "CAN_COLLIDE"];
+                private ["_parachute", "_dir"];
+                _parachute = createVehicle ["Steerable_Parachute_F", (getPosATL _unit), [], 0, "CAN_COLLIDE"];
                 _parachute setDir (getDir _unit);
                 _parachute enableSimulationGlobal true;
 
@@ -148,7 +149,7 @@
 
 
         // Revert and unlock locality if necessary.
-        if !(_groupOwner isEqualTo []) then
+        if !(isNil "_groupOwner") then
         {
             _AIGroup setGroupOwner _groupOwner;
             _AIGroup setVariable ["DMS_LockLocality", false];

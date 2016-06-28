@@ -36,19 +36,6 @@
 10, hgun_Pistol_heavy_01_F	// 4-five .45
 9, hgun_Pistol_heavy_02_F	// Zubr .45
 10, hgun_Pistol_Signal_F	// Starter Pistol
-10, hgun_mas_mak_F
-10, hgun_mas_uzi_F
-10, hgun_mas_m9_F
-10, hgun_mas_bhp_F
-10, hgun_mas_glock_F
-10, hgun_mas_p226_F
-10, hgun_mas_grach_F
-10, hgun_mas_sa61_F
-10, hgun_mas_mp7p_F
-10, hgun_mas_acp_F
-10, hgun_mas_glocksf_F
-10, hgun_mas_usp_F
-10, hgun_mas_m23_F
 
 
 > PistolAmmo
@@ -59,46 +46,21 @@
 10, 6Rnd_GreenSignal_F		// Starter Pistol
 10, 6Rnd_RedSignal_F			// Starter Pistol 
 10, 9Rnd_45ACP_Mag			// ACP-C2
-10, 17Rnd_mas_9x21_Mag
-10, 15Rnd_mas_9x21_Mag
-10, 13Rnd_mas_9x21_Mag
-10, 8Rnd_mas_9x18_Mag
-10, 12Rnd_mas_45acp_Mag
 
 > PistolAttachments
 30, muzzle_snds_L
 20, muzzle_snds_acp
 10, optic_Yorris		// No one needs this crap
 15, optic_MRD
-15, optic_mas_MRD
 
 > SMG
 9, SMG_01_F		// Vermin SMG .45 ACP
 9, SMG_02_F		// Sting 9 mm
 9, hgun_PDW2000_F	// PDW2000 9 mm
-9, arifle_mas_mp40
-9, arifle_mas_mp40_o
-9, arifle_mas_mp5
-9, arifle_mas_mp5_v
-9, arifle_mas_mp5_d
-9, arifle_mas_mp5sd
-9, arifle_mas_mp5sd_ds
-9, arifle_mas_bizon
-9, hgun_mas_mp7_F
-9, arifle_mas_sten
 
 > SMGAmmo
 10, 30Rnd_45ACP_Mag_SMG_01					// Vermin SMG
 10, 30Rnd_45ACP_Mag_SMG_01_Tracer_Green		// Vermin SMG
-10, 30Rnd_mas_9x21_Stanag
-10, 30Rnd_mas_9x21sd_Stanag
-10, 30Rnd_mas_9x21d_Stanag
-10, 40Rnd_mas_46x30_Mag
-10, 40Rnd_mas_46x30sd_Mag
-10, 64Rnd_mas_9x18_mag
-10, 64Rnd_mas_9x18sd_mag
-10, 25Rnd_mas_9x19_Mag
-10, 20Rnd_mas_765x17_Mag
 
 > SMGAttachments
 18, optic_Holosight_smg
@@ -106,7 +68,6 @@
 20, optic_Aco_smg
 20, optic_ACO_grn
 20, optic_Aco
-20, optic_mas_Aco_camo
 
 > Rifles
 10, arifle_Katiba_F			// Katiba 6.5 mm
@@ -126,116 +87,7 @@
 10, arifle_MXC_Black_F		// MXC 6.5 mm (Black)
 10, arifle_MX_Black_F		// MX 6.5 mm (Black)
 10, arifle_MX_GL_Black_F		// MX 3GL 6.5 mm (Black)
-10, arifle_mas_m16
-10, arifle_mas_m16a2
-10, arifle_mas_m16_gl
-10, arifle_mas_m16a2_gl
-10, arifle_mas_g36c
-10, arifle_mas_m4
-10, arifle_mas_m4_gl
-10, arifle_mas_m4_m203
-10, arifle_mas_m4_v
-10, arifle_mas_m4_gl_v
-10, arifle_mas_m4_m203_v
-10, arifle_mas_m4_d
-10, arifle_mas_m4_gl_d
-10, arifle_mas_m4_m203_d
-10, arifle_mas_m4vlt
-10, arifle_mas_m4c
-10, arifle_mas_m4_m203c
-10, arifle_mas_m4c_v
-10, arifle_mas_m4_m203c_v
-10, arifle_mas_m4c_d
-10, arifle_mas_m4_m203c_d
-10, arifle_mas_hk416
-10, arifle_mas_hk416_gl
-10, arifle_mas_hk416_m203
-10, arifle_mas_hk416_v
-10, arifle_mas_hk416_gl_v
-10, arifle_mas_hk416_m203_v
-10, arifle_mas_hk416_d
-10, arifle_mas_hk416_gl_d
-10, arifle_mas_hk416_m203_d
-10, arifle_mas_hk416c
-10, arifle_mas_hk416_m203c
-10, arifle_mas_hk416c_v
-10, arifle_mas_hk416_m203c_v
-10, arifle_mas_hk416c_d
-10, arifle_mas_hk416_m203c_d
-10, arifle_mas_arx
-10, arifle_mas_arx_gl
-10, arifle_mas_arx_l
-10, arifle_mas_arx_l_gl
-10, arifle_mas_l119
-10, arifle_mas_l119c
-10, arifle_mas_l119_gl
-10, arifle_mas_l119_m203
-10, arifle_mas_l119_v
-10, arifle_mas_l119c_v
-10, arifle_mas_l119_gl_v
-10, arifle_mas_l119_m203_v
-10, arifle_mas_l119_d
-10, arifle_mas_l119c_d
-10, arifle_mas_l119_gl_d
-10, arifle_mas_l119_m203_d
-10, arifle_mas_mk16
-10, arifle_mas_mk16_gl
-10, arifle_mas_mk16_l
-10, arifle_mas_mk16_l_gl
-10, arifle_mas_m27
-10, arifle_mas_m27m
-10, arifle_mas_m27_v
-10, arifle_mas_m27m_v
-10, arifle_mas_m27_d
-10, arifle_mas_m27m_d
-10, arifle_mas_ak_74m
-10, arifle_mas_ak_74m_gl
-10, arifle_mas_ak_74m_c
-10, arifle_mas_ak_74m_gl_c
-10, arifle_mas_ak_74m_sf
-10, arifle_mas_ak_74m_sf_gl
-10, arifle_mas_ak_74m_sf_c
-10, arifle_mas_ak_74m_sf_gl_c
-10, arifle_mas_aks74
-10, arifle_mas_aks74_gl
-10, arifle_mas_aks74u
-10, arifle_mas_aks74u_c
-10, arifle_mas_ak74
-10, arifle_mas_ak74_gl
-10, arifle_mas_ak12_sf
-10, arifle_mas_ak12_sf_gl
-10, arifle_mas_akms
-10, arifle_mas_akms_gl
-10, arifle_mas_akms_c
-10, arifle_mas_akms_gl_c
-10, arifle_mas_akm
-10, arifle_mas_akm_gl
-10, arifle_mas_m70
-10, arifle_mas_m70_gl
-10, arifle_mas_m70ab
-10, arifle_mas_m70ab_gl
-10, arifle_mas_hk417c
-10, arifle_mas_hk417_m203c
-10, arifle_mas_hk417c_v
-10, arifle_mas_hk417_m203c_v
-10, arifle_mas_hk417c_d
-10, arifle_mas_hk417_m203c_d
-10, srifle_mas_hk417
-10, srifle_mas_hk417_v
-10, srifle_mas_hk417_d
-10, arifle_mas_mk17
-10, arifle_mas_mk17_gl
-10, arifle_mas_g3
-10, arifle_mas_g3_m203
-10, arifle_mas_g3s
-10, arifle_mas_g3s_m203
-10, arifle_mas_fal
-10, arifle_mas_fal_m203
-10, arifle_mas_m14
-10, arifle_mas_ppsh
-10, arifle_mas_saiga
-10, arifle_mas_m1014
-10, arifle_mas_aa12
+
 
 > RifleAmmo
 10, 20Rnd_556x45_UW_mag						// SDAR
@@ -246,24 +98,6 @@
 10, 30Rnd_65x39_caseless_green_mag_Tracer	// Katiba
 10, 30Rnd_65x39_caseless_mag					// MX/C/M/SW/3GL
 10, 30Rnd_65x39_caseless_mag_Tracer			// MX/C/M/SW/3GL
-10, 30Rnd_mas_556x45_Stanag
-10, 30Rnd_mas_556x45sd_Stanag
-10, 30Rnd_mas_556x45_T_Stanag
-10, 20Rnd_mas_762x51_Stanag
-10, 20Rnd_mas_762x51sd_Stanag
-10, 20Rnd_mas_762x51_T_Stanag
-10, 150Rnd_mas_556x45_Stanag
-10, 150Rnd_mas_556x45_T_Stanag
-10, 71Rnd_mas_762x25_mag
-10, 30Rnd_mas_545x39_mag
-10, 30Rnd_mas_545x39sd_mag
-10, 30Rnd_mas_545x39_T_mag
-10, 10Rnd_mas_12Gauge_Slug
-10, 10Rnd_mas_12Gauge_Pellets
-10, 20Rnd_mas_12Gauge_Slug
-10, 20Rnd_mas_12Gauge_Pellets
-10, 7Rnd_mas_12Gauge_Slug
-10, 7Rnd_mas_12Gauge_Pellets
 
 > RifleAttachments
 10, muzzle_snds_M
@@ -277,52 +111,12 @@
 10, optic_DMS
 2, optic_NVS
 2, optic_tws
-10, optic_mas_DMS
-10, optic_mas_DMS_c
-10, optic_mas_Holosight_blk
-10, optic_mas_Holosight_camo
-10, optic_mas_Arco_blk
-10, optic_mas_Arco_camo
-10, optic_mas_Hamr_camo
-10, optic_mas_Aco_camo
-10, optic_mas_ACO_grn_camo
-10, optic_mas_MRCO_camo
-10, optic_mas_zeiss
-10, optic_mas_zeiss_c
-10, optic_mas_zeiss_eo
-10, optic_mas_zeiss_eo_c
-10, optic_mas_acog
-10, optic_mas_acog_c
-10, optic_mas_acog_eo
-10, optic_mas_acog_eo_c
-10, optic_mas_acog_rd
-10, optic_mas_acog_rd_c
-10, optic_mas_handle
-10, optic_mas_aim
-10, optic_mas_aim_c
-10, optic_mas_kobra
-10, optic_mas_kobra_c
 
 > LMG
 9, arifle_MX_SW_Black_F	// MX SW 6.5 mm (Black)
 9, arifle_MX_SW_F			// MX SW 6.5 mm
 9, LMG_Mk200_F				// Mk200 6.5 mm
 9, LMG_Zafir_F				// Zafir 7.62 mm
-9, LMG_mas_MK200_F
-9, LMG_mas_Mk48_F
-9, LMG_mas_Mk48_F_v
-9, LMG_mas_Mk48_F_d
-9, LMG_mas_m240_F
-9, LMG_mas_mg3_F
-9, LMG_mas_m60_F
-9, LMG_mas_m72_F
-9, LMG_mas_rpk_F
-9, LMG_mas_pkm_F
-9, LMG_mas_pech_F
-9, LMG_mas_M249_F_v
-9, LMG_mas_M249_F_d
-9, LMG_mas_M249_F
-9, LMG_mas_M249a_F
 
 > LMGAmmo
 10, 100Rnd_65x39_caseless_mag			// MX SW
@@ -335,56 +129,21 @@
 10, 200Rnd_65x39_Belt_Tracer_Green	// Mk200
 10, 200Rnd_65x39_Belt_Tracer_Red		// Mk200
 10, 200Rnd_65x39_Belt_Tracer_Yellow	// Mk200
-10, 200Rnd_mas_556x45_Stanag
-10, 200Rnd_mas_556x45_T_Stanag
-10, 100Rnd_mas_762x51_Stanag
-10, 100Rnd_mas_762x51_T_Stanag
-10, 100Rnd_mas_762x39_mag
-10, 100Rnd_mas_762x39_T_mag
-10, 100Rnd_mas_545x39_mag
-10, 100Rnd_mas_545x39_T_mag
-10, 100Rnd_mas_762x54_mag
-10, 100Rnd_mas_762x54_T_mag
 
 > Snipers
-10, srifle_DMR_01_F			// Rahim 7.62 mm
-10, srifle_EBR_F			// Mk18 ABR 7.62 mm
-3, srifle_GM6_F			// GM6 Lynx 12.7 mm
-3, srifle_LRR_F			// M320 LRR .408
-10, arifle_mas_lee
-10, srifle_mas_vss
-10, arifle_mas_asval
-10, arifle_mas_asval_ds
-10, srifle_mas_ebr
-10, srifle_mas_sr25
-10, srifle_mas_sr25_v
-10, srifle_mas_sr25_d
-10, srifle_mas_m110
-10, srifle_mas_mk17s
-10, srifle_mas_m24
-10, srifle_mas_m24_v
-10, srifle_mas_m24_d
-10, srifle_mas_svd
-10, srifle_mas_m91
-10, srifle_mas_lrr
+11, srifle_DMR_01_F			// Rahim 7.62 mm
+12, srifle_EBR_F			// Mk18 ABR 7.62 mm
+12, srifle_GM6_F			// GM6 Lynx 12.7 mm
+12, srifle_LRR_F			// M320 LRR .408
+
+
 
 > SniperAmmo
-3, 5Rnd_127x108_Mag		// GM6 Lynx
-3, 7Rnd_408_Mag			// M320 LRR
+10, 5Rnd_127x108_Mag		// GM6 Lynx
+10, 7Rnd_408_Mag			// M320 LRR
 10, 10Rnd_762x51_Mag		// Rahim
 10, 20Rnd_762x51_Mag		// Mk18 ABR
-2, 5Rnd_127x108_APDS_Mag	// GM6 Lynx 
-10, 5Rnd_mas_762x51_Stanag
-10, 5Rnd_mas_762x51_T_Stanag
-10, 10Rnd_mas_338_Stanag
-10, 10Rnd_mas_338sd_Stanag
-10, 10Rnd_mas_338_T_Stanag
-10, 10Rnd_mas_762x54sd_mag
-10, 20Rnd_mas_9x39_mag
-10, 20Rnd_mas_9x39sd_mag
-10, 30Rnd_mas_9x39_mag
-10, 30Rnd_mas_9x39sd_mag
-10, 30Rnd_mas_9x39d_mag
+10, 5Rnd_127x108_APDS_Mag	// GM6 Lynx 
 
 > SniperAttachments
 14, muzzle_snds_B
@@ -393,20 +152,6 @@
 15, optic_DMS
 15, optic_SOS
 15, optic_LRPS
-10, optic_mas_PSO
-10, optic_mas_PSO_c
-10, optic_mas_PSO_eo
-10, optic_mas_PSO_eo_c
-10, optic_mas_PSO_nv
-10, optic_mas_PSO_nv_c
-10, optic_mas_PSO_nv_eo
-10, optic_mas_PSO_nv_eo_c
-10, optic_mas_PSO_day
-10, optic_mas_PSO_nv_day
-10, optic_mas_LRPS
-10, optic_mas_nspu
-10, optic_mas_PSO_kv
-10, optic_mas_PSO_kv_c
 
 > DLCRifles
 1, MMG_01_hex_F				//Navid
@@ -1104,29 +849,6 @@
 20, TRYK_B_Coyotebackpack_OD
 20, TRYK_B_Coyotebackpack_BLK
 20, TRYK_B_Coyotebackpack_WH
-10, B_mas_m_Bergen_acr_w
-10, B_mas_m_Bergen_acr_g
-10, B_mas_m_Bergen_acr
-10, B_mas_m_Bergen_acr_c
-10, B_mas_m_Bergen_us_w
-10, B_mas_m_Bergen_us_b
-10, B_mas_m_Bergen_us_m
-10, B_mas_m_Bergen_us_g
-10, B_mas_m_Bergen_us
-16, B_mas_Bergen_wint
-16, B_mas_Bergen_black
-16, O_mas_Bergen_blk
-16, O_mas_Bergen_flo
-16, O_mas_Bergen_rtan
-16, B_mas_Bergen_mul
-16, B_mas_Bergen_rng
-16, B_mas_Bergen_des
-16, B_mas_m_Bergen_al
-20, B_mas_Kitbag_des
-20, B_mas_Kitbag_rng
-20, B_mas_Kitbag_black
-20, B_mas_Kitbag_wint
-20, B_mas_Kitbag_mul
 
 > MilitaryVests
 10, V_PlateCarrier1_blk
@@ -1338,6 +1060,7 @@
 
 > Trash
 10, Exile_Item_Can_Empty
+10, Exile_Item_ToiletPaper
 10, Exile_Item_PlasticBottleEmpty			// Nothing :)
 
 > Magazine01

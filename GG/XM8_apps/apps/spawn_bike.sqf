@@ -1,5 +1,5 @@
 if !((vehicle player) isEqualTo player) exitWith {};
-if (!("ItemRadio" in (assigneditems player))) exitWith { hint "You need a radio equipped to deploy a quadbike !";};
+if (!("ItemRadio" in (items player) || "ItemRadio" in (assigneditems player))) exitWith { hint "You need a radio to deploy a quadbike !";};
 if (ExileClientPlayerIsInCombat) exitWith { hint "You cannot deploy a quadbike in combat !";};
 (findDisplay 24015) closeDisplay 0;
 _spawnPos = player modelToWorld [0,2,0];
