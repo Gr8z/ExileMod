@@ -657,6 +657,7 @@ class CfgSettings
 		// Stuff to spawn on roads
 		ground[] = 
 		{
+			"Exile_Bike_QuadBike_Black",
 			"Exile_Bike_QuadBike_Blue",
 			"Exile_Bike_QuadBike_Red",
 			"Exile_Bike_QuadBike_White",

@@ -1172,6 +1172,23 @@ class CargoContainerSmall: Exile_AbstractCraftingRecipe
 	category = "Extended Base Items";
 };	
 
+class BlockConcrete: Exile_AbstractCraftingRecipe
+{
+	name = "Concrete Block";
+	pictureItem = "BlockConcrete_F_Kit";
+	returnedItems[] = 
+	{
+		{1, "BlockConcrete_F_Kit"}
+	};
+	requiresFire = 0;
+	requiredInteractionModelGroup = "WorkBench";
+	components[] = 
+	{
+		{4, "Exile_Item_Cement"},
+	};
+	category = "Extended Base Items";
+};	
+
 class Chair: Exile_AbstractCraftingRecipe
 {
 	name = "Chair";
@@ -1187,7 +1204,43 @@ class Chair: Exile_AbstractCraftingRecipe
 		{5, "Exile_Item_WoodPlank"},
 	};
 	category = "Extended Base Items";
-};		
+};	
+
+class Pierbox: Exile_AbstractCraftingRecipe
+{
+	name = "Pierbox";
+	pictureItem = "Land_Pier_Box_F_Kit";
+	returnedItems[] = 
+	{
+		{1, "Land_Pier_Box_F_Kit"}
+	};
+	requiresFire = 1;
+	requiredInteractionModelGroup = "WorkBench";
+	components[] = 
+	{
+		{2, "Land_CncWall4_F_Kit"},
+		{5, "Exile_Item_WoodPlank"},
+	};
+	category = "Extended Base Items";
+};	
+
+class Toiletbox: Exile_AbstractCraftingRecipe
+{
+	name = "Toiletbox";
+	pictureItem = "Land_ToiletBox_F_Kit";
+	returnedItems[] = 
+	{
+		{1, "Land_ToiletBox_F_Kit"}
+	};
+	requiresFire = 0;
+	requiredInteractionModelGroup = "WorkBench";
+	components[] = 
+	{
+		{4, "Exile_Item_WoodPlank"},
+		{1, "Exile_Item_JunkMetal"},
+	};
+	category = "Extended Base Items";
+};	
 		
 class Table: Exile_AbstractCraftingRecipe
 {
@@ -1202,7 +1255,7 @@ class Table: Exile_AbstractCraftingRecipe
 	components[] = 
 	{
 		{10, "Exile_Item_WoodPlank"},
-		{3, "Exile_Item_MetalBoard"},
+		{1, "Exile_Item_MetalBoard"},
 	};
 	category = "Extended Base Items";
 };			
@@ -1262,6 +1315,42 @@ class Floodlightdouble: Exile_AbstractCraftingRecipe
 	category = "Extended Base Items";
 };
 
+class CncWallSmall8m: Exile_AbstractCraftingRecipe
+{
+	name = "Small concrete wall 8m";
+	pictureItem = "Land_Concrete_SmallWall_8m_F_Kit";
+	returnedItems[] = 
+	{
+		{1, "Land_Concrete_SmallWall_8m_F_Kit"}
+	};
+	requiresFire = 0;
+	requiredInteractionModelGroup = "WorkBench";
+	components[] = 
+	{
+		{2, "Exile_Item_Cement"},
+		{2, "Exile_Item_Sand"},
+	};
+	category = "Extended Base Items";
+};
+
+class CncWallSmall4m: Exile_AbstractCraftingRecipe
+{
+	name = "Small concrete wall 4m";
+	pictureItem = "Land_Concrete_SmallWall_4m_F_Kit";
+	returnedItems[] = 
+	{
+		{1, "Land_Concrete_SmallWall_4m_F_Kit"}
+	};
+	requiresFire = 0;
+	requiredInteractionModelGroup = "WorkBench";
+	components[] = 
+	{
+		{1, "Exile_Item_Cement"},
+		{1, "Exile_Item_Sand"},
+	};
+	category = "Extended Base Items";
+};
+
 class MilitaryVehicle: Exile_AbstractCraftingRecipe
 {
 	name = "Military Vehicle Sign";
@@ -1294,6 +1383,24 @@ class MilSignSmall: Exile_AbstractCraftingRecipe
 	{
 		{1, "Exile_Item_MetalPole"},
 		{1, "Exile_Item_WoodPlank"},
+	};
+	category = "Extended Base Items";
+};
+
+class Watersource: Exile_AbstractCraftingRecipe
+{
+	name = "Watersource";
+	pictureItem = "Land_Water_source_F_Kit";
+	returnedItems[] = 
+	{
+		{1, "Land_Water_source_F_Kit"}
+	};
+	requiresFire = 1;
+	requiredInteractionModelGroup = "WorkBench";
+	components[] = 
+	{
+		{1, "Exile_Item_MetalPole"},
+		{3, "Exile_Item_Cement"},
 	};
 	category = "Extended Base Items";
 };
@@ -1332,6 +1439,56 @@ class crashbarrier: Exile_AbstractCraftingRecipe
 		{2, "Exile_Item_JunkMetal"},
 	};
 	category = "Extended Base Items";
+};
+
+class HugeContainer: Exile_AbstractCraftingRecipe
+{
+	name = "Huge Container";
+	pictureItem = "Land_Cargo40_light_green_F_Kit";
+	returnedItems[] = 
+	{
+		{1, "Land_Cargo40_light_green_F_Kit"}
+	};
+	requiresFire = 1;
+	requiredInteractionModelGroup = "WorkBench";
+	components[] = 
+	{
+		{6, "Exile_Item_JunkMetal"},
+		{6, "Exile_Item_MetalBoard"},
+	};
+};
+
+class cncbarriermedium: Exile_AbstractCraftingRecipe
+{
+	name = "CNC Barrier Medium";
+	pictureItem = "Land_CncBarrierMedium_F_Kit";
+	returnedItems[] = 
+	{
+		{2, "Land_CncBarrierMedium_F_Kit"}
+	};
+	requiresFire = 0;
+	requiredInteractionModelGroup = "WorkBench";
+	components[] = 
+	{
+		{1, "Exile_Item_Cement"},
+	};
+	category = "Extended Base Items";
+};
+
+class cncbarrier1: Exile_AbstractCraftingRecipe
+{
+	name = "CNC Barrier 1";
+	pictureItem = "Land_CncWall1_F_Kit";
+	returnedItems[] = 
+	{
+		{1, "Land_CncWall1_F_Kit"}
+	};
+	requiresFire = 0;
+	requiredInteractionModelGroup = "WorkBench";
+	components[] = 
+	{
+		{1, "Exile_Item_Cement"},
+	};category = "Extended Base Items";
 };
 
 class Airportlamp: Exile_AbstractCraftingRecipe
@@ -1444,6 +1601,43 @@ class CNCStairs: Exile_AbstractCraftingRecipe
 	category = "Extended Base Items";
 };
 
+class CargoContainerSandSmall: Exile_AbstractCraftingRecipe
+{
+	name = "Cargo container Sand Small";
+	pictureItem = "Land_Cargo20_sand_F_Kit";
+	returnedItems[] = 
+	{
+		{1, "Land_Cargo20_sand_F_Kit"}
+	};
+	requiresFire = 1;
+	requiredInteractionModelGroup = "WorkBench";
+	components[] = 
+	{
+		{2, "Exile_Item_MetalBoard"},
+		{2, "Exile_Item_JunkMetal"},
+	};
+	category = "Extended Base Items";
+};
+
+class Brokenshed: Exile_AbstractCraftingRecipe
+{
+	name = "Broken Shed";
+	pictureItem = "Land_u_Addon_01_V1_F_Kit";
+	returnedItems[] = 
+	{
+		{1, "Land_u_Addon_01_V1_F_Kit"}
+	};
+	requiresFire = 0;
+	requiredInteractionModelGroup = "WorkBench";
+	components[] = 
+	{
+		{1, "Exile_Item_Sand"},
+		{2, "Exile_Item_Cement"},
+		{2, "Exile_Item_WoodPlank"},
+	};
+	category = "Extended Base Items";
+};
+
 class Razorwire: Exile_AbstractCraftingRecipe
 {
 	name = "Razorwire";
@@ -1484,6 +1678,41 @@ class SmallShed: Exile_AbstractCraftingRecipe
 	tools[] = {"Exile_Item_Wrench"}; // Change
 };
 
+class CNCWallType2: Exile_AbstractCraftingRecipe
+{
+	name = "CNC Wall Type 2";
+	pictureItem = "Land_CncWall4_F_Kit";
+	returnedItems[] = 
+	{
+		{1, "Land_CncWall4_F_Kit"}
+	};
+	requiresFire = 0;
+	requiredInteractionModelGroup = "WorkBench";
+	components[] = 
+	{
+		{2, "Exile_Item_Cement"},
+	};
+	category = "Extended Base Items";
+};
+
+class CNCWall: Exile_AbstractCraftingRecipe
+{
+	name = "CNC Wall";
+	pictureItem = "Land_Wall_IndCnc_2deco_F_Kit";
+	returnedItems[] = 
+	{
+		{1, "Land_Wall_IndCnc_2deco_F_Kit"}
+	};
+	requiresFire = 0;
+	requiredInteractionModelGroup = "WorkBench";
+	components[] = 
+	{
+		{2, "Exile_Item_Cement"},
+	};
+	category = "Extended Base Items";
+};
+
+
 class CNCShelter: Exile_AbstractCraftingRecipe
 {
 	name = "CNC Shelter";
@@ -1497,6 +1726,40 @@ class CNCShelter: Exile_AbstractCraftingRecipe
 	components[] = 
 	{
 		{1, "Exile_Item_Cement"},
+	};
+	category = "Extended Base Items";
+};
+
+
+class SlumContainer: Exile_AbstractCraftingRecipe
+{
+	name = "Slum Container";
+	pictureItem = "Land_cargo_house_slum_F_Kit";
+	returnedItems[] = 
+	{
+		{1, "Land_cargo_house_slum_F_Kit"}
+	};
+	requiresFire = 1;
+	requiredInteractionModelGroup = "WorkBench";
+	components[] = 
+	{
+		{2, "Exile_Item_JunkMetal"},
+		{1, "Exile_Item_MetalBoard"},
+	};
+	category = "Extended Base Items";
+};
+class ShootingPos: Exile_AbstractCraftingRecipe
+{
+	name = "Shooting Pos";
+	pictureItem = "ShootingPos_F_Kit";
+	returnedItems[] = 
+	{
+		{1, "ShootingPos_F_Kit"}
+	};
+	requiresFire = 0;
+	components[] = 
+	{
+		{4, "Exile_Item_Woodlog"},
 	};
 	category = "Extended Base Items";
 };
@@ -1543,6 +1806,24 @@ class Pumpstation: Exile_AbstractCraftingRecipe
 	category = "Extended Base Items";
 };
 
+class MetalShelf: Exile_AbstractCraftingRecipe
+{
+	name = "Metal Shelf";
+	pictureItem = "Land_ShelvesMetal_F_Kit";
+	returnedItems[] = 
+	{
+		{1, "Land_ShelvesMetal_F_Kit"}
+	};
+	requiresFire = 1;
+	requiredInteractionModelGroup = "WorkBench";
+	components[] = 
+	{
+		{3, "Exile_Item_MetalBoard"},
+		{5, "Exile_Item_WoodPlank"},
+	};
+	category = "Extended Base Items";
+};
+
 class RustyTank: Exile_AbstractCraftingRecipe
 {
 	name = "RustyTank";
@@ -1580,6 +1861,23 @@ class Steelfence: Exile_AbstractCraftingRecipe
 	category = "Extended Base Items";
 };
 
+class Pier: Exile_AbstractCraftingRecipe
+{
+	name = "Pier";
+	pictureItem = "Land_Pier_small_F_Kit";
+	returnedItems[] = 
+	{
+		{1, "Land_Pier_small_F_Kit"}
+	};
+	requiresFire = 0;
+	requiredInteractionModelGroup = "WorkBench";
+	components[] = 
+	{
+		{10, "Exile_Item_Woodlog"},
+	};
+	category = "Extended Base Items";
+};
+
 class CncWallMil4M: Exile_AbstractCraftingRecipe
 {
 	name = "Concrete Wall Military 4m";
@@ -1595,6 +1893,46 @@ class CncWallMil4M: Exile_AbstractCraftingRecipe
 		{2, "Exile_Item_JunkMetal"},
 		{2, "Exile_Item_WoodPlank"},
 	};
+	category = "Extended Base Items";
+};
+
+class MilitaryArea: Exile_AbstractCraftingRecipe
+{
+	name = "Military Area";
+	pictureItem = "Land_Sign_WarningMilitaryArea_F_Kit";
+	returnedItems[] = 
+	{
+		{1, "Land_Sign_WarningMilitaryArea_F_Kit"}
+	};
+	requiresFire = 0;
+	requiredInteractionModelGroup = "WorkBench";
+	components[] = 
+	{
+		{2, "Exile_Item_JunkMetal"},
+		{2, "Exile_Item_WoodPlank"},
+	};
+	category = "Extended Base Items";
+};
+
+
+class Icebox: Exile_AbstractCraftingRecipe
+{
+	name = "Icebox";
+	pictureItem = "Land_Icebox_F_Kit";
+	returnedItems[] = 
+	{
+		{1, "Land_Icebox_F_Kit"}
+	};
+	requiresFire = 0;
+	requiredInteractionModelGroup = "WorkBench";
+	components[] = 
+	{
+		{2, "Exile_Item_MetalBoard"},
+		{4, "Exile_Item_PlasticBottleEmpty"},
+		{1, "Exile_Item_MetalScrews"}, // Change
+		{1, "Exile_Item_ExtensionCord"}, // Change
+	};
+	tools[] = {"Exile_Item_CordlessScrewdriver"}; // Change
 	category = "Extended Base Items";
 };
 
@@ -1631,6 +1969,43 @@ class Citygate: Exile_AbstractCraftingRecipe
 		{1, "Exile_Item_MetalBoard"},
 		{1, "Exile_Item_MetalPole"},
 		{1, "Exile_Item_Cement"}
+	};
+	category = "Extended Base Items";
+};
+
+class Rack: Exile_AbstractCraftingRecipe
+{
+	name = "A Shelf";
+	pictureItem = "Land_Rack_F_Kit";
+	returnedItems[] = 
+	{
+		{1, "Land_Rack_F_Kit"}
+	};
+	requiresFire = 0;
+	requiredInteractionModelGroup = "WorkBench";
+	components[] = 
+	{
+		{4, "Exile_Item_WoodPlank"},
+		{2, "Exile_Item_JunkMetal"},
+	};
+	category = "Extended Base Items";
+};
+
+class HeliPad: Exile_AbstractCraftingRecipe
+{
+	name = "Helipad";
+	pictureItem = "Land_HelipadCivil_F_Kit";
+	returnedItems[] = 
+	{
+		{1, "Land_HelipadCivil_F_Kit"}
+	};
+	requiresFire = 1;
+	requiredInteractionModelGroup = "WorkBench";
+	components[] = 
+	{
+		{2, "Exile_Item_Cement"},
+		{2, "Exile_Item_Sand"},
+		{2, "Exile_Item_MetalBoard"},
 	};
 	category = "Extended Base Items";
 };
@@ -1686,6 +2061,23 @@ class ConcreteWall1: Exile_AbstractCraftingRecipe
 	category = "Extended Base Items";
 };
 
+class ConcreteRamp: Exile_AbstractCraftingRecipe
+{
+	name = "Concrete Ramp";
+	pictureItem = "Land_RampConcrete_F_Kit";
+	returnedItems[] = 
+	{
+		{1, "Land_RampConcrete_F_Kit"}
+	};
+	requiresFire = 0;
+	requiredInteractionModelGroup = "WorkBench";
+	components[] = 
+	{
+		{3, "Exile_Item_Cement"},
+	};
+	category = "Extended Base Items";
+};
+
 class SandbagBarrierBigCorner: Exile_AbstractCraftingRecipe
 {
 	name = "Sandbag Barrier Big Corner";
@@ -1698,7 +2090,7 @@ class SandbagBarrierBigCorner: Exile_AbstractCraftingRecipe
 	requiredInteractionModelGroup = "WorkBench";
 	components[] = 
 	{
-		{6, "Exile_Item_Sand"},
+		{3, "Exile_Item_Sand"},
 	};
 	category = "Extended Base Items";
 };
@@ -1722,6 +2114,115 @@ class BagBunkerSmall: Exile_AbstractCraftingRecipe
 	category = "Extended Base Items";
 };
 
+class MetalWoodenRack: Exile_AbstractCraftingRecipe
+{
+	name = "Metal Wooden Shelf";
+	pictureItem = "Land_Metal_wooden_rack_F_Kit";
+	returnedItems[] = 
+	{
+		{1, "Land_Metal_wooden_rack_F_Kit"}
+	};
+	requiresFire = 1;
+	requiredInteractionModelGroup = "WorkBench";
+	components[] = 
+	{
+		{1, "Exile_Item_MetalBoard"},
+		{1, "Exile_Item_MetalPole"},
+		{3, "Exile_Item_WoodPlank"},
+	};
+	category = "Extended Base Items";
+};
+
+class SandbagTower: Exile_AbstractCraftingRecipe
+{
+	name = "Sandbag Tower";
+	pictureItem = "Land_HBarrierTower_F_Kit";
+	returnedItems[] = 
+	{
+		{1, "Land_HBarrierTower_F_Kit"}
+	};
+	requiresFire = 1;
+	requiredInteractionModelGroup = "WorkBench";
+	components[] = 
+	{
+		{2, "Exile_Item_Sand"},
+		{1, "Exile_Item_Cement"},
+		{1, "Exile_Item_MetalBoard"},
+		{1, "Exile_Item_MetalPole"},
+	};
+	category = "Extended Base Items";
+};
+
+class SandbagsLong: Exile_AbstractCraftingRecipe
+{
+	name = "Sandbags Long";
+	pictureItem = "Land_BagFence_Long_F_Kit";
+	returnedItems[] = 
+	{
+		{1, "Land_BagFence_Long_F_Kit"}
+	};
+	requiresFire = 0;
+	requiredInteractionModelGroup = "WorkBench";
+	components[] = 
+	{
+		{1, "Exile_Item_Sand"},
+	};
+	category = "Extended Base Items";
+};
+
+class SandbagCorner: Exile_AbstractCraftingRecipe
+{
+	name = "Sandbag Corner";
+	pictureItem = "Land_BagFence_Corner_F_Kit";
+	returnedItems[] = 
+	{
+		{1, "Land_BagFence_Corner_F_Kit"}
+	};
+	requiresFire = 0;
+	requiredInteractionModelGroup = "WorkBench";
+	components[] = 
+	{
+		{1, "Exile_Item_Sand"},
+	};
+	category = "Extended Base Items";
+};
+
+class LandContainer: Exile_AbstractCraftingRecipe
+{
+	name = "LandContainer";
+	pictureItem = "Land_Cargo20_military_green_F_Kit";
+	returnedItems[] = 
+	{
+		{1, "Land_Cargo20_military_green_F_Kit"}
+	};
+	requiresFire = 1;
+	requiredInteractionModelGroup = "WorkBench";
+	components[] = 
+	{
+		{6, "Exile_Item_MetalBoard"},
+	};
+	category = "Extended Base Items";
+};
+
+class Ammobox: Exile_AbstractCraftingRecipe
+{
+	name = "Ammobox";
+	pictureItem = "Land_Pallet_MilBoxes_F_Kit";
+	returnedItems[] = 
+	{
+		{1, "Land_Pallet_MilBoxes_F_Kit"}
+	};
+	requiresFire = 1;
+	requiredInteractionModelGroup = "WorkBench";
+	components[] = 
+	{
+		{1, "Exile_Item_MetalBoard"},
+		{1, "Exile_Item_StorageCrateKit"},
+		{2, "Exile_Item_JunkMetal"},
+	};
+	category = "Extended Base Items";
+};
+
 class Watercooler: Exile_AbstractCraftingRecipe
 {
 	name = "Water Cooler";
@@ -1736,6 +2237,24 @@ class Watercooler: Exile_AbstractCraftingRecipe
 	{
 		{4, "Exile_Item_MetalBoard"},
 		{1, "Exile_Item_WaterBarrelKit"},
+	};
+	category = "Extended Base Items";
+};
+
+class CncBarrier: Exile_AbstractCraftingRecipe
+{
+	name = "Concrete Barrier";
+	pictureItem = "Land_CncBarrier_F_Kit";
+	returnedItems[] = 
+	{
+		{1, "Land_CncBarrier_F_Kit"}
+	};
+	requiresFire = 0;
+	requiredInteractionModelGroup = "WorkBench";
+	components[] = 
+	{
+		{1, "Exile_Item_Cement"},
+		{1, "Exile_Item_Sand"},
 	};
 	category = "Extended Base Items";
 };
@@ -1846,6 +2365,92 @@ class CamoNetBLUFORopen: Exile_AbstractCraftingRecipe
 	};
 	category = "Extended Base Items";
 };
+
+class Barrier1: Exile_AbstractCraftingRecipe  //thank you MrDynamite for sharing better Receipideas :)
+{
+    name = "Barrier";
+    pictureItem = "Land_HBarrier_1_F_Kit";
+    returnedItems[] =
+    {
+        {1, "Land_HBarrier_1_F_Kit"}
+    };
+    requiresFire = 0;
+    requiredInteractionModelGroup = "WorkBench";
+    components[] =
+    {
+        {2, "Exile_Item_Sand"}, // Change
+    };
+    category = "Extended Base Items";
+};
+
+class Barrier3: Exile_AbstractCraftingRecipe
+{
+    name = "Barrier3";
+    pictureItem = "Land_HBarrier_3_F_Kit";
+    returnedItems[] =
+    {
+        {1, "Land_HBarrier_3_F_Kit"}
+    };
+    requiresFire = 0;
+    requiredInteractionModelGroup = "WorkBench";
+    components[] =
+    {
+        {1, "Land_HBarrier_1_F_Kit"}, {1, "Exile_Item_Sand"}, // Change
+    };
+    category = "Extended Base Items";
+};
+
+class Barrier5: Exile_AbstractCraftingRecipe
+{
+    name = "Barrier5";
+    pictureItem = "Land_HBarrier_5_F_Kit";
+    returnedItems[] =
+    {    
+        {1, "Land_HBarrier_5_F_Kit"}
+    };
+    requiresFire = 0;
+    requiredInteractionModelGroup = "WorkBench";
+    components[] =
+    {
+        {1, "Land_HBarrier_3_F_Kit"}, {1, "Exile_Item_Sand"}, // Change
+    };
+    category = "Extended Base Items";
+};
+
+class SandbagBarrierBig4m: Exile_AbstractCraftingRecipe
+{
+    name = "Sandbag Barrier Big 4m";
+    pictureItem = "Land_HBarrierWall4_F_Kit";
+    returnedItems[] =
+    {
+        {1, "Land_HBarrierWall4_F_Kit"}
+    };
+    requiresFire = 0;
+    requiredInteractionModelGroup = "WorkBench";
+    components[] =
+    {
+        {1, "Land_HBarrier_3_F_Kit"}, {2, "Exile_Item_Sand"}, // Change
+    };
+    category = "Extended Base Items";
+};
+
+class SandbagBarrierBig6m: Exile_AbstractCraftingRecipe
+{
+    name = "Sandbag Barrier Big 6m";
+    pictureItem = "Land_HBarrierWall6_F_Kit";
+    returnedItems[] =
+    {
+        {1, "Land_HBarrierWall6_F_Kit"}
+    };
+    requiresFire = 0;
+    requiredInteractionModelGroup = "WorkBench";
+    components[] =
+    {
+        {1, "Land_HBarrierWall4_F_Kit"},{2, "Exile_Item_Sand"}, // Change
+    };
+    category = "Extended Base Items";
+};
+
 
 class BagBunker: Exile_AbstractCraftingRecipe
 {
@@ -2637,9 +3242,17 @@ class CfgExileArsenal
 	class srifle_LRR_camo_F 						{ quality = 3; price = 10000; };
 	class srifle_LRR_F 								{ quality = 3; price = 10000; };
 
+	
+	///////////////////////////////////////////////////////////////////////////////
+	// BIKES
+	///////////////////////////////////////////////////////////////////////////////
+	class Exile_Bike_OldBike 						{ quality = 1; price = 40; };
+	class Exile_Bike_MountainBike 					{ quality = 1; price = 50; };
+
 	///////////////////////////////////////////////////////////////////////////////
 	// QUAD BIKES
 	///////////////////////////////////////////////////////////////////////////////
+	class Exile_Bike_QuadBike_Black					{ quality = 1; price = 250; };
 	class Exile_Bike_QuadBike_Blue					{ quality = 1; price = 250; };
 	class Exile_Bike_QuadBike_Red					{ quality = 1; price = 250; };
 	class Exile_Bike_QuadBike_White					{ quality = 1; price = 250; };
@@ -3884,7 +4497,7 @@ class CfgInteractionMenus
 	class CargoSmall
 	{
 		targetType = 2;
-		target = "Land_CargoBox_V1_F";
+		target = "Land_CargoBox_V1_F_Kit";
 		
 		class Actions 
 		{
@@ -3908,12 +4521,6 @@ class CfgInteractionMenus
 				title = "Set PIN";
 				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo 0)";
 				action = "_this spawn ExileClient_object_lock_setPin";
-			};
-			class HackSafe : ExileAbstractAction
-			{
-				title = "Hack Container";
-				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo -1)";
-				action = "_this spawn ExAd_fnc_startHack";
 			};
 		};
 	};	
@@ -3945,12 +4552,6 @@ class CfgInteractionMenus
 				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo 0)";
 				action = "_this spawn ExileClient_object_lock_setPin";
 			};
-			class HackSafe : ExileAbstractAction
-			{
-				title = "Hack Container";
-				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo -1)";
-				action = "_this spawn ExAd_fnc_startHack";
-			};
 		};
 	};
 	class Cargo40
@@ -3980,12 +4581,6 @@ class CfgInteractionMenus
 				title = "Set PIN";
 				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo 0)";
 				action = "_this spawn ExileClient_object_lock_setPin";
-			};
-			class HackSafe : ExileAbstractAction
-			{
-				title = "Hack Container";
-				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo -1)";
-				action = "_this spawn ExAd_fnc_startHack";
 			};
 		};
 	};
@@ -4017,12 +4612,6 @@ class CfgInteractionMenus
 				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo 0)";
 				action = "_this spawn ExileClient_object_lock_setPin";
 			};
-			class HackSafe : ExileAbstractAction
-			{
-				title = "Hack Container";
-				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo -1)";
-				action = "_this spawn ExAd_fnc_startHack";
-			};
 		};
 	};
 	
@@ -4053,12 +4642,6 @@ class CfgInteractionMenus
 				title = "Set PIN";
 				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo 0)";
 				action = "_this spawn ExileClient_object_lock_setPin";
-			};
-			class HackSafe : ExileAbstractAction
-			{
-				title = "Hack Safe";
-				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo -1)";
-				action = "_this spawn ExAd_fnc_startHack";
 			};
 		};
 	};
@@ -4312,7 +4895,7 @@ class CfgInteractionMenus
 	class Bikes
 	{
 		targetType = 2;
-		target = "Exile_Bike_QuadBike_Black";
+		target = "Bicycle";
 
 		class Actions
 		{
@@ -4324,9 +4907,9 @@ class CfgInteractionMenus
 			};
 			class Pack: ExileAbstractAction
 			{
-				title = "Pack Quadbike";
+				title = "Pack Bike";
 				condition = "true";
-				action = "deleteVehicle ExileClientInteractionObject;player linkItem 'ItemRadio';['Success',['Quadbike packed! Radio added!']] call ExileClient_gui_notification_event_addNotification;";
+				action = "deleteVehicle ExileClientInteractionObject;player linkItem 'ItemRadio';['Success',['Bike packed! Radio added!']] call ExileClient_gui_notification_event_addNotification;";
 			};
 		};
 	};
@@ -5486,6 +6069,17 @@ class CfgTraderCategories
 		};
 	};
 
+	class Bikes
+	{
+		name = "Bikes";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] = 
+		{
+			"Exile_Bike_OldBike",
+			"Exile_Bike_MountainBike"
+		};
+	};
+
 	class Cars
 	{
 		name = "Cars";
@@ -5493,6 +6087,7 @@ class CfgTraderCategories
 		items[] = 
 		{
 			"Exile_Car_Kart_Black",
+			"Exile_Bike_QuadBike_Black",
 			"Exile_Car_OldTractor_Red",
 			"Exile_Car_TowTractor_White",
 			"Exile_Car_Tractor_Red",
