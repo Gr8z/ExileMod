@@ -82,8 +82,9 @@
 			"optic_mas_LRPS", 
 			"optic_mas_kobra", 
 			"optic_mas_kobra_c", 
-			"optic_mas_nspu", 
-			"optic_mas_goshawk"
+			"optic_mas_nspu",
+			"optic_mas_PSO_kv",
+			"optic_mas_PSO_kv_c"
 		};
 	};
 
@@ -180,7 +181,8 @@
 			"15Rnd_mas_9x21_Mag",
 			"13Rnd_mas_9x21_Mag",
 			//MP-443 Grach/Makarov ammo
-			"8Rnd_mas_9x18_Mag"
+			"8Rnd_mas_9x18_Mag",
+			"12Rnd_mas_45acp_Mag"
 		};
 	};
 
@@ -207,7 +209,11 @@
 			//SA61 Skorpion
 			"hgun_mas_sa61_F",			// stock
 			//MP7A1  PISTOL SLOT
-			"hgun_mas_mp7p_F"			// stock
+			"hgun_mas_mp7p_F",			// stock
+			"hgun_mas_acp_F",			//1911
+			"hgun_mas_glocksf_F",
+			"hgun_mas_usp_F",
+			"hgun_mas_m23_F"
 		};
 	};
 	
@@ -244,7 +250,8 @@
 			//Bizon
 			"arifle_mas_bizon", 		// stock
 			//MP7A1 RIFLE SLOT
-			"hgun_mas_mp7_F"			// stock
+			"hgun_mas_mp7_F",			// stock
+			"arifle_mas_sten"
 		};
 	};
 
@@ -273,7 +280,11 @@
 			//PKM
 			"LMG_mas_pkm_F",			// stock
 			//PKP
-			"LMG_mas_pech_F"			// stock	
+			"LMG_mas_pech_F",			// stock	
+			"LMG_mas_M249_F_v",
+			"LMG_mas_M249_F_d",
+			"LMG_mas_M249_F",
+			"LMG_mas_M249a_F"
 		};
 	};
 
@@ -458,6 +469,7 @@
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
+			"arifle_mas_m79",
 			"mas_launch_RPG7_F", 
 			"mas_launch_Stinger_F"
 		};
@@ -474,7 +486,6 @@
 			"mas_PG7L", 
 			"mas_PG7VR", 
 			"mas_TBG7V",
-			"RPG32_F",
 			"mas_Stinger"
 		};
 	};		
@@ -486,6 +497,28 @@
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\backpack_ca.paa";
 		items[] = 
 		{
-			"B_mas_m_Bergen_us" 
+			"B_mas_m_Bergen_acr_w",
+			"B_mas_m_Bergen_acr_g",
+			"B_mas_m_Bergen_acr",
+			"B_mas_m_Bergen_acr_c",
+			"B_mas_m_Bergen_us_w",
+			"B_mas_m_Bergen_us_b",
+			"B_mas_m_Bergen_us_m",
+			"B_mas_m_Bergen_us_g",
+			"B_mas_m_Bergen_us",
+			"B_mas_Bergen_wint",
+			"B_mas_Bergen_black",
+			"O_mas_Bergen_blk",
+			"O_mas_Bergen_flo",
+			"O_mas_Bergen_rtan",
+			"B_mas_Bergen_mul",
+			"B_mas_Bergen_rng",
+			"B_mas_Bergen_des",
+			"B_mas_m_Bergen_al",
+			"B_mas_Kitbag_des",
+			"B_mas_Kitbag_rng",
+			"B_mas_Kitbag_black",
+			"B_mas_Kitbag_wint",
+			"B_mas_Kitbag_mul"
 		};
 	};		

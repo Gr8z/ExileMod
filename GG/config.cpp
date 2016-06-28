@@ -1009,10 +1009,10 @@ class CraftBandage: Exile_AbstractCraftingRecipe
 class CraftPopTabs: Exile_AbstractCraftingRecipe
 {
 	name = "Make Money";
-	pictureItem = "CUP_item_Money";
+	pictureItem = "Exile_Item_Can_Empty";
 	returnedItems[] =
 	{
-		{1, "CUP_item_Money"}
+		{1, "Exile_Item_Can_Empty"}
 	};
 	components[] = 
 	{
@@ -2215,7 +2215,7 @@ class CfgExileArsenal
 	// Money
 	///////////////////////////////////////////////////////////////////////////////
 	//class CUP_item_Money							{ quality = 3; price = 500000;sellPrice = 500000; }; //NEEDS TO BE FIXED, other item needed
-
+	class Exile_Item_Can_Empty						{ quality = 1; price = 500000; sellPrice = 500000; };
 	///////////////////////////////////////////////////////////////////////////////
 	// Static MGs
 	///////////////////////////////////////////////////////////////////////////////
@@ -2249,6 +2249,7 @@ class CfgExileArsenal
 	class optic_MRD									{ quality = 1; price = 25; };
 	class optic_SOS									{ quality = 2; price = 250; };
 	class optic_Yorris								{ quality = 1; price = 25; };
+	class optic_tws_mg								{ quality = 1; price = 2000; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Hardware
@@ -2294,7 +2295,6 @@ class CfgExileArsenal
 	class Exile_Item_InstantCoffee					{ quality = 1; price = 30; }; //5, 10
 	class Exile_Item_CockONut						{ quality = 1; price = 60; }; //5, 10
 	class Exile_Item_DsNuts							{ quality = 1; price = 70; }; //5, 10
-	class Exile_Item_Can_Empty						{ quality = 1; price = 1; sellPrice = 1; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Drinks
@@ -2346,9 +2346,6 @@ class CfgExileArsenal
 	class NVGoggles_INDEP							{ quality = 2; price = 300; };
 	class NVGoggles_OPFOR							{ quality = 2; price = 300; };
 	class Exile_Item_XM8							{ quality = 2; price = 5; };	
-	class lerca_1200_black                          { quality = 2; price = 100; };
-	class lerca_1200_tan                            { quality = 2; price = 100; };
-	class Leupold_Mk4                               { quality = 2; price = 105; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Watch out for a Walter fart! He has gas!
@@ -5383,6 +5380,16 @@ class CfgTraderCategories
 			"SLAMDirectionalMine_Wire_Mag"
 		};
 	};
+	
+	class Launcherammo
+	{
+		name = "Launcher Ammo";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\cargothrow_ca.paa";
+		items[] = 
+		{
+			"RPG32_Fg"
+		};
+	};
 
 	class Pistols 
 	{
@@ -5668,6 +5675,7 @@ class CfgTraders
 			"Smokes",
 			"StaticMGs",
 			"Explosives",
+			"Launcherammo",
 			"MASLaunchers",
 			"MASLauncherAmmo",
 			"Navigation"
