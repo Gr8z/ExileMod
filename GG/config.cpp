@@ -2331,6 +2331,7 @@ class CfgExileArsenal
 	class Exile_Item_Hammer							{ quality = 1; price = 1000; };
 	class Exile_Item_Shovel							{ quality = 1; price = 750; };
 	class Exile_Item_Wrench							{ quality = 1; price = 500; };	
+	class Exile_Item_ZipTie							{ quality = 1; price = 60; };	
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Navigation
@@ -5387,7 +5388,7 @@ class CfgTraderCategories
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\cargothrow_ca.paa";
 		items[] = 
 		{
-			"RPG32_Fg"
+			"RPG32_F"
 		};
 	};
 
