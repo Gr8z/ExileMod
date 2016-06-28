@@ -5885,7 +5885,7 @@ class CfgTrading
 	* items and vehicles. It is used if there is no sales price defined
 	* in CfgExileArsenal. 
 	*/
-	sellPriceFactor = 0.5;
+	sellPriceFactor = 0.25;
 	
 	rekeyPriceFactor = 0.1;
 };
