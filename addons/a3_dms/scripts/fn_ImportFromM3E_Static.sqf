@@ -14,6 +14,10 @@
 	This function will simply create the objects from a file that was exported from M3Editor, and return a list of those objects.
 */
 
+private ["_OK", "_varname", "_file", "_export"];
+
+
+
 if !(params
 [
 	["_file","",[""]]
@@ -24,8 +28,7 @@ exitWith
 	[]
 };
 
-// The next few lines checks to see if the static base has been spawned previously, in order to avoid spawning duplicate objects.
-private _varname = format ["DMS_StaticBaseSpawned_%1",_file];
+_varname = format ["DMS_StaticBaseSpawned_%1",_file];
 
 if (missionNamespace getVariable [_varname,false]) exitWith
 {
@@ -35,7 +38,8 @@ if (missionNamespace getVariable [_varname,false]) exitWith
 missionNamespace setVariable [_varname,true];
 
 
-private _export = call compile preprocessFileLineNumbers (format ["\x\addons\DMS\objects\static\%1.sqf",_file]);
+
+_export = call compile preprocessFileLineNumbers (format ["\x\addons\DMS\objects\static\%1.sqf",_file]);
 
 if ((isNil "_export") || {!(_export isEqualType [])}) exitWith
 {
@@ -43,12 +47,14 @@ if ((isNil "_export") || {!(_export isEqualType [])}) exitWith
 	[]
 };
 
-private _objs = _export apply
+
+_objs = _export apply
 {
-	private _obj = createVehicle [_x select 0, [0,0,0], [], 0, "CAN_COLLIDE"];
+	private ["_obj","_pos"];
+
+	_obj = createVehicle [_x select 0, [0,0,0], [], 0, "CAN_COLLIDE"];
+	_pos = _x select 1;
 	_obj enableSimulationGlobal false;
-	
-	private _pos = _x select 1;
 
 	if (_x select 4) then
 	{
@@ -60,6 +66,8 @@ private _objs = _export apply
 		_obj setPosATL _pos;
 		_obj setVectorDirAndUp (_x select 3);
 	};
+
+	_obj enableSimulationGlobal false;
 
 	_obj;
 };

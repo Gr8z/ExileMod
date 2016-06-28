@@ -6,10 +6,9 @@
 	Explanations to all of these configs also exist in the main config.
 */
 
-DMS_findSafePosBlacklist append
+DMS_findSafePosBlacklist =
 [
-	[[11375,16170],[14302,18600]],
-	[[13300,14670],[14875,16170]]
+	//Insert position blacklists here.
 ];
 
 // These configs are the default values from the main config. Just included here as an example.

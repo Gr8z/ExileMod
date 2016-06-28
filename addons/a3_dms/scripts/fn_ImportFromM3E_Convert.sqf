@@ -16,6 +16,9 @@
 	This function will return all created objects.
 */
 
+private ["_file", "_missionPos", "_objs", "_export", "_obj", "_objPos"];
+
+
 if !(params
 [
 	["_file","",[""]],
@@ -41,21 +44,17 @@ if ((count _missionPos)<3) then
 };
 
 
-private _export = call compile preprocessFileLineNumbers (format ["\x\addons\DMS\objects\static\%1.sqf",_file]);
 
-if ((isNil "_export") || {!(_export isEqualType [])}) exitWith
+
+
+_export = call compile preprocessFileLineNumbers (format ["\x\addons\DMS\objects\static\%1.sqf",_file]);
+
+_objs = _export apply
 {
-	diag_log format ["DMS ERROR :: Calling DMS_fnc_ImportFromM3E_Convert with invalid file/filepath: %1 | _export: %2",_file,_export];
-	[]
-};
-
-private _objs = _export apply
-{
-	private _obj = createVehicle [_x select 0, [0,0,0], [], 0, "CAN_COLLIDE"];
-	_obj enableSimulationGlobal false;
-
-	private _pos = (_x select 1) vectorAdd [0,0,5000];
-
+	private ["_obj","_pos"];
+	_obj = createVehicle [_x select 0, [0,0,0], [], 0, "CAN_COLLIDE"];
+	_pos = _x select 1;
+	_pos set [2,(_pos select 2)+5000];
 	if (_x select 4) then
 	{
 		_obj setDir (_x select 2);
@@ -67,10 +66,12 @@ private _objs = _export apply
 		_obj setVectorDirAndUp (_x select 3);
 	};
 
+	_obj enableSimulationGlobal false;
+	
 	_obj;
 };
 
-[_objs,_missionPos] call DMS_fnc_SetRelPositions;
+[_objs,_missionPos] call DMS_fnc_setRelPositions;
 
 
 _objs

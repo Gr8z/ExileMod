@@ -24,12 +24,14 @@
 		(format ["CleanUpManager :: Checking Cleaning Status for: %1",_x]) call DMS_fnc_DebugLog;
 	};
 
+	private ["_objs","_timeAddedToList","_timeUntilClean"];
+
 
 	if !(_x params
 	[
-		"_objs",
-		"_timeAddedToList",
-		"_timeUntilClean"
+		["_objs",[objNull],[objNull,[],grpNull]],
+		["_timeAddedToList",diag_tickTime,[0]],
+		["_timeUntilClean",DMS_CompletedMissionCleanupTime,[0]]
 	])
 	then
 	{
