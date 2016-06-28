@@ -12,15 +12,18 @@
 	] call DMS_fnc_SpawnMinefield;
 */
 
-private _mines = [];
+private ["_centerPos", "_difficulty", "_side", "_mines", "_minesInfo", "_AISide", "_mineCount", "_radius", "_randDirOffset", "_sign"];
+
+
+_mines = [];
 
 if (DMS_SpawnMinesAroundMissions) then
 {
 	if !(params
 	[
-		"_centerPos",
-		"_difficulty",
-		"_side"
+		["_centerPos","",[[]],[2,3]],
+		["_difficulty","",["",[]],[2]],
+		["_side","",[""]]
 	])
 	exitWith
 	{
@@ -46,27 +49,25 @@ if (DMS_SpawnMinesAroundMissions) then
 	};
 
 
-	private _minesInfo =
-		if (_difficulty isEqualType "") then
-		{
-			missionNamespace getVariable [format ["DMS_MineInfo_%1", _difficulty], [10,50]];
-		}
-		else
-		{
-			_difficulty
-		};
+	_minesInfo = _difficulty;
+	if (_difficulty isEqualType "") then
+	{
+		_minesInfo	= missionNamespace getVariable [format ["DMS_MineInfo_%1", _difficulty], [10,50]];
+	};
 
-	private _AISide		= missionNamespace getVariable [format ["DMS_%1Side", _side], EAST];
+	_AISide		= missionNamespace getVariable [format ["DMS_%1Side", _side], EAST];
 
 
-	private _mineCount	= _minesInfo select 0;
-	private _radius		= _minesInfo select 1;
+	_mineCount	= _minesInfo select 0;
+	_radius		= _minesInfo select 1;
 
 
 	for "_i" from 1 to _mineCount do
 	{
-		private _minePos = _centerPos getPos [random _radius,random 360];
-		private _mine = createMine ["ATMine", [0,0,0], [], 0];
+		private ["_minePos", "_mine"];
+
+		_minePos = _centerPos getPos [random _radius,random 360];
+		_mine = createMine ["ATMine", [0,0,0], [], 0];
 
 		// Fixes players shooting the mine and causing premature 'splosions
 		if (DMS_BulletProofMines) then
@@ -86,10 +87,10 @@ if (DMS_SpawnMinesAroundMissions) then
 
 	if (_spawnWarningSign) then
 	{
-		private _randDirOffset = random 45;
+		_randDirOffset = random 45;
 		for "_i" from 0 to 359 step 90 do
 		{
-			private _sign = createVehicle ["Land_Sign_Mines_F", [0,0,0], [], 0, "CAN_COLLIDE"];
+			_sign = createVehicle ["Land_Sign_Mines_F", [0,0,0], [], 0, "CAN_COLLIDE"];
 			_sign setDir (180+_i);
 			_sign setPosATL (_centerPos getPos [_radius+2, _randDirOffset+_i]);
 			_sign setVectorUp [0,0,1];

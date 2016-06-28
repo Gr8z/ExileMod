@@ -11,15 +11,18 @@
 
 	Returns a new position offset from the provided position with the provided distance and direction. Position provided is at ground level in AGL
 
-	This function has been deprecated by the new functionality of the "getPos" command (https://community.bistudio.com/wiki/getPos). This function has been updated for efficiency and retained for compatibility.
+	This function has been deprecated by the new functionality of the "getPos" command (https://community.bistudio.com/wiki/getPos). This function has been updated for efficiency and compatibility.
 
 */
 
+private ["_origin","_dis","_dir","_npos"];
+
+
 if !(params
 [
-	"_origin",
-	"_dis",
-	"_dir"
+	["_origin","",[objNull,[]],[2,3]],
+	["_dis",0,[0]],
+	["_dir",0,[0]]
 ])
 exitWith
 {

@@ -2,8 +2,6 @@
 	DMS_fnc_CalcPos
 	Created by eraser1
 
-	https://github.com/Defent/DMS_Exile/wiki/DMS_fnc_CalcPos
-
 	Usage:
 	[
 		_positionOrObject,				// Object or Position: The center
@@ -13,10 +11,15 @@
 	Returns the absolute position from the provided relative position from the provided center position or object.
 */
 
+
+private ["_pos", "_relPos", "_npos"];
+
+
+
 if !(params
 [
-	"_pos",
-	"_relPos"
+	["_pos","",[[],objNull],[2,3]],
+	["_relPos","",[[]],[2,3]]
 ])
 exitWith
 {
