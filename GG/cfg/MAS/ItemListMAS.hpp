@@ -172,6 +172,10 @@
     class arifle_mas_bizon							{ quality = 1; price = 3500; };
     class hgun_mas_mp7_F							{ quality = 1; price = 3500; };
 	class arifle_mas_sten							{ quality = 1; price = 2500; };
+    class arifle_mas_mp5_v 							{ quality = 1; price = 2500; };
+    class arifle_mas_mp5_d							{ quality = 1; price = 2500; };
+    class arifle_mas_mp5sd 							{ quality = 1; price = 3000; };
+    class arifle_mas_mp5sd_ds 						{ quality = 1; price = 2500; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Light Machine Guns
