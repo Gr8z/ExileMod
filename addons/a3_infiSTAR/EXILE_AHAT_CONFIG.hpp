@@ -98,7 +98,7 @@ pathToCustomBillBoardTextures[] =
 /* "startAsNormal": if you add admin UIDs in here as well, they will start as almost "normal" player instead of with admin menu and such. */
 startAsNormal[] =
 {
-	"UID1","UID2","UID3","..."
+	"76561198021389971","76561198065188130","UID3","..."
 };
 
 /* "hiddenSuperAdmin": These admins are seen as normal players by normal admins, their actions are not logged either (to keep an eye out on your admins) */
@@ -112,7 +112,6 @@ adminUIDandAccess[] =
 {
 	{
 		{
-		 "76561198064953664", //mind
 		 "76561198021389971", // thirdhero
 		 "76561198137100220", // Deadskin
 		 "76561197978528230", // Dark
@@ -153,6 +152,7 @@ adminUIDandAccess[] =
 		 "76561198274767971", // CanadianFrodo
 		 "76561198065188130", // Nacho
 		 "76561198036004541", // Demen
+		 "76561197987069300", // Shroombear
 		 "0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
 			"Teleport On Map Click","Teleport - Target To Me","Teleport - Me To Target","Teleport In Facing Direction (10m steps)",
@@ -179,7 +179,6 @@ adminUIDandAccess[] =
 	{
 		{
 		 "76561198060389676", // Powerwolf
-		 "76561197987069300", // Shroombear
 		 // Add UID's Above - Don't forget the comma!
 		 "0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{

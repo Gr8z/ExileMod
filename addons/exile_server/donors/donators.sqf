@@ -65,6 +65,7 @@ Engineer3 = [
 // Marksman Class  /////////
 Marksman1 = [
 	"76561198106890529", // Englishman (OD-2016-05-10) #13687
+	"76561198090941099", // Josh (OD-2016-06-25) #13963
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Marksman1";
@@ -150,7 +151,8 @@ Scout1 = [
 Scout2 = [
 	"76561197980662311", // ezPK XS PWR (OD-2015-09-15) #11479
 	"76561198062796125", // ezPK Zephyr (OD-2015-09-15) #11597
-	"76561198258605036", //  Graham Broadbelt (OD-2016-06-07) #13850 
+	"76561198258605036", //  Graham Broadbelt (OD-2016-06-07) #13850
+	"76561198090813740", // Celty (OD-2016-06-19) #13943	
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout2";
@@ -204,6 +206,7 @@ Scout3 = [
 	"76561198006564526", // Hybrid Black (OD-2016-06-13) #13897
 	"76561198084922099", // ^UG^ MegaWaffle (OD-2016-06-15) #13917
 	"76561198135611591", // Turnip (OD-2016-05-26) #13802
+	"76561198000588916", // howwl (OD-2016-06-24) #13960
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout3";
@@ -273,6 +276,8 @@ Soldier3 = [
 	"76561198155900335", // Andrew (OD-2016-06-16) #13924
 	"76561198145289881", // [WD] Lt. Squeaker Squad (OD-2016-06-18) #13932 
 	"76561197972037463", // *[MA]* Get Smashed (OD-2016-06-19) #13937  
+	"76561198126852115", // Ferg (OD-2016-06-19) #13941
+	"76561198194014225", // [BHJ]Raul (OD-2016-06-20) #13945
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Soldier3";
