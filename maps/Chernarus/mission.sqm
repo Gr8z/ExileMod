@@ -11,7 +11,7 @@ class Mission {
 	addOnsAuto[]=
 	{
 		"exile_client",
-		"A3_Characters_F"
+		"A3_Characters_F",
 	};
 	randomSeed = 8080942;
 	
