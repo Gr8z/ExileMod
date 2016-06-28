@@ -360,9 +360,9 @@
 	class B_mas_Bergen_mul                    			{ quality = 1; price = 3000; };
 	class B_mas_Bergen_rng                    			{ quality = 1; price = 3000; };
 	class B_mas_Bergen_des                    			{ quality = 1; price = 3000; };
-	class B_mas_m_Bergen_al                    			{ quality = 1; price = 3000; };'
+	class B_mas_m_Bergen_al                    			{ quality = 1; price = 3000; };
 	class B_mas_Kitbag_des                    			{ quality = 1; price = 2750; };
 	class B_mas_Kitbag_rng                    			{ quality = 1; price = 2750; };
-	class B_mas_Kitbag_black                    			{ quality = 1; price = 2750; };
+	class B_mas_Kitbag_black                    		{ quality = 1; price = 2750; };
 	class B_mas_Kitbag_wint                    			{ quality = 1; price = 2750; };
 	class B_mas_Kitbag_mul                    			{ quality = 1; price = 2750; };
