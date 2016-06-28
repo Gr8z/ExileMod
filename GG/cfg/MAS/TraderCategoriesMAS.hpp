@@ -94,6 +94,8 @@
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{	
+			//.45 ammo
+			"12Rnd_mas_45acp_Mag",
 			//Hk 416 ammo
 			"30Rnd_mas_556x45_Stanag",
 			"30Rnd_mas_556x45sd_Stanag", 	//SD
@@ -194,6 +196,10 @@
 		{
 			//Makarov
 			"hgun_mas_mak_F",			// stock
+			//ACP
+			"hgun_mas_acp_F";			// stock
+			//USP
+			"hgun_mas_usp_F",			// stock
 			//Micro UZI
 			"hgun_mas_uzi_F",			// stock
 			//M9
@@ -263,6 +269,8 @@
 		{
 			//Stoner LMG (mk200)
 			"LMG_mas_MK200_F",			// stock
+			//M249 LMG 5.56
+			"LMG_mas_M249_F_v",
 			//Mk48
 			"LMG_mas_Mk48_F",			// stock
 			"LMG_mas_Mk48_F_v",			// camo
