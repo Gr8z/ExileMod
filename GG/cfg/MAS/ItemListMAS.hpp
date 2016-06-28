@@ -93,8 +93,8 @@
     class 5Rnd_mas_762x51_T_Stanag    				{ quality = 2; price = 250; };
     class 7Rnd_mas_12Gauge_Slug    					{ quality = 2; price = 75; };
     class 7Rnd_mas_12Gauge_Pellets    				{ quality = 2; price = 75; };
-    class 20Rnd_mas_12Gauge_Slug    				{ quality = 2; price = 200; };
-    class 20Rnd_mas_12Gauge_Pellets    				{ quality = 2; price = 200; };
+    class 20Rnd_mas_12Guage_Slug    				{ quality = 2; price = 200; };
+    class 20Rnd_mas_12Guage_Pellets    				{ quality = 2; price = 200; };
     class 5Rnd_mas_762x51sd_Stanag    				{ quality = 2; price = 200; };
     class 10Rnd_mas_338_Stanag    					{ quality = 2; price = 500; };
     class 10Rnd_mas_338sd_Stanag    				{ quality = 2; price = 750; };
