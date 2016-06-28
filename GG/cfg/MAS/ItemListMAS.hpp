@@ -138,19 +138,19 @@
 	///////////////////////////////////////////////////////////////////////////////
 	// Pistols
 	///////////////////////////////////////////////////////////////////////////////
-    class hgun_mas_uzi_F 							{ quality = 1; price = 1500; };
-    class hgun_mas_m9_F 							{ quality = 1; price = 600; };
-	class hgun_mas_acp_F							{ quality = 1; price = 700; };
+    class hgun_mas_uzi_F 							{ quality = 1; price = 1500; sellPrice = 300; };
+    class hgun_mas_m9_F 							{ quality = 1; price = 600; sellPrice = 120; };
+	class hgun_mas_acp_F							{ quality = 1; price = 700; sellPrice = 140; };
     class hgun_mas_bhp_F 							{ quality = 1; price = 800; };
     class hgun_mas_glock_F 							{ quality = 1; price = 600; };
     class hgun_mas_p226_F 							{ quality = 1; price = 600; };
-    class hgun_mas_grach_F 							{ quality = 1; price = 600; };
-    class hgun_mas_mak_F 							{ quality = 1; price = 700; };
+    class hgun_mas_grach_F 							{ quality = 1; price = 600; sellPrice = 120; };
+    class hgun_mas_mak_F 							{ quality = 1; price = 700; sellPrice = 140; };
     class hgun_mas_sa61_F 							{ quality = 1; price = 1500; };
-    class hgun_mas_mp7p_F 							{ quality = 1; price = 3500; };
+    class hgun_mas_mp7p_F 							{ quality = 1; price = 3500; sellPrice = 700; };
 	class hgun_mas_glocksf_F						{ quality = 1; price = 600; };
 	class hgun_mas_usp_F							{ quality = 1; price = 700; };
-	class hgun_mas_m23_F							{ quality = 1; price = 700; };
+	class hgun_mas_m23_F							{ quality = 1; price = 700; sellPrice = 140; };
 
     ///////////////////////////////////////////////////////////////////////////////
 	// Shotguns
