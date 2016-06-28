@@ -119,8 +119,8 @@
 			"7Rnd_mas_12Gauge_Slug", 		//slug
 			"7Rnd_mas_12Gauge_Pellets", 	//Pellets
 			//AA-12
-			"20Rnd_mas_12Guage_Slug", 		//slug
-			"20Rnd_mas_12Guage_Pellets", 	//pellets
+			"20Rnd_mas_12Gauge_Slug", 		//slug
+			"20Rnd_mas_12Gauge_Pellets", 	//pellets
 			//M24 ammo
 			"5Rnd_mas_762x51sd_Stanag", 	//SD
 			//LRR AWM ammo
@@ -217,7 +217,7 @@
 		};
 	};
 	
-		class MASShotguns
+	class MASShotguns
 	{
 		name = "MAS Shotguns";
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
