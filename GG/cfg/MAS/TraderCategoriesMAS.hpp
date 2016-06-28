@@ -197,7 +197,7 @@
 			//Makarov
 			"hgun_mas_mak_F",			// stock
 			//ACP
-			"hgun_mas_acp_F";			// stock
+			"hgun_mas_acp_F",			// stock
 			//USP
 			"hgun_mas_usp_F",			// stock
 			//Micro UZI
