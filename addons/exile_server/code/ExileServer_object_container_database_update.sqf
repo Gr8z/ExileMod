@@ -18,7 +18,7 @@ if (_containerID > -1) then
 	_vectorDirection = vectorDir _containerObject;
 	_vectorUp = vectorUp _containerObject;
 	_territoryFlag = _containerObject call ExileClient_util_world_getTerritoryAtPosition;
-	_territoryID = if (isNull _territoryFlag) then { 'NULL' } else  { _territoryFlag getVariable ["ExileDatabaseID", 'NULL']};
+	_territoryID = if (isNull _territoryFlag) then { 'NULL' } else { _territoryFlag getVariable ["ExileDatabaseID", 'NULL']};
 	_containerObject setVariable ["ExileTerritoryID", _territoryID];
 	_data =
 	[
@@ -36,6 +36,7 @@ if (_containerID > -1) then
 		magazinesAmmoCargo _containerObject,
 		weaponsItemsCargo _containerObject,
 		_containerObject call ExileServer_util_getObjectContainerCargo,
+		_containerObject getVariable ["ExileMoney", 0],
 		_containerID,
 		_territoryID
 	];

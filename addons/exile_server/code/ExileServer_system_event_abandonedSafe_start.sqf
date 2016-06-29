@@ -20,7 +20,7 @@ if (_abandonedSafes isEqualTo []) exitWith
 _randomNumber = (floor (random (count _abandonedSafes)));
 _safe = _abandonedSafes select _randomNumber;
 _position = getPosATL _safe;
-["standardHintRequest", [format ["An abandoned safe has been located."]]] call ExileServer_system_network_send_broadcast;
+["toastRequest", ["InfoTitleAndText", ["Abandoned safe located!", "PIN has been changed to 0000. Check your map for the location."]]] call ExileServer_system_network_send_broadcast;
 _marker = createMarker [ format["ExileAbandonedSafe%1", diag_tickTime], _position];
 _marker setMarkerType "ExileSafe";
 _marker setMarkerText "Abandoned Safe - Code '0000'";

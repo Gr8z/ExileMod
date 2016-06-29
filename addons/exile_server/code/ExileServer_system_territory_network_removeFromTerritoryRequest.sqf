@@ -24,7 +24,7 @@ try
 	_flagObject = objectFromNetId _flagNetID;
 	if (isNull _flagObject) then
 	{
-		throw "Invalid flag object!";
+		throw "Invalid flag object.";
 	};
 	_territoryID = _flagObject getVariable ["ExileDatabaseID", -1];
 	if (_territoryID isEqualTo -1) then
@@ -34,7 +34,7 @@ try
 	_ownerUID = _flagObject getVariable ["ExileOwnerUID", ""];
 	if (_playerToBeKickedUID isEqualTo _ownerUID) then
 	{
-		throw "Owners cannot leave territories!";
+		throw "Owners cannot leave territories.";
 	};
 	_moderators = _flagObject getVariable ["ExileTerritoryModerators", []];
 	_buildRights = _flagObject getVariable ["ExileTerritoryBuildRights", []];
@@ -45,7 +45,7 @@ try
 	{
 		if !((getPlayerUID _playerObject) in _moderators) then
 		{
-			throw "Only moderators can kick!"; 
+			throw "Only moderators can kick."; 
 		};
 	};
 	_moderators = _moderators - [_playerToBeKickedUID];
@@ -56,7 +56,7 @@ try
 }
 catch 
 {
-	[_sessionID, "notificationRequest", ["Whoops", [_exception]]] call ExileServer_system_network_send_to;
+	[_sessionID, "toastRequest", ["ErrorTitleAndText", ["Failed to remove!", _exception]]] call ExileServer_system_network_send_to;
 	_exception call ExileServer_util_log;
 };
 true

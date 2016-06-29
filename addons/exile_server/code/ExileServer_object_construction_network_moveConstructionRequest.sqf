@@ -31,6 +31,10 @@ try
 	{
 		throw "Player object is null!";
 	};
+	if (_object getVariable ["ExileConstructionDamage",0] > 0)then
+	{
+		throw "You cant move Damaged objects, repair it first";
+	};
 	_playerUID = getPlayerUID _playerObject;
 	_objectID = _object getVariable ["ExileDatabaseID", -1];
 	if (_objectID isEqualTo -1) then 

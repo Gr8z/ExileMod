@@ -35,5 +35,4 @@ _extDB2Message = ["insertConstruction", _data] call ExileServer_util_extDB2_crea
 _constructionID = _extDB2Message call ExileServer_system_database_query_insertSingle;
 _constructionObject setVariable ["ExileDatabaseID", _constructionID];
 _constructionObject setVariable ["ExileTerritoryID", _territoryID];
-_constructionObject addMPEventHandler ["MPKilled", { if !(isServer) exitWith {}; (_this select 0) call ExileServer_object_construction_event_onMpKilled; }];
 _constructionID

@@ -22,6 +22,7 @@ _containerObject setVariable ["ExileDatabaseID", _containerID];
 _containerObject setVariable ["ExileOwnerUID", (_data select 2),true];
 _containerObject setVariable ["ExileAccessCode",(_data select 16)];
 _containerObject setVariable ["ExileTerritoryID", (_data select 17)];
+_containerObject setVariable ["ExileMoney", (_data select 20), true];
 if(getNumber(configFile >> "CfgVehicles" >> typeOf _containerObject >> "exileIsLockable") isEqualTo 1)then
 {
 	_containerObject setVariable ["ExileIsLocked",(_data select 3),true];

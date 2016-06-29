@@ -1,5 +1,5 @@
 /**
- * ExileServer_object_player_event_killFeed
+ * ExileServer_system_xm8_sendBaseRaid
  *
  * Exile Mod
  * www.exilemod.com
@@ -9,8 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-if(ExileServerKillFeed)then
-{
-	_this call ExileServer_system_network_send_broadcast;
-};
-true
+private["_recipients","_territoryName"];
+_recipients = _this getVariable ["ExileTerritoryBuildRights", []];
+_territoryName = _this getVariable ["ExileTerritoryName", ""];
+["base-raid", _recipients, _territoryName] call ExileServer_system_xm8_send;

@@ -20,7 +20,7 @@ _lootConfig = missionConfigFile >> "CfgExileLootSettings";
 _maximumNumberOfLootPositions = getNumber (_lootConfig >> "maximumNumberOfLootSpotsPerBuilding");
 _maximumPositionCoverage = getNumber (_lootConfig >> "maximumPositionCoverage");
 _maximumNumberOfItemsPerLootSpot = getNumber (_lootConfig >> "maximumNumberOfItemsPerLootSpot");
-_numberOfPositionsToUse = 1 max (((count _localPositions) * 100 / _maximumPositionCoverage) min _maximumNumberOfLootPositions);
+_numberOfPositionsToUse = 1 max (((count _localPositions) * _maximumPositionCoverage / 100) min _maximumNumberOfLootPositions);
 _localPositions = _localPositions call ExileClient_util_array_shuffle;
 _lootPositions = _localPositions select [0, _numberOfPositionsToUse];
 _spawnedItemClassNames = [];
@@ -67,7 +67,7 @@ _lootWeaponHolderNetIDs = [];
 				case 2: 	
 				{ 
 					_lootHolder addWeaponCargoGlobal [_itemClassName, 1]; 
-					if (_itemClassName != "Exile_Melee_Axe") then
+					if !(_itemClassName isKindOf ["Exile_Melee_Abstract", configFile >> "CfgWeapons"]) then
 					{
 						_magazineClassNames = getArray(configFile >> "CfgWeapons" >> _itemClassName >> "magazines");
 						if (count(_magazineClassNames) > 0) then
