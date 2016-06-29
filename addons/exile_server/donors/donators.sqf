@@ -41,6 +41,7 @@ Engineer1 = [
 
 Engineer2 = [
 	"76561198059890709", // NarstyNate (OD-2016-06-16) #13919
+	"76561198051054305", // Miguel (EXP 29-06-2016) Paid one month on the website
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Engineer2";
