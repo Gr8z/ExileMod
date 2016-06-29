@@ -5,9 +5,6 @@ class Mission {
 	{
 		"exile_client",
 		"A3_Characters_F",
-		"CUP_Weapons_WeaponsCore",
-		"rhs_weapons",
-		"rhsusf_weapons",
 		"tryk_backpack",
 		"extendedbase"
 	};
@@ -160,7 +157,7 @@ class Mission {
 	};
 	
 	class Markers {
-		items = 22;
+		items = 39;
 		
 		class Item0
 		{
@@ -171,47 +168,96 @@ class Mission {
 		};
 		class Item1
 		{
+			position[]={1696.6591,14.285818,2291.1062};
+			name="SpawnKamenkaIcon";
+			text="";
+			type="ExileSpawnZoneIcon";
+		};
+		class Item2
+		{
 			position[]={4833.1958,5.9000001,2262.3147};
 			name="SpawnBalota";
 			text="Balota";
 			type="ExileSpawnZone";
 		};
-		class Item2
+		class Item3
+		{
+			position[]={4833.1958,5.9000001,2262.3147};
+			name="SpawnBalotaIcon";
+			text="";
+			type="ExileSpawnZoneIcon";
+		};
+		class Item4
 		{
 			position[]={6711.7202,6,2589.9814};
 			name="SpawnChernogorsk";
 			text="Chernogorsk";
 			type="ExileSpawnZone";
 		};
-		class Item3
+		class Item5
+		{
+			position[]={6711.7202,6,2589.9814};
+			name="SpawnChernogorskIcon";
+			text="";
+			type="ExileSpawnZoneIcon";
+		};
+		class Item6
 		{
 			position[]={10513.343,6.8559303,2081.8613};
 			name="SpawnElektro";
 			text="Elektro";
 			type="ExileSpawnZone";
 		};
-		class Item4
+		class Item7
+		{
+			position[]={10513.343,6.8559303,2081.8613};
+			name="SpawnElektroIcon";
+			text="";
+			type="ExileSpawnZoneIcon";
+		};
+		class Item8
 		{
 			position[]={12054.753,6.1015596,3489.873};
 			name="SpawnKamyshovo";
 			text="Kamyshovo";
 			type="ExileSpawnZone";
 		};
-		class Item5
+		class Item9
+		{
+			position[]={12054.753,6.1015596,3489.873};
+			name="SpawnKamyshovoIcon";
+			text="";
+			type="ExileSpawnZoneIcon";
+		};
+		class Item10
 		{
 			position[]={13352.05,6.0021176,6301.7461};
 			name="SpawnSolnichniy";
 			text="Solnichniy";
 			type="ExileSpawnZone";
 		};
-		class Item6
+		class Item11
+		{
+			position[]={13352.05,6.0021176,6301.7461};
+			name="SpawnSolnichniyIcon";
+			text="";
+			type="ExileSpawnZoneIcon";
+		};
+		class Item12
 		{
 			position[]={12546.252,9.5938053,9774.4521};
 			name="SpawnBerezino";
 			text="Berezino";
 			type="ExileSpawnZone";
 		};
-		class Item7
+		class Item13
+		{
+			position[]={12546.252,9.5938053,9774.4521};
+			name="SpawnBerezinoIcon";
+			text="";
+			type="ExileSpawnZoneIcon";
+		};
+		class Item14
 		{
 			position[]={7063.8457,0,1887.2378};
 			name="Website";
@@ -219,7 +265,7 @@ class Mission {
 			type="mil_pickup";
 			colorName="ColorYellow";
 		};
-		class Item8
+		class Item15
 		{
 			position[]={7065.8457,0,1287.2378};
 			name="Teamspeak";
@@ -227,7 +273,7 @@ class Mission {
 			type="mil_pickup";
 			colorName="ColorYellow";
 		};
-		class Item9
+		class Item16
 		{
 			position[]={6330.98, 0, 7800.99};
 			name = "TraderCityMarker1";
@@ -240,8 +286,14 @@ class Mission {
 			b = 175;
 			drawBorder = 1;
 		};
-		
-         class Item10
+		class Item17
+		{
+			position[]={6330.98, 0, 7800.99};
+			name="TraderCityMarker1Icon";
+			text="";
+			type="ExileTraderZoneIcon";
+		};
+         class Item18
 		{
 			position[]={4073.33,0,11677.6};
 			name = "TraderCityMarker2";
@@ -254,7 +306,14 @@ class Mission {
 			b = 175;
 			drawBorder = 1;
 		};
-		class Item11
+		class Item19
+		{
+			position[]={4073.33,0,11677.6};
+			name="TraderCityMarker2Icon";
+			text="";
+			type="ExileTraderZoneIcon";
+		};
+		class Item20
 		{
 			position[]={12147.7,0,12747.2};
 			name = "TraderCityMarker3";
@@ -267,7 +326,14 @@ class Mission {
 			b = 175;
 			drawBorder = 1;
 		};
-		class Item12
+		class Item21
+		{
+			position[]={12147.7,0,12747.2};
+			name="TraderCityMarker3Icon";
+			text="";
+			type="ExileTraderZoneIcon";
+		};
+		class Item22
 		{
 			position[]={11474.1,0,11343.2};
 			name = "TraderCityMarker4";
@@ -280,7 +346,14 @@ class Mission {
 			b = 175;
 			drawBorder = 1;
 		};
-		class Item13
+		class Item23
+		{
+			position[]={11474.1,0,11343.2};
+			name="TraderCityMarker4Icon";
+			text="";
+			type="ExileTraderZoneIcon";
+		};
+		class Item24
 		{
 			position[] = {12147.7,0,12747.2};
 			name = "NE Airfield Trader";
@@ -291,7 +364,14 @@ class Mission {
 			a = 3;
 			b = 3;
 		};
-		class Item14
+		class Item25
+		{
+			position[]={12147.7,0,12747.2};
+			name="NE Airfield TraderIcon";
+			text="";
+			type="ExileTraderZoneIcon";
+		};
+		class Item26
 		{
 			position[] = {11474.1,0,11343.2};
 			name = "Klen Trader";
@@ -302,7 +382,14 @@ class Mission {
 			a = 3;
 			b = 3;
 		};
-		class Item15
+		class Item27
+		{
+			position[]={11474.1,0,11343.2};
+			name="Klen TraderIcon";
+			text="";
+			type="ExileTraderZoneIcon";
+		};
+		class Item28
 		{
 			position[] = {4073.33 ,0, 11677.6};
 			name = "Bash Trader";
@@ -313,7 +400,14 @@ class Mission {
 			a = 3;
 			b = 3;
 		};
-		class Item16
+		class Item29
+		{
+			position[]={4073.33 ,0, 11677.6};
+			name="Bash TraderIcon";
+			text="";
+			type="ExileTraderZoneIcon";
+		};
+		class Item30
 		{
 			position[]={6330.98, 0, 7800.99};
 			name="Stary Trader";
@@ -324,14 +418,28 @@ class Mission {
 			a=3;
 			b=3;
 		};
-		class Item17
+		class Item31
+		{
+			position[]={6330.98, 0, 7800.99};
+			name="Stary TraderIcon";
+			text="";
+			type="ExileTraderZoneIcon";
+		};
+		class Item32
 		{
 			position[]={2624.49,6.0021176,5348.43};
 			name="SpawnZelenogorsk";
 			text="Zelenogorsk";
 			type="ExileSpawnZone";
 		};
-		class Item18
+		class Item33
+		{
+			position[]={2624.49,6.0021176,5348.43};
+			name="SpawnZelenogorskIcon";
+			text="";
+			type="ExileSpawnZoneIcon";
+		};
+		class Item34
 		{
 			position[]={13459.7,0,5439.48};
 			name="Boat Trader";
@@ -342,10 +450,10 @@ class Mission {
 			a=3;
 			b=3;
 		};
-		class Item19
+		class Item35
 		{
 			position[]={13459.7,0,5439.48};
-			name = "BoatTraderCityMarker";
+			name = "BoatTraderCity";
 			text = "Mafia Trader City";
 			markerType = "ELLIPSE";
 			type = "ExileTraderZone";
@@ -355,21 +463,17 @@ class Mission {
 			b = 40;
 			drawBorder = 1;
 		};
-		class Item20
+		class Item36
 		{
-			position[]={3444.4487,0,3803.5161};
-			name="Bor Trader";
-			text="Bor Trader";
-			type="loc_Tree";
-			colorName="ColorWhite";
-			fillName="Vertical";
-			a=3;
-			b=3;
+			position[]={13459.7,0,5439.48};
+			name="BoatTraderCityIcon";
+			text="";
+			type="ExileTraderZoneIcon";
 		};
-		class Item21
+		class Item37
 		{
 			position[]={3444.4487,0,3803.5161};
-			name = "BorTraderCityMarker";
+			name = "BorTraderCity";
 			text = "Mafia Trader City";
 			markerType = "ELLIPSE";
 			type = "ExileTraderZone";
@@ -378,6 +482,13 @@ class Mission {
 			a = 100;
 			b = 100;
 			drawBorder = 1;
+		};
+		class Item38
+		{
+			position[]={3444.4487,0,3803.5161};
+			name="BorTraderCityIcon";
+			text="";
+			type="ExileTraderZoneIcon";
 		};
 	};
 };

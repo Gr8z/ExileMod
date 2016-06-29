@@ -8,7 +8,7 @@
  * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
-
+ 
 class CfgRemoteExec
 {
 	class Functions
@@ -97,6 +97,231 @@ class CfgNotifications
 	};
 };
 
+class ExileDamage
+{
+	class objects
+	{
+		class Exile_Construction_BaseCamera_Static
+		{
+			required = 0;
+		};
+
+		class Exile_Container_CamoTent
+		{
+			required = 0;
+		};
+
+		class Exile_Construction_CampFire_Static
+		{
+			required = 0;
+		};
+
+		class Exile_Construction_ConcreteDoor_Static
+		{
+			required = 0;
+		};
+
+		class Exile_Construction_ConcreteDoorway_Static
+		{
+			required = 0;
+		};
+
+		class Exile_Construction_ConcreteFloor_Static
+		{
+			required = 0;
+		};
+
+		class Exile_Construction_ConcreteFloorHatch_Static
+		{
+			required = 0;
+		};
+
+		class Exile_Construction_ConcreteFloorPort_Static
+		{
+			required = 0;
+		};
+
+		class Exile_Construction_ConcreteGate_Static
+		{
+			required = 0;
+		};
+
+		class Exile_Construction_ConcreteStairs_Static
+		{
+			required = 0;
+		};
+
+		class Exile_Construction_ConcreteSupport_Static
+		{
+			required = 0;
+		};
+
+		class Exile_Construction_ConcreteWall_Static
+		{
+			required = 0;
+		};
+
+		class Exile_Construction_ConcreteWindow_Static
+		{
+			required = 0;
+		};
+
+		class Exile_Construction_ConcreteWindowHatch_Static
+		{
+			required = 0;
+		};
+
+		class Exile_Construction_Flag_Static
+		{
+			required = 0;
+		};
+
+		class Exile_Construction_FloodLight_Static
+		{
+			required = 0;
+		};
+
+		class Exile_Construction_Laptop_Static
+		{
+			required = 0;
+		};
+
+		class Exile_Construction_MetalHedgehog_Static
+		{
+			required = 0;
+		};
+
+		class Exile_Construction_PortableGenerator_Static
+		{
+			required = 0;
+		};
+
+		class Exile_Construction_RazorWire_Static
+		{
+			required = 0;
+		};
+
+		class Exile_Container_Safe
+		{
+			required = 0;
+		};
+
+		class Exile_Construction_SandBags_Long_Static
+		{
+			required = 0;
+		};
+
+		class Exile_Container_StorageCrate
+		{
+			required = 0;
+		};
+
+		class Exile_Container_SupplyBox
+		{
+			required = 0;
+		};
+
+		class Exile_Construction_WaterBarrel_Static
+		{
+			required = 0;
+		};
+
+		class Exile_Construction_WireFence_Static
+		{
+			required = 0;
+		};
+
+		class Exile_Construction_WoodDoor_Static
+		{
+			required = 0;
+		};
+
+		class Exile_Construction_WoodDoor_Reinforced_Static
+		{
+			required = 0;
+		};
+
+		class Exile_Construction_WoodDoorway_Static
+		{
+			required = 0;
+		};
+
+		class Exile_Construction_WoodDoorway_Reinforced_Static
+		{
+			required = 0;
+		};
+
+		class Exile_Construction_WoodFloor_Static
+		{
+			required = 0;
+		};
+
+		class Exile_Construction_WoodFloorPort_Static
+		{
+			required = 0;
+		};
+
+		class Exile_Construction_WoodFloor_Reinforced_Static
+		{
+			required = 0;
+		};
+
+		class Exile_Construction_WoodGate_Static
+		{
+			required = 0;
+		};
+
+		class Exile_Construction_WoodGate_Reinforced_Static
+		{
+			required = 0;
+		};
+
+		class Exile_Construction_WoodStairs_Static
+		{
+			required = 0;
+		};
+
+		class Exile_Construction_WoodSupport_Static
+		{
+			required = 0;
+		};
+
+		class Exile_Construction_WoodWall_Static
+		{
+			required = 0;
+		};
+
+		class Exile_Construction_WoodWallHalf_Static
+		{
+			required = 0;
+		};
+
+		class Exile_Construction_WoodWallHalf_Reinforced_Static
+		{
+			required = 0;
+		};
+
+		class Exile_Construction_WoodWall_Reinforced_Static
+		{
+			required = 0;
+		};
+
+		class Exile_Construction_WoodWindow_Static
+		{
+			required = 0;
+		};
+
+		class Exile_Construction_WoodWindow_Reinforced_Static
+		{
+			required = 0;
+		};
+
+		class Exile_Construction_WorkBench_Static
+		{
+			required = 0;
+		};
+	};
+};
 class CfgClans
 {
 	/*
@@ -108,8 +333,39 @@ class CfgClans
 
 	/*
 		A list of all characters allowed in a clan *name*
+
+		NOTE: 
 	*/
-	clanNameAlphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 -!";
+	clanNameAlphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ._-!:\\/";
+
+	/*
+
+		Maximum markers per clan
+
+	*/
+	maximumIcons = 20;
+
+	/*
+		Maximum number of characters on a Marker in a presistent system
+
+		Note: MAX 255!
+		
+	*/
+	maximumIconText = 50;
+
+	/*
+
+		Maximum poly markers per clan
+
+	*/
+	maximumPolys = 10;
+
+
+	/* 
+
+		Maximum points in poly
+	*/
+	maximumPolyNode = 10;
 };
 class Exile_AbstractCraftingRecipe
 {
@@ -121,11 +377,71 @@ class Exile_AbstractCraftingRecipe
 	requiredInteractionModelGroup = ""; // See CfgInteractionModels
 	requiresOcean = 0; // isSurfaceWater test
 	requiresFire = 0; // inflamed object nearby
+	requiresConcreteMixer = 0; // Check if concrete mixer is nearby
 };
 
 class CfgCraftingRecipes
 {
 	
+class BreachingChargeBigMomma: Exile_AbstractCraftingRecipe
+{
+	name = "Breaching Charge (Big Momma)";
+	pictureItem = "Exile_Item_BreachingCharge_BigMomma";
+	returnedItems[] =
+	{
+		{1, "Exile_Item_BreachingCharge_BigMomma"}
+	};
+	tools[] =
+	{
+		"Exile_Item_Foolbox"
+	};
+	components[] = 
+	{
+		{3, "Exile_Item_BreachingCharge_Metal"},
+		{1, "Exile_Item_MobilePhone"},
+		{1, "Exile_Item_DuctTape"},
+		{1, "Exile_Item_ZipTie"}
+	};
+};
+
+class BreachingChargeMetal: Exile_AbstractCraftingRecipe
+{
+	name = "Breaching Charge (Metal)";
+	pictureItem = "Exile_Item_BreachingCharge_Metal";
+	returnedItems[] =
+	{
+		{1, "Exile_Item_BreachingCharge_Metal"}
+	};
+	tools[] =
+	{
+		"Exile_Item_Foolbox"
+	};
+	components[] = 
+	{
+		{1, "Exile_Item_DuctTape"},
+		{1, "SatchelCharge_Remote_Mag"}
+	};
+};
+
+class BreachingChargeWood: Exile_AbstractCraftingRecipe
+{
+	name = "Breaching Charge (Wood)";
+	pictureItem = "Exile_Item_BreachingCharge_Wood";
+	returnedItems[] =
+	{
+		{1, "Exile_Item_BreachingCharge_Wood"}
+	};
+	tools[] =
+	{
+		"Exile_Item_Foolbox"
+	};
+	components[] = 
+	{
+		{1, "Exile_Item_DuctTape"},
+		{1, "DemoCharge_Remote_Mag"}
+	};
+};
+
 class CookBBQSandwich: Exile_AbstractCraftingRecipe
 {
 	name = "Cook BBQ Sandwich";
@@ -133,18 +449,17 @@ class CookBBQSandwich: Exile_AbstractCraftingRecipe
 	requiresFire = 1;
 	returnedItems[] =
 	{
-    	{1, "Exile_Item_BBQSandwich_Cooked"}
-    };
+		{1, "Exile_Item_BBQSandwich_Cooked"}
+	};
 	tools[] =
 	{
-         "Exile_Item_CookingPot"
-    };
-     components[] = 
+		"Exile_Item_CookingPot"
+	};
+	components[] = 
 	{
-    	{1, "Exile_Item_BBQSandwich"}
-    };
-		category = "Food/Drinks";
-}; 
+		{1, "Exile_Item_BBQSandwich"}
+	};
+};
 
 class CookCatFood: Exile_AbstractCraftingRecipe
 {
@@ -153,18 +468,17 @@ class CookCatFood: Exile_AbstractCraftingRecipe
 	requiresFire = 1;
 	returnedItems[] =
 	{
-    	{1, "Exile_Item_CatFood_Cooked"}
+		{1, "Exile_Item_CatFood_Cooked"}
 	};
 	tools[] =
 	{
 		"Exile_Item_CookingPot"
 	};
-     components[] = 
+	components[] = 
 	{
 		{1, "Exile_Item_CatFood"}
 	};
-		category = "Food/Drinks";
-}; 
+};
 
 class CookChristmasTinner: Exile_AbstractCraftingRecipe
 {
@@ -173,7 +487,7 @@ class CookChristmasTinner: Exile_AbstractCraftingRecipe
 	requiresFire = 1;
 	returnedItems[] =
 	{
-    	{1, "Exile_Item_ChristmasTinner_Cooked"}
+		{1, "Exile_Item_ChristmasTinner_Cooked"}
 	};
 	tools[] =
 	{
@@ -181,9 +495,8 @@ class CookChristmasTinner: Exile_AbstractCraftingRecipe
 	};
 	components[] = 
 	{
-    	{1, "Exile_Item_ChristmasTinner"}
+		{1, "Exile_Item_ChristmasTinner"}
 	};
-	category = "Food/Drinks";
 };
 class CookCoffee: Exile_AbstractCraftingRecipe
 {
@@ -192,18 +505,17 @@ class CookCoffee: Exile_AbstractCraftingRecipe
 	requiresFire = 1;
 	returnedItems[] =
 	{
-    	{1, "Exile_Item_PlasticBottleCoffee"}
+		{1, "Exile_Item_PlasticBottleCoffee"}
 	};
 	tools[] =
 	{
 		"Exile_Item_CookingPot"
 	};
-     components[] = 
+	components[] = 
 	{
-    	{1, "Exile_Item_PlasticBottleFreshWater"},
-    	{1, "Exile_Item_InstantCoffee"}
+		{1, "Exile_Item_PlasticBottleFreshWater"},
+		{1, "Exile_Item_InstantCoffee"}
 	};
-		category = "Food/Drinks";
 };
 class CookDogFood: Exile_AbstractCraftingRecipe
 {
@@ -212,18 +524,17 @@ class CookDogFood: Exile_AbstractCraftingRecipe
 	requiresFire = 1;
 	returnedItems[] =
 	{
-    	{1, "Exile_Item_DogFood_Cooked"}
+		{1, "Exile_Item_DogFood_Cooked"}
 	};
 	tools[] =
 	{
 		"Exile_Item_CookingPot"
 	};
-     components[] = 
+	components[] = 
 	{
-    	{1, "Exile_Item_DogFood"}
+		{1, "Exile_Item_DogFood"}
 	};
-		category = "Food/Drinks";
-}; 
+};
 
 class CookGloriousKnakworst: Exile_AbstractCraftingRecipe
 {
@@ -232,18 +543,17 @@ class CookGloriousKnakworst: Exile_AbstractCraftingRecipe
 	requiresFire = 1;
 	returnedItems[] =
 	{
-    	{1, "Exile_Item_GloriousKnakworst_Cooked"}
+		{1, "Exile_Item_GloriousKnakworst_Cooked"}
 	};
 	tools[] =
 	{
-         "Exile_Item_CookingPot"
+		"Exile_Item_CookingPot"
 	};
-     components[] = 
+	components[] = 
 	{
-    	{1, "Exile_Item_GloriousKnakworst"}
+		{1, "Exile_Item_GloriousKnakworst"}
 	};
-		category = "Food/Drinks";
-}; 
+};
 
 class CookPlasticBottleDirtyWater: Exile_AbstractCraftingRecipe
 {
@@ -252,17 +562,16 @@ class CookPlasticBottleDirtyWater: Exile_AbstractCraftingRecipe
 	requiresFire = 1;
 	returnedItems[] =
 	{
-    	{1, "Exile_Item_PlasticBottleFreshWater"}
+		{1, "Exile_Item_PlasticBottleFreshWater"}
 	};
 	tools[] =
 	{
 		"Exile_Item_CookingPot"
 	};
-     components[] = 
+	components[] = 
 	{
-    	{1, "Exile_Item_PlasticBottleDirtyWater"}
+		{1, "Exile_Item_PlasticBottleDirtyWater"}
 	};
-		category = "Food/Drinks";
 };
 class CookPlasticBottleSaltWater: Exile_AbstractCraftingRecipe
 {
@@ -271,18 +580,18 @@ class CookPlasticBottleSaltWater: Exile_AbstractCraftingRecipe
 	requiresFire = 1;
 	returnedItems[] =
 	{
-    	{1, "Exile_Item_PlasticBottleFreshWater"}
+		{1, "Exile_Item_PlasticBottleFreshWater"}
 	};
 	tools[] =
 	{
 		"Exile_Item_CookingPot"
 	};
-     components[] = 
+	components[] = 
 	{
-    	{1, "Exile_Item_PlasticBottleSaltWater"}
+		{1, "Exile_Item_PlasticBottleSaltWater"}
 	};
-		category = "Food/Drinks";
-}; 
+};
+
 class CookSausageGravy: Exile_AbstractCraftingRecipe
 {
 	name = "Cook Sausage Gravy";
@@ -290,18 +599,18 @@ class CookSausageGravy: Exile_AbstractCraftingRecipe
 	requiresFire = 1;
 	returnedItems[] =
 	{
-    	{1, "Exile_Item_SausageGravy_Cooked"}
+		{1, "Exile_Item_SausageGravy_Cooked"}
 	};
 	tools[] =
 	{
 		"Exile_Item_CookingPot"
 	};
-     components[] = 
+	components[] = 
 	{
-    	{1, "Exile_Item_SausageGravy"}
+		{1, "Exile_Item_SausageGravy"}
 	};
-		category = "Food/Drinks";
-}; 
+};
+
 class CookSurstromming: Exile_AbstractCraftingRecipe
 {
 	name = "Cook Surströmming";
@@ -309,35 +618,512 @@ class CookSurstromming: Exile_AbstractCraftingRecipe
 	requiresFire = 1;
 	returnedItems[] =
 	{
-    	{1, "Exile_Item_Surstromming_Cooked"}
-    };
+		{1, "Exile_Item_Surstromming_Cooked"}
+	};
 	tools[] =
 	{
 		"Exile_Item_CookingPot"
-    };
-     components[] = 
-	{
-    	{1, "Exile_Item_Surstromming"}
-    };
-		category = "Food/Drinks";
-}; 
-
-class CraftBushKitGreen: Exile_AbstractCraftingRecipe
-{
-	name = "Craft a Bush Kit (Green)";
-	pictureItem = "Exile_Item_BushKit_Green";
-     requiredInteractionModelGroup = "WorkBench";
-	returnedItems[] = 
-	{
-    	{1, "Exile_Item_BushKit_Green"}
-    };
+	};
 	components[] = 
 	{
-    	{10, "Exile_Item_Leaves"},
-    	{5, "Exile_Item_WoodSticks"},
-    	{1, "Exile_Item_Rope"}
-    };
-		category = "Craftables";
+		{1, "Exile_Item_Surstromming"}
+	};
+};
+
+class CraftBandage: Exile_AbstractCraftingRecipe
+{
+	name = "Craft Bandage";
+	pictureItem = "Exile_Item_Bandage";
+	returnedItems[] =
+	{
+		{1, "Exile_Item_Bandage"}
+	};
+	components[] = 
+	{
+		{4, "Exile_Item_ToiletPaper"}
+	};
+};
+
+class CraftConcreteDoorway: Exile_AbstractCraftingRecipe
+{
+	name = "Craft Concrete Doorway";
+	pictureItem = "Exile_Item_ConcreteDoorwayKit";
+	requiresConcreteMixer = true;
+	returnedItems[] = 
+	{
+		{1, "Exile_Item_ConcreteDoorwayKit"},
+		{3, "Exile_Item_WaterCanisterEmpty"},
+		{1, "Exile_Item_FuelCanisterEmpty"}
+	};
+	components[] = 
+	{
+		{3, "Exile_Item_Cement"},
+		{3, "Exile_Item_Sand"},
+		{3, "Exile_Item_MetalPole"},
+		{3, "Exile_Item_WaterCanisterDirtyWater"},
+		{1, "Exile_Item_FuelCanisterFull"}
+	};
+};
+class CraftConcreteFloor: Exile_AbstractCraftingRecipe
+{
+	name = "Craft Concrete Floor";
+	pictureItem = "Exile_Item_ConcreteFloorKit";
+	requiresConcreteMixer = true;
+	returnedItems[] = 
+	{
+		{1, "Exile_Item_ConcreteFloorKit"},
+		{2, "Exile_Item_WaterCanisterEmpty"},
+		{1, "Exile_Item_FuelCanisterEmpty"}
+	};
+	components[] = 
+	{
+		{2, "Exile_Item_Cement"},
+		{2, "Exile_Item_Sand"},
+		{2, "Exile_Item_MetalPole"},
+		{2, "Exile_Item_WaterCanisterDirtyWater"},
+		{1, "Exile_Item_FuelCanisterFull"}
+	};
+};
+class CraftConcreteFloorPort: Exile_AbstractCraftingRecipe
+{
+	name = "Craft Concrete Floor Port";
+	pictureItem = "Exile_Item_ConcreteFloorPortKit";
+	requiresConcreteMixer = true;
+	returnedItems[] = 
+	{
+		{1, "Exile_Item_ConcreteFloorPortKit"},
+		{3, "Exile_Item_WaterCanisterEmpty"},
+		{1, "Exile_Item_FuelCanisterEmpty"}
+	};
+	components[] = 
+	{
+		{3, "Exile_Item_Cement"},
+		{3, "Exile_Item_Sand"},
+		{3, "Exile_Item_MetalPole"},
+		{3, "Exile_Item_WaterCanisterDirtyWater"},
+		{1, "Exile_Item_FuelCanisterFull"}
+	};
+};
+class CraftConcreteGate: Exile_AbstractCraftingRecipe
+{
+	name = "Craft Concrete Gate";
+	pictureItem = "Exile_Item_ConcreteGateKit";
+	requiresConcreteMixer = true;
+	returnedItems[] = 
+	{
+		{1, "Exile_Item_ConcreteGateKit"},
+		{4, "Exile_Item_WaterCanisterEmpty"},
+		{1, "Exile_Item_FuelCanisterEmpty"}
+	};
+	components[] = 
+	{
+		{4, "Exile_Item_Cement"},
+		{4, "Exile_Item_Sand"},
+		{4, "Exile_Item_MetalPole"},
+		{4, "Exile_Item_WaterCanisterDirtyWater"},
+		{1, "Exile_Item_FuelCanisterFull"}
+	};
+};
+class CraftConcretStairs: Exile_AbstractCraftingRecipe
+{
+	name = "Craft Concrete Stairs";
+	pictureItem = "Exile_Item_ConcreteStairsKit";
+	requiresConcreteMixer = true;
+	returnedItems[] = 
+	{
+		{1, "Exile_Item_ConcreteStairsKit"},
+		{1, "Exile_Item_WaterCanisterEmpty"},
+		{1, "Exile_Item_FuelCanisterEmpty"}
+	};
+	components[] = 
+	{
+		{1, "Exile_Item_Cement"},
+		{1, "Exile_Item_Sand"},
+		{1, "Exile_Item_MetalPole"},
+		{1, "Exile_Item_WaterCanisterDirtyWater"},
+		{1, "Exile_Item_FuelCanisterFull"}
+	};
+};
+class CraftConcretSupport: Exile_AbstractCraftingRecipe
+{
+	name = "Craft Concrete Support";
+	pictureItem = "Exile_Item_ConcreteSupportKit";
+	requiresConcreteMixer = true;
+	returnedItems[] = 
+	{
+		{1, "Exile_Item_ConcreteSupportKit"},
+		{1, "Exile_Item_WaterCanisterEmpty"},
+		{1, "Exile_Item_FuelCanisterEmpty"}
+	};
+	components[] = 
+	{
+		{1, "Exile_Item_Cement"},
+		{1, "Exile_Item_Sand"},
+		{1, "Exile_Item_MetalPole"},
+		{1, "Exile_Item_WaterCanisterDirtyWater"},
+		{1, "Exile_Item_FuelCanisterFull"}
+	};
+};
+class CraftConcreteWall: Exile_AbstractCraftingRecipe
+{
+	name = "Craft Concrete Wall";
+	pictureItem = "Exile_Item_ConcreteWallKit";
+	requiresConcreteMixer = true;
+	returnedItems[] = 
+	{
+		{1, "Exile_Item_ConcreteWallKit"},
+		{2, "Exile_Item_WaterCanisterEmpty"},
+		{1, "Exile_Item_FuelCanisterEmpty"}
+	};
+	components[] = 
+	{
+		{2, "Exile_Item_Cement"},
+		{2, "Exile_Item_Sand"},
+		{2, "Exile_Item_MetalPole"},
+		{2, "Exile_Item_WaterCanisterDirtyWater"},
+		{1, "Exile_Item_FuelCanisterFull"}
+	};
+};
+class CraftFirePlace: Exile_AbstractCraftingRecipe
+{
+	name = "Craft Fire Place";
+	pictureItem = "Exile_Item_CampFireKit";
+	returnedItems[] = 
+	{
+		{1, "Exile_Item_CampFireKit"}
+	};
+	components[] = 
+	{
+		{2, "Exile_Item_WoodLog"}
+	};
+};
+class CraftFloodLight: Exile_AbstractCraftingRecipe
+{
+	name = "Craft Flood Light";
+	pictureItem = "Exile_Item_FloodLightKit";
+	requiresFire = 1;
+	returnedItems[] = 
+	{
+		{1, "Exile_Item_FloodLightKit"}
+	};
+	components[] = 
+	{
+		{1, "Exile_Item_MetalPole"},
+		{1, "Exile_Item_LightBulb"},
+		{1, "Exile_Item_ExtensionCord"}
+	};
+};
+class CraftFortificationUpgrade: Exile_AbstractCraftingRecipe
+{
+	name = "Craft Fortification Upgrade";
+	pictureItem = "Exile_Item_MetalBoard"; //<< CHANGE IT
+	requiresFire = 1;
+	requiredInteractionModelGroup = "WorkBench";
+	returnedItems[] = 
+	{
+		{1, "Exile_Item_FortificationUpgrade"}
+	};
+	components[] = 
+	{
+		{2, "Exile_Item_MetalPole"},
+		{4, "Exile_Item_MetalBoard"}
+	};
+	tools[] = {"Exile_Item_Grinder"};
+};
+class CraftHBarrier5Kit: Exile_AbstractCraftingRecipe
+{
+	name = "Craft H-barrier (5 Blocks)";
+	pictureItem = "Exile_Item_HBarrier5Kit";
+	requiredInteractionModelGroup = "WorkBench";
+	tools[] = 
+	{
+		"Exile_Item_Pliers"
+	};
+	returnedItems[] = 
+	{
+		{1, "Exile_Item_HBarrier5Kit"}
+	};
+	components[] = 
+	{
+		{3, "Exile_Item_SandBagsKit_Long"},
+		{2, "Exile_Item_MetalWire"}
+	};
+};
+class CraftMetalBoard: Exile_AbstractCraftingRecipe
+{
+	name = "Craft Metal Board";
+	pictureItem = "Exile_Item_MetalBoard";
+	requiresFire = 1;
+	returnedItems[] = 
+	{
+		{1, "Exile_Item_MetalBoard"}
+	};
+	components[] = 
+	{
+		{2, "Exile_Item_JunkMetal"}
+	};
+	tools[] = {"Exile_Item_Grinder"};
+};
+class CraftMetalHedgehog: Exile_AbstractCraftingRecipe
+{
+	name = "Craft Metal Hedgehog";
+	pictureItem = "Exile_Item_MetalHedgehogKit";
+	requiresFire = 1;
+	returnedItems[] = 
+	{
+		{1, "Exile_Item_MetalHedgehogKit"}
+	};
+	components[] = 
+	{
+		{4, "Exile_Item_MetalPole"}
+	};
+	tools[] = {"Exile_Item_Grinder"};
+};
+class CraftMetalPole: Exile_AbstractCraftingRecipe
+{
+	name = "Craft Metal Pole";
+	pictureItem = "Exile_Item_MetalPole";
+	requiresFire = 1;
+	returnedItems[] = 
+	{
+		{1, "Exile_Item_MetalPole"}
+	};
+	components[] = 
+	{
+		{4, "Exile_Item_JunkMetal"}
+	};
+	tools[] = {"Exile_Item_Grinder"};
+};
+class CraftPortableGenerator: Exile_AbstractCraftingRecipe
+{
+	name = "Craft Portable Generator";
+	pictureItem = "Exile_Item_PortableGeneratorKit";
+	requiresFire = 1;
+	returnedItems[] = 
+	{
+		{1, "Exile_Item_PortableGeneratorKit"}
+	};
+	components[] = 
+	{
+		{4, "Exile_Item_MetalBoard"},
+		{1, "Exile_Item_FuelCanisterFull"},
+		{1, "Exile_Item_ExtensionCord"}
+	};
+};
+class CraftRazorWireKit: Exile_AbstractCraftingRecipe
+{
+	name = "Craft Razor Wire Kit Kit";
+	pictureItem = "Exile_Item_RazorWireKit_Long";
+	requiredInteractionModelGroup = "WorkBench";
+	tools[] = 
+	{
+		"Exile_Item_Grinder", 
+		"Exile_Item_Pliers",
+		"Exile_Item_Screwdriver"
+	};
+	returnedItems[] = 
+	{
+		{1, "Exile_Item_RazorWireKit_Long"}
+	};
+	components[] = 
+	{
+		{2, "Exile_Item_MetalPole"},
+		{4, "Exile_Item_MetalWire"},
+		{1, "Exile_Item_MetalScrews"}
+	};
+};
+class CraftRepairKitConcrete: Exile_AbstractCraftingRecipe
+{
+	name = "Craft Concrete Repair Kit";
+	pictureItem = "Exile_Item_Cement";
+	requiresConcreteMixer = true;
+	returnedItems[] = 
+	{
+		{1, "Exile_Item_RepairKitConcrete"},
+		{1, "Exile_Item_WaterCanisterEmpty"},
+		{1, "Exile_Item_FuelCanisterEmpty"}
+	};
+	components[] = 
+	{
+		{4, "Exile_Item_Cement"},
+		{2, "Exile_Item_Sand"},
+		{1, "Exile_Item_WaterCanisterDirtyWater"},
+		{1, "Exile_Item_FuelCanisterFull"}
+	};
+};
+class CraftRepairKitMetal: Exile_AbstractCraftingRecipe
+{
+	name = "Craft Metal Repair Kit";
+	pictureItem = "Exile_Item_MetalBoard";
+	requiresFire = 0;
+	requiredInteractionModelGroup = "WorkBench";
+	returnedItems[] = 
+	{
+		{1, "Exile_Item_RepairKitWood"}
+	};
+	components[] = 
+	{
+		{4, "Exile_Item_MetalBoard"}
+	};
+	tools[] = 
+	{
+		"Exile_Item_Foolbox",
+		"Exile_Item_Grinder"
+	};
+};
+class CraftRepairKitWood: Exile_AbstractCraftingRecipe
+{
+	name = "Craft Wood Repair Kit";
+	pictureItem = "Exile_Item_WoodPlank";
+	requiresFire = 0;
+	requiredInteractionModelGroup = "WorkBench";
+	returnedItems[] = 
+	{
+		{1, "Exile_Item_RepairKitWood"}
+	};
+	components[] = 
+	{
+		{4, "Exile_Item_WoodPlank"}
+	};
+	tools[] = 
+	{
+		"Exile_Item_Foolbox"
+	};
+};
+class CraftSandBagsKitCorner: Exile_AbstractCraftingRecipe
+{
+	name = "Craft Sandbags Kit (Corner)";
+	pictureItem = "Exile_Item_SandBagsKit_Corner";
+	requiredInteractionModelGroup = "WorkBench";
+	returnedItems[] = 
+	{
+		{1, "Exile_Item_SandBagsKit_Corner"}
+	};
+	components[] = 
+	{
+		{3, "Exile_Item_Sand"}
+	};
+};
+class CraftSandBagsKitLong: Exile_AbstractCraftingRecipe
+{
+	name = "Craft Sand Bags Kit (Long)";
+	pictureItem = "Exile_Item_SandBagsKit_Long";
+	requiredInteractionModelGroup = "WorkBench";
+	returnedItems[] = 
+	{
+		{1, "Exile_Item_SandBagsKit_Long"}
+	};
+	components[] = 
+	{
+		{6, "Exile_Item_Sand"}
+	};
+};
+class CraftStorageCrate: Exile_AbstractCraftingRecipe
+{
+	name = "Craft Storage Crate";
+	pictureItem = "Exile_Item_StorageCrateKit";
+	requiredInteractionModelGroup = "WorkBench";
+	returnedItems[] = 
+	{
+		{1, "Exile_Item_StorageCrateKit"}
+	};
+	components[] = 
+	{
+		{5, "Exile_Item_WoodPlank"}
+	};
+};
+class CraftWaterBarrel: Exile_AbstractCraftingRecipe
+{
+	name = "Craft Water Barrel";
+	pictureItem = "Exile_Item_WaterBarrelKit";
+	requiredInteractionModelGroup = "WorkBench";
+	requiresFire = 1;
+	returnedItems[] = 
+	{
+		{1, "Exile_Item_WaterBarrelKit"}
+	};
+	components[] = 
+	{
+		{20, "Exile_Item_PlasticBottleEmpty"}
+	};
+};
+class CraftWireFenceKit: Exile_AbstractCraftingRecipe
+{
+	name = "Craft Wire Fence Kit";
+	pictureItem = "Exile_Item_WireFenceKit_Long";
+	requiredInteractionModelGroup = "WorkBench";
+	tools[] = 
+	{
+		"Exile_Item_Grinder", 
+		"Exile_Item_Pliers",
+		"Exile_Item_Screwdriver"
+	};
+	returnedItems[] = 
+	{
+		{1, "Exile_Item_RazorWireKit_Long"}
+	};
+	components[] = 
+	{
+		{4, "Exile_Item_MetalPole"},
+		{6, "Exile_Item_MetalWire"},
+		{1, "Exile_Item_MetalScrews"}
+	};
+};
+class CraftWoodDoorWay: Exile_AbstractCraftingRecipe
+{
+	name = "Craft Wood Doorway";
+	pictureItem = "Exile_Item_WoodDoorwayKit";
+	requiredInteractionModelGroup = "WorkBench";
+	returnedItems[] = 
+	{
+		{1, "Exile_Item_WoodDoorwayKit"}
+	};
+	components[] = 
+	{
+		{6, "Exile_Item_WoodPlank"}
+	};
+};
+class CraftWoodFloor: Exile_AbstractCraftingRecipe
+{
+	name = "Craft Wood Floor";
+	pictureItem = "Exile_Item_WoodFloorKit";
+	requiredInteractionModelGroup = "WorkBench";
+	returnedItems[] = 
+	{
+		{1, "Exile_Item_WoodFloorKit"}
+	};
+	components[] = 
+	{
+		{4, "Exile_Item_WoodPlank"}
+	};
+};
+class CraftWoodFloorPort: Exile_AbstractCraftingRecipe
+{
+	name = "Craft Wood Floor Port";
+	pictureItem = "Exile_Item_WoodFloorPortKit";
+	requiredInteractionModelGroup = "WorkBench";
+	returnedItems[] = 
+	{
+		{1, "Exile_Item_WoodFloorPortKit"}
+	};
+	components[] = 
+	{
+		{6, "Exile_Item_WoodPlank"}
+	};
+};
+class CraftWoodGate: Exile_AbstractCraftingRecipe
+{
+	name = "Craft Wood Gate";
+	pictureItem = "Exile_Item_WoodGateKit";
+	requiredInteractionModelGroup = "WorkBench";
+	returnedItems[] = 
+	{
+		{1, "Exile_Item_WoodGateKit"}
+	};
+	components[] = 
+	{
+		{8, "Exile_Item_WoodPlank"}
+	};
 };
 class CraftWoodPlank: Exile_AbstractCraftingRecipe
 {
@@ -352,213 +1138,7 @@ class CraftWoodPlank: Exile_AbstractCraftingRecipe
 	{
 		{2, "Exile_Item_WoodLog"}
 	};
-	tools[] ={"Exile_Item_Handsaw"};
-    category = "Building";
-}; 
-class CraftFirePlace: Exile_AbstractCraftingRecipe
-{
-	name = "Craft Fire Place";
-	pictureItem = "Exile_Item_CampFireKit";
-	returnedItems[] = 
-	{
-    	{1, "Exile_Item_CampFireKit"}
-    };
-	components[] = 
-	{
-    	{2, "Exile_Item_WoodLog"}
-    };
-		category = "Building";
-};
-class CraftFloodLight: Exile_AbstractCraftingRecipe
-{
-	name = "Craft Flood Light";
-	pictureItem = "Exile_Item_FloodLightKit";
-	requiresFire = 1;
-	returnedItems[] = 
-	{
-    	{1, "Exile_Item_FloodLightKit"}
-    };
-     components[] = 
-	{
-    	{1, "Exile_Item_MetalPole"},
-    	{1, "Exile_Item_LightBulb"},
-    	{1, "Exile_Item_ExtensionCord"}
-    };
-		category = "Building";
-};
-class CraftFortificationUpgrade: Exile_AbstractCraftingRecipe
-{
-	name = "Craft Fortification Upgrade";
-	pictureItem = "Exile_Item_MetalBoard"; //<< CHANGE IT
-	requiresFire = 1;
-	requiredInteractionModelGroup = "WorkBench";
-	returnedItems[] = 
-	{
-    	{1, "Exile_Item_FortificationUpgrade"}
-    };
-     components[] = 
-	{
-    	{2, "Exile_Item_MetalPole"},
-    	{4, "Exile_Item_MetalBoard"}
-    };
-	tools[] = {"Exile_Item_Grinder"};
-		category = "Building";
-};
-class CraftMetalBoard: Exile_AbstractCraftingRecipe
-{
-	name = "Craft Metal Board";
-	pictureItem = "Exile_Item_MetalBoard";
-	requiresFire = 1;
-	returnedItems[] = 
-	{
-    	{1, "Exile_Item_MetalBoard"}
-    };
-     components[] = 
-	{
-    	{2, "Exile_Item_JunkMetal"}
-    };
-	tools[] = {"Exile_Item_Grinder"};
-		category = "Craftables";
-};
-class CraftMetalHedgehog: Exile_AbstractCraftingRecipe
-{
-	name = "Craft Metal Hedgehog";
-	pictureItem = "Exile_Item_MetalHedgehogKit";
-	requiresFire = 1;
-	returnedItems[] = 
-	{
-    	{1, "Exile_Item_MetalHedgehogKit"}
-    };
-     components[] = 
-	{
-    	{4, "Exile_Item_MetalPole"}
-    };
-	tools[] = {"Exile_Item_Grinder"};
-		category = "Building";
-};
- class CraftMetalPole: Exile_AbstractCraftingRecipe
- {
-	name = "Craft Metal Pole";
-	pictureItem = "Exile_Item_MetalPole";
-	requiresFire = 1;
-	returnedItems[] = 
-	{
-    	{1, "Exile_Item_MetalPole"}
-    };
-     components[] = 
-	{
-    	{4, "Exile_Item_JunkMetal"}
-    };
-	tools[] = {"Exile_Item_Grinder"};
-		category = "Craftables";
-};
- class CraftPortableGenerator: Exile_AbstractCraftingRecipe
- {
-	name = "Craft Portable Generator";
-	pictureItem = "Exile_Item_PortableGeneratorKit";
-	requiresFire = 1;
-	returnedItems[] = 
-	{
-    	{1, "Exile_Item_PortableGeneratorKit"}
-    };
-     components[] = 
-	{
-    	{4, "Exile_Item_MetalBoard"},
-    	{1, "Exile_Item_FuelCanisterFull"},
-    	{1, "Exile_Item_ExtensionCord"}
-    };
-		category = "Building";
-};
- class CraftStorageCrate: Exile_AbstractCraftingRecipe
- {
-	name = "Craft Storage Crate";
-	pictureItem = "Exile_Item_StorageCrateKit";
-     requiredInteractionModelGroup = "WorkBench";
-	returnedItems[] = 
-	{
-    	{1, "Exile_Item_StorageCrateKit"}
-    };
-     components[] = 
-	{
-    	{5, "Exile_Item_WoodPlank"}
-    };
-		category = "Building";
-};
- class CraftWaterBarrel: Exile_AbstractCraftingRecipe
- {
-	name = "Craft Water Barrel";
-	pictureItem = "Exile_Item_WaterBarrelKit";
-     requiredInteractionModelGroup = "WorkBench";
-	requiresFire = 1;
-	returnedItems[] = 
-	{
-    	{1, "Exile_Item_WaterBarrelKit"}
-    };
-     components[] = 
-	{
-    	{20, "Exile_Item_PlasticBottleEmpty"}
-    };
-		category = "Building";
-};
- class CraftWoodDoorWay: Exile_AbstractCraftingRecipe
- {
-	name = "Craft Wood Doorway";
-	pictureItem = "Exile_Item_WoodDoorwayKit";
-     requiredInteractionModelGroup = "WorkBench";
-	returnedItems[] = 
-	{
-    	{1, "Exile_Item_WoodDoorwayKit"}
-    };
-     components[] = 
-	{
-    	{6, "Exile_Item_WoodPlank"}
-    };
-		category = "Building";
-};
- class CraftWoodFloor: Exile_AbstractCraftingRecipe
- {
-	name = "Craft Wood Floor";
-	pictureItem = "Exile_Item_WoodFloorKit";
-     requiredInteractionModelGroup = "WorkBench";
-	returnedItems[] = 
-	{
-    	{1, "Exile_Item_WoodFloorKit"}
-    };
-     components[] = 
-	{
-    	{4, "Exile_Item_WoodPlank"}
-    };
-		category = "Building";
-};
- class CraftWoodFloorPort: Exile_AbstractCraftingRecipe
- {
-	name = "Craft Wood Floor Port";
-	pictureItem = "Exile_Item_WoodFloorPortKit";
-     requiredInteractionModelGroup = "WorkBench";
-	returnedItems[] = 
-	{
-    	{1, "Exile_Item_WoodFloorPortKit"}
-    };
-     components[] = 
-	{
-    	{6, "Exile_Item_WoodPlank"}
-    };
-		category = "Building";
-};
- class CraftWoodGate: Exile_AbstractCraftingRecipe
- {
-	name = "Craft Wood Gate";
-	pictureItem = "Exile_Item_WoodGateKit";
-     requiredInteractionModelGroup = "WorkBench";
-	returnedItems[] = 
-	{
-    	{1, "Exile_Item_WoodGateKit"}
-    };
-     components[] = 
-	{
-    	{8, "Exile_Item_WoodPlank"}
-    };
-		category = "Building";
+	tools[] = {"Exile_Item_Handsaw"};
 };
 class CraftWoodStairs: Exile_AbstractCraftingRecipe
 {
@@ -573,7 +1153,6 @@ class CraftWoodStairs: Exile_AbstractCraftingRecipe
 	{
 		{6, "Exile_Item_WoodPlank"}
 	};
-		category = "Building";
 };
 class CraftWoodSupport: Exile_AbstractCraftingRecipe
 {
@@ -588,7 +1167,6 @@ class CraftWoodSupport: Exile_AbstractCraftingRecipe
 	{
 		{6, "Exile_Item_WoodPlank"}
 	};
-		category = "Building";
 };
 class CraftWoodWall: Exile_AbstractCraftingRecipe
 {
@@ -603,7 +1181,6 @@ class CraftWoodWall: Exile_AbstractCraftingRecipe
 	{
 		{4, "Exile_Item_WoodPlank"}
 	};
-		category = "Building";
 };
 class CraftWoodWallHalf: Exile_AbstractCraftingRecipe
 {
@@ -618,7 +1195,6 @@ class CraftWoodWallHalf: Exile_AbstractCraftingRecipe
 	{
 		{2, "Exile_Item_WoodPlank"}
 	};
-		category = "Building";
 };
 class CraftWoodWindow: Exile_AbstractCraftingRecipe
 {
@@ -633,7 +1209,6 @@ class CraftWoodWindow: Exile_AbstractCraftingRecipe
 	{
 		{6, "Exile_Item_WoodPlank"}
 	};
-		category = "Building";
 };
 class CraftWorkBench: Exile_AbstractCraftingRecipe
 {
@@ -647,109 +1222,179 @@ class CraftWorkBench: Exile_AbstractCraftingRecipe
 	{
 		{4, "Exile_Item_WoodLog"}
 	};
-		category = "Building";
 };
- class EmptyFuelCanister: Exile_AbstractCraftingRecipe
- {
+class EmptyFuelCanister: Exile_AbstractCraftingRecipe
+{
 	name = "Empty Fuel Canister";
 	pictureItem = "Exile_Item_FuelCanisterEmpty";
 	returnedItems[] = 
 	{
-    	{1, "Exile_Item_FuelCanisterEmpty"}
-    };
-     components[] = 
+		{1, "Exile_Item_FuelCanisterEmpty"}
+	};
+	components[] = 
 	{
-    	{1, "Exile_Item_FuelCanisterFull"}
-    };
-		category = "Food/Drinks";
+		{1, "Exile_Item_FuelCanisterFull"}
+	};
 };
- class EmptyPlasticBottleDirtyWater: Exile_AbstractCraftingRecipe
- {
+class EmptyPlasticBottleDirtyWater: Exile_AbstractCraftingRecipe
+{
 	name = "Empty Dirty Water";
 	pictureItem = "Exile_Item_PlasticBottleEmpty";
 	returnedItems[] =
 	{
-    	{1, "Exile_Item_PlasticBottleEmpty"}
-    };
-     components[] =
+		{1, "Exile_Item_PlasticBottleEmpty"}
+	};
+	components[] =
 	{
-    	{1, "Exile_Item_PlasticBottleDirtyWater"}
-    };
-		category = "Food/Drinks";
+		{1, "Exile_Item_PlasticBottleDirtyWater"}
+	};
 };
- class EmptyPlasticBottleSaltWater: Exile_AbstractCraftingRecipe
- {
+class EmptyPlasticBottleSaltWater: Exile_AbstractCraftingRecipe
+{
 	name = "Empty Salt Water";
 	pictureItem = "Exile_Item_PlasticBottleEmpty";
 	returnedItems[] =
 	{
-    	{1, "Exile_Item_PlasticBottleEmpty"}
-    };
-     components[] =
+		{1, "Exile_Item_PlasticBottleEmpty"}
+	};
+	components[] =
 	{
-    	{1, "Exile_Item_PlasticBottleSaltWater"}
-    };
-		category = "Food/Drinks";
+		{1, "Exile_Item_PlasticBottleSaltWater"}
+	};
 };
- class FillEmptyPlasticBottleWithDirtyWater: Exile_AbstractCraftingRecipe
- {
+class FillEmptyPlasticBottleWithDirtyWater: Exile_AbstractCraftingRecipe
+{
 	name = "Fill Dirty Water";
 	pictureItem = "Exile_Item_PlasticBottleDirtyWater";
-     requiredInteractionModelGroup = "WaterSource";
+	requiredInteractionModelGroup = "WaterSource";
 	returnedItems[] =
 	{
-    	{1, "Exile_Item_PlasticBottleDirtyWater"}
-    };
-     components[] = 
+		{1, "Exile_Item_PlasticBottleDirtyWater"}
+	};
+	components[] = 
 	{
-    	{1, "Exile_Item_PlasticBottleEmpty"}
-    };
-		category = "Food/Drinks";
+		{1, "Exile_Item_PlasticBottleEmpty"}
+	};
 };
- class FillEmptyPlasticBottleWithFreshWater: Exile_AbstractCraftingRecipe
- {
+class FillEmptyPlasticBottleWithFreshWater: Exile_AbstractCraftingRecipe
+{
 	name = "Fill Fresh Water";
 	pictureItem = "Exile_Item_PlasticBottleFreshWater";
-     requiredInteractionModelGroup = "CleanWaterSource";
+	requiredInteractionModelGroup = "CleanWaterSource";
 	returnedItems[] =
 	{
-    	{1, "Exile_Item_PlasticBottleFreshWater"}
-    };
-     components[] = 
+		{1, "Exile_Item_PlasticBottleFreshWater"}
+	};
+	components[] = 
 	{
-    	{1, "Exile_Item_PlasticBottleEmpty"}
-    };
-		category = "Food/Drinks";
+		{1, "Exile_Item_PlasticBottleEmpty"}
+	};
 };
- class FillEmptyPlasticBottleWithSaltWater: Exile_AbstractCraftingRecipe
- {
+class FillEmptyPlasticBottleWithSaltWater: Exile_AbstractCraftingRecipe
+{
 	name = "Fill Salt Water";
 	pictureItem = "Exile_Item_PlasticBottleSaltWater";
-     requiresOcean = 1;
+	requiresOcean = 1;
 	returnedItems[] = 
 	{
-    	{1, "Exile_Item_PlasticBottleSaltWater"}
-    };
-     components[] = 
+		{1, "Exile_Item_PlasticBottleSaltWater"}
+	};
+	components[] = 
 	{
-    	{1, "Exile_Item_PlasticBottleEmpty"}
-    };
-		category = "Food/Drinks";
+		{1, "Exile_Item_PlasticBottleEmpty"}
+	};
 };
- class FillFuelCanister: Exile_AbstractCraftingRecipe
- {
+class FillEmptyWaterCanisterWithDirtyWater: Exile_AbstractCraftingRecipe
+{
+	name = "Fill Dirty Water";
+	pictureItem = "Exile_Item_WaterCanisterDirtyWater";
+	requiredInteractionModelGroup = "WaterSource";
+	returnedItems[] =
+	{
+		{1, "Exile_Item_WaterCanisterDirtyWater"}
+	};
+	components[] = 
+	{
+		{1, "Exile_Item_WaterCanisterEmpty"}
+	};
+};
+class FillFuelCanister: Exile_AbstractCraftingRecipe
+{
 	name = "Fill Fuel Canister";
 	pictureItem = "Exile_Item_FuelCanisterFull";
-     requiredInteractionModelGroup = "FuelSource";
+	requiredInteractionModelGroup = "FuelSource";
 	returnedItems[] = 
 	{
-    	{1, "Exile_Item_FuelCanisterFull"}
-    };
-     components[] = 
+		{1, "Exile_Item_FuelCanisterFull"}
+	};
+	components[] = 
 	{
-    	{1, "Exile_Item_FuelCanisterEmpty"}
-    };
-		category = "Food/Drinks";
+		{1, "Exile_Item_FuelCanisterEmpty"}
+	};
+};
+class UpgradeToConcreteDoor: Exile_AbstractCraftingRecipe
+{
+	name = "Upgrade to Concrete Door";
+	pictureItem = "Exile_Item_ConcreteDoorKit";
+	requiredInteractionModelGroup = "WorkBench";
+	returnedItems[] = 
+	{
+		{1, "Exile_Item_ConcreteDoorKit"}
+	};
+	components[] = 
+	{
+		{1, "Exile_Item_ConcreteDoorwayKit"},
+		{2, "Exile_Item_MetalPole"},
+		{4, "Exile_Item_MetalBoard"}
+	};
+};
+class UpgradeToConcreteFloorPort: Exile_AbstractCraftingRecipe
+{
+	name = "Upgrade to Concrete Floor Port";
+	pictureItem = "Exile_Item_ConcreteFloorPortKit";
+	requiredInteractionModelGroup = "WorkBench";
+	returnedItems[] = 
+	{
+		{1, "Exile_Item_ConcreteFloorPortKit"}
+	};
+	components[] = 
+	{
+		{1, "Exile_Item_ConcreteFloorKit"},
+		{2, "Exile_Item_MetalPole"},
+		{4, "Exile_Item_MetalBoard"}
+	};
+};
+class UpgradeToConcreteGate: Exile_AbstractCraftingRecipe
+{
+	name = "Upgrade to Concrete Gate";
+	pictureItem = "Exile_Item_ConcreteGateKit";
+	requiredInteractionModelGroup = "WorkBench";
+	returnedItems[] = 
+	{
+		{1, "Exile_Item_ConcreteGateKit"}
+	};
+	components[] = 
+	{
+		{1, "Exile_Item_ConcreteWallKit"},
+		{2, "Exile_Item_MetalPole"},
+		{4, "Exile_Item_MetalBoard"}
+	};
+};
+class UpgradeToConcreteWindow: Exile_AbstractCraftingRecipe
+{
+	name = "Upgrade to Concrete Window";
+	pictureItem = "Exile_Item_ConcreteWindowKit";
+	requiredInteractionModelGroup = "WorkBench";
+	returnedItems[] = 
+	{
+		{1, "Exile_Item_ConcreteWindowKit"}
+	};
+	components[] = 
+	{
+		{1, "Exile_Item_ConcreteWallKit"},
+		{2, "Exile_Item_MetalPole"},
+		{4, "Exile_Item_MetalBoard"}
+	};
 };
 class UpgradeToWoodDoor: Exile_AbstractCraftingRecipe
 {
@@ -765,7 +1410,6 @@ class UpgradeToWoodDoor: Exile_AbstractCraftingRecipe
 		{1, "Exile_Item_WoodDoorwayKit"},
 		{2, "Exile_Item_WoodPlank"}
 	};
-		category = "Building";
 };
 class UpgradeToWoodFloorPort: Exile_AbstractCraftingRecipe
 {
@@ -781,7 +1425,6 @@ class UpgradeToWoodFloorPort: Exile_AbstractCraftingRecipe
 		{1, "Exile_Item_WoodFloorKit"},
 		{2, "Exile_Item_WoodPlank"}
 	};
-		category = "Building";
 };
 class UpgradeToWoodGate: Exile_AbstractCraftingRecipe
 {
@@ -797,7 +1440,6 @@ class UpgradeToWoodGate: Exile_AbstractCraftingRecipe
 		{1, "Exile_Item_WoodWallKit"},
 		{4, "Exile_Item_WoodPlank"}
 	};
-		category = "Building";
 };
 class UpgradeToWoodWall: Exile_AbstractCraftingRecipe
 {
@@ -812,7 +1454,6 @@ class UpgradeToWoodWall: Exile_AbstractCraftingRecipe
 	{
 		{2, "Exile_Item_WoodWallHalfKit"}
 	};
-		category = "Building";
 };
 class UpgradeToWoodWindow: Exile_AbstractCraftingRecipe
 {
@@ -828,1054 +1469,14 @@ class UpgradeToWoodWindow: Exile_AbstractCraftingRecipe
 		{1, "Exile_Item_WoodWallKit"},
 		{2, "Exile_Item_WoodPlank"}
 	};
-		category = "Building";
 };
-//NEW CRAFTING RECIPIES
-class IEDLandSmall_Remote_Mag: Exile_AbstractCraftingRecipe
-{
-    name = "Small Crafted IED";
-    pictureItem = "IEDLandSmall_Remote_Mag";
-    requiresFire = 1;
-    requiredInteractionModelGroup = "WorkBench";
-    returnedItems[] =
-    {
-        {1, "IEDLandSmall_Remote_Mag"}
-    };
-    components[] =
-    {
-        {2, "Exile_Item_MetalPole"},
-        {4, "Exile_Item_JunkMetal"},
-        {3, "Exile_Item_FuelCanisterFull"},
-        {1, "Exile_Item_ExtensionCord"},
-        {1, "Exile_Item_DuctTape"}
-    };
-    category = "Craftables";
-};
-class IEDLandbig_Remote_Mag: Exile_AbstractCraftingRecipe
-{
-    name = "Large Crafted IED";
-    pictureItem = "IEDLandBig_Remote_Mag";
-    requiresFire = 1;
-    requiredInteractionModelGroup = "WorkBench";
-    returnedItems[] =
-    {
-        {1, "IEDLandBig_Remote_Mag"}
-    };
-    components[] =
-    {
-        {1, "Exile_Item_FuelCanisterEmpty"},
-        {10, "Exile_Item_JunkMetal"},
-        {5, "Exile_Item_FuelCanisterFull"},
-        {2, "Exile_Item_ExtensionCord"},
-        {2, "Exile_Item_DuctTape"}
-    };
-    category = "Craftables";
-};
-
-class Exile_Item_CookingPot: Exile_AbstractCraftingRecipe
-{
-    name = "Craft Cookingpot";
-    pictureItem = "Exile_Item_CookingPot";
-    requiresFire = 1;
-    requiredInteractionModelGroup = "WorkBench";
-    returnedItems[] =
-    {
-        {1, "Exile_Item_CookingPot"}
-    };
-    components[] =
-    {
-        {1, "Exile_Item_JunkMetal"}
-    };
-    category = "Food/Drinks";
-};
-
-class Exile_melee_Axe: Exile_AbstractCraftingRecipe
-{
-    name = "Craft Axe";
-    pictureItem = "Exile_melee_Axe";
-    requiresFire = 1;
-    requiredInteractionModelGroup = "WorkBench";
-    returnedItems[] =
-    {
-        {1, "Exile_melee_Axe"}
-    };
-    components[] =
-    {
-        {2, "Exile_Item_JunkMetal"},
-        {1, "Exile_Item_WoodLog"}
-    };
-    category = "Craftables";
-};
-
-class Exile_Item_SafeKit: Exile_AbstractCraftingRecipe
-{
-    name = "Craft Safe";
-    pictureItem = "Exile_Item_SafeKit";
-    requiresFire = 1;
-    requiredInteractionModelGroup = "WorkBench";
-    returnedItems[] =
-    {
-        {1, "Exile_Item_SafeKit"}
-    };
-    components[] =
-    {
-        {2, "Exile_Item_MetalPole"},
-        {4, "Exile_Item_MetalBoard"},
-        {1, "Exile_Item_Codelock"}
-    };
-    category = "Building";
-};
-
-class Exile_Item_Camo_TentKit: Exile_AbstractCraftingRecipe
-{
-    name = "Craft Camo Tent";
-    pictureItem = "Exile_Item_Camo_TentKit";
-    requiresFire = 1;
-    requiredInteractionModelGroup = "WorkBench";
-    returnedItems[] =
-    {
-        {1, "Exile_Item_Camo_TentKit"}
-    };
-    components[] =
-    {
-        {2, "Exile_Item_DuctTape"},
-        {4, "Exile_Item_WoodPlank"},
-        {2, "Exile_Item_Rope"}
-    };
-    category = "Craftables";
-};
-
-class Laserdesignator: Exile_AbstractCraftingRecipe
-{
-    name = "Craft Laserdesignator";
-    pictureItem = "Laserdesignator";
-    requiresFire = 1;
-    returnedItems[] =
-    {
-        {1, "Laserdesignator"}
-    };
-    components[] =
-    {
-        {2, "Exile_Item_LightBulb"},
-        {1, "Exile_Item_JunkMetal"},
-        {1, "Exile_Item_ThermalScannerPro"}
-    };
-    category = "Craftables";
-};
-//NEW CRAFTING RECIPIES END
-//NEW WEAPON MAGAZINE CRAFTING
-class SpillDirtyWater: Exile_AbstractCraftingRecipe
-{
-	name = "Spill Dirty Water";
-	pictureItem = "Exile_Item_PlasticBottleEmpty";
-	returnedItems[] =
-	{
-		{1, "Exile_Item_PlasticBottleEmpty"}
-	};
-	components[] =
-	{
-		{1, "Exile_Item_PlasticBottleDirtyWater"}
-	};
-	category = "Food/Drinks";
-};
-class SpillSaltWater: Exile_AbstractCraftingRecipe
-{
-	name = "Spill Salt Water";
-	pictureItem = "Exile_Item_PlasticBottleEmpty";
-	returnedItems[] =
-	{
-		{1, "Exile_Item_PlasticBottleEmpty"}
-	};
-	components[] =
-	{
-		{1, "Exile_Item_PlasticBottleSaltWater"}
-	};
-	category = "Food/Drinks";
-};
-class CraftBandage: Exile_AbstractCraftingRecipe
-{
-	name = "Craft Bandage";
-	pictureItem = "Exile_Item_Bandage";
-	returnedItems[] =
-	{
-		{1, "Exile_Item_Bandage"}
-	};
-	components[] = 
-	{
-		{1, "Exile_Item_ToiletPaper"}
-	};
-	category = "Craftables";
-};
-class CraftPopTabs: Exile_AbstractCraftingRecipe
-{
-	name = "Make Money";
-	pictureItem = "Exile_Item_Can_Empty";
-	returnedItems[] =
-	{
-		{1, "Exile_Item_Can_Empty"}
-	};
-	components[] = 
-	{
-		{1, "Exile_Item_Magazine01"},
-		{1, "Exile_Item_Magazine02"},
-		{1, "Exile_Item_Magazine03"}
-	};
-	category = "Craftables";
-};
-
-/////////////////////////////////////////
-// Entended Recipies 
-/////////////////////////////////////////
-
-class Shabbylamp: Exile_AbstractCraftingRecipe
-{
-	name = "Shabby Lamp";
-	pictureItem = "Land_LampShabby_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_LampShabby_F_Kit"}
-	};
-	requiresFire = 0;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{8, "Exile_Item_Woodlog"},
-		{2, "Exile_Item_ExtensionCord"},
-		{1, "Exile_Item_LightBulb"},
-	};
-	category = "Extended Base Items";
-};
-
-class Sunshade: Exile_AbstractCraftingRecipe
-{
-	name = "Sunshade";
-	pictureItem = "Land_Sunshade_04_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_Sunshade_04_F_Kit"}
-	};
-	requiresFire = 0;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{1, "Exile_Item_Woodlog"},
-		{1, "Exile_Item_Rope"},
-	};
-	category = "Extended Base Items";
-};
-
-class Sunchair: Exile_AbstractCraftingRecipe
-{
-	name = "Sunchair";
-	pictureItem = "Land_Sun_chair_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_Sun_chair_F_Kit"}
-	};
-	requiresFire = 0;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{2, "Exile_Item_Woodlog"},
-		{2, "Exile_Item_Rope"},
-	};
-	category = "Extended Base Items";
-};
-
-class MetalShed: Exile_AbstractCraftingRecipe
-{
-	name = "Metal Shed";
-	pictureItem = "Land_Metal_Shed_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_Metal_Shed_F_Kit"}
-	};
-	requiresFire = 0;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{2, "Exile_Item_JunkMetal"},
-		{2, "Exile_Item_Woodlog"},
-		{1, "Exile_Item_Rope"},
-	};
-	category = "Extended Base Items";
-};
-
-class StreetLamp: Exile_AbstractCraftingRecipe
-{
-	name = "Street Lamp";
-	pictureItem = "Land_LampStreet_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_LampStreet_F_Kit"}
-	};
-	requiresFire = 1;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{2, "Exile_Item_MetalPole"},
-		{4, "Exile_Item_ExtensionCord"},
-		{1, "Exile_Item_LightBulb"},
-	};
-	category = "Extended Base Items";
-};
-
-class Industryfence3pts: Exile_AbstractCraftingRecipe
-{
-	name = "Industryfence 3pts";
-	pictureItem = "Land_IndFnc_9_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_IndFnc_9_F_Kit"}
-	};
-	requiresFire = 0;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{3, "Exile_Item_Cement"},
-	};
-	category = "Extended Base Items";
-};
-
-class Industryfence: Exile_AbstractCraftingRecipe
-{
-	name = "Industryfence";
-	pictureItem = "Land_IndFnc_3_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_IndFnc_3_F_Kit"}
-	};
-	requiresFire = 0;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{1, "Exile_Item_Cement"},
-	};
-	category = "Extended Base Items";
-};	
-
-class CargoContainerSmall: Exile_AbstractCraftingRecipe
-{
-	name = "Cargo Container Small";
-	pictureItem = "Land_CargoBox_V1_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_CargoBox_V1_F_Kit"}
-	};
-	requiresFire = 1;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{2, "Exile_Item_MetalBoard"},
-		{2, "Exile_Item_JunkMetal"},
-	};
-	category = "Extended Base Items";
-};	
-
-class Chair: Exile_AbstractCraftingRecipe
-{
-	name = "Chair";
-	pictureItem = "Land_ChairWood_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_ChairWood_F_Kit"}
-	};
-	requiresFire = 0;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{5, "Exile_Item_WoodPlank"},
-	};
-	category = "Extended Base Items";
-};		
-		
-class Table: Exile_AbstractCraftingRecipe
-{
-	name = "Table";
-	pictureItem = "Land_TableDesk_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_TableDesk_F_Kit"}
-	};
-	requiresFire = 1;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{10, "Exile_Item_WoodPlank"},
-		{3, "Exile_Item_MetalBoard"},
-	};
-	category = "Extended Base Items";
-};			
-
-class Slumplane: Exile_AbstractCraftingRecipe
-{
-	name = "Slumplane";
-	pictureItem = "Land_Cargo_addon02_V2_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_Cargo_addon02_V2_F_Kit"}
-	};
-	requiresFire = 0;
-	components[] = 
-	{
-		{4, "Exile_Item_Woodlog"},
-		{2, "Exile_Item_Rope"},
-	};
-	category = "Extended Base Items";
-};		
-
-class Radarsmall: Exile_AbstractCraftingRecipe
-{
-	name = "Small Radar";
-	pictureItem = "Land_Radar_Small_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_Radar_Small_F_Kit"}
-	};
-	requiresFire = 1;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{4, "Exile_Item_MetalBoard"},
-		{2, "Exile_Item_JunkMetal"},
-		{5, "Exile_Item_ExtensionCord"},
-	};
-	category = "Extended Base Items";
-};
-		
-class Floodlightdouble: Exile_AbstractCraftingRecipe
-{
-	name = "Floodlight double";
-	pictureItem = "Land_PortableLight_double_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_PortableLight_double_F_Kit"}
-	};
-	requiresFire = 1;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{6, "Exile_Item_LightBulb"},
-		{2, "Exile_Item_JunkMetal"},
-		{2, "Exile_Item_ExtensionCord"},
-	};
-	category = "Extended Base Items";
-};
-
-class MilitaryVehicle: Exile_AbstractCraftingRecipe
-{
-	name = "Military Vehicle Sign";
-	pictureItem = "Land_Sign_WarningMilitaryVehicles_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_Sign_WarningMilitaryVehicles_F_Kit"}
-	};
-	requiresFire = 1;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{1, "Exile_Item_MetalPole"},
-		{1, "Exile_Item_WoodPlank"},
-	};
-	category = "Extended Base Items";
-};
-
-class MilSignSmall: Exile_AbstractCraftingRecipe
-{
-	name = "Military Sign Small";
-	pictureItem = "Land_Sign_WarningMilAreaSmall_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_Sign_WarningMilAreaSmall_F_Kit"}
-	};
-	requiresFire = 1;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{1, "Exile_Item_MetalPole"},
-		{1, "Exile_Item_WoodPlank"},
-	};
-	category = "Extended Base Items";
-};
-
-class TouristShelter: Exile_AbstractCraftingRecipe
-{
-	name = "Tourist Shelter";
-	pictureItem = "Land_TouristShelter_01_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_TouristShelter_01_F_Kit"}
-	};
-	requiresFire = 1;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{2, "Exile_Item_Sand"},
-		{2, "Exile_Item_Cement"},
-		{5, "Exile_Item_WoodPlank"},
-	};
-	category = "Extended Base Items";
-};
-
-class crashbarrier: Exile_AbstractCraftingRecipe
-{
-	name = "Crashbarrier";
-	pictureItem = "Land_Crash_barrier_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_Crash_barrier_F_Kit"}
-	};
-	requiresFire = 1;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{2, "Exile_Item_JunkMetal"},
-	};
-	category = "Extended Base Items";
-};
-
-class Airportlamp: Exile_AbstractCraftingRecipe
-{
-	name = "Airportlamp";
-	pictureItem = "Land_LampAirport_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_LampAirport_F_Kit"}
-	};
-	requiresFire = 1;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{4, "Exile_Item_ExtensionCord"},
-		{4, "Exile_Item_LightBulb"},
-		{3, "Exile_Item_MetalPole"},
-	};
-	tools[] = {"Exile_Item_Screwdriver", "Exile_Item_Pliers"}; // Change
-	category = "Extended Base Items";
-};
-
-class LampHalogen: Exile_AbstractCraftingRecipe
-{
-	name = "Halogen Base Lamp";
-	pictureItem = "Land_LampHalogen_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_LampHalogen_F_Kit"}
-	};
-	requiresFire = 1;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{10, "Exile_Item_LightBulb"},
-		{5, "Exile_Item_ExtensionCord"}, // Change
-		{3, "Exile_Item_MetalPole"},
-	};
-	category = "Extended Base Items";
-	tools[] = {"Exile_Item_Screwdriver", "Exile_Item_Pliers"}; // Change
-};
-
-class TentDome: Exile_AbstractCraftingRecipe
-{
-	name = "Tent Dome";
-	pictureItem = "Land_TentDome_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_TentDome_F_Kit"}
-	};
-	requiresFire = 0;
-	components[] = 
-	{
-		{2, "Exile_Item_Woodlog"},
-		{2, "Exile_Item_Rope"},
-	};
-	category = "Extended Base Items";
-};
-
-class Platform: Exile_AbstractCraftingRecipe
-{
-	name = "Platform";
-	pictureItem = "Land_GH_Platform_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_GH_Platform_F_Kit"}
-	};
-	requiresFire = 0;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{2, "Exile_Item_Cement"},
-	};
-	category = "Extended Base Items";
-};
-
-class Garage: Exile_AbstractCraftingRecipe
-{
-	name = "Garage";
-	pictureItem = "Land_i_Garage_V2_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_i_Garage_V2_F_Kit"}
-	};
-	requiresFire = 0;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{1, "Exile_Item_Sand"},
-		{1, "Exile_Item_Cement"},
-		{2, "Exile_Item_WoodPlank"},
-	};
-	category = "Extended Base Items";
-};
-
-class CNCStairs: Exile_AbstractCraftingRecipe
-{
-	name = "CNC Stairs";
-	pictureItem = "Land_GH_Stairs_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_GH_Stairs_F_Kit"}
-	};
-	requiresFire = 0;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{2, "Exile_Item_Cement"},
-	};
-	category = "Extended Base Items";
-};
-
-class Razorwire: Exile_AbstractCraftingRecipe
-{
-	name = "Razorwire";
-	pictureItem = "Land_Razorwire_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_Razorwire_F_Kit"}
-	};
-	requiresFire = 1;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{3, "Exile_Item_JunkMetal"},
-		{6, "Exile_Item_ExtensionCord"},
-	};
-	category = "Extended Base Items";
-};
-
-class SmallShed: Exile_AbstractCraftingRecipe
-{
-	name = "Small Shed";
-	pictureItem = "Land_Shed_Small_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_Shed_Small_F_Kit"}
-	};
-	requiresFire = 1;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{2, "Exile_Item_MetalBoard"}, // Change
-		{1, "Exile_Item_MetalPole"},
-		{1, "Exile_Item_JunkMetal"},
-		{2, "Exile_Item_Cement"},
-		{2, "Exile_Item_MetalScrews"}, // Change
-	};
-	category = "Extended Base Items";
-	tools[] = {"Exile_Item_Wrench"}; // Change
-};
-
-class CNCShelter: Exile_AbstractCraftingRecipe
-{
-	name = "CNC Shelter";
-	pictureItem = "Land_CncShelter_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_CncShelter_F_Kit"}
-	};
-	requiresFire = 0;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{1, "Exile_Item_Cement"},
-	};
-	category = "Extended Base Items";
-};
-
-class BagBunkerBig: Exile_AbstractCraftingRecipe
-{
-	name = "Bag Bunker Big";
-	pictureItem = "Land_BagBunker_Large_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_BagBunker_Large_F_Kit"}
-	};
-	requiresFire = 0;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{1, "Land_BagBunker_Small_F_Kit"}, // Change
-		{1, "Exile_Item_Sand"},  // Change
-		{1, "Exile_Item_Cement"},  // Change
-		{2, "Exile_Item_WoodPlank"},  // Change
-	};
-	category = "Extended Base Items";
-};
-
-
-class Pumpstation: Exile_AbstractCraftingRecipe
-{
-	name = "Pumpstation";
-	pictureItem = "Land_FuelStation_Feed_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_FuelStation_Feed_F_Kit"}
-	};
-	requiresFire = 1;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{2, "Exile_Item_MetalBoard"},
-		{3, "Exile_Item_JunkMetal"}, // Change
-		{1, "Exile_Item_WaterBarrelKit"},
-		{1, "Exile_Item_MetalScrews"}, // Change
-	};
-	tools[] = {"Exile_Item_CordlessScrewdriver"}; // Change
-	category = "Extended Base Items";
-};
-
-class RustyTank: Exile_AbstractCraftingRecipe
-{
-	name = "RustyTank";
-	pictureItem = "Land_Tank_rust_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_Tank_rust_F_Kit"}
-	};
-	requiresFire = 1;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{1, "Exile_Item_MetalBoard"}, // Change
-		{2, "Exile_Item_WaterBarrelKit"},
-		{1, "Exile_Item_MetalScrews"}, // Change
-	};
-	tools[] = {"Exile_Item_CordlessScrewdriver"}; // Change
-	category = "Extended Base Items";
-};
-
-class Steelfence: Exile_AbstractCraftingRecipe
-{
-	name = "Steelfence";
-	pictureItem = "Land_Wall_Tin_4_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_Wall_Tin_4_Kit"}
-	};
-	requiresFire = 0;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{2, "Exile_Item_MetalBoard"},
-	};
-	category = "Extended Base Items";
-};
-
-class CncWallMil4M: Exile_AbstractCraftingRecipe
-{
-	name = "Concrete Wall Military 4m";
-	pictureItem = "Land_Mil_WallBig_4m_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_Mil_WallBig_4m_F_Kit"}
-	};
-	requiresFire = 0;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{2, "Exile_Item_JunkMetal"},
-		{2, "Exile_Item_WoodPlank"},
-	};
-	category = "Extended Base Items";
-};
-
-class Bargate: Exile_AbstractCraftingRecipe
-{
-	name = "Bar Gate";
-	pictureItem = "Land_BarGate_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_BarGate_F_Kit"}
-	};
-	requiresFire = 1;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{1, "Exile_Item_MetalBoard"},
-		{3, "Exile_Item_MetalPole"},
-	};
-	category = "Extended Base Items";
-};
-
-class Citygate: Exile_AbstractCraftingRecipe
-{
-	name = "City Gate";
-	pictureItem = "Land_City_Gate_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_City_Gate_F_Kit"}
-	};
-	requiresFire = 1;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{1, "Exile_Item_MetalBoard"},
-		{1, "Exile_Item_MetalPole"},
-		{1, "Exile_Item_Cement"}
-	};
-	category = "Extended Base Items";
-};
-
-class ConcreteWall8m: Exile_AbstractCraftingRecipe
-{
-	name = "Concrete Wall 8m";
-	pictureItem = "Land_City2_8m_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_City2_8m_F_Kit"}
-	};
-	requiresFire = 0;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{4, "Exile_Item_Cement"},
-	};
-	category = "Extended Base Items";
-};
-
-class ConcreteWall4m: Exile_AbstractCraftingRecipe
-{
-	name = "Concrete Wall 4m";
-	pictureItem = "Land_City2_4m_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_City2_4m_F_Kit"}
-	};
-	requiresFire = 0;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{2, "Exile_Item_Cement"},
-	};
-	category = "Extended Base Items";
-};
-
-class ConcreteWall1: Exile_AbstractCraftingRecipe
-{
-	name = "Concrete Wall";
-	pictureItem = "Land_Wall_IndCnc_4_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_Wall_IndCnc_4_F_Kit"}
-	};
-	requiresFire = 0;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{3, "Exile_Item_Cement"},
-	};
-	category = "Extended Base Items";
-};
-
-class SandbagBarrierBigCorner: Exile_AbstractCraftingRecipe
-{
-	name = "Sandbag Barrier Big Corner";
-	pictureItem = "Land_HBarrierWall_corner_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_HBarrierWall_corner_F_Kit"}
-	};
-	requiresFire = 0;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{6, "Exile_Item_Sand"},
-	};
-	category = "Extended Base Items";
-};
-
-class BagBunkerSmall: Exile_AbstractCraftingRecipe
-{
-	name = "Bag Bunker Small";
-	pictureItem = "Land_BagBunker_Small_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_BagBunker_Small_F_Kit"}
-	};
-	requiresFire = 0;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{2, "Exile_Item_Sand"},
-		{1, "Exile_Item_Cement"},
-		{4, "Exile_Item_WoodPlank"},
-	};
-	category = "Extended Base Items";
-};
-
-class Watercooler: Exile_AbstractCraftingRecipe
-{
-	name = "Water Cooler";
-	pictureItem = "Land_WaterCooler_01_new_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_WaterCooler_01_new_F_Kit"}
-	};
-	requiresFire = 0;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{4, "Exile_Item_MetalBoard"},
-		{1, "Exile_Item_WaterBarrelKit"},
-	};
-	category = "Extended Base Items";
-};
-
-class Stonewall: Exile_AbstractCraftingRecipe
-{
-	name = "Stone Wall";
-	pictureItem = "Land_Stone_4m_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_Stone_4m_F_Kit"}
-	};
-	requiresFire = 0;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{1, "Exile_Item_Cement"},
-		{1, "Exile_Item_Sand"},
-	};
-	category = "Extended Base Items";
-};
-
-class Stonegate: Exile_AbstractCraftingRecipe
-{
-	name = "Stone Gate";
-	pictureItem = "Land_Stone_Gate_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_Stone_Gate_F_Kit"}
-	};
-	requiresFire = 1;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{1, "Exile_Item_MetalPole"},
-		{1, "Exile_Item_MetalBoard"},
-		{1, "Exile_Item_Cement"},
-		{1, "Exile_Item_Sand"},
-	};
-	category = "Extended Base Items";
-};
-
-class PierLadder: Exile_AbstractCraftingRecipe
-{
-	name = "Ladder";
-	pictureItem = "PierLadder_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "PierLadder_F_Kit"}
-	};
-	requiresFire = 1;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{3, "Exile_Item_MetalPole"},
-		{2, "Exile_Item_JunkMetal"},
-	};
-	category = "Extended Base Items";
-};
-
-class CamoNetOPFORopen: Exile_AbstractCraftingRecipe
-{
-	name = "CamoNet OPFOR open";
-	pictureItem = "CamoNet_OPFOR_open_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "CamoNet_OPFOR_open_F_Kit"}
-	};
-	requiresFire = 1;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{2, "Exile_Item_MetalPole"},
-	};
-	category = "Extended Base Items";
-};
-
-class CamoNetINDPopen: Exile_AbstractCraftingRecipe
-{
-	name = "CamoNet INDP open";
-	pictureItem = "CamoNet_INDP_open_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "CamoNet_INDP_open_F_Kit"}
-	};
-	requiresFire = 1;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{2, "Exile_Item_MetalPole"},
-	};
-	category = "Extended Base Items";
-};
-
-class CamoNetBLUFORopen: Exile_AbstractCraftingRecipe
-{
-	name = "CamoNet BLUFOR open";
-	pictureItem = "CamoNet_BLUFOR_open_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "CamoNet_BLUFOR_open_F_Kit"}
-	};
-	requiresFire = 1;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{2, "Exile_Item_MetalPole"},
-	};
-	category = "Extended Base Items";
-};
-
-class BagBunker: Exile_AbstractCraftingRecipe
-{
-	name = "BagBunker";
-	pictureItem = "Land_BagBunker_Tower_F_Kit";
-	returnedItems[] = 
-	{
-		{1, "Land_BagBunker_Tower_F_Kit"}
-	};
-	requiresFire = 1;
-	requiredInteractionModelGroup = "WorkBench";
-	components[] = 
-	{
-		{3, "Exile_Item_Sand"},
-		{1, "Exile_Item_MetalBoard"},
-		{2, "Exile_Item_MetalPole"},
-		{2, "Exile_Item_WoodPlank"}
-	};
-	category = "Extended Base Items";
-};
-
 };
 class CfgExileArsenal
 {
 	class Exile_Uniform_BambiOverall				{ quality = 1; price = 1; sellPrice = 1; };
-
+	
 	#include "cfg\MAS\ItemListMAS.hpp"
 	#include "cfg\TRYK\ItemListTRYK.hpp"
-	
-	
 	///////////////////////////////////////////////////////////////////////////////
 	// Civillian Clothing
 	///////////////////////////////////////////////////////////////////////////////
@@ -2216,6 +1817,9 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	//class CUP_item_Money							{ quality = 3; price = 500000;sellPrice = 500000; }; //NEEDS TO BE FIXED, other item needed
 	class Exile_Item_Can_Empty						{ quality = 1; price = 500000; sellPrice = 500000; };
+
+
+
 	///////////////////////////////////////////////////////////////////////////////
 	// Static MGs
 	///////////////////////////////////////////////////////////////////////////////
@@ -2223,6 +1827,7 @@ class CfgExileArsenal
 	class O_HMG_01_support_F 						{ quality = 3; price = 10000; };
 
 	class O_HMG_01_high_weapon_F 					{ quality = 3; price = 60000; };
+
 	class O_HMG_01_support_high_F 					{ quality = 3; price = 20000; };
 
 	///////////////////////////////////////////////////////////////////////////////
@@ -2247,9 +1852,12 @@ class CfgExileArsenal
 	class optic_LRPS								{ quality = 2; price = 600; };
 	class optic_MRCO								{ quality = 1; price = 250; };
 	class optic_MRD									{ quality = 1; price = 25; };
+	class optic_Nightstalker						{ quality = 6; price = 1000; };
+	class optic_NVS									{ quality = 4; price = 500; };
 	class optic_SOS									{ quality = 2; price = 250; };
 	class optic_Yorris								{ quality = 1; price = 25; };
 	class optic_tws_mg								{ quality = 1; price = 2000; };
+
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Hardware
@@ -2271,9 +1879,11 @@ class CfgExileArsenal
 	class Exile_Item_CamoTentKit					{ quality = 1; price = 250; };
 	class Exile_Item_MetalPole						{ quality = 1; price = 850; };
 	class Exile_Item_OilCanister					{ quality = 1; price = 750; };
+
 	class Exile_Item_Cement							{ quality = 1; price = 750; };
 	class Exile_Item_Sand							{ quality = 1; price = 750; };
 	class Exile_Item_MetalScrews					{ quality = 1; price = 250; };
+	class Exile_Item_CarWheel						{ quality = 1; price = 1000; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Food
@@ -2304,6 +1914,7 @@ class CfgExileArsenal
 	class Exile_Item_PlasticBottleFreshWater 		{ quality = 2; price = 75; sellPrice = 6; }; //80, 15
 	class Exile_Item_Beer 							{ quality = 1; price = 50; }; //75, 30
 	class Exile_Item_EnergyDrink					{ quality = 1; price = 60; }; //75, 20
+
 	class Exile_Item_MountainDupe					{ quality = 1; price = 35; }; //50, 20
 	class Exile_Item_PlasticBottleEmpty				{ quality = 1; price = 6; };
 
@@ -2314,6 +1925,8 @@ class CfgExileArsenal
 	class Exile_Item_Vishpirin						{ quality = 1; price = 500; };
 	class Exile_Item_Bandage	                    { quality = 1; price = 150; };
 	class Exile_Item_Heatpack	                    { quality = 1; price = 75; };
+
+
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Tools
@@ -2321,17 +1934,24 @@ class CfgExileArsenal
 	class Exile_Item_Matches 						{ quality = 1; price = 60; };
 	class Exile_Item_CookingPot						{ quality = 2; price = 80; };
 	class Exile_Melee_Axe							{ quality = 1; price = 100; sellPrice = 10; };
+	class Exile_Melee_SledgeHammmer					{ quality = 3; price = 500; };
 	class Exile_Item_CanOpener						{ quality = 1; price = 80; };
 	class Exile_Item_Handsaw						{ quality = 1; price = 500; };
 	class Exile_Item_Pliers							{ quality = 1; price = 350; };
 	class Exile_Item_Grinder						{ quality = 1; price = 1250; };
+	class Exile_Item_Foolbox						{ quality = 2; price = 4000; };
 	// useless tools for now
+
 	class Exile_Item_Screwdriver					{ quality = 1; price = 500; };
 	class Exile_Item_CordlessScrewdriver			{ quality = 1; price = 1000; };
 	class Exile_Item_Hammer							{ quality = 1; price = 1000; };
+
+
 	class Exile_Item_Shovel							{ quality = 1; price = 750; };
 	class Exile_Item_Wrench							{ quality = 1; price = 500; };	
+
 	class Exile_Item_ZipTie							{ quality = 1; price = 60; };	
+
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Navigation
@@ -2343,10 +1963,14 @@ class CfgExileArsenal
 	class ItemRadio									{ quality = 1; price = 100; };
 	class Binocular									{ quality = 1; price = 40; };
 	class Rangefinder								{ quality = 2; price = 200; };
+
+
+
 	class NVGoggles									{ quality = 2; price = 300; };
 	class NVGoggles_INDEP							{ quality = 2; price = 300; };
 	class NVGoggles_OPFOR							{ quality = 2; price = 300; };
 	class Exile_Item_XM8							{ quality = 2; price = 5; };	
+
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Watch out for a Walter fart! He has gas!
@@ -2391,11 +2015,19 @@ class CfgExileArsenal
 	class U_C_Driver_3								{ quality = 3; price = 150; };
 	class U_C_Driver_4								{ quality = 3; price = 150; };
 	class U_C_Driver_1_black						{ quality = 3; price = 300; };
+
 	class U_C_Driver_1_blue							{ quality = 3; price = 300; };
 	class U_C_Driver_1_green						{ quality = 3; price = 300; };
+
+
+
+
 	class U_C_Driver_1_red							{ quality = 3; price = 300; };
+
 	class U_C_Driver_1_white						{ quality = 3; price = 300; };
+
 	class U_C_Driver_1_yellow						{ quality = 3; price = 300; };
+
 	class U_C_Driver_1_orange						{ quality = 3; price = 300; };
 
 	///////////////////////////////////////////////////////////////////////////////
@@ -2477,7 +2109,7 @@ class CfgExileArsenal
 	class 6Rnd_RedSignal_F 							{ quality = 9000; price = 100; };
 	class 7Rnd_408_Mag 								{ quality = 1; price = 800; };
 	class 9Rnd_45ACP_Mag 							{ quality = 1; price = 50; };
-
+	
 	///////////////////////////////////////////////////////////////////////////////
 	// Flares
 	///////////////////////////////////////////////////////////////////////////////
@@ -2580,6 +2212,7 @@ class CfgExileArsenal
 	class MMG_02_camo_F								{ quality = 3; price = 13000; };
 	class MMG_02_sand_F								{ quality = 3; price = 13000; };
 	
+
 	///////////////////////////////////////////////////////////////////////////////
 	// Assault Rifles
 	///////////////////////////////////////////////////////////////////////////////
@@ -2631,9 +2264,63 @@ class CfgExileArsenal
 	class srifle_LRR_F 								{ quality = 3; price = 20000; };
 
 	///////////////////////////////////////////////////////////////////////////////
+	// ArmA 2 Weapons
+	///////////////////////////////////////////////////////////////////////////////
+	class Exile_Weapon_AK107						{ quality = 1; price = 300; };
+	class Exile_Weapon_AK107_GL						{ quality = 2; price = 400; };
+	class Exile_Weapon_AK74							{ quality = 2; price = 350; };
+	class Exile_Weapon_AK74_GL						{ quality = 2; price = 400; };
+	class Exile_Weapon_AK47							{ quality = 3; price = 500; };
+	class Exile_Weapon_AKM							{ quality = 3; price = 500; };
+	class Exile_Weapon_AKS							{ quality = 3; price = 500; };
+	class Exile_Weapon_AKS_Gold						{ quality = 3; price = 550; };
+	class Exile_Weapon_DMR							{ quality = 3; price = 650; };
+	class Exile_Weapon_LeeEnfield					{ quality = 1; price = 250; };
+	class Exile_Weapon_CZ550						{ quality = 2; price = 400; };
+	class Exile_Weapon_SVD							{ quality = 4; price = 800; };
+	class Exile_Weapon_SVDCamo						{ quality = 4; price = 850; };
+	class Exile_Weapon_VSSVintorez					{ quality = 3; price = 600; };
+	class Exile_Weapon_RPK							{ quality = 2; price = 250; };
+	class Exile_Weapon_PK							{ quality = 3; price = 300; };
+	class Exile_Weapon_PKP							{ quality = 3; price = 350; };
+	class Exile_Weapon_Colt1911						{ quality = 1; price = 100; };
+	class Exile_Weapon_Makarov						{ quality = 1; price = 100; };
+	class Exile_Weapon_Taurus						{ quality = 1; price = 100; };
+	class Exile_Weapon_TaurusGold					{ quality = 1; price = 150; };
+	class Exile_Weapon_M1014						{ quality = 2; price = 200; };
+	
+	///////////////////////////////////////////////////////////////////////////////
+	// ArmA 2 Ammunition
+	///////////////////////////////////////////////////////////////////////////////
+	class Exile_Magazine_30Rnd_762x39_AK				{ quality = 3; price = 20; };
+	class Exile_Magazine_30Rnd_545x39_AK				{ quality = 1; price = 20; };
+	class Exile_Magazine_30Rnd_545x39_AK_Green			{ quality = 1; price = 20; };
+	class Exile_Magazine_30Rnd_545x39_AK_Red			{ quality = 1; price = 20; };
+	class Exile_Magazine_30Rnd_545x39_AK_White			{ quality = 1; price = 20; };
+	class Exile_Magazine_30Rnd_545x39_AK_Yellow			{ quality = 1; price = 20; };
+	class Exile_Magazine_45Rnd_545x39_RPK_Green			{ quality = 1; price = 20; };
+	class Exile_Magazine_75Rnd_545x39_RPK_Green			{ quality = 1; price = 20; };
+	class Exile_Magazine_20Rnd_762x51_DMR				{ quality = 3; price = 20; };
+	class Exile_Magazine_20Rnd_762x51_DMR_Yellow		{ quality = 3; price = 20; };
+	class Exile_Magazine_20Rnd_762x51_DMR_Red			{ quality = 3; price = 20; };
+	class Exile_Magazine_20Rnd_762x51_DMR_Green			{ quality = 3; price = 20; };
+	class Exile_Magazine_10Rnd_303						{ quality = 1; price = 20; };
+	class Exile_Magazine_100Rnd_762x54_PK_Green			{ quality = 3; price = 20; };
+	class Exile_Magazine_7Rnd_45ACP						{ quality = 1; price = 20; };
+	class Exile_Magazine_8Rnd_9x18						{ quality = 1; price = 20; };
+	class Exile_Magazine_6Rnd_45ACP						{ quality = 1; price = 20; };
+	class Exile_Magazine_5Rnd_22LR						{ quality = 1; price = 20; };
+	class Exile_Magazine_10Rnd_762x54					{ quality = 1; price = 20; };
+	class Exile_Magazine_10Rnd_9x39						{ quality = 1; price = 20; };
+	class Exile_Magazine_20Rnd_9x39						{ quality = 1; price = 20; };
+	class Exile_Magazine_8Rnd_74Slug					{ quality = 1; price = 20; };
+	class Exile_Magazine_8Rnd_74Pellets					{ quality = 1; price = 20; }; // broken?
+
+	///////////////////////////////////////////////////////////////////////////////
 	// QUAD BIKES
 	///////////////////////////////////////////////////////////////////////////////
 	class Exile_Bike_QuadBike_Blue					{ quality = 1; price = 500; };
+
 	class Exile_Bike_QuadBike_Red					{ quality = 1; price = 500; };
 	class Exile_Bike_QuadBike_White					{ quality = 1; price = 500; };
 	class Exile_Bike_QuadBike_Nato					{ quality = 1; price = 500; };
@@ -2645,6 +2332,7 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// KARTS
 	//////////////////////////////////////////////////////////////////////////////
+
 	class Exile_Car_Kart_BluKing					{ quality = 1; price = 1000; };
 	class Exile_Car_Kart_RedStone					{ quality = 1; price = 1000; };
 	class Exile_Car_Kart_Vrana						{ quality = 1; price = 1000; };
@@ -2702,7 +2390,6 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	class Exile_Chopper_Hummingbird_Green			{ quality = 1; price = 10000; };
 
-
 	///////////////////////////////////////////////////////////////////////////////
 	// Hummingbird (Civillian)
 	///////////////////////////////////////////////////////////////////////////////
@@ -2758,10 +2445,8 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	class Exile_Chopper_Taru_Transport_CSAT						{ quality = 1; price = 25000; };
 	class Exile_Chopper_Taru_Transport_Black					{ quality = 1; price = 25000; };
-	
 	class Exile_Chopper_Taru_CSAT								{ quality = 1; price = 20000; };
 	class Exile_Chopper_Taru_Black								{ quality = 1; price = 20000; };
-
 	class Exile_Chopper_Taru_Covered_CSAT						{ quality = 1; price = 18000; };
 	class Exile_Chopper_Taru_Covered_Black						{ quality = 1; price = 18000; };
 
@@ -2771,6 +2456,12 @@ class CfgExileArsenal
 	class Exile_Plane_Cessna									{ quality = 1; price = 10000; };
 
 	///////////////////////////////////////////////////////////////////////////////
+	// An-2
+	///////////////////////////////////////////////////////////////////////////////
+	class Exile_Plane_AN2_Green									{ quality = 2; price = 17000; };
+	class Exile_Plane_AN2_White									{ quality = 2; price = 17000; };
+	class Exile_Plane_AN2_Stripe								{ quality = 2; price = 17000; };
+	
 	// Hatchback
 	///////////////////////////////////////////////////////////////////////////////
 	class Exile_Car_Hatchback_Beige						{ quality = 1; price = 12000; };
@@ -2785,6 +2476,12 @@ class CfgExileArsenal
 	class Exile_Car_Hatchback_Rusty1					{ quality = 1; price = 12000; };
 	class Exile_Car_Hatchback_Rusty2					{ quality = 1; price = 12000; };
 	class Exile_Car_Hatchback_Rusty3					{ quality = 1; price = 12000; };
+
+	///////////////////////////////////////////////////////////////////////////////
+	// Golf
+	///////////////////////////////////////////////////////////////////////////////
+	class Exile_Car_Golf_Red							{ quality = 1; price = 8000; };
+	class Exile_Car_Golf_Black							{ quality = 1; price = 8000; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Ikarus
@@ -2810,9 +2507,16 @@ class CfgExileArsenal
 	class Exile_Car_Ural_Covered_Military		{ quality = 1; price = 20000; };
 
 	///////////////////////////////////////////////////////////////////////////////
+	// V3S
+	///////////////////////////////////////////////////////////////////////////////
+	class Exile_Car_V3S_Open			{ quality = 2; price = 28000; };
+	class Exile_Car_V3S_Covered			{ quality = 2; price = 28000; };
+
+	///////////////////////////////////////////////////////////////////////////////
 	// SUVXL
 	///////////////////////////////////////////////////////////////////////////////
 	class Exile_Car_SUVXL_Black 				{ quality = 1; price = 15000; };
+
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Tractor
@@ -2838,12 +2542,12 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// UAZ
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Car_UAZ_Green				{ quality = 1; price = 10000; };
+	class Exile_Car_UAZ_Green				{ quality = 1; price = 5000; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// UAZ (Open)
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Car_UAZ_Open_Green			{ quality = 1; price = 8000; };
+	class Exile_Car_UAZ_Open_Green			{ quality = 1; price = 4500; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Land Rover
@@ -2864,18 +2568,18 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// Lada
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Car_Lada_Green 				{ quality = 1; price = 6000; };
-	class Exile_Car_Lada_Taxi 				{ quality = 1; price = 6000; };
-	class Exile_Car_Lada_Red 				{ quality = 1; price = 6000; };
-	class Exile_Car_Lada_White 				{ quality = 1; price = 6000; };
-	class Exile_Car_Lada_Hipster 			{ quality = 1; price = 6000; };
+	class Exile_Car_Lada_Green 				{ quality = 1; price = 3500; };
+	class Exile_Car_Lada_Taxi 				{ quality = 1; price = 3500; };
+	class Exile_Car_Lada_Red 				{ quality = 1; price = 3500; };
+	class Exile_Car_Lada_White 				{ quality = 1; price = 3500; };
+	class Exile_Car_Lada_Hipster 			{ quality = 1; price = 3500; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Volha
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Car_Volha_Blue				{ quality = 1; price = 7000; };
-	class Exile_Car_Volha_White				{ quality = 1; price = 7000; };
-	class Exile_Car_Volha_Black				{ quality = 1; price = 7000; };
+	class Exile_Car_Volha_Blue				{ quality = 1; price = 3500; };
+	class Exile_Car_Volha_White				{ quality = 1; price = 3500; };
+	class Exile_Car_Volha_Black				{ quality = 1; price = 3500; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Hatchback (Sport)
@@ -2983,6 +2687,36 @@ class CfgExileArsenal
 	class Exile_Car_SUV_Orange 							{ quality = 1; price = 13000; };
 
 	///////////////////////////////////////////////////////////////////////////////
+	// SUV (Armed)
+	///////////////////////////////////////////////////////////////////////////////
+	class Exile_Car_SUV_Armed_Black 					{ quality = 4; price = 25000; };
+	
+	///////////////////////////////////////////////////////////////////////////////
+	// BRDM2
+	///////////////////////////////////////////////////////////////////////////////
+	class Exile_Car_BRDM2_HQ 							{ quality = 5; price = 25000; };
+	
+	///////////////////////////////////////////////////////////////////////////////
+	// BTR40
+	///////////////////////////////////////////////////////////////////////////////
+	class Exile_Car_BTR40_MG_Green 							{ quality = 6; price = 38000; };
+	class Exile_Car_BTR40_MG_Camo 							{ quality = 6; price = 38000; };
+	class Exile_Car_BTR40_Green 							{ quality = 2; price = 15000; };
+	class Exile_Car_BTR40_Camo 								{ quality = 2; price = 15000; };
+	
+	///////////////////////////////////////////////////////////////////////////////
+	// HMMWV
+	///////////////////////////////////////////////////////////////////////////////
+	class Exile_Car_HMMWV_M134_Green 							{ quality = 5; price = 33000; };
+	class Exile_Car_HMMWV_M134_Desert 							{ quality = 5; price = 33000; };
+	class Exile_Car_HMMWV_M2_Green 								{ quality = 6; price = 40000; };
+	class Exile_Car_HMMWV_M2_Desert 							{ quality = 6; price = 40000; };
+	class Exile_Car_HMMWV_MEV_Green 							{ quality = 3; price = 21000; };
+	class Exile_Car_HMMWV_MEV_Desert 							{ quality = 3; price = 21000; };
+	class Exile_Car_HMMWV_UNA_Green 							{ quality = 3; price = 21000; };
+	class Exile_Car_HMMWV_UNA_Desert 							{ quality = 3; price = 21000; };
+	
+	///////////////////////////////////////////////////////////////////////////////
 	// Tempest
 	///////////////////////////////////////////////////////////////////////////////
 	class Exile_Car_Tempest 							{ quality = 1; price = 35000; };
@@ -3031,107 +2765,48 @@ class CfgExileArsenal
 	// Zamak
 	///////////////////////////////////////////////////////////////////////////////
 	class Exile_Car_Zamak 								{ quality = 1; price = 30000; };
+
+	///////////////////////////////////////////////////////////////////////////////
+	// Flags
+	///////////////////////////////////////////////////////////////////////////////
+	class Exile_Item_FlagStolen1						{ quality = 1; price = 5000;  sellPrice = 5000;  };
+	class Exile_Item_FlagStolen2						{ quality = 1; price = 10000; sellPrice = 10000; };
+	class Exile_Item_FlagStolen3						{ quality = 1; price = 15000; sellPrice = 15000; };
+	class Exile_Item_FlagStolen4						{ quality = 1; price = 20000; sellPrice = 20000; };
+	class Exile_Item_FlagStolen5						{ quality = 1; price = 25000; sellPrice = 25000; };
+	class Exile_Item_FlagStolen6						{ quality = 1; price = 30000; sellPrice = 30000; };
+	class Exile_Item_FlagStolen7						{ quality = 1; price = 35000; sellPrice = 35000; };
+	class Exile_Item_FlagStolen8						{ quality = 1; price = 40000; sellPrice = 40000; };
+	class Exile_Item_FlagStolen9						{ quality = 1; price = 45000; sellPrice = 45000; };
+	class Exile_Item_FlagStolen10						{ quality = 1; price = 50000; sellPrice = 50000; };
 };
+
+
 class CfgExileCustomCode 
 {
-	ExileClient_object_player_death_startBleedingOut = 		"GG\overrides\GG_object_player_death_startBleedingOut.sqf";
-	ExileClient_object_player_bambiStateBegin =	 			"GG\overrides\GG_object_player_bambiStateBegin.sqf";
-	ExileClient_gui_selectSpawnLocation_show = 				"GG\overrides\GG_gui_selectSpawnLocation_show.sqf";
-	ExileClient_util_playerEquipment_add = 					"GG\overrides\GG_util_playerEquipment_add.sqf";
-	ExileClient_object_item_construct= 						"GG\overrides\GG_object_item_construct.sqf";
-    ExileClient_gui_xm8_slide_players_onOpen = 				"GG\overrides\GG_gui_xm8_slide_players_onOpen.sqf";
-    ExileClient_construction_handleAbort = 					"GG\overrides\GG_construction_handleAbort.sqf";
-    ExileClient_object_item_consume = 						"GG\overrides\GG_object_item_consume.sqf";
-    ExileClient_system_lootManager_thread_spawn = 			"GG\overrides\GG_system_lootManager_thread_spawn.sqf";
-    ExileClient_object_player_thread_safeZone = 			"GG\SecureSafezones\compiles\GG_safeZone.sqf";
-    ExileClient_object_player_event_onEnterSafezone = 		"GG\SecureSafezones\compiles\GG_onEnterSafezone.sqf";
-    ExileClient_object_player_event_onLeaveSafezone = 		"GG\SecureSafezones\compiles\GG_onLeaveSafezone.sqf";
-    ExileClient_object_vehicle_network_lockResponse = 		"GG\SecureSafezones\compiles\GG_lockResponse.sqf";
-    ExileClient_object_player_event_onInventoryOpened = 	"GG\overrides\GG_object_player_event_onInventoryOpened.sqf";
-	ExileClient_util_item_getArmor =						"GG\overrides\GG_util_item_getArmor.sqf";
-    ExileClient_gui_xm8_show = 								"GG\XM8_apps\scripts\ExileClient_gui_xm8_show.sqf";
-    ExileClient_gui_xm8_slide_apps_onOpen = 				"GG\XM8_apps\scripts\ExileClient_gui_xm8_slide_apps_onOpen.sqf";
-    ExileClient_gui_xm8_slide = 							"GG\XM8_apps\scripts\ExileClient_gui_xm8_slide.sqf";
-    ExileClient_gui_xm8_slide_server_onOpen = 				"GG\overrides\GG_gui_xm8_slide_server_onOpen.sqf";
-    ExileServer_system_territory_database_load = 			"GG\ExAdClient\VirtualGarage\CustomCode\ExileServer_system_territory_database_load.sqf";
+	/*
+		You can overwrite every single file of our code without touching it.
+		To do that, add the function name you want to overwrite plus the 
+		path to your custom file here. If you wonder how this works, have a
+		look at our bootstrap/fn_preInit.sqf function.
+
+		Simply add the following scheme here:
+
+		<Function Name of Exile> = "<New File Name>";
+
+		Example:
+
+		ExileClient_util_fusRoDah = "myaddon\myfunction.sqf";
+	*/
 };
-
-class CfgNetworkMessages {
-	class updateBankStats
-	{
-		module = "banking";
-		parameters[] = {"STRING"};
-	};
-
-	class depositRequest
-	{
-		module = "banking";
-		parameters[] = {"STRING"};
-	};
-
-	class updateATMResponse
-	{
-		module = "banking";
-		parameters[] = {"STRING","STRING"};
-	};
-
-	class withdrawalRequest
-	{
-		module = "banking";
-		parameters[] = {"STRING"};
-	};
-
-	class collectionRequest
-	{
-		module = "banking";
-		parameters[] = {"STRING","STRING"};
-	};
-
-	class collectMoneyResponse
-	{
-		module = "banking";
-		parameters[] = {"STRING","STRING"};
-	};
-	class saleRequest
-	{
-		module = "banking";
-		parameters[] = {"STRING","STRING"};
-	};
-	class buyRequest
-	{
-		module = "banking";
-		parameters[] = {"STRING","STRING"};
-	};
-	class updateWalletStats
-	{
-		module = "banking";
-		parameters[] = {"STRING"};
-	};
-	class handleATMMessage
-	{
-		module = "banking";
-		parameters[] = {"STRING","STRING"};
-	};
-	class youWonTheLottery
-	{
-		module = "banking";
-		parameters[] = {"STRING","STRING"};
-	};
-	class AdvancedHint
-	{
-		parameters[] = {"STRING","ARRAY"};
-	};
-	class Call
-	{
-		parameters[] = {"CODE"};
-	};
-};
-
-
 class CfgExileEnvironment
 {
 	class Altis 
 	{
+		// A list of {position, radius} where building is not allowed at all
+		nonConstructionZones[] = {};
+
+
 		class FireFlies
 		{
 			// 1 = enabled, 0 = disabled
@@ -3174,7 +2849,7 @@ class CfgExileEnvironment
 		class Radiation 
 		{
 			// 1 = enabled, 0 = disabled
-			enable = 0;
+			enable = 1;
 
 			/*
 				Defines contaminated zones in a specific map. 
@@ -3200,7 +2875,10 @@ class CfgExileEnvironment
 	            |------------------------|------------------------------|
 	            1        1      1        1     0.75    0.5     0.25    0
 			*/
-			contaminatedZones[] = {};
+			contaminatedZones[] = 
+			{
+				{{21845.1, 20977.6, 30}, 350, 400}	// Ghost Hotel
+			};
 		};
 
 		class Temperature
@@ -3226,6 +2904,46 @@ class CfgExileEnvironment
 		};
 	};
 
+	class Namalsk: Altis 
+	{
+		class FireFlies: FireFlies
+		{
+			enable = 1;
+		};
+
+		class Anomalies: Anomalies
+		{
+			enable = 1;
+		};
+
+		class Breathing: Breathing
+		{
+			enable = 1;
+		};
+
+		class Snow: Snow
+		{
+			enable = 1;
+			surfaces[] = {"#nam_snow"};
+		};
+
+		class Radiation: Radiation
+		{
+			enable = 1;
+			contaminatedZones[] = 
+			{
+				{{3960.14,	8454.75,	152.862}, 	80, 	140},	// Object A1
+				{{4974.70,	6632.82,	4.74293}, 	40, 	150},	// Object A2
+				{{6487.92,	9302.03,	36.0014}, 	60, 	110}	// Sebjan Chemical Factory
+			};
+		};
+
+		class Temperature: Temperature
+		{
+			daytimeTemperature[] = {-2.00,-1.77,-1.12,-0.10,1.24,2.78,4.40,6.00,7.46,8.65,9.50,9.90,9.90,9.50,8.65,7.46,6.00,4.40,2.78,1.24,-0.10,-1.12,-1.77,-2.00,-2.00};
+		};
+	};
+	
 	class Chernarus 
 	{
 		class FireFlies
@@ -3321,7 +3039,7 @@ class CfgExileEnvironment
 			water = -5;
 		};
 	};
-
+	
 	class Panthera3
 	{
 		class FireFlies
@@ -3496,7 +3214,7 @@ class CfgExileLootSettings
 	 * Interval in seconds when the client searches for
 	 * new buildings to spawn loot in
 	 */
-	spawnInterval = 60;
+	spawnInterval = 30;
 
 	/**
 	 * This is a percentage value to determine how many loot
@@ -3510,7 +3228,7 @@ class CfgExileLootSettings
 	 *
 	 * You can also cap it at a maximum value. See below.
 	 */
-	maximumPositionCoverage = 6;
+	maximumPositionCoverage = 30;
 
  	/**
  	 * Limit the number of loot positions per building. If the 
@@ -3527,7 +3245,7 @@ class CfgExileLootSettings
 	 * is the upper cap for that. So 3 means it could spawn 1, 2 
 	 * or 3.
 	 */
-	maximumNumberOfItemsPerLootSpot = 1;
+	maximumNumberOfItemsPerLootSpot = 2;
 
 	/**
 	 * Radius in meter to spawn loot AROUND each player.
@@ -3553,7 +3271,15 @@ class CfgExileLootSettings
 	 * set this to a lower value than the maximum radius of a territory,
 	 * which is 150m by default.
 	 */
-	minimumDistanceToTerritories = 50;
+	minimumDistanceToTerritories = 150;
+};
+class CfgExileMobileXM8
+{
+	/**
+	 * Add the 4 digit permission code here, so players can authorize
+	 * your server to send them messages to their Mobile XM8 app.
+	 */
+	code = "";
 };
 class CfgExileMusic
 {
@@ -3565,6 +3291,14 @@ class CfgExileParty
 {
 	showESP = 1;
 	allow3DMarkers = 1;
+};
+class CfgExileRussianRoulette
+{
+	/*
+		Minimum amount to join a session of 
+		russian roulette
+	*/
+	buyInAmount = 100;
 };
 class CfgFlags 
 {
@@ -3641,6 +3375,7 @@ class CfgFlags
 		uids[] = {};
 	};
 };
+
 class ExileAbstractAction
 {
 	title = "";
@@ -4366,6 +4101,348 @@ class CfgInteractionMenus
 		};
 	};
 };
+
+	class Safe
+	{
+		targetType = 2;
+		target = "Exile_Container_Safe";
+
+		class Actions 
+		{
+			class ScanLock: ExileAbstractAction
+			{
+				title = "Scan Lock";
+				condition = "('Exile_Item_ThermalScannerPro' in (magazines player)) && !((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo 1) && !ExilePlayerInSafezone";
+				action = "_this call ExileClient_object_lock_scan";
+			};
+
+			// Locks a vehicle
+			class Lock : ExileAbstractAction
+			{
+				title = "Lock";
+				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo 0)";
+				action = "true spawn ExileClient_object_lock_toggle";
+			};
+
+			class Unlock : ExileAbstractAction
+			{
+				title = "Unlock";
+				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo -1)";
+				action = "false spawn ExileClient_object_lock_toggle";
+			};
+
+			class Pack : ExileAbstractAction
+			{
+				title = "Pack";
+				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo 0)";
+				action = "_this spawn ExileClient_object_container_pack";
+			};
+
+			class SetPinCode : ExileAbstractAction
+			{
+				title = "Set PIN";
+				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo 0)";
+				action = "_this spawn ExileClient_object_lock_setPin";
+			};
+		};
+	};
+
+	class Laptop
+	{
+		targetType = 2;
+		target = "Exile_Construction_Laptop_Static";
+
+		class Actions
+		{
+			class CameraSystem: ExileAbstractAction
+			{
+				title = "CCTV Access";
+				condition = "((ExileClientInteractionObject animationPhase 'LaptopLidRotation') >= 0.5)";
+				action = "_this call ExileClient_gui_baseCamera_show";
+			};
+		};
+	};
+
+	class SupplyBox
+	{
+		targetType = 2;
+		target = "Exile_Container_SupplyBox";
+
+		class Actions
+		{
+			class Mount: ExileAbstractAction
+			{
+				title = "Mount";
+				condition = "(isNull (attachedTo ExileClientInteractionObject)) && ((ExileClientInteractionObject getvariable ['ExileOwnerUID',1]) isEqualTo 1)";
+				action = "_this call ExileClient_object_supplyBox_mount";
+			};
+
+			class Install: ExileAbstractAction
+			{
+				title = "Install";
+				condition = "isNull (attachedTo ExileClientInteractionObject) && ((ExileClientInteractionObject getvariable ['ExileOwnerUID',1]) isEqualTo 1)";
+				action = "_this call ExileClient_object_supplyBox_install";
+			};
+
+			class Unmount: ExileAbstractAction
+			{
+				title = "Unmount";
+				condition = "!(isNull (attachedTo ExileClientInteractionObject)) && ((ExileClientInteractionObject getvariable ['ExileOwnerUID',1]) isEqualTo 1)";
+				action = "_this call ExileClient_object_supplyBox_unmount";
+			};
+		};
+	};
+
+	class Construction
+	{
+		targetType = 2;
+		target = "Exile_Construction_Abstract_Static";
+
+		class Actions 
+		{
+			class ScanLock: ExileAbstractAction
+			{
+				title = "Scan Lock";
+				condition = "('Exile_Item_ThermalScannerPro' in (magazines player)) && !((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo 1)";
+				action = "_this call ExileClient_object_lock_scan";
+			};
+
+			class Unlock : ExileAbstractAction
+			{
+				title = "Unlock";
+				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo -1)";
+				action = "false spawn ExileClient_object_lock_toggle";
+			};
+
+			class Lock : ExileAbstractAction
+			{
+				title = "Lock";
+				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo 0)";
+				action = "true spawn ExileClient_object_lock_toggle";
+			};
+
+			// Picks up the construction so you can move it
+			class Move: ExileAbstractAction
+			{
+				title = "Move";
+				condition = "call ExileClient_util_world_isInOwnTerritory";
+				action = "_this spawn ExileClient_object_construction_move";
+			};
+
+			// Removes the construction.
+			class Deconstruct: ExileAbstractAction
+			{
+				title = "Remove";
+				condition = "call ExileClient_util_world_isInOwnTerritory";
+				action = "_this spawn ExileClient_object_construction_deconstruct";
+			};
+
+			class AddALock : ExileAbstractAction
+			{
+				title = "Add a Lock";
+				condition = "call ExileClient_object_construction_lockAddShow";
+				action = "_this spawn ExileClient_object_construction_lockAdd";
+			};
+
+			class Upgrade : ExileAbstractAction
+			{
+				title = "Upgrade";
+				condition = "call ExileClient_object_construction_upgradeShow";
+				action = "_this call ExileClient_object_construction_upgrade";
+			};
+
+			class MakeBoom : ExileAbstractAction
+			{
+				title = "Plant charge";
+				condition = "call ExileClient_system_breaching_condition";
+				action = "_this call ExileClient_system_breaching_action";
+			};
+
+			class Repair : ExileAbstractAction
+			{
+				title = "Repair";
+				condition = "(!((ExileClientInteractionObject getVariable ['ExileConstructionDamage',0]) isEqualTo 0)) && (call ExileClient_util_world_isInOwnTerritory)";
+				action = "_this call ExileClient_object_construction_repair";
+			};
+
+		};
+	};
+
+	/*
+		Tent, Storage crate etc.
+	*/
+	class Container
+	{
+		targetType = 2;
+		target = "Exile_Container_Abstract";
+
+		class Actions 
+		{
+			class Pack 
+			{
+				title = "Pack";
+				condition = "!((typeOf ExileClientInteractionObject) isEqualTo 'Exile_Container_SupplyBox')";
+				action = "_this spawn ExileClient_object_container_pack";
+			};
+			// Picks up the container so you can move it
+			class Move: ExileAbstractAction
+			{
+				title = "Move";
+				condition = "(getNumber(configFile >> 'CfgVehicles' >> typeOf ExileClientInteractionObject >> 'exileIsLockable') isEqualTo 0) || ((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo 0)";
+				action = "_this spawn ExileClient_object_construction_move";
+			};
+		};
+	};
+
+	class Flag
+	{
+		targetType = 2;
+		target = "Exile_Construction_Flag_Static";
+
+		class Actions
+		{
+			/*
+			class Manage : ExileAbstractAction
+			{
+				title = "Manage";
+				condition = "true";
+				action = "_this call ExileClient_gui_baseManagement_event_show";
+			};
+			*/
+			class StealFlag: ExileAbstractAction
+			{
+				title = "Steal Flag";
+				condition = "((ExileClientInteractionObject getvariable ['ExileFlagStolen',1]) isEqualTo 0)";
+				action = "['StealFlag', _this select 0] call ExileClient_action_execute";
+			};
+			
+			class RestoreFlag: ExileAbstractAction
+			{
+				title = "Restore Flag";
+				condition = "((ExileClientInteractionObject getvariable ['ExileFlagStolen',0]) isEqualTo 1)";
+				action = "['restoreFlagRequest', [netID ExileClientInteractionObject]] call ExileClient_system_network_send";
+			};
+		};
+	};
+
+	class Boat 
+	{
+		targetType = 2;
+		target = "Ship";
+
+		class Actions
+		{
+			// Locks a vehicle
+			class Lock: ExileAbstractAction
+			{
+				title = "Lock";
+				condition = "((locked ExileClientInteractionObject) isEqualTo 0) && ((locked ExileClientInteractionObject) != 1)";
+				action = "true spawn ExileClient_object_lock_toggle";
+			};
+
+			// Unlocks a vehicle
+			class Unlock: ExileAbstractAction
+			{
+				title = "Unlock";
+				condition = "((locked ExileClientInteractionObject) isEqualTo 2) && ((locked ExileClientInteractionObject) != 1)";
+				action = "false spawn ExileClient_object_lock_toggle";
+			};
+
+			// Hot-wires a vehicle
+			class Hotwire: ExileAbstractAction
+			{
+				title = "Hotwire";
+				condition = "((locked ExileClientInteractionObject) isEqualTo 2) && ((locked ExileClientInteractionObject) != 1)";
+				action = "['HotwireVehicle', _this select 0] call ExileClient_action_execute";
+			};
+
+			// Repairs a vehicle to 100%. Requires Duckttape
+			class Repair: ExileAbstractAction
+			{
+				title = "Repair";
+				condition = "true";
+				action = "['RepairVehicle', _this select 0] call ExileClient_action_execute";
+			};
+
+			// Fills fuel from a can into a car
+			class Refuel: ExileAbstractAction
+			{
+				title = "Refuel";
+				condition = "call ExileClient_object_vehicle_interaction_show";
+				action = "_this call ExileClient_object_vehicle_refuel";
+			};
+
+			// Drains fuel from a car into an empty jerry can
+			class DrainFuel: ExileAbstractAction
+			{
+				title = "Drain Fuel";
+				condition = "call ExileClient_object_vehicle_interaction_show";
+				action = "_this call ExileClient_object_vehicle_drain";
+			};
+
+			// Pushes a boat into look direction to move into water
+			class Push: ExileAbstractAction
+			{
+				title = "Fus Ro Dah!";
+				condition = "((crew ExileClientInteractionObject) isEqualTo [])";
+				action = "_this call ExileClient_object_vehicle_push";
+			};
+		};
+	};
+
+	class Bikes
+	{
+		targetType = 2;
+		target = "Bicycle";
+
+		class Actions
+		{
+			class Flip: ExileAbstractAction
+			{
+				title = "Flip";
+				condition = "true";
+				action = "_this call ExileClient_object_vehicle_flip";
+			};
+		};
+	};
+
+	class Player 
+	{
+		targetType = 2;
+		target = "Exile_Unit_Player";
+
+		class Actions 
+		{
+			class Free: ExileAbstractAction
+			{
+				title = "Free";
+				condition = "(alive ExileClientInteractionObject) && (ExileClientInteractionObject getVariable ['ExileIsHandcuffed', false]) && !ExileClientIsHandcuffed";
+				action = "_this call ExileClient_object_handcuffs_free";
+			};
+			
+			class Search: ExileAbstractAction
+			{
+				title = "Search Gear";
+				condition = "(alive ExileClientInteractionObject) && (ExileClientInteractionObject getVariable ['ExileIsHandcuffed', false]) && !ExileClientIsHandcuffed";
+				action = "_this call ExileClient_object_handcuffs_searchGear";
+			};
+
+			class Identify: ExileAbstractAction
+			{
+				title = "Identify Body";
+				condition = "!(alive ExileClientInteractionObject)";
+				action = "_this call ExileClient_object_player_identifyBody";
+			};
+			
+			class HideCorpse: ExileAbstractAction
+			{
+				title = "Hide Body";
+				condition = "!(alive ExileClientInteractionObject) && ('Exile_Melee_Shovel' isEqualTo (currentWeapon player))";
+				action = "['HideBody', (_this select 0)] call ExileClient_action_execute";
+			};
+		};
+	};
+};
 /**
  * Classname is used for reference
  * name is displayed in crafting requirements
@@ -4385,19 +4462,21 @@ class CfgInteractionModels
 			"stallwater_f",
 			"waterpump_01_f",
 			"water_source_f",
-			"misc_well.p3d",
 			"watertank_f.p3d",
 			"pumpa.p3d",
+			"misc_well.p3d",
+			"stallwater_f",
+			"Land_WaterCooler_01_new_F",
+			"Land_WaterCooler_01_old_F",
 			"Land_Water_source_F",
 			"Land_WaterTank_F",
 			"Land_BarrelEmpty_F",
 			"Land_BarrelWater_F",
 			"Land_BarrelWater_grey_F",
 			"Land_WaterBarrel_F",
-			"Land_WaterCooler_01_new_F",
-			"Land_WaterCooler_01_old_F",
 			"Land_pumpa",
 			"kasna_new.p3d",
+			
 			// Namalsk
 			"wellpump",
 			"Land_jhad_stand_water",
@@ -4405,7 +4484,13 @@ class CfgInteractionModels
 			"Land_jbad_Fridge",
 			"Land_jbad_reservoir",
 			"Land_jbad_teapot",
-			"Land_KBud"
+			"Land_KBud",
+			
+			//Tanoa
+			"watertank_01_f",
+			"watertank_02_f",
+			"watertank_03_f",
+			"watertank_04_f"
 		};
 	};
 
@@ -4427,73 +4512,53 @@ class CfgInteractionModels
 		};
 	};
 
-	class WoodSource
+	class ShippingContainerSource
 	{
-		name = "Trees";
+		name = "Shipping Containers";
 		models[] = 
 		{
-			" t_",
-			" bo_t_",
+			// Arma 3
+			"CargoBox_V1_F",
+			"Cargo20_blue_F",
+			"Cargo20_brick_red_F",
+			"Cargo20_cyan_F",
+			"Cargo20_grey_F",
+			"Cargo20_light_blue_F",
+			"Cargo20_light_green_F",
+			"Cargo20_military_green_F",
+			"Cargo20_military_ruins_F",
+			"Cargo20_orange_F",
+			"Cargo20_red_F",
+			"Cargo20_sand_F",
+			"Cargo20_white_F",
+			"Cargo20_yellow_F",
+			"Cargo40_blue_F",
+			"Cargo40_brick_red_F",
+			"Cargo40_cyan_F",
+			"Cargo40_grey_F",
+			"Cargo40_light_blue_F",
+			"Cargo40_light_green_F",
+			"Cargo40_military_green_F",
+			"Cargo40_orange_F",
+			"Cargo40_red_F",
+			"Cargo40_sand_F",
+			"Cargo40_white_F",
+			"Cargo40_yellow_F",
 
-			// A2 trees
-            " str_",
-            " Smrk_",
-            " les_",
-            " brg_",
-            "jablon"		
-		};
-	};
+			// Namalsk
+			"nam_container.p3d",
+			"misc_cargo1d.p3d",
+			"misc_cargo1b.p3d",
+			"misc_cargo1bo.p3d",
+			"misc_cargo2c.p3d",
+			"misc_cargo1ao.p3d",
+			
+			//Tanoa
+			"containerline_01_f",
+			"containerline_02_f",
+			"containerline_03_f",
 
-	class BushSource
-	{
-		name = "Bushes";
-		models[] = {" b_"};
-	};
-
-	class StoneSource
-	{
-		name = "Stones, stone walls or rocks";
-		models[] = 
-		{
-			// We are using find() so this should match everything that is out of stone/rock
-			"stone",
-			"Stone",
-			"Rock",
-			"rock",
-			"cobble",
-			"Cobble",
-			"sea_wall_f.p3d"
-		};
-	};
-
-	// TODO: Add https://community.bistudio.com/wikidata/images/thumb/6/60/Arma3_CfgVehicles_Land_Tank_rust_F.jpg/150px-Arma3_CfgVehicles_Land_Tank_rust_F.jpg
-	class FuelSource
-	{
-		name = "Fuel pumps, stations or barrels";
-		models[] = 
-		{
-			"fuelstation_feed_f.p3d",
-			"metalbarrel_f.p3d",
-			"flexibletank_01_f.p3d",
-			"fs_feed_f.p3d",
-			"fuel_tank_big.p3d",
-			"fuel_tank_small.p3d",
-			"fuel_tank_stairs.p3d",
-			"a_fuelstation_feed.p3d",
-			"ind_tanksmall.p3d",
-			"ind_tanksmall2.p3d",
-			"benzina_schenell.p3d",
-			"fuelstation_army.p3d",
-			"fuelstation.p3d",
-			"Tank_rust_F"
-		};	
-	};
-
-	class Wrecks
-	{
-		name = "Wrecks";
-		models[] = 
-		{
+			// Also allow wrecks
 			"wreck_"
 /*			
 			"wreck_bmp2_f.p3d",
@@ -4518,43 +4583,65 @@ class CfgInteractionModels
 			"wreck_ural_f.p3d"
 			"wreck_van_f.p3d",
 			*/
+
+
+			// TODO: Ask community for CUP/AiA model names	
 		};
 	};
 
-	class Trash
+	class WoodSource
 	{
-		name = "Trash";
+		name = "Trees";
 		models[] = 
 		{
-			"trash",
-			"garbage",
-			"crabcages_f.p3d",
-			"fishinggear",
-			"junkpile_f.p3d",
-			"wheeliebin_01_f.p3d"
-/*
-			"barreltrash_f.p3d",
-			"barreltrash_grey_f.p3d",
-			"crabcages_f.p3d",
-			"fishinggear_01_f.p3d",
-			"fishinggear_02_f.p3d",
-			"garbage_square3_f.p3d",
-			"garbage_square5_f.p3d",
-			"garbagebags_f.p3d",
-			"garbagebarrel_01_f.p3d",
-			"garbagecontainer_closed_f.p3d",
-			"garbagecontainer_open_f.p3d",
-			"garbagepallet_f.p3d",
-			"garbagewashingmachine_f.p3d",
-			"junkpile_f.p3d",
-			"wheeliebin_01_f.p3d"
-*/
+			" t_",
+			" bo_t_",
+
+			// A2 trees
+            " str_",
+            " Smrk_",
+            " les_",
+            " brg_",
+            "jablon"			
 		};
 	};
+
+	// TODO: Add https://community.bistudio.com/wikidata/images/thumb/6/60/Arma3_CfgVehicles_Land_Tank_rust_F.jpg/150px-Arma3_CfgVehicles_Land_Tank_rust_F.jpg
+	class FuelSource
+	{
+		name = "Fuel pumps, stations or barrels";
+		models[] = 
+		{
+			"fuelstation_feed_f.p3d",
+			"metalbarrel_f.p3d",
+			"flexibletank_01_f.p3d",
+			"fs_feed_f.p3d",
+			"fuel_tank_big.p3d",
+			"fuel_tank_small.p3d",
+			"fuel_tank_stairs.p3d",
+			"a_fuelstation_feed.p3d",
+			"ind_tanksmall.p3d",
+			"ind_tanksmall2.p3d",
+			"benzina_schenell.p3d",
+			"fuelstation_army.p3d",
+			"fuelstation.p3d",
+			"Tank_rust_F",
+			//Tanoa
+			"fuelstation_01_pump_f.p3d",
+			"fuelstation_02_pump_f.p3d"
+		};	
+	};
 };
+class CfgLocker 
+{
+	numbersOnly = "0123456789";
+	
+	maxDeposit = 10000;
+};
+
 class CfgPlayer 
 {
-	// In minutes amount of time it takes to go from 100 - 0 if stationary
+	// In minutes ammount of time it takes to go from 100 - 0 if stationary
 	hungerDecay = 90;
 	thirstDecay = 60;
 
@@ -4577,6 +4664,62 @@ class CfgPlayer
 	// 0 or 1
 	enableFatigue = 0;
 	enableStamina = 0;
+
+	disableMapDrawing = 1;
+};
+class CfgSlothMachine
+{
+	spinCost = 100;
+	Jackpot = 10100;
+	
+	chances[] = 
+	{
+		{85, ""}, 					// 85% = Nothing
+		{95, "Level1"}, 			// 10% = 1pt
+		{96, "Level2"}, 			// 1% = 10pt
+		{97, "Level3"}, 			// 1% = 25pt
+		{98, "Level4"}, 			// 1% = 50pt
+		{99, "Level5"},				// 1% = 100pt
+		{100, "Jackpot"} 			// 1% = Jackpot
+	};
+
+	class Prizes 
+	{
+		class Level1
+		{
+			symbol = "\exile_assets\texture\item\Exile_Item_ToiletPaper.paa";
+			prize = 101;
+		};
+
+		class Level2
+		{
+			symbol = "\exile_assets\texture\item\Exile_Item_CockONut.paa";
+			prize = 110;
+		};
+
+		class Level3
+		{
+			symbol = "\exile_assets\texture\item\Exile_Item_Beer.paa";
+			prize = 125;
+		};
+
+		class Level4
+		{
+			symbol = "\exile_assets\texture\item\Exile_Item_Knife.paa";
+			prize = 150;
+		};
+
+		class Level5
+		{
+			symbol = "\exile_assets\texture\item\Exile_Item_Safe.paa";
+			prize = 200;
+		};
+		
+		class Jackpot
+		{
+			symbol = "\exile_assets\texture\item\Exile_Item_XmasPresent.paa";
+		};
+	};
 };
 class CfgTerritories
 {
@@ -4618,9 +4761,8 @@ class CfgTerritories
 	 */
 	minimumDistanceToSpawnZones = 1000;
 
-	// Amount of pop tabs or respect per object to pay
+	// Amount of pop tabs per object to pay
 	popTabAmountPerObject = 50;
-	respectAmountPerObject = 10;
 };
 class CfgTraderCategories 
 {
@@ -5048,10 +5190,9 @@ class CfgTraderCategories
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
-			"O_HMG_01_weapon_F",
 			"O_HMG_01_support_F",
-			"O_HMG_01_high_weapon_F",
-			"O_HMG_01_support_high_F"
+			//"O_HMG_01_support_high_F", // Does not seem to work with HMG01, only the lower version does
+			"O_HMG_01_weapon_F"
 		};
 	};
 
@@ -5080,7 +5221,11 @@ class CfgTraderCategories
 			"optic_LRPS",
 			"optic_MRCO",
 			"optic_MRD",
+			//"optic_Nightstalker",
+			"optic_NVS",
 			"optic_SOS",
+			//"optic_tws",
+			//"optic_tws_mg",
 			"optic_Yorris"
 		};
 	};
@@ -5093,7 +5238,7 @@ class CfgTraderCategories
 		{
 			"Exile_Item_Rope",
 			"Exile_Item_DuctTape",
-			"Exile_Magazine_Battery",
+			//"Exile_Magazine_Battery",
 			"Exile_Item_ExtensionCord",
 			"Exile_Item_FuelCanisterEmpty",
 			"Exile_Item_JunkMetal",
@@ -5152,6 +5297,7 @@ class CfgTraderCategories
 			"Exile_Item_PlasticBottleFreshWater",
 			"Exile_Item_Beer",
 			"Exile_Item_EnergyDrink",
+			"Exile_Item_ChocolateMilk",
 			"Exile_Item_MountainDupe",
 			"Exile_Item_PlasticBottleEmpty"
 		};
@@ -5170,11 +5316,12 @@ class CfgTraderCategories
 			"Exile_Item_Handsaw",
 			"Exile_Item_Pliers",
 			"Exile_Item_Grinder",
-			"Exile_Item_CordlessScrewdriver", //Start of Extended Exile mod items (current line included)
+			"Exile_Item_Foolbox",
+			"Exile_Item_CordlessScrewdriver",
 			"Exile_Item_Screwdriver",
 			"Exile_Item_Shovel",
 			"Exile_Item_Wrench",
-			"Exile_Item_Hammer", //End of Extended Exile mod items (current line included)
+			"Exile_Item_Hammer",
 			"Binocular",
 			"Rangefinder",
 			"NVGoggles",
@@ -5199,8 +5346,12 @@ class CfgTraderCategories
 			"Exile_Item_Bandage",
 			"Exile_Item_Vishpirin",
 			"Exile_Item_Heatpack"
+
+			// Not available in 0.9.4!
+			//"Exile_Item_Defibrillator"
 		};
 	};
+
 	class Navigation
 	{
 		name = "Special Environment";
@@ -5270,7 +5421,7 @@ class CfgTraderCategories
 			"10Rnd_762x54_Mag",
 			"10Rnd_93x64_DMR_05_Mag",
 			"11Rnd_45ACP_Mag",
-			"130Rnd_338_Mag",
+			"130Rnd_338_Mag", 
 			"150Rnd_762x54_Box",
 			"150Rnd_762x54_Box_Tracer",
 			"150Rnd_93x64_Mag",
@@ -5298,7 +5449,30 @@ class CfgTraderCategories
 			"6Rnd_GreenSignal_F",
 			"6Rnd_RedSignal_F",
 			"7Rnd_408_Mag",
-			"9Rnd_45ACP_Mag"
+			"9Rnd_45ACP_Mag",
+			"Exile_Magazine_30Rnd_762x39_AK",
+			"Exile_Magazine_30Rnd_545x39_AK_Green",
+			"Exile_Magazine_30Rnd_545x39_AK_Red",
+			"Exile_Magazine_30Rnd_545x39_AK_White",
+			"Exile_Magazine_30Rnd_545x39_AK_Yellow",
+			"Exile_Magazine_45Rnd_545x39_RPK_Green",
+			"Exile_Magazine_75Rnd_545x39_RPK_Green",
+			"Exile_Magazine_20Rnd_762x51_DMR",
+			"Exile_Magazine_20Rnd_762x51_DMR_Yellow",
+			"Exile_Magazine_20Rnd_762x51_DMR_Red",
+			"Exile_Magazine_20Rnd_762x51_DMR_Green",
+			"Exile_Magazine_10Rnd_303",
+			"Exile_Magazine_100Rnd_762x54_PK_Green",
+			"Exile_Magazine_7Rnd_45ACP",
+			"Exile_Magazine_8Rnd_9x18",
+			"Exile_Magazine_30Rnd_545x39_AK",
+			"Exile_Magazine_6Rnd_45ACP",
+			"Exile_Magazine_5Rnd_22LR",
+			"Exile_Magazine_10Rnd_762x54",
+			"Exile_Magazine_10Rnd_9x39",
+			"Exile_Magazine_20Rnd_9x39",
+			"Exile_Magazine_8Rnd_74Pellets",
+			"Exile_Magazine_8Rnd_74Slug"
 		};
 	};
 
@@ -5358,7 +5532,7 @@ class CfgTraderCategories
 
 	class Explosives
 	{
-		name = "Explosives and Explosive Ammo";
+		name = "Explosives";
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\cargothrow_ca.paa";
 		items[] = 
 		{
@@ -5404,7 +5578,11 @@ class CfgTraderCategories
 			"hgun_Pistol_heavy_01_F",
 			"hgun_Pistol_heavy_02_F",
 			"hgun_Pistol_Signal_F",
-			"hgun_Rook40_F"
+			"hgun_Rook40_F",
+			"Exile_Weapon_Colt1911",
+			"Exile_Weapon_Makarov",
+			"Exile_Weapon_Taurus",
+			"Exile_Weapon_TaurusGold"
 		};
 	};
 
@@ -5430,6 +5608,9 @@ class CfgTraderCategories
 			"arifle_MX_SW_F",
 			"LMG_Mk200_F",
 			"LMG_Zafir_F",
+			"Exile_Weapon_RPK",
+			"Exile_Weapon_PK",
+			"Exile_Weapon_PKP",
 			"MMG_01_hex_F",
 			"MMG_01_tan_F",
 			"MMG_02_black_F",
@@ -5462,7 +5643,25 @@ class CfgTraderCategories
 			"arifle_SDAR_F",
 			"arifle_TRG20_F",
 			"arifle_TRG21_F",
-			"arifle_TRG21_GL_F"
+			"arifle_TRG21_GL_F",
+			"Exile_Weapon_AK107",
+			"Exile_Weapon_AK107_GL",
+			"Exile_Weapon_AK74",
+			"Exile_Weapon_AK74_GL",
+			"Exile_Weapon_AK47",
+			"Exile_Weapon_AKM",
+			"Exile_Weapon_AKS",
+			"Exile_Weapon_AKS_Gold"
+		};
+	};
+	
+	class Shotguns
+	{
+		name = "Shotguns";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] = 
+		{
+			"Exile_Weapon_M1014"
 		};
 	};
 
@@ -5494,7 +5693,13 @@ class CfgTraderCategories
 			"srifle_GM6_camo_F",
 			"srifle_GM6_F",
 			"srifle_LRR_camo_F",
-			"srifle_LRR_F"
+			"srifle_LRR_F",
+			"Exile_Weapon_CZ550",
+			"Exile_Weapon_SVD",
+			"Exile_Weapon_SVDCamo",
+			"Exile_Weapon_VSSVintorez",
+			"Exile_Weapon_DMR",
+			"Exile_Weapon_LeeEnfield"
 		};
 	};
 
@@ -5511,6 +5716,7 @@ class CfgTraderCategories
 			"Exile_Car_UAZ_Green",
 			"Exile_Car_UAZ_Open_Green",
 			"Exile_Car_Octavius_White",
+			"Exile_Car_Golf_Red",
 			"Exile_Car_LandRover_Green",
 			"Exile_Car_LandRover_Ambulance_Green",
 			"Exile_Car_Lada_Green",
@@ -5521,16 +5727,21 @@ class CfgTraderCategories
 			"Exile_Car_Hatchback_Sport_Red",
 			"Exile_Car_SUV_Red",
 			"Exile_Car_SUVXL_Black",
+			"Exile_Car_SUV_Armed_Black",
 			"Exile_Car_Offroad_Rusty1",
 			"Exile_Car_Offroad_Rusty2",
 			"Exile_Car_Offroad_Rusty3",
 			"Exile_Car_Offroad_Repair_Civillian",
 			"Exile_Car_Offroad_Armed_Guerilla01",
+			"Exile_Car_BRDM2_HQ",
+			"Exile_Car_BTR40_MG_Green",
+			"Exile_Car_BTR40_Green",
+			"Exile_Car_HMMWV_M134_Green",
+			"Exile_Car_HMMWV_M2_Green",
+			"Exile_Car_HMMWV_MEV_Green",
+			"Exile_Car_HMMWV_UNA_Green",
 			"Exile_Car_Strider",
 			"Exile_Car_Hunter",
-			"B_MRAP_01_hmg_F",
-			"I_MRAP_03_hmg_F",
-			"O_MRAP_02_hmg_F",
 			"Exile_Car_Ifrit"
 		};
 	};
@@ -5546,12 +5757,11 @@ class CfgTraderCategories
 			"Exile_Car_Van_Fuel_Black",
 			"Exile_Car_Ural_Open_Worker",
 			"Exile_Car_Ural_Covered_Worker",
+			"Exile_Car_V3S_Covered",
 			"Exile_Car_Zamak",
 			"Exile_Car_Tempest",
 			"Exile_Car_HEMMT",
-			"Exile_Car_Ikarus_Blue",
-			"Exile_Car_Ural_Open_Worker",
-			"Exile_Car_Ural_Covered_Worker"
+			"Exile_Car_Ikarus_Blue"
 		};
 	};
 
@@ -5604,30 +5814,10 @@ class CfgTraderCategories
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
-			"Exile_Plane_Cessna"
+			"Exile_Plane_Cessna",
+			"Exile_Plane_AN2_Green"
 		};
 	};
-  class MilitarySpecial
-  {
-    name = "MilitarySpecial";
-    icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
-    items[] =
-    {
-
-		"B_Carryall_ocamo",
-		"B_Carryall_oucamo",
-		"B_Carryall_mcamo",
-		"B_Carryall_oli",
-		"B_Carryall_khk",
-		"B_Carryall_cbr",
-		"Rangefinder",
-		"Laserdesignator",
-		"ItemRadio",
-		"ItemGPS",
-		"NVGoggles",
-		"Exile_Item_InstaDoc"
-    };
-  };
 };
 
 class CfgTraders
@@ -5886,9 +6076,19 @@ class CfgTrading
 	* items and vehicles. It is used if there is no sales price defined
 	* in CfgExileArsenal. 
 	*/
-	sellPriceFactor = 0.25;
+	sellPriceFactor = 0.35;
 	
 	rekeyPriceFactor = 0.1;
+
+	class requiredRespect 
+	{
+		Level1 = 0;
+		Level2 = 0;
+		Level3 = 0;
+		Level4 = 0;
+		Level5 = 0;
+		Level6 = 0;
+	};
 };
 class CfgVehicleCustoms
 {
@@ -6210,18 +6410,6 @@ class CfgVehicleCustoms
 			{"Exile_Chopper_Huey_Armed_Desert", 700, "Desert", {"Exile_psycho_UH1H\data\uh1d_tka_co.paa","Exile_psycho_UH1H\data\uh1d_in_tka_co.paa","Exile_psycho_UH1H\data\default_co.paa","Exile_psycho_UH1H\data\alpha_ca.paa"};}
 		};
 	};
-	
-	///////////////////////////////////////////////////////////////////////////////
-    // Ghost Hawk
-    ///////////////////////////////////////////////////////////////////////////////    
-    class Heli_Transport_01_base_F
-    {
-        skins[] =
-        {
-            {"B_Heli_Transport_01_F",            1500,    "Black",    {"\A3\Air_F_Beta\Heli_Transport_01\Data\Heli_Transport_01_ext01_CO.paa","\A3\Air_F_Beta\Heli_Transport_01\Data\Heli_Transport_01_ext02_CO.paa"};},
-            {"B_Heli_Transport_01_camo_F",        1500,    "Green",    {"\A3\Air_F_Beta\Heli_Transport_01\Data\Heli_Transport_01_ext01_BLUFOR_CO.paa","\A3\Air_F_Beta\Heli_Transport_01\Data\Heli_Transport_01_ext02_BLUFOR_CO.paa"};}
-        };
-    };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Offroad (Armed)
@@ -6441,6 +6629,99 @@ class CfgVehicleCustoms
 			{"Exile_Car_Hunter",		1000, "Exile Black",			{"exile_assets\texture\vehicle\Exile_Hunter_Black_co.paa","exile_assets\texture\vehicle\Exile_Hunter_Black_Back_co.paa"};}
 		};
 	};
+	
+	///////////////////////////////////////////////////////////////////////////////
+	// HMMWV
+	///////////////////////////////////////////////////////////////////////////////
+	class Exile_Car_HMMWV_M2_Abstract
+	{
+		skins[] = 
+		{
+			
+			{"Exile_Car_HMMWV_M2_Green",		1000, "Green",	{"Exile_psycho_hmmw\data\hmmwv_body_co.paa"};},
+			{"Exile_Car_HMMWV_M2_Desert",		1000, "Desert",	{"Exile_psycho_hmmw\data\des\hmmwv_body_co.paa"};}
+		};
+	};
+	
+	class Exile_Car_HMMWV_M134_Abstract
+	{
+		skins[] = 
+		{
+			
+			{"Exile_Car_HMMWV_M134_Green",		1000, "Green",	{"Exile_psycho_hmmw\data\hmmwv_body_co.paa"};},
+			{"Exile_Car_HMMWV_M134_Desert",		1000, "Desert",	{"Exile_psycho_hmmw\data\des\hmmwv_body_co.paa"};}
+		};
+	};
+	
+	class Exile_Car_HMMWV_MEV_Abstract
+	{
+		skins[] = 
+		{
+			
+			{"Exile_Car_HMMWV_MEV_Green",		1000, "Green",	{"Exile_psycho_hmmw\data\hmmwv_body_cm.paa"};},
+			{"Exile_Car_HMMWV_MEV_Desert",		1000, "Desert",	{"Exile_psycho_hmmw\data\des\hmmwv_body_cm.paa"};}
+		};
+	};
+	
+	class Exile_Car_HMMWV_UNA_Abstract
+	{
+		skins[] = 
+		{
+			
+			{"Exile_Car_HMMWV_UNA_Green",		1000, "Green",	{"Exile_psycho_hmmw\data\hmmwv_body_co.paa"};},
+			{"Exile_Car_HMMWV_UNA_Desert",		1000, "Desert",	{"Exile_psycho_hmmw\data\des\hmmwv_body_co.paa"};}
+		};
+	};
+	
+	///////////////////////////////////////////////////////////////////////////////
+	// BTR40
+	///////////////////////////////////////////////////////////////////////////////
+	class Exile_Car_BTR40_MG_Abstract
+	{
+		skins[] = 
+		{
+			
+			{"Exile_Car_BTR40_MG_Green",		1000, "Green",	{"exile_psycho_btr40\data\btr40ext_co.paa"};},
+			{"Exile_Car_BTR40_MG_Camo",			1000, "Camo",	{"exile_psycho_btr40\data\btr40extcamo_co.paa"};}
+		};
+	};
+	
+	class Exile_Car_BTR40_Abstract
+	{
+		skins[] = 
+		{
+			
+			{"Exile_Car_BTR40_Green",			1000, "Green",	{"exile_psycho_btr40\data\btr40ext_co.paa"};},
+			{"Exile_Car_BTR40_Camo",			1000, "Camo",	{"exile_psycho_btr40\data\btr40extcamo_co.paa"};}
+		};
+	};
+	
+	///////////////////////////////////////////////////////////////////////////////
+	// Golf
+	///////////////////////////////////////////////////////////////////////////////
+	class Exile_Car_Golf_Abstract
+	{
+		skins[] = 
+		{
+			
+			{"Exile_Car_Golf_Red",				1000, "Red",	{"exile_psycho_VWGolf\data\vwgolf_body_co.paa"};},
+			{"Exile_Car_Golf_Black",			1000, "Black",	{"exile_psycho_VWGolf\data\texture\black_co.paa"};}
+		};
+	};
+	
+	///////////////////////////////////////////////////////////////////////////////
+	// AN-2
+	///////////////////////////////////////////////////////////////////////////////
+	class Exile_Plane_AN2_Abstract
+	{
+		skins[] = 
+		{
+			{"Exile_Plane_AN2_Green", 700, "Green", {"Exile_psycho_An2\data\an2_1_co.paa","Exile_psycho_An2\data\an2_2_co.paa","Exile_psycho_An2\data\an2_wings_co.paa"};},
+			{"Exile_Plane_AN2_White", 700, "Red, White & Blue", {"Exile_psycho_An2\data\an2_1_a_co.paa",
+		"Exile_psycho_An2\data\an2_2_a_co.paa","Exile_psycho_An2\data\an2_wings_a_co.paa"};},
+			{"Exile_Plane_AN2_Stripe", 700, "Green Stripe", {"Exile_psycho_An2\data\an2_1_b_co.paa","Exile_psycho_An2\data\an2_2_b_co.paa","Exile_psycho_An2\data\an2_wings_b_co.paa"};}
+		};
+	};
 };
 class CfgVehicleTransport 
 {
@@ -6482,5 +6763,51 @@ class CfgVehicleTransport
 			cargoIndizes[] = {1, 6, 7, 9}; 
 			detachPosition[] = {0.08, -6};
 		};
+	};
+};
+class CfgVon
+{
+	// self explanitory isnt it
+	class global
+	{
+		id = 0;
+		text = 0;
+		von = 0;
+	};
+
+	class side
+	{
+		id = 1;
+		text = 1;
+		von = 0;
+	};
+
+	class command
+	{
+		id = 2;
+		text = 0;
+		von = 0;
+	};
+
+	class group
+
+	{
+		id = 3;
+		text = 1;
+		von = 1;
+	};
+
+	class vehicle
+	{
+		id = 4;
+		text = 1;
+		von = 1;
+	};
+
+	class direct
+	{
+		id = 5;
+		text = 1;
+		von = 1;
 	};
 };

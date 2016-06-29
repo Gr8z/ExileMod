@@ -34,7 +34,8 @@ showHUD[] =
     true,   // Tank direction indicator
     true,   // Commanding menu
     false,   // Group Bar
-    true    // HUD Weapon Cursors
+    true,    // HUD Weapon Cursors
+	false   // Squad Radar
 };
 
 respawn = "BASE";
