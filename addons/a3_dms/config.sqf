@@ -392,11 +392,9 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 
 	//Assault Class
 	DMS_assault_weps =					[							// Assault Rifles
-											"arifle_Katiba_GL_F",
 											"arifle_MX_GL_Black_F",
 											"arifle_Mk20_GL_F",
 											"arifle_TRG21_GL_F",
-											"arifle_Katiba_F",
 											"arifle_MX_Black_F",
 											"arifle_TRG21_F",
 											"arifle_TRG20_F",
