@@ -91,7 +91,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 1:{
 			if !(_puid in Scout1 + Scout2 + Scout3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Scout Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 
-			_cost = 1705;
+			_cost = 853;
 			if (_cost > ExileClientBank) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			["buyRequest",["BANK",str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Scout Loadout 1</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
@@ -119,7 +119,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 2:{
 			if !(_puid in Scout2 + Scout3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Scout Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			
-			_cost = 2400;
+			_cost = 1200;
 			if (_cost > ExileClientBank) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			["buyRequest",["BANK",str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Scout Loadout 2</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
@@ -150,7 +150,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 3:{
 			if !(_puid in Scout3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Scout Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			
-			_cost = 6840;
+			_cost = 3420;
 			if (_cost > ExileClientBank) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			["buyRequest",["BANK",str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Scout Loadout 3</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
@@ -183,7 +183,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 4:{
 			if !(_puid in Marksman1 + Marksman2 + Marksman3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Marksman Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			
-			_cost = 2315;
+			_cost = 1250;
 			if (_cost > ExileClientBank) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			["buyRequest",["BANK",str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Marksman Loadout 1</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
@@ -211,7 +211,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 5:{
 			if !(_puid in Marksman2 + Marksman3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Marksman Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			
-			_cost = 4865;
+			_cost = 2433;
 			if (_cost > ExileClientBank) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			["buyRequest",["BANK",str(_cost)]] call ExileClient_system_network_send;	
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Marksman Loadout 2</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
@@ -241,7 +241,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 6:{
 			if !(_puid in Marksman3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Marksman Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			
-			_cost = 6065;
+			_cost = 3032;
 			if (_cost > ExileClientBank) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			["buyRequest",["BANK",str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Marksman Loadout 3</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
@@ -273,7 +273,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 7:{
 			if !(_puid in Soldier1 + Soldier2 + Soldier3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Soldier Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			
-			_cost = 2125;
+			_cost = 1062;
 			if (_cost > ExileClientBank) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			["buyRequest",["BANK",str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Soldier Loadout 1</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
@@ -301,7 +301,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 8:{
 			if !(_puid in Soldier2 + Soldier3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Soldier Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			
-			_cost = 3700;
+			_cost = 1850;
 			if (_cost > ExileClientBank) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			["buyRequest",["BANK",str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Soldier Loadout 2</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
@@ -334,7 +334,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 9:{
 			if !(_puid in Soldier3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Soldier Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			
-			_cost = 4940;
+			_cost = 2470;
 			if (_cost > ExileClientBank) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			["buyRequest",["BANK",str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Soldier Loadout 3</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
@@ -368,7 +368,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 10:{
 			if !(_puid in Medic1 + Medic2 + Medic3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Medic Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			
-			_cost = 879;
+			_cost = 440;
 			if (_cost > ExileClientBank) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			["buyRequest",["BANK",str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Medic Loadout 1</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
@@ -395,7 +395,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 11:{
 			if !(_puid in Medic2 + Medic3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Medic Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			
-			_cost = 2815;
+			_cost = 1408;
 			if (_cost > ExileClientBank) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			["buyRequest",["BANK",str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Medic Loadout 2</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
@@ -424,7 +424,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 12:{
 			if !(_puid in Medic3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Medic Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			
-			_cost = 3490;
+			_cost = 1745;
 			if (_cost > ExileClientBank) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			["buyRequest",["BANK",str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Medic Loadout 3</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
@@ -456,7 +456,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 13:{
 			if !(_puid in Engineer1 + Engineer2 + Engineer3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Engineer Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			
-			_cost = 3645;
+			_cost = 1823;
 			if (_cost > ExileClientBank) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			["buyRequest",["BANK",str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Engineer Loadout 1</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
@@ -487,7 +487,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 14:{
 			if !(_puid in Engineer2 + Engineer3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Engineer Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			
-			_cost = 4290;
+			_cost = 2145;
 			if (_cost > ExileClientBank) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			["buyRequest",["BANK",str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Engineer Loadout 2</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
@@ -519,7 +519,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 15:{
 			if !(_puid in Engineer3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Engineer Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			
-			_cost = 5300;
+			_cost = 2650;
 			if (_cost > ExileClientBank) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			["buyRequest",["BANK",str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Engineer Loadout 3</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;

@@ -3048,6 +3048,7 @@ class CfgExileCustomCode
     ExileClient_object_player_event_onLeaveSafezone = 		"GG\SecureSafezones\compiles\GG_onLeaveSafezone.sqf";
     ExileClient_object_vehicle_network_lockResponse = 		"GG\SecureSafezones\compiles\GG_lockResponse.sqf";
     ExileClient_object_player_event_onInventoryOpened = 	"GG\overrides\GG_object_player_event_onInventoryOpened.sqf";
+	ExileClient_util_item_getArmor =						"GG\overrides\GG_util_item_getArmor.sqf";
     ExileClient_gui_xm8_show = 								"GG\XM8_apps\scripts\ExileClient_gui_xm8_show.sqf";
     ExileClient_gui_xm8_slide_apps_onOpen = 				"GG\XM8_apps\scripts\ExileClient_gui_xm8_slide_apps_onOpen.sqf";
     ExileClient_gui_xm8_slide = 							"GG\XM8_apps\scripts\ExileClient_gui_xm8_slide.sqf";
@@ -5885,7 +5886,7 @@ class CfgTrading
 	* items and vehicles. It is used if there is no sales price defined
 	* in CfgExileArsenal. 
 	*/
-	sellPriceFactor = 0.5;
+	sellPriceFactor = 0.25;
 	
 	rekeyPriceFactor = 0.1;
 };
