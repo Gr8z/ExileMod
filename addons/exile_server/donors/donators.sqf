@@ -208,6 +208,7 @@ Scout3 = [
 	"76561198084922099", // ^UG^ MegaWaffle (OD-2016-06-15) #13917
 	"76561198135611591", // Turnip (OD-2016-05-26) #13802
 	"76561198000588916", // howwl (OD-2016-06-24) #13960
+	"76561198090941099", // Josh (OD-2016-06-27) #13969
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout3";
@@ -279,6 +280,6 @@ Soldier3 = [
 	"76561197972037463", // *[MA]* Get Smashed (OD-2016-06-19) #13937  
 	"76561198126852115", // Ferg (OD-2016-06-19) #13941
 	"76561198194014225", // [BHJ]Raul (OD-2016-06-20) #13945
-// Add UIDs above, don't forget the comma
+	// Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Soldier3";
