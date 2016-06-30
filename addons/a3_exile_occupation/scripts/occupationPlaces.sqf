@@ -14,11 +14,7 @@ _minFPS 			= SC_minFPS;
 _useLaunchers 	    = DMS_ai_use_launchers;
 _scaleAI			= SC_scaleAI;
 _side               = "bandit"; 
-
-if(SC_occupyPlacesSurvivors) then 
-{ 
-    if(!isNil "DMS_Enable_RankChange") then { DMS_Enable_RankChange = true;  };
-};
+_okToSpawn          = true;
 
 
 // more than _scaleAI players on the server and the max AI count drops per additional player
@@ -79,6 +75,7 @@ _locations = (nearestLocations [_spawnCenter, ["NameVillage","NameCity", "NameCi
         };
 		
         _okToSpawn = [ _pos ] call SC_fnc_isSafePos;
+        if(isNil "_okToSpawn") then { _okToSpawn = false; };
     
 		// Don't spawn additional AI if there are already AI in range
         _nearBanditAI = { side _x == SC_BanditSide AND _x distance _pos < 500 } count allUnits;

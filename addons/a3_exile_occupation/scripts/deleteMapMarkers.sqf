@@ -5,7 +5,7 @@ if (SC_occupyLootCratesMarkers) then
 
 	for "_i" from 1 to SC_numberofLootCrates do
 	{
-		_markerName = format ["loot_marker_%1", _i];
+		_markerName = format ["SC_loot_marker_%1", _i];
 		_pos = getMarkerPos _markerName;
 		
 		if(!isNil "_pos") then
