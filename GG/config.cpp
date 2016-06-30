@@ -3862,67 +3862,6 @@ class CfgInteractionMenus
 		};
 	};
 
-	class Construction
-	{
-		targetType = 2;
-		target = "Exile_Construction_Abstract_Static";
-
-		class Actions 
-		{
-			class ScanLock: ExileAbstractAction
-			{
-				title = "Scan Lock";
-				condition = "('Exile_Item_ThermalScannerPro' in (magazines player)) && !((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo 1)";
-				action = "_this call ExileClient_object_lock_scan";
-			};
-
-			class Unlock : ExileAbstractAction
-			{
-				title = "Unlock";
-				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo -1)";
-				action = "false spawn ExileClient_object_lock_toggle";
-			};
-
-			class Lock : ExileAbstractAction
-			{
-				title = "Lock";
-				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo 0)";
-				action = "true spawn ExileClient_object_lock_toggle";
-			};
-
-			// Picks up the construction so you can move it
-			class Move: ExileAbstractAction
-			{
-				title = "Move";
-				condition = "true";
-				action = "_this spawn ExileClient_object_construction_move";
-			};
-
-			// Removes the construction. Does not refund anything YET!
-			class Deconstruct: ExileAbstractAction
-			{
-				title = "Remove";
-				condition = "true";
-				action = "_this spawn ExileClient_object_construction_deconstruct";
-			};
-
-			class AddALock : ExileAbstractAction
-			{
-				title = "Add a Lock";
-				condition = "call ExileClient_object_construction_lockAddShow";
-				action = "_this spawn ExileClient_object_construction_lockAdd";
-			};
-
-			class Upgrade : ExileAbstractAction
-			{
-				title = "Upgrade";
-				condition = "call ExileClient_object_construction_upgradeShow";
-				action = "_this call ExileClient_object_construction_upgrade";
-			};
-
-		};
-	};
-
 	/*
 		Tent, Storage crate etc.
 	*/
@@ -3975,6 +3914,19 @@ class CfgInteractionMenus
 				title = "Hack Virtual Garage";
 				condition = "((([ExileClientInteractionObject, getPlayerUID player] call ExileClient_util_territory_getAccessLevel) select 0) < ExAd_VG_ACCESS_LEVEL)";
 				action = "_this spawn ExAd_fnc_startHack";
+			};
+			class StealFlag: ExileAbstractAction
+			{
+				title = "Steal Flag";
+				condition = "((ExileClientInteractionObject getvariable ['ExileFlagStolen',1]) isEqualTo 0)";
+				action = "['StealFlag', _this select 0] call ExileClient_action_execute";
+			};
+			
+			class RestoreFlag: ExileAbstractAction
+			{
+				title = "Restore Flag";
+				condition = "((ExileClientInteractionObject getvariable ['ExileFlagStolen',0]) isEqualTo 1)";
+				action = "['restoreFlagRequest', [netID ExileClientInteractionObject]] call ExileClient_system_network_send";
 			};
 		};
 	};
@@ -4066,87 +4018,6 @@ class CfgInteractionMenus
 		};
 	};
 
-	class Player 
-	{
-		targetType = 2;
-		target = "Exile_Unit_Player";
-
-		class Actions 
-		{
-			class Free: ExileAbstractAction
-			{
-				title = "Free";
-				condition = "(alive ExileClientInteractionObject) && (ExileClientInteractionObject getVariable ['ExileIsHandcuffed', false]) && !ExileClientIsHandcuffed";
-				action = "_this call ExileClient_object_handcuffs_free";
-			};
-			
-			class Search: ExileAbstractAction
-			{
-				title = "Search Gear";
-				condition = "(alive ExileClientInteractionObject) && (ExileClientInteractionObject getVariable ['ExileIsHandcuffed', false]) && !ExileClientIsHandcuffed";
-				action = "_this call ExileClient_object_handcuffs_searchGear";
-			};
-			class Examine: ExileAbstractAction
-           {
-               title = "Examine Body";
-               condition = "!(alive ExileClientInteractionObject) && ((ExileClientInteractionObject getVariable ['ExileName','']) != '')";
-               action = "[(ExileClientInteractionObject getVariable ['ExileName','']),(ExileClientInteractionObject getVariable ['DroppedAmount',0])] call ExileClient_banking_player_examineMoney";
-           };
-	        class Collect: ExileAbstractAction
-           {
-               title = "Collect Pop Tabs";
-               condition = "!(alive ExileClientInteractionObject) && ((ExileClientInteractionObject getVariable ['DroppedAmount',0]) > 0)";
-               action = "[ExileClientInteractionObject,(ExileClientInteractionObject getVariable ['DroppedAmount',0])] call ExileClient_banking_player_collectMoney";
-           };
-		};
-	};
-
-	class Laptop
-	{
-		targetType = 2;
-		target = "Exile_Construction_Laptop_Static";
-
-		class Actions
-		{
-			class CameraSystem: ExileAbstractAction
-			{
-				title = "CCTV Access";
-				condition = "((ExileClientInteractionObject animationPhase 'LaptopLidRotation') >= 0.5)";
-				action = "_this call ExileClient_gui_baseCamera_show";
-			};
-		};
-	};
-
-	class SupplyBox
-	{
-		targetType = 2;
-		target = "Exile_Container_SupplyBox";
-
-		class Actions
-		{
-			class Mount: ExileAbstractAction
-			{
-				title = "Mount";
-				condition = "(isNull (attachedTo ExileClientInteractionObject)) && ((ExileClientInteractionObject getvariable ['ExileOwnerUID',1]) isEqualTo 1)";
-				action = "_this call ExileClient_object_supplyBox_mount";
-			};
-
-			class Install: ExileAbstractAction
-			{
-				title = "Install";
-				condition = "isNull (attachedTo ExileClientInteractionObject) && ((ExileClientInteractionObject getvariable ['ExileOwnerUID',1]) isEqualTo 1)";
-				action = "_this call ExileClient_object_supplyBox_install";
-			};
-
-			class Unmount: ExileAbstractAction
-			{
-				title = "Unmount";
-				condition = "!(isNull (attachedTo ExileClientInteractionObject)) && ((ExileClientInteractionObject getvariable ['ExileOwnerUID',1]) isEqualTo 1)";
-				action = "_this call ExileClient_object_supplyBox_unmount";
-			};
-		};
-	};
-
 	class Construction
 	{
 		targetType = 2;
@@ -4225,141 +4096,6 @@ class CfgInteractionMenus
 	/*
 		Tent, Storage crate etc.
 	*/
-	class Container
-	{
-		targetType = 2;
-		target = "Exile_Container_Abstract";
-
-		class Actions 
-		{
-			class Pack 
-			{
-				title = "Pack";
-				condition = "!((typeOf ExileClientInteractionObject) isEqualTo 'Exile_Container_SupplyBox')";
-				action = "_this spawn ExileClient_object_container_pack";
-			};
-			// Picks up the container so you can move it
-			class Move: ExileAbstractAction
-			{
-				title = "Move";
-				condition = "(getNumber(configFile >> 'CfgVehicles' >> typeOf ExileClientInteractionObject >> 'exileIsLockable') isEqualTo 0) || ((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo 0)";
-				action = "_this spawn ExileClient_object_construction_move";
-			};
-		};
-	};
-
-	class Flag
-	{
-		targetType = 2;
-		target = "Exile_Construction_Flag_Static";
-
-		class Actions
-		{
-			/*
-			class Manage : ExileAbstractAction
-			{
-				title = "Manage";
-				condition = "true";
-				action = "_this call ExileClient_gui_baseManagement_event_show";
-			};
-			*/
-			class StealFlag: ExileAbstractAction
-			{
-				title = "Steal Flag";
-				condition = "((ExileClientInteractionObject getvariable ['ExileFlagStolen',1]) isEqualTo 0)";
-				action = "['StealFlag', _this select 0] call ExileClient_action_execute";
-			};
-			
-			class RestoreFlag: ExileAbstractAction
-			{
-				title = "Restore Flag";
-				condition = "((ExileClientInteractionObject getvariable ['ExileFlagStolen',0]) isEqualTo 1)";
-				action = "['restoreFlagRequest', [netID ExileClientInteractionObject]] call ExileClient_system_network_send";
-			};
-		};
-	};
-
-	class Boat 
-	{
-		targetType = 2;
-		target = "Ship";
-
-		class Actions
-		{
-			// Locks a vehicle
-			class Lock: ExileAbstractAction
-			{
-				title = "Lock";
-				condition = "((locked ExileClientInteractionObject) isEqualTo 0) && ((locked ExileClientInteractionObject) != 1)";
-				action = "true spawn ExileClient_object_lock_toggle";
-			};
-
-			// Unlocks a vehicle
-			class Unlock: ExileAbstractAction
-			{
-				title = "Unlock";
-				condition = "((locked ExileClientInteractionObject) isEqualTo 2) && ((locked ExileClientInteractionObject) != 1)";
-				action = "false spawn ExileClient_object_lock_toggle";
-			};
-
-			// Hot-wires a vehicle
-			class Hotwire: ExileAbstractAction
-			{
-				title = "Hotwire";
-				condition = "((locked ExileClientInteractionObject) isEqualTo 2) && ((locked ExileClientInteractionObject) != 1)";
-				action = "['HotwireVehicle', _this select 0] call ExileClient_action_execute";
-			};
-
-			// Repairs a vehicle to 100%. Requires Duckttape
-			class Repair: ExileAbstractAction
-			{
-				title = "Repair";
-				condition = "true";
-				action = "['RepairVehicle', _this select 0] call ExileClient_action_execute";
-			};
-
-			// Fills fuel from a can into a car
-			class Refuel: ExileAbstractAction
-			{
-				title = "Refuel";
-				condition = "call ExileClient_object_vehicle_interaction_show";
-				action = "_this call ExileClient_object_vehicle_refuel";
-			};
-
-			// Drains fuel from a car into an empty jerry can
-			class DrainFuel: ExileAbstractAction
-			{
-				title = "Drain Fuel";
-				condition = "call ExileClient_object_vehicle_interaction_show";
-				action = "_this call ExileClient_object_vehicle_drain";
-			};
-
-			// Pushes a boat into look direction to move into water
-			class Push: ExileAbstractAction
-			{
-				title = "Fus Ro Dah!";
-				condition = "((crew ExileClientInteractionObject) isEqualTo [])";
-				action = "_this call ExileClient_object_vehicle_push";
-			};
-		};
-	};
-
-	class Bikes
-	{
-		targetType = 2;
-		target = "Bicycle";
-
-		class Actions
-		{
-			class Flip: ExileAbstractAction
-			{
-				title = "Flip";
-				condition = "true";
-				action = "_this call ExileClient_object_vehicle_flip";
-			};
-		};
-	};
-
 	class Player 
 	{
 		targetType = 2;
@@ -4543,7 +4279,7 @@ class CfgInteractionModels
 		};
 	};
 
-	class WoodSource
+	class WoodSourcd
 	{
 		name = "Trees";
 		models[] = 
