@@ -1,3 +1,4 @@
+#include "GG\GG_Exile_AdminMenu.hpp"
 #include "GG\XM8_apps\XM8_apps_sliders.hpp"
 
 // https://community.bistudio.com/wiki/Description.ext#forceRotorLibSimulation
