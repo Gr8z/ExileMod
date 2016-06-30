@@ -20,6 +20,7 @@ _texture = _data select 21;
 _vehicleObject = [(_data select 1), _position, [_vectorDirection, _vectorUp], true,_pinCode] call ExileServer_object_vehicle_createPersistentVehicle;
 _vehicleObject setVariable ["ExileDatabaseID", _vehicleID];
 _vehicleObject setVariable ["ExileOwnerUID", (_data select 3)];
+_vehicleObject setVariable ["ExileMoney", (_data select 23), true];
 _lock = (_data select 4);
 _unlockInSafeZonesAfterRestart = (getNumber (configFile >> "CfgSettings" >> "VehicleSpawn" >> "unlockInSafeZonesAfterRestart")) isEqualTo 1;
 _isLocked = (_lock isEqualTo -1);
@@ -38,19 +39,6 @@ if (_isLocked) then
 	_vehicleObject setVariable ["ExileIsLocked", -1];
 	_vehicleObject lock 2;
 	_vehicleObject enableRopeAttach false;
-
-	// Vehicle Protection System
-	// Start Vehicle Invincible in Authorized Terrority After Restart
-	_vehicleOwner = _vehicleObject getVariable "ExileOwnerUID";   //get vehicle owner ID
-	_vehicleInTerritory = _position call ExileClient_util_world_getTerritoryAtPosition;  //check if the vehicle is in a territory
-		if !(isNull _vehicleInTerritory) then   //if some territory ID is returned
-			{
-				if ((_vehicleOwner) in (_vehicleInTerritory getVariable ["ExileTerritoryBuildRights", []])) then  //check if the vehicle owner has build rights
-					{
-						_vehicleObject allowDamage false;;  //vehicle owner has build rights, vehicle is invinicible
-					};
-			};
-	// End Vehicle Invincible in Authorized Terrority After Restart
 }
 else
 {

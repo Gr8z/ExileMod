@@ -14,7 +14,7 @@ _mapsizeX = worldSize;
 _mapsizeY = worldSize; 
 _gridSize = getNumber(configFile >> "CfgSettings" >> "VehicleSpawn" >> "vehiclesGridSize");
 _gridVehicles = getNumber(configFile >> "CfgSettings" >> "VehicleSpawn" >> "vehiclesGridAmount");
-format ["Spawning Dynamic Vehicles. GridSize: %1 Vehs/Grid : %2",_gridSize,_gridVehicles] call ExileServer_util_log;
+format ["Spawning Dynamic Vehicles. GridSize: %1 Vehs/Grid: %2",_gridSize,_gridVehicles] call ExileServer_util_log;
 _gridSizeOffset = _gridSize % 2;
 _vehicleCount = 0;
 _debugMarkers = ((getNumber(configFile >> "CfgSettings" >> "VehicleSpawn" >> "vehiclesDebugMarkers")) isEqualTo 1);

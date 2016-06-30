@@ -1,3 +1,18 @@
+/*
+	Zupa's Capture Points
+	Configuration of ZCP
+	Capture points and earn rewards.
+
+	╔════╗─────────╔═══╗────────╔╗─────────────╔╗
+	╚══╗═║─────────╚╗╔╗║────────║║────────────╔╝╚╗
+	──╔╝╔╬╗╔╦══╦══╗─║║║╠══╦╗╔╦══╣║╔══╦╗╔╦══╦═╗╚╗╔╬══╗
+	─╔╝╔╝║║║║╔╗║╔╗║─║║║║║═╣╚╝║║═╣║║╔╗║╚╝║║═╣╔╗╗║║║══╣
+	╔╝═╚═╣╚╝║╚╝║╔╗║╔╝╚╝║║═╬╗╔╣║═╣╚╣╚╝║║║║║═╣║║║║╚╬══║
+	╚════╩══╣╔═╩╝╚╝╚═══╩══╝╚╝╚══╩═╩══╩╩╩╩══╩╝╚╝╚═╩══╝
+	────────║║
+	────────╚╝
+*/
+
 // First person in the Cap zone is the capper (If he leaves, the closest on of the group is the new capper but time is reset!).
 // When multiple people are in the zone and not in the same group, the zone is contested and the timer pauses
 // Being first in the zone starts the timer.
@@ -6,6 +21,14 @@
 ZCP_dev = false; // Devmode for shorter development capture times
 
 ZCP_AI_Type = 'DMS'; // NONE | DMS | FUMS
+
+ZCP_AI_useLaunchersChance = 25; // %Change to spawn Launcher on AI soldier ( never exeeds the MIN and MAX defined per cappoint).
+
+// Put the following to -1 to disable it.
+ZCP_AI_killAIAfterMissionCompletionTimer = 60; // AMounts of seconds before all ZCP AI get auto killed after a mission is completed. ( DMS only ).
+
+// ZCP_Min_AI_Amount = 4; Not used anymore
+// ZCP_Random_AI_Max = 8; Not used anymore
 
 ZCP_MessagePlayersBeforeWaves = false; // True -> Inform for an icoming wave of AI, false is not inform the players inside.
 
@@ -18,7 +41,6 @@ ZCP_BaseCleanupDelay = 500; // seconds to wait to delete a captured base.
 ZCP_RewardRelativeToPlayersOnline = true; // This will recalculate the crypto reward according the amount of online players.
 ZCP_PoptabReward = 250; // Poptab reward for capping per player online. ( When poptab reward is selected or randomly chosen ).
 ZCP_MinPoptabReward = 1000; // Poptabreward is added to this number
-ZCP_PopTabsRewardForGroup = 1000;
 
 /* Reputation is ALWAYS given as addition on the normal reward.*/
 ZCP_ReputationReward = 250; // Respect reward for capping per  player online.
@@ -33,7 +55,6 @@ ZCP_FlyHeight = 150; // Height of the flying plane;
 
 ZCP_BomberCanDestroyMapBuildings = false; // if true damage of the bombs are applied to all objects in the blastradius.
 // If false nothing gets hit ( except players and vehicles ) - base cleanup will happen in both cases after explosion.
-ZCP_UseSpecificNamesForCappers = true; // Use the player name, if false it say 'A player'
 
 ZCP_UseSpecificNamesForCappers = true; // Use the player name, if false it says 'A player'
 
@@ -61,50 +82,139 @@ ZCP_RewardWeightForRandomChoice = [
 // capradius -> 0 for Random, real number for Static base files.
 ZCP_CapPoints = [
 	[
-		"Battlezone", // name (0)
+		"ZCP Alpha", // name (0)
 		[[10000,10000,0],[10000,10000,0]], // [[x,y,z],[x,y,z]] if using static location (1)
-		["Reputation"], // Reward -> Random, Poptabs, Vehicle, Buildingbox, WeaponBox , BigWeaponBox, SniperWeaponBox (2)
+		["Random","Random","Reputation"], // Reward -> Random, Poptabs, Vehicle, Buildingbox, WeaponBox , BigWeaponBox, SniperWeaponBox (2)
 		"alpha", // unique varname -> this gets checked and fixed automaticly on server start ( so don't really worry about it ).
 		0, // unique index -> this gets checked and fixed automaticly on server start ( so don't really worry about it ).
 		true, // spawnAI on start of the missions ( NEEDS AI system for this ) (5)
 		false, // isStatic location ( if true it will take the location specified earlier) (6)
-		"Random", // baseFile -> Random OR the name of the sqf file OR array of basefiles to choose from ( eg: ["m3e_base1.sqf","m3e_village.sqf"], )
+		["ec_audacity.sqf","ec_bravery.sqf","ec_courage.sqf", "ec_defiance.sqf","ec_endurance.sqf","ec_fortitude.sqf","m3e_exoBase1.sqf","m3e_exoBase2.sqf","m3e_exoBase3.sqf"], // baseFile -> Random OR the name of the sqf file OR array of basefiles to choose from ( eg: ["m3e_base1.sqf","m3e_village.sqf"], )
 		-1, // capradius if you use a specific static basefile. -> put -1 if you want to use the corresponding one from the ZCP_Capbasses array).
 		-1, // max terrainGradient -> when specific static basefile is used (9) -> put -1 if you want to use the corresponding one from the ZCP_Capbasses array).
 		-1, // distancefromojects -> when specific static basefile is used (10) -> put -1 if you want to use the corresponding one from the ZCP_Capbasses array).
 		600, // captime in seconds for this mission (11)
-		2, // Minimum amount of AI at the start of mission (12)
-		4, // Maximum amount of AI at start of mission ( If you want it to always be a number change MIN and MAX to the same number. )
-		false, // deploy smoke on the circle border when mission is finished (14)
-		0, // ammount of seconds to wait before deploying the smokescreen (15)
-		0, // ammount of meters outside the circle to place the smoke sources ( 0 is ON the circle border, 50 would be 50 meter outside the border)
+		4, // Minimum amount of AI at the start of mission (12)
+        8, // Maximum amount of AI at start of mission ( If you want it to always be a number change MIN and MAX to the same number. )
+        true, // deploy smoke on the circle border when mission is finished (14)
+        0, // ammount of seconds to wait before deploying the smokescreen (15)
+        0, // ammount of meters outside the circle to place the smoke sources ( 0 is ON the circle border, 50 would be 50 meter outside the border)
 		true, // use Waves of AI to attack the base when a player is capping (17)
 		[ // array of waves of AI () (18)
 			[
 				15, // procentage of the cap time to start attack (50 = 50% of the total captime)
-				2, // Amount of AI units in a group
-				1, // Amount of AI groups
+				3, // Amount of AI units in a group
+				2, // Amount of AI groups
 				150, // distance in meter form ZCP for the ai to spawn
 				true // false -> all groups from 1 random location, true -> all groups from their own random location
 			]
 			,
 			[
-				50, // procentage of the cap time to start attack (50 = 50% of the total captime)
-				2, // Amount of AI units in a group
-				2, // Amount of AI groups
-				100, // distance in meter form ZCP for the ai to spawn
+				45, // procentage of the cap time to start attack (50 = 50% of the total captime)
+				3, // Amount of AI units in a group
+				3, // Amount of AI groups
+				200, // distance in meter form ZCP for the ai to spawn
+				false // false -> all groups from 1 random location, true -> all groups from their own random location
+			]
+			,
+			[
+				60, // procentage of the cap time to start attack (50 = 50% of the total captime)
+				3, // Amount of AI units in a group
+				4, // Amount of AI groups
+				200, // distance in meter form ZCP for the ai to spawn
 				true // false -> all groups from 1 random location, true -> all groups from their own random location
 			]
-		]
+		],
+		1, // Minimum amount of launchers for starting AI (19)
+        2, // Maximum amount of launchers for starting AI (20)
+        1, // Minimum amount of launchers for Wave AI (21)
+        1  // Maximum amount of launchers for Wave AI (22)
 	]
+	,
+    [
+        "ZCP Bravo", // name (0)
+        [[10000,10000,0],[10000,10000,0]], // [[x,y,z],[x,y,z]] if using static location (1)
+        ["Random","Random","Reputation"], // Reward -> Random, Poptabs, Vehicle, Buildingbox, WeaponBox , BigWeaponBox, SniperWeaponBox (2)
+        "beta", // unique varname -> this gets checked and fixed automaticly on server start ( so don't really worry about it ).
+        1, // unique index -> this gets checked and fixed automaticly on server start ( so don't really worry about it ).
+        true, // spawnAI on start of the missions ( NEEDS AI system for this ) (5)
+        false, // isStatic location ( if true it will take the location specified earlier) (6)
+        'Random', // baseFile -> Random ( from Capbases array- OR the name of the sqf file OR array of basefiles to choose from ( eg: ["m3e_base1.sqf","m3e_village.sqf"], )
+        -1, // capradius if you use a specific static basefile. -> put -1 if you want to use the corresponding one from the ZCP_Capbasses array).
+        -1, // max terrainGradient -> when specific static basefile is used (9) -> put -1 if you want to use the corresponding one from the ZCP_Capbasses array).
+        -1, // distancefromojects -> when specific static basefile is used (10) -> put -1 if you want to use the corresponding one from the ZCP_Capbasses array).
+        300, // captime in seconds for this mission (11)
+        4, // Minimum amount of AI at the start of mission (12)
+        8, // Maximum amount of AI at start of mission ( If you want it to always be a number change MIN and MAX to the same number. )
+        true, // deploy smoke on the circle border when mission is finished (14)
+        20, // ammount of seconds to wait before deploying the smokescreen (15)
+        50, // ammount of meters outside the circle to place the smoke sources ( 0 is ON the circle border, 50 would be 50 meter outside the border)
+        true, // use Waves of AI to attack the base when a player is capping (17)
+        [ // array of waves of AI () (18)
+            [
+                30, // procentage of the cap time to start attack (50 = 50% of the total captime)
+                3, // Amount of AI units in a group
+                2, // Amount of AI groups
+                200, // distance in meter form ZCP for the ai to spawn
+                true // false -> all groups from 1 random location, true -> all groups from their own random location
+            ]
+            ,
+            [
+                75, // procentage of the cap time to start attack (50 = 50% of the total captime)
+                3, // Amount of AI units in a group
+                3, // Amount of AI groups
+                200, // distance in meter form ZCP for the ai to spawn
+                false // false -> all groups from 1 random location, true -> all groups from their own random location
+            ]
+        ],
+        1, // Minimum amount of launchers for starting AI
+        2, // Maximum amount of launchers for starting AI
+        1, // Minimum amount of launchers for Wave AI
+        1  // Maximum amount of launchers for Wave AI
+    ]
+    ,
+    [
+        "ZCP Charlie", // name (0)
+        [[10000,10000,0],[10000,10000,0]], // [[x,y,z],[x,y,z]] if using static location (1)
+        ["Random","Random","Reputation"], // Reward -> Random, Poptabs, Vehicle, Buildingbox, WeaponBox, BigWeaponBox, SniperWeaponBox (2)
+        "charlie", // unique varname -> this gets checked and fixed automaticly on server start ( so don't really worry about it ).
+        2, // unique index -> this gets checked and fixed automaticly on server start ( so don't really worry about it ).
+        true, // spawnAI on start of the missions ( NEEDS AI system for this ) (5)
+        false, // isStatic location ( if true it will take the location specified earlier) (6)
+        'Random', // baseFile -> Random ( from Capbases array- OR the name of the sqf file OR array of basefiles to choose from ( eg: ["m3e_base1.sqf","m3e_village.sqf"], )
+        -1, // capradius if you use a specific static basefile. -> put -1 if you want to use the corresponding one from the ZCP_Capbasses array).
+        -1, // max terrainGradient -> when specific static basefile is used (9) -> put -1 if you want to use the corresponding one from the ZCP_Capbasses array).
+        -1, // distancefromojects -> when specific static basefile is used (10) -> put -1 if you want to use the corresponding one from the ZCP_Capbasses array).
+        300, // captime in seconds for this mission (11)
+        4, // Minimum amount of AI at the start of mission (12)
+        8, // Maximum amount of AI at start of mission ( If you want it to always be a number change MIN and MAX to the same number. )
+        true, // deploy smoke on the circle border when mission is finished (14)
+        20, // ammount of seconds to wait before deploying the smokescreen (15)
+        50, // ammount of meters outside the circle to place the smoke sources ( 0 is ON the circle border, 50 would be 50 meter outside the border)
+        true, // use Waves of AI to attack the base when a player is capping (17)
+        [ // array of waves of AI () (18)
+            [
+                50, // procentage of the cap time to start attack (50 = 50% of the total captime)
+                3, // Amount of AI units in a group
+                2, // Amount of AI groups
+                200, // distance in meter form ZCP for the ai to spawn
+                true // false -> all groups from 1 random location, true -> all groups from their own random location
+            ]
+        ],
+        1, // Minimum amount of launchers for starting AI
+        2, // Maximum amount of launchers for starting AI
+        1, // Minimum amount of launchers for Wave AI
+        1  // Maximum amount of launchers for Wave AI
+    ]
+    // add more here if wanted
 ];
 
 
-ZCP_MaxMissions = 1; // Amount of cap points at the same time when ZCP_MaxMissionsRelativeToPlayers = false
+ZCP_MaxMissions = 2; // Amount of cap points at the same time when ZCP_MaxMissionsRelativeToPlayers = false
 
-ZCP_Minimum_Online_Players = 15; // Amount of players to be online before it allows to spawn a capture point. !!! O = always
+ZCP_Minimum_Online_Players = 0; // Amount of players to be online before it allows to spawn a capture point. !!! O = always
 
-ZCP_MaxMissionsRelativeToPlayers = false; // ZCP_MaxMissions will be ignored if true. ZCP_RelativeMaxMissions will be used
+ZCP_MaxMissionsRelativeToPlayers = true; // ZCP_MaxMissions will be ignored if true. ZCP_RelativeMaxMissions will be used
 ZCP_RelativeMaxMissions = [
     //[ min players,  amount of cappoints],
     [5, 1],
@@ -126,17 +236,10 @@ ZCP_CapBases = [ // located in capbases folder [filename, capradius, buildeditor
 	["ec_defiance.sqf", 20, "EdenConverted", 90, 20],
 	["ec_endurance.sqf", 20, "EdenConverted", 90, 20],
 	["ec_fortitude.sqf", 25, "EdenConverted", 90, 25],
-	["ec_maze.sqf", 35, "EdenConverted", 90, 20],
-	["ec_battlefield.sqf", 65, "EdenConverted", 90, 20],
-	["ec_urban.sqf", 65, "EdenConverted", 90, 20],
-	["m3e_base2.sqf", 90, "m3e", 90, 20],
-	["m3e_base3.sqf", 40, "m3e", 90, 20],
-	["m3e_smallBase1.sqf", 40, "m3e", 90, 20],
 	["m3e_exoBase1.sqf", 30, "m3e", 90, 50],
-	["m3e_exoBase2.sqf", 30, "m3e", 90, 50],
-	["m3e_exoBase3.sqf", 35, "m3e", 90, 50]
+    ["m3e_exoBase2.sqf", 30, "m3e", 90, 50],
+    ["m3e_exoBase3.sqf", 35, "m3e", 90, 50]
 ];
-
 
 ZCP_Blacklist = [ // [ [x,y,z], radius ];
 	[[23644,18397,0] , 1200], // altis saltlake
@@ -387,20 +490,20 @@ ZCP_DMS_DEBUG = false;
 
 ZCP_Translations = [ // ['original','original in your language'] the %1 %2 and so on are Variables!
 	['%1 capbase set up. Capture for %2 min!' , '%1 capbase set up. Capture for %2 min!'], // ZCP Alpha capbase set up. Capture for 10 min!
-	['%2 is capping The %1. %3min left!' , '%2 is capping %1. %3min left!'], // Zupa is capping ZCP alpha, 5min left.
+	['%2 is capping %1. %3min left!' , '%2 is capping %1. %3min left!'], // Zupa is capping ZCP alpha, 5min left.
 	['A player' , 'A player'], // A player
 	['%1 is 50%4 captured by %2. %3min left!', '%1 is 50%4 captured by %2. %3min left!'], // ZCP Alpha is 50% captured by Zupa/A player. 2min left!
 	['%1 is almost captured by %2. 60s left!', '%1 is almost captured by %2. 60s left!'], // ZCP Alpha is almost captured by Zupa/A player. 60s left!
 	['%1 is captured. %2.', '%1 is captured. %2.'], // ZCP Alpha is captured. (%2 is on of the 2 following translations, so leave the variable there!
 	['Bombing in %1s!', 'Bombing in %1s!'], // Bombing in 600s
 	['Cleanup in %1s!', 'Cleanup in %1s!'], // Cleanup in 600s
-	['Captured Battlezone', 'Captured Battlezone'], // Captured point
-	['Reputation', 'Respect'], // Reputation
-	['Group Reputation', 'Group Respect'], // Group reputation
+	['Captured point', 'Captured point'], // Captured point
+	['Reputation', 'Reputation'], // Reputation
+	['Group Reputation', 'Group Reputation'], // Group reputation
 	['Package delivered, eyes on the sky!', 'Package delivered, eyes on the sky!'], // Package delivered, eyes on the sky!
 	['Package delivered, eyes on the sky! Poptabs on bank!', 'Package delivered, eyes on the sky! Poptabs on bank!'], // Package delivered, eyes on the sky! Poptabs on bank!
-	['Battle Zone is contested!', 'Battle Zone is being contested!'], // Package delivered, eyes on the sky! Poptabs on bank!	
-	['Battle Zone is no longer contested!', 'Battle Zone is no longer being contested!'], // Capture point is contested!
+	['Capture point is contested!', 'Capture point is contested!'], // Package delivered, eyes on the sky! Poptabs on bank!
+	['Capture point is contested is no longer contested!', 'Capture point is no longer contested!'], // Capture point is contested!
 	['AI Wave incoming to retake %1.', 'AI Wave incoming to retake %1.'] // Capture point is contested!
 ];
 

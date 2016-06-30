@@ -29,7 +29,6 @@ else
 	ExileServer_system_rcon_thread_check,
 	[
 		ExileServerRestartTime,
-		ExileServerRestartMessages,
 		ExileServerUseAutokick,
 		ExileServerKickTime,
 		ExileServerLockTime

@@ -23,10 +23,10 @@ try
 	_playerUID = getPlayerUID _requestingPlayer;
 	if(_playerUID isEqualTo "")then
 	{
-		throw format ["Player: '%1' has no player UID. Arma/Steam Sucks!.",name _requestingPlayer];
+		throw format ["Player: '%1' has no player UID. Arma/Steam sucks!.",name _requestingPlayer];
 	};
 	_accountData = format["getAccountStats:%1", _playerUID] call ExileServer_system_database_query_selectSingle;
-	_group = createGroup independent;
+	_group = call ExileServer_system_group_getOrCreateLoneWolfGroup;
 	_bambiPlayer = _group createUnit ["Exile_Unit_Player", [0,0,0], [], 0, "CAN_COLLIDE"];
 	removeHeadgear _bambiPlayer;
 	{

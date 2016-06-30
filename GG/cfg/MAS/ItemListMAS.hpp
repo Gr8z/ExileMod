@@ -178,7 +178,7 @@
 	///////////////////////////////////////////////////////////////////////////////
     class LMG_mas_MK200_F							{ quality = 1; price = 8000; sellPrice = 1600; };
     class LMG_mas_Mk48_F 							{ quality = 1; price = 9500; };
-    class LMG_mas_Mk48_F_v 							{ quality = 1; price = 9500; };
+    class LMG_mas_Mk48_F_v 							{ quality = 1; price = 9500; sellPrice = 1900; };
     class LMG_mas_Mk48_F_d							{ quality = 1; price = 9500; };
     class LMG_mas_m240_F							{ quality = 1; price = 9500; };
     class LMG_mas_mg3_F 							{ quality = 1; price = 9000; sellPrice = 1800; };
@@ -252,7 +252,7 @@
     class arifle_mas_mk16_l 						{ quality = 1; price = 6000; };
     class arifle_mas_mk16_l_gl 						{ quality = 1; price = 6500; };
     class arifle_mas_m27 							{ quality = 1; price = 6500; };
-    class arifle_mas_m27m 							{ quality = 1; price = 6500; };
+    class arifle_mas_m27m 							{ quality = 1; price = 6500; sellPrice = 1300; };
     class arifle_mas_m27_v 							{ quality = 1; price = 6500; };
     class arifle_mas_m27m_v 						{ quality = 1; price = 6500; };
     class arifle_mas_m27_d							{ quality = 1; price = 6500; };
@@ -306,7 +306,7 @@
 	///////////////////////////////////////////////////////////////////////////////
 	// Sniper Rifles
 	///////////////////////////////////////////////////////////////////////////////	
-    class arifle_mas_lee 							{ quality = 1; price = 8000; };
+    class arifle_mas_lee 							{ quality = 1; price = 8000; sellPrice = 1600; };
     class srifle_mas_vss 							{ quality = 1; price = 3000; };
     class arifle_mas_asval 							{ quality = 1; price = 3000; };
     class arifle_mas_asval_ds 						{ quality = 1; price = 4000; };
@@ -319,7 +319,7 @@
     class srifle_mas_m24 							{ quality = 1; price = 8000; };
     class srifle_mas_m24_v							{ quality = 1; price = 8000; };
     class srifle_mas_m24_d 							{ quality = 1; price = 8000; };
-    class srifle_mas_svd 							{ quality = 1; price = 10000; };
+    class srifle_mas_svd 							{ quality = 1; price = 10000; sellPrice = 2000; };
     class srifle_mas_m91 							{ quality = 1; price = 10000; };
     class srifle_mas_lrr							{ quality = 1; price = 16000; };		
 	

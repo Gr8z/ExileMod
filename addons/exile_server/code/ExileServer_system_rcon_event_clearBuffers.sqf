@@ -34,7 +34,7 @@ if !(ExileServerVehicleSaveQueue isEqualTo []) then
 			}
 			else
 			{
-				if (isNumber(configFile >> "CfgVehicles" >> typeOf _vehicleObject >> "ExileIsDoor")) then
+				if (isNumber(configFile >> "CfgVehicles" >> typeOf _vehicleObject >> "exileIsDoor")) then
 				{
 					_vehicleObject call ExileServer_object_construction_database_lockUpdate;
 				}

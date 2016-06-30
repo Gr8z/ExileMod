@@ -27,11 +27,11 @@ try
 	{
 		if (isNull _moderatedPlayer) then
 		{
-			throw format ["You dont have required rights to moderate a %1",_moderatedPlayerAccess select 1];
+			throw format ["You do not have the required rights to moderate a %1.",_moderatedPlayerAccess select 1];
 		}
 		else
 		{
-			throw format ["You dont have required rights to moderate %1(%2)",name _moderatedPlayer,_moderatedPlayerAccess select 1];
+			throw format ["You do not have the required rights to moderate %1(%2).",name _moderatedPlayer,_moderatedPlayerAccess select 1];
 		};
 	};
 	if (_mode) then
@@ -45,10 +45,10 @@ try
 			throw "Player is already a moderator!"; 
 		};
 		_newUserLevel  = (_moderatedPlayerAccess select 0) + 1;
-		[_requestingPlayer, "notificationRequest", ["Success", ["Promoted"]]] call ExileServer_system_network_send_to;
+		[_requestingPlayer, "toastRequest", ["InfoTitleAndText", ["Player has been promoted!", _territoryName]]] call ExileServer_system_network_send_to;
 		if !(isNull _moderatedPlayer) then
 		{
-			[_moderatedPlayer, "notificationRequest", ["Success", [format ["Territory promotion :) : %1",_territoryName]]]] call ExileServer_system_network_send_to;
+			[_moderatedPlayer, "toastRequest", ["InfoTitleAndText", ["You have been promoted!", _territoryName]]] call ExileServer_system_network_send_to;
 		};
 	}
 	else
@@ -58,15 +58,15 @@ try
 			throw format ["Player is already a %1",_moderatedPlayerAccess select 1]; 
 		};
 		_newUserLevel = (_moderatedPlayerAccess select 0) - 1;
-		[_requestingPlayer, "notificationRequest", ["Success", ["Demoted"]]] call ExileServer_system_network_send_to;
+		[_requestingPlayer, "toastRequest", ["InfoTitleAndText", ["Player has been demoted!", _territoryName]]] call ExileServer_system_network_send_to;
 		if !(isNull _moderatedPlayer) then
 		{
-			[_moderatedPlayer, "notificationRequest", ["Whoops", [format ["Territory demotion :( : %1",_territoryName]]]] call ExileServer_system_network_send_to;
+			[_moderatedPlayer, "toastRequest", ["InfoTitleAndText", ["You have been demoted!", _territoryName]]] call ExileServer_system_network_send_to;
 		};
 	};
 	[_flag,_moderatedPlayerUID,_newUserLevel] call ExileServer_system_territory_updateRights;
 }
 catch
 {
-	[_sessionID, "notificationRequest", ["Whoops", [_exception]]] call ExileServer_system_network_send_to;
+	[_sessionID, "toastRequest", ["ErrorTitleAndText", ["Failed!", _exception]]] call ExileServer_system_network_send_to;
 };

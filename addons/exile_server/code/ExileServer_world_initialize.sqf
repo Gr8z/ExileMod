@@ -10,13 +10,13 @@
  */
  
 "Initializing game world..." call ExileServer_util_log;
-ExileServerKillFeed = if((getNumber (configFile >> "CfgSettings" >> "KillFeed" >> "showKillFeed")) isEqualTo 1)then{true}else{false};
+call ExileServer_World_loadAllClans;
 call ExileServer_World_loadAllTerritories;
 call ExileServer_world_loadAllDatabaseConstructions;
 call ExileServer_world_loadAllDatabaseVehicles;
 call ExileServer_world_loadAllDatabaseContainers;
+call ExileServer_system_xm8_sendProtectionMoneyDue;
 call ExileServer_world_spawnSpawnZoneVehicles;
 call ExileServer_world_spawnVehicles;
-call ExileServer_Donators;
 "Game world initialized! Let the fun begin!" call ExileServer_util_log;
 true

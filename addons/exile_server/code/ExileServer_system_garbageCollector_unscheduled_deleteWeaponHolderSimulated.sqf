@@ -19,18 +19,10 @@ _lifeTime = 60 * getNumber (configFile >> "CfgSettings" >> "GarbageCollector" >>
 	}
 	else 
 	{
-		if ([(position _x), 500] call ExileClient_util_world_isSpawnZoneInRange) then 
+		if ((time - _diedAt) >= _lifeTime) then
 		{
-		    if ((time - _diedAt) >= 300) then
-		    {
-		        deleteVehicle _x;
-		    };
-		} else {
-		    if ((time - _diedAt) >= _lifeTime) then
-		    {
-		    	deleteVehicle _x;
-		    };
-		}
+			deleteVehicle _x;
+		};
 	};
 }
 forEach (allMissionObjects "WeaponHolderSimulated");

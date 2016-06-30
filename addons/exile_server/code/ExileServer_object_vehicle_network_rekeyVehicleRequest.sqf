@@ -22,9 +22,9 @@ try
 	{
 		throw format ["Fuuck you!", _forbiddenCharacter];
 	};
-	_vehicle setVariable ["ExileAccessCode",_newPinCode];
-	[_sessionID,"resetCodeResponse",[["Success",[format ["Vehicle rekey complete"]]], netId _vehicle,_newPinCode]] call ExileServer_system_network_send_to;
-	[_vehicle,_newPinCode] call ExileServer_object_vehicle_database_resetCode;	
+	_vehicle setVariable ["ExileAccessCode", _newPinCode];
+	[_sessionID, "resetCodeResponse", [["SuccessTitleOnly", ["PIN changed successfully!"]], netId _vehicle,_newPinCode]] call ExileServer_system_network_send_to;
+	[_vehicle, _newPinCode] call ExileServer_object_vehicle_database_resetCode;	
 }
 catch
 {

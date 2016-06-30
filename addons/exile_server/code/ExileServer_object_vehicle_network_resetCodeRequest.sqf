@@ -27,12 +27,12 @@ try
 	if(_pincode isEqualTo _vehiclePinCode)then
 	{
 		_vehicle setVariable ["ExileAccessCode",_newPinCode];
-		[_sessionID,"resetCodeResponse",[["Success",[format ["New code set"]]], netId _vehicle,_newPinCode]] call ExileServer_system_network_send_to;
-		[_vehicle,_newPinCode] call ExileServer_object_vehicle_database_resetCode;
+		[_sessionID, "resetCodeResponse", [["SuccessTitleOnly", ["PIN changed successfully!"]], netId _vehicle,_newPinCode]] call ExileServer_system_network_send_to;
+		[_vehicle, _newPinCode] call ExileServer_object_vehicle_database_resetCode;
 	}
 	else
 	{
-		[_sessionID, "resetCodeResponse", [["Whoops", ["Wrong pin code!"]],"",""]] call ExileServer_system_network_send_to;
+		[_sessionID, "resetCodeResponse", [["ErrorTitleOnly", ["Wrong PIN!"]],"",""]] call ExileServer_system_network_send_to;
 	};
 }
 catch{};

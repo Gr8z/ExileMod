@@ -17,20 +17,20 @@ try
 	_object = objectFromNetId (_parameters select 0);
 	if (isNull _object) then 
 	{
-		throw "Vehicle object is null!"; 
+		throw "Vehicle object is null."; 
 	};
 	_player = _sessionID call ExileServer_system_session_getPlayerObject;
 	if (isNull _player) then 
 	{
-		throw "Player is null!"; 
+		throw "Player is null."; 
 	};
 	if ((_player distance _object) > 10) then 
 	{
-		throw "You are too far away!"; 
+		throw "You are too far away."; 
 	};
 	if !("Exile_Item_Knife" in (magazines _player)) then 
 	{
-		throw "You do not have a knife!"; 
+		throw "You do not have a knife."; 
 	};
 	if (isNumber(configFile >> "CfgVehicles" >> typeOf _object >> "exileIsLockable")) then
 	{
@@ -53,9 +53,9 @@ try
 	_object setVariable ["ExileLastLockToggleAt", time];
 	_object setVariable ["ExileAccessDenied", false];
 	_object setVariable ["ExileAccessDeniedExpiresAt", 0];
-	throw "Vehicle hot-wired!";
+	[_sessionID, "toastRequest", ["SuccessTitleOnly", ["Vehicle hotwired!"]]] call ExileServer_system_network_send_to;
 }
 catch 
 {
-	[_sessionID, "notificationRequest", ["Success", [_exception]]] call ExileServer_system_network_send_to;
+	[_sessionID, "toastRequest", ["ErrorTitleAndText", ["Failed to hotwire!", _exception]]] call ExileServer_system_network_send_to;
 };

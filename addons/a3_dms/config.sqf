@@ -1,21 +1,23 @@
-// Enables debug logging in DMS functions.
-// Logs will be written in the RPT, and if you have infiSTAR's "ARMA_LOG" DLL loaded, it will also produce logs in the server directory.
-// If you have mARMA by maca134, DMS will also utilize mARMA logs.
-// This will produce A LOT of logs, so make sure you leave it to false unless you know what you're doing.
-DMS_DEBUG = false;
+/*
+	Main DMS Config File
+
+	Created by eraser1
+	Several revisions and additions have been made by community members.
 
 
-
+	A lot of these configs are influenced by WAI :P
+	https://github.com/nerdalertdk/WICKED-AI
+*/
 DMS_Use_Map_Config = true;	// Whether or not to use config overwrites specific to the map.
 /*
-	If you are using a map other than Altis, Bornholm, Esseker, or Tavi (Taviana) you should set this to false OR create a new file within the map_configs folder for the map so that you don't get a missing file error.
+	If you are using a map other than a map listed in the "map_configs" folder, you should set this to false OR create a new file within the map_configs folder for the map so that you don't get a missing file error.
 	To share your map-specific config, please create a merge request on GitHub and/or leave a message on the DMS thread in the Exile forums.
 	For any questions regarding map-specific configs, please leave a reply in the DMS thread on the Exile forums.
 */
 
-DMS_Enable_RankChange = false; // Whether or not to use Rank Changes.
+DMS_Enable_RankChange = false; // Whether or not to use Rank Changes. (Required 'true' if using Occupation)
 /*
-	I am sharing this upgrade to all. If you utilize GR8 Humanity(fully compatible) or a custom version of a ranking system(simple variable changes), this will allow your players to score +/- for Bandit and Hero kills as well as a custom Survivor Faction added to DMS as well. You can still utilize the HERO / BANDIT / SURVIVOR respect and poptab settings for gameplay :) ENJOY! DONKEYPUNCH.INFO!
+	I am sharing this upgrade to all. If you utilize GR8 Humanity (fully compatible) or a custom version of a ranking system(simple variable changes), this will allow your players to score +/- for Bandit and Hero kills as well as a custom Survivor Faction added to DMS as well. You can still utilize the HERO / BANDIT / SURVIVOR respect and poptab settings for gameplay :) ENJOY! DONKEYPUNCH.INFO!
 */
 
 DMS_Add_AIKill2DB = false;  // Adds killstat for player in the database ;)
@@ -30,7 +32,7 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 	DMS_TimeBetweenMissions				= [600,900];				// [Minimum,Maximum] time between missions (if mission limit is not reached) | DEFAULT: 10-15 mins
 	DMS_MissionTimeOut					= [900,1800]; 				// [Minimum,Maximum] time it will take for a mission to timeout | DEFAULT: 15-30 mins
 	DMS_MissionTimeoutResetRange		= 1500;						// If a player is this close to a mission then it won't time-out. Set to 0 to disable this check.
-	DMS_MissionTimeoutResetFrequency	= 180;					// How often (in seconds) to check for nearby players and reset the mission timeout.
+	DMS_MissionTimeoutResetFrequency	= 180;						// How often (in seconds) to check for nearby players and reset the mission timeout.
 	/*General settings for dynamic missions*/
 
 	/*General settings for static missions*/
@@ -51,7 +53,7 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 	DMS_AI_KillPercent					= 100;						// The percent amount of AI that need to be killed for "killPercent" mission requirement (NOT IMPLEMENTED)
 
 	/*Mission Marker settings*/
-	DMS_MissionMarkerCount				= 2;						// If you modify your CreateMarker and have multiple markers, you probably want to change this. *cough*Vish*cough*
+
 	DMS_ShowDifficultyColorLegend		= true;						// Whether or not to show a "color legend" at the bottom left of the map that shows which color corresponds to which difficulty. I know it's not very pretty, meh.
 	DMS_MarkerText_ShowMissionPrefix	= true;						// Whether or not to place a prefix before the mission marker text. Enable this if your players get confused by the marker names :P
 	DMS_MarkerText_MissionPrefix		= "Mission:";				// The text displayed before the mission name in the mission marker.
@@ -153,9 +155,18 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 											"dynamicTextRequest",			// You should use either "dynamicTextRequest" or "textTilesRequest", and I think "textTilesRequest" looks better, but this is less performance-intensive.
 											//"standardHintRequest",		// Hints are a bit wonky...
 											//"textTilesRequest",			// Keep in mind you can only have 1 "text tile" message up at a time, so the message will disappear if the player gets a kill or something while the message is shown. This message type is also performance-intensive, so I advise against it.
-											"systemChatRequest"				// Always nice to show in chat so that players can scroll up to read the info if they need to.
+											"systemChatRequest"	,			// Always nice to show in chat so that players can scroll up to read the info if they need to.
+											"ExileToasts"					// Default notification type since Exile 0.98, see (http://www.exilemod.com/devblog/new-ingame-notifications/)
 										];
 
+		/*Exile Toasts Notification Settings*/
+	DMS_ExileToasts_Title_Size			= 22;						// Size for Client Exile Toasts  mission titles.
+	DMS_ExileToasts_Title_Font			= "puristaMedium";			// Font for Client Exile Toasts  mission titles.
+	DMS_ExileToasts_Message_Color		= "#ff979ba1";				// Exile Toasts color for "ExileToast" client notification type.
+	DMS_ExileToasts_Message_Size		= 19;						// Exile Toasts size for "ExileToast" client notification type.
+	DMS_ExileToasts_Message_Font		= "PuristaLight";			// Exile Toasts font for "ExileToast" client notification type.
+		/*Exile Toasts Notification Settings*/
+		
 		/*Dynamic Text Notification Settings*/
 	DMS_dynamicText_Duration			= 7;						// Number of seconds that the message will last on the screen.
 	DMS_dynamicText_FadeTime			= 1.5;						// Number of seconds that the message will fade in/out (does not affect duration).
@@ -203,70 +214,86 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 											["thieves",2],
 											["lost_battalion",2],
 											["behindenemylines",2],
-											["mercbase",1]
+											["mercbase",3]
 										];
 
 
-	DMS_StaticMissionTypes =			[							// List of STATIC missions with spawn chances.
-											//["saltflats",1],		//<--Example (already imported by default on Altis)
-											//["slums",1]			//<--Example (already imported by default on Altis)
+	DMS_StaticMissionTypes =			[								// List of STATIC missions with spawn chances.
+											//["saltflats",1]			//<--Example (already imported by default on Altis in map configs)
+											//["slums",1]				//<--Example (already imported by default on Altis in map configs)
+											//["occupation",1]		//<--Example
 
 											//["sectorB",1]			//<--Example for Taviana
 										];
 
-	DMS_BasesToImportOnServerStart = 	[							// List of static bases to import on server startup (spawned post-init). This will reduce the amount of work the server has to do when it actually spawns static missions, and players won't be surprised when a base suddenly pops up. You can also include any other M3E-exported bases to spawn here.
+	DMS_BasesToImportOnServerStart = 	[								// List of static bases to import on server startup (spawned post-init). This will reduce the amount of work the server has to do when it actually spawns static missions, and players won't be surprised when a base suddenly pops up. You can also include any other M3E-exported bases to spawn here.
 											//"saltflatsbase",		//<--Example (already imported by default on Altis)
-											//"slums_objects"		//<--Example (already imported by default on Altis)
+											//"slums_objects"			//<--Example (already imported by default on Altis)
 										];
 
 	DMS_BanditMissionsOnServerStart =	[
 											//"construction"		//<-- Example
 										];
 
-	DMS_StaticMissionsOnServerStart =	[							// List of STATIC missions with spawn chances.
-											//"saltflats",			//<--Example
-											//"slums				//<--Example
+	DMS_StaticMissionsOnServerStart =	[								// List of STATIC missions with spawn chances.
+											//"saltflats"				//<--Example
+											//"slums"				//<--Example
+											//"occupation"			//<--Example
 
 											//"sectorB"				//<--Example for Taviana
 										];
 
 
 
-	DMS_findSafePosBlacklist =			[							// For BIS_fnc_findSafePos position blacklist info refer to: http://www.exilemod.com/topic/61-dms-defents-mission-system/?page=18#comment-31190
-											// An example is given in the altis_config.sqf (it blacklists the salt flats).
-											/*
-											// Blacklists most of the Northern Taviana Volcano
-											[[11375,16170],[14302,18600]],
-											[[13300,14670],[14875,16170]]
-											*/
+	DMS_findSafePosBlacklist =			[								// This list defines areas where missions WILL NOT spawn. For position blacklist info refer to: http://www.exilemod.com/topic/61-dms-defents-mission-system/?do=findComment&comment=31190
+											// There are examples in the altis map config (it blacklists the salt flats) and in the tavi/taviana map configs.
+
+											//[[2350,4680],100]		// This random example blacklists any position within 100 meters of coordinates "[2350,4680]"
+
+
+
+
+
 										];
 /* Mission System Settings */
 
 
 /* AI Settings */
 	DMS_AI_Classname					= "O_recon_F";				// Since some of you wanted this...
+	DMS_AI_UseRealNames					= true;						// true if you want Arma assigned real names, false if you want random DMS assigned unit numbers
 
 	DMS_Show_Kill_Poptabs_Notification	= true;						// Whether or not to show the poptabs gained/lost message on the player's screen when killing an AI. (It will still change the player's money, it just won't show the "Money Received" notification)
 	DMS_Show_Kill_Respect_Notification	= true;						// Whether or not to show the "Frag Message" on the player's screen when killing an AI. (It will still change the player's respect, it just won't show the "AI Killed" frag message)
 	DMS_Show_Kill_Rank_Notification		= false;
 	DMS_Show_Party_Kill_Notification	= true;						// Whether or not to show in chat when a party member kills an AI.
 
+	DMS_Spawn_AI_With_Money				= true;						// Whether or not to spawn AI with money that can be looted from the body.
+	DMS_AIMoney_PopulationMultiplier	= 5;						// This determines how much EXTRA money an AI will have on his body. For example, setting this to 5 and having a server population of 30 means the AI will have an extra 150 poptabs on the body. Set to 0 to disable.
+
+	DMS_GiveMoneyToPlayer_OnAIKill		= true;						// Whether or not to give money directly to players when they kill AI (old method of giving money).
+	DMS_GiveRespectToPlayer_OnAIKill	= true;						// Whether or not to give respect to players when they kill AI.
+	
 	DMS_Bandit_Soldier_MoneyGain		= 50;						// The amount of Poptabs gained for killing a bandit soldier
 	DMS_Bandit_Soldier_RepGain			= 200;						// The amount of Respect gained for killing a bandit soldier
 	DMS_Bandit_Soldier_RankGain			= 30;
+	DMS_Bandit_Soldier_SpawnMoney		= 50;						// The amount of Poptabs carried by a bandit soldier
 	DMS_Bandit_Static_MoneyGain			= 75;						// The amount of Poptabs gained for killing a bandit static gunner
 	DMS_Bandit_Static_RepGain			= 300;						// The amount of Respect gained for killing a bandit static gunner
 	DMS_Bandit_Static_RankGain			= 30;
+	DMS_Bandit_Static_SpawnMoney		= 75;						// The amount of Poptabs carried by a bandit static gunner
 	DMS_Bandit_Vehicle_MoneyGain		= 100;						// The amount of Poptabs gained for killing a bandit vehicle crew member
 	DMS_Bandit_Vehicle_RepGain			= 500;						// The amount of Respect gained for killing a bandit vehicle crew member
 	DMS_Bandit_Vehicle_RankGain			= 50;	
+	DMS_Bandit_Vehicle_SpawnMoney		= 100;						// The amount of Poptabs carried by a bandit vehicle crew member
 /* DonkeyPunchDMS Custom Settings for Hero AI*/	
 	DMS_Hero_Soldier_MoneyGain			= 100;						// The amount of Poptabs gained for killing a hero soldier
 	DMS_Hero_Soldier_RepGain			= 400;						// The amount of Respect gained for killing a hero soldier
 	DMS_Hero_Soldier_RankGain			= -30;	
+	DMS_Hero_Soldier_SpawnMoney			= 100;						// The amount of Poptabs carried by a hero soldier
 	DMS_Hero_Static_MoneyGain			= 120;						// The amount of Poptabs gained for killing a hero static gunner
 	DMS_Hero_Static_RepGain				= 600;						// The amount of Respect gained for killing a hero static gunner
 	DMS_Hero_Static_RankGain			= -60;
+	DMS_Hero_Static_SpawnMoney			= 120;						// The amount of Poptabs carried by a hero static gunner
 	DMS_Hero_Vehicle_MoneyGain			= 200;						// The amount of Poptabs gained for killing a hero vehicle crew member
 	DMS_Hero_Vehicle_RepGain			= 500;						// The amount of Respect gained for killing a hero vehicle crew member
 	DMS_Hero_Vehicle_RankGain			= -100;
@@ -274,13 +301,16 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 	DMS_Survivor_Soldier_MoneyGain		= -100;						// The amount of Poptabs gained for killing a Survivor soldier
 	DMS_Survivor_Soldier_RepGain		= -100;						// The amount of Respect gained for killing a Survivor soldier
 	DMS_Survivor_Soldier_RankGain		= -250;
+	DMS_Survivor_Soldier_SpawnMoney		= 0;						// The amount of Poptabs carried by a Survivor soldier
 	DMS_Survivor_Static_MoneyGain		= -100;						// The amount of Poptabs gained for killing a Survivor static gunner
 	DMS_Survivor_Static_RepGain			= -100;						// The amount of Respect gained for killing a Survivor static gunner
 	DMS_Survivor_Static_RankGain		= -400;
+	DMS_Survivor_Static_SpawnMoney		= 0;						// The amount of Poptabs carried by a Survivor static gunner
 	DMS_Survivor_Vehicle_MoneyGain		= -500;						// The amount of Poptabs gained for killing a Survivor vehicle crew member
 	DMS_Survivor_Vehicle_RepGain			= -100;						// The amount of Respect gained for killing a Survivor vehicle crew member
 	DMS_Survivor_Vehicle_RankGain		= -600;
 	
+	DMS_Survivor_Vehicle_MoneyGain		= 0;						// The amount of Poptabs carried by a Survivor vehicle crew member
 	DMS_AIKill_DistanceBonusMinDistance	= 100;						// Minimum distance from the player to the AI to apply the distance bonus.
 	DMS_AIKill_DistanceBonusCoefficient	= 0.05;						// If the distance from the player to the killed unit is more than "DMS_AIKill_DistanceBonusMinDistance" meters then the player gets a respect bonus equivalent to the distance multiplied by this coefficient. For example, killing an AI from 400 meters will give 100 extra respect (when the coefficient is 0.25). Set to 0 to disable the bonus. This bonus will not be applied if there isn't a regular AI kill bonus.
 
@@ -318,7 +348,7 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 	DMS_banditSide						= EAST;						// The side (team) that AI Bandits will spawn on
 /* DonkeyPunchDMS Custom Side Factions */
 	DMS_heroSide						= WEST;						// The side (team) that AI Heros will spawn on
-	DMS_survivorSide						= CIV;						// The side (team) that AI Survivor will spawn on
+	DMS_survivorSide					= CIV;						// The side (team) that AI Survivor will spawn on
 	
 	DMS_clear_AI_body					= false;					// Clear AI body as soon as they die
 	DMS_clear_AI_body_chance			= 50;						// Percentage chance that AI bodies will be cleared when they die
@@ -335,6 +365,13 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 	DMS_ai_offload_Only_DMS_AI			= true;					// Do you use other mission systems on your server but still want to offload AI? You should probably enable this then, unless you have tested it for compatibility.
 	DMS_ai_offload_notifyClient			= false;					// Notify the client when AI has been offloaded to the client.
 
+	DMS_ai_allowFreezing				= true;						// Whether or not to "freeze" AI that are a certain distance away from players (and therefore inactive).
+	DMS_ai_freeze_Only_DMS_AI			= false;					// Whether or not to "freeze" AI that are not spawned by DMS.
+	DMS_ai_freezingDistance				= 3500;						// If there are no players within this distance of the leader of an AI group, then the AI group will be "frozen".
+	DMS_ai_unfreezingDistance			= 3500;						// If there are players within this distance of the leader of an AI group, then the AI group will be "un-frozen".
+	DMS_ai_offloadOnUnfreeze			= true;						// Whether or not to offload AI to clients once they have been "un-frozen". NOTE: This config will be ignored if "DMS_ai_offload_to_client" is set to false.
+	DMS_ai_freezeCheckingDelay			= 30;						// How often (in seconds) DMS will check whether to freeze/un-freeze AI.
+	DMS_ai_freezeOnSpawn				= true;						// Whether or not to freeze an AI group when initially spawned.
 	DMS_ai_share_info					= true;						// Share info about killer
 	DMS_ai_share_info_distance			= 300;						// The distance killer's info will be shared to other AI
 
@@ -364,7 +401,9 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 	DMS_AI_EnableStamina_difficult		= false;					// Whether or not to keep the stamina system for "difficult" AI.
 	DMS_AI_EnableStamina_hardcore		= false;					// Whether or not to keep the stamina system for "hardcore" AI.
 	DMS_AI_WP_Radius_base				= 5;						// Waypoint radius for AI in bases
+	DMS_AI_WP_Radius_heli				= 500;						// Waypoint radius for AI in helis.
 
+	DMS_AI_destroyVehicleChance			= 75;						// Percent chance that an AI vehicle will be destroyed after the AI have been killed. Set to 100 for always, or 0 for never.
 	DMS_AI_destroyStaticWeapon			= true;						// Whether or not to destroy static HMGs after AI death.
 	DMS_AI_destroyStaticWeapon_chance	= 95;						// Percent chance that a static weapon will be destroyed (only applied if "DMS_AI_destroyStaticWeapon" is true)
 
@@ -427,6 +466,15 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 										];
 	DMS_assault_equipment =				[							// Equipment for Assault Class AI (stuff that goes in toolbelt slots)
 											"ItemGPS"
+										];
+	DMS_assault_RandItemCount =			2;							// How many random items to add to the AI's inventory.
+	DMS_assault_RandItems =				[							// The random items that will be added to the AI's inventory.
+											"Exile_Item_Catfood_Cooked",
+											"Exile_Item_Surstromming_Cooked",
+											"Exile_Item_PowerDrink",
+											"Exile_Item_EnergyDrink",
+											"Exile_Item_Vishpirin",
+											"Exile_Item_Bandage"
 										];
 	DMS_assault_helmets	=				[							// Helmets for Assault Class
 											"H_HelmetSpecB_paint1",
@@ -929,6 +977,15 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 										];
 	DMS_MG_equipment =					[							// Equipment for MG Class AI (stuff that goes in toolbelt slots)
 											"Binocular"
+										];
+	DMS_MG_RandItemCount =				3;							// How many random items to add to the AI's inventory.
+	DMS_MG_RandItems =					[							// The random items that will be added to the AI's inventory.
+											"Exile_Item_EMRE",
+											"Exile_Item_Surstromming_Cooked",
+											"Exile_Item_PowerDrink",
+											"Exile_Item_PlasticBottleCoffee",
+											"Exile_Item_Vishpirin",
+											"Exile_Item_Instadoc"
 										];
 	DMS_MG_helmets =					[							// Helmets for MG Class
 											"H_PilotHelmetHeli_I",
@@ -1441,6 +1498,14 @@ DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a sch
 	DMS_sniper_equipment =				[							// Equipment for Sniper Class AI (stuff that goes in toolbelt slots)
 											"Rangefinder",
 											"ItemGPS"
+										];
+	DMS_sniper_RandItemCount =			3;							// How many random items to add to the AI's inventory.
+	DMS_sniper_RandItems =				[							// The random items that will be added to the AI's inventory.
+											"Exile_Item_EMRE",
+											"Exile_Item_PlasticBottleCoffee",
+											"Exile_Item_CanOpener",
+											"Exile_Item_Instadoc",
+											"Exile_Item_DuctTape"
 										];
 	DMS_sniper_helmets =				[							// Helmets for Sniper Class
 											"H_HelmetSpecB_paint1",
