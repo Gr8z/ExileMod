@@ -23,6 +23,7 @@ class Header
 };
 
 // DO NOT CHANGE THIS! +
+skipLobby = 1;
 showHUD[] = 
 {
     true,   // Scripted HUD (same as showHUD command)
