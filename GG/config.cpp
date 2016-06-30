@@ -2738,7 +2738,7 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// Ghosthawk
 	///////////////////////////////////////////////////////////////////////////////
-	//class B_Heli_Transport_01_F								{ quality = 1; price = 75000; };
+	class B_Heli_Transport_01_F								{ quality = 1; price = 75000; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Pawnee
@@ -5565,7 +5565,7 @@ class CfgTraderCategories
 			"Exile_Chopper_Hummingbird_Civillian_Wasp",
 			"Exile_Chopper_Huey_Green",
 			"Exile_Chopper_Huey_Armed_Green",
-			//"B_Heli_Transport_01_F",
+			"B_Heli_Transport_01_F",
 			"Exile_Chopper_Taru_Black",
 			"Exile_Chopper_Taru_Covered_Black",
 			"Exile_Chopper_Taru_Transport_Black",
