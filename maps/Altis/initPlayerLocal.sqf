@@ -1,6 +1,5 @@
 [] execVM "GG\StatusBar\statusBar.sqf";
 [] execVM "GG\KillMessages.sqf";
-[] execVM "GG\SpecialWelcomeForDevs.sqf";
 [] execVM "GG\service\service_point.sqf";
 [] execVM "GG\SecureSafezones\config.sqf";
 "" execVM "GG\XM8_apps\scripts\XM8_apps_init.sqf";
