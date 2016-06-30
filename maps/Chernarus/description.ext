@@ -1,4 +1,6 @@
 #include "GG\GG_Exile_AdminMenu.hpp"
+#include "GG\AdvancedBanking\Dialog\AdvBanking_Client_Defines.hpp"
+#include "GG\AdvancedBanking\Dialog\AdvBanking_Client_ATMDialog.hpp"
 #include "GG\XM8_apps\XM8_apps_sliders.hpp"
 
 // https://community.bistudio.com/wiki/Description.ext#forceRotorLibSimulation
@@ -110,6 +112,7 @@ class cfgFunctions
 class RscTitles
 {
 	#include "GG\StatusBar\statusBar.hpp"
+	#include "GG\AdvancedBanking\Dialog\AdvBanking_Client_CreditCard.hpp"
 	#include "GG\ExAdClient\RscTitles.cpp"
 };
 class CfgHints
