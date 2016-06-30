@@ -4,14 +4,11 @@ class Mission
 	addOns[]=
 	{
 		"exile_client",
-		"A3_Characters_F",
-		"tryk_backpack",
-		"extendedbase"
+		"tryk_backpack"
 	};
 	addOnsAuto[]=
 	{
-		"exile_client",
-		"A3_Characters_F"
+		"exile_client"
 	};
 	randomSeed=8080942;
 	class Intel
