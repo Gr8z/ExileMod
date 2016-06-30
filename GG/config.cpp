@@ -3600,22 +3600,7 @@ class CfgInteractionMenus
 			};
 		};
 	};
-	class ATM
-    {
-        targetType = 2;
-        target = "Land_Atm_01_F";
 
-        class Actions
-        {
-            class Access: ExileAbstractAction
-			{
-				title = "Access ATM";
-				condition = "true";
-				action = "createDialog 'AdvBankingATM';";
-			};
-        };
-    };
-	
 	class CargoSmall
 	{
 		targetType = 2;
@@ -3809,12 +3794,6 @@ class CfgInteractionMenus
 				title = "CCTV Access";
 				condition = "((ExileClientInteractionObject animationPhase 'LaptopLidRotation') >= 0.5)";
 				action = "_this call ExileClient_gui_baseCamera_show";
-			};
-			class Access: ExileAbstractAction
-			{
-				title = "Online Banking";
-				condition = "((ExileClientInteractionObject animationPhase 'LaptopLidRotation') >= 0.5)";
-				action = "createDialog 'AdvBankingATM';";
 			};
 			class VG : ExileAbstractAction
 			{
