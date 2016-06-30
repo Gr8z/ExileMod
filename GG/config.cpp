@@ -4100,7 +4100,7 @@ class CfgInteractionMenus
            };
 		};
 	};
-};
+
 
 	class Safe
 	{
