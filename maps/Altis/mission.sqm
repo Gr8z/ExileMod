@@ -5,14 +5,12 @@ class Mission
 	{
 		"exile_client",
 		"A3_Characters_F",
-		"a3_map_altis",
 		"tryk_backpack",
 		"extendedbase"
 	};
 	addOnsAuto[]=
 	{
 		"exile_client",
-		"a3_map_altis",
 		"A3_Characters_F"
 	};
 	randomSeed=8080942;
