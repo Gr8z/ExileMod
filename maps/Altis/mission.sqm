@@ -159,7 +159,7 @@ class Mission
 	
 	class Markers
 	{
-		items=38;
+		items=28;
 
 		class Item0
 		{
@@ -176,14 +176,6 @@ class Mission
 		};
 		class Item1
 		{
-			position[]={3874.3633,18.125629,13280.79};
-			name="SpawnKavalaIcon";
-			text="";
-			type="ExileSpawnZoneIcon";
-		};
-
-		class Item2
-		{
 			position[]={9926.5293,12.364729,12083.253};
 			name="SpawnZaros";
 			text="Zaros";
@@ -195,15 +187,7 @@ class Mission
 			b=500;
 			drawBorder=1;
 		};
-		class Item3
-		{
-			position[]={9926.5293,12.364729,12083.253};
-			name="SpawnZarosIcon";
-			text="";
-			type="ExileSpawnZoneIcon";
-		};
-
-		class Item4
+		class Item2
 		{
 			position[]={20978.369,27.78056,7045.6055};
 			name="SpawnSelekano";
@@ -216,17 +200,7 @@ class Mission
 			b=500;
 			drawBorder=1;
 		};
-		class Item5
-		{
-			position[]={20978.369,27.78056,7045.6055};
-			name="SpawnSelekanoIcon";
-			text="";
-			type="ExileSpawnZoneIcon";
-		};
-
-
-
-		class Item6
+		class Item3
 		{
 			position[]={17137.752,15.032475,12719.362};
 			name="SpawnPrygos";
@@ -239,16 +213,7 @@ class Mission
 			b=500;
 			drawBorder=1;
 		};
-
-		class Item7
-		{
-			position[]={17137.752,15.032475,12719.362};
-			name="SpawnPrygosIcon";
-			text="";
-			type="ExileSpawnZoneIcon";
-		};
-
-		class Item8
+		class Item4
 		{
 			position[]={25713.313,20.344301,21329.576};
 			name="SpawnSofia";
@@ -261,16 +226,7 @@ class Mission
 			b=500;
 			drawBorder=1;
 		};
-		class Item9
-		{
-			position[]={25713.313,20.344301,21329.576};
-			name="SpawnSofiaIcon";
-			text="";
-			type="ExileSpawnZoneIcon";
-		};
-
-
-		class Item10
+		class Item5
 		{
 			position[]={8612.5283,180.58038,18272.271};
 			name="SpawnSyrta";
@@ -283,16 +239,7 @@ class Mission
 			b=500;
 			drawBorder=1;
 		};
-		class Item11
-		{
-			position[]={8612.5283,180.58038,18272.271};
-			name="SpawnSyrtaIcon";
-			text="";
-			type="ExileSpawnZoneIcon";
-		};
-
-
-		class Item12
+		class Item6
 		{
 			position[]={14599.966,22.349989,16797.193};
 			name="MafiaTraderCity";
@@ -305,7 +252,7 @@ class Mission
 			b=175;
 			drawBorder=1;
 		};
-		class Item13
+		class Item7
 		{
 			position[]={14599.966,22.349989,16797.193};
 			name="TraderCityMarkerIcon";
@@ -313,7 +260,7 @@ class Mission
 			type="ExileTraderZoneIcon";
 		};
 
-		class Item14
+		class Item8
 		{
 			position[]={23334.605,4.0095582,24188.938};
 			name="TraderZoneSilderas";
@@ -326,7 +273,7 @@ class Mission
 			b=175;
 			drawBorder=1;
 		};
-		class Item15
+		class Item9
 		{
 			position[]={23334.605,4.0095582,24188.938};
 			name="TraderZoneSilderasIcon";
@@ -334,7 +281,7 @@ class Mission
 			type="ExileTraderZoneIcon";
 		};
 
-		class Item16
+		class Item10
 		{
 			position[]={2998.0603,3.7756021,18175.479};
 			name="TraderZoneFolia";
@@ -347,7 +294,7 @@ class Mission
 			b=175;
 			drawBorder=1;
 		};
-		class Item17
+		class Item11
 		{
 			position[]={2998.0603,3.7756021,18175.479};
 			name="TraderZoneFoliaIcon";
@@ -356,7 +303,7 @@ class Mission
 		};
 
 
-		class Item18
+		class Item12
 		{
 			position[]={14354.0,0,18960.1};
 			name="ConcreteMixerZoneAthira";
@@ -369,7 +316,7 @@ class Mission
 			b=750;
 			drawBorder=1;
 		};
-		class Item19
+		class Item13
 		{
 			position[]={14354.0,0,18960.1};
 			name="ConcreteMixerZoneAthiraIcon";
@@ -378,7 +325,7 @@ class Mission
 		};
 
 
-		class Item20
+		class Item14
 		{
 			position[]={18309.4,0,15575.0};
 			name="ConcreteMixerZoneCharkia";
@@ -391,7 +338,7 @@ class Mission
 			b=750;
 			drawBorder=1;
 		};
-		class Item21
+		class Item15
 		{
 			position[]={18309.4,0,15575.0};
 			name="ConcreteMixerZoneCharkiaIcon";
@@ -399,7 +346,7 @@ class Mission
 			type="ExileConcreteMixerZoneIcon";
 		};
 
-		class Item22
+		class Item16
 		{
 			position[]={11391.2,0,14259.5};
 			name="ConcreteMixerZoneAlikampos";
@@ -412,14 +359,14 @@ class Mission
 			b=750;
 			drawBorder=1;
 		};
-		class Item23
+		class Item17
 		{
 			position[]={11391.2,0,14259.5};
 			name="ConcreteMixerZoneAlikamposIcon";
 			text="";
 			type="ExileConcreteMixerZoneIcon";
 		};
-		class Item24
+		class Item18
 		{
 			position[]={21845.1,0,20977.6};
 			name="ContaminatedZoneGhostHotel";
@@ -432,14 +379,14 @@ class Mission
 			b=400;
 			drawBorder=1;
 		};
-		class Item25
+		class Item19
 		{
 			position[]={21845.1,0,20977.6};
 			name="ContaminatedZoneGhostHotelIcon";
 			text="";
 			type="ExileContaminatedZoneIcon";
 		};
-		class Item26
+		class Item20
 		{
 			position[]={11830.985,0,26582.57};
 			name="Website";
@@ -447,7 +394,7 @@ class Mission
 			type="mil_pickup";
 			colorName="ColorYellow";
 		};
-		class Item27
+		class Item21
 		{
 			position[]={11832.687,0,26008.523};
 			name="Teamspeak";
@@ -455,59 +402,35 @@ class Mission
 			type="mil_pickup";
 			colorName="ColorYellow";
 		};
-		class Item28 {
+		class Item22 
+		{
 			position[] = {14016.512,25.106031,18759.818};
 			name = "SpawnAthira";
 			text = "Athira";
 			type = "ExileSpawnZone";
 		};
-		class Item29
+		class Item23 
 		{
-			position[]={14016.512,25.106031,18759.818};
-			name="SpawnAthiraIcon";
-			text="";
-			type="ExileSpawnZoneIcon";
-		};
-		class Item30 {
 			position[] = {9281.4365,122.98421,15820.145};
 			name = "SpawnAgios";
 			text = "Agios";
 			type = "ExileSpawnZone";
 		};	
-		class Item31
+		class Item24
 		{
-			position[]={9281.4365,122.98421,15820.145};
-			name="SpawnAgiosIcon";
-			text="";
-			type="ExileSpawnZoneIcon";
-		};
-		class Item32 {
 			position[] = {18066.883,26.88798,15219.655};
 			name = "SpawnCharkia";
 			text = "Charkia";
 			type = "ExileSpawnZone";
 		};
-		class Item33
+		class Item25
 		{
-			position[]={18066.883,26.88798,15219.655};
-			name="SpawnCharkiaIcon";
-			text="";
-			type="ExileSpawnZoneIcon";
-		};
-		class Item34 {
 			position[] = {20926.896,44.535809,16914.789};
 			name = "SpawnParos";
 			text = "Paros";
 			type = "ExileSpawnZone";
 		};
-		class Item35
-		{
-			position[]={20926.896,44.535809,16914.789};
-			name="SpawnParosIcon";
-			text="";
-			type="ExileSpawnZoneIcon";
-		};
-		class Item36
+		class Item26
 		{
 			position[]={20521.777,45.45591,11037.807};
 			name="TraderZoneChalkeia";
@@ -520,7 +443,7 @@ class Mission
 			b=175;
 			drawBorder=1;
 		};
-		class Item37
+		class Item27
 		{
 			position[]={20521.777,45.45591,11037.807};
 			name="TraderZoneChalkeiaIcon";
