@@ -17,14 +17,18 @@ if (_this isEqualTo []) exitWith
 	diag_log "DMS ERROR :: Calling DMS_TargetsKilled with empty array!";
 };
 
-private _killed = false;
+private "_killed";
+
+_killed = false;
 
 try
 {
 	{
-		private _lastDistanceCheckTime = _x getVariable ["DMS_LastAIDistanceCheck",time];
-		private _pos = getPosWorld _x;
-		private _spawnPos = _x getVariable ["DMS_AISpawnPos",0];
+		private ["_lastDistanceCheckTime", "_spawnPos"];
+
+		_lastDistanceCheckTime = _x getVariable ["DMS_LastAIDistanceCheck",time];
+		_pos = getPosWorld _x;
+		_spawnPos = _x getVariable ["DMS_AISpawnPos",0];
 
 		if ((DMS_MaxAIDistance>0) && {!(_spawnPos isEqualTo 0)} && {((time - _lastDistanceCheckTime)>DMS_AIDistanceCheckFrequency) && {(_pos distance2D _spawnPos)>DMS_MaxAIDistance}}) then
 		{

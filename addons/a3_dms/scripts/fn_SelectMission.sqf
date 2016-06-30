@@ -5,9 +5,9 @@
 
 	Selects/Spawns missions. Takes no arguments, returns nothing.
 */
+private "_time";
 
-private _time = diag_tickTime;
-private _playerCount = count allPlayers;
+_time = diag_tickTime;
 
 if (DMS_RunningBMissionCount >= DMS_MaxBanditMissions) then
 {
@@ -21,11 +21,12 @@ if ((count DMS_RunningStaticMissions) >= DMS_MaxStaticMissions) then
 
 
 
-if (diag_fps >= DMS_MinServerFPS && {_playerCount >= DMS_MinPlayerCount}) then
+if (diag_fps >= DMS_MinServerFPS && {(count allPlayers) >= DMS_MinPlayerCount}) then
 {
 	if (DMS_DynamicMission && {_time - DMS_BMissionLastStart > DMS_BMissionDelay}) then
 	{
-		private _mission = selectRandom DMS_BanditMissionTypesArray;
+		private "_mission";
+		_mission = selectRandom DMS_BanditMissionTypesArray;
 
 		if (DMS_DEBUG) then
 		{
@@ -43,7 +44,9 @@ if (diag_fps >= DMS_MinServerFPS && {_playerCount >= DMS_MinPlayerCount}) then
 
 	if (DMS_StaticMission && {_time - DMS_StaticMissionLastStart > DMS_StaticMissionDelay}) then
 	{
-		private _availableMissions = (DMS_StaticMissionTypesArray - DMS_RunningStaticMissions);
+		private ["_mission", "_availableMissions"];
+
+		_availableMissions = (DMS_StaticMissionTypesArray - DMS_RunningStaticMissions);
 
 		if (_availableMissions isEqualTo []) exitWith
 		{
@@ -54,7 +57,7 @@ if (diag_fps >= DMS_MinServerFPS && {_playerCount >= DMS_MinPlayerCount}) then
 			};
 		};
 
-		private _mission = selectRandom _availableMissions;
+		_mission = selectRandom _availableMissions;
 
 		if (DMS_DEBUG) then
 		{

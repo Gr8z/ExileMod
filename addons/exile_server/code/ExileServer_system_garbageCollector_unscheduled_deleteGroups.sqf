@@ -9,47 +9,21 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_deleteGroup","_units","_unit"];
+private["_interval","_units"];
+_interval = 60 * getNumber (configFile >> "CfgSettings" >> "GarbageCollector" >> "Ingame" >> "Groups" >> "interval");
 {
-	if !(_x isEqualTo ExileServerGraveyardGroup) then 
+	if !(_x isEqualTo ExileGraveyardGroup) then
 	{
-		if !(_x isEqualTo ExileServerLoneWolfGroup) then 
+		_units = units _x;
+		if ((count _units) isEqualTo 0) then
 		{
-			_deleteGroup = false;
-			_group = _x;
-			_units = units _group;
-			switch (count _units) do 
+			if (local _x) then
 			{
-				case 0: 
-				{
-					_deleteGroup = true;
-				};
-				case 1:
-				{
-					_unit = _units select 0;
-					if !(alive _unit) then 
-					{
-						if (isNull ExileServerGraveyardGroup) then 
-						{
-							ExileServerGraveyardGroup = createGroup independent;
-							ExileServerGraveyardGroup setGroupIdGlobal ["Graveyard"];
-						};
-						[_unit] joinSilent ExileServerGraveyardGroup;
-						_deleteGroup = true;
-					};
-				};
-			};
-			if (_deleteGroup) then 
+				deleteGroup _x;
+			}
+			else
 			{
-				format ["Deleting group %1 (%2)...", _group, netId _group] call ExileServer_util_log;
-				if (local _group) then 
-				{
-					deleteGroup _group;
-				}
-				else 
-				{
-					[groupOwner _group, "DeleteGroupPlz", [_group]] call ExileServer_system_network_send_to;
-				};
+				[groupOwner _x, "DeleteGroupPlz", [_x]] call ExileServer_system_network_send_to;
 			};
 		};
 	};

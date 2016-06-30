@@ -251,9 +251,6 @@ if(_vehiclesToSpawn >= 1) then
                 _unitName = [_side] call SC_fnc_selectName;
                 if(!isNil "_unitName") then { _unit setName _unitName; }; 
             }forEach units _group;
- 
-            [units _group] orderGetIn true;
-            sleep 10; 
             
             [_group, _spawnLocation, 2000] call bis_fnc_taskPatrol;
             _group setBehaviour "SAFE";

@@ -60,7 +60,6 @@ class CfgFunctions {
 			class createDMSGroup {};
 			class createWaypoint {};
 			class createSmokeScreen {};
-			class cleanupAI {};
 		};
 	};
 };

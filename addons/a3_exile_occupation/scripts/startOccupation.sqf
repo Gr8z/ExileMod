@@ -1,10 +1,5 @@
 if (!isServer) exitWith {};
 
-if(SC_occupyTraders) then
-{
-    call compile preprocessFileLineNumbers "\x\addons\a3_exile_occupation\scripts\occupationTraders.sqf";
-};
-
 if(SC_processReporter) then
 {
 	_logDetail = format ["[processReporter]:: Initialised at %1",time];
@@ -41,6 +36,13 @@ if(SC_occupyRandomSpawn) then
 {
 	uiSleep 15; // delay the start
     call compile preprocessFileLineNumbers "\x\addons\a3_exile_occupation\scripts\occupationRandomSpawn.sqf";
+};
+
+
+if(SC_occupyTraders) then
+{
+	uiSleep 15; // delay the start
+    call compile preprocessFileLineNumbers "\x\addons\a3_exile_occupation\scripts\occupationTraders.sqf";
 };
 
 if(SC_occupyLootCrates) then
@@ -99,7 +101,6 @@ if(SC_occupyMilitary) then
 
 if(SC_occupyTransport) then
 {
-	uiSleep 15; // delay the start
 	[] execVM  "\x\addons\a3_exile_occupation\scripts\occupationTransport.sqf";
 };
 

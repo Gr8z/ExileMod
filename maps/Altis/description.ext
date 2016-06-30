@@ -1,4 +1,6 @@
 #include "GG\GG_Exile_AdminMenu.hpp"
+#include "GG\AdvancedBanking\Dialog\AdvBanking_Client_Defines.hpp"
+#include "GG\AdvancedBanking\Dialog\AdvBanking_Client_ATMDialog.hpp"
 #include "GG\XM8_apps\XM8_apps_sliders.hpp"
 
 // https://community.bistudio.com/wiki/Description.ext#forceRotorLibSimulation
@@ -23,7 +25,6 @@ class Header
 };
 
 // DO NOT CHANGE THIS! +
-skipLobby = 1;
 showHUD[] = 
 {
     true,   // Scripted HUD (same as showHUD command)
@@ -33,8 +34,7 @@ showHUD[] =
     true,   // Tank direction indicator
     true,   // Commanding menu
     false,   // Group Bar
-    true,    // HUD Weapon Cursors
-    false   // Squad Radar
+    true    // HUD Weapon Cursors
 };
 
 respawn = "BASE";
@@ -110,6 +110,7 @@ class cfgFunctions
 class RscTitles
 {
 	#include "GG\StatusBar\statusBar.hpp"
+	#include "GG\AdvancedBanking\Dialog\AdvBanking_Client_CreditCard.hpp"
 	#include "GG\ExAdClient\RscTitles.cpp"
 };
 class CfgHints

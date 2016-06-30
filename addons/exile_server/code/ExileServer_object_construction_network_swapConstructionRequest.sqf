@@ -53,5 +53,4 @@ if !(isNull _flag) then
 {
 	_flag call ExileServer_system_territory_updateNumberOfConstructions;
 };
-_playerObject setVariable ["ExileConstructionObject", nil];
 true

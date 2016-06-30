@@ -29,6 +29,7 @@ _data =
 	1,
 	_flagTexture,
 	0,
+	"",
 	_build_rights,
 	_moderators,
 	"Null"
@@ -36,5 +37,4 @@ _data =
 _extDB2Message = ["createTerritory", _data] call ExileServer_util_extDB2_createMessage;
 _territoryID = _extDB2Message call ExileServer_system_database_query_insertSingle;
 _flagObject setVariable ["ExileDatabaseID",_territoryID];
-_flagObject setVariable ["ExileFlagTexture",_flagTexture];
 true

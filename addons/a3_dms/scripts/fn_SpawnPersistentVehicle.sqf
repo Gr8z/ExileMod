@@ -13,15 +13,19 @@
 	Returns the created vehicle object.
 */
 
-private _vehObj = objNull;
+
+private ["_vehicleClass", "_pos", "_pinCode", "_vehObj"];
+
+
+_vehObj = objNull;
 
 try
 {
 	if !(params
 	[
-		"_vehicleClass",
-		"_pos",
-		"_pinCode"
+		["_vehicleClass","",[""]],
+		["_pos",[],[[]],[2,3]],
+		["_pinCode","",[0,""]]
 	])
 	then
 	{
@@ -76,7 +80,7 @@ try
 		throw (format ["invalid STRING _pinCode value (must be 4 digits): %1",_pinCode]);
 	};
 
-	private _spawnATL = if ((count _this)>3) then {_this select 3} else {true};
+	_spawnATL = if ((count _this)>3) then {_this select 3} else {true};
 
 	// Create and set the vehicle
 	_vehObj = [_vehicleClass,_pos] call DMS_fnc_SpawnNonPersistentVehicle;
@@ -108,6 +112,7 @@ catch
 {
 	diag_log format ["DMS ERROR :: Calling DMS_fnc_SpawnPersistentVehicle with %1!",_exception];
 };
+
 
 
 _vehObj

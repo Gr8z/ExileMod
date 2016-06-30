@@ -25,15 +25,6 @@ _pic = "GG\images\logo.paa";
 ] spawn bis_fnc_dynamicText;
 
 
-///////////////////////////////////////////////////////////////////////////////
-// Static Objects
-///////////////////////////////////////////////////////////////////////////////
-
-// Taken away for now
-//#include "initServer.sqf"
-
-if (!hasInterface || isServer) exitWith {};
-
 ///////////////////////////////////////////////////////////////////////////
 // Hardware Trader
 ///////////////////////////////////////////////////////////////////////////
@@ -44,7 +35,6 @@ _workBench setPosATL [14587.8, 16758.7, 0.0938587];
 _trader = 
 [
     "Exile_Trader_Hardware",
-    "Exile_Trader_Hardware",
     "WhiteHead_17",
     ["InBaseMoves_sitHighUp1"],
     [0, 0, -0.5],
@@ -52,6 +42,9 @@ _trader =
     _workBench
 ]
 call ExileClient_object_trader_create;
+
+_trader setVariable ["ExileTraderType", "Exile_Trader_Hardware"];
+
 
 ///////////////////////////////////////////////////////////////////////////
 // Fast Food Trader
@@ -64,20 +57,22 @@ _microwave = "Land_Microwave_01_F" createVehicleLocal [0,0,0];
 _cashDesk disableCollisionWith _microwave;         
 _microwave disableCollisionWith _cashDesk; 
 _microwave attachTo [_cashDesk, [-0.6, 0.2, 1.1]];
+_microwave enableSimulationGlobal false;
 
 _ketchup = "Land_Ketchup_01_F" createVehicleLocal [0,0,0];
 _cashDesk disableCollisionWith _ketchup;         
 _ketchup disableCollisionWith _cashDesk; 
 _ketchup attachTo [_cashDesk, [-0.6, 0, 1.1]];
+_ketchup enableSimulationGlobal false;
 
 _mustard = "Land_Mustard_01_F" createVehicleLocal [0,0,0];
 _cashDesk disableCollisionWith _mustard;         
 _mustard disableCollisionWith _cashDesk; 
 _mustard attachTo [_cashDesk, [-0.5, -0.05, 1.1]];
+_mustard enableSimulationGlobal false;
 
 _trader = 
 [
-    "Exile_Trader_Food",
     "Exile_Trader_Food",
     "GreekHead_A3_01",
     ["InBaseMoves_table1"],
@@ -86,6 +81,8 @@ _trader =
     _cashDesk
 ]
 call ExileClient_object_trader_create;
+
+_trader setVariable ["ExileTraderType", "Exile_Trader_Food"];
 
 ///////////////////////////////////////////////////////////////////////////
 // Armory Trader
@@ -97,7 +94,6 @@ _chair setPosATL [14568.1, 16764.3, 0.084837];
 _trader = 
 [
     "Exile_Trader_Armory",
-    "Exile_Trader_Armory",
     "PersianHead_A3_02",
     ["InBaseMoves_SittingRifle1"],
     [0, -0.15, -0.45],
@@ -106,12 +102,13 @@ _trader =
 ]
 call ExileClient_object_trader_create;
 
+_trader setVariable ["ExileTraderType", "Exile_Trader_Armory"];
+
 ///////////////////////////////////////////////////////////////////////////
 // Equipment Trader
 ///////////////////////////////////////////////////////////////////////////
 _trader = 
 [
-    "Exile_Trader_Equipment",
     "Exile_Trader_Equipment",
     "WhiteHead_19",
     ["InBaseMoves_Lean1"],
@@ -120,12 +117,13 @@ _trader =
 ]
 call ExileClient_object_trader_create;
 
+_trader setVariable ["ExileTraderType", "Exile_Trader_Equipment"];
+
 ///////////////////////////////////////////////////////////////////////////
 // Specops Trader
 ///////////////////////////////////////////////////////////////////////////
 _trader = 
 [
-    "Exile_Trader_SpecialOperations",
     "Exile_Trader_SpecialOperations",
     "AfricanHead_02",
     ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3"],
@@ -134,12 +132,13 @@ _trader =
 ]
 call ExileClient_object_trader_create;
 
+_trader setVariable ["ExileTraderType", "Exile_Trader_SpecialOperations"];
+
 ///////////////////////////////////////////////////////////////////////////
 // Office Trader
 ///////////////////////////////////////////////////////////////////////////
 _trader = 
 [
-    "Exile_Trader_Office",
     "Exile_Trader_Office",
     "GreekHead_A3_04",
     ["HubBriefing_scratch", "HubBriefing_stretch", "HubBriefing_think", "HubBriefing_lookAround1", "HubBriefing_lookAround2"],
@@ -153,7 +152,6 @@ call ExileClient_object_trader_create;
 ///////////////////////////////////////////////////////////////////////////
 _trader = 
 [
-    "Exile_Trader_WasteDump",
     "Exile_Trader_WasteDump",
     "GreekHead_A3_01",
     ["HubStandingUA_move1", "HubStandingUA_move2", "HubStandingUA_idle1", "HubStandingUA_idle2", "HubStandingUA_idle3"],
@@ -169,7 +167,6 @@ call ExileClient_object_trader_create;
 _trader = 
 [
     "Exile_Trader_Aircraft",
-    "Exile_Trader_Aircraft",
     "WhiteHead_17",
     ["LHD_krajPaluby"],
     [14596.5, 16752.9, 0.12644],
@@ -177,12 +174,14 @@ _trader =
 ]
 call ExileClient_object_trader_create;
 
+_trader setVariable ["ExileTraderType", "Exile_Trader_Aircraft"];
+
+
 ///////////////////////////////////////////////////////////////////////////
 // Aircraft Customs Trader
 ///////////////////////////////////////////////////////////////////////////
 _trader = 
 [
-    "Exile_Trader_AircraftCustoms",
     "Exile_Trader_AircraftCustoms",
     "GreekHead_A3_07",
     ["HubStandingUC_idle1", "HubStandingUC_idle2", "HubStandingUC_idle3", "HubStandingUC_move1", "HubStandingUC_move2"],
@@ -198,7 +197,6 @@ call ExileClient_object_trader_create;
 _trader = 
 [
     "Exile_Trader_Vehicle",
-    "Exile_Trader_Vehicle",
     "WhiteHead_11",
     ["InBaseMoves_repairVehicleKnl", "InBaseMoves_repairVehiclePne"],
     [14603.7, 16877.3, 0.00143433],
@@ -209,13 +207,16 @@ call ExileClient_object_trader_create;
 _carWreck = "Land_Wreck_CarDismantled_F" createVehicleLocal [0,0,0];
 _carWreck setDir 355.455;
 _carWreck setPosATL [14605.6, 16877.3, 0.0208359];
+_carWreck enableSimulationGlobal false;
+
+_trader setVariable ["ExileTraderType", "Exile_Trader_Vehicle"];
+
 
 ///////////////////////////////////////////////////////////////////////////
 // Vehicle Customs Trader
 ///////////////////////////////////////////////////////////////////////////
 _trader = 
 [
-    "Exile_Trader_VehicleCustoms",
     "Exile_Trader_VehicleCustoms",
     "WhiteHead_11",
     ["AidlPercMstpSnonWnonDnon_G01", "AidlPercMstpSnonWnonDnon_G02", "AidlPercMstpSnonWnonDnon_G03", "AidlPercMstpSnonWnonDnon_G04", "AidlPercMstpSnonWnonDnon_G05", "AidlPercMstpSnonWnonDnon_G06"],
@@ -230,7 +231,6 @@ call ExileClient_object_trader_create;
 _trader = 
 [
     "Exile_Guard_01",
-    "",
     "WhiteHead_17",
     ["InBaseMoves_patrolling1"],
     [14564.9,16923.4,0.00146294],
@@ -244,7 +244,6 @@ call ExileClient_object_trader_create;
 _trader = 
 [
     "Exile_Guard_02",
-    "",
     "WhiteHead_03",
     ["InBaseMoves_patrolling2"],
     [14626.3,16834.6,4.72644],
@@ -258,7 +257,6 @@ call ExileClient_object_trader_create;
 _trader = 
 [
     "Exile_Guard_03",
-    "",
     "AfricanHead_03",
     ["InBaseMoves_patrolling1"],
     [14577.1,16793.1,3.75118],
@@ -272,7 +270,6 @@ call ExileClient_object_trader_create;
 _trader = 
 [
     "Exile_Guard_02",
-    "",
     "WhiteHead_03",
     ["InBaseMoves_patrolling2"],
     [2950.52,18195.3,4.93399],
@@ -287,7 +284,6 @@ call ExileClient_object_trader_create;
 _trader = 
 [
     "Exile_Trader_Boat",
-    "Exile_Trader_Boat",
     "WhiteHead_17",
     ["AidlPercMstpSnonWnonDnon_G01", "AidlPercMstpSnonWnonDnon_G02", "AidlPercMstpSnonWnonDnon_G03", "AidlPercMstpSnonWnonDnon_G04", "AidlPercMstpSnonWnonDnon_G05", "AidlPercMstpSnonWnonDnon_G06"],
     [2914.35,18192.9,8.51858],
@@ -295,13 +291,15 @@ _trader =
 ]
 call ExileClient_object_trader_create;
 
+_trader setVariable ["ExileTraderType", "Exile_Trader_Boat"];
+
+
 ///////////////////////////////////////////////////////////////////////////
 // Western Vehicle Trader
 ///////////////////////////////////////////////////////////////////////////
 
 _trader = 
 [
-    "Exile_Trader_Vehicle",
     "Exile_Trader_Vehicle",
     "WhiteHead_11",
     ["InBaseMoves_repairVehicleKnl", "InBaseMoves_repairVehiclePne"],
@@ -320,7 +318,6 @@ _carWreck setPosATL [2978.76,18144.5,1.13293];
 _trader = 
 [
     "Exile_Trader_WasteDump",
-    "Exile_Trader_WasteDump",
     "GreekHead_A3_01",
     ["HubStandingUA_move1", "HubStandingUA_move2", "HubStandingUA_idle1", "HubStandingUA_idle2", "HubStandingUA_idle3"],
     [2984.05,18133.4,0.00107765],
@@ -335,13 +332,14 @@ call ExileClient_object_trader_create;
 _trader = 
 [
     "Exile_Trader_Food",
-    "Exile_Trader_Food",
     "GreekHead_A3_01",
     ["AidlPercMstpSnonWnonDnon_G01", "AidlPercMstpSnonWnonDnon_G02", "AidlPercMstpSnonWnonDnon_G03", "AidlPercMstpSnonWnonDnon_G04", "AidlPercMstpSnonWnonDnon_G05", "AidlPercMstpSnonWnonDnon_G06"],
     [2979.87,18184.9,2.55185],
     89.2952
 ]
 call ExileClient_object_trader_create;
+
+_trader setVariable ["ExileTraderType", "Exile_Trader_Food"];
 
 ///////////////////////////////////////////////////////////////////////////
 // Western Equipment Trader
@@ -350,13 +348,13 @@ call ExileClient_object_trader_create;
 _trader = 
 [
     "Exile_Trader_Equipment",
-    "Exile_Trader_Equipment",
     "WhiteHead_19",
     ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3"],
     [2980.7,18192.9,2.49853],
     130.535
 ]
 call ExileClient_object_trader_create;
+_trader setVariable ["ExileTraderType", "Exile_Trader_Equipment"];
 
 ///////////////////////////////////////////////////////////////////////////
 // Western Armory Trader
@@ -365,7 +363,6 @@ call ExileClient_object_trader_create;
 _trader = 
 [
     "Exile_Trader_Armory",
-    "Exile_Trader_Armory",
     "PersianHead_A3_02",
     ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3"],
     [2986.43,18178.5,1.66267],
@@ -373,13 +370,14 @@ _trader =
 ]
 call ExileClient_object_trader_create;
 
+_trader setVariable ["ExileTraderType", "Exile_Trader_Armory"];
+
 ///////////////////////////////////////////////////////////////////////////
 // Western Guard 02
 ///////////////////////////////////////////////////////////////////////////
 _trader = 
 [
     "Exile_Guard_03",
-    "",
     "AfricanHead_03",
     ["InBaseMoves_patrolling1"],
     [2993.2,18167,0.353821],
@@ -398,20 +396,22 @@ _microwave = "Land_Microwave_01_F" createVehicleLocal [0,0,0];
 _cashDesk disableCollisionWith _microwave;         
 _microwave disableCollisionWith _cashDesk; 
 _microwave attachTo [_cashDesk, [-0.6, 0.2, 1.1]];
+_microwave enableSimulationGlobal false;
 
 _ketchup = "Land_Ketchup_01_F" createVehicleLocal [0,0,0];
 _cashDesk disableCollisionWith _ketchup;         
 _ketchup disableCollisionWith _cashDesk; 
 _ketchup attachTo [_cashDesk, [-0.6, 0, 1.1]];
+_ketchup enableSimulationGlobal false;
 
 _mustard = "Land_Mustard_01_F" createVehicleLocal [0,0,0];
 _cashDesk disableCollisionWith _mustard;         
 _mustard disableCollisionWith _cashDesk; 
 _mustard attachTo [_cashDesk, [-0.5, -0.05, 1.1]];
+_mustard enableSimulationGlobal false;
 
 _trader = 
 [
-    "Exile_Trader_Food",
     "Exile_Trader_Food",
     "GreekHead_A3_01",
     ["InBaseMoves_table1"],
@@ -421,13 +421,14 @@ _trader =
 ]
 call ExileClient_object_trader_create;
 
+_trader setVariable ["ExileTraderType", "Exile_Trader_Food"];
+
 ///////////////////////////////////////////////////////////////////////////
 // Eastern Boat Trader
 ///////////////////////////////////////////////////////////////////////////
 
 _trader = 
 [
-    "Exile_Trader_Boat",
     "Exile_Trader_Boat",
     "WhiteHead_17",
     ["AidlPercMstpSnonWnonDnon_G01", "AidlPercMstpSnonWnonDnon_G02", "AidlPercMstpSnonWnonDnon_G03", "AidlPercMstpSnonWnonDnon_G04", "AidlPercMstpSnonWnonDnon_G05", "AidlPercMstpSnonWnonDnon_G06"],
@@ -436,13 +437,14 @@ _trader =
 ]
 call ExileClient_object_trader_create;
 
+_trader setVariable ["ExileTraderType", "Exile_Trader_Boat"];
+
 ///////////////////////////////////////////////////////////////////////////
 // Eastern Vehicle Trader
 ///////////////////////////////////////////////////////////////////////////
 
 _trader = 
 [
-    "Exile_Trader_Vehicle",
     "Exile_Trader_Vehicle",
     "WhiteHead_11",
     ["InBaseMoves_repairVehicleKnl", "InBaseMoves_repairVehiclePne"],
@@ -451,9 +453,12 @@ _trader =
 ]
 call ExileClient_object_trader_create;
 
+_trader setVariable ["ExileTraderType", "Exile_Trader_Vehicle"];
+
 _carWreck = "Land_Wreck_CarDismantled_F" createVehicleLocal [0,0,0];
 _carWreck setDir 47.2728;    
 _carWreck setPosATL [23387.3, 24190.3, 0.05];
+_carWreck enableSimulationGlobal false;
 
 ///////////////////////////////////////////////////////////////////////////
 // Eastern Hardware Trader
@@ -465,7 +470,6 @@ _workBench setPosATL [23371.6, 24188, 0.89873];
 _trader = 
 [
     "Exile_Trader_Hardware",
-    "Exile_Trader_Hardware",
     "WhiteHead_17",
     ["InBaseMoves_sitHighUp1"],
     [0, 0, -0.5],
@@ -474,12 +478,13 @@ _trader =
 ]
 call ExileClient_object_trader_create;
 
+_trader setVariable ["ExileTraderType", "Exile_Trader_Hardware"];
+
 ///////////////////////////////////////////////////////////////////////////
 // Eastern Equipment Trader
 ///////////////////////////////////////////////////////////////////////////
 _trader = 
 [
-    "Exile_Trader_Equipment",
     "Exile_Trader_Equipment",
     "WhiteHead_19",
     ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3"],
@@ -487,6 +492,8 @@ _trader =
     206
 ]
 call ExileClient_object_trader_create;
+
+_trader setVariable ["ExileTraderType", "Exile_Trader_Equipment"];
 
 ///////////////////////////////////////////////////////////////////////////
 // Eastern Armory Trader
@@ -498,7 +505,6 @@ _chair setPosATL [23379.6, 24169.3, 4.56662];
 _trader = 
 [
     "Exile_Trader_Armory",
-    "Exile_Trader_Armory",
     "PersianHead_A3_02",
     ["InBaseMoves_SittingRifle1"],
     [0, -0.15, -0.45],
@@ -507,12 +513,13 @@ _trader =
 ]
 call ExileClient_object_trader_create;
 
+_trader setVariable ["ExileTraderType", "Exile_Trader_Armory"];
+
 ///////////////////////////////////////////////////////////////////////////
 // Eastern Waste Dump Trader
 ///////////////////////////////////////////////////////////////////////////
 _trader = 
 [
-    "Exile_Trader_WasteDump",
     "Exile_Trader_WasteDump",
     "GreekHead_A3_01",
     ["HubStandingUA_move1", "HubStandingUA_move2", "HubStandingUA_idle1", "HubStandingUA_idle2", "HubStandingUA_idle3"],
@@ -521,117 +528,108 @@ _trader =
 ]
 call ExileClient_object_trader_create;
 
-///////////////////////////////////////////////////////////////////////////
-// Russian Roulette
-///////////////////////////////////////////////////////////////////////////
+_chair setDir 12.7272;
+_chair setPosATL [23379.6, 24169.3, 4.56662];
+_trader = 
 [
-    "Exile_Trader_RussianRoulette",
-    "",
-    "GreekHead_A3_01",
-    ["HubStandingUA_move1", "HubStandingUA_move2", "HubStandingUA_idle1", "HubStandingUA_idle2", "HubStandingUA_idle3"],
-    [14622.6, 16820.1, 0.126],
-    187.428
+    "Exile_Trader_Armory",
+    "PersianHead_A3_02",
+    ["InBaseMoves_SittingRifle1"],
+    [0, -0.15, -0.45],
+    180,
+    _chair
 ]
 call ExileClient_object_trader_create;
-
+_trader setVariable ["ExileTraderType", "Exile_Trader_Armory"];
 ///////////////////////////////////////////////////////////////////////////
 // Equipment Trader
 ///////////////////////////////////////////////////////////////////////////
 _trader = 
 [
     "Exile_Trader_Equipment",
-	"Exile_Trader_Equipment",
     "WhiteHead_19",
     ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3"],
     [20501.5,11011.3,-0.000190735],347.642
 ]
 call ExileClient_object_trader_create;
-
+_trader setVariable ["ExileTraderType", "Exile_Trader_Equipment"];
 ///////////////////////////////////////////////////////////////////////////
 // Armory Trader
 ///////////////////////////////////////////////////////////////////////////
 _trader = 
 [
     "Exile_Trader_Armory",
-	"Exile_Trader_Armory",
     "PersianHead_A3_02",
     ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3"],
     [20494.8,11049.9,5.34058e-005],164.366
 ]
 call ExileClient_object_trader_create;
-
+_trader setVariable ["ExileTraderType", "Exile_Trader_Armory"];
 ///////////////////////////////////////////////////////////////////////////
 // Hardware Trader
 ///////////////////////////////////////////////////////////////////////////
 _trader = 
 [
     "Exile_Trader_Hardware",
-	"Exile_Trader_Hardware",
     "WhiteHead_17",
     ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3"],
     [20478.7,11029,0.000175476],100.365
 ]
 call ExileClient_object_trader_create;
-
+_trader setVariable ["ExileTraderType", "Exile_Trader_Hardware"];
 ///////////////////////////////////////////////////////////////////////////
 // Specops Trader
 ///////////////////////////////////////////////////////////////////////////
 _trader = 
 [
     "Exile_Trader_SpecialOperations",
-	"Exile_Trader_SpecialOperations",
     "AfricanHead_02",
     ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3"],
    [20519,11026,0.00508881],283.641
 ]
 call ExileClient_object_trader_create;
-
+_trader setVariable ["ExileTraderType", "Exile_Trader_SpecialOperations"];
 ///////////////////////////////////////////////////////////////////////////
 // Office Trader
 ///////////////////////////////////////////////////////////////////////////
 _trader = 
 [
     "Exile_Trader_Office",
-	"Exile_Trader_Office",
     "GreekHead_A3_04",
     ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3"],
     [20483.4,11043.8,0.00103378],136.729
 ]
 call ExileClient_object_trader_create;
-
 ///////////////////////////////////////////////////////////////////////////
 // Food Trader
 ///////////////////////////////////////////////////////////////////////////
 _trader = 
 [
     "Exile_Trader_Food",
-	"Exile_Trader_Food",
     "GreekHead_A3_01",
     ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3"],
     [20491,11010.8,0.000915527],11.3583
 ]
 call ExileClient_object_trader_create;
-
+_trader setVariable ["ExileTraderType", "Exile_Trader_Food"];
 ///////////////////////////////////////////////////////////////////////////
 // Vehicle Trader
 ///////////////////////////////////////////////////////////////////////////
 _trader = 
 [
     "Exile_Trader_Vehicle",
-	"Exile_Trader_Vehicle",
     "WhiteHead_11",
     ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3"],
     [20468.2,11028.7,-0.000102997],225.549
 ]
 call ExileClient_object_trader_create;
-
+_trader setVariable ["ExileTraderType", "Exile_Trader_Vehicle"];
 ///////////////////////////////////////////////////////////////////////////
 // Waste Dump Trader
 ///////////////////////////////////////////////////////////////////////////
 _trader = 
 [
     "Exile_Trader_WasteDump",
-	"Exile_Trader_WasteDump",
     "GreekHead_A3_01",
     ["HubStandingUA_move1", "HubStandingUA_move2", "HubStandingUA_idle1", "HubStandingUA_idle2", "HubStandingUA_idle3"],
     [20462.3,10997.8,-0.000263214],50.9098

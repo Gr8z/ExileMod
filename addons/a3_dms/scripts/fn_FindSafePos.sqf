@@ -16,9 +16,12 @@
 		_missionNearLimit,			// NUMBER (distance): Minimum distance from another mission.
 		_playerNearLimit,			// NUMBER (distance): Minimum distance from a player.
 		_throttleParams				// BOOLEAN: Whether or not some of the distance values should be throttled on repeated attempts.
+		_waterSpawn					// (OPTIONAL) BOOLEAN: Whether or not the mission is supposed to spawn on water. Default: false
 	] call DMS_fnc_findSafePos;
 */
-#define MAX_ATTEMPTS 5000
+
+
+private ["_nearestObjectMinDistance", "_waterNearLimit", "_minSurfaceNormal", "_spawnZoneNearLimit", "_traderZoneNearLimit", "_missionNearLimit", "_playerNearLimit", "_territoryNearLimit", "_throttleParams", "_waterSpawn", "_isValidSpot", "_attempts", "_pos", "_restriction", "_generatePos", "_presetLocs", "_presetLocsLength"];
 
 params
 [
@@ -41,11 +44,14 @@ if (!isNil "DMS_DebugMarkers") then
 DMS_DebugMarkers = [];
 */
 
-private _isValidSpot = false;
 
-private _presetLocs = [];
-private _presetLocsLength = 0;
+_waterSpawn = if ((count _this)>9) then {_this select 9} else {false};
 
+_isValidSpot = false;
+_attempts = 0;
+_restriction = if (_waterSpawn) then {2} else {0};
+
+_presetLocsLength = 0;
 if (DMS_UsePredefinedMissionLocations) then
 {
 	// Shuffle the array so that the positions are selected in random order
@@ -53,20 +59,29 @@ if (DMS_UsePredefinedMissionLocations) then
 	_presetLocsLength = count _presetLocs;
 };
 
-
-private _pos = [];
-
-for "_attempts" from 1 to MAX_ATTEMPTS do
+_generatePos =
 {
-	_pos =
-		if (DMS_UsePredefinedMissionLocations && {_attempts<=_presetLocsLength}) then
-		{
-			_presetLocs select (_attempts - 1)
-		}
-		else
-		{
-			[DMS_MinMax_X_Coords call DMS_fnc_SelectRandomVal,DMS_MinMax_Y_Coords call DMS_fnc_SelectRandomVal] isFlatEmpty [_nearestObjectMinDistance, 0, -1, 1, -1, false, objNull]
-		};
+	if (DMS_UsePredefinedMissionLocations && {_attempts<=_presetLocsLength}) then
+	{
+		_presetLocs select (_attempts - 1)
+	}
+	else
+	{
+		[DMS_MinMax_X_Coords call DMS_fnc_SelectRandomVal,DMS_MinMax_Y_Coords call DMS_fnc_SelectRandomVal] isFlatEmpty [_nearestObjectMinDistance, 0, 9999, 1, _restriction, _waterSpawn, objNull]
+	};
+};
+
+while {!_isValidSpot} do
+{
+	_attempts = _attempts+1;
+
+
+	_pos = [];
+
+	while {_pos isEqualTo []} do
+	{
+		_pos = call _generatePos;
+	};
 
 	/*
 	_dot = createMarker [format ["DMS_DebugMarker_attempt%1", _attempts], _pos];
@@ -93,23 +108,21 @@ for "_attempts" from 1 to MAX_ATTEMPTS do
 		};
 	};
 
-	_isValidSpot = [_pos, _waterNearLimit, _minSurfaceNormal, _spawnZoneNearLimit, _traderZoneNearLimit, _missionNearLimit, _playerNearLimit, _territoryNearLimit] call DMS_fnc_IsValidPosition;
+	_isValidSpot = [_pos, _waterNearLimit, _minSurfaceNormal, _spawnZoneNearLimit, _traderZoneNearLimit, _missionNearLimit, _playerNearLimit, _territoryNearLimit, _waterSpawn] call DMS_fnc_IsValidPosition;
 
-	if (_isValidSpot) exitWith
+	if (_attempts>5000) exitWith
 	{
-		if (DMS_DEBUG) then
-		{
-			(format["FindSafePos :: Found mission position %1 in %2 attempts. _this: %3",_pos,_attempts,_this]) call DMS_fnc_DebugLog;
-		};
+		diag_log format["DMS ERROR :: Number of attempts in DMS_fnc_findSafePos (%1) exceeded maximum number of attempts!",_attempts];
 	};
 };
 
-if !(_isValidSpot) exitWith
-{
-	diag_log format["DMS ERROR :: Number of attempts in DMS_fnc_findSafePos (%1) reached maximum number of attempts!",MAX_ATTEMPTS];
-};
-
 _pos set [2,0];
+
+
+if (DMS_DEBUG) then
+{
+	(format["FindSafePos :: Found mission position %1 in %2 attempts. _this: %3",_pos,_attempts,_this]) call DMS_fnc_DebugLog;
+};
 
 
 _pos;

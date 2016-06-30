@@ -524,7 +524,7 @@ switch (true) do
     for "_i" from 1 to 2 do {player addItemToBackpack "200Rnd_mas_556x45_Stanag";};
 	for "_i" from 1 to 2 do {player addItemToBackpack "HandGrenade";};
     player addHeadgear "H_HelmetSpecO_blk";
-    player addWeaponGlobal "LMG_Mk200_F";
+    player addWeaponGlobal "LMG_mas_Mk200_F";
     player addPrimaryWeaponItem "optic_mas_MRCO_camo";
 	player addPrimaryWeaponItem "bipod_02_F_hex";
     player addWeapon "hgun_mas_mp7p_F";

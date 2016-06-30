@@ -281,7 +281,7 @@ _allSupportBoxesNames = [];
 	};
 } forEach _allSupportBoxes;
 _KYLE_MODE = ["KYLE_MODE",false] call fnc_infiSTAR_cfg;
-_AdvBanking_Server = false;
+_AdvBanking_Server = true;
 if(_AdvBanking_Server)then
 {
 	_checkPopTabIncrease = false;

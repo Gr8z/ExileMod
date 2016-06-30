@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_parameters","_vehicleClass","_pinCode","_playerObject","_salesPrice","_playerMoney","_position","_vehicleObject","_logging","_traderLog","_responseCode"];
+private["_sessionID","_parameters","_vehicleClass","_pinCode","_playerObject","_salesPrice","_playerMoney","_position","_vehicleObject","_responseCode"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
 _vehicleClass = _parameters select 0;
@@ -39,7 +39,7 @@ try
 	{
 		throw 4;
 	};
-	_playerMoney = _playerObject getVariable ["ExileMoney", 0];
+	_playerMoney = _playerObject getVariable ["ExilePurse", 0];
 	if (_playerMoney < _salesPrice) then
 	{
 		throw 5;
@@ -68,20 +68,19 @@ try
 	_vehicleObject call ExileServer_object_vehicle_database_insert;
 	_vehicleObject call ExileServer_object_vehicle_database_update;
 	_playerMoney = _playerMoney - _salesPrice;
-	_playerObject setVariable ["ExileMoney", _playerMoney, true];
-	format["setPlayerMoney:%1:%2", _playerMoney, _playerObject getVariable ["ExileDatabaseID", 0]] call ExileServer_system_database_query_fireAndForget;
-	[_sessionID, "purchaseVehicleResponse", [0, netId _vehicleObject, _salesPrice]] call ExileServer_system_network_send_to;
-	_logging = getNumber(configFile >> "CfgSettings" >> "Logging" >> "traderLogging");
-	if (_logging isEqualTo 1) then
-	{
-		_traderLog = format ["PLAYER: ( %1 ) %2 PURCHASED VEHICLE %3 FOR %4 POPTABS | PLAYER TOTAL MONEY: %5",getPlayerUID _playerObject,_playerObject,_vehicleClass,_salesPrice,_playerMoney];
-		"extDB2" callExtension format["1:TRADING:%1",_traderLog];
-	};
+	
+    // Advance Banking
+   _playerObject setVariable ["ExilePurse", _playerMoney];
+   format["updateWallet:%1:%2", _playerMoney, (getPlayerUID _playerObject)] call ExileServer_system_database_query_fireAndForget;
+   if (ADVBANKING_SERVER_DEBUG) then {[format["%1 purchased a vehicle",_playerObject],"VehicleRequest"] call ExileServer_banking_utils_diagLog;};
+   // Advance Banking
+
+	[_sessionID, "purchaseVehicleResponse", [0, netId _vehicleObject, str _playerMoney]] call ExileServer_system_network_send_to;
 }
 catch 
 {
 	_responseCode = _exception;
-	[_sessionID, "purchaseVehicleResponse", [_responseCode, "", 0]] call ExileServer_system_network_send_to;
+	[_sessionID, "purchaseVehicleResponse", [_responseCode, "", ""]] call ExileServer_system_network_send_to;
 };
 if !(isNull _playerObject) then 
 {

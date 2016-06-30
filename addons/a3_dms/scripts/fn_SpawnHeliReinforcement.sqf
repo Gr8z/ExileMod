@@ -21,16 +21,19 @@
     Returns the index of the paratrooper info in "DMS_HeliParatrooper_Arr", -1 on error.
 */
 
+private ["_heliClass", "_groupOwner", "_spawnPos", "_heli", "_pilot", "_units", "_crewCount", "_paratrooperCount", "_unit", "_cargoIndex"];
+
+
 if !(params
 [
-    "_AIGroup",
-    "_class",
-    "_difficulty",
-    "_side",
-    "_dropPoint",
-    "_ejectFFVGunners",
-    "_maxJumpers",
-    "_remainAsGunship"
+    ["_AIGroup", 0, [grpNull]],
+    ["_class", 0, [""]],
+    ["_difficulty", 0, [""]],
+    ["_side", 0, [""]],
+    ["_dropPoint", 0, [[],objNull], [2,3]],
+    ["_ejectFFVGunners", 0, [false]],
+    ["_maxJumpers",0,[0]],
+    ["_remainAsGunship", 0, [false]]
 ])
 exitWith
 {
@@ -44,7 +47,7 @@ if (isNull _AIGroup) exitWith
     -1
 };
 
-private _heliClass = if ((count _this)>8) then {_this param [8, "", [""]]} else {selectRandom DMS_ReinforcementHelis};
+_heliClass = if ((count _this)>8) then {_this param [8, "", [""]]} else {selectRandom DMS_ReinforcementHelis};
 
 // Make the AI group local to add passengers.
 if !(local _AIGroup) then
@@ -54,7 +57,7 @@ if !(local _AIGroup) then
 };
 
 // Get the spawn position for the heli
-private _spawnPos =
+_spawnPos =
     if ((count _this)>9) then
     {
         _this param [9, [0,0,0], [[]], [2,3]]
@@ -83,7 +86,7 @@ _spawnPos set [2,DMS_RHeli_Height];
 
 
 // Spawn the heli
-private _heli = createVehicle [_heliClass, _spawnPos, [], 0, "FLY"];
+_heli = createVehicle [_heliClass, _spawnPos, [], 0, "FLY"];
 _heli setFuel 1;
 _heli engineOn true;
 _heli lock 2;
@@ -92,8 +95,9 @@ _AIGroup addVehicle _heli;
 
 
 // Spawn the AI paratroopers
-private _paratrooperCount = 0;
-private _units = (fullCrew [_heli, "", true]) apply
+_units = [];
+_paratrooperCount = 0;
+_crewCount =
 {
     _x params
     [
@@ -111,7 +115,7 @@ private _units = (fullCrew [_heli, "", true]) apply
             _unit = [_AIGroup,_spawnPos,_class,_difficulty,_side,"Vehicle"] call DMS_fnc_SpawnAISoldier;
             _unit moveInDriver _heli;
             _unit setVariable ["DMS_AssignedVeh",_heli];
-            _unit setDestination [_dropPoint, "VEHICLE PLANNED", true];
+            _pilot = _unit;
         };
 
         case "commander";
@@ -146,12 +150,14 @@ private _units = (fullCrew [_heli, "", true]) apply
             };
         };
     };
+    _units pushBack _unit;
 
-    _unit
-};
+    true
+} count (fullCrew [_heli, "", true]);
 
 
 // Set the heli pilot's behavior.
+_pilot setDestination [_dropPoint, "VEHICLE PLANNED", true];
 _heli flyInHeight DMS_RHeli_Height;
 
 
@@ -165,7 +171,7 @@ if !(isNil "_groupOwner") then
 
 if (DMS_DEBUG) then
 {
-	(format ["SpawnHeliReinforcement :: Created a %1 heli (%2) with %3 crew members at %4 with %5 difficulty to group %6, going to %7. Units: %8",_side,_heliClass,count _units,_spawnPos,_difficulty,_AIGroup,_dropPoint,_units]) call DMS_fnc_DebugLog;
+	(format ["SpawnHeliReinforcement :: Created a %1 heli (%2) with %3 crew members at %4 with %5 difficulty to group %6, going to %7. Units: %8",_side,_heliClass,_crewCount+1,_spawnPos,_difficulty,_AIGroup,_dropPoint,_units]) call DMS_fnc_DebugLog;
 };
 
 // Add the necessary information to the monitor.

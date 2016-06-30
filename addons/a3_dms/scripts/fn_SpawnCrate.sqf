@@ -12,10 +12,13 @@
 
 */
 
+private ["_crateClassName", "_pos", "_crate"];
+
+
 if !(params
 [
-	"_crateClassName",
-	"_pos"
+	["_crateClassName","_crateClassName ERROR",[""]],
+	["_pos","_pos ERROR",[[]],[3]]
 ])
 exitWith
 {
@@ -29,9 +32,9 @@ if !(isClass (configFile >> "CfgVehicles" >> _crateClassName)) exitWith
 	objNull
 };
 
-private _spawnATL = if ((count _this)>2) then {_this select 2} else {true};
+_spawnATL = if ((count _this)>2) then {_this select 2} else {true};
 
-private _crate = createVehicle [_crateClassName,_pos,[], 0, "CAN_COLLIDE"];
+_crate = createVehicle [_crateClassName,_pos,[], 0, "CAN_COLLIDE"];
 
 _crate setDir (random 360);
 

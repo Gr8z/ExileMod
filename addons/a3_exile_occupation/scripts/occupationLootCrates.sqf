@@ -5,7 +5,8 @@ _logDetail = format ["[OCCUPATION:LootCrates]:: Starting Occupation Loot Crates"
 
 _logDetail = format["[OCCUPATION:LootCrates]:: worldname: %1 crates to spawn: %2",worldName,SC_numberofLootCrates];
 [_logDetail] call SC_fnc_log;
-private _position = [0,0,0];
+
+private['_position'];
 
 for "_i" from 1 to SC_numberofLootCrates do
 {
@@ -18,15 +19,16 @@ for "_i" from 1 to SC_numberofLootCrates do
 		
 		//Check if near another crate site
 		_nearOtherCrate = (nearestObjects [_position,["CargoNet_01_box_F"],500]) select 0;	
-		if (!isNil "_nearOtherCrate") then { _validspot = false; };			
+		if (!isNil "_nearOtherCrate") then { _validspot = false; };		
+	
 	};	
 	
-	_mapMarkerName = format ["SC_loot_marker_%1", _i];
+	_mapMarkerName = format ["loot_marker_%1", _i];
 	
 	if (SC_occupyLootCratesMarkers) then 
 	{
 		
-		_event_marker = createMarker [ format ["SC_loot_marker_%1", _i], _position];
+		_event_marker = createMarker [ format ["loot_marker_%1", _i], _position];
 		_event_marker setMarkerColor "ColorGreen";
 		_event_marker setMarkerAlpha 1;
 		_event_marker setMarkerText "Gear Crate";
@@ -79,7 +81,7 @@ for "_i" from 1 to SC_numberofLootCrates do
 		
 		
 		[_group, _spawnPosition, 100] call bis_fnc_taskPatrol;
-		_group setBehaviour "STEALTH";
+		_group setBehaviour "AWARE";
 		_group setCombatMode "RED";
 
 		_logDetail = format ["[OCCUPATION:LootCrates]::  Creating crate %3 at drop zone %1 with %2 guards",_position,_AICount,_i];
