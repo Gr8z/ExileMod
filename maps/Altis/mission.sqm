@@ -1,40 +1,38 @@
-version=12;
-class Mission
-{
+version = 12;
+
+class Mission {
 	addOns[]=
 	{
 		"exile_client",
 		"A3_Characters_F",
-		"a3_map_altis",
 		"tryk_backpack",
 		"extendedbase"
 	};
 	addOnsAuto[]=
 	{
 		"exile_client",
-		"a3_map_altis",
 		"A3_Characters_F"
 	};
-	randomSeed=8080942;
-	class Intel
-	{
+	randomSeed = 8080942;
+	
+	class Intel {
 		briefingName="[GG] Ghostz Gamerz ExileMod Altis";
 		overviewText="[GG] Ghostz Gamerz | Web: GHOSTZGAMERZ.com | TS: ts.ghostzgamerz.com";
-		timeOfChanges=1800.0002;
-		startWeather=0.30000001;
-		startWind=0.1;
-		startWaves=0.1;
-		forecastWeather=0.30000001;
-		forecastWind=0.1;
-		forecastWaves=0.1;
-		forecastLightnings=0.1;
-		year=2039;
-		month=6;
-		day=24;
-		hour=12;
-		minute=0;
-		startFogDecay=0.013;
-		forecastFogDecay=0.013;
+		timeOfChanges = 1800;
+		startWeather = 0.3;
+		startWind = 0.1;
+		startWaves = 0.1;
+		forecastWeather = 0.3;
+		forecastWind = 0.1;
+		forecastWaves = 0.1;
+		forecastLightnings = 0.1;
+		year = 2039;
+		month = 6;
+		day = 24;
+		hour = 12;
+		minute = 0;
+		startFogDecay = 0.013;
+		forecastFogDecay = 0.013;
 	};
 	
 	class Groups {
@@ -157,236 +155,79 @@ class Mission
 		};
 	};
 	
-	class Markers
-	{
-		items=28;
-
-		class Item0
-		{
-			position[]={3874.3633,18.125629,13280.79};
-			name="SpawnKavala";
-			text="Kavala";
-			type="ExileSpawnZone";
-			markerType="ELLIPSE";
-			colorName="ColorBlack";
-			fillName="Border";
-			a=500;
-			b=500;
-			drawBorder=1;
+	class Markers {
+		items = 20;
+		
+		class Item0 {
+			position[] = {3874.36, 18.1256, 13280.8};
+			name = "SpawnKavala";
+			text = "Kavala";
+			type = "ExileSpawnZone";
 		};
-		class Item1
-		{
-			position[]={9926.5293,12.364729,12083.253};
-			name="SpawnZaros";
-			text="Zaros";
-			type="ExileSpawnZone";
-			markerType="ELLIPSE";
-			colorName="ColorBlack";
-			fillName="Border";
-			a=500;
-			b=500;
-			drawBorder=1;
+		
+		class Item1 {
+			position[] = {9926.53, 12.3647, 12083.3};
+			name = "SpawnZaros";
+			text = "Zaros";
+			type = "ExileSpawnZone";
 		};
-		class Item2
-		{
-			position[]={20978.369,27.78056,7045.6055};
-			name="SpawnSelekano";
-			text="Selekano";
-			type="ExileSpawnZone";
-			markerType="ELLIPSE";
-			colorName="ColorBlack";
-			fillName="Border";
-			a=500;
-			b=500;
-			drawBorder=1;
+		
+		class Item2 {
+			position[] = {20978.4, 27.7806, 7045.61};
+			name = "SpawnSelekano";
+			text = "Selekano";
+			type = "ExileSpawnZone";
 		};
-		class Item3
-		{
-			position[]={17137.752,15.032475,12719.362};
-			name="SpawnPrygos";
-			text="Pyrgos";
-			type="ExileSpawnZone";
-			markerType="ELLIPSE";
-			colorName="ColorBlack";
-			fillName="Border";
-			a=500;
-			b=500;
-			drawBorder=1;
+		
+		class Item3 {
+			position[] = {17137.8, 15.0325, 12719.4};
+			name = "SpawnPrygos";
+			text = "Pyrgos";
+			type = "ExileSpawnZone";
 		};
-		class Item4
-		{
-			position[]={25713.313,20.344301,21329.576};
-			name="SpawnSofia";
-			text="Sofia";
-			type="ExileSpawnZone";
-			markerType="ELLIPSE";
-			colorName="ColorBlack";
-			fillName="Border";
-			a=500;
-			b=500;
-			drawBorder=1;
+		
+		class Item4 {
+			position[] = {25713.3, 20.3443, 21329.6};
+			name = "SpawnSofia";
+			text = "Sofia";
+			type = "ExileSpawnZone";
 		};
-		class Item5
-		{
-			position[]={8612.5283,180.58038,18272.271};
-			name="SpawnSyrta";
-			text="Syrta";
-			type="ExileSpawnZone";
-			markerType="ELLIPSE";
-			colorName="ColorBlack";
-			fillName="Border";
-			a=500;
-			b=500;
-			drawBorder=1;
+		
+		class Item5 {
+			position[] = {8612.53, 180.58, 18272.3};
+			name = "SpawnSyrta";
+			text = "Syrta";
+			type = "ExileSpawnZone";
 		};
-		class Item6
-		{
-			position[]={14599.966,22.349989,16797.193};
-			name="MafiaTraderCity";
-			text="Mafia";
-			type="ExileTraderZone";
-			markerType="ELLIPSE";
-			colorName="ColorGreen";
-			fillName="SolidBorder";
-			a=175;
-			b=175;
-			drawBorder=1;
+		
+		class Item6 {
+			position[] = {14016.512,25.106031,18759.818};
+			name = "SpawnAthira";
+			text = "Athira";
+			type = "ExileSpawnZone";
 		};
-		class Item7
-		{
-			position[]={14599.966,22.349989,16797.193};
-			name="TraderCityMarkerIcon";
-			text="";
-			type="ExileTraderZoneIcon";
+		
+		class Item7 {
+			position[] = {9281.4365,122.98421,15820.145};
+			name = "SpawnAgios";
+			text = "Agios";
+			type = "ExileSpawnZone";
+		};	
+		
+		class Item8 {
+			position[] = {18066.883,26.88798,15219.655};
+			name = "SpawnCharkia";
+			text = "Charkia";
+			type = "ExileSpawnZone";
 		};
-
-		class Item8
-		{
-			position[]={23334.605,4.0095582,24188.938};
-			name="TraderZoneSilderas";
-			text="Trader";
-			markerType="ELLIPSE";
-			type="ExileTraderZone";
-			colorName="ColorGreen";
-			fillName="SolidBorder";
-			a=175;
-			b=175;
-			drawBorder=1;
+		
+		class Item9 {
+			position[] = {20926.896,44.535809,16914.789};
+			name = "SpawnParos";
+			text = "Paros";
+			type = "ExileSpawnZone";
 		};
-		class Item9
-		{
-			position[]={23334.605,4.0095582,24188.938};
-			name="TraderZoneSilderasIcon";
-			text="";
-			type="ExileTraderZoneIcon";
-		};
-
 		class Item10
-		{
-			position[]={2998.0603,3.7756021,18175.479};
-			name="TraderZoneFolia";
-			text="Trader";
-			markerType="ELLIPSE";
-			type="ExileTraderZone";
-			colorName="ColorGreen";
-			fillName="SolidBorder";
-			a=175;
-			b=175;
-			drawBorder=1;
-		};
-		class Item11
-		{
-			position[]={2998.0603,3.7756021,18175.479};
-			name="TraderZoneFoliaIcon";
-			text="";
-			type="ExileTraderZoneIcon";
-		};
-
-
-		class Item12
-		{
-			position[]={14354.0,0,18960.1};
-			name="ConcreteMixerZoneAthira";
-			text="Concrete Mixer";
-			markerType="ELLIPSE";
-			type="ExileConcreteMixerZone";
-			colorName="ColorGreen";
-			fillName="SolidBorder";
-			a=750;
-			b=750;
-			drawBorder=1;
-		};
-		class Item13
-		{
-			position[]={14354.0,0,18960.1};
-			name="ConcreteMixerZoneAthiraIcon";
-			text="";
-			type="ExileConcreteMixerZoneIcon";
-		};
-
-
-		class Item14
-		{
-			position[]={18309.4,0,15575.0};
-			name="ConcreteMixerZoneCharkia";
-			text="Concrete Mixer";
-			markerType="ELLIPSE";
-			type="ExileConcreteMixerZone";
-			colorName="ColorGreen";
-			fillName="SolidBorder";
-			a=750;
-			b=750;
-			drawBorder=1;
-		};
-		class Item15
-		{
-			position[]={18309.4,0,15575.0};
-			name="ConcreteMixerZoneCharkiaIcon";
-			text="";
-			type="ExileConcreteMixerZoneIcon";
-		};
-
-		class Item16
-		{
-			position[]={11391.2,0,14259.5};
-			name="ConcreteMixerZoneAlikampos";
-			text="Concrete Mixer";
-			markerType="ELLIPSE";
-			type="ExileConcreteMixerZone";
-			colorName="ColorGreen";
-			fillName="SolidBorder";
-			a=750;
-			b=750;
-			drawBorder=1;
-		};
-		class Item17
-		{
-			position[]={11391.2,0,14259.5};
-			name="ConcreteMixerZoneAlikamposIcon";
-			text="";
-			type="ExileConcreteMixerZoneIcon";
-		};
-		class Item18
-		{
-			position[]={21845.1,0,20977.6};
-			name="ContaminatedZoneGhostHotel";
-			text="Contaminated Zone";
-			markerType="ELLIPSE";
-			type="ExileContaminatedZone";
-			colorName="ColorGreen";
-			fillName="SolidBorder";
-			a=400;
-			b=400;
-			drawBorder=1;
-		};
-		class Item19
-		{
-			position[]={21845.1,0,20977.6};
-			name="ContaminatedZoneGhostHotelIcon";
-			text="";
-			type="ExileContaminatedZoneIcon";
-		};
-		class Item20
 		{
 			position[]={11830.985,0,26582.57};
 			name="Website";
@@ -394,7 +235,7 @@ class Mission
 			type="mil_pickup";
 			colorName="ColorYellow";
 		};
-		class Item21
+		class Item11
 		{
 			position[]={11832.687,0,26008.523};
 			name="Teamspeak";
@@ -402,35 +243,79 @@ class Mission
 			type="mil_pickup";
 			colorName="ColorYellow";
 		};
-		class Item22 
+		class Item12
 		{
-			position[] = {14016.512,25.106031,18759.818};
-			name = "SpawnAthira";
-			text = "Athira";
-			type = "ExileSpawnZone";
+			position[]={14600,22.35,16797.199};
+			name="TraderCityMarker";
+			text="Mafia Trader City";
+			markerType="ELLIPSE";
+			type="ExileTraderZone";
+			colorName="ColorGreen";
+			fillName="SolidBorder";
+			a=175;
+			b=175;
+			drawBorder=1;
 		};
-		class Item23 
+		class Item13
 		{
-			position[] = {9281.4365,122.98421,15820.145};
-			name = "SpawnAgios";
-			text = "Agios";
-			type = "ExileSpawnZone";
-		};	
-		class Item24
-		{
-			position[] = {18066.883,26.88798,15219.655};
-			name = "SpawnCharkia";
-			text = "Charkia";
-			type = "ExileSpawnZone";
+			position[]={23334.6,4.0095601,24188.9};
+			name="TraderZoneSilderas";
+			text="Silderas Trader City";
+			markerType="ELLIPSE";
+			type="ExileTraderZone";
+			colorName="ColorGreen";
+			fillName="SolidBorder";
+			a=175;
+			b=175;
+			drawBorder=1;
 		};
-		class Item25
+		class Item14
 		{
-			position[] = {20926.896,44.535809,16914.789};
-			name = "SpawnParos";
-			text = "Paros";
-			type = "ExileSpawnZone";
+			position[]={2998.0601,3.7756,18175.5};
+			name="TraderZoneFolia";
+			text="Folia Trader City";
+			markerType="ELLIPSE";
+			type="ExileTraderZone";
+			colorName="ColorGreen";
+			fillName="SolidBorder";
+			a=175;
+			b=175;
+			drawBorder=1;
 		};
-		class Item26
+		class Item15
+		{
+			position[]={23334.6,4.0095601,24188.9};
+			name="Sideras Safe Zone";
+			text="Trader City Sideras";
+			type="loc_Tree";
+			colorName="ColorWhite";
+			fillName="Vertical";
+			a=3;
+			b=3;
+		};
+		class Item16
+		{
+			position[]={14600,22.35,16797.199};
+			name="Terminal SAFE ZONE";
+			text="Trader City Terminal";
+			type="loc_Tree";
+			colorName="ColorWhite";
+			fillName="Vertical";
+			a=3;
+			b=3;
+		};
+		class Item17
+		{
+			position[]={2998.0601,3.7756,18175.5};
+			name="Fotia SAFE ZONE";
+			text="Trader City Fotia";
+			type="loc_Tree";
+			colorName="ColorWhite";
+			fillName="Vertical";
+			a=3;
+			b=3;
+		};
+		class Item18
 		{
 			position[]={20521.777,45.45591,11037.807};
 			name="TraderZoneChalkeia";
@@ -443,102 +328,88 @@ class Mission
 			b=175;
 			drawBorder=1;
 		};
-		class Item27
+		class Item19
 		{
 			position[]={20521.777,45.45591,11037.807};
-			name="TraderZoneChalkeiaIcon";
-			text="";
-			type="ExileTraderZoneIcon";
+			name="Chalkeia SAFE ZONE";
+			text="Trader City Dome";
+			type="loc_Tree";
+			colorName="ColorWhite";
+			fillName="Vertical";
+			a=3;
+			b=3;
 		};
 	};
 };
-class Intro
-{
-	addOns[]=
-	{
-		"a3_map_altis"
-	};
-	addOnsAuto[]=
-	{
-		"a3_map_altis"
-	};
-	randomSeed=3611332;
-	class Intel
-	{
-		timeOfChanges=1800.0002;
-		startWeather=0.30000001;
-		startWind=0.1;
-		startWaves=0.1;
-		forecastWeather=0.30000001;
-		forecastWind=0.1;
-		forecastWaves=0.1;
-		forecastLightnings=0.1;
-		year=2035;
-		month=6;
-		day=24;
-		hour=12;
-		minute=0;
-		startFogDecay=0.013;
-		forecastFogDecay=0.013;
+
+class Intro {
+	addOns[] = {"a3_map_altis"};
+	addOnsAuto[] = {"a3_map_altis"};
+	randomSeed = 3611332;
+	
+	class Intel {
+		timeOfChanges = 1800;
+		startWeather = 0.3;
+		startWind = 0.1;
+		startWaves = 0.1;
+		forecastWeather = 0.3;
+		forecastWind = 0.1;
+		forecastWaves = 0.1;
+		forecastLightnings = 0.1;
+		year = 2035;
+		month = 6;
+		day = 24;
+		hour = 12;
+		minute = 0;
+		startFogDecay = 0.013;
+		forecastFogDecay = 0.013;
 	};
 };
-class OutroWin
-{
-	addOns[]=
-	{
-		"a3_map_altis"
-	};
-	addOnsAuto[]=
-	{
-		"a3_map_altis"
-	};
-	randomSeed=15572598;
-	class Intel
-	{
-		timeOfChanges=1800.0002;
-		startWeather=0.30000001;
-		startWind=0.1;
-		startWaves=0.1;
-		forecastWeather=0.30000001;
-		forecastWind=0.1;
-		forecastWaves=0.1;
-		forecastLightnings=0.1;
-		year=2035;
-		month=6;
-		day=24;
-		hour=12;
-		minute=0;
-		startFogDecay=0.013;
-		forecastFogDecay=0.013;
+
+class OutroWin {
+	addOns[] = {"a3_map_altis"};
+	addOnsAuto[] = {"a3_map_altis"};
+	randomSeed = 15572598;
+	
+	class Intel {
+		timeOfChanges = 1800;
+		startWeather = 0.3;
+		startWind = 0.1;
+		startWaves = 0.1;
+		forecastWeather = 0.3;
+		forecastWind = 0.1;
+		forecastWaves = 0.1;
+		forecastLightnings = 0.1;
+		year = 2035;
+		month = 6;
+		day = 24;
+		hour = 12;
+		minute = 0;
+		startFogDecay = 0.013;
+		forecastFogDecay = 0.013;
 	};
 };
-class OutroLoose
-{
-	addOns[]=
-	{
-		"a3_map_altis"
-	};
-	addOnsAuto[]=
-	{
-		"a3_map_altis"
-	};
-	randomSeed=13194853;
-	class Intel
-	{
-		timeOfChanges=1800.0002;
-		startWeather=0.30000001;
-		startWind=0.1;
-		startWaves=0.1;
-		forecastWeather=0.30000001;
-		forecastWind=0.1;
-		forecastWaves=0.1;
-		forecastLightnings=0.1;
-		year=2035;
-		month=6;
-		day=24;
-		hour=12;
-		minute=0;
-		startFogDecay=0.013;
-		forecastFogDecay=0.013;
+
+class OutroLoose {
+	addOns[] = {"a3_map_altis"};
+	addOnsAuto[] = {"a3_map_altis"};
+	randomSeed = 13194853;
+	
+	class Intel {
+		timeOfChanges = 1800;
+		startWeather = 0.3;
+		startWind = 0.1;
+		startWaves = 0.1;
+		forecastWeather = 0.3;
+		forecastWind = 0.1;
+		forecastWaves = 0.1;
+		forecastLightnings = 0.1;
+		year = 2035;
+		month = 6;
+		day = 24;
+		hour = 12;
+		minute = 0;
+		startFogDecay = 0.013;
+		forecastFogDecay = 0.013;
 	};
 };
