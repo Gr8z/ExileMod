@@ -37,15 +37,15 @@ _weaponClassNames = [];
 	};
 }
 forEach _arsenal;
-if ((count _weaponClassNames) > 0) then 
-{
-	for "_i" from 0 to 100 do 
-	{
-		"ERROR! ERROR! ERROR! ERROR! ERROR! ERROR!" call ExileServer_util_log;
-	};
-	"You have added weapons to your server that spawn in with attachments." call ExileServer_util_log;
-	"This will allow duping and money farming!" call ExileServer_util_log;
-	"To solve this, please remove the following weapons from your loot tables and trader config OR replace them with their non-attachment equivalent:" call ExileServer_util_log;
-	format ["%1", _weaponClassNames] call ExileServer_util_log;
-	"Example: Use arifle_Katiba_F instead of arifle_Katiba_ACO_pointer_snds_F." call ExileServer_util_log;
-};
+//if ((count _weaponClassNames) > 0) then 
+//{
+//	for "_i" from 0 to 100 do 
+//	{
+//		"ERROR! ERROR! ERROR! ERROR! ERROR! ERROR!" call ExileServer_util_log;
+//	};
+//	"You have added weapons to your server that spawn in with attachments." call ExileServer_util_log;
+//	"This will allow duping and money farming!" call ExileServer_util_log;
+//	"To solve this, please remove the following weapons from your loot tables and trader config OR replace them with their non-attachment equivalent:" call ExileServer_util_log;
+//	format ["%1", _weaponClassNames] call ExileServer_util_log;
+//	"Example: Use arifle_Katiba_F instead of arifle_Katiba_ACO_pointer_snds_F." call ExileServer_util_log;
+//};
