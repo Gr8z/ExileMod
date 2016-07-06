@@ -1790,6 +1790,7 @@ class CfgExileArsenal
 	class Exile_Item_MetalWire						{ quality = 1; price = 300; };
 	class Exile_Item_Cement							{ quality = 1; price = 1500; };
 	class Exile_Item_Sand							{ quality = 1; price = 1500; };
+	class Exile_Item_MetalHedgehogKit				{ quality = 1; price = 800; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Food
@@ -6619,7 +6620,7 @@ class CfgTraderCategories
 			"Exile_Item_MetalWire",
 			"Exile_Item_Laptop",
 			"Exile_Item_BaseCameraKit",
-			//"Exile_Item_MetalHedgehogKit",
+			"Exile_Item_MetalHedgehogKit",
 			//"Exile_Item_CarWheel",
 			"Exile_Item_Cement",
 			"Exile_Item_Sand"
