@@ -7447,11 +7447,11 @@ class CfgTrading
 	class requiredRespect 
 	{
 		Level1 = 0;
-		Level2 = 5000;
-		Level3 = 10000;
-		Level4 = 15000;
-		Level5 = 20000;
-		Level6 = 25000;
+		Level2 = 0;
+		Level3 = 0;
+		Level4 = 0;
+		Level5 = 0;
+		Level6 = 0;
 	};
 };
 class CfgVehicleCustoms
