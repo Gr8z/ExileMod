@@ -17,7 +17,7 @@ _ammoName = _weapon select 2;
 _ammoMAX = _weapon select 3;
 _ammoMIN = _weapon select 4;
 _turret = _weapon select 5;
-_exilew = ExileClientPlayerMoney;
+_exilew = player getVariable ["ExileMoney", 0];
 _veh = vehicle player; 
 
 if (!local _vehicle) exitWith {cutText [format["%2 is not local to %1 - Re-Arm Denied!",name player, _name], "PLAIN DOWN"]; diag_log format["Error: called service_point_rearm.sqf with non-local vehicle: %1", _vehicle] };
@@ -31,8 +31,7 @@ if(_magscount > _ammoMAX)exitWith{cutText [format["You already have %1 magazine(
 if(_ammocount > _ammoMIN)exitWith{cutText [format["You already have %1 magazine(s) of %2 in %3\nTotal of %4 magazine(s)",_ammocount,_ammoName,_weaponName,_magscount], "PLAIN DOWN"];};
  
 if(_costs > 0)then{
-		ExileClientPlayerMoney = ExileClientPlayerMoney - _costs;
-        ["buyRequest",["WALLET",str(_costs)]] call ExileClient_system_network_send;
+		player setVariable ["ExileMoney", ((player getVariable ["ExileMoney", 0]) - _costs)];
 };
  
 // add a magazines

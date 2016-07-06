@@ -59,6 +59,10 @@ else
 					};
 					_object setVariable ["ExileIsLocked",0];
 				};
+				if (_object isKindOf "Exile_Container_Safe") then 
+				{
+					_object animate ['DoorRotation', 1];
+				};
 				[_sessionID,"lockResponse",["Unlocked!", true , netId _object , _objectPinCode, 0]] call ExileServer_system_network_send_to;
 				_object enableRopeAttach true;
 			}
@@ -79,6 +83,10 @@ else
 						[owner _object,"LockVehicleRequest",[netId _object,true]] call ExileServer_system_network_send_to;
 					};
 					_object setVariable ["ExileIsLocked",-1];
+				};
+				if (_object isKindOf "Exile_Container_Safe") then 
+				{
+					_object animate ['DoorRotation', 0];
 				};
 				[_sessionID,"lockResponse",["Locked!",true, netId _object, _objectPinCode, 2]] call ExileServer_system_network_send_to;
 				_object enableRopeAttach false;

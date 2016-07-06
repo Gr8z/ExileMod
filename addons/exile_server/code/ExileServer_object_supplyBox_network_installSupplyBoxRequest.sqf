@@ -22,25 +22,29 @@ try
 	};
 	if !((typeOf _box) isEqualTo "Exile_Container_SupplyBox") then 
 	{
-		throw "That is not a container!";
+		throw "Fuck off";
+	};
+	if!((_box getVariable ["ExileDatabaseID", -1]) isEqualTo -1)then
+	{
+		throw "Container already installed.";
 	};
 	_territory = _box call ExileClient_util_world_getTerritoryAtPosition;
 	if (isNull _territory) then
 	{
-		throw "Only allowed to install in a territory!";
+		throw "Only allowed to install in a territory.";
 	};
 	_playerObject = _sessionID call ExileServer_system_session_getPlayerObject;
 	_access = [_territory,getPlayerUID _playerObject] call ExileClient_util_territory_getAccessLevel;
 	if (_access select 0 isEqualTo 0) then 
 	{
-		throw "Not allowed to install in this territory!";
+		throw "Not allowed to install in this territory.";
 	};
 	_box setVariable ["ExileOwnerUID", getPlayerUID _playerObject,true];
 	_containerID = _box call ExileServer_object_container_database_insert;
-	[_sessionID,"notificationRequest",["Success",["SupplyBox installed"]]] call ExileServer_system_network_send_to;
+	[_sessionID, "toastRequest", ["SuccessTitleOnly", ["Supply box installed!"]]] call ExileServer_system_network_send_to;
 }
 catch
 {
-	[_sessionID,"notificationRequest",["Whoops",[_exception]]] call ExileServer_system_network_send_to;
+	[_sessionID, "toastRequest", ["ErrorTitleAndText", ["Failed to install!", _exception]]] call ExileServer_system_network_send_to;
 };
 true

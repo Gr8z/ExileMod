@@ -1,30 +1,30 @@
-#include "GG\GG_Exile_AdminMenu.hpp"
-#include "GG\AdvancedBanking\Dialog\AdvBanking_Client_Defines.hpp"
-#include "GG\AdvancedBanking\Dialog\AdvBanking_Client_ATMDialog.hpp"
-#include "GG\XM8_apps\XM8_apps_sliders.hpp"
+#include "GG\infiSTAR_Exile_AdminMenu.hpp"
+#include "GG\CfgRemoteExec.hpp"
+#include "GG\ExAdClient\ExAd.cpp"
 
 // https://community.bistudio.com/wiki/Description.ext#forceRotorLibSimulation
 forceRotorLibSimulation = 2;
 
 // https://community.bistudio.com/wiki/Description.ext#disableChannels
-disableChannels[] = {0, 2};
+//disableChannels[] = {0, 2};
 
-author = "[GG] Ghostz Gamerz";
+author = "Ghostz Gamerz";
 loadScreen = "GG\images\logo.jpg"; 
-onLoadMission= "www.GHOSTZGAMERZ.com";
+onLoadMission= "www.ghostzgamerz.com";
 OnLoadIntro = "";
 OnLoadIntroTime = false;
 OnLoadMissionTime = false;
-onLoadName = "Exile Mod";
- 
+onLoadName = "GG Exile Mod Altis";
+
 class Header
 {
 	gameType = Sandbox;
 	minPlayers = 1;
-	maxPlayers = 101;
+	maxPlayers = 100;
 };
 
 // DO NOT CHANGE THIS! +
+skipLobby = 1;
 showHUD[] = 
 {
     true,   // Scripted HUD (same as showHUD command)
@@ -32,13 +32,17 @@ showHUD[] =
     true,   // Vehicle radar 
     true,   // Vehicle compass
     true,   // Tank direction indicator
-    true,   // Commanding menu
+    false,   // Commanding menu
     false,   // Group Bar
-    true    // HUD Weapon Cursors
+    true,    // HUD Weapon Cursors
+    false   // Squad Radar
 };
 
+// Automatically take a free slot in lobby
+joinUnassigned = 1;
+
 respawn = "BASE";
-respawnDelay = 20;
+respawnDelay = 10;
 respawnDialog = 0;
 respawnOnStart = 0;
 respawnButton = 1; 
@@ -57,9 +61,6 @@ wreckRemovalMaxTime = 360;
 
 // When scripted player is enabled, game no longer shows "No player select" error message upon mission start when no player unit is present. 
 scriptedPlayer = 1;
-
-// Automatically take a free slot in lobby
-joinUnassigned = 1;
 
 // Removes all playable units which do not have a human player.
 disabledAI = true;
@@ -80,27 +81,10 @@ allowFunctionsLog = 1;
 // 0 = Default behavior, available only in editor
 // 1 = Available in SP and for hosts / logged in admins
 // 2 = Available for everyone
-enableDebugConsole = 1; // 2 = dangerous in MP
+enableDebugConsole = 0; // 2 = dangerous in MP
 
 // NO NO NO
 allowFunctionsRecompile = 0;
-
-class CfgSounds
-{
-	sounds[] = {intro,cam};
-	class intro
-	{
-		name = "intro";
-		sound[] = {"\GG\introsong.ogg", 1, 1};
-		titles[] = {};
-	};
-	class cam
-	{
-		name = "cam";
-		sound[] = {"\GG\XM8_apps\sounds\cam.ogg", 1, 1};
-		titles[] = {};
-	};
-};
 
 class cfgFunctions
 {
@@ -110,12 +94,17 @@ class cfgFunctions
 class RscTitles
 {
 	#include "GG\StatusBar\statusBar.hpp"
-	#include "GG\AdvancedBanking\Dialog\AdvBanking_Client_CreditCard.hpp"
 	#include "GG\ExAdClient\RscTitles.cpp"
 };
+
 class CfgHints
 {
 	#include "GG\ExAdClient\CfgHints.cpp"
+};
+
+class CfgNetworkMessages
+{
+	#include "GG\ExAdClient\CfgNetworkMessages.cpp"
 };
 
 #include "GG\config.cpp"

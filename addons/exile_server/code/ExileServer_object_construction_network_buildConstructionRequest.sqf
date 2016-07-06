@@ -27,47 +27,57 @@ try
 	{
 		case 1:
 		{
-			throw "You are not in your territory!";
+			throw "You are not in your territory.";
+		};
+		case 11:
+		{
+			throw "You are too close to a concrete mixer.";
+		};
+		case 10:
+		{
+			throw "Building is blocked here.";
 		};
 		case 2:
 		{
-			throw "You are inside enemy territory!";
+			throw "You are inside enemy territory.";
 		};
 		case 8:
 		{
-			throw "You are in a contaminated zone!";
+			throw "You are in a contaminated zone.";
 		};
 		case 3:
 		{
-			throw "This cannot be placed on roads!";
+			throw "This cannot be placed on roads.";
 		};
 		case 5:
 		{
-			throw "You are too close to a spawn zone!";
+			throw "You are too close to a spawn zone.";
 		};
 		case 4:
 		{
-			throw "You are too close to traders!";
+			throw "You are too close to traders.";
 		};
 		case 6:
 		{
-			throw "Maximum number of objects reached!";
+			throw "Maximum number of objects reached.";
 		};
 		case 7:
 		{
-			throw "This snap location is already being used!";
+			throw "This snap location is already being used.";
 		};
 	};
 	_object = createVehicle[_objectClassName, _objectPosition, [], 0, "CAN_COLLIDE"];
 	_object setPosATL _objectPosition;
 	_object setVariable ["BIS_enableRandomization", false];
+	_object setOwner (owner _playerObject);
 	_object enableSimulationGlobal false;
 	_object setVariable ["ExileOwnerUID", getPlayerUID _playerObject];
+	_playerObject setVariable ["ExileConstructionObject", _object];
 	[_object, _playerObject] call ExileServer_system_swapOwnershipQueue_add;
 	[_sessionID, "constructionResponse", [netid _object]] call ExileServer_system_network_send_to;
 }
 catch
 {
-	[_sessionID,"notificationRequest", ["Whoops", [_exception]]] call ExileServer_system_network_send_to;
+	[_sessionID, "toastRequest", ["ErrorTitleAndText", ["Construction aborted!", _exception]]] call ExileServer_system_network_send_to;
 };
 true

@@ -61,14 +61,14 @@ _group =
 
 
 // Create Crate
-_crate = ["Exile_Container_SupplyBox",_pos] call DMS_fnc_SpawnCrate;
+_crate = ["Box_NATO_Wps_F",_pos] call DMS_fnc_SpawnCrate;
 
 // Set crate loot values
 _crate_loot_values =
 [
-	16,		// Weapons
-	10,		// Items
-	4 		// Backpacks
+	8,		// Weapons
+	5,		// Items
+	2 		// Backpacks
 ];
 
 

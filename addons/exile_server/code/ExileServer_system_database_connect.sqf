@@ -46,6 +46,9 @@ try
 	};
 	ExileServerStartTime = (call compile ("extDB2" callExtension "9:LOCAL_TIME")) select 1;
 	"Database protocol initialized!" call ExileServer_util_log;
+	"extDB2" callExtension "9:ADD_PROTOCOL:LOG:TRADING:Exile_TradingLog";
+	"extDB2" callExtension "9:ADD_PROTOCOL:LOG:DEATH:Exile_DeathLog";
+	"extDB2" callExtension "9:ADD_PROTOCOL:LOG:TERRITORY:Exile_TerritoryLog";
 	"extDB2" callExtension "9:LOCK";
 	_isConnected = true;
 }

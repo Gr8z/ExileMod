@@ -61,7 +61,7 @@ _group =
 
 
 // Create Crates
-_crate1 = ["Exile_Container_SupplyBox",_pos] call DMS_fnc_SpawnCrate;
+_crate1 = ["Box_NATO_Wps_F",_pos] call DMS_fnc_SpawnCrate;
 
 _rndDir = random 180;
 

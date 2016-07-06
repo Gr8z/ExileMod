@@ -37,17 +37,17 @@ try
 	_minimumDistanceToTraderZones = getNumber (missionConfigFile >> "CfgTerritories" >> "minimumDistanceToTraderZones");
 	if ([_objectPosition, _minimumDistanceToTraderZones] call ExileClient_util_world_isTraderZoneInRange) then 
 	{
-		throw "You cannot build close to trader zones!";
+		throw "You cannot build close to trader zones.";
 	};
 	_minimumDistanceToSpawnZones = getNumber (missionConfigFile >> "CfgTerritories" >> "minimumDistanceToSpawnZones");
 	if ([_objectPosition, _minimumDistanceToSpawnZones] call ExileClient_util_world_isSpawnZoneInRange) then 
 	{
-		throw "You cannot build close to spawn zones!";
+		throw "You cannot build close to spawn zones.";
 	};
 	_maximumTerritoryRadius = getNumber (missionConfigFile >> "CfgTerritories" >> "minimumDistanceToOtherTerritories");
 	if ([_objectPosition, _maximumTerritoryRadius] call ExileClient_util_world_isTerritoryInRange) then 
 	{
-		throw "You are too close to enemy territory!";
+		throw "You are too close to enemy territory.";
 	};
 	_object = createVehicle[_objectClassName, _objectPosition, [], 0, "CAN_COLLIDE"];	
 	_object setPos _objectPosition;
@@ -69,7 +69,7 @@ try
 }
 catch
 {
-	[_sessionID,"notificationRequest", ["Whoops", [_exception]]] call ExileServer_system_network_send_to;
+	[_sessionID, "toastRequest", ["ErrorTitleAndText", ["Construction aborted!", _exception]]] call ExileServer_system_network_send_to;
 	_exception call ExileServer_util_log;
 };
 true

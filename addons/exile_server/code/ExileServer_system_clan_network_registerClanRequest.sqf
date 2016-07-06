@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_parameters","_clanName","_player","_alphabet","_forbiddenCharacter","_registrationFee","_playerMoney","_clanID"];
+private["_sessionID","_parameters","_clanName","_player","_alphabet","_forbiddenCharacter","_registrationFee","_playerMoney","_playerUid","_clanID","_hashValue"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
 _clanName = _parameters select 0;
@@ -41,16 +41,32 @@ try
 		throw 4;
 	};
 	_playerMoney = _playerMoney - _registrationFee;
-	_player setVariable ["ExileMoney", _playerMoney];
-	format["setAccountMoney:%1:%2", _playerMoney, getPlayerUID _player] call ExileServer_system_database_query_fireAndForget;
-	_clanID = format["createClan:%1:%2", getPlayerUID _player, _clanName] call ExileServer_system_database_query_insertSingle;
+	_player setVariable ["ExileMoney", _playerMoney, true];
+	format["setPlayerMoney:%1:%2", _playerMoney, _player getVariable ["ExileDatabaseID", 0]] call ExileServer_system_database_query_fireAndForget;
+	_playerUid = getPlayerUID _player;
+	_clanID = format["createClan:%1:%2", _playerUid, _clanName] call ExileServer_system_database_query_insertSingle;
+	_hashValue = 
+	[
+		_clanName,		
+		_playerUid,		
+		[				
+			[
+				_playerUid,		
+				_player getVariable ["ExileName",""]	
+			]
+		],
+		[],			
+		[],			
+		grpNull
+	];
+	missionNameSpace setVariable [format ["ExileServer_clan_%1",_clanID],_hashValue];
 	format["setAccountClanLink:%1:%2", _clanID, getPlayerUID _player] call ExileServer_system_database_query_fireAndForget;
 	_player setVariable ["ExileClanID", _clanID];
-	_player setVariable ["ExileClanName", _clanName];
-	[_sessionID, "registerClanResponse", [0, _clanName, str _playerMoney]] call ExileServer_system_network_send_to;
+	_player setVariable ["ExileData", _hashValue];
+	[_sessionID, "registerClanResponse", [0, _registrationFee,_hashValue]] call ExileServer_system_network_send_to;
 }
 catch
 {
-	[_sessionID, "registerClanResponse", [_exception, "", 0]] call ExileServer_system_network_send_to;
+	[_sessionID, "registerClanResponse", [_exception, 0, []]] call ExileServer_system_network_send_to;
 };
 true

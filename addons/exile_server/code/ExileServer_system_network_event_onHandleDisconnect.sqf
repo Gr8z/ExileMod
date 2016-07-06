@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_unit","_id","_pos","_newUnitDeaths","_sessionID"];
+private["_unit","_id","_pos","_newUnitDeaths","_constructionObject","_sessionID"];
 _unit = _this select 0;
 _id = _this select 1;
 _uid = _this select 2;
@@ -18,6 +18,16 @@ _pos = getPos _unit;
 _newUnitDeaths = _unit getVariable ["ExileDeaths", 0];
 if !(_uid in ["", "__SERVER__", "__HEADLESS__"]) then
 {
+	_constructionObject = _unit getVariable ["ExileConstructionObject", objNull];
+	if !(isNull _constructionObject) then 
+	{
+		deleteVehicle _constructionObject;
+	};
+	if (_unit getVariable ["IsPlayingRussianRoulette", false]) then 
+	{
+		_unit call ExileServer_system_russianRoulette_event_onPlayerDisconnected;
+		_unit setVariable ["ExileIsDead", false];
+	};
 	format["endAccountSession:%1", _uid] call ExileServer_system_database_query_fireAndForget;
 	_sessionID = _unit getVariable ["ExileSessionID", ""];
 	_sessionID call ExileServer_system_session_end;
@@ -42,7 +52,12 @@ if !(_uid in ["", "__SERVER__", "__HEADLESS__"]) then
 		{
 			_unit call ExileServer_object_player_database_update;	
 			deleteVehicle _unit;
+			_unit = objNull;
 		};
 	};
+};
+if !(isNull _unit) then 
+{
+	[_unit] joinSilent (createGroup independent);
 };
 false

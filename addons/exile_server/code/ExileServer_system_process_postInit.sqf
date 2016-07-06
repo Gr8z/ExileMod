@@ -11,7 +11,6 @@
  
 if (!isNil "PublicServerVersion") then
 {
-	call ExileServer_system_serverBrowser_update;
 	call ExileClient_system_map_initialize;
 	call ExileServer_system_thread_initialize;
 	call ExileServer_system_playerSaveQueue_initialize;
@@ -21,8 +20,9 @@ if (!isNil "PublicServerVersion") then
 	call ExileServer_system_lootManager_initialize;
 	call ExileServer_system_weather_initialize;
 	call ExileServer_system_garbageCollector_cleanDatabase;
-	call ExileServer_world_initialize;
 	call ExileServer_system_event_initialize;
+	call ExileServer_world_initialize;
+	call ExileServer_system_russianRoulette_initialize;
 	PublicServerIsLoaded = true; 
 	publicVariable "PublicServerIsLoaded";
 	format ["Server is up and running! Version: %1", PublicServerVersion] call ExileServer_util_log;

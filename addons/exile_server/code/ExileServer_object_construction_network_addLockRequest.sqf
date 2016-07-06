@@ -17,25 +17,25 @@ _pincode = _paramaters select 1;
 try
 {
 	_playerObject = _sessionID call ExileServer_system_session_getPlayerObject;
-	if !("Exile_Item_Codelock" in (_playerObject call ExileClient_util_playerCargo_list)) then 
+	if !("Exile_Item_Codelock" in (magazines _playerObject)) then 
 	{
-		throw "You dont have a code lock!";
+		throw "No can do.";
 	};
-	if !(isNumber(configFile >> "CfgVehicles" >> (typeOf _door) >> "ExileIsDoor")) then 
+	if !(isNumber(configFile >> "CfgVehicles" >> (typeOf _door) >> "exileIsDoor")) then 
 	{
-		throw "That is not a door!";
+		throw "Really no can do.";
 	};
 	if !((_door getVariable ["ExileIsLocked",""]) isEqualTo "") then 
 	{
-		throw "Door is already locked";
+		throw "Really really no can do.";
 	};
 	if !((count _pincode) isEqualTo 4) then 
 	{
-		throw "Invalid PinCode";
+		throw "Invalid PIN. Please try again.";
 	};
 	if ((_door animationPhase 'DoorRotation') > 0.5) then 
 	{
-		throw "Close the door first!";
+		throw "Please close the door first.";
 	};
 	_databaseID = _door getVariable ["ExileDatabaseID",0];
 	if(_databaseID isEqualTo 0) then 
@@ -49,6 +49,6 @@ try
 }
 catch
 {
-	[_sessionID,"notificationRequest",["Whoops",[_exception]]] call ExileServer_system_network_send_to;
+	[_sessionID, "toastRequest", ["ErrorTitleAndText", ["Failed to add lock!", _exception]]] call ExileServer_system_network_send_to;
 	_exception call ExileServer_util_log;
 };

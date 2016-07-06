@@ -14,8 +14,8 @@ _events = getArray (configFile >> "CfgSettings" >> "Events" >> "enabledEvents");
 {
 	_eventKey = format ["ExileServerEvent%1LastExecutedAt", _x];
 	_config = configFile >> "CfgSettings" >> "Events" >> _x;
-	_minTime = getNumber (_config >> "minTime") * 60;;
-	_maxTime = getNumber (_config >> "maxTime") * 60;;
+	_minTime = getNumber (_config >> "minTime") * 60;
+	_maxTime = getNumber (_config >> "maxTime") * 60;
 	_randomTime = (_minTime max (random _maxTime));
 	_lastExecutedAt = missionNamespace getVariable [_eventKey, 0];
 	if (time - _lastExecutedAt >= _randomTime) then

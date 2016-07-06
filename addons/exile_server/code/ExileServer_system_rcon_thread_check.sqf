@@ -9,17 +9,16 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_restartTime","_restartMessages","_useAutoKick","_kickTime","_lockTime","_uptime","_timeTilRestart","_time","_i"];
+private["_restartTime","_useAutoKick","_kickTime","_lockTime","_uptime","_timeTilRestart","_time","_sessionID","_i"];
 _restartTime = _this select 0;
-_restartMessages = _this select 1;
-_useAutoKick = _this select 2;
-_kickTime = _this select 3;
-_lockTime = _this select 4;
+_useAutoKick = _this select 1;
+_kickTime = _this select 2;
+_lockTime = _this select 3;
 _uptime = call ExileServer_util_time_uptime;
 _timeTilRestart = _restartTime - _uptime;
-if (typeName _restartMessages isEqualTo "ARRAY") then
+if (typeName ExileServerRestartMessages isEqualTo "ARRAY") then
 {
-	if !(_restartMessages isEqualTo []) then
+	if !(ExileServerRestartMessages isEqualTo []) then
 	{
 		{
 			_time = _x;
@@ -27,13 +26,13 @@ if (typeName _restartMessages isEqualTo "ARRAY") then
 			{
 				if (count ExileSessionIDs > 0) then
 				{
-					["notificationRequest",["RestartWarning",[format["Server restart in %1 min!",_time]]]] call ExileServer_system_network_send_broadcast;
+					[_sessionID, "toastRequest", ["InfoTitleAndText", ["Restart incoming!", format["Server is going to restart in %1 min! Log out before the restart to prevent gear loss.", _time] ]]] call ExileServer_system_network_send_to;
 				};
 				ExileServerRestartMessages deleteAt _forEachIndex;
 				format ["Restart Warnings for %1min sent",_time] call ExileServer_util_log;
 			};
 		} 
-		forEach _restartMessages;
+		forEach ExileServerRestartMessages;
 	};
 };
 if (_timeTilRestart < _lockTime) then
@@ -42,7 +41,7 @@ if (_timeTilRestart < _lockTime) then
 	{
 		"#lock" call ExileServer_system_rcon_event_sendCommand;
 		"Server locked for restart" call ExileServer_util_log;
-		["notificationRequest",["LockKickWarning",["You will be kicked from the server due to restart."]]] call ExileServer_system_network_send_broadcast;
+		[_sessionID, "toastRequest", ["ErrorTitleAndText", ["Server will restart now!", "You will be kicked off the server due to a restart."]]] call ExileServer_system_network_send_to;
 		ExileServerIsLocked = true;
 	};
 	if (_timeTilRestart < _kickTime) then

@@ -70,7 +70,7 @@ _staticGuns =
 
 
 // Create Crate
-_crate = ["Exile_Container_SupplyBox",_pos] call DMS_fnc_SpawnCrate;
+_crate = ["Box_NATO_Wps_F",_pos] call DMS_fnc_SpawnCrate;
 
 // Spawn vehicle
 _vehicle = ["Exile_Car_Offroad_Armed_Guerilla01",[_pos,3+random 10,_dir+90] call DMS_fnc_SelectOffsetPos] call DMS_fnc_SpawnNonPersistentVehicle;
@@ -82,9 +82,9 @@ _crate setObjectTextureGlobal [1,"#(rgb,8,8,3)color(1,0,0.1,1)"];
 // Set crate loot values
 _crate_loot_values =
 [
-	10,		// Weapons
-	20,		// Items
-	6 		// Backpacks
+	5,		// Weapons
+	10,		// Items
+	3 		// Backpacks
 ];
 
 _veh =

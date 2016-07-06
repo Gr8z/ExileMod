@@ -61,16 +61,16 @@ _group =
 
 
 // Create Crates
-_crate1 = ["Exile_Container_SupplyBox",_pos] call DMS_fnc_SpawnCrate;
+_crate1 = ["Box_NATO_Wps_F",_pos] call DMS_fnc_SpawnCrate;
 
 _wreck = createVehicle ["Land_Wreck_Van_F",[(_pos select 0) - 10, (_pos select 1),-0.2],[], 0, "CAN_COLLIDE"];
 
 // Set crate loot values
 _crate_loot_values1 =
 [
-	4,		// Weapons
-	[24,["Exile_Item_GloriousKnakWorst_Cooked","Exile_Item_PlasticBottleFreshWater","Exile_Item_PlasticBottleFreshWater","Exile_Item_BBQSandwich_Cooked","Exile_Item_Catfood_Cooked","Exile_Item_ChristmasTinner_Cooked"]],		// Items
-	4 		// Backpacks
+	2,		// Weapons
+	[12,["Exile_Item_GloriousKnakWorst_Cooked","Exile_Item_PlasticBottleFreshWater","Exile_Item_PlasticBottleFreshWater","Exile_Item_BBQSandwich_Cooked","Exile_Item_Catfood_Cooked","Exile_Item_ChristmasTinner_Cooked"]],		// Items
+	2 		// Backpacks
 ];
 
 

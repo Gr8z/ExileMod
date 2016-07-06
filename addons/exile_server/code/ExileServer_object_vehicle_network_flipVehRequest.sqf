@@ -19,7 +19,7 @@ try
 {
 	if (_vehicle distance _player > 7) then
 	{
-		throw "Player too far";
+		throw "Player to far";
 	};
 	if !((crew _vehicle) isEqualTo []) then
 	{

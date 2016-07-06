@@ -49,9 +49,6 @@ clearBackpackCargoGlobal _vehicleObject;
 clearItemCargoGlobal _vehicleObject;
 clearMagazineCargoGlobal _vehicleObject;
 clearWeaponCargoGlobal _vehicleObject;
-if ((typeOf _vehicleObject) == "B_Heli_Light_01_armed_F") then {
-    _vehicleObject removeMagazinesTurret ["24Rnd_missiles", [-1]];
-};
 if (_vehicleClassName isKindOf "I_UGV_01_F") then 
 {
 	createVehicleCrew _vehicleObject;
