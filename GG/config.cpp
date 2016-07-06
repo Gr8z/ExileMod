@@ -2305,7 +2305,7 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// Ghosthawk
 	///////////////////////////////////////////////////////////////////////////////
-	class B_Heli_Transport_01_F								{ quality = 1; price = 250000; };
+	class B_Heli_Transport_01_F								{ quality = 1; price = 150000; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Pawnee
@@ -2318,7 +2318,7 @@ class CfgExileArsenal
 	class Exile_Chopper_Orca_CSAT								{ quality = 1; price = 16000; };
 	class Exile_Chopper_Orca_Black								{ quality = 1; price = 16000; };
 	class Exile_Chopper_Orca_BlackCustom						{ quality = 1; price = 16000; };
-	class O_Heli_Light_02_v2_F   			            		{ quality = 1; price = 1500000; };
+	class O_Heli_Light_02_v2_F   			            		{ quality = 1; price = 170000; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Taru
