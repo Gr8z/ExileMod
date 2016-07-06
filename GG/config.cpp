@@ -2114,6 +2114,8 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// Sniper Rifles
 	///////////////////////////////////////////////////////////////////////////////
+	class arifle_MXM_Black_F						{ quality = 3; price = 9000; };
+	class arifle_MXM_F 								{ quality = 3; price = 9000; };
 	class srifle_DMR_01_F							{ quality = 3; price = 10000; };
 	class srifle_DMR_02_camo_F						{ quality = 3; price = 16000; };
 	class srifle_DMR_02_F							{ quality = 3; price = 16000; };
@@ -6617,8 +6619,8 @@ class CfgTraderCategories
 			"Exile_Item_MetalWire",
 			"Exile_Item_Laptop",
 			"Exile_Item_BaseCameraKit",
-			"Exile_Item_MetalHedgehogKit",
-			"Exile_Item_CarWheel",
+			//"Exile_Item_MetalHedgehogKit",
+			//"Exile_Item_CarWheel",
 			"Exile_Item_Cement",
 			"Exile_Item_Sand"
 		};
