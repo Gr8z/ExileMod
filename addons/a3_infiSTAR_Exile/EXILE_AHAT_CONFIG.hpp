@@ -177,17 +177,16 @@ adminUIDandAccess[] =
 			"spectating","Delete Vehicle","FlyUp","ShowGear","Show Server Information",
 			"HealSelf","HealRepairNear","AdminLog","Freeze","UnFreeze","Restrain","UnRestrain",
 			"==== Base Deleter ====","Items spawn menu",
-			"Remove Gear","Revive","Heal","Restore","Flip Vehicle","Move In My Vehicle","Move In Target Vehicle","Eject","Eject Crew",
-			"Kill","Explode","Force Disconnect","Kick (Announce)",
+			"Remove Gear","Heal","Restore","Flip Vehicle","Move In My Vehicle","Move In Target Vehicle","Eject","Eject Crew",
+			"Kill","Explode","Kick (Announce)",
 			"Player ESP","Player ESP (safezone style)","AI ESP","Dead ESP","Loot ESP",
 			"Vehicle Marker","Flag Marker (with radius)","DeadPlayer Marker",
-			"God Mode","God Mode (no stats change)","Vehicle God Mode","Lower Terrain","Vehboost","UnlimAmmo","noRecoil","FastFire","Stealth / Invisible",
-			"Disable Announces","Mass Message","Change Time","Spawn Support-Boxes","Create Billboard","Change ViewDistance",
-			"Spawn Ammo","Login as Arma Admin","Request Steam Name","showinfo","Change Money","Change Respect","UnlockLockVehicle","Copy Worldspace(coords) to RPT & Chat",
+			"God Mode","Vehicle God Mode","Lower Terrain","Stealth / Invisible",
+			"Disable Announces","Mass Message","Spawn Support-Boxes","Change ViewDistance",
+			"Spawn Ammo","Request Steam Name","showinfo","Change Money","Change Respect","UnlockLockVehicle","Copy Worldspace(coords) to RPT & Chat",
 			"Spawn Vehicles","Spawn Persistent Vehicles","MapIcons","MapIcons: Buildings","MapIcons: Flags","MapIcons: Player","MapIcons: DeadPlayer","MapIcons: Vehicles",
 			"MapIcons: Vehicle Types","MapIcons: Vehicle lockstate","MapIcons: DeadVehicles",
-			"MapIcons: AI","Unconscious","Remove Unconscious",
-			"Light"	// Zeus like Lighting from the Air strikes down at selected player / target / location - use ctrl+1 or the menu to use it!
+			"MapIcons: AI","Unconscious","Remove Unconscious"
 		}
 	},
 	{
