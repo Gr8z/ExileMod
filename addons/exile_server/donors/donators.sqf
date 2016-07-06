@@ -41,7 +41,6 @@ Engineer1 = [
 
 Engineer2 = [
 	"76561198059890709", // NarstyNate (OD-2016-06-16) #13919
-	"76561198051054305", // Miguel (EXP 29-07-2016) Paid one month on the website
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Engineer2";
@@ -209,6 +208,7 @@ Scout3 = [
 	"76561198135611591", // Turnip (OD-2016-05-26) #13802
 	"76561198000588916", // howwl (OD-2016-06-24) #13960
 	"76561198090941099", // Josh (OD-2016-06-27) #13969
+	"76561198051054305", // Miguel (EXP 29-07-2016) Paid one month on the website
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout3";
