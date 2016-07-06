@@ -1390,7 +1390,6 @@
 2, Exile_Item_Laptop
 5, Exile_Item_BaseCameraKit
 > Trash
-10, Exile_Item_Can_Empty
 10, Exile_Item_PlasticBottleEmpty			// Nothing :)
 
 > Magazine01
@@ -1401,6 +1400,7 @@
 
 > Magazine03
 100, Exile_Item_Magazine03
+100, Exile_Item_Magazine04
 
 > Unused
 3, Exile_Item_CordlessScrewdriver
