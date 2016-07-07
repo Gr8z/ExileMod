@@ -574,7 +574,6 @@
 30, ItemRadio
 12, ItemGPS
 20, Binocular
-8, Exile_Magazine_Battery
 
 > CivilianClothing
 6, U_C_Poor_1
@@ -1334,8 +1333,8 @@
 10, Exile_Item_Heatpack
 
 > IndustrialItems
-1, Exile_Item_ThermalScannerPro
-2, Exile_Item_Knife
+0.5, Exile_Item_ThermalScannerPro
+0.2, Exile_Item_Knife
 3, Exile_Item_Cement
 3, Exile_Item_FloodLightKit
 3, Exile_Item_PortableGeneratorKit

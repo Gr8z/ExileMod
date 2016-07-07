@@ -139,7 +139,7 @@
 2, DLCOptics
 2, DLCSupressor
 2, Bipods
-5, Explosives
+0.3, Explosives
 0.01, Magazine03
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -169,7 +169,7 @@
 4, HandGrenades
 4, Restraints
 4, MedicalItems
-4, Explosives
+0.2, Explosives
 
 ///////////////////////////////////////////////////////////////////////////////
 // Ghost Hotel Buildings
@@ -189,5 +189,5 @@
 4, HandGrenades
 4, Restraints
 4, MedicalItems
-10, Explosives
+1, Explosives
 4, EpicWeapons
