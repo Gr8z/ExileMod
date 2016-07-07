@@ -3688,7 +3688,11 @@ class CfgExileEnvironment
 	class Altis 
 	{
 		// A list of {position, radius} where building is not allowed at all
-		nonConstructionZones[] = {};
+		nonConstructionZones[] = {
+			{{21845.1, 20977.6, 30}, 1000);
+			{{14562.4,16925.7,17.279}, 1500);
+			
+			};
 
 
 		class FireFlies
@@ -3831,7 +3835,9 @@ class CfgExileEnvironment
 	class Chernarus 
 	{
 		// A list of {position, radius} where building is not allowed at all
-		nonConstructionZones[] = {};
+		nonConstructionZones[] = {
+			{{8347.18,5990.92,291.991}, 1000};
+			};
 
 
 		class FireFlies
@@ -3904,7 +3910,7 @@ class CfgExileEnvironment
 			*/
 			contaminatedZones[] = 
 			{
-				{{8347.18,5990.92,291.991}, 300, 400}	// Ghost Hotel
+				{{8347.18,5990.92,291.991}, 300, 400}	// radiation church
 			};
 		};
 
