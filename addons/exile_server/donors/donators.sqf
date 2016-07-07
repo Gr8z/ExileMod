@@ -41,6 +41,7 @@ Engineer1 = [
 
 Engineer2 = [
 	"76561198059890709", // NarstyNate (OD-2016-06-16) #13919
+	"76561198082227396", // Shootin Putin (OD-2016-07-07) #14102
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Engineer2";
@@ -58,7 +59,7 @@ Engineer3 = [
 	"76561198155652757", // Boston (EXP-2016-06-27) #0000  
 	"76561197969022250", // fbj (OD-2016-06-13) #13900
 	"76561197972037463", // evan (OD-2016-07-06) #14099 
-	"76561198145289881", // Rook9 (OD-2016-07-06) #14100 
+	"76561198145289881", // Rook9 (OD-2016-07-06) #14100
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Engineer3";
@@ -211,6 +212,7 @@ Scout3 = [
 	"76561198000588916", // howwl (OD-2016-06-24) #13960
 	"76561198090941099", // Josh (OD-2016-06-27) #13969
 	"76561198051054305", // Miguel (EXP 29-07-2016) Paid one month on the website
+	"76561198042117085", // Cogig (OD-2016-07-07) #14104
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout3";
