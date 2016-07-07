@@ -3020,9 +3020,6 @@ class CfgExileArsenal
 	class B_mas_m_Bergen_us                    			{ quality = 1; price = 3000; };
 	class B_mas_Bergen_wint                    			{ quality = 1; price = 3000; };
 	class B_mas_Bergen_black                    		{ quality = 1; price = 3000; };
-	class O_mas_Bergen_blk                    			{ quality = 1; price = 3000; };
-	class O_mas_Bergen_flo                    			{ quality = 1; price = 3000; };
-	class O_mas_Bergen_rtan                    			{ quality = 1; price = 3000; };
 	class B_mas_Bergen_mul                    			{ quality = 1; price = 3000; };
 	class B_mas_Bergen_rng                    			{ quality = 1; price = 3000; };
 	class B_mas_Bergen_des                    			{ quality = 1; price = 3000; };
@@ -6140,9 +6137,6 @@ class CfgTraderCategories
 			"B_mas_m_Bergen_us",
 			"B_mas_Bergen_wint",
 			"B_mas_Bergen_black",
-			"O_mas_Bergen_blk",
-			"O_mas_Bergen_flo",
-			"O_mas_Bergen_rtan",
 			"B_mas_Bergen_mul",
 			"B_mas_Bergen_rng",
 			"B_mas_Bergen_des",
