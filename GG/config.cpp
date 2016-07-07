@@ -2201,6 +2201,7 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// QUAD BIKES
 	///////////////////////////////////////////////////////////////////////////////
+	class Exile_Bike_QuadBike_Black					{ quality = 1; price = 500; };
 	class Exile_Bike_QuadBike_Blue					{ quality = 1; price = 500; };
 	class Exile_Bike_QuadBike_Red					{ quality = 1; price = 500; };
 	class Exile_Bike_QuadBike_White					{ quality = 1; price = 500; };
