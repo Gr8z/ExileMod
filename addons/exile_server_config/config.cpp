@@ -6320,7 +6320,7 @@ class CfgSettings
 		{
 			unlucky = 0; // Dying for an unknown reason costs you 0% respect
 			crash = 0; // Crashing your car costs you 0% respect
-			suicide = 1; // Comitting suicide costs you 1% of your respect
+			suicide = 0; // Comitting suicide costs you 0% of your respect
 			friendyFire = 2; // Friendly fire costs you 2% 
 			npc = 1; // Being killed by an NPC costs you 4%
 			bambiKill = 2; // Killing a bambi costs you 2%
