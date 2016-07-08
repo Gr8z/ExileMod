@@ -6261,7 +6261,7 @@ class CfgSettings
 			permanentlyDeleteTime = 14;
 			
 			// Remove all territories (and contructions + containers in it) that were not paid after X days
-			territoryLifeTime = 7;
+			territoryLifeTime = 10;
 
 			// Remove all containers outside of territories that have not been used for X days
 			// Example: Tents
@@ -6275,13 +6275,13 @@ class CfgSettings
 			vehicleLifeTime = 3;
 			
 			// Set safe as abandoned
-			abandonedTime = 7;
+			abandonedTime = 10;
 			
 			// Deletes a base X days after the flag is stolen if the ransom money isn't paid
-			stolenFlagLifeTime = 3;
+			stolenFlagLifeTime = 5;
 			
 			// Sets door & safe pins to 0000 and marks safes to abandoned X days after the flag is stolen if the ransom money isn't paid
-			unlockLifeTime = 2;
+			unlockLifeTime = 6;
 		};
 	};
 
