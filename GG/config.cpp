@@ -280,6 +280,66 @@ class CfgClans
 	*/
 	maximumPolyNode = 10;
 };
+
+class CfgNotifications
+{
+  class Success
+  {
+      description = "%1";
+      title = "Success";
+      iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
+      iconText = "";
+      color[] = {0.01,0.61,0.94,1};
+      duration = 5;
+      priority = 0;
+      difficulty[] = {};
+  };
+  class Whoops
+  {
+      description = "%1";
+      title = "Error";
+      iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
+      iconText = "";
+      color[] = {0.01,0.61,0.94,1};
+      duration = 5;
+      priority = 0;
+      difficulty[] = {};
+  };
+	class ZCP_Init
+	{
+		description = "%1";
+		title = "Battle Zone Spawned";
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
+		iconText = "";
+		color[] = {0.01,0.61,0.94,1};
+		duration = 5;
+		priority = 0;
+		difficulty[] = {};
+	};
+	class ZCP_Capped
+	{
+		description = "%1";
+		title = "Battle Zone Capped";
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
+		iconText = "";
+		color[] = {0.01,0.61,0.94,1};
+		duration = 5;
+		priority = 0;
+		difficulty[] = {};
+	};
+	class ZCP_Capping
+	{
+		description = "%1";
+		title = "Battle Zone alert";
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
+		iconText = "";
+		color[] = {0.01,0.61,0.94,1};
+		duration = 5;
+		priority = 0;
+		difficulty[] = {};
+	};
+};
+
 class Exile_AbstractCraftingRecipe
 {
 	name = "";
@@ -4013,7 +4073,7 @@ class CfgExileLootSettings
 	 * Interval in seconds when the client searches for
 	 * new buildings to spawn loot in
 	 */
-	spawnInterval = 30;
+	spawnInterval = 60;
 
 	/**
 	 * This is a percentage value to determine how many loot
@@ -4044,7 +4104,7 @@ class CfgExileLootSettings
 	 * is the upper cap for that. So 3 means it could spawn 1, 2 
 	 * or 3.
 	 */
-	maximumNumberOfItemsPerLootSpot = 2;
+	maximumNumberOfItemsPerLootSpot = 1;
 
 	/**
 	 * Radius in meter to spawn loot AROUND each player.
@@ -4055,7 +4115,7 @@ class CfgExileLootSettings
 	 * 50m  = Minimum
 	 * 200m = Maximum
 	 */
-	spawnRadius = 150;
+	spawnRadius = 100;
 
 	/**
 	 * Defines the radius around trader cities where the system should
