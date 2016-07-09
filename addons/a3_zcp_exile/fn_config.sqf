@@ -7,6 +7,13 @@ ZCP_dev = false; // Devmode for shorter development capture times
 
 ZCP_AI_Type = 'DMS'; // NONE | DMS | FUMS
 
+ZCP_AI_useLaunchersChance = -1; // %Change to spawn Launcher on AI soldier ( never exeeds the MIN and MAX defined per cappoint).
+
+// Put the following to -1 to disable it.
+ZCP_AI_killAIAfterMissionCompletionTimer = 60; // AMounts of seconds before all ZCP AI get auto killed after a mission is completed. ( DMS only ).
+
+// ZCP_Min_AI_Amount = 4; Not used anymore
+// ZCP_Random_AI_Max = 8; Not used anymore
 ZCP_MessagePlayersBeforeWaves = false; // True -> Inform for an icoming wave of AI, false is not inform the players inside.
 
 // ZCP_CapTime = 300; // Now defined for each mission seperate
@@ -95,7 +102,21 @@ ZCP_CapPoints = [
 				100, // distance in meter form ZCP for the ai to spawn
 				true // false -> all groups from 1 random location, true -> all groups from their own random location
 			]
-		]
+			,
+			[
+				60, // procentage of the cap time to start attack (50 = 50% of the total captime)
+				2, // Amount of AI units in a group
+				4, // Amount of AI groups
+
+				200, // distance in meter form ZCP for the ai to spawn
+				true // false -> all groups from 1 random location, true -> all groups from their own random location
+			]
+		],
+		1, // Minimum amount of launchers for starting AI (19)
+        2, // Maximum amount of launchers for starting AI (20)
+        1, // Minimum amount of launchers for Wave AI (21)
+        1  // Maximum amount of launchers for Wave AI (22)
+		
 	]
 ];
 
