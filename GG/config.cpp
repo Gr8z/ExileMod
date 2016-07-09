@@ -3707,7 +3707,7 @@ class CfgExileArsenal
 
 class CfgXM8
 {
-	extraApps[] = {"ExAd_VG"};
+	extraApps[] = {"ExAd_VG", "viewdistance"};
 	
 	class ExAd_VG 
 	{
@@ -3716,6 +3716,15 @@ class CfgXM8
 		onLoad = "GG\ExAdClient\XM8\Apps\VG\onLoad.sqf";
 		onOpen = "GG\ExAdClient\XM8\Apps\VG\onOpen.sqf";
 		onClose = "GG\ExAdClient\XM8\Apps\VG\onClose.sqf";
+	};
+	
+	class viewdistance 
+	{
+		title = "view distance";
+		controlID = 50100;					//IDC:50000 -> 50014
+		onLoad = "GG\XM8_apps\apps\IGUViewDistance\scripts\XM8_ViewDistance_Slide1_onLoad.sqf";
+		onOpen = "GG\XM8_apps\apps\IGUViewDistance\scripts\ExileClient_gui_xm8_slide_IGUViewDistance_onOpen.sqf";
+		onClose = "";
 	};
 };
 
