@@ -27,12 +27,12 @@ ExileRouletteChairs = [];
 
 ExileRouletteChairPositions = 
 [
-    [[6333.39, 7801.25, 304.994], 0.58], 
-    [[6332.78, 7801.67, 304.994], 0.58], 
-    [[6331.24, 7801.54, 304.996], 5.249], 
-    [[6331.66, 7800.12, 304.998], 3.690], 
-    [[6332.29, 7799.64, 304.998], 3.755],
-    [[6333.74, 7799.86, 304.995], 2.211]
+    [[6333.39,7801.25,304.994], 0.58], 
+    [[6332.78,7801.67,304.994], 0.58], 
+    [[6331.24,7801.54,304.996], 5.249], 
+    [[6331.66,7800.12,304.998], 3.690], 
+    [[6332.29,7799.64,304.998], 3.755],
+    [[6333.74,7799.86,304.995], 2.211]
 ];
 
 {
@@ -40,7 +40,7 @@ ExileRouletteChairPositions =
 
     _chair = "Land_ChairWood_F" createVehicle [0, 0, 0];
     _chair setDir (deg (_x select 1));
-    _chair setPosWorld (_x select 0);
+    _chair setPosASL (_x select 0);
     _chair allowDamage false;
     _chair enableSimulationGlobal true;
 
