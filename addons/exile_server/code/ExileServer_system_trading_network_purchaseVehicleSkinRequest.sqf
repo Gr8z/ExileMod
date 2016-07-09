@@ -5,16 +5,16 @@
  * www.exilemod.com
  * © 2015 Exile Mod Team
  *
- * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
+ * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
- 
-private["_sessionID","_parameters","_vehicleNetID","_skinTextures","_playerObject","_vehicleObject","_vehicleParentClass","_salesPrice","_skinVariations","_availableSkinTexture","_playerMoney","_skinMaterials","_skinClassName","_vehicleID","_logging","_traderLog","_responseCode"];
+
+private["_sessionID","_parameters","_vehicleNetID","_skinTextures","_playerObject","_vehicleObject","_vehicleParentClass","_salesPrice","_skinVariations","_availableSkinTexture","_playerMoney","_skinMaterials","_skinClassName","_vehicleID","_responseCode"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
 _vehicleNetID = _parameters select 0;
 _skinTextures = _parameters select 1;
-try 
+try
 {
 	_playerObject = _sessionID call ExileServer_system_session_getPlayerObject;
 	if (isNull _playerObject) then
@@ -54,7 +54,7 @@ try
 	{
 		throw 4;
 	};
-	_playerMoney = _playerObject getVariable ["ExileMoney", 0];
+	_playerMoney = _playerObject getVariable ["ExilePurse", 0];
 	if (_playerMoney < _salesPrice) then
 	{
 		throw 5;
@@ -71,22 +71,19 @@ try
 	_vehicleID = _vehicleObject getVariable ["ExileDatabaseID", -1];
 	format["updateVehicleSkin:%1:%2", _skinTextures, _vehicleID] call ExileServer_system_database_query_fireAndForget;
 	_playerMoney = _playerMoney - _salesPrice;
-	_playerObject setVariable ["ExileMoney", _playerMoney, true];
-	format["setPlayerMoney:%1:%2", _playerMoney, _playerObject getVariable ["ExileDatabaseID", 0]] call ExileServer_system_database_query_fireAndForget;
-	[_sessionID, "purchaseVehicleSkinResponse", [0, _salesPrice]] call ExileServer_system_network_send_to;
-	_logging = getNumber(configFile >> "CfgSettings" >> "Logging" >> "traderLogging");
-	if (_logging isEqualTo 1) then
-	{
-		_traderLog = format ["PLAYER: ( %1 ) %2 PURCHASED VEHICLE SKIN %3 (%4) FOR %5 POPTABS | PLAYER TOTAL MONEY: %6",getPlayerUID _playerObject,_playerObject,_skinTextures,_vehicleParentClass,_salesPrice,_playerMoney];
-		"extDB2" callExtension format["1:TRADING:%1",_traderLog];
-	};
+    // Advanced Banking
+     _playerObject setVariable ["ExilePurse", _playerMoney];
+     format["updateWallet:%1:%2", _playerMoney, (getPlayerUID _playerObject)] call ExileServer_system_database_query_fireAndForget;
+     if (ADVBANKING_SERVER_DEBUG) then {[format["%1 purchased a vehicle skin",_playerObject],"VehicleSkinRequest"] call ExileServer_banking_utils_diagLog;};
+     // Advanced Banking
+	[_sessionID, "purchaseVehicleSkinResponse", [0, str _playerMoney]] call ExileServer_system_network_send_to;
 }
-catch 
+catch
 {
 	_responseCode = _exception;
-	[_sessionID, "purchaseVehicleSkinResponse", [_responseCode, 0]] call ExileServer_system_network_send_to;
+	[_sessionID, "purchaseVehicleSkinResponse", [_responseCode, ""]] call ExileServer_system_network_send_to;
 };
-if !(isNull _playerObject) then 
+if !(isNull _playerObject) then
 {
 	_playerObject setVariable ["ExileMutex", false];
 };

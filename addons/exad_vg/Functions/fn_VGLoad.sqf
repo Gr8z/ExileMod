@@ -1,6 +1,4 @@
 /*  
-	fn_VGLoad.sqf
-	
 	Copyright 2016 Jan Babor
 
 	Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,6 +12,7 @@
 	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 	See the License for the specific language governing permissions and
 	limitations under the License.
+
 */
 
 private ["_objVehNetId","_objVeh","_flagNetId","_flag","_objVehId","_flagId","_data","_extDB2Message","_vehList"];
@@ -22,8 +21,7 @@ _objId = [_this,0,"",[""]] call BIS_fnc_param;
 _flagNetId = [_this,1,"",[""]] call BIS_fnc_param;
 _playerNetId = [_this,2,"",[""]] call BIS_fnc_param;
 _flag = objectFromNetId _flagNetId;
-_player = objectFromNetId _playerNetId;
-_requestFrom = owner _player;
+_requestFrom = owner (objectFromNetId _playerNetId);
 
 _proceed = false;
 _vehList = _flag getVariable ["ExAdVGVeh", []];
@@ -35,7 +33,7 @@ _vehList = _flag getVariable ["ExAdVGVeh", []];
 	}
 }forEach _vehList;
 
-if(!_proceed)exitWith{[_owner, "toastRequest", ["ErrorTitleAndText", ["Virtual Garage", STR_ExAd_VG_NOTI_NOT_AVAILABLE]]] call ExileServer_system_network_send_to};
+if(!_proceed)exitWith{[_requestFrom, "notificationRequest", ["Whoops", ["They vehicle is not available anymore"]]] call ExileServer_system_network_send_to};
 
 _flag setVariable ["ExAdVGVeh", _vehList, true];
 
@@ -50,7 +48,5 @@ if(ExAd_VG_SHOW_ADVHINT)then{
 _pos = getPosATL _vehObj;
 _pos set [2, (_pos select 2) + 0.1];
 _vehObj setPosATL _pos;
-
-["VirtualGarage", format["Spawned: Player - %1(%2)|Vehicle - %3(%4)|",name _player, getPlayerUID _player, typeOf _vehObj, _objId]] call ExAdServer_fnc_log;
 
 true

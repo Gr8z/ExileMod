@@ -7,6 +7,9 @@
  *
  * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
+ *
+ *
+ * Modified by ynpmoose of ZeroSurvival.com / Vehicle Protection System
  */
  
 private["_vehicleObject","_vehicleID","_position","_vectorDirection","_vectorUp","_availableHitpoints","_vehicleHitpoints","_data","_extDB2Message"];
@@ -19,6 +22,12 @@ if (_vehicleID > -1) then
 	_vectorUp = vectorUp _vehicleObject;
 	_availableHitpoints = getAllHitPointsDamage _vehicleObject;
 	_vehicleHitpoints = [];
+
+// Vehicle Protection System
+// Start: Vehicles Vulnerable Upon Save
+	_vehicleObject allowDamage true;	
+// End: Vehicles Vulnerable Upon Save
+	
 	if!(_availableHitpoints isEqualTo [])then
 	{
 		{
@@ -45,7 +54,6 @@ if (_vehicleID > -1) then
 		magazinesAmmoCargo _vehicleObject,
 		weaponsItemsCargo _vehicleObject,
 		_vehicleObject call ExileServer_util_getObjectContainerCargo,
-		_vehicleObject getVariable ["ExileMoney", 0],
 		_vehicleID 
 	];
 	_extDB2Message = ["updateVehicle", _data] call ExileServer_util_extDB2_createMessage;

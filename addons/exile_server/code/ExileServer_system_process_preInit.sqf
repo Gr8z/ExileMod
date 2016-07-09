@@ -13,14 +13,18 @@ private["_MySql"];
 "Server is loading..." call ExileServer_util_log;
 call ExileServer_system_rcon_initialize;
 finishMissionInit;
-ExileSessionIDs = [];
-ExileServerGraveyardGroup = grpNull;
-ExileServerLoneWolfGroup = grpNull;
-ExileServerBreachingCharges = [];
-independent setFriend [sideEnemy, 1];
-call ExileServer_system_process_noobFilter;
+ExileSessionIDs = []; 
+ExileGraveyardGroup = createGroup independent;
+Independent setFriend [sideEnemy, 1];
 _MySql_connection = [] call ExileServer_system_database_connect;
-call ExileServer_system_network_setupEventHandlers;
+if !(_MySql_connection) exitWith
+{
+	"extDB2" callExtension "9:SHUTDOWN";
+	false
+};
+addMissionEventHandler ["HandleDisconnect", { _this call ExileServer_system_network_event_onHandleDisconnect; }];
+onPlayerConnected {[_uid, _name] call ExileServer_system_network_event_onPlayerConnected};
+onPlayerDisconnected {[_uid, _name] call ExileServer_system_network_event_onPlayerDisconnected};
 if !(getRemoteSensorsDisabled) then
 {
 	disableRemoteSensors true;

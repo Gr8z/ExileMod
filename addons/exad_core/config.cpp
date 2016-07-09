@@ -25,10 +25,6 @@ class CfgPatches {
 
 class CfgFunctions {
 	class ExAdServer {
-		class Debug {
-		file = "exad_core\Functions\Debug";
-			class log {};
-		};
 		class System {
 		file = "exad_core\Functions\System";
 			class clientDispatch {};
@@ -40,7 +36,6 @@ class CfgFunctions {
 			class createCrate {};
 			class createMarker {};
 			class putInContainer {};
-			class territoryPlayerPresent {};
 		};
 	};
 };

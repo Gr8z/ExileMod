@@ -1,6 +1,5 @@
 
 > CivillianLowerClass
-
 17, Food
 10, Drinks
 8, Pistols
@@ -22,54 +21,48 @@
 // Apartments, Offices etc.
 ///////////////////////////////////////////////////////////////////////////////
 > CivillianUpperClass
-30, Trash
-28, Food
+20, Food
 10, Drinks
-8, Pistols
-5, PistolAmmo
-3, PistolAttachments
-4, Shotguns
-3, ShotgunAmmo
-4, SMG
-3, SMGAmmo
+9, Pistols
+8, PistolAmmo
+4, PistolAttachments
+7, SMG
+5, SMGAmmo
 3, SMGAttachments
 3, Rifles
 3, RifleAmmo
-3, RifleAttachments
-20, CivilianClothing
+2, RifleAttachments
+17, CivilianClothing
 11, CivilianBackpacks
 5, CivilianVests
-20, CivilianHeadgear
-10, CivilianItems
-10, Chemlights
-10, RoadFlares
+11, CivilianHeadgear
+9, CivilianItems
+3, Chemlights
+3, RoadFlares
 1, Restraints
 
 ///////////////////////////////////////////////////////////////////////////////
 // Kiosks, Supermarkets etc.
 ///////////////////////////////////////////////////////////////////////////////
 > Shop
-30, Trash
 15, Food
 15, Drinks
-10, Pistols
-2, PistolAmmo
+7, Pistols
+4, PistolAmmo
 1, PistolAttachments
-4, Shotguns
-1, ShotgunAmmo
 5, SMG
-1, SMGAmmo
+3, SMGAmmo
 1, SMGAttachments
 5, CivilianBackpacks
-1, CivilianClothing
+4, CivilianClothing
 3, CivilianHeadgear
 1, CivilianVests
-7, CivilianItems
-5, Chemlights
-5, RoadFlares
-4, SmokeGrenades
+6, CivilianItems
+2, Chemlights
+2, RoadFlares
+2, SmokeGrenades
 3, IndustrialItems
-3, Restraints
+2, Restraints
 3, MedicalItems
 0.05, Magazine01
 
@@ -77,69 +70,71 @@
 // Construction Sites, Warehouses, Research etc.
 ///////////////////////////////////////////////////////////////////////////////
 > Industrial
-30, Trash
 40, IndustrialItems
 25, Vehicle
-15, RoadFlares
+5, RoadFlares
 5, Restraints
+5, CivilianClothing
+5, Electronics
 0.025, Magazine02
 ///////////////////////////////////////////////////////////////////////////////
 // Factories
 ///////////////////////////////////////////////////////////////////////////////
 > Factories
-10, Electronics
-40, Trash
-50, IndustrialItems
+5, Electronics
+40, IndustrialItems
+20, Vehicle
 
 ///////////////////////////////////////////////////////////////////////////////
 // Fuel Stations, Garages, Workshops etc.
 ///////////////////////////////////////////////////////////////////////////////
 > VehicleService
-30, Trash
 25, IndustrialItems
 40, Vehicle
-15, RoadFlares
+5, RoadFlares
 5, Restraints
+5, CivilianClothing
 
 ///////////////////////////////////////////////////////////////////////////////
 // Towers, Barracks, Hangars etc.
 ///////////////////////////////////////////////////////////////////////////////
 > Military
-4, CivilianItems
-4, GuerillaItems
-3, HEGrenades
-3, UGLFlares
-3, UGLSmokes
-3, HandGrenades
-3, SmokeGrenades
+3, CivilianItems
+3, GuerillaItems
+1, MilitaryItems
+2, HEGrenades
+2, UGLFlares
+2, UGLSmokes
+2, HandGrenades
+2, SmokeGrenades
 2, Restraints
 2, MedicalItems
-5, GuerillaClothing
+4, GuerillaClothing
 5, MilitaryClothing
-4, GuerillaBackpacks
+3, GuerillaBackpacks
 3, MilitaryBackpacks
 3, GuerillaVests
 3, MilitaryVests
 3, DLCVests
 3, GuerillaHeadgear
 3, MilitaryHeadgear
-1, Ghillies
-1, DLCGhillies
+2, Ghillies
+2, DLCGhillies
 1, Rebreathers
-5, Rifles
-3, RifleAmmo
+9, Rifles
+6, RifleAmmo
 3, RifleAttachments
 4, LMG
 2, LMGAmmo
-3, Snipers
-2, SniperAmmo
+4, Snipers
+3, SniperAmmo
 2, SniperAttachments
 3, DLCRifles
 2, DLCAmmo
 2, DLCOptics
 2, DLCSupressor
 2, Bipods
-0.3, Explosives
+3, Explosives
 0.01, Magazine03
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -154,40 +149,20 @@
 // Light Houses + Life Guard Towers + Castles
 ///////////////////////////////////////////////////////////////////////////////
 > Tourist
+12, CivilianClothing
 10, MilitaryBackpacks
 10, MilitaryHeadgear
 5, Ghillies
 5, DLCGhillies
 20, Snipers
-2, SniperAmmo
+3, SniperAmmo
 2, SniperAttachments
-20, DLCRifles
+15, DLCRifles
 2, DLCAmmo
 2, DLCOptics
 2, DLCSupressor
 4, CivilianItems
-4, HandGrenades
+2, HandGrenades
 4, Restraints
 4, MedicalItems
-0.2, Explosives
-
-///////////////////////////////////////////////////////////////////////////////
-// Ghost Hotel Buildings
-///////////////////////////////////////////////////////////////////////////////
-> Radiation
-10, MilitaryBackpacks
-10, MilitaryHeadgear
-5, Ghillies
-5, DLCGhillies
-30, Snipers
-2, SniperAmmo
-2, SniperAttachments
-30, DLCRifles
-2, DLCAmmo
-2, DLCOptics
-2, DLCSupressor
-4, HandGrenades
-4, Restraints
-4, MedicalItems
-1, Explosives
-4, EpicWeapons
+4, Explosives

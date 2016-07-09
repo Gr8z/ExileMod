@@ -331,11 +331,11 @@ if (isPlayer _killer) then
 			};
 		};
 
-		private _shareInfoDistance = _unit getVariable ["DMS_ai_share_info_distance",DMS_ai_share_info_distance];
+
 		{
-			if ((_x distance2D _unit) <= _shareInfoDistance) then
+			if ((alive _x) && {!(isPlayer _x) && {(_x distance2D _unit) <= (_unit getVariable ["DMS_ai_share_info_distance",DMS_ai_share_info_distance])}}) then
 			{
-				_x reveal [_killer, _revealAmount];
+				_x reveal [_killer, _revealAmount max (_x knowsAbout _playerObj)];
 			};
 		} forEach _grpUnits;
 	};

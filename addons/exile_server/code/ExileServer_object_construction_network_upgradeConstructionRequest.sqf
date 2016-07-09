@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_parameters","_object","_playerObject","_maxRange","_flags","_buildRights","_objectConfig","_objectClass","_position","_vectorUp","_vectorDir","_objectDatabaseID","_objectOwner","_accessCode","_newObject"];
+private["_sessionID","_parameters","_object","_playerObject","_maxRange","_flags","_buildRights","_playerGear","_objectConfig","_objectClass","_position","_vectorUp","_vectorDir","_objectDatabaseID","_objectOwner","_accessCode","_newObject"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
 _object = _parameters select 0;
@@ -21,7 +21,7 @@ try
 	_flags = nearestObjects [_playerObject,["Exile_Construction_Flag_Static"],_maxRange];
 	if (_flags isEqualTo []) then 
 	{
-		throw "You are retarded!";
+		throw "No flags nearby!";
 	};
 	_flags = _flags select 0;
 	_buildRights = _flags getVariable ["ExileTerritoryBuildRights",[]];
@@ -29,13 +29,10 @@ try
 	{
 		throw "No territory access!";
 	};
-	if !("Exile_Item_FortificationUpgrade" in (magazines _playerObject)) then 
+	_playerGear = _playerObject call ExileClient_util_playerCargo_list;
+	if !("Exile_Item_FortificationUpgrade" in _playerGear) then 
 	{
-		throw "Really?";
-	};
-	if !(_object getVariable ["ExileConstructionDamage",0] isEqualTo 0)then
-	{
-		throw "Please repair the object first.";
+		throw "You do not have a upgrade kit!";
 	};
 	_objectConfig =
 	"
@@ -79,7 +76,7 @@ try
 }
 catch
 {
-	[_sessionID, "toastRequest", ["ErrorTitleAndText", ["Failed to upgrade!", _exception]]] call ExileServer_system_network_send_to;
+	[_sessionID,"notificationRequest",["Whoops",[_exception]]] call ExileServer_system_network_send_to;
 	_exception call ExileServer_util_log;
 };
 true

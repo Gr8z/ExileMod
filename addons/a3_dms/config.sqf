@@ -8,9 +8,6 @@
 	A lot of these configs are influenced by WAI :P
 	https://github.com/nerdalertdk/WICKED-AI
 */
-
-
-
 DMS_Use_Map_Config = true;	// Whether or not to use config overwrites specific to the map.
 /*
 	If you are using a map other than a map listed in the "map_configs" folder, you should set this to false OR create a new file within the map_configs folder for the map so that you don't get a missing file error.
@@ -25,7 +22,7 @@ DMS_Enable_RankChange = false; // Whether or not to use Rank Changes. (Required 
 
 DMS_Add_AIKill2DB = false;  // Adds killstat for player in the database ;)
 
-DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a scheduled environment. Setting to true may help with lag when certain missions spawn.
+DMS_SpawnMissions_Scheduled = true;	// Whether or not to spawn missions in a scheduled environment. Setting to true may help with lag when certain missions spawn.
 
 /* Mission System Settings */
 	/*General settings for dynamic missions*/
@@ -56,6 +53,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_AI_KillPercent					= 100;						// The percent amount of AI that need to be killed for "killPercent" mission requirement (NOT IMPLEMENTED)
 
 	/*Mission Marker settings*/
+
 	DMS_ShowDifficultyColorLegend		= true;						// Whether or not to show a "color legend" at the bottom left of the map that shows which color corresponds to which difficulty. I know it's not very pretty, meh.
 	DMS_MarkerText_ShowMissionPrefix	= true;						// Whether or not to place a prefix before the mission marker text. Enable this if your players get confused by the marker names :P
 	DMS_MarkerText_MissionPrefix		= "Mission:";				// The text displayed before the mission name in the mission marker.
@@ -109,12 +107,12 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_AttemptsUntilThrottle			= 15;						// How many attempts until the parameters are throttled.
 	DMS_ThrottleCoefficient				= 0.9;						// How much the parameters are throttled. The parameters are multiplied by the coefficient, so 0.9 means 90% of whatever the parameter was.
 	DMS_MinThrottledDistance			= 100;						// The minimum distance to which it will throttle. If the throttled value is less than this, then this value is used instead.
-	DMS_PlayerNearBlacklist				= 1250;						// Missions won't spawn in a position this many meters close to a player
+	DMS_PlayerNearBlacklist				= 2000;						// Missions won't spawn in a position this many meters close to a player
 	DMS_SpawnZoneNearBlacklist			= 1250;						// Missions won't spawn in a position this many meters close to a spawn zone
 	DMS_TraderZoneNearBlacklist			= 1250;						// Missions won't spawn in a position this many meters close to a trader zone
 	DMS_MissionNearBlacklist			= 1250;						// Missions won't spawn in a position this many meters close to another mission
 	DMS_WaterNearBlacklist				= 500;						// Missions won't spawn in a position this many meters close to water
-	DMS_TerritoryNearBlacklist			= 100;						// Missions won't spawn in a position this many meters close to a territory flag. This is a resource intensive check, don't set this value too high!
+	DMS_TerritoryNearBlacklist			= 100;						// Missions won't spawn in a position this many meters close to a territory flag
 	DMS_MinSurfaceNormal				= 0.9;						// Missions won't spawn in a position where its surfaceNormal is less than this amount. The lower the value, the steeper the location. Greater values means flatter locations. Values can range from 0-1, with 0 being sideways, and 1 being perfectly flat. For reference: SurfaceNormal of about 0.7 is when you are forced to walk up a surface. If you want to convert surfaceNormal to degrees, use the arc-cosine of the surfaceNormal. 0.9 is about 25 degrees. Google "(arccos 0.9) in degrees"
 	DMS_MinDistFromWestBorder			= 250;						// Missions won't spawn in a position this many meters close to the western map border.
 	DMS_MinDistFromEastBorder			= 250;						// Missions won't spawn in a position this many meters close to the easter map border.
@@ -153,21 +151,12 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_MinServerFPS					= 5; 						// Minimum server FPS for missions to start
 
 	/*Mission notification settings*/
-	DMS_PlayerNotificationTypes =		[									// Notification types. Supported values are: ["dynamicTextRequest", "standardHintRequest", "systemChatRequest", "textTilesRequest", "ExileToasts"]. Details below.
-											//"dynamicTextRequest",			// You should use either "dynamicTextRequest" or "textTilesRequest", and I think "textTilesRequest" looks better, but this is less performance-intensive.
+	DMS_PlayerNotificationTypes =		[							// Notification types. Supported values are: ["dynamicTextRequest", "standardHintRequest", "systemChatRequest", "textTilesRequest"]. Details below
+											"dynamicTextRequest",			// You should use either "dynamicTextRequest" or "textTilesRequest", and I think "textTilesRequest" looks better, but this is less performance-intensive.
 											//"standardHintRequest",		// Hints are a bit wonky...
 											//"textTilesRequest",			// Keep in mind you can only have 1 "text tile" message up at a time, so the message will disappear if the player gets a kill or something while the message is shown. This message type is also performance-intensive, so I advise against it.
-											//"systemChatRequest",			// Always nice to show in chat so that players can scroll up to read the info if they need to.
-											"ExileToasts"					// Default notification type since Exile 0.98, see (http://www.exilemod.com/devblog/new-ingame-notifications/)
+											"systemChatRequest"				// Always nice to show in chat so that players can scroll up to read the info if they need to.
 										];
-
-		/*Exile Toasts Notification Settings*/
-	DMS_ExileToasts_Title_Size			= 22;						// Size for Client Exile Toasts  mission titles.
-	DMS_ExileToasts_Title_Font			= "puristaMedium";			// Font for Client Exile Toasts  mission titles.
-	DMS_ExileToasts_Message_Color		= "#FFFFFF";				// Exile Toasts color for "ExileToast" client notification type.
-	DMS_ExileToasts_Message_Size		= 19;						// Exile Toasts size for "ExileToast" client notification type.
-	DMS_ExileToasts_Message_Font		= "PuristaLight";			// Exile Toasts font for "ExileToast" client notification type.
-		/*Exile Toasts Notification Settings*/
 
 		/*Dynamic Text Notification Settings*/
 	DMS_dynamicText_Duration			= 7;						// Number of seconds that the message will last on the screen.
@@ -199,7 +188,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 
 	/*Mission notification settings*/
 
-	DMS_BanditMissionTypes =			[							//	List of missions with spawn chances. If they add up to 100%, they represent the percentage chance each one will spawn
+		DMS_BanditMissionTypes =			[							//	List of missions with spawn chances. If they add up to 100%, they represent the percentage chance each one will spawn
 											["donthasslethehoff",5],
 											["bandits",5],
 											["bauhaus",5],
@@ -224,6 +213,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											//["saltflats",1]			//<--Example (already imported by default on Altis in map configs)
 											//["slums",1]				//<--Example (already imported by default on Altis in map configs)
 											//["occupation",1]		//<--Example
+
 											//["sectorB",1]			//<--Example for Taviana
 										];
 
@@ -240,6 +230,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											//"saltflats"				//<--Example
 											//"slums"				//<--Example
 											//"occupation"			//<--Example
+
 											//"sectorB"				//<--Example for Taviana
 										];
 
@@ -249,6 +240,11 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											// There are examples in the altis map config (it blacklists the salt flats) and in the tavi/taviana map configs.
 
 											//[[2350,4680],100]		// This random example blacklists any position within 100 meters of coordinates "[2350,4680]"
+
+
+
+
+
 										];
 /* Mission System Settings */
 
@@ -259,100 +255,78 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 
 	DMS_Show_Kill_Poptabs_Notification	= true;						// Whether or not to show the poptabs gained/lost message on the player's screen when killing an AI. (It will still change the player's money, it just won't show the "Money Received" notification)
 	DMS_Show_Kill_Respect_Notification	= true;						// Whether or not to show the "Frag Message" on the player's screen when killing an AI. (It will still change the player's respect, it just won't show the "AI Killed" frag message)
-	DMS_Show_Kill_Rank_Notification		= true;
+	DMS_Show_Kill_Rank_Notification		= false;
 	DMS_Show_Party_Kill_Notification	= true;						// Whether or not to show in chat when a party member kills an AI.
 
-	DMS_Spawn_AI_With_Money				= true;						// Whether or not to spawn AI with money that can be looted from the body.
-	DMS_AIMoney_PopulationMultiplier	= 5;						// This determines how much EXTRA money an AI will have on his body. For example, setting this to 5 and having a server population of 30 means the AI will have an extra 150 poptabs on the body. Set to 0 to disable.
-
-	DMS_GiveMoneyToPlayer_OnAIKill		= true;						// Whether or not to give money directly to players when they kill AI (old method of giving money).
-	DMS_GiveRespectToPlayer_OnAIKill	= true;						// Whether or not to give respect to players when they kill AI.
-
 	DMS_Bandit_Soldier_MoneyGain		= 50;						// The amount of Poptabs gained for killing a bandit soldier
-	DMS_Bandit_Soldier_RepGain			= 10;						// The amount of Respect gained for killing a bandit soldier
-	DMS_Bandit_Soldier_RankGain			= 15;
-	DMS_Bandit_Soldier_SpawnMoney		= 50;						// The amount of Poptabs carried by a bandit soldier
-
+	DMS_Bandit_Soldier_RepGain			= 200;						// The amount of Respect gained for killing a bandit soldier
+	DMS_Bandit_Soldier_RankGain			= 30;
 	DMS_Bandit_Static_MoneyGain			= 75;						// The amount of Poptabs gained for killing a bandit static gunner
-	DMS_Bandit_Static_RepGain			= 15;						// The amount of Respect gained for killing a bandit static gunner
+	DMS_Bandit_Static_RepGain			= 300;						// The amount of Respect gained for killing a bandit static gunner
 	DMS_Bandit_Static_RankGain			= 30;
-	DMS_Bandit_Static_SpawnMoney		= 75;						// The amount of Poptabs carried by a bandit static gunner
-
 	DMS_Bandit_Vehicle_MoneyGain		= 100;						// The amount of Poptabs gained for killing a bandit vehicle crew member
-	DMS_Bandit_Vehicle_RepGain			= 25;						// The amount of Respect gained for killing a bandit vehicle crew member
-	DMS_Bandit_Vehicle_RankGain			= 50;
-	DMS_Bandit_Vehicle_SpawnMoney		= 100;						// The amount of Poptabs carried by a bandit vehicle crew member
-
-/* DonkeyPunchDMS Custom Settings for Hero AI*/
+	DMS_Bandit_Vehicle_RepGain			= 500;						// The amount of Respect gained for killing a bandit vehicle crew member
+	DMS_Bandit_Vehicle_RankGain			= 50;	
+/* DonkeyPunchDMS Custom Settings for Hero AI*/	
 	DMS_Hero_Soldier_MoneyGain			= 100;						// The amount of Poptabs gained for killing a hero soldier
-	DMS_Hero_Soldier_RepGain			= 20;						// The amount of Respect gained for killing a hero soldier
-	DMS_Hero_Soldier_RankGain			= -30;
-	DMS_Hero_Soldier_SpawnMoney			= 100;						// The amount of Poptabs carried by a hero soldier
-
+	DMS_Hero_Soldier_RepGain			= 400;						// The amount of Respect gained for killing a hero soldier
+	DMS_Hero_Soldier_RankGain			= -30;	
 	DMS_Hero_Static_MoneyGain			= 120;						// The amount of Poptabs gained for killing a hero static gunner
-	DMS_Hero_Static_RepGain				= 30;						// The amount of Respect gained for killing a hero static gunner
+	DMS_Hero_Static_RepGain				= 600;						// The amount of Respect gained for killing a hero static gunner
 	DMS_Hero_Static_RankGain			= -60;
-	DMS_Hero_Static_SpawnMoney			= 120;						// The amount of Poptabs carried by a hero static gunner
-
 	DMS_Hero_Vehicle_MoneyGain			= 200;						// The amount of Poptabs gained for killing a hero vehicle crew member
-	DMS_Hero_Vehicle_RepGain			= 50;						// The amount of Respect gained for killing a hero vehicle crew member
+	DMS_Hero_Vehicle_RepGain			= 500;						// The amount of Respect gained for killing a hero vehicle crew member
 	DMS_Hero_Vehicle_RankGain			= -100;
-	DMS_Hero_Vehicle_SpawnMoney			= 200;						// The amount of Poptabs carried by a hero vehicle crew member
-/* DonkeyPunchDMS Custom Settings for Survivor AI*/
+/* DonkeyPunchDMS Custom Settings for Survivor AI*/	
 	DMS_Survivor_Soldier_MoneyGain		= -100;						// The amount of Poptabs gained for killing a Survivor soldier
 	DMS_Survivor_Soldier_RepGain		= -100;						// The amount of Respect gained for killing a Survivor soldier
 	DMS_Survivor_Soldier_RankGain		= -250;
-	DMS_Survivor_Soldier_SpawnMoney		= 0;						// The amount of Poptabs carried by a Survivor soldier
-
 	DMS_Survivor_Static_MoneyGain		= -100;						// The amount of Poptabs gained for killing a Survivor static gunner
 	DMS_Survivor_Static_RepGain			= -100;						// The amount of Respect gained for killing a Survivor static gunner
 	DMS_Survivor_Static_RankGain		= -400;
-	DMS_Survivor_Static_SpawnMoney		= 0;						// The amount of Poptabs carried by a Survivor static gunner
-
 	DMS_Survivor_Vehicle_MoneyGain		= -500;						// The amount of Poptabs gained for killing a Survivor vehicle crew member
-	DMS_Survivor_Vehicle_RepGain		= -100;						// The amount of Respect gained for killing a Survivor vehicle crew member
+	DMS_Survivor_Vehicle_RepGain			= -100;						// The amount of Respect gained for killing a Survivor vehicle crew member
 	DMS_Survivor_Vehicle_RankGain		= -600;
-	DMS_Survivor_Vehicle_MoneyGain		= 0;						// The amount of Poptabs carried by a Survivor vehicle crew member
-
+	
 	DMS_AIKill_DistanceBonusMinDistance	= 100;						// Minimum distance from the player to the AI to apply the distance bonus.
 	DMS_AIKill_DistanceBonusCoefficient	= 0.05;						// If the distance from the player to the killed unit is more than "DMS_AIKill_DistanceBonusMinDistance" meters then the player gets a respect bonus equivalent to the distance multiplied by this coefficient. For example, killing an AI from 400 meters will give 100 extra respect (when the coefficient is 0.25). Set to 0 to disable the bonus. This bonus will not be applied if there isn't a regular AI kill bonus.
 
 	DMS_Diff_RepOrTabs_on_roadkill 		= true;						// Whether or not you want to use different values for giving respect/poptabs when you run an AI over. Default values are NEGATIVE. This means player will LOSE respect or poptabs.
 	DMS_Bandit_Soldier_RoadkillMoney	= -10;						// The amount of Poptabs gained/lost for running over a bandit soldier
 	DMS_Bandit_Soldier_RoadkillRep		= -5;						// The amount of Respect gained/lost for running over a bandit soldier
-	DMS_Bandit_Soldier_RoadkillRank		= 20;
+	DMS_Bandit_Soldier_RoadkillRank		= 40;
 	DMS_Bandit_Static_RoadkillMoney		= -10;						// The amount of Poptabs gained/lost for running over a bandit static gunner
 	DMS_Bandit_Static_RoadkillRep		= -5;						// The amount of Respect gained/lost for running over a bandit static gunner
 	DMS_Bandit_Static_RoadkillRank		= 30;
 	DMS_Bandit_Vehicle_RoadkillMoney	= -10;						// The amount of Poptabs gained/lost for running over a bandit vehicle crew member
 	DMS_Bandit_Vehicle_RoadkillRep		= -5;						// The amount of Respect gained/lost for running over a bandit vehicle crew member
 	DMS_Bandit_Vehicle_RoadkillRank		= 50;
-/* DonkeyPunchDMS Custom RoadKill Settings for Hero AI*/
+/* DonkeyPunchDMS Custom RoadKill Settings for Hero AI*/	
 	DMS_Hero_Soldier_RoadkillMoney		= 20;						// The amount of Poptabs gained/lost for running over a hero soldier
-	DMS_Hero_Soldier_RoadkillRep		= 10;						// The amount of Respect gained/lost for running over a hero soldier
+	DMS_Hero_Soldier_RoadkillRep		= 200;						// The amount of Respect gained/lost for running over a hero soldier
 	DMS_Hero_Soldier_RoadkillRank		= -40;
 	DMS_Hero_Static_RoadkillMoney		= 20;						// The amount of Poptabs gained/lost for running over a hero static gunner
-	DMS_Hero_Static_RoadkillRep			= 10;						// The amount of Respect gained/lost for running over a hero static gunner
+	DMS_Hero_Static_RoadkillRep			= 200;						// The amount of Respect gained/lost for running over a hero static gunner
 	DMS_Hero_Static_RoadkillRank		= -60;
 	DMS_Hero_Vehicle_RoadkillMoney		= 20;						// The amount of Poptabs gained/lost for running over a hero vehicle crew member
-	DMS_Hero_Vehicle_RoadkillRep		= 10;						// The amount of Respect gained/lost for running over a hero vehicle crew member
+	DMS_Hero_Vehicle_RoadkillRep		= 200;						// The amount of Respect gained/lost for running over a hero vehicle crew member
 	DMS_Hero_Vehicle_RoadkillRank		= -100;
-/* DonkeyPunchDMS Custom Roadkill Settings for Survivor AI*/
+/* DonkeyPunchDMS Custom Roadkill Settings for Survivor AI*/	
 	DMS_Survivor_Soldier_RoadkillMoney	= -200;						// The amount of Poptabs gained/lost for running over a Survivor soldier
-	DMS_Survivor_Soldier_RoadkillRep	= -200;						// The amount of Respect gained/lost for running over a Survivor soldier
-	DMS_Survivor_Soldier_RoadkillRank	= -200;
-	DMS_Survivor_Static_RoadkillMoney	= -200;						// The amount of Poptabs gained/lost for running over a Survivor static gunner
+	DMS_Survivor_Soldier_RoadkillRep		= -200;						// The amount of Respect gained/lost for running over a Survivor soldier
+	DMS_Survivor_Soldier_RoadkillRank		= -200;	
+	DMS_Survivor_Static_RoadkillMoney		= -200;						// The amount of Poptabs gained/lost for running over a Survivor static gunner
 	DMS_Survivor_Static_RoadkillRep		= -200;						// The amount of Respect gained/lost for running over a Survivor static gunner
-	DMS_Survivor_Static_RoadkillRank	= -200;
+	DMS_Survivor_Static_RoadkillRank		= -200;	
 	DMS_Survivor_Vehicle_RoadkillMoney	= -500;						// The amount of Poptabs gained/lost for running over a Survivor vehicle crew member
-	DMS_Survivor_Vehicle_RoadkillRep	= -100;						// The amount of Respect gained/lost for running over a Survivor vehicle crew member
-	DMS_Survivor_Vehicle_RoadkillRank	= -100;
+	DMS_Survivor_Vehicle_RoadkillRep		= -100;						// The amount of Respect gained/lost for running over a Survivor vehicle crew member
+	DMS_Survivor_Vehicle_RoadkillRank		= -100;
 
 	DMS_banditSide						= EAST;						// The side (team) that AI Bandits will spawn on
 /* DonkeyPunchDMS Custom Side Factions */
 	DMS_heroSide						= WEST;						// The side (team) that AI Heros will spawn on
 	DMS_survivorSide					= CIV;						// The side (team) that AI Survivor will spawn on
-
+	
 	DMS_clear_AI_body					= false;					// Clear AI body as soon as they die
 	DMS_clear_AI_body_chance			= 50;						// Percentage chance that AI bodies will be cleared when they die
 	DMS_ai_disable_ramming_damage 		= true;						// Disables damage due to ramming into AI. !!!NOTE: THIS WILL NOT BE RELIABLE WITH "DMS_ai_offload_to_client"!!!
@@ -365,7 +339,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_AIDistanceCheckFrequency		= 60;						// How often to check within DMS_fnc_TargetsKilled whether or not the AI is out of the maximum radius. Lower values increase frequency and increase server load, greater values decrease frequency and may cause longer delays for "runaway" AI.
 
 	DMS_ai_offload_to_client			= true;						// Offload spawned AI groups to random clients. Helps with server performance.
-	DMS_ai_offload_Only_DMS_AI			= false;					// Do you use other mission systems on your server but still want to offload AI? You should probably enable this then, unless you have tested it for compatibility.
+	DMS_ai_offload_Only_DMS_AI			= true;					// Do you use other mission systems on your server but still want to offload AI? You should probably enable this then, unless you have tested it for compatibility.
 	DMS_ai_offload_notifyClient			= false;					// Notify the client when AI has been offloaded to the client.
 
 	DMS_ai_allowFreezing				= true;						// Whether or not to "freeze" AI that are a certain distance away from players (and therefore inactive).
@@ -375,8 +349,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_ai_offloadOnUnfreeze			= true;						// Whether or not to offload AI to clients once they have been "un-frozen". NOTE: This config will be ignored if "DMS_ai_offload_to_client" is set to false.
 	DMS_ai_freezeCheckingDelay			= 30;						// How often (in seconds) DMS will check whether to freeze/un-freeze AI.
 	DMS_ai_freezeOnSpawn				= true;						// Whether or not to freeze an AI group when initially spawned.
-
-	DMS_ai_share_info					= false;					// Share info about killer
+	DMS_ai_share_info					= true;						// Share info about killer
 	DMS_ai_share_info_distance			= 300;						// The distance killer's info will be shared to other AI
 
 	DMS_ai_nighttime_accessory_chance	= 75;						// Percentage chance that AI will have a flashlight or laser pointer on their guns if spawned during nighttime
@@ -392,10 +365,10 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_ai_skill_randomDifficult		= ["hardcore","hardcore","difficult","difficult","difficult"];	// 60% chance for "difficult", 40% chance for "hardcore" AI.
 	DMS_ai_skill_randomEasy				= ["moderate","moderate","easy","easy","easy"];					// 60% chance for "easy", 40% chance for "moderate" AI.
 	DMS_ai_skill_randomIntermediate		= ["difficult","difficult","moderate","moderate","moderate"];	// 60% chance for "moderate", 40% chance for "difficult" AI.
-	DMS_AI_WP_Radius_easy				= 20;						// Waypoint radius for "easy" AI.
-	DMS_AI_WP_Radius_moderate			= 30;						// Waypoint radius for "moderate" AI.
-	DMS_AI_WP_Radius_difficult			= 50;						// Waypoint radius for "difficult" AI.
-	DMS_AI_WP_Radius_hardcore			= 75;						// Waypoint radius for "hardcore" AI.
+	DMS_AI_WP_Radius_easy				= 20;						// Waypoint radius for "easy" AI
+	DMS_AI_WP_Radius_moderate			= 30;						// Waypoint radius for "moderate" AI
+	DMS_AI_WP_Radius_difficult			= 50;						// Waypoint radius for "difficult" AI
+	DMS_AI_WP_Radius_hardcore			= 75;						// Waypoint radius for "hardcore" AI
 	DMS_AI_AimCoef_easy					= 0.9;						// "Custom Aim Coefficient" (weapon sway multiplier) for "easy" AI
 	DMS_AI_AimCoef_moderate				= 0.65;						// "Custom Aim Coefficient" (weapon sway multiplier) for "moderate" AI
 	DMS_AI_AimCoef_difficult			= 0.4;						// "Custom Aim Coefficient" (weapon sway multiplier) for "difficult" AI
@@ -404,11 +377,10 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_AI_EnableStamina_moderate		= true;						// Whether or not to keep the stamina system for "moderate" AI.
 	DMS_AI_EnableStamina_difficult		= false;					// Whether or not to keep the stamina system for "difficult" AI.
 	DMS_AI_EnableStamina_hardcore		= false;					// Whether or not to keep the stamina system for "hardcore" AI.
-	DMS_AI_WP_Radius_base				= 5;						// Waypoint radius for AI in bases.
+	DMS_AI_WP_Radius_base				= 5;						// Waypoint radius for AI in bases
 	DMS_AI_WP_Radius_heli				= 500;						// Waypoint radius for AI in helis.
 
 	DMS_AI_destroyVehicleChance			= 75;						// Percent chance that an AI vehicle will be destroyed after the AI have been killed. Set to 100 for always, or 0 for never.
-
 	DMS_AI_destroyStaticWeapon			= true;						// Whether or not to destroy static HMGs after AI death.
 	DMS_AI_destroyStaticWeapon_chance	= 95;						// Percent chance that a static weapon will be destroyed (only applied if "DMS_AI_destroyStaticWeapon" is true)
 
@@ -502,7 +474,286 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"U_B_SpecopsUniform_sgg",
 											"U_I_OfficerUniform",
 											"U_B_CTRG_3",
-											"U_I_G_resistanceLeader_F"
+											"U_I_G_resistanceLeader_F",
+											"TRYK_HRP_UCP",
+											"TRYK_HRP_USMC",
+											"TRYK_HRP_khk",
+											"TRYK_U_B_OD_OD_CombatUniform",
+											"TRYK_U_B_OD_OD_R_CombatUniform",
+											"TRYK_U_B_TANTAN_CombatUniform",
+											"TRYK_U_B_TANTAN_R_CombatUniform",
+											"TRYK_U_B_BLKBLK_CombatUniform",
+											"TRYK_U_B_BLKBLK_R_CombatUniform",
+											"TRYK_U_B_GRYOCP_CombatUniform",
+											"TRYK_U_B_GRYOCP_R_CombatUniformTshirt",
+											"TRYK_U_B_TANOCP_CombatUniform",
+											"TRYK_U_B_TANOCP_R_CombatUniformTshirt",
+											"TRYK_U_B_BLKOCP_CombatUniform",
+											"TRYK_U_B_BLKOCP_R_CombatUniformTshirt",
+											"TRYK_U_B_BLKTAN_CombatUniform",
+											"TRYK_U_B_BLKTANR_CombatUniformTshirt",
+											"TRYK_U_B_ODTAN_CombatUniform",
+											"TRYK_U_B_ODTANR_CombatUniformTshirt",
+											"TRYK_U_B_GRTAN_CombatUniform",
+											"TRYK_U_B_GRTANR_CombatUniformTshirt",
+											"TRYK_U_B_wood_CombatUniform",
+											"TRYK_U_B_woodR_CombatUniformTshirt",
+											"TRYK_U_B_wood3c_CombatUniform",
+											"TRYK_U_B_wood3c_CombatUniformTshirt",
+											"TRYK_U_B_MARPAT_WOOD_CombatUniform",
+											"TRYK_U_B_MARPAT_WOOD_CombatUniformTshirt",
+											"TRYK_U_B_WOOD_MARPAT_CombatUniform",
+											"TRYK_U_B_WOOD_MARPAT_CombatUniformTshirt",
+											"TRYK_U_B_woodtan_CombatUniform",
+											"TRYK_U_B_woodtanR_CombatUniformTshirt",
+											"TRYK_U_B_JSDF_CombatUniform",
+											"TRYK_U_B_JSDF_CombatUniformTshirt",
+											"TRYK_U_B_3CD_Delta_BDU",
+											"TRYK_U_B_3CD_Delta_BDUTshirt",
+											"TRYK_U_B_3CD_Ranger_BDU",
+											"TRYK_U_B_3CD_Ranger_BDUTshirt",
+											"TRYK_U_B_3CD_BLK_BDUTshirt",
+											"TRYK_U_B_3CD_BLK_BDUTshirt2",
+											"TRYK_U_B_ACU",
+											"TRYK_U_B_ACUTshirt",
+											"TRYK_U_B_MARPAT_Wood",
+											"TRYK_U_B_MARPAT_Wood_Tshirt",
+											"TRYK_U_B_MARPAT_Desert",
+											"TRYK_U_B_MARPAT_Desert_Tshirt",
+											"TRYK_U_B_MARPAT_Desert2",
+											"TRYK_U_B_MARPAT_Desert2_Tshirt",
+											"TRYK_U_B_3c",
+											"TRYK_U_B_3cr",
+											"TRYK_U_B_Sage_Tshirt",
+											"TRYK_U_B_BLK3CD",
+											"TRYK_U_B_BLK3CD_Tshirt",
+											"TRYK_U_B_BLK",
+											"TRYK_U_B_BLK_Tshirt",
+											"TRYK_U_B_BLKTAN",
+											"TRYK_U_B_BLKTAN_Tshirt",
+											"TRYK_U_B_ODTAN",
+											"TRYK_U_B_ODTAN_Tshirt",
+											"TRYK_U_B_BLK_OD",
+											"TRYK_U_B_BLK_OD_Tshirt",
+											"TRYK_U_B_C01_Tsirt",
+											"TRYK_U_B_C02_Tsirt",
+											"TRYK_U_B_OD_BLK",
+											"TRYK_U_B_OD_BLK_2",
+											"TRYK_U_B_BLK_TAN_1",
+											"TRYK_U_B_BLK_TAN_2",
+											"TRYK_U_B_wh_tan_Rollup_CombatUniform",
+											"TRYK_U_B_wh_OD_Rollup_CombatUniform",
+											"TRYK_U_B_wh_blk_Rollup_CombatUniform",
+											"TRYK_U_B_BLK_tan_Rollup_CombatUniform",
+											"TRYK_U_B_BLK_OD_Rollup_CombatUniform",
+											"TRYK_U_B_NATO_UCP_GRY_CombatUniform",
+											"TRYK_U_B_NATO_UCP_GRY_R_CombatUniform",
+											"TRYK_U_B_NATO_UCP_CombatUniform",
+											"TRYK_U_B_NATO_UCP_R_CombatUniform",
+											"TRYK_U_B_NATO_OCP_c_BLK_CombatUniform",
+											"TRYK_U_B_NATO_OCP_BLK_c_R_CombatUniform",
+											"TRYK_U_B_NATO_OCP_BLK_CombatUniform",
+											"TRYK_U_B_NATO_OCP_BLK_R_CombatUniform",
+											"TRYK_U_B_NATO_OCPD_CombatUniform",
+											"TRYK_U_B_NATO_OCPD_R_CombatUniform",
+											"TRYK_U_B_NATO_OCP_CombatUniform",
+											"TRYK_U_B_NATO_OCP_R_CombatUniform",
+											"TRYK_U_B_AOR1_Rollup_CombatUniform",
+											"TRYK_U_B_AOR2_Rollup_CombatUniform",
+											"TRYK_U_B_MTP_CombatUniform",
+											"TRYK_U_B_MTP_R_CombatUniform",
+											"TRYK_U_B_MTP_BLK_CombatUniform",
+											"TRYK_U_B_MTP_BLK_R_CombatUniform",
+											"TRYK_U_B_Woodland",
+											"TRYK_U_B_Woodland_Tshirt",
+											"TRYK_U_B_WDL_GRY_CombatUniform",
+											"TRYK_U_B_WDL_GRY_R_CombatUniform",
+											"TRYK_U_B_ARO1_GR_CombatUniform",
+											"TRYK_U_B_ARO1_GR_R_CombatUniform",
+											"TRYK_U_B_ARO1_GRY_CombatUniform",
+											"TRYK_U_B_ARO1_GRY_R_CombatUniform",
+											"TRYK_U_B_ARO1_CombatUniform",
+											"TRYK_U_B_ARO1R_CombatUniform",
+											"TRYK_U_B_ARO1_BLK_CombatUniform",
+											"TRYK_U_B_ARO1_BLK_R_CombatUniform",
+											"TRYK_U_B_ARO1_CBR_CombatUniform",
+											"TRYK_U_B_ARO1_CBR_R_CombatUniform",
+											"TRYK_U_B_ARO2_CombatUniform",
+											"TRYK_U_B_ARO2R_CombatUniform",
+											"TRYK_U_B_AOR2_BLK_CombatUniform",
+											"TRYK_U_B_AOR2_BLK_R_CombatUniform",
+											"TRYK_U_B_AOR2_OD_CombatUniform",
+											"TRYK_U_B_AOR2_OD_R_CombatUniform",
+											"TRYK_U_B_AOR2_GRY_CombatUniform",
+											"TRYK_U_B_AOR2_GRY_R_CombatUniform",
+											"TRYK_U_B_Snow_CombatUniform",
+											"TRYK_U_B_Snowt",
+											"TRYK_U_B_Denim_T_WH",
+											"TRYK_U_B_Denim_T_BK",
+											"TRYK_U_B_BLK_T_WH",
+											"TRYK_U_B_BLK_T_BK",
+											"TRYK_U_B_RED_T_BR",
+											"TRYK_U_B_Denim_T_BG_WH",
+											"TRYK_U_B_Denim_T_BG_BK",
+											"TRYK_U_B_BLK_T_BG_WH",
+											"TRYK_U_B_BLK_T_BG_BK",
+											"TRYK_U_B_RED_T_BG_BR",
+											"TRYK_U_B_fleece",
+											"TRYK_U_B_fleece_UCP",
+											"TRYK_U_B_UCP_PCUs",
+											"TRYK_U_B_GRY_PCUs",
+											"TRYK_U_B_Wood_PCUs",
+											"TRYK_U_B_PCUs",
+											"TRYK_U_B_UCP_PCUs_R",
+											"TRYK_U_B_GRY_PCUs_R",
+											"TRYK_U_B_Wood_PCUs_R",
+											"TRYK_U_B_PCUs_R",
+											"TRYK_U_B_PCUGs",
+											"TRYK_U_B_PCUODs",
+											"TRYK_U_B_PCUGs_gry",
+											"TRYK_U_B_PCUGs_BLK",
+											"TRYK_U_B_PCUGs_OD",
+											"TRYK_U_B_PCUGs_gry_R",
+											"TRYK_U_B_PCUGs_BLK_R",
+											"TRYK_U_B_PCUGs_OD_R",
+											"TRYK_U_Bts_GRYGRY_PCUs",
+											"TRYK_U_Bts_UCP_PCUs",
+											"TRYK_U_Bts_Wood_PCUs",
+											"TRYK_U_Bts_PCUs",
+											"TRYK_U_pad_j",
+											"TRYK_U_pad_j_blk",
+											"TRYK_U_pad_hood_Cl",
+											"TRYK_U_pad_hood_Cl_blk",
+											"TRYK_U_pad_hood_tan",
+											"TRYK_U_pad_hood_Blk",
+											"TRYK_U_pad_hood_CSATBlk",
+											"TRYK_U_pad_hood_Blod",
+											"TRYK_U_pad_hood_odBK",
+											"TRYK_U_pad_hood_BKT2",
+											"TRYK_hoodie_Blk",
+											"TRYK_hoodie_FR",
+											"TRYK_hoodie_Wood",
+											"TRYK_hoodie_3c",
+											"TRYK_T_camo_tan",
+											"TRYK_T_camo_3c",
+											"TRYK_T_camo_Wood",
+											"TRYK_T_camo_wood_marpat",
+											"TRYK_T_camo_Desert_marpat",
+											"TRYK_T_camo_3c_BG",
+											"TRYK_T_camo_Wood_BG",
+											"TRYK_T_camo_wood_marpat_BG",
+											"TRYK_T_camo_desert_marpat_BG",
+											"TRYK_T_PAD",
+											"TRYK_T_OD_PAD",
+											"TRYK_T_TAN_PAD",
+											"TRYK_T_BLK_PAD",
+											"TRYK_T_T2_PAD",
+											"TRYK_T_CSAT_PAD",
+											"TRYK_U_nohoodPcu_gry",
+											"TRYK_U_hood_nc",
+											"TRYK_U_hood_mc",
+											"TRYK_U_denim_hood_blk",
+											"TRYK_U_denim_hood_mc",
+											"TRYK_U_denim_hood_3c",
+											"TRYK_U_denim_hood_nc",
+											"TRYK_U_denim_jersey_blu",
+											"TRYK_U_denim_jersey_blk",
+											"TRYK_shirts_PAD",
+											"TRYK_shirts_OD_PAD",
+											"TRYK_shirts_TAN_PAD",
+											"TRYK_shirts_BLK_PAD",
+											"TRYK_shirts_PAD_BK",
+											"TRYK_shirts_OD_PAD_BK",
+											"TRYK_shirts_TAN_PAD_BK",
+											"TRYK_shirts_BLK_PAD_BK",
+											"TRYK_shirts_PAD_BLW",
+											"TRYK_shirts_OD_PAD_BLW",
+											"TRYK_shirts_TAN_PAD_BLW",
+											"TRYK_shirts_BLK_PAD_BLW",
+											"TRYK_shirts_PAD_YEL",
+											"TRYK_shirts_OD_PAD_YEL",
+											"TRYK_shirts_TAN_PAD_YEL",
+											"TRYK_shirts_BLK_PAD_YEL",
+											"TRYK_shirts_PAD_RED2",
+											"TRYK_shirts_OD_PAD_RED2",
+											"TRYK_shirts_TAN_PAD_RED2",
+											"TRYK_shirts_BLK_PAD_RED2",
+											"TRYK_shirts_PAD_BLU3",
+											"TRYK_shirts_OD_PAD_BLU3",
+											"TRYK_shirts_TAN_PAD_BLU3",
+											"TRYK_shirts_BLK_PAD_BLU3",
+											"TRYK_shirts_DENIM_R",
+											"TRYK_shirts_DENIM_BL",
+											"TRYK_shirts_DENIM_BK",
+											"TRYK_shirts_DENIM_WH",
+											"TRYK_shirts_DENIM_BWH",
+											"TRYK_shirts_DENIM_RED2",
+											"TRYK_shirts_DENIM_WHB",
+											"TRYK_shirts_DENIM_ylb",
+											"TRYK_shirts_DENIM_od",
+											"TRYK_shirts_DENIM_R_Sleeve",
+											"TRYK_shirts_DENIM_BL_Sleeve",
+											"TRYK_shirts_DENIM_BK_Sleeve",
+											"TRYK_shirts_DENIM_WH_Sleeve",
+											"TRYK_shirts_DENIM_BWH_Sleeve",
+											"TRYK_shirts_DENIM_RED2_Sleeve",
+											"TRYK_shirts_DENIM_WHB_Sleeve",
+											"TRYK_shirts_DENIM_ylb_Sleeve",
+											"TRYK_shirts_DENIM_od_Sleeve",
+											"TRYK_shirts_PAD_BL",
+											"TRYK_shirts_OD_PAD_BL",
+											"TRYK_shirts_TAN_PAD_BL",
+											"TRYK_shirts_BLK_PAD_BL",
+											"TRYK_U_taki_wh",
+											"TRYK_U_taki_COY",
+											"TRYK_U_taki_BL",
+											"TRYK_U_taki_BLK",
+											"TRYK_U_Bts_PCUGs",
+											"TRYK_U_Bts_PCUODs",
+											"TRYK_U_taki_G_WH",
+											"TRYK_U_taki_G_COY",
+											"TRYK_U_taki_G_BL",
+											"TRYK_U_taki_G_BLK",
+											"TRYK_U_B_PCUHs",
+											"TRYK_U_B_PCUGHs",
+											"TRYK_U_B_PCUODHs",
+											"TRYK_B_USMC_R",
+											"TRYK_B_USMC_R_ROLL",
+											"TRYK_ZARATAKI",
+											"TRYK_ZARATAKI2",
+											"TRYK_ZARATAKI3",
+											"TRYK_B_TRYK_UCP_T",
+											"TRYK_B_TRYK_3C_T",
+											"TRYK_B_TRYK_MTP_T",
+											"TRYK_B_TRYK_OCP_T",
+											"TRYK_B_TRYK_OCP_D_T",
+											"TRYK_DMARPAT_T",
+											"TRYK_C_AOR2_T",
+											"TRYK_U_B_Sage_T",
+											"TRYK_U_B_Wood_T",
+											"TRYK_U_B_BLTAN_T",
+											"TRYK_U_B_BLOD_T",
+											"TRYK_OVERALL_flesh",
+											"TRYK_OVERALL_nok_flesh",
+											"TRYK_OVERALL_SAGE_BLKboots",
+											"TRYK_OVERALL_SAGE_BLKboots_nk_blk",
+											"TRYK_OVERALL_SAGE_BLKboots_nk",
+											"TRYK_OVERALL_SAGE_BLKboots_nk_blk2",
+											"TRYK_OVERALL_SAGE",
+											"TRYK_SUITS_BLK_F",
+											"TRYK_SUITS_BR_F",
+											"TRYK_H_ghillie_top_headless3glass",
+											"TRYK_shoulder_armor_BK",
+											"TRYK_shoulder_armor_OD",
+											"TRYK_shoulder_armor_CY",
+											"TRYK_H_ghillie_top_headless3",
+											"TRYK_U_B_PCUHsW",
+											"TRYK_U_B_PCUHsW2",
+											"TRYK_U_B_PCUHsW3",
+											"TRYK_U_B_PCUHsW3nh",
+											"TRYK_U_B_PCUHsW4",
+											"TRYK_U_B_PCUHsW5",
+											"TRYK_U_B_PCUHsW6"
 										];
 	DMS_assault_vests =					[							// Vests for Assault Class
 											"V_PlateCarrierH_CTRG",
@@ -514,7 +765,115 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"V_PlateCarrierSpec_mtp",
 											"V_PlateCarrierL_CTRG",
 											"V_TacVest_blk_POLICE",
-											"V_PlateCarrierIA2_dgtl"
+											"V_PlateCarrierIA2_dgtl",
+											"TRYK_Hrp_vest_ucp",
+											"TRYK_V_PlateCarrier_JSDF",
+											"TRYK_V_ArmorVest_AOR1",
+											"TRYK_V_ArmorVest_AOR2",
+											"TRYK_V_ArmorVest_coyo",
+											"TRYK_V_ArmorVest_Brown",
+											"TRYK_V_ArmorVest_CBR",
+											"TRYK_V_ArmorVest_khk",
+											"TRYK_V_ArmorVest_rgr",
+											"TRYK_V_ArmorVest_green",
+											"TRYK_V_ArmorVest_tan",
+											"TRYK_V_ArmorVest_Delta",
+											"TRYK_V_ArmorVest_Ranger",
+											"TRYK_V_ArmorVest_AOR1_2",
+											"TRYK_V_ArmorVest_AOR2_2",
+											"TRYK_V_ArmorVest_coyo2",
+											"TRYK_V_ArmorVest_Brown2",
+											"TRYK_V_ArmorVest_cbr2",
+											"TRYK_V_ArmorVest_khk2",
+											"TRYK_V_ArmorVest_rgr2",
+											"TRYK_V_ArmorVest_green2",
+											"TRYK_V_ArmorVest_tan2",
+											"TRYK_V_ArmorVest_Delta2",
+											"TRYK_V_ArmorVest_Ranger2",
+											"TRYK_V_PlateCarrier_blk",
+											"TRYK_V_PlateCarrier_coyo",
+											"TRYK_V_PlateCarrier_wood",
+											"TRYK_V_PlateCarrier_ACU",
+											"TRYK_V_TacVest_coyo",
+											"TRYK_V_harnes_blk_L",
+											"TRYK_V_harnes_od_L",
+											"TRYK_V_harnes_TAN_L",
+											"TRYK_V_PlateCarrier_blk_L",
+											"TRYK_V_PlateCarrier_wood_L",
+											"TRYK_V_PlateCarrier_ACU_L",
+											"TRYK_V_PlateCarrier_coyo_L",
+											"TRYK_V_ChestRig_L",
+											"TRYK_V_ChestRig",
+											"TRYK_V_Bulletproof",
+											"TRYK_V_Bulletproof_BLK",
+											"TRYK_V_Bulletproof_BL",
+											"TRYK_V_IOTV_BLK",
+											"TRYK_V_tacv1M_BK",
+											"TRYK_V_tacv1MLC_BK",
+											"TRYK_V_tacv1",
+											"TRYK_V_tacv1_CY",
+											"TRYK_V_tacv1_BK",
+											"TRYK_V_tacv1_P_BK",
+											"TRYK_V_tacv1_SHERIFF_BK",
+											"TRYK_V_tacv1_FBI_BK",
+											"TRYK_V_tacv1LP_BK",
+											"TRYK_V_tacv1LSRF_BK",
+											"TRYK_V_tacv1LC_BK",
+											"TRYK_V_tacv1LC_CY",
+											"TRYK_V_tacv1LC_OD",
+											"TRYK_V_tacv1LC_FBI_BK",
+											"TRYK_V_tacv1LC_SRF_BK",
+											"TRYK_V_tacv1LC_SRF_OD",
+											"TRYK_V_tacv1LC_P_BK",
+											"TRYK_V_PlateCarrier_POLICE",
+											"TRYK_V_ArmorVest_HRT_B",
+											"TRYK_V_ArmorVest_HRT_OD",
+											"TRYK_V_ArmorVest_HRT2_B",
+											"TRYK_V_ArmorVest_HRT2_OD",
+											"TRYK_V_ArmorVest_Winter",
+											"TRYK_V_Sheriff_BA_OD",
+											"TRYK_V_tacv10_BK",
+											"TRYK_V_tacv10_OD",
+											"TRYK_V_tacv10_TN",
+											"TRYK_V_tacv10LC_BK",
+											"TRYK_V_tacv10LC_OD",
+											"TRYK_V_tacv10LC_TN",
+											"TRYK_V_tacv1L_BK",
+											"TRYK_V_tacv1L_OD",
+											"TRYK_V_tacv1L_CY",
+											"TRYK_V_tacv1LC_FBI2_BK",
+											"TRYK_V_tacv1LC_SRF2_BK",
+											"TRYK_V_tacv1LC_SRF2_OD",
+											"TRYK_V_tacv1LC_P2_BK",
+											"TRYK_V_tacv1_MSL_BK",
+											"TRYK_V_tacv1_MSL_NV",
+											"TRYK_V_tacv1LMSL_BK",
+											"TRYK_V_tacv1LMSL_NV",
+											"TRYK_V_tacv1LC_MSL_BK",
+											"TRYK_V_tacv1LC_MSL_NV",
+											"TRYK_V_tacSVD_BK",
+											"TRYK_V_tacSVD_OD",
+											"TRYK_V_Sheriff_BA_TL",
+											"TRYK_V_Sheriff_BA_TBL",
+											"TRYK_V_Sheriff_BA_TCL",
+											"TRYK_V_Sheriff_BA_TL2",
+											"TRYK_V_Sheriff_BA_TBL2",
+											"TRYK_V_Sheriff_BA_TCL2",
+											"TRYK_V_Sheriff_BA_T",
+											"TRYK_V_Sheriff_BA_TB",
+											"TRYK_V_Sheriff_BA_T2",
+											"TRYK_V_Sheriff_BA_TB2",
+											"TRYK_V_Sheriff_BA_T3",
+											"TRYK_V_Sheriff_BA_TB3",
+											"TRYK_V_Sheriff_BA_T4",
+											"TRYK_V_Sheriff_BA_TB4",
+											"TRYK_V_Sheriff_BA_T5",
+											"TRYK_V_Sheriff_BA_TB5",
+											"TRYK_V_Sheriff_BA_TBL3_BK",
+											"TRYK_V_Sheriff_BA_TBL3_OD",
+											"TRYK_V_Sheriff_BA_TBL3_TN",
+											"TRYK_LOC_AK_chestrig_OD",
+											"TRYK_LOC_AK_chestrig_TAN"
 										];
 	DMS_assault_backpacks =				[							// Backpacks for Assault Class
 											"B_Bergen_rgr",
@@ -523,14 +882,54 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"B_Carryall_cbr",
 											"B_FieldPack_oucamo",
 											"B_FieldPack_cbr",
-											"B_Bergen_blk"
+											"B_Bergen_blk",
+											"TRYK_B_AssaultPack_UCP",
+											"TRYK_B_AssaultPack_Type2camo",
+											"TRYK_B_AssaultPack_MARPAT_Desert",
+											"TRYK_B_AssaultPack_MARPAT_Wood",
+											"TRYK_B_Kitbag_Base",
+											"TRYK_B_Kitbag_blk",
+											"TRYK_B_Kitbag_aaf",
+											"TRYK_B_Carryall_blk",
+											"TRYK_B_Carryall_wh",
+											"TRYK_B_Carryall_wood",
+											"TRYK_B_Carryall_JSDF",
+											"TRYK_B_Kitbag_Base_JSDF",
+											"TRYK_B_Coyotebackpack",
+											"TRYK_B_Coyotebackpack_OD",
+											"TRYK_B_Coyotebackpack_BLK",
+											"TRYK_B_Coyotebackpack_WH",
+											"TRYK_B_Alicepack",
+											"TRYK_B_Medbag",
+											"TRYK_B_Medbag_OD",
+											"TRYK_B_Medbag_BK",
+											"TRYK_B_Medbag_ucp",
+											"TRYK_B_Belt",
+											"TRYK_B_Belt_BLK",
+											"TRYK_B_Belt_CYT",
+											"TRYK_B_Belt_tan",
+											"TRYK_B_Belt_br",
+											"TRYK_B_Belt_GR",
+											"TRYK_B_Belt_AOR1",
+											"TRYK_B_Belt_AOR2",
+											"TRYK_B_BAF_BAG_BLK",
+											"TRYK_B_BAF_BAG_CYT",
+											"TRYK_B_BAF_BAG_OD",
+											"TRYK_B_BAF_BAG_rgr",
+											"TRYK_B_BAF_BAG_mcamo",
+											"TRYK_B_tube_cyt",
+											"TRYK_B_tube_od",
+											"TRYK_B_tube_blk",
+											"TRYK_B_FieldPack_Wood",
+											"TRYK_Winter_pack"
 										];
 
 	//Machine Gun Class
 	DMS_MG_weps	=						[							// Machine Guns
 											"LMG_Zafir_F",
 											"LMG_Mk200_F",
-											"arifle_MX_SW_Black_F"
+											"arifle_MX_SW_Black_F",
+											"MMG_01_hex_F"
 										];
 	DMS_MG_pistols =					[							// Pistols for MG Class (Set to empty array if you don't want to give them any pistols)
 											"hgun_ACPC2_F",
@@ -592,7 +991,286 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"U_B_SpecopsUniform_sgg",
 											"U_I_OfficerUniform",
 											"U_B_CTRG_3",
-											"U_I_G_resistanceLeader_F"
+											"U_I_G_resistanceLeader_F",
+											"TRYK_HRP_UCP",
+											"TRYK_HRP_USMC",
+											"TRYK_HRP_khk",
+											"TRYK_U_B_OD_OD_CombatUniform",
+											"TRYK_U_B_OD_OD_R_CombatUniform",
+											"TRYK_U_B_TANTAN_CombatUniform",
+											"TRYK_U_B_TANTAN_R_CombatUniform",
+											"TRYK_U_B_BLKBLK_CombatUniform",
+											"TRYK_U_B_BLKBLK_R_CombatUniform",
+											"TRYK_U_B_GRYOCP_CombatUniform",
+											"TRYK_U_B_GRYOCP_R_CombatUniformTshirt",
+											"TRYK_U_B_TANOCP_CombatUniform",
+											"TRYK_U_B_TANOCP_R_CombatUniformTshirt",
+											"TRYK_U_B_BLKOCP_CombatUniform",
+											"TRYK_U_B_BLKOCP_R_CombatUniformTshirt",
+											"TRYK_U_B_BLKTAN_CombatUniform",
+											"TRYK_U_B_BLKTANR_CombatUniformTshirt",
+											"TRYK_U_B_ODTAN_CombatUniform",
+											"TRYK_U_B_ODTANR_CombatUniformTshirt",
+											"TRYK_U_B_GRTAN_CombatUniform",
+											"TRYK_U_B_GRTANR_CombatUniformTshirt",
+											"TRYK_U_B_wood_CombatUniform",
+											"TRYK_U_B_woodR_CombatUniformTshirt",
+											"TRYK_U_B_wood3c_CombatUniform",
+											"TRYK_U_B_wood3c_CombatUniformTshirt",
+											"TRYK_U_B_MARPAT_WOOD_CombatUniform",
+											"TRYK_U_B_MARPAT_WOOD_CombatUniformTshirt",
+											"TRYK_U_B_WOOD_MARPAT_CombatUniform",
+											"TRYK_U_B_WOOD_MARPAT_CombatUniformTshirt",
+											"TRYK_U_B_woodtan_CombatUniform",
+											"TRYK_U_B_woodtanR_CombatUniformTshirt",
+											"TRYK_U_B_JSDF_CombatUniform",
+											"TRYK_U_B_JSDF_CombatUniformTshirt",
+											"TRYK_U_B_3CD_Delta_BDU",
+											"TRYK_U_B_3CD_Delta_BDUTshirt",
+											"TRYK_U_B_3CD_Ranger_BDU",
+											"TRYK_U_B_3CD_Ranger_BDUTshirt",
+											"TRYK_U_B_3CD_BLK_BDUTshirt",
+											"TRYK_U_B_3CD_BLK_BDUTshirt2",
+											"TRYK_U_B_ACU",
+											"TRYK_U_B_ACUTshirt",
+											"TRYK_U_B_MARPAT_Wood",
+											"TRYK_U_B_MARPAT_Wood_Tshirt",
+											"TRYK_U_B_MARPAT_Desert",
+											"TRYK_U_B_MARPAT_Desert_Tshirt",
+											"TRYK_U_B_MARPAT_Desert2",
+											"TRYK_U_B_MARPAT_Desert2_Tshirt",
+											"TRYK_U_B_3c",
+											"TRYK_U_B_3cr",
+											"TRYK_U_B_Sage_Tshirt",
+											"TRYK_U_B_BLK3CD",
+											"TRYK_U_B_BLK3CD_Tshirt",
+											"TRYK_U_B_BLK",
+											"TRYK_U_B_BLK_Tshirt",
+											"TRYK_U_B_BLKTAN",
+											"TRYK_U_B_BLKTAN_Tshirt",
+											"TRYK_U_B_ODTAN",
+											"TRYK_U_B_ODTAN_Tshirt",
+											"TRYK_U_B_BLK_OD",
+											"TRYK_U_B_BLK_OD_Tshirt",
+											"TRYK_U_B_C01_Tsirt",
+											"TRYK_U_B_C02_Tsirt",
+											"TRYK_U_B_OD_BLK",
+											"TRYK_U_B_OD_BLK_2",
+											"TRYK_U_B_BLK_TAN_1",
+											"TRYK_U_B_BLK_TAN_2",
+											"TRYK_U_B_wh_tan_Rollup_CombatUniform",
+											"TRYK_U_B_wh_OD_Rollup_CombatUniform",
+											"TRYK_U_B_wh_blk_Rollup_CombatUniform",
+											"TRYK_U_B_BLK_tan_Rollup_CombatUniform",
+											"TRYK_U_B_BLK_OD_Rollup_CombatUniform",
+											"TRYK_U_B_NATO_UCP_GRY_CombatUniform",
+											"TRYK_U_B_NATO_UCP_GRY_R_CombatUniform",
+											"TRYK_U_B_NATO_UCP_CombatUniform",
+											"TRYK_U_B_NATO_UCP_R_CombatUniform",
+											"TRYK_U_B_NATO_OCP_c_BLK_CombatUniform",
+											"TRYK_U_B_NATO_OCP_BLK_c_R_CombatUniform",
+											"TRYK_U_B_NATO_OCP_BLK_CombatUniform",
+											"TRYK_U_B_NATO_OCP_BLK_R_CombatUniform",
+											"TRYK_U_B_NATO_OCPD_CombatUniform",
+											"TRYK_U_B_NATO_OCPD_R_CombatUniform",
+											"TRYK_U_B_NATO_OCP_CombatUniform",
+											"TRYK_U_B_NATO_OCP_R_CombatUniform",
+											"TRYK_U_B_AOR1_Rollup_CombatUniform",
+											"TRYK_U_B_AOR2_Rollup_CombatUniform",
+											"TRYK_U_B_MTP_CombatUniform",
+											"TRYK_U_B_MTP_R_CombatUniform",
+											"TRYK_U_B_MTP_BLK_CombatUniform",
+											"TRYK_U_B_MTP_BLK_R_CombatUniform",
+											"TRYK_U_B_Woodland",
+											"TRYK_U_B_Woodland_Tshirt",
+											"TRYK_U_B_WDL_GRY_CombatUniform",
+											"TRYK_U_B_WDL_GRY_R_CombatUniform",
+											"TRYK_U_B_ARO1_GR_CombatUniform",
+											"TRYK_U_B_ARO1_GR_R_CombatUniform",
+											"TRYK_U_B_ARO1_GRY_CombatUniform",
+											"TRYK_U_B_ARO1_GRY_R_CombatUniform",
+											"TRYK_U_B_ARO1_CombatUniform",
+											"TRYK_U_B_ARO1R_CombatUniform",
+											"TRYK_U_B_ARO1_BLK_CombatUniform",
+											"TRYK_U_B_ARO1_BLK_R_CombatUniform",
+											"TRYK_U_B_ARO1_CBR_CombatUniform",
+											"TRYK_U_B_ARO1_CBR_R_CombatUniform",
+											"TRYK_U_B_ARO2_CombatUniform",
+											"TRYK_U_B_ARO2R_CombatUniform",
+											"TRYK_U_B_AOR2_BLK_CombatUniform",
+											"TRYK_U_B_AOR2_BLK_R_CombatUniform",
+											"TRYK_U_B_AOR2_OD_CombatUniform",
+											"TRYK_U_B_AOR2_OD_R_CombatUniform",
+											"TRYK_U_B_AOR2_GRY_CombatUniform",
+											"TRYK_U_B_AOR2_GRY_R_CombatUniform",
+											"TRYK_U_B_Snow_CombatUniform",
+											"TRYK_U_B_Snowt",
+											"TRYK_U_B_Denim_T_WH",
+											"TRYK_U_B_Denim_T_BK",
+											"TRYK_U_B_BLK_T_WH",
+											"TRYK_U_B_BLK_T_BK",
+											"TRYK_U_B_RED_T_BR",
+											"TRYK_U_B_Denim_T_BG_WH",
+											"TRYK_U_B_Denim_T_BG_BK",
+											"TRYK_U_B_BLK_T_BG_WH",
+											"TRYK_U_B_BLK_T_BG_BK",
+											"TRYK_U_B_RED_T_BG_BR",
+											"TRYK_U_B_fleece",
+											"TRYK_U_B_fleece_UCP",
+											"TRYK_U_B_UCP_PCUs",
+											"TRYK_U_B_GRY_PCUs",
+											"TRYK_U_B_Wood_PCUs",
+											"TRYK_U_B_PCUs",
+											"TRYK_U_B_UCP_PCUs_R",
+											"TRYK_U_B_GRY_PCUs_R",
+											"TRYK_U_B_Wood_PCUs_R",
+											"TRYK_U_B_PCUs_R",
+											"TRYK_U_B_PCUGs",
+											"TRYK_U_B_PCUODs",
+											"TRYK_U_B_PCUGs_gry",
+											"TRYK_U_B_PCUGs_BLK",
+											"TRYK_U_B_PCUGs_OD",
+											"TRYK_U_B_PCUGs_gry_R",
+											"TRYK_U_B_PCUGs_BLK_R",
+											"TRYK_U_B_PCUGs_OD_R",
+											"TRYK_U_Bts_GRYGRY_PCUs",
+											"TRYK_U_Bts_UCP_PCUs",
+											"TRYK_U_Bts_Wood_PCUs",
+											"TRYK_U_Bts_PCUs",
+											"TRYK_U_pad_j",
+											"TRYK_U_pad_j_blk",
+											"TRYK_U_pad_hood_Cl",
+											"TRYK_U_pad_hood_Cl_blk",
+											"TRYK_U_pad_hood_tan",
+											"TRYK_U_pad_hood_Blk",
+											"TRYK_U_pad_hood_CSATBlk",
+											"TRYK_U_pad_hood_Blod",
+											"TRYK_U_pad_hood_odBK",
+											"TRYK_U_pad_hood_BKT2",
+											"TRYK_hoodie_Blk",
+											"TRYK_hoodie_FR",
+											"TRYK_hoodie_Wood",
+											"TRYK_hoodie_3c",
+											"TRYK_T_camo_tan",
+											"TRYK_T_camo_3c",
+											"TRYK_T_camo_Wood",
+											"TRYK_T_camo_wood_marpat",
+											"TRYK_T_camo_Desert_marpat",
+											"TRYK_T_camo_3c_BG",
+											"TRYK_T_camo_Wood_BG",
+											"TRYK_T_camo_wood_marpat_BG",
+											"TRYK_T_camo_desert_marpat_BG",
+											"TRYK_T_PAD",
+											"TRYK_T_OD_PAD",
+											"TRYK_T_TAN_PAD",
+											"TRYK_T_BLK_PAD",
+											"TRYK_T_T2_PAD",
+											"TRYK_T_CSAT_PAD",
+											"TRYK_U_nohoodPcu_gry",
+											"TRYK_U_hood_nc",
+											"TRYK_U_hood_mc",
+											"TRYK_U_denim_hood_blk",
+											"TRYK_U_denim_hood_mc",
+											"TRYK_U_denim_hood_3c",
+											"TRYK_U_denim_hood_nc",
+											"TRYK_U_denim_jersey_blu",
+											"TRYK_U_denim_jersey_blk",
+											"TRYK_shirts_PAD",
+											"TRYK_shirts_OD_PAD",
+											"TRYK_shirts_TAN_PAD",
+											"TRYK_shirts_BLK_PAD",
+											"TRYK_shirts_PAD_BK",
+											"TRYK_shirts_OD_PAD_BK",
+											"TRYK_shirts_TAN_PAD_BK",
+											"TRYK_shirts_BLK_PAD_BK",
+											"TRYK_shirts_PAD_BLW",
+											"TRYK_shirts_OD_PAD_BLW",
+											"TRYK_shirts_TAN_PAD_BLW",
+											"TRYK_shirts_BLK_PAD_BLW",
+											"TRYK_shirts_PAD_YEL",
+											"TRYK_shirts_OD_PAD_YEL",
+											"TRYK_shirts_TAN_PAD_YEL",
+											"TRYK_shirts_BLK_PAD_YEL",
+											"TRYK_shirts_PAD_RED2",
+											"TRYK_shirts_OD_PAD_RED2",
+											"TRYK_shirts_TAN_PAD_RED2",
+											"TRYK_shirts_BLK_PAD_RED2",
+											"TRYK_shirts_PAD_BLU3",
+											"TRYK_shirts_OD_PAD_BLU3",
+											"TRYK_shirts_TAN_PAD_BLU3",
+											"TRYK_shirts_BLK_PAD_BLU3",
+											"TRYK_shirts_DENIM_R",
+											"TRYK_shirts_DENIM_BL",
+											"TRYK_shirts_DENIM_BK",
+											"TRYK_shirts_DENIM_WH",
+											"TRYK_shirts_DENIM_BWH",
+											"TRYK_shirts_DENIM_RED2",
+											"TRYK_shirts_DENIM_WHB",
+											"TRYK_shirts_DENIM_ylb",
+											"TRYK_shirts_DENIM_od",
+											"TRYK_shirts_DENIM_R_Sleeve",
+											"TRYK_shirts_DENIM_BL_Sleeve",
+											"TRYK_shirts_DENIM_BK_Sleeve",
+											"TRYK_shirts_DENIM_WH_Sleeve",
+											"TRYK_shirts_DENIM_BWH_Sleeve",
+											"TRYK_shirts_DENIM_RED2_Sleeve",
+											"TRYK_shirts_DENIM_WHB_Sleeve",
+											"TRYK_shirts_DENIM_ylb_Sleeve",
+											"TRYK_shirts_DENIM_od_Sleeve",
+											"TRYK_shirts_PAD_BL",
+											"TRYK_shirts_OD_PAD_BL",
+											"TRYK_shirts_TAN_PAD_BL",
+											"TRYK_shirts_BLK_PAD_BL",
+											"TRYK_U_taki_wh",
+											"TRYK_U_taki_COY",
+											"TRYK_U_taki_BL",
+											"TRYK_U_taki_BLK",
+											"TRYK_U_Bts_PCUGs",
+											"TRYK_U_Bts_PCUODs",
+											"TRYK_U_taki_G_WH",
+											"TRYK_U_taki_G_COY",
+											"TRYK_U_taki_G_BL",
+											"TRYK_U_taki_G_BLK",
+											"TRYK_U_B_PCUHs",
+											"TRYK_U_B_PCUGHs",
+											"TRYK_U_B_PCUODHs",
+											"TRYK_B_USMC_R",
+											"TRYK_B_USMC_R_ROLL",
+											"TRYK_ZARATAKI",
+											"TRYK_ZARATAKI2",
+											"TRYK_ZARATAKI3",
+											"TRYK_B_TRYK_UCP_T",
+											"TRYK_B_TRYK_3C_T",
+											"TRYK_B_TRYK_MTP_T",
+											"TRYK_B_TRYK_OCP_T",
+											"TRYK_B_TRYK_OCP_D_T",
+											"TRYK_DMARPAT_T",
+											"TRYK_C_AOR2_T",
+											"TRYK_U_B_Sage_T",
+											"TRYK_U_B_Wood_T",
+											"TRYK_U_B_BLTAN_T",
+											"TRYK_U_B_BLOD_T",
+											"TRYK_OVERALL_flesh",
+											"TRYK_OVERALL_nok_flesh",
+											"TRYK_OVERALL_SAGE_BLKboots",
+											"TRYK_OVERALL_SAGE_BLKboots_nk_blk",
+											"TRYK_OVERALL_SAGE_BLKboots_nk",
+											"TRYK_OVERALL_SAGE_BLKboots_nk_blk2",
+											"TRYK_OVERALL_SAGE",
+											"TRYK_SUITS_BLK_F",
+											"TRYK_SUITS_BR_F",
+											"TRYK_H_ghillie_top_headless3glass",
+											"TRYK_shoulder_armor_BK",
+											"TRYK_shoulder_armor_OD",
+											"TRYK_shoulder_armor_CY",
+											"TRYK_H_ghillie_top_headless3",
+											"TRYK_U_B_PCUHsW",
+											"TRYK_U_B_PCUHsW2",
+											"TRYK_U_B_PCUHsW3",
+											"TRYK_U_B_PCUHsW3nh",
+											"TRYK_U_B_PCUHsW4",
+											"TRYK_U_B_PCUHsW5",
+											"TRYK_U_B_PCUHsW6"
 										];
 	DMS_MG_vests =						[							// Vests for MG Class
 											"V_PlateCarrierH_CTRG",
@@ -606,14 +1284,161 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"V_TacVest_blk_POLICE",
 											"V_PlateCarrierIA2_dgtl",
 											"V_HarnessO_brn",
-											"V_HarnessO_gry"
+											"V_HarnessO_gry",
+											"TRYK_Hrp_vest_ucp",
+											"TRYK_V_PlateCarrier_JSDF",
+											"TRYK_V_ArmorVest_AOR1",
+											"TRYK_V_ArmorVest_AOR2",
+											"TRYK_V_ArmorVest_coyo",
+											"TRYK_V_ArmorVest_Brown",
+											"TRYK_V_ArmorVest_CBR",
+											"TRYK_V_ArmorVest_khk",
+											"TRYK_V_ArmorVest_rgr",
+											"TRYK_V_ArmorVest_green",
+											"TRYK_V_ArmorVest_tan",
+											"TRYK_V_ArmorVest_Delta",
+											"TRYK_V_ArmorVest_Ranger",
+											"TRYK_V_ArmorVest_AOR1_2",
+											"TRYK_V_ArmorVest_AOR2_2",
+											"TRYK_V_ArmorVest_coyo2",
+											"TRYK_V_ArmorVest_Brown2",
+											"TRYK_V_ArmorVest_cbr2",
+											"TRYK_V_ArmorVest_khk2",
+											"TRYK_V_ArmorVest_rgr2",
+											"TRYK_V_ArmorVest_green2",
+											"TRYK_V_ArmorVest_tan2",
+											"TRYK_V_ArmorVest_Delta2",
+											"TRYK_V_ArmorVest_Ranger2",
+											"TRYK_V_PlateCarrier_blk",
+											"TRYK_V_PlateCarrier_coyo",
+											"TRYK_V_PlateCarrier_wood",
+											"TRYK_V_PlateCarrier_ACU",
+											"TRYK_V_TacVest_coyo",
+											"TRYK_V_harnes_blk_L",
+											"TRYK_V_harnes_od_L",
+											"TRYK_V_harnes_TAN_L",
+											"TRYK_V_PlateCarrier_blk_L",
+											"TRYK_V_PlateCarrier_wood_L",
+											"TRYK_V_PlateCarrier_ACU_L",
+											"TRYK_V_PlateCarrier_coyo_L",
+											"TRYK_V_ChestRig_L",
+											"TRYK_V_ChestRig",
+											"TRYK_V_Bulletproof",
+											"TRYK_V_Bulletproof_BLK",
+											"TRYK_V_Bulletproof_BL",
+											"TRYK_V_IOTV_BLK",
+											"TRYK_V_tacv1M_BK",
+											"TRYK_V_tacv1MLC_BK",
+											"TRYK_V_tacv1",
+											"TRYK_V_tacv1_CY",
+											"TRYK_V_tacv1_BK",
+											"TRYK_V_tacv1_P_BK",
+											"TRYK_V_tacv1_SHERIFF_BK",
+											"TRYK_V_tacv1_FBI_BK",
+											"TRYK_V_tacv1LP_BK",
+											"TRYK_V_tacv1LSRF_BK",
+											"TRYK_V_tacv1LC_BK",
+											"TRYK_V_tacv1LC_CY",
+											"TRYK_V_tacv1LC_OD",
+											"TRYK_V_tacv1LC_FBI_BK",
+											"TRYK_V_tacv1LC_SRF_BK",
+											"TRYK_V_tacv1LC_SRF_OD",
+											"TRYK_V_tacv1LC_P_BK",
+											"TRYK_V_PlateCarrier_POLICE",
+											"TRYK_V_ArmorVest_HRT_B",
+											"TRYK_V_ArmorVest_HRT_OD",
+											"TRYK_V_ArmorVest_HRT2_B",
+											"TRYK_V_ArmorVest_HRT2_OD",
+											"TRYK_V_ArmorVest_Winter",
+											"TRYK_V_Sheriff_BA_OD",
+											"TRYK_V_tacv10_BK",
+											"TRYK_V_tacv10_OD",
+											"TRYK_V_tacv10_TN",
+											"TRYK_V_tacv10LC_BK",
+											"TRYK_V_tacv10LC_OD",
+											"TRYK_V_tacv10LC_TN",
+											"TRYK_V_tacv1L_BK",
+											"TRYK_V_tacv1L_OD",
+											"TRYK_V_tacv1L_CY",
+											"TRYK_V_tacv1LC_FBI2_BK",
+											"TRYK_V_tacv1LC_SRF2_BK",
+											"TRYK_V_tacv1LC_SRF2_OD",
+											"TRYK_V_tacv1LC_P2_BK",
+											"TRYK_V_tacv1_MSL_BK",
+											"TRYK_V_tacv1_MSL_NV",
+											"TRYK_V_tacv1LMSL_BK",
+											"TRYK_V_tacv1LMSL_NV",
+											"TRYK_V_tacv1LC_MSL_BK",
+											"TRYK_V_tacv1LC_MSL_NV",
+											"TRYK_V_tacSVD_BK",
+											"TRYK_V_tacSVD_OD",
+											"TRYK_V_Sheriff_BA_TL",
+											"TRYK_V_Sheriff_BA_TBL",
+											"TRYK_V_Sheriff_BA_TCL",
+											"TRYK_V_Sheriff_BA_TL2",
+											"TRYK_V_Sheriff_BA_TBL2",
+											"TRYK_V_Sheriff_BA_TCL2",
+											"TRYK_V_Sheriff_BA_T",
+											"TRYK_V_Sheriff_BA_TB",
+											"TRYK_V_Sheriff_BA_T2",
+											"TRYK_V_Sheriff_BA_TB2",
+											"TRYK_V_Sheriff_BA_T3",
+											"TRYK_V_Sheriff_BA_TB3",
+											"TRYK_V_Sheriff_BA_T4",
+											"TRYK_V_Sheriff_BA_TB4",
+											"TRYK_V_Sheriff_BA_T5",
+											"TRYK_V_Sheriff_BA_TB5",
+											"TRYK_V_Sheriff_BA_TBL3_BK",
+											"TRYK_V_Sheriff_BA_TBL3_OD",
+											"TRYK_V_Sheriff_BA_TBL3_TN",
+											"TRYK_LOC_AK_chestrig_OD",
+											"TRYK_LOC_AK_chestrig_TAN"
 										];
 	DMS_MG_backpacks =					[							// Backpacks for MG Class
 											"B_Bergen_rgr",
 											"B_Carryall_oli",
 											"B_Kitbag_mcamo",
 											"B_Carryall_cbr",
-											"B_Bergen_blk"
+											"B_Bergen_blk",
+											"TRYK_B_AssaultPack_UCP",
+											"TRYK_B_AssaultPack_Type2camo",
+											"TRYK_B_AssaultPack_MARPAT_Desert",
+											"TRYK_B_AssaultPack_MARPAT_Wood",
+											"TRYK_B_Kitbag_Base",
+											"TRYK_B_Kitbag_blk",
+											"TRYK_B_Kitbag_aaf",
+											"TRYK_B_Carryall_blk",
+											"TRYK_B_Carryall_wh",
+											"TRYK_B_Carryall_wood",
+											"TRYK_B_Carryall_JSDF",
+											"TRYK_B_Kitbag_Base_JSDF",
+											"TRYK_B_Coyotebackpack",
+											"TRYK_B_Coyotebackpack_OD",
+											"TRYK_B_Coyotebackpack_BLK",
+											"TRYK_B_Coyotebackpack_WH",
+											"TRYK_B_Alicepack",
+											"TRYK_B_Medbag",
+											"TRYK_B_Medbag_OD",
+											"TRYK_B_Medbag_BK",
+											"TRYK_B_Medbag_ucp",
+											"TRYK_B_Belt",
+											"TRYK_B_Belt_BLK",
+											"TRYK_B_Belt_CYT",
+											"TRYK_B_Belt_tan",
+											"TRYK_B_Belt_br",
+											"TRYK_B_Belt_GR",
+											"TRYK_B_Belt_AOR1",
+											"TRYK_B_Belt_AOR2",
+											"TRYK_B_BAF_BAG_BLK",
+											"TRYK_B_BAF_BAG_CYT",
+											"TRYK_B_BAF_BAG_OD",
+											"TRYK_B_BAF_BAG_rgr",
+											"TRYK_B_BAF_BAG_mcamo",
+											"TRYK_B_tube_cyt",
+											"TRYK_B_tube_od",
+											"TRYK_B_tube_blk",
+											"TRYK_B_FieldPack_Wood",
+											"TRYK_Winter_pack"
 										];
 
 	//Sniper Class
@@ -636,7 +1461,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_sniper_optics =					[							// Optics for Sniper Class
 											"optic_SOS",
 											"optic_DMS",
-											"optic_LRPS"
+											"optic_LRPS"	
 										];
 	DMS_sniper_optic_chance				= 100;						// Percentage chance that a Sniper Class AI will get an optic
 	DMS_sniper_bipod_chance				= 90;						// Percentage chance that a Sniper Class AI will get a bipod
@@ -693,14 +1518,161 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"V_TacVest_blk_POLICE",
 											"V_PlateCarrierIA2_dgtl",
 											"V_HarnessO_brn",
-											"V_HarnessO_gry"
+											"V_HarnessO_gry",
+											"TRYK_Hrp_vest_ucp",
+											"TRYK_V_PlateCarrier_JSDF",
+											"TRYK_V_ArmorVest_AOR1",
+											"TRYK_V_ArmorVest_AOR2",
+											"TRYK_V_ArmorVest_coyo",
+											"TRYK_V_ArmorVest_Brown",
+											"TRYK_V_ArmorVest_CBR",
+											"TRYK_V_ArmorVest_khk",
+											"TRYK_V_ArmorVest_rgr",
+											"TRYK_V_ArmorVest_green",
+											"TRYK_V_ArmorVest_tan",
+											"TRYK_V_ArmorVest_Delta",
+											"TRYK_V_ArmorVest_Ranger",
+											"TRYK_V_ArmorVest_AOR1_2",
+											"TRYK_V_ArmorVest_AOR2_2",
+											"TRYK_V_ArmorVest_coyo2",
+											"TRYK_V_ArmorVest_Brown2",
+											"TRYK_V_ArmorVest_cbr2",
+											"TRYK_V_ArmorVest_khk2",
+											"TRYK_V_ArmorVest_rgr2",
+											"TRYK_V_ArmorVest_green2",
+											"TRYK_V_ArmorVest_tan2",
+											"TRYK_V_ArmorVest_Delta2",
+											"TRYK_V_ArmorVest_Ranger2",
+											"TRYK_V_PlateCarrier_blk",
+											"TRYK_V_PlateCarrier_coyo",
+											"TRYK_V_PlateCarrier_wood",
+											"TRYK_V_PlateCarrier_ACU",
+											"TRYK_V_TacVest_coyo",
+											"TRYK_V_harnes_blk_L",
+											"TRYK_V_harnes_od_L",
+											"TRYK_V_harnes_TAN_L",
+											"TRYK_V_PlateCarrier_blk_L",
+											"TRYK_V_PlateCarrier_wood_L",
+											"TRYK_V_PlateCarrier_ACU_L",
+											"TRYK_V_PlateCarrier_coyo_L",
+											"TRYK_V_ChestRig_L",
+											"TRYK_V_ChestRig",
+											"TRYK_V_Bulletproof",
+											"TRYK_V_Bulletproof_BLK",
+											"TRYK_V_Bulletproof_BL",
+											"TRYK_V_IOTV_BLK",
+											"TRYK_V_tacv1M_BK",
+											"TRYK_V_tacv1MLC_BK",
+											"TRYK_V_tacv1",
+											"TRYK_V_tacv1_CY",
+											"TRYK_V_tacv1_BK",
+											"TRYK_V_tacv1_P_BK",
+											"TRYK_V_tacv1_SHERIFF_BK",
+											"TRYK_V_tacv1_FBI_BK",
+											"TRYK_V_tacv1LP_BK",
+											"TRYK_V_tacv1LSRF_BK",
+											"TRYK_V_tacv1LC_BK",
+											"TRYK_V_tacv1LC_CY",
+											"TRYK_V_tacv1LC_OD",
+											"TRYK_V_tacv1LC_FBI_BK",
+											"TRYK_V_tacv1LC_SRF_BK",
+											"TRYK_V_tacv1LC_SRF_OD",
+											"TRYK_V_tacv1LC_P_BK",
+											"TRYK_V_PlateCarrier_POLICE",
+											"TRYK_V_ArmorVest_HRT_B",
+											"TRYK_V_ArmorVest_HRT_OD",
+											"TRYK_V_ArmorVest_HRT2_B",
+											"TRYK_V_ArmorVest_HRT2_OD",
+											"TRYK_V_ArmorVest_Winter",
+											"TRYK_V_Sheriff_BA_OD",
+											"TRYK_V_tacv10_BK",
+											"TRYK_V_tacv10_OD",
+											"TRYK_V_tacv10_TN",
+											"TRYK_V_tacv10LC_BK",
+											"TRYK_V_tacv10LC_OD",
+											"TRYK_V_tacv10LC_TN",
+											"TRYK_V_tacv1L_BK",
+											"TRYK_V_tacv1L_OD",
+											"TRYK_V_tacv1L_CY",
+											"TRYK_V_tacv1LC_FBI2_BK",
+											"TRYK_V_tacv1LC_SRF2_BK",
+											"TRYK_V_tacv1LC_SRF2_OD",
+											"TRYK_V_tacv1LC_P2_BK",
+											"TRYK_V_tacv1_MSL_BK",
+											"TRYK_V_tacv1_MSL_NV",
+											"TRYK_V_tacv1LMSL_BK",
+											"TRYK_V_tacv1LMSL_NV",
+											"TRYK_V_tacv1LC_MSL_BK",
+											"TRYK_V_tacv1LC_MSL_NV",
+											"TRYK_V_tacSVD_BK",
+											"TRYK_V_tacSVD_OD",
+											"TRYK_V_Sheriff_BA_TL",
+											"TRYK_V_Sheriff_BA_TBL",
+											"TRYK_V_Sheriff_BA_TCL",
+											"TRYK_V_Sheriff_BA_TL2",
+											"TRYK_V_Sheriff_BA_TBL2",
+											"TRYK_V_Sheriff_BA_TCL2",
+											"TRYK_V_Sheriff_BA_T",
+											"TRYK_V_Sheriff_BA_TB",
+											"TRYK_V_Sheriff_BA_T2",
+											"TRYK_V_Sheriff_BA_TB2",
+											"TRYK_V_Sheriff_BA_T3",
+											"TRYK_V_Sheriff_BA_TB3",
+											"TRYK_V_Sheriff_BA_T4",
+											"TRYK_V_Sheriff_BA_TB4",
+											"TRYK_V_Sheriff_BA_T5",
+											"TRYK_V_Sheriff_BA_TB5",
+											"TRYK_V_Sheriff_BA_TBL3_BK",
+											"TRYK_V_Sheriff_BA_TBL3_OD",
+											"TRYK_V_Sheriff_BA_TBL3_TN",
+											"TRYK_LOC_AK_chestrig_OD",
+											"TRYK_LOC_AK_chestrig_TAN"
 										];
 	DMS_sniper_backpacks =				[							// Backpacks for Sniper Class
 											"B_Bergen_rgr",
 											"B_Carryall_oli",
 											"B_Kitbag_mcamo",
 											"B_Carryall_cbr",
-											"B_Bergen_blk"
+											"B_Bergen_blk",
+											"TRYK_B_AssaultPack_UCP",
+											"TRYK_B_AssaultPack_Type2camo",
+											"TRYK_B_AssaultPack_MARPAT_Desert",
+											"TRYK_B_AssaultPack_MARPAT_Wood",
+											"TRYK_B_Kitbag_Base",
+											"TRYK_B_Kitbag_blk",
+											"TRYK_B_Kitbag_aaf",
+											"TRYK_B_Carryall_blk",
+											"TRYK_B_Carryall_wh",
+											"TRYK_B_Carryall_wood",
+											"TRYK_B_Carryall_JSDF",
+											"TRYK_B_Kitbag_Base_JSDF",
+											"TRYK_B_Coyotebackpack",
+											"TRYK_B_Coyotebackpack_OD",
+											"TRYK_B_Coyotebackpack_BLK",
+											"TRYK_B_Coyotebackpack_WH",
+											"TRYK_B_Alicepack",
+											"TRYK_B_Medbag",
+											"TRYK_B_Medbag_OD",
+											"TRYK_B_Medbag_BK",
+											"TRYK_B_Medbag_ucp",
+											"TRYK_B_Belt",
+											"TRYK_B_Belt_BLK",
+											"TRYK_B_Belt_CYT",
+											"TRYK_B_Belt_tan",
+											"TRYK_B_Belt_br",
+											"TRYK_B_Belt_GR",
+											"TRYK_B_Belt_AOR1",
+											"TRYK_B_Belt_AOR2",
+											"TRYK_B_BAF_BAG_BLK",
+											"TRYK_B_BAF_BAG_CYT",
+											"TRYK_B_BAF_BAG_OD",
+											"TRYK_B_BAF_BAG_rgr",
+											"TRYK_B_BAF_BAG_mcamo",
+											"TRYK_B_tube_cyt",
+											"TRYK_B_tube_od",
+											"TRYK_B_tube_blk",
+											"TRYK_B_FieldPack_Wood",
+											"TRYK_Winter_pack"
 										];
 
 	DMS_ai_SupportedClasses =			[							// Allowed AI classes. If you want to create your own class, make sure you define everything as I've defined above, and add it here
@@ -750,8 +1722,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 
 	DMS_AI_wep_launchers_AT =			[							// AT Launchers
 											"launch_NLAW_F",
-											"launch_RPG32_F",
-											"launch_B_Titan_short_F"
+											"launch_RPG32_F"
 										];
 	DMS_AI_wep_launchers_AA =			[							// AA Launchers
 											"launch_B_Titan_F"
@@ -772,11 +1743,11 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_CrateCase_Sniper =				[							// If you pass "Sniper" in _lootValues, then it will spawn these weapons/items/backpacks
 											[
 												["Rangefinder",1],
-												["srifle_GM6_F",1],
-												["srifle_LRR_F",1],
-												["srifle_EBR_F",1],
-												["hgun_Pistol_heavy_01_F",1],
-												["hgun_PDW2000_F",1]
+												["srifle_GM6_F",2],
+												["srifle_LRR_F",2],
+												["srifle_EBR_F",2]
+
+
 											],
 											[
 												["ItemGPS",1],
@@ -800,7 +1771,6 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 												["5Rnd_127x108_APDS_Mag",3],
 												["7Rnd_408_Mag",3],
 												["20Rnd_762x51_Mag",5],
-												["11Rnd_45ACP_Mag",3],
 												["30Rnd_9x21_Mag",3]
 											],
 											[
@@ -821,15 +1791,28 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"arifle_Mk20_plain_F",
 											"arifle_Mk20_F",
 											"LMG_Zafir_F",
-											"LMG_Mk200_F",
-											"arifle_MX_SW_Black_F",
+											"MMG_01_hex_F",
 											"srifle_EBR_F",
 											"srifle_DMR_01_F",
 											"srifle_GM6_F",
 											"srifle_LRR_F",
-											"arifle_MXM_F",
-											"arifle_MXM_Black_F",
-											"srifle_DMR_02_F"
+											"srifle_DMR_02_F",
+											"MMG_01_tan_F",
+											"MMG_02_camo_F",
+											"MMG_02_black_F",
+											"MMG_02_sand_F",
+											"srifle_DMR_03_F",
+											"srifle_DMR_03_khaki_F",
+											"srifle_DMR_03_tan_F",
+											"srifle_DMR_04_F",
+											"srifle_DMR_04_Tan_F",
+											"srifle_DMR_05_blk_F",
+											"srifle_DMR_05_tan_F",
+											"srifle_DMR_05_hex_F",
+											"srifle_DMR_06_camo_F",
+											"srifle_DMR_06_olive_F",
+											"srifle_LRR_camo_F",
+											"srifle_GM6_camo_F"	
 										];
 	DMS_BoxFood =						[							// List of food that can spawn in a crate.
 											"Exile_Item_GloriousKnakworst_Cooked",
@@ -838,9 +1821,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"Exile_Item_ChristmasTinner_Cooked",
 											"Exile_Item_BBQSandwich_Cooked",
 											"Exile_Item_Catfood_Cooked",
-											"Exile_Item_DogFood_Cooked",
-											"Exile_Item_EMRE",
-											"Exile_Item_EMRE"
+											"Exile_Item_DogFood_Cooked"
 										];
 	DMS_BoxDrinks =						[
 											"Exile_Item_PlasticBottleCoffee",
@@ -858,7 +1839,8 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"Exile_Item_Matches",
 											"Exile_Item_CookingPot",
 											"Exile_Melee_Axe",
-											"Exile_Item_CanOpener"
+											"Exile_Item_CanOpener",
+											"Exile_Item_DuctTape"
 										] + DMS_BoxFood + DMS_BoxDrinks + DMS_BoxMeds;
 	DMS_BoxBaseParts =					[
 											"Exile_Item_CamoTentKit",
@@ -894,7 +1876,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"optic_SOS",
 											"optic_DMS",
 											"optic_LRPS",
-											"optic_Nightstalker"			// Nightstalker scope lost thermal in Exile v0.9.4
+											"optic_Nightstalker"
 										];
 	DMS_BoxBackpacks =					[							//List of backpacks that can spawn in a crate
 											"B_Bergen_rgr",
@@ -903,15 +1885,92 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"B_Carryall_cbr",
 											"B_FieldPack_oucamo",
 											"B_FieldPack_cbr",
-											"B_Bergen_blk"
+											"B_Bergen_blk",
+											"TRYK_B_AssaultPack_UCP",
+											"TRYK_B_AssaultPack_Type2camo",
+											"TRYK_B_AssaultPack_MARPAT_Desert",
+											"TRYK_B_AssaultPack_MARPAT_Wood",
+											"TRYK_B_Kitbag_Base",
+											"TRYK_B_Kitbag_blk",
+											"TRYK_B_Kitbag_aaf",
+											"TRYK_B_Carryall_blk",
+											"TRYK_B_Carryall_wh",
+											"TRYK_B_Carryall_wood",
+											"TRYK_B_Carryall_JSDF",
+											"TRYK_B_Kitbag_Base_JSDF",
+											"TRYK_B_Coyotebackpack",
+											"TRYK_B_Coyotebackpack_OD",
+											"TRYK_B_Coyotebackpack_BLK",
+											"TRYK_B_Coyotebackpack_WH",
+											"TRYK_B_Alicepack",
+											"TRYK_B_Medbag",
+											"TRYK_B_Medbag_OD",
+											"TRYK_B_Medbag_BK",
+											"TRYK_B_Medbag_ucp",
+											"TRYK_B_Belt",
+											"TRYK_B_Belt_BLK",
+											"TRYK_B_Belt_CYT",
+											"TRYK_B_Belt_tan",
+											"TRYK_B_Belt_br",
+											"TRYK_B_Belt_GR",
+											"TRYK_B_Belt_AOR1",
+											"TRYK_B_Belt_AOR2",
+											"TRYK_B_BAF_BAG_BLK",
+											"TRYK_B_BAF_BAG_CYT",
+											"TRYK_B_BAF_BAG_OD",
+											"TRYK_B_BAF_BAG_rgr",
+											"TRYK_B_BAF_BAG_mcamo",
+											"TRYK_B_tube_cyt",
+											"TRYK_B_tube_od",
+											"TRYK_B_tube_blk",
+											"TRYK_B_FieldPack_Wood",
+											"TRYK_Winter_pack"
 										];
+	DMS_CrateCase_Custom1 =					[
+										[
+											["MMG_01_hex_F",2],
+											["MMG_02_camo_F",2],
+											["srifle_EBR_F",2],
+											["srifle_GM6_F",1],
+											["srifle_LRR_F",1],
+											["Laserdesignator",1]
+										],
+										[
+											["150Rnd_93x64_Mag",4],
+											["130Rnd_338_Mag",4],
+											["20Rnd_762x51_Mag",6],
+											["5Rnd_127x108_APDS_Mag",3],
+											["7Rnd_408_Mag",3],
+											["optic_DMS",2],
+											["optic_Hamr",2],
+											["optic_Holosight",3],
+											["IEDLandSmall_Remote_Mag",2],
+											["optic_tws_mg",1],
+											["Exile_Item_InstaDoc",2],
+											["Exile_Item_BBQSandwich_Cooked",4],
+											["Exile_Item_PlasticBottleCoffee",4],
+											["V_PlateCarrierSpec_rgr",1],
+											["V_PlateCarrierSpec_blk",1],
+											["V_PlateCarrierSpec_mtp",1],
+											["Exile_Uniform_Woodland",2],
+											["U_I_FullGhillie_ard",2],
+											["NVGoggles",2]
+										],
+										[
+											["B_Carryall_cbr",4]
+										]
+									];
 	DMS_BoxItems						= DMS_BoxSurvivalSupplies+DMS_BoxBuildingSupplies+DMS_BoxOptics;	// Random "items" can spawn optics, survival supplies, or building supplies
 
 	DMS_RareLoot						= true;						// Potential chance to spawn rare loot in any crate.
 	DMS_RareLootAmount					= 1;						// How many rare loot items to add.
 	DMS_RareLootList =					[							// List of rare loot to spawn
 											"Exile_Item_SafeKit",
-											"Exile_Item_CodeLock"
+											"Exile_Item_CodeLock",
+											"Exile_Item_Defibrillator",
+											"Exile_Item_Magazine01",
+											"Exile_Item_Magazine02",
+											"Exile_Item_Magazine03"
 										];
 	DMS_RareLootChance					= 10;						// Percentage Chance to spawn rare loot in any crate | Default: 10%
 
@@ -930,9 +1989,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"Exile_Car_Van_Guerilla01",
 											"Exile_Car_Zamak",
 											"Exile_Car_Tempest",
-											"Exile_Car_HEMMT",
-											"Exile_Car_Ural_Open_Military",
-											"Exile_Car_Ural_Covered_Military"
+											"Exile_Car_HEMMT"
 										];
 
 	DMS_RefuelTrucks =					[							// List of refuel trucks that can spawn

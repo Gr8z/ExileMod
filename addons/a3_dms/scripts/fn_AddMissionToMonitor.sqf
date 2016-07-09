@@ -140,8 +140,6 @@ try
 	{
 		throw format["_messages |%1|",_messages];
 	};
-	_msgWIN pushBack "win";
-	_msgLose pushBack "lose";
 
 
 	if !(_onEndingScripts params

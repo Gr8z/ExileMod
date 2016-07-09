@@ -58,7 +58,7 @@ _group =
 
 
 // Create Crate
-_crate = ["Box_NATO_Wps_F",[(_pos select 0)+2,(_pos select 1)-1,0]] call DMS_fnc_SpawnCrate;
+_crate = ["Exile_Container_SupplyBox",[(_pos select 0)+2,(_pos select 1)-1,0]] call DMS_fnc_SpawnCrate;
 
 _wreck1 = createVehicle ["Land_CinderBlocks_F",[(_pos select 0) - 10, (_pos select 1),-0.1],[], 0, "CAN_COLLIDE"];
 _wreck2 = createVehicle ["Land_Bricks_V1_F",[(_pos select 0) - 5, (_pos select 1),-3.3],[], 0, "CAN_COLLIDE"];
@@ -95,9 +95,9 @@ _vehicle = [_vehClass,_pos] call DMS_fnc_SpawnNonPersistentVehicle;
 // Set crate loot values
 _crate_loot_values =
 [
-	3,		// Weapons
-	[25,DMS_BoxBuildingSupplies],		// Items
-	2 		// Backpacks
+	6,		// Weapons
+	[50,DMS_BoxBuildingSupplies],		// Items
+	4 		// Backpacks
 ];
 
 
