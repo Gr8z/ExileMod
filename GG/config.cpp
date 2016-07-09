@@ -4082,7 +4082,7 @@ class CfgExileLootSettings
 	 * Interval in seconds when the client searches for
 	 * new buildings to spawn loot in
 	 */
-	spawnInterval = 30;
+	spawnInterval = 60;
 
 	/**
 	 * This is a percentage value to determine how many loot
@@ -4113,7 +4113,7 @@ class CfgExileLootSettings
 	 * is the upper cap for that. So 3 means it could spawn 1, 2 
 	 * or 3.
 	 */
-	maximumNumberOfItemsPerLootSpot = 2;
+	maximumNumberOfItemsPerLootSpot = 1;
 
 	/**
 	 * Radius in meter to spawn loot AROUND each player.
@@ -4124,7 +4124,7 @@ class CfgExileLootSettings
 	 * 50m  = Minimum
 	 * 200m = Maximum
 	 */
-	spawnRadius = 150;
+	spawnRadius = 100;
 
 	/**
 	 * Defines the radius around trader cities where the system should
