@@ -48,7 +48,7 @@ enableIngameLogs = true;
 	note: this is case sensitive as well, meaning "infiSTAR [admin]" would not work as we set it in our example to "[Admin]"
 */
 needAdminNameTag = true;
-AdminNameTag = "[STAFF]";
+AdminNameTag = "[GG]";
 /*
 	{chatCommand (text typed in chat),text shown to player}
 	only triggers if the EXACT text is typed!
