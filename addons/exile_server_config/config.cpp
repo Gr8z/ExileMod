@@ -6321,10 +6321,10 @@ class CfgSettings
 			unlucky = 0; // Dying for an unknown reason costs you 0% respect
 			crash = 0; // Crashing your car costs you 0% respect
 			suicide = 0; // Comitting suicide costs you 0% of your respect
-			friendyFire = 2; // Friendly fire costs you 2% 
-			npc = 1; // Being killed by an NPC costs you 4%
-			bambiKill = 2; // Killing a bambi costs you 2%
-			frag = 0; // Killing someone will get you 2% and remove 2% from the victim
+			friendyFire = 0.5; // Friendly fire costs you 0.5% 
+			npc = 0.5; // Being killed by an NPC costs you 0.5%
+			bambiKill = 1; // Killing a bambi costs you 1%
+			frag = 0; // Killing someone will get you 0% and remove 0% from the victim
 		};
 
 		class Handcuffs 
