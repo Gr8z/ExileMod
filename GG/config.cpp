@@ -7236,7 +7236,7 @@ class CfgTraderCategories
 			"Exile_Chopper_Mohawk_FIA",
 			"Exile_Chopper_Huron_Black",
 			"Exile_Chopper_Hellcat_Green",
-			"B_Heli_Transport_01_F"
+			"B_Heli_Transport_01_F",
 			"I_Heli_light_03_F"
 		};
 	};
