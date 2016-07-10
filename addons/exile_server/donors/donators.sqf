@@ -34,6 +34,7 @@ SlotDonor = [
 /////////// Engineer Class ///////
 Engineer1 = [
 	"0", // NAME (OD-00-00-0000) #0000
+	"76561198131195291", // TopherTheGopher (OD-2016-07-08) #14108 
 	"76561198091055808", // KaoruGZ (EXP-2016-07-11) #13886 
 // Add UIDs above, don't forget the comma
 "0"
