@@ -268,18 +268,18 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_GiveMoneyToPlayer_OnAIKill		= true;						// Whether or not to give money directly to players when they kill AI (old method of giving money).
 	DMS_GiveRespectToPlayer_OnAIKill	= true;						// Whether or not to give respect to players when they kill AI.
 
-	DMS_Bandit_Soldier_MoneyGain		= 50;						// The amount of Poptabs gained for killing a bandit soldier
-	DMS_Bandit_Soldier_RepGain			= 10;						// The amount of Respect gained for killing a bandit soldier
+	DMS_Bandit_Soldier_MoneyGain		= 75;						// The amount of Poptabs gained for killing a bandit soldier
+	DMS_Bandit_Soldier_RepGain			= 75;						// The amount of Respect gained for killing a bandit soldier
 	DMS_Bandit_Soldier_RankGain			= 15;
 	DMS_Bandit_Soldier_SpawnMoney		= 50;						// The amount of Poptabs carried by a bandit soldier
 
-	DMS_Bandit_Static_MoneyGain			= 75;						// The amount of Poptabs gained for killing a bandit static gunner
-	DMS_Bandit_Static_RepGain			= 15;						// The amount of Respect gained for killing a bandit static gunner
+	DMS_Bandit_Static_MoneyGain			= 100;						// The amount of Poptabs gained for killing a bandit static gunner
+	DMS_Bandit_Static_RepGain			= 100;						// The amount of Respect gained for killing a bandit static gunner
 	DMS_Bandit_Static_RankGain			= 30;
 	DMS_Bandit_Static_SpawnMoney		= 75;						// The amount of Poptabs carried by a bandit static gunner
 
-	DMS_Bandit_Vehicle_MoneyGain		= 100;						// The amount of Poptabs gained for killing a bandit vehicle crew member
-	DMS_Bandit_Vehicle_RepGain			= 25;						// The amount of Respect gained for killing a bandit vehicle crew member
+	DMS_Bandit_Vehicle_MoneyGain		= 125;						// The amount of Poptabs gained for killing a bandit vehicle crew member
+	DMS_Bandit_Vehicle_RepGain			= 125;						// The amount of Respect gained for killing a bandit vehicle crew member
 	DMS_Bandit_Vehicle_RankGain			= 50;
 	DMS_Bandit_Vehicle_SpawnMoney		= 100;						// The amount of Poptabs carried by a bandit vehicle crew member
 
@@ -355,7 +355,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 
 	DMS_clear_AI_body					= false;					// Clear AI body as soon as they die
 	DMS_clear_AI_body_chance			= 50;						// Percentage chance that AI bodies will be cleared when they die
-	DMS_ai_disable_ramming_damage 		= true;						// Disables damage due to ramming into AI. !!!NOTE: THIS WILL NOT BE RELIABLE WITH "DMS_ai_offload_to_client"!!!
+	DMS_ai_disable_ramming_damage 		= false;						// Disables damage due to ramming into AI. !!!NOTE: THIS WILL NOT BE RELIABLE WITH "DMS_ai_offload_to_client"!!!
 	DMS_remove_roadkill					= true; 					// Remove gear from AI bodies that are roadkilled
 	DMS_remove_roadkill_chance			= 50;						// Percentage chance that roadkilled AI bodies will be deleted
 	DMS_explode_onRoadkill				= true;						// Whether or not to spawn an explosion when an AI gets run over. It will likely take out the 2 front wheels. Should help mitigate the ineffective AI vs. striders issue ;)
@@ -369,15 +369,15 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_ai_offload_notifyClient			= false;					// Notify the client when AI has been offloaded to the client.
 
 	DMS_ai_allowFreezing				= true;						// Whether or not to "freeze" AI that are a certain distance away from players (and therefore inactive).
-	DMS_ai_freeze_Only_DMS_AI			= false;					// Whether or not to "freeze" AI that are not spawned by DMS.
+	DMS_ai_freeze_Only_DMS_AI			= true;					// Whether or not to "freeze" AI that are not spawned by DMS.
 	DMS_ai_freezingDistance				= 3500;						// If there are no players within this distance of the leader of an AI group, then the AI group will be "frozen".
 	DMS_ai_unfreezingDistance			= 3500;						// If there are players within this distance of the leader of an AI group, then the AI group will be "un-frozen".
 	DMS_ai_offloadOnUnfreeze			= true;						// Whether or not to offload AI to clients once they have been "un-frozen". NOTE: This config will be ignored if "DMS_ai_offload_to_client" is set to false.
 	DMS_ai_freezeCheckingDelay			= 30;						// How often (in seconds) DMS will check whether to freeze/un-freeze AI.
 	DMS_ai_freezeOnSpawn				= true;						// Whether or not to freeze an AI group when initially spawned.
 
-	DMS_ai_share_info					= false;					// Share info about killer
-	DMS_ai_share_info_distance			= 300;						// The distance killer's info will be shared to other AI
+	DMS_ai_share_info					= true;					// Share info about killer
+	DMS_ai_share_info_distance			= 150;						// The distance killer's info will be shared to other AI
 
 	DMS_ai_nighttime_accessory_chance	= 75;						// Percentage chance that AI will have a flashlight or laser pointer on their guns if spawned during nighttime
 	DMS_ai_enable_water_equipment		= true;						// Enable/disable overriding default weapons of an AI if it spawns on/in water

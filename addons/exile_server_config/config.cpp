@@ -6295,7 +6295,7 @@ class CfgSettings
 		*
 		* Default: Get 1 respect for every 10 pop tabs 
 		*/
-		tradingRespectFactor = 0.1;
+		tradingRespectFactor = 0.01;
 		
 		/**
 		* Defines the the minimum amount of Respect earned/lost for a kill
