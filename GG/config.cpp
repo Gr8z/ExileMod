@@ -2324,6 +2324,7 @@ class CfgExileArsenal
 	// Hellcat
 	///////////////////////////////////////////////////////////////////////////////
 	class Exile_Chopper_Hellcat_Green				{ quality = 1; price = 25000; };
+	class I_Heli_light_03_F							{ quality = 1; price = 425000; };	
 	class Exile_Chopper_Hellcat_FIA					{ quality = 1; price = 25000; };
 
 	///////////////////////////////////////////////////////////////////////////////
@@ -7236,6 +7237,7 @@ class CfgTraderCategories
 			"Exile_Chopper_Huron_Black",
 			"Exile_Chopper_Hellcat_Green",
 			"B_Heli_Transport_01_F"
+			"I_Heli_light_03_F"
 		};
 	};
 
