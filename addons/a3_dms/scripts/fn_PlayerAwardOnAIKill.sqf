@@ -71,7 +71,7 @@ if ((!isNull _playerObj) && {(_playerUID != "") && {_playerObj isKindOf "Exile_U
 		if (DMS_Show_Kill_Poptabs_Notification) then
 		{
 			// Create and send message to player
-			_msgParams =
+			private _msgParams =
 				if (_moneyChange > 0) then
 				{
 					["SuccessTitleOnly",[format ["Gained %1 poptabs for killing %2 AI!",abs _moneyChange,_AIType]]];
@@ -83,6 +83,9 @@ if ((!isNull _playerObj) && {(_playerUID != "") && {_playerObj isKindOf "Exile_U
 
 			// Send notification
 			[_playerObj, "toastRequest", _msgParams] call ExileServer_system_network_send_to;
+
+			// Update money in database
+			format["setPlayerMoney:%1:%2", _playerMoney, _playerObj getVariable ["ExileDatabaseID", 0]] call ExileServer_system_database_query_fireAndForget;
 		};
 	};
 
