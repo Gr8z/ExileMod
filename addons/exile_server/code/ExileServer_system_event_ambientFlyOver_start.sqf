@@ -31,7 +31,9 @@ _endPosition =
 ];
 _planeClass = selectRandom 
 [
-
+	"B_Plane_CAS_01_F",
+	"O_Plane_CAS_02_F",
+	"I_Plane_Fighter_03_CAS_F"
 ];
 for "_i" from 1 to (1 + (floor (random 3))) do 
 {

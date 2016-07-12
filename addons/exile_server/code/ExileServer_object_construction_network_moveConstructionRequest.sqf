@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_parameters","_objectNetID","_object","_objectClassname","_isContainer","_playerObject","_playerUID","_objectID","_ownerUID","_canMove","_flag","_buildRights","_holderPosition","_holder"];
+private["_sessionID","_parameters","_objectNetID","_object","_objectClassname","_isContainer","_playerObject","_playerUID","_objectID","_ownerUID","_canMove","_flag","_buildRights","_money","_holderPosition","_holder"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
 _objectNetID = _parameters select 0;
@@ -48,6 +48,10 @@ try
 	};
 	_canMove = false;
 	_flag = _object call ExileClient_util_world_getTerritoryAtPosition;
+	if ((_flag getVariable ["ExileFlagStolen", 0]) isEqualTo 1) then
+	{
+		throw "You cannot move parts while your flag is stolen.";
+	};
 	if (_playerUID isEqualTo _ownerUID) then
 	{
 		_canMove = true;
@@ -69,12 +73,14 @@ try
 	};
 	if (_isContainer) then
 	{
+		_money = _object getVariable ["ExileMoney", 0];
 		ExileContainerCargo =
 		[
 			_object call ExileServer_util_getItemCargo,
 			magazinesAmmoCargo _object,
 			weaponsItemsCargo _object,
-			_object call ExileServer_util_getObjectContainerCargo
+			_object call ExileServer_util_getObjectContainerCargo,
+			_money
 		];
 		_object call ExileServer_object_container_database_delete;
 	} else

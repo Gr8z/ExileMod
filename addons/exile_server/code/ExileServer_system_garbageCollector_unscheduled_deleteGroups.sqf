@@ -27,21 +27,23 @@ private["_deleteGroup","_units","_unit"];
 				case 1:
 				{
 					_unit = _units select 0;
-					if !(alive _unit) then 
+					if !(_unit isKindOf "Exile_Unit_GhostPlayer") then 
 					{
-						if (isNull ExileServerGraveyardGroup) then 
+						if !(alive _unit) then 
 						{
-							ExileServerGraveyardGroup = createGroup independent;
-							ExileServerGraveyardGroup setGroupIdGlobal ["Graveyard"];
+							if (isNull ExileServerGraveyardGroup) then 
+							{
+								ExileServerGraveyardGroup = createGroup independent;
+								ExileServerGraveyardGroup setGroupIdGlobal ["Graveyard"];
+							};
+							[_unit] joinSilent ExileServerGraveyardGroup;
+							_deleteGroup = true;
 						};
-						[_unit] joinSilent ExileServerGraveyardGroup;
-						_deleteGroup = true;
 					};
 				};
 			};
 			if (_deleteGroup) then 
 			{
-				format ["Deleting group %1 (%2)...", _group, netId _group] call ExileServer_util_log;
 				if (local _group) then 
 				{
 					deleteGroup _group;

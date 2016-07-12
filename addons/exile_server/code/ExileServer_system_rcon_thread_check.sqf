@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_restartTime","_useAutoKick","_kickTime","_lockTime","_uptime","_timeTilRestart","_time","_sessionID","_i"];
+private["_restartTime","_useAutoKick","_kickTime","_lockTime","_uptime","_timeTilRestart","_time","_i"];
 _restartTime = _this select 0;
 _useAutoKick = _this select 1;
 _kickTime = _this select 2;
@@ -26,7 +26,7 @@ if (typeName ExileServerRestartMessages isEqualTo "ARRAY") then
 			{
 				if (count ExileSessionIDs > 0) then
 				{
-					[_sessionID, "toastRequest", ["InfoTitleAndText", ["Restart incoming!", format["Server is going to restart in %1 min! Log out before the restart to prevent gear loss.", _time] ]]] call ExileServer_system_network_send_to;
+					["toastRequest", ["InfoTitleAndText", ["Restart incoming!", format["Server is going to restart in %1 min! Log out before the restart to prevent gear loss.", _time] ]]] call ExileServer_system_network_send_broadcast;
 				};
 				ExileServerRestartMessages deleteAt _forEachIndex;
 				format ["Restart Warnings for %1min sent",_time] call ExileServer_util_log;
@@ -41,7 +41,7 @@ if (_timeTilRestart < _lockTime) then
 	{
 		"#lock" call ExileServer_system_rcon_event_sendCommand;
 		"Server locked for restart" call ExileServer_util_log;
-		[_sessionID, "toastRequest", ["ErrorTitleAndText", ["Server will restart now!", "You will be kicked off the server due to a restart."]]] call ExileServer_system_network_send_to;
+		["toastRequest", ["ErrorTitleAndText", ["Server will restart now!", "You will be kicked off the server due to a restart."]]] call ExileServer_system_network_send_broadcast;
 		ExileServerIsLocked = true;
 	};
 	if (_timeTilRestart < _kickTime) then

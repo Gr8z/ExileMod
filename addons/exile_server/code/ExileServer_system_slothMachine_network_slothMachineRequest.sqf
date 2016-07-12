@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_player","_playerMoney","_spinCost","_dice","_prizeConfig","_chances","_prizeName","_gameTextOutput","_symbols","_allPrizes","_i","_randomPrizeConfig","_prizeSymbol","_totalWinnings","_jackpotAmount","_playerMoneyAdjustment"];
+private["_sessionID","_player","_playerMoney","_spinCost","_dice","_prizeConfig","_chances","_prizeName","_gameTextOutput","_symbols","_allPrizes","_i","_randomPrizeConfig","_newSymbol","_prizeSymbol","_totalWinnings","_jackpotAmount","_playerMoneyAdjustment"];
 _sessionID = _this select 0;
 try 
 {
@@ -47,7 +47,13 @@ try
 		for "_i" from 0 to 2 do 
 		{
 			_randomPrizeConfig = selectRandom _allPrizes;
-			_symbols pushBack getText (_randomPrizeConfig >> "symbol");
+			_newSymbol = getText (_randomPrizeConfig >> "symbol");
+			while {_newSymbol in _symbols} do
+			{
+				_randomPrizeConfig = selectRandom _allPrizes;
+				_newSymbol = getText (_randomPrizeConfig >> "symbol");
+			};
+			_symbols pushBack _newSymbol;
 		};
 	}
 	else 

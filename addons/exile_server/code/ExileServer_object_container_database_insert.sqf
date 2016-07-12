@@ -35,6 +35,7 @@ if !(ExileContainerCargo isEqualTo []) then
 		ExileContainerCargo select 1,
 		ExileContainerCargo select 2,
 		ExileContainerCargo select 3,
+		ExileContainerCargo select 4,
 		"0000",
 		_territoryID
 	];
@@ -57,6 +58,7 @@ if !(ExileContainerCargo isEqualTo []) then
 		[],
 		[],
 		[],
+		0,
 		"0000",
 		_territoryID
 	];
@@ -80,6 +82,7 @@ _containerObject setVariable ["ExileIsPersistent", true];
 _containerObject setVariable ["ExileIsContainer", true];
 _containerObject setVariable ["ExileAccessCode","0000"];
 _containerObject setVariable ["ExileTerritoryID", _territoryID];
+_containerObject setVariable ["ExileMoney", parseNumber (_data select 15), true];
 _containerObject addMPEventHandler ["MPKilled", { if !(isServer) exitWith {}; (_this select 0) call ExileServer_object_container_event_onMpKilled; }];
 if(getNumber(configFile >> "CfgVehicles" >> typeOf _containerObject >> "exileIsLockable") isEqualTo 1)then
 {
