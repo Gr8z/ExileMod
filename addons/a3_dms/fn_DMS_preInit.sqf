@@ -8,7 +8,7 @@
 // Logs will be written in the RPT, and if you have infiSTAR's "ARMA_LOG" DLL loaded, it will also produce logs in the server directory.
 // If you have mARMA by maca134, DMS will also utilize mARMA logs.
 // This will produce A LOT of logs, so make sure you leave it to false unless you know what you're doing.
-DMS_DEBUG = false;
+DMS_DEBUG = true;
 
 
 
