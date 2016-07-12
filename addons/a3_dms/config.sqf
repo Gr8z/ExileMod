@@ -1185,7 +1185,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 										[
 											["MMG_01_hex_F", 2],
 											["MMG_02_camo_F", 2],
-											["srifle_EBR_F", 1],
+											["srifle_EBR_F", 1]
 										],
 										[
 											["150Rnd_93x64_Mag", 4],
