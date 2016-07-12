@@ -1012,6 +1012,44 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 												["B_Kitbag_mcamo",1]
 											]
 										];
+										
+	DMS_CrateCase_Custom1 =				[							// If you pass "Sniper" in _lootValues, then it will spawn these weapons/items/backpacks
+											[
+												["MMG_01_hex_F",2],
+												["MMG_02_camo_F",2],
+												["srifle_EBR_F",1],
+												["Rangefinder",1],
+												["srifle_GM6_F",1],
+												["srifle_LRR_F",1],
+												["srifle_EBR_F",1],
+												["hgun_Pistol_heavy_01_F",1],
+												["hgun_PDW2000_F",1]
+											],
+											[
+												["150Rnd_93x64_Mag",4],
+												["130Rnd_338_Mag",4],
+												["20Rnd_762x51_Mag",5],
+												["optic_DMS",2],
+												["optic_Hamr",2],
+												["optic_Holosight",3],
+												["IEDLandSmall_Remote_Mag",2],
+												["optic_tws_mg",1],
+												["Exile_Item_InstaDoc",2],
+												["Exile_Item_BBQSandwich_Cooked",4],
+												["Exile_Item_PlasticBottleCoffee",4],
+												["V_PlateCarrierSpec_rgr",1],
+												["V_PlateCarrierSpec_blk",1],
+												["V_PlateCarrierSpec_mtp",1],
+												["Laserdesignator",1]
+												["Exile_Uniform_Woodland",2],
+												["U_I_FullGhillie_ard",2],
+												["NVGoggles",2]
+											],
+											[
+												["B_Carryall_cbr",1],
+												["B_Kitbag_mcamo",1]
+											]
+										];
 	DMS_BoxWeapons =					[							// List of weapons that can spawn in a crate
 											#ifdef USE_MARKSMAN_DLC_WEAPONS_IN_CRATES
 											"srifle_DMR_02_F",
@@ -1182,37 +1220,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"B_FieldPack_cbr",
 											"B_Bergen_blk"
 										];
-										
-	DMS_CrateCase_Custom1 =			[
-										[
-											["MMG_01_hex_F", 2],
-											["MMG_02_camo_F", 2],
-											["srifle_EBR_F", 1]
-										],
-										[
-											["150Rnd_93x64_Mag", 4],
-											["130Rnd_338_Mag", 4],
-											["20Rnd_762x51_Mag", 5],
-											["optic_DMS", 2],
-											["optic_Hamr", 2],
-											["optic_Holosight", 3],
-											["IEDLandSmall_Remote_Mag", 2],
-											["optic_tws_mg", 1],
-											["Exile_Item_InstaDoc", 2],
-											["Exile_Item_BBQSandwich_Cooked", 4],
-											["Exile_Item_PlasticBottleCoffee", 4],
-											["V_PlateCarrierSpec_rgr", 1],
-											["V_PlateCarrierSpec_blk", 1],
-											["V_PlateCarrierSpec_mtp", 1],
-											["Laserdesignator", 1]
-											["Exile_Uniform_Woodland", 2],
-											["U_I_FullGhillie_ard", 2],
-											["NVGoggles", 2]
-										],
-										[
-											["B_Carryall_cbr", 4]
-										]
-									];
+
 	DMS_BoxItems						= DMS_BoxSurvivalSupplies+DMS_BoxBuildingSupplies+DMS_BoxOptics;	// Random "items" can spawn optics, survival supplies, or building supplies
 
 	DMS_Box_BreachingCharges =			[							// List of breaching charges (weighted). Not used (yet).
@@ -1223,7 +1231,6 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"BreachingChargeWood",
 											"BreachingChargeWood"
 										];
-										
 	DMS_RareLoot						= true;						// Potential chance to spawn rare loot in any crate.
 	DMS_RareLootAmount					= 1;						// How many rare loot items to add.
 	DMS_RareLootList =					[							// List of rare loot to spawn
