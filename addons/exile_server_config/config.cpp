@@ -6281,7 +6281,7 @@ class CfgSettings
 			stolenFlagLifeTime = 5;
 			
 			// Sets door & safe pins to 0000 and marks safes to abandoned X days after the flag is stolen if the ransom money isn't paid
-			unlockLifeTime = 6;
+			unlockLifeTime = 4;
 		};
 	};
 
@@ -6427,7 +6427,7 @@ class CfgSettings
 		 * expired or when they pick up their first weapon. Whatever
 		 * happens first.
 		 */
-		protectionDuration = 3;
+		protectionDuration = 5;
 
 		/**
 		 * Radius of spawn zones around the center of spawn zone markers.
@@ -6819,8 +6819,8 @@ class CfgSettings
 		{
 			type = "call";
 			function = "ExileServer_system_event_ambientFlyOver_start";
-			minTime = 10; // minutes
-			maxTime = 20; // minutes
+			minTime = 30; // minutes
+			maxTime = 90; // minutes
 			minimumPlayersOnline = 1;
 		};
 	};
