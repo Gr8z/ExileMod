@@ -4851,6 +4851,23 @@ class CfgInteractionMenus
 			};
 		};
 	};
+	
+	class Vtolramp
+	{
+		target = "B_T_VTOL_01_vehicle_F";
+		targetType = 2;
+
+		class Actions
+		{
+			
+			class Ramp: ExileAbstractAction
+			{
+				title = "Open Ramp";
+				condition = "call ExileClient_object_vehicle_interaction_show";
+				action = "_this animateDoor ['Door_1_source', 0]";
+			};
+		};
+	};
 };
 /**
  * Classname is used for reference
