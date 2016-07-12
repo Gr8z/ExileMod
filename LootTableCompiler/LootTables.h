@@ -1,22 +1,24 @@
 
 > CivillianLowerClass
-
-17, Food
+10, Trash
+28, Food
 10, Drinks
 8, Pistols
-6, PistolAmmo
-4, PistolAttachments
+5, PistolAmmo
+3, PistolAttachments
+4, Shotguns
+3, ShotgunAmmo
 4, SMG
 3, SMGAmmo
-2, SMGAttachments
-17, CivilianClothing
-10, CivilianBackpacks
+3, SMGAttachments
+20, CivilianClothing
+11, CivilianBackpacks
 5, CivilianVests
-10, CivilianHeadgear
+20, CivilianHeadgear
 10, CivilianItems
 1, Restraints
-2, Chemlights
-2, RoadFlares
+10, Chemlights
+10, RoadFlares
 
 ///////////////////////////////////////////////////////////////////////////////
 // Apartments, Offices etc.

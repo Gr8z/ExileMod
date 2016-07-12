@@ -21,7 +21,10 @@ _lifeTime = 60 * getNumber (configFile >> "CfgSettings" >> "GarbageCollector" >>
 	{
 		if ((time - _diedAt) >= _lifeTime) then
 		{
-			_x call ExileServer_system_garbageCollector_deleteObject;
+			if !(isPlayer _x) then 
+			{
+				_x call ExileServer_system_garbageCollector_deleteObject;
+			};
 		};
 	};
 }

@@ -16,6 +16,10 @@ _building setVariable ["ExileHasLoot", true];
 _buildingConfig = configFile >> "CfgBuildings" >> typeOf _building;
 _lootTableName = getText (_buildingConfig >> "table");
 _localPositions = getArray (_buildingConfig >> "positions");
+if ((getPosATL _building) call ExileClient_util_world_isInRadiatedZone) then 
+{
+	_lootTableName = "Radiation";
+};
 _lootConfig = missionConfigFile >> "CfgExileLootSettings";
 _maximumNumberOfLootPositions = getNumber (_lootConfig >> "maximumNumberOfLootSpotsPerBuilding");
 _maximumPositionCoverage = getNumber (_lootConfig >> "maximumPositionCoverage");

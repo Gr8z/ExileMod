@@ -56,9 +56,8 @@ try
 	_weaponHolders = nearestObjects[_treePosition, ["GroundWeaponHolder"], _spawnRadius];
 	_weaponHolder = objNull;
 	if (_weaponHolders isEqualTo []) then
-	{
-		_weaponHolderPosition = [_treePosition, _spawnRadius] call ExileClient_util_math_getRandomPositionInCircle;
-		_weaponHolderPosition set [2, 0];
+	{	
+		_weaponHolderPosition = getPosATL _player;
 		_weaponHolder = createVehicle ["GroundWeaponHolder", _weaponHolderPosition, [], 0, "CAN_COLLIDE"];
 		_weaponHolder setPosATL _weaponHolderPosition;
 	}

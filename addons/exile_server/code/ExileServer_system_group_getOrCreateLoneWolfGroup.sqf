@@ -13,6 +13,5 @@ if (isNull ExileServerLoneWolfGroup) then
 {
 	ExileServerLoneWolfGroup = createGroup independent;
 	ExileServerLoneWolfGroup setGroupIdGlobal [""]; 
-	(format ["Created a new lone wolf group: %1", netId ExileServerLoneWolfGroup]) call ExileServer_util_log;
 };
 ExileServerLoneWolfGroup

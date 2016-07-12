@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_parameters","_netId","_player","_ExileSessionID","_sessionId"];
+private["_parameters","_netId","_player","_existingSessionID","_sessionId"];
 _parameters = _this select 1;
 _netId = _parameters select 0;
 try 
@@ -19,8 +19,8 @@ try
 	{
 		throw "Cannot start session for unknown network ID!";
 	};
-	_ExileSessionID = _player getVariable ["ExileSessionID",-1];
-	if !(_ExileSessionID isEqualTo -1) then 
+	_existingSessionID = _player getVariable ["ExileSessionID",-1];
+	if !(_existingSessionID isEqualTo -1) then 
 	{
 		throw "Trying to get a second session ID!";
 	};

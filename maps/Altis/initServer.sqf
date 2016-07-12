@@ -411,7 +411,7 @@ ExileRouletteChairPositions =
 {
     private ["_chair"];
 
-    _chair = "Land_ChairWood_F" createVehicle [0, 0, 0];
+    _chair = "Exile_RussianRouletteChair" createVehicle [0, 0, 0];
     _chair setDir (deg (_x select 1));
     _chair setPosWorld (_x select 0);
     _chair allowDamage false;

@@ -22,6 +22,13 @@ ExileServerRussianRouletteCurrentShot = -1;
 ExileServerRussianRoulettePotValue = 0;
 ExileServerRussianRouletteCountDownEndTime = -1;
 ExileServerRussianRouletteCurrentPlayerNetId = "";
+if (isNil "ExileRouletteChairPositions") exitWith
+{
+	"There are no Russian Roulette chairs defined. Russian Roulette will not work!" call ExileServer_util_log;
+	ExileServerRussianRouletteStatus = 1;
+	ExileRouletteChairs = [];
+	ExileRouletteChairPositions = [];
+};
 {
 	_chair = ExileRouletteChairs select _forEachIndex;
     _chair setDir (deg (_x select 1));

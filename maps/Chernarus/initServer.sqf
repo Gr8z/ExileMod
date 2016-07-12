@@ -38,7 +38,7 @@ ExileRouletteChairPositions =
 {
     private ["_chair"];
 
-    _chair = "Land_ChairWood_F" createVehicle [0, 0, 0];
+    _chair = "Exile_RussianRouletteChair" createVehicle [0, 0, 0];
     _chair setDir (deg (_x select 1));
     _chair setPosASL (_x select 0);
     _chair allowDamage false;
@@ -56,7 +56,7 @@ _concreteMixers =
 [
 	[[1763.97, 7715.98, 283.087],  223.572], // Myshkino
 	[[11461.8, 7482.31, 221.53],  0], // Factory
-	[[8405.68, 12211.4, 159], 279.519] // Gvozdno
+	[[8408.44, 11236.2, 156.469], 185.285] // Gvozdno
 ];
 
 {

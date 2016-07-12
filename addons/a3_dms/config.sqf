@@ -9,6 +9,27 @@
 	https://github.com/nerdalertdk/WICKED-AI
 */
 
+// You dawg... heard you like configs... so here's some configs for your config.... so you can configure your configuration to make it easier to configure your configuration http://i.imgur.com/9eJjEEo.jpg
+
+
+// If you don't want the AI to have marksman DLC weapons, then simply remove the line below, or comment it by putting // at the beginning of the line
+#define GIVE_AI_MARKSMAN_DLC_WEAPONS 1
+
+// If you don't want crates to spawn with marksman DLC weapons, simply remove the line below or comment it out.
+#define USE_MARKSMAN_DLC_WEAPONS_IN_CRATES 1
+
+// Uncomment this if you want Apex weapons on AI.
+//#define GIVE_AI_APEX_WEAPONS 1
+
+// Uncomment this if you want Apex gear on AI. Uniforms, Vests, Backpacks, Helmets,Scopes
+//#define GIVE_AI_APEX_GEAR
+
+// Uncomment this if you want Apex weapons in loot crates
+//#define USE_APEX_WEAPONS_IN_CRATES 1
+
+// Uncomment this if you want Apex vehicles to spawn for AI/missions
+//#define USE_APEX_VEHICLES 1
+
 
 
 DMS_Use_Map_Config = true;	// Whether or not to use config overwrites specific to the map.
@@ -57,6 +78,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 
 	/*Mission Marker settings*/
 	DMS_ShowDifficultyColorLegend		= true;						// Whether or not to show a "color legend" at the bottom left of the map that shows which color corresponds to which difficulty. I know it's not very pretty, meh.
+	DMS_ShowMarkerCircle				= false;					// Whether or not to show the colored "circle" around a mission marker.
 	DMS_MarkerText_ShowMissionPrefix	= true;						// Whether or not to place a prefix before the mission marker text. Enable this if your players get confused by the marker names :P
 	DMS_MarkerText_MissionPrefix		= "Mission:";				// The text displayed before the mission name in the mission marker.
 	DMS_MarkerText_ShowAICount			= true;						// Whether or not to display the number of remaining AI in the marker name.
@@ -115,16 +137,26 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_MissionNearBlacklist			= 1250;						// Missions won't spawn in a position this many meters close to another mission
 	DMS_WaterNearBlacklist				= 500;						// Missions won't spawn in a position this many meters close to water
 	DMS_TerritoryNearBlacklist			= 100;						// Missions won't spawn in a position this many meters close to a territory flag. This is a resource intensive check, don't set this value too high!
+	DMS_MixerNearBlacklist				= 1000;						// Missions won't spawn in a position this many meters close to a concrete mixer
+	DMS_ContaminatedZoneNearBlacklist	= 1000;						// Missions won't spawn in a position this many meters close to a contaminated zone
 	DMS_MinSurfaceNormal				= 0.9;						// Missions won't spawn in a position where its surfaceNormal is less than this amount. The lower the value, the steeper the location. Greater values means flatter locations. Values can range from 0-1, with 0 being sideways, and 1 being perfectly flat. For reference: SurfaceNormal of about 0.7 is when you are forced to walk up a surface. If you want to convert surfaceNormal to degrees, use the arc-cosine of the surfaceNormal. 0.9 is about 25 degrees. Google "(arccos 0.9) in degrees"
 	DMS_MinDistFromWestBorder			= 250;						// Missions won't spawn in a position this many meters close to the western map border.
 	DMS_MinDistFromEastBorder			= 250;						// Missions won't spawn in a position this many meters close to the easter map border.
 	DMS_MinDistFromSouthBorder			= 250;						// Missions won't spawn in a position this many meters close to the southern map border.
 	DMS_MinDistFromNorthBorder			= 250;						// Missions won't spawn in a position this many meters close to the northern map border.
 	DMS_SpawnZoneMarkerTypes =			[							// If you're using custom spawn zone markers, make sure you define them here. CASE SENSITIVE!!!
-											"ExileSpawnZone"
+
+											"ExileSpawnZoneIcon"
 										];
 	DMS_TraderZoneMarkerTypes =			[							// If you're using custom trader markers, make sure you define them here. CASE SENSITIVE!!!
-											"ExileTraderZone"
+
+											"ExileTraderZoneIcon"
+										];
+	DMS_MixerMarkerTypes =				[							// If you're using custom concrete mixer map markers, make sure you define them here. CASE SENSITIVE!!!
+											"ExileConcreteMixerZoneIcon"
+										];
+	DMS_ContaminatedZoneMarkerTypes =	[							// If you're using custom contaminated zone markers, make sure you define them here. CASE SENSITIVE!!!
+											"ExileContaminatedZoneIcon"
 										];
 	/*Mission spawn location settings*/
 
@@ -199,24 +231,39 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 
 	/*Mission notification settings*/
 
-	DMS_BanditMissionTypes =			[							//	List of missions with spawn chances. If they add up to 100%, they represent the percentage chance each one will spawn
-											["donthasslethehoff",5],
-											["bandits",5],
-											["bauhaus",5],
-											["cardealer",5],
-											["humanitarian",5],
-											["foodtransport",5],
-											["blackhawkdown",4],
-											["construction",4],
-											["walmart",4],
-											["mercenaries",4],
-											["guntransport",4],
+	DMS_BanditMissionTypes =			[			//	List of missions with spawn chances. If they add up to 100%, they represent the percentage chance each one will spawn
+
+											["bandits",3],
+											["bauhaus",3],
 											["beertransport",3],
+											["behindenemylines",3],
+											["blackhawkdown",3],
+											["cardealer",3],
+											["construction",3],
+											["donthasslethehoff",3],
+											["foodtransport",3],
+											["guntransport",3],
+											["humanitarian",3],
+											["lost_battalion",3],
+											["medical",3],
+											["mercbase",1],
+											["mercenaries",3],
+											["nedbuilding1_mission",3],
+											["nedcar_mission",4],
+											["nedguns1_mission",3],
+											["nedhatchback_mission",3],
+											["nedhunter_mission",2],
+											["nedifrit_mission",2],
+											["nedlittlebird_mission",2],
+											["nedmedical1_mission",3],
+											["nedoffroad_mission",3],
+											["nedresearch_mission",3],
+											["nedsnipercamp_mission",3],
+											["nedstrider_mission",2],
+											["nedural_mission",3],
 											["roguenavyseals",3],
-											["thieves",2],
-											["lost_battalion",2],
-											["behindenemylines",2],
-											["mercbase",3]
+											["thieves",3],
+											["walmart",3]
 										];
 
 
@@ -436,6 +483,13 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 
 	//Assault Class
 	DMS_assault_weps =					[							// Assault Rifles
+											#ifdef GIVE_AI_APEX_WEAPONS
+											"arifle_AK12_F",
+											"arifle_ARX_ghex_F",
+											"arifle_CTAR_blk_F",
+											"arifle_SPAR_01_khk_F",
+											"arifle_SPAR_03_khk_F",
+											#endif
 											"arifle_Katiba_GL_F",
 											"arifle_MX_GL_Black_F",
 											"arifle_Mk20_GL_F",
@@ -445,16 +499,31 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"arifle_TRG21_F",
 											"arifle_TRG20_F",
 											"arifle_Mk20_plain_F",
-											"arifle_Mk20_F"
+											"arifle_Mk20_F",
+											"Exile_Weapon_AK107",
+											"Exile_Weapon_AK107_GL",
+											"Exile_Weapon_AK74_GL",
+											"Exile_Weapon_AK47",
+											"Exile_Weapon_AKM",
+											"Exile_Weapon_AKS",
+											"Exile_Weapon_AKS_Gold"
 										];
 	DMS_assault_pistols =				[							// Pistols for Assault Class (Set to empty array if you don't want to give them any pistols)
 											"hgun_ACPC2_F",
 											"hgun_Rook40_F",
 											"hgun_P07_F",
 											"hgun_Pistol_heavy_01_F",
-											"hgun_Pistol_heavy_02_F"
+											"hgun_Pistol_heavy_02_F",
+											"Exile_Weapon_Colt1911",
+											"Exile_Weapon_Makarov",
+											"Exile_Weapon_Taurus",
+											"Exile_Weapon_TaurusGold"
 										];
 	DMS_assault_optics =				[							// Optics for Assault Class
+											#ifdef GIVE_AI_APEX_GEAR
+											"optic_ERCO_khk_F",
+											"optic_Holosight_blk_F",
+											#endif
 											"optic_Arco",
 											"optic_Hamr",
 											"optic_Aco",
@@ -484,15 +553,30 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"Exile_Item_Bandage"
 										];
 	DMS_assault_helmets	=				[							// Helmets for Assault Class
+											#ifdef GIVE_AI_APEX_GEAR
+											"H_HelmetB_TI_tna_F",
+											"H_HelmetB_Enh_tna_F",
+											"H_HelmetSpecO_ghex_F",
+											"H_HelmetCrew_O_ghex_F",
+											#endif
 											"H_HelmetSpecB_paint1",
 											"H_HelmetIA_camo",
 											"H_HelmetLeaderO_ocamo",
 											"H_HelmetLeaderO_oucamo"
 										];
 	DMS_assault_clothes	=				[							// Uniforms for Assault Class
+											#ifdef GIVE_AI_APEX_GEAR
+											"U_B_T_Soldier_F",
+											"U_B_T_Soldier_SL_F",
+											"U_B_CTRG_Soldier_F",
+											"U_O_V_Soldier_Viper_F",
+											"U_I_C_Soldier_Bandit_2_F",
+											"U_I_C_Soldier_Camo_F",
+											"U_B_CTRG_Soldier_urb_1_F",
+											#endif
 											"U_O_CombatUniform_ocamo",
 											"U_O_PilotCoveralls",
-											"U_B_Wetsuit",
+											//"U_B_Wetsuit",
 											"U_BG_Guerilla3_1",
 											"U_BG_Guerilla2_3",
 											"U_BG_Guerilla2_2",
@@ -505,6 +589,14 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"U_I_G_resistanceLeader_F"
 										];
 	DMS_assault_vests =					[							// Vests for Assault Class
+											#ifdef GIVE_AI_APEX_GEAR
+											"V_TacChestrig_grn_F",
+											"V_PlateCarrier2_tna_F",
+											"V_PlateCarrierSpec_tna_F",
+											"V_PlateCarrierGL_tna_F",
+											"V_TacVest_gen_F",
+											"V_PlateCarrier1_rgr_noflag_F",
+											#endif
 											"V_PlateCarrierH_CTRG",
 											"V_PlateCarrierSpec_rgr",
 											"V_PlateCarrierGL_blk",
@@ -517,6 +609,11 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"V_PlateCarrierIA2_dgtl"
 										];
 	DMS_assault_backpacks =				[							// Backpacks for Assault Class
+											#ifdef GIVE_AI_APEX_GEAR
+											"B_Bergen_tna_F",
+											"B_FieldPack_ghex_F",
+											"B_ViperLightHarness_khk_F",
+											#endif
 											"B_Bergen_rgr",
 											"B_Carryall_oli",
 											"B_Kitbag_mcamo",
@@ -528,18 +625,37 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 
 	//Machine Gun Class
 	DMS_MG_weps	=						[							// Machine Guns
+											#ifdef GIVE_AI_MARKSMAN_DLC_WEAPONS
+											"MMG_01_hex_F",
+											"MMG_02_black_F",
+											#endif
+
+											#ifdef GIVE_AI_APEX_WEAPONS
+											"LMG_03_F",
+											#endif
 											"LMG_Zafir_F",
 											"LMG_Mk200_F",
-											"arifle_MX_SW_Black_F"
+											"arifle_MX_SW_Black_F",
+											"Exile_Weapon_RPK",
+											"Exile_Weapon_PKP"
 										];
-	DMS_MG_pistols =					[							// Pistols for MG Class (Set to empty array if you don't want to give them any pistols)
+	DMS_MG_pistols =				[							// Pistols for Assault Class (Set to empty array if you don't want to give them any pistols)
 											"hgun_ACPC2_F",
 											"hgun_Rook40_F",
 											"hgun_P07_F",
 											"hgun_Pistol_heavy_01_F",
-											"hgun_Pistol_heavy_02_F"
+											"hgun_Pistol_heavy_02_F",
+											"Exile_Weapon_Colt1911",
+											"Exile_Weapon_Makarov",
+											"Exile_Weapon_Taurus",
+											"Exile_Weapon_TaurusGold"
 										];
 	DMS_MG_optics =						[							//	Optics for MG Class
+											#ifdef GIVE_AI_APEX_GEAR
+											"optic_ERCO_khk_F",
+											"optic_DMS_ghex_F",
+											"optic_Arco_blk_F",
+											#endif
 											"optic_Hamr",
 											"optic_Aco",
 											"optic_Holosight",
@@ -568,6 +684,13 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"Exile_Item_Instadoc"
 										];
 	DMS_MG_helmets =					[							// Helmets for MG Class
+											#ifdef GIVE_AI_APEX_GEAR
+											"H_HelmetB_TI_tna_F",
+											"H_HelmetB_Enh_tna_F",
+											"H_HelmetSpecO_ghex_F",
+											"H_HelmetLeaderO_ghex_F",
+											"H_HelmetCrew_O_ghex_F",
+											#endif
 											"H_PilotHelmetHeli_I",
 											"H_PilotHelmetHeli_O",
 											"H_PilotHelmetFighter_I",
@@ -580,9 +703,18 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"H_HelmetLeaderO_oucamo"
 										];
 	DMS_MG_clothes =					[							// Uniforms for MG Class
+											#ifdef GIVE_AI_APEX_GEAR
+											"U_B_T_Soldier_F",
+											"U_B_T_Soldier_SL_F",
+											"U_B_CTRG_Soldier_F",
+											"U_O_V_Soldier_Viper_F",
+											"U_I_C_Soldier_Bandit_2_F",
+											"U_I_C_Soldier_Camo_F",
+											"U_B_CTRG_Soldier_urb_1_F",
+											#endif
 											"U_O_CombatUniform_ocamo",
 											"U_O_PilotCoveralls",
-											"U_B_Wetsuit",
+											//"U_B_Wetsuit",
 											"U_BG_Guerilla3_1",
 											"U_BG_Guerilla2_3",
 											"U_BG_Guerilla2_2",
@@ -595,6 +727,14 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"U_I_G_resistanceLeader_F"
 										];
 	DMS_MG_vests =						[							// Vests for MG Class
+											#ifdef GIVE_AI_APEX_GEAR
+											"V_TacChestrig_grn_F",
+											"V_PlateCarrier2_tna_F",
+											"V_PlateCarrierSpec_tna_F",
+											"V_PlateCarrierGL_tna_F",
+											"V_TacVest_gen_F",
+											"V_PlateCarrier1_rgr_noflag_F",
+											#endif
 											"V_PlateCarrierH_CTRG",
 											"V_PlateCarrierSpec_rgr",
 											"V_PlateCarrierGL_blk",
@@ -609,6 +749,12 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"V_HarnessO_gry"
 										];
 	DMS_MG_backpacks =					[							// Backpacks for MG Class
+											#ifdef GIVE_AI_APEX_GEAR
+											"B_Bergen_tna_F",
+											"B_Carryall_ghex_F",
+											"B_ViperHarness_ghex_F",
+											"B_ViperLightHarness_ghex_F",
+											#endif
 											"B_Bergen_rgr",
 											"B_Carryall_oli",
 											"B_Kitbag_mcamo",
@@ -619,21 +765,49 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	//Sniper Class
 	DMS_sniper_weps =					[							// Sniper Rifles
 											"srifle_EBR_F",
-											"srifle_DMR_01_F",
 											"srifle_GM6_F",
 											"srifle_LRR_F",
-											"arifle_MXM_F",
 											"arifle_MXM_Black_F",
-											"srifle_DMR_02_F"
+											"srifle_DMR_01_F",
+											#ifdef GIVE_AI_MARKSMAN_DLC_WEAPONS
+											"srifle_DMR_02_F",
+											"srifle_DMR_03_woodland_F",
+											//"srifle_DMR_04_F",			// Does anybody like the ASP-1? :p
+											"srifle_DMR_05_blk_F",
+											"srifle_DMR_06_olive_F",
+											#endif
+
+											#ifdef GIVE_AI_APEX_WEAPONS
+											"srifle_DMR_07_ghex_F",
+											#endif
+											"Exile_Weapon_DMR",
+											"Exile_Weapon_SVD",
+											"Exile_Weapon_VSSVintorez"
 										];
-	DMS_sniper_pistols =				[							// Pistols for Sniper Class (Set to empty array if you don't want to give them any pistols)
+	DMS_sniper_pistols =				[							// Pistols for Assault Class (Set to empty array if you don't want to give them any pistols)
+											#ifdef GIVE_AI_APEX_WEAPONS
+											"hgun_Pistol_01_F",
+											#endif
 											"hgun_ACPC2_F",
 											"hgun_Rook40_F",
 											"hgun_P07_F",
 											"hgun_Pistol_heavy_01_F",
-											"hgun_Pistol_heavy_02_F"
+											"hgun_Pistol_heavy_02_F",
+											"Exile_Weapon_Colt1911",
+											"Exile_Weapon_Makarov",
+											"Exile_Weapon_Taurus",
+											"Exile_Weapon_TaurusGold"
 										];
 	DMS_sniper_optics =					[							// Optics for Sniper Class
+											#ifdef GIVE_AI_APEX_GEAR
+											"optic_SOS_khk_F",
+											"optic_DMS_ghex_F",
+											"optic_LRPS_tna_F",
+											#endif
+
+											#ifdef GIVE_AI_MARKSMAN_DLC_WEAPONS
+											"optic_AMS_khk",
+											#endif
 											"optic_SOS",
 											"optic_DMS",
 											"optic_LRPS"
@@ -662,12 +836,24 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"Exile_Item_DuctTape"
 										];
 	DMS_sniper_helmets =				[							// Helmets for Sniper Class
+											#ifdef GIVE_AI_APEX_GEAR
+											//"H_HelmetO_ViperSP_ghex_F",			// Special helmet with in-built NVGs and thermal :o
+											"H_HelmetB_Enh_tna_F",
+											"H_HelmetSpecO_ghex_F",
+											"H_HelmetLeaderO_ghex_F",
+											#endif
 											"H_HelmetSpecB_paint1",
 											"H_HelmetIA_camo",
 											"H_HelmetLeaderO_ocamo",
 											"H_HelmetLeaderO_oucamo"
 										];
 	DMS_sniper_clothes =				[							// Uniforms for Sniper Class
+											#ifdef GIVE_AI_APEX_GEAR
+											"U_B_T_Sniper_F",
+											"U_B_T_FullGhillie_tna_F",				// Invisible to thermal? 0_o
+											"U_O_T_Sniper_F",
+											"U_O_T_FullGhillie_tna_F",
+											#endif
 											"U_O_GhillieSuit",
 											"U_B_FullGhillie_ard",
 											"U_B_FullGhillie_lsh",
@@ -682,6 +868,12 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"U_O_FullGhillie_sard"
 										];
 	DMS_sniper_vests =					[							// Vests for Sniper Class
+											#ifdef GIVE_AI_APEX_GEAR
+											"V_PlateCarrier2_tna_F",
+											"V_PlateCarrierSpec_tna_F",
+											"V_PlateCarrierGL_tna_F",
+											"V_PlateCarrier2_rgr_noflag_F",
+											#endif
 											"V_PlateCarrierH_CTRG",
 											"V_PlateCarrierSpec_rgr",
 											"V_PlateCarrierGL_blk",
@@ -696,6 +888,15 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"V_HarnessO_gry"
 										];
 	DMS_sniper_backpacks =				[							// Backpacks for Sniper Class
+											#ifdef GIVE_AI_APEX_GEAR
+											"B_Bergen_tna_F",
+											"B_Bergen_hex_F",
+											"B_Carryall_ghex_F",
+											"B_ViperHarness_ghex_F",
+											"B_ViperHarness_blk_F",
+											"B_ViperLightHarness_ghex_F",
+											"B_ViperLightHarness_khk_F",
+											#endif
 											"B_Bergen_rgr",
 											"B_Carryall_oli",
 											"B_Kitbag_mcamo",
@@ -749,6 +950,9 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_ai_remove_launchers				= true;						// Remove rocket launchers on AI death
 
 	DMS_AI_wep_launchers_AT =			[							// AT Launchers
+											#ifdef GIVE_AI_APEX_WEAPONS
+											"launch_RPG7_F",
+											#endif
 											"launch_NLAW_F",
 											"launch_RPG32_F",
 											"launch_B_Titan_short_F"
@@ -808,8 +1012,67 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 												["B_Kitbag_mcamo",1]
 											]
 										];
+										
+	DMS_CrateCase_Custom1 =				[							// If you pass "Sniper" in _lootValues, then it will spawn these weapons/items/backpacks
+											[
+												["MMG_01_hex_F",2],
+												["MMG_02_camo_F",2],
+												["srifle_EBR_F",1],
+												["Rangefinder",1],
+												["srifle_GM6_F",1],
+												["srifle_LRR_F",1],
+												["srifle_EBR_F",1],
+												["hgun_Pistol_heavy_01_F",1],
+												["hgun_PDW2000_F",1]
+											],
+											[
+												["150Rnd_93x64_Mag",4],
+												["130Rnd_338_Mag",4],
+												["20Rnd_762x51_Mag",5],
+												["optic_DMS",2],
+												["optic_Hamr",2],
+												["optic_Holosight",3],
+												["IEDLandSmall_Remote_Mag",2],
+												["optic_tws_mg",1],
+												["Exile_Item_InstaDoc",2],
+												["Exile_Item_BBQSandwich_Cooked",4],
+												["Exile_Item_PlasticBottleCoffee",4],
+												["V_PlateCarrierSpec_rgr",1],
+												["V_PlateCarrierSpec_blk",1],
+												["V_PlateCarrierSpec_mtp",1],
+												["Laserdesignator",1],
+												["Exile_Uniform_Woodland",2],
+												["U_I_FullGhillie_ard",2],
+												["NVGoggles",2]
+											],
+											[
+												["B_Carryall_cbr",1],
+												["B_Kitbag_mcamo",1]
+											]
+										];
 	DMS_BoxWeapons =					[							// List of weapons that can spawn in a crate
+											#ifdef USE_MARKSMAN_DLC_WEAPONS_IN_CRATES
+											"srifle_DMR_02_F",
+											"srifle_DMR_03_woodland_F",
+											//"srifle_DMR_04_F",			// ASP-1 Kir
+											"srifle_DMR_05_blk_F",
+											"srifle_DMR_06_olive_F",
+											"MMG_01_hex_F",
+											"MMG_02_black_F",
+											#endif
+
+											#ifdef USE_APEX_WEAPONS_IN_CRATES
+											"arifle_AK12_F",
+											"arifle_ARX_ghex_F",
+											"arifle_CTAR_blk_F",
+											"arifle_SPAR_01_khk_F",
+											"arifle_SPAR_03_khk_F",
+											//"srifle_DMR_07_ghex_F",				// Oh great, a 6.5mm 20 round sniper rifle... because everybody wanted a nerfed MXM :p
+											"LMG_03_F",
+											#endif
 											"Exile_Melee_Axe",
+											"Exile_Melee_SledgeHammer",
+											//"Exile_Melee_Shovel",					// Not really interesting for players...
 											"arifle_Katiba_GL_F",
 											"arifle_MX_GL_Black_F",
 											"arifle_Mk20_GL_F",
@@ -820,16 +1083,29 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"arifle_TRG20_F",
 											"arifle_Mk20_plain_F",
 											"arifle_Mk20_F",
+											"Exile_Weapon_AK107",
+											"Exile_Weapon_AK107_GL",
+											"Exile_Weapon_AK74_GL",
+											"Exile_Weapon_AK47",
+											"Exile_Weapon_AKM",
+											"Exile_Weapon_AKS",
+											"Exile_Weapon_AKS_Gold",
 											"LMG_Zafir_F",
 											"LMG_Mk200_F",
 											"arifle_MX_SW_Black_F",
+											"Exile_Weapon_RPK",
+											"Exile_Weapon_PK",
+											"Exile_Weapon_PKP",
 											"srifle_EBR_F",
 											"srifle_DMR_01_F",
 											"srifle_GM6_F",
 											"srifle_LRR_F",
-											"arifle_MXM_F",
 											"arifle_MXM_Black_F",
-											"srifle_DMR_02_F"
+											"Exile_Weapon_DMR",
+											"Exile_Weapon_SVD",
+											"Exile_Weapon_VSSVintorez",
+											"Exile_Weapon_CZ550",
+											"Exile_Weapon_SVDCamo"
 										];
 	DMS_BoxFood =						[							// List of food that can spawn in a crate.
 											"Exile_Item_GloriousKnakworst_Cooked",
@@ -840,14 +1116,20 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"Exile_Item_Catfood_Cooked",
 											"Exile_Item_DogFood_Cooked",
 											"Exile_Item_EMRE",
-											"Exile_Item_EMRE"
+											"Exile_Item_BeefParts",
+											"Exile_Item_Noodles",
+											"Exile_Item_SeedAstics",
+											"Exile_Item_Raisins",
+											"Exile_Item_Moobar",
+											"Exile_Item_InstantCoffee"
 										];
 	DMS_BoxDrinks =						[
 											"Exile_Item_PlasticBottleCoffee",
 											"Exile_Item_PowerDrink",
 											"Exile_Item_PlasticBottleFreshWater",
 											"Exile_Item_EnergyDrink",
-											"Exile_Item_MountainDupe"
+											"Exile_Item_MountainDupe",
+											"Exile_Item_ChocolateMilk"
 										];
 	DMS_BoxMeds =						[
 											"Exile_Item_InstaDoc",
@@ -860,26 +1142,59 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"Exile_Melee_Axe",
 											"Exile_Item_CanOpener"
 										] + DMS_BoxFood + DMS_BoxDrinks + DMS_BoxMeds;
-	DMS_BoxBaseParts =					[
-											"Exile_Item_CamoTentKit",
+	DMS_Box_BaseParts_Wood =			[							// List of wooden base parts.
 											"Exile_Item_WoodWallKit",
 											"Exile_Item_WoodWallHalfKit",
-											"Exile_Item_WoodDoorwayKit",
+											"Exile_Item_WoodWindowKit",
 											"Exile_Item_WoodDoorKit",
+											"Exile_Item_WoodDoorwayKit",
+											"Exile_Item_WoodGateKit",
 											"Exile_Item_WoodFloorKit",
 											"Exile_Item_WoodFloorPortKit",
-											"Exile_Item_WoodStairsKit",
-											"Exile_Item_WoodSupportKit",
-											"Exile_Item_FortificationUpgrade"
+											"Exile_Item_WoodStairsKit"
 										];
+	DMS_Box_BaseParts_Concrete =		[							// List of concrete base parts
+											"Exile_Item_ConcreteWallKit",
+											"Exile_Item_ConcreteWindowKit",
+											"Exile_Item_ConcreteDoorKit",
+											"Exile_Item_ConcreteDoorwayKit",
+											"Exile_Item_ConcreteGateKit",
+											"Exile_Item_ConcreteFloorKit",
+											"Exile_Item_ConcreteFloorPortKit",
+											"Exile_Item_ConcreteStairsKit"
+										];
+	DMS_BoxBaseParts =					[							// List of all base parts to spawn. Weighted towards wood base parts.
+											"Exile_Item_FortificationUpgrade",
+											"Exile_Item_FortificationUpgrade",
+											"Exile_Item_SandBagsKit_Long",
+											"Exile_Item_SandBagsKit_Long",
+											"Exile_Item_SandBagsKit_Corner",
+											"Exile_Item_SandBagsKit_Corner",
+											"Exile_Item_HBarrier5Kit"
+										] + DMS_Box_BaseParts_Wood + DMS_Box_BaseParts_Wood + DMS_Box_BaseParts_Wood + DMS_Box_BaseParts_Concrete;
 	DMS_BoxCraftingMaterials =			[
-											"Exile_Item_MetalPole",
+											"Exile_Item_Cement",
+											"Exile_Item_Sand",
+											"Exile_Item_Sand",
+											"Exile_Item_WaterCanisterDirtyWater",
 											"Exile_Item_MetalBoard",
-											"Exile_Item_JunkMetal"
+											"Exile_Item_MetalPole",
+											"Exile_Item_MetalPole",
+											"Exile_Item_JunkMetal",
+											"Exile_Item_JunkMetal",
+											"Exile_Item_JunkMetal",
+											"Exile_Item_WoodPlank",
+											"Exile_Item_WoodPlank",
+											"Exile_Item_WoodPlank",
+											"Exile_Item_WoodPlank"
 										];
 	DMS_BoxTools =						[
 											"Exile_Item_Grinder",
-											"Exile_Item_Handsaw"
+											"Exile_Item_Handsaw",
+											"Exile_Item_CanOpener",
+											"Exile_Item_Pliers",
+											"Exile_Item_Screwdriver",
+											"Exile_Item_Foolbox"
 										];
 	DMS_BoxBuildingSupplies	=			[							// List of building supplies that can spawn in a crate ("DMS_BoxBaseParts", "DMS_BoxCraftingMaterials", and "DMS_BoxTools" are automatically added to this list. "DMS_BoxCraftingMaterials" is added twice for weight.)
 											"Exile_Item_DuctTape",
@@ -905,8 +1220,17 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"B_FieldPack_cbr",
 											"B_Bergen_blk"
 										];
+
 	DMS_BoxItems						= DMS_BoxSurvivalSupplies+DMS_BoxBuildingSupplies+DMS_BoxOptics;	// Random "items" can spawn optics, survival supplies, or building supplies
 
+	DMS_Box_BreachingCharges =			[							// List of breaching charges (weighted). Not used (yet).
+											"BreachingChargeBigMomma",
+											"BreachingChargeMetal",
+											"BreachingChargeMetal",
+											"BreachingChargeWood",
+											"BreachingChargeWood",
+											"BreachingChargeWood"
+										];
 	DMS_RareLoot						= true;						// Potential chance to spawn rare loot in any crate.
 	DMS_RareLootAmount					= 1;						// How many rare loot items to add.
 	DMS_RareLootList =					[							// List of rare loot to spawn
@@ -917,10 +1241,18 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 
 	// Vehicles
 	DMS_ArmedVehicles =					[							// List of armed vehicles that can spawn
+											#ifdef USE_APEX_VEHICLES
+											"B_T_LSV_01_armed_F",
+											"O_T_LSV_02_armed_F",
+											#endif
 											"Exile_Car_Offroad_Armed_Guerilla01"
 										];
 
-	DMS_MilitaryVehicles =				[							// List of military vehicles that can spawn
+	DMS_MilitaryVehicles =				[							// List of (unarmed) military vehicles that can spawn
+											#ifdef USE_APEX_VEHICLES
+											"B_T_LSV_01_unarmed_F",
+											"O_T_LSV_02_unarmed_F",
+											#endif
 											"Exile_Car_Strider",
 											"Exile_Car_Hunter",
 											"Exile_Car_Ifrit"
@@ -945,6 +1277,10 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 										];
 
 	DMS_CivilianVehicles =				[							// List of civilian vehicles that can spawn
+											#ifdef USE_APEX_VEHICLES
+											"C_Offroad_02_unarmed_F",
+											"I_C_Van_01_transport_F",
+											#endif
 											"Exile_Car_SUV_Red",
 											"Exile_Car_Hatchback_Rusty1",
 											"Exile_Car_Hatchback_Rusty2",
@@ -955,6 +1291,10 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 										];
 
 	DMS_TransportHelis =				[							// List of transport helis that can spawn
+											#ifdef USE_APEX_VEHICLES
+											"B_T_VTOL_01_infantry_F",
+											"O_T_VTOL_02_infantry_F",
+											#endif
 											"Exile_Chopper_Hummingbird_Green",
 											"Exile_Chopper_Orca_BlackCustom",
 											"Exile_Chopper_Mohawk_FIA",

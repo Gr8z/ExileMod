@@ -2,29 +2,59 @@
 #include "GG\CfgRemoteExec.hpp"
 #include "GG\ExAdClient\ExAd.cpp"
 
-// https://community.bistudio.com/wiki/Description.ext#forceRotorLibSimulation
-forceRotorLibSimulation = 2;
-
-// https://community.bistudio.com/wiki/Description.ext#disableChannels
-//disableChannels[] = {0, 2};
-
+///////////////////////////////////////////////////////////////////////////////
+// Server Settings - Modify at will
+///////////////////////////////////////////////////////////////////////////////
 author = "Ghostz Gamerz";
-loadScreen = "GG\images\logo.jpg"; 
+onLoadName = "Ghostz Gamerz Exile Mod Chernarus";
 onLoadMission= "www.ghostzgamerz.com";
+loadScreen = "GG\images\logo.jpg"; 
+disableChannels[] = {0, 2};
 OnLoadIntro = "";
 OnLoadIntroTime = false;
 OnLoadMissionTime = false;
-onLoadName = "GG Exile Mod Chernarus";
 
 class Header
 {
-	gameType = Sandbox;
-	minPlayers = 1;
-	maxPlayers = 100;
+    gameType = Survive; // Do NOT change this
+    minPlayers = 1;
+    maxPlayers = 100;
 };
 
-// DO NOT CHANGE THIS! +
+///////////////////////////////////////////////////////////////////////////////
+// Exile Settings - Do not change these!
+///////////////////////////////////////////////////////////////////////////////
+forceRotorLibSimulation = 2;
 skipLobby = 1;
+joinUnassigned = 1;
+respawn = "BASE";
+respawnDelay = 10;
+respawnDialog = 0;
+respawnOnStart = 0;
+respawnButton = 1; 
+respawnTemplates[] = {"Exile"};
+corpseManagerMode = 0;
+corpseLimit = 20;
+corpseRemovalMinTime = 1800;
+corpseRemovalMaxTime = 3600;
+wreckManagerMode = 0;
+wreckLimit = 10;
+wreckRemovalMinTime = 60;
+wreckRemovalMaxTime = 360;
+scriptedPlayer = 1;
+disabledAI = 1;
+enableItemsDropping = 0;
+briefing = 0;
+debriefing = 0;
+allowFunctionsLog = 1;
+enableDebugConsole = 0; 
+allowFunctionsRecompile = 0;
+showSquadRadar = 0;
+showUAVFeed = 0;
+reviveDelay = 6;
+reviveForceRespawnDelay = 3;
+reviveBleedOutDelay = 10;
+
 showHUD[] = 
 {
     true,   // Scripted HUD (same as showHUD command)
@@ -32,59 +62,11 @@ showHUD[] =
     true,   // Vehicle radar 
     true,   // Vehicle compass
     true,   // Tank direction indicator
-    false,   // Commanding menu
-    false,   // Group Bar
-    true,    // HUD Weapon Cursors
+    false,  // Commanding menu
+    false,  // Group Bar
+    true,   // HUD Weapon Cursors
     false   // Squad Radar
 };
-
-// Automatically take a free slot in lobby
-joinUnassigned = 1;
-
-respawn = "BASE";
-respawnDelay = 10;
-respawnDialog = 0;
-respawnOnStart = 0;
-respawnButton = 1; 
-respawnTemplates[] = {"Exile"};
-
-// These are broken as fuck, do not use them!
-corpseManagerMode = 0;
-corpseLimit = 20;
-corpseRemovalMinTime = 1800;
-corpseRemovalMaxTime = 3600;
-wreckManagerMode = 0;
-wreckLimit = 2;
-wreckRemovalMinTime = 60;
-wreckRemovalMaxTime = 360;
-// DO NOT CHANGE THIS! -
-
-// When scripted player is enabled, game no longer shows "No player select" error message upon mission start when no player unit is present. 
-scriptedPlayer = 1;
-
-// Removes all playable units which do not have a human player.
-disabledAI = true;
-
-// Disable dropping items while swimming
-enableItemsDropping = 0;
-
-// Briefing will still be displayed until all clients are connected and done loading :(
-briefing = 0;
-
-// Defines if the debriefing is shown or not at the end of the mission. 
-debriefing = 0;
-
-// Allow RPT loging
-allowFunctionsLog = 1;
-
-// Allows access to the Debug Console outside of the editor during normal gameplay. 
-// 0 = Default behavior, available only in editor
-// 1 = Available in SP and for hosts / logged in admins
-// 2 = Available for everyone
-enableDebugConsole = 0; // 2 = dangerous in MP
-
-// NO NO NO
-allowFunctionsRecompile = 0;
 
 class cfgFunctions
 {
