@@ -1397,7 +1397,7 @@ class Mission
 
 		class Item32
 		{
-			position[]={8407.597,0,12217.082};
+			position[]={8408.44,0,11236.2};
 			name="ConcreteMixerZoneGvozdno";
 			text="Concrete Mixer";
 			markerType="ELLIPSE";
@@ -1410,7 +1410,7 @@ class Mission
 		};
 		class Item33
 		{
-			position[]={8407.597,0,12217.082};
+			position[]={8408.44,0,11236.2};
 			name="ConcreteMixerZoneGvozdnoIcon";
 			text="";
 			type="ExileConcreteMixerZoneIcon";
