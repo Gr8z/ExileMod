@@ -98,6 +98,11 @@ if !(DMS_ai_offload_to_client) then
 	DMS_ai_offloadOnUnfreeze = false;
 };
 
+if !(DMS_ai_allowFreezing) then
+{
+	DMS_ai_freezeOnSpawn = false;
+};
+
 
 
 DMS_A3_AllMarkerColors = [];
@@ -129,7 +134,7 @@ publicVariable "DMS_CLIENT_fnc_hintSilent";
 publicVariable "DMS_Version";
 
 
-format["DMS_Version: %1",DMS_Version] remoteExecCall ["diag_log", -2, "DMS_LogVersion_JIP_ID"]; 
+format["DMS_Version: %1",DMS_Version] remoteExecCall ["diag_log", -2, "DMS_LogVersion_JIP_ID"];
 
 
 
@@ -160,31 +165,47 @@ if (DMS_ShowDifficultyColorLegend) then
 	_title setMarkerType "mil_dot";
 	_title setMarkerAlpha 0.5;
 	{
-		private ["_difficulty", "_color", "_num", "_pos", "_circle", "_dot"];
+		private _difficulty = _x;
 
-		_difficulty = _x;
+		private _color = "ColorGreen";
+		private _markerType = "ExileMissionEasyIcon";
+
+
 		switch (_difficulty) do
 		{
-			case "easy": 		{_color = "ColorGreen";};
-			case "moderate": 	{_color = "ColorYellow";};
-			case "difficult": 	{_color = "ColorRed";};
-			case "hardcore" : 	{_color = "ColorBlack";};
+			case "moderate":
+			{
+				_color = "ColorYellow";
+				_markerType = "ExileMissionModerateIcon";
+			};
+			case "difficult":
+			{
+				_color = "ColorRed";
+				_markerType = "ExileMissionDifficultIcon";
+			};
+			case "hardcore":
+			{
+				_color = "ColorBlack";
+				_markerType = "ExileMissionHardcoreIcon";
+			};
 		};
 
-		_num = -200 * (_forEachIndex - 0.5);
-		_pos = [100,_num];
+		private _num = -200 * (_forEachIndex - 0.5);
+		private _pos = [100,_num];
 
-		_circle = createMarker [format ["DMS_MissionMarker_DifficultyColor_%1",_color], _pos];
-		_circle setMarkerColor _color;
-		_circle setMarkerShape "ELLIPSE";
-		_circle setMarkerBrush "Solid";
-		_circle setMarkerSize [100,100];
+		if (DMS_ShowMarkerCircle) then
+		{
+			private _circle = createMarker [format ["DMS_MissionMarker_DifficultyColor_%1",_color], _pos];
+			_circle setMarkerColor _color;
+			_circle setMarkerShape "ELLIPSE";
+			_circle setMarkerBrush "Solid";
+			_circle setMarkerSize [100,100];
+		};
 
-		_dot = createMarker [format ["DMS_MissionMarker_Difficulty_%1",_difficulty],_pos];
-		_dot setMarkerColor "ColorWhite";
-		_dot setMarkerType "mil_dot";
-		_dot setMarkerAlpha 0.5;
+		private _dot = createMarker [format ["DMS_MissionMarker_Difficulty_%1",_difficulty],_pos];
+		_dot setMarkerType _markerType;
 		_dot setMarkerText _difficulty;
+		_dot setMarkerAlpha 0.5;
 	} forEach ["hardcore","difficult","moderate","easy"];
 };
 
@@ -195,22 +216,37 @@ if (DMS_ShowDifficultyColorLegend) then
 
 
 {
+	missionNamespace setVariable
+	[
+		format["DMS_Mission_%1",_missionName],
+		compileFinal preprocessFileLineNumbers (format ["\x\addons\DMS\missions\bandit\%1.sqf",_missionName])
+	];
+
 	[_x] call DMS_fnc_SpawnBanditMission;
 } forEach DMS_BanditMissionsOnServerStart;
 
+
 if (DMS_StaticMission) then
 {
+	private _temp = DMS_StaticMinPlayerDistance;
+	DMS_StaticMinPlayerDistance = 0;
+
 	{
+		missionNamespace setVariable
+		[
+			format["DMS_StaticMission_%1",_x],
+			compileFinal preprocessFileLineNumbers (format ["\x\addons\DMS\missions\static\%1.sqf",_x])
+		];
+
 		[_x] call DMS_fnc_SpawnStaticMission;
 	} forEach DMS_StaticMissionsOnServerStart;
+
+	DMS_StaticMinPlayerDistance = _temp;
 };
 
 
 // Add heli paratroopers monitor to the thread system.
 [5, DMS_fnc_HeliParatroopers_Monitor, [], true] call ExileServer_system_thread_addTask;
-
-// Add "freeze" monitor to the thread system.
-[DMS_ai_freezeCheckingDelay, DMS_fnc_FreezeManager, [], true] call ExileServer_system_thread_addTask;
 
 
 
