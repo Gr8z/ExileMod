@@ -1207,7 +1207,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											["Laserdesignator", 1]
 											["Exile_Uniform_Woodland", 2],
 											["U_I_FullGhillie_ard", 2],
-											["NVGoggles". 2]
+											["NVGoggles", 2]
 										],
 										[
 											["B_Carryall_cbr", 4]
