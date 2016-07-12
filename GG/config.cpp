@@ -1651,7 +1651,6 @@ class CfgExileArsenal
 	class optic_SOS									{ quality = 2; price = 250; };
 	class optic_Yorris								{ quality = 1; price = 25; };
 	class optic_tws_mg								{ quality = 1; price = 2000; };
-	class optic_Yorris								{ quality = 1; price = 10; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Hardware
