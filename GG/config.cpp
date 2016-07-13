@@ -2394,13 +2394,7 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// Ghosthawk
 	///////////////////////////////////////////////////////////////////////////////
-	class B_Heli_Transport_01_F								{ quality = 1; price = 150000; };	
-	
-	///////////////////////////////////////////////////////////////////////////////
-	// VTOL's APEX
-	///////////////////////////////////////////////////////////////////////////////
-	class B_TVTOL_01_infantry_F								{ quality = 1; price = 110000; };
-	class B_TVTOL_01_vehicle_F								{ quality = 1; price = 120000; };
+	class B_Heli_Transport_01_F								{ quality = 1; price = 150000; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Pawnee
@@ -7608,8 +7602,6 @@ class Glasses
 			"Exile_Plane_AN2_Green",
 			"Exile_Plane_Ceasar",
 			"Exile_Plane_BlackfishInfantry",
-			"B_TVTOL_01_vehicle_F",
-			"B_TVTOL_01_infantry_F",
 			"Exile_Plane_BlackfishVehicle"
 		};
 	};
