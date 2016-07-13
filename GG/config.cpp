@@ -7094,6 +7094,7 @@ class Glasses
 		{
 			"Exile_Item_Matches",
 			"Exile_Item_CookingPot",
+			"Exile_Melee_Axe",
 			"Exile_Item_CanOpener",
 			"Exile_Item_Handsaw",
 			"Exile_Item_Pliers",
