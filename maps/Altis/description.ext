@@ -5,8 +5,8 @@
 ///////////////////////////////////////////////////////////////////////////////
 // Server Settings - Modify at will
 ///////////////////////////////////////////////////////////////////////////////
-author = "Ghostz Gamerz";
-onLoadName = "Ghostz Gamerz Exile Mod Altis";
+author = "[GG] Ghostz Gamerz";
+onLoadName = "[GG] ExileMod Altis";
 onLoadMission= "www.ghostzgamerz.com";
 loadScreen = "GG\images\logo.jpg"; 
 disableChannels[] = {0, 2};
