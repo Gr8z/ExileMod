@@ -5227,15 +5227,15 @@ class CfgTerritories
 	{
 		// Purchase Price 		Radius 		Number of Objects
 		{10000,					10,			30 					}, // Level 1
-		{20000,					20,			60 					}, // Level 2 
-		{30000,					30,			90 					}, // Level 3
-		{40000,					40,			120					}, // Level 4
-		{50000,					50,			150					}, // Level 5
-		{60000,					60,			180					}, // Level 6
-		{70000,					70,			210					}, // Level 7
-		{80000,					80,			240					}, // Level 8
-		{90000,					90,			270					}, // Level 9
-		{100000,				100,		300					}  // Level 10
+		{50000,					20,			60 					}, // Level 2 
+		{100000,				30,			90 					}, // Level 3
+		{150000,				40,			120					}, // Level 4
+		{200000,				50,			150					}, // Level 5
+		{250000,				60,			180					}, // Level 6
+		{300000,				70,			210					}, // Level 7
+		{350000,				80,			240					}, // Level 8
+		{400000,				90,			270					}, // Level 9
+		{500000,				100,		300					}  // Level 10
 	};
 
 	// A shortcut of the above maximum radius
