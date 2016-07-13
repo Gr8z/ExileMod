@@ -3,7 +3,26 @@
  * www.exilemod.com
  */
 
+[] execVM "GG\StatusBar\statusBar.sqf";
+//[] execVM "GG\KillMessages.sqf";
+[] execVM "GG\service\service_point.sqf";
+
+call compileFinal preprocessFileLineNumbers 'GG\TRYKfix.sqf';
+
+//#include "initServer.sqf"
+
 if (!hasInterface || isServer) exitWith {};
+
+_pic = "GG\images\logo.paa";
+[
+    '<img align=''left'' size=''1.0'' shadow=''1'' image='+(str(_pic))+' />',
+    safeZoneX+0.027,
+    safeZoneY+safeZoneH-0.1,
+    99999,
+    0,
+    0,
+    3090
+] spawn bis_fnc_dynamicText;
 
 // 76 NPCs
 private _npcs = [
