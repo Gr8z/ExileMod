@@ -312,7 +312,7 @@ ban_for_steam_ban = false;	/* if "check_steam_ban = true;" then steambanned play
 	};
 	Trading zones are white-listed by default.
 */
-UAT = true;	
+UAT = false;	
 class allowTP {
 
 	custom[] = {};
