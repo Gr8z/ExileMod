@@ -2756,6 +2756,8 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	class Exile_Plane_BlackfishInfantry							{ quality = 6; price = 60000; };
 	class Exile_Plane_BlackfishVehicle							{ quality = 6; price = 60000; };
+	class B_TVTOL_01_infantry_F									{ quality = 1; price = 110000; };
+	class B_TVTOL_01_vehicle_F									{ quality = 1; price = 120000; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Prowler
@@ -7602,6 +7604,8 @@ class Glasses
 			"Exile_Plane_AN2_Green",
 			"Exile_Plane_Ceasar",
 			"Exile_Plane_BlackfishInfantry",
+			"B_TVTOL_01_vehicle_F",
+			"B_TVTOL_01_infantry_F",
 			"Exile_Plane_BlackfishVehicle"
 		};
 	};
