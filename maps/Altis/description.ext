@@ -9,7 +9,11 @@ author = "[GG] Ghostz Gamerz";
 onLoadName = "[GG] ExileMod Altis";
 onLoadMission= "www.ghostzgamerz.com";
 loadScreen = "GG\images\logo.jpg"; 
-disableChannels[] = {0, 2};
+disableChannels[]={
+    {0,true,true},
+    {1,false,true},
+    {2,true,true}
+};
 OnLoadIntro = "";
 OnLoadIntroTime = false;
 OnLoadMissionTime = false;
