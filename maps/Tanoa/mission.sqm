@@ -52,6 +52,8 @@ class Mission
 {
 	class Intel
 	{
+		briefingName="[GG] Ghostz Gamerz ExileMod Tanoa";
+		overviewText="[GG] Ghostz Gamerz | Web: GHOSTZGAMERZ.com | TS: ts.ghostzgamerz.com";
 		timeOfChanges = 1800.0002;
 		startWeather = 0.3;
 		startWind = 0.1;

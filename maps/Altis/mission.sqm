@@ -14,6 +14,8 @@ class Mission
 	randomSeed=8080942;
 	class Intel
 	{
+		briefingName="[GG] Ghostz Gamerz ExileMod Altis";
+		overviewText="[GG] Ghostz Gamerz | Web: GHOSTZGAMERZ.com | TS: ts.ghostzgamerz.com";
 		timeOfChanges=1800.0002;
 		startWeather=0.30000001;
 		startWind=0.1;
