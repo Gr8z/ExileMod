@@ -213,7 +213,7 @@ Scout3 = [
 	"76561198051054305", // Miguel (EXP 29-07-2016) Paid one month on the website
 	"76561198042117085", // Cogig (OD-2016-07-07) #14104
 	"76561198151106659", // MARINEALLUPINYOU (OD-2016-07-11) #14126 (Bought 2 months worth)
-	"76761198042873245", // Whisper (OD-2016-07-11) #14121
+	"76561198042873245", // Whisper (OD-2016-07-11) #14121
 	"76561198150490375", // Ramit Inmah Ashol (OD-2016-03-22) #13346
 // Add UIDs above, don't forget the comma
 "0"
