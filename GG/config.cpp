@@ -1251,54 +1251,54 @@ class CfgExileArsenal
 	class U_C_Poor_2 								{ quality = 1; price = 25; };
 	class U_C_Poor_shorts_1 						{ quality = 1; price = 25; };
 	class U_C_Scientist 							{ quality = 1; price = 50; };
-	class U_OrestesBody 							{ quality = 3; price = 75; };
+	class U_OrestesBody 							{ quality = 1; price = 75; };
 	class U_Rangemaster 							{ quality = 1; price = 75; };
-	class U_NikosAgedBody 							{ quality = 3; price = 75; };
-	class U_NikosBody 								{ quality = 3; price = 75; };
+	class U_NikosAgedBody 							{ quality = 1; price = 75; };
+	class U_NikosBody 								{ quality = 1; price = 75; };
 	class U_Competitor 								{ quality = 1; price = 75; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Soldier Uniforms
 	///////////////////////////////////////////////////////////////////////////////
 	class U_B_CombatUniform_mcam 					{ quality = 2; price = 150; };
-	class U_B_CombatUniform_mcam_tshirt 			{ quality = 1; price = 150; };
-	class U_B_CombatUniform_mcam_vest 				{ quality = 1; price = 150; };
-	class U_B_CombatUniform_mcam_worn 				{ quality = 1; price = 150; };
+	class U_B_CombatUniform_mcam_tshirt 			{ quality = 2; price = 150; };
+	class U_B_CombatUniform_mcam_vest 				{ quality = 2; price = 150; };
+	class U_B_CombatUniform_mcam_worn 				{ quality = 2; price = 150; };
 	class U_B_CTRG_1 								{ quality = 2; price = 150; };
 	class U_B_CTRG_2 								{ quality = 2; price = 150; };
 	class U_B_CTRG_3								{ quality = 2; price = 150; };
-	class U_I_CombatUniform 						{ quality = 1; price = 150; };
-	class U_I_CombatUniform_shortsleeve				{ quality = 1; price = 150; };
-	class U_I_CombatUniform_tshirt					{ quality = 1; price = 150; };
-	class U_I_OfficerUniform						{ quality = 1; price = 150; };
-	class U_O_CombatUniform_ocamo 					{ quality = 1; price = 150; };
-	class U_O_CombatUniform_oucamo 					{ quality = 1; price = 150; };
-	class U_O_OfficerUniform_ocamo 					{ quality = 3; price = 200; };
-	class U_B_SpecopsUniform_sgg 					{ quality = 3; price = 200; };
-	class U_O_SpecopsUniform_blk 					{ quality = 3; price = 200; };
-	class U_O_SpecopsUniform_ocamo 					{ quality = 3; price = 200; };
-	class U_I_G_Story_Protagonist_F 				{ quality = 3; price = 225; };
+	class U_I_CombatUniform 						{ quality = 2; price = 150; };
+	class U_I_CombatUniform_shortsleeve				{ quality = 2; price = 150; };
+	class U_I_CombatUniform_tshirt					{ quality = 2; price = 150; };
+	class U_I_OfficerUniform						{ quality = 2; price = 150; };
+	class U_O_CombatUniform_ocamo 					{ quality = 2; price = 150; };
+	class U_O_CombatUniform_oucamo 					{ quality = 2; price = 150; };
+	class U_O_OfficerUniform_ocamo 					{ quality = 2; price = 200; };
+	class U_B_SpecopsUniform_sgg 					{ quality = 2; price = 200; };
+	class U_O_SpecopsUniform_blk 					{ quality = 2; price = 200; };
+	class U_O_SpecopsUniform_ocamo 					{ quality = 2; price = 200; };
+	class U_I_G_Story_Protagonist_F 				{ quality = 2; price = 225; };
 	class Exile_Uniform_Woodland 					{ quality = 3; price = 500; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Guerilla Uniforms
 	///////////////////////////////////////////////////////////////////////////////
-	class U_C_HunterBody_grn						{ quality = 1; price = 145; };
-	class U_IG_Guerilla1_1							{ quality = 1; price = 145; };
+	class U_C_HunterBody_grn						{ quality = 2; price = 145; };
+	class U_IG_Guerilla1_1							{ quality = 2; price = 145; };
 	class U_IG_Guerilla2_1							{ quality = 2; price = 165; };
-	class U_IG_Guerilla2_2							{ quality = 1; price = 145; };
-	class U_IG_Guerilla2_3							{ quality = 1; price = 145; };
-	class U_IG_Guerilla3_1							{ quality = 1; price = 145; };
-	class U_BG_Guerilla2_1							{ quality = 1; price = 145; };
-	class U_IG_Guerilla3_2							{ quality = 1; price = 145; };
+	class U_IG_Guerilla2_2							{ quality = 2; price = 145; };
+	class U_IG_Guerilla2_3							{ quality = 2; price = 145; };
+	class U_IG_Guerilla3_1							{ quality = 2; price = 145; };
+	class U_BG_Guerilla2_1							{ quality = 2; price = 145; };
+	class U_IG_Guerilla3_2							{ quality = 2; price = 145; };
 	class U_BG_Guerrilla_6_1						{ quality = 2; price = 160; };
-	class U_BG_Guerilla1_1							{ quality = 1; price = 145; };
-	class U_BG_Guerilla2_2							{ quality = 1; price = 145; };
-	class U_BG_Guerilla2_3							{ quality = 1; price = 145; };
-	class U_BG_Guerilla3_1							{ quality = 1; price = 140; };
-	class U_BG_leader								{ quality = 1; price = 140; };
-	class U_IG_leader								{ quality = 1; price = 140; };
-	class U_I_G_resistanceLeader_F					{ quality = 3; price = 100; };
+	class U_BG_Guerilla1_1							{ quality = 2; price = 145; };
+	class U_BG_Guerilla2_2							{ quality = 2; price = 145; };
+	class U_BG_Guerilla2_3							{ quality = 2; price = 145; };
+	class U_BG_Guerilla3_1							{ quality = 2; price = 140; };
+	class U_BG_leader								{ quality = 2; price = 140; };
+	class U_IG_leader								{ quality = 2; price = 140; };
+	class U_I_G_resistanceLeader_F					{ quality = 2; price = 100; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Ghillie Suits
@@ -1319,10 +1319,10 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// Wet Suits
 	///////////////////////////////////////////////////////////////////////////////
-	class U_I_Wetsuit								{ quality = 3; price = 350; };
-	class U_O_Wetsuit								{ quality = 3; price = 350; };
-	class U_B_Wetsuit								{ quality = 3; price = 350; };
-	class U_B_survival_uniform						{ quality = 3; price = 350; };
+	class U_I_Wetsuit								{ quality = 2; price = 350; };
+	class U_O_Wetsuit								{ quality = 2; price = 350; };
+	class U_B_Wetsuit								{ quality = 2; price = 350; };
+	class U_B_survival_uniform						{ quality = 2; price = 350; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Bandolliers
@@ -1344,10 +1344,10 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// Vests
 	///////////////////////////////////////////////////////////////////////////////
-	class V_Press_F									{ quality = 1; price = 120; };
-	class V_Rangemaster_belt						{ quality = 1; price = 120; };
+	class V_Press_F									{ quality = 2; price = 120; };
+	class V_Rangemaster_belt						{ quality = 2; price = 120; };
 	class V_TacVest_blk								{ quality = 2; price = 200; };
-	class V_TacVest_blk_POLICE						{ quality = 3; price = 500; };
+	class V_TacVest_blk_POLICE						{ quality = 2; price = 500; };
 	class V_TacVest_brn								{ quality = 2; price = 150; };
 	class V_TacVest_camo							{ quality = 2; price = 150; };
 	class V_TacVest_khk								{ quality = 2; price = 150; };
@@ -1369,19 +1369,19 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// Plate Carriers
 	///////////////////////////////////////////////////////////////////////////////
-	class V_PlateCarrier1_blk 						{ quality = 1; price = 300; };
-	class V_PlateCarrier1_rgr 						{ quality = 1; price = 300; };
-	class V_PlateCarrier2_rgr 						{ quality = 2; price = 300; };
-	class V_PlateCarrier3_rgr 						{ quality = 2; price = 300; };
+	class V_PlateCarrier1_blk 						{ quality = 3; price = 300; };
+	class V_PlateCarrier1_rgr 						{ quality = 3; price = 300; };
+	class V_PlateCarrier2_rgr 						{ quality = 3; price = 300; };
+	class V_PlateCarrier3_rgr 						{ quality = 3; price = 300; };
 	class V_PlateCarrierGL_blk 						{ quality = 3; price = 500; };
 	class V_PlateCarrierGL_mtp 						{ quality = 3; price = 500; };
 	class V_PlateCarrierGL_rgr 						{ quality = 3; price = 500; };
-	class V_PlateCarrierH_CTRG 						{ quality = 2; price = 400; };
-	class V_PlateCarrierIA1_dgtl 					{ quality = 2; price = 300; };
-	class V_PlateCarrierIA2_dgtl 					{ quality = 2; price = 300; };
+	class V_PlateCarrierH_CTRG 						{ quality = 3; price = 400; };
+	class V_PlateCarrierIA1_dgtl 					{ quality = 3; price = 300; };
+	class V_PlateCarrierIA2_dgtl 					{ quality = 3; price = 300; };
 	class V_PlateCarrierIAGL_dgtl 					{ quality = 3; price = 300; };
 	class V_PlateCarrierIAGL_oli 					{ quality = 3; price = 400; };
-	class V_PlateCarrierL_CTRG 						{ quality = 2; price = 400; };
+	class V_PlateCarrierL_CTRG 						{ quality = 3; price = 400; };
 	class V_PlateCarrierSpec_blk 					{ quality = 3; price = 600; };
 	class V_PlateCarrierSpec_mtp 					{ quality = 3; price = 600; };
 	class V_PlateCarrierSpec_rgr 					{ quality = 3; price = 600; };
@@ -1448,7 +1448,6 @@ class CfgExileArsenal
 	class G_Balaclava_TI_blk_F			{ quality = 2; price = 15; };
 	class G_Balaclava_TI_tna_F			{ quality = 2; price = 15; };
 	class G_Balaclava_TI_G_blk_F		{ quality = 2; price = 15; };
-
 	class G_Balaclava_TI_G_tna_F		{ quality = 2; price = 15; };
 	class G_Combat_Goggles_tna_F		{ quality = 1; price = 6; };
 
@@ -1506,7 +1505,7 @@ class CfgExileArsenal
 	class H_StrawHat								{ quality = 1; price = 20; };
 	class H_StrawHat_dark							{ quality = 1; price = 20; };
 	class Exile_Headgear_SantaHat					{ quality = 3; price = 500; };
-	class Exile_Headgear_SafetyHelmet				{ quality = 1; price = 20; };
+	class Exile_Headgear_SafetyHelmet				{ quality = 2; price = 20; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Berets
@@ -1530,7 +1529,7 @@ class CfgExileArsenal
 	class H_Shemag_tan								{ quality = 1; price = 75; };
 	class H_ShemagOpen_khk							{ quality = 1; price = 75; };
 	class H_ShemagOpen_tan							{ quality = 1; price = 75; };
-	class H_TurbanO_blk								{ quality = 1; price = 100; };
+	class H_TurbanO_blk								{ quality = 3; price = 100; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Light Helmets
@@ -1561,10 +1560,10 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// Spec Ops Helmets
 	///////////////////////////////////////////////////////////////////////////////
-	class H_HelmetSpecB								{ quality = 2; price = 200; };
-	class H_HelmetSpecB_blk							{ quality = 2; price = 200; };
-	class H_HelmetSpecB_paint1						{ quality = 2; price = 200; };
-	class H_HelmetSpecB_paint2						{ quality = 2; price = 200; };
+	class H_HelmetSpecB								{ quality = 3; price = 200; };
+	class H_HelmetSpecB_blk							{ quality = 3; price = 200; };
+	class H_HelmetSpecB_paint1						{ quality = 3; price = 200; };
+	class H_HelmetSpecB_paint2						{ quality = 3; price = 200; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Super Helmets
@@ -1611,19 +1610,17 @@ class CfgExileArsenal
 	class muzzle_snds_M 							{ quality = 1; price = 300; };
 	
 	///////////////////////////////////////////////////////////////////////////////
-	// Money
-
+	// Money Item for the 4 Magazines
 	///////////////////////////////////////////////////////////////////////////////
-	//class CUP_item_Money							{ quality = 3; price = 500000;sellPrice = 500000; }; //NEEDS TO BE FIXED, other item needed
 	class Exile_Item_Can_Empty						{ quality = 1; price = 500000; sellPrice = 500000; };
-	
+
 	///////////////////////////////////////////////////////////////////////////////
 	// Static MGs
 	///////////////////////////////////////////////////////////////////////////////
-	class O_HMG_01_weapon_F 						{ quality = 3; price = 50000; };
-	class O_HMG_01_support_F 						{ quality = 3; price = 10000; };
-	class O_HMG_01_high_weapon_F 					{ quality = 3; price = 60000; };
-	class O_HMG_01_support_high_F 					{ quality = 3; price = 20000; };
+	class O_HMG_01_weapon_F 						{ quality = 4; price = 50000; };
+	class O_HMG_01_support_F 						{ quality = 4; price = 10000; };
+	class O_HMG_01_high_weapon_F 					{ quality = 4; price = 60000; };
+	class O_HMG_01_support_high_F 					{ quality = 4; price = 20000; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Optic Attachments
@@ -1632,22 +1629,22 @@ class CfgExileArsenal
 	class optic_ACO_grn								{ quality = 1; price = 100; };
 	class optic_ACO_grn_smg							{ quality = 1; price = 100; };
 	class optic_Aco_smg								{ quality = 1; price = 100; };
-	class optic_AMS									{ quality = 3; price = 500; };
-	class optic_AMS_khk								{ quality = 3; price = 500; };
-	class optic_AMS_snd								{ quality = 3; price = 500; };
+	class optic_AMS									{ quality = 2; price = 500; };
+	class optic_AMS_khk								{ quality = 2; price = 500; };
+	class optic_AMS_snd								{ quality = 2; price = 500; };
 	class optic_Arco								{ quality = 1; price = 250; };
 	class optic_DMS									{ quality = 1; price = 350; };
 	class optic_Hamr								{ quality = 3; price = 250; };
 	class optic_Holosight							{ quality = 1; price = 150; };
 	class optic_Holosight_smg						{ quality = 1; price = 150; };
-	class optic_KHS_blk								{ quality = 3; price = 350; };
-	class optic_KHS_hex								{ quality = 3; price = 350; };
-	class optic_KHS_old								{ quality = 3; price = 350; };
-	class optic_KHS_tan								{ quality = 3; price = 350; };
+	class optic_KHS_blk								{ quality = 1; price = 350; };
+	class optic_KHS_hex								{ quality = 1; price = 350; };
+	class optic_KHS_old								{ quality = 1; price = 350; };
+	class optic_KHS_tan								{ quality = 1; price = 350; };
 	class optic_LRPS								{ quality = 2; price = 700; };
 	class optic_MRCO								{ quality = 1; price = 250; };
 	class optic_MRD									{ quality = 1; price = 25; };
-	class optic_NVS									{ quality = 4; price = 500; };
+	class optic_NVS									{ quality = 3; price = 500; };
 	class optic_SOS									{ quality = 2; price = 250; };
 	class optic_Yorris								{ quality = 1; price = 25; };
 	class optic_tws_mg								{ quality = 1; price = 2000; };
@@ -1664,10 +1661,10 @@ class CfgExileArsenal
 	class Exile_Item_MetalBoard						{ quality = 1; price = 1000; };
 	class Exile_Item_FloodLightKit					{ quality = 1; price = 1000; };
 	class Exile_Item_PortableGeneratorKit			{ quality = 1; price = 2500; };
-	class Exile_Item_SafeKit						{ quality = 3; price = 15000; };
-	class Exile_Item_CodeLock						{ quality = 2; price = 7500; };
-	class Exile_Item_Laptop							{ quality = 2; price = 10000; };
-	class Exile_Item_BaseCameraKit					{ quality = 2; price = 7500; };
+	class Exile_Item_SafeKit						{ quality = 1; price = 15000; };
+	class Exile_Item_CodeLock						{ quality = 1; price = 7500; };
+	class Exile_Item_Laptop							{ quality = 1; price = 10000; };
+	class Exile_Item_BaseCameraKit					{ quality = 1; price = 7500; };
 //	class Exile_Magazine_Battery					{ quality = 1; price = 2000; };
 	class Exile_Item_CamoTentKit					{ quality = 1; price = 250; };
 	class Exile_Item_MetalPole						{ quality = 1; price = 850; };
@@ -1680,17 +1677,17 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// Food
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Item_EMRE							{ quality = 3; price = 150; }; //75, 60
-	class Exile_Item_GloriousKnakworst				{ quality = 3; price = 100; }; //60, 30
-	class Exile_Item_Surstromming					{ quality = 3; price = 80; }; //55, 25
-	class Exile_Item_SausageGravy					{ quality = 3; price = 70; }; //50, 25
-	class Exile_Item_Catfood						{ quality = 2; price = 60; }; //40, 40
-	class Exile_Item_ChristmasTinner				{ quality = 3; price = 60; }; //40, 60
-	class Exile_Item_BBQSandwich					{ quality = 3; price = 60; }; //40, 60
-	class Exile_Item_MacasCheese					{ quality = 3; price = 20; }; //40, 60
-	class Exile_Item_Dogfood						{ quality = 2; price = 50; }; //30, 30
-	class Exile_Item_BeefParts						{ quality = 2; price = 50; }; //30, 30
-	class Exile_Item_Cheathas						{ quality = 2; price = 50; }; //30, 30
+	class Exile_Item_EMRE							{ quality = 1; price = 150; }; //75, 60
+	class Exile_Item_GloriousKnakworst				{ quality = 1; price = 100; }; //60, 30
+	class Exile_Item_Surstromming					{ quality = 1; price = 80; }; //55, 25
+	class Exile_Item_SausageGravy					{ quality = 1; price = 70; }; //50, 25
+	class Exile_Item_Catfood						{ quality = 1; price = 60; }; //40, 40
+	class Exile_Item_ChristmasTinner				{ quality = 1; price = 60; }; //40, 60
+	class Exile_Item_BBQSandwich					{ quality = 1; price = 60; }; //40, 60
+	class Exile_Item_MacasCheese					{ quality = 1; price = 20; }; //40, 60
+	class Exile_Item_Dogfood						{ quality = 1; price = 50; }; //30, 30
+	class Exile_Item_BeefParts						{ quality = 1; price = 50; }; //30, 30
+	class Exile_Item_Cheathas						{ quality = 1; price = 50; }; //30, 30
 	class Exile_Item_Noodles						{ quality = 1; price = 40; }; //25, 50
 	class Exile_Item_SeedAstics						{ quality = 1; price = 30; }; //20, 40
 	class Exile_Item_Raisins						{ quality = 1; price = 20; }; //15, 30
@@ -1702,9 +1699,9 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// Drinks
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Item_PlasticBottleCoffee	 		{ quality = 3; price = 175; }; //100, 60
-	class Exile_Item_PowerDrink						{ quality = 3; price = 225; }; //95, 10
-	class Exile_Item_PlasticBottleFreshWater 		{ quality = 2; price = 150; sellPrice = 10; }; //80, 15
+	class Exile_Item_PlasticBottleCoffee	 		{ quality = 1; price = 175; }; //100, 60
+	class Exile_Item_PowerDrink						{ quality = 1; price = 225; }; //95, 10
+	class Exile_Item_PlasticBottleFreshWater 		{ quality = 1; price = 150; sellPrice = 10; }; //80, 15
 	class Exile_Item_Beer 							{ quality = 1; price = 100; }; //75, 30
 	class Exile_Item_EnergyDrink					{ quality = 1; price = 125; }; //75, 20
 	class Exile_Item_ChocolateMilk					{ quality = 1; price = 125; }; //75, 20
@@ -1724,14 +1721,14 @@ class CfgExileArsenal
 	// Tools
 	///////////////////////////////////////////////////////////////////////////////
 	class Exile_Item_Matches 						{ quality = 1; price = 60; };
-	class Exile_Item_CookingPot						{ quality = 2; price = 80; };
+	class Exile_Item_CookingPot						{ quality = 1; price = 80; };
 	class Exile_Melee_Axe							{ quality = 1; price = 100; sellPrice = 10; };
-	class Exile_Melee_SledgeHammmer					{ quality = 3; price = 500; };
+	class Exile_Melee_SledgeHammmer					{ quality = 2; price = 500; };
 	class Exile_Item_CanOpener						{ quality = 1; price = 15; };
 	class Exile_Item_Handsaw						{ quality = 1; price = 500; };
 	class Exile_Item_Pliers							{ quality = 1; price = 350; };
 	class Exile_Item_Grinder						{ quality = 1; price = 1250; };
-	class Exile_Item_Foolbox						{ quality = 2; price = 4000; };
+	class Exile_Item_Foolbox						{ quality = 3; price = 4000; };
 	class Exile_Item_Screwdriver					{ quality = 1; price = 500; };
 	class Exile_Item_CordlessScrewdriver			{ quality = 1; price = 1000; };
 	class Exile_Item_Hammer							{ quality = 1; price = 1000; };
@@ -1761,7 +1758,7 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// Watch out for a Walter fart! He has gas!
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Headgear_GasMask					{ quality = 3; price = 5000; };
+	class Exile_Headgear_GasMask					{ quality = 1; price = 15000; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Rebreather
@@ -1773,7 +1770,7 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// Pilot Stuff
 	///////////////////////////////////////////////////////////////////////////////
-	class B_Parachute								{ quality = 3; price = 250; };
+	class B_Parachute								{ quality = 1; price = 250; };
 	class H_CrewHelmetHeli_B						{ quality = 2; price = 150; };
 	class H_CrewHelmetHeli_I						{ quality = 2; price = 150; };
 	class H_CrewHelmetHeli_O						{ quality = 2; price = 150; };
@@ -1795,7 +1792,7 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// Backpacks
 	///////////////////////////////////////////////////////////////////////////////
-	class B_HuntingBackpack							{ quality = 3; price = 350; };
+	class B_HuntingBackpack							{ quality = 1; price = 350; };
 	class B_OutdoorPack_blk							{ quality = 1; price = 350; };
 	class B_OutdoorPack_blu							{ quality = 1; price = 350; };
 	class B_OutdoorPack_tan							{ quality = 1; price = 350; };
@@ -1806,34 +1803,34 @@ class CfgExileArsenal
 	class B_AssaultPack_mcamo						{ quality = 1; price = 500; };
 	class B_AssaultPack_rgr							{ quality = 1; price = 500; };
 	class B_AssaultPack_sgg							{ quality = 1; price = 500; };
-	class B_FieldPack_blk							{ quality = 2; price = 700; };
-	class B_FieldPack_cbr							{ quality = 2; price = 700; };
-	class B_FieldPack_ocamo							{ quality = 2; price = 700; };
-	class B_FieldPack_oucamo						{ quality = 2; price = 700; };
-	class B_TacticalPack_blk						{ quality = 2; price = 750; };
-	class B_TacticalPack_rgr						{ quality = 2; price = 750; };
-	class B_TacticalPack_ocamo						{ quality = 2; price = 750; };
-	class B_TacticalPack_mcamo						{ quality = 2; price = 750; };
-	class B_TacticalPack_oli						{ quality = 2; price = 750; };
-	class B_Kitbag_cbr								{ quality = 3; price = 1000; };
-	class B_Kitbag_mcamo							{ quality = 3; price = 1000; };
-	class B_Kitbag_sgg								{ quality = 3; price = 1000; };
-	class B_Bergen_blk								{ quality = 2; price = 1000; };
-	class B_Bergen_mcamo							{ quality = 2; price = 1000; };
-	class B_Bergen_rgr								{ quality = 2; price = 1000; };
-	class B_Bergen_sgg								{ quality = 2; price = 1000; };
-	class B_Carryall_cbr							{ quality = 3; price = 1500; };
-	class B_Carryall_khk							{ quality = 3; price = 1500; };
-	class B_Carryall_mcamo							{ quality = 3; price = 1500; };
-	class B_Carryall_ocamo							{ quality = 3; price = 1500; };
-	class B_Carryall_oli							{ quality = 3; price = 1500; };
-	class B_Carryall_oucamo							{ quality = 3; price = 1500; };
+	class B_FieldPack_blk							{ quality = 1; price = 700; };
+	class B_FieldPack_cbr							{ quality = 1; price = 700; };
+	class B_FieldPack_ocamo							{ quality = 1; price = 700; };
+	class B_FieldPack_oucamo						{ quality = 1; price = 700; };
+	class B_TacticalPack_blk						{ quality = 1; price = 750; };
+	class B_TacticalPack_rgr						{ quality = 1; price = 750; };
+	class B_TacticalPack_ocamo						{ quality = 1; price = 750; };
+	class B_TacticalPack_mcamo						{ quality = 1; price = 750; };
+	class B_TacticalPack_oli						{ quality = 1; price = 750; };
+	class B_Kitbag_cbr								{ quality = 1; price = 1000; };
+	class B_Kitbag_mcamo							{ quality = 1; price = 1000; };
+	class B_Kitbag_sgg								{ quality = 1; price = 1000; };
+	class B_Bergen_blk								{ quality = 1; price = 1000; };
+	class B_Bergen_mcamo							{ quality = 1; price = 1000; };
+	class B_Bergen_rgr								{ quality = 1; price = 1000; };
+	class B_Bergen_sgg								{ quality = 1; price = 1000; };
+	class B_Carryall_cbr							{ quality = 1; price = 1500; };
+	class B_Carryall_khk							{ quality = 1; price = 1500; };
+	class B_Carryall_mcamo							{ quality = 1; price = 1500; };
+	class B_Carryall_ocamo							{ quality = 1; price = 1500; };
+	class B_Carryall_oli							{ quality = 1; price = 1500; };
+	class B_Carryall_oucamo							{ quality = 1; price = 1500; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Ammunition
 	///////////////////////////////////////////////////////////////////////////////
 	class 100Rnd_65x39_caseless_mag 				{ quality = 1; price = 400; };
-	class 100Rnd_65x39_caseless_mag_Tracer 			{ quality = 2; price = 350; };
+	class 100Rnd_65x39_caseless_mag_Tracer 			{ quality = 1; price = 350; };
 	class 10Rnd_127x54_Mag 							{ quality = 1; price = 1200; };
 	class 10Rnd_338_Mag 							{ quality = 1; price = 500; };
 	class 10Rnd_762x54_Mag 							{ quality = 1; price = 300; };
@@ -1841,35 +1838,35 @@ class CfgExileArsenal
 	class 10Rnd_93x64_DMR_05_Mag 					{ quality = 1; price = 500; };
 	class 11Rnd_45ACP_Mag 							{ quality = 1; price = 100; };
 	class 150Rnd_762x54_Box 						{ quality = 1; price = 600; };
-	class 150Rnd_762x54_Box_Tracer 					{ quality = 2; price = 550; };
+	class 150Rnd_762x54_Box_Tracer 					{ quality = 1; price = 550; };
 	class 16Rnd_9x21_Mag 							{ quality = 1; price = 75; };
 	class 200Rnd_65x39_cased_Box 					{ quality = 1; price = 500; };
-	class 200Rnd_65x39_cased_Box_Tracer 			{ quality = 2; price = 450; };
+	class 200Rnd_65x39_cased_Box_Tracer 			{ quality = 1; price = 450; };
 	class 150Rnd_93x64_Mag 							{ quality = 2; price = 1200; };
 	class 130Rnd_338_Mag 							{ quality = 2; price = 1000; };
 	class 20Rnd_556x45_UW_mag 						{ quality = 1; price = 200; };
 	class 20Rnd_762x51_Mag 							{ quality = 1; price = 350; };
 	class 30Rnd_45ACP_Mag_SMG_01 					{ quality = 1; price = 150; };
-	class 30Rnd_45ACP_Mag_SMG_01_Tracer_Green 		{ quality = 2; price = 100; };
-	class 30Rnd_45ACP_Mag_SMG_01_Tracer_Yellow		{ quality = 2; price = 100; };
-	class 30Rnd_45ACP_Mag_SMG_01_Tracer_Red			{ quality = 2; price = 100; };
+	class 30Rnd_45ACP_Mag_SMG_01_Tracer_Green 		{ quality = 1; price = 100; };
+	class 30Rnd_45ACP_Mag_SMG_01_Tracer_Yellow		{ quality = 1; price = 100; };
+	class 30Rnd_45ACP_Mag_SMG_01_Tracer_Red			{ quality = 1; price = 100; };
 	class 30Rnd_556x45_Stanag 						{ quality = 1; price = 200; };
-	class 30Rnd_556x45_Stanag_Tracer_Green 			{ quality = 2; price = 150; };
-	class 30Rnd_556x45_Stanag_green  				{ quality = 2; price = 200; };
-	class 30Rnd_556x45_Stanag_Tracer_Red 			{ quality = 2; price = 150; };
-	class 30Rnd_556x45_Stanag_Tracer_Yellow 		{ quality = 2; price = 150; };
-	class 30Rnd_556x45_Stanag_red 					{ quality = 2; price = 200; };
+	class 30Rnd_556x45_Stanag_Tracer_Green 			{ quality = 1; price = 150; };
+	class 30Rnd_556x45_Stanag_green  				{ quality = 1; price = 200; };
+	class 30Rnd_556x45_Stanag_Tracer_Red 			{ quality = 1; price = 150; };
+	class 30Rnd_556x45_Stanag_Tracer_Yellow 		{ quality = 1; price = 150; };
+	class 30Rnd_556x45_Stanag_red 					{ quality = 1; price = 200; };
 	class 30Rnd_65x39_caseless_green 				{ quality = 1; price = 250; };
-	class 30Rnd_65x39_caseless_green_mag_Tracer 	{ quality = 2; price = 200; };
+	class 30Rnd_65x39_caseless_green_mag_Tracer 	{ quality = 1; price = 200; };
 	class 30Rnd_65x39_caseless_mag 					{ quality = 1; price = 250; };
-	class 30Rnd_65x39_caseless_mag_Tracer 			{ quality = 2; price = 200; };
+	class 30Rnd_65x39_caseless_mag_Tracer 			{ quality = 1; price = 200; };
 	class 30Rnd_9x21_Mag 							{ quality = 1; price = 125; };
-	class 5Rnd_127x108_APDS_Mag 					{ quality = 2; price = 1200; };
-	class 5Rnd_127x108_Mag 							{ quality = 1; price = 1000; };
+	class 5Rnd_127x108_APDS_Mag 					{ quality = 3; price = 1200; };
+	class 5Rnd_127x108_Mag 							{ quality = 2; price = 1000; };
 	class 6Rnd_45ACP_Cylinder 						{ quality = 1; price = 100; };
-	class 6Rnd_GreenSignal_F 						{ quality = 9000; price = 100; };
-	class 6Rnd_RedSignal_F 							{ quality = 9000; price = 100; };
-	class 7Rnd_408_Mag 								{ quality = 1; price = 800; };
+	class 6Rnd_GreenSignal_F 						{ quality = 1; price = 100; };
+	class 6Rnd_RedSignal_F 							{ quality = 1; price = 100; };
+	class 7Rnd_408_Mag 								{ quality = 2; price = 800; };
 	class 9Rnd_45ACP_Mag 							{ quality = 1; price = 50; };
 
 	///////////////////////////////////////////////////////////////////////////////
@@ -1882,14 +1879,14 @@ class CfgExileArsenal
 	class FlareRed_F								{ quality = 1; price = 10; };
 	class FlareWhite_F								{ quality = 1; price = 10; };
 	class FlareYellow_F								{ quality = 1; price = 10; };
-	class UGL_FlareGreen_F							{ quality = 2; price = 10; };
-	class UGL_FlareRed_F							{ quality = 2; price = 10; };
-	class UGL_FlareWhite_F							{ quality = 2; price = 10; };
-	class UGL_FlareYellow_F							{ quality = 2; price = 10; };
-	class 3Rnd_UGL_FlareGreen_F						{ quality = 3; price = 10*3; };
-	class 3Rnd_UGL_FlareRed_F						{ quality = 3; price = 10*3; };
-	class 3Rnd_UGL_FlareWhite_F						{ quality = 3; price = 10*3; };
-	class 3Rnd_UGL_FlareYellow_F					{ quality = 3; price = 10*3; };
+	class UGL_FlareGreen_F							{ quality = 1; price = 10; };
+	class UGL_FlareRed_F							{ quality = 1; price = 10; };
+	class UGL_FlareWhite_F							{ quality = 1; price = 10; };
+	class UGL_FlareYellow_F							{ quality = 1; price = 10; };
+	class 3Rnd_UGL_FlareGreen_F						{ quality = 1; price = 10*3; };
+	class 3Rnd_UGL_FlareRed_F						{ quality = 1; price = 10*3; };
+	class 3Rnd_UGL_FlareWhite_F						{ quality = 1; price = 10*3; };
+	class 3Rnd_UGL_FlareYellow_F					{ quality = 1; price = 10*3; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Smokes
@@ -1901,57 +1898,61 @@ class CfgExileArsenal
 	class SmokeShellPurple							{ quality = 1; price = 25; };
 	class SmokeShellRed								{ quality = 1; price = 25; };
 	class SmokeShellYellow							{ quality = 1; price = 25; };
-	class 1Rnd_Smoke_Grenade_shell					{ quality = 2; price = 30; };
-	class 1Rnd_SmokeBlue_Grenade_shell				{ quality = 2; price = 30; };
-	class 1Rnd_SmokeGreen_Grenade_shell				{ quality = 2; price = 30; };
-	class 1Rnd_SmokeOrange_Grenade_shell			{ quality = 2; price = 30; };
-	class 1Rnd_SmokePurple_Grenade_shell			{ quality = 2; price = 30; };
-	class 1Rnd_SmokeRed_Grenade_shell				{ quality = 2; price = 30; };
-	class 1Rnd_SmokeYellow_Grenade_shell			{ quality = 2; price = 30; };
-	class 3Rnd_Smoke_Grenade_shell					{ quality = 3; price = 30*3; };
-	class 3Rnd_SmokeBlue_Grenade_shell				{ quality = 3; price = 30*3; };
-	class 3Rnd_SmokeGreen_Grenade_shell				{ quality = 3; price = 30*3; };
-	class 3Rnd_SmokeOrange_Grenade_shell			{ quality = 3; price = 30*3; };
-	class 3Rnd_SmokePurple_Grenade_shell			{ quality = 3; price = 30*3; };
-	class 3Rnd_SmokeRed_Grenade_shell				{ quality = 3; price = 30*3; };
-	class 3Rnd_SmokeYellow_Grenade_shell			{ quality = 3; price = 30*3; };
+	class 1Rnd_Smoke_Grenade_shell					{ quality = 1; price = 30; };
+	class 1Rnd_SmokeBlue_Grenade_shell				{ quality = 1; price = 30; };
+	class 1Rnd_SmokeGreen_Grenade_shell				{ quality = 1; price = 30; };
+	class 1Rnd_SmokeOrange_Grenade_shell			{ quality = 1; price = 30; };
+	class 1Rnd_SmokePurple_Grenade_shell			{ quality = 1; price = 30; };
+	class 1Rnd_SmokeRed_Grenade_shell				{ quality = 1; price = 30; };
+	class 1Rnd_SmokeYellow_Grenade_shell			{ quality = 1; price = 30; };
+	class 3Rnd_Smoke_Grenade_shell					{ quality = 1; price = 30*3; };
+	class 3Rnd_SmokeBlue_Grenade_shell				{ quality = 1; price = 30*3; };
+	class 3Rnd_SmokeGreen_Grenade_shell				{ quality = 1; price = 30*3; };
+	class 3Rnd_SmokeOrange_Grenade_shell			{ quality = 1; price = 30*3; };
+	class 3Rnd_SmokePurple_Grenade_shell			{ quality = 1; price = 30*3; };
+	class 3Rnd_SmokeRed_Grenade_shell				{ quality = 1; price = 30*3; };
+	class 3Rnd_SmokeYellow_Grenade_shell			{ quality = 1; price = 30*3; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Explosives
 	///////////////////////////////////////////////////////////////////////////////
-	class HandGrenade								{ quality = 3; price = 300; };
+	class HandGrenade								{ quality = 2; price = 300; };
 	class MiniGrenade								{ quality = 2; price = 150; };
 	class B_IR_Grenade								{ quality = 1; price = 100; };
 	class O_IR_Grenade								{ quality = 1; price = 100; };
 	class I_IR_Grenade								{ quality = 1; price = 100; };
 	class 1Rnd_HE_Grenade_shell						{ quality = 2; price = 300; };
-	class 3Rnd_HE_Grenade_shell						{ quality = 3; price = 700; };	
+	class 3Rnd_HE_Grenade_shell						{ quality = 2; price = 700; };	
 	class APERSBoundingMine_Range_Mag				{ quality = 3; price = 7000; };
 	class APERSMine_Range_Mag						{ quality = 3; price = 5000; };
 	class APERSTripMine_Wire_Mag					{ quality = 3; price = 4500; };
 	class ClaymoreDirectionalMine_Remote_Mag		{ quality = 3; price = 3500; };
-	class DemoCharge_Remote_Mag						{ quality = 3; price = 7000; };
+	class DemoCharge_Remote_Mag						{ quality = 4; price = 7000; };
 	class IEDLandBig_Remote_Mag						{ quality = 3; price = 7000; };
 	class IEDLandSmall_Remote_Mag					{ quality = 3; price = 3500; };
 	class IEDUrbanBig_Remote_Mag					{ quality = 3; price = 8000; };
 	class IEDUrbanSmall_Remote_Mag					{ quality = 3; price = 4000; };
-	class SatchelCharge_Remote_Mag					{ quality = 3; price = 10000;};
+	class SatchelCharge_Remote_Mag					{ quality = 4; price = 10000;};
 	class SLAMDirectionalMine_Wire_Mag				{ quality = 3; price = 7500; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Launcher stuff
 	///////////////////////////////////////////////////////////////////////////////
-	class launch_RPG32_F							{ quality = 3; price = 7500; };
-	class RPG32_F									{ quality = 3; price = 20000; };
+	class launch_RPG7_F 							{ quality = 5; price = 50000; };
+	class launch_RPG32_F							{ quality = 5; price = 75000; };
+	class launch_NLAW_F								{ quality = 5; price = 100000; };
+	class launch_B_Titan_short_F					{ quality = 5; price = 100000; };
+	class launch_B_Titan_F 							{ quality = 5; price = 100000; };
+	class RPG32_F									{ quality = 5; price = 20000; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Pistols
 	///////////////////////////////////////////////////////////////////////////////
 	class hgun_ACPC2_F 								{ quality = 1; price = 600; };
 	class hgun_P07_F 								{ quality = 1; price = 500; };
-	class hgun_Pistol_heavy_01_F 					{ quality = 2; price = 600; };
-	class hgun_Pistol_heavy_02_F 					{ quality = 2; price = 600; };
-	class hgun_Pistol_Signal_F 						{ quality = 9000; price = 100; };
+	class hgun_Pistol_heavy_01_F 					{ quality = 1; price = 600; };
+	class hgun_Pistol_heavy_02_F 					{ quality = 1; price = 600; };
+	class hgun_Pistol_Signal_F 						{ quality = 1; price = 100; };
 	class hgun_Rook40_F 							{ quality = 1; price = 400; };
 
 	///////////////////////////////////////////////////////////////////////////////
@@ -1993,7 +1994,7 @@ class CfgExileArsenal
 	class arifle_MX_GL_F							{ quality = 2; price = 7000; };
 	class arifle_MXC_Black_F						{ quality = 1; price = 6500; };
 	class arifle_MXC_F								{ quality = 1; price = 6500; };
-	class arifle_SDAR_F								{ quality = 3; price = 6000; };
+	class arifle_SDAR_F								{ quality = 2; price = 6000; };
 	class arifle_TRG20_F							{ quality = 1; price = 6000; };
 	class arifle_TRG21_F							{ quality = 1; price = 6000; };
 	class arifle_TRG21_GL_F							{ quality = 2; price = 6500; };
@@ -2001,26 +2002,26 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// Sniper Rifles
 	///////////////////////////////////////////////////////////////////////////////
-	class arifle_MXM_Black_F						{ quality = 3; price = 9000; };
-	class arifle_MXM_F 								{ quality = 3; price = 9000; };
-	class srifle_DMR_01_F							{ quality = 3; price = 10000; };
-	class srifle_DMR_02_camo_F						{ quality = 3; price = 16000; };
-	class srifle_DMR_02_F							{ quality = 3; price = 16000; };
-	class srifle_DMR_02_sniper_F					{ quality = 3; price = 16000; };
-	class srifle_DMR_03_F							{ quality = 3; price = 11500; };
-	class srifle_DMR_03_khaki_F						{ quality = 3; price = 11500; };
-	class srifle_DMR_03_multicam_F					{ quality = 3; price = 11500; };
-	class srifle_DMR_03_tan_F						{ quality = 3; price = 11500; };
-	class srifle_DMR_03_woodland_F					{ quality = 3; price = 11500; };
-	class srifle_DMR_04_F							{ quality = 3; price = 18000; };
-	class srifle_DMR_04_Tan_F						{ quality = 3; price = 18000; };
+	class arifle_MXM_Black_F						{ quality = 2; price = 9000; };
+	class arifle_MXM_F 								{ quality = 2; price = 9000; };
+	class srifle_DMR_01_F							{ quality = 2; price = 10000; };
+	class srifle_DMR_02_camo_F						{ quality = 4; price = 16000; };
+	class srifle_DMR_02_F							{ quality = 4; price = 16000; };
+	class srifle_DMR_02_sniper_F					{ quality = 4; price = 16000; };
+	class srifle_DMR_03_F							{ quality = 2; price = 11500; };
+	class srifle_DMR_03_khaki_F						{ quality = 2; price = 11500; };
+	class srifle_DMR_03_multicam_F					{ quality = 2; price = 11500; };
+	class srifle_DMR_03_tan_F						{ quality = 2; price = 11500; };
+	class srifle_DMR_03_woodland_F					{ quality = 2; price = 11500; };
+	class srifle_DMR_04_F							{ quality = 2; price = 18000; };
+	class srifle_DMR_04_Tan_F						{ quality = 2; price = 18000; };
 	class srifle_DMR_05_blk_F						{ quality = 4; price = 18000; };
 	class srifle_DMR_05_hex_F						{ quality = 4; price = 18000; };
 	class srifle_DMR_05_tan_f						{ quality = 4; price = 18000; };
 	class srifle_DMR_06_camo_F						{ quality = 3; price = 10000; };
 	class srifle_DMR_06_olive_F						{ quality = 3; price = 10000; };
 	class srifle_EBR_F								{ quality = 3; price = 10000; };
-	class srifle_GM6_camo_F							{ quality = 3; price = 24000; };
+	class srifle_GM6_camo_F							{ quality = 5; price = 24000; };
 	class srifle_GM6_F								{ quality = 5; price = 24000; };
 	class srifle_LRR_camo_F							{ quality = 5; price = 20000; };
 	class srifle_LRR_F 								{ quality = 5; price = 20000; };
@@ -2030,21 +2031,21 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	class Exile_Weapon_AK107						{ quality = 1; price = 7000; };
 	class Exile_Weapon_AK107_GL						{ quality = 2; price = 7500; };
-	class Exile_Weapon_AK74							{ quality = 2; price = 7000; };
+	class Exile_Weapon_AK74							{ quality = 1; price = 7000; };
 	class Exile_Weapon_AK74_GL						{ quality = 2; price = 7500; };
-	class Exile_Weapon_AK47							{ quality = 3; price = 7000; };
-	class Exile_Weapon_AKM							{ quality = 3; price = 7000; };
-	class Exile_Weapon_AKS							{ quality = 3; price = 7000; };
-	class Exile_Weapon_AKS_Gold						{ quality = 3; price = 30000; };
-	class Exile_Weapon_DMR							{ quality = 3; price = 9000; };
+	class Exile_Weapon_AK47							{ quality = 2; price = 7000; };
+	class Exile_Weapon_AKM							{ quality = 2; price = 7000; };
+	class Exile_Weapon_AKS							{ quality = 1; price = 5500; };
+	class Exile_Weapon_AKS_Gold						{ quality = 2; price = 30000; };
+	class Exile_Weapon_DMR							{ quality = 2; price = 9000; };
 	class Exile_Weapon_LeeEnfield					{ quality = 1; price = 7000; };
 	class Exile_Weapon_CZ550						{ quality = 2; price = 7000; };
-	class Exile_Weapon_SVD							{ quality = 4; price = 7000; };
-	class Exile_Weapon_SVDCamo						{ quality = 4; price = 7000; };
-	class Exile_Weapon_VSSVintorez					{ quality = 3; price = 4000; };
+	class Exile_Weapon_SVD							{ quality = 2; price = 7000; };
+	class Exile_Weapon_SVDCamo						{ quality = 2; price = 7000; };
+	class Exile_Weapon_VSSVintorez					{ quality = 1; price = 4000; };
 	class Exile_Weapon_RPK							{ quality = 2; price = 7000; };
-	class Exile_Weapon_PK							{ quality = 3; price = 7000; };
-	class Exile_Weapon_PKP							{ quality = 3; price = 8000; };
+	class Exile_Weapon_PK							{ quality = 2; price = 7000; };
+	class Exile_Weapon_PKP							{ quality = 2; price = 8000; };
 	class Exile_Weapon_Colt1911						{ quality = 1; price = 600; };
 	class Exile_Weapon_Makarov						{ quality = 1; price = 500; };
 	class Exile_Weapon_Taurus						{ quality = 1; price = 100; };
@@ -2054,7 +2055,7 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// ArmA 2 Ammunition
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Magazine_30Rnd_762x39_AK				{ quality = 3; price = 20; };
+	class Exile_Magazine_30Rnd_762x39_AK				{ quality = 1; price = 20; };
 	class Exile_Magazine_30Rnd_545x39_AK				{ quality = 1; price = 20; };
 	class Exile_Magazine_30Rnd_545x39_AK_Green			{ quality = 1; price = 20; };
 	class Exile_Magazine_30Rnd_545x39_AK_Red			{ quality = 1; price = 20; };
@@ -2062,12 +2063,12 @@ class CfgExileArsenal
 	class Exile_Magazine_30Rnd_545x39_AK_Yellow			{ quality = 1; price = 20; };
 	class Exile_Magazine_45Rnd_545x39_RPK_Green			{ quality = 1; price = 20; };
 	class Exile_Magazine_75Rnd_545x39_RPK_Green			{ quality = 1; price = 20; };
-	class Exile_Magazine_20Rnd_762x51_DMR				{ quality = 3; price = 20; };
-	class Exile_Magazine_20Rnd_762x51_DMR_Yellow		{ quality = 3; price = 20; };
-	class Exile_Magazine_20Rnd_762x51_DMR_Red			{ quality = 3; price = 20; };
-	class Exile_Magazine_20Rnd_762x51_DMR_Green			{ quality = 3; price = 20; };
+	class Exile_Magazine_20Rnd_762x51_DMR				{ quality = 1; price = 20; };
+	class Exile_Magazine_20Rnd_762x51_DMR_Yellow		{ quality = 1; price = 20; };
+	class Exile_Magazine_20Rnd_762x51_DMR_Red			{ quality = 1; price = 20; };
+	class Exile_Magazine_20Rnd_762x51_DMR_Green			{ quality = 1; price = 20; };
 	class Exile_Magazine_10Rnd_303						{ quality = 1; price = 20; };
-	class Exile_Magazine_100Rnd_762x54_PK_Green			{ quality = 3; price = 20; };
+	class Exile_Magazine_100Rnd_762x54_PK_Green			{ quality = 1; price = 20; };
 	class Exile_Magazine_7Rnd_45ACP						{ quality = 1; price = 20; };
 	class Exile_Magazine_8Rnd_9x18						{ quality = 1; price = 20; };
 	class Exile_Magazine_6Rnd_45ACP						{ quality = 1; price = 20; };
@@ -2084,74 +2085,74 @@ class CfgExileArsenal
 	class hgun_Pistol_01_F            { quality = 1; price = 500; };
 	class hgun_P07_khk_F              { quality = 1; price = 500; };
 	class SMG_05_F					  { quality = 1; price = 3000; };
-	class LMG_03_F					  { quality = 2; price = 7500; };
-	class arifle_MX_khk_F             { quality = 2; price = 6500; };
-	class arifle_MX_GL_khk_F          { quality = 2; price = 7000; };
-	class arifle_MXC_khk_F            { quality = 2; price = 6500; };
-	class arifle_MXM_khk_F            { quality = 2; price = 9000; };
-	class srifle_LRR_tna_F            { quality = 6; price = 20000; };
-	class srifle_GM6_ghex_F           { quality = 6; price = 24000; };
-	class srifle_DMR_07_blk_F         { quality = 4; price = 8500; };
-	class srifle_DMR_07_hex_F         { quality = 4; price = 8500; };
-	class srifle_DMR_07_ghex_F        { quality = 4; price = 8500; };
-	class arifle_AK12_F               { quality = 3; price = 7000; };
-	class arifle_AK12_GL_F            { quality = 3; price = 7500; };
-	class arifle_AKM_F                { quality = 3; price = 7000; };
-	class arifle_AKM_FL_F             { quality = 3; price = 7500; };
-	class arifle_AKS_F                { quality = 3; price = 7000; };
-	class arifle_ARX_blk_F            { quality = 5; price = 12000; };
-	class arifle_ARX_ghex_F           { quality = 5; price = 12000; };
-	class arifle_ARX_hex_F            { quality = 5; price = 12000; };
-	class arifle_CTAR_blk_F           { quality = 2; price = 6000; };
-	class arifle_CTAR_hex_F           { quality = 2; price = 6000; };
-	class arifle_CTAR_ghex_F          { quality = 2; price = 6000; };
-	class arifle_CTAR_GL_blk_F        { quality = 2; price = 6500; };
-	class arifle_CTARS_blk_F          { quality = 2; price = 6000; };
-	class arifle_CTARS_ghex_F         { quality = 2; price = 6000; };
-	class arifle_CTARS_hex_F          { quality = 2; price = 6000; };
+	class LMG_03_F					  { quality = 1; price = 7500; };
+	class arifle_MX_khk_F             { quality = 1; price = 6500; };
+	class arifle_MX_GL_khk_F          { quality = 1; price = 7000; };
+	class arifle_MXC_khk_F            { quality = 1; price = 6500; };
+	class arifle_MXM_khk_F            { quality = 1; price = 9000; };
+	class srifle_LRR_tna_F            { quality = 5; price = 20000; };
+	class srifle_GM6_ghex_F           { quality = 5; price = 24000; };
+	class srifle_DMR_07_blk_F         { quality = 2; price = 8500; };
+	class srifle_DMR_07_hex_F         { quality = 2; price = 8500; };
+	class srifle_DMR_07_ghex_F        { quality = 2; price = 8500; };
+	class arifle_AK12_F               { quality = 2; price = 7000; };
+	class arifle_AK12_GL_F            { quality = 2; price = 7500; };
+	class arifle_AKM_F                { quality = 2; price = 7000; };
+	class arifle_AKM_FL_F             { quality = 2; price = 7500; };
+	class arifle_AKS_F                { quality = 1; price = 5500; };
+	class arifle_ARX_blk_F            { quality = 4; price = 12000; };
+	class arifle_ARX_ghex_F           { quality = 4; price = 12000; };
+	class arifle_ARX_hex_F            { quality = 4; price = 12000; };
+	class arifle_CTAR_blk_F           { quality = 1; price = 6000; };
+	class arifle_CTAR_hex_F           { quality = 1; price = 6000; };
+	class arifle_CTAR_ghex_F          { quality = 1; price = 6000; };
+	class arifle_CTAR_GL_blk_F        { quality = 1; price = 6500; };
+	class arifle_CTARS_blk_F          { quality = 1; price = 6000; };
+	class arifle_CTARS_ghex_F         { quality = 1; price = 6000; };
+	class arifle_CTARS_hex_F          { quality = 1; price = 6000; };
 	class arifle_SPAR_01_blk_F        { quality = 1; price = 5500; };
 	class arifle_SPAR_01_khk_F        { quality = 1; price = 5500; };
 	class arifle_SPAR_01_snd_F        { quality = 1; price = 5500; };
 	class arifle_SPAR_01_GL_blk_F     { quality = 1; price = 6000; };
 	class arifle_SPAR_01_GL_khk_F     { quality = 1; price = 6000; };
 	class arifle_SPAR_01_GL_snd_F     { quality = 1; price = 6000; };
-	class arifle_SPAR_02_blk_F        { quality = 2; price = 5000; };
-	class arifle_SPAR_02_khk_F        { quality = 2; price = 5000; };
-	class arifle_SPAR_02_snd_F        { quality = 2; price = 5000; };
-	class arifle_SPAR_03_blk_F        { quality = 3; price = 7000; };
-	class arifle_SPAR_03_khk_F        { quality = 3; price = 7000; };
-	class arifle_SPAR_03_snd_F        { quality = 3; price = 7000; };					
-	class muzzle_snds_H_khk_F         { quality = 2; price = 325; };
-	class muzzle_snds_H_snd_F         { quality = 2; price = 325; };
+	class arifle_SPAR_02_blk_F        { quality = 1; price = 5000; };
+	class arifle_SPAR_02_khk_F        { quality = 1; price = 5000; };
+	class arifle_SPAR_02_snd_F        { quality = 1; price = 5000; };
+	class arifle_SPAR_03_blk_F        { quality = 2; price = 7000; };
+	class arifle_SPAR_03_khk_F        { quality = 2; price = 7000; };
+	class arifle_SPAR_03_snd_F        { quality = 2; price = 7000; };					
+	class muzzle_snds_H_khk_F         { quality = 1; price = 325; };
+	class muzzle_snds_H_snd_F         { quality = 1; price = 325; };
 	class muzzle_snds_58_blk_F        { quality = 1; price = 325; };
 	class muzzle_snds_m_khk_F         { quality = 1; price = 300; };
 	class muzzle_snds_m_snd_F         { quality = 1; price = 300; };
-	class muzzle_snds_B_khk_F         { quality = 3; price = 350; };
-	class muzzle_snds_B_snd_F         { quality = 3; price = 350; };
+	class muzzle_snds_B_khk_F         { quality = 1; price = 350; };
+	class muzzle_snds_B_snd_F         { quality = 1; price = 350; };
 	class muzzle_snds_58_wdm_F        { quality = 1; price = 325; };
-	class muzzle_snds_65_TI_blk_F     { quality = 2; price = 325; };
-	class muzzle_snds_65_TI_hex_F     { quality = 2; price = 325; };
-	class muzzle_snds_65_TI_ghex_F    { quality = 2; price = 325; };
-	class muzzle_snds_H_MG_blk_F      { quality = 2; price = 350; };
-	class muzzle_snds_H_MG_khk_F      { quality = 2; price = 350; };
+	class muzzle_snds_65_TI_blk_F     { quality = 1; price = 325; };
+	class muzzle_snds_65_TI_hex_F     { quality = 1; price = 325; };
+	class muzzle_snds_65_TI_ghex_F    { quality = 1; price = 325; };
+	class muzzle_snds_H_MG_blk_F      { quality = 1; price = 350; };
+	class muzzle_snds_H_MG_khk_F      { quality = 1; price = 350; };
 	class optic_Arco_blk_F            { quality = 1; price = 250; };
 	class optic_Arco_ghex_F           { quality = 1; price = 250; };
-	class optic_DMS_ghex_F            { quality = 2; price = 350; };
-	class optic_Hamr_khk_F            { quality = 3; price = 250; };
+	class optic_DMS_ghex_F            { quality = 1; price = 350; };
+	class optic_Hamr_khk_F            { quality = 1; price = 250; };
 	class optic_ERCO_blk_F            { quality = 1; price = 250; };
 	class optic_ERCO_khk_F            { quality = 1; price = 250; };
 	class optic_ERCO_snd_F            { quality = 1; price = 250; };
-	class optic_SOS_khk_F             { quality = 2; price = 200; };
-	class optic_LRPS_tna_F            { quality = 5; price = 300; };
-	class optic_LRPS_ghex_F           { quality = 5; price = 300; };
+	class optic_SOS_khk_F             { quality = 1; price = 200; };
+	class optic_LRPS_tna_F            { quality = 2; price = 300; };
+	class optic_LRPS_ghex_F           { quality = 2; price = 300; };
 	class optic_Holosight_blk_F       { quality = 1; price = 100; };
 	class optic_Holosight_khk_F       { quality = 1; price = 100; };
 	class optic_Holosight_smg_blk_F   { quality = 1; price = 100; };
-	class bipod_01_F_khk              { quality = 2; price = 100; };
-	class O_NVGoggles_hex_F           { quality = 3; price = 300; };
-	class O_NVGoggles_urb_F           { quality = 3; price = 300; };
-	class O_NVGoggles_ghex_F          { quality = 3; price = 300; };
-	class NVGoggles_tna_F             { quality = 2; price = 300; };
+	class bipod_01_F_khk              { quality = 1; price = 100; };
+	class O_NVGoggles_hex_F           { quality = 1; price = 300; };
+	class O_NVGoggles_urb_F           { quality = 1; price = 300; };
+	class O_NVGoggles_ghex_F          { quality = 1; price = 300; };
+	class NVGoggles_tna_F             { quality = 1; price = 300; };
 	//class NVGogglesB_blk_F            { quality = 1; price = 1000; }; //Normal NightV but fullscreen thermal
 	//class NVGogglesB_grn_F            { quality = 1; price = 1000; };	//Normal NightV but fullscreen thermal
 	//class NVGogglesB_gry_F            { quality = 1; price = 1000; };	//Normal NightV but fullscreen thermal
@@ -2161,7 +2162,7 @@ class CfgExileArsenal
 	class U_B_T_Soldier_AR_F          { quality = 2; price = 150; };
 	class U_B_T_Soldier_SL_F          { quality = 2; price = 150; };
 	class U_B_T_Sniper_F              { quality = 3; price = 150; };
-	class U_B_T_FullGhillie_tna_F     { quality = 4; price = 500; };
+	class U_B_T_FullGhillie_tna_F     { quality = 3; price = 500; };
 	class U_B_CTRG_Soldier_F          { quality = 2; price = 150; };
 	class U_B_CTRG_Soldier_2_F        { quality = 2; price = 150; };
 	class U_B_CTRG_Soldier_3_F        { quality = 2; price = 150; };
@@ -2170,9 +2171,9 @@ class CfgExileArsenal
 	class U_O_T_Soldier_F             { quality = 2; price = 150; };
 	class U_O_T_Officer_F             { quality = 3; price = 150; };
 	class U_O_T_Sniper_F              { quality = 3; price = 150; };
-	class U_O_T_FullGhillie_tna_F     { quality = 4; price = 500; };
-	class U_O_V_Soldier_Viper_F       { quality = 4; price = 500; };
-	class U_O_V_Soldier_Viper_hex_F   { quality = 4; price = 500; };
+	class U_O_T_FullGhillie_tna_F     { quality = 3; price = 500; };
+	class U_O_V_Soldier_Viper_F       { quality = 4; price = 5000; };
+	class U_O_V_Soldier_Viper_hex_F   { quality = 4; price = 5000; };
 	class U_I_C_Soldier_Para_1_F      { quality = 2; price = 100; };
 	class U_I_C_Soldier_Para_2_F      { quality = 2; price = 100; };
 	class U_I_C_Soldier_Para_3_F      { quality = 2; price = 100; };
@@ -2197,16 +2198,16 @@ class CfgExileArsenal
 	class U_B_CTRG_Soldier_urb_2_F    { quality = 2; price = 150; };
 	class U_B_CTRG_Soldier_urb_3_F    { quality = 2; price = 150; };
 	class H_Helmet_Skate              { quality = 2; price = 20; };
-	class H_HelmetB_TI_tna_F          { quality = 4; price = 450; };
-	//class H_HelmetO_ViperSP_hex_F     { quality = 4; price = 1000; };		//Themal
-	//class H_HelmetO_ViperSP_ghex_F    { quality = 4; price = 1000; }; 	//Themal 
+	class H_HelmetB_TI_tna_F          { quality = 4; price = 500; };
+	//class H_HelmetO_ViperSP_hex_F     { quality = 4; price = 10000; };		//Thermal
+	//class H_HelmetO_ViperSP_ghex_F    { quality = 4; price = 10000; }; 	//Thermal 
 	class H_HelmetB_tna_F             { quality = 3; price = 300; };
 	class H_HelmetB_Enh_tna_F         { quality = 4; price = 100; };
 	class H_HelmetB_Light_tna_F       { quality = 2; price = 100; };
-	class H_HelmetSpecO_ghex_F        { quality = 5; price = 100; };
-	class H_HelmetLeaderO_ghex_F      { quality = 5; price = 175; };
-	class H_HelmetO_ghex_F            { quality = 5; price = 150; };
-	class H_HelmetCrew_O_ghex_F       { quality = 3; price = 100; };
+	class H_HelmetSpecO_ghex_F        { quality = 2; price = 100; };
+	class H_HelmetLeaderO_ghex_F      { quality = 2; price = 175; };
+	class H_HelmetO_ghex_F            { quality = 2; price = 150; };
+	class H_HelmetCrew_O_ghex_F       { quality = 2; price = 100; };
 	class H_MilCap_tna_F              { quality = 1; price = 8; };
 	class H_MilCap_ghex_F             { quality = 1; price = 8; };
 	class H_Booniehat_tna_F           { quality = 1; price = 4; };
@@ -2222,22 +2223,22 @@ class CfgExileArsenal
 	class V_TacChestrig_cbr_F         { quality = 1; price = 100; };
 	class V_PlateCarrier1_tna_F       { quality = 3; price = 300; };
 	class V_PlateCarrier2_tna_F       { quality = 3; price = 300; };
-	class V_PlateCarrierSpec_tna_F    { quality = 5; price = 600; };
-	class V_PlateCarrierGL_tna_F      { quality = 6; price = 500; };
+	class V_PlateCarrierSpec_tna_F    { quality = 3; price = 600; };
+	class V_PlateCarrierGL_tna_F      { quality = 3; price = 500; };
 	class V_HarnessO_ghex_F           { quality = 2; price = 100; };
 	class V_HarnessOGL_ghex_F         { quality = 1; price = 100; };
 	class V_BandollierB_ghex_F        { quality = 1; price = 100; };
 	class V_TacVest_gen_F             { quality = 1; price = 25; };
 	class V_PlateCarrier1_rgr_noflag_F		{ quality = 2; price = 300; };
 	class V_PlateCarrier2_rgr_noflag_F		{ quality = 2; price = 300; };
-	class B_Bergen_Base_F					{ quality = 5; price = 5000; };
-	class B_Bergen_mcamo_F                  { quality = 5; price = 5000; };
-	class B_Bergen_dgtl_F                   { quality = 5; price = 5000; };
-	class B_Bergen_hex_F                    { quality = 5; price = 5000; };
-	class B_Bergen_tna_F                    { quality = 5; price = 5000; };
+	class B_Bergen_Base_F					{ quality = 3; price = 5000; };
+	class B_Bergen_mcamo_F                  { quality = 3; price = 5000; };
+	class B_Bergen_dgtl_F                   { quality = 3; price = 5000; };
+	class B_Bergen_hex_F                    { quality = 3; price = 5000; };
+	class B_Bergen_tna_F                    { quality = 3; price = 5000; };
 	class B_AssaultPack_tna_F               { quality = 1; price = 500; };
-	class B_Carryall_ghex_F                 { quality = 4; price = 1500; };
-	class B_FieldPack_ghex_F                { quality = 2; price = 700; };
+	class B_Carryall_ghex_F                 { quality = 1; price = 1500; };
+	class B_FieldPack_ghex_F                { quality = 1; price = 700; };
 	class B_ViperHarness_base_F             { quality = 3; price = 1000; };
 	class B_ViperHarness_blk_F              { quality = 3; price = 1000; };
 	class B_ViperHarness_ghex_F             { quality = 3; price = 1000; };
@@ -2254,18 +2255,18 @@ class CfgExileArsenal
 	class 30Rnd_9x21_Mag_SMG_02_Tracer_Red          {quality = 1; price = 120; };
 	class 30Rnd_9x21_Mag_SMG_02_Tracer_Yellow       {quality = 1; price = 120; };
 	class 30Rnd_9x21_Mag_SMG_02_Tracer_Green        {quality = 1; price = 120; };
-	class 30Rnd_580x42_Mag_F                        {quality = 2; price = 200; };
-	class 30Rnd_580x42_Mag_Tracer_F                 {quality = 2; price = 200; };
-	class 100Rnd_580x42_Mag_F                       {quality = 2; price = 200; };
-	class 100Rnd_580x42_Mag_Tracer_F                {quality = 2; price = 200; };
-	class 20Rnd_650x39_Cased_Mag_F                  {quality = 4; price = 250; };
-	class 10Rnd_50BW_Mag_F                          {quality = 5; price = 350; };
-	class 150Rnd_556x45_Drum_Mag_F                  {quality = 2; price = 350; };
-	class 150Rnd_556x45_Drum_Mag_Tracer_F           {quality = 2; price = 350; };
-	class 30Rnd_762x39_Mag_F                        {quality = 3; price = 300; };
-	class 30Rnd_762x39_Mag_Green_F                  {quality = 3; price = 300; };
-	class 30Rnd_762x39_Mag_Tracer_F                 {quality = 3; price = 300; };
-	class 30Rnd_762x39_Mag_Tracer_Green_F           {quality = 3; price = 300; };
+	class 30Rnd_580x42_Mag_F                        {quality = 1; price = 200; };
+	class 30Rnd_580x42_Mag_Tracer_F                 {quality = 1; price = 200; };
+	class 100Rnd_580x42_Mag_F                       {quality = 1; price = 200; };
+	class 100Rnd_580x42_Mag_Tracer_F                {quality = 1; price = 200; };
+	class 20Rnd_650x39_Cased_Mag_F                  {quality = 1; price = 250; };
+	class 10Rnd_50BW_Mag_F                          {quality = 3; price = 350; };
+	class 150Rnd_556x45_Drum_Mag_F                  {quality = 1; price = 350; };
+	class 150Rnd_556x45_Drum_Mag_Tracer_F           {quality = 1; price = 350; };
+	class 30Rnd_762x39_Mag_F                        {quality = 1; price = 300; };
+	class 30Rnd_762x39_Mag_Green_F                  {quality = 1; price = 300; };
+	class 30Rnd_762x39_Mag_Tracer_F                 {quality = 1; price = 300; };
+	class 30Rnd_762x39_Mag_Tracer_Green_F           {quality = 1; price = 300; };
 	class 30Rnd_545x39_Mag_F                        {quality = 1; price = 150; };
 	class 30Rnd_545x39_Mag_Green_F                  {quality = 1; price = 150; };
 	class 30Rnd_545x39_Mag_Tracer_F                 {quality = 1; price = 150; };
@@ -2330,34 +2331,34 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// SDV
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Boat_SDV_CSAT						{ quality = 1; price = 10000; };
-	class Exile_Boat_SDV_Digital					{ quality = 1; price = 10000; };
-	class Exile_Boat_SDV_Grey						{ quality = 1; price = 10000; };
+	class Exile_Boat_SDV_CSAT						{ quality = 2; price = 10000; };
+	class Exile_Boat_SDV_Digital					{ quality = 2; price = 10000; };
+	class Exile_Boat_SDV_Grey						{ quality = 2; price = 10000; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// UH-1H Huey
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Chopper_Huey_Green 					{ quality = 1; price = 24000; };
-	class Exile_Chopper_Huey_Desert					{ quality = 1; price = 24000; };
-	class Exile_Chopper_Huey_Armed_Green			{ quality = 1; price = 36000; };
-	class Exile_Chopper_Huey_Armed_Desert			{ quality = 1; price = 36000; };
+	class Exile_Chopper_Huey_Green 					{ quality = 2; price = 24000; };
+	class Exile_Chopper_Huey_Desert					{ quality = 2; price = 24000; };
+	class Exile_Chopper_Huey_Armed_Green			{ quality = 2; price = 36000; };
+	class Exile_Chopper_Huey_Armed_Desert			{ quality = 2; price = 36000; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// ARMED BOAT
 	///////////////////////////////////////////////////////////////////////////////
-	class B_Boat_Armed_01_minigun_F            		{ quality = 1; price = 50000; };
+	class B_Boat_Armed_01_minigun_F            		{ quality = 5; price = 50000; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Hellcat
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Chopper_Hellcat_Green				{ quality = 1; price = 25000; };
-	class I_Heli_light_03_F							{ quality = 1; price = 425000; };	
-	class Exile_Chopper_Hellcat_FIA					{ quality = 1; price = 25000; };
+	class Exile_Chopper_Hellcat_Green				{ quality = 2; price = 25000; };
+	class I_Heli_light_03_F							{ quality = 6; price = 425000; };	
+	class Exile_Chopper_Hellcat_FIA					{ quality = 2; price = 25000; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Hummingbird
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Chopper_Hummingbird_Green			{ quality = 1; price = 10000; };
+	class Exile_Chopper_Hummingbird_Green			{ quality = 2; price = 10000; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Hummingbird (Civillian)
@@ -2383,41 +2384,40 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// Huron
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Chopper_Huron_Black								{ quality = 1; price = 55000; };
-	class Exile_Chopper_Huron_Green								{ quality = 1; price = 55000; };
+	class Exile_Chopper_Huron_Black								{ quality = 3; price = 55000; };
+	class Exile_Chopper_Huron_Green								{ quality = 3; price = 55000; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Mohawk
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Chopper_Mohawk_FIA								{ quality = 1; price = 24000; };
+	class Exile_Chopper_Mohawk_FIA								{ quality = 3; price = 24000; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Ghosthawk
 	///////////////////////////////////////////////////////////////////////////////
-	class B_Heli_Transport_01_F								{ quality = 1; price = 150000; };
+	class B_Heli_Transport_01_F								{ quality = 5; price = 150000; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Pawnee
 	///////////////////////////////////////////////////////////////////////////////
-	class B_Heli_light_01_armed_F								{ quality = 1; price = 200000; };
+	class B_Heli_light_01_armed_F								{ quality = 6; price = 200000; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Orca
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Chopper_Orca_CSAT								{ quality = 1; price = 16000; };
-	class Exile_Chopper_Orca_Black								{ quality = 1; price = 16000; };
-	class Exile_Chopper_Orca_BlackCustom						{ quality = 1; price = 16000; };
-	class O_Heli_Light_02_v2_F   			            		{ quality = 1; price = 170000; };
+	class Exile_Chopper_Orca_CSAT								{ quality = 2; price = 16000; };
+	class Exile_Chopper_Orca_Black								{ quality = 2; price = 16000; };
+	class Exile_Chopper_Orca_BlackCustom						{ quality = 2; price = 16000; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Taru
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Chopper_Taru_Transport_CSAT						{ quality = 1; price = 45000; };
-	class Exile_Chopper_Taru_Transport_Black					{ quality = 1; price = 45000; };                                                                                      
-	class Exile_Chopper_Taru_CSAT								{ quality = 1; price = 40000; };
-	class Exile_Chopper_Taru_Black								{ quality = 1; price = 40000; };                                                                         
-	class Exile_Chopper_Taru_Covered_CSAT						{ quality = 1; price = 35000; };
-	class Exile_Chopper_Taru_Covered_Black						{ quality = 1; price = 35000; };
+	class Exile_Chopper_Taru_Transport_CSAT						{ quality = 2; price = 45000; };
+	class Exile_Chopper_Taru_Transport_Black					{ quality = 2; price = 45000; };                                                                                      
+	class Exile_Chopper_Taru_CSAT								{ quality = 2; price = 40000; };
+	class Exile_Chopper_Taru_Black								{ quality = 2; price = 40000; };                                                                         
+	class Exile_Chopper_Taru_Covered_CSAT						{ quality = 2; price = 35000; };
+	class Exile_Chopper_Taru_Covered_Black						{ quality = 2; price = 35000; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Cessna
@@ -2471,10 +2471,10 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// Ural (Covered)
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Car_Ural_Covered_Blue			{ quality = 1; price = 20000; };
-	class Exile_Car_Ural_Covered_Yellow			{ quality = 1; price = 20000; };
-	class Exile_Car_Ural_Covered_Worker			{ quality = 1; price = 20000; };
-	class Exile_Car_Ural_Covered_Military		{ quality = 1; price = 20000; };
+	class Exile_Car_Ural_Covered_Blue			{ quality = 2; price = 20000; };
+	class Exile_Car_Ural_Covered_Yellow			{ quality = 2; price = 20000; };
+	class Exile_Car_Ural_Covered_Worker			{ quality = 2; price = 20000; };
+	class Exile_Car_Ural_Covered_Military		{ quality = 2; price = 20000; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// V3S
@@ -2563,19 +2563,19 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// HEMMT
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Car_HEMMT 								{ quality = 1; price = 40000; };
+	class Exile_Car_HEMMT 								{ quality = 3; price = 40000; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Hunter
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Car_Hunter 								{ quality = 1; price = 35000; };
-	class B_MRAP_01_hmg_F 								{ quality = 1; price = 150000; };
+	class Exile_Car_Hunter 								{ quality = 3; price = 35000; };
+	class B_MRAP_01_hmg_F 								{ quality = 4; price = 150000; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Ifrit
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Car_Ifrit 								{ quality = 1; price = 40000; };
-	class O_MRAP_02_hmg_F 								{ quality = 1; price = 175000; };
+	class Exile_Car_Ifrit 								{ quality = 3; price = 40000; };
+	class O_MRAP_02_hmg_F 								{ quality = 4; price = 175000; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Offroad
@@ -2605,18 +2605,18 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// Offroad (Armed)
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Car_Offroad_Armed_Guerilla01 			{ quality = 1; price = 30000; };
-	class Exile_Car_Offroad_Armed_Guerilla02 			{ quality = 1; price = 30000; };
-	class Exile_Car_Offroad_Armed_Guerilla03 			{ quality = 1; price = 30000; };
-	class Exile_Car_Offroad_Armed_Guerilla04 			{ quality = 1; price = 30000; };
-	class Exile_Car_Offroad_Armed_Guerilla05 			{ quality = 1; price = 30000; };
-	class Exile_Car_Offroad_Armed_Guerilla06 			{ quality = 1; price = 30000; };
-	class Exile_Car_Offroad_Armed_Guerilla07 			{ quality = 1; price = 30000; };
-	class Exile_Car_Offroad_Armed_Guerilla08 			{ quality = 1; price = 30000; };
-	class Exile_Car_Offroad_Armed_Guerilla09 			{ quality = 1; price = 30000; };
-	class Exile_Car_Offroad_Armed_Guerilla10 			{ quality = 1; price = 30000; };
-	class Exile_Car_Offroad_Armed_Guerilla11 			{ quality = 1; price = 30000; };
-	class Exile_Car_Offroad_Armed_Guerilla12 			{ quality = 1; price = 30000; };
+	class Exile_Car_Offroad_Armed_Guerilla01 			{ quality = 2; price = 30000; };
+	class Exile_Car_Offroad_Armed_Guerilla02 			{ quality = 2; price = 30000; };
+	class Exile_Car_Offroad_Armed_Guerilla03 			{ quality = 2; price = 30000; };
+	class Exile_Car_Offroad_Armed_Guerilla04 			{ quality = 2; price = 30000; };
+	class Exile_Car_Offroad_Armed_Guerilla05 			{ quality = 2; price = 30000; };
+	class Exile_Car_Offroad_Armed_Guerilla06 			{ quality = 2; price = 30000; };
+	class Exile_Car_Offroad_Armed_Guerilla07 			{ quality = 2; price = 30000; };
+	class Exile_Car_Offroad_Armed_Guerilla08 			{ quality = 2; price = 30000; };
+	class Exile_Car_Offroad_Armed_Guerilla09 			{ quality = 2; price = 30000; };
+	class Exile_Car_Offroad_Armed_Guerilla10 			{ quality = 2; price = 30000; };
+	class Exile_Car_Offroad_Armed_Guerilla11 			{ quality = 2; price = 30000; };
+	class Exile_Car_Offroad_Armed_Guerilla12 			{ quality = 2; price = 30000; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Offroad (Repair)
@@ -2644,8 +2644,8 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// Strider
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Car_Strider 							{ quality = 1; price = 50000; };
-	class I_MRAP_03_hmg_F 							   { quality = 1; price = 200000; };
+	class Exile_Car_Strider 							{ quality = 3; price = 50000; };
+	class I_MRAP_03_hmg_F 							   { quality = 6; price = 200000; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// SUV
@@ -2663,13 +2663,13 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// BRDM2
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Car_BRDM2_HQ 							{ quality = 5; price = 85000; };
+	class Exile_Car_BRDM2_HQ 							{ quality = 4; price = 85000; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// BTR40
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Car_BTR40_MG_Green 							{ quality = 6; price = 38000; };
-	class Exile_Car_BTR40_MG_Camo 							{ quality = 6; price = 38000; };
+	class Exile_Car_BTR40_MG_Green 							{ quality = 4; price = 38000; };
+	class Exile_Car_BTR40_MG_Camo 							{ quality = 4; price = 38000; };
 	class Exile_Car_BTR40_Green 							{ quality = 2; price = 20000; };
 	class Exile_Car_BTR40_Camo 								{ quality = 2; price = 20000; };
 	
@@ -2678,72 +2678,72 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	class Exile_Car_HMMWV_M134_Green 							{ quality = 5; price = 75000; };
 	class Exile_Car_HMMWV_M134_Desert 							{ quality = 5; price = 75000; };
-	class Exile_Car_HMMWV_M2_Green 								{ quality = 6; price = 75000; };
-	class Exile_Car_HMMWV_M2_Desert 							{ quality = 6; price = 75000; };
-	class Exile_Car_HMMWV_MEV_Green 							{ quality = 3; price = 18000; };
-	class Exile_Car_HMMWV_MEV_Desert 							{ quality = 3; price = 18000; };
-	class Exile_Car_HMMWV_UNA_Green 							{ quality = 3; price = 18000; };
-	class Exile_Car_HMMWV_UNA_Desert 							{ quality = 3; price = 18000; };
+	class Exile_Car_HMMWV_M2_Green 								{ quality = 5; price = 75000; };
+	class Exile_Car_HMMWV_M2_Desert 							{ quality = 5; price = 75000; };
+	class Exile_Car_HMMWV_MEV_Green 							{ quality = 2; price = 18000; };
+	class Exile_Car_HMMWV_MEV_Desert 							{ quality = 2; price = 18000; };
+	class Exile_Car_HMMWV_UNA_Green 							{ quality = 2; price = 18000; };
+	class Exile_Car_HMMWV_UNA_Desert 							{ quality = 2; price = 18000; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Tempest
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Car_Tempest 							{ quality = 1; price = 35000; };
+	class Exile_Car_Tempest 							{ quality = 3; price = 35000; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Van 
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Car_Van_Black 							{ quality = 1; price = 15000; };
-	class Exile_Car_Van_White 							{ quality = 1; price = 15000; };
-	class Exile_Car_Van_Red 							{ quality = 1; price = 15000; };
-	class Exile_Car_Van_Guerilla01 						{ quality = 1; price = 15000; };
-	class Exile_Car_Van_Guerilla02 						{ quality = 1; price = 15000; };
-	class Exile_Car_Van_Guerilla03 						{ quality = 1; price = 15000; };
-	class Exile_Car_Van_Guerilla04 						{ quality = 1; price = 15000; };
-	class Exile_Car_Van_Guerilla05 						{ quality = 1; price = 15000; };
-	class Exile_Car_Van_Guerilla06 						{ quality = 1; price = 15000; };
-	class Exile_Car_Van_Guerilla07 						{ quality = 1; price = 15000; };
-	class Exile_Car_Van_Guerilla08 						{ quality = 1; price = 15000; };
+	class Exile_Car_Van_Black 							{ quality = 2; price = 15000; };
+	class Exile_Car_Van_White 							{ quality = 2; price = 15000; };
+	class Exile_Car_Van_Red 							{ quality = 2; price = 15000; };
+	class Exile_Car_Van_Guerilla01 						{ quality = 2; price = 15000; };
+	class Exile_Car_Van_Guerilla02 						{ quality = 2; price = 15000; };
+	class Exile_Car_Van_Guerilla03 						{ quality = 2; price = 15000; };
+	class Exile_Car_Van_Guerilla04 						{ quality = 2; price = 15000; };
+	class Exile_Car_Van_Guerilla05 						{ quality = 2; price = 15000; };
+	class Exile_Car_Van_Guerilla06 						{ quality = 2; price = 15000; };
+	class Exile_Car_Van_Guerilla07 						{ quality = 2; price = 15000; };
+	class Exile_Car_Van_Guerilla08 						{ quality = 2; price = 15000; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Van (Box) 
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Car_Van_Box_Black 						{ quality = 1; price = 16000; };
-	class Exile_Car_Van_Box_White 						{ quality = 1; price = 16000; };
-	class Exile_Car_Van_Box_Red 						{ quality = 1; price = 16000; };
-	class Exile_Car_Van_Box_Guerilla01 					{ quality = 1; price = 16000; };
-	class Exile_Car_Van_Box_Guerilla02 					{ quality = 1; price = 16000; };
-	class Exile_Car_Van_Box_Guerilla03 					{ quality = 1; price = 16000; };
-	class Exile_Car_Van_Box_Guerilla04 					{ quality = 1; price = 16000; };
-	class Exile_Car_Van_Box_Guerilla05 					{ quality = 1; price = 16000; };
-	class Exile_Car_Van_Box_Guerilla06 					{ quality = 1; price = 16000; };
-	class Exile_Car_Van_Box_Guerilla07 					{ quality = 1; price = 16000; };
-	class Exile_Car_Van_Box_Guerilla08 					{ quality = 1; price = 16000; };
+	class Exile_Car_Van_Box_Black 						{ quality = 2; price = 16000; };
+	class Exile_Car_Van_Box_White 						{ quality = 2; price = 16000; };
+	class Exile_Car_Van_Box_Red 						{ quality = 2; price = 16000; };
+	class Exile_Car_Van_Box_Guerilla01 					{ quality = 2; price = 16000; };
+	class Exile_Car_Van_Box_Guerilla02 					{ quality = 2; price = 16000; };
+	class Exile_Car_Van_Box_Guerilla03 					{ quality = 2; price = 16000; };
+	class Exile_Car_Van_Box_Guerilla04 					{ quality = 2; price = 16000; };
+	class Exile_Car_Van_Box_Guerilla05 					{ quality = 2; price = 16000; };
+	class Exile_Car_Van_Box_Guerilla06 					{ quality = 2; price = 16000; };
+	class Exile_Car_Van_Box_Guerilla07 					{ quality = 2; price = 16000; };
+	class Exile_Car_Van_Box_Guerilla08 					{ quality = 2; price = 16000; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Van (Fuel) 
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Car_Van_Fuel_Black 						{ quality = 1; price = 18000; };
-	class Exile_Car_Van_Fuel_White 						{ quality = 1; price = 18000; };
-	class Exile_Car_Van_Fuel_Red 						{ quality = 1; price = 18000; };
-	class Exile_Car_Van_Fuel_Guerilla01 				{ quality = 1; price = 18000; };
-	class Exile_Car_Van_Fuel_Guerilla02 				{ quality = 1; price = 18000; };
-	class Exile_Car_Van_Fuel_Guerilla03 				{ quality = 1; price = 18000; };
+	class Exile_Car_Van_Fuel_Black 						{ quality = 2; price = 18000; };
+	class Exile_Car_Van_Fuel_White 						{ quality = 2; price = 18000; };
+	class Exile_Car_Van_Fuel_Red 						{ quality = 2; price = 18000; };
+	class Exile_Car_Van_Fuel_Guerilla01 				{ quality = 2; price = 18000; };
+	class Exile_Car_Van_Fuel_Guerilla02 				{ quality = 2; price = 18000; };
+	class Exile_Car_Van_Fuel_Guerilla03 				{ quality = 2; price = 18000; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Zamak
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Car_Zamak 								{ quality = 4; price = 43000; };
+	class Exile_Car_Zamak 								{ quality = 3; price = 43000; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Water Scooter
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Boat_WaterScooter						{ quality = 2; price = 800; };
+	class Exile_Boat_WaterScooter						{ quality = 1; price = 800; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// RHIB
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Boat_RHIB								{ quality = 3; price = 1500; };
+	class Exile_Boat_RHIB								{ quality = 2; price = 1500; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Ceaser BTT
@@ -2754,27 +2754,27 @@ class CfgExileArsenal
 
 	// V-44 X Blackfish
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Plane_BlackfishInfantry							{ quality = 6; price = 60000; };
-	class Exile_Plane_BlackfishVehicle							{ quality = 6; price = 60000; };
-	class B_T_VTOL_01_infantry_F									{ quality = 1; price = 110000; };
-	class B_T_VTOL_01_vehicle_F									{ quality = 1; price = 120000; };
+	class Exile_Plane_BlackfishInfantry					{ quality = 5; price = 60000; };
+	class Exile_Plane_BlackfishVehicle					{ quality = 5; price = 60000; };
+	class B_T_VTOL_01_infantry_F						{ quality = 6; price = 110000; };
+	class B_T_VTOL_01_vehicle_F							{ quality = 6; price = 120000; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Prowler
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Car_ProwlerLight							{ quality = 3; price = 22000; };
-	class Exile_Car_ProwlerUnarmed							{ quality = 3; price = 22000; };
+	class Exile_Car_ProwlerLight						{ quality = 2; price = 22000; };
+	class Exile_Car_ProwlerUnarmed						{ quality = 2; price = 22000; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Qilin
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Car_QilinUnarmed							{ quality = 3; price = 21000; };
+	class Exile_Car_QilinUnarmed						{ quality = 2; price = 20000; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// MB 4WD
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Car_MB4WD							{ quality = 2; price = 15000; };
-	class Exile_Car_MB4WDOpen							{ quality = 2; price = 15000; };
+	class Exile_Car_MB4WD								{ quality = 1; price = 15000; };
+	class Exile_Car_MB4WDOpen							{ quality = 1; price = 15000; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Flags
@@ -2862,7 +2862,7 @@ class CfgExileArsenal
 	class optic_mas_PSO_nv_day 						{ quality = 1; price = 250; };
 	class optic_mas_term 							{ quality = 1; price = 5000; }; //needs to checked
 	class optic_mas_MRD 							{ quality = 1; price = 25; };
-	class optic_mas_LRPS 							{ quality = 1; price = 800; };	
+	class optic_mas_LRPS 							{ quality = 3; price = 800; };	
 	class optic_mas_kobra							{ quality = 1; price = 150; };
 	class optic_mas_kobra_c 						{ quality = 1; price = 150; };
 	class optic_mas_nspu 							{ quality = 1; price = 200; };
@@ -2873,62 +2873,62 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// Ammunition
 	///////////////////////////////////////////////////////////////////////////////
-	class 30Rnd_mas_556x45_Stanag    				{ quality = 2; price = 200; };
-    class 30Rnd_mas_556x45sd_Stanag           		{ quality = 2; price = 200; };
-    class 30Rnd_mas_556x45_T_Stanag    				{ quality = 2; price = 200; };
-    class 20Rnd_mas_762x51_Stanag    				{ quality = 2; price = 300; };
-    class 20Rnd_mas_762x51sd_Stanag    				{ quality = 2; price = 300; };
-    class 20Rnd_mas_762x51_T_Stanag    				{ quality = 2; price = 300; };
-    class 150Rnd_mas_556x45_Stanag    				{ quality = 2; price = 350; };
-    class 150Rnd_mas_556x45_T_Stanag    			{ quality = 2; price = 350; };
-    class 30Rnd_mas_9x21_Stanag    					{ quality = 2; price = 100; };
-    class 30Rnd_mas_9x21sd_Stanag   				{ quality = 2; price = 100; };
-    class 30Rnd_mas_9x21d_Stanag    				{ quality = 2; price = 100; };
-    class 5Rnd_mas_762x51_Stanag    				{ quality = 2; price = 250; };
-    class 5Rnd_mas_762x51_T_Stanag    				{ quality = 2; price = 250; };
-    class 7Rnd_mas_12Gauge_Slug    					{ quality = 2; price = 75; };
-    class 7Rnd_mas_12Gauge_Pellets    				{ quality = 2; price = 75; };
-    class 20Rnd_mas_12Gauge_Slug    				{ quality = 2; price = 200; };
-    class 20Rnd_mas_12Gauge_Pellets    				{ quality = 2; price = 200; };
-    class 5Rnd_mas_762x51sd_Stanag    				{ quality = 2; price = 200; };
-    class 10Rnd_mas_338_Stanag    					{ quality = 2; price = 500; };
-    class 10Rnd_mas_338sd_Stanag    				{ quality = 2; price = 750; };
-    class 10Rnd_mas_338_T_Stanag    				{ quality = 2; price = 500; };
-    class 40Rnd_mas_46x30_Mag    					{ quality = 2; price = 250; };
-    class 40Rnd_mas_46x30sd_Mag    					{ quality = 2; price = 250; };
-    class 200Rnd_mas_556x45_Stanag    				{ quality = 2; price = 350; };
-    class 200Rnd_mas_556x45_T_Stanag    			{ quality = 2; price = 350; };
-    class 100Rnd_mas_762x51_Stanag    				{ quality = 2; price = 550; };
-    class 100Rnd_mas_762x51_T_Stanag    			{ quality = 2; price = 550; };
-	class 71Rnd_mas_762x25_mag    					{ quality = 2; price = 500; };
-    class 30Rnd_mas_545x39_mag    					{ quality = 2; price = 150; };
-    class 30Rnd_mas_545x39sd_mag    				{ quality = 2; price = 200; };
-    class 30Rnd_mas_545x39_T_mag                    { quality = 2; price = 150; };
-    class 64Rnd_mas_9x18_mag    					{ quality = 2; price = 150; };
-    class 64Rnd_mas_9x18sd_mag    					{ quality = 2; price = 150; };
-    class 10Rnd_mas_12Gauge_Slug    				{ quality = 2; price = 75; };
-    class 10Rnd_mas_12Gauge_Pellets   				{ quality = 2; price = 75; };
-    class 10Rnd_mas_762x54_mag    					{ quality = 2; price = 300; };
-	class 10Rnd_mas_762x54_T_mag   					{ quality = 2; price = 300; };
-    class 100Rnd_mas_762x39_mag   					{ quality = 2; price = 350; };
-    class 100Rnd_mas_762x39_T_mag    				{ quality = 2; price = 350; };
-    class 10Rnd_mas_762x54sd_mag    				{ quality = 2; price = 450; };
-    class 20Rnd_mas_9x39_mag   						{ quality = 2; price = 75; };
-    class 20Rnd_mas_9x39sd_mag   					{ quality = 2; price = 75; };
-    class 30Rnd_mas_9x39_mag    					{ quality = 2; price = 100; };
-    class 30Rnd_mas_9x39sd_mag    					{ quality = 2; price = 100; };
-    class 30Rnd_mas_9x39d_mag    					{ quality = 2; price = 100; };
-    class 100Rnd_mas_545x39_mag    					{ quality = 2; price = 350; };
-	class 100Rnd_mas_545x39_T_mag					{ quality = 2; price = 350; };
-    class 100Rnd_mas_762x54_mag    					{ quality = 2; price = 350; };
-    class 100Rnd_mas_762x54_T_mag    				{ quality = 2; price = 350; };
-    class 25Rnd_mas_9x19_Mag    					{ quality = 2; price = 75; };
-    class 20Rnd_mas_765x17_Mag    					{ quality = 2; price = 50; };
-    class 17Rnd_mas_9x21_Mag   						{ quality = 2; price = 50; };
-    class 15Rnd_mas_9x21_Mag   						{ quality = 2; price = 50; };
-    class 13Rnd_mas_9x21_Mag    					{ quality = 2; price = 50; };
-    class 8Rnd_mas_9x18_Mag   						{ quality = 2; price = 50; };
-	class 12Rnd_mas_45acp_Mag						{ quality = 2; price = 75; };
+	class 30Rnd_mas_556x45_Stanag    				{ quality = 1; price = 200; };
+    class 30Rnd_mas_556x45sd_Stanag           		{ quality = 1; price = 200; };
+    class 30Rnd_mas_556x45_T_Stanag    				{ quality = 1; price = 200; };
+    class 20Rnd_mas_762x51_Stanag    				{ quality = 1; price = 300; };
+    class 20Rnd_mas_762x51sd_Stanag    				{ quality = 1; price = 300; };
+    class 20Rnd_mas_762x51_T_Stanag    				{ quality = 1; price = 300; };
+    class 150Rnd_mas_556x45_Stanag    				{ quality = 1; price = 350; };
+    class 150Rnd_mas_556x45_T_Stanag    			{ quality = 1; price = 350; };
+    class 30Rnd_mas_9x21_Stanag    					{ quality = 1; price = 100; };
+    class 30Rnd_mas_9x21sd_Stanag   				{ quality = 1; price = 100; };
+    class 30Rnd_mas_9x21d_Stanag    				{ quality = 1; price = 100; };
+    class 5Rnd_mas_762x51_Stanag    				{ quality = 1; price = 250; };
+    class 5Rnd_mas_762x51_T_Stanag    				{ quality = 1; price = 250; };
+    class 7Rnd_mas_12Gauge_Slug    					{ quality = 1; price = 75; };
+    class 7Rnd_mas_12Gauge_Pellets    				{ quality = 1; price = 75; };
+    class 20Rnd_mas_12Gauge_Slug    				{ quality = 1; price = 200; };
+    class 20Rnd_mas_12Gauge_Pellets    				{ quality = 1; price = 200; };
+    class 5Rnd_mas_762x51sd_Stanag    				{ quality = 1; price = 200; };
+    class 10Rnd_mas_338_Stanag    					{ quality = 1; price = 500; };
+    class 10Rnd_mas_338sd_Stanag    				{ quality = 1; price = 750; };
+    class 10Rnd_mas_338_T_Stanag    				{ quality = 1; price = 500; };
+    class 40Rnd_mas_46x30_Mag    					{ quality = 1; price = 250; };
+    class 40Rnd_mas_46x30sd_Mag    					{ quality = 1; price = 250; };
+    class 200Rnd_mas_556x45_Stanag    				{ quality = 1; price = 350; };
+    class 200Rnd_mas_556x45_T_Stanag    			{ quality = 1; price = 350; };
+    class 100Rnd_mas_762x51_Stanag    				{ quality = 1; price = 550; };
+    class 100Rnd_mas_762x51_T_Stanag    			{ quality = 1; price = 550; };
+	class 71Rnd_mas_762x25_mag    					{ quality = 1; price = 500; };
+    class 30Rnd_mas_545x39_mag    					{ quality = 1; price = 150; };
+    class 30Rnd_mas_545x39sd_mag    				{ quality = 1; price = 200; };
+    class 30Rnd_mas_545x39_T_mag                    { quality = 1; price = 150; };
+    class 64Rnd_mas_9x18_mag    					{ quality = 1; price = 150; };
+    class 64Rnd_mas_9x18sd_mag    					{ quality = 1; price = 150; };
+    class 10Rnd_mas_12Gauge_Slug    				{ quality = 1; price = 75; };
+    class 10Rnd_mas_12Gauge_Pellets   				{ quality = 1; price = 75; };
+    class 10Rnd_mas_762x54_mag    					{ quality = 1; price = 300; };
+	class 10Rnd_mas_762x54_T_mag   					{ quality = 1; price = 300; };
+    class 100Rnd_mas_762x39_mag   					{ quality = 1; price = 350; };
+    class 100Rnd_mas_762x39_T_mag    				{ quality = 1; price = 350; };
+    class 10Rnd_mas_762x54sd_mag    				{ quality = 1; price = 450; };
+    class 20Rnd_mas_9x39_mag   						{ quality = 1; price = 75; };
+    class 20Rnd_mas_9x39sd_mag   					{ quality = 1; price = 75; };
+    class 30Rnd_mas_9x39_mag    					{ quality = 1; price = 100; };
+    class 30Rnd_mas_9x39sd_mag    					{ quality = 1; price = 100; };
+    class 30Rnd_mas_9x39d_mag    					{ quality = 1; price = 100; };
+    class 100Rnd_mas_545x39_mag    					{ quality = 1; price = 350; };
+	class 100Rnd_mas_545x39_T_mag					{ quality = 1; price = 350; };
+    class 100Rnd_mas_762x54_mag    					{ quality = 1; price = 350; };
+    class 100Rnd_mas_762x54_T_mag    				{ quality = 1; price = 350; };
+    class 25Rnd_mas_9x19_Mag    					{ quality = 1; price = 75; };
+    class 20Rnd_mas_765x17_Mag    					{ quality = 1; price = 50; };
+    class 17Rnd_mas_9x21_Mag   						{ quality = 1; price = 50; };
+    class 15Rnd_mas_9x21_Mag   						{ quality = 1; price = 50; };
+    class 13Rnd_mas_9x21_Mag    					{ quality = 1; price = 50; };
+    class 8Rnd_mas_9x18_Mag   						{ quality = 1; price = 50; };
+	class 12Rnd_mas_45acp_Mag						{ quality = 1; price = 75; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Pistols
@@ -3116,24 +3116,24 @@ class CfgExileArsenal
     class srifle_mas_m24_d 							{ quality = 1; price = 8000; };
     class srifle_mas_svd 							{ quality = 1; price = 10000; };
     class srifle_mas_m91 							{ quality = 1; price = 10000; };
-    class srifle_mas_lrr							{ quality = 1; price = 16000; };		
+    class srifle_mas_lrr							{ quality = 3; price = 16000; };		
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Launchers
 	///////////////////////////////////////////////////////////////////////////////
-    class arifle_mas_m79							{ quality = 1; price = 9000; };
-    class mas_launch_RPG7_F							{ quality = 1; price = 50000; };
-    class mas_launch_Stinger_F						{ quality = 1; price = 100000; };
+    class arifle_mas_m79							{ quality = 3; price = 9000; };
+    class mas_launch_RPG7_F							{ quality = 5; price = 50000; };
+    class mas_launch_Stinger_F						{ quality = 5; price = 100000; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Launcher Ammo
 	///////////////////////////////////////////////////////////////////////////////
-    class mas_PG7V   								{ quality = 2; price = 12000; };
-    class mas_OG7   								{ quality = 2; price = 10000; };
-    class mas_PG7L   								{ quality = 2; price = 14000; };
-	class mas_PG7VR    							    { quality = 2; price = 15000; };
-	class mas_TBG7V   								{ quality = 2; price = 14000; };
-	class mas_Stinger   							{ quality = 2; price = 35000; };
+    class mas_PG7V   								{ quality = 3; price = 12000; };
+    class mas_OG7   								{ quality = 3; price = 10000; };
+    class mas_PG7L   								{ quality = 3; price = 14000; };
+	class mas_PG7VR    							    { quality = 3; price = 15000; };
+	class mas_TBG7V   								{ quality = 3; price = 14000; };
+	class mas_Stinger   							{ quality = 3; price = 35000; };
 
     ///////////////////////////////////////////////////////////////////////////////
     // Backpacks
@@ -7448,6 +7448,7 @@ class Glasses
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
+			"LMG_03_F",
 			"arifle_MX_SW_Black_F",
 			"arifle_MX_SW_F",
 			"LMG_Mk200_F",
@@ -7610,25 +7611,17 @@ class Glasses
 			"Exile_Car_Hatchback_Sport_Red",
 			"Exile_Car_SUV_Red",
 			"Exile_Car_SUVXL_Black",
-			"Exile_Car_SUV_Armed_Black",
 			"Exile_Car_Offroad_Rusty1",
 			"Exile_Car_Offroad_Rusty2",
 			"Exile_Car_Offroad_Rusty3",
 			"Exile_Car_Offroad_Repair_Civillian",
-			"Exile_Car_Offroad_Armed_Guerilla01",
-			"Exile_Car_BRDM2_HQ",
-			"Exile_Car_BTR40_MG_Green",
 			"Exile_Car_BTR40_Green",
-			"Exile_Car_HMMWV_M134_Green",
-			"Exile_Car_HMMWV_M2_Green",
 			"Exile_Car_HMMWV_MEV_Green",
 			"Exile_Car_HMMWV_UNA_Green",
 			"Exile_Car_Strider",
 			"Exile_Car_Hunter",
 			"Exile_Car_Ifrit",
-			"B_MRAP_01_hmg_F",
-			"O_MRAP_02_hmg_F",
-			"I_MRAP_03_hmg_F" ,
+			//Apex cars
 			"Exile_Car_ProwlerLight",
 			"Exile_Car_ProwlerUnarmed",
 			"Exile_Car_QilinUnarmed",
@@ -7653,6 +7646,24 @@ class Glasses
 			"Exile_Car_Tempest",
 			"Exile_Car_HEMMT",
 			"Exile_Car_Ikarus_Blue"
+		};
+	};
+
+	class ArmedVehicles
+	{
+		name = "Armed Vehicles";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] = 
+		{
+			"Exile_Car_SUV_Armed_Black",
+			"Exile_Car_Offroad_Armed_Guerilla01",
+			"Exile_Car_BRDM2_HQ",
+			"Exile_Car_BTR40_MG_Green",
+			"Exile_Car_HMMWV_M134_Green",
+			"Exile_Car_HMMWV_M2_Green",
+			"B_MRAP_01_hmg_F",
+			"O_MRAP_02_hmg_F",
+			"I_MRAP_03_hmg_F"
 		};
 	};
 
@@ -7708,6 +7719,7 @@ class Glasses
 		{
 			"Exile_Plane_Cessna",
 			"Exile_Plane_AN2_Green",
+			//Apex
 			"Exile_Plane_Ceasar",
 			"Exile_Plane_BlackfishInfantry",
 			"Exile_Plane_BlackfishVehicle",
@@ -7852,7 +7864,8 @@ class CfgTraders
 		categories[] = 
 		{
 			"Cars",
-			"Trucks"
+			"Trucks",
+			"ArmedVehicles"
 		};
 	};
 
@@ -8009,11 +8022,11 @@ class CfgTrading
 	class requiredRespect 
 	{
 		Level1 = 0;
-		Level2 = 0;
-		Level3 = 0;
-		Level4 = 0;
-		Level5 = 0;
-		Level6 = 0;
+		Level2 = 10000;
+		Level3 = 25000;
+		Level4 = 50000;
+		Level5 = 75000;
+		Level6 = 100000;
 	};
 };
 class CfgVehicleCustoms
