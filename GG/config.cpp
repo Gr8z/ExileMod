@@ -2676,14 +2676,14 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// HMMWV
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Car_HMMWV_M134_Green 							{ quality = 5; price = 75000; };
-	class Exile_Car_HMMWV_M134_Desert 							{ quality = 5; price = 75000; };
-	class Exile_Car_HMMWV_M2_Green 								{ quality = 5; price = 75000; };
-	class Exile_Car_HMMWV_M2_Desert 							{ quality = 5; price = 75000; };
-	class Exile_Car_HMMWV_MEV_Green 							{ quality = 2; price = 18000; };
-	class Exile_Car_HMMWV_MEV_Desert 							{ quality = 2; price = 18000; };
-	class Exile_Car_HMMWV_UNA_Green 							{ quality = 2; price = 18000; };
-	class Exile_Car_HMMWV_UNA_Desert 							{ quality = 2; price = 18000; };
+	class Exile_Car_HMMWV_M134_Green 							{ quality = 5; price = 70000; };
+	class Exile_Car_HMMWV_M134_Desert 							{ quality = 5; price = 70000; };
+	class Exile_Car_HMMWV_M2_Green 								{ quality = 5; price = 25000; };
+	class Exile_Car_HMMWV_M2_Desert 							{ quality = 5; price = 25000; };
+	class Exile_Car_HMMWV_MEV_Green 							{ quality = 2; price = 13000; };
+	class Exile_Car_HMMWV_MEV_Desert 							{ quality = 2; price = 13000; };
+	class Exile_Car_HMMWV_UNA_Green 							{ quality = 2; price = 13000; };
+	class Exile_Car_HMMWV_UNA_Desert 							{ quality = 2; price = 13000; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Tempest
