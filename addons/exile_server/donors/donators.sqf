@@ -43,6 +43,7 @@ Engineer1 = [
 Engineer2 = [
 	"76561198059890709", // NarstyNate (OD-2016-06-16) #13919
 	"76561198082227396", // Shootin Putin (OD-2016-07-07) #14102
+	"76561198013727461", // Medaglia (OD-2016-07-12) #14136
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Engineer2";
@@ -60,6 +61,7 @@ Engineer3 = [
 	"76561197969022250", // fbj (OD-2016-06-13) #13900
 	"76561197972037463", // evan (OD-2016-07-06) #14099 
 	"76561198145289881", // Rook9 (OD-2016-07-06) #14100
+	"76561198066067824", // [BHJ] General187 (OD-2016-07-12) #14131
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Engineer3";
@@ -82,6 +84,7 @@ Marksman2 = [
 	"76561198041528102", // Jay (OD-2016-05-08) #13679    
 	"76561198064823672", // Mr Deadly Aim (OD-2016-05-15) #13735    
 	"76561198282309996", // Blake (OD-2016-05-24) #13796    
+	"76561198168821750", // Stitch (OD-2016-07-12) #14134    
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Marksman2";
