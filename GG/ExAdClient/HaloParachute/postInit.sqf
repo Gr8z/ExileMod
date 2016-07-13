@@ -27,6 +27,11 @@ if(isNil "ExAd_HALOPARACHUTE_USE_KEY_ACTIONS")then{ExAd_HALOPARACHUTE_USE_KEY_AC
 if(isNil "ExAd_ACTION_PARACHUTE_HEIGHT")then{ExAd_ACTION_PARACHUTE_HEIGHT = 10;};
 if(isNil "ExAd_ACTION_EJECT_HEIGHT")then{ExAd_ACTION_EJECT_HEIGHT = 0;};
 
+["STR_ExAd_HALOPARACHUTE_ACTIONS_HALO", "Halo Jump"] call ExAd_fnc_localize;
+["STR_ExAd_HALOPARACHUTE_ACTIONS_PARACHUTE", "Open Parachute"] call ExAd_fnc_localize;
+["STR_ExAd_HALOPARACHUTE_ACTIONS_DETACH", "Open Parachute"] call ExAd_fnc_localize;
+["STR_ExAd_HALOPARACHUTE_INFO_DETACH", "You can eject from parachute with: Alt Shift x"] call ExAd_fnc_localize;
+
 [] spawn {
 	while {true} do {
 		waitUntil{!isNil "ExileClientLoadedIn"};
