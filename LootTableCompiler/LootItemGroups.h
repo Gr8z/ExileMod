@@ -669,7 +669,6 @@
 20, Binocular
 40, Exile_Item_Heatpack
 35, ItemMap
-2, Exile_Item_MobilePhone
 
 > CivilianClothing
 6, U_C_Poor_1
@@ -1589,7 +1588,10 @@
 
 > Magazine03
 100, Exile_Item_Magazine03
-100, Exile_Item_Magazine04
+50, Exile_Item_Magazine04
+
+> Phone
+100, Exile_Item_MobilePhone
 
 > Unused
 3, Exile_Item_CordlessScrewdriver

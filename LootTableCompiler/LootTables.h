@@ -193,3 +193,4 @@
 4, MedicalItems
 1, Explosives
 4, EpicWeapons
+0.05, Phone
