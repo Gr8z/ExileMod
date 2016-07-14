@@ -3810,7 +3810,7 @@ class CfgExileCustomCode
 	ExileClient_gui_xm8_show = "GG\ExAdClient\XM8\CustomCode\ExileClient_gui_xm8_show.sqf";
 	ExileClient_object_item_construct = "GG\override\gg_object_item_construct.sqf";
 	ExileClient_gui_xm8_slide_server_onOpen = "GG\override\gg_gui_xm8_slide_server_onOpen.sqf";
-	ExileClient_object_player_bambiStateBegin =	"GG\overrides\gg_object_player_bambiStateBegin.sqf";
+	ExileClient_object_player_bambiStateBegin =	"GG\override\gg_object_player_bambiStateBegin.sqf";
 	ExileClient_object_player_thread_safeZone = "GG\SecureSafezones\compiles\GG_safeZone.sqf";
     ExileClient_object_player_event_onEnterSafezone = "GG\SecureSafezones\compiles\GG_onEnterSafezone.sqf";
     ExileClient_object_player_event_onLeaveSafezone = "GG\SecureSafezones\compiles\GG_onLeaveSafezone.sqf";
