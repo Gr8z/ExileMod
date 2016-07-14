@@ -4069,7 +4069,7 @@ class CfgExileEnvironment
 	{
 		// A list of {position, radius} where building is not allowed at all
 		nonConstructionZones[] = {
-			{{8347.18,5990.92,291.991}, 1000};
+			//{{8347.18,5990.92,291.991}, 1000};
 			};
 
 
