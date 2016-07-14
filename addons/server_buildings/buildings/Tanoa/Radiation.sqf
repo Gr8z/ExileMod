@@ -288,5 +288,5 @@ private _objects = [
 	    _airportVehicle allowDamage false;
 	}
 	forEach _airportVehicles;
-
-};*/
+*/
+};
