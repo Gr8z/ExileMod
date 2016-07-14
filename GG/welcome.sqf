@@ -9,7 +9,7 @@
                 default{worldName};
         };
         /* GR8 */
-        [[format["Welcome %2, to [GG] Ghostz Gamerz Exile %1", _worldName, profileNameSteam],"","","Open XM8 Apps for Info and Tools","","","","",""," ","","","",""], -.5, .85] call BIS_fnc_typeText;
+        [[format["Welcome %2, to [GG] Ghostz Gamerz Exile %1", _worldName, profileNameSteam],"","","Open your XM8 for useful info and tools","","","","",""," ","","","",""], -.5, .85] call BIS_fnc_typeText;
         //sleep 2;
         [["Visit Us At:","www.GHOSTZGAMERZ.com","For Rules","Forums","and Donor Perks","",""], .5, .85] call BIS_fnc_typeText;
         /* GR8 */
