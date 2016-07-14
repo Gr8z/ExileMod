@@ -5,7 +5,7 @@
                 case "altis"             :{"Altis"};
                 case "bornholm"             :{"Bornholm"};
                 case "chernarus"             :{"Chernarus"};
-                case "panthera3"             :{"Panthera"};
+                case "tanoa"             :{"Tanoa"};
                 default{worldName};
         };
         /* GR8 */
