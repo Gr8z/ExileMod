@@ -250,6 +250,7 @@ Soldier3 = [
 	"76561197972037463", // *[MA]* Get Smashed (EXP-2016-07-19) #13937  
 	"76561198126852115", // Ferg (OD-2016-06-19) #13941
 	"76561198194014225", // [BHJ]Raul (OD-2016-06-20) #13945
+	"76561198107690563", // [3-C] Daquan (OD-2016-07-13) #14138 
 	// Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Soldier3";
