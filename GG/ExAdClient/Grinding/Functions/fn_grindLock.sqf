@@ -65,12 +65,12 @@ while{(ExAd_GRINDING_OBJECT == ExileClientInteractionObject) && ExAd_GRINDING}do
 	
 	if(random[0,50,100] < 1)exitWith{
 		player removeItem "Exile_Item_Grinder";
-		["ErrorTitleAndText", ["ExAd - Grinding", STR_ExAd_GRINDING_NOTI_BROKE]] call ExileClient_gui_toaster_addTemplateToast;
+		["ErrorTitleAndText", ["Grinding", STR_ExAd_GRINDING_NOTI_BROKE]] call ExileClient_gui_toaster_addTemplateToast;
 		false
 	};
 	
 	if!("Exile_Magazine_Battery" in (magazines player))exitWith{
-		["ErrorTitleAndText", ["ExAd - Grinding", STR_ExAd_GRINDING_NOTI_EMPTY_BAT]] call ExileClient_gui_toaster_addTemplateToast;
+		["ErrorTitleAndText", ["Grinding", STR_ExAd_GRINDING_NOTI_EMPTY_BAT]] call ExileClient_gui_toaster_addTemplateToast;
 		false
 	};
 	
@@ -78,14 +78,14 @@ while{(ExAd_GRINDING_OBJECT == ExileClientInteractionObject) && ExAd_GRINDING}do
 		player removeItem "Exile_Magazine_Battery";
 		
 		["grindProgress", [netId ExAd_GRINDING_OBJECT]] call ExAd_fnc_serverDispatch;
-		["SuccessTitleAndText", ["ExAd - Grinding", STR_ExAd_GRINDING_NOTI_PROGRESS]] call ExileClient_gui_toaster_addTemplateToast;
+		["SuccessTitleAndText", ["Grinding", STR_ExAd_GRINDING_NOTI_PROGRESS]] call ExileClient_gui_toaster_addTemplateToast;
 		
 		player playActionNow "medicStart";
 	};
 	
 	if(ExAd_GRINDING_OBJECT getVariable ["ExAd_Grinding_progress", 0] > ExAd_GRINDING_OBJECT_MAX)exitWith{
 		UISleep 2;
-		["SuccessTitleAndText", ["ExAd - Grinding", STR_ExAd_GRINDING_NOTI_FINISHED]] call ExileClient_gui_toaster_addTemplateToast;
+		["SuccessTitleAndText", ["Grinding", STR_ExAd_GRINDING_NOTI_FINISHED]] call ExileClient_gui_toaster_addTemplateToast;
 		["grindProgress", [netId ExAd_GRINDING_OBJECT]] call ExAd_fnc_serverDispatch;
 	};
 	_ticker = _ticker + 1;

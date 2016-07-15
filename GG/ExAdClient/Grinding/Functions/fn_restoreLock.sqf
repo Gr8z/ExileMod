@@ -24,7 +24,7 @@ player playActionNow "medic";
 
 UISleep 5;
 player removeItem "Exile_Item_Codelock";
-["SuccessTitleAndText", ["ExAd - Grinding", STR_ExAd_GRINDING_NOTI_RESTORED]] call ExileClient_gui_toaster_addTemplateToast;
+["SuccessTitleAndText", ["Grinding", STR_ExAd_GRINDING_NOTI_RESTORED]] call ExileClient_gui_toaster_addTemplateToast;
 
 ["restoreLock", [netId _object]] call ExAd_fnc_serverDispatch;
 

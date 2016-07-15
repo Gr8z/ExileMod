@@ -23,6 +23,6 @@ try
 }
 catch
 {
-	["ErrorTitleAndText", ["ExAd - Virtual Garage", _exception]] call ExileClient_gui_toaster_addTemplateToast;
+	["ErrorTitleAndText", ["Virtual Garage", _exception]] call ExileClient_gui_toaster_addTemplateToast;
 	["extraApps", 1] call ExileClient_gui_xm8_slide
 }
