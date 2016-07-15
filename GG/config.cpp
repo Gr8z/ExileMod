@@ -165,7 +165,7 @@ class BreachingChargeMetal: Exile_AbstractCraftingRecipe
 	components[] = 
 	{
 		{1, "Exile_Item_DuctTape"},
-		{1, "SatchelCharge_Remote_Mag"}
+		{2, "SatchelCharge_Remote_Mag"}
 	};
 };
 
@@ -184,7 +184,7 @@ class BreachingChargeWood: Exile_AbstractCraftingRecipe
 	components[] = 
 	{
 		{1, "Exile_Item_DuctTape"},
-		{1, "DemoCharge_Remote_Mag"}
+		{2, "DemoCharge_Remote_Mag"}
 	};
 };
 
