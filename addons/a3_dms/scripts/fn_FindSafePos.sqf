@@ -18,7 +18,7 @@
 		_throttleParams				// BOOLEAN: Whether or not some of the distance values should be throttled on repeated attempts.
 	] call DMS_fnc_findSafePos;
 */
-#define MAX_ATTEMPTS 5000
+#define MAX_ATTEMPTS 1500
 
 params
 [
