@@ -7244,6 +7244,8 @@ class Glasses
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
+			"1Rnd_HE_Grenade_shell",
+			"3Rnd_HE_Grenade_shell",
 			"100Rnd_65x39_caseless_mag",
 			"100Rnd_65x39_caseless_mag_Tracer",
 			"10Rnd_127x54_Mag",
