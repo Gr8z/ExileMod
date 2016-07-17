@@ -7,5 +7,5 @@ _spawnDir = (getDir player) -90;
 player unlinkItem "ItemRadio";
 _veh = createVehicle["Exile_Bike_QuadBike_Black", _spawnPos , [] ,0 , "NONE"];
 _veh setDir _spawnDir;
-["Success", ["Quadbike Deployed! Radio removed!"]] call ExileClient_gui_notification_event_addNotification;
+["SuccessTitleAndText", ["Quadbike Deployed! Radio removed!"]] call ExileClient_gui_toaster_addTemplateToast;
 _veh addEventHandler ["getin", "'down' cutText ['WARNING: Deployed Quadbikes do not save through restarts','PLAIN DOWN'];"];
