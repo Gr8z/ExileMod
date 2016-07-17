@@ -3776,7 +3776,7 @@ class CfgExileArsenal
 
 class CfgXM8
 {
-	extraApps[] = {"ExAd_VG","ExAd_Info"};
+	extraApps[] = {"ExAd_VG","ExAd_Info","GG_Quadbike"};
 	
 	class ExAd_VG 
 	{
@@ -3795,6 +3795,15 @@ class CfgXM8
 		onLoad = "GG\ExAdClient\XM8\Apps\Info\onLoad.sqf";
 		onOpen = "GG\ExAdClient\XM8\Apps\Info\onOpen.sqf";
 		onClose = "GG\ExAdClient\XM8\Apps\Info\onClose.sqf";
+	};
+	class GG_Quadbike
+	{
+		title = "Spawn Quadbike";
+		controlID = 50200;					//IDC:50100 -> 50102 || These need to be unique and out of range from each other
+		logo = "GG\ExAdClient\XM8\Apps\Quadbike\quadbike.paa";
+		onLoad = "";
+		onOpen = "GG\ExAdClient\XM8\Apps\Quadbike\spawn_bike.sqf";
+		onClose = "";
 	};
 }; 
 
