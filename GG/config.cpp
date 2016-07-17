@@ -2877,6 +2877,7 @@ class CfgExileArsenal
     class 20Rnd_mas_762x51_Stanag    				{ quality = 1; price = 300; };
     class 20Rnd_mas_762x51sd_Stanag    				{ quality = 1; price = 300; };
     class 20Rnd_mas_762x51_T_Stanag    				{ quality = 1; price = 300; };
+	class 30Rnd_mas_762x39sd_mag	   				{ quality = 1; price = 300; };
     class 150Rnd_mas_556x45_Stanag    				{ quality = 1; price = 350; };
     class 150Rnd_mas_556x45_T_Stanag    			{ quality = 1; price = 350; };
     class 30Rnd_mas_9x21_Stanag    					{ quality = 1; price = 100; };
@@ -6040,6 +6041,7 @@ class CfgTraderCategories
 			"71Rnd_mas_762x25_mag",
 			//AK74M/AKS74/AKS74U/AK74/AK12/AKMS/AKM/Zastava M70 ammo
 			"30Rnd_mas_545x39_mag",
+			"30Rnd_mas_762x39sd_mag",
 			"30Rnd_mas_545x39sd_mag",		//SD
 			"30Rnd_mas_545x39_T_mag",		//tracer
 			//Bizon ammo
