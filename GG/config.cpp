@@ -3801,7 +3801,7 @@ class CfgXM8
 		title = "Spawn Quadbike";
 		controlID = 50200;					//IDC:50100 -> 50102 || These need to be unique and out of range from each other
 		logo = "GG\ExAdClient\XM8\Apps\Quadbike\quadbike.paa";
-		onLoad = "";
+		onLoad = "GG\ExAdClient\XM8\Apps\Quadbike\onload.sqf";
 		onOpen = "GG\ExAdClient\XM8\Apps\Quadbike\spawn_bike.sqf";
 		onClose = "";
 	};
