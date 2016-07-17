@@ -6830,7 +6830,7 @@ class CfgSettings
 		 */
 		spawnZoneVehicles[] =
 		{
-			{5, "Exile_Bike_QuadBike_White"}
+			{2, "Exile_Bike_QuadBike_White"}
 		};
 	};
 
@@ -6845,7 +6845,7 @@ class CfgSettings
 		* smaller the number more vehicles,
 		* you get the point
 		*/
-		vehiclesGridSize = 2200;
+		vehiclesGridSize = 1750;
 
 		/**
 		* Vehicle ammount per grid
@@ -6884,15 +6884,7 @@ class CfgSettings
 		// Stuff to spawn on roads
 		ground[] = 
 		{
-			"Exile_Bike_QuadBike_Black",
 			"Exile_Bike_QuadBike_Blue",
-			"Exile_Bike_QuadBike_Red",
-			"Exile_Bike_QuadBike_White",
-			"Exile_Bike_QuadBike_Nato",
-			"Exile_Bike_QuadBike_Csat",
-			"Exile_Bike_QuadBike_Fia",
-			"Exile_Bike_QuadBike_Guerilla01",
-			"Exile_Bike_QuadBike_Guerilla02",
 			"Exile_Car_Volha_Blue",
 			"Exile_Car_Volha_White",
 			"Exile_Car_Lada_Green",
