@@ -1249,32 +1249,6 @@ class Laserdesignator: Exile_AbstractCraftingRecipe
         {1, "Exile_Item_ThermalScannerPro"}
     };
 };
-class SpillDirtyWater: Exile_AbstractCraftingRecipe
-{
-	name = "Empty Dirty Water";
-	pictureItem = "Exile_Item_PlasticBottleEmpty";
-	returnedItems[] =
-	{
-		{1, "Exile_Item_PlasticBottleEmpty"}
-	};
-	components[] =
-	{
-		{1, "Exile_Item_PlasticBottleDirtyWater"}
-	};
-};
-class SpillSaltWater: Exile_AbstractCraftingRecipe
-{
-	name = "Empty Salt Water";
-	pictureItem = "Exile_Item_PlasticBottleEmpty";
-	returnedItems[] =
-	{
-		{1, "Exile_Item_PlasticBottleEmpty"}
-	};
-	components[] =
-	{
-		{1, "Exile_Item_PlasticBottleSaltWater"}
-	};
-};
 };
 class CfgExileArsenal
 {
