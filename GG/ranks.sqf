@@ -577,5 +577,6 @@ switch (true) do
     //  "Your rank is Inmate";
     _rank = "Inmate";  
      [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,2500-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
+	 player linkItem "ItemMap";
     };
 };
