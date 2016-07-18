@@ -29,8 +29,8 @@ class Mission
 		day=24;
 		hour=12;
 		minute=0;
-		startFogDecay=0.013;
-		forecastFogDecay=0.013;
+		startFogDecay=0;
+		forecastFogDecay=0;
 	};
 	class Groups
 	{
@@ -1468,8 +1468,8 @@ class Intro
 		day=24;
 		hour=12;
 		minute=0;
-		startFogDecay=0.013;
-		forecastFogDecay=0.013;
+		startFogDecay=0;
+		forecastFogDecay=0;
 	};
 };
 class OutroWin
@@ -1498,8 +1498,8 @@ class OutroWin
 		day=24;
 		hour=12;
 		minute=0;
-		startFogDecay=0.013;
-		forecastFogDecay=0.013;
+		startFogDecay=0;
+		forecastFogDecay=0;
 	};
 };
 class OutroLoose
@@ -1528,7 +1528,7 @@ class OutroLoose
 		day=24;
 		hour=12;
 		minute=0;
-		startFogDecay=0.013;
-		forecastFogDecay=0.013;
+		startFogDecay=0;
+		forecastFogDecay=0;
 	};
 };

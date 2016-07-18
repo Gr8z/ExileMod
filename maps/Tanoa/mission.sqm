@@ -67,10 +67,10 @@ class Mission
 		day = 24;
 		hour = 12;
 		minute = 0;
-		startFogBase = 5.0;
-		forecastFogBase = 5.0;
-		startFogDecay = 0.014;
-		forecastFogDecay = 0.014;
+		startFogBase = 0;
+		forecastFogBase = 0;
+		startFogDecay = 0.;
+		forecastFogDecay = 0.;
 	};
 	class Entities
 	{
