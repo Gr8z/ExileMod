@@ -179,12 +179,15 @@
 > Radiation
 10, MilitaryBackpacks
 10, MilitaryHeadgear
+20, Food
+20, Drinks
+10, Trash
 5, Ghillies
 5, DLCGhillies
-30, Snipers
+20, Snipers
 2, SniperAmmo
 2, SniperAttachments
-30, DLCRifles
+20, DLCRifles
 2, DLCAmmo
 2, DLCOptics
 2, DLCSupressor
@@ -193,4 +196,4 @@
 4, MedicalItems
 1, Explosives
 4, EpicWeapons
-0.05, Phone
+0.1, Phone
