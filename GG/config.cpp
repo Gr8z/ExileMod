@@ -1232,61 +1232,7 @@ class CraftPopTabs: Exile_AbstractCraftingRecipe
 		{1, "Exile_Item_Magazine03"},
 		{1, "Exile_Item_Magazine04"}
 	};
-};
-class Laserdesignator: Exile_AbstractCraftingRecipe
-{
-    name = "Craft Laserdesignator";
-    pictureItem = "Laserdesignator";
-    requiresFire = 1;
-    returnedItems[] =
-    {
-        {1, "Laserdesignator"}
-    };
-    components[] =
-    {
-        {2, "Exile_Item_LightBulb"},
-        {1, "Exile_Item_JunkMetal"},
-        {1, "Exile_Item_ThermalScannerPro"}
-    };
-};
-class SpillDirtyWater: Exile_AbstractCraftingRecipe
-{
-	name = "Empty Dirty Water";
-	pictureItem = "Exile_Item_PlasticBottleEmpty";
-	returnedItems[] =
-	{
-		{1, "Exile_Item_PlasticBottleEmpty"}
-	};
-	components[] =
-	{
-		{1, "Exile_Item_PlasticBottleDirtyWater"}
-	};
-};
-class SpillSaltWater: Exile_AbstractCraftingRecipe
-{
-	name = "Empty Salt Water";
-	pictureItem = "Exile_Item_PlasticBottleEmpty";
-	returnedItems[] =
-	{
-		{1, "Exile_Item_PlasticBottleEmpty"}
-	};
-	components[] =
-	{
-		{1, "Exile_Item_PlasticBottleSaltWater"}
-	};
-};
-class CraftBandage: Exile_AbstractCraftingRecipe
-{
-	name = "Craft Bandage";
-	pictureItem = "Exile_Item_Bandage";
-	returnedItems[] =
-	{
-		{1, "Exile_Item_Bandage"}
-	};
-	components[] = 
-	{
-		{1, "Exile_Item_ToiletPaper"}
-	};
+	category = "Craftables";
 };
 };
 class CfgExileArsenal
