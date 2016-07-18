@@ -1275,19 +1275,6 @@ class SpillSaltWater: Exile_AbstractCraftingRecipe
 		{1, "Exile_Item_PlasticBottleSaltWater"}
 	};
 };
-class CraftBandage: Exile_AbstractCraftingRecipe
-{
-	name = "Craft Bandage";
-	pictureItem = "Exile_Item_Bandage";
-	returnedItems[] =
-	{
-		{1, "Exile_Item_Bandage"}
-	};
-	components[] = 
-	{
-		{1, "Exile_Item_ToiletPaper"}
-	};
-};
 };
 class CfgExileArsenal
 {
