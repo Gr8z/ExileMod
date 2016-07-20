@@ -40,6 +40,7 @@ Engineer2 = [
 	"76561198059890709", // NarstyNate (OD-2016-06-16) #13919
 	"76561198082227396", // Shootin Putin (OD-2016-07-07) #14102
 	"76561198013727461", // Medaglia (OD-2016-07-12) #14136
+	"76561198041124253", // Alpha (OD-2016-07-19) #14163 
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Engineer2";
@@ -196,6 +197,7 @@ Scout3 = [
 	"76561198042873245", // Whisper (OD-2016-07-11) #14121
 	"76561198150490375", // Ramit Inmah Ashol (OD-2016-03-22) #13346
 	"76561198016316076", // Whacko (OD-2016-07-18) #14150
+	"76561198202597157", // BillyR192 (OD-2016-07-18) #14154
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout3";
