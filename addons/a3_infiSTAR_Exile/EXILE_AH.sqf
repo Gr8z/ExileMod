@@ -3500,7 +3500,7 @@ _fnc_server_handle_mpmessage = {
 			_serverOwner = owner _victim;
 			
 			moveOut _victim;
-			_victim action ['eject', (vehicle _victim)];
+			//_victim action ['eject', (vehicle _victim)];
 			['',{ExileClientIsHandcuffed = true;},_clientOwner,false] call FN_infiSTAR_S;
 			_victim setVariable['ExileIsHandcuffed', true, true];
 			_victim setVariable['ExileHostageTakernetId', netId _victim];
@@ -4413,7 +4413,7 @@ _fnc_AdminReqReal = {
 					throw 'Cannot double handcuff someone!'; 
 				};
 				moveOut _victim;
-				_victim action ['eject', (vehicle _victim)];
+				//_victim action ['eject', (vehicle _victim)];
 				_victim setVariable['ExileIsHandcuffed', true, true];
 				_victim setVariable['ExileHostageTakernetId', netId _hostageTaker];
 				_victim setVariable['ExileHostageTakerUID', getPlayerUID _hostageTaker];

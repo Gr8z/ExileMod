@@ -378,6 +378,7 @@ allowedIDDs[] =
 	6666,	// Paintshop
 	0711,	// Advanced Banking
 	0720,	// Virtual Garage
+	101,	// hue hue
 	5501,5502,5503,5504,5505,5506,5507,	// BRAma Cookbook
 	-1339,-1340,	// custom infiSTAR dialogs (some editor & a private chat menu)
 	/* main idd - never delete it */
