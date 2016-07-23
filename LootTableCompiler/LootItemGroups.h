@@ -1524,7 +1524,6 @@
 
 > IndustrialItems
 0.5, Exile_Item_ThermalScannerPro
-0.2, Exile_Item_Knife
 3, Exile_Item_Cement
 3, Exile_Item_FloodLightKit
 3, Exile_Item_PortableGeneratorKit
@@ -1590,8 +1589,9 @@
 100, Exile_Item_Magazine03
 50, Exile_Item_Magazine04
 
-> Phone
+> Phoneknife
 100, Exile_Item_MobilePhone
+100, Exile_Item_Knife
 
 > Unused
 3, Exile_Item_CordlessScrewdriver

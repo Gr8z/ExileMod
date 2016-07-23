@@ -196,4 +196,4 @@
 4, MedicalItems
 1, Explosives
 4, EpicWeapons
-0.1, Phone
+0.7, Phoneknife
