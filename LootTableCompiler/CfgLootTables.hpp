@@ -4518,7 +4518,7 @@ class CfgLootTables
 			{9635.07325572434, "B_mas_m_Bergen_acr_g"}, // 0.08%
 			{9643.5391293644, "B_mas_m_Bergen_acr"}, // 0.08%
 			{9651.18195978608, "muzzle_snds_B"}, // 0.08%
-			{9657.98005631905, "Exile_Item_MobilePhone"}, // 0.07%
+			{9657.98005631905, "Exile_Item_MobilePhone"}, // 0.09%
 			{9664.4544339695, "150Rnd_93x64_Mag"}, // 0.06%
 			{9670.92881161995, "130Rnd_338_Mag"}, // 0.06%
 			{9677.30202711961, "H_HelmetB_paint"}, // 0.06%
