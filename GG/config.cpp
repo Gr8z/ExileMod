@@ -3790,7 +3790,7 @@ class CfgExileArsenal
 
 class CfgXM8
 {
-	extraApps[] = {"ExAd_VG","ExAd_Info","GG_Quadbike"};
+	extraApps[] = {"ExAd_VG","ExAd_Info","ExAd_CHVD","ExAd_Journal","GG_Quadbike"};
 	
 	class ExAd_VG 
 	{
@@ -3809,18 +3809,37 @@ class CfgXM8
 		onLoad = "GG\ExAdClient\XM8\Apps\Info\onLoad.sqf";
 		onOpen = "GG\ExAdClient\XM8\Apps\Info\onOpen.sqf";
 		onClose = "GG\ExAdClient\XM8\Apps\Info\onClose.sqf";
+	};	
+	class ExAd_CHVD 
+	{
+		title = "View Distance";
+		controlID = 50200;					//IDC:50200 -> 50250 || These need to be unique and out of range from each other
+		config = "GG\ExadClient\XM8\Apps\CHVD\config.sqf";
+		logo = "GG\ExadClient\XM8\Apps\CHVD\Icon_CHVD.paa";
+		onLoad = "GG\ExAdClient\XM8\Apps\CHVD\onLoad.sqf";
+		onOpen = "GG\ExAdClient\XM8\Apps\CHVD\onOpen.sqf";
+		onClose = "GG\ExAdClient\XM8\Apps\CHVD\onClose.sqf";
+	};
+	class ExAd_Journal 
+	{
+		title = "Journal";
+		controlID = 50300;					//IDC:50300 -> 50305 || These need to be unique and out of range from each other
+		config = "GG\ExadClient\XM8\Apps\Journal\config.sqf";
+		logo = "GG\ExadClient\XM8\Apps\Journal\Icon_Journal.paa";
+		onLoad = "GG\ExAdClient\XM8\Apps\Journal\onLoad.sqf";
+		onOpen = "GG\ExAdClient\XM8\Apps\Journal\onOpen.sqf";
+		onClose = "GG\ExAdClient\XM8\Apps\Journal\onClose.sqf";
 	};
 	class GG_Quadbike
 	{
 		title = "Spawn Quadbike";
-		controlID = 50200;					//IDC:50100 -> 50102 || These need to be unique and out of range from each other
+		controlID = 50400;					//IDC:50100 -> 50102 || These need to be unique and out of range from each other
 		logo = "GG\ExAdClient\XM8\Apps\Quadbike\quadbike.paa";
 		onLoad = "GG\ExAdClient\XM8\Apps\Quadbike\onload.sqf";
 		onOpen = "GG\ExAdClient\XM8\Apps\Quadbike\spawn_bike.sqf";
 		onClose = "";
-	};
-}; 
-
+	};	
+};
 class CfgExileCustomCode 
 {
 	/*
