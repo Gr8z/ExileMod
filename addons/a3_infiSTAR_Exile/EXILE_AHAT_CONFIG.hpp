@@ -127,12 +127,12 @@ adminUIDandAccess[] =
 {
 	{
 
-		{"76561198021389971", // thirdhero
-		 "76561198137100220", // Deadskin
+		{"76561198137100220", // Deadskin
 		 "76561197978528230", // Dark
 		 "76561198115492831", // BigEgg
-		 "76561198056028211",  // Nasty
+		 "76561198056028211", // Nasty
 		 "76561198133936962", // Wrice4
+		 "76561198021389971", // thirdhero
 		 //Add UID's Above - Don't forget the comma!
 		"0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
@@ -192,6 +192,7 @@ adminUIDandAccess[] =
 	{
 		{
 		"76561198060389676", // Powerwolf
+		"76561198090941099", // Josh
 		"0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
 			"spectating","AdminConsole","Delete Vehicle","ShowGear","Show Server Information",
