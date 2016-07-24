@@ -1356,7 +1356,6 @@ player addEventHandler ['Take', { _this call fn_onPlayerTake }];
 						{
 							if(_floor)then
 							{
-								cutText ['Do not glitch through floors!', 'PLAIN'];
 								if(time > _floorGlitchReported)then
 								{
 									_floorGlitchReported = time + 3;
@@ -1366,7 +1365,6 @@ player addEventHandler ['Take', { _this call fn_onPlayerTake }];
 							}
 							else
 							{
-								cutText ['Do not glitch through walls!', 'PLAIN'];
 								if(time > _wallGlitchReported)then
 								{
 									_wallGlitchReported = time + 3;
@@ -2980,7 +2978,6 @@ fnc_infiSTAR_stopvaultglitch = compileFinal ""
 		{
 			if(isNil'vaultblockcounter')then{vaultblockcounter=0;};
 			vaultblockcounter = vaultblockcounter + 1;
-			cutText [format['<infiSTAR.de>%1: Blocked VAULT - Exile Basepart close #1!',vaultblockcounter],'PLAIN'];
 			true
 		};
 		
@@ -2989,7 +2986,6 @@ fnc_infiSTAR_stopvaultglitch = compileFinal ""
 		{
 			if(isNil'vaultblockcounter')then{vaultblockcounter=0;};
 			vaultblockcounter = vaultblockcounter + 1;
-			cutText [format['<infiSTAR.de>%1: Blocked VAULT - Exile Basepart close #2!',vaultblockcounter],'PLAIN'];
 			true
 		};
 		
