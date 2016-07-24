@@ -3505,7 +3505,6 @@ _fnc_server_handle_mpmessage = {
 			
 			_mapgridpos = format['%1:%2',(mapGridPosition _victim) select [0,3],(mapGridPosition _victim) select [3,3]];
 			_msg = format['Wallglitcher %1 restrained for 2 minutes at mapGridPosition %2',name _victim,_mapgridpos];
-			[_msg,-2] call fnc_serverMassMessage;
 			[format['<infiSTAR.de> %1',_msg],{systemChat _this},-2,false] call FN_infiSTAR_S;
 			
 			if(isNull _victim)exitWith{};
