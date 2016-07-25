@@ -6871,13 +6871,13 @@ class CfgSettings
 		* smaller the number more vehicles,
 		* you get the point
 		*/
-		vehiclesGridSize = 1750;
+		vehiclesGridSize = 4000;
 
 		/**
 		* Vehicle ammount per grid
 		* kinda self explanitory
 		*/
-		vehiclesGridAmount = 2;
+		vehiclesGridAmount = 1;
 
 		/**
 		* Creates global markers for vehicle spawn tweeking,
