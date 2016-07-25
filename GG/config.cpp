@@ -4295,7 +4295,7 @@ class CfgExileLootSettings
 	 * the garbage collector settings of your server
 	 * CfgSettings!
 	 */
-	lifeTime = 8;
+	lifeTime = 4;
 
 	/**
 	 * Interval in seconds when the client searches for

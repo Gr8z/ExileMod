@@ -6656,7 +6656,7 @@ class CfgSettings
 			// Loot spawned inside a building
 			class Loot 
 			{
-				lifeTime = 8;
+				lifeTime = 4;
 				interval = 1;
 			};
 
