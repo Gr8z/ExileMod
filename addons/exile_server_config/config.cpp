@@ -6871,7 +6871,7 @@ class CfgSettings
 		* smaller the number more vehicles,
 		* you get the point
 		*/
-		vehiclesGridSize = 4000;
+		vehiclesGridSize = 5000;
 
 		/**
 		* Vehicle ammount per grid
