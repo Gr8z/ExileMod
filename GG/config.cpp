@@ -4946,7 +4946,7 @@ class CfgInteractionMenus
 	class Bikes
 	{
 		targetType = 2;
-		target = "Bicycle";
+		target = "Exile_Bike_QuadBike_Black";
 
 		class Actions
 		{
@@ -4955,6 +4955,12 @@ class CfgInteractionMenus
 				title = "Flip";
 				condition = "true";
 				action = "_this call ExileClient_object_vehicle_flip";
+			};
+			class Pack: ExileAbstractAction
+			{
+				title = "Pack Quadbike";
+				condition = "true";
+				action = "deleteVehicle ExileClientInteractionObject;player linkItem 'ItemRadio';['Success',['Quadbike packed. Radio added.']] call ExileClient_gui_notification_event_addNotification;";
 			};
 		};
 	};
