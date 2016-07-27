@@ -1586,12 +1586,12 @@
 100, Exile_Item_Magazine02
 
 > Magazine03
-100, Exile_Item_Magazine03
+50, Exile_Item_Magazine03
 50, Exile_Item_Magazine04
 
 > Phoneknife
-100, Exile_Item_MobilePhone
-100, Exile_Item_Knife
+50, Exile_Item_MobilePhone
+50, Exile_Item_Knife
 
 > Unused
 3, Exile_Item_CordlessScrewdriver
