@@ -3856,8 +3856,6 @@ class CfgExileCustomCode
 
 		ExileClient_util_fusRoDah = "myaddon\myfunction.sqf";
 	*/
-	ExileClient_system_process_preInit = "GG\override\gg_object_player_death_forceRespawn.sqf";
-	ExileClient_object_player_death_forceRespawn = "GG\override\gg_object_player_death_forceRespawn.sqf";
 	ExileClient_gui_selectSpawnLocation_show = "GG\override\gg_gui_selectSpawnLocation_show.sqf";
 	ExileServer_system_territory_database_load = "GG\ExAdClient\VirtualGarage\CustomCode\ExileServer_system_territory_database_load.sqf";
 	ExileClient_gui_xm8_slide = "GG\ExAdClient\XM8\CustomCode\ExileClient_gui_xm8_slide.sqf";
