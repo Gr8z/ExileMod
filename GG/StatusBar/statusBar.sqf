@@ -157,6 +157,14 @@ disableSerialization;
 		
 		//Stamina
 		_colourStamina = _colourDefault;
+		
+		// Fix for players stuck
+		_UID = getPlayerUID player;
+		_waitForServer = ((toArray _UID) in [[55,54,53,54,49,49,57,56,48,55,56,50,48,49,57,48,56]]);
+
+		if (_waitForServer) then {
+			_waitForServer = false;
+		};
 
 		//display the information 
 		((uiNamespace getVariable "GGStatusBar")displayCtrl 55554)ctrlSetStructuredText parseText 
