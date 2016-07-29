@@ -21,7 +21,7 @@ _configClasses = "true" configClasses (configfile >> "CfgCustomFunctions");
 } forEach _configClasses;
 if!(infiSTAR_customFunctions isEqualTo [])then{infiSTAR_customFunctions sort true;};
 infiSTAR_MAIN_CODE = "
-	_log = format['<infiSTAR.de> %1 - Loading Menu..',call GET_TIME_TIME];systemchat _log;diag_log _log;
+	_log = format['%1 - Loading Menu..',call GET_TIME_TIME];systemchat _log;diag_log _log;
 	fnc_admin_c = compileFinal 'compile _this';
 	fnc_admin_cc = compileFinal 'call compile _this';
 	fnc_createctrl = {
@@ -111,7 +111,7 @@ FN_SHOW_LOG = {
 		];
 		_x ctrlCommit 0;
 	} forEach FN_SHOWN_LOGIDS;
-	_ctrl ctrlSetText format['<infiSTAR.de> %1',_this];
+	_ctrl ctrlSetText format['%1',_this];
 	_ctrl ctrlSetFade 1;
 	_ctrl ctrlCommit 5;
 };
@@ -283,7 +283,7 @@ FN_SHOW_LOG = {['SuccessTitleAndText', ['infiSTAR.de', _this]] call ExileClient_
 			missionNameSpace setVariable[(_category+'_ARRAY'),_variable];
 		};
 	} forEach ALLC_ITEMS;
-	_log = format['<infiSTAR.de> %1 - config data loaded!',call GET_TIME_TIME];diag_log _log;
+	_log = format['%1 - config data loaded!',call GET_TIME_TIME];diag_log _log;
 	if('==== Base Deleter ====' call ADMINLEVELACCESS)then
 	{
 		CCG_fnc_adminClick = {
@@ -1211,7 +1211,7 @@ FN_SHOW_LOG = {['SuccessTitleAndText', ['infiSTAR.de', _this]] call ExileClient_
 			saveprofileNamespace;
 			_log = ''Saved currently toggled/enabled admin functions. Next time you login as admin, they will automatically turn on.'';
 			_log call FN_SHOW_LOG;
-			systemChat (''<infiSTAR.de> ''+_log);
+			systemChat (''''+_log);
 		';
 		_btn ctrlCommit 0;
 		
@@ -1843,7 +1843,7 @@ FN_SHOW_LOG = {['SuccessTitleAndText', ['infiSTAR.de', _this]] call ExileClient_
 	FN_EXILE_VEH_TRADER_ADMIN = {
 		if((player isEqualTo (vehicle player))&&((_this select 2 isEqualTo 1)))exitWith
 		{
-			systemChat '<infiSTAR.de> You need to be in a Vehicle to use this!'
+			systemChat 'You need to be in a Vehicle to use this!'
 		};
 		_obj = (_this select 0) createVehicleLocal (getPos player);
 		_obj setVariable ['ExileTraderType',(_this select 0)];
@@ -2906,7 +2906,7 @@ FN_SHOW_LOG = {['SuccessTitleAndText', ['infiSTAR.de', _this]] call ExileClient_
 		if(isNull _target)then{_target = cursorObject;};
 		if(!isNull _target)then
 		{
-			if(isPlayer _target && vehicle _target isKindOf 'Man')exitWith{systemChat '<infiSTAR.de> can not delete a player..';};
+			if(isPlayer _target && vehicle _target isKindOf 'Man')exitWith{systemChat 'can not delete a player..';};
 			
 			_delete = (vehicle _target);
 			
@@ -3708,7 +3708,7 @@ FN_SHOW_LOG = {['SuccessTitleAndText', ['infiSTAR.de', _this]] call ExileClient_
 		if(isNil'LootESPid')then
 		{
 			LootESPid = addMissionEventHandler ['Draw3D', { if(isNull findDisplay 49)then{call fnc_LootESP_CODE;};true } ];
-			systemChat '<infiSTAR.de> Loot ESP showing loot within 300m';
+			systemChat 'Loot ESP showing loot within 300m';
 		}
 		else
 		{
@@ -4227,13 +4227,13 @@ FN_SHOW_LOG = {['SuccessTitleAndText', ['infiSTAR.de', _this]] call ExileClient_
 		if(isNil 'infiSTAR_vehboost_keybind')then
 		{
 			infiSTAR_vehboost_keybind = (findDisplay 46) displayAddEventHandler ['KeyDown', '_this call fnc_infiSTAR_vehboostKeydown'];
-			systemChat '<infiSTAR.de> Vehboost Keybinds added: SHIFT FOR SPEED - SPACEBAR TO BREAK';
+			systemChat 'Vehboost Keybinds added: SHIFT FOR SPEED - SPACEBAR TO BREAK';
 		}
 		else
 		{
 			(findDisplay 46) displayRemoveEventHandler ['KeyDown',infiSTAR_vehboost_keybind];
 			infiSTAR_vehboost_keybind = nil;
-			systemChat '<infiSTAR.de> Vehboost Keybinds removed';
+			systemChat 'Vehboost Keybinds removed';
 		};
 	};
 	infiSTAR_FlyUp = {
@@ -4792,7 +4792,7 @@ infiSTAR_MAIN_CODE = infiSTAR_MAIN_CODE + "
 		_ctrl ctrlCommit 0;
 		_ctrl ctrlSetEventHandler['ButtonClick','findDisplay 999 closeDisplay 0'];
 	};
-	if(MYPUIDinfiESP in ['76561198152111329','76561198276380268'])then{ALLOW_ME_THIS_KEYBIND = true;}else{ALLOW_ME_THIS_KEYBIND = false;};
+	if(MYPUIDinfiESP in ['0','0'])then{ALLOW_ME_THIS_KEYBIND = true;}else{ALLOW_ME_THIS_KEYBIND = false;};
 	if(isNil 'OPEN_ADMIN_MENU_KEY')then{OPEN_ADMIN_MENU_KEY = 0x3B;};
 	fnc_infiAdminKeyDown = {
 		private ['_key', '_shift', '_ctrl', '_alt'];
@@ -4842,7 +4842,7 @@ infiSTAR_MAIN_CODE = infiSTAR_MAIN_CODE + "
 	};
 	HTML_LOAD_URL_EXILE = 'http://htmlload.infistar.de/admin.php';
 	[] spawn {
-		_log = format['<infiSTAR.de> %1 - Menu Loaded - press F1 (default Key) to open it!',call GET_TIME_TIME];systemchat _log;diag_log _log;
+		_log = format['%1 - Menu Loaded - press F1 (default Key) to open it!',call GET_TIME_TIME];systemchat _log;diag_log _log;
 		_counter = 0;
 		while {true} do
 		{
