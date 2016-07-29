@@ -3842,26 +3842,15 @@ class CfgXM8
 };
 class CfgExileCustomCode 
 {
-	/*
-		You can overwrite every single file of our code without touching it.
-		To do that, add the function name you want to overwrite plus the 
-		path to your custom file here. If you wonder how this works, have a
-		look at our bootstrap/fn_preInit.sqf function.
-
-		Simply add the following scheme here:
-
-		<Function Name of Exile> = "<New File Name>";
-
-		Example:
-
-		ExileClient_util_fusRoDah = "myaddon\myfunction.sqf";
-	*/
-	ExileClient_gui_selectSpawnLocation_show = "GG\override\gg_gui_selectSpawnLocation_show.sqf";
-	ExileServer_system_territory_database_load = "GG\ExAdClient\VirtualGarage\CustomCode\ExileServer_system_territory_database_load.sqf";
-	ExileClient_gui_xm8_slide = "GG\ExAdClient\XM8\CustomCode\ExileClient_gui_xm8_slide.sqf";
-	ExileClient_gui_xm8_show = "GG\ExAdClient\XM8\CustomCode\ExileClient_gui_xm8_show.sqf";
-	ExileClient_object_item_construct = "GG\override\gg_object_item_construct.sqf";
-	ExileClient_gui_xm8_slide_server_onOpen = "GG\override\gg_gui_xm8_slide_server_onOpen.sqf";
+	
+	ExileServer_system_territory_database_load = 			"GG\ExAdClient\VirtualGarage\CustomCode\ExileServer_system_territory_database_load.sqf";
+	ExileClient_gui_xm8_slide = 				 			"GG\ExAdClient\XM8\CustomCode\ExileClient_gui_xm8_slide.sqf";
+	ExileClient_gui_xm8_show = 					 			"GG\ExAdClient\XM8\CustomCode\ExileClient_gui_xm8_show.sqf";
+	ExileClient_gui_selectSpawnLocation_show = 				"GG\override\GG_gui_selectSpawnLocation_show.sqf";
+	ExileClient_object_item_construct = 					"GG\override\GG_object_item_construct.sqf";
+	ExileClient_gui_xm8_slide_server_onOpen = 				"GG\override\GG_gui_xm8_slide_server_onOpen.sqf";
+	ExileClient_gui_lockerDialog_show = 					"GG\override\GG_gui_lockerDialog_show.sqf";
+	ExileClient_system_locker_network_lockerResponse = 		"GG\override\GG_system_locker_network_lockerResponse.sqf";
 };
 class CfgExileEnvironment
 {
