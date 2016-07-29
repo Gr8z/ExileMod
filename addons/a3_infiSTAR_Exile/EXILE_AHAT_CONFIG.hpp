@@ -118,8 +118,7 @@ startAsNormal[] =
 /* "hiddenSuperAdmin": These admins are seen as normal players by normal admins, their actions are not logged either (to keep an eye out on your admins) */
 hiddenSuperAdmin[] =
 {
-	"76561198078201908", // Gr8
-	"76561198150490375", // Gr8 ALT
+	"76561198204864584", // Gr8
 	"76561198153784743", // Ghost
 	"0"
 };
