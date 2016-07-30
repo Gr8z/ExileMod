@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_display","_topTextCTRL1","_topTextCTRL2","_spawnButton","_listBox","_listItemIndex","_numberOfSpawnPoints","_randNum","_randData","_randomSpawnIndex","_puid"];
+private["_display","_topTextCTRL1","_topTextCTRL2","_spawnButton","_listBox","_listItemIndex","_numberOfSpawnPoints","_randNum","_randData","_randomSpawnIndex","_puid","_title"];
 disableSerialization;
 diag_log "Selecting spawn location...";
 ExileClientSpawnLocationSelectionDone = false;
@@ -45,9 +45,16 @@ if (_numberOfSpawnPoints > 0) then
 	_randomSpawnIndex = _listBox lbAdd "Random";
 	_listBox lbSetData [_randomSpawnIndex, _randData];
 };
+_title	 = _display ctrlCreate["RscText",24005];
+_title ctrlSetPosition [1.1625,0.76,0.4375,0.08];
+_title ctrlSetBackgroundColor [0.07,0.07,0.08,1];
+_title ctrlCommit 0;
+_title ctrlEnable true;
+_title ctrlSetText "LOADOUTS";
+
 _listBox = _display ctrlCreate["RscListbox", 24004];
-_listBox ctrlSetPosition [1.08,0.764,0.556,0.545];
-_listBox ctrlSetBackgroundColor [0,0,0,0.25];
+_listBox ctrlSetPosition [1.1625,0.86,0.4375,0.28];
+_listBox ctrlSetBackgroundColor [0.07,0.07,0.08,1];
 _listBox ctrlCommit 0;
 _listBox ctrlEnable true;
 _listBox ctrlRemoveAllEventHandlers "LBDblClick";
