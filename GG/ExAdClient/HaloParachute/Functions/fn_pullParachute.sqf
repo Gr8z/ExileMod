@@ -40,7 +40,7 @@ if(ExAd_HALOPARACHUTE_SAFE_MODE)then{
 };
 
 if(ExAd_HALOPARACHUTE_USE_KEY_ACTIONS)then{
-	cutText [localize "STR_ExAd_HALOPARACHUTE_INFO_DETACH","PLAIN",2];
+	cutText ["You can eject from parachute above 100m with: ALT + SHIFT + X","PLAIN",2];
 };
 
 true
