@@ -47,7 +47,7 @@ if (_numberOfSpawnPoints > 0) then
 };
 _title	 = _display ctrlCreate["RscText",24005];
 _title ctrlSetPosition [1.1625,0.76,0.4375,0.08];
-_title ctrlSetBackgroundColor [0.07,0.07,0.08,1];
+_title ctrlSetBackgroundColor [0,0,0,1];
 _title ctrlCommit 0;
 _title ctrlEnable true;
 _title ctrlSetText "LOADOUTS";
