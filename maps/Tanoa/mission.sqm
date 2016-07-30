@@ -1581,7 +1581,7 @@ class Mission
 	        markerType = "ELLIPSE";
 	        type = "ExileTraderZone";
 	        colorName = "ColorBlack";
-	        fillName = "Border";
+	        fillName = "SolidBorder";
 	        a = 200;
 	        b = 200;
 	        drawBorder = 1;
@@ -1876,7 +1876,7 @@ class Mission
 	        markerType = "ELLIPSE";
 	        type = "ExileTraderZone";
 	        colorName = "ColorBlack";
-	        fillName = "Border";
+	        fillName = "SolidBorder";
 	        a = 200;
 	        b = 200;
 	        drawBorder = 1;
@@ -2104,7 +2104,7 @@ class Mission
 	        markerType = "ELLIPSE";
 	        type = "ExileTraderZone";
 	        colorName = "ColorBlack";
-	        fillName = "Border";
+	        fillName = "SolidBorder";
 	        a = 200;
 	        b = 200;
 	        drawBorder = 1;
