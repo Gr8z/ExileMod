@@ -46,14 +46,14 @@ if (_numberOfSpawnPoints > 0) then
 	_listBox lbSetData [_randomSpawnIndex, _randData];
 };
 _title	 = _display ctrlCreate["RscText",24005];
-_title ctrlSetPosition [1.1625,0.76,0.556,0.08];
+_title ctrlSetPosition [1.1625,0.76,0.4375,0.08];
 _title ctrlSetBackgroundColor [0.07,0.07,0.08,1];
 _title ctrlCommit 0;
 _title ctrlEnable true;
 _title ctrlSetText "LOADOUTS";
 
 _listBox = _display ctrlCreate["RscListbox", 24004];
-_listBox ctrlSetPosition [1.1625,0.86,0.556,0.28];
+_listBox ctrlSetPosition [1.1625,0.86,0.4375,0.28];
 _listBox ctrlSetBackgroundColor [0.07,0.07,0.08,1];
 _listBox ctrlCommit 0;
 _listBox ctrlEnable true;
