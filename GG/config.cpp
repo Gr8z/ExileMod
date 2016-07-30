@@ -4948,7 +4948,7 @@ class CfgInteractionMenus
 			{
 				title = "Pack Quadbike";
 				condition = "true";
-				action = "deleteVehicle ExileClientInteractionObject;player linkItem 'ItemRadio';['Success',['Quadbike packed. Radio added.']] call ExileClient_gui_notification_event_addNotification;";
+				action = "deleteVehicle ExileClientInteractionObject;player linkItem 'ItemRadio';['SuccessTitleAndText', ['Quadbike Packed. Radio Added.']] call ExileClient_gui_toaster_addTemplateToast;";
 			};
 		};
 	};
