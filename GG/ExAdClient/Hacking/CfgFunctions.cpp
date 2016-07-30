@@ -20,8 +20,6 @@
 class Hacking
 {
 	file = "GG\ExAdClient\Hacking\Functions";
-	class canHackSafe {};
-	class canHackVG {};
 	class startHack {};
 	class stopHack {};
 	class postInitHacking {file = "GG\ExAdClient\Hacking\postInit.sqf"; postInit = 1;};

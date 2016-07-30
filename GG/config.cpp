@@ -4670,7 +4670,7 @@ class CfgInteractionMenus
 			class HackSafe : ExileAbstractAction
 			{
 				title = "Hack Safe";
-				condition = "(('Exile_Item_Laptop' in (magazines player)) && ((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo -1) && (({alive _x}count playableUnits) >= ExAd_HACKING_MIN_PLAYERS_ONLINE))";
+				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo -1)";
 				action = "_this spawn ExAd_fnc_startHack";
 			};
 		};
@@ -4836,14 +4836,6 @@ class CfgInteractionMenus
 
 		class Actions
 		{
-			/*
-			class Manage : ExileAbstractAction
-			{
-				title = "Manage";
-				condition = "true";
-				action = "_this call ExileClient_gui_baseManagement_event_show";
-			};
-			*/
 			class StealFlag: ExileAbstractAction
 			{
 				title = "Steal Flag";
@@ -4860,7 +4852,7 @@ class CfgInteractionMenus
 			class HackVG : ExileAbstractAction
 			{
 				title = "Hack Virtual Garage";
-				condition = "(('Exile_Item_Laptop' in (magazines player)) && ((([ExileClientInteractionObject, getPlayerUID player] call ExileClient_util_territory_getAccessLevel) select 0) < ExAd_VG_ACCESS_LEVEL) && (({alive _x}count playableUnits) >= ExAd_HACKING_MIN_PLAYERS_ONLINE))";
+				condition = "((([ExileClientInteractionObject, getPlayerUID player] call ExileClient_util_territory_getAccessLevel) select 0) < ExAd_VG_ACCESS_LEVEL))";
 				action = "_this spawn ExAd_fnc_startHack";
 			}; 
 		};
