@@ -1593,7 +1593,7 @@ class Mission
 	        dataType = "Marker";
 	        position[] = {2265.13, 0, 8596.37};
 	        name = "ExileMarker14";
-	        text = "1";
+	        text = "Trader City Ferry";
 	        type = "ExileTraderZoneIcon";
 	        id = 114;
 	        atlOffset = 0;
@@ -1619,7 +1619,7 @@ class Mission
 	        dataType = "Marker";
 	        position[] = {11670.7, 0, 4106.17};
 	        name = "ExileMarker16";
-	        text = "2";
+	        text = "Trader City Saioko";
 	        type = "ExileTraderZoneIcon";
 	        id = 116;
 	        atlOffset = 0;
@@ -1888,7 +1888,7 @@ class Mission
 	        dataType = "Marker";
 	        position[] = {12190.4, 0, 8167.03};
 	        name = "ExileMarker36";
-	        text = "3";
+	        text = "Trader City Banana";
 	        type = "ExileTraderZoneIcon";
 	        id = 136;
 	        atlOffset = 0;
@@ -2116,7 +2116,7 @@ class Mission
 	        dataType = "Marker";
 	        position[] = {7991.1, 0, 12411.6};
 	        name = "ExileMarker52";
-	        text = "4";
+	        text = "Trader City Galili";
 	        type = "ExileTraderZoneIcon";
 	        id = 152;
 	        atlOffset = 0;
