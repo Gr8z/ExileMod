@@ -1,13 +1,3 @@
-/*
-	Author: Chris(tian) "infiSTAR" Lorenzen
-	Contact: infiSTAR23@gmail.com // www.infiSTAR.de
-	
-	Copyright infiSTAR - 2011 - 2016. All rights reserved.
-	Christian (Chris) L. (infiSTAR23@gmail.com) Developer of infiSTAR
-	
-	Description:
-	Arma AntiHack & AdminTools - infiSTAR.de
-*/
 comment 'Antihack & AdminTools - Christian Lorenzen - www.infiSTAR.de';
 UPDATEEMAIL='ahmed-banna@hotmail.com';
 INFISTARVERSION='01-Jul-2016 22-39-14 - v0053';
@@ -862,10 +852,10 @@ _FN_INJECT_ON_CLIENT = {
 				(_display49 displayCtrl 122) ctrlShow false;
 			};
 			"; if(!_BRIEFING_MSG)then{ _A3AHstring = _A3AHstring + "
-				(_display49 displayCtrl 120) ctrlSetText 'infiSTAR.de AntiHack & AdminsTools - [Author: infiSTAR, Contact: infiSTAR23@gmail.com]';
+				(_display49 displayCtrl 120) ctrlSetText '[GG] Ghostz Gamerz - www.GhostzGamerz.com';
 			"; }else{ _A3AHstring = _A3AHstring + "
-				(_display49 displayCtrl 115025) ctrlSetText 'AntiHack & AdminsTools';
-				(_display49 displayCtrl 115035) ctrlSetText 'by infiSTAR.de';
+				(_display49 displayCtrl 115025) ctrlSetText 'Visit Us';
+				(_display49 displayCtrl 115035) ctrlSetText 'at ghostzgamerz.com';
 			"; }; _A3AHstring = _A3AHstring + "
 		"; }; _A3AHstring = _A3AHstring + "
 		};
@@ -2527,7 +2517,7 @@ _bigInputArray pushBack
 		if(isNil'VERSIONCHECKRESULT')then{VERSIONCHECKRESULT='';};
 		_devLog = format['infiSTAR.de AHAT %1 - 01-Jul-2016 22-39-14 - v0053 - server running: %2:214 - AdminNameTag: "+str _AdminNameTag+"',VERSIONCHECKRESULT,call _GET_TIME_TIME];diag_log _devLog;
 		"; if(!_HIDE_FROM_PLAYERS)then{ _A3AHstring = _A3AHstring + "
-			systemChat format['%1 - Successfully Loaded In.',call _GET_TIME_TIME];
+			systemChat format['%1 - Successfully Loaded In. Welcome to [GG] Ghostz Gamerz',call _GET_TIME_TIME];
 		"; }; _A3AHstring = _A3AHstring + "
 		diag_log str _admins;{diag_log format['%1',_x];} forEach diag_activeSQFScripts;
 		"; if(_TGV != -1)then{ _A3AHstring = _A3AHstring + "
@@ -2542,7 +2532,7 @@ _bigInputArray pushBack
 		"; if(_SVD != -1)then{ _A3AHstring = _A3AHstring + "
 			setObjectViewDistance [getObjectViewDistance select 0,"+str _SVD+"];
 		"; }; _A3AHstring = _A3AHstring + "
-		player createDiaryRecord ['Diary', ['infiSTAR.de AntiHack & AdminTools', '<br/>  Get your own infiSTAR.de AntiHack and AdminTools available on <br/><br/>http://www.infiSTAR.de<br/><br/>']];
+		player createDiaryRecord ['Diary', ['[GG] Ghostz Gamerz', '<br/>  Visit Our Website @ <br/><br/>http://www.ghostzgamerz.com<br/><br/>']];
 		_bis_fnc_diagkey = uiNamespace getVariable['bis_fnc_diagkey',{false}];
 		if(!isNil'_bis_fnc_diagkey')then{if!((str _bis_fnc_diagkey) in ['{false}','{}'])then{bis_fnc_diagkeychanged='bis_fnc_diagkeychanged';publicVariableServer'bis_fnc_diagkeychanged';};};
 		"+_AH_RunCheckENDVAR+" = time;
@@ -5719,8 +5709,3 @@ _pathToCustomBillBoardTextures spawn {
 		};
 	} forEach (allMissionObjects 'Exile_Sign_TraderCity');
 };
-/* ********************************************************************************* */
-/* *********************************www.infiSTAR.de********************************* */
-/* *******************Developed by infiSTAR (infiSTAR23@gmail.com)****************** */
-/* **************infiSTAR Copyright®© 2011 - 2016 All rights reserved.************** */
-/* ****DayZAntiHack.com***DayZAntiHack.de***ArmaAntiHack.com***Arma3AntiHack.com**** */

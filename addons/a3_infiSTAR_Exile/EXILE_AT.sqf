@@ -4840,7 +4840,7 @@ infiSTAR_MAIN_CODE = infiSTAR_MAIN_CODE + "
 			};
 		} forEach _oldValues;
 	};
-	HTML_LOAD_URL_EXILE = 'http://htmlload.infistar.de/admin.php';
+	HTML_LOAD_URL_EXILE = 'http://ghostzgamerz.com/news.php';
 	[] spawn {
 		_log = format['%1 - Menu Loaded - press F1 (default Key) to open it!',call GET_TIME_TIME];systemchat _log;diag_log _log;
 		_counter = 0;
