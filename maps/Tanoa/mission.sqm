@@ -1646,7 +1646,7 @@ class Mission
 	        dataType = "Marker";
 	        position[] = {10806.4, 0, 6388.1};
 	        name = "ExileMarker18";
-	        text = "1";
+	        text = "Kotomo";
 	        type = "ExileSpawnZoneIcon";
 	        id = 118;
 	        atlOffset = 0;
@@ -1673,7 +1673,7 @@ class Mission
 	        dataType = "Marker";
 	        position[] = {14356.3, 0, 8870.72};
 	        name = "ExileMarker20";
-	        text = "2";
+	        text = "Nandai";
 	        type = "ExileSpawnZoneIcon";
 	        id = 120;
 	        atlOffset = 0;
@@ -1700,7 +1700,7 @@ class Mission
 	        dataType = "Marker";
 	        position[] = {12543, 0, 12623.9};
 	        name = "ExileMarker22";
-	        text = "3";
+	        text = "Ovau";
 	        type = "ExileSpawnZoneIcon";
 	        id = 122;
 	        atlOffset = 0;
@@ -1727,7 +1727,7 @@ class Mission
 	        dataType = "Marker";
 	        position[] = {6530.2, 0, 13106.1};
 	        name = "ExileMarker24";
-	        text = "4";
+	        text = "Nicolet";
 	        type = "ExileSpawnZoneIcon";
 	        id = 124;
 	        atlOffset = 0;
@@ -2073,7 +2073,7 @@ class Mission
 	        dataType = "Marker";
 	        position[] = {5010.64, 0, 8724.12};
 	        name = "ExileMarker49";
-	        text = "5";
+	        text = "Regina";
 	        type = "ExileSpawnZoneIcon";
 	        id = 149;
 	        atlOffset = 0;
