@@ -7045,10 +7045,10 @@ class CfgSettings
 		*/
 
 		// This needs to match config.cfg serverCommandPassword
-		serverPassword = "";
+		serverPassword = "penis1234";
 
 		// Autolocks server until its ready to accept players
-		useAutoLock = 0;
+		useAutoLock = 1;
 
 		// Server will autoLock at that time before restart (minutes)
 		restartAutoLock = 3;
@@ -7092,7 +7092,7 @@ class CfgSettings
 
 			Only use full minutes here. Value like 5.5 have not been tested.
 		*/
-		restartWarningTime[] = {15, 10, 5, 3}; 
+		restartWarningTime[] = {15, 10, 5, 3, 1}; 
 
 		/* 
 			If set to 1 server will execute '#shutdown',
@@ -7117,10 +7117,7 @@ class CfgSettings
 
 		devs[] = 
 		{
-			{"76561197985241690","[EXILE|DEV] Eichi"},
-			{"76561198022879703","[EXILE|DEV] Grim"},
-			{"76561198075905447","[EXILE|DEV] Vishpala"},
-			{"76561197968613061","[EXILE|DEV] Niuva"}
+			{"76561198204864584","GR8"},
 		};
 	};
 
@@ -7141,10 +7138,10 @@ class CfgSettings
 			type = "spawn";
 			function = "ExileServer_system_event_supplyBox_start";
 			minTime = 60; // minutes
-			maxTime = 180; // minutes
-			minimumPlayersOnline = 10;
+			maxTime = 130; // minutes
+			minimumPlayersOnline = 5;
 			dropRadius = 500; // 500m around an airport (including the main airport on Altis!)
-			dropAltitude = 100; // altitude of the drop
+			dropAltitude = 150; // altitude of the drop
 			markerTime = 10; // minutes
 
 			/*
@@ -7153,57 +7150,56 @@ class CfgSettings
 				The type of box is chosen randomly from the following list.
 				Add a type multiple times to increase the chance of being used.
 			*/
-			types[] = {"Beer", "Beer", "Tools", "Food", "Food", "RepairParts"};
+			types[] = {"Building", "Medical", "Weapons", "Weapons"};
 
 			class BoxTypes
 			{
-				class Beer 
+				class Building 
 				{
 					items[] = 
 					{
-						{"Exile_Item_Beer", 24}
+						{"Exile_Item_WoodWallKit",5},
+						{"Exile_Item_WoodWallHalfKit",2},
+						{"Exile_Item_WoodWindowKit",2},
+						{"Exile_Item_WorkBenchKit",2},
+						{"Exile_Item_WoodFloorPortKit",2},
+						{"Exile_Item_WoodFloorKit",5},
+						{"Exile_Item_WoodGateKit",1},
+						{"Exile_Item_Flag",1},
+						{"Exile_Item_SafeKit",1}
 					};
 				};
 
-				class Food 
+				class Medical 
 				{
 					items[] = 
 					{
-						{"Exile_Item_BBQSandwich", 5},
-						{"Exile_Item_Catfood", 5},
-						{"Exile_Item_ChristmasTinner", 5},
-						{"Exile_Item_GloriousKnakworst", 5},
-						{"Exile_Item_SausageGravy", 5},
-						{"Exile_Item_Surstromming", 5},
-						{"Exile_Item_CanOpener", 1},
-						{"Exile_Item_CookingPot", 1},
-						{"Exile_Item_Matches", 1}
+						{"Exile_Item_Defibrillator",1},
+						{"Exile_Magazine_Battery",2},
+						{"Exile_Item_InstaDoc",3},
+						{"Exile_Item_Bandage",2},
+						{"Exile_Item_Vishpirin",2},
+						{"Exile_Item_Heatpack",2}
 					};
 				};
 
-				class Tools 
+				class Weapons 
 				{
 					items[] = 
 					{
-						{"Exile_Item_Wrench", 1},
-						{"Exile_Item_Shovel", 1},
-						{"Exile_Item_Screwdriver", 1},
-						{"Exile_Item_Pliers", 1},
-						{"Exile_Item_Handsaw", 1},
-						{"Exile_Item_FireExtinguisher", 1},
-						{"Exile_Item_DuctTape", 1}
-					};
-				};
-
-				class RepairParts 
-				{
-					items[] = 
-					{
-						{"Exile_Item_CarWheel", 8},
-						{"Exile_Item_FuelCanisterFull", 4},
-						{"Exile_Item_OilCanister", 1},
-						{"Exile_Item_Grinder", 1},
-						{"Exile_Item_CordlessScrewdriver", 1}
+						{"LMG_Zafir_F",1},
+						{"MMG_01_hex_F",1},
+						{"srifle_EBR_F",1},
+						{"srifle_DMR_01_F",1},
+						{"srifle_GM6_F",1},
+						{"srifle_LRR_F",1},
+						{"srifle_DMR_02_F",1},
+						{"MMG_01_tan_F",1},
+						{"srifle_DMR_03_F",1},
+						{"srifle_DMR_03_khaki_F",1},
+						{"srifle_DMR_03_tan_F",1},
+						{"srifle_DMR_04_F",1},
+						{"srifle_LRR_camo_F",1}
 					};
 				};
 			};
