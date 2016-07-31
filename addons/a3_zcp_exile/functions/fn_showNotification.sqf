@@ -28,7 +28,7 @@ if(ZCP_CurrentMod == 'Exile') exitWith {
                      _ZCP_SN_player,
                     "toastRequest",
                     [
-                        "_zcp_toast_type",
+                        _zcp_toast_type,
                         [
                             format
                             [
