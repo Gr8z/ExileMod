@@ -2413,7 +2413,7 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// Pawnee
 	///////////////////////////////////////////////////////////////////////////////
-	class B_Heli_light_01_armed_F								{ quality = 6; price = 200000; };
+	class B_Heli_light_01_armed_F								{ quality = 6; price = 250000; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Orca
@@ -7727,6 +7727,7 @@ class Glasses
 			"Exile_Chopper_Huron_Black",
 			"Exile_Chopper_Hellcat_Green",
 			"B_Heli_Transport_01_F",
+			"B_heli_Light_01_armed_F",
 			"I_Heli_light_03_F"
 		};
 	};
