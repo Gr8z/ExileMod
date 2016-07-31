@@ -192,6 +192,7 @@ adminUIDandAccess[] =
 	},
 	{
 		{
+		"76561198218878119", // Mack
 		"76561198060389676", // Powerwolf
 		"76561198090941099", // Josh
 		"0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
