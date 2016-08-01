@@ -3850,6 +3850,7 @@ class CfgExileCustomCode
 	ExileClient_gui_xm8_slide_server_onOpen = 			"GG\override\GG_gui_xm8_slide_server_onOpen.sqf";
 	ExileClient_gui_lockerDialog_show = 				"GG\override\GG_gui_lockerDialog_show.sqf";
 	ExileClient_system_locker_network_lockerResponse =	"GG\override\GG_system_locker_network_lockerResponse.sqf";
+	ExileClient_util_playerEquipment_add =				"GG\override\GG_util_playerEquipment_add.sqf";
 };
 class CfgExileEnvironment
 {
