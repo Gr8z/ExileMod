@@ -1047,7 +1047,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=34;
+		items=36;
 
 		class Item0
 		{
@@ -1238,13 +1238,29 @@ class Mission
 			type="ExileTraderZoneIcon";
 		};
 		class Item18
+	    {
+	        position[]={13459.7,0,5439.48};
+	        name = "ExileMarker45";
+	        text = "";
+	        markerType = "ELLIPSE";
+	        type = "ExileNonConstructionZone";
+	        colorName = "ColorBlack";
+	        fillName = "Border";
+	        alpha = 0;
+	        a = 400;
+	        b = 400;
+	        drawBorder = 1;
+	        id = 145;
+	        atlOffset = 0;
+	    };
+		class Item19
 		{
 			position[]={12147.7,0,12747.2};
 			name="NE Airfield Trader Icon";
 			text="";
 			type="ExileAircraftTraderIcon";
 		};
-		class Item19
+		class Item20
 		{
 			position[]={11474.1,0,11343.2};
 			name="Klen Trader";
@@ -1257,14 +1273,14 @@ class Mission
 			b=175;
 			drawBorder=1;
 		};		
-		class Item20
+		class Item21
 		{
 			position[]={11474.1,0,11343.2};
 			name="Klen Trader Icon";
 			text="Trader City Klen";
 			type="ExileTraderZoneIcon";
 		};
-		class Item21
+		class Item22
 		{
 			position[]={4073.33 ,0, 11677.6};
 			name="Bash Trader";
@@ -1277,14 +1293,14 @@ class Mission
 			b=175;
 			drawBorder=1;
 		};		
-		class Item22
+		class Item23
 		{
 			position[]={4073.33 ,0, 11677.6};
 			name="Bash Trader Icon";
 			text="Trader City Bash";
 			type="ExileTraderZoneIcon";
 		};		
-		class Item23
+		class Item24
 		{
 			position[]={3444.4487,0,3803.5161};
 			name="Bor Trader";
@@ -1297,14 +1313,30 @@ class Mission
 			b=175;
 			drawBorder=1;
 		};
-		class Item24
+		class Item25
 		{
 			position[]={3444.4487,0,3803.5161};
 			name="Bor Trader Icon";
 			text="Trader City Bor";
 			type="ExileTraderZoneIcon";
-		};		
-		class Item25
+		};
+		class Item26
+	    {
+	        position[]={13459.7,0,5439.48};
+	        name = "ExileMarker45";
+	        text = "";
+	        markerType = "ELLIPSE";
+	        type = "ExileNonConstructionZone";
+	        colorName = "ColorBlack";
+	        fillName = "Border";
+	        alpha = 0;
+	        a = 400;
+	        b = 400;
+	        drawBorder = 1;
+	        id = 145;
+	        atlOffset = 0;
+	    };	
+		class Item27
 		{
 			position[]={13459.7,0,5439.48};
 			name="Boat Trader Icon";
@@ -1313,7 +1345,7 @@ class Mission
 		};
 		
 		//concrete
-		class Item26
+		class Item28
 		{
 			position[]={1762.244,0,7716.082};
 			name="ConcreteMixerZoneMyshkino";
@@ -1325,15 +1357,16 @@ class Mission
 			a=750;
 			b=750;
 			drawBorder=1;
+			atlOffset = 0;
 		};
-		class Item27
+		class Item29
 		{
 			position[]={1762.244,0,7716.082};
 			name="ConcreteMixerZoneMyshkinoIcon";
 			text="";
 			type="ExileConcreteMixerZoneIcon";
 		};
-		class Item28
+		class Item30
 		{
 			position[]={11463.258,0,7480.617};
 			name="ConcreteMixerZoneFactory";
@@ -1345,15 +1378,16 @@ class Mission
 			a=750;
 			b=750;
 			drawBorder=1;
+			atlOffset = 0;
 		};
-		class Item29
+		class Item31
 		{
 			position[]={11463.258,0,7480.617};
 			name="ConcreteMixerZoneFactoryIcon";
 			text="";
 			type="ExileConcreteMixerZoneIcon";
 		};
-		class Item30
+		class Item32
 		{
 			position[]={8408.44,0,12234.9};
 			name="ConcreteMixerZoneGvozdno";
@@ -1365,15 +1399,16 @@ class Mission
 			a=750;
 			b=750;
 			drawBorder=1;
+			atlOffset = 0;
 		};
-		class Item31
+		class Item33
 		{
 			position[]={8408.44,0,12234.9};
 			name="ConcreteMixerZoneGvozdnoIcon";
 			text="";
 			type="ExileConcreteMixerZoneIcon";
 		};
-		class Item32
+		class Item34
 		{
 			position[]={8347.057,0,5991.487};
 			name="ContaminatedZoneKumyrna";
@@ -1385,8 +1420,9 @@ class Mission
 			a=400;
 			b=400;
 			drawBorder=1;
+			atlOffset = 0;
 		};
-		class Item33
+		class Item35
 		{
 			position[]={8347.057,0,5991.487};
 			name="ContaminatedZoneKumyrnaIcon";
