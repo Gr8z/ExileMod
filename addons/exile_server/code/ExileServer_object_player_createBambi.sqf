@@ -106,6 +106,7 @@ if ((getNumber(configFile >> "CfgSettings" >> "BambiSettings" >> "parachuteSpawn
 	_position set [2, getNumber(configFile >> "CfgSettings" >> "BambiSettings" >> "parachuteDropHeight")]; 
 	if ((getNumber(configFile >> "CfgSettings" >> "BambiSettings" >> "haloJump")) isEqualTo 1) then
 	{
+		_bambiPlayer addBackpackGlobal "B_Parachute";
 		_bambiPlayer setPosATL _position;
 		_spawnType = 2;
 	}
