@@ -512,13 +512,9 @@ allSupportBoxes[] =
 		{
 
 
-
-			"Exile_Item_Flag",
-			{"Exile_Item_WoodDoorKit",15},{"Exile_Item_WoodDoorwayKit",15},{"Exile_Item_WoodDrawBridgeKit",15},
-			{"Exile_Item_WoodFloorKit",15},{"Exile_Item_WoodFloorPortKit",15},{"Exile_Item_WoodGateKit",15},
-			{"Exile_Item_WoodLog",15},{"Exile_Item_WoodPlank",15},{"Exile_Item_WoodStairsKit",15},
-			{"Exile_Item_WoodSupportKit",15},{"Exile_Item_WoodWallHalfKit",15},{"Exile_Item_WoodWallKit",15},
-			{"Exile_Item_WoodWindowKit",15},{"Exile_Item_WorkBenchKit",15}
+			"Exile_Item_Flag",{"Exile_Item_CookingPot",2},{"Exile_Melee_Axe",2},{"Exile_Item_Matches",2}
+			{"Exile_Item_Codelock",4},{"Exile_Item_WoodDoorKit",2},{"Exile_Item_WoodDoorwayKit",2},
+			{"Exile_Item_Matches",2},{"Exile_Item_WoodFloorKit",18},{"Exile_Item_WoodFloorPortKit",4},
 		}
 	},
 	{
@@ -526,10 +522,10 @@ allSupportBoxes[] =
 
 		"Support-Box3",
 		{
-			{"Exile_Item_Flag",5},{"Exile_Item_WoodDoorKit",15},{"Exile_Item_WoodWallKit",15},
-
-
-			{"Exile_Item_WoodWindowKit",15},{"Exile_Item_WoodFloorKit",15},{"Exile_Item_SafeKit",5}
+			
+			
+			{"Exile_Item_WoodDoorKit",4},{"Exile_Item_WoodWallKit",30},
+			{"Exile_Item_WoodWindowKit",4},{"Exile_Item_WoodFloorKit",30}
 		}
 	},
 	{
