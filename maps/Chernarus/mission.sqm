@@ -1357,7 +1357,7 @@ class Mission
 			a=750;
 			b=750;
 			drawBorder=1;
-			atlOffset = 0;
+			alpha = 0;
 		};
 		class Item29
 		{
@@ -1378,7 +1378,7 @@ class Mission
 			a=750;
 			b=750;
 			drawBorder=1;
-			atlOffset = 0;
+			alpha = 0;
 		};
 		class Item31
 		{
@@ -1399,7 +1399,7 @@ class Mission
 			a=750;
 			b=750;
 			drawBorder=1;
-			atlOffset = 0;
+			alpha = 0;
 		};
 		class Item33
 		{
@@ -1420,7 +1420,7 @@ class Mission
 			a=400;
 			b=400;
 			drawBorder=1;
-			atlOffset = 0;
+			alpha = 0;
 		};
 		class Item35
 		{
