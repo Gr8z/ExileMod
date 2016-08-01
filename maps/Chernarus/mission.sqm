@@ -1047,7 +1047,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=36;
+		items=34;
 
 		class Item0
 		{
@@ -1112,7 +1112,6 @@ class Mission
 			text="Chernogorsk";
 			type="ExileSpawnZoneIcon";
 		};
-
 		class Item6
 		{
 			position[]={10513.343,6.8559303,2081.8613};
@@ -1127,7 +1126,6 @@ class Mission
 			drawBorder=1;
 			alpha = 0;
 		};
-
 		class Item7
 		{
 			position[]={10513.343,6.8559303,2081.8613};
@@ -1135,7 +1133,6 @@ class Mission
 			text="Elektro";
 			type="ExileSpawnZoneIcon";
 		};
-
 		class Item8
 		{
 			position[]={12054.753,6.1015596,3489.873};
@@ -1150,7 +1147,6 @@ class Mission
 			drawBorder=1;
 			alpha = 0;
 		};
-		
 		class Item9
 		{
 			position[]={12054.753,6.1015596,3489.873};
@@ -1158,7 +1154,6 @@ class Mission
 			text="Kamyshovo";
 			type="ExileSpawnZoneIcon";
 		};
-		
 		class Item10
 		{
 			position[]={13352.05,6.0021176,6301.7461};
@@ -1172,8 +1167,7 @@ class Mission
 			b=500;
 			drawBorder=1;
 			alpha = 0;
-		};
-		
+		};	
 		class Item11
 		{
 			position[]={13352.05,6.0021176,6301.7461};
@@ -1181,7 +1175,6 @@ class Mission
 			text="Solnichniy";
 			type="ExileSpawnZoneIcon";
 		};
-
 		class Item12
 		{
 			position[]={12546.252,9.5938053,9774.4521};
@@ -1195,16 +1188,14 @@ class Mission
 			b=500;
 			drawBorder=1;
 			alpha = 0;
-		};
-		
+		};		
 		class Item13
 		{
 			position[]={12546.252,9.5938053,9774.4521};
 			name="SpawnBerezinoIcon";
 			text="Berezino";
 			type="ExileSpawnZoneIcon";
-		};
-		
+		};		
 		class Item14
 		{
 			position[]={2624.49,6.0021176,5348.43};
@@ -1218,16 +1209,14 @@ class Mission
 			b=500;
 			drawBorder=1;
 			alpha = 0;
-		};
-		
+		};		
 		class Item15
 		{
 			position[]={2624.49,6.0021176,5348.43};
 			name="SpawnZelenogorskIcon";
 			text="Zelenogorsk";
 			type="ExileSpawnZoneIcon";
-		};
-		
+		};	
 		class Item16
 		{
 			position[]={6330.98, 0, 7800.99};
@@ -1236,42 +1225,26 @@ class Mission
 			type="ExileTraderZone";
 			markerType="ELLIPSE";
 			colorName="ColorBlack";
-			fillName="Border";
+			fillName="SolidBorder";
 			a=175;
 			b=175;
 			drawBorder=1;
 		};
-		
 		class Item17
 		{
 			position[]={6330.98, 0, 7800.99};
 			name="TraderCityStaryIcon";
-			text="";
+			text="Trader City Stary";
 			type="ExileTraderZoneIcon";
 		};
-
 		class Item18
-		{
-			position[]={12147.7,0,12747.2};
-			name="NE Airfield Trader";
-			text="NE Airfield Trader";
-			markerType="ELLIPSE";
-			type="ExileTraderZone";
-			colorName="ColorBlack";
-			fillName="Border";
-			a=175;
-			b=175;
-			drawBorder=1;
-		};
-		class Item19
 		{
 			position[]={12147.7,0,12747.2};
 			name="NE Airfield Trader Icon";
 			text="";
-			type="ExileTraderZoneIcon";
+			type="ExileAircraftTraderIcon";
 		};
-
-		class Item20
+		class Item19
 		{
 			position[]={11474.1,0,11343.2};
 			name="Klen Trader";
@@ -1279,21 +1252,19 @@ class Mission
 			markerType="ELLIPSE";
 			type="ExileTraderZone";
 			colorName="ColorBlack";
-			fillName="Border";
+			fillName="SolidBorder";
 			a=175;
 			b=175;
 			drawBorder=1;
-		};
-		
-		class Item21
+		};		
+		class Item20
 		{
 			position[]={11474.1,0,11343.2};
 			name="Klen Trader Icon";
-			text="";
+			text="Trader City Klen";
 			type="ExileTraderZoneIcon";
 		};
-
-		class Item22
+		class Item21
 		{
 			position[]={4073.33 ,0, 11677.6};
 			name="Bash Trader";
@@ -1301,21 +1272,19 @@ class Mission
 			markerType="ELLIPSE";
 			type="ExileTraderZone";
 			colorName="ColorBlack";
-			fillName="Border";
+			fillName="SolidBorder";
 			a=175;
 			b=175;
 			drawBorder=1;
-		};
-		
-		class Item23
+		};		
+		class Item22
 		{
 			position[]={4073.33 ,0, 11677.6};
 			name="Bash Trader Icon";
-			text="";
+			text="Trader City Bash";
 			type="ExileTraderZoneIcon";
-		};
-		
-		class Item24
+		};		
+		class Item23
 		{
 			position[]={3444.4487,0,3803.5161};
 			name="Bor Trader";
@@ -1323,44 +1292,28 @@ class Mission
 			markerType="ELLIPSE";
 			type="ExileTraderZone";
 			colorName="ColorBlack";
-			fillName="Border";
+			fillName="SolidBorder";
 			a=175;
 			b=175;
 			drawBorder=1;
 		};
-		
-		class Item25
+		class Item24
 		{
 			position[]={3444.4487,0,3803.5161};
 			name="Bor Trader Icon";
-			text="";
+			text="Trader City Bor";
 			type="ExileTraderZoneIcon";
-		};
-		
-		class Item26
-		{
-			position[]={13459.7,0,5439.48};
-			name="Boat Trader";
-			text="Boat Trader";
-			markerType="ELLIPSE";
-			type="ExileTraderZone";
-			colorName="ColorBlack";
-			fillName="Border";
-			a=175;
-			b=175;
-			drawBorder=1;
-		};
-		
-		class Item27
+		};		
+		class Item25
 		{
 			position[]={13459.7,0,5439.48};
 			name="Boat Trader Icon";
 			text="";
-			type="ExileTraderZoneIcon";
+			type="ExileBoatTraderIcon";
 		};
 		
-//concrete
-		class Item28
+		//concrete
+		class Item26
 		{
 			position[]={1762.244,0,7716.082};
 			name="ConcreteMixerZoneMyshkino";
@@ -1373,16 +1326,14 @@ class Mission
 			b=750;
 			drawBorder=1;
 		};
-		class Item29
+		class Item27
 		{
 			position[]={1762.244,0,7716.082};
 			name="ConcreteMixerZoneMyshkinoIcon";
 			text="";
 			type="ExileConcreteMixerZoneIcon";
 		};
-
-
-		class Item30
+		class Item28
 		{
 			position[]={11463.258,0,7480.617};
 			name="ConcreteMixerZoneFactory";
@@ -1395,15 +1346,14 @@ class Mission
 			b=750;
 			drawBorder=1;
 		};
-		class Item31
+		class Item29
 		{
 			position[]={11463.258,0,7480.617};
 			name="ConcreteMixerZoneFactoryIcon";
 			text="";
 			type="ExileConcreteMixerZoneIcon";
 		};
-
-		class Item32
+		class Item30
 		{
 			position[]={8408.44,0,12234.9};
 			name="ConcreteMixerZoneGvozdno";
@@ -1416,17 +1366,14 @@ class Mission
 			b=750;
 			drawBorder=1;
 		};
-		class Item33
+		class Item31
 		{
 			position[]={8408.44,0,12234.9};
 			name="ConcreteMixerZoneGvozdnoIcon";
 			text="";
 			type="ExileConcreteMixerZoneIcon";
 		};
-
-
-
-		class Item34
+		class Item32
 		{
 			position[]={8347.057,0,5991.487};
 			name="ContaminatedZoneKumyrna";
@@ -1439,7 +1386,7 @@ class Mission
 			b=400;
 			drawBorder=1;
 		};
-		class Item35
+		class Item33
 		{
 			position[]={8347.057,0,5991.487};
 			name="ContaminatedZoneKumyrnaIcon";
