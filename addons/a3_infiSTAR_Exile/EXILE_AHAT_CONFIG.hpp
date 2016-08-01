@@ -512,12 +512,12 @@ allSupportBoxes[] =
 		{
 
 
-			"Exile_Item_Flag",{"Exile_Item_CookingPot",2},{"Exile_Melee_Axe",2},{"Exile_Item_Matches",2}
+			"Exile_Item_Flag","Exile_Item_WorkBenchKit","B_Carryall_khk"
+			{"Exile_Item_CookingPot",2},{"Exile_Melee_Axe",2},{"Exile_Item_Matches",2}
 			{"Exile_Item_Codelock",4},{"Exile_Item_WoodDoorKit",2},{"Exile_Item_WoodDoorwayKit",2},
 			{"Exile_Item_Matches",2},{"Exile_Item_WoodFloorKit",18},{"Exile_Item_WoodFloorPortKit",4},
 			{"Exile_Item_WoodGateKit",2},{"Exile_Item_WoodStairsKit",4},{"Exile_Item_WoodWallKit",25},
-			{"Exile_Item_WoodWindowKit",4},{"Exile_Item_SafeKit",3},{"Exile_Item_FortificationUpgrade",10},
-			"Exile_Item_WorkBenchKit","B_Carryall_khk"
+			{"Exile_Item_WoodWindowKit",4},{"Exile_Item_SafeKit",3},{"Exile_Item_FortificationUpgrade",10}
 		}
 	},
 	{
