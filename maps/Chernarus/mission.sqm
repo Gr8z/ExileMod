@@ -1061,15 +1061,15 @@ class Mission
 			a=500;
 			b=500;
 			drawBorder=1;
+			alpha = 0;
 		};
 		class Item1
 		{
 			position[]={1696.6591,14.285818,2291.1062};
 			name="SpawnKamenkaIcon";
-			text="";
+			text="Kamenka";
 			type="ExileSpawnZoneIcon";
 		};
-
 		class Item2
 		{
 			position[]={4833.1958,5.9000001,2262.3147};
@@ -1082,15 +1082,15 @@ class Mission
 			a=500;
 			b=500;
 			drawBorder=1;
+			alpha = 0;
 		};
 		class Item3
 		{
 			position[]={4833.1958,5.9000001,2262.3147};
 			name="SpawnBalotaIcon";
-			text="";
+			text="Balota";
 			type="ExileSpawnZoneIcon";
 		};
-
 		class Item4
 		{
 			position[]={6711.7202,6,2589.9814};
@@ -1103,12 +1103,13 @@ class Mission
 			a=500;
 			b=500;
 			drawBorder=1;
+			alpha = 0;
 		};
 		class Item5
 		{
 			position[]={6711.7202,6,2589.9814};
 			name="SpawnChernogorskIcon";
-			text="";
+			text="Chernogorsk";
 			type="ExileSpawnZoneIcon";
 		};
 
@@ -1124,13 +1125,14 @@ class Mission
 			a=500;
 			b=500;
 			drawBorder=1;
+			alpha = 0;
 		};
 
 		class Item7
 		{
 			position[]={10513.343,6.8559303,2081.8613};
 			name="SpawnElektroIcon";
-			text="";
+			text="Elektro";
 			type="ExileSpawnZoneIcon";
 		};
 
@@ -1146,13 +1148,14 @@ class Mission
 			a=500;
 			b=500;
 			drawBorder=1;
+			alpha = 0;
 		};
 		
 		class Item9
 		{
 			position[]={12054.753,6.1015596,3489.873};
 			name="SpawnKamyshovoIcon";
-			text="";
+			text="Kamyshovo";
 			type="ExileSpawnZoneIcon";
 		};
 		
@@ -1168,13 +1171,14 @@ class Mission
 			a=500;
 			b=500;
 			drawBorder=1;
+			alpha = 0;
 		};
 		
 		class Item11
 		{
 			position[]={13352.05,6.0021176,6301.7461};
 			name="SpawnSolnichniyIcon";
-			text="";
+			text="Solnichniy";
 			type="ExileSpawnZoneIcon";
 		};
 
@@ -1190,13 +1194,14 @@ class Mission
 			a=500;
 			b=500;
 			drawBorder=1;
+			alpha = 0;
 		};
 		
 		class Item13
 		{
 			position[]={12546.252,9.5938053,9774.4521};
 			name="SpawnBerezinoIcon";
-			text="";
+			text="Berezino";
 			type="ExileSpawnZoneIcon";
 		};
 		
@@ -1212,13 +1217,14 @@ class Mission
 			a=500;
 			b=500;
 			drawBorder=1;
+			alpha = 0;
 		};
 		
 		class Item15
 		{
 			position[]={2624.49,6.0021176,5348.43};
 			name="SpawnZelenogorskIcon";
-			text="";
+			text="Zelenogorsk";
 			type="ExileSpawnZoneIcon";
 		};
 		
