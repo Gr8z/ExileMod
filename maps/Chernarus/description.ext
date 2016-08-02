@@ -67,6 +67,17 @@ showHUD[] =
     false   // Squad Radar
 };
 
+class CfgSounds
+{
+    sounds[] = {intro};
+    class intro
+    {
+        name = "intro";
+        sound[] = {"\GG\introsong.ogg", 1, 1};
+        titles[] = {};
+    };
+};
+
 class cfgFunctions
 {
 	#include "GG\ExAdClient\CfgFunctions.cpp"
