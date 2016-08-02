@@ -54,7 +54,7 @@ switch (_PV) do
 			case 2:
 			{
 				_display = getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "icon");
-				_message = format["<t color='%4'>%1</t> <img image='%3' color='%5' size='2'/> <t color='%6'>%2</t>",(name _victim),(name _killer),_display,_XG_colorVictim,_XG_ColorVW,_XG_ColorKiller];
+				_message = format["<t color='%4'>%1</t> <img image='%3' color='%5' size='2'/> <t color='%6'>%2</t>",(name _killer),(name _victim),_display,_XG_colorVictim,_XG_ColorVW,_XG_ColorKiller];
 			};
 		};
 	};
