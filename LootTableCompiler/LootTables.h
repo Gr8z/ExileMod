@@ -1,6 +1,5 @@
 
 > CivillianLowerClass
-10, Trash
 28, Food
 10, Drinks
 8, Pistols
@@ -24,7 +23,6 @@
 // Apartments, Offices etc.
 ///////////////////////////////////////////////////////////////////////////////
 > CivillianUpperClass
-30, Trash
 28, Food
 10, Drinks
 8, Pistols
@@ -51,7 +49,6 @@
 // Kiosks, Supermarkets etc.
 ///////////////////////////////////////////////////////////////////////////////
 > Shop
-30, Trash
 15, Food
 15, Drinks
 10, Pistols
@@ -79,7 +76,6 @@
 // Construction Sites, Warehouses, Research etc.
 ///////////////////////////////////////////////////////////////////////////////
 > Industrial
-30, Trash
 40, IndustrialItems
 25, Vehicle
 15, RoadFlares
@@ -90,14 +86,12 @@
 ///////////////////////////////////////////////////////////////////////////////
 > Factories
 10, Electronics
-40, Trash
 50, IndustrialItems
 
 ///////////////////////////////////////////////////////////////////////////////
 // Fuel Stations, Garages, Workshops etc.
 ///////////////////////////////////////////////////////////////////////////////
 > VehicleService
-30, Trash
 25, IndustrialItems
 40, Vehicle
 15, RoadFlares
@@ -151,6 +145,7 @@
 70, MedicalItems
 10, Food
 10, Drinks
+0.08, Magazine04
 
 ///////////////////////////////////////////////////////////////////////////////
 // Light Houses + Life Guard Towers + Castles
@@ -181,7 +176,6 @@
 10, MilitaryHeadgear
 20, Food
 20, Drinks
-10, Trash
 5, Ghillies
 5, DLCGhillies
 20, Snipers
