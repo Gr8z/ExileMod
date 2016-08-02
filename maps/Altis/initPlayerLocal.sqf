@@ -1,8 +1,8 @@
 [] execVM "GG\StatusBar\statusBar.sqf";
-//[] execVM "GG\KillMessages.sqf";
 [] execVM "GG\service\service_point.sqf";
 
 call compileFinal preprocessFileLineNumbers 'GG\TRYKfix.sqf';
+missionNamespace setVariable ["ExileClient_KillMessages_network_KillMessages",(compileFinal preprocessFileLineNumbers "GG\kills\ExileClient_KillMessages_network_KillMessages.sqf")];
 
 //#include "initServer.sqf"
 

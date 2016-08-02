@@ -76,6 +76,7 @@ class RscTitles
 {
 	#include "GG\StatusBar\statusBar.hpp"
 	#include "GG\ExAdClient\RscTitles.cpp"
+    #include "GG\kills\KillMessages.hpp"
 };
 
 class CfgHints
@@ -86,6 +87,11 @@ class CfgHints
 class CfgNetworkMessages
 {
 	#include "GG\ExAdClient\CfgNetworkMessages.cpp"
+    class KillMessages
+    {
+        module = "KillMessages";
+        parameters[] = {"STRING","STRING","OBJECT","OBJECT"};
+    };
 };
 
 #include "GG\config.cpp"
