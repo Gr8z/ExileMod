@@ -108,6 +108,9 @@ _XG_fnc_Send_Killed =
 if (!isserver || hasinterface || isNull _victim) exitWith {};
 _victim setVariable ["ExileDiedAt", time];
 if !(isPlayer _victim) exitWith {};
+_victimPosition = getPos _victim;
+_locationNames = nearestLocations [_victimPosition, ["ExileTerritory","NameCityCapital","NameCity","NameVillage","NameLocal","Hill","NameMarine"], 4000];  
+_victimNear = text (_locationNames select 0);
 _victim setVariable ["ExileIsDead", true]; 
 _victim setVariable ["ExileName", name _victim, true]; 
 _countDeath = false;
@@ -136,7 +139,7 @@ switch (_killType) do
 	{
 		_countDeath = true;
 		_modifyVictimRespect = true;
-		_systemChat = format ["%1 commited suicide!", name _victim];
+		_systemChat = format ["%1 commited suicide near %2!", name _victim, (text _victimNear)];
 		_newVictimRespect = _oldVictimRespect - round ((abs _oldVictimRespect) / 100 * (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Percentages" >> "suicide")));
 		["Exile","Suicide",_killer,_victim] call _XG_fnc_Send_Killed;
 	};
@@ -153,7 +156,7 @@ switch (_killType) do
 	{
 		_countDeath = true;
 		_countKill = false;
-		_systemChat = format ["%1 crashed to death!", name _victim];
+		_systemChat = format ["%1 crashed to death near %2!", name _victim, (text _victimNear)];
 		["Exile","Crashed",_killer,_victim] call _XG_fnc_Send_Killed;
 		_newVictimRespect = _oldVictimRespect - round ((abs _oldVictimRespect) / 100 * (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Percentages" >> "crash")));
 	};
@@ -161,7 +164,7 @@ switch (_killType) do
 	{
 		_countDeath = true;
 		_countKill = false;
-		_systemChat = format ["%1 was killed by an NPC!", name _victim];
+		_systemChat = format ["%1 was killed by an NPC near %2!", name _victim, (text _victimNear)];
 		["Exile","NPC",_killer,_victim] call _XG_fnc_Send_Killed;
 		_newVictimRespect = _oldVictimRespect - round ((abs _oldVictimRespect) / 100 * (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Percentages" >> "npc")));
 	};
@@ -169,7 +172,7 @@ switch (_killType) do
 	{
 		_countDeath = false;
 		_countKill = false;
-		_systemChat = format ["%1 was team-killed by %2!", name _victim, name _killingPlayer];
+		_systemChat = format ["%1 was team-killed by %2 near %3!", name _victim, name _killingPlayer, (text _victimNear)];
 		["Exile","TK",_killer,_victim] call _XG_fnc_Send_Killed;
 		_systemChat call _XG_fnc_Send_Killed;
 		_respectLoss = round ((abs _oldKillerRespect) / 100 * (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Percentages" >> "friendyFire")));
@@ -180,7 +183,7 @@ switch (_killType) do
 	{
 		_countDeath = false;
 		_countKill = false;
-		_systemChat = format ["%1 was killed by %2! (BAMBI SLAYER)", name _victim, name _killingPlayer];
+		_systemChat = format ["%1 was killed by %2! (BAMBI SLAYER) near %3", name _victim, name _killingPlayer, (text _victimNear)];
 		_respectLoss = round ((abs _oldKillerRespect) / 100 * (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Percentages" >> "bambiKill")));
 		_newKillerRespect = _oldKillerRespect - _respectLoss;
 		_killSummary pushBack ["BAMBI SLAYER", -1 * _respectLoss];
@@ -202,7 +205,7 @@ switch (_killType) do
 		_killSummary pushBack ["ENEMY FRAGGED", _respectTransfer];
 		if (_perks isEqualTo []) then 
 		{
-			_systemChat = format ["%1 was killed by %2!", name _victim, name _killingPlayer];
+			_systemChat = format ["%1 was killed by %2 near %3!", name _victim, name _killingPlayer, (text _victimNear)];
 			[_killer,_victim] call _XG_Fnc_Killed_Handle;
 		}
 		else 
@@ -214,7 +217,7 @@ switch (_killType) do
 				_newKillerRespect = _newKillerRespect + (_x select 1);
 			} 
 			forEach _perks;
-			_systemChat = format ["%1 was killed by %2! (%3)", name _victim, name _killingPlayer, _perkNames joinString ", "];
+			_systemChat = format ["%1 was killed by %2 near %4! (%3)", name _victim, name _killingPlayer, _perkNames joinString ", ", (text _victimNear)];
 			[_killer,_victim] call _XG_Fnc_Killed_Handle;
 		};
 	};
