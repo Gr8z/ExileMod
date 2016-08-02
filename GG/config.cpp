@@ -1599,14 +1599,14 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// Bitpod Attachments
 	///////////////////////////////////////////////////////////////////////////////
-	class bipod_01_F_blk	 						{ quality = 1; price = 150; };
-	class bipod_01_F_mtp	 						{ quality = 1; price = 150; };
-	class bipod_01_F_snd	 						{ quality = 1; price = 150; };
-	class bipod_02_F_blk	 						{ quality = 1; price = 150; };
-	class bipod_02_F_hex	 						{ quality = 1; price = 150; };
-	class bipod_02_F_tan	 						{ quality = 1; price = 150; };
-	class bipod_03_F_blk	 						{ quality = 1; price = 150; };
-	class bipod_03_F_oli	 						{ quality = 1; price = 150; };
+	class bipod_01_F_blk	 						{ quality = 1; price = 150; sellPrice = 1; }; 
+	class bipod_01_F_mtp	 						{ quality = 1; price = 150; sellPrice = 1; };
+	class bipod_01_F_snd	 						{ quality = 1; price = 150; sellPrice = 1; };
+	class bipod_02_F_blk	 						{ quality = 1; price = 150; sellPrice = 1; };
+	class bipod_02_F_hex	 						{ quality = 1; price = 150; sellPrice = 1; };
+	class bipod_02_F_tan	 						{ quality = 1; price = 150; sellPrice = 1; };
+	class bipod_03_F_blk	 						{ quality = 1; price = 150; sellPrice = 1; };
+	class bipod_03_F_oli	 						{ quality = 1; price = 150; sellPrice = 1; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Muzzle Attachments
@@ -2163,7 +2163,7 @@ class CfgExileArsenal
 	class optic_Holosight_blk_F       { quality = 1; price = 100; };
 	class optic_Holosight_khk_F       { quality = 1; price = 100; };
 	class optic_Holosight_smg_blk_F   { quality = 1; price = 100; };
-	class bipod_01_F_khk              { quality = 1; price = 100; };
+	class bipod_01_F_khk              { quality = 1; price = 100; sellPrice = 1; };
 	class O_NVGoggles_hex_F           { quality = 1; price = 300; };
 	class O_NVGoggles_urb_F           { quality = 1; price = 300; };
 	class O_NVGoggles_ghex_F          { quality = 1; price = 300; };
