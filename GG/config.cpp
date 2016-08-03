@@ -3790,7 +3790,7 @@ class CfgExileArsenal
 
 class CfgXM8
 {
-	extraApps[] = {"ExAd_VG","ExAd_Info","ExAd_CHVD","ExAd_Journal","ExAd_Bike"};
+	extraApps[] = {"ExAd_VG","ExAd_CHVD","ExAd_Journal","ExAd_Bike"};
 	
 	class ExAd_VG 
 	{
@@ -3800,16 +3800,7 @@ class CfgXM8
 		onLoad = "GG\ExAdClient\XM8\Apps\VG\onLoad.sqf";
 		onOpen = "GG\ExAdClient\XM8\Apps\VG\onOpen.sqf";
 		onClose = "GG\ExAdClient\XM8\Apps\VG\onClose.sqf";
-	};	
-	class ExAd_Info 
-	{
-		title = "Server Info";
-		controlID = 50100;					//IDC:50100 -> 50102 || These need to be unique and out of range from each other
-		logo = "GG\ExAdClient\XM8\Apps\Info\Icon_SI.paa";
-		onLoad = "GG\ExAdClient\XM8\Apps\Info\onLoad.sqf";
-		onOpen = "GG\ExAdClient\XM8\Apps\Info\onOpen.sqf";
-		onClose = "GG\ExAdClient\XM8\Apps\Info\onClose.sqf";
-	};	
+	};
 	class ExAd_CHVD 
 	{
 		title = "View Distance Settings";
