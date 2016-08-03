@@ -107,7 +107,7 @@ if ((getNumber(configFile >> "CfgSettings" >> "BambiSettings" >> "parachuteSpawn
 	if ((getNumber(configFile >> "CfgSettings" >> "BambiSettings" >> "haloJump")) isEqualTo 1) then
 	{
 		_bambiPlayer addBackpackGlobal "B_Parachute";
-		_bambiPlayerplayer addItemGlobal "Exile_Item_ExtensionCord";
+		_bambiPlayer addItemGlobal "Exile_Item_ExtensionCord";
 		_bambiPlayer setPosATL _position;
 		_spawnType = 2;
 	}
