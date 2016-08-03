@@ -195,6 +195,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToVest "Exile_Item_PlasticBottleCoffee";
 			player addItemToVest "Exile_Item_EMRE";
 			player addItemToVest "Exile_Item_Matches";
+			player addItemToVest "Exile_Item_ExtensionCord";
 			player addItemToVest "Exile_Item_CanOpener";
 			player addWeapon "Exile_Melee_Axe";
 			player linkItem "TRYK_G_Shades_Black_NV";
@@ -221,6 +222,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addHandgunItem "optic_mas_MRD";
 			player addItemToUniform "Exile_Magazine_Swing";
 			player addItemToBackpack "Exile_Item_MountainDupe";
+			player addItemToBackpack "Exile_Item_ExtensionCord";
 			player addItemToBackpack "Exile_Item_Cheathas";
 			player addItemToBackpack "Exile_Item_CanOpener";
 			player addWeapon "Binocular";
@@ -255,6 +257,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToVest "Exile_Item_EnergyDrink";
 			player addItemToVest "Exile_Item_GloriousKnakworst";
 			player addItemToVest "Exile_Item_CanOpener";
+			player addItemToVest "Exile_Item_ExtensionCord";
 			player addWeapon "Exile_Melee_Axe";
 			call ExileClient_object_player_bambiStateEnd; };};
 		};
@@ -283,6 +286,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToVest "Exile_Item_PlasticBottleCoffee";
 			player addItemToVest "Exile_Item_EMRE";
 			player addItemToVest "Exile_Item_Matches";
+			player addItemToVest "Exile_Item_ExtensionCord";
 			player linkItem "TRYK_ShemaghESSOD_NV";
 			player addItemToVest "Exile_Item_CanOpener";
 			player linkItem "ItemGPS";
@@ -312,6 +316,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToBackpack "Exile_Item_Bandage";
 			player addItemToBackpack "Exile_Item_MountainDupe";
 			player addItemToBackpack "Exile_Item_Cheathas";
+			player addItemToBackpack "Exile_Item_ExtensionCord";
 			player addItemToBackpack "Exile_Item_CanOpener";
 			player linkItem "ItemGPS";
 			player addWeapon "Binocular";
@@ -347,6 +352,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToVest "Exile_Item_Vishpirin";
 			player addItemToVest "Exile_Item_EnergyDrink";
 			player addItemToVest "Exile_Item_GloriousKnakworst";
+			player addItemToVest "Exile_Item_ExtensionCord";
 			player addItemToVest "Exile_Item_CanOpener";
 			player addWeapon "Exile_Melee_Axe";
 			call ExileClient_object_player_bambiStateEnd; };};
@@ -379,6 +385,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToVest "Exile_Item_PlasticBottleCoffee";
 			player addItemToVest "Exile_Item_EMRE";
 			player addItemToVest "Exile_Item_Matches";
+			player addItemToVest "Exile_Item_ExtensionCord";
 			player addItemToVest "Exile_Item_CanOpener";
 			player linkItem "ItemGPS";
 			player linkItem "TRYK_TAC_SET_NV_MESH_2";
@@ -406,6 +413,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToBackpack "Exile_Item_MountainDupe";
 			player addItemToBackpack "Exile_Item_BeefParts";
 			player addItemToBackpack "Exile_Item_CanOpener";
+			player addItemToBackpack "Exile_Item_ExtensionCord";
 			for "_i" from 1 to 2 do {player addItemToVest "Exile_Item_Vishpirin";};
 			player addWeapon "Exile_Melee_Axe";
 			player linkItem "ItemGPS";
@@ -436,6 +444,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			for "_i" from 2 to 3 do {player addItemToVest "Exile_Item_Vishpirin";};
 			player addItemToBackpack "Exile_Item_GloriousKnakworst";
 			player addItemToBackpack "Exile_Item_CanOpener";
+			player addItemToBackpack "Exile_Item_ExtensionCord";
 			player addWeapon "Exile_Melee_Axe";
 			player linkItem "ItemGPS";
 			player addWeapon "Binocular";
@@ -464,6 +473,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToVest "Exile_Item_PlasticBottleCoffee";
 			player addItemToVest "Exile_Item_EMRE";
 			player addItemToVest "Exile_Item_Matches";
+			player addItemToVest "Exile_Item_ExtensionCord";
 			player addItemToVest "Exile_Item_CanOpener";
 			for "_i" from 3 to 4 do {player addItemToVest "Exile_Item_Vishpirin";};
 			for "_i" from 2 to 3 do {player addItemToVest "Exile_Item_InstaDoc";};
@@ -499,6 +509,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToBackpack "Exile_Item_MountainDupe";
 			player addItemToBackpack "Exile_Item_BeefParts";
 			player addItemToBackpack "Exile_Item_CanOpener";
+			player addItemToBackpack "Exile_Item_ExtensionCord";
 			player addWeapon "Exile_Melee_Axe";
 			player linkItem "ItemGPS";
 			player addWeapon "Binocular";
@@ -531,6 +542,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToBackpack "Exile_Item_GloriousKnakworst";
 			player addItemToBackpack "Exile_Item_Vishpirin";
 			player addItemToBackpack "Exile_Item_CanOpener";
+			player addItemToBackpack "Exile_Item_ExtensionCord";
 			player addWeapon "Exile_Melee_Axe";
 			player linkItem "ItemGPS";
 			player addWeapon "Binocular";
@@ -564,6 +576,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToVest "Exile_Item_DuctTape";
 			player addItemToVest "Exile_Item_EMRE";
 			player addItemToVest "Exile_Item_Matches";
+			player addItemToVest "Exile_Item_ExtensionCord";
 			player addItemToVest "Exile_Item_CanOpener";
 			player linkItem "TRYK_Shemagh_G_NV";
 			player linkItem "ItemGPS";

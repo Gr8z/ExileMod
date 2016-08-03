@@ -77,6 +77,7 @@ switch (true) do
     player addItemToVest "8Rnd_mas_9x18_Mag";
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
+    player addItem "Exile_Item_ExtensionCord";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
     player addItem "Exile_Item_BBQSandwich";
@@ -103,6 +104,7 @@ switch (true) do
 	player addPrimaryWeaponItem "optic_Aco_smg";
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
+    player addItem "Exile_Item_ExtensionCord";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
     player addItem "Exile_Item_BBQSandwich";
@@ -128,6 +130,7 @@ switch (true) do
     player addWeaponGlobal "hgun_mas_m9_F";
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
+    player addItem "Exile_Item_ExtensionCord";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
     player addItem "Exile_Item_BBQSandwich";
@@ -154,6 +157,7 @@ switch (true) do
 	player addPrimaryWeaponItem "muzzle_mas_snds_C";
 	player addPrimaryWeaponItem "optic_mas_aim_c";
     player addItem "Exile_Item_Matches";
+    player addItem "Exile_Item_ExtensionCord";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
@@ -180,6 +184,7 @@ switch (true) do
     player addWeaponGlobal "hgun_Pistol_heavy_01_F";
 	player addPrimaryWeaponItem "optic_mas_kobra_c";
     player addItem "Exile_Item_Matches";
+    player addItem "Exile_Item_ExtensionCord";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
@@ -206,6 +211,7 @@ switch (true) do
 	player addPrimaryWeaponItem "optic_mas_PSO_eo";
     player addWeaponGlobal "hgun_ACPC2_F";
     player addItem "Exile_Item_Matches";
+    player addItem "Exile_Item_ExtensionCord";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
@@ -232,6 +238,7 @@ switch (true) do
     player addPrimaryWeaponItem "optic_mas_aim";
     player addWeaponGlobal "hgun_mas_acp_F";
     player addItem "Exile_Item_Matches";
+    player addItem "Exile_Item_ExtensionCord";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
@@ -258,6 +265,7 @@ switch (true) do
 	player addPrimaryWeaponItem "optic_mas_acog_rd_c";
     player addWeaponGlobal "hgun_mas_m23_F";
     player addItem "Exile_Item_Matches";
+    player addItem "Exile_Item_ExtensionCord";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
@@ -286,6 +294,7 @@ switch (true) do
     player addWeaponGlobal "hgun_mas_grach_F";
     player addHandgunItem "optic_mas_MRD";
     player addItem "Exile_Item_Matches";
+    player addItem "Exile_Item_ExtensionCord";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
@@ -317,6 +326,7 @@ switch (true) do
     player addHandgunItem "muzzle_snds_L";
 	player addHandgunItem "optic_mas_MRD";
     player addItem "Exile_Item_Matches";
+    player addItem "Exile_Item_ExtensionCord";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
@@ -348,6 +358,7 @@ switch (true) do
     player addHandgunItem "muzzle_snds_L";
 	player addHandgunItem "optic_mas_MRD";
     player addItem "Exile_Item_Matches";
+    player addItem "Exile_Item_ExtensionCord";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
@@ -378,6 +389,7 @@ switch (true) do
     player addHandgunItem "muzzle_snds_L";
 	player addHandgunItem "optic_mas_MRD";
     player addItem "Exile_Item_Matches";
+    player addItem "Exile_Item_ExtensionCord";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
@@ -409,6 +421,7 @@ switch (true) do
     player addHandgunItem "muzzle_snds_L";
 	player addHandgunItem "optic_mas_MRD";
     player addItem "Exile_Item_Matches";
+    player addItem "Exile_Item_ExtensionCord";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
@@ -440,6 +453,7 @@ switch (true) do
 	player addHandgunItem "muzzle_mas_snds_MP7";
 	player addHandgunItem "optic_mas_aim";
     player addItem "Exile_Item_Matches";
+    player addItem "Exile_Item_ExtensionCord";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
@@ -471,6 +485,7 @@ switch (true) do
 	player addHandgunItem "muzzle_mas_snds_MP7";
 	player addHandgunItem "optic_mas_aim";
     player addItem "Exile_Item_Matches";
+    player addItem "Exile_Item_ExtensionCord";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
@@ -503,6 +518,7 @@ switch (true) do
 	player addHandgunItem "optic_mas_aim";
 	player addItemToVest "SmokeShellRed";
     player addItem "Exile_Item_Matches";
+    player addItem "Exile_Item_ExtensionCord";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
@@ -535,6 +551,7 @@ switch (true) do
 	player addHandgunItem "optic_mas_aim";
 	player addItemToVest "SmokeShellYellow";
     player addItem "Exile_Item_Matches";
+    player addItem "Exile_Item_ExtensionCord";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
@@ -565,6 +582,7 @@ switch (true) do
 	player addHandgunItem "muzzle_mas_snds_MP7";
 	player addHandgunItem "optic_mas_aim";
     player addItem "Exile_Item_Matches";
+    player addItem "Exile_Item_ExtensionCord";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
