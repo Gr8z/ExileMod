@@ -9,6 +9,7 @@ switch (true) do
     player forceAddUniform "TRYK_U_B_Denim_T_BG_BK";
     player addBackpack "TRYK_B_tube_blk";
     player addItem "Exile_Item_Matches";
+    player addItem "Exile_Item_ExtensionCord";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
@@ -26,6 +27,7 @@ switch (true) do
     player addBackpack "B_AssaultPack_blk";
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
+    player addItem "Exile_Item_ExtensionCord";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
     player addItem "Exile_Item_PlasticBottleFreshWater";
@@ -47,6 +49,7 @@ switch (true) do
 	player addWeaponGlobal "hgun_mas_mak_F";
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
+    player addItem "Exile_Item_ExtensionCord";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
     player addItem "Exile_Item_BBQSandwich";
