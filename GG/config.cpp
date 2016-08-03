@@ -3834,7 +3834,7 @@ class CfgXM8
 	{
 		title = "Deploy Bike";
 		config = "GG\ExAdClient\XM8\Apps\DeployVehicle\config.sqf";
-		logo = "GG\ExAdClient\XM8\Apps\Journal\Icon_Journal.paa";
+		logo = "GG\ExAdClient\XM8\Apps\DeployVehicle\icon_DeployVehicle.paa";
 		bambiState = 0;
 		vehicleClass = "Exile_Bike_MountainBike";
 		recipe[] = {{"ItemRadio",1}};
