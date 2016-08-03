@@ -3790,13 +3790,13 @@ class CfgExileArsenal
 
 class CfgXM8
 {
-	extraApps[] = {"ExAd_VG","ExAd_Info","ExAd_CHVD","ExAd_Journal","GG_Quadbike"};
+	extraApps[] = {"ExAd_VG","ExAd_Info","ExAd_CHVD","ExAd_Journal","ExAd_Bike","ExAd_Quad"};
 	
 	class ExAd_VG 
 	{
 		title = "Virtual Garage";
 		controlID = 50000;					//IDC:50000 -> 50015 || These need to be unique and out of range from each other 
-		logo = "GG\ExadClient\XM8\Apps\VG\Icon_VG.paa";
+		logo = "GG\ExAdClient\XM8\Apps\VG\Icon_VG.paa";
 		onLoad = "GG\ExAdClient\XM8\Apps\VG\onLoad.sqf";
 		onOpen = "GG\ExAdClient\XM8\Apps\VG\onOpen.sqf";
 		onClose = "GG\ExAdClient\XM8\Apps\VG\onClose.sqf";
@@ -3805,41 +3805,53 @@ class CfgXM8
 	{
 		title = "Server Info";
 		controlID = 50100;					//IDC:50100 -> 50102 || These need to be unique and out of range from each other
-		logo = "GG\ExadClient\XM8\Apps\Info\Icon_SI.paa";
+		logo = "GG\ExAdClient\XM8\Apps\Info\Icon_SI.paa";
 		onLoad = "GG\ExAdClient\XM8\Apps\Info\onLoad.sqf";
 		onOpen = "GG\ExAdClient\XM8\Apps\Info\onOpen.sqf";
 		onClose = "GG\ExAdClient\XM8\Apps\Info\onClose.sqf";
 	};	
 	class ExAd_CHVD 
 	{
-		title = "View Distance";
-		controlID = 50200;					//IDC:50200 -> 50250 || These need to be unique and out of range from each other
-		config = "GG\ExadClient\XM8\Apps\CHVD\config.sqf";
-		logo = "GG\ExadClient\XM8\Apps\CHVD\Icon_CHVD.paa";
+		title = "View Distance Settings";
+		controlID = 50200;					//IDC:50200 -> 50102 || These need to be unique and out of range from each other
+		config = "GG\ExAdClient\XM8\Apps\CHVD\config.sqf";
+		logo = "GG\ExAdClient\XM8\Apps\CHVD\Icon_CHVD.paa";
 		onLoad = "GG\ExAdClient\XM8\Apps\CHVD\onLoad.sqf";
 		onOpen = "GG\ExAdClient\XM8\Apps\CHVD\onOpen.sqf";
 		onClose = "GG\ExAdClient\XM8\Apps\CHVD\onClose.sqf";
-	};
+	};		
 	class ExAd_Journal 
 	{
 		title = "Journal";
 		controlID = 50300;					//IDC:50300 -> 50305 || These need to be unique and out of range from each other
-		config = "GG\ExadClient\XM8\Apps\Journal\config.sqf";
-		logo = "GG\ExadClient\XM8\Apps\Journal\Icon_Journal.paa";
+		config = "GG\ExAdClient\XM8\Apps\Journal\config.sqf";
+		logo = "GG\ExAdClient\XM8\Apps\Journal\Icon_Journal.paa";
 		onLoad = "GG\ExAdClient\XM8\Apps\Journal\onLoad.sqf";
 		onOpen = "GG\ExAdClient\XM8\Apps\Journal\onOpen.sqf";
 		onClose = "GG\ExAdClient\XM8\Apps\Journal\onClose.sqf";
 	};
-	class GG_Quadbike
+	class ExAd_Bike
 	{
-		title = "Spawn Quadbike";
-		controlID = 50400;					//IDC:50100 -> 50102 || These need to be unique and out of range from each other
-		logo = "GG\ExAdClient\XM8\Apps\Quadbike\quadbike.paa";
-		onLoad = "GG\ExAdClient\XM8\Apps\Quadbike\onload.sqf";
-		onOpen = "GG\ExAdClient\XM8\Apps\Quadbike\spawn_bike.sqf";
-		onClose = "";
-	};	
-};
+		title = "Deploy Bike";
+		config = "GG\ExAdClient\XM8\Apps\DeployVehicle\config.sqf";
+		bambiState = 0;
+		vehicleClass = "Exile_Bike_MountainBike";
+		recipe[] = {{"Exile_Item_ExtensionCord",-1}};
+		packable = 1;
+		autoCleanUp = 1;
+		quickFunction = "['ExAd_Bike'] call ExAd_XM8_DV_fnc_spawnVehicle";
+	};
+	class ExAd_Quad
+	{
+		title = "Deploy Quad";
+		bambiState = 0;
+		vehicleClass = "Exile_Bike_QuadBike_Fia";
+		recipe[] = {{"Exile_Item_ExtensionCord",1}};
+		packable = 1;
+		quickFunction = "['ExAd_Quad'] call ExAd_XM8_DV_fnc_spawnVehicle";
+	};
+}; 
+
 class CfgExileCustomCode 
 {
 	
@@ -4537,6 +4549,12 @@ class CfgInteractionMenus
 				condition = "call ExileClient_object_vehicle_interaction_show";
 				action = "_this call ExileClient_object_vehicle_drain";
 			};
+			class PackDeployedVehicle: ExileAbstractAction
+			{
+				title = "Pack Vehicle";
+				condition = "call ExAd_XM8_DV_fnc_canPack";
+				action = "call ExAd_XM8_DV_fnc_pack";
+			};
 		};
 	};
 
@@ -4943,6 +4961,12 @@ class CfgInteractionMenus
 				title = "Pack Quadbike";
 				condition = "true";
 				action = "deleteVehicle ExileClientInteractionObject;player linkItem 'ItemRadio';['SuccessTitleAndText', ['Quadbike Packed. Radio Added.']] call ExileClient_gui_toaster_addTemplateToast;";
+			};
+			class PackDeployedVehicle: ExileAbstractAction
+			{
+				title = "Pack Bike";
+				condition = "call ExAd_XM8_DV_fnc_canPack";
+				action = "call ExAd_XM8_DV_fnc_pack";
 			};
 		};
 	};

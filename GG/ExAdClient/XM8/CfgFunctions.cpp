@@ -23,6 +23,7 @@ file = "GG\ExAdClient\XM8\Functions";
 	class createBackgroundGUI {};
 	class createButton {};
 	class createCheckBox {};
+	class createCombo {};
 	class createCtrlGrp {};
 	class createEdit {};
 	class createExtraApps {};

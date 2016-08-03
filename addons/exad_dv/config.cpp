@@ -1,6 +1,6 @@
 /*  
-	customize.sqf
-	
+	config.cpp
+
 	Copyright 2016 Jan Babor
 
 	Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,14 +16,31 @@
 	limitations under the License.
 */
 
-ExAd_GRINDING_PROGRESS_INTERVALL = 5;	//SCALAR - Grinding, interval time measured in seconds.
+class CfgPatches {
+	class ExAd_DV {
+		requiredVersion = 0.1;
+		requiredAddons[] = {"ExAd_Core"};
+	};
+};
 
-ExAd_GRINDING_PROGRESS = 30;			//SCALAR - Damage each finished interval will take from the code lock.
+class CfgFunctions {
+	class ExAdServer {
+		class DV {
+		file = "exad_dv\Functions";
+			class spawnDeployableVehicle {};
+			class despawnDeployableVehicle {};
+		};
+	};
+};
 
-ExAd_GRINDING_OBJECT_MAX = 300;			//SCALAR - Code lock sustainability.
-
-ExAd_GRINDING_PROGRESSBAR_POS = "Mid";	//SCALAR/STRING - You can use values between 0.3-2 or using "LOW"|"MID"|"HIGH"
-
-/*
-The default values above means that a full succesful grind will take (900 / 30) * 60 = 1800 = 20 minutes
-*/
+class CfgNetworkMessages
+{
+	class spawnDeployableVehicle
+	{
+		parameters[] = {"STRING","STRING"};
+	};
+	class despawnDeployableVehicle
+	{
+		parameters[] = {"STRING"};
+	};
+};
