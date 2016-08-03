@@ -125,7 +125,7 @@ ExAd_XM8_DV_fnc_spawnVehicle = {
 	catch{
 		[_exception] spawn {
 			UISleep 0.5; 
-			["ErrorTitleAndText", ["ExAd - Deploy Vehicle", _this select 0]] call ExileClient_gui_toaster_addTemplateToast;
+			["ErrorTitleAndText", ["Deploy Vehicle", _this select 0]] call ExileClient_gui_toaster_addTemplateToast;
 			["extraApps", 1] call ExileClient_gui_xm8_slide;
 		};
 	};
