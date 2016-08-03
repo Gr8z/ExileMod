@@ -24,6 +24,6 @@ try
 }
 catch
 {
-	["ErrorTitleAndText", ["ExAd - Server Info", _exception]] call ExileClient_gui_toaster_addTemplateToast;
+	["ErrorTitleAndText", ["Server Info", _exception]] call ExileClient_gui_toaster_addTemplateToast;
 	["extraApps", 1] call ExileClient_gui_xm8_slide
 }
