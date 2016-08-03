@@ -3828,7 +3828,7 @@ class CfgXM8
 		logo = "GG\ExAdClient\XM8\Apps\DeployVehicle\icon_DeployVehicle.paa";
 		bambiState = 0;
 		vehicleClass = "Exile_Bike_MountainBike";
-		recipe[] = {{"Exile_Item_ExtensionCord",1}};
+		recipe[] = {{"Exile_Item_ExtensionCord",-1}};
 		packable = 1;
 		autoCleanUp = 1;
 		quickFunction = "['ExAd_Bike'] call ExAd_XM8_DV_fnc_spawnVehicle";
