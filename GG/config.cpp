@@ -3790,7 +3790,7 @@ class CfgExileArsenal
 
 class CfgXM8
 {
-	extraApps[] = {"ExAd_VG","ExAd_Info","ExAd_CHVD","ExAd_Journal","ExAd_Bike","ExAd_Quad"};
+	extraApps[] = {"ExAd_VG","ExAd_Info","ExAd_CHVD","ExAd_Journal","ExAd_Bike"};
 	
 	class ExAd_VG 
 	{
@@ -3834,21 +3834,13 @@ class CfgXM8
 	{
 		title = "Deploy Bike";
 		config = "GG\ExAdClient\XM8\Apps\DeployVehicle\config.sqf";
+		logo = "GG\ExAdClient\XM8\Apps\Journal\Icon_Journal.paa";
 		bambiState = 0;
 		vehicleClass = "Exile_Bike_MountainBike";
-		recipe[] = {{"Exile_Item_ExtensionCord",-1}};
+		recipe[] = {{"ItemRadio",1}};
 		packable = 1;
 		autoCleanUp = 1;
 		quickFunction = "['ExAd_Bike'] call ExAd_XM8_DV_fnc_spawnVehicle";
-	};
-	class ExAd_Quad
-	{
-		title = "Deploy Quad";
-		bambiState = 0;
-		vehicleClass = "Exile_Bike_QuadBike_Fia";
-		recipe[] = {{"Exile_Item_ExtensionCord",1}};
-		packable = 1;
-		quickFunction = "['ExAd_Quad'] call ExAd_XM8_DV_fnc_spawnVehicle";
 	};
 }; 
 
@@ -4946,7 +4938,7 @@ class CfgInteractionMenus
 	class Bikes
 	{
 		targetType = 2;
-		target = "Exile_Bike_QuadBike_Black";
+		target = "Exile_Bike_MountainBike";
 
 		class Actions
 		{
@@ -4955,12 +4947,6 @@ class CfgInteractionMenus
 				title = "Flip";
 				condition = "true";
 				action = "_this call ExileClient_object_vehicle_flip";
-			};
-			class Pack: ExileAbstractAction
-			{
-				title = "Pack Quadbike";
-				condition = "true";
-				action = "deleteVehicle ExileClientInteractionObject;player linkItem 'ItemRadio';['SuccessTitleAndText', ['Quadbike Packed. Radio Added.']] call ExileClient_gui_toaster_addTemplateToast;";
 			};
 			class PackDeployedVehicle: ExileAbstractAction
 			{
