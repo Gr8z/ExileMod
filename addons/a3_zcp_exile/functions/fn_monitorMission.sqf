@@ -4,7 +4,7 @@ private['_ZCP_MM_mission', '_ZCP_MM_missionIndex','_ZCP_MM_recreateTrigger','_ZC
 "_ZCP_MM_continueLoop","_ZCP_MM_name",'_ZCP_MM_nextWaveTimer','_ZCP_MM_currentWaveIndex',
 "_ZCP_MM_proximityList","_ZCP_MM_baseObjects", "_ZCP_MM_originalThis","_ZCP_MM_missionCapTime","_ZCP_MM_isCapping",
 "_ZCP_MM_contestEndTime","_ZCP_MM_contestTotalTime","_ZCP_MM_proximityMessageList","_ZCP_MM_isContested","_ZCP_MM_capperName",
-"_ZCP_MM_currentCapper","_ZCP_MM_previousCapper","_ZCP_MM_currentGroup","_ZCP_MM_wasContested","_ZCP_MM_finishText","_ZCP_MM_markers",
+"_ZCP_MM_currentCapper","_ZCP_MM_previousCapper","_ZCP_MM_currentGroup","_ZCP_MM_wasContested","_ZCP_MM_markers",
 "_ZCP_MM_contestStartTime","_ZCP_MM_capIndex","_ZCP_MM_capturePosition","_ZCP_MM_Halfway","_ZCP_MM_oneMin","_ZCP_MM_capStartTime",
 "_ZCP_MM_baseRadius","_ZCP_MM_circle","_ZCP_MM_totalWaves",'_ZCP_MM_useWaves','_ZCP_MM_waveData','_ZCP_MM_nextWave','_ZCP_MM_AI_NewGroups'
 ];
@@ -227,17 +227,7 @@ if(_ZCP_MM_recreateTrigger) then {
     ZCP_MissionTriggerData set [_ZCP_MM_capIndex, [_ZCP_MM_originalThis, _ZCP_MM_baseObjects, _ZCP_MM_capturePosition, _ZCP_MM_baseRadius, _ZCP_MM_markers, _ZCP_MM_circle, _ZCP_MM_AI_Groups]];
   	[_ZCP_MM_capIndex, _ZCP_MM_capturePosition, _ZCP_MM_baseRadius] call ZCP_fnc_createTrigger;
 } else {
-  _ZCP_MM_finishText = '';
 
-  if(ZCP_CleanupBase)then{
-        if(ZCP_CleanupBaseWithAIBomber)then{
-          _ZCP_MM_finishText = format [[6] call ZCP_fnc_translate,ZCP_BaseCleanupDelay];
-        }else{
-          _ZCP_MM_finishText = format [[7] call ZCP_fnc_translate,ZCP_BaseCleanupDelay];
-        };
-  };
-
-  ['Notification', ["ZCP",[format[[5] call ZCP_fnc_translate,_ZCP_MM_name,_ZCP_MM_finishText]], 'ZCP_Capped']] call ZCP_fnc_showNotification;
   [_ZCP_MM_currentCapper,_ZCP_MM_name,_ZCP_MM_capturePosition,_ZCP_MM_originalThis select 2, _ZCP_MM_baseRadius] call ZCP_fnc_giveReward;
 
   ['PersonalNotification', ["ZCP",[format[[11] call ZCP_fnc_translate]], 'ZCP_Init'], _ZCP_MM_currentCapper] call ZCP_fnc_showNotification;
