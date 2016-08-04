@@ -34,6 +34,8 @@ file = "GG\ExAdClient\XM8\Functions";
 	class createXList {};
 	class createXSliderH {};
 	class getAppCtrl {};
+	class getBlankSpace {};
 	class getNextIDC {};
+	class prepareSlider {};
 	class postInitXM8 {file = "GG\ExAdClient\XM8\postInit.sqf"; postInit = 1;};
 };

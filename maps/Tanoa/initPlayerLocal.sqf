@@ -1,4 +1,3 @@
-[] execVM "GG\StatusBar\statusBar.sqf";
 [] execVM "GG\service\service_point.sqf";
 
 call compileFinal preprocessFileLineNumbers 'GG\TRYKfix.sqf';

@@ -3790,7 +3790,7 @@ class CfgExileArsenal
 
 class CfgXM8
 {
-	extraApps[] = {"ExAd_VG","ExAd_CHVD","ExAd_Journal","ExAd_Bike"};
+	extraApps[] = {"ExAd_VG","ExAd_CHVD","ExAd_Journal","ExAd_Bike","ExAd_SB"};
 	
 	class ExAd_VG 
 	{
@@ -3833,6 +3833,13 @@ class CfgXM8
 		autoCleanUp = 1;
 		quickFunction = "['ExAd_Bike'] call ExAd_XM8_DV_fnc_spawnVehicle";
 	};
+	class ExAd_SB 
+	{
+		title = "Statsbar Settings";
+		controlID = 50400;					//IDC:50400 -> 50475 || These need to be unique and out of range from each other
+		logo = "GG\ExadClient\XM8\Apps\SB_Settings\Icon_SB.paa";
+		onLoad = "GG\ExAdClient\XM8\Apps\SB_Settings\onLoad.sqf";
+	};
 }; 
 
 class CfgExileCustomCode 
@@ -3847,6 +3854,7 @@ class CfgExileCustomCode
 	ExileClient_system_locker_network_lockerResponse =	"GG\override\GG_system_locker_network_lockerResponse.sqf";
 	ExileClient_util_playerEquipment_add =				"GG\override\GG_util_playerEquipment_add.sqf";
 	ExileClient_object_player_bambiStateBegin =			"GG\override\GG_object_player_bambiStateBegin.sqf";
+	ExileClient_gui_lockerDialog_show =					"GG\override\GG_gui_lockerDialog_show.sqf";
 };
 class CfgExileEnvironment
 {

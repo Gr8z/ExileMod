@@ -83,7 +83,6 @@ class cfgFunctions
 
 class RscTitles
 {
-    #include "GG\StatusBar\statusBar.hpp"
     #include "GG\ExAdClient\RscTitles.cpp"
     #include "GG\kills\KillMessages.hpp"
 };
