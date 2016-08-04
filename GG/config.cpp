@@ -3854,7 +3854,7 @@ class CfgExileCustomCode
 	ExileClient_system_locker_network_lockerResponse =	"GG\override\GG_system_locker_network_lockerResponse.sqf";
 	ExileClient_util_playerEquipment_add =				"GG\override\GG_util_playerEquipment_add.sqf";
 	ExileClient_object_player_bambiStateBegin =			"GG\override\GG_object_player_bambiStateBegin.sqf";
-	ExileClient_gui_lockerDialog_show =					"GG\override\GG_gui_lockerDialog_show.sqf";
+	ExileClient_system_territory_database_load =		"GG\override\GG_system_territory_database_load.sqf";
 };
 class CfgExileEnvironment
 {
