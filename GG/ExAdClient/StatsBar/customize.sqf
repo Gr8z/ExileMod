@@ -41,7 +41,7 @@ GG_SB_GUI_BgColor_Default = [0.074, 0.082, 0.105, 0.85];				//ARRAY - rgba array
 
 GG_SB_Text_Margin_Default = " ";						//STRING - Margin between components measured in blankspaces
 GG_SB_Text_InnerMargin_Default = " ";					//STRING - Margin between icon and text within the component measured in blankspaces
-GG_SB_Text_Font_Default = "PuristaLight";			//STRING - Font family
+GG_SB_Text_Font_Default = "PuristaMedium";			//STRING - Font family
 GG_SB_Text_Align_Default = "center";					//STRING - Alignment (left,center,right)
 GG_SB_Text_Size_Default = 0.90;							//SCALAR - Text size ( 0-2 )
 GG_SB_Img_Size_Default = 0.90;							//SCALAR - Icon size ( 0-2 )

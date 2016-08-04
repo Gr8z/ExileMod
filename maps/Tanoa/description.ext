@@ -6,7 +6,7 @@
 author = "[GG] Ghostz Gamerz";
 onLoadName = "[GG] ExileMod Tanoa";
 onLoadMission= "www.ghostzgamerz.com";
-loadScreen = "GG\images\logo.jpg"; 
+loadScreen = "GG\images\load.paa"; 
 OnLoadIntro = "";
 OnLoadIntroTime = false;
 OnLoadMissionTime = false;
