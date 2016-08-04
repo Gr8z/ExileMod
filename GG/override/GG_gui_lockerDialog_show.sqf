@@ -13,7 +13,7 @@ private["_dialog","_lockerAmount","_lockerLimit","_depositInput","_withdrawInput
 disableSerialization;
 createDialog "RscExileLockerDialog";
 _dialog = uiNameSpace getVariable ["RscExileLockerDialog", displayNull];
-_lockerAmount = player getVariable ["ExileLocker", 0];
+_lockerAmount = [(player getVariable ["ExileLocker", 0])] call BIS_fnc_numberText;
 _lockerLimit = [(getNumber(missionConfigFile >> "CfgLocker" >> "maxDeposit"))] call BIS_fnc_numberText;
 _depositInput = _dialog displayCtrl 4006;
 _depositInput ctrlSetText "";
