@@ -5106,6 +5106,9 @@ class CfgInteractionModels
 			"containerline_01_f",
 			"containerline_02_f",
 			"containerline_03_f",
+			"land_containerline_01_f",
+			"land_containerline_02_f",
+			"land_containerline_03_f",
 
 			// Also allow wrecks
 			"wreck_"
