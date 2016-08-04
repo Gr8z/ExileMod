@@ -114,7 +114,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			_cost = 853;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Scout Loadout 1</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Scout Loadout 1</t><br/><img size='0.6' image='GG\ExAdClient\StatsBar\Icons\ExAd_Wallet.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "TRYK_U_denim_jersey_blk";
 			player addHeadgear "H_Bandanna_gry";
@@ -142,7 +142,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			_cost = 1200;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Scout Loadout 2</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Scout Loadout 2</t><br/><img size='0.6' image='GG\ExAdClient\StatsBar\Icons\ExAd_Wallet.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "TRYK_U_denim_hood_blk";
 			player addHeadgear "H_Watchcap_blk";
@@ -173,7 +173,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			_cost = 3420;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Scout Loadout 3</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Scout Loadout 3</t><br/><img size='0.6' image='GG\ExAdClient\StatsBar\Icons\ExAd_Wallet.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "U_B_GhillieSuit";
 			player addHeadgear "H_Watchcap_blk";
@@ -207,7 +207,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			_cost = 1250;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Marksman Loadout 1</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Marksman Loadout 1</t><br/><img size='0.6' image='GG\ExAdClient\StatsBar\Icons\ExAd_Wallet.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "TRYK_U_B_NATO_OCPD_CombatUniform";
 			player addVest "V_Chestrig_khk";
@@ -236,7 +236,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			_cost = 2433;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];	
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Marksman Loadout 2</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Marksman Loadout 2</t><br/><img size='0.6' image='GG\ExAdClient\StatsBar\Icons\ExAd_Wallet.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "TRYK_U_B_NATO_OCPD_CombatUniform";
 			player addHeadgear "TRYK_r_cap_od_Glasses";
@@ -267,7 +267,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			_cost = 3032;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Marksman Loadout 3</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Marksman Loadout 3</t><br/><img size='0.6' image='GG\ExAdClient\StatsBar\Icons\ExAd_Wallet.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "U_I_GhillieSuit";
 			player addVest "V_PlateCarrierSpec_rgr";
@@ -300,7 +300,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			_cost = 1062;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Soldier Loadout 1</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Soldier Loadout 1</t><br/><img size='0.6' image='GG\ExAdClient\StatsBar\Icons\ExAd_Wallet.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "TRYK_U_B_Woodland";
 			player addVest "V_Chestrig_rgr";
@@ -329,7 +329,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			_cost = 1850;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Soldier Loadout 2</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Soldier Loadout 2</t><br/><img size='0.6' image='GG\ExAdClient\StatsBar\Icons\ExAd_Wallet.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "TRYK_U_B_Woodland";
 			player addHeadgear "H_Bandanna_camo";
@@ -363,7 +363,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			_cost = 2470;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Soldier Loadout 3</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Soldier Loadout 3</t><br/><img size='0.6' image='GG\ExAdClient\StatsBar\Icons\ExAd_Wallet.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "TRYK_U_B_Woodland";
 			player addVest "V_PlateCarrierSpec_rgr";
@@ -398,7 +398,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			_cost = 440;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Medic Loadout 1</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Medic Loadout 1</t><br/><img size='0.6' image='GG\ExAdClient\StatsBar\Icons\ExAd_Wallet.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "TRYK_U_B_NATO_UCP_CombatUniform";
 			player addHeadgear "H_Beret_02";
@@ -426,7 +426,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			_cost = 1408;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Medic Loadout 2</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Medic Loadout 2</t><br/><img size='0.6' image='GG\ExAdClient\StatsBar\Icons\ExAd_Wallet.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "TRYK_U_B_NATO_UCP_CombatUniform";
 			player addHeadgear "H_Beret_02";
@@ -456,7 +456,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			_cost = 1745;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Medic Loadout 3</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Medic Loadout 3</t><br/><img size='0.6' image='GG\ExAdClient\StatsBar\Icons\ExAd_Wallet.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "TRYK_U_B_NATO_UCP_CombatUniform";
 			player addVest "V_PlateCarrier2_blk";
@@ -489,7 +489,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			_cost = 1823;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Engineer Loadout 1</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Engineer Loadout 1</t><br/><img size='0.6' image='GG\ExAdClient\StatsBar\Icons\ExAd_Wallet.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "TRYK_OVERALL_SAGE_BLKboots_nk_blk2";
 			player addVest "V_Chestrig_oli";
@@ -521,7 +521,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			_cost = 2145;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Engineer Loadout 2</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Engineer Loadout 2</t><br/><img size='0.6' image='GG\ExAdClient\StatsBar\Icons\ExAd_Wallet.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "TRYK_OVERALL_SAGE_BLKboots";
 			player addHeadgear "H_Shemag_olive_hs";
@@ -554,7 +554,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			_cost = 2650;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Engineer Loadout 3</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Engineer Loadout 3</t><br/><img size='0.6' image='GG\ExAdClient\StatsBar\Icons\ExAd_Wallet.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "TRYK_OVERALL_SAGE_BLKboots";
 			player addVest "V_PlateCarrierGL_rgr";
