@@ -18,7 +18,7 @@
 */
 private["_img","_text"];
 
-_img = [GG_SB_ICON_PLAYERS] call ExAd_fnc_formatSBImage;
+_img = [ExAd_SB_ICON_PLAYERS] call ExAd_fnc_formatSBImage;
 _text = count playableUnits;
 
 [[_img, _text]] call ExAd_fnc_formatSBOutput

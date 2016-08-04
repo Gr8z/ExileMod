@@ -21,14 +21,14 @@ private["_request","_time","_hours","_minutes","_img","_text"];
 _request = [];
 
 _time = serverTime;
-_hours = (GG_SB_Timer - 1) - floor (_time / 3600);
+_hours = (ExAd_SB_Timer - 1) - floor (_time / 3600);
 _minutes = 59 - floor ((_time % 3600) / 60);
 
-_img = [GG_SB_ICON_TIMER] call ExAd_fnc_formatSBImage;
+_img = [ExAd_SB_ICON_TIMER] call ExAd_fnc_formatSBImage;
 _text = format["%1:%2", _hours,(if(_minutes < 10 )then{format["0%1",_minutes]}else{_minutes})];
 _request pushBack [_img,_text];
 
-if(GG_SB_COMPONENTS_ACTIVE_COLORS)then{
+if(ExAd_SB_COMPONENTS_ACTIVE_COLORS)then{
 	if(_hours > 0)then{
 		_request pushBack ([0,1,_hours] call ExAd_fnc_getSBColor)
 	}else{

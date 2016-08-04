@@ -17,15 +17,15 @@
 
 */	
 
-if(GG_SB_Active)then{
+if(ExAd_SB_Active)then{
 	call ExAd_fnc_sbStop
 }else{
 	call ExAd_fnc_loadSB
 };
 
-GG_SB_Active = !GG_SB_Active;
+ExAd_SB_Active = !ExAd_SB_Active;
 
-(_this select 0) ctrlSetText (if(!GG_SB_Active)then{STR_GG_SB_APP_BTN_SHOW}else{STR_GG_SB_APP_BTN_HIDE});
-call GG_SB_fnc_thread;
+(_this select 0) ctrlSetText (if(!ExAd_SB_Active)then{STR_ExAd_SB_APP_BTN_SHOW}else{STR_ExAd_SB_APP_BTN_HIDE});
+call ExAd_SB_fnc_thread;
 
 true

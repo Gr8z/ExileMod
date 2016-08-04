@@ -20,11 +20,11 @@ private["_request","_img","_text"];
 
 _request = [];
 
-_img = [GG_SB_ICON_HP] call ExAd_fnc_formatSBImage;
+_img = [ExAd_SB_ICON_HP] call ExAd_fnc_formatSBImage;
 _text = round (ExileClientPlayerAttributes select 0);
 _request pushBack [_img,_text];
 
-if(GG_SB_COMPONENTS_ACTIVE_COLORS)then{
+if(ExAd_SB_COMPONENTS_ACTIVE_COLORS)then{
 	_request pushBack ([0,100,_text] call ExAd_fnc_getSBColor)
 };
 
