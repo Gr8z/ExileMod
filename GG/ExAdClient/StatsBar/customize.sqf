@@ -35,11 +35,11 @@ ExAd_SB_COMPONENTS_COLORS = ["#000000", "#440B00","#FE1106","#CA7400","#A9C700",
 
 ExAd_SB_Timer = 2; 										//SCALAR - Restart time measured in hours. 
 
-ExAd_SB_GUI_POS_Default = 	[safeZoneX, safeZoneY + safeZoneH - 32 * pixelH, safeZoneW, 30 * pixelH]; //ARRAY - Position with this attributes [x,y,w,h];
+ExAd_SB_GUI_POS_Default = 	[-0.000156274 * safezoneW + safezoneX","0.973 * safezoneH + safezoneY","1.00031 * safezoneW","0.022 * safezoneH]; //ARRAY - Position with this attributes [x,y,w,h];
 ExAd_SB_GUI_TextColor_Default = [1,1,1,1];				//ARRAY - rgba array with values between 0-1, 0 => 0 | 255 => 1
 ExAd_SB_GUI_BgColor_Default = [0.074, 0.082, 0.105, 0.85];				//ARRAY - rgba array with values between 0-1, 0 => 0 | 255 => 1
 
-ExAd_SB_Text_Margin_Default = "";						//STRING - Margin between components measured in blankspaces
+ExAd_SB_Text_Margin_Default = " ";						//STRING - Margin between components measured in blankspaces
 ExAd_SB_Text_InnerMargin_Default = " ";					//STRING - Margin between icon and text within the component measured in blankspaces
 ExAd_SB_Text_Font_Default = "PuristaLight";			//STRING - Font family
 ExAd_SB_Text_Align_Default = "center";					//STRING - Alignment (left,center,right)
