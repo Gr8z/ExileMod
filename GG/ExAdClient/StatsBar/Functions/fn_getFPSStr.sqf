@@ -20,11 +20,11 @@ private["_request","_img","_text"];
 
 _request = [];
 
-_img = format["<t size='%1'>FPS</t>", ExAd_SB_Img_Size];
+_img = format["<t size='%1'>FPS</t>", GG_SB_Img_Size];
 _text = floor diag_fps;
 _request pushBack [_img,_text];
 
-if(ExAd_SB_COMPONENTS_ACTIVE_COLORS)then{
+if(GG_SB_COMPONENTS_ACTIVE_COLORS)then{
 	_request pushBack ([0,40,_text] call ExAd_fnc_getSBColor)
 };
 

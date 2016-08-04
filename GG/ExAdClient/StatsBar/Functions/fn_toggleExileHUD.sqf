@@ -23,9 +23,9 @@ disableSerialization;
 _display = uiNameSpace getVariable ["RscExileHUD",displayNull];	
 _exileCtrl = _display displayCtrl 1300;
 
-_exileCtrl ctrlShow ExAd_SB_EXILE_HUD_ACTIVE;
+_exileCtrl ctrlShow GG_SB_EXILE_HUD_ACTIVE;
 
-if(ExAd_SB_EXILE_HUD_ACTIVE)then{
+if(GG_SB_EXILE_HUD_ACTIVE)then{
 	_hungerLabel = _display displayCtrl 1303;
 	_hungerLabel ctrlShow (ExileHudMode isEqualTo 0);
 	_hungerValue = _display displayCtrl 1302;

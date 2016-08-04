@@ -20,17 +20,17 @@ private["_display"];
 
 disableSerialization;
 
-ExAd_SB_Dialog_Layer cutRsc ["ExAd_STATSBAR", "PLAIN", 1];
+GG_SB_Dialog_Layer cutRsc ["ExAd_STATSBAR", "PLAIN", 1];
 	
 _display = uiNameSpace getVariable ["ExAd_STATSBAR",displayNull];	
-_logoCtrl = _display displayCtrl ExAd_SB_Dialog_CtrlLogo_IDC;
+_logoCtrl = _display displayCtrl GG_SB_Dialog_CtrlLogo_IDC;
 
-if(count ExAd_SB_ICON_LOGO > 0)then{
-	_logoCtrl ctrlSetText ExAd_SB_ICON_LOGO;
+if(count GG_SB_ICON_LOGO > 0)then{
+	_logoCtrl ctrlSetText GG_SB_ICON_LOGO;
 };
 
 call ExAd_fnc_updateSB;
 
-ExAd_SB_Thread = [ExAd_SB_Update_Rate, ExAd_fnc_sbThread, [], true] call ExileClient_system_thread_addtask;
+GG_SB_Thread = [GG_SB_Update_Rate, ExAd_fnc_sbThread, [], true] call ExileClient_system_thread_addtask;
 
 true

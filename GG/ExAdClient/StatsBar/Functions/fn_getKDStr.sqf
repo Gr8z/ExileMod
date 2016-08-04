@@ -22,12 +22,12 @@ _request = [];
 
 _death = if(ExileClientPlayerDeaths == 0)then{0.001}else{ExileClientPlayerDeaths};
 
-_img = [ExAd_SB_ICON_KD] call ExAd_fnc_formatSBImage;
+_img = [GG_SB_ICON_KD] call ExAd_fnc_formatSBImage;
 _text = [ExileClientPlayerKills / _death, 2] call ExileClient_util_math_round;
 
 _request pushBack [_img,_text];
 
-if(ExAd_SB_COMPONENTS_ACTIVE_COLORS)then{
+if(GG_SB_COMPONENTS_ACTIVE_COLORS)then{
 	_request pushBack ([0,2,_text] call ExAd_fnc_getSBColor)
 };
 

@@ -20,125 +20,125 @@
 _path = "GG\ExAdClient\StatsBar\customize.sqf";
 call compile preprocessFileLineNumbers _path;
 
-if(isNil "ExAd_SB_ICON_BANK")then{ExAd_SB_ICON_BANK = "ExAdClient\StatsBar\Icons\ExAd_Bank.paa";};
-if(isNil "ExAd_SB_ICON_CLAN")then{ExAd_SB_ICON_CLAN = "ExAdClient\StatsBar\Icons\ExAd_Family.paa";};
-if(isNil "ExAd_SB_ICON_COMPASS")then{ExAd_SB_ICON_COMPASS = "ExAdClient\StatsBar\Icons\ExAd_Compass.paa";};
-if(isNil "ExAd_SB_ICON_GRID")then{ExAd_SB_ICON_GRID = "ExAdClient\StatsBar\Icons\ExAd_Grid.paa";};
-if(isNil "ExAd_SB_ICON_HP")then{ExAd_SB_ICON_HP = "ExAdClient\StatsBar\Icons\ExAd_Health.paa";};
-if(isNil "ExAd_SB_ICON_HUNGER")then{ExAd_SB_ICON_HUNGER = "ExAdClient\StatsBar\Icons\ExAd_Hunger.paa";};
-if(isNil "ExAd_SB_ICON_KD")then{ExAd_SB_ICON_KD = "ExAdClient\StatsBar\Icons\ExAd_KD.paa";};
-if(isNil "ExAd_SB_ICON_PLAYERS")then{ExAd_SB_ICON_PLAYERS = "ExAdClient\StatsBar\Icons\ExAd_Players.paa";};
-if(isNil "ExAd_SB_ICON_RESPECT")then{ExAd_SB_ICON_RESPECT = "ExAdClient\StatsBar\Icons\ExAd_Respect.paa";};
-if(isNil "ExAd_SB_ICON_TEMP")then{ExAd_SB_ICON_TEMP = "ExAdClient\StatsBar\Icons\ExAd_Temp.paa";};
-if(isNil "ExAd_SB_ICON_THIRST")then{ExAd_SB_ICON_THIRST = "ExAdClient\StatsBar\Icons\ExAd_Thirst.paa";};
-if(isNil "ExAd_SB_ICON_TIMER")then{ExAd_SB_ICON_TIMER = "ExAdClient\StatsBar\Icons\ExAd_Restart.paa";};
-if(isNil "ExAd_SB_ICON_Wallet")then{ExAd_SB_ICON_Wallet = "ExAdClient\StatsBar\Icons\ExAd_Wallet.paa";};
-if(isNil "ExAd_SB_ICON_LOGO")then{ExAd_SB_ICON_LOGO = "ExAdClient\Core\Img\ExAd_logo_128.paa";};
+if(isNil "GG_SB_ICON_BANK")then{GG_SB_ICON_BANK = "ExAdClient\StatsBar\Icons\ExAd_Bank.paa";};
+if(isNil "GG_SB_ICON_CLAN")then{GG_SB_ICON_CLAN = "ExAdClient\StatsBar\Icons\ExAd_Family.paa";};
+if(isNil "GG_SB_ICON_COMPASS")then{GG_SB_ICON_COMPASS = "ExAdClient\StatsBar\Icons\ExAd_Compass.paa";};
+if(isNil "GG_SB_ICON_GRID")then{GG_SB_ICON_GRID = "ExAdClient\StatsBar\Icons\ExAd_Grid.paa";};
+if(isNil "GG_SB_ICON_HP")then{GG_SB_ICON_HP = "ExAdClient\StatsBar\Icons\ExAd_Health.paa";};
+if(isNil "GG_SB_ICON_HUNGER")then{GG_SB_ICON_HUNGER = "ExAdClient\StatsBar\Icons\ExAd_Hunger.paa";};
+if(isNil "GG_SB_ICON_KD")then{GG_SB_ICON_KD = "ExAdClient\StatsBar\Icons\ExAd_KD.paa";};
+if(isNil "GG_SB_ICON_PLAYERS")then{GG_SB_ICON_PLAYERS = "ExAdClient\StatsBar\Icons\ExAd_Players.paa";};
+if(isNil "GG_SB_ICON_RESPECT")then{GG_SB_ICON_RESPECT = "ExAdClient\StatsBar\Icons\ExAd_Respect.paa";};
+if(isNil "GG_SB_ICON_TEMP")then{GG_SB_ICON_TEMP = "ExAdClient\StatsBar\Icons\ExAd_Temp.paa";};
+if(isNil "GG_SB_ICON_THIRST")then{GG_SB_ICON_THIRST = "ExAdClient\StatsBar\Icons\ExAd_Thirst.paa";};
+if(isNil "GG_SB_ICON_TIMER")then{GG_SB_ICON_TIMER = "ExAdClient\StatsBar\Icons\ExAd_Restart.paa";};
+if(isNil "GG_SB_ICON_Wallet")then{GG_SB_ICON_Wallet = "ExAdClient\StatsBar\Icons\ExAd_Wallet.paa";};
+if(isNil "GG_SB_ICON_LOGO")then{GG_SB_ICON_LOGO = "ExAdClient\Core\Img\ExAd_logo_128.paa";};
 
-if(isNil "ExAd_SB_GUI_POS_Default")then{ExAd_SB_GUI_POS_Default = 	[safeZoneX, safeZoneY + safeZoneH - 32 * pixelH, safeZoneW, 30 * pixelH];};
-if(isNil "ExAd_SB_GUI_TextColor_Default")then{ExAd_SB_GUI_TextColor_Default = [1,1,1,1];};
-if(isNil "ExAd_SB_GUI_BgColor_Default")then{ExAd_SB_GUI_BgColor_Default = [0,0,0,0];};
+if(isNil "GG_SB_GUI_POS_Default")then{GG_SB_GUI_POS_Default = 	[safeZoneX, safeZoneY + safeZoneH - 32 * pixelH, safeZoneW, 30 * pixelH];};
+if(isNil "GG_SB_GUI_TextColor_Default")then{GG_SB_GUI_TextColor_Default = [1,1,1,1];};
+if(isNil "GG_SB_GUI_BgColor_Default")then{GG_SB_GUI_BgColor_Default = [0,0,0,0];};
 
-if(isNil "ExAd_SB_Text_Margin_Default")then{ExAd_SB_Text_Margin_Default = " ";};
-if(isNil "ExAd_SB_Text_InnerMargin_Default")then{ExAd_SB_Text_InnerMargin_Default = "";};
-if(isNil "ExAd_SB_Text_Font_Default")then{ExAd_SB_Text_Font_Default = "OrbitronLight";};
-if(isNil "ExAd_SB_Text_Align_Default")then{ExAd_SB_Text_Align_Default = "center";};
-if(isNil "ExAd_SB_Text_Size_Default")then{ExAd_SB_Text_Size_Default = 1;};
-if(isNil "ExAd_SB_Img_Size_Default")then{ExAd_SB_Img_Size_Default = 1;};
+if(isNil "GG_SB_Text_Margin_Default")then{GG_SB_Text_Margin_Default = " ";};
+if(isNil "GG_SB_Text_InnerMargin_Default")then{GG_SB_Text_InnerMargin_Default = "";};
+if(isNil "GG_SB_Text_Font_Default")then{GG_SB_Text_Font_Default = "OrbitronLight";};
+if(isNil "GG_SB_Text_Align_Default")then{GG_SB_Text_Align_Default = "center";};
+if(isNil "GG_SB_Text_Size_Default")then{GG_SB_Text_Size_Default = 1;};
+if(isNil "GG_SB_Img_Size_Default")then{GG_SB_Img_Size_Default = 1;};
 
-if(isNil "ExAd_SB_Timer")then{ExAd_SB_Timer = 3;};
+if(isNil "GG_SB_Timer")then{GG_SB_Timer = 3;};
 
-if(isNil "ExAd_SB_Show_KD_Default")then{ExAd_SB_Show_KD_Default = false;};
-if(isNil "ExAd_SB_Show_HP_Default")then{ExAd_SB_Show_HP_Default = true;};
-if(isNil "ExAd_SB_Show_Thirst_Default")then{ExAd_SB_Show_Thirst_Default = false;};
-if(isNil "ExAd_SB_Show_Hunger_Default")then{ExAd_SB_Show_Hunger_Default = false;};
-if(isNil "ExAd_SB_Show_Wallet_Default")then{ExAd_SB_Show_Wallet_Default = true;};
-if(isNil "ExAd_SB_Show_Bank_Default")then{ExAd_SB_Show_Bank_Default = false;};
-if(isNil "ExAd_SB_Show_Respect_Default")then{ExAd_SB_Show_Respect_Default = false;};
-if(isNil "ExAd_SB_Show_FPS_Default")then{ExAd_SB_Show_FPS_Default = true;};
-if(isNil "ExAd_SB_Show_Time_Default")then{ExAd_SB_Show_Time_Default = true;};
-if(isNil "ExAd_SB_Show_Temp_Default")then{ExAd_SB_Show_Temp_Default = true;};
-if(isNil "ExAd_SB_Show_Grid_Default")then{ExAd_SB_Show_Grid_Default = true;};
-if(isNil "ExAd_SB_Show_Compass_Default")then{ExAd_SB_Show_Compass_Default = true;};
-if(isNil "ExAd_SB_Show_PlayerCount_Default")then{ExAd_SB_Show_PlayerCount_Default = true;};
-if(isNil "ExAd_SB_Show_ClanCount_Default")then{ExAd_SB_Show_ClanCount_Default = false;};
+if(isNil "GG_SB_Show_KD_Default")then{GG_SB_Show_KD_Default = false;};
+if(isNil "GG_SB_Show_HP_Default")then{GG_SB_Show_HP_Default = true;};
+if(isNil "GG_SB_Show_Thirst_Default")then{GG_SB_Show_Thirst_Default = false;};
+if(isNil "GG_SB_Show_Hunger_Default")then{GG_SB_Show_Hunger_Default = false;};
+if(isNil "GG_SB_Show_Wallet_Default")then{GG_SB_Show_Wallet_Default = true;};
+if(isNil "GG_SB_Show_Bank_Default")then{GG_SB_Show_Bank_Default = false;};
+if(isNil "GG_SB_Show_Respect_Default")then{GG_SB_Show_Respect_Default = false;};
+if(isNil "GG_SB_Show_FPS_Default")then{GG_SB_Show_FPS_Default = true;};
+if(isNil "GG_SB_Show_Time_Default")then{GG_SB_Show_Time_Default = true;};
+if(isNil "GG_SB_Show_Temp_Default")then{GG_SB_Show_Temp_Default = true;};
+if(isNil "GG_SB_Show_Grid_Default")then{GG_SB_Show_Grid_Default = true;};
+if(isNil "GG_SB_Show_Compass_Default")then{GG_SB_Show_Compass_Default = true;};
+if(isNil "GG_SB_Show_PlayerCount_Default")then{GG_SB_Show_PlayerCount_Default = true;};
+if(isNil "GG_SB_Show_ClanCount_Default")then{GG_SB_Show_ClanCount_Default = false;};
 
 
-if(isNil "ExAd_SB_COMPONENTS_COLORS")then{ExAd_SB_COMPONENTS_COLORS = ["#000000", "#440B00","#FE1106","#CA7400","#A9C700","#11BF03"];};
-if(isNil "ExAd_SB_Dialog_Layer")then{ExAd_SB_Dialog_Layer = 102;};
-if(isNil "ExAd_SB_Dialog_CtrlLogo_IDC")then{ExAd_SB_Dialog_CtrlLogo_IDC = 1000;};
-if(isNil "ExAd_SB_Dialog_CtrlBar_IDC")then{ExAd_SB_Dialog_CtrlBar_IDC = 1100;};
+if(isNil "GG_SB_COMPONENTS_COLORS")then{GG_SB_COMPONENTS_COLORS = ["#000000", "#440B00","#FE1106","#CA7400","#A9C700","#11BF03"];};
+if(isNil "GG_SB_Dialog_Layer")then{GG_SB_Dialog_Layer = 102;};
+if(isNil "GG_SB_Dialog_CtrlLogo_IDC")then{GG_SB_Dialog_CtrlLogo_IDC = 1000;};
+if(isNil "GG_SB_Dialog_CtrlBar_IDC")then{GG_SB_Dialog_CtrlBar_IDC = 1100;};
 
 {
 	_x call ExAd_fnc_localize;
 }forEach [
-	["STR_ExAd_SB_APP_GO_BACK", "Go Back"],
-	["STR_ExAd_SB_APP_CB_KD", "Kill/Death Ratio"],
-	["STR_ExAd_SB_APP_CB_HP", "Health"],
-	["STR_ExAd_SB_APP_CB_THIRST", "Thirst"],
-	["STR_ExAd_SB_APP_CB_HUNGER", "Hunger"],
-	["STR_ExAd_SB_APP_CB_WALLET", "POP TABS in wallet"],
-	["STR_ExAd_SB_APP_CB_BANK", "POP TABS in bank"],
-	["STR_ExAd_SB_APP_CB_RESPECT", "Respect"],
-	["STR_ExAd_SB_APP_CB_COLORS", "Use color indications"],
-	["STR_ExAd_SB_APP_CB_FPS", "FPS"],
-	["STR_ExAd_SB_APP_CB_TIMER", "Restart time"],
-	["STR_ExAd_SB_APP_CB_TEMP", "Body Temperature"],
-	["STR_ExAd_SB_APP_CB_GRID", "Grid location"],
-	["STR_ExAd_SB_APP_CB_COMPASS", "Compass"],
-	["STR_ExAd_SB_APP_CB_PLAYERS", "Players online"],
-	["STR_ExAd_SB_APP_CB_CLAN_MEMBERS", "Family members online"],
-	["STR_ExAd_SB_APP_CB_HIDE_EXILE_SB", "Hide Exile Status bar"],
-	["STR_ExAd_SB_APP_SLIDER_BG_COLOR", "Background Color"],
-	["STR_ExAd_SB_APP_SLIDER_POS_SIZE", "Position/Size"],
-	["STR_ExAd_SB_APP_COMBO_FONT", "Font"],
-	["STR_ExAd_SB_APP_COMBO_TOOLTIP_FONT", "Font"],
-	["STR_ExAd_SB_APP_COMBO_TOOLTIP_ALIGN", "Align"],
-	["STR_ExAd_SB_APP_SLIDER_TEXT_COLOR", "Text Color"],
-	["STR_ExAd_SB_APP_SLIDER_UPDATE_RATE", "Update Rate"],
-	["STR_ExAd_SB_APP_SLIDER_TEXT_SIZE", "Text Size"],
-	["STR_ExAd_SB_APP_SLIDER_TEXT_MARGIN", "Margin"],
-	["STR_ExAd_SB_APP_SLIDER_TEXT_PADDING", "Padding"],
-	["STR_ExAd_SB_APP_SLIDER_IMG_SIZE", "Image Size"],
-	["STR_ExAd_SB_APP_BTN_SHOW", "Show"],
-	["STR_ExAd_SB_APP_BTN_HIDE", "Hide"]
+	["STR_GG_SB_APP_GO_BACK", "Go Back"],
+	["STR_GG_SB_APP_CB_KD", "Kill/Death Ratio"],
+	["STR_GG_SB_APP_CB_HP", "Health"],
+	["STR_GG_SB_APP_CB_THIRST", "Thirst"],
+	["STR_GG_SB_APP_CB_HUNGER", "Hunger"],
+	["STR_GG_SB_APP_CB_WALLET", "POP TABS in wallet"],
+	["STR_GG_SB_APP_CB_BANK", "POP TABS in bank"],
+	["STR_GG_SB_APP_CB_RESPECT", "Respect"],
+	["STR_GG_SB_APP_CB_COLORS", "Use color indications"],
+	["STR_GG_SB_APP_CB_FPS", "FPS"],
+	["STR_GG_SB_APP_CB_TIMER", "Restart time"],
+	["STR_GG_SB_APP_CB_TEMP", "Body Temperature"],
+	["STR_GG_SB_APP_CB_GRID", "Grid location"],
+	["STR_GG_SB_APP_CB_COMPASS", "Compass"],
+	["STR_GG_SB_APP_CB_PLAYERS", "Players online"],
+	["STR_GG_SB_APP_CB_CLAN_MEMBERS", "Family members online"],
+	["STR_GG_SB_APP_CB_HIDE_EXILE_SB", "Hide Exile Status bar"],
+	["STR_GG_SB_APP_SLIDER_BG_COLOR", "Background Color"],
+	["STR_GG_SB_APP_SLIDER_POS_SIZE", "Position/Size"],
+	["STR_GG_SB_APP_COMBO_FONT", "Font"],
+	["STR_GG_SB_APP_COMBO_TOOLTIP_FONT", "Font"],
+	["STR_GG_SB_APP_COMBO_TOOLTIP_ALIGN", "Align"],
+	["STR_GG_SB_APP_SLIDER_TEXT_COLOR", "Text Color"],
+	["STR_GG_SB_APP_SLIDER_UPDATE_RATE", "Update Rate"],
+	["STR_GG_SB_APP_SLIDER_TEXT_SIZE", "Text Size"],
+	["STR_GG_SB_APP_SLIDER_TEXT_MARGIN", "Margin"],
+	["STR_GG_SB_APP_SLIDER_TEXT_PADDING", "Padding"],
+	["STR_GG_SB_APP_SLIDER_IMG_SIZE", "Image Size"],
+	["STR_GG_SB_APP_BTN_SHOW", "Show"],
+	["STR_GG_SB_APP_BTN_HIDE", "Hide"]
 ];
 	
 
 
-ExAd_SB_Update_Rate = profileNamespace getVariable ["ExAd_SB_Update_Rate", 1];
-ExAd_SB_Active = profileNamespace getVariable ["ExAd_SB_Active", true];
+GG_SB_Update_Rate = profileNamespace getVariable ["GG_SB_Update_Rate", 1];
+GG_SB_Active = profileNamespace getVariable ["GG_SB_Active", true];
 
-ExAd_SB_GUI_POS = profileNamespace getVariable ["ExAd_SB_GUI_POS", ExAd_SB_GUI_POS_Default];
-ExAd_SB_GUI_TextColor = profileNamespace getVariable ["ExAd_SB_GUI_TextColor", ExAd_SB_GUI_TextColor_Default];
-ExAd_SB_GUI_BgColor = profileNamespace getVariable ["ExAd_SB_GUI_BgColor", ExAd_SB_GUI_BgColor_Default];
+GG_SB_GUI_POS = profileNamespace getVariable ["GG_SB_GUI_POS", GG_SB_GUI_POS_Default];
+GG_SB_GUI_TextColor = profileNamespace getVariable ["GG_SB_GUI_TextColor", GG_SB_GUI_TextColor_Default];
+GG_SB_GUI_BgColor = profileNamespace getVariable ["GG_SB_GUI_BgColor", GG_SB_GUI_BgColor_Default];
 
-ExAd_SB_Text_Margin = profileNamespace getVariable ["ExAd_SB_Text_Margin", ExAd_SB_Text_Margin_Default];
-ExAd_SB_Text_InnerMargin = profileNamespace getVariable ["ExAd_SB_Text_InnerMargin", ExAd_SB_Text_InnerMargin_Default];
-ExAd_SB_Text_Font = profileNamespace getVariable ["ExAd_SB_Text_Font", ExAd_SB_Text_Font_Default];
-ExAd_SB_Text_Align = profileNamespace getVariable ["ExAd_SB_Text_Align", ExAd_SB_Text_Align_Default];
-ExAd_SB_Text_Size = profileNamespace getVariable ["ExAd_SB_Text_Size", ExAd_SB_Text_Size_Default];
-ExAd_SB_Img_Size = profileNamespace getVariable ["ExAd_SB_Img_Size", ExAd_SB_Img_Size_Default];
+GG_SB_Text_Margin = profileNamespace getVariable ["GG_SB_Text_Margin", GG_SB_Text_Margin_Default];
+GG_SB_Text_InnerMargin = profileNamespace getVariable ["GG_SB_Text_InnerMargin", GG_SB_Text_InnerMargin_Default];
+GG_SB_Text_Font = profileNamespace getVariable ["GG_SB_Text_Font", GG_SB_Text_Font_Default];
+GG_SB_Text_Align = profileNamespace getVariable ["GG_SB_Text_Align", GG_SB_Text_Align_Default];
+GG_SB_Text_Size = profileNamespace getVariable ["GG_SB_Text_Size", GG_SB_Text_Size_Default];
+GG_SB_Img_Size = profileNamespace getVariable ["GG_SB_Img_Size", GG_SB_Img_Size_Default];
 
-ExAd_SB_Show_KD = profileNamespace getVariable ["ExAd_SB_Show_KD", ExAd_SB_Show_KD_Default];
-ExAd_SB_Show_HP = profileNamespace getVariable ["ExAd_SB_Show_HP", ExAd_SB_Show_HP_Default];
-ExAd_SB_Show_Thirst = profileNamespace getVariable ["ExAd_SB_Show_Thirst", ExAd_SB_Show_Thirst_Default];
-ExAd_SB_Show_Hunger = profileNamespace getVariable ["ExAd_SB_Show_Hunger", ExAd_SB_Show_Hunger_Default];
-ExAd_SB_Show_Wallet = profileNamespace getVariable ["ExAd_SB_Show_Wallet", ExAd_SB_Show_Wallet_Default];
-ExAd_SB_Show_Bank = profileNamespace getVariable ["ExAd_SB_Show_Bank", ExAd_SB_Show_Bank_Default];
-ExAd_SB_Show_Respect = profileNamespace getVariable ["ExAd_SB_Show_Respect", ExAd_SB_Show_Respect_Default];
-ExAd_SB_Show_FPS = profileNamespace getVariable ["ExAd_SB_Show_FPS", ExAd_SB_Show_FPS_Default];
-ExAd_SB_Show_Time = profileNamespace getVariable ["ExAd_SB_Show_Time", ExAd_SB_Show_Time_Default];
-ExAd_SB_Show_Temp = profileNamespace getVariable ["ExAd_SB_Show_Temp", ExAd_SB_Show_Temp_Default];
-ExAd_SB_Show_Grid = profileNamespace getVariable ["ExAd_SB_Show_Grid", ExAd_SB_Show_Grid_Default];
-ExAd_SB_Show_Compass = profileNamespace getVariable ["ExAd_SB_Show_Compass", ExAd_SB_Show_Compass_Default];
-ExAd_SB_Show_PlayerCount = profileNamespace getVariable ["ExAd_SB_Show_PlayerCount", ExAd_SB_Show_PlayerCount_Default];
-ExAd_SB_Show_ClanCount = profileNamespace getVariable ["ExAd_SB_Show_ClanCount", ExAd_SB_Show_ClanCount_Default];
+GG_SB_Show_KD = profileNamespace getVariable ["GG_SB_Show_KD", GG_SB_Show_KD_Default];
+GG_SB_Show_HP = profileNamespace getVariable ["GG_SB_Show_HP", GG_SB_Show_HP_Default];
+GG_SB_Show_Thirst = profileNamespace getVariable ["GG_SB_Show_Thirst", GG_SB_Show_Thirst_Default];
+GG_SB_Show_Hunger = profileNamespace getVariable ["GG_SB_Show_Hunger", GG_SB_Show_Hunger_Default];
+GG_SB_Show_Wallet = profileNamespace getVariable ["GG_SB_Show_Wallet", GG_SB_Show_Wallet_Default];
+GG_SB_Show_Bank = profileNamespace getVariable ["GG_SB_Show_Bank", GG_SB_Show_Bank_Default];
+GG_SB_Show_Respect = profileNamespace getVariable ["GG_SB_Show_Respect", GG_SB_Show_Respect_Default];
+GG_SB_Show_FPS = profileNamespace getVariable ["GG_SB_Show_FPS", GG_SB_Show_FPS_Default];
+GG_SB_Show_Time = profileNamespace getVariable ["GG_SB_Show_Time", GG_SB_Show_Time_Default];
+GG_SB_Show_Temp = profileNamespace getVariable ["GG_SB_Show_Temp", GG_SB_Show_Temp_Default];
+GG_SB_Show_Grid = profileNamespace getVariable ["GG_SB_Show_Grid", GG_SB_Show_Grid_Default];
+GG_SB_Show_Compass = profileNamespace getVariable ["GG_SB_Show_Compass", GG_SB_Show_Compass_Default];
+GG_SB_Show_PlayerCount = profileNamespace getVariable ["GG_SB_Show_PlayerCount", GG_SB_Show_PlayerCount_Default];
+GG_SB_Show_ClanCount = profileNamespace getVariable ["GG_SB_Show_ClanCount", GG_SB_Show_ClanCount_Default];
 
-ExAd_SB_COMPONENTS_ACTIVE_COLORS = profileNamespace getVariable ["ExAd_SB_COMPONENTS_ACTIVE_COLORS", true];
-ExAd_SB_EXILE_HUD_ACTIVE = profileNamespace getVariable ["ExAd_SB_EXILE_HUD_ACTIVE", true];
+GG_SB_COMPONENTS_ACTIVE_COLORS = profileNamespace getVariable ["GG_SB_COMPONENTS_ACTIVE_COLORS", true];
+GG_SB_EXILE_HUD_ACTIVE = profileNamespace getVariable ["GG_SB_EXILE_HUD_ACTIVE", true];
 
-if(!ExAd_SB_Active)exitWith{false};
+if(!GG_SB_Active)exitWith{false};
 
 [] spawn {
 	waituntil { !isnil "bis_fnc_init" && !isNull findDisplay 46 && alive player && !isNil "ExileClientLoadedIn" };
@@ -146,7 +146,7 @@ if(!ExAd_SB_Active)exitWith{false};
 
 	call ExAd_fnc_loadSB;
 	
-	if(!ExAd_SB_EXILE_HUD_ACTIVE)then{
+	if(!GG_SB_EXILE_HUD_ACTIVE)then{
 		call ExAd_fnc_toggleExileHUD;
 	};
 
