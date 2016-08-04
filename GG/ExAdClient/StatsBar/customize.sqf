@@ -39,9 +39,9 @@ ExAd_SB_GUI_POS_Default = 	[safeZoneX, safeZoneY + safeZoneH - 32 * pixelH, safe
 ExAd_SB_GUI_TextColor_Default = [1,1,1,1];				//ARRAY - rgba array with values between 0-1, 0 => 0 | 255 => 1
 ExAd_SB_GUI_BgColor_Default = [0.074, 0.082, 0.105, 0.85];				//ARRAY - rgba array with values between 0-1, 0 => 0 | 255 => 1
 
-ExAd_SB_Text_Margin_Default = " ";						//STRING - Margin between components measured in blankspaces
+ExAd_SB_Text_Margin_Default = "  ";						//STRING - Margin between components measured in blankspaces
 ExAd_SB_Text_InnerMargin_Default = "";					//STRING - Margin between icon and text within the component measured in blankspaces
-ExAd_SB_Text_Font_Default = "OrbitronLight";			//STRING - Font family
+ExAd_SB_Text_Font_Default = "PuristaLight";			//STRING - Font family
 ExAd_SB_Text_Align_Default = "center";					//STRING - Alignment (left,center,right)
 ExAd_SB_Text_Size_Default = 1;							//SCALAR - Text size ( 0-2 )
 ExAd_SB_Img_Size_Default = 1;							//SCALAR - Icon size ( 0-2 )
