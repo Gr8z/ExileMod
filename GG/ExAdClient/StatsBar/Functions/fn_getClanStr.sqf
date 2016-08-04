@@ -18,7 +18,7 @@
 */
 private["_img","_text"];
 
-_img = [ExAd_SB_ICON_CLAN] call ExAd_fnc_formatSBImage;
+_img = [GG_SB_ICON_CLAN] call ExAd_fnc_formatSBImage;
 _text = "N/A";
 
 [[_img, _text]] call ExAd_fnc_formatSBOutput

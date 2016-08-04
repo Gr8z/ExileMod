@@ -18,7 +18,7 @@
 */
 private["_img","_text"];
 
-_img = [ExAd_SB_ICON_BANK] call ExAd_fnc_formatSBImage;
+_img = [GG_SB_ICON_BANK] call ExAd_fnc_formatSBImage;
 _text = [player getVariable ["ExileLocker", 0]] call ExAd_fnc_formatNbrToPrefixStr;
 
 [[_img, _text]] call ExAd_fnc_formatSBOutput

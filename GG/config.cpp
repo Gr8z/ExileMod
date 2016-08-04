@@ -3790,7 +3790,7 @@ class CfgExileArsenal
 
 class CfgXM8
 {
-	extraApps[] = {"ExAd_VG","ExAd_CHVD","ExAd_Journal","ExAd_Bike","ExAd_SB"};
+	extraApps[] = {"ExAd_VG","ExAd_CHVD","ExAd_Journal","ExAd_Bike","GG_SB"};
 	
 	class ExAd_VG 
 	{
@@ -3833,7 +3833,7 @@ class CfgXM8
 		autoCleanUp = 1;
 		quickFunction = "['ExAd_Bike'] call ExAd_XM8_DV_fnc_spawnVehicle";
 	};
-	class ExAd_SB 
+	class GG_SB 
 	{
 		title = "Statsbar Settings";
 		controlID = 50400;					//IDC:50400 -> 50475 || These need to be unique and out of range from each other

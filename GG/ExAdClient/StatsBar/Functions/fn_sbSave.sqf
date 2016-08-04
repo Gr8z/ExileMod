@@ -16,36 +16,36 @@
 	limitations under the License.
 
 */
-profileNamespace setVariable ["ExAd_SB_Update_Rate", ExAd_SB_Update_Rate];
-profileNamespace setVariable ["ExAd_SB_Active", ExAd_SB_Active];
+profileNamespace setVariable ["GG_SB_Update_Rate", GG_SB_Update_Rate];
+profileNamespace setVariable ["GG_SB_Active", GG_SB_Active];
 
-profileNamespace setVariable ["ExAd_SB_GUI_POS", ExAd_SB_GUI_POS];
-profileNamespace setVariable ["ExAd_SB_GUI_TextColor", ExAd_SB_GUI_TextColor];
-profileNamespace setVariable ["ExAd_SB_GUI_BgColor", ExAd_SB_GUI_BgColor];
+profileNamespace setVariable ["GG_SB_GUI_POS", GG_SB_GUI_POS];
+profileNamespace setVariable ["GG_SB_GUI_TextColor", GG_SB_GUI_TextColor];
+profileNamespace setVariable ["GG_SB_GUI_BgColor", GG_SB_GUI_BgColor];
 
-profileNamespace setVariable ["ExAd_SB_Text_Margin", ExAd_SB_Text_Margin];
-profileNamespace setVariable ["ExAd_SB_Text_InnerMargin", ExAd_SB_Text_InnerMargin];
-profileNamespace setVariable ["ExAd_SB_Text_Font", ExAd_SB_Text_Font];
-profileNamespace setVariable ["ExAd_SB_Text_Align", ExAd_SB_Text_Align];
-profileNamespace setVariable ["ExAd_SB_Text_Size", ExAd_SB_Text_Size];
-profileNamespace setVariable ["ExAd_SB_Img_Size", ExAd_SB_Img_Size];
+profileNamespace setVariable ["GG_SB_Text_Margin", GG_SB_Text_Margin];
+profileNamespace setVariable ["GG_SB_Text_InnerMargin", GG_SB_Text_InnerMargin];
+profileNamespace setVariable ["GG_SB_Text_Font", GG_SB_Text_Font];
+profileNamespace setVariable ["GG_SB_Text_Align", GG_SB_Text_Align];
+profileNamespace setVariable ["GG_SB_Text_Size", GG_SB_Text_Size];
+profileNamespace setVariable ["GG_SB_Img_Size", GG_SB_Img_Size];
 
-profileNamespace setVariable ["ExAd_SB_Show_KD", ExAd_SB_Show_KD];
-profileNamespace setVariable ["ExAd_SB_Show_HP", ExAd_SB_Show_HP];
-profileNamespace setVariable ["ExAd_SB_Show_Thirst", ExAd_SB_Show_Thirst];
-profileNamespace setVariable ["ExAd_SB_Show_Hunger", ExAd_SB_Show_Hunger];
-profileNamespace setVariable ["ExAd_SB_Show_Wallet", ExAd_SB_Show_Wallet];
-profileNamespace setVariable ["ExAd_SB_Show_Bank", ExAd_SB_Show_Bank];
-profileNamespace setVariable ["ExAd_SB_Show_Respect", ExAd_SB_Show_Respect];
-profileNamespace setVariable ["ExAd_SB_Show_FPS", ExAd_SB_Show_FPS];
-profileNamespace setVariable ["ExAd_SB_Show_Time", ExAd_SB_Show_Time];
-profileNamespace setVariable ["ExAd_SB_Show_Temp", ExAd_SB_Show_Temp];
-profileNamespace setVariable ["ExAd_SB_Show_Grid", ExAd_SB_Show_Grid];
-profileNamespace setVariable ["ExAd_SB_Show_Compass", ExAd_SB_Show_Compass];
-profileNamespace setVariable ["ExAd_SB_Show_PlayerCount", ExAd_SB_Show_PlayerCount];
-profileNamespace setVariable ["ExAd_SB_Show_ClanCount", ExAd_SB_Show_ClanCount];
+profileNamespace setVariable ["GG_SB_Show_KD", GG_SB_Show_KD];
+profileNamespace setVariable ["GG_SB_Show_HP", GG_SB_Show_HP];
+profileNamespace setVariable ["GG_SB_Show_Thirst", GG_SB_Show_Thirst];
+profileNamespace setVariable ["GG_SB_Show_Hunger", GG_SB_Show_Hunger];
+profileNamespace setVariable ["GG_SB_Show_Wallet", GG_SB_Show_Wallet];
+profileNamespace setVariable ["GG_SB_Show_Bank", GG_SB_Show_Bank];
+profileNamespace setVariable ["GG_SB_Show_Respect", GG_SB_Show_Respect];
+profileNamespace setVariable ["GG_SB_Show_FPS", GG_SB_Show_FPS];
+profileNamespace setVariable ["GG_SB_Show_Time", GG_SB_Show_Time];
+profileNamespace setVariable ["GG_SB_Show_Temp", GG_SB_Show_Temp];
+profileNamespace setVariable ["GG_SB_Show_Grid", GG_SB_Show_Grid];
+profileNamespace setVariable ["GG_SB_Show_Compass", GG_SB_Show_Compass];
+profileNamespace setVariable ["GG_SB_Show_PlayerCount", GG_SB_Show_PlayerCount];
+profileNamespace setVariable ["GG_SB_Show_ClanCount", GG_SB_Show_ClanCount];
 
-profileNamespace setVariable ["ExAd_SB_COMPONENTS_ACTIVE_COLORS", ExAd_SB_COMPONENTS_ACTIVE_COLORS];
-profileNamespace setVariable ["ExAd_SB_EXILE_HUD_ACTIVE", ExAd_SB_EXILE_HUD_ACTIVE];
+profileNamespace setVariable ["GG_SB_COMPONENTS_ACTIVE_COLORS", GG_SB_COMPONENTS_ACTIVE_COLORS];
+profileNamespace setVariable ["GG_SB_EXILE_HUD_ACTIVE", GG_SB_EXILE_HUD_ACTIVE];
 
 true
