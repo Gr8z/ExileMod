@@ -1673,7 +1673,7 @@ class CfgExileArsenal
 	class Exile_Item_FuelCanisterEmpty				{ quality = 1; price = 50; };
 	class Exile_Item_JunkMetal						{ quality = 1; price = 450; };
 	class Exile_Item_LightBulb						{ quality = 1; price = 250; };
-	class Exile_Item_MetalBoard						{ quality = 1; price = 1000; };
+	class Exile_Item_MetalBoard						{ quality = 1; price = 1200; };
 	class Exile_Item_FloodLightKit					{ quality = 1; price = 1000; };
 	class Exile_Item_PortableGeneratorKit			{ quality = 1; price = 2500; };
 	class Exile_Item_SafeKit						{ quality = 1; price = 15000; };
@@ -1682,7 +1682,7 @@ class CfgExileArsenal
 	class Exile_Item_BaseCameraKit					{ quality = 1; price = 7500; };
 //	class Exile_Magazine_Battery					{ quality = 1; price = 2000; };
 	class Exile_Item_CamoTentKit					{ quality = 1; price = 250; };
-	class Exile_Item_MetalPole						{ quality = 1; price = 850; };
+	class Exile_Item_MetalPole						{ quality = 1; price = 2400; };
 	class Exile_Item_MetalScrews					{ quality = 1; price = 150; };
 	class Exile_Item_MetalWire						{ quality = 1; price = 300; };
 	class Exile_Item_Cement							{ quality = 1; price = 1500; };
