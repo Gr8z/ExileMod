@@ -610,7 +610,8 @@ class CraftMetalBoard: Exile_AbstractCraftingRecipe
 	};
 	tools[] = {"Exile_Item_Grinder"};
 };
-class CraftMetalHedgehog: Exile_AbstractCraftingRecipe
+/*
+ class CraftMetalHedgehog: Exile_AbstractCraftingRecipe
 {
 	name = "Craft Metal Hedgehog";
 	pictureItem = "Exile_Item_MetalHedgehogKit";
@@ -625,6 +626,7 @@ class CraftMetalHedgehog: Exile_AbstractCraftingRecipe
 	};
 	tools[] = {"Exile_Item_Grinder"};
 };
+*/
 class CraftMetalPole: Exile_AbstractCraftingRecipe
 {
 	name = "Craft Metal Pole";
@@ -1687,7 +1689,7 @@ class CfgExileArsenal
 	class Exile_Item_MetalWire						{ quality = 1; price = 300; };
 	class Exile_Item_Cement							{ quality = 1; price = 1500; };
 	class Exile_Item_Sand							{ quality = 1; price = 1500; };
-	class Exile_Item_MetalHedgehogKit				{ quality = 1; price = 800; };
+//	class Exile_Item_MetalHedgehogKit				{ quality = 1; price = 800; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Food
@@ -7091,7 +7093,7 @@ class Glasses
 			"Exile_Item_MetalWire",
 			"Exile_Item_Laptop",
 			"Exile_Item_BaseCameraKit",
-			"Exile_Item_MetalHedgehogKit",
+			//"Exile_Item_MetalHedgehogKit",
 			//"Exile_Item_CarWheel",
 			"Exile_Item_Cement",
 			"Exile_Item_Sand"
