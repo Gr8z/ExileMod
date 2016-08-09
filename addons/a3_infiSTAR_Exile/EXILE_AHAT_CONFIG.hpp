@@ -133,7 +133,6 @@ adminUIDandAccess[] =
 		 "76561197978528230", // Dark
 		 "76561198056028211", // Nasty
 		 "76561198133936962", // Wrice4
-		 "76561198021389971", // thirdhero
 		 //Add UID's Above - Don't forget the comma!
 		"0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
@@ -167,11 +166,11 @@ adminUIDandAccess[] =
 		 "76561198088251390", // SIX
 		 "76561197979611157", // Clanzoucu
 		 "76561198073495490", // Adam Kadmon
-		 "76561198129318411", // FriendlyFire
 		 "76561198274767971", // CanadianFrodo
 		 "76561198065188130", // Nacho
 		 "76561198036004541", // Demen
 		 "76561197987069300", // Shroombear
+		 "76561198021389971", // thirdhero
 		 "0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
 			"Teleport On Map Click","Teleport - Target To Me","Teleport - Me To Target","Teleport In Facing Direction (10m steps)",
