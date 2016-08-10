@@ -2828,7 +2828,7 @@ class CfgExileArsenal
 	class muzzle_mas_snds_L 						{ quality = 1; price = 150; };
 	class muzzle_mas_snds_LM 						{ quality = 1; price = 150; };
 	class muzzle_mas_snds_C 						{ quality = 1; price = 200; };
-	class muzzle_mas_snds_MP5SD6					{ quality = 1; price = 200; };
+	class muzzle_mas_snds_MP5SD6					{ quality = 1; price = 200; sellPrice = 1; };
 	class muzzle_mas_snds_M 						{ quality = 1; price = 300; };
 	class muzzle_mas_snds_Mc 						{ quality = 1; price = 300; };
 	class muzzle_mas_snds_MP7 						{ quality = 1; price = 200; };
