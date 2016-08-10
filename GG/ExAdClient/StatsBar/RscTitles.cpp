@@ -26,7 +26,7 @@ class ExAd_STATSBAR
 		{	
 			type= 0;
 			idc = 1000;
-			x = "safeZoneX + 60 * pixelW";
+			x = "safeZoneX + safeZoneW - 60 * pixelW";
 			y = "safeZoneY + 60 * pixelH - 32 * pixelH";
 			w = "64 * pixelW";
 			h = "64 * pixelH";
