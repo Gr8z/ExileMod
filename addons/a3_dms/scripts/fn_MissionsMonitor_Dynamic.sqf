@@ -270,7 +270,7 @@
 				_text = format ["%1 %2",DMS_MarkerText_MissionPrefix,_text];
 			};
 
-			_dot setMarkerText (format ["%1 (%2 %3 remaining)",_text,count (_units call DMS_fnc_GetAllUnits),DMS_MarkerText_AIName]);
+			_dot setMarkerText (format ["%1 (%2)",_text,count (_units call DMS_fnc_GetAllUnits)]);
 		};
 
 		/*

@@ -9,6 +9,7 @@ switch (true) do
     player forceAddUniform "TRYK_U_B_Denim_T_BG_BK";
     player addBackpack "TRYK_B_tube_blk";
     player addItem "Exile_Item_Matches";
+    player addItem "Exile_Item_ExtensionCord";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
@@ -26,6 +27,7 @@ switch (true) do
     player addBackpack "B_AssaultPack_blk";
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
+    player addItem "Exile_Item_ExtensionCord";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
     player addItem "Exile_Item_PlasticBottleFreshWater";
@@ -47,6 +49,7 @@ switch (true) do
 	player addWeaponGlobal "hgun_mas_mak_F";
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
+    player addItem "Exile_Item_ExtensionCord";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
     player addItem "Exile_Item_BBQSandwich";
@@ -74,6 +77,7 @@ switch (true) do
     player addItemToVest "8Rnd_mas_9x18_Mag";
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
+    player addItem "Exile_Item_ExtensionCord";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
     player addItem "Exile_Item_BBQSandwich";
@@ -100,6 +104,7 @@ switch (true) do
 	player addPrimaryWeaponItem "optic_Aco_smg";
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
+    player addItem "Exile_Item_ExtensionCord";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
     player addItem "Exile_Item_BBQSandwich";
@@ -125,6 +130,7 @@ switch (true) do
     player addWeaponGlobal "hgun_mas_m9_F";
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
+    player addItem "Exile_Item_ExtensionCord";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
     player addItem "Exile_Item_BBQSandwich";
@@ -151,6 +157,7 @@ switch (true) do
 	player addPrimaryWeaponItem "muzzle_mas_snds_C";
 	player addPrimaryWeaponItem "optic_mas_aim_c";
     player addItem "Exile_Item_Matches";
+    player addItem "Exile_Item_ExtensionCord";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
@@ -177,6 +184,7 @@ switch (true) do
     player addWeaponGlobal "hgun_Pistol_heavy_01_F";
 	player addPrimaryWeaponItem "optic_mas_kobra_c";
     player addItem "Exile_Item_Matches";
+    player addItem "Exile_Item_ExtensionCord";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
@@ -203,6 +211,7 @@ switch (true) do
 	player addPrimaryWeaponItem "optic_mas_PSO_eo";
     player addWeaponGlobal "hgun_ACPC2_F";
     player addItem "Exile_Item_Matches";
+    player addItem "Exile_Item_ExtensionCord";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
@@ -229,6 +238,7 @@ switch (true) do
     player addPrimaryWeaponItem "optic_mas_aim";
     player addWeaponGlobal "hgun_mas_acp_F";
     player addItem "Exile_Item_Matches";
+    player addItem "Exile_Item_ExtensionCord";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
@@ -255,6 +265,7 @@ switch (true) do
 	player addPrimaryWeaponItem "optic_mas_acog_rd_c";
     player addWeaponGlobal "hgun_mas_m23_F";
     player addItem "Exile_Item_Matches";
+    player addItem "Exile_Item_ExtensionCord";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
@@ -283,6 +294,7 @@ switch (true) do
     player addWeaponGlobal "hgun_mas_grach_F";
     player addHandgunItem "optic_mas_MRD";
     player addItem "Exile_Item_Matches";
+    player addItem "Exile_Item_ExtensionCord";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
@@ -314,6 +326,7 @@ switch (true) do
     player addHandgunItem "muzzle_snds_L";
 	player addHandgunItem "optic_mas_MRD";
     player addItem "Exile_Item_Matches";
+    player addItem "Exile_Item_ExtensionCord";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
@@ -330,10 +343,10 @@ switch (true) do
     _rank = "Arms Dealer";  
   call ExileClient_object_player_bambiStateEnd;
      [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,430000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
-    player forceAddUniform "TRYK_U_B_BLK";
+    player forceAddUniform "TRYK_U_B_Woodland";
     for "_i" from 1 to 2 do {player addItemToUniform "25Rnd_mas_9x19_Mag";};
-    player addVest "V_PlateCarrierGL_blk";
-	player addBackpack "TRYK_B_Carryall_blk";
+    player addVest "V_PlateCarrierIAGL_oli";
+	player addBackpack "B_Carryall_oli";
 	player addItemToVest "1Rnd_HE_Grenade_shell";
     for "_i" from 1 to 2 do {player addItemToVest "25Rnd_mas_9x19_Mag";};
     for "_i" from 1 to 4 do {player addItemToBackpack "30Rnd_65x39_caseless_green";};
@@ -345,6 +358,7 @@ switch (true) do
     player addHandgunItem "muzzle_snds_L";
 	player addHandgunItem "optic_mas_MRD";
     player addItem "Exile_Item_Matches";
+    player addItem "Exile_Item_ExtensionCord";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
@@ -361,20 +375,21 @@ switch (true) do
     _rank = "Destroyer";  
     call ExileClient_object_player_bambiStateEnd;
      [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,510000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
-    player forceAddUniform "TRYK_U_B_BLKBLK_CombatUniform";
+    player forceAddUniform "TRYK_U_B_JSDF_CombatUniform";
     for "_i" from 1 to 2 do {player addItemToUniform "25Rnd_mas_9x19_Mag";};
-    player addVest "V_PlateCarrierGL_blk";
-    player addBackpack "TRYK_B_Carryall_blk";
+    player addVest "V_PlateCarrierIAGL_oli";
+    player addBackpack "TRYK_B_Carryall_wood";
 	for "_i" from 1 to 2 do {player addItemToVest "25Rnd_mas_9x19_Mag";};
     for "_i" from 1 to 4 do {player addItemToBackpack "30Rnd_mas_762x39_mag";};
 	for "_i" from 1 to 2 do {player addItemToBackpack "HandGrenade";};
-    player addHeadgear "TRYK_H_PASGT_BLK";
+    player addHeadgear "TRYK_H_PASGT_OD";
     player addWeaponGlobal "arifle_mas_akm";
 	player addPrimaryWeaponItem "optic_mas_kobra";
     player addWeaponGlobal "hgun_mas_uzi_F";
     player addHandgunItem "muzzle_snds_L";
 	player addHandgunItem "optic_mas_MRD";
     player addItem "Exile_Item_Matches";
+    player addItem "Exile_Item_ExtensionCord";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
@@ -406,6 +421,7 @@ switch (true) do
     player addHandgunItem "muzzle_snds_L";
 	player addHandgunItem "optic_mas_MRD";
     player addItem "Exile_Item_Matches";
+    player addItem "Exile_Item_ExtensionCord";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
@@ -437,6 +453,7 @@ switch (true) do
 	player addHandgunItem "muzzle_mas_snds_MP7";
 	player addHandgunItem "optic_mas_aim";
     player addItem "Exile_Item_Matches";
+    player addItem "Exile_Item_ExtensionCord";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
@@ -468,6 +485,7 @@ switch (true) do
 	player addHandgunItem "muzzle_mas_snds_MP7";
 	player addHandgunItem "optic_mas_aim";
     player addItem "Exile_Item_Matches";
+    player addItem "Exile_Item_ExtensionCord";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
@@ -500,6 +518,7 @@ switch (true) do
 	player addHandgunItem "optic_mas_aim";
 	player addItemToVest "SmokeShellRed";
     player addItem "Exile_Item_Matches";
+    player addItem "Exile_Item_ExtensionCord";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
@@ -532,6 +551,7 @@ switch (true) do
 	player addHandgunItem "optic_mas_aim";
 	player addItemToVest "SmokeShellYellow";
     player addItem "Exile_Item_Matches";
+    player addItem "Exile_Item_ExtensionCord";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
@@ -562,6 +582,7 @@ switch (true) do
 	player addHandgunItem "muzzle_mas_snds_MP7";
 	player addHandgunItem "optic_mas_aim";
     player addItem "Exile_Item_Matches";
+    player addItem "Exile_Item_ExtensionCord";
     player linkItem "ItemGPS";
     player addWeaponGlobal "Exile_Melee_Axe";
     player addMagazine "Exile_Magazine_Swing";
@@ -577,5 +598,6 @@ switch (true) do
     //  "Your rank is Inmate";
     _rank = "Inmate";  
      [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,2500-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
+	 player linkItem "ItemMap";
     };
 };

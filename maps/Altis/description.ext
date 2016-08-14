@@ -1,19 +1,12 @@
 #include "GG\infiSTAR_Exile_AdminMenu.hpp"
 #include "GG\CfgRemoteExec.hpp"
-#include "GG\ExAdClient\ExAd.cpp"
-
 ///////////////////////////////////////////////////////////////////////////////
 // Server Settings - Modify at will
 ///////////////////////////////////////////////////////////////////////////////
 author = "[GG] Ghostz Gamerz";
 onLoadName = "[GG] ExileMod Altis";
 onLoadMission= "www.ghostzgamerz.com";
-loadScreen = "GG\images\logo.jpg"; 
-disableChannels[]={
-    {0,true,true},
-    {1,false,true},
-    {2,true,true}
-};
+loadScreen = "GG\images\load.paa"; 
 OnLoadIntro = "";
 OnLoadIntroTime = false;
 OnLoadMissionTime = false;
@@ -51,7 +44,7 @@ enableItemsDropping = 0;
 briefing = 0;
 debriefing = 0;
 allowFunctionsLog = 1;
-enableDebugConsole = 0; 
+enableDebugConsole = 1; 
 allowFunctionsRecompile = 0;
 showSquadRadar = 0;
 showUAVFeed = 0;
@@ -72,6 +65,17 @@ showHUD[] =
     false   // Squad Radar
 };
 
+class CfgSounds
+{
+    sounds[] = {intro};
+    class intro
+    {
+        name = "intro";
+        sound[] = {"\GG\introsong.ogg", 1, 1};
+        titles[] = {};
+    };
+};
+
 class cfgFunctions
 {
 	#include "GG\ExAdClient\CfgFunctions.cpp"
@@ -79,8 +83,8 @@ class cfgFunctions
 
 class RscTitles
 {
-	#include "GG\StatusBar\statusBar.hpp"
 	#include "GG\ExAdClient\RscTitles.cpp"
+    #include "GG\kills\KillMessages.hpp"
 };
 
 class CfgHints
@@ -91,6 +95,11 @@ class CfgHints
 class CfgNetworkMessages
 {
 	#include "GG\ExAdClient\CfgNetworkMessages.cpp"
+    class KillMessages
+    {
+        module = "KillMessages";
+        parameters[] = {"STRING","STRING","OBJECT","OBJECT"};
+    };
 };
 
 #include "GG\config.cpp"

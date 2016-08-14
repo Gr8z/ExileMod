@@ -1,7 +1,7 @@
 @echo off
 @REM *** PARAMETERS/VARIABLES ***
-SET mysqlschema=exile_1
-SET mysqlpassword=madgr8
+SET mysqlschema=exile
+SET mysqlpassword=chicken123
 SET mysqluser=root
 @REM *** EXECUTION ***
 

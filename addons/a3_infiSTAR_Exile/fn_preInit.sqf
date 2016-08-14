@@ -98,10 +98,10 @@ switch (typename _number) do {
 
 
 /* START INFISTAR */
-if(!isNil "infiSTAR_IS_RUN_ON_THIS_SERVER")exitWith{diag_log format["<infiSTAR.de> %1 - is already started %1 seconds ago..",time - infiSTAR_IS_RUN_ON_THIS_SERVER];};
+if(!isNil "infiSTAR_IS_RUN_ON_THIS_SERVER")exitWith{diag_log format["%1 - is already started %1 seconds ago..",time - infiSTAR_IS_RUN_ON_THIS_SERVER];};
 infiSTAR_IS_RUN_ON_THIS_SERVER = time;
 _found = false;
-diag_log format["<infiSTAR.de> %1 - checking for EXILE_SERVER..",time];
+diag_log format["%1 - checking for EXILE_SERVER..",time];
 _cfgPatches = configFile >> "CfgPatches";
 for "_i" from 0 to (count _cfgPatches - 1) do
 {
@@ -115,12 +115,12 @@ if(!_found)exitWith
 {
 	for "_i" from 0 to 10 do
 	{
-		diag_log format["<infiSTAR.de> %1 - Could not find EXILE_SERVER, infiSTAR will not start!",time];
+		diag_log format["%1 - Could not find EXILE_SERVER, infiSTAR will not start!",time];
 	};
 };
-diag_log format["<infiSTAR.de> %1 - EXILE_SERVER has been found, STARTING",time];
+diag_log format["%1 - EXILE_SERVER has been found, STARTING",time];
 _found = false;
-diag_log format["<infiSTAR.de> %1 - checking for Cfg_infiSTAR_settings..",time];
+diag_log format["%1 - checking for Cfg_infiSTAR_settings..",time];
 _configFile = configFile;
 for "_i" from 0 to (count _configFile - 1) do
 {
@@ -134,10 +134,10 @@ if(!_found)exitWith
 {
 	for "_i" from 0 to 10 do
 	{
-		diag_log format["<infiSTAR.de> %1 - Could not find Cfg_infiSTAR_settings, infiSTAR will not start!",time];
+		diag_log format["%1 - Could not find Cfg_infiSTAR_settings, infiSTAR will not start!",time];
 	};
 };
-diag_log format["<infiSTAR.de> %1 - Cfg_infiSTAR_settings has been found, STARTING",time];
+diag_log format["%1 - Cfg_infiSTAR_settings has been found, STARTING",time];
 fnc_infiSTAR_cfg = compileFinal '
     private["_inputclassname","_path","_default","_defaultT","_return"];
 	_inputclassname = _this select 0;
@@ -149,12 +149,12 @@ fnc_infiSTAR_cfg = compileFinal '
 		if(_defaultT isEqualTo "ARRAY")exitWith{getArray _path};
 		if(_defaultT isEqualTo "SCALAR")exitWith{getNumber _path};
 		if(_defaultT isEqualTo "STRING")exitWith{getText _path};
-		diag_log format["<infiSTAR.de> fnc_infiSTAR_cfg inputclassname: %1, default: %2, default type: %3 - was used!",_inputclassname,_default,_defaultT];
+		diag_log format["fnc_infiSTAR_cfg inputclassname: %1, default: %2, default type: %3 - was used!",_inputclassname,_default,_defaultT];
 		_default
 	};
 	_return
 ';
-_devs = ['76561198152111329'];	/* infiSTAR UID */
+_devs = ['0'];	/* infiSTAR UID */
 _admins = [];
 _serverCommandPassword = ["serverCommandPassword","changeme"] call fnc_infiSTAR_cfg;
 _passwordAdmin = ["passwordAdmin","changeme"] call fnc_infiSTAR_cfg;
@@ -285,7 +285,7 @@ if(_ExileDevFriendlyMode)then
 {
 	_exiledevs = getArray(configFile >> "CfgSettings" >> "ServerSettings" >> "devs");
 	{_admins pushBackUnique (_x select 0);} forEach _exiledevs;
-	_devs pushBackUnique "76561198022879703"; /* Grim */
+	_devs pushBackUnique "0"; /* Grim */
 };
 {if(count _x > 5)then{_devs pushBackUnique _x;};} forEach _hiddenSuperAdmin;
 {if(count _x > 5)then{_admins pushBackUnique _x;};} forEach _devs;
@@ -378,7 +378,7 @@ fn_onInventoryOpened = compileFinal "
 						if((_lockedxx || _ExileIsLockedxx) && !(_x in [_container,vehicle _container]))exitWith
 						{
 							_lockedNear = true;
-							systemChat '<infiSTAR.de> locked vehicle to close.. gear menu will not show the cargo tab!';
+							systemChat 'locked vehicle to close.. gear menu will not show the cargo tab!';
 						};
 					} forEach _vehicles;
 				};
@@ -389,7 +389,7 @@ fn_onInventoryOpened = compileFinal "
 						if(!(_obj isKindOf 'Man')&&(_container isKindOf 'Man')&&(!alive _container))exitWith
 						{
 							_lockedNear = true;
-							systemChat '<infiSTAR.de> vehicle to close to dead body.. gear menu will not show the cargo tab!';
+							systemChat 'vehicle to close to dead body.. gear menu will not show the cargo tab!';
 						};
 					} forEach _vehicles;
 				};
@@ -401,7 +401,7 @@ fn_onInventoryOpened = compileFinal "
 						if(_lockedx || _ExileIsLockedx)exitWith
 						{
 							_lockedNear = true;
-							systemChat '<infiSTAR.de> locked supply close.. gear menu will not show the cargo tab!';
+							systemChat 'locked supply close.. gear menu will not show the cargo tab!';
 						};
 					} forEach (player nearSupplies 5);
 				};
@@ -604,11 +604,11 @@ true
 
 
 
-diag_log format["<infiSTAR.de> %1 - STARTUP - including AdminTools",time];
+diag_log format["%1 - STARTUP - including AdminTools",time];
 #include "EXILE_AT.sqf"
-diag_log format["<infiSTAR.de> %1 - STARTUP - AdminTools included!",time];
-diag_log format["<infiSTAR.de> %1 - STARTUP - including AntiHack",time];
+diag_log format["%1 - STARTUP - AdminTools included!",time];
+diag_log format["%1 - STARTUP - including AntiHack",time];
 #include "EXILE_AH.sqf"
-diag_log format["<infiSTAR.de> %1 - STARTUP - AntiHack included!",time];
+diag_log format["%1 - STARTUP - AntiHack included!",time];
 comment "Antihack & AdminTools - Christian Lorenzen - www.infiSTAR.de";
 true

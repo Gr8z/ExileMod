@@ -118,8 +118,10 @@ startAsNormal[] =
 /* "hiddenSuperAdmin": These admins are seen as normal players by normal admins, their actions are not logged either (to keep an eye out on your admins) */
 hiddenSuperAdmin[] =
 {
-	"76561198078201908", // Gr8
+	"76561198078201908", // Gr8 old
+	"76561198204864584", // Gr8
 	"76561198153784743", // Ghost
+	"76561198115492831", // BigEgg
 	"0"
 };
 
@@ -127,11 +129,9 @@ adminUIDandAccess[] =
 {
 	{
 
-		{"76561198021389971", // thirdhero
-		 "76561198137100220", // Deadskin
+		{"76561198137100220", // Deadskin
 		 "76561197978528230", // Dark
-		 "76561198115492831", // BigEgg
-		 "76561198056028211",  // Nasty
+		 "76561198056028211", // Nasty
 		 "76561198133936962", // Wrice4
 		 //Add UID's Above - Don't forget the comma!
 		"0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
@@ -166,11 +166,11 @@ adminUIDandAccess[] =
 		 "76561198088251390", // SIX
 		 "76561197979611157", // Clanzoucu
 		 "76561198073495490", // Adam Kadmon
-		 "76561198129318411", // FriendlyFire
 		 "76561198274767971", // CanadianFrodo
 		 "76561198065188130", // Nacho
 		 "76561198036004541", // Demen
 		 "76561197987069300", // Shroombear
+		 "76561198021389971", // thirdhero
 		 "0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
 			"Teleport On Map Click","Teleport - Target To Me","Teleport - Me To Target","Teleport In Facing Direction (10m steps)",
@@ -191,7 +191,9 @@ adminUIDandAccess[] =
 	},
 	{
 		{
+		"76561198218878119", // Mack
 		"76561198060389676", // Powerwolf
+		"76561198090941099", // Josh
 		"0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
 			"spectating","AdminConsole","Delete Vehicle","ShowGear","Show Server Information",
@@ -239,10 +241,10 @@ MRV = 0.3;	/* if "DayNightVote = true;" - Minimum votes required. Percentage of 
 MVP = 0.51;	/* if "DayNightVote = true;" - Minimum vote percentage. A setting that dictates the minimum vote percentage that needs to be reached for the vote to pass. */
 VCT = 300;	/* if "DayNightVote = true;" - Time (in seconds) to wait until nex vote is possible. */
 /* The following 4 options can be disabled by putting the value to -1. For example "TGV = -1;" */
-/* Terrain Grid Value   */ TGV = 40;	/* 50, 25, 12.5  */	/* if set to 50 grass will be very low for better client FPS.. default is 25 ~35 is good performance and grass :) */
-/* ViewDistance Value   */ VDV = 1600;
-/* ObjectViewDistance   */ VOV = 1600;
-/* ShadowViewDistance   */ SVD = 50;
+/* Terrain Grid Value   */ TGV = -1;	/* 50, 25, 12.5  */	/* if set to 50 grass will be very low for better client FPS.. default is 25 ~35 is good performance and grass :) */
+/* ViewDistance Value   */ VDV = -1;
+/* ObjectViewDistance   */ VOV = -1;
+/* ShadowViewDistance   */ SVD = -1;
 /****************************************************************************************************/
 /***************************FIXES DUE TO ARMA BEING BROKEN - BELOW***********************************/
 /****************************************************************************************************/
@@ -509,13 +511,12 @@ allSupportBoxes[] =
 		{
 
 
-
-			"Exile_Item_Flag",
-			{"Exile_Item_WoodDoorKit",15},{"Exile_Item_WoodDoorwayKit",15},{"Exile_Item_WoodDrawBridgeKit",15},
-			{"Exile_Item_WoodFloorKit",15},{"Exile_Item_WoodFloorPortKit",15},{"Exile_Item_WoodGateKit",15},
-			{"Exile_Item_WoodLog",15},{"Exile_Item_WoodPlank",15},{"Exile_Item_WoodStairsKit",15},
-			{"Exile_Item_WoodSupportKit",15},{"Exile_Item_WoodWallHalfKit",15},{"Exile_Item_WoodWallKit",15},
-			{"Exile_Item_WoodWindowKit",15},{"Exile_Item_WorkBenchKit",15}
+			"Exile_Item_Flag","Exile_Item_WorkBenchKit","B_Carryall_khk",
+			{"Exile_Item_CookingPot",2},{"Exile_Melee_Axe",2},{"Exile_Item_Matches",2},
+			{"Exile_Item_Codelock",4},{"Exile_Item_WoodDoorKit",2},{"Exile_Item_WoodDoorwayKit",2},
+			{"Exile_Item_Matches",2},{"Exile_Item_WoodFloorKit",18},{"Exile_Item_WoodFloorPortKit",4},
+			{"Exile_Item_WoodGateKit",2},{"Exile_Item_WoodStairsKit",4},{"Exile_Item_WoodWallKit",25},
+			{"Exile_Item_WoodWindowKit",4},{"Exile_Item_SafeKit",3},{"Exile_Item_FortificationUpgrade",10}
 		}
 	},
 	{
@@ -523,10 +524,10 @@ allSupportBoxes[] =
 
 		"Support-Box3",
 		{
-			{"Exile_Item_Flag",5},{"Exile_Item_WoodDoorKit",15},{"Exile_Item_WoodWallKit",15},
-
-
-			{"Exile_Item_WoodWindowKit",15},{"Exile_Item_WoodFloorKit",15},{"Exile_Item_SafeKit",5}
+			
+			
+			{"Exile_Item_WoodDoorKit",4},{"Exile_Item_WoodWallKit",30},
+			{"Exile_Item_WoodWindowKit",4},{"Exile_Item_WoodFloorKit",30}
 		}
 	},
 	{

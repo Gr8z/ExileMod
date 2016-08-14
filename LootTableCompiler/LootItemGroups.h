@@ -1524,7 +1524,7 @@
 
 > IndustrialItems
 0.5, Exile_Item_ThermalScannerPro
-0.2, Exile_Item_Knife
+0.5, Exile_Item_Knife
 3, Exile_Item_Cement
 3, Exile_Item_FloodLightKit
 3, Exile_Item_PortableGeneratorKit
@@ -1579,19 +1579,19 @@
 > Electronics
 2, Exile_Item_Laptop
 5, Exile_Item_BaseCameraKit
-> Trash
-10, Exile_Item_PlasticBottleEmpty			// Nothing :)
+
 > Magazine01
 100, Exile_Item_Magazine01
 > Magazine02
 100, Exile_Item_Magazine02
-
 > Magazine03
 100, Exile_Item_Magazine03
-50, Exile_Item_Magazine04
+>Magazine04
+100, Exile_Item_Magazine04
 
-> Phone
-100, Exile_Item_MobilePhone
+> Phoneknife
+50, Exile_Item_MobilePhone
+50, Exile_Item_Knife
 
 > Unused
 3, Exile_Item_CordlessScrewdriver

@@ -29,8 +29,8 @@ class Mission
 		day=24;
 		hour=12;
 		minute=0;
-		startFogDecay=0.013;
-		forecastFogDecay=0.013;
+		startFogDecay=0;
+		forecastFogDecay=0;
 	};
 	class Groups
 	{
@@ -1061,15 +1061,15 @@ class Mission
 			a=500;
 			b=500;
 			drawBorder=1;
+			alpha = 0;
 		};
 		class Item1
 		{
 			position[]={1696.6591,14.285818,2291.1062};
 			name="SpawnKamenkaIcon";
-			text="";
+			text="Kamenka";
 			type="ExileSpawnZoneIcon";
 		};
-
 		class Item2
 		{
 			position[]={4833.1958,5.9000001,2262.3147};
@@ -1082,15 +1082,15 @@ class Mission
 			a=500;
 			b=500;
 			drawBorder=1;
+			alpha = 0;
 		};
 		class Item3
 		{
 			position[]={4833.1958,5.9000001,2262.3147};
 			name="SpawnBalotaIcon";
-			text="";
+			text="Balota";
 			type="ExileSpawnZoneIcon";
 		};
-
 		class Item4
 		{
 			position[]={6711.7202,6,2589.9814};
@@ -1103,15 +1103,15 @@ class Mission
 			a=500;
 			b=500;
 			drawBorder=1;
+			alpha = 0;
 		};
 		class Item5
 		{
 			position[]={6711.7202,6,2589.9814};
 			name="SpawnChernogorskIcon";
-			text="";
+			text="Chernogorsk";
 			type="ExileSpawnZoneIcon";
 		};
-
 		class Item6
 		{
 			position[]={10513.343,6.8559303,2081.8613};
@@ -1124,16 +1124,15 @@ class Mission
 			a=500;
 			b=500;
 			drawBorder=1;
+			alpha = 0;
 		};
-
 		class Item7
 		{
 			position[]={10513.343,6.8559303,2081.8613};
 			name="SpawnElektroIcon";
-			text="";
+			text="Elektro";
 			type="ExileSpawnZoneIcon";
 		};
-
 		class Item8
 		{
 			position[]={12054.753,6.1015596,3489.873};
@@ -1146,16 +1145,15 @@ class Mission
 			a=500;
 			b=500;
 			drawBorder=1;
+			alpha = 0;
 		};
-		
 		class Item9
 		{
 			position[]={12054.753,6.1015596,3489.873};
 			name="SpawnKamyshovoIcon";
-			text="";
+			text="Kamyshovo";
 			type="ExileSpawnZoneIcon";
 		};
-		
 		class Item10
 		{
 			position[]={13352.05,6.0021176,6301.7461};
@@ -1168,16 +1166,15 @@ class Mission
 			a=500;
 			b=500;
 			drawBorder=1;
-		};
-		
+			alpha = 0;
+		};	
 		class Item11
 		{
 			position[]={13352.05,6.0021176,6301.7461};
 			name="SpawnSolnichniyIcon";
-			text="";
+			text="Solnichniy";
 			type="ExileSpawnZoneIcon";
 		};
-
 		class Item12
 		{
 			position[]={12546.252,9.5938053,9774.4521};
@@ -1190,16 +1187,15 @@ class Mission
 			a=500;
 			b=500;
 			drawBorder=1;
-		};
-		
+			alpha = 0;
+		};		
 		class Item13
 		{
 			position[]={12546.252,9.5938053,9774.4521};
 			name="SpawnBerezinoIcon";
-			text="";
+			text="Berezino";
 			type="ExileSpawnZoneIcon";
-		};
-		
+		};		
 		class Item14
 		{
 			position[]={2624.49,6.0021176,5348.43};
@@ -1212,16 +1208,15 @@ class Mission
 			a=500;
 			b=500;
 			drawBorder=1;
-		};
-		
+			alpha = 0;
+		};		
 		class Item15
 		{
 			position[]={2624.49,6.0021176,5348.43};
 			name="SpawnZelenogorskIcon";
-			text="";
+			text="Zelenogorsk";
 			type="ExileSpawnZoneIcon";
-		};
-		
+		};	
 		class Item16
 		{
 			position[]={6330.98, 0, 7800.99};
@@ -1230,41 +1225,41 @@ class Mission
 			type="ExileTraderZone";
 			markerType="ELLIPSE";
 			colorName="ColorBlack";
-			fillName="Border";
+			fillName="SolidBorder";
 			a=175;
 			b=175;
 			drawBorder=1;
 		};
-		
 		class Item17
 		{
 			position[]={6330.98, 0, 7800.99};
 			name="TraderCityStaryIcon";
-			text="";
+			text="Trader City Stary";
 			type="ExileTraderZoneIcon";
 		};
-
 		class Item18
-		{
-			position[]={12147.7,0,12747.2};
-			name="NE Airfield Trader";
-			text="NE Airfield Trader";
-			markerType="ELLIPSE";
-			type="ExileTraderZone";
-			colorName="ColorBlack";
-			fillName="Border";
-			a=175;
-			b=175;
-			drawBorder=1;
-		};
+	    {
+	        position[]={13459.7,0,5439.48};
+	        name = "ExileMarker45";
+	        text = "";
+	        markerType = "ELLIPSE";
+	        type = "ExileNonConstructionZone";
+	        colorName = "ColorBlack";
+	        fillName = "Border";
+	        alpha = 0;
+	        a = 400;
+	        b = 400;
+	        drawBorder = 1;
+	        id = 145;
+	        atlOffset = 0;
+	    };
 		class Item19
 		{
 			position[]={12147.7,0,12747.2};
 			name="NE Airfield Trader Icon";
 			text="";
-			type="ExileTraderZoneIcon";
+			type="ExileAircraftTraderIcon";
 		};
-
 		class Item20
 		{
 			position[]={11474.1,0,11343.2};
@@ -1273,20 +1268,18 @@ class Mission
 			markerType="ELLIPSE";
 			type="ExileTraderZone";
 			colorName="ColorBlack";
-			fillName="Border";
+			fillName="SolidBorder";
 			a=175;
 			b=175;
 			drawBorder=1;
-		};
-		
+		};		
 		class Item21
 		{
 			position[]={11474.1,0,11343.2};
 			name="Klen Trader Icon";
-			text="";
+			text="Trader City Klen";
 			type="ExileTraderZoneIcon";
 		};
-
 		class Item22
 		{
 			position[]={4073.33 ,0, 11677.6};
@@ -1295,20 +1288,18 @@ class Mission
 			markerType="ELLIPSE";
 			type="ExileTraderZone";
 			colorName="ColorBlack";
-			fillName="Border";
+			fillName="SolidBorder";
 			a=175;
 			b=175;
 			drawBorder=1;
-		};
-		
+		};		
 		class Item23
 		{
 			position[]={4073.33 ,0, 11677.6};
 			name="Bash Trader Icon";
-			text="";
+			text="Trader City Bash";
 			type="ExileTraderZoneIcon";
-		};
-		
+		};		
 		class Item24
 		{
 			position[]={3444.4487,0,3803.5161};
@@ -1317,43 +1308,43 @@ class Mission
 			markerType="ELLIPSE";
 			type="ExileTraderZone";
 			colorName="ColorBlack";
-			fillName="Border";
+			fillName="SolidBorder";
 			a=175;
 			b=175;
 			drawBorder=1;
 		};
-		
 		class Item25
 		{
 			position[]={3444.4487,0,3803.5161};
 			name="Bor Trader Icon";
-			text="";
+			text="Trader City Bor";
 			type="ExileTraderZoneIcon";
 		};
-		
 		class Item26
-		{
-			position[]={13459.7,0,5439.48};
-			name="Boat Trader";
-			text="Boat Trader";
-			markerType="ELLIPSE";
-			type="ExileTraderZone";
-			colorName="ColorBlack";
-			fillName="Border";
-			a=175;
-			b=175;
-			drawBorder=1;
-		};
-		
+	    {
+	        position[]={13459.7,0,5439.48};
+	        name = "ExileMarker45";
+	        text = "";
+	        markerType = "ELLIPSE";
+	        type = "ExileNonConstructionZone";
+	        colorName = "ColorBlack";
+	        fillName = "Border";
+	        alpha = 0;
+	        a = 400;
+	        b = 400;
+	        drawBorder = 1;
+	        id = 145;
+	        atlOffset = 0;
+	    };	
 		class Item27
 		{
 			position[]={13459.7,0,5439.48};
 			name="Boat Trader Icon";
 			text="";
-			type="ExileTraderZoneIcon";
+			type="ExileBoatTraderIcon";
 		};
 		
-//concrete
+		//concrete
 		class Item28
 		{
 			position[]={1762.244,0,7716.082};
@@ -1366,6 +1357,7 @@ class Mission
 			a=750;
 			b=750;
 			drawBorder=1;
+			alpha = 0;
 		};
 		class Item29
 		{
@@ -1374,8 +1366,6 @@ class Mission
 			text="";
 			type="ExileConcreteMixerZoneIcon";
 		};
-
-
 		class Item30
 		{
 			position[]={11463.258,0,7480.617};
@@ -1388,6 +1378,7 @@ class Mission
 			a=750;
 			b=750;
 			drawBorder=1;
+			alpha = 0;
 		};
 		class Item31
 		{
@@ -1396,7 +1387,6 @@ class Mission
 			text="";
 			type="ExileConcreteMixerZoneIcon";
 		};
-
 		class Item32
 		{
 			position[]={8408.44,0,12234.9};
@@ -1409,6 +1399,7 @@ class Mission
 			a=750;
 			b=750;
 			drawBorder=1;
+			alpha = 0;
 		};
 		class Item33
 		{
@@ -1417,9 +1408,6 @@ class Mission
 			text="";
 			type="ExileConcreteMixerZoneIcon";
 		};
-
-
-
 		class Item34
 		{
 			position[]={8347.057,0,5991.487};
@@ -1432,6 +1420,7 @@ class Mission
 			a=400;
 			b=400;
 			drawBorder=1;
+			alpha = 0;
 		};
 		class Item35
 		{
@@ -1468,8 +1457,8 @@ class Intro
 		day=24;
 		hour=12;
 		minute=0;
-		startFogDecay=0.013;
-		forecastFogDecay=0.013;
+		startFogDecay=0;
+		forecastFogDecay=0;
 	};
 };
 class OutroWin
@@ -1498,8 +1487,8 @@ class OutroWin
 		day=24;
 		hour=12;
 		minute=0;
-		startFogDecay=0.013;
-		forecastFogDecay=0.013;
+		startFogDecay=0;
+		forecastFogDecay=0;
 	};
 };
 class OutroLoose
@@ -1528,7 +1517,7 @@ class OutroLoose
 		day=24;
 		hour=12;
 		minute=0;
-		startFogDecay=0.013;
-		forecastFogDecay=0.013;
+		startFogDecay=0;
+		forecastFogDecay=0;
 	};
 };

@@ -29,8 +29,8 @@ class Mission
 		day=24;
 		hour=12;
 		minute=0;
-		startFogDecay=0.013;
-		forecastFogDecay=0.013;
+		startFogDecay=0;
+		forecastFogDecay=0;
 	};
 	class Groups
 	{
@@ -1061,15 +1061,15 @@ class Mission
 			a=500;
 			b=500;
 			drawBorder=1;
+			alpha = 0;
 		};
 		class Item1
 		{
 			position[]={3874.3633,18.125629,13280.79};
 			name="SpawnKavalaIcon";
-			text="";
+			text="Kavala";
 			type="ExileSpawnZoneIcon";
 		};
-
 		class Item2
 		{
 			position[]={9926.5293,12.364729,12083.253};
@@ -1082,15 +1082,15 @@ class Mission
 			a=500;
 			b=500;
 			drawBorder=1;
+			alpha = 0;
 		};
 		class Item3
 		{
 			position[]={9926.5293,12.364729,12083.253};
 			name="SpawnZarosIcon";
-			text="";
+			text="Zaros";
 			type="ExileSpawnZoneIcon";
 		};
-
 		class Item4
 		{
 			position[]={20978.369,27.78056,7045.6055};
@@ -1103,17 +1103,15 @@ class Mission
 			a=500;
 			b=500;
 			drawBorder=1;
+			alpha = 0;
 		};
 		class Item5
 		{
 			position[]={20978.369,27.78056,7045.6055};
 			name="SpawnSelekanoIcon";
-			text="";
+			text="Selekano";
 			type="ExileSpawnZoneIcon";
 		};
-
-
-
 		class Item6
 		{
 			position[]={17137.752,15.032475,12719.362};
@@ -1126,16 +1124,15 @@ class Mission
 			a=500;
 			b=500;
 			drawBorder=1;
+			alpha = 0;
 		};
-
 		class Item7
 		{
 			position[]={17137.752,15.032475,12719.362};
 			name="SpawnPrygosIcon";
-			text="";
+			text="Pyrgos";
 			type="ExileSpawnZoneIcon";
 		};
-
 		class Item8
 		{
 			position[]={25713.313,20.344301,21329.576};
@@ -1148,16 +1145,15 @@ class Mission
 			a=500;
 			b=500;
 			drawBorder=1;
+			alpha = 0;
 		};
 		class Item9
 		{
 			position[]={25713.313,20.344301,21329.576};
 			name="SpawnSofiaIcon";
-			text="";
+			text="Sofia";
 			type="ExileSpawnZoneIcon";
 		};
-
-
 		class Item10
 		{
 			position[]={8612.5283,180.58038,18272.271};
@@ -1170,16 +1166,15 @@ class Mission
 			a=500;
 			b=500;
 			drawBorder=1;
+			alpha = 0;
 		};
 		class Item11
 		{
 			position[]={8612.5283,180.58038,18272.271};
 			name="SpawnSyrtaIcon";
-			text="";
+			text="Syrta";
 			type="ExileSpawnZoneIcon";
 		};
-
-
 		class Item12
 		{
 			position[]={14599.966,22.349989,16797.193};
@@ -1192,15 +1187,15 @@ class Mission
 			a=175;
 			b=175;
 			drawBorder=1;
+			alpha = 0;
 		};
 		class Item13
 		{
 			position[]={14599.966,22.349989,16797.193};
 			name="TraderCityMarkerIcon";
-			text="";
+			text="Trader City Terminal";
 			type="ExileTraderZoneIcon";
 		};
-
 		class Item14
 		{
 			position[]={23334.605,4.0095582,24188.938};
@@ -1213,15 +1208,15 @@ class Mission
 			a=175;
 			b=175;
 			drawBorder=1;
+			alpha = 0;
 		};
 		class Item15
 		{
 			position[]={23334.605,4.0095582,24188.938};
 			name="TraderZoneSilderasIcon";
-			text="";
+			text="Trader City Silderas";
 			type="ExileTraderZoneIcon";
 		};
-
 		class Item16
 		{
 			position[]={2998.0603,3.7756021,18175.479};
@@ -1234,16 +1229,15 @@ class Mission
 			a=175;
 			b=175;
 			drawBorder=1;
+			alpha = 0;
 		};
 		class Item17
 		{
 			position[]={2998.0603,3.7756021,18175.479};
 			name="TraderZoneFoliaIcon";
-			text="";
+			text="Trader City Folia";
 			type="ExileTraderZoneIcon";
 		};
-
-
 		class Item18
 		{
 			position[]={14354.0,0,18960.1};
@@ -1256,6 +1250,7 @@ class Mission
 			a=750;
 			b=750;
 			drawBorder=1;
+			alpha = 0;
 		};
 		class Item19
 		{
@@ -1264,8 +1259,6 @@ class Mission
 			text="";
 			type="ExileConcreteMixerZoneIcon";
 		};
-
-
 		class Item20
 		{
 			position[]={18309.4,0,15575.0};
@@ -1278,6 +1271,7 @@ class Mission
 			a=750;
 			b=750;
 			drawBorder=1;
+			alpha = 0;
 		};
 		class Item21
 		{
@@ -1286,7 +1280,6 @@ class Mission
 			text="";
 			type="ExileConcreteMixerZoneIcon";
 		};
-
 		class Item22
 		{
 			position[]={11391.2,0,14259.5};
@@ -1299,6 +1292,7 @@ class Mission
 			a=750;
 			b=750;
 			drawBorder=1;
+			alpha = 0;
 		};
 		class Item23
 		{
@@ -1307,9 +1301,6 @@ class Mission
 			text="";
 			type="ExileConcreteMixerZoneIcon";
 		};
-
-
-
 		class Item24
 		{
 			position[]={21845.1,0,20977.6};
@@ -1322,6 +1313,7 @@ class Mission
 			a=400;
 			b=400;
 			drawBorder=1;
+			alpha = 0;
 		};
 		class Item25
 		{
@@ -1358,8 +1350,8 @@ class Intro
 		day=24;
 		hour=12;
 		minute=0;
-		startFogDecay=0.013;
-		forecastFogDecay=0.013;
+		startFogDecay=0;
+		forecastFogDecay=0;
 	};
 };
 class OutroWin
@@ -1388,8 +1380,8 @@ class OutroWin
 		day=24;
 		hour=12;
 		minute=0;
-		startFogDecay=0.013;
-		forecastFogDecay=0.013;
+		startFogDecay=0;
+		forecastFogDecay=0;
 	};
 };
 class OutroLoose
@@ -1418,7 +1410,7 @@ class OutroLoose
 		day=24;
 		hour=12;
 		minute=0;
-		startFogDecay=0.013;
-		forecastFogDecay=0.013;
+		startFogDecay=0;
+		forecastFogDecay=0;
 	};
 };

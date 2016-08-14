@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_display","_topTextCTRL1","_topTextCTRL2","_spawnButton","_listBox","_listItemIndex","_numberOfSpawnPoints","_randNum","_randData","_randomSpawnIndex","_puid"];
+private["_display","_topTextCTRL1","_topTextCTRL2","_spawnButton","_listBox","_listItemIndex","_numberOfSpawnPoints","_randNum","_randData","_randomSpawnIndex","_puid","_title"];
 disableSerialization;
 diag_log "Selecting spawn location...";
 ExileClientSpawnLocationSelectionDone = false;
@@ -45,9 +45,17 @@ if (_numberOfSpawnPoints > 0) then
 	_randomSpawnIndex = _listBox lbAdd "Random";
 	_listBox lbSetData [_randomSpawnIndex, _randData];
 };
+_title	 = _display ctrlCreate["RscText",24005];
+_title ctrlSetPosition [1.1625,0.781684,0.481313,0.0583164];
+_title ctrlSetBackgroundColor [0,0,0,1];
+_title ctrlCommit 0;
+_title ctrlEnable true;
+_title ctrlSetText "LOADOUTS";
+_title ctrlSetFont "PuristaBold";
+
 _listBox = _display ctrlCreate["RscListbox", 24004];
-_listBox ctrlSetPosition [1.08,0.764,0.556,0.545];
-_listBox ctrlSetBackgroundColor [0,0,0,0.25];
+_listBox ctrlSetPosition [1.1625,0.86505,0.481313,0.27495];
+_listBox ctrlSetBackgroundColor [0.07,0.07,0.08,1];
 _listBox ctrlCommit 0;
 _listBox ctrlEnable true;
 _listBox ctrlRemoveAllEventHandlers "LBDblClick";
@@ -57,35 +65,35 @@ _listBox ctrlAddEventHandler ["LBSelChanged", "call fnc_LBDblClick_LBSelChanged_
 _listItemIndex = _listBox lbAdd "Respect Loadout";
 _listItemIndex = _listBox lbSetColor [0, [0, 1, 0, 0.5]];
 _listItemIndex = _listBox lbSetTooltip [0, "Get a Free Loadout based on your respect"];
-_listItemIndex = _listBox lbAdd "Scout Level 1 Loadout";
+_listItemIndex = _listBox lbAdd "Scout Level 1";
 _listItemIndex = _listBox lbSetTooltip [1, "$4.69 / month"];
-_listItemIndex = _listBox lbAdd "Scout Level 2 Loadout";
+_listItemIndex = _listBox lbAdd "Scout Level 2";
 _listItemIndex = _listBox lbSetTooltip [2, "$7.98 / month"];
-_listItemIndex = _listBox lbAdd "Scout Level 3 Loadout";
+_listItemIndex = _listBox lbAdd "Scout Level 3";
 _listItemIndex = _listBox lbSetTooltip [3, "$19.89 / month"];
-_listItemIndex = _listBox lbAdd "Marksman Level 1 Loadout";
+_listItemIndex = _listBox lbAdd "Marksman Level 1";
 _listItemIndex = _listBox lbSetTooltip [4, "$4.69 / month"];
-_listItemIndex = _listBox lbAdd "Marksman Level 2 Loadout";
+_listItemIndex = _listBox lbAdd "Marksman Level 2";
 _listItemIndex = _listBox lbSetTooltip [5, "$7.98 / month"];
-_listItemIndex = _listBox lbAdd "Marksman Level 3 Loadout";
+_listItemIndex = _listBox lbAdd "Marksman Level 3";
 _listItemIndex = _listBox lbSetTooltip [6, "$19.89 / month"];
-_listItemIndex = _listBox lbAdd "Soldier Level 1 Loadout";
+_listItemIndex = _listBox lbAdd "Soldier Level 1";
 _listItemIndex = _listBox lbSetTooltip [7, "$3.22 / month"];
-_listItemIndex = _listBox lbAdd "Soldier Level 2 Loadout";
+_listItemIndex = _listBox lbAdd "Soldier Level 2";
 _listItemIndex = _listBox lbSetTooltip [8, "$5.70 / month"];
-_listItemIndex = _listBox lbAdd "Soldier Level 3 Loadout";
+_listItemIndex = _listBox lbAdd "Soldier Level 3";
 _listItemIndex = _listBox lbSetTooltip [9, "$9.89 / month"];
-_listItemIndex = _listBox lbAdd "Medic Level 1 Loadout";
+_listItemIndex = _listBox lbAdd "Medic Level 1";
 _listItemIndex = _listBox lbSetTooltip [10, "$3.89 / month"];
-_listItemIndex = _listBox lbAdd "Medic Level 2 Loadout";
+_listItemIndex = _listBox lbAdd "Medic Level 2";
 _listItemIndex = _listBox lbSetTooltip [11, "$5.75 / month"];
-_listItemIndex = _listBox lbAdd "Medic Level 3 Loadout";
+_listItemIndex = _listBox lbAdd "Medic Level 3";
 _listItemIndex = _listBox lbSetTooltip [12, "$8.00 / month"];
-_listItemIndex = _listBox lbAdd "Engineer Level 1 Loadout";
+_listItemIndex = _listBox lbAdd "Engineer Level 1";
 _listItemIndex = _listBox lbSetTooltip [13, "$5.90 / month"];
-_listItemIndex = _listBox lbAdd "Engineer Level 2 Loadout";
+_listItemIndex = _listBox lbAdd "Engineer Level 2";
 _listItemIndex = _listBox lbSetTooltip [14, "$8.90 / month"];
-_listItemIndex = _listBox lbAdd "Engineer Level 3 Loadout";
+_listItemIndex = _listBox lbAdd "Engineer Level 3";
 _listItemIndex = _listBox lbSetTooltip [15, "$15.00 / month"];
 
 systemChat 'DONOR LOADOUTS CAN BE PURCHASED FROM GHOSTZGAMERZ.COM';
@@ -106,7 +114,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			_cost = 853;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Scout Loadout 1</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Scout Loadout 1</t><br/><img size='0.6' image='GG\ExAdClient\StatsBar\Icons\ExAd_Wallet.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "TRYK_U_denim_jersey_blk";
 			player addHeadgear "H_Bandanna_gry";
@@ -134,7 +142,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			_cost = 1200;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Scout Loadout 2</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Scout Loadout 2</t><br/><img size='0.6' image='GG\ExAdClient\StatsBar\Icons\ExAd_Wallet.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "TRYK_U_denim_hood_blk";
 			player addHeadgear "H_Watchcap_blk";
@@ -165,7 +173,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			_cost = 3420;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Scout Loadout 3</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Scout Loadout 3</t><br/><img size='0.6' image='GG\ExAdClient\StatsBar\Icons\ExAd_Wallet.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "U_B_GhillieSuit";
 			player addHeadgear "H_Watchcap_blk";
@@ -187,6 +195,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToVest "Exile_Item_PlasticBottleCoffee";
 			player addItemToVest "Exile_Item_EMRE";
 			player addItemToVest "Exile_Item_Matches";
+			player addItemToVest "Exile_Item_ExtensionCord";
 			player addItemToVest "Exile_Item_CanOpener";
 			player addWeapon "Exile_Melee_Axe";
 			player linkItem "TRYK_G_Shades_Black_NV";
@@ -198,7 +207,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			_cost = 1250;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Marksman Loadout 1</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Marksman Loadout 1</t><br/><img size='0.6' image='GG\ExAdClient\StatsBar\Icons\ExAd_Wallet.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "TRYK_U_B_NATO_OCPD_CombatUniform";
 			player addVest "V_Chestrig_khk";
@@ -213,6 +222,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addHandgunItem "optic_mas_MRD";
 			player addItemToUniform "Exile_Magazine_Swing";
 			player addItemToBackpack "Exile_Item_MountainDupe";
+			player addItemToBackpack "Exile_Item_ExtensionCord";
 			player addItemToBackpack "Exile_Item_Cheathas";
 			player addItemToBackpack "Exile_Item_CanOpener";
 			player addWeapon "Binocular";
@@ -226,7 +236,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			_cost = 2433;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];	
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Marksman Loadout 2</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Marksman Loadout 2</t><br/><img size='0.6' image='GG\ExAdClient\StatsBar\Icons\ExAd_Wallet.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "TRYK_U_B_NATO_OCPD_CombatUniform";
 			player addHeadgear "TRYK_r_cap_od_Glasses";
@@ -247,6 +257,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToVest "Exile_Item_EnergyDrink";
 			player addItemToVest "Exile_Item_GloriousKnakworst";
 			player addItemToVest "Exile_Item_CanOpener";
+			player addItemToVest "Exile_Item_ExtensionCord";
 			player addWeapon "Exile_Melee_Axe";
 			call ExileClient_object_player_bambiStateEnd; };};
 		};
@@ -256,7 +267,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			_cost = 3032;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Marksman Loadout 3</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Marksman Loadout 3</t><br/><img size='0.6' image='GG\ExAdClient\StatsBar\Icons\ExAd_Wallet.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "U_I_GhillieSuit";
 			player addVest "V_PlateCarrierSpec_rgr";
@@ -275,6 +286,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToVest "Exile_Item_PlasticBottleCoffee";
 			player addItemToVest "Exile_Item_EMRE";
 			player addItemToVest "Exile_Item_Matches";
+			player addItemToVest "Exile_Item_ExtensionCord";
 			player linkItem "TRYK_ShemaghESSOD_NV";
 			player addItemToVest "Exile_Item_CanOpener";
 			player linkItem "ItemGPS";
@@ -288,7 +300,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			_cost = 1062;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Soldier Loadout 1</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Soldier Loadout 1</t><br/><img size='0.6' image='GG\ExAdClient\StatsBar\Icons\ExAd_Wallet.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "TRYK_U_B_Woodland";
 			player addVest "V_Chestrig_rgr";
@@ -304,6 +316,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToBackpack "Exile_Item_Bandage";
 			player addItemToBackpack "Exile_Item_MountainDupe";
 			player addItemToBackpack "Exile_Item_Cheathas";
+			player addItemToBackpack "Exile_Item_ExtensionCord";
 			player addItemToBackpack "Exile_Item_CanOpener";
 			player linkItem "ItemGPS";
 			player addWeapon "Binocular";
@@ -316,7 +329,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			_cost = 1850;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Soldier Loadout 2</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Soldier Loadout 2</t><br/><img size='0.6' image='GG\ExAdClient\StatsBar\Icons\ExAd_Wallet.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "TRYK_U_B_Woodland";
 			player addHeadgear "H_Bandanna_camo";
@@ -339,6 +352,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToVest "Exile_Item_Vishpirin";
 			player addItemToVest "Exile_Item_EnergyDrink";
 			player addItemToVest "Exile_Item_GloriousKnakworst";
+			player addItemToVest "Exile_Item_ExtensionCord";
 			player addItemToVest "Exile_Item_CanOpener";
 			player addWeapon "Exile_Melee_Axe";
 			call ExileClient_object_player_bambiStateEnd; };};
@@ -349,7 +363,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			_cost = 2470;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Soldier Loadout 3</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Soldier Loadout 3</t><br/><img size='0.6' image='GG\ExAdClient\StatsBar\Icons\ExAd_Wallet.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "TRYK_U_B_Woodland";
 			player addVest "V_PlateCarrierSpec_rgr";
@@ -371,6 +385,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToVest "Exile_Item_PlasticBottleCoffee";
 			player addItemToVest "Exile_Item_EMRE";
 			player addItemToVest "Exile_Item_Matches";
+			player addItemToVest "Exile_Item_ExtensionCord";
 			player addItemToVest "Exile_Item_CanOpener";
 			player linkItem "ItemGPS";
 			player linkItem "TRYK_TAC_SET_NV_MESH_2";
@@ -383,7 +398,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			_cost = 440;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Medic Loadout 1</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Medic Loadout 1</t><br/><img size='0.6' image='GG\ExAdClient\StatsBar\Icons\ExAd_Wallet.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "TRYK_U_B_NATO_UCP_CombatUniform";
 			player addHeadgear "H_Beret_02";
@@ -398,6 +413,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToBackpack "Exile_Item_MountainDupe";
 			player addItemToBackpack "Exile_Item_BeefParts";
 			player addItemToBackpack "Exile_Item_CanOpener";
+			player addItemToBackpack "Exile_Item_ExtensionCord";
 			for "_i" from 1 to 2 do {player addItemToVest "Exile_Item_Vishpirin";};
 			player addWeapon "Exile_Melee_Axe";
 			player linkItem "ItemGPS";
@@ -410,7 +426,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			_cost = 1408;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Medic Loadout 2</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Medic Loadout 2</t><br/><img size='0.6' image='GG\ExAdClient\StatsBar\Icons\ExAd_Wallet.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "TRYK_U_B_NATO_UCP_CombatUniform";
 			player addHeadgear "H_Beret_02";
@@ -428,6 +444,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			for "_i" from 2 to 3 do {player addItemToVest "Exile_Item_Vishpirin";};
 			player addItemToBackpack "Exile_Item_GloriousKnakworst";
 			player addItemToBackpack "Exile_Item_CanOpener";
+			player addItemToBackpack "Exile_Item_ExtensionCord";
 			player addWeapon "Exile_Melee_Axe";
 			player linkItem "ItemGPS";
 			player addWeapon "Binocular";
@@ -439,7 +456,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			_cost = 1745;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Medic Loadout 3</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Medic Loadout 3</t><br/><img size='0.6' image='GG\ExAdClient\StatsBar\Icons\ExAd_Wallet.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "TRYK_U_B_NATO_UCP_CombatUniform";
 			player addVest "V_PlateCarrier2_blk";
@@ -456,6 +473,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToVest "Exile_Item_PlasticBottleCoffee";
 			player addItemToVest "Exile_Item_EMRE";
 			player addItemToVest "Exile_Item_Matches";
+			player addItemToVest "Exile_Item_ExtensionCord";
 			player addItemToVest "Exile_Item_CanOpener";
 			for "_i" from 3 to 4 do {player addItemToVest "Exile_Item_Vishpirin";};
 			for "_i" from 2 to 3 do {player addItemToVest "Exile_Item_InstaDoc";};
@@ -471,7 +489,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			_cost = 1823;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Engineer Loadout 1</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Engineer Loadout 1</t><br/><img size='0.6' image='GG\ExAdClient\StatsBar\Icons\ExAd_Wallet.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "TRYK_OVERALL_SAGE_BLKboots_nk_blk2";
 			player addVest "V_Chestrig_oli";
@@ -491,6 +509,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToBackpack "Exile_Item_MountainDupe";
 			player addItemToBackpack "Exile_Item_BeefParts";
 			player addItemToBackpack "Exile_Item_CanOpener";
+			player addItemToBackpack "Exile_Item_ExtensionCord";
 			player addWeapon "Exile_Melee_Axe";
 			player linkItem "ItemGPS";
 			player addWeapon "Binocular";
@@ -502,7 +521,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			_cost = 2145;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Engineer Loadout 2</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Engineer Loadout 2</t><br/><img size='0.6' image='GG\ExAdClient\StatsBar\Icons\ExAd_Wallet.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "TRYK_OVERALL_SAGE_BLKboots";
 			player addHeadgear "H_Shemag_olive_hs";
@@ -523,6 +542,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToBackpack "Exile_Item_GloriousKnakworst";
 			player addItemToBackpack "Exile_Item_Vishpirin";
 			player addItemToBackpack "Exile_Item_CanOpener";
+			player addItemToBackpack "Exile_Item_ExtensionCord";
 			player addWeapon "Exile_Melee_Axe";
 			player linkItem "ItemGPS";
 			player addWeapon "Binocular";
@@ -534,7 +554,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			_cost = 2650;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
-			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Engineer Loadout 3</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
+			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Engineer Loadout 3</t><br/><img size='0.6' image='GG\ExAdClient\StatsBar\Icons\ExAd_Wallet.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "TRYK_OVERALL_SAGE_BLKboots";
 			player addVest "V_PlateCarrierGL_rgr";
@@ -556,6 +576,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToVest "Exile_Item_DuctTape";
 			player addItemToVest "Exile_Item_EMRE";
 			player addItemToVest "Exile_Item_Matches";
+			player addItemToVest "Exile_Item_ExtensionCord";
 			player addItemToVest "Exile_Item_CanOpener";
 			player linkItem "TRYK_Shemagh_G_NV";
 			player linkItem "ItemGPS";

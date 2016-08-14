@@ -610,7 +610,8 @@ class CraftMetalBoard: Exile_AbstractCraftingRecipe
 	};
 	tools[] = {"Exile_Item_Grinder"};
 };
-class CraftMetalHedgehog: Exile_AbstractCraftingRecipe
+/*
+ class CraftMetalHedgehog: Exile_AbstractCraftingRecipe
 {
 	name = "Craft Metal Hedgehog";
 	pictureItem = "Exile_Item_MetalHedgehogKit";
@@ -625,6 +626,7 @@ class CraftMetalHedgehog: Exile_AbstractCraftingRecipe
 	};
 	tools[] = {"Exile_Item_Grinder"};
 };
+*/
 class CraftMetalPole: Exile_AbstractCraftingRecipe
 {
 	name = "Craft Metal Pole";
@@ -1232,7 +1234,22 @@ class CraftPopTabs: Exile_AbstractCraftingRecipe
 		{1, "Exile_Item_Magazine03"},
 		{1, "Exile_Item_Magazine04"}
 	};
-	category = "Craftables";
+};
+class Laserdesignator: Exile_AbstractCraftingRecipe
+{
+    name = "Craft Laserdesignator";
+    pictureItem = "Laserdesignator";
+    requiresFire = 1;
+    returnedItems[] =
+    {
+        {1, "Laserdesignator"}
+    };
+    components[] =
+    {
+        {2, "Exile_Item_LightBulb"},
+        {1, "Exile_Item_JunkMetal"},
+        {1, "Exile_Item_ThermalScannerPro"}
+    };
 };
 };
 class CfgExileArsenal
@@ -1584,14 +1601,14 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// Bitpod Attachments
 	///////////////////////////////////////////////////////////////////////////////
-	class bipod_01_F_blk	 						{ quality = 1; price = 150; };
-	class bipod_01_F_mtp	 						{ quality = 1; price = 150; };
-	class bipod_01_F_snd	 						{ quality = 1; price = 150; };
-	class bipod_02_F_blk	 						{ quality = 1; price = 150; };
-	class bipod_02_F_hex	 						{ quality = 1; price = 150; };
-	class bipod_02_F_tan	 						{ quality = 1; price = 150; };
-	class bipod_03_F_blk	 						{ quality = 1; price = 150; };
-	class bipod_03_F_oli	 						{ quality = 1; price = 150; };
+	class bipod_01_F_blk	 						{ quality = 1; price = 150; sellPrice = 1; }; 
+	class bipod_01_F_mtp	 						{ quality = 1; price = 150; sellPrice = 1; };
+	class bipod_01_F_snd	 						{ quality = 1; price = 150; sellPrice = 1; };
+	class bipod_02_F_blk	 						{ quality = 1; price = 150; sellPrice = 1; };
+	class bipod_02_F_hex	 						{ quality = 1; price = 150; sellPrice = 1; };
+	class bipod_02_F_tan	 						{ quality = 1; price = 150; sellPrice = 1; };
+	class bipod_03_F_blk	 						{ quality = 1; price = 150; sellPrice = 1; };
+	class bipod_03_F_oli	 						{ quality = 1; price = 150; sellPrice = 1; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Muzzle Attachments
@@ -1658,7 +1675,7 @@ class CfgExileArsenal
 	class Exile_Item_FuelCanisterEmpty				{ quality = 1; price = 50; };
 	class Exile_Item_JunkMetal						{ quality = 1; price = 450; };
 	class Exile_Item_LightBulb						{ quality = 1; price = 250; };
-	class Exile_Item_MetalBoard						{ quality = 1; price = 1000; };
+	class Exile_Item_MetalBoard						{ quality = 1; price = 1200; };
 	class Exile_Item_FloodLightKit					{ quality = 1; price = 1000; };
 	class Exile_Item_PortableGeneratorKit			{ quality = 1; price = 2500; };
 	class Exile_Item_SafeKit						{ quality = 1; price = 15000; };
@@ -1667,12 +1684,12 @@ class CfgExileArsenal
 	class Exile_Item_BaseCameraKit					{ quality = 1; price = 7500; };
 //	class Exile_Magazine_Battery					{ quality = 1; price = 2000; };
 	class Exile_Item_CamoTentKit					{ quality = 1; price = 250; };
-	class Exile_Item_MetalPole						{ quality = 1; price = 850; };
+	class Exile_Item_MetalPole						{ quality = 1; price = 2400; };
 	class Exile_Item_MetalScrews					{ quality = 1; price = 150; };
 	class Exile_Item_MetalWire						{ quality = 1; price = 300; };
 	class Exile_Item_Cement							{ quality = 1; price = 1500; };
 	class Exile_Item_Sand							{ quality = 1; price = 1500; };
-	class Exile_Item_MetalHedgehogKit				{ quality = 1; price = 800; };
+//	class Exile_Item_MetalHedgehogKit				{ quality = 1; price = 800; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Food
@@ -2148,7 +2165,7 @@ class CfgExileArsenal
 	class optic_Holosight_blk_F       { quality = 1; price = 100; };
 	class optic_Holosight_khk_F       { quality = 1; price = 100; };
 	class optic_Holosight_smg_blk_F   { quality = 1; price = 100; };
-	class bipod_01_F_khk              { quality = 1; price = 100; };
+	class bipod_01_F_khk              { quality = 1; price = 100; sellPrice = 1; };
 	class O_NVGoggles_hex_F           { quality = 1; price = 300; };
 	class O_NVGoggles_urb_F           { quality = 1; price = 300; };
 	class O_NVGoggles_ghex_F          { quality = 1; price = 300; };
@@ -2398,7 +2415,7 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// Pawnee
 	///////////////////////////////////////////////////////////////////////////////
-	class B_Heli_light_01_armed_F								{ quality = 6; price = 200000; };
+	class B_Heli_light_01_armed_F								{ quality = 6; price = 250000; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Orca
@@ -2811,7 +2828,7 @@ class CfgExileArsenal
 	class muzzle_mas_snds_L 						{ quality = 1; price = 150; };
 	class muzzle_mas_snds_LM 						{ quality = 1; price = 150; };
 	class muzzle_mas_snds_C 						{ quality = 1; price = 200; };
-	class muzzle_mas_snds_MP5SD6					{ quality = 1; price = 200; };
+	class muzzle_mas_snds_MP5SD6					{ quality = 1; price = 200; sellPrice = 1; };
 	class muzzle_mas_snds_M 						{ quality = 1; price = 300; };
 	class muzzle_mas_snds_Mc 						{ quality = 1; price = 300; };
 	class muzzle_mas_snds_MP7 						{ quality = 1; price = 200; };
@@ -3775,59 +3792,71 @@ class CfgExileArsenal
 
 class CfgXM8
 {
-	extraApps[] = {"ExAd_VG","ExAd_Info","GG_Quadbike"};
+	extraApps[] = {"ExAd_VG","ExAd_CHVD","ExAd_Journal","ExAd_Bike","GG_SB"};
 	
 	class ExAd_VG 
 	{
 		title = "Virtual Garage";
 		controlID = 50000;					//IDC:50000 -> 50015 || These need to be unique and out of range from each other 
-		logo = "GG\ExadClient\XM8\Apps\VG\Icon_VG.paa";
+		logo = "GG\ExAdClient\XM8\Apps\VG\Icon_VG.paa";
 		onLoad = "GG\ExAdClient\XM8\Apps\VG\onLoad.sqf";
 		onOpen = "GG\ExAdClient\XM8\Apps\VG\onOpen.sqf";
 		onClose = "GG\ExAdClient\XM8\Apps\VG\onClose.sqf";
-	};	
-	class ExAd_Info 
-	{
-		title = "Server Info";
-		controlID = 50100;					//IDC:50100 -> 50102 || These need to be unique and out of range from each other
-		logo = "GG\ExadClient\XM8\Apps\Info\Icon_SI.paa";
-		onLoad = "GG\ExAdClient\XM8\Apps\Info\onLoad.sqf";
-		onOpen = "GG\ExAdClient\XM8\Apps\Info\onOpen.sqf";
-		onClose = "GG\ExAdClient\XM8\Apps\Info\onClose.sqf";
 	};
-	class GG_Quadbike
+	class ExAd_CHVD 
 	{
-		title = "Spawn Quadbike";
-		controlID = 50200;					//IDC:50100 -> 50102 || These need to be unique and out of range from each other
-		logo = "GG\ExAdClient\XM8\Apps\Quadbike\quadbike.paa";
-		onLoad = "GG\ExAdClient\XM8\Apps\Quadbike\onload.sqf";
-		onOpen = "GG\ExAdClient\XM8\Apps\Quadbike\spawn_bike.sqf";
-		onClose = "";
+		title = "View Distance Settings";
+		controlID = 50200;					//IDC:50200 -> 50102 || These need to be unique and out of range from each other
+		config = "GG\ExAdClient\XM8\Apps\CHVD\config.sqf";
+		logo = "GG\ExAdClient\XM8\Apps\CHVD\Icon_CHVD.paa";
+		onLoad = "GG\ExAdClient\XM8\Apps\CHVD\onLoad.sqf";
+		onOpen = "GG\ExAdClient\XM8\Apps\CHVD\onOpen.sqf";
+		onClose = "GG\ExAdClient\XM8\Apps\CHVD\onClose.sqf";
+	};		
+	class ExAd_Journal 
+	{
+		title = "Journal";
+		controlID = 50300;					//IDC:50300 -> 50305 || These need to be unique and out of range from each other
+		config = "GG\ExAdClient\XM8\Apps\Journal\config.sqf";
+		logo = "GG\ExAdClient\XM8\Apps\Journal\Icon_Journal.paa";
+		onLoad = "GG\ExAdClient\XM8\Apps\Journal\onLoad.sqf";
+		onOpen = "GG\ExAdClient\XM8\Apps\Journal\onOpen.sqf";
+		onClose = "GG\ExAdClient\XM8\Apps\Journal\onClose.sqf";
+	};
+	class ExAd_Bike
+	{
+		title = "Deploy Bike";
+		config = "GG\ExAdClient\XM8\Apps\DeployVehicle\config.sqf";
+		logo = "GG\ExAdClient\XM8\Apps\DeployVehicle\icon_DeployVehicle.paa";
+		bambiState = 0;
+		vehicleClass = "Exile_Bike_MountainBike";
+		recipe[] = {{"Exile_Item_ExtensionCord",1}};
+		packable = 1;
+		autoCleanUp = 1;
+		quickFunction = "['ExAd_Bike'] call ExAd_XM8_DV_fnc_spawnVehicle";
+	};
+	class GG_SB 
+	{
+		title = "Statsbar Settings";
+		controlID = 50400;					//IDC:50400 -> 50475 || These need to be unique and out of range from each other
+		logo = "GG\ExadClient\XM8\Apps\SB_Settings\Icon_SB.paa";
+		onLoad = "GG\ExAdClient\XM8\Apps\SB_Settings\onLoad.sqf";
 	};
 }; 
 
 class CfgExileCustomCode 
 {
-	/*
-		You can overwrite every single file of our code without touching it.
-		To do that, add the function name you want to overwrite plus the 
-		path to your custom file here. If you wonder how this works, have a
-		look at our bootstrap/fn_preInit.sqf function.
-
-		Simply add the following scheme here:
-
-		<Function Name of Exile> = "<New File Name>";
-
-		Example:
-
-		ExileClient_util_fusRoDah = "myaddon\myfunction.sqf";
-	*/
-	ExileClient_gui_selectSpawnLocation_show = "GG\override\gg_gui_selectSpawnLocation_show.sqf";
-	ExileServer_system_territory_database_load = "GG\ExAdClient\VirtualGarage\CustomCode\ExileServer_system_territory_database_load.sqf";
-	ExileClient_gui_xm8_slide = "GG\ExAdClient\XM8\CustomCode\ExileClient_gui_xm8_slide.sqf";
-	ExileClient_gui_xm8_show = "GG\ExAdClient\XM8\CustomCode\ExileClient_gui_xm8_show.sqf";
-	ExileClient_object_item_construct = "GG\override\gg_object_item_construct.sqf";
-	ExileClient_gui_xm8_slide_server_onOpen = "GG\override\gg_gui_xm8_slide_server_onOpen.sqf";
+	
+	ExileClient_gui_xm8_slide = 				 		"GG\override\GG_gui_xm8_slide.sqf";
+	ExileClient_gui_xm8_show = 					 		"GG\override\GG_gui_xm8_show.sqf";
+	ExileClient_gui_selectSpawnLocation_show = 			"GG\override\GG_gui_selectSpawnLocation_show.sqf";
+	ExileClient_object_item_construct = 				"GG\override\GG_object_item_construct.sqf";
+	ExileClient_gui_xm8_slide_server_onOpen = 			"GG\override\GG_gui_xm8_slide_server_onOpen.sqf";
+	ExileClient_gui_lockerDialog_show = 				"GG\override\GG_gui_lockerDialog_show.sqf";
+	ExileClient_system_locker_network_lockerResponse =	"GG\override\GG_system_locker_network_lockerResponse.sqf";
+	ExileClient_util_playerEquipment_add =				"GG\override\GG_util_playerEquipment_add.sqf";
+	ExileClient_object_player_bambiStateBegin =			"GG\override\GG_object_player_bambiStateBegin.sqf";
+	ExileClient_system_territory_database_load =		"GG\override\GG_system_territory_database_load.sqf";
 };
 class CfgExileEnvironment
 {
@@ -4088,6 +4117,7 @@ class CfgExileEnvironment
 		// A list of {position, radius} where building is not allowed at all
 		nonConstructionZones[] = {
 			//{{8347.18,5990.92,291.991}, 1000};
+				{{2901.51,12333.8,291.991}, 1600};
 			};
 
 
@@ -4161,7 +4191,7 @@ class CfgExileEnvironment
 			*/
 			contaminatedZones[] = 
 			{
-				{{8347.18,5990.92,291.991}, 300, 400}	// radiation church
+				{{2901.51,12333.8,291.991}, 1300, 1600}	// radiation
 			};
 		};
 
@@ -4260,7 +4290,7 @@ class CfgExileLootSettings
 	 * the garbage collector settings of your server
 	 * CfgSettings!
 	 */
-	lifeTime = 8;
+	lifeTime = 4;
 
 	/**
 	 * Interval in seconds when the client searches for
@@ -4512,6 +4542,12 @@ class CfgInteractionMenus
 				condition = "call ExileClient_object_vehicle_interaction_show";
 				action = "_this call ExileClient_object_vehicle_drain";
 			};
+			class PackDeployedVehicle: ExileAbstractAction
+			{
+				title = "Pack Vehicle";
+				condition = "call ExAd_XM8_DV_fnc_canPack";
+				action = "call ExAd_XM8_DV_fnc_pack";
+			};
 		};
 	};
 
@@ -4647,7 +4683,7 @@ class CfgInteractionMenus
 			class HackSafe : ExileAbstractAction
 			{
 				title = "Hack Safe";
-				condition = "(('Exile_Item_Laptop' in (magazines player)) && ((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo -1) && (({alive _x}count playableUnits) >= ExAd_HACKING_MIN_PLAYERS_ONLINE))";
+				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo -1)";
 				action = "_this spawn ExAd_fnc_startHack";
 			};
 		};
@@ -4813,14 +4849,6 @@ class CfgInteractionMenus
 
 		class Actions
 		{
-			/*
-			class Manage : ExileAbstractAction
-			{
-				title = "Manage";
-				condition = "true";
-				action = "_this call ExileClient_gui_baseManagement_event_show";
-			};
-			*/
 			class StealFlag: ExileAbstractAction
 			{
 				title = "Steal Flag";
@@ -4837,7 +4865,7 @@ class CfgInteractionMenus
 			class HackVG : ExileAbstractAction
 			{
 				title = "Hack Virtual Garage";
-				condition = "(('Exile_Item_Laptop' in (magazines player)) && ((([ExileClientInteractionObject, getPlayerUID player] call ExileClient_util_territory_getAccessLevel) select 0) < ExAd_VG_ACCESS_LEVEL) && (({alive _x}count playableUnits) >= ExAd_HACKING_MIN_PLAYERS_ONLINE))";
+				condition = "((([ExileClientInteractionObject, getPlayerUID player] call ExileClient_util_territory_getAccessLevel) select 0) < ExAd_VG_ACCESS_LEVEL))";
 				action = "_this spawn ExAd_fnc_startHack";
 			}; 
 		};
@@ -4911,7 +4939,7 @@ class CfgInteractionMenus
 	class Bikes
 	{
 		targetType = 2;
-		target = "Bicycle";
+		target = "Exile_Bike_MountainBike";
 
 		class Actions
 		{
@@ -4920,6 +4948,12 @@ class CfgInteractionMenus
 				title = "Flip";
 				condition = "true";
 				action = "_this call ExileClient_object_vehicle_flip";
+			};
+			class PackDeployedVehicle: ExileAbstractAction
+			{
+				title = "Pack Bike";
+				condition = "call ExAd_XM8_DV_fnc_canPack";
+				action = "call ExAd_XM8_DV_fnc_pack";
 			};
 		};
 	};
@@ -5074,6 +5108,9 @@ class CfgInteractionModels
 			"containerline_01_f",
 			"containerline_02_f",
 			"containerline_03_f",
+			"land_containerline_01_f",
+			"land_containerline_02_f",
+			"land_containerline_03_f",
 
 			// Also allow wrecks
 			"wreck_"
@@ -5892,539 +5929,7 @@ class CfgTraderCategories
 			"TRYK_B_FieldPack_Wood",
 			"TRYK_Winter_pack"
 		};
-	};
-	
-	class MASPointerAttachments 
-	{
-		name = "MAS Pointer Attachments";
-		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
-		items[] = 
-		{
-			"acc_mas_flash_gun", 
-			"acc_mas_pointer_gun_IR", 
-			"acc_mas_pointer_IR", 
-			"acc_mas_pointer_IR_b", 
-			"acc_mas_pointer_IR_top", 
-			"acc_mas_pointer_IR_top_b", 
-			"acc_mas_pointer_IR2", 
-			"acc_mas_pointer_IR2_top", 
-			"acc_mas_pointer_IR2c", 
-			"acc_mas_pointer_IR2c_top"
-		};
-	};
-
-	class MASMuzzleAttachments 
-	{
-		name = "MAS Muzzle Attachments";
-		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemmuzzle_ca.paa";
-		items[] = 
-		{
-			"muzzle_mas_snds_L", 
-			"muzzle_mas_snds_LM", 
-			"muzzle_mas_snds_C", 
-			"muzzle_mas_snds_MP5SD6", 
-			"muzzle_mas_snds_M", 
-			"muzzle_mas_snds_Mc", 
-			"muzzle_mas_snds_MP7", 
-			"muzzle_mas_snds_AK", 
-			"muzzle_mas_snds_SM", 
-			"muzzle_mas_snds_SMc", 
-			"muzzle_mas_snds_SH", 
-			"muzzle_mas_snds_SHc", 
-			"muzzle_mas_snds_SVD" 
-		};
-	};
-
-	class MASOpticAttachments 
-	{
-		name = "MAS Scopes";
-		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemoptic_ca.paa";
-		items[] = 
-		{
-			"optic_mas_DMS", 
-			"optic_mas_DMS_c", 
-			"optic_mas_Holosight_blk", 
-			"optic_mas_Holosight_camo", 
-			"optic_mas_Arco_blk", 
-			"optic_mas_Arco_camo", 
-			"optic_mas_Hamr_camo", 
-			"optic_mas_Aco_camo", 
-			"optic_mas_ACO_grn_camo", 
-			"optic_mas_MRCO_camo", 
-			"optic_mas_zeiss", 
-			"optic_mas_zeiss_c", 
-			"optic_mas_zeiss_eo", 
-			"optic_mas_zeiss_eo_c", 
-			"optic_mas_acog", 
-			"optic_mas_acog_c", 
-			"optic_mas_acog_eo", 
-			"optic_mas_acog_eo_c", 
-			"optic_mas_acog_rd", 
-			"optic_mas_acog_rd_c", 
-			"optic_mas_handle", 
-			"optic_mas_aim", 
-			"optic_mas_aim_c", 
-			"optic_mas_PSO", 
-			"optic_mas_PSO_c", 
-			"optic_mas_PSO_eo", 
-			"optic_mas_PSO_eo_c", 
-			"optic_mas_PSO_nv", 
-			"optic_mas_PSO_nv_c", 
-			"optic_mas_PSO_nv_eo", 
-			"optic_mas_PSO_nv_eo_c", 
-			"optic_mas_PSO_day", 
-			"optic_mas_PSO_nv_day",  
-			"optic_mas_MRD", 
-			"optic_mas_LRPS", 
-			"optic_mas_kobra", 
-			"optic_mas_kobra_c", 
-			"optic_mas_nspu",
-			"optic_mas_PSO_kv",
-			"optic_mas_PSO_kv_c"
-		};
-	};
-
-	class MASAmmunition
-	{
-		name = "MAS Ammunition";
-		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
-		items[] = 
-		{	
-			//.45 ammo
-			"12Rnd_mas_45acp_Mag",
-			//Hk 416 ammo
-			"30Rnd_mas_556x45_Stanag",
-			"30Rnd_mas_556x45sd_Stanag", 	//SD
-			"30Rnd_mas_556x45_T_Stanag", 	//tracer
-			//Hk 417 ammo
-			"20Rnd_mas_762x51_Stanag",
-			"20Rnd_mas_762x51sd_Stanag",	//SD
-			"20Rnd_mas_762x51_T_Stanag", 	//tracer
-			//M27 IAR ammo
-			"150Rnd_mas_556x45_Stanag", 	//Drum
-			"150Rnd_mas_556x45_T_Stanag", 	//Drum tracer
-			//SCAR-H ammo
-			"20Rnd_mas_762x51_Stanag",
-			"20Rnd_mas_762x51sd_Stanag", 	//SD
-			"20Rnd_mas_762x51_T_Stanag", 	//tracer
-			//MP-40
-			"30Rnd_mas_9x21_Stanag",
-			//Lee-Enfield No4
-			"5Rnd_mas_762x51_Stanag",
-			"5Rnd_mas_762x51_T_Stanag", 	//tracer
-			//Benelli M1014 (shotgun) shells
-			"7Rnd_mas_12Gauge_Slug", 		//slug
-			"7Rnd_mas_12Gauge_Pellets", 	//Pellets
-			//AA-12
-			"20Rnd_mas_12Gauge_Slug", 		//slug
-			"20Rnd_mas_12Gauge_Pellets", 	//pellets
-			//M24 ammo
-			"5Rnd_mas_762x51sd_Stanag", 	//SD
-			//LRR AWM ammo
-			"10Rnd_mas_338_Stanag",
-			"10Rnd_mas_338sd_Stanag", 		//SD
-			"10Rnd_mas_338_T_Stanag",		//tracer
-			//MP5
-			"30Rnd_mas_9x21_Stanag",
-			"30Rnd_mas_9x21sd_Stanag",		//SD
-			"30Rnd_mas_9x21d_Stanag",		//underwater
-			//MP7A1 ammo
-			"40Rnd_mas_46x30_Mag",
-			"40Rnd_mas_46x30sd_Mag",		//SD
-			//Stoner LMG (mk200) ammo
-			"200Rnd_mas_556x45_Stanag",
-			"200Rnd_mas_556x45_T_Stanag",	//tracer
-			//Mk48/M240/MG3/M60 ammo
-			"100Rnd_mas_762x51_Stanag",
-			"100Rnd_mas_762x51_T_Stanag",	//tracer
-			//PPSh-41 ammo
-			"71Rnd_mas_762x25_mag",
-			//AK74M/AKS74/AKS74U/AK74/AK12/AKMS/AKM/Zastava M70 ammo
-			"30Rnd_mas_545x39_mag",
-			"30Rnd_mas_762x39sd_mag",
-			"30Rnd_mas_545x39sd_mag",		//SD
-			"30Rnd_mas_545x39_T_mag",		//tracer
-			//Bizon ammo
-			"64Rnd_mas_9x18_mag",
-			"64Rnd_mas_9x18sd_mag",			//SD
-			//Saiga 12 ammo
-			"10Rnd_mas_12Gauge_Slug",
-			"10Rnd_mas_12Gauge_Pellets",
-			//Zastava M91 ammo
-			"10Rnd_mas_762x54_mag",
-			"10Rnd_mas_762x54_T_mag",		//tracer
-			//Zastava M72 ammo
-			"100Rnd_mas_762x39_mag",
-			"100Rnd_mas_762x39_T_mag",		//tracer
-			//SVD ammo
-			"10Rnd_mas_762x54sd_mag",
-			//VSS Vintorez ammo
-			"20Rnd_mas_9x39_mag",
-			"20Rnd_mas_9x39sd_mag",			//SD
-			//AS VAL ammo
-			"30Rnd_mas_9x39_mag",
-			"30Rnd_mas_9x39sd_mag",			//SD
-			"30Rnd_mas_9x39d_mag",			//underwater
-			//RPK ammo
-			"100Rnd_mas_545x39_mag",
-			"100Rnd_mas_545x39_T_mag",		//tracer
-			//PKM/PKP ammo
-			"100Rnd_mas_762x54_mag",
-			"100Rnd_mas_762x54_T_mag",		//tracer
-			//Micro Uzi
-			"25Rnd_mas_9x19_Mag",
-			//SA61 Skorpion ammo
-			"20Rnd_mas_765x17_Mag",
-			//M9/Browning HP/Glock 17/Sig p226 ammo
-			"17Rnd_mas_9x21_Mag",
-			"15Rnd_mas_9x21_Mag",
-			"13Rnd_mas_9x21_Mag",
-			//MP-443 Grach/Makarov ammo
-			"8Rnd_mas_9x18_Mag",
-			"12Rnd_mas_45acp_Mag"
-		};
-	};
-
-	class MASPistols 
-	{
-		name = "MAS Pistols";
-		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\handgun_ca.paa";
-		items[] = 
-		{
-			//Makarov
-			"hgun_mas_mak_F",			// stock
-			//ACP
-			"hgun_mas_acp_F",			// stock
-			//USP
-			"hgun_mas_usp_F",			// stock
-			//Micro UZI
-			"hgun_mas_uzi_F",			// stock
-			//M9
-			"hgun_mas_m9_F",			// stock
-			//Browning HP
-			"hgun_mas_bhp_F",			// stock
-			//Glock 17
-			"hgun_mas_glock_F",			// stock
-			//Sig p226
-			"hgun_mas_p226_F",			// stock
-			//MP-443 Grach
-			"hgun_mas_grach_F",			// stock
-			//SA61 Skorpion
-			"hgun_mas_sa61_F",			// stock
-			//MP7A1  PISTOL SLOT
-			"hgun_mas_mp7p_F",			// stock
-			"hgun_mas_acp_F",			//1911
-			"hgun_mas_glocksf_F",
-			"hgun_mas_usp_F",
-			"hgun_mas_m23_F"
-		};
-	};
-	
-	class MASShotguns
-	{
-		name = "MAS Shotguns";
-		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
-		items[] = 
-		{
-			//Saiga 12
-			"arifle_mas_saiga",			// stock
-			//Benelli M1014 (shotgun)
-			"arifle_mas_m1014", 		// stock
-			//AA-12
-			"arifle_mas_aa12" 			// stock
-		};
-	};
-
-	class MASSubMachineGuns 
-	{
-		name = "MAS Sub Machine Guns";
-		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
-		items[] = 
-		{
-			//MP-40
-			"arifle_mas_mp40", 			// closed stock
-			"arifle_mas_mp40_o", 		// open stock
-			//MP5
-			"arifle_mas_mp5",			// stock
-			"arifle_mas_mp5_v",			// camo
-			"arifle_mas_mp5_d",			// desert
-			"arifle_mas_mp5sd",			// MP5SD6
-			"arifle_mas_mp5sd_ds",		// MP5SD6 Scuba
-			//Bizon
-			"arifle_mas_bizon", 		// stock
-			//MP7A1 RIFLE SLOT
-			"hgun_mas_mp7_F",			// stock
-			"arifle_mas_sten"
-		};
-	};
-
-	class MASLightMachineGuns 
-	{
-		name = "MAS Light Machine Guns";
-		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
-		items[] = 
-		{
-			//Stoner LMG (mk200)
-			"LMG_mas_MK200_F",			// stock
-			//M249 LMG 5.56
-			"LMG_mas_M249_F_v",
-			//Mk48
-			"LMG_mas_Mk48_F",			// stock
-			"LMG_mas_Mk48_F_v",			// camo
-			"LMG_mas_Mk48_F_d",			// desert
-			//M240
-			"LMG_mas_m240_F",			// stock
-			//MG3
-			"LMG_mas_mg3_F",			// Stock
-			//M60
-			"LMG_mas_m60_F",			// stock
-			//Zastava M72
-			"LMG_mas_m72_F",			// stock
-			//RPK
-			"LMG_mas_rpk_F",			// stock
-			//PKM
-			"LMG_mas_pkm_F",			// stock
-			//PKP
-			"LMG_mas_pech_F",			// stock	
-			"LMG_mas_M249_F_v",
-			"LMG_mas_M249_F_d",
-			"LMG_mas_M249_F",
-			"LMG_mas_M249a_F"
-		};
-	};
-
-	class MASAssaultRifles
-	{
-		name = "MAS Assault Rifles";
-		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
-		items[] = 
-		{
-			//M16
-			"arifle_mas_m16", 			// stock a4
-			"arifle_mas_m16a2", 		// stock a2
-			"arifle_mas_m16_gl", 		// m203 a4
-			"arifle_mas_m16a2_gl", 		// m203 a2
-			//G36c
-			"arifle_mas_g36c", 			// stock
-			//M4
-			"arifle_mas_m4", 			// stock
-			"arifle_mas_m4_gl",			// gl
-			"arifle_mas_m4_m203",		// m203
-			"arifle_mas_m4_v",			// camo
-			"arifle_mas_m4_gl_v",		// gl camo
-			"arifle_mas_m4_m203_v",		// m203 camo
-			"arifle_mas_m4_d", 			// desert
-			"arifle_mas_m4_gl_d",		// gl desert
-			"arifle_mas_m4_m203_d", 	// m203 desert
-			"arifle_mas_m4vlt",			// VLTOR
-			"arifle_mas_m4c", 			// cqb stock
-			"arifle_mas_m4_m203c",		// cqb m203
-			"arifle_mas_m4c_v", 		// cqb camo
-			"arifle_mas_m4_m203c_v", 	// cqb m203 camo
-			"arifle_mas_m4c_d",			// cqb desert
-			"arifle_mas_m4_m203c_d",	// cqb m203 desert
-			//Hk 416
-			"arifle_mas_hk416", 		// stock
-			"arifle_mas_hk416_gl", 		// gl (fires further)
-			"arifle_mas_hk416_m203", 	// m203 (shorter range than gl)
-			"arifle_mas_hk416_v", 		// camo
-			"arifle_mas_hk416_gl_v", 	// camo gl (fires further)
-			"arifle_mas_hk416_m203_v", 	// camo m203
-			"arifle_mas_hk416_d", 		// desert (shorter range than gl)
-			"arifle_mas_hk416_gl_d", 	// desert gl (fires further)
-			"arifle_mas_hk416_m203_d", 	// desert m203 (shorter range than gl)
-			"arifle_mas_hk416c", 		// cqb stock
-			"arifle_mas_hk416_m203c", 	// cqb m203
-			"arifle_mas_hk416c_v", 		// cqb camo
-			"arifle_mas_hk416_m203c_v", // cqb camo m203
-			"arifle_mas_hk416c_d", 		// cqb desert
-			"arifle_mas_hk416_m203c_d", // cqb desert m203
-			//ARX160
-			"arifle_mas_arx", 			// stock
-			"arifle_mas_arx_gl",		// gl
-			"arifle_mas_arx_l", 		// black long barrel
-			"arifle_mas_arx_l_gl",		// black long barrel gl
-			//L119A1
-			"arifle_mas_l119", 			// stock
-			"arifle_mas_l119c", 		// cqb
-			"arifle_mas_l119_gl", 		// gl
-			"arifle_mas_l119_m203", 	// m203
-			"arifle_mas_l119_v", 		// camo
-			"arifle_mas_l119c_v", 		// cqb camo
-			"arifle_mas_l119_gl_v", 	// gl camo
-			"arifle_mas_l119_m203_v", 	// m203 camo
-			"arifle_mas_l119_d", 		// desert
-			"arifle_mas_l119c_d", 		// cqb desert
-			"arifle_mas_l119_gl_d", 	// gl desert
-			"arifle_mas_l119_m203_d", 	// m203 desert
-			//SCAR-LS (Short barrel)
-			"arifle_mas_mk16", 			// short barrel
-			"arifle_mas_mk16_gl", 		// short barrel gl
-			//SCAR-L
-			"arifle_mas_mk16_l", 		// stock
-			"arifle_mas_mk16_l_gl", 	// gl
-			//M27 IAR
-			"arifle_mas_m27", 			// stock
-			"arifle_mas_m27m", 			// supports drum mag
-			"arifle_mas_m27_v", 		// camo
-			"arifle_mas_m27m_v", 		// Drum camo
-			"arifle_mas_m27_d", 		// desert
-			"arifle_mas_m27m_d", 		// desert drum
-			//AK74M
-			"arifle_mas_ak_74m",		// stock
-			"arifle_mas_ak_74m_gl",		// gl
-			"arifle_mas_ak_74m_c",		// camo
-			"arifle_mas_ak_74m_gl_c",	// camo gl
-			"arifle_mas_ak_74m_sf",		// sf (rails)
-			"arifle_mas_ak_74m_sf_gl",	// sf gl (rails)
-			"arifle_mas_ak_74m_sf_c",	// sf camo (rails)
-			"arifle_mas_ak_74m_sf_gl_c",// sf gl camo (rails)
-			//AKS74
-			"arifle_mas_aks74",			// stock
-			"arifle_mas_aks74_gl",		// gl
-			"arifle_mas_aks74u",		// 74u
-			"arifle_mas_aks74u_c",		// 74u camo
-			//AK74
-			"arifle_mas_ak74",			// stock
-			"arifle_mas_ak74_gl",		// gl
-			//AK12
-			"arifle_mas_ak12_sf",		// stock
-			"arifle_mas_ak12_sf_gl",	// gl
-			//AKMS
-			"arifle_mas_akms",			// stock
-			"arifle_mas_akms_gl",		// gl
-			"arifle_mas_akms_c",		// camo
-			"arifle_mas_akms_gl_c",		// gl camo
-			//AKM
-			"arifle_mas_akm",			// stock
-			"arifle_mas_akm_gl",		// gl
-			//Zastava M70
-			"arifle_mas_m70",			// stock
-			"arifle_mas_m70_gl",		// gl
-			"arifle_mas_m70ab",			// folding stock
-			"arifle_mas_m70ab_gl",		// folding stock gl
-			//Hk 417
-			"arifle_mas_hk417c", 		// cqb
-			"arifle_mas_hk417_m203c", 	// cqb m203
-			"arifle_mas_hk417c_v", 		// cqb camo
-			"arifle_mas_hk417_m203c_v", // cqb m203 camo
-			"arifle_mas_hk417c_d", 		// cqb desert
-			"arifle_mas_hk417_m203c_d", // cqb m203 desert
-			"srifle_mas_hk417", 		// stock
-			"srifle_mas_hk417_v", 		// camo
-			"srifle_mas_hk417_d", 		// desert
-			//SCAR-H
-			"arifle_mas_mk17", 			// stock
-			"arifle_mas_mk17_gl", 		// gl
-			//G3
-			"arifle_mas_g3", 			// stock
-			"arifle_mas_g3_m203", 		// m203
-			"arifle_mas_g3s", 			// folding stock
-			"arifle_mas_g3s_m203", 		// folding stock m203
-			//FN FAL
-			"arifle_mas_fal", 			// stock
-			"arifle_mas_fal_m203", 		// m203
-			//M14 Old
-			"arifle_mas_m14", 			// stock
-			//PPSh-41
-			"arifle_mas_ppsh"			// stock
-		};
-	};
-
-	class MASSniperRifles
-	{
-		name = "MAS Sniper Rifles";
-		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
-		items[] = 
-		{	
-			//Lee-Enfield No4
-			"arifle_mas_lee", 			// stock
-			//VSS Vintorez
-			"srifle_mas_vss",			// stock
-			//AS VAL
-			"arifle_mas_asval",			// stock
-			"arifle_mas_asval_ds",		// underwater
-			//M14 EBR
-			"srifle_mas_ebr",			// stock
-			//SR25
-			"srifle_mas_sr25", 			// stock
-			"srifle_mas_sr25_v", 		// camo
-			"srifle_mas_sr25_d", 		// desert
-			//M110
-			"srifle_mas_m110", 			// stock
-			//SCAR-H Mark
-			"srifle_mas_mk17s", 		// stock
-			//M24
-			"srifle_mas_m24", 			// stock
-			"srifle_mas_m24_v",			// camo
-			"srifle_mas_m24_d",			// desert
-			//SVD
-			"srifle_mas_svd",			// stock
-			//Zastava M91
-			"srifle_mas_m91",			// stock
-			//LRR AWM
-			"srifle_mas_lrr"			// stock
-		};
-	};
-
-	
-	class MASLaunchers 
-	{
-		name = "Launchers";
-		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
-		items[] = 
-		{
-			"arifle_mas_m79",
-			"mas_launch_RPG7_F", 
-			"mas_launch_Stinger_F"
-		};
 	};	
-	
-	class MASLauncherAmmo 
-	{
-		name = "MAS Launcher Ammo";
-		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
-		items[] = 
-		{
-			"mas_PG7V", 
-			"mas_OG7", 
-			"mas_PG7L", 
-			"mas_PG7VR", 
-			"mas_TBG7V",
-			"RPG32_F", //ARMA 3 ALAMUT
-			"mas_Stinger"
-		};
-	};		
-
-
-	class MASBackpacks 
-	{
-		name = "MAS Backpacks";
-		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\backpack_ca.paa";
-		items[] = 
-		{
-			"B_mas_m_Bergen_acr_w",
-			"B_mas_m_Bergen_acr_g",
-			"B_mas_m_Bergen_acr",
-			"B_mas_m_Bergen_acr_c",
-			"B_mas_m_Bergen_us_w",
-			"B_mas_m_Bergen_us_b",
-			"B_mas_m_Bergen_us_m",
-			"B_mas_m_Bergen_us_g",
-			"B_mas_m_Bergen_us",
-			"B_mas_Bergen_wint",
-			"B_mas_Bergen_black",
-			"B_mas_Bergen_mul",
-			"B_mas_Bergen_rng",
-			"B_mas_Bergen_des",
-			"B_mas_m_Bergen_al",
-			"B_mas_Kitbag_des",
-			"B_mas_Kitbag_rng",
-			"B_mas_Kitbag_black",
-			"B_mas_Kitbag_wint",
-			"B_mas_Kitbag_mul"
-		};
-	};		
 	
 	class Community
 	{
@@ -6607,8 +6112,8 @@ class CfgTraderCategories
 			"U_B_T_Soldier_F",
 			"U_B_T_Soldier_AR_F",
 			"U_B_T_Soldier_SL_F",
-			//"U_B_T_Sniper_F",
-			//"U_B_T_FullGhillie_tna_F",
+			"U_B_T_Sniper_F",
+			"U_B_T_FullGhillie_tna_F",
 			"U_B_CTRG_Soldier_F",
 			"U_B_CTRG_Soldier_2_F",
 			"U_B_CTRG_Soldier_3_F",
@@ -6616,8 +6121,8 @@ class CfgTraderCategories
 			"U_B_GEN_Commander_F",
 			"U_O_T_Soldier_F",
 			"U_O_T_Officer_F",
-			//"U_O_T_Sniper_F",
-			//"U_O_T_FullGhillie_tna_F",
+			"U_O_T_Sniper_F",
+			"U_O_T_FullGhillie_tna_F",
 			"U_O_V_Soldier_Viper_F",
 			"U_O_V_Soldier_Viper_hex_F",
 			"U_I_C_Soldier_Para_1_F",
@@ -7056,7 +6561,7 @@ class Glasses
 			"Exile_Item_MetalWire",
 			"Exile_Item_Laptop",
 			"Exile_Item_BaseCameraKit",
-			"Exile_Item_MetalHedgehogKit",
+			//"Exile_Item_MetalHedgehogKit",
 			//"Exile_Item_CarWheel",
 			"Exile_Item_Cement",
 			"Exile_Item_Sand"
@@ -7706,6 +7211,7 @@ class Glasses
 			"Exile_Chopper_Huron_Black",
 			"Exile_Chopper_Hellcat_Green",
 			"B_Heli_Transport_01_F",
+			"B_heli_Light_01_armed_F",
 			"I_Heli_light_03_F"
 		};
 	};
@@ -7789,17 +7295,7 @@ class CfgTraders
 			"SubMachineGuns",
 			"LightMachineGuns",
 			"AssaultRifles",
-			"SniperRifles",
-			"MASPointerAttachments",
-			"MASMuzzleAttachments",
-			"MASOpticAttachments",
-			"MASAmmunition",
-			"MASPistols",
-			"MASShotguns",
-			"MASSubMachineGuns",
-			"MASLightMachineGuns",
-			"MASAssaultRifles",
-			"MASSniperRifles"
+			"SniperRifles"
 		};
 	};
 
@@ -7817,8 +7313,6 @@ class CfgTraders
 			//"UAVs",
 			"StaticMGs",
 			"Explosives",
-			"MASLaunchers",
-			"MASLauncherAmmo",
 			"Navigation"
 		};
 	};
@@ -7842,7 +7336,6 @@ class CfgTraders
 			"TRYKHeadgear",
 			"TRYKNVGHeadgear",
 			"TRYKBackpacks",
-			"MASBackpacks",
 			"FirstAid"
 		};
 	};
@@ -8437,17 +7930,6 @@ class CfgVehicleCustoms
 			{"Exile_Car_SUV_Black", 	150, "Snow Camo",			{"exile_assets\texture\vehicle\Exile_SUV_Snow_co.paa"};},
 			{"Exile_Car_SUV_Black", 	150, "Leaf Camo",			{"exile_assets\texture\vehicle\Exile_SUV_Leaf_Light_co.paa"};},
 			{"Exile_Car_SUV_Black", 	150, "Leaf Camo (Dark)",	{"exile_assets\texture\vehicle\Exile_SUV_Leaf_Dark_co.paa"};}
-		};
-	};
-
-	///////////////////////////////////////////////////////////////////////////////
-	// SUV XL
-	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Car_SUVXL_Abstract
-	{
-		skins[] = 
-		{
-			{"Exile_Car_SUVXL_Black", 100, "Black", {""};}
 		};
 	};
 
