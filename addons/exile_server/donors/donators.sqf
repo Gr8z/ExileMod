@@ -106,7 +106,6 @@ Marksman3 = [
 	"76561197977797550", // Doctor (OD-2016-05-06) #13666 
 	"76561198053962268", // Dolus (OD-2016-05-21) #13775
 	"76561198135356952", // TheSurvivorZ (OD-2016-06-01) #13823
-	"76561197985323270", // Jhun (OD-2016-08-15) #14203
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Marksman3";
@@ -201,6 +200,7 @@ Scout3 = [
 	"76561198202597157", // BillyR192 (OD-2016-07-18) #14154
 	"76561198202597157", // Triippz (OD-2016-07-19) #14165 
 	"76561198115832323", // Spookey (OD-2016-07-20) #14169
+	"76561197985323270", // Jhun (OD-2016-08-15) #14203
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout3";
