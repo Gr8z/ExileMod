@@ -1955,14 +1955,13 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// Launcher stuff
 	///////////////////////////////////////////////////////////////////////////////
-	class launch_RPG7_F 							{ quality = 5; price = 50000; };
+	class launch_RPG7_F 							{ quality = 5; price = 70000; };
 	class launch_RPG32_F							{ quality = 5; price = 75000; };
 	class launch_NLAW_F								{ quality = 5; price = 100000; };
 	class launch_B_Titan_short_F				             	{ quality = 5; price = 100000; };
 	class launch_B_Titan_F 							{ quality = 5; price = 100000; };
 	class RPG32_F									{ quality = 5; price = 20000; };
 	class Titan_AA                                                           {quality = 5; price = 35000; };
-	class launch_RPG7_F 	                                           	{ quality = 1; price = 70000;  };
 	class RPG7_F                       		                          { quality = 1; price = 30000;  };
 
 
