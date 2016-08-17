@@ -200,6 +200,7 @@ Scout3 = [
 	"76561198202597157", // BillyR192 (OD-2016-07-18) #14154
 	"76561198202597157", // Triippz (OD-2016-07-19) #14165 
 	"76561198115832323", // Spookey (OD-2016-07-20) #14169
+	"76561197985323270", // Jhun (OD-2016-08-15) #14203
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout3";
@@ -215,6 +216,7 @@ Soldier1 = [
 Soldier2 = [
 	"76561197991652949", // Bhum (OD-2016-05-02) #13631 
 	"76561197994499310", // Comrade Karl (OD-2016-06-11) #13888  
+	"76561198043587439", // Killjoy (OD-2016-08-14) #14199
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Soldier2";
