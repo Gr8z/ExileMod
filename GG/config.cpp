@@ -1961,6 +1961,7 @@ class CfgExileArsenal
 	class launch_B_Titan_short_F					{ quality = 5; price = 100000; };
 	class launch_B_Titan_F 							{ quality = 5; price = 100000; };
 	class RPG32_F									{ quality = 5; price = 20000; };
+	class Titan_AA                                                           {quality = 5; price = 35000; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Pistols
@@ -6930,7 +6931,8 @@ class Glasses
 			"IEDUrbanSmall_Remote_Mag",
 			"SatchelCharge_Remote_Mag",
 			"SLAMDirectionalMine_Wire_Mag",
-			"launch_B_Titan_F"							
+			"launch_B_Titan_F",
+			"Titan_AA"
 		};
 	};
 
