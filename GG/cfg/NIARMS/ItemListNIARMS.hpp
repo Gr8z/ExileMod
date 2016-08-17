@@ -138,11 +138,11 @@
 	///////////////////////////////////////////////////////////////////////////////
 	// Pistols
 	///////////////////////////////////////////////////////////////////////////////
-    class hgun_mas_uzi_F 							{ quality = 1; price = 1500; };
+    class hlc_smg_mp5k 								{ quality = 1; price = 2000; }; //HK MP5K
     ///////////////////////////////////////////////////////////////////////////////
 	// Shotguns
 	///////////////////////////////////////////////////////////////////////////////
-	class hlc_rifle_saiga12k 						{ quality = 1; price = 4000; }; // Izhmash Saiga12K
+	class hlc_rifle_saiga12k 						{ quality = 1; price = 4000; }; //Izhmash Saiga12K
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Sub Machine Guns
@@ -162,24 +162,23 @@
 	class hlc_rifle_auga2para						{ quality = 1; price = 5000; }; //Steyr AUGA2 9mm OD
 	class hlc_rifle_auga2para_b						{ quality = 1; price = 5500; }; //Steyr AUGA2 9mm Black
 	class hlc_rifle_auga2para_t						{ quality = 1; price = 5500; }; //Steyr AUGA2 9mm Tan
+	
 	///////////////////////////////////////////////////////////////////////////////
 	// Light Machine Guns
 	///////////////////////////////////////////////////////////////////////////////
-    class LMG_mas_MK200_F							{ quality = 1; price = 8000; sellPrice = 1600; };
-    class LMG_mas_Mk48_F 							{ quality = 1; price = 9500; };
-    class LMG_mas_Mk48_F_v 							{ quality = 1; price = 9500; };
-    class LMG_mas_Mk48_F_d							{ quality = 1; price = 9500; };
-    class LMG_mas_m240_F							{ quality = 1; price = 9500; };
-    class LMG_mas_mg3_F 							{ quality = 1; price = 9000; sellPrice = 1800; };
-    class LMG_mas_m60_F 							{ quality = 1; price = 9500; };
-    class LMG_mas_m72_F 							{ quality = 1; price = 9000; };
-    class LMG_mas_rpk_F 							{ quality = 1; price = 9000; };
-    class LMG_mas_pkm_F 							{ quality = 1; price = 9000; };
-    class LMG_mas_pech_F 							{ quality = 1; price = 9500; };
-	class LMG_mas_M249_F_v							{ quality = 1; price = 7500; };
-	class LMG_mas_M249_F_d							{ quality = 1; price = 7500; };
-	class LMG_mas_M249_F							{ quality = 1; price = 7500; };
-	class LMG_mas_M249a_F							{ quality = 1; price = 7500; };
+    class hlc_lmg_M249E2							{ quality = 1; price = 8000; }; //M249E2
+    class hlc_lmg_m249para 							{ quality = 1; price = 9500; }; //M249E2 Para13.7 in
+    class hlc_lmg_M60 								{ quality = 1; price = 9500; }; //M60
+    class hlc_lmg_M60E4								{ quality = 1; price = 9500; }; //M60E4
+    class hlc_lmg_minimi							{ quality = 1; price = 9500; }; //FN Minimi 18.3 in
+    class hlc_lmg_minimi_railed 					{ quality = 1; price = 9000; }; //FN Minimi RIS Solid Stock
+    class hlc_lmg_minimipara 						{ quality = 1; price = 9500; }; //FN Minimi Para
+    class hlc_lmg_mk48 								{ quality = 1; price = 9000; }; //Mk48 Mod 0
+    class hlc_m249_pip1 							{ quality = 1; price = 9000; }; //M249 PIP RIS18.3 in
+    class hlc_m249_pip2 							{ quality = 1; price = 9000; }; //M249E2 RIS13.7 in
+    class hlc_m249_pip3 							{ quality = 1; price = 9500; }; //M249 PIP RIS PIP Stock
+	class hlc_m249_pip4								{ quality = 1; price = 7500; }; //M249 PIP VFGPIP Stock
+	class hlc_m249_squantoon						{ quality = 1; price = 7500; }; //M249 Squantoon Special
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Assault Rifles
@@ -295,13 +294,13 @@
 	///////////////////////////////////////////////////////////////////////////////
 	// Sniper Rifles
 	///////////////////////////////////////////////////////////////////////////////	
-    class arifle_mas_lee 							{ quality = 1; price = 8000; };
-    class srifle_mas_vss 							{ quality = 1; price = 3000; };
-    class arifle_mas_asval 							{ quality = 1; price = 3000; };
-    class arifle_mas_asval_ds 						{ quality = 1; price = 4000; };
-    class srifle_mas_ebr 							{ quality = 1; price = 10000; };
-    class srifle_mas_sr25 							{ quality = 1; price = 12000; };
-    class srifle_mas_sr25_v 						{ quality = 1; price = 12000; };
+    class hlc_rifle_awcovert 						{ quality = 1; price = 8000; }; //AI AWC-M OD
+    class hlc_rifle_awcovert_BL 					{ quality = 1; price = 3000; }; //AI AWC-M Black
+    class hlc_rifle_awcovert_FDE 					{ quality = 1; price = 3000; }; //AI AWC-M FDE
+    class hlc_rifle_awmagnum 						{ quality = 1; price = 4000; }; //AI AWM OD
+    class hlc_rifle_awmagnum_bl 					{ quality = 1; price = 10000; }; //AI AWM Black
+    class hlc_rifle_awmagnum_bl_ghillie 			{ quality = 1; price = 12000; }; //AI AWM Black+Ghillie
+    class hlc_rifle_awmagnum_fde 					{ quality = 1; price = 12000; };
     class srifle_mas_sr25_d 						{ quality = 1; price = 12000; };
     class srifle_mas_m110 							{ quality = 1; price = 12000; };
     class srifle_mas_mk17s 							{ quality = 1; price = 12000; };
