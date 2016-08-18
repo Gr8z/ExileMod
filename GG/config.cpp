@@ -4015,7 +4015,7 @@ class CfgExileEnvironment
 	{
 		// A list of {position, radius} where building is not allowed at all
 		nonConstructionZones[] = {
-			{{8347.18,5990.92,291.991}, 1000};
+			{{7562.91,0,5149.56}, 1000};
 			};
 
 
@@ -4089,7 +4089,7 @@ class CfgExileEnvironment
 			*/
 			contaminatedZones[] = 
 			{
-				{{8347.18,5990.92,291.991}, 300, 400}	// radiation church
+				{{7562.91,0,5149.56}, 300, 400}	// radiation mogilevka
 			};
 		};
 
