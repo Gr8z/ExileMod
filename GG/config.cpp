@@ -6989,7 +6989,6 @@ class Glasses
 			"hlc_m249_pip3"
 			"hlc_m249_pip4"
 			"hlc_m249_squantoon"
-			"hlc_rifle_mg36"
 			
 		};
 	};
@@ -7147,10 +7146,74 @@ class Glasses
 			"hlc_rifle_g36a1ag36"
 			"hlc_rifle_g36c"
 			"hlc_rifle_g36cmlic"
-			
+			"hlc_rifle_g36ctac"
+			"hlc_rifle_g36cv"
+			"hlc_rifle_g36e1"
+			"hlc_rifle_g36e1ag36"
+			"hlc_rifle_g36ka1"
+			"hlc_rifle_g36ke1"
+			"hlc_rifle_g36kmlic"
+			"hlc_rifle_g36ktac"
+			"hlc_rifle_g36kv"
+			"hlc_rifle_g36mliag36"
+			"hlc_rifle_g36mlic"
+			"hlc_rifle_g36tac"
+			"hlc_rifle_g36v"
+			"hlc_rifle_g36vag36"
+			"hlc_rifle_mg36"
+			"hlc_rifle_g3a3"
+			"hlc_rifle_g3a3ris"
+			"hlc_rifle_g3a3v"
+			"hlc_rifle_g3ka4"
+			"hlc_rifle_g3ka4_gl"
+			"hlc_rifle_hk33a2"
+			"hlc_rifle_hk33a2ris"
+			"hlc_rifle_hk51"
+			"hlc_rifle_hk53"
+			"hlc_rifle_hk53ras"
 		};
 	};
 	
+	class NIARMSRIFLES
+	{
+		name = "NIARMS Rifles";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] = 
+		{
+			"hlc_rifle_amt"
+			"hlc_rifle_bcmjack"
+			"hlc_rifle_bushmaster300"
+			"hlc_rifle_c1a1"
+			"hlc_rifle_colt727"
+			"hlc_rifle_colt727_gl"
+			"hlc_rifle_cqbr"
+			"hlc_rifle_fal5000"
+			"hlc_rifle_5000rail"
+			"hlc_rifle_5061"
+			"hlc_rifle_5061"
+			"hlc_rifle_falosw"
+			"hlc_rifle_honeybadger"
+			"hlc_rifle_l1a1slr"
+			"hlc_rifle_lar"
+			"hlc_rifle_m4"
+			"hlc_rifle_m4m203"
+			"hlc_rifle_osw_gl"
+			"hlc_rifle_ru556"
+			"hlc_rifle_ru5562"
+			"hlc_rifle_samr"
+			"hlc_rifle_samr2"
+			"hlc_rifle_sig5104"
+			"hlc_rifle_slr"
+			"hlc_rifle_slr107u"
+			"hlc_rifle_slr107u_mtk"
+			"hlc_rifle_slrchopmod"
+			"hlc_rifle_stg58f"
+			"hlc_rifle_stgw57"
+			"hlc_rifle_stgw57_commando"
+			"hlc_rifle_stgw57_ris"
+			"hlc_rifle_vendimus"
+		};
+	};
 	class Shotguns
 	{
 		name = "Shotguns";
@@ -7230,6 +7293,7 @@ class Glasses
 			"hlc_rifle_m14dmr"
 			"hlc_rifle_m14sopmod"
 			"hlc_rifle_m21"
+			"hlc_rifle_g3sg1"
 		};
 	};
 
