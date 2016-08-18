@@ -3040,7 +3040,89 @@ class CfgExileArsenal
 	class hlc_rifle_augsrhbar 						{ quality = 1; price = 5000; };
 	class hlc_rifle_augsrhbar_b 					{ quality = 1; price = 5000; };
     class hlc_rifle_augsrhbar_t 					{ quality = 1; price = 5000; };
-    
+	class hlc_rifle_ak12 							{ quality = 1; price = 5000; };
+	class hlc_rifle_akgl 							{ quality = 1; price = 5000; };
+	class hlc_rifle_ak47 							{ quality = 1; price = 5000; };
+	class hlc_rifle_ak74 							{ quality = 1; price = 5000; };
+	class hlc_rifle_ak74_dirty 							{ quality = 1; price = 5000; };
+	class hlc_rifle_ak74_dirty2 							{ quality = 1; price = 5000; };
+	class hlc_rifle_ak74_mtk 							{ quality = 1; price = 5000; };
+	class hlc_rifle_ak74m 							{ quality = 1; price = 5000; };
+	class hlc_rifle_ak74m_gl 							{ quality = 1; price = 5000; };
+	class hlc_rifle_ak74m_mtk 							{ quality = 1; price = 5000; };
+	class hlc_rifle_akm 							{ quality = 1; price = 5000; };
+	class hlc_rifle_akm_mtk 							{ quality = 1; price = 5000; };
+	class hlc_rifle_akmgl 							{ quality = 1; price = 5000; };
+	class hlc_rifle_aks74 							{ quality = 1; price = 5000; };
+	class hlc_rifle_aks74_gl 							{ quality = 1; price = 5000; };
+	class hlc_rifle_aks74_mtk 							{ quality = 1; price = 5000; };
+	class hlc_rifle_aks74u 							{ quality = 1; price = 5000; };
+	class hlc_rifle_aks74u_mtk 							{ quality = 1; price = 5000; };
+	class hlc_rifle_aku12 							{ quality = 1; price = 5000; };
+	class hlc_rifle_rk62 							{ quality = 1; price = 5000; };
+	class hlc_rifle_aek971 							{ quality = 1; price = 5000; };
+	class hlc_rifle_aek971_mtk 							{ quality = 1; price = 5000; };
+	class hlc_rifle_aek971worn 							{ quality = 1; price = 5000; };
+	class hlc_rifle_g36a1 							{ quality = 1; price = 5000; };
+	class hlc_rifle_g36a1ag36 							{ quality = 1; price = 5000; };
+	class hlc_rifle_g36c 							{ quality = 1; price = 5000; };
+	class hlc_rifle_g36cmlic 							{ quality = 1; price = 5000; };
+	class hlc_rifle_g36ctac 							{ quality = 1; price = 5000; };
+	class hlc_rifle_g36cv 							{ quality = 1; price = 5000; };
+	class hlc_rifle_g36e1 							{ quality = 1; price = 5000; };
+	class hlc_rifle_g36e1ag36 							{ quality = 1; price = 5000; };
+	class hlc_rifle_g36ka1 							{ quality = 1; price = 5000; };
+	class hlc_rifle_g36ke1 							{ quality = 1; price = 5000; };
+	class hlc_rifle_g36kmlic 							{ quality = 1; price = 5000; };
+	class hlc_rifle_g36ktac 							{ quality = 1; price = 5000; };
+	class hlc_rifle_g36kv 							{ quality = 1; price = 5000; };
+	class hlc_rifle_g36mliag36 							{ quality = 1; price = 5000; };
+	class hlc_rifle_g36mlic 							{ quality = 1; price = 5000; };
+	class hlc_rifle_g36tac 							{ quality = 1; price = 5000; };
+	class hlc_rifle_g36v 							{ quality = 1; price = 5000; };
+	class hlc_rifle_g36vag36 							{ quality = 1; price = 5000; };
+	class hlc_rifle_g3a3 							{ quality = 1; price = 5000; };
+	class hlc_rifle_g3a3ris 							{ quality = 1; price = 5000; };
+	class hlc_rifle_g3a3v 							{ quality = 1; price = 5000; };
+	class hlc_rifle_g3ka4 							{ quality = 1; price = 5000; };
+	class hlc_rifle_g3ka4_gl 							{ quality = 1; price = 5000; };
+	class hlc_rifle_hk33a2 							{ quality = 1; price = 5000; };
+	class hlc_rifle_hk33a2ris 							{ quality = 1; price = 5000; };
+	class hlc_rifle_hk51 							{ quality = 1; price = 5000; };
+	class hlc_rifle_hk53 							{ quality = 1; price = 5000; };
+	class hlc_rifle_hk53ras 							{ quality = 1; price = 5000; };
+	class hlc_rifle_amt 							{ quality = 1; price = 5000; };
+	class hlc_rifle_bcmjack 							{ quality = 1; price = 5000; };
+	class hlc_rifle_bushmaster300 							{ quality = 1; price = 5000; };
+	class hlc_rifle_c1a1 							{ quality = 1; price = 5000; };
+	class hlc_rifle_colt727 							{ quality = 1; price = 5000; };
+	class hlc_rifle_colt727_gl 							{ quality = 1; price = 5000; };
+	class hlc_rifle_cqbr 							{ quality = 1; price = 5000; };
+	class hlc_rifle_fal5000 							{ quality = 1; price = 5000; };
+	class hlc_rifle_5000rail 							{ quality = 1; price = 5000; };
+	class hlc_rifle_5061 							{ quality = 1; price = 5000; };
+	class hlc_rifle_5061rail 							{ quality = 1; price = 5000; };
+	class hlc_rifle_falosw 							{ quality = 1; price = 5000; };
+	class hlc_rifle_honeybadger 							{ quality = 1; price = 5000; };
+	class hlc_rifle_l1a1slr 							{ quality = 1; price = 5000; };
+	class hlc_rifle_lar 							{ quality = 1; price = 5000; };
+	class hlc_rifle_m4 							{ quality = 1; price = 5000; };
+	class hlc_rifle_m4m203 							{ quality = 1; price = 5000; };
+	class hlc_rifle_osw_gl 							{ quality = 1; price = 5000; };
+	class hlc_rifle_ru556 							{ quality = 1; price = 5000; };
+	class hlc_rifle_ru5562 							{ quality = 1; price = 5000; };
+	class hlc_rifle_samr 							{ quality = 1; price = 5000; };
+	class hlc_rifle_samr2 							{ quality = 1; price = 5000; };
+	class hlc_rifle_sig5104 							{ quality = 1; price = 5000; };
+	class hlc_rifle_slr 							{ quality = 1; price = 5000; };
+	class hlc_rifle_slr107u 							{ quality = 1; price = 5000; };
+	class hlc_rifle_slr107u_mtk 							{ quality = 1; price = 5000; };
+	class hlc_rifle_slrchopmod 							{ quality = 1; price = 5000; };
+	class hlc_rifle_stg58f 							{ quality = 1; price = 5000; };
+	class hlc_rifle_stgw57 							{ quality = 1; price = 5000; };
+	class hlc_rifle_stgw57_commando 							{ quality = 1; price = 5000; };
+	class hlc_rifle_stgw57_ris 							{ quality = 1; price = 5000; };
+	class hlc_rifle_vendimus 							{ quality = 1; price = 5000; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// NIARMS Sniper Rifles
@@ -6785,6 +6867,16 @@ class Glasses
 			"10Rnd_9x21_Mag"
 		};
 	};
+	
+	class NIARMSAMMO
+	{
+		name = "NIARMS Ammunition";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] = 
+		{
+			
+		};
+	};
 
 	class Flares 
 	{
@@ -7477,15 +7569,19 @@ class CfgTraders
 			"MuzzleAttachments",
 			"OpticAttachments",
 			"Ammunition",
+			"AssaultRifles",
+			"NIARMSRIFLES"
+			"NIARMSHK"
+			"NIARMSAUG"
+			"NIARMSAK"
+			"SniperRifles",
+			"NIARMSSniperRifles",
+			"LightMachineGuns",
+			"NIARMSLightMachineGuns",
 			"Pistols",
 			"Shotguns",
 			"SubMachineGuns",
 			"NIARMSSubMachineGuns",
-			"LightMachineGuns",
-			"NIARMSLightMachineGuns",
-			"AssaultRifles",
-			"SniperRifles",
-			"NIARMSSniperRifles"
 		};
 	};
 
