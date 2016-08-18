@@ -1410,8 +1410,8 @@ class Mission
 		};
 		class Item34
 		{
-			position[]={7562.91,0,5149.56};
-			name="ContaminatedZoneMogilevka";
+			position[]={8347.057,0,5991.487};
+			name="ContaminatedZoneKumyrna";
 			text="Contaminated Zone";
 			markerType="ELLIPSE";
 			type="ExileContaminatedZone";
@@ -1424,8 +1424,8 @@ class Mission
 		};
 		class Item35
 		{
-			position[]={7562.91,0,5149.56};
-			name="ContaminatedZoneMogilevka";
+			position[]={8347.057,0,5991.487};
+			name="ContaminatedZoneKumyrnaIcon";
 			text="";
 			type="ExileContaminatedZoneIcon";
 		};
