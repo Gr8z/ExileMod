@@ -1755,6 +1755,7 @@ class CfgExileArsenal
 	class Exile_Item_SleepingMat					{ quality = 1; price = 1250; };
 	class Exile_Item_ToiletPaper					{ quality = 1; price = 10; };
 	class Exile_Item_ZipTie							{ quality = 1; price = 300; };
+	class Exile_Item_knife							{ quality = 1; price = 50000; sellprice = 25000 };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Navigation
@@ -1956,12 +1957,19 @@ class CfgExileArsenal
 	// Launcher stuff
 	///////////////////////////////////////////////////////////////////////////////
 	class launch_RPG7_F 							{ quality = 5; price = 50000; };
-	class launch_RPG32_F							{ quality = 5; price = 80000; };
+	class launch_RPG32_F							{ quality = 5; price = 75000; };
 	class launch_NLAW_F								{ quality = 5; price = 100000; };
 	class launch_B_Titan_short_F					{ quality = 5; price = 100000; };
+	class launch_Titan_F 							{ quality = 5; price = 100000; };
 	class launch_B_Titan_F 							{ quality = 5; price = 100000; };
-	class RPG32_F									{ quality = 5; price = 30000; };
-	class Titan_AA                                  {quality = 5; price = 35000; };
+	class launch_I_Titan_F 							{ quality = 5; price = 100000; };
+	class launch_O_Titan_F 							{ quality = 5; price = 100000; };
+	class launch_O_Titan_ghex_F 					{ quality = 5; price = 100000; };
+	class launch_B_Titan_tna_F 						{ quality = 5; price = 100000; };
+	class RPG32_F									{ quality = 5; price = 20000; };
+	class RPG32_HE_F								{ quality = 5; price = 20000; };
+	class titan_AA									{ quality = 5; price = 35000; };
+	class RPG7_F									{ quality = 5; price = 20000; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Pistols
