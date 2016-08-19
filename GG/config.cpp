@@ -7451,7 +7451,7 @@ class Glasses
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\cargothrow_ca.paa";
 		items[] = 
 		{
-			"launch_RPG7_F"
+			//"launch_RPG7_F"
 			"launch_RPG32_F"
 			"launch_Titan_F"
 			"launch_I_Titan_F"
@@ -8081,6 +8081,7 @@ class CfgTraders
 		showWeaponFilter = 1; // for noob tubes
 		categories[] = 
 		{
+			"Launchers",
 			"Flares",
 			"Smokes",
 			"NIARMSGL",
