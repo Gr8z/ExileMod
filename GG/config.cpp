@@ -1755,7 +1755,7 @@ class CfgExileArsenal
 	class Exile_Item_SleepingMat					{ quality = 1; price = 1250; };
 	class Exile_Item_ToiletPaper					{ quality = 1; price = 10; };
 	class Exile_Item_ZipTie							{ quality = 1; price = 300; };
-	class Exile_Item_knife							{ quality = 1; price = 50000; sellprice = 25000 };
+	class Exile_Item_knife							{ quality = 1; price = 75000; sellprice = 25000 };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Navigation
