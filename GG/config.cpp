@@ -6937,9 +6937,7 @@ class Glasses
 			"IEDLandSmall_Remote_Mag",
 			"IEDUrbanBig_Remote_Mag",
 			"IEDUrbanSmall_Remote_Mag",
-			"SatchelCharge_Remote_Mag",
-			"SLAMDirectionalMine_Wire_Mag"
-			
+			"SatchelCharge_Remote_Mag"
 		};
 	};
 	
