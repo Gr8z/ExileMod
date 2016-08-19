@@ -1961,7 +1961,7 @@ class CfgExileArsenal
 	class launch_B_Titan_short_F					{ quality = 5; price = 100000; };
 	class launch_B_Titan_F 							{ quality = 5; price = 100000; };
 	class RPG32_F									{ quality = 5; price = 30000; };
-	class Titan_AA                                                           {quality = 5; price = 35000; };
+	class Titan_AA                                  {quality = 5; price = 35000; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Pistols
@@ -2073,29 +2073,29 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// ArmA 2 Ammunition
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Magazine_30Rnd_762x39_AK				{ quality = 1; price = 20; };
-	class Exile_Magazine_30Rnd_545x39_AK				{ quality = 1; price = 20; };
-	class Exile_Magazine_30Rnd_545x39_AK_Green			{ quality = 1; price = 20; };
-	class Exile_Magazine_30Rnd_545x39_AK_Red			{ quality = 1; price = 20; };
-	class Exile_Magazine_30Rnd_545x39_AK_White			{ quality = 1; price = 20; };
-	class Exile_Magazine_30Rnd_545x39_AK_Yellow			{ quality = 1; price = 20; };
-	class Exile_Magazine_45Rnd_545x39_RPK_Green			{ quality = 1; price = 20; };
-	class Exile_Magazine_75Rnd_545x39_RPK_Green			{ quality = 1; price = 20; };
-	class Exile_Magazine_20Rnd_762x51_DMR				{ quality = 1; price = 20; };
-	class Exile_Magazine_20Rnd_762x51_DMR_Yellow		{ quality = 1; price = 20; };
-	class Exile_Magazine_20Rnd_762x51_DMR_Red			{ quality = 1; price = 20; };
-	class Exile_Magazine_20Rnd_762x51_DMR_Green			{ quality = 1; price = 20; };
-	class Exile_Magazine_10Rnd_303						{ quality = 1; price = 20; };
-	class Exile_Magazine_100Rnd_762x54_PK_Green			{ quality = 1; price = 20; };
-	class Exile_Magazine_7Rnd_45ACP						{ quality = 1; price = 20; };
-	class Exile_Magazine_8Rnd_9x18						{ quality = 1; price = 20; };
-	class Exile_Magazine_6Rnd_45ACP						{ quality = 1; price = 20; };
-	class Exile_Magazine_5Rnd_22LR						{ quality = 1; price = 20; };
-	class Exile_Magazine_10Rnd_762x54					{ quality = 1; price = 20; };
-	class Exile_Magazine_10Rnd_9x39						{ quality = 1; price = 20; };
-	class Exile_Magazine_20Rnd_9x39						{ quality = 1; price = 20; };
-	class Exile_Magazine_8Rnd_74Slug					{ quality = 1; price = 20; };
-	class Exile_Magazine_8Rnd_74Pellets					{ quality = 1; price = 20; }; // broken?
+	class Exile_Magazine_30Rnd_762x39_AK				{ quality = 1; price = 350; };
+	class Exile_Magazine_30Rnd_545x39_AK				{ quality = 1; price = 200; };
+	class Exile_Magazine_30Rnd_545x39_AK_Green			{ quality = 1; price = 150; };
+	class Exile_Magazine_30Rnd_545x39_AK_Red			{ quality = 1; price = 150; };
+	class Exile_Magazine_30Rnd_545x39_AK_White			{ quality = 1; price = 150; };
+	class Exile_Magazine_30Rnd_545x39_AK_Yellow			{ quality = 1; price = 150; };
+	class Exile_Magazine_45Rnd_545x39_RPK_Green			{ quality = 1; price = 250; };
+	class Exile_Magazine_75Rnd_545x39_RPK_Green			{ quality = 1; price = 350; };
+	class Exile_Magazine_20Rnd_762x51_DMR				{ quality = 1; price = 350; };
+	class Exile_Magazine_20Rnd_762x51_DMR_Yellow		{ quality = 1; price = 300; };
+	class Exile_Magazine_20Rnd_762x51_DMR_Red			{ quality = 1; price = 300; };
+	class Exile_Magazine_20Rnd_762x51_DMR_Green			{ quality = 1; price = 300; };
+	class Exile_Magazine_10Rnd_303						{ quality = 1; price = 500; };
+	class Exile_Magazine_100Rnd_762x54_PK_Green			{ quality = 1; price = 400; };
+	class Exile_Magazine_7Rnd_45ACP						{ quality = 1; price = 60; };
+	class Exile_Magazine_8Rnd_9x18						{ quality = 1; price = 50; };
+	class Exile_Magazine_6Rnd_45ACP						{ quality = 1; price = 50; };
+	class Exile_Magazine_5Rnd_22LR						{ quality = 1; price = 25; };
+	class Exile_Magazine_10Rnd_762x54					{ quality = 1; price = 150; };
+	class Exile_Magazine_10Rnd_9x39						{ quality = 1; price = 65; };
+	class Exile_Magazine_20Rnd_9x39						{ quality = 1; price = 100; };
+	class Exile_Magazine_8Rnd_74Slug					{ quality = 1; price = 50; };
+	class Exile_Magazine_8Rnd_74Pellets					{ quality = 1; price = 45; }; // broken?
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Apex Items & Weapons
@@ -2293,10 +2293,10 @@ class CfgExileArsenal
 	class 200Rnd_556x45_Box_Red_F                   {quality = 1; price = 350; };
 	class 200Rnd_556x45_Box_Tracer_F                {quality = 1; price = 350; };
 	class 200Rnd_556x45_Box_Tracer_Red_F            {quality = 1; price = 350; };
-	class 10Rnd_9x21_Mag							{quality = 1; price = 15; };
-	class 30Rnd_9x21_Yellow_Mag						{quality = 1; price = 15; };
-	class 30Rnd_9x21_Green_Mag						{quality = 1; price = 15; };
-	class 30Rnd_9x21_Red_Mag						{quality = 1; price = 15; };
+	class 10Rnd_9x21_Mag							{quality = 1; price = 50; };
+	class 30Rnd_9x21_Yellow_Mag						{quality = 1; price = 40; };
+	class 30Rnd_9x21_Green_Mag						{quality = 1; price = 40; };
+	class 30Rnd_9x21_Red_Mag						{quality = 1; price = 40; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// BIKES
