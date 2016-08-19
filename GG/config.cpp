@@ -7436,11 +7436,7 @@ class Glasses
 			"IEDUrbanBig_Remote_Mag",
 			"IEDUrbanSmall_Remote_Mag",
 			"SatchelCharge_Remote_Mag",
-			"SLAMDirectionalMine_Wire_Mag",
-			"launch_B_Titan_F",
-			"Titan_AA",
-			"launch_RPG32_F",
-			"RPG32_F"
+			"SLAMDirectionalMine_Wire_Mag"
 			
 		};
 	};
