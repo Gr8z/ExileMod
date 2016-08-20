@@ -171,6 +171,7 @@ adminUIDandAccess[] =
 		 "76561198065188130", // Nacho
 		 "76561198036004541", // Demen
 		 "76561197987069300", // Shroombear
+		 "76561198090941099", // Josh
 		 "0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
 			"Teleport On Map Click","Teleport - Target To Me","Teleport - Me To Target","Teleport In Facing Direction (10m steps)",
@@ -193,7 +194,6 @@ adminUIDandAccess[] =
 		{
 		"76561198218878119", // Mack
 		"76561198060389676", // Powerwolf
-		"76561198090941099", // Josh
 		"0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
 			"spectating","AdminConsole","Delete Vehicle","ShowGear","Show Server Information",
