@@ -6477,6 +6477,28 @@ class Glasses
 			"muzzle_snds_H_MG_khk_F"
 		};
 	};
+	
+	class NIARMSMUZZLE 
+	{
+		name = "NIARMS Suppressor Attachments";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemmuzzle_ca.paa";
+		items[] = 
+		{
+			"hlc_muzzle_300blk_KAC",
+			"hlc_muzzle_545SUP_AK",
+			"hlc_muzzle_556NATO_KAC",
+			"hlc_muzzle_762SUP_AK",
+			"hlc_muzzle_Agendasix",
+			"hlc_muzzle_Agendasix10mm",
+			"hlc_muzzle_snds_a6AUG",
+			"hlc_muzzle_snds_AUG",
+			"hlc_muzzle_snds_fal",
+			"hlc_muzzle_snds_g3",
+			"hlc_muzzle_snds_HK33",
+			"hlc_muzzle_snds_M14",
+			"hlc_muzzle_Tundra"
+		};
+	};
 
 	/*class UAVs
 	{
@@ -6546,6 +6568,37 @@ class Glasses
 			"optic_Holosight_blk_F",
 			"optic_Holosight_khk_F",
 			"optic_Holosight_smg_blk_F"
+		};
+	};
+	
+	class NIARMSOPTICS 
+	{
+		name = "NIARMS Scopes";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemoptic_ca.paa";
+		items[] = 
+		{
+			"HLC_Optic_1p29",
+			"hlc_optic_accupoint_g3",
+			"hlc_optic_artel_m14",
+			"HLC_Optic_G36Dualoptic15x",
+			"HLC_Optic_G36Dualoptic15x2d",
+			"HLC_Optic_G36dualoptic35x",
+			"HLC_Optic_G36dualoptic35x2d",
+			"HLC_Optic_G36Export15x",
+			"HLC_Optic_G36Export15x2d",
+			"HLC_Optic_G36Export35x",
+			"HLC_Optic_G36Export35x2d",
+			"hlc_optic_goshawk",
+			"hlc_optic_Kern",
+			"hlc_optic_Kern2d",
+			"hlc_optic_kobra",
+			"hlc_optic_LRT_m14",
+			"HLC_Optic_PSO1",
+			"hlc_optic_PVS4FAL",
+			"hlc_optic_PVS4G3",
+			"hlc_optic_PVS4M14",
+			"hlc_optic_suit",
+			"HLC_Optic_ZFSG1"
 		};
 	};
 
@@ -6860,6 +6913,98 @@ class Glasses
 			"10Rnd_9x21_Mag"
 		};
 	};
+	
+	class NIARMSAMMO
+	{
+		name = "NIARMS Ammunition";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] = 
+		{
+			"hlc_100rnd_556x45_EPR_G36",
+			"hlc_100Rnd_762x51_B_M60E4",
+			"hlc_100Rnd_762x51_Barrier_M60E4",
+			"hlc_100Rnd_762x51_M_M60E4",
+			"hlc_100Rnd_762x51_T_M60E4",
+			"hlc_10rnd_12g_buck_S12",
+			"hlc_10rnd_12g_slug_S12",
+			"hlc_200rnd_556x45_B_SAW",
+			"hlc_200rnd_556x45_M_SAW",
+			"hlc_200rnd_556x45_T_SAW",
+			"hlc_20Rnd_762x51_b_amt",
+			"hlc_20Rnd_762x51_B_fal",
+			"hlc_20rnd_762x51_b_G3",
+			"hlc_20Rnd_762x51_B_M14",
+			"hlc_20Rnd_762x51_barrier_fal",
+			"hlc_20rnd_762x51_barrier_G3",
+			"hlc_20Rnd_762x51_barrier_M14",
+			"hlc_20Rnd_762x51_bball_amt",
+			"hlc_20Rnd_762x51_mk316_amt",
+			"hlc_20Rnd_762x51_mk316_fal",
+			"hlc_20rnd_762x51_Mk316_G3",
+			"hlc_20Rnd_762x51_mk316_M14",
+			"hlc_20Rnd_762x51_S_fal",
+			"hlc_20rnd_762x51_S_G3",
+			"hlc_20Rnd_762x51_S_M14",
+			"hlc_20Rnd_762x51_T_amt",
+			"hlc_20Rnd_762x51_T_fal",
+			"hlc_20rnd_762x51_T_G3",
+			"hlc_20Rnd_762x51_T_M14",
+			"hlc_24Rnd_75x55_ap_stgw",
+			"hlc_24Rnd_75x55_B_stgw",
+			"hlc_24Rnd_75x55_T_stgw",
+			"hlc_25Rnd_9x19mm_JHP_AUG",
+			"hlc_25Rnd_9x19mm_M882_AUG",
+			"hlc_25Rnd_9x19mm_subsonic_AUG",
+			"hlc_30Rnd_10mm_B_MP5",
+			"hlc_30Rnd_10mm_JHP_MP5",
+			"hlc_30Rnd_545x39_B_AK",
+			"hlc_30Rnd_545x39_EP_ak",
+			"hlc_30Rnd_545x39_S_AK",
+			"hlc_30Rnd_545x39_t_ak",
+			"hlc_30Rnd_556x45_B_AUG",
+			"hlc_30rnd_556x45_b_HK33",
+			"hlc_30rnd_556x45_EPR",
+			"hlc_30rnd_556x45_EPR_G36",
+			"hlc_30rnd_556x45_EPR_HK33",
+			"hlc_30rnd_556x45_S",
+			"hlc_30rnd_556x45_SOST",
+			"hlc_30Rnd_556x45_SOST_AUG",
+			"hlc_30rnd_556x45_SOST_G36",
+			"hlc_30rnd_556x45_SOST_HK33",
+			"hlc_30rnd_556x45_SPR",
+			"hlc_30Rnd_556x45_SPR_AUG",
+			"hlc_30rnd_556x45_SPR_G36",
+			"hlc_30Rnd_556x45_T_AUG",
+			"hlc_30rnd_556x45_t_HK33",
+			"hlc_30rnd_556x45_Tracers_G36",
+			"hlc_30Rnd_762x39_b_ak",
+			"hlc_30rnd_762x39_s_ak",
+			"hlc_30Rnd_762x39_t_ak",
+			"hlc_30Rnd_9x19_B_MP5",
+			"hlc_30Rnd_9x19_GD_MP5",
+			"hlc_30Rnd_9x19_SD_MP5",
+			"hlc_40Rnd_556x45_B_AUG",
+			"hlc_40Rnd_556x45_SOST_AUG",
+			"hlc_40Rnd_556x45_SPR_AUG",
+			"hlc_45Rnd_545x39_t_rpk",
+			"hlc_45Rnd_762x39_m_rpk",
+			"hlc_45Rnd_762x39_t_rpk",
+			"hlc_50rnd_556x45_EPR",
+			"hlc_50Rnd_762x51_B_M14",
+			"hlc_50rnd_762x51_M_FAL",
+			"hlc_50rnd_762x51_M_G3",
+			"hlc_50rnd_9x19_B_9mmar",
+			"hlc_5rnd_3006_1903",
+			"hlc_5rnd_300WM_AP_AWM",
+			"hlc_5rnd_300WM_BTSP_AWM",
+			"hlc_5rnd_300WM_FMJ_AWM",
+			"hlc_5rnd_300WM_mk248_AWM",
+			"hlc_5rnd_300WM_SBT_AWM",
+			"hlc_60Rnd_545x39_t_rpk",
+			"hlc_75Rnd_762x39_m_rpk"
+
+		};
+	};
 
 	class Flares 
 	{
@@ -6912,6 +7057,23 @@ class Glasses
 			"3Rnd_SmokePurple_Grenade_shell",
 			"3Rnd_SmokeRed_Grenade_shell",
 			"3Rnd_SmokeYellow_Grenade_shell"
+		};
+	};	
+	
+	class NIARMSGL
+	{
+		name = "NIARMS GL";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] = 
+		{
+			"hlc_GRD_blue",
+			"hlc_GRD_green",
+			"hlc_GRD_orange",
+			"hlc_GRD_purple",
+			"hlc_GRD_red",
+			"hlc_GRD_white",
+			"hlc_GRD_yellow",
+			"hlc_VOG25_AK"
 		};
 	};	
 
@@ -6997,6 +7159,31 @@ class Glasses
 			"SMG_05_F"
 		};
 	};
+	
+	class NIARMSSubMachineGuns 
+	{
+		name = "NIARMS Sub Machine Guns";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] = 
+		{
+			"hlc_smg_mp510",
+			"hlc_smg_mp5a2",
+			"hlc_smg_mp5a3",
+			"hlc_smg_mp5a4",
+			"hlc_smg_mp5k_PDW",
+			"hlc_smg_mp5n",
+			"hlc_smg_9mmar",
+			"hlc_smg_mp5sd5",
+			"hlc_smg_mp5sd6",
+			"hlc_rifle_augpara",
+			"hlc_rifle_augpara_b",
+			"hlc_rifle_augpara_t",
+			"hlc_rifle_auga2para",
+			"hlc_rifle_auga2para_b",
+			"hlc_rifle_auga2para_t",
+			"hlc_smg_mp5k"
+		};
+	};
 
 	class LightMachineGuns 
 	{
@@ -7017,6 +7204,29 @@ class Glasses
 			"MMG_02_black_F",
 			"MMG_02_camo_F",
 			"MMG_02_sand_F"
+		};
+	};
+	
+	class NIARMSLightMachineGuns 
+	{
+		name = "NIARMS Light Machine Guns";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] = 
+		{
+			"hlc_lmg_M249E2",
+			"hlc_lmg_m249para",
+			"hlc_lmg_M60",
+			"hlc_lmg_M60E4",
+			"hlc_lmg_minimi",
+			"hlc_lmg_minimi_railed",
+			"hlc_lmg_minimipara",
+			"hlc_lmg_mk48",
+			"hlc_m249_pip1",
+			"hlc_m249_pip2",
+			"hlc_m249_pip3",
+			"hlc_m249_pip4",
+			"hlc_m249_squantoon"
+			
 		};
 	};
 
@@ -7086,6 +7296,162 @@ class Glasses
 		};
 	};
 	
+	class NIARMSAUG
+	{
+		name = "Steyr AUG Rifles";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] = 
+		{
+			"hlc_rifle_aug",
+			"hlc_rifle_auga1_b",
+			"hlc_rifle_auga1_t",
+			"hlc_rifle_auga1carb",
+			"hlc_rifle_auga1carb_b",
+			"hlc_rifle_auga1carb_t",
+			"hlc_rifle_auga2",
+			"hlc_rifle_auga2_b",
+			"hlc_rifle_auga2_t",
+			"hlc_rifle_auga2carb",
+			"hlc_rifle_auga2carb_b",
+			"hlc_rifle_auga2carb_t",
+			"hlc_rifle_auga2lsw",
+			"hlc_rifle_auga2lsw_b",
+			"hlc_rifle_auga2lsw_t",
+			"hlc_rifle_auga3",
+			"hlc_rifle_auga3_b",
+			"hlc_rifle_auga3_bl",
+			"hlc_rifle_auga3_gl",
+			"hlc_rifle_auga3_gl_b",
+			"hlc_rifle_auga3_gl_bl",
+			"hlc_rifle_aughbar",
+			"hlc_rifle_aughbar_b",
+			"hlc_rifle_aughbar_t",
+			"hlc_rifle_augsr",
+			"hlc_rifle_augsr_b",
+			"hlc_rifle_augsr_t",
+			"hlc_rifle_augsrcarb",
+			"hlc_rifle_augsrcarb_t",
+			"hlc_rifle_augsrcarb_b",
+			"hlc_rifle_augsrhbar",
+			"hlc_rifle_augsrhbar_b",
+			"hlc_rifle_augsrhbar_t"
+		};
+	};
+	
+	class NIARMSAK
+	{
+		name = "AK Style Rifles";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] = 
+		{
+			"hlc_rifle_ak12",
+			"hlc_rifle_akgl",
+			"hlc_rifle_ak47",
+			"hlc_rifle_ak74",
+			"hlc_rifle_ak74_dirty",
+			"hlc_rifle_ak74_dirty2",
+			"hlc_rifle_ak74_mtk",
+			"hlc_rifle_ak74m",
+			"hlc_rifle_ak74m_gl",
+			"hlc_rifle_ak74m_mtk",
+			"hlc_rifle_akm",
+			"hlc_rifle_akm_mtk",
+			"hlc_rifle_akmgl",
+			"hlc_rifle_aks74",
+			"hlc_rifle_aks74_gl",
+			"hlc_rifle_aks74_mtk",
+			"hlc_rifle_aks74u",
+			"hlc_rifle_aks74u_mtk",
+			"hlc_rifle_aku12",
+			"hlc_rifle_rk62",
+			"hlc_rifle_aek971",
+			"hlc_rifle_aek971_mtk",
+			"hlc_rifle_aek971worn",
+			"hlc_rifle_rpk",
+			"hlc_rifle_rpk12",
+			"hlc_rifle_rpk74n"
+		};
+	};
+	
+	class NIARMSHK
+	{
+		name = "Heckler & Koch Rifles";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] = 
+		{
+			"hlc_rifle_g36a1",
+			"hlc_rifle_g36a1ag36",
+			"hlc_rifle_g36c",
+			"hlc_rifle_g36cmlic",
+			"hlc_rifle_g36ctac",
+			"hlc_rifle_g36cv",
+			"hlc_rifle_g36e1",
+			"hlc_rifle_g36e1ag36",
+			"hlc_rifle_g36ka1",
+			"hlc_rifle_g36ke1",
+			"hlc_rifle_g36kmlic",
+			"hlc_rifle_g36ktac",
+			"hlc_rifle_g36kv",
+			"hlc_rifle_g36mliag36",
+			"hlc_rifle_g36mlic",
+			"hlc_rifle_g36tac",
+			"hlc_rifle_g36v",
+			"hlc_rifle_g36vag36",
+			"hlc_rifle_mg36",
+			"hlc_rifle_g3a3",
+			"hlc_rifle_g3a3ris",
+			"hlc_rifle_g3a3v",
+			"hlc_rifle_g3ka4",
+			"hlc_rifle_g3ka4_gl",
+			"hlc_rifle_hk33a2",
+			"hlc_rifle_hk33a2ris",
+			"hlc_rifle_hk51",
+			"hlc_rifle_hk53",
+			"hlc_rifle_hk53ras"
+		};
+	};
+	
+	class NIARMSRIFLES
+	{
+		name = "NIARMS Rifles";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] = 
+		{
+			"hlc_rifle_amt",
+			"hlc_rifle_bcmjack",
+			"hlc_rifle_bushmaster300",
+			"hlc_rifle_c1a1",
+			"hlc_rifle_colt727",
+			"hlc_rifle_colt727_gl",
+			"hlc_rifle_cqbr",
+			"hlc_rifle_fal5000",
+			"hlc_rifle_5000rail",
+			"hlc_rifle_5061",
+			"hlc_rifle_5061",
+			"hlc_rifle_falosw",
+			"hlc_rifle_honeybadger",
+			"hlc_rifle_l1a1slr",
+			"hlc_rifle_lar",
+			"hlc_rifle_m4",
+			"hlc_rifle_m4m203",
+			"hlc_rifle_osw_gl",
+			"hlc_rifle_ru556",
+			"hlc_rifle_ru5562",
+			"hlc_rifle_samr",
+			"hlc_rifle_samr2",
+			"hlc_rifle_sig5104",
+			"hlc_rifle_slr",
+			"hlc_rifle_slr107u",
+			"hlc_rifle_slr107u_mtk",
+			"hlc_rifle_slrchopmod",
+			"hlc_rifle_stg58f",
+			"hlc_rifle_stgw57",
+			"hlc_rifle_stgw57_commando",
+			"hlc_rifle_stgw57_ris",
+			"hlc_rifle_vendimus"
+		};
+	};
+	
 	class Shotguns
 	{
 		name = "Shotguns";
@@ -7140,6 +7506,33 @@ class Glasses
 		};
 	};
 
+class NIARMSSniperRifles
+	{
+		name = "NIARMS Sniper Rifles";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] = 
+		{
+			"hlc_rifle_awcovert",
+			"hlc_rifle_awcovert_BL",
+			"hlc_rifle_awcovert_FDE",
+			"hlc_rifle_awmagnum",
+			"hlc_rifle_awmagnum_bl",
+			"hlc_rifle_awmagnum_bl_ghillie",
+			"hlc_rifle_awmagnum_fde",
+			"hlc_rifle_awmagnum_fde_ghillie",
+			"hlc_rifle_awmagnum_OD_ghillie",
+			"hlc_rifle_m1903a1",
+			"hlc_rifle_m1903a1_unertl",
+			"hlc_rifle_m1903A10MR",
+			"hlc_rifle_m14",
+			"hlc_rifle_m14_bipod",
+			"hlc_rifle_m14_rail",
+			"hlc_rifle_m14dmr",
+			"hlc_rifle_m14sopmod",
+			"hlc_rifle_m21",
+			"hlc_rifle_g3sg1"
+		};
+	};
 
 	class Cars
 	{
@@ -7316,15 +7709,25 @@ class CfgTraders
 		{
 			"PointerAttachments",
 			"BipodAttachments",
+			"NIARMSMUZZLE",
 			"MuzzleAttachments",
 			"OpticAttachments",
+			"NIARMSOPTICS",
 			"Ammunition",
+			"NIARMSAMMO",
+			"AssaultRifles",
+			"NIARMSRIFLES",
+			"NIARMSHK",
+			"NIARMSAUG",
+			"NIARMSAK",
+			"SniperRifles",
+			"NIARMSSniperRifles",
+			"LightMachineGuns",
+			"NIARMSLightMachineGuns",
 			"Pistols",
 			"Shotguns",
 			"SubMachineGuns",
-			"LightMachineGuns",
-			"AssaultRifles",
-			"SniperRifles"
+			"NIARMSSubMachineGuns",
 		};
 	};
 
@@ -7340,6 +7743,7 @@ class CfgTraders
 			"Launchers",
 			"Flares",
 			"Smokes",
+			"NIARMSGL",
 			//"UAVs",
 			"StaticMGs",
 			"Explosives",
