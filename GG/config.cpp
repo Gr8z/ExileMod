@@ -3040,7 +3040,7 @@ class CfgExileArsenal
 	class hlc_rifle_augsrhbar_b 					{ quality = 1; price = 5000; };
     class hlc_rifle_augsrhbar_t 					{ quality = 1; price = 5000; };
 	class hlc_rifle_ak12 							{ quality = 1; price = 6000; };
-	class hlc_rifle_akgl 							{ quality = 1; price = 6500; };
+	class hlc_rifle_ak12gl 							{ quality = 1; price = 6500; };
 	class hlc_rifle_ak47 							{ quality = 1; price = 6000; };
 	class hlc_rifle_ak74 							{ quality = 1; price = 5000; };
 	class hlc_rifle_ak74_dirty 						{ quality = 1; price = 5000; };
@@ -3098,9 +3098,9 @@ class CfgExileArsenal
 	class hlc_rifle_colt727_gl 						{ quality = 1; price = 6500; };
 	class hlc_rifle_cqbr 							{ quality = 1; price = 5000; };
 	class hlc_rifle_fal5000 						{ quality = 1; price = 5000; };
-	class hlc_rifle_5000rail 						{ quality = 1; price = 5500; };
-	class hlc_rifle_5061 							{ quality = 1; price = 5000; };
-	class hlc_rifle_5061rail 						{ quality = 1; price = 5500; };
+	class hlc_rifle_fal5000rail 					{ quality = 1; price = 5500; };
+	class hlc_rifle_fal5061 						{ quality = 1; price = 5000; };
+	class hlc_rifle_fal5061rail 					{ quality = 1; price = 5500; };
 	class hlc_rifle_falosw 							{ quality = 1; price = 6000; };
 	class hlc_rifle_honeybadger 					{ quality = 1; price = 7000; };
 	class hlc_rifle_l1a1slr 						{ quality = 1; price = 5500; };
@@ -3141,7 +3141,7 @@ class CfgExileArsenal
 	class hlc_rifle_g3sg1 							{ quality = 1; price = 7500; };
 	class hlc_rifle_m1903a1 						{ quality = 1; price = 6000; };
 	class hlc_rifle_m1903a1_unertl					{ quality = 1; price = 7500; };
-	class hlc_rifle_m1903A10MR 						{ quality = 1; price = 6000; };
+	class hlc_rifle_m1903A1OMR 						{ quality = 1; price = 6000; };
 	class hlc_rifle_m14 							{ quality = 1; price = 6500; };
 	class hlc_rifle_m14_bipod 						{ quality = 1; price = 7500; };
 	class hlc_rifle_m14_rail 						{ quality = 1; price = 7500; };
@@ -7681,7 +7681,7 @@ class Glasses
 		items[] = 
 		{
 			"hlc_rifle_ak12",
-			"hlc_rifle_akgl",
+			"hlc_rifle_ak12gl",
 			"hlc_rifle_ak47",
 			"hlc_rifle_ak74",
 			"hlc_rifle_ak74_dirty",
@@ -7704,7 +7704,7 @@ class Glasses
 			"hlc_rifle_aek971_mtk",
 			"hlc_rifle_aek971worn",
 			"hlc_rifle_rpk",
-			"hlc_rifle_rpk12",
+			"hlc_rifle_RPK12",
 			"hlc_rifle_rpk74n"
 		};
 	};
@@ -7761,9 +7761,9 @@ class Glasses
 			"hlc_rifle_colt727_gl",
 			"hlc_rifle_cqbr",
 			"hlc_rifle_fal5000",
-			"hlc_rifle_5000rail",
-			"hlc_rifle_5061",
-			"hlc_rifle_5061",
+			"hlc_rifle_fal5000rail",
+			"hlc_rifle_fal5061",
+			"hlc_rifle_fal5061",
 			"hlc_rifle_falosw",
 			"hlc_rifle_honeybadger",
 			"hlc_rifle_l1a1slr",
@@ -7859,7 +7859,7 @@ class NIARMSSniperRifles
 			"hlc_rifle_awmagnum_OD_ghillie",
 			"hlc_rifle_m1903a1",
 			"hlc_rifle_m1903a1_unertl",
-			"hlc_rifle_m1903A10MR",
+			"hlc_rifle_M1903A1OMR",
 			"hlc_rifle_m14",
 			"hlc_rifle_m14_bipod",
 			"hlc_rifle_m14_rail",
