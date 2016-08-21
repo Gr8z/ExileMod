@@ -101,7 +101,7 @@
 // Towers, Barracks, Hangars etc.
 ///////////////////////////////////////////////////////////////////////////////
 > Military
-2, CivilianItems
+4, CivilianItems
 4, GuerillaItems
 3, HEGrenades
 3, UGLFlares
@@ -135,7 +135,7 @@
 2, DLCOptics
 2, DLCSupressor
 2, Bipods
-0.5, Explosives
+0.3, Explosives
 0.01, Magazine03
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -190,4 +190,4 @@
 4, MedicalItems
 1, Explosives
 4, EpicWeapons
-0.6, Phoneknife
+0.4, Phoneknife
