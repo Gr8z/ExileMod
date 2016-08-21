@@ -402,7 +402,7 @@
 10, hlc_50Rnd_762x51_B_M14
 10, hlc_50rnd_762x51_M_FAL
 10, hlc_50rnd_762x51_M_G3
-10, hlc_60Rnd_545x39_t_rpk",
+10, hlc_60Rnd_545x39_t_rpk
 10, hlc_75Rnd_762x39_m_rpk
 
 > RifleAttachments
