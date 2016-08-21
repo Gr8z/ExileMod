@@ -2854,7 +2854,7 @@ class CfgExileArsenal
 	class HLC_Optic_G36Export15x2d 					{ quality = 1; price = 400; };
 	class HLC_Optic_G36Export35x 					{ quality = 1; price = 300; };
 	class HLC_Optic_G36Export35x2d 					{ quality = 1; price = 400; };
-	//class hlc_optic_goshawk 						{ quality = 1; price = 1000; };
+	class hlc_optic_goshawk 						{ quality = 1; price = 20000; };
 	class hlc_optic_Kern 							{ quality = 1; price = 500; };
 	class hlc_optic_Kern2d 							{ quality = 1; price = 500; };
 	class hlc_optic_kobra 							{ quality = 1; price = 200; };
