@@ -2854,7 +2854,7 @@ class CfgExileArsenal
 	class HLC_Optic_G36Export15x2d 					{ quality = 1; price = 400; };
 	class HLC_Optic_G36Export35x 					{ quality = 1; price = 300; };
 	class HLC_Optic_G36Export35x2d 					{ quality = 1; price = 400; };
-	class hlc_optic_goshawk 						{ quality = 1; price = 1000; };
+	//class hlc_optic_goshawk 						{ quality = 1; price = 1000; };
 	class hlc_optic_Kern 							{ quality = 1; price = 500; };
 	class hlc_optic_Kern2d 							{ quality = 1; price = 500; };
 	class hlc_optic_kobra 							{ quality = 1; price = 200; };
@@ -3228,7 +3228,7 @@ class CfgExileArsenal
 	class optic_mas_nspu 							{ quality = 1; price = 200; };
 	class optic_mas_PSO_kv							{ quality = 1; price = 500; };
 	class optic_mas_PSO_kv_c						{ quality = 1; price = 500; };
-	class optic_mas_goshawk 						{ quality = 1; price = 2000; };
+	//class optic_mas_goshawk 						{ quality = 1; price = 2000; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Ammunition
@@ -6924,7 +6924,7 @@ class Glasses
 			"HLC_Optic_G36Export15x2d",
 			"HLC_Optic_G36Export35x",
 			"HLC_Optic_G36Export35x2d",
-			"hlc_optic_goshawk",
+			//"hlc_optic_goshawk",
 			"hlc_optic_Kern",
 			"hlc_optic_Kern2d",
 			"hlc_optic_kobra",
