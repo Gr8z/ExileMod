@@ -2838,7 +2838,8 @@ class CfgExileArsenal
 	class hlc_muzzle_snds_g3 						{ quality = 1; price = 400; };
 	class hlc_muzzle_snds_HK33 						{ quality = 1; price = 400; };
 	class hlc_muzzle_snds_M14 						{ quality = 1; price = 400; };
-	class hlc_muzzle_Tundra 						{ quality = 1; price = 400; };	
+	class hlc_muzzle_Tundra 						{ quality = 1; price = 400; };
+	class Muzzle_HBadger 							{ quality = 1; price = 400; };	
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Optic Attachments
@@ -2952,6 +2953,9 @@ class CfgExileArsenal
     class hlc_5rnd_300WM_SBT_AWM   					{ quality = 1; price = 500; };
     class hlc_60Rnd_545x39_t_rpk   					{ quality = 1; price = 400; };
     class hlc_75Rnd_762x39_m_rpk    				{ quality = 1; price = 400; };
+	class 29rnd_300BLK_stanag   					{ quality = 1; price = 500; };
+	class 29rnd_300BLK_stanag_T   					{ quality = 1; price = 500; };
+	class 29rnd_300BLK_stanag_S   					{ quality = 1; price = 500; };
    
 	///////////////////////////////////////////////////////////////////////////////
 	// Pistols
@@ -3065,18 +3069,18 @@ class CfgExileArsenal
 	class hlc_rifle_g36a1 							{ quality = 1; price = 5000; };
 	class hlc_rifle_g36a1ag36 						{ quality = 1; price = 5500; };
 	class hlc_rifle_g36c 							{ quality = 1; price = 5000; };
-	class hlc_rifle_g36cmlic 						{ quality = 1; price = 5000; };
+	class hlc_rifle_g36cmlic 						{ quality = 1; price = 6000; };
 	class hlc_rifle_g36ctac 						{ quality = 1; price = 5000; };
 	class hlc_rifle_g36cv 							{ quality = 1; price = 5000; };
 	class hlc_rifle_g36e1 							{ quality = 1; price = 5000; };
 	class hlc_rifle_g36e1ag36 						{ quality = 1; price = 5500; };
 	class hlc_rifle_g36ka1 							{ quality = 1; price = 5000; };
 	class hlc_rifle_g36ke1 							{ quality = 1; price = 5000; };
-	class hlc_rifle_g36kmlic 						{ quality = 1; price = 5000; };
+	class hlc_rifle_g36kmlic 						{ quality = 1; price = 6000; };
 	class hlc_rifle_g36ktac 						{ quality = 1; price = 5000; };
 	class hlc_rifle_g36kv 							{ quality = 1; price = 5000; };
 	class hlc_rifle_g36mliag36 						{ quality = 1; price = 5500; };
-	class hlc_rifle_g36mlic 						{ quality = 1; price = 5000; };
+	class hlc_rifle_g36mlic 						{ quality = 1; price = 6000; };
 	class hlc_rifle_g36tac 							{ quality = 1; price = 5000; };
 	class hlc_rifle_g36v 							{ quality = 1; price = 5000; };
 	class hlc_rifle_g36vag36 						{ quality = 1; price = 5500 };
@@ -6832,7 +6836,8 @@ class Glasses
 			"hlc_muzzle_snds_g3",
 			"hlc_muzzle_snds_HK33",
 			"hlc_muzzle_snds_M14",
-			"hlc_muzzle_Tundra"
+			"hlc_muzzle_Tundra",
+			"muzzle_HBadger"
 		};
 	};
 
@@ -7337,7 +7342,10 @@ class Glasses
 			"hlc_5rnd_300WM_mk248_AWM",
 			"hlc_5rnd_300WM_SBT_AWM",
 			"hlc_60Rnd_545x39_t_rpk",
-			"hlc_75Rnd_762x39_m_rpk"
+			"hlc_75Rnd_762x39_m_rpk",
+			"29rnd_300blk_stanag",
+			"29rnd_300blk_stanag_T",
+			"29rnd_300blk_stanag_S"
 
 		};
 	};
@@ -7479,7 +7487,8 @@ class Glasses
 			"Exile_Weapon_TaurusGold",
 			//Apex
 			"hgun_Pistol_01_F",
-			"hgun_P07_khk_F"
+			"hgun_P07_khk_F",
+			"hlc_smg_mp5k"
 		};
 	};
 
@@ -7516,8 +7525,8 @@ class Glasses
 			"hlc_rifle_augpara_t",
 			"hlc_rifle_auga2para",
 			"hlc_rifle_auga2para_b",
-			"hlc_rifle_auga2para_t",
-			"hlc_smg_mp5k"
+			"hlc_rifle_auga2para_t"
+			
 		};
 	};
 
