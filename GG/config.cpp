@@ -2788,6 +2788,7 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	class Exile_Car_ProwlerLight						{ quality = 2; price = 22000; };
 	class Exile_Car_ProwlerUnarmed						{ quality = 2; price = 22000; };
+	class B_lsv_01_armed_f								{ quality = 2; price = 35000; };
 	class B_lsv_01_armed_black_f						{ quality = 2; price = 35000; };
 	class B_lsv_01_armed_olive_f						{ quality = 2; price = 35000; };
 	class B_lsv_01_armed_sand_f							{ quality = 2; price = 35000; };
@@ -2797,6 +2798,7 @@ class CfgExileArsenal
 	// Qilin
 	///////////////////////////////////////////////////////////////////////////////
 	class Exile_Car_QilinUnarmed						{ quality = 2; price = 20000; };
+	class B_lsv_02_armed_f						 		{ quality = 2; price = 35000; };
 	class O_LSV_02_armed_black_f						{ quality = 2; price = 60000; };
 	class O_LSV_02_armed_arid_f							{ quality = 2; price = 60000; };
 	class O_LSV_02_armed_ghex_f							{ quality = 2; price = 60000; };
@@ -7970,8 +7972,8 @@ class NIARMSSniperRifles
 			"B_MRAP_01_hmg_F",
 			"O_MRAP_02_hmg_F",
 			"I_MRAP_03_hmg_F",
-			"B_lsv_01_armed_black_f",
-			"O_LSV_02_armed_black_f"
+			"B_lsv_01_armed_f",
+			"O_LSV_02_armed_f"
 		};
 	};
 
@@ -9077,13 +9079,13 @@ class CfgVehicleCustoms
 		};
 	};
 	
-	class B_LSV_01_armed_black_f
+	class LSV_01_armed_base_f
 	{
 		skins[] = 
 		{
-			{"LSV_01_armed_base_f",				150, "Olive", {"\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_01_olive_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_02_olive_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_03_olive_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_Adds_olive_CO.paa"};},
-			{"LSV_01_armed_base_f",				150, "Dazzle", {"\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_01_dazzle_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_02_olive_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_03_olive_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_Adds_olive_CO.paa"};},
-			{"LSV_01_armed_base_f",				150, "Sand", {"\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_01_sand_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_02_sand_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_03_sand_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_Adds_sand_CO.paa"};}
+			{"LSV_01_armed_f",				150, "Olive", {"\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_01_olive_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_02_olive_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_03_olive_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_Adds_olive_CO.paa"};},
+			{"LSV_01_armed_f",				150, "Dazzle", {"\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_01_dazzle_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_02_olive_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_03_olive_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_Adds_olive_CO.paa"};},
+			{"LSV_01_armed_f",				150, "Sand", {"\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_01_sand_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_02_sand_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_03_sand_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_Adds_sand_CO.paa"};}
 		}; 													 
 	};
 	
@@ -9099,12 +9101,12 @@ class CfgVehicleCustoms
 		};
 	};
 	
-	class O_LSV_02_armed_black_F
+	class LSV_02_armed_base_f
 	{
 		skins[] = 
 		{
-			{"LSV_02_armed_base_f",		150, "Arid", {"\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_01_arid_CO.paa","\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_02_arid_CO.paa","\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_03_arid_CO.paa"};},
-			{"LSV_02_armed_base_f",		150, "Green Hex", {"\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_01_ghex_CO.paa","\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_02_ghex_CO.paa","\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_03_ghex_CO.paa"};}
+			{"LSV_02_armed_f",		150, "Arid", {"\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_01_arid_CO.paa","\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_02_arid_CO.paa","\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_03_arid_CO.paa"};},
+			{"LSV_02_armed_f",		150, "Green Hex", {"\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_01_ghex_CO.paa","\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_02_ghex_CO.paa","\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_03_ghex_CO.paa"};}
 		};
 	};
 	
