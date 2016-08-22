@@ -219,11 +219,11 @@ switch (true) do
     //   "Your rank is Terrorist";
    };
    
-       case (_respect > 800000):
+       case (_respect > 1000000):
    {
     _rank = "Warlord";
     call ExileClient_object_player_bambiStateEnd;  
-   [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t>",_rank],0,0,10,0] spawn bis_fnc_dynamictext;
+   [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,1000000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
     player forceAddUniform "TRYK_U_B_BLKBLK_CombatUniform";
     player addVest "V_PlateCarrierGL_blk";
     player addBackpack "TRYK_B_Carryall_blk";
