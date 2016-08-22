@@ -28,7 +28,7 @@ switch (true) do
 	player addHeadgear "H_Cap_blk";
     player addVest "V_BandollierB_rgr";
     player addBackpack "B_AssaultPack_rgr";
-	player for "_i" from 1 to 3 do {player addItemToVest "16Rnd_9x21_Mag";};
+	for "_i" from 1 to 3 do {player addItemToVest "16Rnd_9x21_Mag";};
 	player addWeapon "hgun_P07_F";
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
