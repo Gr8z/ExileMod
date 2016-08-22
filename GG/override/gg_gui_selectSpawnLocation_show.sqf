@@ -123,7 +123,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			for "_i" from 1 to 3 do {player addItemToUniform "11Rnd_45ACP_Mag";};
 			player addWeapon "hgun_Pistol_heavy_01_F";
 			player addHandgunItem "muzzle_snds_acp";
-            player addHandgunItem "optic_mas_MRD";
+            player addHandgunItem "optic_MRD";
 			player addWeapon "Binocular";
 			player addItemToUniform "Exile_Magazine_Swing";
 			player linkItem "ItemGPS";
@@ -319,7 +319,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player forceAddUniform "U_I_C_Soldier_Para_3_F";
 			player addHeadgear "H_HelmetB_tna_F";
 			player addVest "V_TacVest_oli";
-			player addBackpack "B_mas_m_Bergen_us_g";
+			player addBackpack "B_Kitbag_rgr";
 			for "_i" from 1 to 2 do {player addItemToBackpack "HandGrenade";};
 			for "_i" from 1 to 3 do {player addItemToBackpack "Exile_Magazine_7Rnd_45ACP";};
 			for "_i" from 1 to 3 do {player addItemToBackpack "30Rnd_9x21_Mag_SMG_02_Tracer_Red";};
