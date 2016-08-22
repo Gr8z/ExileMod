@@ -2798,10 +2798,10 @@ class CfgExileArsenal
 	// Qilin
 	///////////////////////////////////////////////////////////////////////////////
 	class Exile_Car_QilinUnarmed						{ quality = 2; price = 20000; };
-	class O_lsv_02_armed_f						 		{ quality = 2; price = 60000; };
-	class O_LSV_02_armed_black_f						{ quality = 2; price = 60000; };
-	class O_LSV_02_armed_arid_f							{ quality = 2; price = 60000; };
-	class O_LSV_02_armed_ghex_f							{ quality = 2; price = 60000; };
+	class O_lsv_02_armed_f						 		{ quality = 2; price = 75000; };
+	class O_LSV_02_armed_black_f						{ quality = 2; price = 75000; };
+	class O_LSV_02_armed_arid_f							{ quality = 2; price = 75000; };
+	class O_LSV_02_armed_ghex_f							{ quality = 2; price = 75000; };
 	///////////////////////////////////////////////////////////////////////////////
 	// MB 4WD
 	///////////////////////////////////////////////////////////////////////////////
