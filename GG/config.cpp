@@ -4214,6 +4214,7 @@ class CfgExileCustomCode
 	ExileClient_util_playerEquipment_add =				"GG\override\GG_util_playerEquipment_add.sqf";
 	ExileClient_object_player_bambiStateBegin =			"GG\override\GG_object_player_bambiStateBegin.sqf";
 	ExileClient_system_territory_database_load =		"GG\override\GG_system_territory_database_load.sqf";
+	ExileServer_object_vehicle_createNonPersistentVehicle = "GG\override\GG_object_vehicle_createNonPersistentVehicle.sqf";
 };
 class CfgExileEnvironment
 {
