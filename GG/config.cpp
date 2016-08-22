@@ -4186,7 +4186,7 @@ class CfgXM8
 		config = "GG\ExAdClient\XM8\Apps\DeployVehicle\config.sqf";
 		logo = "GG\ExAdClient\XM8\Apps\DeployVehicle\icon_DeployVehicle.paa";
 		bambiState = 0;
-		vehicleClass = "Exile_Bike_Quadbike_Fia";
+		vehicleClass = "Exile_Bike_Quadbike_Black";
 		recipe[] = {{"Exile_Item_ExtensionCord",1}};
 		packable = 1;
 		autoCleanUp = 1;
