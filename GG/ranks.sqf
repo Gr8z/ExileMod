@@ -126,10 +126,10 @@ switch (true) do
     player forceAddUniform "TRYK_T_PAD";
     player addVest "TRYK_V_ArmorVest_tan";
     player addBackpack "B_TacticalPack_blk";
-	for "_i" from 1 to 2 do {player addItemToBackpack "29rnd_300BLK_STANAG_T";};
-    player addHeadgear "H_Cap_tan_specops_US";
-	player addWeapon "hlc_rifle_vendimus";
-	player addPrimaryWeaponItem "optic_Hamr";
+	for "_i" from 1 to 3 do {player addItemToBackpack "hlc_30Rnd_545x39_B_AK";};
+    player addHeadgear "H_Cap_tan";
+	player addWeapon "hlc_rifle_ak74";
+	player addPrimaryWeaponItem "HLC_Optic_1p29";
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
     player addItem "Exile_Item_ExtensionCord";
