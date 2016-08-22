@@ -41,7 +41,7 @@ switch (true) do
    //    "Your rank is Pickpocket";
    };
    
-    case (_respect > 49999 && _respect < 999999):
+    case (_respect > 49999 && _respect < 99999):
    {
     _rank = "Thief";
     call ExileClient_object_player_bambiStateEnd;
@@ -67,7 +67,7 @@ switch (true) do
    //   "Your rank is Thief";
    };
    
-    case (_respect > 999999 && _respect < 149999):
+    case (_respect > 99999 && _respect < 149999):
    {
     _rank = "Gangster";  
     call ExileClient_object_player_bambiStateEnd;
