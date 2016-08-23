@@ -6,13 +6,13 @@
 5, Exile_Item_Matches
 3, Exile_Item_EMRE						// 75% Hunger
 6, Exile_Item_GloriousKnakworst			// 60% Hunger
-7, Exile_Item_Surstromming				// 55% Hunger
-7, Exile_Item_SausageGravy				// 50% Hunger
-7, Exile_Item_ChristmasTinner			// 40% Hunger
-7, Exile_Item_MacasCheese				// 40% Hunger
-7, Exile_Item_BBQSandwich				// 40% Hunger
-7, Exile_Item_CatFood					// 40% Hunger
-7, Exile_Item_Dogfood					// 30% Hunger
+17, Exile_Item_Surstromming				// 55% Hunger
+17, Exile_Item_SausageGravy				// 50% Hunger
+17, Exile_Item_ChristmasTinner			// 40% Hunger
+17, Exile_Item_MacasCheese				// 40% Hunger
+17, Exile_Item_BBQSandwich				// 40% Hunger
+17, Exile_Item_CatFood					// 40% Hunger
+17, Exile_Item_Dogfood					// 30% Hunger
 7, Exile_Item_BeefParts					// 30% Hunger
 7, Exile_Item_Cheathas					// 30% Hunger
 7, Exile_Item_DsNuts					// 30% Hunger
@@ -30,7 +30,7 @@
 17, Exile_Item_EnergyDrink					// +75% Thirst
 20, Exile_Item_MountainDupe					// +50% Thirst, spawns always twice!	
 25, Exile_Item_ChocolateMilk				// +35% Thirst
-30, Exile_Item_PlasticBottleDirtyWater		// +10% Thirst
+10, Exile_Item_PlasticBottleDirtyWater		// +10% Thirst
 
 > Pistols
 10, hgun_ACPC2_F			// ACP-C2 .45
@@ -225,7 +225,7 @@
 20, hlc_rifle_ak74m_mtk
 20, hlc_rifle_akm
 20, hlc_rifle_akm_mtk
-20, hlc_rifle_akmgl
+15, hlc_rifle_akmgl
 20, hlc_rifle_aks74
 20, hlc_rifle_aks74_gl
 20, hlc_rifle_aks74_mtk
@@ -252,17 +252,17 @@
 20, hlc_rifle_g36kmlic
 20, hlc_rifle_g36ktac
 20, hlc_rifle_g36kv
-20, hlc_rifle_g36mliag36
+10, hlc_rifle_g36mliag36
 20, hlc_rifle_g36mlic
 20, hlc_rifle_g36tac
 20, hlc_rifle_g36v
-20, hlc_rifle_g36vag36
+5, hlc_rifle_g36vag36
 20, hlc_rifle_mg36
-20, hlc_rifle_g3a3
-20, hlc_rifle_g3a3ris
-20, hlc_rifle_g3a3v
-20, hlc_rifle_g3ka4
-20, hlc_rifle_g3ka4_gl
+10, hlc_rifle_g3a3
+10, hlc_rifle_g3a3ris
+10, hlc_rifle_g3a3v
+10, hlc_rifle_g3ka4
+5, hlc_rifle_g3ka4_gl
 20, hlc_rifle_hk33a2
 20, hlc_rifle_hk33a2ris
 20, hlc_rifle_hk51
@@ -270,26 +270,26 @@
 20, hlc_rifle_hk53ras
 20, hlc_rifle_amt
 20, hlc_rifle_bcmjack
-20, hlc_rifle_bushmaster300
+5, hlc_rifle_bushmaster300
 20, hlc_rifle_c1a1
 20, hlc_rifle_colt727
-20, hlc_rifle_colt727_gl
+15, hlc_rifle_colt727_gl
 20, hlc_rifle_cqbr
 20, hlc_rifle_fal5000
 20, hlc_rifle_fal5000rail
 20, hlc_rifle_fal5061
 20, hlc_rifle_fal5061rail
 20, hlc_rifle_falosw
-20, hlc_rifle_honeybadger
+5, hlc_rifle_honeybadger
 20, hlc_rifle_l1a1slr
 20, hlc_rifle_lar
 20, hlc_rifle_m4
-20, hlc_rifle_m4m203
-20, hlc_rifle_osw_gl
-20, hlc_rifle_ru556
-20, hlc_rifle_ru5562
-20, hlc_rifle_samr
-20, hlc_rifle_samr2
+15, hlc_rifle_m4m203
+15, hlc_rifle_osw_gl
+15, hlc_rifle_ru556
+15, hlc_rifle_ru5562
+10, hlc_rifle_samr
+10, hlc_rifle_samr2
 20, hlc_rifle_sig5104
 20, hlc_rifle_slr
 20, hlc_rifle_slr107u
@@ -299,7 +299,7 @@
 20, hlc_rifle_stgw57
 20, hlc_rifle_stgw57_commando
 20, hlc_rifle_stgw57_ris
-20, hlc_rifle_vendimus
+5, hlc_rifle_vendimus
 
 
 > RifleAmmo
@@ -1115,6 +1115,12 @@
 7, V_HarnessOSpec_brn
 7, V_HarnessOSpec_gry
 3, V_I_G_resistanceLeader_F
+5, V_PlateCarrier1_blk
+5, V_PlateCarrier1_rgr
+5, V_PlateCarrier2_rgr
+5, V_PlateCarrier3_rgr
+5, V_PlateCarrierIA1_dgtl
+5, V_PlateCarrierIA2_dgtl
 
 > GuerillaHeadgear
 1, Exile_Headgear_GasMask
