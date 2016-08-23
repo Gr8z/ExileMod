@@ -180,6 +180,7 @@ switch (true) do
 	for "_i" from 1 to 3 do {player addItemToBackpack "30Rnd_65x39_caseless_mag";};
     player addHeadgear "H_Shemag_olive_hs";
 	player addWeaponGlobal "arifle_MX_khk_F";
+	player addPrimaryWeaponItem "muzzle_snds_H";
 	player addPrimaryWeaponItem "optic_ERCO_khk_F";
     player addItem "Exile_Item_Matches";
     player addItem "Exile_Item_ExtensionCord";
@@ -199,7 +200,7 @@ switch (true) do
     _rank = "Terrorist";  
   call ExileClient_object_player_bambiStateEnd;
      [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,800000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
-    player forceAddUniform "TRYK_ZARATAKI";
+    player forceAddUniform "TRYK_ZARATAKI3";
     player addVest "V_TacVest_khk";
     player addBackpack "B_Kitbag_mcamo";
 	for "_i" from 1 to 3 do {player addItemToBackpack "hlc_45Rnd_762x39_m_rpk";};
@@ -224,7 +225,7 @@ switch (true) do
     _rank = "Warlord";
     call ExileClient_object_player_bambiStateEnd;  
    [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t>",_rank],0,0,10,0] spawn bis_fnc_dynamictext;
-    player forceAddUniform "TRYK_U_B_BLKBLK_CombatUniform";
+    player forceAddUniform "TRYK_U_B_MTP_R_CombatUniform"; 
     player addVest "V_PlateCarrierGL_blk";
     player addBackpack "TRYK_B_Carryall_blk";
 	player addGoggles "TRYK_kio_balaclavas";
