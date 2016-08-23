@@ -1967,6 +1967,7 @@ class CfgExileArsenal
 	class launch_O_Titan_ghex_F 					{ quality = 5; price = 100000; };
 	class launch_B_Titan_tna_F 						{ quality = 5; price = 100000; };
 	class RPG32_F									{ quality = 5; price = 20000; };
+	class RPG32_ghex_F								{ quality = 5; price = 20000; };
 	class RPG32_HE_F								{ quality = 5; price = 20000; };
 	class titan_AA									{ quality = 5; price = 35000; };
 	class RPG7_F									{ quality = 5; price = 20000; };
@@ -7474,6 +7475,7 @@ class Glasses
 			"launch_O_Titan_ghex_F",
 			"launch_B_Titan_tna_F",
 			"RPG32_F",
+			"RPG32_ghex_F"
 			"RPG32_HE_F",
 			"RPG7_F",
 			"Titan_AA"
