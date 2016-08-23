@@ -200,7 +200,7 @@ switch (true) do
     _rank = "Terrorist";  
   call ExileClient_object_player_bambiStateEnd;
      [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,800000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
-    player forceAddUniform "TRYK_ZARATAKI3";
+    player forceAddUniform "TRYK_U_taki_BLK";
     player addVest "V_TacVest_khk";
     player addBackpack "B_Kitbag_mcamo";
 	for "_i" from 1 to 3 do {player addItemToBackpack "hlc_45Rnd_762x39_m_rpk";};
