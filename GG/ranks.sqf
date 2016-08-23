@@ -180,7 +180,7 @@ switch (true) do
 	for "_i" from 1 to 3 do {player addItemToBackpack "30Rnd_65x39_caseless_mag";};
     player addHeadgear "H_Shemag_olive_hs";
 	player addWeaponGlobal "arifle_MX_khk_F";
-	player addPrimaryWeaponItem "muzzle_snds_H";
+	player addPrimaryWeaponItem "muzzle_snds_h_khk_f";
 	player addPrimaryWeaponItem "optic_ERCO_khk_F";
     player addItem "Exile_Item_Matches";
     player addItem "Exile_Item_ExtensionCord";
