@@ -7475,7 +7475,7 @@ class Glasses
 			"launch_O_Titan_ghex_F",
 			"launch_B_Titan_tna_F",
 			"RPG32_F",
-			"RPG32_ghex_F"
+			"RPG32_ghex_F",
 			"RPG32_HE_F",
 			"RPG7_F",
 			"Titan_AA"
