@@ -399,9 +399,6 @@
 10, hlc_45Rnd_762x39_m_rpk
 10, hlc_45Rnd_762x39_t_rpk
 10, hlc_50rnd_556x45_EPR
-10, hlc_50Rnd_762x51_B_M14
-10, hlc_50rnd_762x51_M_FAL
-10, hlc_50rnd_762x51_M_G3
 10, hlc_60Rnd_545x39_t_rpk
 10, hlc_75Rnd_762x39_m_rpk
 10, 29rnd_300blk_stanag
@@ -518,7 +515,6 @@
 10, 200Rnd_556x45_Box_Red_F         // LIM-85	
 10, 200Rnd_556x45_Box_Tracer_F      // LIM-85	
 10, 200Rnd_556x45_Box_Tracer_Red_F  // LIM-85	
-10, hlc_100rnd_556x45_EPR_G36
 10, hlc_100Rnd_762x51_B_M60E4
 10, hlc_100Rnd_762x51_Barrier_M60E4
 10, hlc_100Rnd_762x51_M_M60E4

@@ -5,7 +5,7 @@
 8, Pistols
 5, PistolAmmo
 3, PistolAttachments
-12, Rifles
+9, Rifles
 5, RifleAmmo
 4, SMG
 3, SMGAmmo
@@ -33,7 +33,7 @@
 10, SMG
 3, SMGAmmo
 3, SMGAttachments
-20, Rifles
+17, Rifles
 5, RifleAmmo
 10, RifleAttachments
 10, GuerillaVests
