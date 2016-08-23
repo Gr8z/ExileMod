@@ -128,6 +128,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addItemToUniform "Exile_Magazine_Swing";
 			player linkItem "ItemGPS";
 			player addItemToBackpack "Exile_Item_Bandage";
+			player addItemToBackpack "Exile_Item_ExtensionCord";
 			player addItemToBackpack "Exile_Item_MountainDupe";
 			player addItemToBackpack "Exile_Item_Cheathas";
 			player addItemToBackpack "Exile_Item_CanOpener";
@@ -157,6 +158,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addWeapon "Binocular";
 			player addItemToUniform "Exile_Magazine_Swing";
 			player linkItem "ItemGPS";
+			player addItemToVest "Exile_Item_ExtensionCord";
 			player addItemToVest "Exile_Item_Vishpirin";
 			player addItemToVest "Exile_Item_EnergyDrink";
 			player addItemToVest "Exile_Item_GloriousKnakworst";
@@ -176,7 +178,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addHeadgear "TRYK_H_Booniehat_WOOD";
 			player addVest "V_PlateCarrier1_tna_F";
 			player addBackpack "B_Carryall_ghex_F";
-			player addItemToBackpack "hlc_50Rnd_762x51_B_M14";
+			for "_i" from 1 to 2 do {player addItemToBackpack "hlc_50Rnd_762x51_B_M14";};
 			for "_i" from 1 to 4 do {player addItemToUniform "11Rnd_45ACP_Mag";};
 			player addWeapon "hlc_rifle_m14dmr";
 			player addPrimaryWeaponItem "hlc_muzzle_snds_M14";
