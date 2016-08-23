@@ -226,13 +226,13 @@ switch (true) do
     call ExileClient_object_player_bambiStateEnd;  
    [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t>",_rank],0,0,10,0] spawn bis_fnc_dynamictext;
     player forceAddUniform "TRYK_U_B_MTP_R_CombatUniform"; 
-    player addVest "V_PlateCarrierGL_blk";
-    player addBackpack "TRYK_B_Carryall_blk";
+    player addVest "V_PlateCarrierGL_rgr";
+    player addBackpack "TRYK_B_Carryall_wood";
 	player addGoggles "TRYK_kio_balaclavas";
     for "_i" from 1 to 2 do {player addItemToBackpack "hlc_100Rnd_762x51_M_M60E4";};
 	for "_i" from 1 to 3 do {player addItemToBackpack "9Rnd_45ACP_Mag";};
 	for "_i" from 1 to 2 do {player addItemToBackpack "HandGrenade";};
-    player addHeadgear "TRYK_H_PASGT_BLK";
+    player addHeadgear "TRYK_H_PASGT_OD";
     player addWeapon "hlc_lmg_mk48";
 	player addPrimaryWeaponItem "optic_ERCO_blk_F";
 	player addPrimaryWeaponItem "muzzle_snds_B";
