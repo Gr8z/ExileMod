@@ -1967,6 +1967,7 @@ class CfgExileArsenal
 	class launch_O_Titan_ghex_F 					{ quality = 5; price = 100000; };
 	class launch_B_Titan_tna_F 						{ quality = 5; price = 100000; };
 	class RPG32_F									{ quality = 5; price = 20000; };
+	class RPG32_ghex_F								{ quality = 5; price = 20000; };
 	class RPG32_HE_F								{ quality = 5; price = 20000; };
 	class titan_AA									{ quality = 5; price = 35000; };
 	class RPG7_F									{ quality = 5; price = 20000; };
@@ -4214,6 +4215,7 @@ class CfgExileCustomCode
 	ExileClient_util_playerEquipment_add =				"GG\override\GG_util_playerEquipment_add.sqf";
 	ExileClient_object_player_bambiStateBegin =			"GG\override\GG_object_player_bambiStateBegin.sqf";
 	ExileClient_system_territory_database_load =		"GG\override\GG_system_territory_database_load.sqf";
+	ExileServer_object_vehicle_createNonPersistentVehicle = "GG\override\GG_object_vehicle_createNonPersistentVehicle.sqf";
 };
 class CfgExileEnvironment
 {
@@ -7473,6 +7475,7 @@ class Glasses
 			"launch_O_Titan_ghex_F",
 			"launch_B_Titan_tna_F",
 			"RPG32_F",
+			"RPG32_ghex_F",
 			"RPG32_HE_F",
 			"RPG7_F",
 			"Titan_AA"

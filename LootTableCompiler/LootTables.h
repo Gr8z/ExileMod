@@ -1,16 +1,16 @@
 
 > CivillianLowerClass
-28, Food
+17, Food
 10, Drinks
 8, Pistols
 5, PistolAmmo
 3, PistolAttachments
-4, Shotguns
-3, ShotgunAmmo
+9, Rifles
+5, RifleAmmo
 4, SMG
 3, SMGAmmo
 3, SMGAttachments
-20, CivilianClothing
+15, CivilianClothing
 11, CivilianBackpacks
 5, CivilianVests
 20, CivilianHeadgear
@@ -23,26 +23,26 @@
 // Apartments, Offices etc.
 ///////////////////////////////////////////////////////////////////////////////
 > CivillianUpperClass
-28, Food
+17, Food
 10, Drinks
 8, Pistols
 5, PistolAmmo
 3, PistolAttachments
-4, Shotguns
-3, ShotgunAmmo
-4, SMG
+2, Shotguns
+1, ShotgunAmmo
+10, SMG
 3, SMGAmmo
 3, SMGAttachments
-3, Rifles
-3, RifleAmmo
-3, RifleAttachments
-20, CivilianClothing
+17, Rifles
+5, RifleAmmo
+10, RifleAttachments
+10, GuerillaVests
+10, GuerillaClothing
 11, CivilianBackpacks
-5, CivilianVests
-20, CivilianHeadgear
+5, CivilianHeadgear
 10, CivilianItems
-10, Chemlights
-10, RoadFlares
+3, Chemlights
+3, RoadFlares
 1, Restraints
 
 ///////////////////////////////////////////////////////////////////////////////
