@@ -16,7 +16,7 @@
 	limitations under the License.
 */
 
-ExAd_HACKING_MIN_PLAYERS_ONLINE = 20;			//SCALAR - Minimun allowed players online to initalize a hack.
+ExAd_HACKING_MIN_PLAYERS_ONLINE = 1;			//SCALAR - Minimun allowed players online to initalize a hack.
 
 ExAd_HACKING_ALLOWED_HACKS = 1;					//SCALAR - Simultaneous hacks allowed.
 
