@@ -1,2 +1,0 @@
-ExileClientIntroIsPlaying = false;
-true
