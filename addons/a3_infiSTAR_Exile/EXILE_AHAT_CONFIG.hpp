@@ -25,14 +25,14 @@ class Cfg_infiSTAR_settings {
 	It will try to get this password from "@ExileServer\addons\exile_server_config" first. If you did not set a password there (config.cpp),
 	then it will take what you put here.
 */
-serverCommandPassword = "changeme";
+serverCommandPassword = "penis1234";
 
 /*
 	"passwordAdmin" is passwordAdmin - in your servers config.cfg, needed for servercommands from client
 	
 	This is used to be able to use the "login" function ingame. Will log you in as Arma "Admin".
 */
-passwordAdmin = "changeme";
+passwordAdmin = "revivethisyet?";
 /* serverCommandPassword and passwordAdmin should always be different passwords or it could cause problems! */
 
 
@@ -48,7 +48,7 @@ use_html_load_on_adminmenu = true;		/* default and recommended is TRUE. infiSTAR
 	"infiSTAR_Logs/" would be a folder called "infiSTAR_Logs" within your Arma3Server directory.
 	You need to create the defined folder if it doesn't exist. If you don't create it - the DLL won't be able to write any Log files ! ! !
 */
-LOG_PATH = "";
+LOG_PATH = "Logs/";
 
 
 
@@ -62,8 +62,8 @@ enableIngameLogs = true;
 	example names: "[Admin] infiSTAR" or "infiSTAR [Admin]"
 	note: this is case sensitive as well, meaning "infiSTAR [admin]" would not work as we set it in our example to "[Admin]"
 */
-needAdminNameTag = false;
-AdminNameTag = "[Admin]";
+needAdminNameTag = true;
+AdminNameTag = "[GG]";
 
 
 /*
@@ -72,9 +72,9 @@ AdminNameTag = "[Admin]";
 */
 chatCommands[] =
 {
-	{"!ts","ts.mycommunity.com"},
-	{"!website","www.mycommunity.com"},
-	{"!admin","please visit ts.mycommunity.com"}
+	{"!ts","ts.ghostzgamerz.com"},
+	{"!website","www.ghostzgamerz.com"},
+	{"!admin","please visit ts.ghostzgamerz.com"}
 };
 
 /*
@@ -83,7 +83,8 @@ chatCommands[] =
 */
 chatCommandsP[] =
 {
-	{"no loot","You cannot loot from non arma buildings in this map, you must move around - check the shipping yards for best loot"}
+		{"admin","SUPPORT FORBIDDEN IN SIDECHAT! JOIN OUR TEAMSPEAK.."}
+		
 };
 
 
@@ -100,7 +101,7 @@ chatCommandsP[] =
 	~ x-range is between -0.7 to +1
 	~ y-range is between -0.4 to +1
 */
-ENABLE_NOTIFICATION_MESSAGES = true;
+ENABLE_NOTIFICATION_MESSAGES = false;
 NOTIFY_MSG_ARRAY[] =
 {
 	{-1, -1, 6, 0.6, 0, 0, "#ff0000", "Welcome to our server"},
@@ -132,19 +133,29 @@ pathToCustomBillBoardTextures[] =
 /* "startAsNormal": if you add admin UIDs in here as well, they will start as almost "normal" player instead of with admin menu and such. */
 startAsNormal[] =
 {
-	"UID1","UID2","UID3","..."
+	"0"
 };
 
 /* "hiddenSuperAdmin": These admins are seen as normal players by normal admins, their actions are not logged either (to keep an eye out on your admins) */
 hiddenSuperAdmin[] =
 {
-	"UID1","UID2","UID3","..."
+	"76561198078201908", // Gr8 old
+	"76561198204864584", // Gr8
+	"76561198153784743", // Ghost
+	"76561198115492831", // BigEgg
+	"0"
 };
 
 adminUIDandAccess[] =
 {
 	{
-		{"76561198021389971","UID2","UID3","..."},	/* Admins with UIDs in this Array have their Access defined in the array below. */
+		{"76561198137100220", // Deadskin
+		 "76561197978528230", // Dark
+		 "76561198056028211", // Nasty
+		 "76561198133936962", // Wrice4
+		 "76561198021389971", // thirdhero
+		 //Add UID's Above - Don't forget the comma!
+		"0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
 			"Teleport On Map Click","Teleport - Target To Me","Teleport - Me To Target",
 			"Teleport In Facing Direction (10m steps)","Drag and drop units on the map",
@@ -159,19 +170,14 @@ adminUIDandAccess[] =
 			"Spawn Ammo","Login as Arma Admin","BIS FreeRoam Cam (works with ESP)","FreeRoam Cam (does not work with ESP)",
 			"Request Steam Name","showinfo",
 			"UnlockLockVehicle","Copy Worldspace(coords) to RPT & Chat",
-			
 			"Spawn Vehicles","Spawn Persistent Vehicles",
-			
 			"Kill","Explode","Force Disconnect",
 			"Kick (Silent)","Kick (Announce)","Ban (Silent)","Ban (Announce)","TempBan (Silent)","TempBan (Announce)",
-			
 			"AdminConsole",
 			"DebugConsole",
 			"Execute code on server (DebugConsole)","Execute code global (DebugConsole)","Execute code local (DebugConsole)",
 			"Lock Server (DebugConsole)","UnLock Server (DebugConsole)","Ban (DebugConsole)","Kick (DebugConsole)",
-			
 			"Change Money on Player","Change Money on Bank","Change Respect",
-			
 			"MapIcons",
 			"MapIcons: Buildings","MapIcons: Flags",
 			"MapIcons: Player","MapIcons: DeadPlayer","MapIcons: Vehicles",
@@ -180,95 +186,50 @@ adminUIDandAccess[] =
 			"Arsenal",	// Adds Arsenal to the mousewheel actions if you press "," on the Numpad!
 			"Unconscious","Remove Unconscious",
 			"Light",	// Zeus like Lighting from the Air strikes down at selected player / target / location - use ctrl+1 or the menu to use it!
-			
 			"Spawn Zombie on Target Location!",	// This only works when you are using ExilZ / RyanZombies
 			
 			""
 		}
 	},
 	{
-		{"UID1","UID2","UID3","..."},	/* Admins with UIDs in this Array have their Access defined in the array below. */
+		{"76561197960289679", //TangoWhiskey
+		 "76561198088251390", // SIX
+		 "76561197979611157", // Clanzoucu
+		 "76561198073495490", // Adam Kadmon
+		 "76561198274767971", // CanadianFrodo
+		 "76561198065188130", // Nacho
+		 "76561198036004541", // Demen
+		 "76561197987069300", // Shroombear
+		 "76561198090941099", // Josh
+		 "0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
 			"Teleport On Map Click","Teleport - Target To Me","Teleport - Me To Target",
 			"Teleport In Facing Direction (10m steps)","Drag and drop units on the map",
 			"spectating","Delete Vehicle","FlyUp","ShowGear","Show Server Information",
 			"HealSelf","HealRepairNear","AdminLog","Freeze","UnFreeze","Restrain","UnRestrain",
-			"==== Loadouts ====","==== Base Deleter ====","==== WeatherLord ====","Items spawn menu",
+			"==== Base Deleter ====","Items spawn menu",
 			"Remove Gear","Heal","Restore","Flip Vehicle","Move In My Vehicle","Move In Target Vehicle","Eject","Eject Crew",
-			"Player ESP","Player ESP (safezone style)","AI ESP","Dead ESP","Loot ESP",
-			"Vehicle Marker","Flag Marker (with radius)","DeadPlayer Marker",
-			"God Mode","God Mode (no stats change)","Vehicle God Mode","Lower Terrain","Vehboost","UnlimAmmo","noRecoil","FastFire","Stealth / Invisible",
-			"Disable Announces","Mass Message","Change Time","Spawn Support-Boxes","Create Billboard","Change ViewDistance",
-			"Spawn Ammo","Login as Arma Admin","BIS FreeRoam Cam (works with ESP)","FreeRoam Cam (does not work with ESP)",
-			"Request Steam Name","showinfo",
-			"UnlockLockVehicle","Copy Worldspace(coords) to RPT & Chat",
-			
-			"Spawn Vehicles","Spawn Persistent Vehicles",
-			
-			"Kill","Explode","Force Disconnect",
-			"Kick (Silent)","Kick (Announce)","Ban (Silent)","Ban (Announce)","TempBan (Silent)","TempBan (Announce)",
-			
-			"AdminConsole",
-			"DebugConsole",
-			"Execute code on server (DebugConsole)","Execute code global (DebugConsole)","Execute code local (DebugConsole)",
-			"Lock Server (DebugConsole)","UnLock Server (DebugConsole)","Ban (DebugConsole)","Kick (DebugConsole)",
-			
-			"Change Money on Player","Change Money on Bank","Change Respect",
-			
-			"MapIcons",
-			"MapIcons: Buildings","MapIcons: Flags",
-			"MapIcons: Player","MapIcons: DeadPlayer","MapIcons: Vehicles",
-			"MapIcons: Vehicle Types","MapIcons: Vehicle lockstate","MapIcons: DeadVehicles",
-			"MapIcons: AI",
-			"Arsenal",	// Adds Arsenal to the mousewheel actions if you press "," on the Numpad!
-			"Unconscious","Remove Unconscious",
-			"Light",	// Zeus like Lighting from the Air strikes down at selected player / target / location - use ctrl+1 or the menu to use it!
-			
-			"Spawn Zombie on Target Location!",	// This only works when you are using ExilZ / RyanZombies
-			
+			"Player ESP","AI ESP","Dead ESP","Loot ESP","Vehicle Marker","Flag Marker (with radius)","DeadPlayer Marker",
+			"God Mode","Vehicle God Mode","Lower Terrain","Stealth / Invisible",
+			"Mass Message","Spawn Support-Boxes",
+			"Spawn Ammo","Request Steam Name","showinfo","UnlockLockVehicle","Spawn Vehicles","Spawn Persistent Vehicles",
+			"Kill","Force Disconnect","Kick (Announce)","Ban (Announce)","TempBan (Announce)",
+			"Change Money on Player","Change Money on Bank","Change Respect","MapIcons","MapIcons: Buildings","MapIcons: Flags",
+			"MapIcons: Player","MapIcons: DeadPlayer","MapIcons: Vehicles","MapIcons: Vehicle Types","MapIcons: Vehicle lockstate",
+			"MapIcons: DeadVehicles","MapIcons: AI",
 			""
 		}
 	},
 	{
-		{"UID1","UID2","UID3","..."},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
-			"Teleport On Map Click","Teleport - Target To Me","Teleport - Me To Target",
-			"Teleport In Facing Direction (10m steps)","Drag and drop units on the map",
-			"spectating","Delete Vehicle","FlyUp","ShowGear","Show Server Information",
-			"HealSelf","HealRepairNear","AdminLog","Freeze","UnFreeze","Restrain","UnRestrain",
-			"==== Loadouts ====","==== Base Deleter ====","==== WeatherLord ====","Items spawn menu",
-			"Remove Gear","Heal","Restore","Flip Vehicle","Move In My Vehicle","Move In Target Vehicle","Eject","Eject Crew",
-			"Player ESP","Player ESP (safezone style)","AI ESP","Dead ESP","Loot ESP",
-			"Vehicle Marker","Flag Marker (with radius)","DeadPlayer Marker",
-			"God Mode","God Mode (no stats change)","Vehicle God Mode","Lower Terrain","Vehboost","UnlimAmmo","noRecoil","FastFire","Stealth / Invisible",
-			"Disable Announces","Mass Message","Change Time","Spawn Support-Boxes","Create Billboard","Change ViewDistance",
-			"Spawn Ammo","Login as Arma Admin","BIS FreeRoam Cam (works with ESP)","FreeRoam Cam (does not work with ESP)",
-			"Request Steam Name","showinfo",
-			"UnlockLockVehicle","Copy Worldspace(coords) to RPT & Chat",
-			
-			"Spawn Vehicles","Spawn Persistent Vehicles",
-			
-			"Kill","Explode","Force Disconnect",
-			"Kick (Silent)","Kick (Announce)","Ban (Silent)","Ban (Announce)","TempBan (Silent)","TempBan (Announce)",
-			
-			"AdminConsole",
-			"DebugConsole",
-			"Execute code on server (DebugConsole)","Execute code global (DebugConsole)","Execute code local (DebugConsole)",
-			"Lock Server (DebugConsole)","UnLock Server (DebugConsole)","Ban (DebugConsole)","Kick (DebugConsole)",
-			
-			"Change Money on Player","Change Money on Bank","Change Respect",
-			
-			"MapIcons",
-			"MapIcons: Buildings","MapIcons: Flags",
-			"MapIcons: Player","MapIcons: DeadPlayer","MapIcons: Vehicles",
-			"MapIcons: Vehicle Types","MapIcons: Vehicle lockstate","MapIcons: DeadVehicles",
-			"MapIcons: AI",
-			"Arsenal",	// Adds Arsenal to the mousewheel actions if you press "," on the Numpad!
-			"Unconscious","Remove Unconscious",
-			"Light",	// Zeus like Lighting from the Air strikes down at selected player / target / location - use ctrl+1 or the menu to use it!
-			
-			"Spawn Zombie on Target Location!",	// This only works when you are using ExilZ / RyanZombies
-			
+		"76561198218878119", // Mack
+		"76561198060389676", // Powerwolf
+		"0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
+		{
+			"spectating","ShowGear","Show Server Information","Spawn Vehicles",
+			"Freeze","UnFreeze","Remove Gear","Heal","Restore","Flip Vehicle",
+			"Eject","DeadPlayer Marker","Mass Message","Request Steam Name","UnlockLockVehicle",
+			"Kill","Kick (Announce)","Change Money on Player","Change Money on Bank",
 			""
 		}
 	}
@@ -295,22 +256,22 @@ UID_WHITELIST[] =
 	"UID1","UID2","UID3","..."
 };
 
-ExileDevFriendlyMode = true;	/* adds Exile Devs to your AdminList - makes it easier for them to debug their mod live */
+ExileDevFriendlyMode = false;	/* adds Exile Devs to your AdminList - makes it easier for them to debug their mod live */
 
 
 /* What ESCAPE Menu shows */
-ESCMNUTOP = "AntiHack & AdminTools";
-ESCMNUBOT = "by infiSTAR.de";
+ESCMNUTOP = "[GG] Ghostz Gamerz";
+ESCMNUBOT = "www.GHOSTZGAMERZ.com";
 BRIEFING_MSG = false;	/* use mission briefing message: if   "BRIEFING_MSG = false;"   then the message will be replaced by infiSTAR */
-HTML_LOAD_URL = "";		/* HTML_LOAD_URL = ""; == disabled and if you set a url it will be shown in ESCAPE menu. HTML in Arma/this is limited. Try it :) example: "http://goo.gl/gb0o7b" */
+HTML_LOAD_URL = "http://ghostzgamerz.com/esc.php";		/* HTML_LOAD_URL = ""; == disabled and if you set a url it will be shown in ESCAPE menu. HTML in Arma/this is limited. Try it :) example: "http://goo.gl/gb0o7b" */
 ENABLE_PRIVATE_CHAT_MENU = true;		/* players can open it by typing !chat in chat or by  custom controls -> "Use Action 3" */
-PRIVATE_CHAT_MENU_8GNETWORK = false;	/* if this is true - players will only be able to use private chat if they enable 8GNetwork in their xm8 */
+PRIVATE_CHAT_MENU_8GNETWORK = true;	/* if this is true - players will only be able to use private chat if they enable 8GNetwork in their xm8 */
 
 /* shows RESTART IN X MINS */
 USE_RESTART_TIMER = true;			/* show time left to next restart */
 RESTART_TIME_IN_M = 180;			/* restart time in minutes (default: 180min == 3 hours) */
 SHOW_TIMER_IN_MIN[] = {1,2,3,5,10};	/* minutes before restart, when message is shown */
-USE_RESTART_TIMER_SHUTDOWN = true;	/* #shutdown the server after RESTART_TIME_IN_M minutes */
+USE_RESTART_TIMER_SHUTDOWN = false;	/* #shutdown the server after RESTART_TIME_IN_M minutes */
 USE_THIS_TIME_FUNCTION = "time";	/* I recommend using "time" or "serverTime" just try what's best for you! */
 
 
@@ -322,10 +283,10 @@ VCT = 300;	/* if "DayNightVote = true;" - Time (in seconds) to wait until nex vo
 
 
 /* The following 4 options can be disabled by putting the value to -1. For example "TGV = -1;" */
-/* Terrain Grid Value   */ TGV = 40;	/* 50, 25, 12.5  */	/* if set to 50 grass will be very low for better client FPS.. default is 25 ~35 is good performance and grass :) */
-/* ViewDistance Value   */ VDV = 1000;
-/* ObjectViewDistance   */ VOV = 800;
-/* ShadowViewDistance   */ SVD = 50;
+/* Terrain Grid Value   */ TGV = -1;	/* 50, 25, 12.5  */	/* if set to 50 grass will be very low for better client FPS.. default is 25 ~35 is good performance and grass :) */
+/* ViewDistance Value   */ VDV = -1;
+/* ObjectViewDistance   */ VOV = -1;
+/* ShadowViewDistance   */ SVD = -1;
 
 
 
@@ -338,13 +299,13 @@ VCT = 300;	/* if "DayNightVote = true;" - Time (in seconds) to wait until nex vo
 	the game is still broken and sometimes you can see people naked when they are not.
 	I did not add the old check back in, I made a new one making use of new functions :)
 */
-fix_uniform_and_vest = false;
+fix_uniform_and_vest = true;
 
 
 /*
 	So far only checking for duped backpacks and not taking any actions besides logging. Need to test more before It will start to remove duped items.
 */
-experimental_dupe_check = false;
+experimental_dupe_check = true;
 
 
 /*
@@ -384,18 +345,18 @@ GodModeCheck = true;
 /*            many checks should be set to true instead of false.                    */
 /* ********************************************************************************* */
 LVC = true;			/* Local Vehicle Check - ALWAYS HAVE THIS TRUE! */
-URC = true;			/* Check unitRecoilCoefficient and reset default unitRecoilCoefficient */
+URC = false;			/* Check unitRecoilCoefficient and reset default unitRecoilCoefficient */
 CAP = false;		/* Check Actions Plr - "Actions: xxx/xxx possible scroll menu hack (or you added custom actions..)" */
 
 
-KCM = true;			/* Just close ALL CommandingMenus */
-CMC = false;		/* Check for CommandingMenus that are not in the allowedCommandingMenus array */
+KCM = false;			/* Just close ALL CommandingMenus */
+CMC = true;		/* Check for CommandingMenus that are not in the allowedCommandingMenus array */
 allowedCommandingMenus[] = {"#user:example","#user:example2"};
 
 
 check_Notifications = false;		/* checks if BIS_fnc_showNotification was used, as it is used with many hacks - some custom addons however use them too. */
-disconnect_dupe_check = false;		/* checks if player tries to dupe using the "disconnect trick" -> sends a ping to the server whenever a player opens the escape menu */
-block_glitch_actions = true;		/* if a player is near a flag where he has no buildrights, he can't vault/getover/lean close to buildingparts (to prevent glitching!) */
+disconnect_dupe_check = true;		/* checks if player tries to dupe using the "disconnect trick" -> sends a ping to the server whenever a player opens the escape menu */
+block_glitch_actions = false;		/* if a player is near a flag where he has no buildrights, he can't vault/getover/lean close to buildingparts (to prevent glitching!) */
 wall_glitch_object = true;			/* checks if a players tries to glitch through a wall (if player is allowed to build in that territory, it will not be logged.) */
 wall_glitch_vehicle = true;			/* stops players from glitching into bases using "eject" or "getout" of a vehicle.. */
 check_doors_n_gates = true;			/* check if a door is locked but still being opened */
@@ -414,7 +375,7 @@ checkFilePatchingEnabled = true;	/* checks if filepatching is enabled on the cli
 
 
 /* Check for Map Menu & Map Sub-Menu */
-CMM = true;
+CMM = false;
 maxMapMenuEntries = 6;	/* "Map Menu has been changed x entries found - Texts: y" incase you want to add some briefing to your map menu. Only matters if you have CMM = true; */
 
 /* if steam api.steampowered.com is working, this might be a nice feature */
@@ -439,7 +400,7 @@ ban_for_steam_ban = false;	/* if "check_steam_ban = true;" then steambanned play
 	};
 	Trading zones are white-listed by default.
 */
-UAT = true;	
+UAT = false;	
 class allowTP {
 	custom[] = {};
 };
@@ -476,11 +437,11 @@ badbanChat[] = {};
 badNamesFull[] = {"grim"};
 
 /* Not allowed Names on server. Example: badNamesPartial[] = {"THE"}; would kick all players with names like "the car" as it includes "THE" (not case sensitive) */
-badNamesPartial[] = {"admin","thirtysix","adolf","le hippo"};
+badNamesPartial[] = {"admin","thirtysix","adolf","le hippo","nigger"};
 
 
 /* Not allowed Group Names on server. Example: badGroupNames[] = {"THE"}; would rename all groups with names like "the car" as it includes "THE" (not case sensitive) */
-badGroupNames[] = {"admin"};
+badGroupNames[] = {"admin","Ghostz Gamerz"};
 
 
 
@@ -566,7 +527,7 @@ VehicleWhiteList[] =
 /*
 	Use forbidden vehicle check? (everything in the ForbiddenVehicles will be flagged as BadVehicle and deleted (even when it is on the white-list)!)
 */
-ForbiddenVehicles_check = true;
+ForbiddenVehicles_check = false;
 ForbiddenVehicles[] =
 {
 	"B_MBT_01_arty_F"
@@ -639,19 +600,19 @@ allSupportBoxes[] =
 	{
 		"Support-Box2",
 		{
-			"Exile_Item_Flag",
-			{"Exile_Item_WoodDoorKit",15},{"Exile_Item_WoodDoorwayKit",15},{"Exile_Item_WoodDrawBridgeKit",15},
-			{"Exile_Item_WoodFloorKit",15},{"Exile_Item_WoodFloorPortKit",15},{"Exile_Item_WoodGateKit",15},
-			{"Exile_Item_WoodLog",15},{"Exile_Item_WoodPlank",15},{"Exile_Item_WoodStairsKit",15},
-			{"Exile_Item_WoodSupportKit",15},{"Exile_Item_WoodWallHalfKit",15},{"Exile_Item_WoodWallKit",15},
-			{"Exile_Item_WoodWindowKit",15},{"Exile_Item_WorkBenchKit",15}
+			"Exile_Item_Flag","Exile_Item_WorkBenchKit","B_Carryall_khk",
+			{"Exile_Item_CookingPot",2},{"Exile_Melee_Axe",2},{"Exile_Item_Matches",2},
+			{"Exile_Item_Codelock",4},{"Exile_Item_WoodDoorKit",2},{"Exile_Item_WoodDoorwayKit",2},
+			{"Exile_Item_Matches",2},{"Exile_Item_WoodFloorKit",18},{"Exile_Item_WoodFloorPortKit",4},
+			{"Exile_Item_WoodGateKit",2},{"Exile_Item_WoodStairsKit",4},{"Exile_Item_WoodWallKit",25},
+			{"Exile_Item_WoodWindowKit",4},{"Exile_Item_SafeKit",3},{"Exile_Item_FortificationUpgrade",10}
 		}
 	},
 	{
 		"Support-Box3",
 		{
-			{"Exile_Item_Flag",5},{"Exile_Item_WoodDoorKit",15},{"Exile_Item_WoodWallKit",15},
-			{"Exile_Item_WoodWindowKit",15},{"Exile_Item_WoodFloorKit",15},{"Exile_Item_SafeKit",5}
+			{"Exile_Item_WoodDoorKit",4},{"Exile_Item_WoodWallKit",30},
+			{"Exile_Item_WoodWindowKit",4},{"Exile_Item_WoodFloorKit",30}
 		}
 	},
 	{

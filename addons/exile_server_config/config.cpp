@@ -5531,7 +5531,7 @@ class CfgSettings
 		*/
 
 		// This needs to match config.cfg serverCommandPassword
-		serverPassword = "";
+		serverPassword = "penis1234";
 
 		// Autolocks server until its ready to accept players
 		useAutoLock = 0;
@@ -5599,7 +5599,7 @@ class CfgSettings
 			If this is enabled, Exile developers will spawn with a ton of pop tabs.
 			We will have a hard time debugging things if you disable this.
 		*/
-		devFriendyMode = 1;
+		devFriendyMode = 0;
 
 		devs[] = 
 		{
@@ -5615,7 +5615,7 @@ class CfgSettings
 		/*
 			A list of events that are active
 		*/
-		enabledEvents[] = {"SupplyBox", "AbandonedSafe", "AmbientFlyOver"}; 
+		enabledEvents[] = {"SupplyBox", "AbandonedSafe"}; 
 
 		class SupplyBox 
 		{
