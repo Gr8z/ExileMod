@@ -1,0 +1,2 @@
+//new
+7 "" !="true" !="false" !="[0-9]{1,2}" !=".{0,25} [0-9]*.[0-9]* Exile_Unit_Player" !="111thID" !="BI" !="ExileBrunswik" !="CTRG" !="CTRG14" !="CTRG15" !="Exile" !="GryffinRegiment" !="MANW" !="TFAegis" !="Curator"

@@ -1,0 +1,6 @@
+//new
+7 "" !="exilexm8isonline" !="bis_fnc_selectrespawntemplate_respawned" !="ExileCameraInUse" !="isrunning" !="bis_fnc_setunitinsignia_class" !="bis_accesscounter"
+7 "ExilePurse"
+7 "ExileBank"
+7 "ExileMoney"
+7 "ExileScore"
