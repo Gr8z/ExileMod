@@ -1744,7 +1744,7 @@ class CfgExileArsenal
 	class Exile_Item_CanOpener						{ quality = 1; price = 15; };
 	class Exile_Item_Handsaw						{ quality = 1; price = 500; };
 	class Exile_Item_Pliers							{ quality = 1; price = 350; };
-	class Exile_Item_Grinder						{ quality = 1; price = 2000; };
+	class Exile_Item_Grinder						{ quality = 1; price = 1250; };
 	class Exile_Item_Foolbox						{ quality = 3; price = 4000; };
 	class Exile_Item_Screwdriver					{ quality = 1; price = 500; };
 	class Exile_Item_CordlessScrewdriver			{ quality = 1; price = 1000; };
