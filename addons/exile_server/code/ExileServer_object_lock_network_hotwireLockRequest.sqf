@@ -24,7 +24,7 @@ try
 	{
 		throw "Player is null."; 
 	};
-	if ((_player distance _object) > 20) then 
+	if ((_player distance _object) > 10) then 
 	{
 		throw "You are too far away."; 
 	};

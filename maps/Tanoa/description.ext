@@ -1,12 +1,11 @@
-#include "GG\infiSTAR_Exile_AdminMenu.hpp"
-#include "GG\CfgRemoteExec.hpp"
 ///////////////////////////////////////////////////////////////////////////////
 // Server Settings - Modify at will
 ///////////////////////////////////////////////////////////////////////////////
-author = "[GG] Ghostz Gamerz";
-onLoadName = "[GG] ExileMod Tanoa";
-onLoadMission= "www.ghostzgamerz.com";
-loadScreen = "GG\images\load.paa"; 
+author = "Exile Mod Team";
+onLoadName = "Exile Mod";
+onLoadMission= "www.exilemod.com";
+loadScreen = "exile_assets\texture\mod\logo.paa"; 
+disableChannels[] = {0, 2};
 OnLoadIntro = "";
 OnLoadIntroTime = false;
 OnLoadMissionTime = false;
@@ -25,7 +24,7 @@ forceRotorLibSimulation = 2;
 skipLobby = 1;
 joinUnassigned = 1;
 respawn = "BASE";
-respawnDelay = 10;
+respawnDelay = 120;
 respawnDialog = 0;
 respawnOnStart = 0;
 respawnButton = 1; 
@@ -35,7 +34,7 @@ corpseLimit = 20;
 corpseRemovalMinTime = 1800;
 corpseRemovalMaxTime = 3600;
 wreckManagerMode = 0;
-wreckLimit = 10;
+wreckLimit = 2;
 wreckRemovalMinTime = 60;
 wreckRemovalMaxTime = 360;
 scriptedPlayer = 1;
@@ -44,13 +43,13 @@ enableItemsDropping = 0;
 briefing = 0;
 debriefing = 0;
 allowFunctionsLog = 1;
-enableDebugConsole = 1; 
+enableDebugConsole = 0; 
 allowFunctionsRecompile = 0;
 showSquadRadar = 0;
 showUAVFeed = 0;
 reviveDelay = 6;
 reviveForceRespawnDelay = 3;
-reviveBleedOutDelay = 10;
+reviveBleedOutDelay = 120;
 
 showHUD[] = 
 {
@@ -65,41 +64,24 @@ showHUD[] =
     false   // Squad Radar
 };
 
-class CfgSounds
+#include "config.cpp"
+
+class CfgRemoteExec
 {
-    sounds[] = {intro};
-    class intro
+    class Functions
     {
-        name = "intro";
-        sound[] = {"\GG\introsong.ogg", 1, 1};
-        titles[] = {};
+        mode = 1;
+        jip = 0;
+
+        class ExileServer_system_network_dispatchIncomingMessage
+        {
+            allowedTargets = 2;
+        };
+    };
+
+    class Commands
+    {
+        mode = 0;
+        jip = 0;
     };
 };
-
-class cfgFunctions
-{
-	#include "GG\ExAdClient\CfgFunctions.cpp"
-};
-
-class RscTitles
-{
-    #include "GG\ExAdClient\RscTitles.cpp"
-    #include "GG\kills\KillMessages.hpp"
-};
-
-class CfgHints
-{
-    #include "GG\ExAdClient\CfgHints.cpp"
-};
-
-class CfgNetworkMessages
-{
-    #include "GG\ExAdClient\CfgNetworkMessages.cpp"
-    class KillMessages
-    {
-        module = "KillMessages";
-        parameters[] = {"STRING","STRING","OBJECT","OBJECT"};
-    };
-};
-
-#include "GG\config.cpp"

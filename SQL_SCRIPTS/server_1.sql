@@ -2,7 +2,7 @@
 
 /* DELETE Inactive Players */
 DELETE FROM player
-WHERE account_uid IN (SELECT uid FROM exile_hive.account WHERE last_connect_at < NOW() - INTERVAL 7 DAY 
+WHERE account_uid IN (SELECT uid FROM account WHERE last_connect_at < NOW() - INTERVAL 7 DAY 
 AND total_connections < 10);
 
 /* DELETE Bugged Players */
@@ -24,7 +24,7 @@ DELETE FROM player
 WHERE last_updated_at < NOW() - INTERVAL 14 DAY;
 
 /* DELETE old accounts */
-DELETE FROM exile_hive.account
+DELETE FROM account
 WHERE last_connect_at < NOW() - INTERVAL 30 DAY;
 
 /* Remove empty containers */

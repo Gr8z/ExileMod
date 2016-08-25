@@ -1,16 +1,81 @@
+/*
+	///////////////////////////////////////////////////////////////////////////////
+	// Class Names
+	///////////////////////////////////////////////////////////////////////////////
 
+	Remember that item class names, group names and loot table names cannot 
+	contain spaces. Also be 100% sure to have the exact same name as in Arma,
+	as they are *case sensive*.
+
+	///////////////////////////////////////////////////////////////////////////////
+	// Item Groups
+	///////////////////////////////////////////////////////////////////////////////
+
+	You can link one group of items to loot tables.
+	One item should only be in one group.
+
+	Syntax:
+	= <Group Name>
+	<Spawn Chance Within Group>,<Item Class Name>
+
+	///////////////////////////////////////////////////////////////////////////////
+	// Propability
+	///////////////////////////////////////////////////////////////////////////////
+
+	<Spawn Chance>,<Item>
+
+	10, Banana
+	20, Tomato
+	30, Cherry
+
+	Sum of chances:
+	10 + 20 + 30 = 60 = 100%
+
+	Spawn chances:
+	Banana	10 : 60 = 10 * 100 / 60 = 16.67%
+	Tomato	20 : 60 = 20 * 100 / 60 = 33.33%
+	Cherry	30 : 60 = 30 * 100 / 60 = 50%
+
+	In words: 
+	If Exile should spawn an item of the above group, it has a 33.33%
+	chance to spawn a Banana.
+
+	///////////////////////////////////////////////////////////////////////////////
+	// Loot Tables
+	///////////////////////////////////////////////////////////////////////////////
+
+	Defines which item group spawns in which building type. The loot table itself
+	is linked with a building in exile_server_config.pbo/config/CfgBuildings. Spawn
+	chances work like for items.
+
+	Syntax:
+	> <Loot Table Name>
+	<Spawn Chance Within Loot Table>,<Group Name>
+*/
+
+
+
+/*
+	Loot Tables
+*/
+
+///////////////////////////////////////////////////////////////////////////////
+// Slums/Ghetto, Farms, Village Houses, Castle etc.
+// Spawn Guerilla things :)
+///////////////////////////////////////////////////////////////////////////////
 > CivillianLowerClass
-17, Food
+30, Trash
+28, Food
 10, Drinks
 8, Pistols
 5, PistolAmmo
 3, PistolAttachments
-9, Rifles
-5, RifleAmmo
+4, Shotguns
+3, ShotgunAmmo
 4, SMG
 3, SMGAmmo
 3, SMGAttachments
-15, CivilianClothing
+20, CivilianClothing
 11, CivilianBackpacks
 5, CivilianVests
 20, CivilianHeadgear
@@ -23,32 +88,34 @@
 // Apartments, Offices etc.
 ///////////////////////////////////////////////////////////////////////////////
 > CivillianUpperClass
-17, Food
+30, Trash
+28, Food
 10, Drinks
 8, Pistols
 5, PistolAmmo
 3, PistolAttachments
-2, Shotguns
-1, ShotgunAmmo
-10, SMG
+4, Shotguns
+3, ShotgunAmmo
+4, SMG
 3, SMGAmmo
 3, SMGAttachments
-17, Rifles
-5, RifleAmmo
-10, RifleAttachments
-10, GuerillaVests
-10, GuerillaClothing
+3, Rifles
+3, RifleAmmo
+3, RifleAttachments
+20, CivilianClothing
 11, CivilianBackpacks
-5, CivilianHeadgear
+5, CivilianVests
+20, CivilianHeadgear
 10, CivilianItems
-3, Chemlights
-3, RoadFlares
+10, Chemlights
+10, RoadFlares
 1, Restraints
 
 ///////////////////////////////////////////////////////////////////////////////
 // Kiosks, Supermarkets etc.
 ///////////////////////////////////////////////////////////////////////////////
 > Shop
+30, Trash
 15, Food
 15, Drinks
 10, Pistols
@@ -70,28 +137,30 @@
 3, IndustrialItems
 3, Restraints
 3, MedicalItems
-0.05, Magazine01
 
 ///////////////////////////////////////////////////////////////////////////////
 // Construction Sites, Warehouses, Research etc.
 ///////////////////////////////////////////////////////////////////////////////
 > Industrial
+30, Trash
 40, IndustrialItems
 25, Vehicle
 15, RoadFlares
 5, Restraints
-0.025, Magazine02
+
 ///////////////////////////////////////////////////////////////////////////////
 // Factories
 ///////////////////////////////////////////////////////////////////////////////
 > Factories
 10, Electronics
+40, Trash
 50, IndustrialItems
 
 ///////////////////////////////////////////////////////////////////////////////
 // Fuel Stations, Garages, Workshops etc.
 ///////////////////////////////////////////////////////////////////////////////
 > VehicleService
+30, Trash
 25, IndustrialItems
 40, Vehicle
 15, RoadFlares
@@ -101,7 +170,8 @@
 // Towers, Barracks, Hangars etc.
 ///////////////////////////////////////////////////////////////////////////////
 > Military
-2, CivilianItems
+100, Trash
+4, CivilianItems
 4, GuerillaItems
 3, HEGrenades
 3, UGLFlares
@@ -135,17 +205,14 @@
 2, DLCOptics
 2, DLCSupressor
 2, Bipods
-0.5, Explosives
-0.01, Magazine03
+5, Explosives
 
 ///////////////////////////////////////////////////////////////////////////////
-// Hospital, Medevac etc.
+// Hospital, Medevac etc. (Does not spawn on Altis!)
 ///////////////////////////////////////////////////////////////////////////////
 > Medical
+30, Trash
 70, MedicalItems
-10, Food
-10, Drinks
-0.08, Magazine04
 
 ///////////////////////////////////////////////////////////////////////////////
 // Light Houses + Life Guard Towers + Castles
@@ -166,7 +233,7 @@
 4, HandGrenades
 4, Restraints
 4, MedicalItems
-0.2, Explosives
+4, Explosives
 
 ///////////////////////////////////////////////////////////////////////////////
 // Ghost Hotel Buildings
@@ -174,20 +241,17 @@
 > Radiation
 10, MilitaryBackpacks
 10, MilitaryHeadgear
-20, Food
-20, Drinks
 5, Ghillies
 5, DLCGhillies
-20, Snipers
+30, Snipers
 2, SniperAmmo
 2, SniperAttachments
-20, DLCRifles
+30, DLCRifles
 2, DLCAmmo
 2, DLCOptics
 2, DLCSupressor
 4, HandGrenades
 4, Restraints
 4, MedicalItems
-1, Explosives
+10, Explosives
 4, EpicWeapons
-0.6, Phoneknife
