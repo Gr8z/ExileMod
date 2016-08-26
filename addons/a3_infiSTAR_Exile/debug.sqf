@@ -366,14 +366,14 @@ _ctrl = [_display,'RSCButton',_ctrlid] call fnc_createctrl;
 _ctrl ctrlSetText 'GLOBAL';
 _ctrl ctrlSetPosition [0,_startYpos + 1,0.25,_buttonheight];
 _ctrl ctrlCommit 0;
-_ctrl ctrlSetEventHandler['ButtonClick','[call fnc_getMainText] call admin_d0;systemChat ''<infiSTAR.de> RAN CODE ON: GLOBAL (SERVER AND ALL CLIENTS)'';true'];
+_ctrl ctrlSetEventHandler['ButtonClick','[call fnc_getMainText] call admin_d0;systemChat ''RAN CODE ON: GLOBAL (SERVER AND ALL CLIENTS)'';true'];
 
 _ctrlid = _ctrlid + 1;
 _ctrl = [_display,'RSCButton',_ctrlid] call fnc_createctrl;
 _ctrl ctrlSetText 'ALL BUT SERVER';
 _ctrl ctrlSetPosition [0,_startYpos + 1 + _buttonheight,0.25,_buttonheight];
 _ctrl ctrlCommit 0;
-_ctrl ctrlSetEventHandler['ButtonClick','[''if(!isServer)then{''+(call fnc_getMainText)+''};''] call admin_d0;systemChat ''<infiSTAR.de> RAN CODE ON: ALL BUT SERVER'';true'];
+_ctrl ctrlSetEventHandler['ButtonClick','[''if(!isServer)then{''+(call fnc_getMainText)+''};''] call admin_d0;systemChat ''RAN CODE ON: ALL BUT SERVER'';true'];
 
 
 _ctrlid = _ctrlid + 1;
@@ -381,14 +381,14 @@ _ctrl = [_display,'RSCButton',_ctrlid] call fnc_createctrl;
 _ctrl ctrlSetText 'SERVER';
 _ctrl ctrlSetPosition [0.25,_startYpos + 1,0.25,_buttonheight];
 _ctrl ctrlCommit 0;
-_ctrl ctrlSetEventHandler['ButtonClick','[call fnc_getMainText] call admin_d0_server;systemChat ''<infiSTAR.de> RAN CODE ON: SERVER'';true'];
+_ctrl ctrlSetEventHandler['ButtonClick','[call fnc_getMainText] call admin_d0_server;systemChat ''RAN CODE ON: SERVER'';true'];
 
 _ctrlid = _ctrlid + 1;
 _ctrl = [_display,'RSCButton',_ctrlid] call fnc_createctrl;
 _ctrl ctrlSetText 'SELECTED (ORANGE) TARGET';
 _ctrl ctrlSetPosition [0.25,_startYpos + 1 + _buttonheight,0.25,_buttonheight];
 _ctrl ctrlCommit 0;
-_ctrl ctrlSetEventHandler['ButtonClick','if(isPlayer SELECTED_TARGET_PLAYER)then{[call fnc_getMainText,SELECTED_TARGET_PLAYER] call admin_d0_target;systemChat format[''<infiSTAR.de> RAN CODE ON: %1'',name SELECTED_TARGET_PLAYER];};true'];
+_ctrl ctrlSetEventHandler['ButtonClick','if(isPlayer SELECTED_TARGET_PLAYER)then{[call fnc_getMainText,SELECTED_TARGET_PLAYER] call admin_d0_target;systemChat format[''RAN CODE ON: %1'',name SELECTED_TARGET_PLAYER];};true'];
 };
 
 _ctrlid = _ctrlid + 1;
@@ -396,7 +396,7 @@ _ctrl = [_display,'RSCButton',_ctrlid] call fnc_createctrl;
 _ctrl ctrlSetText 'LOCAL';
 _ctrl ctrlSetPosition [0.5,_startYpos + 1,0.25,_buttonheight];
 _ctrl ctrlCommit 0;
-_ctrl ctrlSetEventHandler['ButtonClick','(call fnc_getMainText) call fnc_admin_cc;systemChat ''<infiSTAR.de> RAN CODE ON: LOCAL'';true'];
+_ctrl ctrlSetEventHandler['ButtonClick','(call fnc_getMainText) call fnc_admin_cc;systemChat ''RAN CODE ON: LOCAL'';true'];
 
 if(_admin)then{
 _ctrlid = _ctrlid + 1;
@@ -404,7 +404,7 @@ _ctrl = [_display,'RSCButton',_ctrlid] call fnc_createctrl;
 _ctrl ctrlSetText 'CAMERAON';
 _ctrl ctrlSetPosition [0.5,_startYpos + 1 + _buttonheight,0.25,_buttonheight];
 _ctrl ctrlCommit 0;
-_ctrl ctrlSetEventHandler['ButtonClick','if(!isNull cameraOn)then{[call fnc_getMainText,cameraOn] call admin_d0_target;systemChat format[''<infiSTAR.de> RAN CODE ON: %1'',name cameraOn];};true'];
+_ctrl ctrlSetEventHandler['ButtonClick','if(!isNull cameraOn)then{[call fnc_getMainText,cameraOn] call admin_d0_target;systemChat format[''RAN CODE ON: %1'',name cameraOn];};true'];
 };
 
 _ctrlid = _ctrlid + 1;

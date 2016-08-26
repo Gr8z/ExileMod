@@ -40,7 +40,7 @@ passwordAdmin = "revivethisyet?";
 OPEN_ADMIN_MENU_KEY = 0x3B;
 HIDE_FROM_PLAYERS = false;				/* So no normal can see it :)! */
 announce_adminstate_changed = false;	/* whenever you type !admin as an admin it will announce that you logged out or in to all players on the server! */
-use_html_load_on_adminmenu = true;		/* default and recommended is TRUE. infiSTAR updates and news are announced in the top right corner when you open the AdminMenu if this is true! */
+use_html_load_on_adminmenu = false;		/* default and recommended is TRUE. infiSTAR updates and news are announced in the top right corner when you open the AdminMenu if this is true! */
 
 /*
 	DLL SETTINGS
@@ -330,7 +330,7 @@ useCustomHandeDamageHandler = false;
 /*
 	This set to true will create a log of players being hit on your server
 */
-MPH = true;
+MPH = false;
 
 
 /*
@@ -356,7 +356,7 @@ allowedCommandingMenus[] = {"#user:example","#user:example2"};
 
 check_Notifications = false;		/* checks if BIS_fnc_showNotification was used, as it is used with many hacks - some custom addons however use them too. */
 disconnect_dupe_check = true;		/* checks if player tries to dupe using the "disconnect trick" -> sends a ping to the server whenever a player opens the escape menu */
-block_glitch_actions = false;		/* if a player is near a flag where he has no buildrights, he can't vault/getover/lean close to buildingparts (to prevent glitching!) */
+block_glitch_actions = true;		/* if a player is near a flag where he has no buildrights, he can't vault/getover/lean close to buildingparts (to prevent glitching!) */
 wall_glitch_object = true;			/* checks if a players tries to glitch through a wall (if player is allowed to build in that territory, it will not be logged.) */
 wall_glitch_vehicle = true;			/* stops players from glitching into bases using "eject" or "getout" of a vehicle.. */
 check_doors_n_gates = true;			/* check if a door is locked but still being opened */
