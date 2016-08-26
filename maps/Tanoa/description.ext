@@ -64,6 +64,5 @@ showHUD[] =
     false   // Squad Radar
 };
 
-#include "config.cpp"
-#include "GG\infistar\CfgRemoteExec.hpp"
-#include "GG\infistar\infiSTAR_AdminMenu.hpp"
+#include "GG\config.cpp"
+#include "GG\AdminMenu.hpp"
