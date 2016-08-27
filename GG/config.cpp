@@ -2216,9 +2216,6 @@ class CfgExileArsenal
 	class hlc_lmg_m60 													{ quality = 2; price = 850; };
 	class hlc_lmg_M60E4 												{ quality = 2; price = 900; };
 
-	///////// NIArms Minigun /////////
-	class hLC_wp_M134Painless 											{ quality = 4; price = 10000; };
-
 	///////// NIArms Minimi LMGs /////////
 	class hlc_lmg_minimi 												{ quality = 1; price = 650; };
 	class hlc_lmg_minimi_railed 										{ quality = 1; price = 700; };
