@@ -301,6 +301,24 @@ class CookGloriousKnakworst: Exile_AbstractCraftingRecipe
 	};
 };
 
+class CookMacasCheese: Exile_AbstractCraftingRecipe
+{
+	name = "Cook Macas Cheese";
+	pictureItem = "Exile_Item_MacasCheese_Cooked";
+	requiresFire = 1;
+	returnedItems[] =
+	{
+		{1, "Exile_Item_MacasCheese_Cooked"}
+	};
+	tools[] =
+	{
+		"Exile_Item_CookingPot"
+	};
+	components[] = 
+	{
+		{1, "Exile_Item_MacasCheese"}
+	};
+};
 class CookPlasticBottleDirtyWater: Exile_AbstractCraftingRecipe
 {
 	name = "Cook Dirty Water";
@@ -3850,14 +3868,6 @@ class CfgExileEnvironment
 {
 	class Altis 
 	{
-		// A list of {position, radius} where building is not allowed at all
-		nonConstructionZones[] = {
-			{{21845.1, 20977.6, 30}, 1000};
-			{{14562.4,16925.7,17.279}, 1500};
-			
-			};
-
-
 		class FireFlies
 		{
 			// 1 = enabled, 0 = disabled
@@ -3901,35 +3911,6 @@ class CfgExileEnvironment
 		{
 			// 1 = enabled, 0 = disabled
 			enable = 1;
-
-			/*
-				Defines contaminated zones in a specific map. 
-				You can define multiple zones per map. The format
-				of the zones is:
-
-				[Position ASL(!), Full Radiation Radius, Maximum Radius]
-
-				The radius works as follows:
-
-	            |-------------------------------------------------------|
-	                                Maximum Radius
-				
-				|------------------------|
-				  Full Radiation Radius   
-
-				Within the full radiation radius, radiation factor is
-				always at a maximum. Outside of this, it lowers down
-				to no radiation smoothly.
-
-				Radiation:
-
-	            |------------------------|------------------------------|
-	            1        1      1        1     0.75    0.5     0.25    0
-			*/
-			contaminatedZones[] = 
-			{
-				{{21845.1, 20977.6, 30}, 300, 400}	// Ghost Hotel
-			};
 		};
 
 		class Temperature
@@ -3994,218 +3975,41 @@ class CfgExileEnvironment
 			daytimeTemperature[] = {-2.00,-1.77,-1.12,-0.10,1.24,2.78,4.40,6.00,7.46,8.65,9.50,9.90,9.90,9.50,8.65,7.46,6.00,4.40,2.78,1.24,-0.10,-1.12,-1.77,-2.00,-2.00};
 		};
 	};
-	
-	class Chernarus 
+
+	class Tanoa: Altis
 	{
-		// A list of {position, radius} where building is not allowed at all
-		nonConstructionZones[] = {
-			{{8347.18,5990.92,291.991}, 1000};
-			};
-
-
-		class FireFlies
+		class FireFlies: FireFlies
 		{
-			// 1 = enabled, 0 = disabled
-			enable = 0;
-
-			// At this hour fire flies begin to spawn
-			startHour = 18;
-
-			// At this hour fire flies stop spawning
-			endHour = 4;
-		};
-
-		class Anomalies
-		{
-			// 1 = enabled, 0 = disabled
-			enable = 0;
-
-			// At this hour anomalies begin to spawn
-			startHour = 19;
-
-			// At this hour anomalies stop spawning
-			endHour = 6;
-		};
-
-		class Breathing
-		{
-			// 1 = enabled, 0 = disabled
 			enable = 0;
 		};
 
-		class Snow
+		class Anomalies: Anomalies
 		{
-			// 1 = enabled, 0 = disabled
 			enable = 0;
-
-			// https://community.bistudio.com/wiki/surfaceType
-			surfaces[] = {};
 		};
 
-		class Radiation 
+		class Breathing: Breathing
 		{
-			// 1 = enabled, 0 = disabled
+			enable = 0;
+		};
+
+		class Snow: Snow
+		{
+			enable = 0;
+		};
+
+		class Radiation: Radiation
+		{
 			enable = 1;
-
-			/*
-				Defines contaminated zones in a specific map. 
-				You can define multiple zones per map. The format
-				of the zones is:
-
-				[Position ASL(!), Full Radiation Radius, Maximum Radius]
-
-				The radius works as follows:
-
-	            |-------------------------------------------------------|
-	                                Maximum Radius
-				
-				|------------------------|
-				  Full Radiation Radius   
-
-				Within the full radiation radius, radiation factor is
-				always at a maximum. Outside of this, it lowers down
-				to no radiation smoothly.
-
-				Radiation:
-
-	            |------------------------|------------------------------|
-	            1        1      1        1     0.75    0.5     0.25    0
-			*/
-			contaminatedZones[] = 
-			{
-				{{8347.18,5990.92,291.991}, 300, 400}	// radiation church
-			};
 		};
 
-		class Temperature
+		class Temperature: Temperature
 		{
-			// Temperature in °C for the time of day, per hour
-			// Add the first index to the last index, so it is 25 indizes!
 			daytimeTemperature[] = {15.93,16.89,18.42,20.40,22.68,25.10,27.48,29.63,31.40,32.66,33.32,33.80,33.80,33.32,32.66,31.40,29.63,27.48,25.10,22.68,20.40,18.42,16.89,15.93,15.93};
-		
-			// Temperature change in °C when it is 100% overcast
-			overcast = -2;
-
-			// Temperature change in °C when it is 100% raining
-			rain = -5;
-
-			// Temperature change in °C when it is 100% windy
-			wind = -1;
-
-			// Temperature change per 100m altitude in °C
-			altitude = -0.5;
-
-			// Difference from the daytime temperature to the water temperature
-			water = -5;
-		};
-	};
-
-	class Tanoa 
-	{
-		// A list of {position, radius} where building is not allowed at all
-		nonConstructionZones[] = {
-			//{{8347.18,5990.92,291.991}, 1000};
-				{{2901.51,12333.8,291.991}, 1600};
-			};
-
-
-		class FireFlies
-		{
-			// 1 = enabled, 0 = disabled
-			enable = 0;
-
-			// At this hour fire flies begin to spawn
-			startHour = 18;
-
-			// At this hour fire flies stop spawning
-			endHour = 4;
-		};
-
-		class Anomalies
-		{
-			// 1 = enabled, 0 = disabled
-			enable = 0;
-
-			// At this hour anomalies begin to spawn
-			startHour = 19;
-
-			// At this hour anomalies stop spawning
-			endHour = 6;
-		};
-
-		class Breathing
-		{
-			// 1 = enabled, 0 = disabled
-			enable = 0;
-		};
-
-		class Snow
-		{
-			// 1 = enabled, 0 = disabled
-			enable = 0;
-
-			// https://community.bistudio.com/wiki/surfaceType
-			surfaces[] = {};
-		};
-
-		class Radiation 
-		{
-			// 1 = enabled, 0 = disabled
-			enable = 1;
-
-			/*
-				Defines contaminated zones in a specific map. 
-				You can define multiple zones per map. The format
-				of the zones is:
-
-				[Position ASL(!), Full Radiation Radius, Maximum Radius]
-
-				The radius works as follows:
-
-	            |-------------------------------------------------------|
-	                                Maximum Radius
-				
-				|------------------------|
-				  Full Radiation Radius   
-
-				Within the full radiation radius, radiation factor is
-				always at a maximum. Outside of this, it lowers down
-				to no radiation smoothly.
-
-				Radiation:
-
-	            |------------------------|------------------------------|
-	            1        1      1        1     0.75    0.5     0.25    0
-			*/
-			contaminatedZones[] = 
-			{
-				{{2901.51,12333.8,291.991}, 1300, 1600}	// radiation
-			};
-		};
-
-		class Temperature
-		{
-			// Temperature in °C for the time of day, per hour
-			// Add the first index to the last index, so it is 25 indizes!
-			daytimeTemperature[] = {15.93,16.89,18.42,20.40,22.68,25.10,27.48,29.63,31.40,32.66,33.32,33.80,33.80,33.32,32.66,31.40,29.63,27.48,25.10,22.68,20.40,18.42,16.89,15.93,15.93};
-		
-			// Temperature change in °C when it is 100% overcast
-			overcast = -2;
-
-			// Temperature change in °C when it is 100% raining
-			rain = -5;
-
-			// Temperature change in °C when it is 100% windy
-			wind = -1;
-
-			// Temperature change per 100m altitude in °C
-			altitude = -0.5;
-
-			// Difference from the daytime temperature to the water temperature
-			water = -5;
 		};
 	};
 };
+
 class CfgExileHUD
 {
 	class ShortItemNames
@@ -4278,13 +4082,13 @@ class CfgExileLootSettings
 	 * the garbage collector settings of your server
 	 * CfgSettings!
 	 */
-	lifeTime = 4;
+	lifeTime = 8;
 
 	/**
 	 * Interval in seconds when the client searches for
 	 * new buildings to spawn loot in
 	 */
-	spawnInterval = 60;
+	spawnInterval = 30;
 
 	/**
 	 * This is a percentage value to determine how many loot
@@ -4298,7 +4102,7 @@ class CfgExileLootSettings
 	 *
 	 * You can also cap it at a maximum value. See below.
 	 */
-	maximumPositionCoverage = 75;
+	maximumPositionCoverage = 30;
 
  	/**
  	 * Limit the number of loot positions per building. If the 
@@ -4308,14 +4112,14 @@ class CfgExileLootSettings
  	 * This results in 30 loot positions and that is too much. So we
  	 * cap this at 10
  	 */
-	maximumNumberOfLootSpotsPerBuilding = 5;
+	maximumNumberOfLootSpotsPerBuilding = 3;
 
 	/**
 	 * Exile spawns a random number of items per loot spot. This 
 	 * is the upper cap for that. So 3 means it could spawn 1, 2 
 	 * or 3.
 	 */
-	maximumNumberOfItemsPerLootSpot = 1;
+	maximumNumberOfItemsPerLootSpot = 2;
 
 	/**
 	 * Radius in meter to spawn loot AROUND each player.
@@ -4326,7 +4130,7 @@ class CfgExileLootSettings
 	 * 50m  = Minimum
 	 * 200m = Maximum
 	 */
-	spawnRadius = 100;
+	spawnRadius = 60;
 
 	/**
 	 * Defines the radius around trader cities where the system should
@@ -4341,7 +4145,7 @@ class CfgExileLootSettings
 	 * set this to a lower value than the maximum radius of a territory,
 	 * which is 150m by default.
 	 */
-	minimumDistanceToTerritories = 100;
+	minimumDistanceToTerritories = 150;
 };
 class CfgExileMobileXM8
 {
@@ -4368,7 +4172,7 @@ class CfgExileRussianRoulette
 		Minimum amount to join a session of 
 		russian roulette
 	*/
-	buyInAmount = 500;
+	buyInAmount = 100;
 };
 class CfgFlags 
 {

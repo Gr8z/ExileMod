@@ -19,18 +19,13 @@ _lifeTime = 60 * getNumber (configFile >> "CfgSettings" >> "GarbageCollector" >>
 	}
 	else 
 	{
-		if ([(position _x), 500] call ExileClient_util_world_isSpawnZoneInRange) then 
+		if ((time - _diedAt) >= _lifeTime) then
 		{
-		    if ((time - _diedAt) >= 300) then
-		    {
-		        _x call ExileServer_system_garbageCollector_deleteObject;
-		    };
-		} else {
-		    if ((time - _diedAt) >= _lifeTime) then
-		    {
-		    	_x call ExileServer_system_garbageCollector_deleteObject;
-		    };
-		}
+			if !(isPlayer _x) then 
+			{
+				_x call ExileServer_system_garbageCollector_deleteObject;
+			};
+		};
 	};
 }
 forEach allDead;

@@ -48,14 +48,4 @@ _flagObject setVariable ["ExileTerritoryNumberOfConstructions", _data select 15,
 _flagObject setVariable ["ExileRadiusShown", false, true];
 _flagObject setVariable ["ExileFlagStolen",_flagStolen,true];
 _flagObject setVariable ["ExileFlagTexture",_flagTexture];
-
-////////////////////////
-/////  ExAd START  /////
-////////////////////////
-_vehicles = format ["loadTerritoryVehicles:%1", _territoryID] call ExileServer_system_database_query_selectFull;
-_flagObject setVariable ["ExAdVGVeh", _vehicles, true];
-////////////////////////
-/////   ExAd END    /////
-////////////////////////
-
 true
