@@ -18,5 +18,6 @@ call ExileServer_world_loadAllDatabaseContainers;
 call ExileServer_system_xm8_sendProtectionMoneyDue;
 call ExileServer_world_spawnSpawnZoneVehicles;
 call ExileServer_world_spawnVehicles;
+call ExileServer_Donators;
 "Game world initialized! Let the fun begin!" call ExileServer_util_log;
 true
