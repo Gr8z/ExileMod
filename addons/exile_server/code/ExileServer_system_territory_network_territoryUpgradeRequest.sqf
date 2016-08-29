@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_parameters","_flag","_playerObject","_databaseID","_moderators","_level","_territoryConfig","_territoryLevels","_territoryPrice","_territoryRange","_playerMoney","_player","_logging","_territoryLog"];
+private["_sessionID","_parameters","_flag","_playerObject","_databaseID","_moderators","_level","_territoryConfig","_territoryLevels","_territoryPrice","_territoryRange","_playerMoney","_logging","_territoryLog"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
 _flag = _parameters select 0;
@@ -50,7 +50,7 @@ try
 	};
 	_playerMoney = _playerMoney - _territoryPrice;
 	_playerObject setVariable ["ExileMoney", _playerMoney, true];
-	format["setPlayerMoney:%1:%2", _playerMoney, _player getVariable ["ExileDatabaseID", 0]] call ExileServer_system_database_query_fireAndForget;
+	format["setPlayerMoney:%1:%2", _playerMoney, _playerObject getVariable ["ExileDatabaseID", 0]] call ExileServer_system_database_query_fireAndForget;
 	_flag setVariable ["ExileTerritoryLevel",_level + 1, true];
 	_flag setVariable ["ExileTerritorySize",_territoryRange, true];
 	format ["setTerritoryLevel:%1:%2",_level + 1,_databaseID] call ExileServer_system_database_query_fireAndForget;
