@@ -1237,7 +1237,7 @@ class UpgradeToWoodWindow: Exile_AbstractCraftingRecipe
 		{2, "Exile_Item_WoodPlank"}
 	};
 };
-class CraftPopTabs: Exile_AbstractCraftingRecipe
+/*class CraftPopTabs: Exile_AbstractCraftingRecipe
 {
 	name = "Make Money";
 	pictureItem = "Exile_Item_Can_Empty";
@@ -1252,7 +1252,7 @@ class CraftPopTabs: Exile_AbstractCraftingRecipe
 		{1, "Exile_Item_Magazine03"},
 		{1, "Exile_Item_Magazine04"}
 	};
-};
+};*/
 class Laserdesignator: Exile_AbstractCraftingRecipe
 {
     name = "Craft Laserdesignator";
@@ -1647,7 +1647,7 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// Money Item for the 4 Magazines
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Item_Can_Empty						{ quality = 1; price = 500000; sellPrice = 500000; };
+	//class Exile_Item_Can_Empty						{ quality = 1; price = 500000; sellPrice = 500000; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Static MGs
