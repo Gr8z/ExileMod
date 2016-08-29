@@ -37,7 +37,7 @@ _weaponClassNames = [];
 	};
 }
 forEach _arsenal;
-if ((count _weaponClassNames) > 0) then 
+/*if ((count _weaponClassNames) > 0) then 
 {
 	for "_i" from 0 to 100 do 
 	{
@@ -48,4 +48,5 @@ if ((count _weaponClassNames) > 0) then
 	"To solve this, please remove the following weapons from your loot tables and trader config OR replace them with their non-attachment equivalent:" call ExileServer_util_log;
 	format ["%1", _weaponClassNames] call ExileServer_util_log;
 	"Example: Use arifle_Katiba_F instead of arifle_Katiba_ACO_pointer_snds_F." call ExileServer_util_log;
+	*/
 };
