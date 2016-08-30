@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_parameters","_flag","_playerObject","_databaseID","_moderators","_level","_territoryConfig","_territoryLevels","_territoryPrice","_territoryRange","_playerMoney","_logging","_territoryLog"];
+private["_sessionID","_parameters","_flag","_playerObject","_databaseID","_moderators","_level","_territoryConfig","_territoryLevels","_territoryPrice","_territoryRange","_playerMoney","_logging","_territoryLog","_playerRespect","_territoryRespectPrice"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
 _flag = _parameters select 0;
@@ -47,6 +47,12 @@ try
 	if (_playerMoney < _territoryPrice) then
 	{
 		throw "Not enough pop tabs!";
+	};
+	_playerRespect = _playerObject getVariable ["ExileScore",0];
+	_territoryRespectPrice = (_territoryConfig select _level) select 3;
+	if (_playerRespect < _territoryRespectPrice) then
+	{
+		throw "Not enough Respect!";
 	};
 	_playerMoney = _playerMoney - _territoryPrice;
 	_playerObject setVariable ["ExileMoney", _playerMoney, true];

@@ -3950,17 +3950,17 @@ class CfgTerritories
 	// Level 1 is allways for Pop Tabs, >= 2 for Respect
 	prices[] = 
 	{
-		// Purchase Price 		Radius 		Number of Objects
-		{5000,					15,			30 					}, // Level 1
-		{10000,					30,			60 					}, // Level 2 
-		{15000,					45,			90 					}, // Level 3
-		{20000,					60,			120					}, // Level 4
-		{25000,					75,			150					}, // Level 5
-		{30000,					90,			180					}, // Level 6
-		{35000,					105,		210					}, // Level 7
-		{40000,					120,		240					}, // Level 8
-		{45000,					135,		270					}, // Level 9
-		{50000,					150,		300					}  // Level 10
+		// Purchase Price 	Radius 		Number of Objects 	Respect	
+		{5000,				15,			30, 				10000		}, // Level 1
+		{10000,				30,			60, 				20000		}, // Level 2 
+		{15000,				45,			90, 				30000		}, // Level 3
+		{20000,				60,			120,				40000		}, // Level 4
+		{25000,				75,			150,				50000		}, // Level 5
+		{30000,				90,			180,				60000		}, // Level 6
+		{35000,				105,		210,				70000		}, // Level 7
+		{40000,				120,		240,				80000		}, // Level 8
+		{45000,				135,		270,				90000		}, // Level 9
+		{50000,				150,		300,				100000		}  // Level 10
 	};
 
 	// A shortcut of the above maximum radius
