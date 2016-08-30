@@ -40,7 +40,7 @@ if(ExAd_HALOPARACHUTE_SAFE_MODE)then{
 };
 
 if(ExAd_HALOPARACHUTE_USE_KEY_ACTIONS)then{
-	hint localize "STR_ExAd_HALOPARACHUTE_INFO_DETACH"
+	hint localize "You can eject from parachute with: Alt Shift x"
 };
 
 true

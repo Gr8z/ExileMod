@@ -33,14 +33,14 @@ if(isNil "ExAd_VG_ACCESS_LEVEL")then{ExAd_VG_ACCESS_LEVEL = 1;};
 
 if(isNil "ExAd_HACKING_FAILED_HACK")then{ExAd_VG_ACCESS_LEVEL = 1;}; /*Needs to be here if peolpe don't use the VirtualGarage*/
 
-["STR_ExAd_HACKING_NOTI_MAX_TERRITORY_HACKS_REACHED", "Connection failed! Territory Wi-Fi is down!"] call ExAd_fnc_localize;
-["STR_ExAd_HACKING_NOTI_TERRITORY_ONE_HACK", "Wi-Fi occupied!!"] call ExAd_fnc_localize;
-["STR_ExAd_HACKING_NOTI_MAX_SIM_HACKS", "The laptop overloaded and got destroyed! Another hacker is already using the grid."] call ExAd_fnc_localize;
-["STR_ExAd_HACKING_NOTI_NO_PLAYER_PRESENT", "No Wi-Fi available!"] call ExAd_fnc_localize;
-["STR_ExAd_HACKING_HINT_TITLE", "Hack Activity"] call ExAd_fnc_localize;
-["STR_ExAd_HACKING_HINT_HACK_START", "A brute force hack is detected on the grid!"] call ExAd_fnc_localize;
-["STR_ExAd_HACKING_NOTI_VG_SUCCESS", "Hack successful! The Virtual Garage unloaded a %1"] call ExAd_fnc_localize;
-["STR_ExAd_HACKING_NOTI_VG_NO_VEH", "Hack successful! No vehicles were stored in the Virtual Garage."] call ExAd_fnc_localize;
-["STR_ExAd_HACKING_NOTI_SAFE_SUCCESS", "Hack successful! The safe is now unlocked."] call ExAd_fnc_localize;
-["STR_ExAd_HACKING_NOTI_INTERUPTED", "Hack has been interupted"] call ExAd_fnc_localize;
-["STR_ExAd_HACKING_NOTI_FAILED", "Hack failed! Circuits overloaded!"] call ExAd_fnc_localize;
+["Connection failed! Territory Wi-Fi is down!", "Connection failed! Territory Wi-Fi is down!"] call ExAd_fnc_localize;
+["Wi-Fi occupied!!", "Wi-Fi occupied!!"] call ExAd_fnc_localize;
+["The laptop overloaded and got destroyed! Another hacker is already using the grid.", "The laptop overloaded and got destroyed! Another hacker is already using the grid."] call ExAd_fnc_localize;
+["No Wi-Fi available!", "No Wi-Fi available!"] call ExAd_fnc_localize;
+["Hack Activity", "Hack Activity"] call ExAd_fnc_localize;
+["A brute force hack is detected on the grid!", "A brute force hack is detected on the grid!"] call ExAd_fnc_localize;
+["Hack successful! The Virtual Garage unloaded a %1", "Hack successful! The Virtual Garage unloaded a %1"] call ExAd_fnc_localize;
+["Hack successful! No vehicles were stored in the Virtual Garage.", "Hack successful! No vehicles were stored in the Virtual Garage."] call ExAd_fnc_localize;
+["Hack successful! The safe is now unlocked.", "Hack successful! The safe is now unlocked."] call ExAd_fnc_localize;
+["Hack has been interupted", "Hack has been interupted"] call ExAd_fnc_localize;
+["Hack failed! Circuits overloaded!", "Hack failed! Circuits overloaded!"] call ExAd_fnc_localize;
