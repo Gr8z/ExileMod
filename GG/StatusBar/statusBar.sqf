@@ -1,43 +1,38 @@
 waitUntil {!(isNull (findDisplay 46))};
 disableSerialization;
 
-	_rscLayer = "GGStatusBar" call BIS_fnc_rscLayer;
-	_rscLayer cutRsc["GGStatusBar","PLAIN"];
-	[] spawn 
-	{
+_rscLayer = "GGStatusBar" call BIS_fnc_rscLayer;
+_rscLayer cutRsc["GGStatusBar","PLAIN"];
 
-		uiSleep 5;
-		//set the color values.
-		//Additional color codes can be found here:  http://html-color-codes.com/
-		_colourDefault 	= parseText "#ffffff"; //set your default colour here
-		_colourExtra	= parseText "#38bee1";
-		_colour108		= parseText "#FF7000";
-		_colour107		= parseText "#FF9000";
-		_colour106		= parseText "#FFBB00";
-		_colour105		= parseText "#FFCC00";
-		_colour104		= parseText "#81CCDD";
-		_colour103		= parseText	"#33AACC";
-		_colour102		= parseText "#3388CC";
-		_colour101		= parseText "#3366CC";
-		_colour100 		= parseText "#336600";
-		_colour90 		= parseText "#339900";
-		_colour80 		= parseText "#33CC00";
-		_colour70 		= parseText "#33FF00";
-		_colour60 		= parseText "#66FF00";
-		_colour50 		= parseText "#CCFF00";
-		_colour40 		= parseText "#CCCC00";
-		_colour30 		= parseText "#CC9900";
-		_colour20 		= parseText "#CC6600";
-		_colour10 		= parseText "#CC3300";
-		_colour0 		= parseText "#CC0000";
-		_colourDead 	= parseText "#000000";
-		_uid = getPlayerUID player;	
-	
-		
-	while {true} do 
-	{
-	
-		uiSleep 0.5;
+uiSleep 5;
+//set the color values.
+//Additional color codes can be found here:  http://html-color-codes.com/
+_colourDefault 	= parseText "#ffffff"; //set your default colour here
+_colourExtra	= parseText "#38bee1";
+_colour108		= parseText "#FF7000";
+_colour107		= parseText "#FF9000";
+_colour106		= parseText "#FFBB00";
+_colour105		= parseText "#FFCC00";
+_colour104		= parseText "#81CCDD";
+_colour103		= parseText	"#33AACC";
+_colour102		= parseText "#3388CC";
+_colour101		= parseText "#3366CC";
+_colour100 		= parseText "#336600";
+_colour90 		= parseText "#339900";
+_colour80 		= parseText "#33CC00";
+_colour70 		= parseText "#33FF00";
+_colour60 		= parseText "#66FF00";
+_colour50 		= parseText "#CCFF00";
+_colour40 		= parseText "#CCCC00";
+_colour30 		= parseText "#CC9900";
+_colour20 		= parseText "#CC6600";
+_colour10 		= parseText "#CC3300";
+_colour0 		= parseText "#CC0000";
+_colourDead 	= parseText "#000000";
+_uid 			= getPlayerUID player;	
+
+GGStatusBar =
+{
 				
 		//moved the creation of the status bar inside the loop and create it if it is null,
 		//this is to handle instance where the status bar is disappearing 
@@ -69,18 +64,18 @@ disableSerialization;
 		_minutes = (_time - (_hours * 60));
 		
 		switch(_minutes) do
-	{
-		case 9: {_minutes = "09"};
-		case 8: {_minutes = "08"};
-		case 7: {_minutes = "07"};
-		case 6: {_minutes = "06"};
-		case 5: {_minutes = "05"};
-		case 4: {_minutes = "04"};
-		case 3: {_minutes = "03"};
-		case 2: {_minutes = "02"};
-		case 1: {_minutes = "01"};
-		case 0: {_minutes = "00"};
-	};
+		{
+			case 9: {_minutes = "09"};
+			case 8: {_minutes = "08"};
+			case 7: {_minutes = "07"};
+			case 6: {_minutes = "06"};
+			case 5: {_minutes = "05"};
+			case 4: {_minutes = "04"};
+			case 3: {_minutes = "03"};
+			case 2: {_minutes = "02"};
+			case 1: {_minutes = "01"};
+			case 0: {_minutes = "00"};
+		};
 		
 		
 				
@@ -119,10 +114,9 @@ disableSerialization;
 		if(_hunger < 1) then{_colourHunger =  _colourDead;};
 		
 				
-				//Thirst
+		//Thirst
 		_colourThirst = _colourDefault;		
 		switch true do{
-		
 			case(_thirst >= 100) : {_colourThirst = _colour101;};
 			case((_thirst >= 90) && (_thirst < 100)) :  {_colourThirst =  _colour102;};
 			case((_thirst >= 80) && (_thirst < 90)) :  {_colourThirst =  _colour103;};
@@ -160,7 +154,7 @@ disableSerialization;
 		
 		//display the information 
 		((uiNamespace getVariable "GGStatusBar")displayCtrl 55554)ctrlSetStructuredText parseText 
-			format["
+		format["
 			<t color='%10'><img size='1.6' image='GG\images\icons\players.paa' color='%19'/> %2</t>
 			<t color='%10'><img size='1.0' image='GG\images\icons\health.paa' color='%19'/> %3%1</t> 
 			<t color='%10'><img size='1.0' image='GG\images\icons\poptab_ca.paa' color='%19'/> %4</t> 
@@ -169,27 +163,25 @@ disableSerialization;
 			<t color='%10'><img size='1.0' image='GG\images\icons\exile.paa' color='%19'/> %9</t>
 			<t color='%10'>FPS:  %7</t>
 			<t color='%10'><img size='1.6' image='GG\images\icons\restart.paa' color='%19'/>%17:%18</t>",
-			
-					"%", 
-					count playableUnits,
-					_damage,
-					_wallet,
-					_hunger, 
-					_thirst, 
-					_serverFPS, 
-					_energyPercent, 
-					_stamina, 
-					_colourDefault,
-					_colourDamage,
-					_colourHunger,
-					_colourThirst,
-					_colourEnergy,
-					_colourStamina,
-					format["%1/%2",_xx,_yy],
-					_hours,
-					_minutes,
-					_colourExtra
-				];
-		
-		}; 
-};
+			"%", 
+			count playableUnits,
+			_damage,
+			_wallet,
+			_hunger, 
+			_thirst, 
+			_serverFPS, 
+			_energyPercent, 
+			_stamina, 
+			_colourDefault,
+			_colourDamage,
+			_colourHunger,
+			_colourThirst,
+			_colourEnergy,
+			_colourStamina,
+			format["%1/%2",_xx,_yy],
+			_hours,
+			_minutes,
+			_colourExtra
+		];
+}; 
+statusBarRefresh = [1, GGStatusBar, [], true] call ExileClient_system_thread_addtask;

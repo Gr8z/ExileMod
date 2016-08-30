@@ -2809,8 +2809,6 @@ class CfgExileArsenal
 	class Exile_Car_TowTractor_White									{ quality = 1; price = 1800; };
 };
 
-
-
 class CfgExileCustomCode 
 {
 	ExileClient_gui_xm8_slide = 			"GG\custom\ExileClient_gui_xm8_slide.sqf";
