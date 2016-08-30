@@ -17,6 +17,26 @@ class Header
     maxPlayers = 100;
 };
 
+class CfgFunctions
+{
+	#include "GG\ExAdClient\CfgFunctions.cpp"
+};
+
+class CfgHints
+{
+	#include "GG\ExAdClient\CfgHints.cpp"
+};
+
+class CfgNetworkMessages
+{
+	#include "GG\ExAdClient\CfgNetworkMessages.cpp"
+};
+
+class RscTitles
+{
+    #include "GG\StatusBar\statusBar.hpp"
+};
+
 ///////////////////////////////////////////////////////////////////////////////
 // Exile Settings - Do not change these!
 ///////////////////////////////////////////////////////////////////////////////
