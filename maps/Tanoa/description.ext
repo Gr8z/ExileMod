@@ -17,8 +17,6 @@ class Header
     maxPlayers = 100;
 };
 
-#include "ExAdClient\ExAd.cpp"
-
 class CfgFunctions
 {
 	#include "GG\ExAdClient\CfgFunctions.cpp"
