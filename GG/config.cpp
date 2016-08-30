@@ -17,6 +17,7 @@ class CfgRemoteExec
 		jip = 0;
 		class fnc_AdminReq { allowedTargets=2; };
 		class ExileServer_system_network_dispatchIncomingMessage { allowedTargets=2; };
+		class ExAdServer_fnc_clientRequest { allowedTargets=2; };
 	};
 	class Commands
 	{
@@ -2812,20 +2813,9 @@ class CfgExileArsenal
 
 class CfgExileCustomCode 
 {
-	/*
-		You can overwrite every single file of our code without touching it.
-		To do that, add the function name you want to overwrite plus the 
-		path to your custom file here. If you wonder how this works, have a
-		look at our bootstrap/fn_preInit.sqf function.
-
-		Simply add the following scheme here:
-
-		<Function Name of Exile> = "<New File Name>";
-
-		Example:
-
-		ExileClient_util_fusRoDah = "myaddon\myfunction.sqf";
-	*/
+	ExileServer_system_territory_database_load = "GG\GG\ExAdClient\VirtualGarage\CustomCode\ExileServer_system_territory_database_load.sqf";
+	ExileClient_gui_xm8_slide = "GG\GG\ExAdClient\XM8\CustomCode\ExileClient_gui_xm8_slide.sqf";
+	ExileClient_gui_xm8_show = "GG\GG\ExAdClient\XM8\CustomCode\ExileClient_gui_xm8_show.sqf";
 };
 class CfgExileEnvironment
 {
@@ -3230,6 +3220,12 @@ class CfgInteractionMenus
 				condition = "call ExileClient_object_vehicle_interaction_show";
 				action = "_this call ExileClient_object_vehicle_drain";
 			};
+			class PackDeployedVehicle: ExileAbstractAction
+			{
+				title = "Pack Vehicle";
+				condition = "call ExAd_XM8_DV_fnc_canPack";
+				action = "call ExAd_XM8_DV_fnc_pack";
+			};
 		};
 	};
 
@@ -3362,6 +3358,12 @@ class CfgInteractionMenus
 				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo 0)";
 				action = "_this spawn ExileClient_object_lock_setPin";
 			};
+			class HackSafe : ExileAbstractAction
+			{
+				title = "Hack Safe";
+				condition = "call ExAd_fnc_canHackSafe";
+				action = "_this spawn ExAd_fnc_startHack";
+			};
 		};
 	};
 
@@ -3377,6 +3379,12 @@ class CfgInteractionMenus
 				title = "CCTV Access";
 				condition = "((ExileClientInteractionObject animationPhase 'LaptopLidRotation') >= 0.5)";
 				action = "_this call ExileClient_gui_baseCamera_show";
+			};
+			class StopHack: ExileAbstractAction
+			{
+				title = "Interupt Hack";
+				condition = "(ExileClientInteractionObject getVariable ['ExAd_HACKING_IN_PROGRESS', false])";
+				action = "_this spawn ExAd_fnc_stopHack";
 			};
 		};
 	};
@@ -3483,6 +3491,19 @@ class CfgInteractionMenus
 				action = "_this call ExileClient_object_construction_repair";
 			};
 
+			class Grind : ExileAbstractAction
+			{
+				title = "Grind Lock";
+				condition = "call ExAd_fnc_canGrindLock";
+				action = "_this spawn ExAd_fnc_grindLock";
+			};
+			
+			class RestoreLock : ExileAbstractAction
+			{
+				title = "Restore Lock";
+				condition = "_object call ExAd_fnc_canRestoreLock";
+				action = "_this spawn ExAd_fnc_restoreLock";
+			};
 		};
 	};
 
@@ -3539,6 +3560,12 @@ class CfgInteractionMenus
 				title = "Restore Flag";
 				condition = "((ExileClientInteractionObject getvariable ['ExileFlagStolen',0]) isEqualTo 1)";
 				action = "['restoreFlagRequest', [netID ExileClientInteractionObject]] call ExileClient_system_network_send";
+			};
+			class HackVG : ExileAbstractAction
+			{
+				title = "Hack Virtual Garage";
+				condition = "call ExAd_fnc_canHackVG";
+				action = "_this spawn ExAd_fnc_startHack";
 			};
 		};
 	};
@@ -3620,6 +3647,12 @@ class CfgInteractionMenus
 				title = "Flip";
 				condition = "true";
 				action = "_this call ExileClient_object_vehicle_flip";
+			};
+			class PackDeployedVehicle: ExileAbstractAction
+			{
+				title = "Pack Bike";
+				condition = "call ExAd_XM8_DV_fnc_canPack";
+				action = "call ExAd_XM8_DV_fnc_pack";
 			};
 		};
 	};
@@ -6411,6 +6444,78 @@ class CfgVehicleTransport
 		};
 	};
 };
+
+class CfgXM8
+{
+	extraApps[] = {"ExAd_VG","ExAd_Info","ExAd_CHVD","ExAd_Journal","ExAd_Bike","ExAd_Quad","ExAd_SB"};
+	
+	class ExAd_VG 
+	{
+		title = "Virtual Garage";
+		controlID = 50000;					//IDC:50000 -> 50015 || These need to be unique and out of range from each other 
+		logo = "GG\ExAdClient\XM8\Apps\VG\Icon_VG.paa";
+		onLoad = "GG\ExAdClient\XM8\Apps\VG\onLoad.sqf";
+		onOpen = "GG\ExAdClient\XM8\Apps\VG\onOpen.sqf";
+		onClose = "GG\ExAdClient\XM8\Apps\VG\onClose.sqf";
+	};	
+	class ExAd_Info 
+	{
+		title = "Server Info";
+		controlID = 50100;					//IDC:50100 -> 50102 || These need to be unique and out of range from each other
+		logo = "GG\ExAdClient\XM8\Apps\Info\Icon_SI.paa";
+		onLoad = "GG\ExAdClient\XM8\Apps\Info\onLoad.sqf";
+		onOpen = "GG\ExAdClient\XM8\Apps\Info\onOpen.sqf";
+		onClose = "GG\ExAdClient\XM8\Apps\Info\onClose.sqf";
+	};	
+	class ExAd_CHVD 
+	{
+		title = "View Distance Settings";
+		controlID = 50200;					//IDC:50200 -> 50102 || These need to be unique and out of range from each other
+		config = "GG\ExAdClient\XM8\Apps\CHVD\config.sqf";
+		logo = "GG\ExAdClient\XM8\Apps\CHVD\Icon_CHVD.paa";
+		onLoad = "GG\ExAdClient\XM8\Apps\CHVD\onLoad.sqf";
+		onOpen = "GG\ExAdClient\XM8\Apps\CHVD\onOpen.sqf";
+		onClose = "GG\ExAdClient\XM8\Apps\CHVD\onClose.sqf";
+	};		
+	class ExAd_Journal 
+	{
+		title = "Journal";
+		controlID = 50300;					//IDC:50300 -> 50305 || These need to be unique and out of range from each other
+		config = "GG\ExAdClient\XM8\Apps\Journal\config.sqf";
+		logo = "GG\ExAdClient\XM8\Apps\Journal\Icon_Journal.paa";
+		onLoad = "GG\ExAdClient\XM8\Apps\Journal\onLoad.sqf";
+		onOpen = "GG\ExAdClient\XM8\Apps\Journal\onOpen.sqf";
+		onClose = "GG\ExAdClient\XM8\Apps\Journal\onClose.sqf";
+	};
+	class ExAd_Bike
+	{
+		title = "Deploy Bike";
+		config = "GG\ExAdClient\XM8\Apps\DeployVehicle\config.sqf";
+		bambiState = 0;
+		vehicleClass = "Exile_Bike_MountainBike";
+		recipe[] = {{"Exile_Item_ExtensionCord",-1}};
+		packable = 1;
+		autoCleanUp = 1;
+		quickFunction = "['ExAd_Bike'] call ExAd_XM8_DV_fnc_spawnVehicle";
+	};
+	class ExAd_Quad
+	{
+		title = "Deploy Quad";
+		bambiState = 0;
+		vehicleClass = "Exile_Bike_QuadBike_Fia";
+		recipe[] = {{"Exile_Item_ExtensionCord",1}};
+		packable = 1;
+		quickFunction = "['ExAd_Quad'] call ExAd_XM8_DV_fnc_spawnVehicle";
+	};
+	class ExAd_SB 
+	{
+		title = "Statsbar Settings";
+		controlID = 50400;					//IDC:50400 -> 50475 || These need to be unique and out of range from each other
+		logo = "GG\ExAdClient\XM8\Apps\SB_Settings\Icon_SB.paa";
+		onLoad = "GG\ExAdClient\XM8\Apps\SB_Settings\onLoad.sqf";
+	};
+}; 
+
 class CfgVon
 {
 	// self explanitory isnt it
