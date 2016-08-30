@@ -25,16 +25,16 @@ if(isNull _object || isNull _player)exitWith{false};
 _flag = ((getPos _object) nearObjects ["Exile_Construction_Flag_Static", 150]) select 0;
 
 if(ExAd_HACKING_PLAYER_ONLINE && !([_flag] call ExAdServer_fnc_territoryPlayerPresent))exitWith{
-	["No Wi-Fi available!" ,0,0.6,2,0] remoteExec ["BIS_fnc_dynamicText",owner _player];
+	[STR_ExAd_HACKING_NOTI_NO_PLAYER_PRESENT ,0,0.6,2,0] remoteExec ["BIS_fnc_dynamicText",owner _player];
 };
 
 if(_flag getVariable ["ExAd_HACKS_SUCCEEDED",0] >= ExAd_HACKING_TERRITORY_MAX)exitWith{
-	["Connection failed! Territory Wi-Fi is down!" ,0,0.6,2,0] remoteExec ["BIS_fnc_dynamicText",owner _player];
+	[STR_ExAd_HACKING_NOTI_MAX_TERRITORY_HACKS_REACHED ,0,0.6,2,0] remoteExec ["BIS_fnc_dynamicText",owner _player];
 };
 
 _laptops = nearestObjects [getPos _object, ["Exile_Construction_Laptop_Static"], 200];
 if(({(_x getVariable ["ExAd_HACKING_IN_PROGRESS", false])}count _laptops) >= 1)exitWith{
-		["Wi-Fi occupied!!" ,0,0.6,2,0] remoteExec ["BIS_fnc_dynamicText",owner _player];
+		[STR_ExAd_HACKING_NOTI_TERRITORY_ONE_HACK,0,0.6,2,0] remoteExec ["BIS_fnc_dynamicText",owner _player];
 		false
 };
 
@@ -59,12 +59,12 @@ _player removeItem "Exile_Item_Laptop";
 	params ["_object","_player","_laptop","_flag","_markers","_marker","_success","_ticks","_newSize","_destroy","_msg"];
 	UISleep 2;
 	
-	(parseText (format["<t color='%1' size='%2' font='%3'>%4</t><br/><t color='%5' size='%6' font='%7'>%8</t>", ExAd_Hint_Title_Color, ExAd_Hint_Title_Size, ExAd_Hint_Title_Font,"Hack Activity", ExAd_Hint_Msg_Color, ExAd_Hint_Msg_Size, ExAd_Hint_Msg_Font, "A brute force hack is detected on the grid!"])) remoteExec ["hint", -2];
+	(parseText (format["<t color='%1' size='%2' font='%3'>%4</t><br/><t color='%5' size='%6' font='%7'>%8</t>", ExAd_Hint_Title_Color, ExAd_Hint_Title_Size, ExAd_Hint_Title_Font,STR_ExAd_HACKING_HINT_TITLE, ExAd_Hint_Msg_Color, ExAd_Hint_Msg_Size, ExAd_Hint_Msg_Font, STR_ExAd_HACKING_HINT_HACK_START])) remoteExec ["hint", -2];
 	
 	if(ExAd_HACKS_IN_PROGRESS >= ExAd_HACKING_ALLOWED_HACKS)exitWith{
 		_laptop setVariable ["ExAd_HACKING_IN_PROGRESS", false, true];
 		_laptop setDamage 1;
-		[format["The laptop overloaded and got destroyed! Another hacker is already using the grid."],0,0.6,2,0] remoteExec ["BIS_fnc_dynamicText",owner _player];
+		[format[STR_ExAd_HACKING_NOTI_MAX_SIM_HACKS],0,0.6,2,0] remoteExec ["BIS_fnc_dynamicText",owner _player];
 		false
 	};
 	
@@ -123,26 +123,26 @@ _player removeItem "Exile_Item_Laptop";
 					_displayName = getText(ConfigFile >> "CfgVehicles" >> typeOf _vehObj >> "displayName");
 					["Hacking", format["Hack Successful: Territory - %1| Virtual Garage - %2(%3)",_flag getVariable ["ExileTerritoryName", "Unknown"], _displayName, _objId]] call ExAdServer_fnc_log;
 					
-					format["Hack successful! The Virtual Garage unloaded a %1", _displayName]
+					format[STR_ExAd_HACKING_NOTI_VG_SUCCESS, _displayName]
 				}else{
 					["Hacking", format["Hack Successful: Territory - %1| Virtual Garage - No Vehicle",_flag getVariable ["ExileTerritoryName", "Unknown"]]] call ExAdServer_fnc_log;
-					"Hack successful! No vehicles were stored in the Virtual Garage."
+					STR_ExAd_HACKING_NOTI_VG_NO_VEH
 				}
 			}
 		}else{
 			["Hacking", format["Hack Successful: Territory - %1| Safe(%2) opened",_flag getVariable ["ExileTerritoryName", "Unknown"], _object getVariable ["ExileDatabaseID", -1]]] call ExAdServer_fnc_log;
 		
 			_object setVariable ["ExileIsLocked",0,true];
-			"Hack successful! The safe is now unlocked."
+			STR_ExAd_HACKING_NOTI_SAFE_SUCCESS
 		}
 	}else{
 		if(_laptop getVariable ["ExAd_HACK_INTERUPTED",false])then{
 			["Hacking", format["Hack Interupted: Territory - %1",_flag getVariable ["ExileTerritoryName", "Unknown"]]] call ExAdServer_fnc_log;
-			"Hack has been interupted"
+			STR_ExAd_HACKING_NOTI_INTERUPTED
 		}else{
 			_destroy = true;
 			["Hacking", format["Hack Failed: Territory - %1",_flag getVariable ["ExileTerritoryName", "Unknown"]]] call ExAdServer_fnc_log;
-			"Hack failed! Circuits overloaded!"
+			STR_ExAd_HACKING_NOTI_FAILED
 		}
 	};
 	
