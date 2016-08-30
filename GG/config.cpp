@@ -5920,9 +5920,9 @@ class CfgTrading
 	class requiredRespect 
 	{
 		Level1 = -9999999;
-		Level2 = 10000;
-		Level3 = 20000;
-		Level4 = 40000;
+		Level2 = 15000;
+		Level3 = 25000;
+		Level4 = 50000;
 	};
 };
 
