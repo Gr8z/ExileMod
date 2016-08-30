@@ -1,10 +1,10 @@
 ///////////////////////////////////////////////////////////////////////////////
 // Server Settings - Modify at will
 ///////////////////////////////////////////////////////////////////////////////
-author = "Exile Mod Team";
-onLoadName = "Exile Mod";
-onLoadMission= "www.exilemod.com";
-loadScreen = "exile_assets\texture\mod\logo.paa"; 
+author = "Ghostz Gamerz";
+onLoadName = "Ghostz Gamerz Exile mod";
+onLoadMission= "www.ghostzgamerz.com";
+loadScreen = "GG\images\logo.jpg"; 
 disableChannels[] = {0, 2};
 OnLoadIntro = "";
 OnLoadIntroTime = false;

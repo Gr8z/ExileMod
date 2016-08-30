@@ -7,6 +7,17 @@
 
 if (!hasInterface || isServer) exitWith {};
 
+_pic = "GG\images\logo.paa";
+[
+    '<img align=''left'' size=''1.0'' shadow=''1'' image='+(str(_pic))+' />',
+    safeZoneX+0.027,
+    safeZoneY+safeZoneH-0.1,
+    99999,
+    0,
+    0,
+    3090
+] spawn bis_fnc_dynamicText;
+
 // 76 NPCs
 private _npcs = [
 ["Exile_Trader_WasteDump", ["Acts_CivilListening_2"], "Exile_Trader_WasteDump", "Default", [[],[],[],["U_I_C_Soldier_Bandit_4_F",[]],[],[],"H_Hat_grey","",[],["","","","","",""]], [2253.92, 8581.53, 1.44809], [-0.031831, 0.999493, 0], [0, 0, 1]],
