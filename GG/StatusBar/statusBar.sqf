@@ -55,7 +55,7 @@ disableSerialization;
 		//_damage = (round(_damage * 100));
 		_hunger = round (ExileClientPlayerAttributes select 2);
 		_thirst = round (ExileClientPlayerAttributes select 3);
-		_wallet = ExileClientPlayerMoney;
+		_wallet = (player getVariable ["ExileMoney", 0]);
 		_stamina = ExileClientPlayerScore;
 		_energy = 100;
 		_energyPercent = 100;
