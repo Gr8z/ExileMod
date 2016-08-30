@@ -3488,20 +3488,6 @@ class CfgInteractionMenus
 				condition = "(!((ExileClientInteractionObject getVariable ['ExileConstructionDamage',0]) isEqualTo 0)) && (call ExileClient_util_world_isInOwnTerritory)";
 				action = "_this call ExileClient_object_construction_repair";
 			};
-
-			class Grind : ExileAbstractAction
-			{
-				title = "Grind Lock";
-				condition = "call ExAd_fnc_canGrindLock";
-				action = "_this spawn ExAd_fnc_grindLock";
-			};
-			
-			class RestoreLock : ExileAbstractAction
-			{
-				title = "Restore Lock";
-				condition = "_object call ExAd_fnc_canRestoreLock";
-				action = "_this spawn ExAd_fnc_restoreLock";
-			};
 		};
 	};
 
@@ -6445,7 +6431,7 @@ class CfgVehicleTransport
 
 class CfgXM8
 {
-	extraApps[] = {"ExAd_VG","ExAd_Info","ExAd_CHVD","ExAd_Journal","ExAd_Bike","ExAd_Quad","ExAd_SB"};
+	extraApps[] = {"ExAd_VG","ExAd_Info","ExAd_CHVD","ExAd_Journal","ExAd_Quad"};
 	
 	class ExAd_VG 
 	{
@@ -6485,17 +6471,6 @@ class CfgXM8
 		onOpen = "GG\ExAdClient\XM8\Apps\Journal\onOpen.sqf";
 		onClose = "GG\ExAdClient\XM8\Apps\Journal\onClose.sqf";
 	};
-	class ExAd_Bike
-	{
-		title = "Deploy Bike";
-		config = "GG\ExAdClient\XM8\Apps\DeployVehicle\config.sqf";
-		bambiState = 0;
-		vehicleClass = "Exile_Bike_MountainBike";
-		recipe[] = {{"Exile_Item_ExtensionCord",-1}};
-		packable = 1;
-		autoCleanUp = 1;
-		quickFunction = "['ExAd_Bike'] call ExAd_XM8_DV_fnc_spawnVehicle";
-	};
 	class ExAd_Quad
 	{
 		title = "Deploy Quad";
@@ -6504,13 +6479,6 @@ class CfgXM8
 		recipe[] = {{"Exile_Item_ExtensionCord",1}};
 		packable = 1;
 		quickFunction = "['ExAd_Quad'] call ExAd_XM8_DV_fnc_spawnVehicle";
-	};
-	class ExAd_SB 
-	{
-		title = "Statsbar Settings";
-		controlID = 50400;					//IDC:50400 -> 50475 || These need to be unique and out of range from each other
-		logo = "GG\ExAdClient\XM8\Apps\SB_Settings\Icon_SB.paa";
-		onLoad = "GG\ExAdClient\XM8\Apps\SB_Settings\onLoad.sqf";
 	};
 }; 
 
