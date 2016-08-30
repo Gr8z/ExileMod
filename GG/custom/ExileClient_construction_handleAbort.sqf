@@ -66,7 +66,7 @@ switch (ExileClientConstructionResult) do
 			deleteVehicle ExileClientConstructionObject;
 		};
 		ExileBuildHeightLimit = getNumber (missionConfigFile >> "CfgTerritories" >> "maximumHeight");
-		["ErrorTitleAndText", ["Construction aborted!", "format ['The build height limit of %1 meters has been reached!', ExileBuildHeightLimit];"]] call ExileClient_gui_toaster_addTemplateToast;
+		["ErrorTitleAndText", ["Construction aborted!", "The build height limit of 30 meters has been reached."]] call ExileClient_gui_toaster_addTemplateToast;
 	};
 	case 2:
 	{
