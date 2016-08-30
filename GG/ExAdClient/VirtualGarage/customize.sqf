@@ -16,7 +16,7 @@
 	limitations under the License.
 */
 
-ExAd_VG_MIN_ALLOWED_VEH = 5;			//SCALAR - Minimun allowed vehicles in the virtual garage.
+ExAd_VG_MIN_ALLOWED_VEH = 2;			//SCALAR - Minimun allowed vehicles in the virtual garage.
 
 ExAd_VG_ALLOWED_VEH_MULTIPLE_FACTOR = 2;//SCALAR - How many extra vehicle slots for each territory level.
 
