@@ -17,10 +17,23 @@ class Header
     maxPlayers = 100;
 };
 
+#include "ExAdClient\ExAd.cpp"
+
 class CfgFunctions
 {
 	#include "GG\ExAdClient\CfgFunctions.cpp"
 };
+
+class CfgHints
+{
+	#include "GG\ExAdClient\CfgHints.cpp"
+};
+
+class CfgNetworkMessages
+{
+	#include "GG\ExAdClient\CfgNetworkMessages.cpp"
+};
+
 ///////////////////////////////////////////////////////////////////////////////
 // Exile Settings - Do not change these!
 ///////////////////////////////////////////////////////////////////////////////
