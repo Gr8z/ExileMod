@@ -25,7 +25,7 @@ if(ExAd_SB_Active)then{
 
 ExAd_SB_Active = !ExAd_SB_Active;
 
-(_this select 0) ctrlSetText (if(!ExAd_SB_Active)then{STR_ExAd_SB_APP_BTN_SHOW}else{STR_ExAd_SB_APP_BTN_HIDE});
+(_this select 0) ctrlSetText (if(!ExAd_SB_Active)then{"Show"}else{"Hide"});
 call ExAd_SB_fnc_thread;
 
 true
