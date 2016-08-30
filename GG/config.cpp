@@ -2813,9 +2813,9 @@ class CfgExileArsenal
 
 class CfgExileCustomCode 
 {
-	ExileServer_system_territory_database_load = "GG\GG\ExAdClient\VirtualGarage\CustomCode\ExileServer_system_territory_database_load.sqf";
-	ExileClient_gui_xm8_slide = "GG\GG\ExAdClient\XM8\CustomCode\ExileClient_gui_xm8_slide.sqf";
-	ExileClient_gui_xm8_show = "GG\GG\ExAdClient\XM8\CustomCode\ExileClient_gui_xm8_show.sqf";
+	ExileServer_system_territory_database_load = "GG\ExAdClient\VirtualGarage\CustomCode\ExileServer_system_territory_database_load.sqf";
+	ExileClient_gui_xm8_slide = "GG\ExAdClient\XM8\CustomCode\ExileClient_gui_xm8_slide.sqf";
+	ExileClient_gui_xm8_show = "GG\ExAdClient\XM8\CustomCode\ExileClient_gui_xm8_show.sqf";
 };
 class CfgExileEnvironment
 {
