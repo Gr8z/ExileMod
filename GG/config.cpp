@@ -2487,11 +2487,6 @@ class CfgExileArsenal
 	class Binocular														{ quality = 1; price = 75; };
 	class Rangefinder													{ quality = 1; price = 250; };
 	class Exile_Item_XM8												{ quality = 1; price = 100; sellPrice = 10; };
-	class Laserdesignator												{ quality = 4; price = 750; };
-	class Laserdesignator_02											{ quality = 4; price = 750; };
-	class Laserdesignator_03											{ quality = 4; price = 750; };
-	class Laserdesignator_01_khk_F										{ quality = 4; price = 750; };
-	class Laserdesignator_02_ghex_F										{ quality = 4; price = 750; };
 	
 		///////// Explosives /////////
 	class HandGrenade													{ quality = 1; price = 75; };
