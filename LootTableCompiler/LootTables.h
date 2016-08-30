@@ -5,18 +5,18 @@
 8, Pistols
 5, PistolAmmo
 3, PistolAttachments
-15, Rifles
+20, Rifles
 2, RifleAmmo
 4, SMG
 3, SMGAmmo
 3, SMGAttachments
-13, CivilianClothing
-11, CivilianBackpacks
-5, CivilianVests
-15, CivilianHeadgear
+15, CivilianClothing
+10, CivilianBackpacks
+3, CivilianVests
+5, CivilianHeadgear
 5, CivilianItems
-10, Chemlights
-10, RoadFlares
+5, Chemlights
+5, RoadFlares
 
 ///////////////////////////////////////////////////////////////////////////////
 // Apartments, Offices etc.
@@ -32,7 +32,7 @@
 10, SMG
 3, SMGAmmo
 3, SMGAttachments
-20, Rifles
+22, Rifles
 5, RifleAmmo
 5, RifleAttachments
 12, GuerillaVests
