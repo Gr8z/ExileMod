@@ -3,6 +3,8 @@
  * www.exilemod.com
  */
 
+[] execVM "GG\StatusBar\statusBar.sqf";
+
 if (!hasInterface || isServer) exitWith {};
 
 // 76 NPCs
