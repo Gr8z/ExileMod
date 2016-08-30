@@ -28,6 +28,20 @@ switch (ExileClientConstructionResult) do
 		{
 			["SuccessTitleAndText", ["Placed object!", format ["You have successfully placed a %1.", ExileClientConstructionObjectDisplayName]]] call ExileClient_gui_toaster_addTemplateToast;
 		};
+		if (ExileClientConstructionProcess isEqualTo 1) then
+		{
+			if (ExileClientConstructionKitClassName in magazines player) then
+			{
+				[] spawn
+				{
+					_result = [format ["Would you like to construct another %1?", ExileClientConstructionObjectDisplayName], "Construct Another?", "Yes", "No"] call BIS_fnc_guiMessage;
+					if (_result) then
+					{
+						[ExileClientConstructionKitClassName] call ExileClient_object_item_construct;
+					};
+				};
+			};
+		};
 	};
 	case 3:
 	{
