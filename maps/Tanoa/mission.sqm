@@ -52,6 +52,8 @@ class Mission
 {
 	class Intel
 	{
+		briefingName="[GG] Ghostz Gamerz ExileMod Tanoa Alpha";
+		overviewText="[GG] Ghostz Gamerz | Web: GHOSTZGAMERZ.com | TS: ts.ghostzgamerz.com";
 		timeOfChanges = 1800.0002;
 		startWeather = 0.3;
 		startWind = 0.1;
@@ -1411,7 +1413,7 @@ class Mission
 	        markerType = "ELLIPSE";
 	        type = "ExileTraderZone";
 	        colorName = "ColorBlack";
-	        fillName = "Border";
+	        fillName = "SolidBorder";
 	        a = 79.787;
 	        b = 79.787;
 	        drawBorder = 1;
@@ -1579,7 +1581,7 @@ class Mission
 	        markerType = "ELLIPSE";
 	        type = "ExileTraderZone";
 	        colorName = "ColorBlack";
-	        fillName = "Border";
+	        fillName = "SolidBorder";
 	        a = 200;
 	        b = 200;
 	        drawBorder = 1;
@@ -1591,7 +1593,7 @@ class Mission
 	        dataType = "Marker";
 	        position[] = {2265.13, 0, 8596.37};
 	        name = "ExileMarker14";
-	        text = "";
+	        text = "Trader City Ferry";
 	        type = "ExileTraderZoneIcon";
 	        id = 114;
 	        atlOffset = 0;
@@ -1605,7 +1607,7 @@ class Mission
 	        markerType = "ELLIPSE";
 	        type = "ExileTraderZone";
 	        colorName = "ColorBlack";
-	        fillName = "Border";
+	        fillName = "SolidBorder";
 	        a = 142.19;
 	        b = 142.19;
 	        drawBorder = 1;
@@ -1617,7 +1619,7 @@ class Mission
 	        dataType = "Marker";
 	        position[] = {11670.7, 0, 4106.17};
 	        name = "ExileMarker16";
-	        text = "";
+	        text = "Trader City Saioko";
 	        type = "ExileTraderZoneIcon";
 	        id = 116;
 	        atlOffset = 0;
@@ -1644,7 +1646,7 @@ class Mission
 	        dataType = "Marker";
 	        position[] = {10806.4, 0, 6388.1};
 	        name = "ExileMarker18";
-	        text = "";
+	        text = "Kotomo";
 	        type = "ExileSpawnZoneIcon";
 	        id = 118;
 	        atlOffset = 0;
@@ -1671,7 +1673,7 @@ class Mission
 	        dataType = "Marker";
 	        position[] = {14356.3, 0, 8870.72};
 	        name = "ExileMarker20";
-	        text = "";
+	        text = "Nandai";
 	        type = "ExileSpawnZoneIcon";
 	        id = 120;
 	        atlOffset = 0;
@@ -1698,7 +1700,7 @@ class Mission
 	        dataType = "Marker";
 	        position[] = {12543, 0, 12623.9};
 	        name = "ExileMarker22";
-	        text = "";
+	        text = "Ovau";
 	        type = "ExileSpawnZoneIcon";
 	        id = 122;
 	        atlOffset = 0;
@@ -1725,7 +1727,7 @@ class Mission
 	        dataType = "Marker";
 	        position[] = {6530.2, 0, 13106.1};
 	        name = "ExileMarker24";
-	        text = "";
+	        text = "Nicolet";
 	        type = "ExileSpawnZoneIcon";
 	        id = 124;
 	        atlOffset = 0;
@@ -1874,7 +1876,7 @@ class Mission
 	        markerType = "ELLIPSE";
 	        type = "ExileTraderZone";
 	        colorName = "ColorBlack";
-	        fillName = "Border";
+	        fillName = "SolidBorder";
 	        a = 200;
 	        b = 200;
 	        drawBorder = 1;
@@ -1886,7 +1888,7 @@ class Mission
 	        dataType = "Marker";
 	        position[] = {12190.4, 0, 8167.03};
 	        name = "ExileMarker36";
-	        text = "";
+	        text = "Trader City Banana";
 	        type = "ExileTraderZoneIcon";
 	        id = 136;
 	        atlOffset = 0;
@@ -2071,7 +2073,7 @@ class Mission
 	        dataType = "Marker";
 	        position[] = {5010.64, 0, 8724.12};
 	        name = "ExileMarker49";
-	        text = "";
+	        text = "Regina";
 	        type = "ExileSpawnZoneIcon";
 	        id = 149;
 	        atlOffset = 0;
@@ -2102,7 +2104,7 @@ class Mission
 	        markerType = "ELLIPSE";
 	        type = "ExileTraderZone";
 	        colorName = "ColorBlack";
-	        fillName = "Border";
+	        fillName = "SolidBorder";
 	        a = 200;
 	        b = 200;
 	        drawBorder = 1;
@@ -2114,7 +2116,7 @@ class Mission
 	        dataType = "Marker";
 	        position[] = {7991.1, 0, 12411.6};
 	        name = "ExileMarker52";
-	        text = "";
+	        text = "Trader City Galili";
 	        type = "ExileTraderZoneIcon";
 	        id = 152;
 	        atlOffset = 0;
