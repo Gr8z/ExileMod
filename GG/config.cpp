@@ -3952,20 +3952,22 @@ class CfgTerritories
 	prices[] = 
 	{
 		// Purchase Price 	Radius 		Number of Objects 	Respect	
-		{5000,				15,			30, 				10000		}, // Level 1
-		{10000,				30,			60, 				20000		}, // Level 2 
-		{15000,				45,			90, 				30000		}, // Level 3
-		{20000,				60,			120,				40000		}, // Level 4
-		{25000,				75,			150,				50000		}, // Level 5
-		{30000,				90,			180,				60000		}, // Level 6
-		{35000,				105,		210,				70000		}, // Level 7
-		{40000,				120,		240,				80000		}, // Level 8
-		{45000,				135,		270,				90000		}, // Level 9
-		{50000,				150,		300,				100000		}  // Level 10
+		{5000,				10,			20, 				10000		}, // Level 1
+		{10000,				20,			40, 				20000		}, // Level 2 
+		{15000,				30,			60, 				30000		}, // Level 3
+		{20000,				40,			80,					40000		}, // Level 4
+		{25000,				50,			100,				50000		}, // Level 5
+		{30000,				60,			120,				60000		}, // Level 6
+		{35000,				70,			140,				70000		}, // Level 7
+		{40000,				80,			160,				80000		}, // Level 8
+		{45000,				90,			180,				90000		}, // Level 9
+		{50000,				100,		200,				100000		}  // Level 10
 	};
 
 	// A shortcut of the above maximum radius
-	maximumRadius = 150;
+	maximumRadius = 100;
+
+	// Max Height a base can be built up to
 	maximumHeight = 30;
 	
 	// The above * 2 plus coverving the 20m you can move while placing things
