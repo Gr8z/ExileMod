@@ -3956,7 +3956,7 @@ class CfgTerritories
 
 	// A shortcut of the above maximum radius
 	maximumRadius = 150;
-	maximumHeight = 150;
+	maximumHeight = 30;
 	
 	// The above * 2 plus coverving the 20m you can move while placing things
 	minimumDistanceToOtherTerritories = 325; 
