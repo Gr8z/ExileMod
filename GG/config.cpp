@@ -4130,7 +4130,7 @@ class CfgExileLootSettings
 	 * 50m  = Minimum
 	 * 200m = Maximum
 	 */
-	spawnRadius = 60;
+	spawnRadius = 100;
 
 	/**
 	 * Defines the radius around trader cities where the system should

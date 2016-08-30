@@ -5,7 +5,7 @@
 8, Pistols
 5, PistolAmmo
 3, PistolAttachments
-12, Rifles
+15, Rifles
 2, RifleAmmo
 4, SMG
 3, SMGAmmo
@@ -24,7 +24,7 @@
 > CivillianUpperClass
 17, Food
 10, Drinks
-8, Pistols
+5, Pistols
 5, PistolAmmo
 3, PistolAttachments
 2, Shotguns
@@ -32,7 +32,7 @@
 10, SMG
 3, SMGAmmo
 3, SMGAttachments
-18, Rifles
+20, Rifles
 5, RifleAmmo
 5, RifleAttachments
 12, GuerillaVests
