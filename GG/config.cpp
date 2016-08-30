@@ -1193,6 +1193,22 @@ class UpgradeToWoodWindow: Exile_AbstractCraftingRecipe
 		{2, "Exile_Item_WoodPlank"}
 	};
 };
+class Laserdesignator: Exile_AbstractCraftingRecipe
+{
+    name = "Craft Laserdesignator";
+    pictureItem = "Laserdesignator";
+    requiresFire = 1;
+    returnedItems[] =
+    {
+        {1, "Laserdesignator"}
+    };
+    components[] =
+    {
+        {2, "Exile_Item_LightBulb"},
+        {1, "Exile_Item_JunkMetal"},
+        {1, "Exile_Item_ThermalScannerPro"}
+    };
+};
 };
 class CfgExileArsenal
 {
