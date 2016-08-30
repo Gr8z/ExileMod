@@ -1326,11 +1326,11 @@ class CfgExileArsenal
 	class U_O_FullGhillie_sard											{ quality = 3; price = 750; };
 	class U_O_T_FullGhillie_tna_F										{ quality = 3; price = 750; };
 	class U_B_T_FullGhillie_tna_F										{ quality = 3; price = 750; };
-	class U_O_GhillieSuit												{ quality = 3; price = 500; };
-	class U_B_GhillieSuit												{ quality = 3; price = 500; };
-	class U_I_GhillieSuit												{ quality = 3; price = 500; };
-	class U_O_T_Sniper_F												{ quality = 3; price = 500; };
-	class U_B_T_Sniper_F												{ quality = 3; price = 500; };
+	class U_O_GhillieSuit												{ quality = 2; price = 500; };
+	class U_B_GhillieSuit												{ quality = 2; price = 500; };
+	class U_I_GhillieSuit												{ quality = 2; price = 500; };
+	class U_O_T_Sniper_F												{ quality = 2; price = 500; };
+	class U_B_T_Sniper_F												{ quality = 2; price = 500; };
 
 	///////// Wetsuits /////////
 	class U_I_Wetsuit													{ quality = 1; price = 200; };
@@ -1542,8 +1542,8 @@ class CfgExileArsenal
 	class H_HelmetB_TI_tna_F											{ quality = 2; price = 500; };
 	
 	///////// Special Purpose Helmets 	/////////
-	class H_HelmetO_ViperSP_ghex_F										{ quality = 4; price = 3000; };
-	class H_HelmetO_ViperSP_hex_F										{ quality = 4; price = 3000; };
+	class H_HelmetO_ViperSP_ghex_F										{ quality = 4; price = 7500; };
+	class H_HelmetO_ViperSP_hex_F										{ quality = 4; price = 7500; };
 		
 	///////// Night Vision Goggles /////////
 	class NVGoggles														{ quality = 1; price = 250; };
@@ -1553,9 +1553,6 @@ class CfgExileArsenal
 	class O_NVGoggles_ghex_F											{ quality = 1; price = 250; };
 	class O_NVGoggles_hex_F												{ quality = 1; price = 250; };
 	class O_NVGoggles_urb_F												{ quality = 1; price = 250; };
-	class NVGogglesB_blk_F												{ quality = 4; price = 2500; };
-	class NVGogglesB_grn_F												{ quality = 4; price = 2500; };
-	class NVGogglesB_gry_F												{ quality = 4; price = 2500; };	
 
 	///////// Exile Headgear /////////	
 	class Exile_Headgear_SantaHat										{ quality = 1; price = 75; };
@@ -1660,31 +1657,32 @@ class CfgExileArsenal
 	class V_PlateCarrier1_rgr 											{ quality = 1; price = 300; };
 	class V_PlateCarrier1_tna_F											{ quality = 1; price = 300; };
 	class V_PlateCarrier1_rgr_noflag_F									{ quality = 1; price = 300; };
-	class V_PlateCarrier2_rgr 											{ quality = 1; price = 400; };
-	class V_PlateCarrier2_tna_F											{ quality = 1; price = 400; };
-	class V_PlateCarrier2_rgr_noflag_F									{ quality = 1; price = 400; };
-	class V_PlateCarrier3_rgr 											{ quality = 1; price = 400; };
-	class V_PlateCarrierGL_blk 											{ quality = 1; price = 850; };
-	class V_PlateCarrierGL_mtp 											{ quality = 1; price = 850; };
-	class V_PlateCarrierGL_rgr 											{ quality = 1; price = 850; };
-	class V_PlateCarrierGL_tna_F										{ quality = 1; price = 850; };
-	class V_PlateCarrierH_CTRG 											{ quality = 1; price = 300; };
+	class V_PlateCarrier2_rgr 											{ quality = 2; price = 400; };
+	class V_PlateCarrier2_tna_F											{ quality = 2; price = 400; };
+	class V_PlateCarrier2_rgr_noflag_F									{ quality = 2; price = 400; };
+	class V_PlateCarrier3_rgr 											{ quality = 2; price = 400; };
+	class V_PlateCarrierGL_blk 											{ quality = 3; price = 850; };
+	class V_PlateCarrierGL_mtp 											{ quality = 3; price = 850; };
+	class V_PlateCarrierGL_rgr 											{ quality = 3; price = 850; };
+	class V_PlateCarrierGL_tna_F										{ quality = 3; price = 850; };
+	class V_PlateCarrierH_CTRG 											{ quality = 2; price = 300; };
 	class V_PlateCarrierIA1_dgtl 										{ quality = 1; price = 275; };
 	class V_PlateCarrierIA2_dgtl 										{ quality = 1; price = 350; };
-	class V_PlateCarrierIAGL_dgtl 										{ quality = 1; price = 750; };
-	class V_PlateCarrierIAGL_oli 										{ quality = 1; price = 750; };
+	class V_PlateCarrierIAGL_dgtl 										{ quality = 3; price = 750; };
+	class V_PlateCarrierIAGL_oli 										{ quality = 3; price = 750; };
 	class V_PlateCarrierL_CTRG 											{ quality = 1; price = 300; };
-	class V_PlateCarrierSpec_blk 										{ quality = 1; price = 450; };
-	class V_PlateCarrierSpec_mtp 										{ quality = 1; price = 450; };
-	class V_PlateCarrierSpec_rgr 										{ quality = 1; price = 450; };
-	class V_PlateCarrierSpec_tna_F										{ quality = 1; price = 450; };
+	class V_PlateCarrierSpec_blk 										{ quality = 3; price = 650; };
+	class V_PlateCarrierSpec_mtp 										{ quality = 3; price = 650; };
+	class V_PlateCarrierSpec_rgr 										{ quality = 3; price = 650; };
+	class V_PlateCarrierSpec_tna_F										{ quality = 3; price = 650; };
 
 	///////// Rebreathers /////////
 	class V_RebreatherB													{ quality = 1; price = 500; };
 	class V_RebreatherIA												{ quality = 1; price = 500; };
 	class V_RebreatherIR												{ quality = 1; price = 500; };
 	
-		class 6Rnd_GreenSignal_F 											{ quality = 1; price = 10; };
+	//////// Ammo ///////////
+	class 6Rnd_GreenSignal_F 											{ quality = 1; price = 10; };
 	class 6Rnd_RedSignal_F 												{ quality = 1; price = 10; };
 	class 6Rnd_45ACP_Cylinder 											{ quality = 1; price = 10; };
 	class 9Rnd_45ACP_Mag 												{ quality = 1; price = 15; };
@@ -1741,12 +1739,12 @@ class CfgExileArsenal
 	class 7Rnd_408_Mag 													{ quality = 3; price = 40; };
 	class 10Rnd_127x54_Mag 												{ quality = 3; price = 30; };
 	class 5Rnd_127x108_Mag 												{ quality = 3; price = 100; };
-	class 5Rnd_127x108_APDS_Mag 										{ quality = 3; price = 300; };
+	class 5Rnd_127x108_APDS_Mag 										{ quality = 3; price = 1000; };
 	class 10Rnd_50BW_Mag_F												{ quality = 3; price = 100; };
 	
 	///////// Rockets /////////
-	class RPG32_F														{ quality = 3; price = 1500; };
-	class RPG32_HE_F													{ quality = 3; price = 1500; };
+	class RPG32_F														{ quality = 4; price = 1500; };
+	class RPG32_HE_F													{ quality = 4; price = 1500; };
 		
 	///////// Chemlights & Flares /////////
 	class Chemlight_blue												{ quality = 1; price = 15; };
@@ -1789,7 +1787,7 @@ class CfgExileArsenal
 	class 3Rnd_SmokeYellow_Grenade_shell								{ quality = 1; price = 50; };
 	
 	///////// Exile Ammo /////////
-	class Exile_Magazine_30Rnd_762x39_AK								{ quality = 3; price = 20; };
+	class Exile_Magazine_30Rnd_762x39_AK								{ quality = 2; price = 20; };
 	class Exile_Magazine_30Rnd_545x39_AK								{ quality = 1; price = 20; };
 	class Exile_Magazine_30Rnd_545x39_AK_Green							{ quality = 1; price = 20; };
 	class Exile_Magazine_30Rnd_545x39_AK_Red							{ quality = 1; price = 20; };
@@ -1797,12 +1795,12 @@ class CfgExileArsenal
 	class Exile_Magazine_30Rnd_545x39_AK_Yellow							{ quality = 1; price = 20; };
 	class Exile_Magazine_45Rnd_545x39_RPK_Green							{ quality = 1; price = 20; };
 	class Exile_Magazine_75Rnd_545x39_RPK_Green							{ quality = 1; price = 20; };
-	class Exile_Magazine_20Rnd_762x51_DMR								{ quality = 3; price = 20; };
-	class Exile_Magazine_20Rnd_762x51_DMR_Yellow						{ quality = 3; price = 20; };
-	class Exile_Magazine_20Rnd_762x51_DMR_Red							{ quality = 3; price = 20; };
-	class Exile_Magazine_20Rnd_762x51_DMR_Green							{ quality = 3; price = 20; };
+	class Exile_Magazine_20Rnd_762x51_DMR								{ quality = 2; price = 20; };
+	class Exile_Magazine_20Rnd_762x51_DMR_Yellow						{ quality = 2; price = 20; };
+	class Exile_Magazine_20Rnd_762x51_DMR_Red							{ quality = 2; price = 20; };
+	class Exile_Magazine_20Rnd_762x51_DMR_Green							{ quality = 2; price = 20; };
 	class Exile_Magazine_10Rnd_303										{ quality = 1; price = 20; };
-	class Exile_Magazine_100Rnd_762x54_PK_Green							{ quality = 3; price = 20; };
+	class Exile_Magazine_100Rnd_762x54_PK_Green							{ quality = 2; price = 20; };
 	class Exile_Magazine_7Rnd_45ACP										{ quality = 1; price = 20; };
 	class Exile_Magazine_8Rnd_9x18										{ quality = 1; price = 20; };
 	class Exile_Magazine_6Rnd_45ACP										{ quality = 1; price = 20; };
@@ -1876,19 +1874,19 @@ class CfgExileArsenal
 	class hlc_20Rnd_762x51_S_fal										{ quality = 2; price = 30; };
 	class hlc_20Rnd_762x51_barrier_fal									{ quality = 2; price = 30; };
 	class hlc_20Rnd_762x51_mk316_fal									{ quality = 2; price = 30; };
-	class hlc_50rnd_762x51_M_FAL										{ quality = 2; price = 50; };
+	class hlc_50rnd_762x51_M_FAL										{ quality = 3; price = 50; };
 	class hlc_20Rnd_762x51_B_G3											{ quality = 2; price = 30; };
 	class hlc_20rnd_762x51_T_G3											{ quality = 2; price = 30; };
 	class hlc_20rnd_762x51_Mk316_G3										{ quality = 2; price = 30; };
 	class hlc_20rnd_762x51_barrier_G3									{ quality = 2; price = 30; };
 	class hlc_20rnd_762x51_S_G3											{ quality = 2; price = 30; };
-	class hlc_50rnd_762x51_M_G3											{ quality = 2; price = 50; };
+	class hlc_50rnd_762x51_M_G3											{ quality = 3; price = 50; };
 	class hlc_20Rnd_762x51_B_M14										{ quality = 2; price = 30; };
 	class hlc_20rnd_762x51_T_M14										{ quality = 2; price = 30; };
 	class hlc_20Rnd_762x51_S_M14										{ quality = 2; price = 30; };
 	class hlc_20Rnd_762x51_barrier_M14									{ quality = 2; price = 30; };
 	class hlc_20rnd_762x51_mk316_M14									{ quality = 2; price = 30; };
-	class hlc_50Rnd_762x51_B_M14										{ quality = 2; price = 50; };
+	class hlc_50Rnd_762x51_B_M14										{ quality = 3; price = 50; };
 	class hlc_20Rnd_762x51_b_amt										{ quality = 2; price = 30; };
 	class hlc_20Rnd_762x51_mk316_amt									{ quality = 2; price = 30; };
 	class hlc_20Rnd_762x51_bball_amt									{ quality = 2; price = 30; };
@@ -1897,8 +1895,6 @@ class CfgExileArsenal
 	class hlc_100Rnd_762x51_T_M60E4										{ quality = 2; price = 70; };
 	class hlc_100Rnd_762x51_M_M60E4										{ quality = 2; price = 70; };
 	class hlc_100Rnd_762x51_Barrier_M60E4								{ quality = 2; price = 70; };
-	class hlc_5Rnd_792_T_Kar98											{ quality = 1; price = 20; };
-	class hlc_5Rnd_792_AP_Kar98											{ quality = 1; price = 20; };
 	class 29rnd_300BLK_STANAG											{ quality = 2; price = 35; };
 	class 29rnd_300BLK_STANAG_T											{ quality = 2; price = 35; };
 	class 29rnd_300BLK_STANAG_S											{ quality = 2; price = 35; };
@@ -1906,12 +1902,8 @@ class CfgExileArsenal
 	class hlc_5rnd_300WM_AP_AWM											{ quality = 3; price = 20; };
 	class hlc_5rnd_300WM_BTSP_AWM										{ quality = 3; price = 20; };
 	class hlc_5rnd_300WM_mk248_AWM										{ quality = 3; price = 20; };
-	class hlc_5rnd_300WM_SBT_AWM										{ quality = 3; price = 20; };
+	class hlc_5rnd_300WM_SBT_AWM										{ quality = 2; price = 20; };
 	class hlc_5rnd_3006_1903											{ quality = 1; price = 20; };
-	class hlc_10Rnd_303_B_enfield										{ quality = 1; price = 20; };
-	class hlc_10Rnd_303_T_enfield										{ quality = 1; price = 20; };
-	class hlc_10Rnd_303_AP_enfield										{ quality = 1; price = 20; };
-	class hlc_500rnd_762x51_Belt										{ quality = 4; price = 500; };
 		
 	///////// NIArms Smokes /////////
 	class hlc_GRD_White													{ quality = 1; price = 25; };
@@ -2037,28 +2029,28 @@ class CfgExileArsenal
 	class srifle_LRR_tna_F 												{ quality = 3; price = 1750; };
 	
 	///////// Launchers /////////
-	class launch_RPG7_F													{ quality = 3; price = 3000; };
-	class launch_RPG32_F												{ quality = 3; price = 3000; };
-	class launch_RPG32_ghex_F											{ quality = 3; price = 3000; };
+	class launch_RPG7_F													{ quality = 4; price = 3000; };
+	class launch_RPG32_F												{ quality = 4; price = 3000; };
+	class launch_RPG32_ghex_F											{ quality = 4; price = 3000; };
 	
 	///////// Exile Weapons /////////
 	class Exile_Weapon_AK107											{ quality = 1; price = 300; };
 	class Exile_Weapon_AK107_GL											{ quality = 2; price = 400; };
 	class Exile_Weapon_AK74												{ quality = 2; price = 350; };
 	class Exile_Weapon_AK74_GL											{ quality = 2; price = 400; };
-	class Exile_Weapon_AK47												{ quality = 3; price = 500; };
-	class Exile_Weapon_AKM												{ quality = 3; price = 500; };
-	class Exile_Weapon_AKS												{ quality = 3; price = 500; };
-	class Exile_Weapon_AKS_Gold											{ quality = 3; price = 550; };
+	class Exile_Weapon_AK47												{ quality = 2; price = 500; };
+	class Exile_Weapon_AKM												{ quality = 2; price = 500; };
+	class Exile_Weapon_AKS												{ quality = 2; price = 500; };
+	class Exile_Weapon_AKS_Gold											{ quality = 2; price = 550; };
 	class Exile_Weapon_DMR												{ quality = 3; price = 650; };
 	class Exile_Weapon_LeeEnfield										{ quality = 1; price = 250; };
 	class Exile_Weapon_CZ550											{ quality = 2; price = 400; };
-	class Exile_Weapon_SVD												{ quality = 4; price = 800; };
-	class Exile_Weapon_SVDCamo											{ quality = 4; price = 850; };
+	class Exile_Weapon_SVD												{ quality = 2; price = 800; };
+	class Exile_Weapon_SVDCamo											{ quality = 2; price = 850; };
 	class Exile_Weapon_VSSVintorez										{ quality = 3; price = 600; };
 	class Exile_Weapon_RPK												{ quality = 2; price = 250; };
-	class Exile_Weapon_PK												{ quality = 3; price = 300; };
-	class Exile_Weapon_PKP												{ quality = 3; price = 350; };
+	class Exile_Weapon_PK												{ quality = 2; price = 300; };
+	class Exile_Weapon_PKP												{ quality = 2; price = 350; };
 	class Exile_Weapon_Colt1911											{ quality = 1; price = 100; };
 	class Exile_Weapon_Makarov											{ quality = 1; price = 100; };
 	class Exile_Weapon_Taurus											{ quality = 1; price = 100; };
@@ -2181,12 +2173,12 @@ class CfgExileArsenal
 	class hlc_rifle_STG58F 												{ quality = 2; price = 825; };
 
 	///////// NIArms G3 Rifles /////////
-	class hlc_rifle_g3sg1 												{ quality = 1; price = 900; };
-	class hlc_rifle_g3a3 												{ quality = 1; price = 900; };
-	class hlc_rifle_g3a3v 												{ quality = 1; price = 900; };
-	class hlc_rifle_g3a3ris 											{ quality = 1; price = 900; };
-	class hlc_rifle_g3ka4 												{ quality = 1; price = 950; }; 
-	class hLC_Rifle_g3ka4_GL 											{ quality = 1; price = 1000; }; 
+	class hlc_rifle_g3sg1 												{ quality = 2; price = 900; };
+	class hlc_rifle_g3a3 												{ quality = 2; price = 900; };
+	class hlc_rifle_g3a3v 												{ quality = 2; price = 900; };
+	class hlc_rifle_g3a3ris 											{ quality = 2; price = 900; };
+	class hlc_rifle_g3ka4 												{ quality = 2; price = 950; }; 
+	class hLC_Rifle_g3ka4_GL 											{ quality = 2; price = 1000; }; 
 	class hlc_rifle_hk33a2 												{ quality = 1; price = 700; };
 	class hlc_rifle_hk33a2RIS 											{ quality = 1; price = 725; };	
 	class hlc_rifle_hk53 												{ quality = 1; price = 450; };	
@@ -2225,8 +2217,8 @@ class CfgExileArsenal
 	class hlc_rifle_m14sopmod 											{ quality = 2; price = 925; };
 
 	///////// NIArms M1903 Springfield Rifles /////////
-	class hlc_rifle_M1903A1 											{ quality = 2; price = 400; };
-	class hlc_rifle_M1903A1OMR 											{ quality = 2; price = 400; };
+	class hlc_rifle_M1903A1 											{ quality = 1; price = 400; };
+	class hlc_rifle_M1903A1OMR 											{ quality = 1; price = 400; };
 	class hlc_rifle_M1903A1_unertl 										{ quality = 2; price = 600; };
 
 	///////// NIArms M60 GPMGs /////////
@@ -2262,13 +2254,13 @@ class CfgExileArsenal
 	class hlc_rifle_sig5104 											{ quality = 1; price = 950; };
 	class hlc_rifle_STGW57 												{ quality = 1; price = 800; };
 	class hlc_rifle_stgw57_commando 									{ quality = 1; price = 850; };
-	class hlc_rifle_stgw57_RIS 											{ quality = 1; price = 900; };
+	class hlc_rifle_stgw57_RIS 											{ quality = 2; price = 900; };
 	
-		///////// Pointer Attachements /////////
+		///////// Pointer Attachments /////////
 	class acc_flashlight 												{ quality = 1; price = 50; };
 	class acc_pointer_IR 												{ quality = 1; price = 75; };
 
-	///////// Bipod Attachements /////////
+	///////// Bipod Attachments /////////
 	class bipod_01_F_blk	 											{ quality = 1; price = 75; };
 	class bipod_01_F_mtp	 											{ quality = 1; price = 75; };
 	class bipod_01_F_snd	 											{ quality = 1; price = 75; };
@@ -2279,7 +2271,7 @@ class CfgExileArsenal
 	class bipod_03_F_oli	 											{ quality = 1; price = 75; };
 	class bipod_01_F_khk												{ quality = 1; price = 75; };
 
-	///////// Muzzle Attachements /////////
+	///////// Muzzle Attachments /////////
 	class muzzle_snds_acp 												{ quality = 1; price = 50; };
 	class muzzle_snds_338_black 										{ quality = 3; price = 150; };
 	class muzzle_snds_338_green 										{ quality = 3; price = 150; };
@@ -2313,9 +2305,9 @@ class CfgExileArsenal
 	class optic_ACO_grn													{ quality = 1; price = 100; };
 	class optic_ACO_grn_smg												{ quality = 1; price = 100; };
 	class optic_Aco_smg													{ quality = 1; price = 100; };
-	class optic_AMS														{ quality = 1; price = 500; };
-	class optic_AMS_khk													{ quality = 1; price = 500; };
-	class optic_AMS_snd													{ quality = 1; price = 500; };
+	class optic_AMS														{ quality = 2; price = 500; };
+	class optic_AMS_khk													{ quality = 2; price = 500; };
+	class optic_AMS_snd													{ quality = 2; price = 500; };
 	class optic_Arco													{ quality = 1; price = 250; };
 	class optic_Arco_blk_F												{ quality = 1; price = 250; };	
 	class optic_Arco_ghex_F												{ quality = 1; price = 250; };		
@@ -2335,16 +2327,16 @@ class CfgExileArsenal
 	class optic_KHS_hex													{ quality = 1; price = 400; };
 	class optic_KHS_old													{ quality = 1; price = 400; };
 	class optic_KHS_tan													{ quality = 1; price = 400; };
-	class optic_LRPS													{ quality = 1; price = 400; };
-	class optic_LRPS_tna_F												{ quality = 1; price = 400; };
-	class optic_LRPS_ghex_F												{ quality = 1; price = 400; };
+	class optic_LRPS													{ quality = 3; price = 400; };
+	class optic_LRPS_tna_F												{ quality = 3; price = 400; };
+	class optic_LRPS_ghex_F												{ quality = 3; price = 400; };
 	class optic_MRCO													{ quality = 1; price = 200; };
 	class optic_NVS														{ quality = 1; price = 500; };
 	class optic_SOS														{ quality = 1; price = 300; };
 	class optic_SOS_khk_F												{ quality = 1; price = 300; };
 	class optic_MRD														{ quality = 1; price = 75; };
 	class optic_Yorris													{ quality = 1; price = 75; };
-	class optic_Nightstalker											{ quality = 2; price = 1000; };
+	class optic_Nightstalker											{ quality = 4; price = 2000; };
 	//class optic_tws													{ quality = 1; price = 1500; };
 	//class optic_tws_mg												{ quality = 1; price = 1500; };
 	
@@ -2363,8 +2355,9 @@ class CfgExileArsenal
 	class hlc_muzzle_556NATO_KAC 										{ quality = 1; price = 75; };
 	class hlc_muzzle_300blk_KAC 										{ quality = 2; price = 75; };
 	class hlc_muzzle_snds_fal											{ quality = 2; price = 75; };
-	class hlc_muzzle_snds_g3											{ quality = 1; price = 75; };
+	class hlc_muzzle_snds_g3											{ quality = 3; price = 75; };
 	class hlc_muzzle_snds_HK33											{ quality = 1; price = 75; };
+	class muzzle_hbadger												{ quality = 2; price = 75; };
 
 	///////// NIArms Optic Attachements /////////	
 	class HLC_Optic_PSO1 												{ quality = 1; price = 200; };
@@ -2390,7 +2383,7 @@ class CfgExileArsenal
 	class HLC_Optic_ZFSG1 												{ quality = 1; price = 100; };
 	//class hlc_optic_goshawk 											{ quality = 3; price = 1500; };
 	
-		///////// Food /////////
+	///////// Food /////////
 	class Exile_Item_EMRE												{ quality = 1; price = 75; }; //75, 60
 	class Exile_Item_GloriousKnakworst									{ quality = 1; price = 60; }; //60, 30
 	class Exile_Item_Surstromming										{ quality = 1; price = 55; }; //55, 25
@@ -2528,39 +2521,39 @@ class CfgExileArsenal
 	class Exile_Bike_MountainBike 										{ quality = 1; price = 100; };
 	
 	///////// QuadBikes /////////
-	class Exile_Bike_QuadBike_Black										{ quality = 1; price = 2500; };
-	class Exile_Bike_QuadBike_Blue										{ quality = 1; price = 2500; };
-	class Exile_Bike_QuadBike_Red										{ quality = 1; price = 2500; };
-	class Exile_Bike_QuadBike_White										{ quality = 1; price = 2500; };
-	class Exile_Bike_QuadBike_Nato										{ quality = 1; price = 2500; };
-	class Exile_Bike_QuadBike_Csat										{ quality = 1; price = 2500; };
-	class Exile_Bike_QuadBike_Fia										{ quality = 1; price = 2500; };
-	class Exile_Bike_QuadBike_Guerilla01								{ quality = 1; price = 2500; };
-	class Exile_Bike_QuadBike_Guerilla02								{ quality = 1; price = 2500; };
+	class Exile_Bike_QuadBike_Black										{ quality = 1; price = 1000; };
+	class Exile_Bike_QuadBike_Blue										{ quality = 1; price = 1000; };
+	class Exile_Bike_QuadBike_Red										{ quality = 1; price = 1000; };
+	class Exile_Bike_QuadBike_White										{ quality = 1; price = 1000; };
+	class Exile_Bike_QuadBike_Nato										{ quality = 1; price = 1000; };
+	class Exile_Bike_QuadBike_Csat										{ quality = 1; price = 1000; };
+	class Exile_Bike_QuadBike_Fia										{ quality = 1; price = 1000; };
+	class Exile_Bike_QuadBike_Guerilla01								{ quality = 1; price = 1000; };
+	class Exile_Bike_QuadBike_Guerilla02								{ quality = 1; price = 1000; };
 
 	///////// Karts /////////
-	class Exile_Car_Kart_BluKing										{ quality = 1; price = 1500; };
-	class Exile_Car_Kart_RedStone										{ quality = 1; price = 1500; };
-	class Exile_Car_Kart_Vrana											{ quality = 1; price = 1500; };
-	class Exile_Car_Kart_Green											{ quality = 1; price = 1500; };
-	class Exile_Car_Kart_Blue											{ quality = 1; price = 1500; };
-	class Exile_Car_Kart_Orange											{ quality = 1; price = 1500; };
-	class Exile_Car_Kart_White											{ quality = 1; price = 1500; };
-	class Exile_Car_Kart_Yellow											{ quality = 1; price = 1500; };
-	class Exile_Car_Kart_Black											{ quality = 1; price = 1500; };
+	class Exile_Car_Kart_BluKing										{ quality = 1; price = 650; };
+	class Exile_Car_Kart_RedStone										{ quality = 1; price = 650; };
+	class Exile_Car_Kart_Vrana											{ quality = 1; price = 650; };
+	class Exile_Car_Kart_Green											{ quality = 1; price = 650; };
+	class Exile_Car_Kart_Blue											{ quality = 1; price = 650; };
+	class Exile_Car_Kart_Orange											{ quality = 1; price = 650; };
+	class Exile_Car_Kart_White											{ quality = 1; price = 650; };
+	class Exile_Car_Kart_Yellow											{ quality = 1; price = 650; };
+	class Exile_Car_Kart_Black											{ quality = 1; price = 650; };
 
 	///////// Boats /////////
 	class Exile_Boat_MotorBoat_Police									{ quality = 1; price = 3500; };
 	class Exile_Boat_MotorBoat_Orange									{ quality = 1; price = 3500; };
 	class Exile_Boat_MotorBoat_White									{ quality = 1; price = 3500; };
-	class Exile_Boat_RubberDuck_CSAT									{ quality = 1; price = 1500; };
-	class Exile_Boat_RubberDuck_Digital									{ quality = 1; price = 1500; };
-	class Exile_Boat_RubberDuck_Orange									{ quality = 1; price = 1500; };
-	class Exile_Boat_RubberDuck_Blue									{ quality = 1; price = 1500; };
-	class Exile_Boat_RubberDuck_Black									{ quality = 1; price = 1500; };
+	class Exile_Boat_RubberDuck_CSAT									{ quality = 1; price = 650; };
+	class Exile_Boat_RubberDuck_Digital									{ quality = 1; price = 650; };
+	class Exile_Boat_RubberDuck_Orange									{ quality = 1; price = 650; };
+	class Exile_Boat_RubberDuck_Blue									{ quality = 1; price = 650; };
+	class Exile_Boat_RubberDuck_Black									{ quality = 1; price = 650; };
 	class Exile_Boat_RHIB												{ quality = 1; price = 2500; };
 	class C_Boat_Transport_02_F											{ quality = 1; price = 2500; };
-	class Exile_Boat_WaterScooter										{ quality = 1; price = 1500; };
+	class Exile_Boat_WaterScooter										{ quality = 1; price = 1000; };
 	
 	///////// Submarines /////////
 	class Exile_Boat_SDV_CSAT											{ quality = 2; price = 7500; };
@@ -2618,6 +2611,11 @@ class CfgExileArsenal
 	class B_Heli_Transport_01_camo_F									{ quality = 4; price = 125000; };
 	class B_CTRG_Heli_Transport_01_sand_F								{ quality = 4; price = 125000; };
 	class B_CTRG_Heli_Transport_01_tropic_F								{ quality = 4; price = 125000; };
+	class B_Heli_Light_01_armed_F										{ quality = 4; price = 150000; };
+	class B_Heli_Transport_03_F											{ quality = 4; price = 150000; };
+	class B_Heli_Transport_03_black_F									{ quality = 4; price = 150000; };
+	
+	
 
 	///////// Planes /////////
 	class Exile_Plane_Cessna											{ quality = 2; price = 7500; };
@@ -2627,8 +2625,8 @@ class CfgExileArsenal
 	class Exile_Plane_Ceasar											{ quality = 2; price = 15000; }; 
 	
 	///////// Military Planes /////////
-	class Exile_Plane_BlackfishInfantry									{ quality = 2; price = 15000; };
-	class Exile_Plane_BlackfishVehicle									{ quality = 2; price = 15000; };
+	class Exile_Plane_BlackfishInfantry									{ quality = 3; price = 45000; };
+	class Exile_Plane_BlackfishVehicle									{ quality = 3; price = 45000; };
 	
 	///////// Military /////////
 	class Exile_Car_Ifrit 												{ quality = 2; price = 20000; };
@@ -2655,18 +2653,18 @@ class CfgExileArsenal
 	class O_LSV_02_armed_F												{ quality = 3; price = 25000; };
 	class B_LSV_01_armed_F												{ quality = 3; price = 25000; };
 	class B_T_LSV_01_armed_F											{ quality = 3; price = 25000; };
-	class Exile_Car_Offroad_Armed_Guerilla01 							{ quality = 3; price = 12500; };
-	class Exile_Car_Offroad_Armed_Guerilla02 							{ quality = 3; price = 12500; };
-	class Exile_Car_Offroad_Armed_Guerilla03 							{ quality = 3; price = 12500; };
-	class Exile_Car_Offroad_Armed_Guerilla04 							{ quality = 3; price = 12500; };
-	class Exile_Car_Offroad_Armed_Guerilla05 							{ quality = 3; price = 12500; };
-	class Exile_Car_Offroad_Armed_Guerilla06 							{ quality = 3; price = 12500; };
-	class Exile_Car_Offroad_Armed_Guerilla07 							{ quality = 3; price = 12500; };
-	class Exile_Car_Offroad_Armed_Guerilla08 							{ quality = 3; price = 12500; };
-	class Exile_Car_Offroad_Armed_Guerilla09 							{ quality = 3; price = 12500; };
-	class Exile_Car_Offroad_Armed_Guerilla10 							{ quality = 3; price = 12500; };
-	class Exile_Car_Offroad_Armed_Guerilla11 							{ quality = 3; price = 12500; };
-	class Exile_Car_Offroad_Armed_Guerilla12 							{ quality = 3; price = 12500; };
+	class Exile_Car_Offroad_Armed_Guerilla01 							{ quality = 2; price = 12500; };
+	class Exile_Car_Offroad_Armed_Guerilla02 							{ quality = 2; price = 12500; };
+	class Exile_Car_Offroad_Armed_Guerilla03 							{ quality = 2; price = 12500; };
+	class Exile_Car_Offroad_Armed_Guerilla04 							{ quality = 2; price = 12500; };
+	class Exile_Car_Offroad_Armed_Guerilla05 							{ quality = 2; price = 12500; };
+	class Exile_Car_Offroad_Armed_Guerilla06 							{ quality = 2; price = 12500; };
+	class Exile_Car_Offroad_Armed_Guerilla07 							{ quality = 2; price = 12500; };
+	class Exile_Car_Offroad_Armed_Guerilla08 							{ quality = 2; price = 12500; };
+	class Exile_Car_Offroad_Armed_Guerilla09 							{ quality = 2; price = 12500; };
+	class Exile_Car_Offroad_Armed_Guerilla10 							{ quality = 2; price = 12500; };
+	class Exile_Car_Offroad_Armed_Guerilla11 							{ quality = 2; price = 12500; };
+	class Exile_Car_Offroad_Armed_Guerilla12 							{ quality = 2; price = 12500; };
 	class Exile_Car_HMMWV_M2_Green 										{ quality = 3; price = 30000; };
 	class Exile_Car_HMMWV_M2_Desert 									{ quality = 3; price = 30000; };
 	class Exile_Car_HMMWV_M134_Green 									{ quality = 3; price = 35000; };
@@ -2677,7 +2675,7 @@ class CfgExileArsenal
 	class Exile_Car_BRDM2_HQ											{ quality = 3; price = 40000; };
 
 	///////// Military Medical /////////
-	class B_Truck_01_medical_F											{ quality = 2; price = 10000; };
+	class B_Truck_01_medical_F											{ quality = 1; price = 10000; };
 	class Exile_Car_LandRover_Ambulance_Green							{ quality = 2; price = 12000; };
 	class Exile_Car_LandRover_Ambulance_Desert							{ quality = 2; price = 12000; };
 	class Exile_Car_LandRover_Ambulance_Sand							{ quality = 2; price = 12000; };
@@ -2775,25 +2773,25 @@ class CfgExileArsenal
 	class Exile_Car_Van_Black 											{ quality = 1; price = 6000; };
 	class Exile_Car_Van_White 											{ quality = 1; price = 6000; };
 	class Exile_Car_Van_Red 											{ quality = 1; price = 6000; };
-	class Exile_Car_Van_Guerilla01 										{ quality = 1; price = 6000; };
-	class Exile_Car_Van_Guerilla02 										{ quality = 1; price = 6000; };
-	class Exile_Car_Van_Guerilla03 										{ quality = 1; price = 6000; };
-	class Exile_Car_Van_Guerilla04 										{ quality = 1; price = 6000; };
-	class Exile_Car_Van_Guerilla05 										{ quality = 1; price = 6000; };
-	class Exile_Car_Van_Guerilla06 										{ quality = 1; price = 6000; };
-	class Exile_Car_Van_Guerilla07 										{ quality = 1; price = 6000; };
-	class Exile_Car_Van_Guerilla08 										{ quality = 1; price = 6000; };
-	class Exile_Car_Van_Box_Black 										{ quality = 1; price = 6000; };
-	class Exile_Car_Van_Box_White 										{ quality = 1; price = 6000; };
-	class Exile_Car_Van_Box_Red 										{ quality = 1; price = 6000; };
-	class Exile_Car_Van_Box_Guerilla01 									{ quality = 1; price = 6000; };
-	class Exile_Car_Van_Box_Guerilla02 									{ quality = 1; price = 6000; };
-	class Exile_Car_Van_Box_Guerilla03 									{ quality = 1; price = 6000; };
-	class Exile_Car_Van_Box_Guerilla04 									{ quality = 1; price = 6000; };
-	class Exile_Car_Van_Box_Guerilla05 									{ quality = 1; price = 6000; };
-	class Exile_Car_Van_Box_Guerilla06 									{ quality = 1; price = 6000; };
-	class Exile_Car_Van_Box_Guerilla07 									{ quality = 1; price = 6000; };
-	class Exile_Car_Van_Box_Guerilla08 									{ quality = 1; price = 6000; };
+	class Exile_Car_Van_Guerilla01 										{ quality = 3; price = 6000; };
+	class Exile_Car_Van_Guerilla02 										{ quality = 3; price = 6000; };
+	class Exile_Car_Van_Guerilla03 										{ quality = 3; price = 6000; };
+	class Exile_Car_Van_Guerilla04 										{ quality = 3; price = 6000; };
+	class Exile_Car_Van_Guerilla05 										{ quality = 3; price = 6000; };
+	class Exile_Car_Van_Guerilla06 										{ quality = 3; price = 6000; };
+	class Exile_Car_Van_Guerilla07 										{ quality = 3; price = 6000; };
+	class Exile_Car_Van_Guerilla08 										{ quality = 3; price = 6000; };
+	class Exile_Car_Van_Box_Black 										{ quality = 3; price = 6000; };
+	class Exile_Car_Van_Box_White 										{ quality = 3; price = 6000; };
+	class Exile_Car_Van_Box_Red 										{ quality = 3; price = 6000; };
+	class Exile_Car_Van_Box_Guerilla01 									{ quality = 3; price = 6000; };
+	class Exile_Car_Van_Box_Guerilla02 									{ quality = 3; price = 6000; };
+	class Exile_Car_Van_Box_Guerilla03 									{ quality = 3; price = 6000; };
+	class Exile_Car_Van_Box_Guerilla04 									{ quality = 3; price = 6000; };
+	class Exile_Car_Van_Box_Guerilla05 									{ quality = 3; price = 6000; };
+	class Exile_Car_Van_Box_Guerilla06 									{ quality = 3; price = 6000; };
+	class Exile_Car_Van_Box_Guerilla07 									{ quality = 3; price = 6000; };
+	class Exile_Car_Van_Box_Guerilla08 									{ quality = 3; price = 6000; };
 	class Exile_Car_Van_Fuel_Black 										{ quality = 1; price = 6000; };
 	class Exile_Car_Van_Fuel_White 										{ quality = 1; price = 6000; };
 	class Exile_Car_Van_Fuel_Red 										{ quality = 1; price = 6000; };
@@ -4093,9 +4091,11 @@ class CfgTraderCategories
 		};
 	};
 
-	class Uniforms
+	class CfgTraderCategories 
+{	
+	class CivilianUniforms
 	{
-		name = "Uniforms";
+		name = "Civilian Uniforms";
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\uniform_ca.paa";
 		items[] = 
 		{
@@ -4114,26 +4114,24 @@ class CfgTraderCategories
 			"U_NikosAgedBody",
 			"U_NikosBody",
 			"U_Competitor",
-			"U_B_CombatUniform_mcam",
-			"U_B_CombatUniform_mcam_tshirt",
-			"U_B_CombatUniform_mcam_vest",
-			"U_B_CombatUniform_mcam_worn",
-			"U_B_CTRG_1",
-			"U_B_CTRG_2",
-			"U_B_CTRG_3",
-			"U_I_CombatUniform",
-			"U_I_CombatUniform_shortsleeve",
-			"U_I_CombatUniform_tshirt",
-			"U_I_OfficerUniform",
-			"U_O_CombatUniform_ocamo",
-			"U_O_CombatUniform_oucamo",
-			"U_O_OfficerUniform_ocamo",
-			"U_B_SpecopsUniform_sgg",
-			"U_O_SpecopsUniform_blk",
-			"U_O_SpecopsUniform_ocamo",
-			"U_I_G_Story_Protagonist_F",
-			"Exile_Uniform_Woodland",
-			"U_C_HunterBody_grn",
+			"U_C_Man_casual_1_F",
+			"U_C_Man_casual_2_F",
+			"U_C_Man_casual_3_F",
+			"U_C_man_sport_1_F",
+			"U_C_man_sport_2_F",
+			"U_C_man_sport_3_F",
+			"U_C_Man_casual_4_F",
+			"U_C_Man_casual_5_F",
+			"U_C_Man_casual_6_F"
+		};
+	};
+	
+	class GuerillaUniforms
+	{
+		name = "Guerilla Uniforms";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\uniform_ca.paa";
+		items[] = 
+		{
 			"U_IG_Guerilla1_1",
 			"U_IG_Guerilla2_1",
 			"U_IG_Guerilla2_2",
@@ -4149,67 +4147,62 @@ class CfgTraderCategories
 			"U_BG_leader",
 			"U_IG_leader",
 			"U_I_G_resistanceLeader_F",
-			/*"U_B_FullGhillie_ard",
-			"U_B_FullGhillie_lsh",
-			"U_B_FullGhillie_sard",
-			"U_B_GhillieSuit",
-			"U_I_FullGhillie_ard",
-			"U_I_FullGhillie_lsh",
-			"U_I_FullGhillie_sard",
-			"U_I_GhillieSuit",
-			"U_O_FullGhillie_ard",
-			"U_O_FullGhillie_lsh",
-			"U_O_FullGhillie_sard",
-			"U_O_GhillieSuit",*/
-			"U_I_Wetsuit",
-			"U_O_Wetsuit",
-			"U_B_Wetsuit",
-			"U_B_survival_uniform",
-			"U_B_HeliPilotCoveralls",
-			"U_I_HeliPilotCoveralls",
-			"U_B_PilotCoveralls",
-			"U_I_pilotCoveralls",
-			"U_O_PilotCoveralls",
-			//Apex
-			"U_B_T_Soldier_F",
-			"U_B_T_Soldier_AR_F",
-			"U_B_T_Soldier_SL_F",
-			//"U_B_T_Sniper_F",
-			//"U_B_T_FullGhillie_tna_F",
-			"U_B_CTRG_Soldier_F",
-			"U_B_CTRG_Soldier_2_F",
-			"U_B_CTRG_Soldier_3_F",
-			"U_B_GEN_Soldier_F",
-			"U_B_GEN_Commander_F",
-			"U_O_T_Soldier_F",
-			"U_O_T_Officer_F",
-			//"U_O_T_Sniper_F",
-			//"U_O_T_FullGhillie_tna_F",
-			"U_O_V_Soldier_Viper_F",
-			"U_O_V_Soldier_Viper_hex_F",
-			"U_I_C_Soldier_Para_1_F",
-			"U_I_C_Soldier_Para_2_F",
-			"U_I_C_Soldier_Para_3_F",
-			"U_I_C_Soldier_Para_4_F",
-			"U_I_C_Soldier_Para_5_F",
 			"U_I_C_Soldier_Bandit_1_F",
 			"U_I_C_Soldier_Bandit_2_F",
 			"U_I_C_Soldier_Bandit_3_F",
 			"U_I_C_Soldier_Bandit_4_F",
 			"U_I_C_Soldier_Bandit_5_F",
-			"U_I_C_Soldier_Camo_F",
-			"U_C_man_sport_1_F",
-			"U_C_man_sport_2_F",
-			"U_C_man_sport_3_F",
-			"U_C_Man_casual_1_F",
-			"U_C_Man_casual_2_F",
-			"U_C_Man_casual_3_F",
-			"U_C_Man_casual_4_F",
-			"U_C_Man_casual_5_F",
-			"U_C_Man_casual_6_F",
+			"U_I_C_Soldier_Para_1_F",
+			"U_I_C_Soldier_Para_2_F",
+			"U_I_C_Soldier_Para_3_F",
+			"U_I_C_Soldier_Para_4_F",
+			"U_I_C_Soldier_Para_5_F",
+			"U_I_C_Soldier_Camo_F"
+		};
+	};
+	
+	class MilitaryUniforms
+	{
+		name = "Military Uniforms";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\uniform_ca.paa";
+		items[] = 
+		{
+			"Exile_Uniform_Woodland",
+			"U_B_survival_uniform",
+			"U_B_GEN_Commander_F",
+			"U_B_GEN_Soldier_F",
+			"U_B_CombatUniform_mcam",
+			"U_B_CombatUniform_mcam_tshirt",
+			"U_B_CombatUniform_mcam_vest",
+			"U_B_CombatUniform_mcam_worn",
+			"U_O_CombatUniform_ocamo",
+			"U_O_CombatUniform_oucamo",
+			"U_B_CTRG_1",
+			"U_B_CTRG_2",
+			"U_B_CTRG_3",
 			"U_B_CTRG_Soldier_urb_1_F",
+			"U_B_CTRG_Soldier_urb_3_F",
 			"U_B_CTRG_Soldier_urb_2_F",
-			"U_B_CTRG_Soldier_urb_3_F"
+			"U_I_CombatUniform",
+			"U_I_CombatUniform_shortsleeve",
+			"U_I_CombatUniform_tshirt",
+			"U_I_OfficerUniform",
+			"U_O_OfficerUniform_ocamo",
+			"U_B_SpecopsUniform_sgg",
+			"U_O_SpecopsUniform_blk",
+			"U_O_SpecopsUniform_ocamo",
+			"U_I_G_Story_Protagonist_F",
+			"U_C_HunterBody_grn",
+			"U_B_HeliPilotCoveralls",
+			"U_B_PilotCoveralls",
+			"U_I_HeliPilotCoveralls",
+			"U_I_pilotCoveralls",
+			"U_O_PilotCoveralls",
+			"U_B_T_Soldier_F",
+			"U_B_T_Soldier_AR_F",
+			"U_O_T_Soldier_F",
+			"U_O_T_Officer_F",
+			"U_B_T_Soldier_SL_F"
 		};
 	};
 
@@ -4223,6 +4216,7 @@ class CfgTraderCategories
 			"V_Rangemaster_belt",
 			"V_TacVest_blk",
 			"V_TacVest_blk_POLICE",
+			"V_TacVest_gen_F",
 			"V_TacVest_brn",
 			"V_TacVest_camo",
 			"V_TacVest_khk",
@@ -4230,11 +4224,15 @@ class CfgTraderCategories
 			"V_TacVestCamo_khk",
 			"V_TacVestIR_blk",
 			"V_I_G_resistanceLeader_F",
+			"V_TacChestrig_grn_F",
+			"V_TacChestrig_oli_F",
+			"V_TacChestrig_cbr_F",
 			"V_BandollierB_blk",
 			"V_BandollierB_cbr",
 			"V_BandollierB_khk",
 			"V_BandollierB_oli",
 			"V_BandollierB_rgr",
+			"V_BandollierB_ghex_F",
 			"V_Chestrig_blk",
 			"V_Chestrig_khk",
 			"V_Chestrig_oli",
@@ -4245,9 +4243,15 @@ class CfgTraderCategories
 			"V_HarnessOGL_gry",
 			"V_HarnessOSpec_brn",
 			"V_HarnessOSpec_gry",
+			"V_HarnessO_ghex_F",
+			"V_HarnessOGL_ghex_F",
 			"V_PlateCarrier1_blk",
 			"V_PlateCarrier1_rgr",
+			"V_PlateCarrier1_tna_F",
+			"V_PlateCarrier1_rgr_noflag_F",
 			"V_PlateCarrier2_rgr",
+			"V_PlateCarrier2_tna_F",
+			"V_PlateCarrier2_rgr_noflag_F",
 			"V_PlateCarrier3_rgr",
 			"V_PlateCarrierGL_blk",
 			"V_PlateCarrierGL_mtp",
@@ -4261,20 +4265,8 @@ class CfgTraderCategories
 			"V_PlateCarrierSpec_blk",
 			"V_PlateCarrierSpec_mtp",
 			"V_PlateCarrierSpec_rgr",
-			//Apex
-			"V_TacChestrig_grn_F",
-			"V_TacChestrig_oli_F",
-			"V_TacChestrig_cbr_F",
-			"V_PlateCarrier1_tna_F",
-			"V_PlateCarrier2_tna_F",
 			"V_PlateCarrierSpec_tna_F",
-			"V_PlateCarrierGL_tna_F",
-			"V_HarnessO_ghex_F",
-			"V_HarnessOGL_ghex_F",
-			"V_BandollierB_ghex_F",
-			"V_TacVest_gen_F",
-			"V_PlateCarrier1_rgr_noflag_F",
-			"V_PlateCarrier2_rgr_noflag_F"
+			"V_PlateCarrierGL_tna_F"
 		};
 	};
 
@@ -4284,7 +4276,6 @@ class CfgTraderCategories
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\headgear_ca.paa";
 		items[] =
 		{
-			"Exile_Headgear_SantaHat",
 			"Exile_Headgear_SafetyHelmet",
 			"H_Cap_blk",
 			"H_Cap_blk_Raven",
@@ -4388,11 +4379,7 @@ class CfgTraderCategories
 			"H_PilotHelmetHeli_B",
 			"H_PilotHelmetHeli_I",
 			"H_PilotHelmetHeli_O",
-			//Apex
 			"H_Helmet_Skate",
-			"H_HelmetB_TI_tna_F",
-			//"H_HelmetO_ViperSP_hex_F",
-			//"H_HelmetO_ViperSP_ghex_F",
 			"H_HelmetB_tna_F",
 			"H_HelmetB_Enh_tna_F",
 			"H_HelmetB_Light_tna_F",
@@ -4412,9 +4399,9 @@ class CfgTraderCategories
 		};
 	};
 
-class Glasses 
+class Facewear 
 	{
-		name = "Glasses";
+		name = "Facewear";
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\Goggles_ca.paa";
 		items[] =
 		{
@@ -4438,10 +4425,6 @@ class Glasses
 			"G_Lady_Dark",
 			"G_Lady_Red",
 			"G_Lady_Blue",
-			"G_Diving",
-			"G_B_Diving",
-			"G_O_Diving",
-			"G_I_Diving",
 			"G_Goggles_VR",
 			"G_Balaclava_blk",
 			"G_Balaclava_oli",
@@ -4473,6 +4456,7 @@ class Glasses
 		items[] = 
 		{
 			"acc_flashlight",
+			"hlc_acc_Surefiregrip",
 			"acc_pointer_IR"
 		};
 	};
@@ -4485,14 +4469,13 @@ class Glasses
 		{
 			"bipod_01_F_blk",
 			"bipod_01_F_mtp",
+			"bipod_01_F_khk",
 			"bipod_01_F_snd",
 			"bipod_02_F_blk",
 			"bipod_02_F_hex",
 			"bipod_02_F_tan",
 			"bipod_03_F_blk",
-			"bipod_03_F_oli",
-			//Apex
-			"bipod_01_F_khk"
+			"bipod_03_F_oli"
 		};
 	};
 
@@ -4502,11 +4485,6 @@ class Glasses
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemmuzzle_ca.paa";
 		items[] = 
 		{
-			"muzzle_snds_338_black",
-			"muzzle_snds_338_green",
-			"muzzle_snds_338_sand",
-			"muzzle_snds_93mmg",
-			"muzzle_snds_93mmg_tan",
 			"muzzle_snds_acp",
 			"muzzle_snds_B",
 			"muzzle_snds_H",
@@ -4514,7 +4492,6 @@ class Glasses
 			"muzzle_snds_H_SW",
 			"muzzle_snds_L",
 			"muzzle_snds_M",
-			//Apex
 			"muzzle_snds_H_khk_F",
 			"muzzle_snds_H_snd_F",
 			"muzzle_snds_58_blk_F",
@@ -4523,24 +4500,26 @@ class Glasses
 			"muzzle_snds_B_khk_F",
 			"muzzle_snds_B_snd_F",
 			"muzzle_snds_58_wdm_F",
-			"muzzle_snds_65_TI_blk_F",
-			"muzzle_snds_65_TI_hex_F",
-			"muzzle_snds_65_TI_ghex_F",
 			"muzzle_snds_H_MG_blk_F",
-			"muzzle_snds_H_MG_khk_F"
+			"muzzle_snds_H_MG_khk_F",
+			//NIArms
+			"hlc_muzzle_Agendasix10mm",
+			"hlc_muzzle_Agendasix",
+			"hlc_muzzle_Tundra",
+			"hlc_muzzle_snds_AUG",
+			"hlc_muzzle_snds_a6AUG",
+			"hlc_muzzle_545SUP_AK",
+			"hlc_muzzle_762SUP_AK",
+			"hlc_muzzle_snds_M14",
+			"hlc_muzzle_556NATO_KAC",
+			"hlc_muzzle_300blk_KAC",
+			"hlc_muzzle_snds_fal",
+			"hlc_muzzle_snds_g3",
+			"hlc_muzzle_snds_HK33",
+			"muzzle_HBADGER"
 		};
 	};
 
-	class UAVs
-	{
-		name = "Unmanned Aerial Vehicles";
-		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\gps_ca.paa";
-		items[] = 
-		{
-			"I_UavTerminal",
-			"I_UAV_01_backpack_F"
-		};
-	};
 
 	class StaticMGs
 	{
@@ -4549,7 +4528,6 @@ class Glasses
 		items[] = 
 		{
 			"O_HMG_01_support_F",
-			//"O_HMG_01_support_high_F", // Does not seem to work with HMG01, only the lower version does
 			"O_HMG_01_weapon_F"
 		};
 	};
@@ -4560,6 +4538,8 @@ class Glasses
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemoptic_ca.paa";
 		items[] = 
 		{
+			"optic_MRD",
+			"optic_Yorris",
 			"optic_Aco",
 			"optic_ACO_grn",
 			"optic_ACO_grn_smg",
@@ -4568,37 +4548,95 @@ class Glasses
 			"optic_AMS_khk",
 			"optic_AMS_snd",
 			"optic_Arco",
+			"optic_Arco_blk_F",	
+			"optic_Arco_ghex_F",		
+			"optic_ERCO_blk_F",
+			"optic_ERCO_khk_F",
+			"optic_ERCO_snd_F",
 			"optic_DMS",
+			"optic_DMS_ghex_F",
 			"optic_Hamr",
+			"optic_Hamr_khk_F",
 			"optic_Holosight",
 			"optic_Holosight_smg",
+			"optic_Holosight_blk_F",
+			"optic_Holosight_khk_F",
+			"optic_Holosight_smg_blk_F",
 			"optic_KHS_blk",
 			"optic_KHS_hex",
 			"optic_KHS_old",
 			"optic_KHS_tan",
 			"optic_LRPS",
-			"optic_MRCO",
-			"optic_MRD",
-			"optic_Nightstalker",
-			"optic_NVS",
-			"optic_SOS",
-			//"optic_tws",
-			//"optic_tws_mg",
-			"optic_Yorris",
-			//Apex
-			"optic_Arco_blk_F",
-			"optic_Arco_ghex_F",
-			"optic_DMS_ghex_F",
-			"optic_Hamr_khk_F",
-			"optic_ERCO_blk_F",
-			"optic_ERCO_khk_F",
-			"optic_ERCO_snd_F",
-			"optic_SOS_khk_F",
 			"optic_LRPS_tna_F",
 			"optic_LRPS_ghex_F",
-			"optic_Holosight_blk_F",
-			"optic_Holosight_khk_F",
-			"optic_Holosight_smg_blk_F"
+			"optic_MRCO",
+			"optic_NVS",
+			"optic_SOS",
+			"optic_SOS_khk_F",
+			"optic_Nightstalker",
+			//"optic_tws"
+			//"optic_tws_mg"
+			//NIArms
+			"HLC_Optic_PSO1",
+			"HLC_Optic_1p29",
+			"hlc_optic_kobra",
+			//"hlc_optic_goshawk",
+			"hlc_optic_PVS4FAL",
+			"hlc_optic_PVS4G3",
+			"hlc_optic_PVS4M14",
+			"hlc_optic_suit",
+			"hlc_optic_accupoint_g3",
+			"HLC_Optic_G36dualoptic35x",
+			"HLC_Optic_G36dualoptic35x2d",
+			"HLC_Optic_G36Export35x",
+			"HLC_Optic_G36Export35x2d",
+			"HLC_Optic_G36Dualoptic15x",
+			"HLC_Optic_G36Dualoptic15x2d",
+			"HLC_Optic_G36Export15x",
+			"HLC_Optic_G36Export15x2d",
+			"hlc_optic_artel_m14",
+			"hlc_optic_LRT_m14",
+			"hlc_optic_Kern",
+			"hlc_optic_Kern2d",
+			"HLC_Optic_ZFSG1"
+		};
+	};
+	
+	class NVG 
+	{
+		name = "Night Vision Goggles";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] = 
+		{
+			"NVGoggles",
+			"NVGoggles_INDEP",
+			"NVGoggles_OPFOR",
+			"NVGoggles_tna_F",
+			"O_NVGoggles_hex_F",
+			"O_NVGoggles_urb_F",
+			"O_NVGoggles_ghex_F"
+		};
+	};
+	
+	class EquipmentTools
+	{
+		name = "Tools";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] = 
+		{
+			"Binocular",
+			"Rangefinder",
+			"ItemGPS",
+			"ItemMap",
+			"ItemCompass",
+			"ItemRadio",
+			"ItemWatch",
+			"Exile_Item_XM8"			
+			/*
+			"Laserdesignator"
+			"Laserdesignator_02"
+			"Laserdesignator_03"
+			*/
 		};
 	};
 
@@ -4608,39 +4646,63 @@ class Glasses
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
-			
 			"Exile_Item_DuctTape",
+			"Exile_Item_ZipTie",
 			"Exile_Item_ExtensionCord",
-			"Exile_Item_FuelCanisterEmpty",
-			"Exile_Item_JunkMetal",
 			"Exile_Item_LightBulb",
+			"Exile_Item_MetalScrews",
+			"Exile_Item_JunkMetal",
 			"Exile_Item_MetalBoard",
 			"Exile_Item_MetalPole",
+			//"Exile_Item_MobilePhone",
 			"Exile_Item_SafeKit",
-			"Exile_Item_CamoTentKit",
-			"Exile_Item_CodeLock"
-			
+			"Exile_Item_CodeLock",
+			"Exile_Item_FuelCanisterFull",
+			"Exile_Item_FuelBarrelFull",
+			"Exile_Item_WaterCanisterDirtyWater",
+			"Exile_Item_CamoTentKit"
 			/*
-			--Not for Sale--
-			"Exile_Item_MetalScrews",
+			"Exile_Item_Rope",
 			"Exile_Item_MetalWire",
 			"Exile_Item_Laptop",
 			"Exile_Item_BaseCameraKit",
 			"Exile_Item_MetalHedgehogKit",
+			"Exile_Item_CarWheel",
 			"Exile_Item_Cement",
-			"Exile_Item_Sand",
-			"Exile_Item_MobilePhone",
-			--Unused--
+			"Exile_Item_Sand"
+			*/
+		};
+	};
+	
+	class Tools
+	{
+		name = "Tools";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] = 
+		{
+			"Exile_Item_Matches",
+			"Exile_Item_CookingPot",
+			"Exile_Item_CanOpener",
+			"Exile_Melee_Axe",
+			"Exile_Item_Handsaw",
+			"Exile_Item_Pliers",
+			"Exile_Item_Grinder",
+			"Exile_Item_Knife",
+			"Exile_Magazine_Battery",
+			"Exile_Melee_SledgeHammer",
+			"Exile_Item_Foolbox",
 			"Exile_Item_CordlessScrewdriver",
+			"Exile_Item_Shovel"
+			/*
+			"Exile_Item_ThermalScannerPro",
 			"Exile_Item_FireExtinguisher",
-			"Exile_Item_OilCanister",
 			"Exile_Item_Hammer",
-			"Exile_Item_Carwheel",
-			"Exile_Item_SleepingMat",
-			"Exile_Item_Defibrillator",
+			"Exile_Item_OilCanister",
+			"Exile_Item_Screwdriver",
 			"Exile_Item_Wrench",
-			"Exile_Item_Rope"
-		*/
+			"Exile_Item_SleepingMat",	
+			"Exile_Item_ToiletPaper",			
+			*/
 		};
 	};
 
@@ -4655,17 +4717,19 @@ class Glasses
 			"Exile_Item_Surstromming",
 			"Exile_Item_SausageGravy",
 			"Exile_Item_Catfood",
+			"Exile_Item_MacasCheese",
 			"Exile_Item_ChristmasTinner",
 			"Exile_Item_BBQSandwich",
-			"Exile_Item_MacasCheese",
 			"Exile_Item_Dogfood",
 			"Exile_Item_BeefParts",
 			"Exile_Item_Cheathas",
+			"Exile_Item_DsNuts",
 			"Exile_Item_Noodles",
 			"Exile_Item_SeedAstics",
 			"Exile_Item_Raisins",
 			"Exile_Item_Moobar",
-			"Exile_Item_InstantCoffee"
+			"Exile_Item_CockONut",
+			"Exile_Item_InstantCoffee"		
 		};
 	};
 
@@ -4686,58 +4750,6 @@ class Glasses
 		};
 	};
 
-	class Tools
-	{
-		name = "Tools";
-		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
-		items[] = 
-		{
-			"Exile_Item_Matches",
-			"Exile_Item_CookingPot",
-			"Exile_Item_CanOpener",
-			"Exile_Item_Handsaw",
-			"Exile_Item_Pliers",
-			"Exile_Item_Grinder",
-			"Exile_Item_Foolbox",
-
-			/*
-			"Exile_Item_CordlessScrewdriver",
-			"Exile_Item_FireExtinguisher",
-			"Exile_Item_Hammer",
-			"Exile_Item_OilCanister",
-			"Exile_Item_Screwdriver",
-			"Exile_Item_Shovel",
-			"Exile_Item_Wrench",
-			"Exile_Item_SleepingMat",	
-			"Exile_Item_ToiletPaper",			
-			"Exile_Item_ZipTie",
-			*/
-
-			"Binocular",
-			"Rangefinder",
-			/*
-			"Laserdesignator",
-			"Laserdesignator_02",
-			"Laserdesignator_03",
-			*/
-			"NVGoggles",
-			"NVGoggles_INDEP",
-			"NVGoggles_OPFOR",
-			"ItemGPS",
-			"ItemMap",
-			"ItemCompass",
-			"ItemRadio",
-			"ItemWatch",
-			"Exile_Item_XM8",
-			
-			//Apex
-			"O_NVGoggles_hex_F",
-			"O_NVGoggles_urb_F",
-			"O_NVGoggles_ghex_F",
-			"NVGoggles_tna_F"
-		};
-	};
-
 	class FirstAid
 	{
 		name = "FirstAid";
@@ -4747,28 +4759,8 @@ class Glasses
 			"Exile_Item_InstaDoc",
 			"Exile_Item_Bandage",
 			"Exile_Item_Vishpirin",
-			"Exile_Item_Heatpack"
-
-			// Not available in 0.9.4!
+			//"Exile_Item_Heatpack"
 			//"Exile_Item_Defibrillator"
-		};
-	};
-
-	class Navigation
-	{
-		name = "Special Environment";
-		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
-		items[] = 
-		{
-			"B_Parachute",
-			"V_RebreatherB",
-			"V_RebreatherIA",
-			"V_RebreatherIR",
-			"Exile_Headgear_GasMask",
-			"G_Diving",
-			"G_B_Diving",
-			"G_O_Diving",
-			"G_I_Diving"			
 		};
 	};
 
@@ -4778,6 +4770,10 @@ class Glasses
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\backpack_ca.paa";
 		items[] = 
 		{
+			"B_HuntingBackpack",
+			"B_OutdoorPack_blk",
+			"B_OutdoorPack_blu",
+			"B_OutdoorPack_tan",
 			"B_AssaultPack_blk",
 			"B_AssaultPack_cbr",
 			"B_AssaultPack_dgtl",
@@ -4785,6 +4781,21 @@ class Glasses
 			"B_AssaultPack_mcamo",
 			"B_AssaultPack_rgr",
 			"B_AssaultPack_sgg",
+			"B_AssaultPack_tna_F",
+			"B_FieldPack_blk",
+			"B_FieldPack_cbr",
+			"B_FieldPack_ocamo",
+			"B_FieldPack_oucamo",
+			"B_FieldPack_ghex_F",
+			"B_TacticalPack_blk",
+			"B_TacticalPack_rgr",
+			"B_TacticalPack_ocamo",
+			"B_TacticalPack_mcamo",
+			"B_TacticalPack_oli",
+			"B_Kitbag_cbr",
+			"B_Kitbag_mcamo",
+			"B_Kitbag_rgr",
+			"B_Kitbag_sgg",
 			"B_Bergen_blk",
 			"B_Bergen_mcamo",
 			"B_Bergen_rgr",
@@ -4795,40 +4806,30 @@ class Glasses
 			"B_Carryall_ocamo",
 			"B_Carryall_oli",
 			"B_Carryall_oucamo",
-			"B_FieldPack_blk",
-			"B_FieldPack_cbr",
-			"B_FieldPack_ocamo",
-			"B_FieldPack_oucamo",
-			"B_HuntingBackpack",
-			"B_Kitbag_cbr",
-			"B_Kitbag_mcamo",
-			"B_Kitbag_sgg",
-			"B_OutdoorPack_blk",
-			"B_OutdoorPack_blu",
-			"B_OutdoorPack_tan",
-			"B_TacticalPack_blk",
-			"B_TacticalPack_mcamo",
-			"B_TacticalPack_ocamo",
-			"B_TacticalPack_oli",
-			"B_TacticalPack_rgr",
-			//Apex
-			"B_Bergen_mcamo_F",
+			"B_Carryall_ghex_F",
 			"B_Bergen_dgtl_F",
 			"B_Bergen_hex_F",
-			"B_Bergen_tna_F",
-			"B_AssaultPack_tna_F",
-			"B_Carryall_ghex_F",
-			"B_FieldPack_ghex_F",
-			"B_ViperHarness_blk_F",
-			"B_ViperHarness_ghex_F",
-			"B_ViperHarness_hex_F",
-			"B_ViperHarness_khk_F",
-			"B_ViperHarness_oli_F",
+			"B_Bergen_mcamo_F",
+			"B_Bergen_tna_F"
+		};
+	};
+	
+	class ViperHarnesses
+	{
+		name = "Viper Harnesses";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\backpack_ca.paa";
+		items[] = 
+		{
 			"B_ViperLightHarness_blk_F",
 			"B_ViperLightHarness_ghex_F",
 			"B_ViperLightHarness_hex_F",
 			"B_ViperLightHarness_khk_F",
-			"B_ViperLightHarness_oli_F"
+			"B_ViperLightHarness_oli_F",
+			"B_ViperHarness_blk_F",						
+			"B_ViperHarness_ghex_F",
+			"B_ViperHarness_hex_F",
+			"B_ViperHarness_khk_F",
+			"B_ViperHarness_oli_F"
 		};
 	};
 
@@ -4838,94 +4839,168 @@ class Glasses
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\CargoMag_ca.paa";
 		items[] = 
 		{
-			"100Rnd_65x39_caseless_mag",
-			"100Rnd_65x39_caseless_mag_Tracer",
-			"10Rnd_127x54_Mag",
-			"10Rnd_338_Mag",
-			"10Rnd_762x54_Mag",
-			"10Rnd_93x64_DMR_05_Mag",
-			"11Rnd_45ACP_Mag",
-			//"130Rnd_338_Mag", SPMG
-			"150Rnd_762x54_Box",
-			"150Rnd_762x54_Box_Tracer",
-			//"150Rnd_93x64_Mag", // NAVID
-			"16Rnd_9x21_Mag",
-			"200Rnd_65x39_cased_Box",
-			"200Rnd_65x39_cased_Box_Tracer",
-			"20Rnd_556x45_UW_mag",
-			"20Rnd_762x51_Mag",
-			"30Rnd_45ACP_Mag_SMG_01",
-			"30Rnd_45ACP_Mag_SMG_01_tracer_green",
-			"30Rnd_45ACP_Mag_SMG_01_Tracer_Red",
-			"30Rnd_45ACP_Mag_SMG_01_Tracer_Yellow",
-			"30Rnd_556x45_Stanag",
-			"30Rnd_556x45_Stanag_Tracer_Green",
-			"30Rnd_556x45_Stanag_Tracer_Red",
-			"30Rnd_556x45_Stanag_Tracer_Yellow",
-			"30Rnd_65x39_caseless_green",
-			"30Rnd_65x39_caseless_green_mag_Tracer",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag_Tracer",
-			"30Rnd_9x21_Mag",
-			"30Rnd_9x21_Yellow_Mag",
-			"30Rnd_9x21_Green_Mag",
-			"30Rnd_9x21_Red_Mag",
-			"5Rnd_127x108_APDS_Mag",
-			"5Rnd_127x108_Mag",
-			"6Rnd_45ACP_Cylinder",
 			"6Rnd_GreenSignal_F",
 			"6Rnd_RedSignal_F",
-			"7Rnd_408_Mag",
+			"6Rnd_45ACP_Cylinder",
 			"9Rnd_45ACP_Mag",
-			"Exile_Magazine_30Rnd_762x39_AK",
-			"Exile_Magazine_30Rnd_545x39_AK_Green",
-			"Exile_Magazine_30Rnd_545x39_AK_Red",
-			"Exile_Magazine_30Rnd_545x39_AK_White",
-			"Exile_Magazine_30Rnd_545x39_AK_Yellow",
-			"Exile_Magazine_45Rnd_545x39_RPK_Green",
-			"Exile_Magazine_75Rnd_545x39_RPK_Green",
-			"Exile_Magazine_20Rnd_762x51_DMR",
-			"Exile_Magazine_20Rnd_762x51_DMR_Yellow",
-			"Exile_Magazine_20Rnd_762x51_DMR_Red",
-			"Exile_Magazine_20Rnd_762x51_DMR_Green",
-			"Exile_Magazine_10Rnd_303",
-			"Exile_Magazine_100Rnd_762x54_PK_Green",
-			"Exile_Magazine_7Rnd_45ACP",
-			"Exile_Magazine_8Rnd_9x18",
-			"Exile_Magazine_30Rnd_545x39_AK",
-			"Exile_Magazine_6Rnd_45ACP",
-			"Exile_Magazine_5Rnd_22LR",
-			"Exile_Magazine_10Rnd_762x54",
-			"Exile_Magazine_10Rnd_9x39",
-			"Exile_Magazine_20Rnd_9x39",
-			//"Exile_Magazine_8Rnd_74Pellets",
-			"Exile_Magazine_8Rnd_74Slug",
-			//Apex
+			"11Rnd_45ACP_Mag",
+			"30Rnd_45ACP_Mag_SMG_01",
+			"30Rnd_45ACP_Mag_SMG_01_Tracer_Green",
+			"30Rnd_45ACP_Mag_SMG_01_Tracer_Yellow",
+			"30Rnd_45ACP_Mag_SMG_01_Tracer_Red",
+			"10Rnd_9x21_Mag",
+			"16Rnd_9x21_Mag",
 			"30Rnd_9x21_Mag_SMG_02",
 			"30Rnd_9x21_Mag_SMG_02_Tracer_Red",
 			"30Rnd_9x21_Mag_SMG_02_Tracer_Yellow",
 			"30Rnd_9x21_Mag_SMG_02_Tracer_Green",
-			"30Rnd_580x42_Mag_F",
-			"30Rnd_580x42_Mag_Tracer_F",
-			"100Rnd_580x42_Mag_F",
-			"100Rnd_580x42_Mag_Tracer_F",
-			"20Rnd_650x39_Cased_Mag_F",
-			"10Rnd_50BW_Mag_F",
+			"30Rnd_9x21_Mag",
+			"20Rnd_556x45_UW_mag",
+			"30Rnd_556x45_Stanag",
+			"30Rnd_556x45_Stanag_green",
+			"30Rnd_556x45_Stanag_red",
+			"30Rnd_556x45_Stanag_Tracer_Red",
+			"30Rnd_556x45_Stanag_Tracer_Yellow",
+			"30Rnd_556x45_Stanag_Tracer_Green",
 			"150Rnd_556x45_Drum_Mag_F",
 			"150Rnd_556x45_Drum_Mag_Tracer_F",
-			"30Rnd_762x39_Mag_F",
-			"30Rnd_762x39_Mag_Green_F",
-			"30Rnd_762x39_Mag_Tracer_F",
-			"30Rnd_762x39_Mag_Tracer_Green_F",
-			"30Rnd_545x39_Mag_F",
-			"30Rnd_545x39_Mag_Green_F",
-			"30Rnd_545x39_Mag_Tracer_F",
-			"30Rnd_545x39_Mag_Tracer_Green_F",
 			"200Rnd_556x45_Box_F",
 			"200Rnd_556x45_Box_Red_F",
 			"200Rnd_556x45_Box_Tracer_F",
 			"200Rnd_556x45_Box_Tracer_Red_F",
-			"10Rnd_9x21_Mag"
+			"30Rnd_580x42_Mag_F",
+			"30Rnd_580x42_Mag_Tracer_F",
+			"100Rnd_580x42_Mag_F",
+			"100Rnd_580x42_Mag_Tracer_F",
+			"100Rnd_65x39_caseless_mag_Tracer",			
+			"30Rnd_65x39_caseless_green",
+			"30Rnd_65x39_caseless_green_mag_Tracer",
+			"30Rnd_65x39_caseless_mag",
+			"30Rnd_65x39_caseless_mag_Tracer",
+			"20Rnd_650x39_Cased_Mag_F",
+			"100Rnd_65x39_caseless_mag",
+			"100Rnd_65x39_caseless_mag_Tracer",
+			"200Rnd_65x39_cased_Box",
+			"200Rnd_65x39_cased_Box_Tracer",
+			"30Rnd_762x39_Mag_F",
+			"30Rnd_762x39_Mag_Green_F",
+			"30Rnd_762x39_Mag_Tracer_F",
+			"30Rnd_762x39_Mag_Tracer_Green_F",
+			"20Rnd_762x51_Mag",
+			"10Rnd_762x54_Mag",
+			"150Rnd_762x54_Box",
+			"150Rnd_762x54_Box_Tracer",
+			//"10Rnd_93x64_DMR_05_Mag",
+			//"150Rnd_93x64_Mag",
+			//"10Rnd_338_Mag",
+			//"130Rnd_338_Mag",
+			//"7Rnd_408_Mag",
+			"10Rnd_127x54_Mag",
+			//"5Rnd_127x108_Mag",
+			//"5Rnd_127x108_APDS_Mag",
+			//"10Rnd_50BW_Mag_F",
+			//NIArms
+			"hlc_12Rnd_45ACP_B_mk23",
+			"hlc_12Rnd_45ACP_S_mk23",
+			"hlc_12Rnd_45ACP_T_mk23",
+			//"hlc_8Rnd_44mag_B_deagle",
+			//"hlc_8Rnd_44mag_JHP_deagle",
+			//"hlc_50Rnd_44mag_B_deagle",
+			//"hlc_50Rnd_44mag_FUN",
+			"hlc_10rnd_12g_buck_S12",
+			"hlc_10rnd_12g_slug_S12",
+			"hlc_25Rnd_9x19mm_M882_AUG",
+			"hlc_25Rnd_9x19mm_JHP_AUG",
+			"hlc_25Rnd_9x19mm_subsonic_AUG",
+			"hlc_30Rnd_9x19_B_MP5",
+			"hlc_30Rnd_9x19_GD_MP5",
+			"hlc_30Rnd_9x19_SD_MP5",
+			"hlc_32rnd_9x19_B_sten",
+			"hlc_30Rnd_10mm_B_MP5",
+			"hlc_30Rnd_10mm_JHP_MP5",
+			"hlc_30Rnd_545x39_B_AK",
+			"hlc_30Rnd_545x39_T_AK",
+			"hlc_30Rnd_545x39_EP_AK",
+			"hlc_30Rnd_545x39_S_AK",
+			"hlc_45Rnd_545x39_t_rpk",
+			"hlc_60Rnd_545x39_t_rpk",
+			"hlc_30rnd_556x45_EPR",
+			"hlc_30rnd_556x45_SOST",
+			"hlc_30rnd_556x45_SPR",
+			"hlc_30rnd_556x45_EPR_G36",
+			"hlc_30rnd_556x45_SOST_G36",
+			"hlc_30rnd_556x45_SPR_G36",
+			"hlc_30rnd_556x45_Tracers_G36",
+			"hlc_100rnd_556x45_EPR_G36",
+			"hlc_30Rnd_556x45_B_AUG",
+			"hlc_30Rnd_556x45_SOST_AUG",
+			"hlc_30Rnd_556x45_SPR_AUG",
+			"hlc_30Rnd_556x45_T_AUG",
+			"hlc_40Rnd_556x45_B_AUG",
+			"hlc_40Rnd_556x45_SOST_AUG",
+			"hlc_40Rnd_556x45_SPR_AUG",
+			"hlc_30rnd_556x45_EPR_HK33",
+			"hlc_30rnd_556x45_SOST_HK33",
+			"hlc_30rnd_556x45_t_HK33",
+			"hlc_30rnd_556x45_b_HK33",
+			"hlc_30rnd_556x45_S",
+			"hlc_50rnd_556x45_EPR",
+			"hlc_200rnd_556x45_M_SAW",
+			"hlc_200rnd_556x45_T_SAW",
+			"hlc_200rnd_556x45_B_SAW",
+			"hlc_24Rnd_75x55_B_stgw",
+			"hlc_24Rnd_75x55_ap_stgw",
+			"hlc_24Rnd_75x55_T_stgw",
+			"hlc_30Rnd_762x39_b_ak",
+			"hlc_30Rnd_762x39_t_ak",
+			"hlc_30rnd_762x39_s_ak",
+			"hlc_45Rnd_762x39_t_rpk",
+			"hlc_45Rnd_762x39_m_rpk",
+			"hlc_75rnd_762x39_m_rpk",
+			"hlc_20Rnd_762x51_B_fal",
+			"hlc_20Rnd_762x51_t_fal",
+			"hlc_20Rnd_762x51_S_fal",
+			"hlc_20Rnd_762x51_barrier_fal",
+			"hlc_20Rnd_762x51_mk316_fal",
+			"hlc_50rnd_762x51_M_FAL",
+			"hlc_20Rnd_762x51_B_G3",
+			"hlc_20rnd_762x51_T_G3",
+			"hlc_20rnd_762x51_Mk316_G3",
+			"hlc_20rnd_762x51_barrier_G3",
+			"hlc_20rnd_762x51_S_G3",
+			"hlc_50rnd_762x51_M_G3",
+			"hlc_20Rnd_762x51_B_M14",
+			"hlc_20rnd_762x51_T_M14",
+			"hlc_20Rnd_762x51_S_M14",
+			"hlc_20Rnd_762x51_barrier_M14",
+			"hlc_20rnd_762x51_mk316_M14",
+			"hlc_50Rnd_762x51_B_M14",
+			"hlc_20Rnd_762x51_b_amt",
+			"hlc_20Rnd_762x51_mk316_amt",
+			"hlc_20Rnd_762x51_bball_amt",
+			"hlc_20Rnd_762x51_T_amt",
+			"hlc_100Rnd_762x51_B_M60E4",
+			"hlc_100Rnd_762x51_T_M60E4",
+			"hlc_100Rnd_762x51_M_M60E4",
+			"hlc_100Rnd_762x51_Barrier_M60E4",
+			//"hlc_5Rnd_792_T_Kar98",
+			//"hlc_5Rnd_792_AP_Kar98",
+			"29rnd_300BLK_STANAG",
+			"29rnd_300BLK_STANAG_T",
+			"29rnd_300BLK_STANAG_S",
+			"hlc_5rnd_3006_1903",
+			//"hlc_10Rnd_303_B_enfield",
+			//"hlc_10Rnd_303_T_enfield",
+			//"hlc_10Rnd_303_AP_enfield",
+			"hlc_5rnd_300WM_FMJ_AWM",
+			"hlc_5rnd_300WM_AP_AWM",
+			"hlc_5rnd_300WM_BTSP_AWM",
+			"hlc_5rnd_300WM_mk248_AWM",
+			"hlc_5rnd_300WM_SBT_AWM",
+			//Exile
+			"Exile_Magazine_8Rnd_74Slug",		
+			"Exile_Magazine_8Rnd_74Pellets"
+			
 		};
 	};
 
@@ -4979,7 +5054,15 @@ class Glasses
 			"3Rnd_SmokeOrange_Grenade_shell",
 			"3Rnd_SmokePurple_Grenade_shell",
 			"3Rnd_SmokeRed_Grenade_shell",
-			"3Rnd_SmokeYellow_Grenade_shell"
+			"3Rnd_SmokeYellow_Grenade_shell",
+			//NIArms
+			"hlc_GRD_White",
+			"hlc_GRD_red",
+			"hlc_GRD_green",
+			"hlc_GRD_blue",
+			"hlc_GRD_orange",
+			"hlc_GRD_purple",
+			"hlc_GRD_yellow"	
 		};
 	};	
 
@@ -5000,35 +5083,32 @@ class Glasses
 			"APERSMine_Range_Mag",
 			"APERSTripMine_Wire_Mag",
 			"ClaymoreDirectionalMine_Remote_Mag",
-			"DemoCharge_Remote_Mag",
+			//"DemoCharge_Remote_Mag",
 			"IEDLandBig_Remote_Mag",
 			"IEDLandSmall_Remote_Mag",
 			"IEDUrbanBig_Remote_Mag",
 			"IEDUrbanSmall_Remote_Mag",
-			"SatchelCharge_Remote_Mag",
-			"SLAMDirectionalMine_Wire_Mag"
+			//"SatchelCharge_Remote_Mag",
+			"SLAMDirectionalMine_Wire_Mag",
+			//NIArms
+			"hlc_VOG25_AK"
 		};
 	};
 
-	class Pistols 
+	class Handguns 
 	{
-		name = "Pistols";
+		name = "Handguns";
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\handgun_ca.paa";
 		items[] = 
 		{
+			"hgun_Pistol_01_F",
 			"hgun_ACPC2_F",
 			"hgun_P07_F",
+			"hgun_P07_khk_F",
+			"hgun_Rook40_F",
 			"hgun_Pistol_heavy_01_F",
 			"hgun_Pistol_heavy_02_F",
-			"hgun_Pistol_Signal_F",
-			"hgun_Rook40_F",
-			"Exile_Weapon_Colt1911",
-			"Exile_Weapon_Makarov",
-			"Exile_Weapon_Taurus",
-			"Exile_Weapon_TaurusGold",
-			//Apex
-			"hgun_Pistol_01_F",
-			"hgun_P07_khk_F"
+			"hlc_smg_mp5k"
 		};
 	};
 
@@ -5041,7 +5121,19 @@ class Glasses
 			"hgun_PDW2000_F",
 			"SMG_01_F",
 			"SMG_02_F",
-			"SMG_05_F"
+			"SMG_05_F",
+			"hlc_rifle_hk53",
+			"hlc_rifle_hk53RAS",
+			"hlc_smg_mp510",
+			"hlc_smg_mp5a2",
+			"hlc_smg_mp5a3",
+			"hlc_smg_mp5a4",
+			"hlc_smg_mp5k_PDW",
+			"hlc_smg_MP5N",
+			"hlc_smg_9mmar",
+			"hlc_smg_mp5sd5",
+			"hlc_smg_mp5sd6"
+			
 		};
 	};
 
@@ -5053,20 +5145,29 @@ class Glasses
 		{
 			"arifle_MX_SW_Black_F",
 			"arifle_MX_SW_F",
+			"LMG_03_F",
 			"LMG_Mk200_F",
 			"LMG_Zafir_F",
-			"LMG_03_F",
-			"Exile_Weapon_RPK",
-			"Exile_Weapon_PK",
-			"Exile_Weapon_PKP"
-
-			/*
-			"MMG_01_hex_F",
-			"MMG_01_tan_F",
-			"MMG_02_black_F",
-			"MMG_02_camo_F",
-			"MMG_02_sand_F"
-			*/
+			//NIArms
+			"hlc_lmg_m60",
+			"hlc_lmg_M60E4",
+			"hlc_lmg_minimi",
+			"hlc_lmg_minimi_railed",
+			"hlc_lmg_minimipara",
+			"hlc_m249_pip1",
+			"hlc_m249_pip3",
+			"hlc_m249_pip4",
+			"hlc_lmg_M249E2",
+			"hlc_m249_pip2",
+			"hlc_lmg_m60",
+			"hlc_lmg_M60E4",
+			"hlc_lmg_mk48",
+			"hlc_rifle_rpk",
+			"hlc_rifle_RPK12",
+			"hlc_rifle_rpk74n",
+			"hlc_rifle_MG36",
+			"hlc_lmg_m249para",
+			"hlc_m249_SQuantoon"
 		};
 	};
 
@@ -5087,36 +5188,30 @@ class Glasses
 			"arifle_Mk20C_plain_F",
 			"arifle_MX_Black_F",
 			"arifle_MX_F",
+			"arifle_MX_khk_F",
 			"arifle_MX_GL_Black_F",
 			"arifle_MX_GL_F",
+			"arifle_MX_GL_khk_F",
 			"arifle_MXC_Black_F",
 			"arifle_MXC_F",
+			"arifle_MXC_khk_F",				
 			"arifle_SDAR_F",
 			"arifle_TRG20_F",
 			"arifle_TRG21_F",
 			"arifle_TRG21_GL_F",
-			"Exile_Weapon_AK107",
-			"Exile_Weapon_AK107_GL",
-			"Exile_Weapon_AK74",
-			"Exile_Weapon_AK74_GL",
-			"Exile_Weapon_AK47",
-			"Exile_Weapon_AKS_Gold",
-			//Apex
-			"arifle_AK12_F",
+			"arifle_AK12_F",											
 			"arifle_AK12_GL_F",
 			"arifle_AKM_F",
-			"arifle_AKM_FL_F",
 			"arifle_AKS_F",
-			"arifle_ARX_blk_F",
-			"arifle_ARX_ghex_F",
-			"arifle_ARX_hex_F",
 			"arifle_CTAR_blk_F",
-			"arifle_CTAR_hex_F",
 			"arifle_CTAR_ghex_F",
+			"arifle_CTAR_hex_F",
 			"arifle_CTAR_GL_blk_F",
+			"arifle_CTAR_GL_ghex_F",
+			"arifle_CTAR_GL_hex_F",
 			"arifle_CTARS_blk_F",
-			"arifle_CTARS_hex_F",
 			"arifle_CTARS_ghex_F",
+			"arifle_CTARS_hex_F",
 			"arifle_SPAR_01_blk_F",
 			"arifle_SPAR_01_khk_F",
 			"arifle_SPAR_01_snd_F",
@@ -5125,14 +5220,130 @@ class Glasses
 			"arifle_SPAR_01_GL_snd_F",
 			"arifle_SPAR_02_blk_F",
 			"arifle_SPAR_02_khk_F",
-			"arifle_SPAR_02_snd_F",			
+			"arifle_SPAR_02_snd_F",
 			"arifle_SPAR_03_blk_F",
 			"arifle_SPAR_03_khk_F",
 			"arifle_SPAR_03_snd_F",
-			"arifle_MX_khk_F",
-			"arifle_MX_GL_khk_F",
-			"arifle_MXC_khk_F",
-			"arifle_MXM_khk_F"
+			// Niarms
+			"hlc_rifle_ak12",
+			"hlc_rifle_ak12GL",
+			"hlc_rifle_aku12",
+			"hlc_rifle_ak47",
+			"hlc_rifle_ak74",
+			"hlc_rifle_ak74_MTK",
+			"hlc_rifle_ak74_dirty",
+			"hlc_rifle_ak74_dirty2",
+			"hlc_rifle_ak74m",
+			"hlc_rifle_ak74m_gl",
+			"hlc_rifle_ak74m_MTK",
+			"hlc_rifle_akm",
+			"hlc_rifle_akmgl",
+			"hlc_rifle_akm_MTK",
+			"hlc_rifle_aks74",
+			"hlc_rifle_aks74_GL",
+			"hlc_rifle_aks74_MTK",
+			"hlc_rifle_aks74u",
+			"hlc_rifle_aks74u_MTK",
+			"hlc_rifle_augsrcarb_b",
+			"hlc_rifle_augsrcarb",
+			"hlc_rifle_augsrhbar_b",
+			"hlc_rifle_augsrhbar",
+			"hlc_rifle_augsrhbar_t",
+			"hlc_rifle_augsr_b",
+			"hlc_rifle_augsr",
+			"hlc_rifle_augsr_t",
+			"hlc_rifle_augsrcarb_t",
+			"hlc_rifle_augpara_b",
+			"hlc_rifle_augpara",
+			"hlc_rifle_augpara_t",
+			"hlc_rifle_auga1carb_B",
+			"hlc_rifle_auga1carb",
+			"hlc_rifle_auga1carb_t",
+			"hlc_rifle_aughbar_B",
+			"hlc_rifle_aughbar",
+			"hlc_rifle_aughbar_t",
+			"hlc_rifle_auga1_b",
+			"hlc_rifle_aug",
+			"hlc_rifle_auga1_t",
+			"hlc_rifle_auga2para_b",
+			"hlc_rifle_auga2para",
+			"hlc_rifle_auga2para_t",
+			"hlc_rifle_auga2carb_b",
+			"hlc_rifle_auga2carb",
+			"hlc_rifle_auga2carb_t",
+			"hlc_rifle_auga2lsw_b",
+			"hlc_rifle_auga2lsw",
+			"hlc_rifle_auga2lsw_t",
+			"hlc_rifle_auga2_b",
+			"hlc_rifle_auga2",
+			"hlc_rifle_auga2_t",
+			"hlc_rifle_auga3_GL_B",
+			"hlc_rifle_auga3_GL_BL",
+			"hlc_rifle_auga3_GL",
+			"hlc_rifle_auga3_b",
+			"hlc_rifle_auga3_bl",
+			"hlc_rifle_auga3",
+			"hlc_rifle_G36MLIC",
+			"hlc_rifle_G36A1",
+			"hlc_rifle_G36A1AG36",
+			"hlc_rifle_G36C",
+			"hlc_rifle_G36CMLIC",
+			"hlc_rifle_G36CV",
+			"hlc_rifle_G36CTac",
+			"hlc_rifle_G36E1",
+			"hlc_rifle_G36E1AG36",
+			"hlc_rifle_G36KMLIC",
+			"hlc_rifle_G36KA1",
+			"hlc_rifle_G36KE1",
+			"hlc_rifle_G36KV",
+			"hlc_rifle_g36KTac",
+			"hlc_rifle_G36MLIAG36",
+			"hlc_rifle_G36V",
+			"hlc_rifle_G36VAG36",
+			"hlc_rifle_G36TAC",
+			"hlc_rifle_honeybadger",
+			"hlc_rifle_vendimus",
+			"hlc_rifle_g3sg1",
+			"hlc_rifle_g3a3",
+			"hlc_rifle_g3a3v",
+			"hlc_rifle_g3a3ris",
+			"hlc_rifle_g3ka4",
+			"hLC_Rifle_g3ka4_GL",
+			"hlc_rifle_hk33a2",
+			"hlc_rifle_hk33a2RIS",
+			"hlc_rifle_falosw",
+			"hlc_rifle_osw_GL",
+			"hlc_rifle_FAL5000",
+			"hlc_rifle_FAL5000Rail",
+			"hlc_rifle_FAL5061",
+			"hlc_rifle_FAL5061Rail",
+			"hlc_rifle_slr107u",
+			"hlc_rifle_slr107u_MTK",
+			"hlc_rifle_RK62",
+			"hlc_rifle_aek971",
+			"hlc_rifle_aek971_mtk",
+			"hlc_rifle_aek971worn",
+			"hlc_rifle_RU5562",
+			"hlc_rifle_RU556",
+			"hlc_rifle_bcmjack",
+			"hlc_rifle_Bushmaster300",
+			"hlc_rifle_Colt727",
+			"hlc_rifle_Colt727_GL",
+			"hlc_rifle_M4",
+			"hlc_rifle_m4m203",
+			"hlc_rifle_CQBR",
+			"hlc_rifle_samr2",
+			"hlc_rifle_SAMR",
+			"hlc_rifle_c1A1",
+			"hlc_rifle_LAR",
+			"hlc_rifle_SLR",
+			"hlc_rifle_SLRchopmod",
+			"hlc_rifle_STG58F",
+			"hlc_rifle_amt",
+			"hlc_rifle_sig5104",
+			"hlc_rifle_STGW57",
+			"hlc_rifle_stgw57_commando",
+			"hlc_rifle_stgw57_RIS"			
 		};
 	};
 	
@@ -5142,7 +5353,8 @@ class Glasses
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
-			"Exile_Weapon_M1014"
+			"Exile_Weapon_M1014",
+			"hlc_rifle_saiga12k"			
 		};
 	};
 
@@ -5154,42 +5366,267 @@ class Glasses
 		{
 			"arifle_MXM_Black_F",
 			"arifle_MXM_F",
+			"arifle_MXM_khk_F",
 			"srifle_DMR_01_F",
-			"srifle_DMR_02_camo_F",
-			"srifle_DMR_02_F",
-			"srifle_DMR_02_sniper_F",
 			"srifle_DMR_03_F",
 			"srifle_DMR_03_khaki_F",
 			"srifle_DMR_03_multicam_F",
 			"srifle_DMR_03_tan_F",
 			"srifle_DMR_03_woodland_F",
+			"srifle_DMR_06_camo_F",
+			"srifle_DMR_06_olive_F",
+			"srifle_DMR_07_blk_F",
+			"srifle_DMR_07_ghex_F",
+			"srifle_DMR_07_hex_F",
+			"srifle_EBR_F",
+			//NIArms			
+			"hlc_rifle_M14",
+			"hlc_rifle_M14_Bipod",
+			"hlc_rifle_M14_Rail",
+			"hlc_rifle_m14dmr",
+			"hlc_rifle_m14sopmod",
+			"hlc_rifle_L1A1SLR",
+			"hlc_rifle_M21",
+			"hlc_rifle_psg1",
+			"hlc_rifle_psg1A1",
+			"hlc_rifle_PSG1A1_RIS",
+			"hlc_rifle_M1903A1",
+			"hlc_rifle_M1903A1OMR",
+			"hlc_rifle_M1903A1_unertl"
+		};
+	};
+	
+	class SpecOpsAR
+	{
+		name = "Assault Rifles";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] = 
+		{
+			"arifle_ARX_blk_F",
+			"arifle_ARX_ghex_F",
+			"arifle_ARX_hex_F"
+		};
+	};
+	
+	class SpecOpsLMG
+	{
+		name = "Light Machine Guns";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] = 
+		{
+			"MMG_01_hex_F",
+			"MMG_01_tan_F",
+			"MMG_02_black_F",
+			"MMG_02_camo_F",
+			"MMG_02_sand_F"
+		};
+	};
+	
+	class SpecOpsSR
+	{
+		name = "Sniper Rifles";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] = 
+		{
 			"srifle_DMR_04_F",
 			"srifle_DMR_04_Tan_F",
+			"srifle_DMR_02_camo_F",
+			"srifle_DMR_02_F",
+			"srifle_DMR_02_sniper_F",
 			"srifle_DMR_05_blk_F",
 			"srifle_DMR_05_hex_F",
 			"srifle_DMR_05_tan_f",
-			"srifle_DMR_06_camo_F",
-			"srifle_DMR_06_olive_F",
-			"srifle_EBR_F",
 			"srifle_GM6_camo_F",
 			"srifle_GM6_F",
+			"srifle_GM6_ghex_F",
 			"srifle_LRR_camo_F",
 			"srifle_LRR_F",
-			"Exile_Weapon_CZ550",
-			"Exile_Weapon_SVD",
-			"Exile_Weapon_SVDCamo",
-			"Exile_Weapon_VSSVintorez",
-			"Exile_Weapon_DMR",
-			"Exile_Weapon_LeeEnfield",
-			//Apex
 			"srifle_LRR_tna_F",
-			"srifle_GM6_ghex_F",
-			"srifle_DMR_07_blk_F",
-			"srifle_DMR_07_hex_F",
-			"srifle_DMR_07_ghex_F"
+			//NIArms
+			"hlc_rifle_awcovert_BL",
+			"hlc_rifle_awcovert_FDE",
+			"hlc_rifle_awcovert",
+			"hlc_rifle_awmagnum_BL",
+			"hlc_rifle_awMagnum_BL_ghillie",
+			"hlc_rifle_awmagnum_FDE",
+			"hlc_rifle_awMagnum_FDE_ghillie",
+			"hlc_rifle_awmagnum",
+			"hlc_rifle_awMagnum_OD_ghillie"
 		};
 	};
-
+	
+	class SpecOpsMuzzle
+	{
+		name = "Sound Supressors";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] = 
+		{
+			"muzzle_snds_338_black",
+			"muzzle_snds_338_green",
+			"muzzle_snds_338_sand",
+			"muzzle_snds_93mmg",
+			"muzzle_snds_93mmg_tan",
+			"muzzle_snds_65_TI_blk_F",
+			"muzzle_snds_65_TI_hex_F",
+			"muzzle_snds_65_TI_ghex_F"
+		};
+	};
+	
+	class SpecOpsAmmo
+	{
+		name = "Ammuntion";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] = 
+		{
+			"30Rnd_65x39_caseless_green",
+			"30Rnd_65x39_caseless_green_mag_Tracer",		
+			"10Rnd_93x64_DMR_05_Mag",
+			"150Rnd_93x64_Mag",
+			"10Rnd_338_Mag",
+			"130Rnd_338_Mag",
+			"7Rnd_408_Mag",
+			"10Rnd_127x54_Mag",	
+			"5Rnd_127x108_Mag",
+			//"5Rnd_127x108_APDS_Mag",
+			"10Rnd_50BW_Mag_F",
+			//NIArms
+			"hlc_5rnd_300WM_FMJ_AWM",
+			"hlc_5rnd_300WM_AP_AWM",
+			"hlc_5rnd_300WM_BTSP_AWM",
+			"hlc_5rnd_300WM_mk248_AWM",
+			"hlc_5rnd_300WM_SBT_AWM"
+		};
+	};
+	
+	class SpecOpsLaunchers
+	{
+		name = "Launchers";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] = 
+		{
+			"launch_RPG32_F",
+			"launch_RPG32_ghex_F",
+			"launch_RPG7_f"
+		};
+	};
+	
+	class SpecOpsLauncherAmmo
+	{
+		name = "Launcher Ammunition";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] = 
+		{	
+			"RPG32_F",
+			"RPG32_HE_F",
+			"RPG7_F"
+		};
+	};
+	
+	class SpecOpsOptics
+	{
+		name = "Scopes";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemoptic_ca.paa";
+		items[] = 
+		{
+			"optic_AMS",
+			"optic_AMS_khk",
+			"optic_AMS_snd",
+			"optic_Arco",
+			"optic_Arco_blk_F",	
+			"optic_Arco_ghex_F",		
+			"optic_ERCO_blk_F",
+			"optic_ERCO_khk_F",
+			"optic_ERCO_snd_F",
+			"optic_DMS",
+			"optic_DMS_ghex_F",
+			"optic_Hamr",
+			"optic_Hamr_khk_F",
+			"optic_Holosight",
+			"optic_Holosight_smg",
+			"optic_Holosight_blk_F",
+			"optic_Holosight_khk_F",
+			"optic_Holosight_smg_blk_F",
+			"optic_KHS_blk",
+			"optic_KHS_hex",
+			"optic_KHS_old",
+			"optic_KHS_tan",
+			"optic_LRPS",
+			"optic_LRPS_tna_F",
+			"optic_LRPS_ghex_F",
+			"optic_MRCO",
+			"optic_NVS",
+			"optic_SOS",
+			"optic_SOS_khk_F",
+			"optic_Nightstalker"
+			//"optic_tws"
+			//"optic_tws_mg"
+		};
+	};
+	
+	class SpecOpsUniforms
+	{
+		name = "Uniforms";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] = 
+		{
+			"U_B_CTRG_Soldier_F",
+			"U_B_CTRG_Soldier_3_F",
+			"U_B_CTRG_Soldier_2_F",
+			"U_O_V_Soldier_Viper_F",
+			"U_O_V_Soldier_Viper_hex_F",
+			"U_O_GhillieSuit",
+			"U_B_GhillieSuit",		
+			"U_I_GhillieSuit",
+			"U_O_T_Sniper_F",
+			"U_B_T_Sniper_F",
+			"U_B_FullGhillie_ard",
+			"U_B_FullGhillie_lsh",
+			"U_B_FullGhillie_sard",
+			"U_I_FullGhillie_ard",
+			"U_I_FullGhillie_lsh",
+			"U_I_FullGhillie_sard",
+			"U_O_FullGhillie_ard",
+			"U_O_FullGhillie_lsh",
+			"U_O_FullGhillie_sard",
+			"U_O_T_FullGhillie_tna_F",
+			"U_B_T_FullGhillie_tna_F"
+		};
+	};
+	
+	class SpecOpsHelmets
+	{
+		name = "Helmets";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] = 
+		{
+			"H_HelmetB_TI_tna_F",
+			//"H_HelmetO_ViperSP_hex_F",
+			//"H_HelmetO_ViperSP_ghex_F"
+		};
+	};
+	
+	class SpecOpsSpecial
+	{
+		name = "Special Environment";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] = 
+		{
+			"Exile_Headgear_GasMask"
+		};
+	};
+	
+	/*class SpecOpsNVG
+	{
+		name = "Night Vision Goggles";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] = 
+		{
+			"NVGogglesB_blk_F",
+			"NVGogglesB_grn_F",
+			"NVGogglesB_gry_F"
+		};
+	};*/
+	
 	class Bikes
 	{
 		name = "Bikes";
@@ -5303,11 +5740,32 @@ class Glasses
 			"Exile_Boat_MotorBoat_Police",
 			"Exile_Boat_MotorBoat_Orange",
 			"Exile_Boat_MotorBoat_White",
+			"Exile_Boat_WaterScooter",
+			"C_Boat_Transport_02_F",
+			"Exile_Boat_RHIB"
+		};
+	};
+	
+	class Submarines
+	{
+		name = "Submarines";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] = 
+		{
 			"Exile_Boat_SDV_CSAT",
 			"Exile_Boat_SDV_Digital",
-			"Exile_Boat_SDV_Grey",
-			"Exile_Boat_WaterScooter",
-			"Exile_Boat_RHIB"
+			"Exile_Boat_SDV_Grey"
+	};
+	};
+	
+	class BoatsArmed
+	{
+		name = "Boats Armed";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] = 
+		{
+			"O_T_Boat_Armed_01_hmg_F",
+			"B_T_Boat_Armed_01_minigun_F"
 		};
 	};
 
@@ -5334,6 +5792,7 @@ class Glasses
 			"G_B_Diving",
 			"G_O_Diving",
 			"G_I_Diving",
+			"G_Diving",
 			"V_RebreatherB",
 			"V_RebreatherIA",
 			"V_RebreatherIR",
@@ -5343,146 +5802,6 @@ class Glasses
 		};
 	};
 };
-
-class CfgTraders
-{
-	/**
-	 * Weapons, scopes, silencers, ammo
-	 */
-	class Exile_Trader_Armory
-	{
-		name = "ARMORY";
-		showWeaponFilter = 1;
-		categories[] = 
-		{
-			"PointerAttachments",
-			"BipodAttachments",
-			"MuzzleAttachments",
-			"OpticAttachments",
-			"Ammunition",
-			"Pistols",
-			"Shotguns",
-			"SubMachineGuns",
-			"LightMachineGuns",
-			"AssaultRifles",
-			"SniperRifles"
-		};
-	};
-
-	/**
-	 * Satchels, nades, UAVs, static MGs
-	 */
-	class Exile_Trader_SpecialOperations
-	{
-		name = "SPECIAL OPERATIONS";
-		showWeaponFilter = 1; // for noob tubes
-		categories[] = 
-		{
-			"Flares",
-			"Smokes",
-			"UAVs",
-			"StaticMGs",
-			"Explosives",
-			"Navigation"
-		};
-	};
-
-	/**
-	 * Uniforms, vests, helmets, backpacks
-	 */
-	class Exile_Trader_Equipment
-	{	
-		name = "EQUIPMENT";
-		showWeaponFilter = 0;
-		categories[] = 
-		{
-			"Headgear",
-			"Glasses",
-			"Uniforms",
-			"Vests",
-			"Backpacks",
-			"FirstAid"
-		};
-	};
-
-	/**
-	 * Cans, cans, cans
-	 */
-	class Exile_Trader_Food
-	{
-		name = "FAST FOOD";
-		showWeaponFilter = 0;
-		categories[] = 
-		{
-			"Food",
-			"Drinks"
-		};
-	};
-
-	/**
-	 * Light bulbs, metal, etc.
-	 */
-	class Exile_Trader_Hardware
-	{
-		name = "HARDWARE";
-		showWeaponFilter = 0;
-		categories[] = 
-		{
-			"Hardware",
-			"Tools"
-		};
-	};
-
-	/**
-	 * Sells cars and general vehicles
-	 */
-	class Exile_Trader_Vehicle
-	{
-		name = "VEHICLE";
-		showWeaponFilter = 0;
-		categories[] = 
-		{
-			"Cars",
-			"Trucks"
-		};
-	};
-
-	/**
-	 * Sells choppers and planes
-	 */
-	class Exile_Trader_Aircraft
-	{
-		name = "AIRCRAFT";
-		showWeaponFilter = 0;
-		categories[] = 
-		{
-			"Choppers", 
-			"Planes"
-		};
-	};
-
-	/**
-	 * Sells ships and boats
-	 */ 
-	class Exile_Trader_Boat
-	{
-		name = "BOAT";
-		showWeaponFilter = 0;
-		categories[] = 
-		{
-			"Boats"
-		};
-	};
-
-	class Exile_Trader_Diving
-	{
-		name = "DIVERS";
-		showWeaponFilter = 0;
-		categories[] = 
-		{
-			"Diving"
-		};
-	};
 
 	/**
 	 * Sells Community Items
@@ -5600,14 +5919,152 @@ class CfgTrading
 
 	class requiredRespect 
 	{
-		Level1 = 0;
-		Level2 = 5000;
-		Level3 = 10000;
-		Level4 = 15000;
-		Level5 = 20000;
-		Level6 = 25000;
+		Level1 = -9999999;
+		Level2 = 10000;
+		Level3 = 20000;
+		Level4 = 40000;
 	};
 };
+
+class CfgTraders
+{
+	class Exile_Trader_Armory
+	{
+		name = "ARMORY";
+		showWeaponFilter = 1;
+		categories[] = 
+		{
+			"Handguns",
+			"Shotguns",
+			"SubMachineGuns",
+			"LightMachineGuns",
+			"AssaultRifles",
+			"SniperRifles",
+			"PointerAttachments",
+			"BipodAttachments",
+			"OpticAttachments",
+			"Ammunition",
+			"Flares",
+			"Smokes"			
+		};
+	};
+
+	class Exile_Trader_SpecialOperations
+	{
+		name = "SPECIAL OPERATIONS";
+		showWeaponFilter = 1; // for noob tubes
+		categories[] = 
+		{
+			"SpecOpsAR",
+			"SpecOpsLMG",
+			"SpecOpsSR",
+			"SpecOpsOptics",
+			"MuzzleAttachments",
+			"SpecOpsMuzzle",
+			"PointerAttachments",
+			"BipodAttachments",
+			"Ammunition",			
+			"SpecOpsAmmo",
+			"SpecOpsLaunchers",
+			"SpecOpsLauncherAmmo",
+			"SpecOpsUniforms",
+			"ViperHarnesses",
+			"SpecOpsHelmets",
+			"SpecOpsSpecial",
+			//"SpecOpsNVG",
+			"StaticMGs",
+			"Explosives"
+			//"UAVs",
+		};
+	};
+
+	class Exile_Trader_Equipment
+	{	
+		name = "EQUIPMENT";
+		showWeaponFilter = 0;
+		categories[] = 
+		{
+			"Headgear",
+			"Facewear",
+			"CivilianUniforms",
+			"GuerillaUniforms",
+			"MilitaryUniforms",
+			"ViperHarnesses"
+			"Vests",
+			"Backpacks",
+			"NVG",
+			"EquipmentTools",
+			"FirstAid"
+		};
+	};
+
+	class Exile_Trader_Food
+	{
+		name = "FAST FOOD";
+		showWeaponFilter = 0;
+		categories[] = 
+		{
+			"Food",
+			"Drinks"
+		};
+	};
+
+	class Exile_Trader_Hardware
+	{
+		name = "HARDWARE";
+		showWeaponFilter = 0;
+		categories[] = 
+		{
+			"Hardware",
+			"Tools"
+		};
+	};
+
+	class Exile_Trader_Vehicle
+	{
+		name = "VEHICLE";
+		showWeaponFilter = 0;
+		categories[] = 
+		{
+			"Cars",
+			"Trucks"
+		};
+	};
+
+	class Exile_Trader_Aircraft
+	{
+		name = "AIRCRAFT";
+		showWeaponFilter = 0;
+		categories[] = 
+		{
+			"Choppers", 
+			"Planes"
+		};
+	};
+
+	class Exile_Trader_Boat
+	{
+		name = "BOAT";
+		showWeaponFilter = 0;
+		categories[] = 
+		{
+			"Boats",
+			"Submarines",
+			"BoatsArmed"
+		};
+	};
+
+	class Exile_Trader_Diving
+	{
+		name = "DIVERS";
+		showWeaponFilter = 0;
+		categories[] = 
+		{
+			"Diving"
+		};
+	};
+};
+
 class CfgVehicleCustoms
 {
 	///////////////////////////////////////////////////////////////////////////////
