@@ -3972,7 +3972,7 @@ class CfgTerritories
 	minimumDistanceToOtherTerritories = 325; 
 
 	// Maximum number of territories a player can own
-	maximumNumberOfTerritoriesPerPlayer = 2;
+	maximumNumberOfTerritoriesPerPlayer = 1;
 
 	/**
 	 * Defines the minimum distance to safe zones / trader cities where players
