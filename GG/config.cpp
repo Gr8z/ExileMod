@@ -2593,7 +2593,6 @@ class CfgExileArsenal
 	///////// Military Helicopters Armed /////////
 	class Exile_Chopper_Huey_Armed_Green								{ quality = 3; price = 25000; };
 	class Exile_Chopper_Huey_Armed_Desert								{ quality = 3; price = 25000; };
-	class B_Heli_Transport_03_F											{ quality = 3; price = 75000; };
 	class B_Heli_Transport_01_F											{ quality = 4; price = 125000; };
 	class B_Heli_Transport_01_camo_F									{ quality = 4; price = 125000; };
 	class B_CTRG_Heli_Transport_01_sand_F								{ quality = 4; price = 125000; };
@@ -2602,8 +2601,6 @@ class CfgExileArsenal
 	class B_Heli_Transport_03_F											{ quality = 4; price = 150000; };
 	class B_Heli_Transport_03_black_F									{ quality = 4; price = 150000; };
 	
-	
-
 	///////// Planes /////////
 	class Exile_Plane_Cessna											{ quality = 2; price = 7500; };
 	class Exile_Plane_AN2_Green											{ quality = 2; price = 15000; };
@@ -2811,7 +2808,7 @@ class CfgExileCustomCode
 	ExileClient_construction_handleAbort = 		"GG\custom\ExileClient_construction_handleAbort.sqf";
 	ExileClient_object_item_construct = 		"GG\custom\ExileClient_object_item_construct.sqf";
 	ExileClient_construction_thread = 			"GG\custom\ExileClient_construction_thread.sqf";
-	ExileClient_gui_selectSpawnLocation_show = 	"GG\custom\ExileClient_gui_selectSpawnLocation_show.sqf"
+	ExileClient_gui_selectSpawnLocation_show = 	"GG\custom\ExileClient_gui_selectSpawnLocation_show.sqf";
 };
 class CfgExileEnvironment
 {
@@ -5830,7 +5827,7 @@ class CfgTraders
 			"CivilianUniforms",
 			"GuerillaUniforms",
 			"MilitaryUniforms",
-			"ViperHarnesses"
+			"ViperHarnesses",
 			"Vests",
 			"Backpacks",
 			"NVG",
