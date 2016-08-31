@@ -36,9 +36,56 @@ try
 	{
 		throw 2;
 	};
-	if !((owner _vehicleObject) isEqualTo (owner _playerObject)) then 
+	_vehicleInfo = _x getVariable ["XG_AntiTheftInfo",[]];
+	if!(_vehicleInfo isEqualTo []) then
 	{
-		throw 6;
+		_vehicleInfo params [["_group",""],["_vifamily","No Family"],["_ownerUID",""]];
+		_family = _playerObject getVariable ["ExileClanID",""];
+		if(_family isEqualTo -1) then
+		{
+			_family = "No Family";
+		};
+		if(_group isEqualTo "No Group") then
+		{
+			if!(_family isEqualTo "No Family") then
+			{
+				if((_family isEqualTo _vifamily) || (getPlayerUID _playerObject) isEqualTo _ownerUID) then
+				{
+					throw 6;
+				};
+			}
+			else
+			{
+				if((getPlayerUID _playerObject) isEqualTo _ownerUID) then
+				{
+					throw 6;
+				};
+			};
+		}
+		else
+		{
+			if!(_family isEqualTo "No Family") then
+			{
+				if((str(group _playerObject) isEqualTo _group) || (_family isEqualTo _vifamily) || (getPlayerUID _playerObject) isEqualTo _ownerUID) then
+				{
+					throw 6;
+				};
+			}
+			else
+			{
+				if((str(group _playerObject) isEqualTo _group) || (getPlayerUID _playerObject) isEqualTo _ownerUID) then
+				{
+					throw 6;
+				};
+			};
+		};
+	}
+	else
+	{
+		if !((owner _vehicleObject) isEqualTo (owner _playerObject)) then 
+		{
+			throw 6;
+		};
 	};
 	_cargo = _vehicleObject call ExileClient_util_containerCargo_list;
 	_revenue = _cargo call ExileClient_util_gear_calculateTotalSellPrice;
