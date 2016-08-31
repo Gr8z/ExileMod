@@ -17,7 +17,9 @@ if (isServer) then {
     _atms enableSimulationGlobal (_x select 4);
     _atms setVariable ["ExileIsLocked", -1, true];
 	_marker = createMarker ["ATM" + str(_forEachIndex), _x select 1];
-    _marker setMarkerShape "ICON";
-    _marker setMarkerType "GG_atm";
+	_marker setMarkerShape "ICON";
+	_marker setMarkerType "loc_Tourism";
+	_marker setMarkerColor "ColorWhite";
+	_marker setMarkerSize [1.4,1.4];
 }
 forEach _vehicles;
