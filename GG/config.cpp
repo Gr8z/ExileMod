@@ -2825,11 +2825,7 @@ class CfgExileCustomCode
 	ExileClient_construction_handleAbort = 		"GG\custom\ExileClient_construction_handleAbort.sqf";
 	ExileClient_object_item_construct = 		"GG\custom\ExileClient_object_item_construct.sqf";
 	ExileClient_construction_thread = 			"GG\custom\ExileClient_construction_thread.sqf";
-	ExileClient_gui_selectSpawnLocation_show = 	"GG\custom\ExileClient_gui_selectSpawnLocation_show.sqf";
-	ExileClient_object_player_event_onEnterSafezone = "Anti-theft\ExileClient_object_player_event_onEnterSafezone.sqf";
-        ExileClient_object_player_event_onLeaveSafezone = "Anti-theft\ExileClient_object_player_event_onLeaveSafezone.sqf";
-        ExileClient_gui_wasteDumpDialog_show = "Anti-theft\ExileClient_gui_wasteDumpDialog_show.sqf";
-        ExileClient_object_player_event_onInventoryOpened = "Anti-theft\ExileClient_object_player_event_onInventoryOpened.sqf"
+	ExileClient_gui_selectSpawnLocation_show = 	"GG\custom\ExileClient_gui_selectSpawnLocation_show.sqf"
 };
 class CfgExileEnvironment
 {
