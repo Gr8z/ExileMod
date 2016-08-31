@@ -1,16 +1,5 @@
 ﻿#include "MostWanted_Client\CfgMostWanted.cpp"
 
-class CfgHints
-{
-    #include "MostWanted_Client\Notifications.hpp"
-};
-
-class CfgNetworkMessages
-{
-    #include "MostWanted_Client\NetworkMessages.hpp"
-};
-
-
 class CfgRemoteExec
 {
 	class Functions
