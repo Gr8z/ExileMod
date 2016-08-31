@@ -5,6 +5,8 @@
 
 [] execVM "GG\StatusBar\statusBar.sqf";
 [] execVM "GG\welcome.sqf";
+[] execVM "MostWanted_Client\MostWanted_Init.sqf";
+
 
 if (!hasInterface || isServer) exitWith {};
 
