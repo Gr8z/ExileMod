@@ -74,7 +74,7 @@ class Mission
 	};
 	class Entities
 	{
-		items = 60;
+		items = 58;
 
 		class Item0
 		{
@@ -2054,9 +2054,9 @@ class Mission
 	    class Item48
 	    {
 	        dataType = "Marker";
-	        position[] = {5010.64, 0, 8724.12};
-	        name = "ExileMarker48";
-	        text = "Regina";
+	        position[] = {5739.34, 0, 10301.3};
+	        name = "ExileMarker58";
+	        text = "Georgetown";
 	        markerType = "ELLIPSE";
 	        type = "ExileSpawnZone";
 	        colorName = "ColorBlack";
@@ -2065,17 +2065,17 @@ class Mission
 	        a = 472.33;
 	        b = 472.33;
 	        drawBorder = 1;
-	        id = 148;
+	        id = 119;
 	        atlOffset = 0;
 	    };
 	    class Item49
 	    {
 	        dataType = "Marker";
-	        position[] = {5010.64, 0, 8724.12};
-	        name = "ExileMarker49";
-	        text = "Regina";
+	        position[] = {5739.34, 0, 10301.3};
+	        name = "ExileMarker59";
+	        text = "Georgetown";
 	        type = "ExileSpawnZoneIcon";
-	        id = 149;
+	        id = 120;
 	        atlOffset = 0;
 	    };
 	    class Item50
@@ -2183,33 +2183,6 @@ class Mission
 	        text = "";
 	        type = "ExileBoatTraderIcon";
 	        id = 157;
-	        atlOffset = 0;
-	    };
-	    class Item58
-	    {
-	        dataType = "Marker";
-	        position[] = {5739.34, 0, 10301.3};
-	        name = "ExileMarker58";
-	        text = "Georgetown";
-	        markerType = "ELLIPSE";
-	        type = "ExileSpawnZone";
-	        colorName = "ColorBlack";
-	        alpha = 0;
-	        fillName = "Border";
-	        a = 472.33;
-	        b = 472.33;
-	        drawBorder = 1;
-	        id = 119;
-	        atlOffset = 0;
-	    };
-	    class Item59
-	    {
-	        dataType = "Marker";
-	        position[] = {5739.34, 0, 10301.3};
-	        name = "ExileMarker59";
-	        text = "Georgetown";
-	        type = "ExileSpawnZoneIcon";
-	        id = 120;
 	        atlOffset = 0;
 	    };
 	};
