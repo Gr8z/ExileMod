@@ -10,16 +10,16 @@ if (isServer) then {
 		["Land_Atm_01_F", [12785, 7448.52, 10.7078], [-0.992736, 0.120315, 0], [0, 0, 1]]
 	];
 	{
-    private _atms = (_x select 0) createVehicle (_x select 1);
-    _atms allowDamage false;
-    _atms setPosWorld (_x select 1);
-    _atms setVectorDirAndUp [_x select 2, _x select 3];
-    _atms enableSimulationGlobal (_x select 4);
-    _atms setVariable ["ExileIsLocked", -1, true];
-	_marker = createMarker ["ATM" + str(_forEachIndex), _x select 1];
+    private _atm = (_x select 0) createVehicle (_x select 1);
+    _atm allowDamage false;
+    _atm setPosWorld (_x select 1);
+    _atm setVectorDirAndUp [_x select 2, _x select 3];
+    _atm enableSimulationGlobal true;
+    _atm setVariable ["ExileIsLocked", -1, true];
+	_marker = createMarker ["cashpoint_" + str(_forEachIndex), _x select 1];
 	_marker setMarkerShape "ICON";
 	_marker setMarkerType "loc_Tourism";
 	_marker setMarkerColor "ColorWhite";
 	_marker setMarkerSize [1.4,1.4];
 }
-forEach _vehicles;
+forEach _atms;
