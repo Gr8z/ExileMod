@@ -1,4 +1,4 @@
-class CfgRemoteExec
+﻿class CfgRemoteExec
 {
 	class Functions
 	{
@@ -2809,6 +2809,13 @@ class CfgExileCustomCode
 	ExileClient_object_item_construct = 		"GG\custom\ExileClient_object_item_construct.sqf";
 	ExileClient_construction_thread = 			"GG\custom\ExileClient_construction_thread.sqf";
 	ExileClient_gui_selectSpawnLocation_show = 	"GG\custom\ExileClient_gui_selectSpawnLocation_show.sqf";
+        ExileClient_object_player_event_onEnterSafezone =       "GG\custom\ExileClient_object_player_event_onEnterSafezone.sqf";
+        
+        ExileClient_object_player_event_onLeaveSafezone =       "GG\custom\ExileClient_object_player_event_onLeaveSafezone.sqf";
+       
+        ExileClient_gui_wasteDumpDialog_show =                  "GG\custom\ExileClient_gui_wasteDumpDialog_show.sqf";
+        
+        ExileClient_object_player_event_onInventoryOpened =     "GG\custom\ExileClient_object_player_event_onInventoryOpened.sqf"
 };
 class CfgExileEnvironment
 {
