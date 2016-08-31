@@ -3165,23 +3165,6 @@ class ExileAbstractAction
 };
 class CfgInteractionMenus
 {
-        class Bounties
-{
-    targetType = 2;
-    target = "Exile_Trader_Office";
-
-    class Actions
-    {
-        class MostWanted: ExileAbstractAction
-        {
-            title = "Most Wanted";
-            condition = "true";
-            action = "createDialog 'MostWantedDialog';";
-        };
-    };
-};
-
-
 	class Car 
 	{
 		targetType = 2;
@@ -3723,6 +3706,21 @@ class CfgInteractionMenus
 				action = "['HideBody', (_this select 0)] call ExileClient_action_execute";
 			};
 		};
+	};
+	class Bounties
+	{
+	    targetType = 2;
+	    target = "Exile_Trader_Office";
+
+	    class Actions
+	    {
+	        class MostWanted: ExileAbstractAction
+	        {
+	            title = "Most Wanted";
+	            condition = "true";
+	            action = "createDialog 'MostWantedDialog';";
+	        };
+	    };
 	};
 };
 class CfgInteractionModels
