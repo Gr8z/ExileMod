@@ -25,13 +25,13 @@ class CfgFunctions
 class CfgHints
 {
 	#include "GG\ExAdClient\CfgHints.cpp"
-	#include "MostWanted_Client\Notifications.hpp"
+	#include "GG\MostWanted_Client\Notifications.hpp"
 };
 
 class CfgNetworkMessages
 {
 	#include "GG\ExAdClient\CfgNetworkMessages.cpp"
-	#include "MostWanted_Client\NetworkMessages.hpp"
+	#include "GG\MostWanted_Client\NetworkMessages.hpp"
 
 
     class XG_EnterSafeZone 
