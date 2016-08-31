@@ -66,6 +66,16 @@ class RscTitles
     #include "GG\StatusBar\statusBar.hpp"
 };
 
+class CfgSounds
+{
+    sounds[] = {intro};
+    class intro
+    {
+        name = "intro";
+        sound[] = {"\GG\sounds\introsong.ogg", 1, 1};
+        titles[] = {};
+    };
+};
 ///////////////////////////////////////////////////////////////////////////////
 // Exile Settings - Do not change these!
 ///////////////////////////////////////////////////////////////////////////////
