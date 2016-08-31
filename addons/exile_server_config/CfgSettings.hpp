@@ -451,7 +451,7 @@ class CfgSettings
 		serverPassword = "penis1234";
 
 		// Autolocks server until its ready to accept players
-		useAutoLock = 0;
+		useAutoLock = 1;
 
 		// Server will autoLock at that time before restart (minutes)
 		restartAutoLock = 3;
