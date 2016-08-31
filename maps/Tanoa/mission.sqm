@@ -2206,7 +2206,7 @@ class Mission
 	    {
 	        dataType = "Marker";
 	        position[] = {5739.34, 0, 10301.3};
-	        name = "ExileMarker20";
+	        name = "ExileMarker19";
 	        text = "Nandai";
 	        type = "ExileSpawnZoneIcon";
 	        id = 120;
