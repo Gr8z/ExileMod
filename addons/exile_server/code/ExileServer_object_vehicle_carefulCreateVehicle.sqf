@@ -50,6 +50,9 @@ clearItemCargoGlobal _vehicleObject;
 clearMagazineCargoGlobal _vehicleObject;
 clearWeaponCargoGlobal _vehicleObject;
 
+if ((typeOf _vehicleObject) == "B_T_Boat_Armed_01_minigun_F") then {
+    _vehicleObject removeMagazinesTurret ["200Rnd_40mm_G_belt", [-1]];
+};
 if ((typeOf _vehicleObject) == "B_Heli_Light_01_armed_F") then {
     _vehicleObject removeMagazinesTurret ["24Rnd_missiles", [-1]];
 };
