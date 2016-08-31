@@ -5,9 +5,10 @@
  * www.exilemod.com
  * © 2015 Exile Mod Team
  *
- * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
+ * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
+ 
 
 private["_data","_oldPlayerObject","_playerUID","_sessionID","_position","_direction","_player","_clanID","_clanName","_clanData","_clanGroup","_devFriendlyMode","_devs","_requestingPlayer","_bambiPlayer","_headgear","_goggles","_binocular","_primaryWeapon","_handgunWeapon","_secondaryWeapon","_currentWeapon","_uniform","_vest","_backpack","_uniformContainer","_vestContainer","_backpackContainer","_assignedItems"];
 _data = _this select 0;
@@ -16,9 +17,9 @@ _playerUID = _this select 2;
 _sessionID = _this select 3;
 _name = name _oldPlayerObject;
 _position = [_data select 11, _data select 12, _data select 13];
-_direction = _data select 10;
-_group = call ExileServer_system_group_getOrCreateLoneWolfGroup;
-_player = _group createUnit ["Exile_Unit_Player", _position, [], 0, "CAN_COLLIDE"];
+_direction = _data select 10
+
+_player = (createGroup independent) createUnit ["Exile_Unit_Player", _position, [], 0, "CAN_COLLIDE"];
 _player setDir _direction;
 _player setPosATL _position;
 _player disableAI "FSM";
@@ -264,7 +265,7 @@ if (getNumber (configFile >> "CfgSettings" >> "VehicleSpawn" >> "thermalVision")
 		(_player getVariable ["ExileWetness", 0])
 	]
 ]
-call ExileServer_system_network_send_to;
+call ExileServer_system_network_send_to
 
 // Most-Wanted
 [
@@ -277,5 +278,5 @@ call ExileServer_system_network_send_to;
 call ExileServer_system_network_send_to;
 // Most-Wanted
 
-[_sessionID, _player] call ExileServer_system_session_update;
+[_sessionID, _player] call ExileServer_system_session_update
 true
