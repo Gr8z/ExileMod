@@ -1,39 +1,38 @@
 waitUntil {!(isNull (findDisplay 46))};
-private ["_colourDefault","_colourExtra","_colour108","_colour107","_colour106","_colour105","_colour104","_colour103","_colour102","_colour101","_colour100","_colour90","_colour80","_colour70","_colour60","_colour50","_colour40","_colour30","_colour20","_colour10","_colour0","_colourDead"];
 disableSerialization;
 
 _rscLayer = "GGStatusBar" call BIS_fnc_rscLayer;
 _rscLayer cutRsc["GGStatusBar","PLAIN"];
 
 uiSleep 5;
-//set the color values.
-//Additional color codes can be found here:  http://html-color-codes.com/
-_colourDefault 	= parseText "#ffffff"; //set your default colour here
-_colourExtra	= parseText "#38bee1";
-_colour108		= parseText "#FF7000";
-_colour107		= parseText "#FF9000";
-_colour106		= parseText "#FFBB00";
-_colour105		= parseText "#FFCC00";
-_colour104		= parseText "#81CCDD";
-_colour103		= parseText	"#33AACC";
-_colour102		= parseText "#3388CC";
-_colour101		= parseText "#3366CC";
-_colour100 		= parseText "#336600";
-_colour90 		= parseText "#339900";
-_colour80 		= parseText "#33CC00";
-_colour70 		= parseText "#33FF00";
-_colour60 		= parseText "#66FF00";
-_colour50 		= parseText "#CCFF00";
-_colour40 		= parseText "#CCCC00";
-_colour30 		= parseText "#CC9900";
-_colour20 		= parseText "#CC6600";
-_colour10 		= parseText "#CC3300";
-_colour0 		= parseText "#CC0000";
-_colourDead 	= parseText "#000000";
 
 GGStatusBar =
 {
-				
+		//set the color values.
+		//Additional color codes can be found here:  http://html-color-codes.com/
+		_colourDefault 	= parseText "#ffffff"; //set your default colour here
+		_colourExtra	= parseText "#38bee1";
+		_colour108		= parseText "#FF7000";
+		_colour107		= parseText "#FF9000";
+		_colour106		= parseText "#FFBB00";
+		_colour105		= parseText "#FFCC00";
+		_colour104		= parseText "#81CCDD";
+		_colour103		= parseText	"#33AACC";
+		_colour102		= parseText "#3388CC";
+		_colour101		= parseText "#3366CC";
+		_colour100 		= parseText "#336600";
+		_colour90 		= parseText "#339900";
+		_colour80 		= parseText "#33CC00";
+		_colour70 		= parseText "#33FF00";
+		_colour60 		= parseText "#66FF00";
+		_colour50 		= parseText "#CCFF00";
+		_colour40 		= parseText "#CCCC00";
+		_colour30 		= parseText "#CC9900";
+		_colour20 		= parseText "#CC6600";
+		_colour10 		= parseText "#CC3300";
+		_colour0 		= parseText "#CC0000";
+		_colourDead 	= parseText "#000000";
+		
 		//moved the creation of the status bar inside the loop and create it if it is null,
 		//this is to handle instance where the status bar is disappearing 
 		if(isNull ((uiNamespace getVariable "GGStatusBar")displayCtrl 55554)) then
