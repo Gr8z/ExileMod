@@ -1,13 +1,13 @@
-﻿#include "GG\MostWanted_Client\CfgMostWanted.cpp"
+﻿#include "MostWanted_Client\CfgMostWanted.cpp"
 
 class CfgHints
 {
-    #include "GG\MostWanted_Client\Notifications.hpp"
+    #include "MostWanted_Client\Notifications.hpp"
 };
 
 class CfgNetworkMessages
 {
-    #include "GG\MostWanted_Client\NetworkMessages.hpp"
+    #include "MostWanted_Client\NetworkMessages.hpp"
 };
 
 
