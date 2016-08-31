@@ -2816,25 +2816,6 @@ class CfgExileArsenal
 	class Exile_Car_TowTractor_White									{ quality = 1; price = 1800; };
 };
 class CfgExileCustomCode 
-<<<<<<< HEAD
-
-	ExileClient_gui_xm8_slide = 								"GG\custom\ExileClient_gui_xm8_slide.sqf";
-	ExileClient_gui_xm8_show = 								"GG\custom\ExileClient_gui_xm8_show.sqf";
-	ExileClient_construction_handleAbort = 							"GG\custom\ExileClient_construction_handleAbort.sqf";
-	ExileClient_object_item_construct = 							"GG\custom\ExileClient_object_item_construct.sqf";
-	ExileClient_construction_thread = 							"GG\custom\ExileClient_construction_thread.sqf";
-	ExileClient_gui_selectSpawnLocation_show = 						"GG\custom\ExileClient_gui_selectSpawnLocation_show.sqf";
-        ExileClient_object_player_event_onEnterSafezone =       				"GG\custom\ExileClient_object_player_event_onEnterSafezone.sqf"; 
-        ExileClient_object_player_event_onLeaveSafezone =       				"GG\custom\ExileClient_object_player_event_onLeaveSafezone.sqf";
-        ExileClient_gui_wasteDumpDialog_show =                  				"GG\custom\ExileClient_gui_wasteDumpDialog_show.sqf";
-        ExeClient_object_player_event_onInventoryOpened =     					"GG\custom\ExileClient_object_player_event_onInventoryOpened.sqf";
-        ExileClient_gui_upgradeTerritoryDialog_event_onTerritoryDropDownSelectionChanged = 	"GG\custom\ExileClient_gui_upgradeTerritoryDialog_event_onTerritoryDropDownSelectionChanged.sqf";
-        ExileClient_gui_xm8_showPartySlides =                                                   "GG\custom\ExileClient_gui_xm8_showPartySlides.sqf";
-        ExileServer_object_player_createBambi =                                                 "GG\custom\ExileServer_object_player_createBambi.sqf";
-        ExileServer_object_player_database_load =                                               "GG\custom\ExileServer_object_player_database_load.sqf";
-        ExileServer_object_player_event_onMpKilled =                                            "GG\custom\ExileServer_object_player_event_onMpKilled.sqf";
-        ExileServer_system_network_event_onPlayerConnected =                                    "GG\custom\ExileServer_system_network_event_onPlayerConnected.sqf";
-=======
 {
 	ExileClient_gui_xm8_slide = 														"GG\custom\ExileClient_gui_xm8_slide.sqf";
 	ExileClient_gui_xm8_show = 															"GG\custom\ExileClient_gui_xm8_show.sqf";
@@ -2849,7 +2830,11 @@ class CfgExileCustomCode
     ExileClient_gui_lockerDialog_show =													"GG\custom\ExileClient_gui_lockerDialog_show.sqf";
     ExileClient_system_locker_network_lockerResponse =									"GG\custom\ExileClient_system_locker_network_lockerResponse.sqf";
     ExileClient_gui_upgradeTerritoryDialog_event_onTerritoryDropDownSelectionChanged = 	"GG\custom\ExileClient_gui_upgradeTerritoryDialog_event_onTerritoryDropDownSelectionChanged.sqf";
->>>>>>> origin/Revival
+    ExileClient_gui_xm8_showPartySlides =                                               "GG\custom\ExileClient_gui_xm8_showPartySlides.sqf";
+    ExileServer_object_player_createBambi =                                             "GG\custom\ExileServer_object_player_createBambi.sqf";
+    ExileServer_object_player_database_load =                                           "GG\custom\ExileServer_object_player_database_load.sqf";
+    ExileServer_object_player_event_onMpKilled =                                        "GG\custom\ExileServer_object_player_event_onMpKilled.sqf";
+    ExileServer_system_network_event_onPlayerConnected =                                "GG\custom\ExileServer_system_network_event_onPlayerConnected.sqf";
 };
 
 class CfgExileEnvironment
