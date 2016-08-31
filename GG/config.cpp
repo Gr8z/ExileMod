@@ -2812,7 +2812,7 @@ class CfgExileCustomCode
     ExileClient_object_player_event_onEnterSafezone =       							"GG\custom\ExileClient_object_player_event_onEnterSafezone.sqf"; 
     ExileClient_object_player_event_onLeaveSafezone =       							"GG\custom\ExileClient_object_player_event_onLeaveSafezone.sqf";
     ExileClient_gui_wasteDumpDialog_show =                  							"GG\custom\ExileClient_gui_wasteDumpDialog_show.sqf";
-    ExeClient_object_player_event_onInventoryOpened =     								"GG\custom\ExileClient_object_player_event_onInventoryOpened.sqf"
+    ExeClient_object_player_event_onInventoryOpened =     								"GG\custom\ExileClient_object_player_event_onInventoryOpened.sqf";
     ExileClient_gui_upgradeTerritoryDialog_event_onTerritoryDropDownSelectionChanged = 	"GG\custom\ExileClient_gui_upgradeTerritoryDialog_event_onTerritoryDropDownSelectionChanged.sqf";
 };
 class CfgExileEnvironment
