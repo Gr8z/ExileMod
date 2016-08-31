@@ -125,5 +125,5 @@ showHUD[] =
 
 #include "GG\config.cpp"
 #include "GG\AdminMenu.hpp"
-#include "MostWanted_Client\Dialog\MostWantedDefines.hpp"
-#include "MostWanted_Client\Dialog\MostWantedDialog.hpp"
+#include "GG\MostWanted_Client\Dialog\MostWantedDefines.hpp"
+#include "GG\MostWanted_Client\Dialog\MostWantedDialog.hpp"
