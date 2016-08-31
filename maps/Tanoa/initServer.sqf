@@ -851,14 +851,7 @@ private _simpleObjects = [
 ["a3\structures_f\items\documents\file1_f.p3d", [11663.3, 4095.98, 166.074], [0.999969, -0.007876, 9.50961e-007], [-4.76539e-006, -0.000484292, 1]],
 ["a3\structures_f\items\documents\file2_f.p3d", [11667.2, 4096.67, 166.094], [0, 1, 0], [0.000488106, 0, 1]],
 ["a3\structures_f\items\documents\file2_f.p3d", [11670.1, 4094.95, 166.094], [0, 0.999712, -0.0239912], [0.00265199, 0.0239911, 0.999709]],
-["a3\structures_f\items\documents\photos_v3_f.p3d", [11670.4, 4094.94, 166.1], [0, 1, 0], [0.000488106, 0, 1]],
-["a3\structures_f_epc\civ\accessories\atm_01_f.p3d", [5457.49, 4047.2, 5.02821], [-0.696254, -0.717796, 0], [0, 0, 1]],
-["a3\structures_f_epc\civ\accessories\atm_01_f.p3d", [3429.36, 6760.93, 3.61379], [-0.468526, -0.883449, 0], [0, 0, 1]],
-["a3\structures_f_epc\civ\accessories\atm_01_f.p3d", [5088.08, 8696.57, 4.086], [-0.998726, -0.0504661, 0], [0, 0, 1]],
-["a3\structures_f_epc\civ\accessories\atm_01_f.p3d", [9325.38, 4006.55, 6.4982], [0.083802, -0.996482, 0], [0, 0, 1]],
-["a3\structures_f_epc\civ\accessories\atm_01_f.p3d", [11043.3, 9822.49, 115.979], [-0.964062, 0.265677, 0], [0, 0, 1]],
-["a3\structures_f_epc\civ\accessories\atm_01_f.p3d", [9692.19, 13503.1, 5.65275], [-0.31274, -0.949839, 0], [0, 0, 1]],
-["a3\structures_f_epc\civ\accessories\atm_01_f.p3d", [12785, 7448.52, 10.7078], [-0.992736, 0.120315, 0], [0, 0, 1]]
+["a3\structures_f\items\documents\photos_v3_f.p3d", [11670.4, 4094.94, 166.1], [0, 1, 0], [0.000488106, 0, 1]]
 ];
 
 {
