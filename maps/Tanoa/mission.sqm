@@ -74,7 +74,7 @@ class Mission
 	};
 	class Entities
 	{
-		items = 58;
+		items = 60;
 
 		class Item0
 		{
@@ -2186,11 +2186,11 @@ class Mission
 	        atlOffset = 0;
 	    };
 	    class Item58
-	     {
+	    {
 	        dataType = "Marker";
 	        position[] = {5739.34, 0, 10301.3};
-	        name = "ExileMarker17";
-	        text = "Georgetown";
+	        name = "ExileMarker19";
+	        text = "Nandai";
 	        markerType = "ELLIPSE";
 	        type = "ExileSpawnZone";
 	        colorName = "ColorBlack";
@@ -2199,7 +2199,17 @@ class Mission
 	        a = 472.33;
 	        b = 472.33;
 	        drawBorder = 1;
-	        id = 117;
+	        id = 119;
+	        atlOffset = 0;
+	    };
+	    class Item59
+	    {
+	        dataType = "Marker";
+	        position[] = {5739.34, 0, 10301.3};
+	        name = "ExileMarker20";
+	        text = "Nandai";
+	        type = "ExileSpawnZoneIcon";
+	        id = 120;
 	        atlOffset = 0;
 	    };
 	};
