@@ -2185,5 +2185,22 @@ class Mission
 	        id = 157;
 	        atlOffset = 0;
 	    };
+	    class Item58
+	     {
+	        dataType = "Marker";
+	        position[] = {5739.34, 0, 10301.3};
+	        name = "ExileMarker17";
+	        text = "Georgetown";
+	        markerType = "ELLIPSE";
+	        type = "ExileSpawnZone";
+	        colorName = "ColorBlack";
+	        alpha = 0;
+	        fillName = "Border";
+	        a = 472.33;
+	        b = 472.33;
+	        drawBorder = 1;
+	        id = 117;
+	        atlOffset = 0;
+	    };
 	};
 };
