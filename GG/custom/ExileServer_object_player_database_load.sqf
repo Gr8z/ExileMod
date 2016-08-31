@@ -16,7 +16,7 @@ _playerUID = _this select 2;
 _sessionID = _this select 3;
 _name = name _oldPlayerObject;
 _position = [_data select 11, _data select 12, _data select 13];
-_direction = _data select 10
+_direction = _data select 10;
 _player = (createGroup independent) createUnit ["Exile_Unit_Player", _position, [], 0, "CAN_COLLIDE"];
 _player setDir _direction;
 _player setPosATL _position;
@@ -49,7 +49,7 @@ else
 	[_player] joinSilent _clanGroup;
 };
 _player setDamage (_data select 3);
-_player setName _name
+_player setName _name;
 
 // Most-Wanted
 private ["_bounty","_lock","_interval","_type","_immunity"];
@@ -260,8 +260,8 @@ if (getNumber (configFile >> "CfgSettings" >> "VehicleSpawn" >> "thermalVision")
 		(_player getVariable ["ExileClanData", []]),
 		(_player getVariable ["ExileTemperature", 0]),
 		(_player getVariable ["ExileWetness", 0])
-	
-]
+	]
+] 
 call ExileServer_system_network_send_to;
 
 // Most-Wanted
