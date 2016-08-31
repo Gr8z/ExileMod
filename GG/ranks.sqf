@@ -1,19 +1,4 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Gist
- @SavageSix
- Watch 10
-  Star 1
- Fork 0 GhostzGamerz/ExileMod Private
- Code  Issues 0  Pull requests 0  Wiki  Pulse  Graphs
-Branch: master Find file Copy pathExileMod/GG/ranks.sqf
-2bc1512  7 days ago
-@ShroomBear ShroomBear damn it github
-6 contributors @GGDark @Gr8z @thirdhero @GhostGamerz @SavageSix @ShroomBear
-RawBlameHistory     263 lines (252 sloc)  12 KB
+
 uiSleep 2;
 _respect = ExileClientPlayerScore;
 switch (true) do 
@@ -276,5 +261,3 @@ switch (true) do
 	 player linkItem "ItemMap";
     };
 };
-Contact GitHub API Training Shop Blog About
-© 2016 GitHub, Inc. Terms Privacy Security Status Help
