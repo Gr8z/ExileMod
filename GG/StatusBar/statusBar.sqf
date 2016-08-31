@@ -1,4 +1,5 @@
 waitUntil {!(isNull (findDisplay 46))};
+private ["_colourDefault","_colourExtra","_colour108","_colour107","_colour106","_colour105","_colour104","_colour103","_colour102","_colour101","_colour100","_colour90","_colour80","_colour70","_colour60","_colour50","_colour40","_colour30","_colour20","_colour10","_colour0","_colourDead"];
 disableSerialization;
 
 _rscLayer = "GGStatusBar" call BIS_fnc_rscLayer;
@@ -29,7 +30,6 @@ _colour20 		= parseText "#CC6600";
 _colour10 		= parseText "#CC3300";
 _colour0 		= parseText "#CC0000";
 _colourDead 	= parseText "#000000";
-_uid 			= getPlayerUID player;	
 
 GGStatusBar =
 {
