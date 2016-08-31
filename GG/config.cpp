@@ -3359,7 +3359,20 @@ class CfgInteractionMenus
 			};
 		};
 	};
-
+	class ATM
+    {
+        targetType = 2;
+        target = "Land_Atm_01_F";
+        class Actions
+        {
+            class Locker: ExileAbstractAction
+            {
+                title = "ATM";
+                condition = "true";
+                action = "_this call ExileClient_gui_lockerDialog_show";
+            };
+        };
+    };
 	class Laptop
 	{
 		targetType = 2;
