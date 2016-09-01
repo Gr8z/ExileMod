@@ -70,11 +70,18 @@ class RscTitles
 
 class CfgSounds
 {
-    sounds[] = {intro};
+    sounds[] = {intro,cam};
     class intro
     {
         name = "intro";
         sound[] = {"\GG\sounds\introsong.ogg", 1, 1};
+        titles[] = {};
+    };
+
+    class cam
+    {
+        name = "cam";
+        sound[] = {"\GG\sounds\cam.ogg", 1, 1};
         titles[] = {};
     };
 };

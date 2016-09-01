@@ -6888,7 +6888,7 @@ class CfgVehicleTransport
 };
 class CfgXM8
 {
-	extraApps[] = {"GG_VG","GG_CHVD","GG_Journal","GG_Quad","GG_Selfie"};
+	extraApps[] = {"GG_VG","GG_CHVD","GG_Journal","GG_Quad","GG_Selfie","GG_Scan"};
 	
 	class GG_VG 
 	{
@@ -6932,8 +6932,17 @@ class CfgXM8
 	class GG_Selfie
 	{
 		title = "Selfie";
-		quickFunction = "['ExAd_Quad'] spawn ExAd_XM8_DV_fnc_spawnVehicle";
+		quickFunction = "['GG_Selfie'] spawn ExAd_XM8_Selfie_fnc_TakeSelfie";
 		logo = "GG\ExAdClient\XM8\Apps\Selfie\icon_Selfie.paa";
+	};
+	class GG_Scan
+	{
+		title = "Player Scan";
+		cooldownTime = 120; //cool down time on script in seconds (15 * 60 = 900) AKA 15 MINS
+		onlyScanforXM8Online = true; //only scan for people who have the 8G network online true =  yes false = no
+		scanDistance = 1000; //area sround player to scan in meters
+		quickFunction = "['GG_Scan'] spawn ExAd_XM8_Scan_fnc_ScanPlayer";
+		logo = "GG\ExAdClient\XM8\Apps\Scan\icon_Scan.paa";
 	};
 }; 
 class CfgVon
