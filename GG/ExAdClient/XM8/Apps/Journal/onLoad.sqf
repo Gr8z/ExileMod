@@ -25,7 +25,7 @@ _rightCol = _leftCol + _leftColW + 2;
 _rightColW = _leftColW + 3;
 _margin = 0.2;
 
-_slideClass = "ExAd_Journal";
+_slideClass = "GG_Journal";
 
 [_display,_slide,([_slideClass,"picBg"] call ExAd_fnc_getNextIDC),[1 * _pW, -1 * _pH, (_leftColW + _rightCol + 5) * _pW, 21 * _pH],"GG\ExAdClient\XM8\Apps\Journal\ExAd_Scroll.paa",[1,1,1,1],false,false,""] call ExAd_fnc_createPicture;
 

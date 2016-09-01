@@ -37,7 +37,7 @@ _footTop = 1 * _pH;
 _carTop = _footTop + _blockH;
 _airTop = _carTop + _blockH;
 
-_slideClass = "ExAd_CHVD";
+_slideClass = "GG_CHVD";
 
 [_display,_slide,([_slideClass,"backButton"] call ExAd_fnc_getNextIDC),[27 * _pW, 17 * _pH, 6 * _pW, 1 * _pH],'["extraApps", 1] call ExileClient_gui_xm8_slide;',"GO BACK"] call ExAd_fnc_createButton;
 

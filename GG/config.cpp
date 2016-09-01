@@ -6949,6 +6949,16 @@ class CfgXM8
 		quickFunction = "createdialog 'infiSTAR_CHAT';";
 		logo = "GG\ExAdClient\XM8\Apps\Chat\icon_Chat.paa";
 	};
+	class GG_Craft 
+	{
+		title = "Crafting Menu";
+		controlID = 50400;
+		config = "GG\ExAdClient\XM8\Apps\Crafting\config.sqf";
+		logo = "GG\ExAdClient\XM8\Apps\Crafting\Icon_Crafting.paa";
+		onLoad = "GG\ExAdClient\XM8\Apps\Crafting\onLoad.sqf";
+		onOpen = "GG\ExAdClient\XM8\Apps\Crafting\onOpen.sqf";
+		onClose = "GG\ExAdClient\XM8\Apps\Crafting\onClose.sqf";
+	};	
 }; 
 class CfgVon
 {

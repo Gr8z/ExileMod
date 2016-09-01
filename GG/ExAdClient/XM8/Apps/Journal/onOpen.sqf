@@ -4,7 +4,7 @@ _display = uiNameSpace getVariable ["RscExileXM8", displayNull];
 
 _notes = profileNamespace getVariable ["ExAd_Journal_Notes",[]];
 
-_listCtrl = [_display,"ExAd_Journal","listNotes"] call ExAd_fnc_getAppCtrl;
+_listCtrl = [_display,"GG_Journal","listNotes"] call ExAd_fnc_getAppCtrl;
 lbClear _listCtrl;
 
 {
