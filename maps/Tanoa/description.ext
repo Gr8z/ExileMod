@@ -32,7 +32,7 @@ class CfgNetworkMessages
 {
 	#include "GG\ExAdClient\CfgNetworkMessages.cpp"
 	#include "GG\MostWanted_Client\NetworkMessages.hpp"
-	#include "MarXet\CfgMarXetNetworkMessages.hpp
+	#include "MarXet\CfgMarXetNetworkMessages.hpp"
 
 
     class XG_EnterSafeZone 
