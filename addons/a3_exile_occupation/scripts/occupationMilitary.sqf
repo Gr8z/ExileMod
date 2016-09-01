@@ -96,7 +96,7 @@ if(_aiActive > _maxAIcount) exitWith
 			//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			_aiCount = 1 + (round (random 2)); 
 			_groupRadius = 500;
-			_difficulty = "random";
+			_difficulty = "easy";
 			_side = SC_BanditSide;
 			_spawnPosition = _pos;				
 									
