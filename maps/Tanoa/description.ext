@@ -32,6 +32,7 @@ class CfgNetworkMessages
 {
 	#include "GG\ExAdClient\CfgNetworkMessages.cpp"
 	#include "GG\MostWanted_Client\NetworkMessages.hpp"
+	#include "MarXet\CfgMarXetNetworkMessages.hpp
 
 
     class XG_EnterSafeZone 
@@ -128,3 +129,5 @@ showHUD[] =
 #include "GG\AdminMenu.hpp"
 #include "GG\MostWanted_Client\Dialog\MostWantedDefines.hpp"
 #include "GG\MostWanted_Client\Dialog\MostWantedDialog.hpp"
+#include "MarXet\dialog\RscMarXetDefines.hpp"
+#include "MarXet\dialog\RscMarXetDialog.hpp"

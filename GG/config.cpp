@@ -1,4 +1,5 @@
 ﻿#include "MostWanted_Client\CfgMostWanted.cpp"
+#include "MarXet\CfgMarXet.cpp"
 
 class CfgRemoteExec
 {
