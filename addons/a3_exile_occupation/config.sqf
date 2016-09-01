@@ -258,21 +258,6 @@ SC_occupyVehicleFixedPositions	= [
                                     [[13074,11817,0],3000,"Tanoa"]  
 								  ];
 
-// Array of arrays of ground vehicles which can be used by AI patrols (the number next to next vehicle is the maximum amount of that class allowed, 0 for no limit)				
-SC_VehicleClassToUse 			=   [	
-									["Exile_Car_LandRover_Green",0],
-                                    ["Exile_Bike_QuadBike_Black",2],
-                                    ["Exile_Car_UAZ_Open_Green",2] 
-                                ];
-SC_VehicleClassToUseRare		=   [	
-                                    ["Exile_Car_Hunter",1],
-                                    ["Exile_Car_HEMMT",1],
-                                    ["Exile_Car_Zamak",1],
-                                    ["Exile_Car_Offroad_Armed_Guerilla12",1],
-                                    ["Exile_Car_Offroad_Armed_Guerilla03",1],
-                                    ["Exile_Car_Tempest",1] 
-                                ];
-
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //	Roaming Aircraft Setup
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////								
@@ -381,10 +366,8 @@ SC_SurvivorBackpack         	= [];
 
 // Possible equipment for bandit AI to spawn with 
 // spawning bandits without vests or backpacks will result in them having no ammunition                                                    
-SC_BanditUniforms           	= ["U_IG_Guerilla1_1","U_IG_Guerilla2_1","U_IG_Guerilla2_2","U_IG_Guerilla2_3","U_IG_Guerilla3_1","U_BG_Guerilla2_1","U_IG_Guerilla3_2","U_BG_Guerrilla_6_1","U_BG_Guerilla1_1","U_BG_Guerilla2_2","U_BG_Guerilla2_3","U_BG_Guerilla3_1"]; 
 SC_BanditVests              	= ["V_BandollierB_blk","V_BandollierB_cbr","V_BandollierB_khk","V_BandollierB_oli"]; 
 SC_BanditHeadgear           	= ["H_Shemag_khk","H_Shemag_olive","H_Shemag_olive_hs","H_Shemag_tan","H_ShemagOpen_khk","H_ShemagOpen_tan"];
-SC_BanditWeapon             	= ["LMG_Zafir_F","arifle_Katiba_C_F","arifle_Katiba_F","arifle_Katiba_GL_F","arifle_MXC_Black_F","arifle_MXC_F","arifle_TRG20_F","arifle_TRG21_F","arifle_TRG21_GL_F"];
 SC_BanditWeaponAttachments  	= [];
 SC_BanditMagazines          	= ["Exile_Item_InstaDoc","Exile_Item_Vishpirin","Exile_Item_Bandage","Exile_Item_DuctTape","Exile_Item_PlasticBottleFreshWater","Exile_Item_Energydrink","Exile_Item_EMRE","Exile_Item_Cheathas","Exile_Item_Noodles","Exile_Item_BBQSandwich","Exile_Item_Catfood"];
 SC_BanditPistol             	= ["hgun_ACPC2_F","hgun_P07_F","hgun_Pistol_heavy_01_F","hgun_Pistol_heavy_02_F","hgun_Rook40_F"];
