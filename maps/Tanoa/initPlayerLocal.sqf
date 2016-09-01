@@ -6,7 +6,7 @@
 [] execVM "GG\StatusBar\statusBar.sqf";
 [] execVM "GG\welcome.sqf";
 [] execVM "GG\MostWanted_Client\MostWanted_Init.sqf";
-[] execVM "MarXet\MarXet_Init.sqf";
+[] execVM "GG\MarXet\MarXet_Init.sqf";
 
 
 if (!hasInterface || isServer) exitWith {};

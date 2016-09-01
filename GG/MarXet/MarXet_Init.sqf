@@ -17,15 +17,15 @@ if (MarXetLoaded) then
     }
     forEach
     [
-        ['ExileClient_MarXet_gui_load','MarXet\functions\ExileClient_MarXet_gui_load.sqf'],
-        ['ExileClient_MarXet_network_buyerBuyNowResponse','MarXet\functions\ExileClient_MarXet_network_buyerBuyNowResponse.sqf'],
-        ['ExileClient_MarXet_network_createNewListingResponse','MarXet\functions\ExileClient_MarXet_network_createNewListingResponse.sqf'],
-        ['ExileClient_MarXet_network_sellerBuyNowResponse','MarXet\functions\ExileClient_MarXet_network_sellerBuyNowResponse.sqf'],
-        ['ExileClient_MarXet_network_updateInventoryResponse','MarXet\functions\ExileClient_MarXet_network_updateInventoryResponse.sqf'],
-        ['ExileClient_MarXet_util_log','MarXet\functions\ExileClient_MarXet_util_log.sqf'],
-        ['ExileClient_MarXet_util_sortNumberString','MarXet\functions\ExileClient_MarXet_util_sortNumberString.sqf']
+        ['ExileClient_MarXet_gui_load','GG\MarXet\functions\ExileClient_MarXet_gui_load.sqf'],
+        ['ExileClient_MarXet_network_buyerBuyNowResponse','GG\MarXet\functions\ExileClient_MarXet_network_buyerBuyNowResponse.sqf'],
+        ['ExileClient_MarXet_network_createNewListingResponse','GG\MarXet\functions\ExileClient_MarXet_network_createNewListingResponse.sqf'],
+        ['ExileClient_MarXet_network_sellerBuyNowResponse','GG\MarXet\functions\ExileClient_MarXet_network_sellerBuyNowResponse.sqf'],
+        ['ExileClient_MarXet_network_updateInventoryResponse','GG\MarXet\functions\ExileClient_MarXet_network_updateInventoryResponse.sqf'],
+        ['ExileClient_MarXet_util_log','GG\MarXet\functions\ExileClient_MarXet_util_log.sqf'],
+        ['ExileClient_MarXet_util_sortNumberString','GG\MarXet\functions\ExileClient_MarXet_util_sortNumberString.sqf']
     ];
-    [] execVM "MarXet\MarXet_Traders.sqf";
+    [] execVM "GG\MarXet\MarXet_Traders.sqf";
     [5, {["updateInventoryRequest",[0]] call ExileClient_system_network_send}, [], false] call ExileClient_system_thread_addtask;
     [format["MarXet Client init completed"],"Client Init"] call ExileClient_MarXet_util_log;
 }
