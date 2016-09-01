@@ -38,6 +38,6 @@ ExAd_XM8_Selfie_fnc_TakeSelfie = {
 			["ErrorTitleAndText", ["Selfie", _this select 0]] call ExileClient_gui_toaster_addTemplateToast;
 			["extraApps", 1] call ExileClient_gui_xm8_slide;
 		};
-	}
+	};
 
 };

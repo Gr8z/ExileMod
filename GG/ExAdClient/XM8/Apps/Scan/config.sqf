@@ -15,7 +15,7 @@ ExAd_XM8_Scan_fnc_ScanPlayer = {
 		};
 
 		if (ExileClientPlayerIsInCombat) exitWith {
-		  throw "Scan failed, you're in combat."l
+		  throw "Scan failed, you're in combat.";
 		};
 
 		if !("ItemGPS" in (assigneditems player)) exitWith
@@ -68,6 +68,6 @@ ExAd_XM8_Scan_fnc_ScanPlayer = {
 			["ErrorTitleAndText", ["Player Scan", _this select 0]] call ExileClient_gui_toaster_addTemplateToast;
 			["extraApps", 1] call ExileClient_gui_xm8_slide;
 		};
-	}
+	};
 
 };
