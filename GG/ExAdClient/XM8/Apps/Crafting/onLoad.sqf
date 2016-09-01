@@ -1,3 +1,10 @@
+/*
+
+Coded and coverted by GR8
+www.ghostzgamerz.com
+
+*/
+
 params["_display","_slide","_idc"];
 
 _pW = 0.025;

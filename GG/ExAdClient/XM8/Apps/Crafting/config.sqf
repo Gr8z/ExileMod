@@ -1,3 +1,10 @@
+/*
+
+Coded and coverted by GR8
+www.ghostzgamerz.com
+
+*/
+
 {
     _code = '';
     _function = _x select 0;

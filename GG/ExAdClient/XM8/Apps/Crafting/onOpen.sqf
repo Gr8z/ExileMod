@@ -1,3 +1,10 @@
+/*
+
+Coded and coverted by GR8
+www.ghostzgamerz.com
+
+*/
+
 private["_display"];
 
 _display = uiNameSpace getVariable ["RscExileXM8", displayNull];

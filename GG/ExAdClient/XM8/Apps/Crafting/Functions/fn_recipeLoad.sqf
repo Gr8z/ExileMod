@@ -1,3 +1,10 @@
+/*
+
+Coded and coverted by GR8
+www.ghostzgamerz.com
+
+*/
+
 private ["_display","_compoList","_reciList","_CategoryCtrl","_SelectedCategory","_CategoryConfig","_pictureItemClassName","_RecipeCategory","_RecipeClass",
 "_currentRecipeName","_pictureItemConfig","_recipePicture","_lbsize"];
 

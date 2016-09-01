@@ -1,3 +1,10 @@
+/*
+
+Coded and coverted by GR8
+www.ghostzgamerz.com
+
+*/
+
 private ["_display","_getControl","_equippedMagazines","_SelectedRecipeCtrl","_recipeList","_components","_Tools","_requiredInteractionModelGroup",
 "_requiresOcean","_requiresFire","_returnedItems","_Quantity","_Component","_ComponentDispName","_ComponentPicture","_equippedComponentQuantity","_lbsize",
 "_Tool","_ToolDispName","_ToolPicture","_equippedToolQuantity","_foundObject","_interactionModelGroupConfig","_RequiredDispName","_interactionModelGroupModels"];
