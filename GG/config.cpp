@@ -6888,7 +6888,7 @@ class CfgVehicleTransport
 };
 class CfgXM8
 {
-	extraApps[] = {"GG_VG","GG_CHVD","GG_Journal","GG_Quad","GG_Selfie","GG_Scan"};
+	extraApps[] = {"GG_VG","GG_CHVD","GG_Journal","GG_Quad","GG_Selfie","GG_Scan","GG_Chat"};
 	
 	class GG_VG 
 	{
@@ -6942,6 +6942,12 @@ class CfgXM8
 		scanDistance = 1000; //area sround player to scan in meters
 		quickFunction = "['GG_Scan'] spawn ExAd_XM8_Scan_fnc_ScanPlayer";
 		logo = "GG\ExAdClient\XM8\Apps\Scan\icon_Scan.paa";
+	};
+	class GG_Chat
+	{
+		title = "Private Chat";
+		quickFunction = "createdialog 'infiSTAR_CHAT';";
+		logo = "GG\ExAdClient\XM8\Apps\Chat\icon_Chat.paa";
 	};
 }; 
 class CfgVon
