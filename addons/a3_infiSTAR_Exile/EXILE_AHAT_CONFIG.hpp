@@ -276,7 +276,7 @@ USE_THIS_TIME_FUNCTION = "time";	/* I recommend using "time" or "serverTime" jus
 
 
 /* Allow Player to vote Day/Night by typing vote day / vote night in Chat*/
-DayNightVote = true;
+DayNightVote = false;
 MRV = 0.3;	/* if "DayNightVote = true;" - Minimum votes required. Percentage of players needed to pass the vote. */
 MVP = 0.51;	/* if "DayNightVote = true;" - Minimum vote percentage. A setting that dictates the minimum vote percentage that needs to be reached for the vote to pass. */
 VCT = 300;	/* if "DayNightVote = true;" - Time (in seconds) to wait until nex vote is possible. */
