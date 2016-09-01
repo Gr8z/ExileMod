@@ -6888,9 +6888,9 @@ class CfgVehicleTransport
 };
 class CfgXM8
 {
-	extraApps[] = {"ExAd_VG","ExAd_CHVD","ExAd_Journal","ExAd_Quad"};
+	extraApps[] = {"GG_VG","GG_CHVD","GG_Journal","GG_Quad","GG_Selfie"};
 	
-	class ExAd_VG 
+	class GG_VG 
 	{
 		title = "Virtual Garage";
 		controlID = 50000;					//IDC:50000 -> 50015 || These need to be unique and out of range from each other 
@@ -6899,7 +6899,7 @@ class CfgXM8
 		onOpen = "GG\ExAdClient\XM8\Apps\VG\onOpen.sqf";
 		onClose = "GG\ExAdClient\XM8\Apps\VG\onClose.sqf";
 	};
-	class ExAd_CHVD 
+	class GG_CHVD 
 	{
 		title = "View Distance Settings";
 		controlID = 50200;					//IDC:50200 -> 50102 || These need to be unique and out of range from each other
@@ -6909,7 +6909,7 @@ class CfgXM8
 		onOpen = "GG\ExAdClient\XM8\Apps\CHVD\onOpen.sqf";
 		onClose = "GG\ExAdClient\XM8\Apps\CHVD\onClose.sqf";
 	};		
-	class ExAd_Journal 
+	class GG_Journal 
 	{
 		title = "Journal";
 		controlID = 50300;					//IDC:50300 -> 50305 || These need to be unique and out of range from each other
@@ -6919,14 +6919,21 @@ class CfgXM8
 		onOpen = "GG\ExAdClient\XM8\Apps\Journal\onOpen.sqf";
 		onClose = "GG\ExAdClient\XM8\Apps\Journal\onClose.sqf";
 	};
-	class ExAd_Quad
+	class GG_Quad
 	{
 		title = "Deploy Quad";
 		bambiState = 0;
 		vehicleClass = "Exile_Bike_QuadBike_Fia";
 		recipe[] = {{"Exile_Item_ExtensionCord",1}};
 		packable = 1;
-		quickFunction = "['ExAd_Quad'] call ExAd_XM8_DV_fnc_spawnVehicle";
+		quickFunction = "['GG_Quad'] call ExAd_XM8_DV_fnc_spawnVehicle";
+		logo = "GG\ExAdClient\XM8\Apps\DeployVehicle\icon_DeployVehicle.paa";
+	};
+	class GG_Selfie
+	{
+		title = "Selfie";
+		quickFunction = "['ExAd_Quad'] spawn ExAd_XM8_DV_fnc_spawnVehicle";
+		logo = "GG\ExAdClient\XM8\Apps\Selfie\icon_Selfie.paa";
 	};
 }; 
 class CfgVon
