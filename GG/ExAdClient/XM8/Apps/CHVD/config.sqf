@@ -1,5 +1,5 @@
 
-CHVD_allowNoGrass = true; 	//TRUE||FALSE
+CHVD_allowNoGrass = false; 	//TRUE||FALSE
 
 CHVD_maxView = 12000; 		//0-12000
 
