@@ -1,6 +1,6 @@
 _display = uiNameSpace getVariable ["RscExileXM8", displayNull];
 {
-	([_display,"ExAd_CHVD",_x select 0] call ExAd_fnc_getAppCtrl) ctrlSetText format["%1", _x select 1];
+	([_display,"GG_CHVD",_x select 0] call ExAd_fnc_getAppCtrl) ctrlSetText format["%1", _x select 1];
 } forEach 
 [
 	["editFootView", str round CHVD_foot],
@@ -16,7 +16,7 @@ _display = uiNameSpace getVariable ["RscExileXM8", displayNull];
 
 {	
 	private["_ctrl"];
-	_ctrl = [_display,"ExAd_CHVD",_x select 0] call ExAd_fnc_getAppCtrl;
+	_ctrl = [_display,"GG_CHVD",_x select 0] call ExAd_fnc_getAppCtrl;
 	_ctrl sliderSetRange [0, _x select 2];
 	_ctrl sliderSetSpeed [500, 500];
 	_ctrl sliderSetPosition (_x select 1);
@@ -31,7 +31,7 @@ _display = uiNameSpace getVariable ["RscExileXM8", displayNull];
 ];
 
 {
-	([_display,"ExAd_CHVD",_x select 0] call ExAd_fnc_getAppCtrl) cbSetChecked (_x select 1);
+	([_display,"GG_CHVD",_x select 0] call ExAd_fnc_getAppCtrl) cbSetChecked (_x select 1);
 } forEach 
 [
 	["cbFootSyncObj",CHVD_footSyncObj],
@@ -40,7 +40,7 @@ _display = uiNameSpace getVariable ["RscExileXM8", displayNull];
 ];
 
 {
-	_ctrl = [_display,"ExAd_CHVD",_x select 0] call ExAd_fnc_getAppCtrl;
+	_ctrl = [_display,"GG_CHVD",_x select 0] call ExAd_fnc_getAppCtrl;
 	if (CHVD_allowNoGrass) then {
 		_ctrl lbAdd STR_chvd_low;
 	};
@@ -62,11 +62,11 @@ _display = uiNameSpace getVariable ["RscExileXM8", displayNull];
 ];
 
 //Edit eventHandlers 
-_sliderFootView = [_display,"ExAd_CHVD","sliderFootView"] call ExAd_fnc_getAppCtrl;
-_editFootView = [_display,"ExAd_CHVD","editFootView"] call ExAd_fnc_getAppCtrl;
-_sliderFootObj = [_display,"ExAd_CHVD","sliderFootObj"] call ExAd_fnc_getAppCtrl;
-_editFootObj = [_display,"ExAd_CHVD","editFootObj"] call ExAd_fnc_getAppCtrl;
-_cbFootSyncObj = [_display,"ExAd_CHVD","cbFootSyncObj"] call ExAd_fnc_getAppCtrl;
+_sliderFootView = [_display,"GG_CHVD","sliderFootView"] call ExAd_fnc_getAppCtrl;
+_editFootView = [_display,"GG_CHVD","editFootView"] call ExAd_fnc_getAppCtrl;
+_sliderFootObj = [_display,"GG_CHVD","sliderFootObj"] call ExAd_fnc_getAppCtrl;
+_editFootObj = [_display,"GG_CHVD","editFootObj"] call ExAd_fnc_getAppCtrl;
+_cbFootSyncObj = [_display,"GG_CHVD","cbFootSyncObj"] call ExAd_fnc_getAppCtrl;
 
 _editFootView ctrlSetEventHandler ["KeyDown", format["['CHVD_foot', %1, _this select 0, 'CHVD_footObj', %2, %3, 'CHVD_footSyncObj'] call CHVD_fnc_onEBinput",ctrlIDC _sliderFootView, ctrlIDC _sliderFootObj, ctrlIDC _editFootObj]];
 
@@ -79,11 +79,11 @@ _sliderFootView ctrlSetEventHandler ["SliderPosChanged", format["['CHVD_foot', _
 _sliderFootObj ctrlSetEventHandler ["SliderPosChanged", format["['CHVD_footObj', _this select 0, _this select 1, %1] call CHVD_fnc_onSliderChange", ctrlIDC _editFootObj]]; 
 
 
-_sliderCarView = [_display,"ExAd_CHVD","sliderCarView"] call ExAd_fnc_getAppCtrl;
-_editCarView = [_display,"ExAd_CHVD","editCarView"] call ExAd_fnc_getAppCtrl;
-_sliderCarObj = [_display,"ExAd_CHVD","sliderCarObj"] call ExAd_fnc_getAppCtrl;
-_editCarObj = [_display,"ExAd_CHVD","editCarObj"] call ExAd_fnc_getAppCtrl;
-_cbCarSyncObj = [_display,"ExAd_CHVD","cbCarSyncObj"] call ExAd_fnc_getAppCtrl;
+_sliderCarView = [_display,"GG_CHVD","sliderCarView"] call ExAd_fnc_getAppCtrl;
+_editCarView = [_display,"GG_CHVD","editCarView"] call ExAd_fnc_getAppCtrl;
+_sliderCarObj = [_display,"GG_CHVD","sliderCarObj"] call ExAd_fnc_getAppCtrl;
+_editCarObj = [_display,"GG_CHVD","editCarObj"] call ExAd_fnc_getAppCtrl;
+_cbCarSyncObj = [_display,"GG_CHVD","cbCarSyncObj"] call ExAd_fnc_getAppCtrl;
 
 _editCarView ctrlSetEventHandler ["KeyDown", format["['CHVD_car', %1, _this select 0, 'CHVD_carObj', %2, %3, 'CHVD_carSyncObj'] call CHVD_fnc_onEBinput",ctrlIDC _sliderCarView, ctrlIDC _sliderCarObj, ctrlIDC _editCarObj]];
 
@@ -96,11 +96,11 @@ _sliderCarView ctrlSetEventHandler ["SliderPosChanged", format["['CHVD_car', _th
 _sliderCarObj ctrlSetEventHandler ["SliderPosChanged", format["['CHVD_carObj', _this select 0, _this select 1, %1] call CHVD_fnc_onSliderChange", ctrlIDC _editCarObj]]; 
 
 
-_sliderAirView = [_display,"ExAd_CHVD","sliderAirView"] call ExAd_fnc_getAppCtrl;
-_editAirView = [_display,"ExAd_CHVD","editAirView"] call ExAd_fnc_getAppCtrl;
-_sliderAirObj = [_display,"ExAd_CHVD","sliderAirObj"] call ExAd_fnc_getAppCtrl;
-_editAirObj = [_display,"ExAd_CHVD","editAirObj"] call ExAd_fnc_getAppCtrl;
-_cbAirSyncObj = [_display,"ExAd_CHVD","cbAirSyncObj"] call ExAd_fnc_getAppCtrl;
+_sliderAirView = [_display,"GG_CHVD","sliderAirView"] call ExAd_fnc_getAppCtrl;
+_editAirView = [_display,"GG_CHVD","editAirView"] call ExAd_fnc_getAppCtrl;
+_sliderAirObj = [_display,"GG_CHVD","sliderAirObj"] call ExAd_fnc_getAppCtrl;
+_editAirObj = [_display,"GG_CHVD","editAirObj"] call ExAd_fnc_getAppCtrl;
+_cbAirSyncObj = [_display,"GG_CHVD","cbAirSyncObj"] call ExAd_fnc_getAppCtrl;
 
 _editAirView ctrlSetEventHandler ["KeyDown", format["['CHVD_air', %1, _this select 0, 'CHVD_airObj', %2, %3, 'CHVD_airSyncObj'] call CHVD_fnc_onEBinput",ctrlIDC _sliderAirView, ctrlIDC _sliderAirObj, ctrlIDC _editAirObj]];
 
@@ -114,7 +114,7 @@ _sliderAirObj ctrlSetEventHandler ["SliderPosChanged", format["['CHVD_airObj', _
 
 
 {
-	_ctrl = [_display,"ExAd_CHVD",_x select 0] call ExAd_fnc_getAppCtrl;
+	_ctrl = [_display,"GG_CHVD",_x select 0] call ExAd_fnc_getAppCtrl;
 	_handle = _ctrl ctrlSetEventHandler ["LBSelChanged", 
 		format ["[_this select 1, '%1', '%2'] call CHVD_fnc_onLBSelChanged", _x select 1, _x select 2]
 	];
@@ -127,13 +127,13 @@ _sliderAirObj ctrlSetEventHandler ["SliderPosChanged", format["['CHVD_airObj', _
 
 
 _footObj = if(CHVD_footSyncObj)then{false}else{true};
-([_display,"ExAd_CHVD","sliderFootObj"] call ExAd_fnc_getAppCtrl) ctrlEnable _footObj;
-([_display,"ExAd_CHVD","editFootObj"] call ExAd_fnc_getAppCtrl) ctrlEnable _footObj;
+([_display,"GG_CHVD","sliderFootObj"] call ExAd_fnc_getAppCtrl) ctrlEnable _footObj;
+([_display,"GG_CHVD","editFootObj"] call ExAd_fnc_getAppCtrl) ctrlEnable _footObj;
 
 _carObj = if(CHVD_carSyncObj)then{false}else{true};
-([_display,"ExAd_CHVD","sliderCarObj"] call ExAd_fnc_getAppCtrl) ctrlEnable _carObj;
-([_display,"ExAd_CHVD","editCarObj"] call ExAd_fnc_getAppCtrl) ctrlEnable _carObj;
+([_display,"GG_CHVD","sliderCarObj"] call ExAd_fnc_getAppCtrl) ctrlEnable _carObj;
+([_display,"GG_CHVD","editCarObj"] call ExAd_fnc_getAppCtrl) ctrlEnable _carObj;
 
 _airObj = if(CHVD_airSyncObj)then{false}else{true};
-([_display,"ExAd_CHVD","sliderAirObj"] call ExAd_fnc_getAppCtrl) ctrlEnable _airObj;
-([_display,"ExAd_CHVD","editAirObj"] call ExAd_fnc_getAppCtrl) ctrlEnable _airObj;
+([_display,"GG_CHVD","sliderAirObj"] call ExAd_fnc_getAppCtrl) ctrlEnable _airObj;
+([_display,"GG_CHVD","editAirObj"] call ExAd_fnc_getAppCtrl) ctrlEnable _airObj;

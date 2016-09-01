@@ -4,7 +4,7 @@ _varType = _this select 1;
 _text = _this select 2;
 
 _display = uiNameSpace getVariable ["RscExileXM8", displayNull];
-_ctrl = [_display,"ExAd_CHVD",_text] call ExAd_fnc_getAppCtrl;
+_ctrl = [_display,"GG_CHVD",_text] call ExAd_fnc_getAppCtrl;
 
 if (!CHVD_allowNoGrass) then {
 	_index = _index + 1;
