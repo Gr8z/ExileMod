@@ -6888,7 +6888,7 @@ class CfgVehicleTransport
 };
 class CfgXM8
 {
-	extraApps[] = {"GG_VG","GG_CHVD","GG_Journal","GG_Quad","GG_Selfie","GG_Scan","GG_Chat"};
+	extraApps[] = {"GG_VG","GG_CHVD","GG_Journal","GG_Quad","GG_Selfie","GG_Scan","GG_Chat","GG_Craft"};
 	
 	class GG_VG 
 	{
