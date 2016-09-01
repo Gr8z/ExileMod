@@ -6932,12 +6932,14 @@ class CfgXM8
 	class GG_Selfie
 	{
 		title = "Selfie";
+		config = "GG\ExAdClient\XM8\Apps\Selfie\config.sqf";
 		quickFunction = "['GG_Selfie'] spawn ExAd_XM8_Selfie_fnc_TakeSelfie";
 		logo = "GG\ExAdClient\XM8\Apps\Selfie\icon_Selfie.paa";
 	};
 	class GG_Scan
 	{
 		title = "Player Scan";
+		config = "GG\ExAdClient\XM8\Apps\Scan\config.sqf";
 		cooldownTime = 120; //cool down time on script in seconds (15 * 60 = 900) AKA 15 MINS
 		scanDistance = 1000; //area sround player to scan in meters
 		quickFunction = "['GG_Scan'] spawn ExAd_XM8_Scan_fnc_ScanPlayer";
