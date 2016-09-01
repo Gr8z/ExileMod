@@ -3,13 +3,14 @@
  * www.exilemod.com
  */
 
-[] execVM "GG\StatusBar\statusBar.sqf";
-[] execVM "GG\welcome.sqf";
 [] execVM "GG\MostWanted_Client\MostWanted_Init.sqf";
 [] execVM "GG\MarXet\MarXet_Init.sqf";
 
-
 if (!hasInterface || isServer) exitWith {};
+
+[] execVM "GG\StatusBar\statusBar.sqf";
+[] execVM "GG\welcome.sqf";
+[] execvm "GG\advertise.sqf";
 
 _pic = "GG\images\logo.paa";
 [
