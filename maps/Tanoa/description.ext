@@ -129,5 +129,5 @@ showHUD[] =
 #include "GG\AdminMenu.hpp"
 #include "GG\MostWanted_Client\Dialog\MostWantedDefines.hpp"
 #include "GG\MostWanted_Client\Dialog\MostWantedDialog.hpp"
-#include "MarXet\dialog\RscMarXetDefines.hpp"
-#include "MarXet\dialog\RscMarXetDialog.hpp"
+#include "GG\MarXet\dialog\RscMarXetDefines.hpp"
+#include "GG\MarXet\dialog\RscMarXetDialog.hpp"
