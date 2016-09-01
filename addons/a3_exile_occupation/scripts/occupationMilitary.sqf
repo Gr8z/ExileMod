@@ -206,12 +206,11 @@ if(_aiActive > _maxAIcount) exitWith
 			{
 				_marker = createMarker [format ["%1", _foundBuilding],_pos];
 				_marker setMarkerShape "Icon";
-				_marker setMarkerSize [3,3];
+				_marker setMarkerSize [0.2,0.2];
 				_marker setMarkerType "mil_dot";
 				_marker setMarkerBrush "Solid";
 				_marker setMarkerAlpha 0.5;
 				_marker setMarkerColor "ColorRed";
-				_marker setMarkerText "Occupied Military Area";	
 			};		
 			_okToSpawn = false;			
 		};	
