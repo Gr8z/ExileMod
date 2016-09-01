@@ -364,14 +364,14 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_AIKill_DistanceBonusCoefficient	= 0.05;						// If the distance from the player to the killed unit is more than "DMS_AIKill_DistanceBonusMinDistance" meters then the player gets a respect bonus equivalent to the distance multiplied by this coefficient. For example, killing an AI from 400 meters will give 100 extra respect (when the coefficient is 0.25). Set to 0 to disable the bonus. This bonus will not be applied if there isn't a regular AI kill bonus.
 
 	DMS_Diff_RepOrTabs_on_roadkill 		= true;						// Whether or not you want to use different values for giving respect/poptabs when you run an AI over. Default values are NEGATIVE. This means player will LOSE respect or poptabs.
-	DMS_Bandit_Soldier_RoadkillMoney	= -10;						// The amount of Poptabs gained/lost for running over a bandit soldier
-	DMS_Bandit_Soldier_RoadkillRep		= -5;						// The amount of Respect gained/lost for running over a bandit soldier
+	DMS_Bandit_Soldier_RoadkillMoney	= -100;						// The amount of Poptabs gained/lost for running over a bandit soldier
+	DMS_Bandit_Soldier_RoadkillRep		= -500;						// The amount of Respect gained/lost for running over a bandit soldier
 	DMS_Bandit_Soldier_RoadkillRank		= 20;
-	DMS_Bandit_Static_RoadkillMoney		= -10;						// The amount of Poptabs gained/lost for running over a bandit static gunner
-	DMS_Bandit_Static_RoadkillRep		= -5;						// The amount of Respect gained/lost for running over a bandit static gunner
+	DMS_Bandit_Static_RoadkillMoney		= -100;						// The amount of Poptabs gained/lost for running over a bandit static gunner
+	DMS_Bandit_Static_RoadkillRep		= -500;						// The amount of Respect gained/lost for running over a bandit static gunner
 	DMS_Bandit_Static_RoadkillRank		= 30;
-	DMS_Bandit_Vehicle_RoadkillMoney	= -10;						// The amount of Poptabs gained/lost for running over a bandit vehicle crew member
-	DMS_Bandit_Vehicle_RoadkillRep		= -5;						// The amount of Respect gained/lost for running over a bandit vehicle crew member
+	DMS_Bandit_Vehicle_RoadkillMoney	= -100;						// The amount of Poptabs gained/lost for running over a bandit vehicle crew member
+	DMS_Bandit_Vehicle_RoadkillRep		= -500;						// The amount of Respect gained/lost for running over a bandit vehicle crew member
 	DMS_Bandit_Vehicle_RoadkillRank		= 50;
 /* DonkeyPunchDMS Custom RoadKill Settings for Hero AI*/
 	DMS_Hero_Soldier_RoadkillMoney		= 20;						// The amount of Poptabs gained/lost for running over a hero soldier
