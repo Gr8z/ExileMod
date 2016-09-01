@@ -1,12 +1,5 @@
 /**
  * ExileClient_construction_thread
- *
- * Exile Mod
- * www.exilemod.com
- * © 2015 Exile Mod Team
- *
- * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
- * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
 private["_boundingBox","_boundingBoxMinimum","_boundingBoxMaximum","_boundingBoxPointsTop","_boundingBoxPointsBottom","_objectColor","_materialColor","_simulatePhysics","_position","_rotation","_vectorDirection","_isFlag","_vectorUp","_potentionalSnapObject","_snapToClassName","_snapToConfig","_snapPosition","_possibleSnapPosition","_contactThreshold","_isBelowTerrain","_worldPosition","_isInAir","_numberOfContactsBottom","_startPosition","_endPosition"];
