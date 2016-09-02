@@ -332,7 +332,7 @@ switch (_option) do
                 {
                     ctrlShow [_x,false];
                 }
-                forEach [21013,21020,21021,21022,21023,21024,21031,21032];
+                forEach [21012,21013,21020,21021,21022,21023,21024,21031,21032];
                 _dataString = lbData [21017,_this select 2];
                 if !(_dataString isEqualTo "") then
                 {
@@ -352,7 +352,7 @@ switch (_option) do
                         {
                             ctrlShow [_x,true];
                         }
-                        forEach [21020,21021,21022,21023,21031,21032];
+                        forEach [21020,21021,21022,21023,21031,21032,21012,21013];
                         ctrlSetText [21032,""];
                         _sellerUID = _dataArray select 5;
                         MarXet_Poptab = _dataArray select 6;
@@ -481,7 +481,7 @@ switch (_option) do
                         ctrlSetText [21023,_fuelText];
                         {
                             ctrlShow [_x,true];
-                        } forEach [21021,21023,21020,21022];
+                        } forEach [21021,21023,21020,21022,21012,21013];
                     }
                     else
                     {
