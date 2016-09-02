@@ -14,7 +14,7 @@ class CfgMostWanted
                 The sooner the array gets reset, the more often players are able to claim bounties or place bounties on their friends
             */
 
-            friendsLifetime = 14;
+            friendsLifetime = 1;
         };
 
         class Immunity
@@ -23,7 +23,7 @@ class CfgMostWanted
                 How long a player has immunity from a bounty in DAYTS
                 While a player has immunity, they won't be able to have a bounty set on them
             */
-            interval = 3;
+            interval = 1;
         };
     };
     class BountyValues
@@ -45,8 +45,8 @@ class CfgMostWanted
             { "80000",  "8"  },
             { "90000",  "9"  },
             { "100000", "10" },
-            { "150000", "15" },
-            { "200000", "20" }
+            { "150000", "11" },
+            { "200000", "12" }
         };
     };
 };
