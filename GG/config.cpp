@@ -7003,7 +7003,7 @@ class CfgXM8
 		title = "Crafting Menu";
 		controlID = 50400;
 		config = "GG\ExAdClient\XM8\Apps\Crafting\config.sqf";
-		logo = "GG\ExAdClient\XM8\Apps\Crafting\icon_Crafing.paa.paa";
+		logo = "GG\ExAdClient\XM8\Apps\Crafting\icon_Crafing.paa";
 		onLoad = "GG\ExAdClient\XM8\Apps\Crafting\onLoad.sqf";
 		onOpen = "GG\ExAdClient\XM8\Apps\Crafting\onOpen.sqf";
 		onClose = "GG\ExAdClient\XM8\Apps\Crafting\onClose.sqf";
