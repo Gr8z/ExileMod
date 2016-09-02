@@ -25,7 +25,7 @@ ExAd_XM8_Selfie_fnc_TakeSelfie = {
 
 			_rNumber = random 10000;
 			_filepath = "GG\Selfie"+_rNumber+".png";
-			_filepathFull = "\Documents\Arma 3\Screenshots\"+_filepath;
+			_filepathFull = "Documents\Arma 3\Screenshots\"+_filepath;
 			screenshot _filepath;
 
 			uiSleep 2;
