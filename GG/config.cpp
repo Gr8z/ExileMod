@@ -2815,8 +2815,10 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// Jets
 	///////////////////////////////////////////////////////////////////////////////
-	class I_Plane_Fighter_03_CAS_F					{ quality = 5; price = 75000; };
-	class B_Plane_CAS_01_F						{ quality = 5; price = 100000; };
+	class I_Plane_Fighter_03_CAS_F					{ quality = 5; price = 125000; };
+	class B_Plane_CAS_01_F						{ quality = 5; price = 175000; };
+	class O_Heli_Attack_02_F					{ quality = 5; price = 200000; };
+	class B_Heli_Attack_01_F					{ quality = 5; price = 110000; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Prowler
@@ -7453,7 +7455,9 @@ class NIARMSSniperRifles
 			"Exile_Chopper_Hellcat_Green",
 			"B_Heli_Transport_01_F",
 			"B_heli_Light_01_armed_F",
-			"I_Heli_light_03_F"
+			"I_Heli_light_03_F",
+			"O_Heli_Attack_02_F",
+			"B_Heli_Attack_01_F"
 		};
 	};
 
