@@ -2494,10 +2494,10 @@ class CfgExileArsenal
 	// Tanks
 	///////////////////////////////////////////////////////////////////////////////
 	
-	class I_MBT_03_cannon_F							{ quality = 1; price = 45000; };
-	class IA_Scorcher_M4							{ quality = 1; price = 90000; };
-	class B_MBT_01_mlrs_F							{ quality = 1; price = 60000; };
-	class O_APC_Tracked_02_AA_F						{ quality = 1; price = 35000; };
+	class I_MBT_03_cannon_F							{ quality = 1; price = 250000; };
+	class O_Scorcher_M4							{ quality = 1; price = 190000; };
+	class B_MBT_01_mlrs_F							{ quality = 1; price = 140000; };
+	class O_APC_Tracked_02_AA_F						{ quality = 1; price = 125000; };
 
 	
 	///////////////////////////////////////////////////////////////////////////////
@@ -7428,7 +7428,7 @@ class NIARMSSniperRifles
 			"B_lsv_01_armed_f",
 			"O_LSV_02_armed_f",
 			"I_MBT_03_cannon_F",
-			"IA_Scorcher_M4",
+			"O_Scorcher_M4",
 			"B_MBT_01_mlrs_F",
 			"O_APC_Tracked_02_AA_F"
 		};
