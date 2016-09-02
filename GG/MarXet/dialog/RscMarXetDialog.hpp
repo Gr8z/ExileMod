@@ -105,6 +105,25 @@ class RscMarXetDialog
 			colorBackground[] = {-1,-1,-1,0};
 			colorText[] = {0.988,0.749,0,1};
 		};
+		class CenterFeeTitle : RscMarXetText
+		{
+			idc = 21012;
+			text = "TAX FEE:"; //--- ToDo: Localize;
+			x = 0.427812 * safezoneW + safezoneX;
+			y = 0.643 * safezoneH + safezoneY;
+			w = 0.0464063 * safezoneW;
+			h = 0.022 * safezoneH;
+			colorBackground[] = {-1,-1,-1,0};
+		};
+		class CenterFeeEditBox: RscMarXetEdit
+		{
+			idc = 21013;
+			x = 0.482219 * safezoneW + safezoneX;
+			y = 0.6432 * safezoneH + safezoneY;
+			w = 0.0567187 * safezoneW;
+			h = 0.022 * safezoneH;
+			colorBackground[] = {-1,-1,-1,0};
+		};
 		class CenterVehicleDamage: RscMarXetText
 		{
 			idc = 21020;

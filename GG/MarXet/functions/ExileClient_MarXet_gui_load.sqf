@@ -14,7 +14,7 @@ switch (_option) do
 {
     case ("Load"):
     {
-        private ["_display","_rightDropdown","_rightLB","_leftLB","_leftDropdown","_priceEditBox","_purchaseBtn"];
+        private ["_display","_rightDropdown","_rightLB","_leftLB","_leftDropdown","_priceEditBox","_feeEditBox","_purchaseBtn"];
         disableSerialization;
         _display = uiNamespace getVariable ["RscMarXetDialog",displayNull];
         MarXet_TempVehicleArray = [];
@@ -47,6 +47,9 @@ switch (_option) do
         _priceEditBox = (_display displayCtrl 21011);
         _priceEditBox ctrlRemoveAllEventHandlers "KeyUp";
         _priceEditBox ctrlSetEventHandler ["KeyUp","if ((count(ctrlText (_this select 0))) > 0) then {ctrlEnable [21024,true];}else{ctrlEnable [21024,false];};"];
+        _feeEditBox = (_display displayCtrl 21013);
+        _feeEditBox ctrlRemoveAllEventHandlers "KeyUp";
+        _feeEditBox ctrlSetEventHandler ["KeyUp","if ((count(ctrlText (_this select 0))) > 0) then {ctrlEnable [21024,true];}else{ctrlEnable [21024,false];};"]; 
         _pinCodeEditBox = (_display displayCtrl 21032);
         _pinCodeEditBox ctrlRemoveAllEventHandlers "KeyUp";
         _pinCodeEditBox ctrlSetEventHandler ["KeyUp","if ((count(ctrlText (_this select 0))) isEqualTo 4) then {ctrlEnable [21014,true];}else{ctrlEnable [21014,false];};"];
@@ -56,6 +59,7 @@ switch (_option) do
         _purchaseBtn = _display displayCtrl 21014;
         _purchaseBtn ctrlEnable false;
         _priceEditBox ctrlEnable false;
+        _feeEditBox ctrlEnable false;
         true call ExileClient_gui_postProcessing_toggleDialogBackgroundBlur;
         ctrlSetFocus (_display displayCtrl 21025);
     };
@@ -69,6 +73,9 @@ switch (_option) do
         _priceEditBox = (_display displayCtrl 21011);
         _priceEditBox ctrlEnable false;
         _priceEditBox ctrlSetText "";
+        _feeEditBox = (_display displayCtrl 21013);
+        _feeEditBox ctrlEnable false;
+        _feeEditBox ctrlSetText "";
         _title = _display displayCtrl 21009;
         _title ctrlSetText "";
         _dropdown = _display displayCtrl 21016;
@@ -204,6 +211,9 @@ switch (_option) do
         _priceEditBox = (_display displayCtrl 21011);
         _priceEditBox ctrlEnable false;
         _priceEditBox ctrlSetText "";
+        _feeEditBox = (_display displayCtrl 21013);
+        _feeEditBox ctrlEnable false;
+        _feeEditBox ctrlSetText "";
         _title = _display displayCtrl 21009;
         _title ctrlSetText "";
         _dropdown = _display displayCtrl 21019;
@@ -312,6 +322,8 @@ switch (_option) do
                 _rightLB = (_display displayCtrl 21017);
                 _priceEditBox = _display displayCtrl 21011;
                 ctrlEnable [21011,false];
+                _feeEditBox = _display displayCtrl 21013;
+                ctrlEnable [21013,false];
                 _priceEditBox ctrlSetText "";
                 _dropdown = _display displayCtrl 21016;
                 _dropdownOption = lbCurSel _dropdown;
@@ -442,6 +454,8 @@ switch (_option) do
                 forEach [21020,21021,21022,21023,21012,21013,21014];
                 _priceEditBox = _display displayCtrl 21011;
                 ctrlEnable [21011,false];
+                _feeEditBox = _display displayCtrl 21013;
+                ctrlEnable [21013,false];
                 _priceEditBox ctrlSetText "";
                 _dataString = _leftLB lbData (_this select 2);
                 if !(_dataString isEqualTo "") then
@@ -454,6 +468,7 @@ switch (_option) do
                     ctrlEnable [21024,false];
                     ctrlEnable [21014,false];
                     ctrlEnable [21011,true];
+                    ctrlEnable [21013,true];
                     _purchaseBtn = _display displayCtrl 21024;
                     _purchaseBtn ctrlShow true;
                     if (_location isEqualTo 4) then
@@ -614,6 +629,7 @@ switch (_option) do
                 MarXet_ListingArray = [];
                 ctrlEnable [21024,false];
                 ctrlEnable [21011,false];
+                ctrlEnable [21013,false];
                 _dropdown = _display displayCtrl 21019;
                 _dropdownIndex = lbCurSel _dropdown;
                 _location = _dropdown lbValue _dropdownIndex;
@@ -662,7 +678,7 @@ switch (_option) do
                 {
                     ctrlEnable [_x,false];
                 }
-                forEach[21011,21014,21024,21015,21016,21017,21018,21019,21025,21007,21008,21032,21033];
+                forEach[21011,21013,21014,21024,21015,21016,21017,21018,21019,21025,21007,21008,21032,21033];
                 _title = _this select 2;
                 _textOption = _this select 3;
                 _confirmBtnText = _this select 4;
@@ -735,6 +751,7 @@ switch (_option) do
                 {
                     ctrlEnable [21024,true];
                     ctrlEnable [21011,true];
+                    ctrlEnable [21013,true];
                 };
             };
         };
