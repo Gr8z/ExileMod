@@ -20,7 +20,7 @@ class MostWantedDialog
 		{
 			idc = 1003;
 
-			text = "MOST WANTED"; //--- ToDo: Localize;
+			text = "Bounties"; //--- ToDo: Localize;
 			x = 0.323759 * safezoneW + safezoneX;
 			y = 0.26306 * safezoneH + safezoneY;
 			w = 0.352567 * safezoneW;
