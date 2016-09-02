@@ -23,9 +23,14 @@ ExAd_XM8_Selfie_fnc_TakeSelfie = {
 			cutText ['','WHITE IN'];
 			playSound "cam";
 
-			_rNumber = random 10000;
-			_filepath = "GG\Selfie"+_rNumber+".png";
-			_filepathFull = "Documents\Arma 3\Screenshots\"+_filepath;
+			_ranNumArr = ['1','2','3','4','5','6','7','8','9','0'];
+			a1 = _ranNumArr call BIS_fnc_selectRandom;
+			a2 = _ranNumArr call BIS_fnc_selectRandom;
+			a3 = _ranNumArr call BIS_fnc_selectRandom;
+			XM8_airDrop_a1a2a3 = a1+a2+a3;
+
+			_filepath = "GG\Selfie\GG"+ round(random 1000) +".png";
+			_filepathFull = "Documents\Arma 3 - Other Profiles\"+ name player +"\Screenshots\"+_filepath;
 			screenshot _filepath;
 
 			uiSleep 2;
