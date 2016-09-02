@@ -2557,15 +2557,15 @@ class CfgExileArsenal
 	class Exile_Bike_MountainBike 										{ quality = 1; price = 100; };
 	
 	///////// QuadBikes /////////
-	class Exile_Bike_QuadBike_Black										{ quality = 1; price = 1000; };
-	class Exile_Bike_QuadBike_Blue										{ quality = 1; price = 1000; };
-	class Exile_Bike_QuadBike_Red										{ quality = 1; price = 1000; };
-	class Exile_Bike_QuadBike_White										{ quality = 1; price = 1000; };
-	class Exile_Bike_QuadBike_Nato										{ quality = 1; price = 1000; };
-	class Exile_Bike_QuadBike_Csat										{ quality = 1; price = 1000; };
-	class Exile_Bike_QuadBike_Fia										{ quality = 1; price = 1000; };
-	class Exile_Bike_QuadBike_Guerilla01								{ quality = 1; price = 1000; };
-	class Exile_Bike_QuadBike_Guerilla02								{ quality = 1; price = 1000; };
+	class Exile_Bike_QuadBike_Black										{ quality = 1; price = 1000; sellPrice = 30;};
+	class Exile_Bike_QuadBike_Blue										{ quality = 1; price = 1000; sellPrice = 30;};
+	class Exile_Bike_QuadBike_Red										{ quality = 1; price = 1000; sellPrice = 30;};
+	class Exile_Bike_QuadBike_White										{ quality = 1; price = 1000; sellPrice = 30;};
+	class Exile_Bike_QuadBike_Nato										{ quality = 1; price = 1000; sellPrice = 30;};
+	class Exile_Bike_QuadBike_Csat										{ quality = 1; price = 1000; sellPrice = 30;};
+	class Exile_Bike_QuadBike_Fia										{ quality = 1; price = 1000; sellPrice = 30;};
+	class Exile_Bike_QuadBike_Guerilla01								{ quality = 1; price = 1000; sellPrice = 30;};
+	class Exile_Bike_QuadBike_Guerilla02								{ quality = 1; price = 1000; sellPrice = 30;};
 
 	///////// Karts /////////
 	class Exile_Car_Kart_BluKing										{ quality = 1; price = 650; };

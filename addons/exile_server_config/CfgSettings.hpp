@@ -250,8 +250,8 @@ class CfgSettings
 		 */
 		spawnZoneVehicles[] =
 		{
-			{5, "Exile_Bike_OldBike"},
-			{5, "Exile_Bike_MountainBike"}
+			{5, "Exile_Bike_QuadBike_Black"},
+			{5, "Exile_Bike_QuadBike_Blue"}
 		};
 	};
 
@@ -556,57 +556,56 @@ class CfgSettings
 				The type of box is chosen randomly from the following list.
 				Add a type multiple times to increase the chance of being used.
 			*/
-			types[] = {"Beer", "Beer", "Tools", "Food", "Food", "RepairParts"};
+			types[] = {"Building","Weapons","Medical"};
 
 			class BoxTypes
 			{
-				class Beer 
+				class Building 
 				{
 					items[] = 
 					{
-						{"Exile_Item_Beer", 24}
+						{"Exile_Item_WoodWallKit",5},
+						{"Exile_Item_WoodWallHalfKit",2},
+						{"Exile_Item_WoodWindowKit",2},
+						{"Exile_Item_WorkBenchKit",2},
+						{"Exile_Item_WoodFloorPortKit",2},
+						{"Exile_Item_WoodFloorKit",5},
+						{"Exile_Item_WoodGateKit",1},
+						{"Exile_Item_Flag",1},
+						{"Exile_Item_SafeKit",1}
 					};
 				};
 
-				class Food 
+				class Medical 
 				{
 					items[] = 
 					{
-						{"Exile_Item_BBQSandwich", 5},
-						{"Exile_Item_Catfood", 5},
-						{"Exile_Item_ChristmasTinner", 5},
-						{"Exile_Item_GloriousKnakworst", 5},
-						{"Exile_Item_SausageGravy", 5},
-						{"Exile_Item_Surstromming", 5},
-						{"Exile_Item_CanOpener", 1},
-						{"Exile_Item_CookingPot", 1},
-						{"Exile_Item_Matches", 1}
+						{"Exile_Item_Defibrillator",1},
+						{"Exile_Magazine_Battery",2},
+						{"Exile_Item_InstaDoc",3},
+						{"Exile_Item_Bandage",2},
+						{"Exile_Item_Vishpirin",2},
+						{"Exile_Item_Heatpack",2}
 					};
 				};
 
-				class Tools 
+				class Weapons 
 				{
 					items[] = 
 					{
-						{"Exile_Item_Wrench", 1},
-						{"Exile_Item_Shovel", 1},
-						{"Exile_Item_Screwdriver", 1},
-						{"Exile_Item_Pliers", 1},
-						{"Exile_Item_Handsaw", 1},
-						{"Exile_Item_FireExtinguisher", 1},
-						{"Exile_Item_DuctTape", 1}
-					};
-				};
-
-				class RepairParts 
-				{
-					items[] = 
-					{
-						{"Exile_Item_CarWheel", 8},
-						{"Exile_Item_FuelCanisterFull", 4},
-						{"Exile_Item_OilCanister", 1},
-						{"Exile_Item_Grinder", 1},
-						{"Exile_Item_CordlessScrewdriver", 1}
+						{"LMG_Zafir_F",1},
+						{"MMG_01_hex_F",1},
+						{"srifle_EBR_F",1},
+						{"srifle_DMR_01_F",1},
+						{"srifle_GM6_F",1},
+						{"srifle_LRR_F",1},
+						{"srifle_DMR_02_F",1},
+						{"MMG_01_tan_F",1},
+						{"srifle_DMR_03_F",1},
+						{"srifle_DMR_03_khaki_F",1},
+						{"srifle_DMR_03_tan_F",1},
+						{"srifle_DMR_04_F",1},
+						{"srifle_LRR_camo_F",1}
 					};
 				};
 			};
