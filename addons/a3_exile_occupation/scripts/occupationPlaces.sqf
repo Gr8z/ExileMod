@@ -331,10 +331,9 @@ _locations = (nearestLocations [_spawnCenter, ["NameVillage","NameCity", "NameCi
 				
 				_marker = createMarker [format ["%1", _locationName],_spawnPosition];
 				_marker setMarkerShape "Icon";
-				_marker setMarkerSize [3,3];
+				_marker setMarkerSize [0.2,0.2];
 				_marker setMarkerType "mil_dot";
 				_marker setMarkerBrush "Solid";
-				_marker setMarkerText _markerName;
 				_marker setMarkerColor _markerColour;
 				_marker setMarkerAlpha 0.5;
 					
