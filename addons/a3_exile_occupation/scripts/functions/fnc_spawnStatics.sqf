@@ -166,7 +166,7 @@ if(_side == "survivor") then { _currentSide = SC_SurvivorSide };
 			{
 				_marker = createMarker [format ["%1", _staticUID],_spawnPosition];
 				_marker setMarkerShape "Icon";
-				_marker setMarkerSize [0.2,0.2];
+				_marker setMarkerSize [0.8,0.8];
 				_marker setMarkerType "mil_dot";
 				_marker setMarkerBrush "Solid";
 				_marker setMarkerAlpha 0.5;

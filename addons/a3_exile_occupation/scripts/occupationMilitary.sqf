@@ -206,7 +206,7 @@ if(_aiActive > _maxAIcount) exitWith
 			{
 				_marker = createMarker [format ["%1", _foundBuilding],_pos];
 				_marker setMarkerShape "Icon";
-				_marker setMarkerSize [0.2,0.2];
+				_marker setMarkerSize [0.8,0.8];
 				_marker setMarkerType "mil_dot";
 				_marker setMarkerBrush "Solid";
 				_marker setMarkerAlpha 0.5;
