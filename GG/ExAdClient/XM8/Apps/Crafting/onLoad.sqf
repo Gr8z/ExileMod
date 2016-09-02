@@ -21,7 +21,7 @@ _slideClass = "GG_Craft";
 
 [_display,_slide,([_slideClass,"categoriesCombo"] call ExAd_fnc_getNextIDC),[0.4*_pW,2.5*_pH,15.2*_pW,1*_pH],"call Crafting_fnc_recipeLoad",""] call ExAd_fnc_createCombo;
 
-[_display,_newParent,([_slideClass,"text"] call ExAd_fnc_getNextIDC),[0.4*_pW,1.5*_pH,15.2*_pW,1*_pH],"[GG] Recipes","PuristaMedium",1,"#ffffff","left",0] call ExAd_fnc_createStructuredText;
+[_display,_slide,([_slideClass,"text"] call ExAd_fnc_getNextIDC),[0.4*_pW,1.5*_pH,15.2*_pW,1*_pH],"[GG] Recipes","PuristaMedium",1,"#ffffff","left",0] call ExAd_fnc_createStructuredText;
 
 [_display,_slide,([_slideClass,"pic"] call ExAd_fnc_getNextIDC),[0.4*_pW,11.5*_pH,15.2*_pW,7*_pH],"\exile_assets\texture\mod\icon.paa",[1,1,1,1],false,true,""] call ExAd_fnc_createPicture;
 

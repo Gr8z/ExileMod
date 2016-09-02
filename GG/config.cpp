@@ -6933,7 +6933,7 @@ class CfgVehicleTransport
 };
 class CfgXM8
 {
-	extraApps[] = {"GG_VG","GG_CHVD","GG_Journal","GG_Quad","GG_Selfie","GG_Scan","GG_Chat","GG_Craft"};
+	extraApps[] = {"GG_VG","GG_CHVD","GG_Journal","GG_Quad","GG_Selfie","GG_Scan","GG_Chat","GG_Craft","GG_AirDrop"};
 	
 	class GG_VG 
 	{
@@ -7007,6 +7007,16 @@ class CfgXM8
 		onLoad = "GG\ExAdClient\XM8\Apps\Crafting\onLoad.sqf";
 		onOpen = "GG\ExAdClient\XM8\Apps\Crafting\onOpen.sqf";
 		onClose = "GG\ExAdClient\XM8\Apps\Crafting\onClose.sqf";
+	};	
+	class GG_AirDrop 
+	{
+		title = "Crafting Menu";
+		controlID = 50500;
+		config = "GG\ExAdClient\XM8\Apps\AirDrop\config.sqf";
+		logo = "GG\ExAdClient\XM8\Apps\AirDrop\icon_AirDrop.paa";
+		onLoad = "GG\ExAdClient\XM8\Apps\AirDrop\onLoad.sqf";
+		onOpen = "GG\ExAdClient\XM8\Apps\AirDrop\onOpen.sqf";
+		onClose = "GG\ExAdClient\XM8\Apps\AirDrop\onClose.sqf";
 	};	
 }; 
 class CfgVon
