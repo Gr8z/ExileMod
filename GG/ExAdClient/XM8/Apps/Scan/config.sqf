@@ -2,7 +2,7 @@ ExAd_XM8_Scan_fnc_ScanPlayer = {
 	params["_slideClass","_cooldownTime","_scanDistance"];
 	try
 	{
-		_cooldownTime = getArray(missionConfigFile >> "CfgXM8" >> _slideClass >> "cooldownTime");
+		_cooldownTime = 120;
 
 		if(isNil "LastUsedCheck")then{LastUsedCheck = 0;};
 
@@ -29,7 +29,7 @@ ExAd_XM8_Scan_fnc_ScanPlayer = {
 		};
 
 		[] spawn {
-			_scanDistance = getArray(missionConfigFile >> "CfgXM8" >> _slideClass >> "scanDistance");
+			_scanDistance = 1000;
 			for "_x" from 1 to 10 do {
 			  if (_x >= 2) then {cutText [format ["PLEASE WAIT - SCANNING FOR 8G USERS WITHIN 1000M...", 11-_x], "PLAIN DOWN"];};
 			  uiSleep 1;
