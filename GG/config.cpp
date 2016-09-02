@@ -3751,7 +3751,7 @@ class CfgInteractionMenus
 	    {
 	        class MostWanted: ExileAbstractAction
 	        {
-	            title = "Most Wanted";
+	            title = "Bounties";
 	            condition = "true";
 	            action = "createDialog 'MostWantedDialog';";
 	        };
