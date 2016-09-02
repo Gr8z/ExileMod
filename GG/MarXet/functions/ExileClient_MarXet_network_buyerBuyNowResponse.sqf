@@ -23,14 +23,14 @@ if !(_vehicleNetID isEqualTo "") then
     {
         ["SuccessTitleAndText", [
             "Vehicle Bought!",
-            format ["Congratulations on your purchase of your old <t color='#ff0000'>%1</t>. Couldn't let go of it huh?<br/>Thank you for choosing Mar<t color='#531517'>X</t>et: Exile's leading marketplace!", _name]
+            format ["Congratulations on your purchase of your old <t color='#ff0000'>%1</t>. Couldn't let go of it huh?", _name]
         ]] call ExileClient_gui_toaster_addTemplateToast;
     }
     else
     {
         ["SuccessTitleAndText", [
             "Vehicle Bought!",
-            format ["Congratulations on your purchase of your new <t color='#ff0000'>%1</t><br/>Your total cost was <t color='#ff0000'>%2</t><img image='\exile_assets\texture\ui\poptab_inline_ca.paa' size='24'/>.<br/>Thank you for choosing Mar<t color='#531517'>X</t>et: Exile's leading marketplace!", _name, _price]
+            format ["Congratulations on your purchase of your new <t color='#ff0000'>%1</t><br/>Your total cost was <t color='#ff0000'>%2</t><img image='\exile_assets\texture\ui\poptab_inline_ca.paa' size='24'/>.", _name, _price]
         ]] call ExileClient_gui_toaster_addTemplateToast;
     };
 }

@@ -43,7 +43,7 @@ _configName = _itemClassname call ExileClient_util_gear_getConfigNameByClassName
 _name = getText(configFile >> _configName >> _itemClassname >> "displayName");
 ["SuccessTitleAndText", [
     "It's been listed!",
-    format ["You have successfully listed your <t color='#ff0000'>%1</t> for <t color='#ff0000'>%2</t><img image='\exile_assets\texture\ui\poptab_inline_ca.paa' size='24'/> on Mar<t color='#531517'>X</t>et.<br/>Thank you for using Mar<t color='#531517'>X</t>et: Exile's leading marketplace!", _name, _price]
+    format ["You have successfully listed your <t color='#ff0000'>%1</t> for <t color='#ff0000'>%2</t><img image='\exile_assets\texture\ui\poptab_inline_ca.paa' size='24'/> on Marketplace", _name, _price]
 ]] call ExileClient_gui_toaster_addTemplateToast;
 _dialog = uiNameSpace getVariable ["RscMarXetDialog", displayNull];
 if !(_dialog isEqualTo displayNull) then
