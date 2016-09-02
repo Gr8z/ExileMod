@@ -20,7 +20,7 @@ ExAd_XM8_Scan_fnc_ScanPlayer = {
 
 		if !("ItemGPS" in (assigneditems player)) exitWith
 		{ 
-			throw = "Scan failed, you don't have a GPS.";
+			throw "Scan failed, you don't have a GPS.";
 		};
 
 		if !((LastUsedCheck == 0) || (diag_tickTime - LastUsedCheck > _cooldownTime)) exitWith
