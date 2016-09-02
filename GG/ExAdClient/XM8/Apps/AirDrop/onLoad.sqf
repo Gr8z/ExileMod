@@ -66,7 +66,7 @@ _ctrl ctrlSetStructuredText (parseText (format ["<br/><t align='center'size='1.4
 	[] spawn AirDrop_fnc_buySelected;',"CALL PRO DROP"] call ExAd_fnc_createButton;
 
 _ctrl = [_display,_slide,([_slideClass,""] call ExAd_fnc_getNextIDC),[18*_pW,2*_pH,12.8*_pW,16*_pH],"","PuristaMedium",1,"#ffffff","left",0] call ExAd_fnc_createStructuredText;
-_ctrl ctrlSetStructuredText (parseText (format ["<t align='center'size='0.8'> Air Drop ID: %2-%3%4<br/>(%1)<br/><br/>Once you buy an Air Drop, The Drop Zone will be marked on the map and announced to every player. We will try our best to send you the random items worth your money.<br/><img image='GG\XM8_apps\apps\ExAd_XM8_AirDrop\icons\drop.paa' size='8.0' shadow='0' />",name player, ExAd_XM8_AirDrop_orderIDcharacters, ExAd_XM8_AirDrop_a1, ExAd_XM8_AirDrop_a2]));
+_ctrl ctrlSetStructuredText (parseText (format ["<t align='center'size='0.8'> Air Drop ID: %2-%3%4<br/>(%1)<br/><br/>Once you buy an Air Drop, The Drop Zone will be marked on the map and announced to every player. We will try our best to send you the random items worth your money.<br/><img image='GG\ExAdClient\XM8\Apps\AirDrop\onLoad.sqf' size='8.0' shadow='0' />",name player, ExAd_XM8_AirDrop_orderIDcharacters, ExAd_XM8_AirDrop_a1, ExAd_XM8_AirDrop_a2]));
 
 [_display,_slide,([_slideClass,"bckButton"] call ExAd_fnc_getNextIDC),[18*_pW,17*_pH,12.8*_pW,1*_pH],'["extraApps", 1] call ExileClient_gui_xm8_slide;',"GO BACK"] call ExAd_fnc_createButton;
 
