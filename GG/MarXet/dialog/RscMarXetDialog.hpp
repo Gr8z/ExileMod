@@ -183,7 +183,7 @@ class RscMarXetDialog
 		class CenterConfirmButton: RscMarXetButton
 		{
 			idc = 21024;
-			text = "Comfirm Listing";
+			text = "confirm Listing";
 			show = false;
 			x = 0.505156 * safezoneW + safezoneX;
 			y = 0.72 * safezoneH + safezoneY;

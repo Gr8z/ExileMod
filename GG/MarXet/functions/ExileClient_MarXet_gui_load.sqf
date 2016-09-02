@@ -332,7 +332,7 @@ switch (_option) do
                 {
                     ctrlShow [_x,false];
                 }
-                forEach [21020,21021,21022,21023,21024,21031,21032];
+                forEach [21013,21020,21021,21022,21023,21024,21031,21032];
                 _dataString = lbData [21017,_this select 2];
                 if !(_dataString isEqualTo "") then
                 {
@@ -451,7 +451,7 @@ switch (_option) do
                 {
                     ctrlShow [_x,false];
                 }
-                forEach [21020,21021,21022,21023,21012,21013,21014];
+                forEach [21020,21021,21022,21023,21012,21014];
                 _priceEditBox = _display displayCtrl 21011;
                 ctrlEnable [21011,false];
                 _feeEditBox = _display displayCtrl 21013;
@@ -468,7 +468,6 @@ switch (_option) do
                     ctrlEnable [21024,false];
                     ctrlEnable [21014,false];
                     ctrlEnable [21011,true];
-                    ctrlEnable [21013,true];
                     _purchaseBtn = _display displayCtrl 21024;
                     _purchaseBtn ctrlShow true;
                     if (_location isEqualTo 4) then
@@ -678,7 +677,7 @@ switch (_option) do
                 {
                     ctrlEnable [_x,false];
                 }
-                forEach[21011,21013,21014,21024,21015,21016,21017,21018,21019,21025,21007,21008,21032,21033];
+                forEach[21011,21014,21024,21015,21016,21017,21018,21019,21025,21007,21008,21032,21033];
                 _title = _this select 2;
                 _textOption = _this select 3;
                 _confirmBtnText = _this select 4;
@@ -751,7 +750,6 @@ switch (_option) do
                 {
                     ctrlEnable [21024,true];
                     ctrlEnable [21011,true];
-                    ctrlEnable [21013,true];
                 };
             };
         };
