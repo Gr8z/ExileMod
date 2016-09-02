@@ -1,6 +1,6 @@
 /*
-	"Underwater Stash" mission for Tanoa
-	Created by eraser1
+    "Underwater Stash" mission for Tanoa
+    Created by eraser1
 */
 
 // For logging purposes
@@ -55,7 +55,7 @@ DMS_CrateCase_DiverGear =
 ];
 
 // I only made some of the variables in this file "private" because I couldn't bother making all of them private :p
-private _crate = ["I_CargoNet_01_ammo_F",[5630,3100,0]] call DMS_fnc_SpawnCrate;
+private _crate = ["Box_IND_AmmoVeh_F",[5630,3100,0]] call DMS_fnc_SpawnCrate;
 _crate setVariable ["DMS_AllowSmoke", false];
 
 
@@ -117,36 +117,31 @@ private _diverGroup =
         [5875.81,3007.73,-55.331],
         [5899.77,2994.57,-61.1307]
     ],
-	21,
-	"hardcore",
-	"custom",
-	_side,
+    21,
+    "hardcore",
+    "custom",
+    _side,
     _diverGearSet
 ] call DMS_fnc_SpawnAIGroup_MultiPos;
 
 DMS_ai_use_launchers = _temp;
 
 
-
-// Remove all previous waypoints for the diver group
-for "_i" from count (waypoints _diverGroup) to 1 step -1 do
 {
-	deleteWaypoint ((waypoints _diverGroup) select _i);
-};
+    _x disableAI "PATH";
+} forEach (units _diverGroup);
 
-private _wp = _diverGroup addWaypoint [_sub1,0];
-_wp setWaypointType "GUARD";
 
 
 
 
 private _landGroup =
 [
-	[5633,3108,0],
-	5,
-	"hardcore",
-	"sniper",
-	"bandit"
+    [5633,3108,0],
+    5,
+    "hardcore",
+    "sniper",
+    "bandit"
 ] call DMS_fnc_SpawnAIGroup;
 
 
@@ -154,7 +149,7 @@ private _landGroup =
 // Define mission-spawned AI Units
 _missionAIUnits =
 [
-	_diverGroup, 		// We only spawned the single group for this mission
+    _diverGroup,        // We only spawned the single group for this mission
     _landGroup
 ];
 
@@ -163,46 +158,46 @@ _groupReinforcementsInfo =
 [
     // Removed reinforcements for this because while I was testing the mission the AI took too long to get back to the objective, and that's annoying
     /*
-	[
-		_diverGroup,			// pass the group
-		[
-			[
-				-1,		// Let's limit number of units instead...
-				0
-			],
-			[
-				10,	    // Maximum 10 units can be given as reinforcements.
-				0
-			]
-		],
-		[
-			180,		// About a 3 minute delay between reinforcements.
-			diag_tickTime
-		],
-		[
+    [
+        _diverGroup,            // pass the group
+        [
+            [
+                -1,     // Let's limit number of units instead...
+                0
+            ],
+            [
+                10,     // Maximum 10 units can be given as reinforcements.
+                0
+            ]
+        ],
+        [
+            180,        // About a 3 minute delay between reinforcements.
+            diag_tickTime
+        ],
+        [
             [5810,2874,1],
             [5933,2912,2],
             [5862,3132,0.5]
         ],
-		"custom",
-		"hardcore",
-		_side,
-		"reinforce",
-		[
-			5,			// Reinforcements will only trigger if there's fewer than 5 members left in the group
-			3			// 3 reinforcement units per wave.
-		],
+        "custom",
+        "hardcore",
+        _side,
+        "reinforce",
+        [
+            5,          // Reinforcements will only trigger if there's fewer than 5 members left in the group
+            3           // 3 reinforcement units per wave.
+        ],
         _diverGearSet
-	]
+    ]
     */
 ];
 
 // Define mission-spawned objects and loot values
 _missionObjs =
 [
-	[],
-	[_sub1, _sub2],
-	[
+    [],
+    [_sub1, _sub2],
+    [
         [
             _sub1,
             [
@@ -237,9 +232,9 @@ _missionName = "Underwater Stash";
 // Create Markers
 _markers =
 [
-	_pos,
-	_missionName,
-	"hardcore"
+    _pos,
+    _missionName,
+    "hardcore"
 ] call DMS_fnc_CreateMarker;
 
 // Record time here (for logging purposes, otherwise you could just put "diag_tickTime" into the "DMS_AddMissionToMonitor" parameters directly)
@@ -248,29 +243,29 @@ _time = diag_tickTime;
 // Parse and add mission info to missions monitor
 _added =
 [
-	_pos,
-	[
-		[
-			"kill",
-			_diverGroup              // Only need to kill the diver group.
-		],
-		[
-			"playerNear",
-			[_sub1,40]
-		]
-	],
-	_groupReinforcementsInfo,
-	[
-		_time,
-		DMS_StaticMissionTimeOut call DMS_fnc_SelectRandomVal
-	],
-	_missionAIUnits,
-	_missionObjs,
-	[_missionName,_msgWIN,_msgLOSE],
-	_markers,
-	_side,
-	"hardcore",
-	[],
+    _pos,
+    [
+        [
+            "kill",
+            _diverGroup              // Only need to kill the diver group.
+        ],
+        [
+            "playerNear",
+            [_sub1,40]
+        ]
+    ],
+    _groupReinforcementsInfo,
+    [
+        _time,
+        DMS_StaticMissionTimeOut call DMS_fnc_SelectRandomVal
+    ],
+    _missionAIUnits,
+    _missionObjs,
+    [_missionName,_msgWIN,_msgLOSE],
+    _markers,
+    _side,
+    "hardcore",
+    [],
     [
         [
             [
@@ -287,28 +282,28 @@ _added =
 // Check to see if it was added correctly, otherwise delete the stuff
 if !(_added) exitWith
 {
-	diag_log format ["DMS ERROR :: Attempt to set up mission %1 with invalid parameters for DMS_fnc_AddMissionToMonitor_Static! Deleting mission objects and resetting DMS_MissionCount.",_missionName];
+    diag_log format ["DMS ERROR :: Attempt to set up mission %1 with invalid parameters for DMS_fnc_AddMissionToMonitor_Static! Deleting mission objects and resetting DMS_MissionCount.",_missionName];
 
-	_cleanup = [];
-	{
-		_cleanup pushBack _x;
-	} forEach _missionAIUnits;
+    _cleanup = [];
+    {
+        _cleanup pushBack _x;
+    } forEach _missionAIUnits;
 
-	_cleanup pushBack ((_missionObjs select 0)+(_missionObjs select 1));
+    _cleanup pushBack ((_missionObjs select 0)+(_missionObjs select 1));
 
-	{
-		_cleanup pushBack (_x select 0);
-	} foreach (_missionObjs select 2);
+    {
+        _cleanup pushBack (_x select 0);
+    } foreach (_missionObjs select 2);
 
-	_cleanup call DMS_fnc_CleanUp;
-
-
-	// Delete the markers directly
-	{deleteMarker _x;} forEach _markers;
+    _cleanup call DMS_fnc_CleanUp;
 
 
-	// Reset the mission count
-	DMS_MissionCount = DMS_MissionCount - 1;
+    // Delete the markers directly
+    {deleteMarker _x;} forEach _markers;
+
+
+    // Reset the mission count
+    DMS_MissionCount = DMS_MissionCount - 1;
 };
 
 
@@ -319,5 +314,5 @@ if !(_added) exitWith
 
 if (DMS_DEBUG) then
 {
-	(format ["MISSION: (%1) :: Mission #%2 started at %3 with %4 AI units and %5 difficulty at time %6",_missionName,_num,_pos,26,"hardcore",_time]) call DMS_fnc_DebugLog;
+    (format ["MISSION: (%1) :: Mission #%2 started at %3 with %4 AI units and %5 difficulty at time %6",_missionName,_num,_pos,26,"hardcore",_time]) call DMS_fnc_DebugLog;
 };

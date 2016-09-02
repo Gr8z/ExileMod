@@ -1,7 +1,6 @@
 /*
 	DMS_fnc_SpawnAIVehicle
 	Created by eraser1
-
 	Usage:
 	[
 		[
@@ -14,7 +13,6 @@
 		_side,						// "bandit","hero", etc.
 		_vehClass					// (OPTIONAL) String: classname of the Vehicle. Use "random" to select a random one from DMS_ArmedVehicles
 	] call DMS_fnc_SpawnAIVehicle;
-
 	Returns the spawned vehicle.
 */
 
@@ -52,11 +50,20 @@ if (_vehClass == "random") then
 
 private _veh = createVehicle [_vehClass, _spawnPos, [], 0, "NONE"];
 
-clearBackpackCargoGlobal _veh;
-clearItemCargoGlobal _veh;
 clearWeaponCargoGlobal _veh;
+clearItemCargoGlobal _veh;
+clearBackpackCargoGlobal _veh;
 
-_veh setFuel 1;
+if (getNumber (configFile >> "CfgSettings" >> "VehicleSpawn" >> "nightVision") isEqualTo 0) then
+{
+	_veh disableNVGEquipment true;
+};
+if (getNumber (configFile >> "CfgSettings" >> "VehicleSpawn" >> "thermalVision") isEqualTo 0) then
+{
+	_veh disableTIEquipment true;
+};
+
+
 _veh engineOn true;
 _veh lock 2;
 

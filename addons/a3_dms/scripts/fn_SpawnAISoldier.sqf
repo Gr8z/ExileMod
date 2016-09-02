@@ -2,7 +2,6 @@
 	DMS_fnc_SpawnAISoldier
 	Created by eraser1
 	Based off of WAI
-
 	Usage:
 	[
 		_group,					// GROUP: Group the AI will belong to
@@ -13,7 +12,6 @@
 		_type,					// STRING: Type of AI: "soldier","static","vehicle","heli", etc.
 		_customGearSet			// (OPTIONAL) ARRAY: Manually defined AI gear.
 	] call DMS_fnc_SpawnAISoldier;
-
 	Usage for _customGearSet:
 	[
 		_weapon,				// String | EG: "LMG_Zafir_F"
@@ -28,7 +26,6 @@
 		_vest,					// String | EG: "V_PlateCarrierGL_blk"
 		_backpack				// String | EG: "B_Carryall_oli"
 	]
-
 	Returns AI Unit
 */
 
@@ -381,16 +378,18 @@ if (DMS_ai_disable_ramming_damage) then
 };
 
 
-{
-	_unit enableAI _x;
-} forEach ["TARGET", "AUTOTARGET", "MOVE", "ANIM", "FSM"];
-
-if (_difficulty=="hardcore") then
+if (_difficulty == "hardcore") then
 {
 	// Make him a little bit harder ;)
 	{
 		_unit disableAI _x;
 	} forEach ["SUPPRESSION", "AIMINGERROR"];
+};
+
+if (_difficulty == "easy") then
+{
+	// Disable visibility raycasts for "easy" AI.
+	_unit disableAI "CHECKVISIBLE";
 };
 
 _unit setCustomAimCoef (missionNamespace getVariable [format["DMS_AI_AimCoef_%1",_difficulty], 0.7]);
