@@ -2804,13 +2804,13 @@ class CfgExileArsenal
 	class Exile_Plane_Ceasar							{ quality = 2; price = 15000; };
 	
 	///////////////////////////////////////////////////////////////////////////////
-
 	// V-44 X Blackfish
 	///////////////////////////////////////////////////////////////////////////////
 	class Exile_Plane_BlackfishInfantry					{ quality = 5; price = 60000; };
 	class Exile_Plane_BlackfishVehicle					{ quality = 5; price = 60000; };
 	class B_T_VTOL_01_infantry_F						{ quality = 6; price = 110000; };
-	class B_T_VTOL_01_vehicle_F							{ quality = 6; price = 120000; };
+	class B_T_VTOL_01_vehicle_F						{ quality = 6; price = 120000; };
+	class O_T_VTOL_02_infantry_ghex_F					{ quality = 6; price = 300000; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Jets
@@ -7494,7 +7494,8 @@ class NIARMSSniperRifles
 			"B_T_VTOL_01_vehicle_F",
 			"B_T_VTOL_01_infantry_F",
 			"I_Plane_Fighter_03_CAS_F",
-			"B_Plane_CAS_01_F"
+			"B_Plane_CAS_01_F",
+			"O_T_VTOL_02_infantry_ghex_F"
 		};
 	};
 
