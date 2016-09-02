@@ -86,6 +86,6 @@ try
 catch
 {
     _exception call ExileServer_MostWanted_util_log;
-    [_sessionID, "toastRequest", ["ErrorTitleAndText", ["Most Wanted", _exception]]] call ExileServer_system_network_send_to;
+    [_sessionID, "toastRequest", ["ErrorTitleAndText", ["Bounties", _exception]]] call ExileServer_system_network_send_to;
 };
 true

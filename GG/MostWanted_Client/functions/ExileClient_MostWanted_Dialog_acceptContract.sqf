@@ -21,5 +21,5 @@ try
 }
 catch
 {
-    ["ErrorTitleAndText", ["Most Wanted", _exception]] call ExileClient_gui_toaster_addTemplateToast;
+    ["ErrorTitleAndText", ["Bounties", _exception]] call ExileClient_gui_toaster_addTemplateToast;
 };

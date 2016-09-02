@@ -9,7 +9,7 @@ private["_response","_display"];
 _response = _this select 0;
 if (_response isEqualTo 1) then
 {
-    ["SuccessTitleAndText", ["Most Wanted", "You have successfully terminated your contract"]] call ExileClient_gui_toaster_addTemplateToast;
+    ["SuccessTitleAndText", ["Bounties", "You have successfully terminated your contract"]] call ExileClient_gui_toaster_addTemplateToast;
 
     _display = uiNameSpace getVariable ["MostWantedDialog",displayNull];
     if !(isNull _display) then
