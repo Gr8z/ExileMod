@@ -5844,7 +5844,7 @@ class CfgTrading
 	*/
 	sellPriceFactor = 0.5;
 	
-	rekeyPriceFactor = 0.1;
+	rekeyPriceFactor = 0;
 
 	class requiredRespect 
 	{

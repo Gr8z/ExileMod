@@ -9,7 +9,7 @@ class CfgMarXet
             This value must be LESS THAN the deleteTime
             Set this to -1 to disable
         */
-        restrictTime = 5;
+        restrictTime = -1;
 
         /*
             The time in DAYS that a MarXet listing will stay in the database before it gets deleted
