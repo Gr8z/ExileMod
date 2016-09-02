@@ -2489,6 +2489,16 @@ class CfgExileArsenal
 	class Exile_Car_Hatchback_Rusty1					{ quality = 1; price = 4000; };
 	class Exile_Car_Hatchback_Rusty2					{ quality = 1; price = 4000; };
 	class Exile_Car_Hatchback_Rusty3					{ quality = 1; price = 4000; };
+
+	///////////////////////////////////////////////////////////////////////////////
+	// Tanks
+	///////////////////////////////////////////////////////////////////////////////
+	
+	class I_MBT_03_cannon_F							{ quality = 1; price = 45000; };
+	class IA_Scorcher_M4							{ quality = 1; price = 90000; };
+	class B_MBT_01_mlrs_F							{ quality = 1; price = 60000; };
+	class O_APC_Tracked_02_AA_F						{ quality = 1; price = 35000; };
+
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Golf
@@ -2801,6 +2811,12 @@ class CfgExileArsenal
 	class Exile_Plane_BlackfishVehicle					{ quality = 5; price = 60000; };
 	class B_T_VTOL_01_infantry_F						{ quality = 6; price = 110000; };
 	class B_T_VTOL_01_vehicle_F							{ quality = 6; price = 120000; };
+	
+	///////////////////////////////////////////////////////////////////////////////
+	// Jets
+	///////////////////////////////////////////////////////////////////////////////
+	class I_Plane_Fighter_03_CAS_F					{ quality = 5; price = 75000; };
+	class B_Plane_CAS_01_F						{ quality = 5; price = 100000; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Prowler
@@ -7371,6 +7387,7 @@ class NIARMSSniperRifles
 			"Exile_Car_QilinUnarmed",
 			"Exile_Car_MB4WD",
 			"Exile_Car_MB4WDOpen"
+			
 		};
 	};
 
@@ -7409,7 +7426,11 @@ class NIARMSSniperRifles
 			"O_MRAP_02_hmg_F",
 			"I_MRAP_03_hmg_F",
 			"B_lsv_01_armed_f",
-			"O_LSV_02_armed_f"
+			"O_LSV_02_armed_f",
+			"I_MBT_03_cannon_F",
+			"IA_Scorcher_M4",
+			"B_MBT_01_mlrs_F",
+			"O_APC_Tracked_02_AA_F"
 		};
 	};
 
@@ -7471,7 +7492,9 @@ class NIARMSSniperRifles
 			"Exile_Plane_BlackfishInfantry",
 			"Exile_Plane_BlackfishVehicle",
 			"B_T_VTOL_01_vehicle_F",
-			"B_T_VTOL_01_infantry_F"
+			"B_T_VTOL_01_infantry_F",
+			"I_Plane_Fighter_03_CAS_F",
+			"B_Plane_CAS_01_F"
 		};
 	};
 
