@@ -6971,8 +6971,10 @@ class CfgXM8
 		vehicleClass = "Exile_Bike_QuadBike_Fia";
 		recipe[] = {{"Exile_Item_ExtensionCord",1}};
 		packable = 1;
+		autoCleanUp = 1;
 		quickFunction = "['GG_Quad'] call ExAd_XM8_DV_fnc_spawnVehicle";
 		logo = "GG\ExAdClient\XM8\Apps\DeployVehicle\icon_DeployVehicle.paa";
+		config = "GG\ExAdClient\XM8\Apps\DeployVehicle\config.sqf";
 	};
 	class GG_Selfie
 	{
