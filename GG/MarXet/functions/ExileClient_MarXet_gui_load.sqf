@@ -315,6 +315,9 @@ switch (_option) do
                 _rightLB = (_display displayCtrl 21017);
                 _priceEditBox = _display displayCtrl 21011;
                 ctrlEnable [21011,false];
+				{
+							ctrlShow [_x,false];
+				} forEach [21012,21013];
                 _priceEditBox ctrlSetText "";
                 _dropdown = _display displayCtrl 21016;
                 _dropdownOption = lbCurSel _dropdown;
