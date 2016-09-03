@@ -65,6 +65,11 @@ class CfgNetworkMessages
 		module = "KillMessages";
 		parameters[] = {"STRING","STRING","OBJECT","OBJECT"};
 	};
+    class buyRequest
+    {
+        module = "AirDrop";
+        parameters[] = {"STRING"};
+    };
 };
 
 

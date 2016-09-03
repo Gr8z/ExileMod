@@ -11,7 +11,7 @@ if (_ok) then {
 	ExAd_XM8_AirDrop_DropInProgress = true;
 	_namePlayer = name player;
 	ExileClientPlayerMoney = ExileClientPlayerMoney - ExAd_XM8_AirDrop_boxCost;
-	["buyRequest",["WALLET",str(ExAd_XM8_AirDrop_boxCost)]] call ExileClient_system_network_send;
+	["buyRequest",[str(ExAd_XM8_AirDrop_boxCost)]] call ExileClient_system_network_send;
 	hint format["Thanks for your order! your Air Drop order number is '%2-%3%4%5'",name player, ExAd_XM8_AirDrop_orderIDcharacters, ExAd_XM8_AirDrop_a1, ExAd_XM8_AirDrop_a2, ExAd_XM8_AirDrop_a3];
 	_playerPOS = getPOSATL player;
 	_pos = position player;

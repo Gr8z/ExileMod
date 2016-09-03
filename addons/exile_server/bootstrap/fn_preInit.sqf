@@ -108,6 +108,7 @@ forEach
 	['ExileServer_object_vehicle_network_rotateVehicleRequest', 'exile_server\code\ExileServer_object_vehicle_network_rotateVehicleRequest.sqf'],
 	['ExileServer_object_vehicle_network_setFuelRequest', 'exile_server\code\ExileServer_object_vehicle_network_setFuelRequest.sqf'],
 	['ExileServer_object_vehicle_network_unlockVehicleRequest', 'exile_server\code\ExileServer_object_vehicle_network_unlockVehicleRequest.sqf'],
+	['ExileServer_system_AirDrop_network_buyRequest', 'exile_server\code\ExileServer_system_AirDrop_network_buyRequest.sqf'],
 	['ExileServer_system_breaching_network_breachingCancel', 'exile_server\code\ExileServer_system_breaching_network_breachingCancel.sqf'],
 	['ExileServer_system_breaching_network_breachingPlaceRequest', 'exile_server\code\ExileServer_system_breaching_network_breachingPlaceRequest.sqf'],
 	['ExileServer_system_breaching_network_breachingStart', 'exile_server\code\ExileServer_system_breaching_network_breachingStart.sqf'],
