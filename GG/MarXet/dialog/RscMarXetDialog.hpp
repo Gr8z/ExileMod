@@ -105,6 +105,25 @@ class RscMarXetDialog
 			colorBackground[] = {-1,-1,-1,0};
 			colorText[] = {0.988,0.749,0,1};
 		};
+		class CenterFeeTitle : RscMarXetText
+		{
+			idc = 21012;
+			text = "TAX FEE:"; //--- ToDo: Localize;
+			x = 0.427812 * safezoneW + safezoneX;
+			y = 0.643 * safezoneH + safezoneY;
+			w = 0.0464063 * safezoneW;
+			h = 0.022 * safezoneH;
+			colorBackground[] = {-1,-1,-1,0};
+		};
+		class CenterFeeEditBox: RscMarXetEdit
+		{
+			idc = 21013;
+			x = 0.482219 * safezoneW + safezoneX;
+			y = 0.6432 * safezoneH + safezoneY;
+			w = 0.0567187 * safezoneW;
+			h = 0.022 * safezoneH;
+			colorBackground[] = {-1,-1,-1,0};
+		};
 		class CenterVehicleDamage: RscMarXetText
 		{
 			idc = 21020;
@@ -164,7 +183,7 @@ class RscMarXetDialog
 		class CenterConfirmButton: RscMarXetButton
 		{
 			idc = 21024;
-			text = "Confirm Listing";
+			text = "confirm Listing";
 			show = false;
 			x = 0.505156 * safezoneW + safezoneX;
 			y = 0.72 * safezoneH + safezoneY;
@@ -310,7 +329,7 @@ class RscMarXetDialog
 		{
 			idc = 21007;
 
-			text = "<t color='#FFFFFF' font='OrbitronLight' size='2' valign='middle' align='center' shadow='0'>Mar<t color='#531517' font='OrbitronLight' size='2' valign='middle' align='center' shadow='0'>X</t>et</t>";
+			text = "<t color='#38a9e1' font='OrbitronLight' size='2' valign='middle' align='center' shadow='0'>Market</t><t color='#878787' font='OrbitronLight' size='2' valign='middle' align='center' shadow='0'>place</t>";
 			x = 0.427812 * safezoneW + safezoneX;
 			y = 0.2705 * safezoneH + safezoneY;
 			w = 0.144375 * safezoneW;
