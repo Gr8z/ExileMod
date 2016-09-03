@@ -88,7 +88,7 @@ switch (_option) do
                 {
                     ctrlShow [_x,false];
                 }
-                forEach [21020,21021,21022,21023,21031,21032,21012,21013];
+                forEach [21020,21021,21022,21023,21031,21032];
                 {
                     _text = "";
                     _ClassName = (_x select 2) select 0;
@@ -323,7 +323,7 @@ switch (_option) do
                 {
                     ctrlShow [_x,false];
                 }
-                forEach [21020,21021,21022,21023,21024,21031,21032,21012,21013];
+                forEach [21020,21021,21022,21023,21024,21031,21032];
                 _dataString = lbData [21017,_this select 2];
                 if !(_dataString isEqualTo "") then
                 {
@@ -343,7 +343,7 @@ switch (_option) do
                         {
                             ctrlShow [_x,true];
                         }
-                        forEach [21020,21021,21022,21023,21031,21032,21012,21013];
+                        forEach [21020,21021,21022,21023,21031,21032];
                         ctrlSetText [21032,""];
 						ctrlSetText [21013,""];
                         _sellerUID = _dataArray select 5;
@@ -446,7 +446,7 @@ switch (_option) do
                 {
                     ctrlShow [_x,false];
                 }
-                forEach [21020,21021,21022,21023,21012,21013,21014];
+                forEach [21020,21021,21022,21023,21012,21014];
                 _priceEditBox = _display displayCtrl 21011;
                 ctrlEnable [21011,false];
                 _priceEditBox ctrlSetText "";
@@ -461,8 +461,10 @@ switch (_option) do
                     ctrlEnable [21024,false];
                     ctrlEnable [21014,false];
                     ctrlEnable [21011,true];
-					ctrlEnable [21032,false];
-					ctrlEnable [21031,false];
+					ctrlshow [21032,false];
+					ctrlshow [21031,false];
+					ctrlshow [21012,true];
+					ctrlshow [21013,true];
                     _purchaseBtn = _display displayCtrl 21024;
                     _purchaseBtn ctrlShow true;
                     if (_location isEqualTo 4) then
