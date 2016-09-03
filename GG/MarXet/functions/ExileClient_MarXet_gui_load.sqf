@@ -679,8 +679,7 @@ switch (_option) do
                 private ["_title","_textOption","_confirmBtnText","_cancelBtnText","_titleCtrl","_textCtrl","_price","_confirmBtnCtrl","_cancelBtnCtrl"];
                 {
                     ctrlEnable [_x,false];
-                }
-                forEach[21011,21014,21024,21015,21016,21017,21018,21019,21025,21007,21008,21032,21033];
+                } forEach[21011,21014,21024,21015,21016,21017,21018,21019,21025,21007,21008,21032,21033];
 				{
 							ctrlShow [_x,false];
 				} forEach [21012,21013];
