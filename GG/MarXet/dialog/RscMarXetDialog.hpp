@@ -244,6 +244,27 @@ class RscMarXetDialog
 			h = 0.022 * safezoneH;
 			colorBackground[] = {-1,-1,-1,0};
 		};
+		class ListingFee: RscMarXetText
+		{
+			idc = 21012;
+			show = false;
+			text = "Listing Fee:"; //--- ToDo: Localize;
+			x = 0.427812 * safezoneW + safezoneX;
+			y = 0.643 * safezoneH + safezoneY;
+			w = 0.0464063 * safezoneW;
+			h = 0.022 * safezoneH;
+			colorBackground[] = {-1,-1,-1,0};
+		};
+		class FeeListingEditBox: RscMarXetEdit
+		{
+			idc = 21013;
+			show = false;
+			x = 0.482219 * safezoneW + safezoneX;
+			y = 0.6432 * safezoneH + safezoneY;
+			w = 0.0567187 * safezoneW;
+			h = 0.022 * safezoneH;
+			colorBackground[] = {-1,-1,-1,0};
+		};
 		class Sorting: RscMarXetCombo
 		{
 			idc = 21033;
