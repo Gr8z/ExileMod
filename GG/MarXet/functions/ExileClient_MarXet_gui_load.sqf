@@ -461,6 +461,8 @@ switch (_option) do
                     ctrlEnable [21024,false];
                     ctrlEnable [21014,false];
                     ctrlEnable [21011,true];
+					ctrlEnable [21032,false];
+					ctrlEnable [21031,false];
                     _purchaseBtn = _display displayCtrl 21024;
                     _purchaseBtn ctrlShow true;
                     if (_location isEqualTo 4) then
