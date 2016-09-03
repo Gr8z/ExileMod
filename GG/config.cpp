@@ -7010,7 +7010,7 @@ class CfgXM8
 	};	
 	class GG_AirDrop 
 	{
-		title = "Crafting Menu";
+		title = "Air Drop";
 		controlID = 50500;
 		config = "GG\ExAdClient\XM8\Apps\AirDrop\config.sqf";
 		logo = "GG\ExAdClient\XM8\Apps\AirDrop\icon_AirDrop.paa";
