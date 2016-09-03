@@ -2494,10 +2494,10 @@ class CfgExileArsenal
 	// Tanks
 	///////////////////////////////////////////////////////////////////////////////
 	
-	class I_MBT_03_cannon_F							{ quality = 1; price = 250000; };
-	class O_Scorcher_M4							{ quality = 1; price = 190000; };
-	class B_MBT_01_mlrs_F							{ quality = 1; price = 140000; };
-	class O_APC_Tracked_02_AA_F						{ quality = 1; price = 125000; };
+	class I_MBT_03_cannon_F							{ quality = 1; price = 50000; };
+	class O_Scorcher_M4							{ quality = 1; price = 90000; };
+	class B_MBT_01_mlrs_F							{ quality = 1; price = 40000; };
+	class O_APC_Tracked_02_AA_F						{ quality = 1; price = 25000; };
 
 	
 	///////////////////////////////////////////////////////////////////////////////
@@ -2810,15 +2810,15 @@ class CfgExileArsenal
 	class Exile_Plane_BlackfishVehicle					{ quality = 5; price = 60000; };
 	class B_T_VTOL_01_infantry_F						{ quality = 6; price = 110000; };
 	class B_T_VTOL_01_vehicle_F						{ quality = 6; price = 120000; };
-	class O_T_VTOL_02_infantry_ghex_F					{ quality = 6; price = 300000; };
+	class O_T_VTOL_02_infantry_ghex_F					{ quality = 6; price = 150000; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Jets
 	///////////////////////////////////////////////////////////////////////////////
-	class I_Plane_Fighter_03_CAS_F					{ quality = 5; price = 125000; };
-	class B_Plane_CAS_01_F						{ quality = 5; price = 175000; };
-	class O_Heli_Attack_02_F					{ quality = 5; price = 200000; };
-	class B_Heli_Attack_01_F					{ quality = 5; price = 110000; };
+	class I_Plane_Fighter_03_CAS_F					{ quality = 5; price = 75000; };
+	class B_Plane_CAS_01_F						{ quality = 5; price = 70000; };
+	class O_Heli_Attack_02_F					{ quality = 5; price = 100000; };
+	class B_Heli_Attack_01_F					{ quality = 5; price = 60000; };
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// Prowler
