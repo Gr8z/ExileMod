@@ -6933,7 +6933,7 @@ class CfgVehicleTransport
 };
 class CfgXM8
 {
-	extraApps[] = {"GG_VG","GG_CHVD","GG_Journal","GG_Quad","GG_Selfie","GG_Scan","GG_Chat","GG_Craft","GG_AirDrop"};
+	extraApps[] = {"GG_VG","GG_CHVD","GG_Journal","GG_Quad","GG_Selfie","GG_Scan","GG_Chat","GG_Craft","GG_AirDrop","GG_kills"};
 	
 	class GG_VG 
 	{
@@ -7022,7 +7022,7 @@ class CfgXM8
 	{
 		title = "Kill Board";
 		quickFunction = "call XG_killboardClient";
-		logo = "GG\ExAdClient\XM8\Apps\Chat\icon_Chat.paa"; // CHANGE
+		logo = "GG\ExAdClient\XM8\Apps\Kills\icon_Kills.paa"; // CHANGE
 	};	
 }; 
 class CfgVon
