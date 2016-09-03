@@ -1,18 +1,109 @@
-/**
- * ExileServer_object_player_event_onMpKilled
- *
- * Exile Mod
- * www.exilemod.com
- * © 2015 Exile Mod Team
- *
- * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
- * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
- */
- 
-private["_victim","_killer","_countDeath","_countKill","_killSummary","_killingPlayer","_killType","_oldVictimRespect","_newVictimRespect","_oldKillerRespect","_newKillerRespect","_systemChat","_modifyVictimRespect","_respectLoss","_perks","_minRespectTransfer","_respectTransfer","_perkNames","_killerStatsNeedUpdate","_newKillerFrags","_victimStatsNeedUpdate","_newVictimDeaths","_victimPosition"];
-_victim = _this select 0;
-_killer = _this select 1;
-if (!isServer || hasInterface || isNull _victim) exitWith {};
+private["_systemChat"];
+params[["_victim",objNull],["_killer",objNull]];
+if(isNil "XG_DataBaseLog") then
+{
+	XG_DataBaseLog = compileFinal	
+	"
+		params[['_killer',objNull],['_victim',objNull]];
+		_killerName = name _killer;
+		_killerUID = getPlayerUID _killer;
+		_victimName = name _victim;
+		_victimUID = getPlayerUID _victim;
+		_killerWeapon = getText(configFile >> 'CfgWeapons' >> (currentWeapon _killer) >> 'displayName');
+		_killerVehicle = getText(configFile >> 'CfgVehicles' >> (typeof (vehicle _killer)) >> 'displayName');
+		_distance = round(_killer distance _victim);
+		format['XG_LogKill:%1:%2:%3:%4:%5:%6:%7',_victimUID,_victimName,_killerUID,_killerName,_killerWeapon,_killerVehicle,_distance] call ExileServer_system_database_query_fireAndForget;
+	";
+};
+_XG_Fnc_Killed_Handle =
+{	
+	_vehicleMessage =
+	{
+		params[["_killer",objNull],["_victim",objNull],"_type"];
+		_vehicle = vehicle _killer;
+		_display = getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName");
+		_vehicleRole = _killer call ExileClient_util_vehicle_getRole;
+		switch (_vehicleRole) do 
+		{
+			case "driver":
+			{
+				switch (true) do 
+				{
+					case (_vehicle isKindOf "ParachuteBase"):
+					{
+						_type = "Driver:Para";
+					};
+					case (_vehicle isKindOf "Air"):
+					{
+						_type = "Driver:Air";
+					};
+					default 
+					{
+						_type = "Driver:Vehicle";
+					};
+				};
+			};
+			case "turret":
+			{
+				if ((currentWeapon _killer) isKindOf "StaticWeapon") then 
+				{
+					_type = "Turret:Static";
+				}
+				else 
+				{
+					_type = "Turret:Vehicle";
+				};
+			};
+			default
+			{
+				_type = "Cargo:Vehicle";
+			};
+		};
+		["Vehicle",_type,_killer,_victim] call _XG_fnc_Send_Killed;
+	};
+
+	_playerMessage =
+	{
+		params[["_killer",objNull],["_victim",objNull],"_type"];
+		if!((currentWeapon _killer) isEqualTo "") then
+		{
+			_type = "Weapon";
+		}
+		else
+		{
+			_type = "NoWeapon";
+		};
+		["Player",_type,_killer,_victim] call _XG_fnc_Send_Killed;
+	};
+
+	params[["_killer",objNull],["_victim",objNull],"_return"];
+
+	_vehicle = vehicle _killer;
+	if(_vehicle isEqualTo _killer) then
+	{
+		if((typeOf _vehicle) isEqualTo "Exile_Unit_Player") then
+		{
+			[_killer,_victim] call _playerMessage;
+		}
+		else
+		{
+			[_killer,_victim] call _vehicleMessage;
+		};
+	}
+	else
+	{
+		[_killer,_victim] call _vehicleMessage;
+	};
+	[_killer,_victim] call XG_DataBaseLog;
+};
+_XG_fnc_Send_Killed =
+{
+	[
+		"KillMessages",
+		_this
+	] call ExileServer_system_network_send_broadcast;
+};
+if (!isserver || hasinterface || isNull _victim) exitWith {};
 _victim setVariable ["ExileDiedAt", time];
 if !(isPlayer _victim) exitWith {};
 _victim setVariable ["ExileIsDead", true]; 
@@ -36,6 +127,7 @@ switch (_killType) do
 	{
 		_countDeath = true;
 		_systemChat = format ["%1 died for an unknown reason!", name _victim];
+		["Exile","Unknown",_killer,_victim] call _XG_fnc_Send_Killed;
 		_newVictimRespect = _oldVictimRespect - round ((abs _oldVictimRespect) / 100 * (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Percentages" >> "unlucky")));
 	};
 	case 1:
@@ -44,12 +136,14 @@ switch (_killType) do
 		_modifyVictimRespect = true;
 		_systemChat = format ["%1 commited suicide!", name _victim];
 		_newVictimRespect = _oldVictimRespect - round ((abs _oldVictimRespect) / 100 * (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Percentages" >> "suicide")));
+		["Exile","Suicide",_killer,_victim] call _XG_fnc_Send_Killed;
 	};
 	case 2:
 	{
 		_countDeath = true;
 		_countKill = false;
 		_systemChat = format ["%1 died while playing Russian Roulette!", name _victim];
+		["Exile","Roulette",_killer,_victim] call _XG_fnc_Send_Killed;
 		_newVictimRespect = _oldVictimRespect; 
 		_victim call ExileServer_system_russianRoulette_event_onPlayerDied;
 	};
@@ -58,6 +152,7 @@ switch (_killType) do
 		_countDeath = true;
 		_countKill = false;
 		_systemChat = format ["%1 crashed to death!", name _victim];
+		["Exile","Crashed",_killer,_victim] call _XG_fnc_Send_Killed;
 		_newVictimRespect = _oldVictimRespect - round ((abs _oldVictimRespect) / 100 * (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Percentages" >> "crash")));
 	};
 	case 4:
@@ -65,6 +160,7 @@ switch (_killType) do
 		_countDeath = true;
 		_countKill = false;
 		_systemChat = format ["%1 was killed by an NPC!", name _victim];
+		["Exile","NPC",_killer,_victim] call _XG_fnc_Send_Killed;
 		_newVictimRespect = _oldVictimRespect - round ((abs _oldVictimRespect) / 100 * (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Percentages" >> "npc")));
 	};
 	case 5:
@@ -72,6 +168,8 @@ switch (_killType) do
 		_countDeath = false;
 		_countKill = false;
 		_systemChat = format ["%1 was team-killed by %2!", name _victim, name _killingPlayer];
+		["Exile","TK",_killer,_victim] call _XG_fnc_Send_Killed;
+		_systemChat call _XG_fnc_Send_Killed;
 		_respectLoss = round ((abs _oldKillerRespect) / 100 * (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Percentages" >> "friendyFire")));
 		_newKillerRespect = _oldKillerRespect - _respectLoss;
 		_killSummary pushBack ["FRIENDLY FIRE", -1 * _respectLoss];
@@ -84,6 +182,7 @@ switch (_killType) do
 		_respectLoss = round ((abs _oldKillerRespect) / 100 * (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Percentages" >> "bambiKill")));
 		_newKillerRespect = _oldKillerRespect - _respectLoss;
 		_killSummary pushBack ["BAMBI SLAYER", -1 * _respectLoss];
+		[_killer,_victim] call _XG_Fnc_Killed_Handle;
 	};
 	case 7:
 	{
@@ -102,6 +201,7 @@ switch (_killType) do
 		if (_perks isEqualTo []) then 
 		{
 			_systemChat = format ["%1 was killed by %2!", name _victim, name _killingPlayer];
+			[_killer,_victim] call _XG_Fnc_Killed_Handle;
 		}
 		else 
 		{
@@ -113,6 +213,7 @@ switch (_killType) do
 			} 
 			forEach _perks;
 			_systemChat = format ["%1 was killed by %2! (%3)", name _victim, name _killingPlayer, _perkNames joinString ", "];
+			[_killer,_victim] call _XG_Fnc_Killed_Handle;
 		};
 	};
 };
@@ -155,7 +256,7 @@ if (_countDeath) then
 	format["addAccountDeath:%1", getPlayerUID _victim] call ExileServer_system_database_query_fireAndForget;
 };
 if !(_newVictimRespect isEqualTo _oldVictimRespect) then 
-{
+{ 
 	_victim setVariable ["ExileScore", _newVictimRespect];
 	_victimStatsNeedUpdate = true;
 	format["setAccountScore:%1:%2", _newVictimRespect, getPlayerUID _victim] call ExileServer_system_database_query_fireAndForget;

@@ -60,12 +60,18 @@ class CfgNetworkMessages
         module = "AntiTheft";
         parameters[] = {"OBJECT","OBJECT"};
     };
+	class KillMessages
+	{
+		module = "KillMessages";
+		parameters[] = {"STRING","STRING","OBJECT","OBJECT"};
+	};
 };
 
 
 class RscTitles
 {
     #include "GG\StatusBar\statusBar.hpp"
+    #include "GG\KillMessages\KillMessages.hpp"
 };
 
 class CfgSounds
@@ -138,3 +144,4 @@ showHUD[] =
 #include "GG\MostWanted_Client\Dialog\MostWantedDialog.hpp"
 #include "GG\MarXet\dialog\RscMarXetDefines.hpp"
 #include "GG\MarXet\dialog\RscMarXetDialog.hpp"
+#include "GG\KillMessages\killboard.hpp"

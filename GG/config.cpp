@@ -7018,6 +7018,12 @@ class CfgXM8
 		onOpen = "GG\ExAdClient\XM8\Apps\AirDrop\onOpen.sqf";
 		onClose = "GG\ExAdClient\XM8\Apps\AirDrop\onClose.sqf";
 	};	
+	class GG_kills
+	{
+		title = "Kill Board";
+		quickFunction = "call XG_killboardClient";
+		logo = "GG\ExAdClient\XM8\Apps\Chat\icon_Chat.paa"; // CHANGE
+	};	
 }; 
 class CfgVon
 {
