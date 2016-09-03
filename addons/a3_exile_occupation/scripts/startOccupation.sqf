@@ -54,8 +54,6 @@ if(SC_occupyMilitary) then
 		{
 			_pos = position _x;
 			SC_completeMilitaryList pushBack _foundBuilding;
-			_logDetail = format ["[OCCUPATION Military]:: Added building: %1 (object: %3) found at location: %2 @ ",_currentBuilding,_pos,_x];
-			[_logDetail] call SC_fnc_log;	
 		}forEach _foundBuilding;
 	
 	}forEach SC_buildings;	
