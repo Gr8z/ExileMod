@@ -207,6 +207,9 @@ switch (_option) do
         _priceEditBox = (_display displayCtrl 21011);
         _priceEditBox ctrlEnable false;
         _priceEditBox ctrlSetText "";
+		_feeEditBox ctrlShow false;
+		_feeEditBox1 = _display displayCtrl 21012;
+		_feeEditBox1 ctrlShow false;
         _title = _display displayCtrl 21009;
         _title ctrlSetText "";
         _dropdown = _display displayCtrl 21019;
