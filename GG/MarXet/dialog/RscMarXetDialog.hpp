@@ -164,7 +164,7 @@ class RscMarXetDialog
 		class CenterConfirmButton: RscMarXetButton
 		{
 			idc = 21024;
-			text = "Comfirm Listing";
+			text = "Confirm Listing";
 			show = false;
 			x = 0.505156 * safezoneW + safezoneX;
 			y = 0.72 * safezoneH + safezoneY;
@@ -238,6 +238,27 @@ class RscMarXetDialog
 		{
 			idc = 21032;
 			show = false;
+			x = 0.482219 * safezoneW + safezoneX;
+			y = 0.6432 * safezoneH + safezoneY;
+			w = 0.0567187 * safezoneW;
+			h = 0.022 * safezoneH;
+			colorBackground[] = {-1,-1,-1,0};
+		};
+		class ListingFee: RscMarXetText
+		{
+			idc = 21012;
+			show = true;
+			text = "Listing Fee:"; //--- ToDo: Localize;
+			x = 0.427812 * safezoneW + safezoneX;
+			y = 0.643 * safezoneH + safezoneY;
+			w = 0.0464063 * safezoneW;
+			h = 0.022 * safezoneH;
+			colorBackground[] = {-1,-1,-1,0};
+		};
+		class FeeListingEditBox: RscMarXetEdit
+		{
+			idc = 21013;
+			show = true;
 			x = 0.482219 * safezoneW + safezoneX;
 			y = 0.6432 * safezoneH + safezoneY;
 			w = 0.0567187 * safezoneW;

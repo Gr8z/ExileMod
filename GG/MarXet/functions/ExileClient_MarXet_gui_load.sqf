@@ -50,6 +50,9 @@ switch (_option) do
         _pinCodeEditBox = (_display displayCtrl 21032);
         _pinCodeEditBox ctrlRemoveAllEventHandlers "KeyUp";
         _pinCodeEditBox ctrlSetEventHandler ["KeyUp","if ((count(ctrlText (_this select 0))) isEqualTo 4) then {ctrlEnable [21014,true];}else{ctrlEnable [21014,false];};"];
+		_listingFeeEditBox = (_display displayCtrl 21013);
+        _listingFeeEditBox ctrlRemoveAllEventHandlers "KeyUp";
+        _listingFeeEditBox ctrlSetEventHandler ["KeyUp","if ((count(ctrlText (_this select 0))) isEqualTo 4) then {ctrlEnable [21014,true];}else{ctrlEnable [21014,false];};"];
         _sortingDropdown = (_display displayCtrl 21033);
         _sortingDropdown ctrlRemoveAllEventHandlers "LBSelChanged";
         _sortingDropdown ctrlSetEventHandler ["LBSelChanged", "[""Sort""] call ExileClient_MarXet_gui_load;"];
@@ -85,7 +88,7 @@ switch (_option) do
                 {
                     ctrlShow [_x,false];
                 }
-                forEach [21020,21021,21022,21023,21031,21032];
+                forEach [21020,21021,21022,21023,21031,21032,21012,21013];
                 {
                     _text = "";
                     _ClassName = (_x select 2) select 0;
@@ -320,7 +323,7 @@ switch (_option) do
                 {
                     ctrlShow [_x,false];
                 }
-                forEach [21020,21021,21022,21023,21024,21031,21032];
+                forEach [21020,21021,21022,21023,21024,21031,21032,21012,21013];
                 _dataString = lbData [21017,_this select 2];
                 if !(_dataString isEqualTo "") then
                 {
@@ -340,8 +343,9 @@ switch (_option) do
                         {
                             ctrlShow [_x,true];
                         }
-                        forEach [21020,21021,21022,21023,21031,21032];
+                        forEach [21020,21021,21022,21023,21031,21032,21012,21013];
                         ctrlSetText [21032,""];
+						ctrlSetText [21013,""];
                         _sellerUID = _dataArray select 5;
                         MarXet_Poptab = _dataArray select 6;
                     }
@@ -361,6 +365,9 @@ switch (_option) do
                         ctrlEnable [21014,false];
                         _pinEditBox = _display displayCtrl 21032;
                         _pinEditBox ctrlEnable false;
+						_feeEditBox = _display displayCtrl 21013;
+                        _feeEditBox ctrlEnable false;
+						
                     }
                     else
                     {
@@ -439,7 +446,7 @@ switch (_option) do
                 {
                     ctrlShow [_x,false];
                 }
-                forEach [21020,21021,21022,21023,21012,21013,21014];
+                forEach [21020,21021,21022,21023,21012,21013,21014,21013];
                 _priceEditBox = _display displayCtrl 21011;
                 ctrlEnable [21011,false];
                 _priceEditBox ctrlSetText "";
