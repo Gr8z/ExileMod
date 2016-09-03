@@ -446,7 +446,7 @@ switch (_option) do
                 {
                     ctrlShow [_x,false];
                 }
-                forEach [21020,21021,21022,21023,21012,21013,21014,21013];
+                forEach [21020,21021,21022,21023,21012,21013,21014];
                 _priceEditBox = _display displayCtrl 21011;
                 ctrlEnable [21011,false];
                 _priceEditBox ctrlSetText "";
