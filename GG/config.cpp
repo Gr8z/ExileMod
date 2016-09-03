@@ -2885,7 +2885,7 @@ class CfgExileEnvironment
 			startHour = 18;
 
 			// At this hour fire flies stop spawning
-			endHour = 4;
+			endHour = 5;
 		};
 
 		class Anomalies
@@ -2988,12 +2988,12 @@ class CfgExileEnvironment
 	{
 		class FireFlies: FireFlies
 		{
-			enable = 0;
+			enable = 1;
 		};
 
 		class Anomalies: Anomalies
 		{
-			enable = 0;
+			enable = 1;
 		};
 
 		class Breathing: Breathing
@@ -3137,7 +3137,7 @@ class CfgExileLootSettings
 	 * 50m  = Minimum
 	 * 200m = Maximum
 	 */
-	spawnRadius = 60;
+	spawnRadius = 120;
 
 	/**
 	 * Defines the radius around trader cities where the system should
