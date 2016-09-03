@@ -437,7 +437,7 @@ class CfgSettings
 		// time in ARMA FORMAT << CONFIG
 		// https://community.bistudio.com/wiki/setDate
 
-		staticTime[] = {2014,9,23,8,0};
+		staticTime[] = {2011,1,6,8,0};
 	};
 
 
