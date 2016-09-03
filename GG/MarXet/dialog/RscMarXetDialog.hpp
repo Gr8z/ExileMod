@@ -331,8 +331,7 @@ class RscMarXetDialog
 		{
 			idc = 21007;
 
-			text = "<t color='#FFFFFF' font='OrbitronLight' size='2' valign='middle' align='center' shadow='0'>Mar<t color='#531517' font='OrbitronLight' size='2' valign='middle' align='center' shadow='0'>X</t>et</t>";
-			x = 0.427812 * safezoneW + safezoneX;
+			text = "<t color='#38a9e1' font='OrbitronLight' size='2' valign='middle' align='center' shadow='0'>Market</t><t color='#878787' font='OrbitronLight' size='2' valign='middle' align='center' shadow='0'>place</t>";			x = 0.427812 * safezoneW + safezoneX;
 			y = 0.2705 * safezoneH + safezoneY;
 			w = 0.144375 * safezoneW;
 			h = 0.077 * safezoneH;

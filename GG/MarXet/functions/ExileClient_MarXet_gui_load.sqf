@@ -704,7 +704,7 @@ switch (_option) do
                 {
                     case 0:
                     {
-                        _textCtrl ctrlSetStructuredText parseText format["<t size='1'>Looks like you are the person who listed this vehicle!<br/>Unfortunately, the vehicle has to be rekeyed.<br/>There is a <t color='#e32636'>%1</t> poptab rekeying fee on this vehicle.<br/>Are you sure you want to continue?</t>",MarXet_Poptab];
+                        _textCtrl ctrlSetStructuredText parseText format["<t size='1'>Looks like you are the person who listed this vehicle!<br/>Are you sure you want to buy it back?</t>",MarXet_Poptab];
                     };
                     case 1:
                     {
