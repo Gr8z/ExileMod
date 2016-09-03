@@ -1,27 +1,62 @@
+/*//////////////////////////////////////////////////////////////////////////////
+	// Class Names
+	///////////////////////////////////////////////////////////////////////////////
+	Remember that item class names, group names and loot table names cannot 
+	contain spaces. Also be 100% sure to have the exact same name as in Arma,
+	as they are *case sensive*.
+	///////////////////////////////////////////////////////////////////////////////
+	// Item Groups
+	///////////////////////////////////////////////////////////////////////////////
+	You can link one group of items to loot tables.
+	One item should only be in one group.
+	Syntax:
+	> <Group Name>
+	<Spawn Chance Within Group>,<Item Class Name>
+	///////////////////////////////////////////////////////////////////////////////
+	// Propability
+	///////////////////////////////////////////////////////////////////////////////
+	<Spawn Chance>,<Item>
+	10, Banana
+	20, Tomato
+	30, Cherry
+	Sum of chances:
+	10 + 20 + 30 = 60 = 100%
+	Spawn chances:
+	Banana	10 : 60 = 10 * 100 / 60 = 16.67%
+	Tomato	20 : 60 = 20 * 100 / 60 = 33.33%
+	Cherry	30 : 60 = 30 * 100 / 60 = 50%
+	In words: 
+	If Exile should spawn an item of the above group, it has a 33.33%
+	chance to spawn a Tomato.
+*/
+	
+/*
+	Item Groups
+*/
 
 
 > Food
-3, Exile_Item_CookingPot
-5, Exile_Item_CanOpener
-5, Exile_Item_Matches
-3, Exile_Item_EMRE						// 75% Hunger
-6, Exile_Item_GloriousKnakworst			// 60% Hunger
-17, Exile_Item_Surstromming				// 55% Hunger
-17, Exile_Item_SausageGravy				// 50% Hunger
-17, Exile_Item_ChristmasTinner			// 40% Hunger
-17, Exile_Item_MacasCheese				// 40% Hunger
-17, Exile_Item_BBQSandwich				// 40% Hunger
-17, Exile_Item_CatFood					// 40% Hunger
-17, Exile_Item_Dogfood					// 30% Hunger
-7, Exile_Item_BeefParts					// 30% Hunger
-7, Exile_Item_Cheathas					// 30% Hunger
-7, Exile_Item_DsNuts					// 30% Hunger
-7, Exile_Item_Noodles					// 25% Hunger
-8, Exile_Item_CockONut					// 20% Hunger
-8, Exile_Item_SeedAstics				// 20% Hunger
-9, Exile_Item_Raisins					// 15% Hunger
-9, Exile_Item_Moobar					// 10% Hunger
-11, Exile_Item_InstantCoffee			//  5% Hunger
+1, Exile_Item_CookingPot
+1, Exile_Item_CanOpener
+1, Exile_Item_Matches
+1, Exile_Item_EMRE						// 75% Hunger
+1, Exile_Item_GloriousKnakworst			// 60% Hunger
+1, Exile_Item_Surstromming				// 55% Hunger
+1, Exile_Item_SausageGravy				// 50% Hunger
+1, Exile_Item_ChristmasTinner			// 40% Hunger
+1, Exile_Item_MacasCheese				// 40% Hunger
+1, Exile_Item_BBQSandwich				// 40% Hunger
+1, Exile_Item_CatFood					// 40% Hunger
+1, Exile_Item_Dogfood					// 30% Hunger
+1, Exile_Item_BeefParts					// 30% Hunger
+1, Exile_Item_Cheathas					// 30% Hunger
+1, Exile_Item_DsNuts					// 30% Hunger
+1, Exile_Item_Noodles					// 25% Hunger
+1, Exile_Item_CockONut					// 20% Hunger
+1, Exile_Item_SeedAstics				// 20% Hunger
+1, Exile_Item_Raisins					// 15% Hunger
+1, Exile_Item_Moobar					// 10% Hunger
+1, Exile_Item_InstantCoffee			//  5% Hunger
 
 > Drinks
 7, Exile_Item_PowerDrink					// +95% Thirst
