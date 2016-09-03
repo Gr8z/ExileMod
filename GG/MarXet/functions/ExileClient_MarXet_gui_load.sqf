@@ -585,8 +585,6 @@ switch (_option) do
                     _dropdown = _display displayCtrl 21019;
                     _dropdownIndex = lbCurSel _dropdown;
                     _location = _dropdown lbValue _dropdownIndex;
-					ctrlEnable [21032,true];
-					ctrlEnable [21031,true];
                     if (typeName(MarXet_SelectedListingID) isEqualTo "ARRAY") then
                     {
                         if (MarXet_BuyerIsSeller && !(MarXet_Confirmed)) then
