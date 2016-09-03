@@ -468,6 +468,7 @@ switch (_option) do
 					ctrlshow [21031,false];
 					ctrlshow [21012,true];
 					ctrlshow [21013,true];
+					ctrlEnable [21013,false];
                     _purchaseBtn = _display displayCtrl 21024;
                     _purchaseBtn ctrlShow true;
                     if (_location isEqualTo 4) then
@@ -680,6 +681,9 @@ switch (_option) do
                     ctrlEnable [_x,false];
                 }
                 forEach[21011,21014,21024,21015,21016,21017,21018,21019,21025,21007,21008,21032,21033];
+				{
+							ctrlShow [_x,false];
+				} forEach [21012,21013];
                 _title = _this select 2;
                 _textOption = _this select 3;
                 _confirmBtnText = _this select 4;
