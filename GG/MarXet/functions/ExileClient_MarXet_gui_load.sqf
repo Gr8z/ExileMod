@@ -346,6 +346,9 @@ switch (_option) do
                         forEach [21020,21021,21022,21023,21031,21032];
                         ctrlSetText [21032,""];
 						ctrlSetText [21013,""];
+						{
+							ctrlShow [_x,false];
+						} forEach [21012,21013];
                         _sellerUID = _dataArray select 5;
                         MarXet_Poptab = _dataArray select 6;
                     }
@@ -488,6 +491,9 @@ switch (_option) do
                 else
                 {
                     _priceEditBox ctrlSetText "NOT EMPTY";
+					{
+							ctrlShow [_x,false];
+					} forEach [21012,21013];
                 };
             };
         };
