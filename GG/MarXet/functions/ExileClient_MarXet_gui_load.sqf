@@ -50,9 +50,6 @@ switch (_option) do
         _pinCodeEditBox = (_display displayCtrl 21032);
         _pinCodeEditBox ctrlRemoveAllEventHandlers "KeyUp";
         _pinCodeEditBox ctrlSetEventHandler ["KeyUp","if ((count(ctrlText (_this select 0))) isEqualTo 4) then {ctrlEnable [21014,true];}else{ctrlEnable [21014,false];};"];
-		_listingFeeEditBox = (_display displayCtrl 21013);
-        _listingFeeEditBox ctrlRemoveAllEventHandlers "KeyUp";
-        _listingFeeEditBox ctrlSetEventHandler ["KeyUp","if ((count(ctrlText (_this select 0))) isEqualTo 4) then {ctrlEnable [21014,true];}else{ctrlEnable [21014,false];};"];
         _sortingDropdown = (_display displayCtrl 21033);
         _sortingDropdown ctrlRemoveAllEventHandlers "LBSelChanged";
         _sortingDropdown ctrlSetEventHandler ["LBSelChanged", "[""Sort""] call ExileClient_MarXet_gui_load;"];
@@ -364,9 +361,6 @@ switch (_option) do
                         ctrlEnable [21014,false];
                         _pinEditBox = _display displayCtrl 21032;
                         _pinEditBox ctrlEnable false;
-						_feeEditBox = _display displayCtrl 21032;
-                        _feeEditBox ctrlEnable false;
-						
                     }
                     else
                     {
