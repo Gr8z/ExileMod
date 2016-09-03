@@ -2,12 +2,12 @@
 > CivillianLowerClass
 17, Food
 10, Drinks
-8, Pistols
+12, Pistols
 5, PistolAmmo
 3, PistolAttachments
-20, Rifles
+5, Rifles
 2, RifleAmmo
-4, SMG
+10, SMG
 3, SMGAmmo
 3, SMGAttachments
 15, CivilianClothing
@@ -16,7 +16,7 @@
 5, CivilianHeadgear
 5, CivilianItems
 5, Chemlights
-5, RoadFlares
+4, GuerillaItems
 
 ///////////////////////////////////////////////////////////////////////////////
 // Apartments, Offices etc.
@@ -24,15 +24,15 @@
 > CivillianUpperClass
 17, Food
 10, Drinks
-5, Pistols
+10, Pistols
 5, PistolAmmo
 3, PistolAttachments
 2, Shotguns
 1, ShotgunAmmo
-10, SMG
+15, SMG
 3, SMGAmmo
 3, SMGAttachments
-22, Rifles
+13, Rifles
 5, RifleAmmo
 5, RifleAttachments
 12, GuerillaVests
@@ -41,35 +41,20 @@
 3, CivilianHeadgear
 5, CivilianItems
 3, Chemlights
-3, RoadFlares
 1, Restraints
+4, GuerillaItems
 
 ///////////////////////////////////////////////////////////////////////////////
 // Kiosks, Supermarkets etc.
 ///////////////////////////////////////////////////////////////////////////////
 > Shop
-15, Food
-15, Drinks
-10, Pistols
-2, PistolAmmo
-1, PistolAttachments
-4, Shotguns
-1, ShotgunAmmo
-5, SMG
-1, SMGAmmo
-1, SMGAttachments
-5, CivilianBackpacks
-1, CivilianClothing
-3, CivilianHeadgear
-1, CivilianVests
-7, CivilianItems
-5, Chemlights
-5, RoadFlares
-4, SmokeGrenades
-3, IndustrialItems
-3, Restraints
-3, MedicalItems
+35, Food
+35, Drinks
+10, CivilianBackpacks
+5, Electronics
+5, Vehicle
 0.05, Magazine01
+
 
 ///////////////////////////////////////////////////////////////////////////////
 // Construction Sites, Warehouses, Research etc.
@@ -77,7 +62,6 @@
 > Industrial
 40, IndustrialItems
 25, Vehicle
-15, RoadFlares
 5, Restraints
 0.025, Magazine02
 ///////////////////////////////////////////////////////////////////////////////
@@ -93,14 +77,12 @@
 > VehicleService
 25, IndustrialItems
 40, Vehicle
-15, RoadFlares
 5, Restraints
 
 ///////////////////////////////////////////////////////////////////////////////
 // Towers, Barracks, Hangars etc.
 ///////////////////////////////////////////////////////////////////////////////
 > Military
-2, CivilianItems
 4, GuerillaItems
 3, HEGrenades
 3, UGLFlares
@@ -108,11 +90,10 @@
 3, HandGrenades
 3, SmokeGrenades
 2, Restraints
-2, MedicalItems
-5, GuerillaClothing
-5, MilitaryClothing
-4, GuerillaBackpacks
-3, MilitaryBackpacks
+3, GuerillaClothing
+4, MilitaryClothing
+3, GuerillaBackpacks
+4, MilitaryBackpacks
 3, GuerillaVests
 3, MilitaryVests
 3, DLCVests
@@ -134,7 +115,7 @@
 2, DLCOptics
 2, DLCSupressor
 2, Bipods
-0.5, Explosives
+1, Explosives
 0.01, Magazine03
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -165,6 +146,7 @@
 4, HandGrenades
 4, Restraints
 4, MedicalItems
+3, Rebreathers
 0.2, Explosives
 
 ///////////////////////////////////////////////////////////////////////////////
