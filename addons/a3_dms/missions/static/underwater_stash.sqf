@@ -41,6 +41,11 @@ DMS_CrateCase_DiverGear =
         "U_O_Wetsuit",
         "U_O_Wetsuit",
         "U_O_Wetsuit",
+		"G_O_Diving",
+		"G_O_Diving",
+		"G_O_Diving",
+		"G_O_Diving",
+		"G_O_Diving",
         "V_RebreatherIA",
         "V_RebreatherIA",
         "V_RebreatherIA",
@@ -270,7 +275,7 @@ _added =
         [
             [
                 _sub1,
-                {_this setVariable ["ExileMoney",25000,true]}                       // The submarine will have 25,000 poptabs after the mission completes. The capacity is actually 5000, but I just overload it.
+                {_this setVariable ["ExileMoney",0,true]}                       // The submarine will have 25,000 poptabs after the mission completes. The capacity is actually 5000, but I just overload it.
             ]
         ],
         [],

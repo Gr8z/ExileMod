@@ -40,7 +40,7 @@ DMS_Use_Map_Config = true;	// Whether or not to use config overwrites specific t
 	For any questions regarding map-specific configs, please leave a reply in the DMS thread on the Exile forums.
 */
 
-DMS_Enable_RankChange = false; // Whether or not to use Rank Changes. (Required 'true' if using Occupation)
+DMS_Enable_RankChange = true; // Whether or not to use Rank Changes. (Required 'true' if using Occupation)
 /*
 	I am sharing this upgrade to all. If you utilize GR8 Humanity (fully compatible) or a custom version of a ranking system(simple variable changes), this will allow your players to score +/- for Bandit and Hero kills as well as a custom Survivor Faction added to DMS as well. You can still utilize the HERO / BANDIT / SURVIVOR respect and poptab settings for gameplay :) ENJOY! DONKEYPUNCH.INFO!
 */
@@ -73,7 +73,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_SpawnFlareOnReinforcements		= true;						// Whether or not to spawn a flare and noise when AI reinforcements have spawned.
 	/*General settings for static missions*/
 
-	DMS_playerNearRadius				= 100;						// How close a player has to be to a mission in order to satisfy the "playerNear" mission requirement (can be customized per mission).
+	DMS_playerNearRadius				= 200;						// How close a player has to be to a mission in order to satisfy the "playerNear" mission requirement (can be customized per mission).
 
 	DMS_AI_KillPercent					= 100;						// The percent amount of AI that need to be killed for "killPercent" mission requirement (NOT IMPLEMENTED)
 
@@ -132,14 +132,14 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_AttemptsUntilThrottle			= 15;						// How many attempts until the parameters are throttled.
 	DMS_ThrottleCoefficient				= 0.9;						// How much the parameters are throttled. The parameters are multiplied by the coefficient, so 0.9 means 90% of whatever the parameter was.
 	DMS_MinThrottledDistance			= 500;						// The minimum distance to which it will throttle. If the throttled value is less than this value, then this value is used instead.
-	DMS_PlayerNearBlacklist				= 2000;						// Missions won't spawn in a position this many meters close to a player
-	DMS_SpawnZoneNearBlacklist			= 2500;						// Missions won't spawn in a position this many meters close to a spawn zone
-	DMS_TraderZoneNearBlacklist			= 2500;						// Missions won't spawn in a position this many meters close to a trader zone
-	DMS_MissionNearBlacklist			= 2500;						// Missions won't spawn in a position this many meters close to another mission
+	DMS_PlayerNearBlacklist				= 500;						// Missions won't spawn in a position this many meters close to a player
+	DMS_SpawnZoneNearBlacklist			= 1000;						// Missions won't spawn in a position this many meters close to a spawn zone
+	DMS_TraderZoneNearBlacklist			= 1500;						// Missions won't spawn in a position this many meters close to a trader zone
+	DMS_MissionNearBlacklist			= 2000;						// Missions won't spawn in a position this many meters close to another mission
 	DMS_WaterNearBlacklist				= 500;						// Missions won't spawn in a position this many meters close to water
 	DMS_TerritoryNearBlacklist			= 100;						// Missions won't spawn in a position this many meters close to a territory flag. This is a resource intensive check, don't set this value too high!
-	DMS_MixerNearBlacklist				= 1000;						// Missions won't spawn in a position this many meters close to a concrete mixer
-	DMS_ContaminatedZoneNearBlacklist	= 1000;						// Missions won't spawn in a position this many meters close to a contaminated zone
+	DMS_MixerNearBlacklist				= 750;						// Missions won't spawn in a position this many meters close to a concrete mixer
+	DMS_ContaminatedZoneNearBlacklist	= 0;						// Missions won't spawn in a position this many meters close to a contaminated zone
 	DMS_MinSurfaceNormal				= 0.9;						// Missions won't spawn in a position where its surfaceNormal is less than this amount. The lower the value, the steeper the location. Greater values means flatter locations. Values can range from 0-1, with 0 being sideways, and 1 being perfectly flat. For reference: SurfaceNormal of about 0.7 is when you are forced to walk up a surface. If you want to convert surfaceNormal to degrees, use the arc-cosine of the surfaceNormal. 0.9 is about 25 degrees. Google "(arccos 0.9) in degrees"
 	DMS_MinDistFromWestBorder			= 250;						// Missions won't spawn in a position this many meters close to the western map border.
 	DMS_MinDistFromEastBorder			= 250;						// Missions won't spawn in a position this many meters close to the easter map border.
@@ -180,7 +180,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_BulletProofMines				= true;						// Whether or not you want to make the mines bulletproof. Prevents players from being able to shoot the mines and creating explosions.
 	/*Mine settings*/
 
-	DMS_MinPlayerCount					= 0; 						// Minimum number of players until mission start
+	DMS_MinPlayerCount					= 1; 						// Minimum number of players until mission start
 	DMS_MinServerFPS					= 5; 						// Minimum server FPS for missions to start
 
 	/*Mission notification settings*/
@@ -315,17 +315,17 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_GiveRespectToPlayer_OnAIKill	= true;						// Whether or not to give respect to players when they kill AI.
 
 	DMS_Bandit_Soldier_MoneyGain		= 50;						// The amount of Poptabs gained for killing a bandit soldier
-	DMS_Bandit_Soldier_RepGain			= 10;						// The amount of Respect gained for killing a bandit soldier
+	DMS_Bandit_Soldier_RepGain			= 25;						// The amount of Respect gained for killing a bandit soldier
 	DMS_Bandit_Soldier_RankGain			= 15;
 	DMS_Bandit_Soldier_SpawnMoney		= 50;						// The amount of Poptabs carried by a bandit soldier
 
 	DMS_Bandit_Static_MoneyGain			= 75;						// The amount of Poptabs gained for killing a bandit static gunner
-	DMS_Bandit_Static_RepGain			= 15;						// The amount of Respect gained for killing a bandit static gunner
+	DMS_Bandit_Static_RepGain			= 100;						// The amount of Respect gained for killing a bandit static gunner
 	DMS_Bandit_Static_RankGain			= 30;
 	DMS_Bandit_Static_SpawnMoney		= 75;						// The amount of Poptabs carried by a bandit static gunner
 
 	DMS_Bandit_Vehicle_MoneyGain		= 100;						// The amount of Poptabs gained for killing a bandit vehicle crew member
-	DMS_Bandit_Vehicle_RepGain			= 25;						// The amount of Respect gained for killing a bandit vehicle crew member
+	DMS_Bandit_Vehicle_RepGain			= 75;						// The amount of Respect gained for killing a bandit vehicle crew member
 	DMS_Bandit_Vehicle_RankGain			= 50;
 	DMS_Bandit_Vehicle_SpawnMoney		= 100;						// The amount of Poptabs carried by a bandit vehicle crew member
 
@@ -456,10 +456,11 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_AI_destroyVehicleChance			= 0;						// Percent chance that an AI vehicle will be destroyed after the AI have been killed. Set to 100 for always, or 0 for never.
 
 	DMS_AI_destroyStaticWeapon			= true;						// Whether or not to destroy static HMGs after AI death.
-	DMS_AI_destroyStaticWeapon_chance	= 95;						// Percent chance that a static weapon will be destroyed (only applied if "DMS_AI_destroyStaticWeapon" is true)
+	DMS_AI_destroyStaticWeapon_chance	= 100;						// Percent chance that a static weapon will be destroyed (only applied if "DMS_AI_destroyStaticWeapon" is true)
 
 	DMS_static_weapons =				[							// Static weapons for AI
-											"O_HMG_01_high_F"
+											"O_HMG_01_high_F",
+											"O_HMG_01_F"	
 										];
 
 	DMS_ai_default_items =				[							// Toolbelt items each AI will spawn with
@@ -484,10 +485,15 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_assault_weps =					[							// Assault Rifles
 											#ifdef GIVE_AI_APEX_WEAPONS
 											"arifle_AK12_F",
-											"arifle_ARX_ghex_F",
 											"arifle_CTAR_blk_F",
 											"arifle_SPAR_01_khk_F",
+											"arifle_SPAR_01_blk_F",
 											"arifle_SPAR_03_khk_F",
+											"arifle_CTAR_hex_F",
+											"arifle_AK12_GL_F",
+											"arifle_CTAR_GL_hex_F",
+											"arifle_SPAR_01_GL_blk_F",
+											"arifle_SPAR_01_GL_khk_F",
 											#endif
 											"arifle_Katiba_GL_F",
 											"arifle_MX_GL_Black_F",
@@ -524,16 +530,18 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"optic_Arco",
 											"optic_Hamr",
 											"optic_Aco",
+											"optic_ACO_grn",
 											"optic_Holosight",
 											"optic_MRCO",
 											"optic_DMS"
 										];
 	DMS_assault_optic_chance			= 75;						// Percentage chance that an Assault Class AI will get an optic
 	DMS_assault_bipod_chance			= 25;						// Percentage chance that an Assault Class AI will get a bipod
-	DMS_assault_suppressor_chance		= 25;						// Percentage chance that an Assault Class AI will get a suppressor
+	DMS_assault_suppressor_chance		= 5;						// Percentage chance that an Assault Class AI will get a suppressor
 
 	DMS_assault_items =					[							// Items for Assault Class AI (Loot stuff that goes in uniform/vest/backpack)
 											"Exile_Item_InstaDoc",
+											"Exile_Item_CanOpener",
 											"Exile_Item_BBQSandwich",
 											"Exile_Item_Energydrink"
 										];
