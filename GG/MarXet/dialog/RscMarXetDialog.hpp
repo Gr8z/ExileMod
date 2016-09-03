@@ -247,7 +247,7 @@ class RscMarXetDialog
 		class ListingFee: RscMarXetText
 		{
 			idc = 21012;
-			show = false;
+			show = true;
 			text = "Listing Fee:"; //--- ToDo: Localize;
 			x = 0.427812 * safezoneW + safezoneX;
 			y = 0.643 * safezoneH + safezoneY;
@@ -258,7 +258,7 @@ class RscMarXetDialog
 		class FeeListingEditBox: RscMarXetEdit
 		{
 			idc = 21013;
-			show = false;
+			show = true;
 			x = 0.482219 * safezoneW + safezoneX;
 			y = 0.6432 * safezoneH + safezoneY;
 			w = 0.0567187 * safezoneW;
