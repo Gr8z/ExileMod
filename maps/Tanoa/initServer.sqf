@@ -6,7 +6,6 @@
 ExileRouletteChairs = [];
 ExileRouletteChairPositions = [];
 
-setTimeMultiplier 3;
 
 // 134 Vehicles
 private _vehicles = [
