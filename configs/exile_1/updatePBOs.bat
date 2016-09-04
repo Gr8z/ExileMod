@@ -1,3 +1,4 @@
+@echo off
 :: Creating New Pbos
 "C:\Program Files\PBO Manager v.1.4 beta\PBOConsole.exe" -pack "C:\ExileMod\maps\Tanoa" "D:\a3Server\mpmissions\GG_exile_1.Tanoa.pbo"
 "C:\Program Files\PBO Manager v.1.4 beta\PBOConsole.exe" -pack "C:\ExileMod\addons\exile_server" "D:\a3Server\@ExileServer\addons\exile_server.pbo"
@@ -17,5 +18,6 @@
 "C:\Program Files\PBO Manager v.1.4 beta\PBOConsole.exe" -pack "C:\ExileMod\addons\XG_killboard" "D:\a3Server\@ExileServer\addons\XG_killboard.pbo"
 
 echo Creating new PBOs 
-timeout 1
-echo.
+
+cls
+@exit
