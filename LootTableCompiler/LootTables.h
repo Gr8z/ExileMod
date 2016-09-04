@@ -12,8 +12,8 @@
 3, SMGAttachments
 15, CivilianClothing
 10, CivilianBackpacks
-3, CivilianVests
-5, CivilianHeadgear
+7, CivilianVests
+8, CivilianHeadgear
 5, CivilianItems
 5, Chemlights
 4, GuerillaItems
