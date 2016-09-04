@@ -1,5 +1,4 @@
 /**
- * ExileServer_system_AirDrop_network_buyRequest
  *
  * Exile Mod
  * www.exilemod.com
