@@ -36,68 +36,68 @@
 
 
 > Food
-1, Exile_Item_CookingPot
-1, Exile_Item_CanOpener
-1, Exile_Item_Matches
-1, Exile_Item_EMRE						// 75% Hunger
-1, Exile_Item_GloriousKnakworst			// 60% Hunger
-1, Exile_Item_Surstromming				// 55% Hunger
-1, Exile_Item_SausageGravy				// 50% Hunger
-1, Exile_Item_ChristmasTinner			// 40% Hunger
-1, Exile_Item_MacasCheese				// 40% Hunger
-1, Exile_Item_BBQSandwich				// 40% Hunger
-1, Exile_Item_CatFood					// 40% Hunger
-1, Exile_Item_Dogfood					// 30% Hunger
-1, Exile_Item_BeefParts					// 30% Hunger
-1, Exile_Item_Cheathas					// 30% Hunger
-1, Exile_Item_DsNuts					// 30% Hunger
-1, Exile_Item_Noodles					// 25% Hunger
+5, Exile_Item_CookingPot
+7, Exile_Item_CanOpener
+5, Exile_Item_Matches
+3, Exile_Item_EMRE						// 75% Hunger
+4, Exile_Item_GloriousKnakworst			// 60% Hunger
+5, Exile_Item_Surstromming				// 55% Hunger
+5, Exile_Item_SausageGravy				// 50% Hunger
+5, Exile_Item_ChristmasTinner			// 40% Hunger
+5, Exile_Item_MacasCheese				// 40% Hunger
+5, Exile_Item_BBQSandwich				// 40% Hunger
+5, Exile_Item_CatFood					// 40% Hunger
+5, Exile_Item_Dogfood					// 30% Hunger
+5, Exile_Item_BeefParts					// 30% Hunger
+5, Exile_Item_Cheathas					// 30% Hunger
+5, Exile_Item_DsNuts					// 30% Hunger
+5, Exile_Item_Noodles					// 25% Hunger
 1, Exile_Item_CockONut					// 20% Hunger
-1, Exile_Item_SeedAstics				// 20% Hunger
-1, Exile_Item_Raisins					// 15% Hunger
-1, Exile_Item_Moobar					// 10% Hunger
-1, Exile_Item_InstantCoffee			//  5% Hunger
+5, Exile_Item_SeedAstics				// 20% Hunger
+5, Exile_Item_Raisins					// 15% Hunger
+5, Exile_Item_Moobar					// 10% Hunger
+5, Exile_Item_InstantCoffee			//  5% Hunger
 
 > Drinks
-7, Exile_Item_PowerDrink					// +95% Thirst
-12, Exile_Item_PlasticBottleFreshWater		// +80% Thirst
-14, Exile_Item_Beer							// +75% Thirst
+5, Exile_Item_PowerDrink					// +95% Thirst
+20, Exile_Item_PlasticBottleFreshWater		// +80% Thirst
+3, Exile_Item_Beer							// +75% Thirst
 17, Exile_Item_EnergyDrink					// +75% Thirst
 20, Exile_Item_MountainDupe					// +50% Thirst, spawns always twice!	
 25, Exile_Item_ChocolateMilk				// +35% Thirst
 10, Exile_Item_PlasticBottleDirtyWater		// +10% Thirst
 
 > Pistols
-10, hgun_ACPC2_F			// ACP-C2 .45
-10, hgun_P07_F				// P07 9 mm
-10, hgun_Rook40_F			// Rook-40 9 mm
-10, hgun_Pistol_heavy_01_F	// 4-five .45
-9, hgun_Pistol_heavy_02_F	// Zubr .45
+7, hgun_ACPC2_F			// ACP-C2 .45
+8, hgun_P07_F				// P07 9 mm
+7, hgun_Rook40_F			// Rook-40 9 mm
+8, hgun_Pistol_heavy_01_F	// 4-five .45
+8, hgun_Pistol_heavy_02_F	// Zubr .45
 10, hgun_Pistol_Signal_F	// Starter Pistol
-13, Exile_Weapon_Colt1911   // Colt 1911
-13, Exile_Weapon_Makarov	// Makarov
-13, Exile_Weapon_Taurus		// Taurus
-13, Exile_Weapon_TaurusGold	// Taurus (Gold)
-13, hgun_Pistol_01_F		// PM 9 mm
-13, hgun_P07_khk_F			// P07 9 mm (Khaki)
+8, Exile_Weapon_Colt1911   // Colt 1911
+10, Exile_Weapon_Makarov	// Makarov
+10, Exile_Weapon_Taurus		// Taurus
+4, Exile_Weapon_TaurusGold	// Taurus (Gold)
+5, hgun_Pistol_01_F		// PM 9 mm
+5, hgun_P07_khk_F			// P07 9 mm (Khaki)
 10, hlc_smg_mp5k 			//MP5K
 
 
 > PistolAmmo
-20, 11Rnd_45ACP_Mag				// 4-five
+10, 11Rnd_45ACP_Mag				// 4-five
 10, 16Rnd_9x21_Mag				// PDW2000, P07, ROOK-40
-20, 30Rnd_9x21_Mag				// Sting, PDW2000, P07, ROOK-40
-16, 6Rnd_45ACP_Cylinder			// Zubr
+5, 30Rnd_9x21_Mag				// Sting, PDW2000, P07, ROOK-40
+7, 6Rnd_45ACP_Cylinder			// Zubr
 7, 6Rnd_GreenSignal_F			// Starter Pistol
 7, 6Rnd_RedSignal_F				// Starter Pistol 
-20, 9Rnd_45ACP_Mag				// ACP-C2
-20, Exile_Magazine_7Rnd_45ACP	// Colt 1911
-20, Exile_Magazine_8Rnd_9x18	// Makarov
-20, Exile_Magazine_6Rnd_45ACP	// Taurus
-20, 10Rnd_9x21_Mag				// PM 9 mm
-15, hlc_30Rnd_9x19_B_MP5
-15, hlc_30Rnd_9x19_GD_MP5
-15, hlc_30Rnd_9x19_SD_MP5
+10, 9Rnd_45ACP_Mag				// ACP-C2
+5, Exile_Magazine_7Rnd_45ACP	// Colt 1911
+10, Exile_Magazine_8Rnd_9x18	// Makarov
+10, Exile_Magazine_6Rnd_45ACP	// Taurus
+10, 10Rnd_9x21_Mag				// PM 9 mm
+7, hlc_30Rnd_9x19_B_MP5
+7, hlc_30Rnd_9x19_GD_MP5
+5, hlc_30Rnd_9x19_SD_MP5
 
 > PistolAttachments
 36, muzzle_snds_L
@@ -112,43 +112,43 @@
 1, Exile_Magazine_8Rnd_74Slug		//M1014
 
 > SMG
-9, SMG_01_F		// Vermin SMG .45 ACP
-9, SMG_02_F		// Sting 9 mm
-12, SMG_05_F		// Protector 9mm
-12, hgun_PDW2000_F	// PDW2000 9 mm
-12, hlc_smg_mp510
-12, hlc_smg_mp5a2
-12, hlc_smg_mp5a3
-12, hlc_smg_mp5a4
-12, hlc_smg_mp5k_PDW
-12, hlc_smg_mp5n
-12, hlc_smg_9mmar
-10, hlc_smg_mp5sd5
-10, hlc_smg_mp5sd6
-8, hlc_rifle_augpara
-8, hlc_rifle_augpara_b
-8, hlc_rifle_augpara_t
-8, hlc_rifle_auga2para
-8, hlc_rifle_auga2para_b
-8, hlc_rifle_auga2para_t
+8, SMG_01_F		// Vermin SMG .45 ACP
+8, SMG_02_F		// Sting 9 mm
+7, SMG_05_F		// Protector 9mm
+7, hgun_PDW2000_F	// PDW2000 9 mm
+7, hlc_smg_mp510
+7, hlc_smg_mp5a2
+7, hlc_smg_mp5a3
+7, hlc_smg_mp5a4
+5, hlc_smg_mp5k_PDW
+5, hlc_smg_mp5n
+5, hlc_smg_9mmar
+5, hlc_smg_mp5sd5
+5, hlc_smg_mp5sd6
+3, hlc_rifle_augpara
+3, hlc_rifle_augpara_b
+3, hlc_rifle_augpara_t
+3, hlc_rifle_auga2para
+3, hlc_rifle_auga2para_b
+3, hlc_rifle_auga2para_t
 
 > SMGAmmo
 10, 30Rnd_45ACP_Mag_SMG_01					// Vermin SMG
 10, 30Rnd_45ACP_Mag_SMG_01_Tracer_Green		// Vermin SMG
-50, 30Rnd_9x21_Mag_SMG_02					// Sting, Protector
-50, 30Rnd_9x21_Mag_SMG_02_Tracer_Red        // Sting, Protector
-50, 30Rnd_9x21_Mag_SMG_02_Tracer_Yellow     // Sting, Protector
-50, 30Rnd_9x21_Mag_SMG_02_Tracer_Green      // Sting, Protector
-15, hlc_30Rnd_10mm_B_MP5
-15, hlc_30Rnd_10mm_JHP_MP5
-12, hlc_25Rnd_9x19mm_JHP_AUG
-12, hlc_25Rnd_9x19mm_M882_AUG
-12, hlc_25Rnd_9x19mm_subsonic_AUG
+10, 30Rnd_9x21_Mag_SMG_02					// Sting, Protector
+5, 30Rnd_9x21_Mag_SMG_02_Tracer_Red        // Sting, Protector
+5, 30Rnd_9x21_Mag_SMG_02_Tracer_Yellow     // Sting, Protector
+5, 30Rnd_9x21_Mag_SMG_02_Tracer_Green      // Sting, Protector
+11, hlc_30Rnd_10mm_B_MP5
+11, hlc_30Rnd_10mm_JHP_MP5
+10, hlc_25Rnd_9x19mm_JHP_AUG
+10, hlc_25Rnd_9x19mm_M882_AUG
+8, hlc_25Rnd_9x19mm_subsonic_AUG
 5, hlc_50rnd_9x19_B_9mmar
 
 > SMGAttachments
-20, optic_Holosight_smg
-20, optic_Holosight_smg_blk_F
+10, optic_Holosight_smg
+10, optic_Holosight_smg_blk_F
 20, optic_ACO_grn_smg
 20, optic_Aco_smg
 20, optic_ACO_grn
@@ -173,11 +173,11 @@
 10, arifle_MX_Black_F		// MX 6.5 mm (Black)
 10, arifle_MX_GL_Black_F		// MX 3GL 6.5 mm (Black)
 10, Exile_Weapon_AK107	
-10, Exile_Weapon_AK107_GL	
-10, Exile_Weapon_AK74_GL
+8, Exile_Weapon_AK107_GL	
+8, Exile_Weapon_AK74_GL
 10, Exile_Weapon_AK74
 10, Exile_Weapon_AK47				
-10, Exile_Weapon_AKS_Gold	
+4, Exile_Weapon_AKS_Gold	
 10, Exile_Weapon_DMR		
 10, Exile_Weapon_LeeEnfield
 10, Exile_Weapon_CZ550
@@ -216,16 +216,16 @@
 5, arifle_SPAR_03_khk_F         // SPAR-17 7.62 mm (Khaki)
 5, arifle_SPAR_03_snd_F         // SPAR-17 7.62 mm (Sand)
 20, hlc_rifle_aug
-20, hlc_rifle_auga1carb
-20, hlc_rifle_auga2
-20, hlc_rifle_auga2carb
-20, hlc_rifle_auga2lsw
-20, hlc_rifle_auga3
-20, hlc_rifle_auga3_gl
-20, hlc_rifle_aughbar
-20, hlc_rifle_augsr
-20, hlc_rifle_augsrcarb
-20, hlc_rifle_augsrhbar
+10, hlc_rifle_auga1carb
+10, hlc_rifle_auga2
+10, hlc_rifle_auga2carb
+10, hlc_rifle_auga2lsw
+10, hlc_rifle_auga3
+10, hlc_rifle_auga3_gl
+10, hlc_rifle_aughbar
+10, hlc_rifle_augsr
+10, hlc_rifle_augsrcarb
+10, hlc_rifle_augsrhbar
 20, hlc_rifle_ak12
 20, hlc_rifle_ak12gl
 20, hlc_rifle_ak47
@@ -246,9 +246,9 @@
 20, hlc_rifle_rk62
 20, hlc_rifle_aek971
 20, hlc_rifle_aek971_mtk
-20, hlc_rifle_rpk
-20, hlc_rifle_RPK12
-20, hlc_rifle_rpk74n
+10, hlc_rifle_rpk
+10, hlc_rifle_RPK12
+10, hlc_rifle_rpk74n
 20, hlc_rifle_g36a1
 20, hlc_rifle_g36a1ag36
 20, hlc_rifle_g36c
@@ -267,23 +267,23 @@
 20, hlc_rifle_g36tac
 20, hlc_rifle_g36v
 5, hlc_rifle_g36vag36
-20, hlc_rifle_mg36
+10, hlc_rifle_mg36
 10, hlc_rifle_g3a3
 10, hlc_rifle_g3a3ris
 10, hlc_rifle_g3a3v
 10, hlc_rifle_g3ka4
 5, hlc_rifle_g3ka4_gl
-20, hlc_rifle_hk33a2
-20, hlc_rifle_hk33a2ris
-20, hlc_rifle_hk51
-20, hlc_rifle_hk53
-20, hlc_rifle_hk53ras
-20, hlc_rifle_amt
-20, hlc_rifle_bcmjack
+10, hlc_rifle_hk33a2
+10, hlc_rifle_hk33a2ris
+10, hlc_rifle_hk51
+10, hlc_rifle_hk53
+10, hlc_rifle_hk53ras
+10, hlc_rifle_amt
+10, hlc_rifle_bcmjack
 5, hlc_rifle_bushmaster300
 20, hlc_rifle_c1a1
-20, hlc_rifle_colt727
-15, hlc_rifle_colt727_gl
+15, hlc_rifle_colt727
+10, hlc_rifle_colt727_gl
 20, hlc_rifle_cqbr
 20, hlc_rifle_fal5000
 20, hlc_rifle_fal5000rail
@@ -320,35 +320,35 @@
 9, 30Rnd_556x45_Stanag_Tracer_Green			// TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR, SPAR-16
 9, 30Rnd_556x45_Stanag_Tracer_Red			// TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR, SPAR-16
 9, 30Rnd_556x45_Stanag_Tracer_Yellow		// TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR, SPAR-16
-15, 30Rnd_65x39_caseless_green				// Katiba, Type 115
+10, 30Rnd_65x39_caseless_green				// Katiba, Type 115
 9, 30Rnd_65x39_caseless_green_mag_Tracer	// Katiba, Type 115
 9, 30Rnd_65x39_caseless_mag					// MX/C/M/SW/3GL
 9, 30Rnd_65x39_caseless_mag_Tracer			// MX/C/M/SW/3GL
 8, Exile_Magazine_10Rnd_303					// Lee-Enfield
-9, Exile_Magazine_30Rnd_762x39_AK			// AK
-9, Exile_Magazine_30Rnd_545x39_AK			// AK
-9, Exile_Magazine_30Rnd_545x39_AK_Green		// AK
-9, Exile_Magazine_30Rnd_545x39_AK_Red		// AK
-9, Exile_Magazine_30Rnd_545x39_AK_White		// AK
-9, Exile_Magazine_30Rnd_545x39_AK_Yellow	// AK
-9, Exile_Magazine_20Rnd_762x51_DMR			// DMR
-9, Exile_Magazine_20Rnd_762x51_DMR_Yellow	// DMR
-9, Exile_Magazine_20Rnd_762x51_DMR_Red		// DMR
-9, Exile_Magazine_20Rnd_762x51_DMR_Green	// DMR
-9, Exile_Magazine_20Rnd_762x51_DMR_White	// DMR
-9, Exile_Magazine_5Rnd_22LR					// CZ550
+10, Exile_Magazine_30Rnd_762x39_AK			// AK
+10, Exile_Magazine_30Rnd_545x39_AK			// AK
+10, Exile_Magazine_30Rnd_545x39_AK_Green		// AK
+10, Exile_Magazine_30Rnd_545x39_AK_Red		// AK
+10, Exile_Magazine_30Rnd_545x39_AK_White		// AK
+10, Exile_Magazine_30Rnd_545x39_AK_Yellow	// AK
+8, Exile_Magazine_20Rnd_762x51_DMR			// DMR
+8, Exile_Magazine_20Rnd_762x51_DMR_Yellow	// DMR
+8, Exile_Magazine_20Rnd_762x51_DMR_Red		// DMR
+8, Exile_Magazine_20Rnd_762x51_DMR_Green	// DMR
+8, Exile_Magazine_20Rnd_762x51_DMR_White	// DMR
+10, Exile_Magazine_5Rnd_22LR					// CZ550
 9, Exile_Magazine_10Rnd_762x54				// SVD
 9, Exile_Magazine_10Rnd_9x39				// VSS
 9, Exile_Magazine_20Rnd_9x39				// VSS
-9, 30Rnd_762x39_Mag_F						// AK-12, AKM
-9, 30Rnd_762x39_Mag_Green_F                 // AK-12, AKM
-9, 30Rnd_762x39_Mag_Tracer_F                // AK-12, AKM
-9, 30Rnd_762x39_Mag_Tracer_Green_F          // AK-12, AKM
-9, 30Rnd_762x39_AK47_M						// AKS
-9, 30Rnd_545x39_Mag_F						// AKS
-9, 30Rnd_545x39_Mag_Green_F					// AKS
-9, 30Rnd_545x39_Mag_Tracer_F				// AKS
-9, 30Rnd_545x39_Mag_Tracer_Green_F			// AKS
+10, 30Rnd_762x39_Mag_F						// AK-12, AKM
+10, 30Rnd_762x39_Mag_Green_F                 // AK-12, AKM
+10, 30Rnd_762x39_Mag_Tracer_F                // AK-12, AKM
+10, 30Rnd_762x39_Mag_Tracer_Green_F          // AK-12, AKM
+10, 30Rnd_762x39_AK47_M						// AKS
+10, 30Rnd_545x39_Mag_F						// AKS
+10, 30Rnd_545x39_Mag_Green_F					// AKS
+10, 30Rnd_545x39_Mag_Tracer_F				// AKS
+10, 30Rnd_545x39_Mag_Tracer_Green_F			// AKS
 5, 10Rnd_50BW_Mag_F							// Type 115
 9, 30Rnd_580x42_Mag_F						// CAR-95
 9, 30Rnd_580x42_Mag_Tracer_F				// CAR-95
@@ -437,7 +437,7 @@
 10, optic_Holosight
 10, optic_Holosight_blk_F
 10, optic_Holosight_khk_F
-14, acc_flashlight
+5, acc_flashlight
 10, acc_pointer_IR
 10, optic_MRCO
 10, optic_DMS
@@ -446,7 +446,7 @@
 10, optic_ERCO_khk_F
 10, optic_ERCO_snd_F
 5, optic_NVS
-1, optic_tws
+//1, optic_tws
 10, HLC_Optic_1p29
 10, hlc_optic_accupoint_g3
 10, hlc_optic_artel_m14
@@ -458,7 +458,7 @@
 10, HLC_Optic_G36Export15x2d
 10, HLC_Optic_G36Export35x
 10, HLC_Optic_G36Export35x2d
-1, hlc_optic_goshawk
+//1, hlc_optic_goshawk
 10, hlc_optic_Kern
 10, hlc_optic_Kern2d
 10, hlc_optic_kobra
@@ -485,18 +485,17 @@
 9, muzzle_hbadger
 
 > LMG
-9, arifle_MX_SW_Black_F	// MX SW 6.5 mm (Black)
-9, arifle_MX_SW_F			// MX SW 6.5 mm
+
 9, LMG_Mk200_F				// Mk200 6.5 mm
 9, LMG_Zafir_F				// Zafir 7.62 mm
-9, Exile_Weapon_RPK
-9, Exile_Weapon_PK
-9, Exile_Weapon_PKP
+10, Exile_Weapon_RPK
+10, Exile_Weapon_PK
+10, Exile_Weapon_PKP
 9, LMG_03_F				//= LIM-85 5.56 mm
 12, hlc_lmg_M249E2
 12, hlc_lmg_m249para
-12, hlc_lmg_M60
-12, hlc_lmg_M60E4
+9, hlc_lmg_M60
+9, hlc_lmg_M60E4
 12, hlc_lmg_minimi
 12, hlc_lmg_minimi_railed
 12, hlc_lmg_minimipara
@@ -512,8 +511,8 @@
 10, 100Rnd_65x39_caseless_mag_Tracer	// MX SW
 12, 150Rnd_762x54_Box					// Zafir
 10, 150Rnd_762x54_Box_Tracer			// Zafir
-5, 130Rnd_338_Mag
-51, 150Rnd_93x64_Mag
+8, 130Rnd_338_Mag
+15, 150Rnd_93x64_Mag
 10, Exile_Magazine_45Rnd_545x39_RPK_Green
 10, Exile_Magazine_75Rnd_545x39_RPK_Green
 10, Exile_Magazine_100Rnd_762x54_PK_Green
@@ -535,23 +534,19 @@
 
 > Snipers
 10, srifle_DMR_01_F			// Rahim 7.62 mm
-10, srifle_EBR_F			// Mk18 ABR 7.62 mm
-1, srifle_GM6_F			// GM6 Lynx 12.7 mm
-1, srifle_LRR_F			// M320 LRR .408
-1, srifle_LRR_tna_F    	// M320 LRR .408 (Tropic)
-1, srifle_GM6_ghex_F   	// GM6 Lynx 12.7 mm (Green Hex)
+8, srifle_EBR_F			// Mk18 ABR 7.62 mm
 10, srifle_DMR_07_blk_F     // CMR-76 6.5 mm (Black)
 10, srifle_DMR_07_hex_F     // CMR-76 6.5 mm (Hex)
 10, srifle_DMR_07_ghex_F    // CMR-76 6.5 mm (Green Hex)
-10, hlc_rifle_awcovert
-10, hlc_rifle_awcovert_BL
-10, hlc_rifle_awcovert_FDE
-10, hlc_rifle_awmagnum
-10, hlc_rifle_awmagnum_bl
-10, hlc_rifle_awmagnum_bl_ghillie
-10, hlc_rifle_awmagnum_fde
-10, hlc_rifle_awmagnum_fde_ghillie
-10, hlc_rifle_awmagnum_OD_ghillie
+5, hlc_rifle_awcovert
+5, hlc_rifle_awcovert_BL
+5, hlc_rifle_awcovert_FDE
+5, hlc_rifle_awmagnum
+5, hlc_rifle_awmagnum_bl
+5, hlc_rifle_awmagnum_bl_ghillie
+5, hlc_rifle_awmagnum_fde
+5, hlc_rifle_awmagnum_fde_ghillie
+5, hlc_rifle_awmagnum_OD_ghillie
 10, hlc_rifle_m1903a1
 10, hlc_rifle_m1903a1_unertl
 10, hlc_rifle_M1903A1OMR
@@ -562,6 +557,8 @@
 10, hlc_rifle_m14sopmod
 10, hlc_rifle_m21
 10, hlc_rifle_g3sg1
+5, hlc_rifle_PSG1A1_RIS
+5, hlc_rifle_psg1
 
 > SniperAmmo
 3, 5Rnd_127x108_Mag		// GM6 Lynx
@@ -569,55 +566,54 @@
 10, 10Rnd_762x51_Mag		// Rahim
 10, 20Rnd_762x51_Mag		// Mk18 ABR
 1, 5Rnd_127x108_APDS_Mag	// GM6 Lynx 
-20, 20Rnd_650x39_Cased_Mag_F	// CMR-76
+10, 20Rnd_650x39_Cased_Mag_F	// CMR-76
 10, hlc_5rnd_3006_1903
-15, hlc_5rnd_300WM_AP_AWM
-15, hlc_5rnd_300WM_BTSP_AWM
-15, hlc_5rnd_300WM_FMJ_AWM
-15, hlc_5rnd_300WM_mk248_AWM
-15, hlc_5rnd_300WM_SBT_AWM
+10, hlc_5rnd_300WM_AP_AWM
+10, hlc_5rnd_300WM_BTSP_AWM
+10, hlc_5rnd_300WM_FMJ_AWM
+10, hlc_5rnd_300WM_mk248_AWM
+10, hlc_5rnd_300WM_SBT_AWM
+10, hlc_20Rnd_762x51_B_G3
 
 > SniperAttachments
-19, muzzle_snds_B
+10, muzzle_snds_B
 10, muzzle_snds_B_khk_F
 10, muzzle_snds_B_snd_F
-1, optic_tws
-1, optic_tws_mg
-27, optic_DMS
-26, optic_SOS
-26, optic_SOS_khk_F
-26, optic_LRPS
-26, optic_LRPS_tna_F
-26, optic_LRPS_ghex_F
+//1, optic_tws
+//1, optic_tws_mg
+12, optic_DMS
+10, optic_SOS
+10, optic_SOS_khk_F
+7, optic_LRPS
+7, optic_LRPS_tna_F
+7, optic_LRPS_ghex_F
+8, hlc_muzzle_snds_HK33
+8, hlc_muzzle_snds_G3
+
 
 > DLCRifles
-1, MMG_01_hex_F				//Navid
-1, MMG_01_tan_F				//Navid
-1, MMG_02_black_F				//SPMG
-1, MMG_02_camo_F				//SPMG
-1, MMG_02_sand_F				//SPMG
-6, srifle_DMR_02_camo_F			//MAR10
-6, srifle_DMR_02_F				//MAR10
-6, srifle_DMR_02_sniper_F		//MAR10
-3, srifle_DMR_03_F				//MK1EMR
-3, srifle_DMR_03_khaki_F		//MK1EMR
-3, srifle_DMR_03_tan_F			//MK1EMR
-3, srifle_DMR_03_woodland_F		//MK1EMR
+
+9, srifle_DMR_02_camo_F			//MAR10
+9, srifle_DMR_02_F				//MAR10
+9, srifle_DMR_02_sniper_F		//MAR10
+8, srifle_DMR_03_F				//MK1EMR
+8, srifle_DMR_03_khaki_F		//MK1EMR
+8, srifle_DMR_03_tan_F			//MK1EMR
+8, srifle_DMR_03_woodland_F		//MK1EMR
 7, srifle_DMR_04_F				//ASP1KIR
 7, srifle_DMR_04_Tan_F			//ASP1KIR
-8, srifle_DMR_05_blk_F			//CYRUS
-8, srifle_DMR_05_hex_F			//CYRUS
-8, srifle_DMR_05_tan_F			//CYRUS
+7, srifle_DMR_05_blk_F			//CYRUS
+7, srifle_DMR_05_hex_F			//CYRUS
+7, srifle_DMR_05_tan_F			//CYRUS
 3, srifle_DMR_06_camo_F			//Mk14
 3, srifle_DMR_06_olive_F		//Mk14
 
 > DLCAmmo
-3, 150Rnd_93x64_Mag		//Navid
-3, 130Rnd_338_Mag			//SPMG
-16, 10Rnd_338_Mag			//MAR10
-11, 20Rnd_762x51_Mag		//MK1EMR
-14, 10Rnd_127x54_Mag		//ASP1KIR
-16, 10Rnd_93x64_DMR_05_Mag	//CYRUS
+
+25, 10Rnd_338_Mag			//MAR10
+25, 20Rnd_762x51_Mag		//MK1EMR
+25, 10Rnd_127x54_Mag		//ASP1KIR
+25, 10Rnd_93x64_DMR_05_Mag	//CYRUS
 
 > DLCOptics
 14, optic_AMS
@@ -635,12 +631,18 @@
 40, muzzle_snds_93mmg
 40, muzzle_snds_93mmg_tan
 40, muzzle_snds_B
+
 > EpicWeapons
-4, MMG_01_hex_F				//Navid
-4, MMG_01_tan_F				//Navid
-6, MMG_02_black_F			//SPMG
-6, MMG_02_camo_F			//SPMG
-6, MMG_02_sand_F			//SPMG
+10, srifle_GM6_F			// GM6 Lynx 12.7 mm
+12, srifle_LRR_F			// M320 LRR .408
+10, srifle_LRR_tna_F    	// M320 LRR .408 (Tropic)
+8, srifle_GM6_ghex_F   	// GM6 Lynx 12.7 mm (Green Hex)
+15, MMG_01_hex_F				//Navid
+15, MMG_01_tan_F				//Navid
+14, MMG_02_black_F			//SPMG
+14, MMG_02_camo_F			//SPMG
+14, MMG_02_sand_F			//SPMG
+
 > Bipods
 17, bipod_03_F_oli
 17, bipod_03_F_blk
@@ -743,8 +745,8 @@
 5, TRYK_U_B_3CD_BLK_BDUTshirt2
 5, TRYK_U_B_ACU
 5, TRYK_U_B_ACUTshirt
-5, TRYK_U_B_MARPAT_Wood
-5, TRYK_U_B_MARPAT_Wood_Tshirt
+8, TRYK_U_B_MARPAT_Wood
+8, TRYK_U_B_MARPAT_Wood_Tshirt
 5, TRYK_U_B_MARPAT_Desert
 5, TRYK_U_B_MARPAT_Desert_Tshirt
 5, TRYK_U_B_MARPAT_Desert2
@@ -783,16 +785,16 @@
 5, TRYK_U_pad_hood_BKT2
 5, TRYK_hoodie_Blk
 5, TRYK_hoodie_FR
-5, TRYK_hoodie_Wood
+8, TRYK_hoodie_Wood
 5, TRYK_hoodie_3c
 5, TRYK_T_camo_tan
 5, TRYK_T_camo_3c
-5, TRYK_T_camo_Wood
-5, TRYK_T_camo_wood_marpat
+7, TRYK_T_camo_Wood
+7, TRYK_T_camo_wood_marpat
 5, TRYK_T_camo_Desert_marpat
 5, TRYK_T_camo_3c_BG
 5, TRYK_T_camo_Wood_BG
-5, TRYK_T_camo_wood_marpat_BG
+7, TRYK_T_camo_wood_marpat_BG
 5, TRYK_T_camo_desert_marpat_BG
 5, TRYK_T_PAD
 5, TRYK_T_OD_PAD
@@ -804,7 +806,7 @@
 5, TRYK_U_hood_nc
 5, TRYK_U_hood_mc
 5, TRYK_B_5
-5, TRYK_DMARPAT_T
+6, TRYK_DMARPAT_T
 5, TRYK_C_AOR2_T
 5, TRYK_U_B_Sage_T
 5, TRYK_U_B_Wood_T
@@ -837,10 +839,10 @@
 2, U_C_Driver_1_orange
 
 > CivilianBackpacks
-10, B_OutdoorPack_blk
+9, B_OutdoorPack_blk
 9, B_OutdoorPack_tan
 9, B_OutdoorPack_blu
-8, B_HuntingBackpack
+12, B_HuntingBackpack
 7, B_AssaultPack_khk
 7, B_AssaultPack_dgtl
 7, B_AssaultPack_rgr
@@ -934,7 +936,7 @@
 8, O_NVGoggles_urb_F
 8, O_NVGoggles_ghex_F
 8, NVGoggles_tna_F
-50, ItemCompass
+35, ItemCompass
 
 > GuerillaClothing
 16, U_IG_Guerilla1_1
@@ -944,7 +946,7 @@
 15, U_IG_Guerilla3_1
 15, U_IG_Guerilla3_2
 4, U_IG_leader
-2, U_I_G_resistanceLeader_F
+4, U_I_G_resistanceLeader_F
 5, U_I_C_Soldier_Para_1_F           // Paramilitary Garb (Tee)
 5, U_I_C_Soldier_Para_2_F           // Paramilitary Garb (Jacket)
 5, U_I_C_Soldier_Para_3_F           // Paramilitary Garb (Shirt)
@@ -1176,30 +1178,30 @@
 15, B_Carryall_oucamo
 15, B_Carryall_mcamo
 18, B_Carryall_oli
-18, B_Carryall_khk
-19, B_Carryall_cbr
-19, B_Carryall_ghex_F  
+15, B_Carryall_khk
+15, B_Carryall_cbr
+12, B_Carryall_ghex_F  
 6, B_Bergen_Base_F				
 6, B_Bergen_mcamo_F              
 6, B_Bergen_dgtl_F               
 6, B_Bergen_hex_F                
 6, B_Bergen_tna_F  
-20, TRYK_B_AssaultPack_UCP
-20, TRYK_B_AssaultPack_Type2camo
-20, TRYK_B_AssaultPack_MARPAT_Desert
+15, TRYK_B_AssaultPack_UCP
+15, TRYK_B_AssaultPack_Type2camo
+10, TRYK_B_AssaultPack_MARPAT_Desert
 20, TRYK_B_AssaultPack_MARPAT_Wood
-20, TRYK_B_Kitbag_Base
-20, TRYK_B_Kitbag_blk
-20, TRYK_B_Kitbag_aaf
-20, TRYK_B_Carryall_blk
-20, TRYK_B_Carryall_wh
-20, TRYK_B_Carryall_wood
-20, TRYK_B_Carryall_JSDF
-20, TRYK_B_Kitbag_Base_JSDF
-20, TRYK_B_Coyotebackpack
-20, TRYK_B_Coyotebackpack_OD
-20, TRYK_B_Coyotebackpack_BLK
-20, TRYK_B_Coyotebackpack_WH
+10, TRYK_B_Kitbag_Base
+10, TRYK_B_Kitbag_blk
+10, TRYK_B_Kitbag_aaf
+10, TRYK_B_Carryall_blk
+//20, TRYK_B_Carryall_wh
+15, TRYK_B_Carryall_wood
+10, TRYK_B_Carryall_JSDF
+10, TRYK_B_Kitbag_Base_JSDF
+15, TRYK_B_Coyotebackpack
+15, TRYK_B_Coyotebackpack_OD
+15, TRYK_B_Coyotebackpack_BLK
+//20, TRYK_B_Coyotebackpack_WH
 
 > MilitaryVests
 10, V_PlateCarrier1_blk
@@ -1338,7 +1340,7 @@
 11, U_O_FullGhillie_sard
 11, U_I_FullGhillie_ard
 11, U_I_FullGhillie_lsh
-12, U_I_FullGhillie_sard
+11, U_I_FullGhillie_sard
 5, U_B_T_Sniper_F                   // Ghillie Suit (Tropic) [NATO]
 5, U_B_T_Soldier_F        			// Ghillie Suit (Tropic) [NATO]
 5, U_B_T_FullGhillie_tna_F          // Full Ghillie (Jungle) [NATO]
@@ -1374,10 +1376,10 @@
 34, V_RebreatherIA
 
 > MedicalItems
-2, Exile_Item_InstaDoc
-5, Exile_Item_Bandage
-10, Exile_Item_Vishpirin
-10, Exile_Item_Heatpack
+30, Exile_Item_InstaDoc
+20, Exile_Item_Bandage
+50, Exile_Item_Vishpirin
+//10, Exile_Item_Heatpack
 
 > IndustrialItems
 0.5, Exile_Item_ThermalScannerPro
@@ -1398,16 +1400,16 @@
 10, Exile_Item_WaterCanisterEmpty
 10, Exile_Melee_Shovel
 11, Exile_Item_JunkMetal
-13, Exile_Item_Handsaw
-13, Exile_Item_Pliers
-13, Exile_Item_ScrewDriver
-22, Exile_Melee_Axe
+12, Exile_Item_Handsaw
+10, Exile_Item_Pliers
+10, Exile_Item_ScrewDriver
+20, Exile_Melee_Axe
 
 > Vehicle
-40, Exile_Item_FuelCanisterFull
-50, Exile_Item_FuelCanisterEmpty
-10, Exile_Item_DuctTape
-30, Exile_Item_OilCanister
+30, Exile_Item_FuelCanisterFull
+30, Exile_Item_FuelCanisterEmpty
+20, Exile_Item_DuctTape
+20, Exile_Item_OilCanister
 
 > Chemlights
 25, Chemlight_blue
@@ -1434,8 +1436,8 @@
 100, Exile_Item_ZipTie
 
 > Electronics
-2, Exile_Item_Laptop
-5, Exile_Item_BaseCameraKit
+40, Exile_Item_Laptop
+60, Exile_Item_BaseCameraKit
 
 > Magazine01
 100, Exile_Item_Magazine01
@@ -1447,8 +1449,8 @@
 100, Exile_Item_Magazine04
 
 > Phoneknife
-75, Exile_Item_MobilePhone
-25, Exile_Item_Knife
+70, Exile_Item_MobilePhone
+30, Exile_Item_Knife
 
 > Unused
 3, Exile_Item_CordlessScrewdriver
