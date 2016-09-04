@@ -6,8 +6,6 @@
 ExileRouletteChairs = [];
 ExileRouletteChairPositions = [];
 
-setTimeMultiplier 3;
-
 // 134 Vehicles
 private _vehicles = [
 ["Land_WaterCooler_01_new_F", [2249.94, 8597.73, 1.87218], [0.00569499, -0.999984, 0], [0, 0, 1], false],
