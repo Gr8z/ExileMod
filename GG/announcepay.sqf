@@ -13,7 +13,7 @@ _playerUID = getPlayerUID player;
 				_nextDueDate select 1,
 				_nextDueDate select 2
 			];
-			 ["DueDate",[format["<t color='#878787'>%2</t> territory payment due: <t color='#878787'>%1</t>",_dueDate,_name]]] call BIS_fnc_showNotification;
+			 ["DueDate",[format["<t color='#38A9E1'>%2</t> territory payment due: <t color='#38A9E1'>%1</t>",_dueDate,_name]]] call BIS_fnc_showNotification;
             };
         }
         forEach (allMissionObjects "Exile_Construction_Flag_Static");

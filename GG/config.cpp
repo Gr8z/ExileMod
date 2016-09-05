@@ -86,7 +86,7 @@ class CfgNotifications
         title = "Territory Due Date";
         iconPicture = "GG\images\logo.paa";
         iconText = "";
-        color[] = {1, 1, 1, 1};
+        color[] = {0.01,0.61,0.94,1};
         duration = 5;
         priority = 0;
         difficulty[] = {};
