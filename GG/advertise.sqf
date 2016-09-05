@@ -11,7 +11,7 @@ GGAdsMessages =
                 ["We are waiting for you on our TS Server","TS.ghostzgamerz.com"]
         ];
         _msg = _messageArray select (random (count _messageArray - 1));
-        [[_msg], -.5, .85] call BIS_fnc_typeText;
+        [_msg, -.5, .85] call BIS_fnc_typeText;
 }; 
 sleep 180;
 GGAdsMessagesLoop = [600, GGAdsMessages, [], true] call ExileClient_system_thread_addtask;
