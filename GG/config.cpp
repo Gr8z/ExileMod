@@ -92,7 +92,6 @@ class CfgNotifications
         difficulty[] = {};
     };
 };
-};
 
 class CfgClans
 {
