@@ -26,6 +26,10 @@ _pic = "GG\images\logo.paa";
     3090
 ] spawn bis_fnc_dynamicText;
 
+waitUntil {!isNull findDisplay 46 && !isNil 'ExileClientLoadedIn' && getPlayerUID player != ''};
+uiSleep 30;
+execVM "GG\announcepay.sqf";
+
 // 76 NPCs
 private _npcs = [
 ["Exile_Trader_WasteDump", ["Acts_CivilListening_2"], "Exile_Trader_WasteDump", "Default", [[],[],[],["U_I_C_Soldier_Bandit_4_F",[]],[],[],"H_Hat_grey","",[],["","","","","",""]], [2253.92, 8581.53, 1.44809], [-0.031831, 0.999493, 0], [0, 0, 1]],
@@ -134,6 +138,3 @@ private _npcs = [
     _trader addEventHandler ["AnimDone", {_this call ExileClient_object_trader_event_onAnimationDone}];
 }
 forEach _npcs;
-waitUntil {!isNull findDisplay 46 && !isNil 'ExileClientLoadedIn' && getPlayerUID player != ''};
-uiSleep 30;
-execVM "GG\announcepay.sqf";
