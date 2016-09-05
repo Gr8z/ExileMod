@@ -22,7 +22,7 @@ ExAd_XM8_AirDrop_box3Cost = 30000;
 ExAd_XM8_AirDrop_box3DonorCost = 3000;
 ExAd_XM8_AirDrop_box3WepCount = 3;
  
-ExAd_XM8_AirDrop_rareItem = ["Exile_Item_Laptop","Exile_Item_BaseCameraKit","Exile_Item_Defibrillator","Exile_Item_SafeKit","Exile_Item_CodeLock","Exile_Magazine_Battery"];
+ExAd_XM8_AirDrop_rareItem = ["Exile_Item_Laptop","Exile_Item_BaseCameraKit","Exile_Item_SafeKit","Exile_Item_CodeLock"];
 ExAd_XM8_AirDrop_BoxConstruction = ["Exile_Item_WoodWallKit","Exile_Item_WoodWallHalfKit","Exile_Item_WoodWindowKit","Exile_Item_WorkBenchKit","Exile_Item_WoodFloorPortKit","Exile_Item_WoodFloorKit","Exile_Item_WoodGateKit"];
 ExAd_XM8_AirDrop_BoxTools = ["Exile_Item_Rope","Exile_Item_DuctTape","Exile_Item_ExtensionCord","Exile_Item_FuelCanisterEmpty","Exile_Item_JunkMetal","Exile_Item_LightBulb","Exile_Item_MetalBoard","Exile_Item_MetalPole","Exile_Item_CamoTentKit"];
 ExAd_XM8_AirDrop_BoxFood = ["Exile_Item_EMRE","Exile_Item_GloriousKnakworst","Exile_Item_Surstromming","Exile_Item_SausageGravy","Exile_Item_Catfood","Exile_Item_ChristmasTinner","Exile_Item_BBQSandwich","Exile_Item_Dogfood","Exile_Item_BeefParts","Exile_Item_Cheathas","Exile_Item_Noodles","Exile_Item_SeedAstics","Exile_Item_Raisins","Exile_Item_Moobar","Exile_Item_InstantCoffee","Exile_Item_PlasticBottleCoffee","Exile_Item_PowerDrink","Exile_Item_PlasticBottleFreshWater","Exile_Item_Beer","Exile_Item_EnergyDrink","Exile_Item_MountainDupe"];
