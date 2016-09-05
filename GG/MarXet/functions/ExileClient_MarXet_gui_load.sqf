@@ -49,7 +49,7 @@ switch (_option) do
         _priceEditBox = (_display displayCtrl 21011);
         _priceEditBox ctrlRemoveAllEventHandlers "KeyUp";
         _priceEditBox ctrlSetEventHandler ["KeyUp","
-        if (((count(ctrlText (_this select 0))) > 0) && isNumber(parseNumber(ctrlText (_this select 0))) (parseNumber(ctrlText (_this select 0)) > 1) && (parseNumber(ctrlText (_this select 0)) < 10000000)) then {
+        if (((count(ctrlText (_this select 0))) > 0) && (isNumber(parseNumber(ctrlText (_this select 0)))) (parseNumber(ctrlText (_this select 0)) > 1) && (parseNumber(ctrlText (_this select 0)) < 10000000)) then {
             
             ctrlEnable [21024,true];
 
