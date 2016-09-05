@@ -92,7 +92,7 @@ if ((!isNull _playerObj) && {(_playerUID != "") && {_playerObj isKindOf "Exile_U
 
 	if (DMS_GiveRespectToPlayer_OnAIKill && {_repChange!=0}) then
 	{
-		private _attributes = [[format ["KILLED %1",toUpper(_unitName)],_repChange]];
+		private _attributes = [[format ["KILLED %1","AI"],_repChange]];
 
 		if (DMS_AIKill_DistanceBonusCoefficient>0) then
 		{
@@ -138,7 +138,7 @@ if ((!isNull _playerObj) && {(_playerUID != "") && {_playerObj isKindOf "Exile_U
 			[
 				"%1 killed %2 from %3 meters away and received %4 poptabs, and %5 respect.",
 				name _playerObj,
-				_unitName,
+				"AI",
 				if (_distance isEqualTo []) then {floor(_unit distance _playerObj)} else {_distance},
 				_moneyChange,
 				_repChange
