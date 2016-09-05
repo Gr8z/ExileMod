@@ -620,7 +620,7 @@ switch (_option) do
                         	_forbiddenCharacter = [_newPinCode, "1234567890"] call ExileClient_util_string_containsForbiddenCharacter;
                         	if !(_forbiddenCharacter isEqualTo -1) exitWith
                         	{
-                        		["Whoops",["Forbidden Character in Pin Code!"]] call ExileClient_gui_notification_event_addNotification;
+                                ["ErrorTitleAndText", ["Marketplace", "Forbidden Character in Pin Code!"]] call ExileClient_gui_toaster_addTemplateToast;
                         	};
                             ["DisplayNotification",0,"Rekeying Required",0,"Purchase","Cancel"] call ExileClient_MarXet_gui_load;
                             MarXet_WhichSideAreYouOn = 0;
@@ -677,7 +677,7 @@ switch (_option) do
                 }
                 else
                 {
-                    ["Whoops",["Please set a list price"]] call ExileClient_gui_notification_event_addNotification;
+                    ["ErrorTitleAndText", ["Marketplace", "Please set a list price"]] call ExileClient_gui_toaster_addTemplateToast;
                     MarXet_ListingArray = nil;
                 };
             };
