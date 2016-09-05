@@ -30,6 +30,15 @@ if!(_objVeh setOwner 2)exitWith{format["Get out of the vehicle before storing it
 
 if!(isNil "ExAd_VG_CLEAN_ON_STORE")then{
 	if(ExAd_VG_CLEAN_ON_STORE)then{
+		_backpacks = backpackCargo _objVeh;
+		_magazines = magazineCargo _objVeh;
+		_weapons = weaponsItemsCargo _objVeh;
+		_items = getItemCargo _objVeh;
+		if (!(isNil "_backpacks") || !(isNil "_magazines") || !(isNil "_weapons") || !(isNil "_items")) exitWith
+		{
+			format["Your vehicle's inventory is not empty."] remoteExec ["hint", _owner]; false
+		};
+
 		clearBackpackCargoGlobal _objVeh;
 		clearItemCargoGlobal _objVeh;
 		clearMagazineCargoGlobal _objVeh;
