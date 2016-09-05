@@ -3371,7 +3371,7 @@ class CfgInteractionMenus
 			class HackSafe : ExileAbstractAction
 			{
 				title = "Hack Safe";
-				condition = "call ExAd_fnc_canHackSafe";
+				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo -1)";
 				action = "_this spawn ExAd_fnc_startHack";
 			};
 		};
@@ -3406,7 +3406,7 @@ class CfgInteractionMenus
 			class StopHack: ExileAbstractAction
 			{
 				title = "Interupt Hack";
-				condition = "(ExileClientInteractionObject getVariable ['ExAd_HACKING_IN_PROGRESS', false])";
+				condition = "((([ExileClientInteractionObject, getPlayerUID player] call ExileClient_util_territory_getAccessLevel) select 0) < ExAd_VG_ACCESS_LEVEL)";
 				action = "_this spawn ExAd_fnc_stopHack";
 			};
 		};
