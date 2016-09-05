@@ -79,8 +79,7 @@ class CfgNotifications
 		priority = 0;
 		difficulty[] = {};
 	};
-	class CfgNotifications
-{
+
     class DueDate
     {
         description = "%1";
