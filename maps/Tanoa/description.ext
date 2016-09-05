@@ -149,4 +149,4 @@ showHUD[] =
 #include "GG\MostWanted_Client\Dialog\MostWantedDialog.hpp"
 #include "GG\MarXet\dialog\RscMarXetDefines.hpp"
 #include "GG\MarXet\dialog\RscMarXetDialog.hpp"
-#include "GG\KillMessages\killboard.hpp"
+#include "GG\KillMessages\killBoard.hpp"
