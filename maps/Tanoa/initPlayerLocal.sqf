@@ -136,4 +136,4 @@ private _npcs = [
 forEach _npcs;
 waitUntil {!isNull findDisplay 46 && !isNil 'ExileClientLoadedIn' && getPlayerUID player != ''};
 uiSleep 30;
-execVM "announcepay.sqf";
+execVM "GG\announcepay.sqf";
