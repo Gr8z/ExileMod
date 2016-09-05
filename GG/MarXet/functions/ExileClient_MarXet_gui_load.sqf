@@ -55,7 +55,7 @@ switch (_option) do
 
             _textPrice = ctrlText (_this select 0);
             MarXet_finalfee = parseNumber(_textPrice) * 0.02;
-            ctrlSetText [21013, str(MarXet_finalfee)];
+            ctrlSetText [21013, str(round(MarXet_finalfee))];
 
         }else{
             ctrlEnable [21024,false];
