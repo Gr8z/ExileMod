@@ -1816,7 +1816,7 @@ class Mission
 	    class Item31
 	    {
 	        dataType = "Marker";
-	        position[] = {11912.8, 0, 10322.6};
+	        position[] = {11930.8, 0, 10345.6};
 	        name = "ExileMarker31";
 	        text = "Non-Construction Zone";
 	        markerType = "ELLIPSE";
@@ -1833,7 +1833,7 @@ class Mission
 	    class Item32
 	    {
 	        dataType = "Marker";
-	        position[] = {11912.8, 0, 10322.6};
+	        position[] = {11930.8, 0, 10345.6};
 	        name = "ExileMarker32";
 	        text = "";
 	        type = "ExileConcreteMixerZoneIcon";
