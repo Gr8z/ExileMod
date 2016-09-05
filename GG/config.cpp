@@ -3549,14 +3549,6 @@ class CfgInteractionMenus
 
 		class Actions
 		{
-			/*
-			class Manage : ExileAbstractAction
-			{
-				title = "Manage";
-				condition = "true";
-				action = "_this call ExileClient_gui_baseManagement_event_show";
-			};
-			*/
 			class StealFlag: ExileAbstractAction
 			{
 				title = "Steal Flag";
