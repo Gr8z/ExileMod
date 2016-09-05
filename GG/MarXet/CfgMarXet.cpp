@@ -32,7 +32,7 @@ class CfgMarXet
         /* 
             All items in this list will not be allowed to list in the marketplace
         */
-        blacklist = {
+        blacklist[] = {
             "ItemCompass",
             "ItemMap",
             "Exile_Item_XM8",
