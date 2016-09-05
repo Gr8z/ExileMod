@@ -20,7 +20,7 @@ ZCP_DMS_ExileToasts_Message_Font        = "PuristaLight";           // Exile Toa
 ZCP_AI_useLaunchersChance = 25; // %Change to spawn Launcher on AI soldier ( never exceeds the MIN and MAX defined per cappoint).
 
 // Put the following to -1 to disable it.
-ZCP_AI_killAIAfterMissionCompletionTimer = 60; // Amount of seconds before all ZCP AI get auto killed after a mission is completed. ( DMS only ).
+ZCP_AI_killAIAfterMissionCompletionTimer = -1; // Amount of seconds before all ZCP AI get auto killed after a mission is completed. ( DMS only ).
 
 ZCP_MessagePlayersBeforeWaves = true; // True -> Inform for an icoming wave of AI, false is not inform the players inside.
 
