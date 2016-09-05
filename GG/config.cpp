@@ -2649,7 +2649,6 @@ class CfgExileArsenal
 	class B_Heli_Light_01_armed_F										{ quality = 4; price = 150000; };
 	class B_Heli_Transport_03_F											{ quality = 4; price = 150000; };
 	class B_Heli_Transport_03_black_F									{ quality = 4; price = 150000; };
-	class B_Heli_Light_01_armed_F										{ quality = 4; price = 80000; };
 	
 	///////// Planes /////////
 	class Exile_Plane_Cessna											{ quality = 2; price = 7500; };
@@ -5756,7 +5755,7 @@ class CfgTraderCategories
 			"Exile_Chopper_Orca_BlackCustom",
 			"Exile_Chopper_Mohawk_FIA",
 			"Exile_Chopper_Huron_Black",
-			"Exile_Chopper_Hellcat_Green"
+			"Exile_Chopper_Hellcat_Green",
 			"B_Heli_Light_01_armed_F"
 		};
 	};
