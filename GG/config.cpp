@@ -2944,46 +2944,6 @@ class CfgExileEnvironment
 		};
 	};
 
-	class Namalsk: Altis 
-	{
-		class FireFlies: FireFlies
-		{
-			enable = 1;
-		};
-
-		class Anomalies: Anomalies
-		{
-			enable = 1;
-		};
-
-		class Breathing: Breathing
-		{
-			enable = 1;
-		};
-
-		class Snow: Snow
-		{
-			enable = 1;
-			surfaces[] = {"#nam_snow"};
-		};
-
-		class Radiation: Radiation
-		{
-			enable = 1;
-			contaminatedZones[] = 
-			{
-				{{3960.14,	8454.75,	152.862}, 	80, 	140},	// Object A1
-				{{4974.70,	6632.82,	4.74293}, 	40, 	150},	// Object A2
-				{{6487.92,	9302.03,	36.0014}, 	60, 	110}	// Sebjan Chemical Factory
-			};
-		};
-
-		class Temperature: Temperature
-		{
-			daytimeTemperature[] = {-2.00,-1.77,-1.12,-0.10,1.24,2.78,4.40,6.00,7.46,8.65,9.50,9.90,9.90,9.50,8.65,7.46,6.00,4.40,2.78,1.24,-0.10,-1.12,-1.77,-2.00,-2.00};
-		};
-	};
-
 	class Tanoa: Altis
 	{
 		class FireFlies: FireFlies
