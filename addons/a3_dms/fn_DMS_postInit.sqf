@@ -253,8 +253,3 @@ for "_i" from 1 to DMS_RandomBanditMissionsOnStart do
 {
 	[selectRandom DMS_BanditMissionTypesArray] call DMS_fnc_SpawnBanditMission;
 };
-
-
-
-
-format ["DMS post-init complete. productVersion: %1 | infiSTAR version: %2", productVersion, if (!isNil "INFISTARVERSION") then {INFISTARVERSION} else {"not installed"}] call DMS_fnc_DebugLog;
