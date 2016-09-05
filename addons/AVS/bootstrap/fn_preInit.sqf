@@ -17,8 +17,8 @@ private ["_worldFound", "_processVehicleSpawn"];
 AVS_Version = (configFile >> "CfgPatches" >> "AVS" >> "AVS_Version") call BIS_fnc_GetCfgData;
 diag_log format ["AVS - Loading AVS version: %1", AVS_Version];
 
-AVS_configuration = compileFinal (preprocessFileLineNumbers "GG\AVS\AVS_configuration.sqf");
-AVS_fnc_getConfigLoadout = compileFinal (preprocessFileLineNumbers "AVS\AVS_fnc_getConfigLoadout.sqf");
+AVS_configuration = compileFinal (preprocessFileLineNumbers "AVS\AVS_configuration.sqf");
+AVS_fnc_getConfigLoadout = compileFinal (preprocessFileLineNumbers "GG\AVS\AVS_fnc_getConfigLoadout.sqf");
 
 call AVS_configuration;
 
