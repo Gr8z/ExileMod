@@ -76,7 +76,7 @@ ZCP_CapPoints = [
     [
         "Battlezone", // name (0)
         [[10000,10000,0],[10000,10000,0]], // [[x,y,z],[x,y,z]] if using static location (1)
-        ["Reputation","Poptabs"], // Reward -> Random, Poptabs, Vehicle, Buildingbox, WeaponBox , BigWeaponBox, SniperWeaponBox (2)
+        ["Reputation"], // Reward -> Random, Poptabs, Vehicle, Buildingbox, WeaponBox , BigWeaponBox, SniperWeaponBox (2)
         "alpha", // unique varname -> this gets checked and fixed automaticly on server start ( so don't really worry about it ).
         0, // unique index -> this gets checked and fixed automaticly on server start ( so don't really worry about it ).
         true, // spawnAI on start of the missions ( NEEDS AI system for this ) (5)
@@ -85,7 +85,7 @@ ZCP_CapPoints = [
         -1, // capradius if you use a specific static basefile. -> put -1 if you want to use the corresponding one from the ZCP_Capbasses array).
         -1, // max terrainGradient -> when specific static basefile is used (9) -> put -1 if you want to use the corresponding one from the ZCP_Capbasses array).
         -1, // distancefromojects -> when specific static basefile is used (10) -> put -1 if you want to use the corresponding one from the ZCP_Capbasses array).
-        120, // captime in seconds for this mission (11)
+        600, // captime in seconds for this mission (11)
         2, // Minimum amount of AI at the start of mission (12)
         4, // Maximum amount of AI at start of mission ( If you want it to always be a number change MIN and MAX to the same number. )
         false, // deploy smoke on the circle border when mission is finished (14)
