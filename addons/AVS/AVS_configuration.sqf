@@ -62,6 +62,8 @@ AVS_GlobalAmmoBlacklist =
 AVS_VehicleWeaponBlacklist =
 [
 //	["VehicleClassName", ["WeaponClassName1", "WeaponClassName2", ...]]
+	["B_Heli_Light_01_armed_F", ["missiles_DAR"]],
+	["B_Boat_Armed_01_minigun_F", ["GMG_40mm"]]
 ];
 
 // You may remove specific ammo classes from specific vehicle classes here.
@@ -88,11 +90,16 @@ AVS_DisableStockRearm = true;
 AVS_RearmObjects =
 [
 //	"ClassName"
-	//"Land_fs_feed_F"	// Gas station pump.
-	"Land_Hangar_F",
-	"Land_TentHangar_V1_F",
 	"Land_HelipadSquare_F",
-	"Land_HelipadCircle_F"
+	"Land_HelipadEmpty_F",
+	"O_Truck_03_covered_F",
+	"Land_CarService_F",
+	"Land_fs_roof_F",
+	"Land_fs_feed_F",
+	"CargoNet_01_barrels_F",
+	"Exile_Trader_Vehicle",
+	"Land_A_FuelStation_Feed",
+	"Land_A_FuelStation_Shed"
 ];
 
 // Default cost of a magazine if not found in AVS_RearmCosts

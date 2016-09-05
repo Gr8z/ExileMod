@@ -16,8 +16,6 @@ _direction = _this select 2;
 _usePositionATL = _this select 3;
 _pinCode = _this select 4;
 _vehicleObject = [_className, _position, _direction, _usePositionATL] call ExileServer_object_vehicle_carefulCreateVehicle;
-_vehicleObject removeWeaponTurret ["missiles_DAR",[-1]];
-_vehicleObject removeWeaponTurret ["GMG_40mm", [0]];
 _vehicleObject setVariable ["ExileIsPersistent", true];
 _vehicleObject setVariable ["ExileAccessCode", _pinCode];
 _vehicleObject addEventHandler ["GetOut", {_this call ExileServer_object_vehicle_event_onGetOut}];
