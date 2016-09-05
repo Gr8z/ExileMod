@@ -37,8 +37,8 @@ if(isNil "ExAd_HACKING_FAILED_HACK")then{ExAd_VG_ACCESS_LEVEL = 1;}; /*Needs to 
 ["STR_ExAd_HACKING_NOTI_TERRITORY_ONE_HACK", "Wi-Fi occupied!!"] call ExAd_fnc_localize;
 ["STR_ExAd_HACKING_NOTI_MAX_SIM_HACKS", "The laptop overloaded and got destroyed! Another hacker is already using the grid."] call ExAd_fnc_localize;
 ["STR_ExAd_HACKING_NOTI_NO_PLAYER_PRESENT", "No Wi-Fi available!"] call ExAd_fnc_localize;
-["STR_ExAd_HACKING_HINT_TITLE", "Hack Activity"] call ExAd_fnc_localize;
-["STR_ExAd_HACKING_HINT_HACK_START", "A brute force hack is detected on the grid!"] call ExAd_fnc_localize;
+["STR_ExAd_HACKING_HINT_TITLE", "Base Raid"] call ExAd_fnc_localize;
+["STR_ExAd_HACKING_HINT_HACK_START", "A brute force hack on a territory is detected on the map!"] call ExAd_fnc_localize;
 ["STR_ExAd_HACKING_NOTI_VG_SUCCESS", "Hack successful! The Virtual Garage unloaded a %1"] call ExAd_fnc_localize;
 ["STR_ExAd_HACKING_NOTI_VG_NO_VEH", "Hack successful! No vehicles were stored in the Virtual Garage."] call ExAd_fnc_localize;
 ["STR_ExAd_HACKING_NOTI_SAFE_SUCCESS", "Hack successful! The safe is now unlocked."] call ExAd_fnc_localize;
