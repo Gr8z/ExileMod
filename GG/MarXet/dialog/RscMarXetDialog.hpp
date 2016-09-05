@@ -66,7 +66,7 @@ class RscMarXetDialog
 		{
 			idc = 21008;
 
-			text = "<t font='OrbitronLight' size='0.7'><t size='1' align='center'>WELCOME!</t><br/>Buying:<br/>Choose your new purchase in the list to the right and click purchase.<br/>Listing/Selling:<br/>Click your desired item/vehicle you want to list on the left<br/>Set your price and click Confirm Listing<br/>You can buy back your item anytime for free.<br/><br/><t color='#ff0000'>WARNING:</t><br/>Any items in vehicles or any attachments on weapons will be deleted upon listing!</t>";
+			text = "<t font='OrbitronLight' size='0.7'>Buying:<br/>Choose your new purchase in the list to the right and click purchase.<br/>Listing/Selling:<br/>Click your desired item/vehicle you want to list on the left<br/>Set your price and click Confirm Listing<br/>You can buy back your item anytime for free.<br/><br/><t color='#ff0000'>WARNING:</t><br/>Any items in vehicles or any attachments on weapons will be deleted upon listing!</t>";
 			x = 0.412344 * safezoneW + safezoneX;
 			y = 0.346 * safezoneH + safezoneY;
 			w = 0.175313 * safezoneW;
