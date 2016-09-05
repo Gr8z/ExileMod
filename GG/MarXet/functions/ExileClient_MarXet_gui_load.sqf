@@ -27,7 +27,6 @@ switch (_option) do
         MarXet_Poptab = 0;
         MarXet_WhichSideAreYouOn = 0;
         MarXet_Sorting = 0;
-        MarXet_feePercent = 0.10;
 
         ["LoadDropdown","Left"] call ExileClient_MarXet_gui_load;
         ["LoadDropdown","Right"] call ExileClient_MarXet_gui_load;
@@ -53,8 +52,8 @@ switch (_option) do
         if ((count(ctrlText (_this select 0))) > 0) then {
             ctrlEnable [21024,true];
 
-            _textPrice = ctrlText _priceEditBox;
-            MarXet_finalfee = _textPrice * MarXet_feePercent;
+            _textPrice = parseNumber(ctrlText _priceEditBox);
+            MarXet_finalfee = _textPrice * 0.10;
             _listingFeeEditBox  ctrlSetText MarXet_finalfee;
 
         }else{
