@@ -119,7 +119,7 @@ ZCP_CapPoints = [
 
 ZCP_MaxMissions = 1; // Amount of cap points at the same time when ZCP_MaxMissionsRelativeToPlayers = false
 
-ZCP_Minimum_Online_Players = 15; // Amount of players to be online before it allows to spawn a capture point. !!! O = always
+ZCP_Minimum_Online_Players = 1; // Amount of players to be online before it allows to spawn a capture point. !!! O = always
 
 ZCP_MaxMissionsRelativeToPlayers = false; // ZCP_MaxMissions will be ignored if true. ZCP_RelativeMaxMissions will be used
 ZCP_RelativeMaxMissions = [
