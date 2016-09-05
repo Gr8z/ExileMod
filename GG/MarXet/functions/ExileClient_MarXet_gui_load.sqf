@@ -650,48 +650,53 @@ switch (_option) do
             };
             case 1:
             {
-                private ["_dropdown","_dropdownIndex","_location","_vehicle","_listingFeeEditBox","_clientMoney"];
+                private ["_dropdown","_dropdownIndex","_location","_vehicle","_blacklist","_clientMoney"];
                 MarXet_ListingArray = [];
                 ctrlEnable [21024,false];
                 ctrlEnable [21011,false];
                 _dropdown = _display displayCtrl 21019;
                 _dropdownIndex = lbCurSel _dropdown;
                 _location = _dropdown lbValue _dropdownIndex;
-                _listingFeeEditBox = (_display displayCtrl 21013);
                 _clientMoney = player getVariable ["ExileMoney",0];
-                if (_clientMoney < MarXet_finalfee) then {
-                    ["ErrorTitleAndText", ["Marketplace", "You don't have enough money to pay the fee"]] call ExileClient_gui_toaster_addTemplateToast;
+                _blacklist = getArray(missionConfigFile >> "CfgMarXet" >> "Settings" >> "blacklist");
+                if ((MarXet_TempListingClassname select 0) in _blacklist) then {
+                    ["ErrorTitleAndText", ["Marketplace", "It is Forbidden to place that item in the marketplace."]] call ExileClient_gui_toaster_addTemplateToast;
                     MarXet_ListingArray = nil;
                 } else {
-                    if !(parseNumber(ctrlText 21011) isEqualTo 0) then
-                    {
-                        _vehicle = false;
-                        if (count(MarXet_TempListingClassname) isEqualTo 1) then
-                        {
-                            MarXet_ListingArray = [MarXet_TempListingClassname select 0,str(abs(parseNumber(ctrlText 21011))),_location];
-                        }
-                        else
-                        {
-                            MarXet_ListingArray = [MarXet_TempListingClassname select 0,str(abs(parseNumber(ctrlText 21011))),_location,MarXet_TempListingClassname select 1];
-                            _vehicle = true;
-                        };
-                        if (!(MarXet_Confirmed) && _vehicle) then
-                        {
-                            ["DisplayNotification",0,"Please Confirm",1,"List it!","Nevermind"] call ExileClient_MarXet_gui_load;
-                            MarXet_WhichSideAreYouOn = 1;
-                        }
-                        else
-                        {
-                            ["createNewListingRequest",[MarXet_ListingArray]] call ExileClient_system_network_send;
-                            ["buyRequest",[str(MarXet_finalfee)]] call ExileClient_system_network_send;
-                            MarXet_ListingArray = nil;
-                            MarXet_Confirmed = false;
-                        };
-                    }
-                    else
-                    {
-                        ["ErrorTitleAndText", ["Marketplace", "Please set a list price"]] call ExileClient_gui_toaster_addTemplateToast;
+                    if (_clientMoney < MarXet_finalfee) then {
+                        ["ErrorTitleAndText", ["Marketplace", "You don't have enough money to pay the fee"]] call ExileClient_gui_toaster_addTemplateToast;
                         MarXet_ListingArray = nil;
+                    } else {
+                        if !(parseNumber(ctrlText 21011) isEqualTo 0) then
+                        {
+                            _vehicle = false;
+                            if (count(MarXet_TempListingClassname) isEqualTo 1) then
+                            {
+                                MarXet_ListingArray = [MarXet_TempListingClassname select 0,str(abs(parseNumber(ctrlText 21011))),_location];
+                            }
+                            else
+                            {
+                                MarXet_ListingArray = [MarXet_TempListingClassname select 0,str(abs(parseNumber(ctrlText 21011))),_location,MarXet_TempListingClassname select 1];
+                                _vehicle = true;
+                            };
+                            if (!(MarXet_Confirmed) && _vehicle) then
+                            {
+                                ["DisplayNotification",0,"Please Confirm",1,"List it!","Nevermind"] call ExileClient_MarXet_gui_load;
+                                MarXet_WhichSideAreYouOn = 1;
+                            }
+                            else
+                            {
+                                ["createNewListingRequest",[MarXet_ListingArray]] call ExileClient_system_network_send;
+                                ["buyRequest",[str(MarXet_finalfee)]] call ExileClient_system_network_send;
+                                MarXet_ListingArray = nil;
+                                MarXet_Confirmed = false;
+                            };
+                        }
+                        else
+                        {
+                            ["ErrorTitleAndText", ["Marketplace", "Please set a list price"]] call ExileClient_gui_toaster_addTemplateToast;
+                            MarXet_ListingArray = nil;
+                        };
                     };
                 };
             };

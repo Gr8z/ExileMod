@@ -28,5 +28,17 @@ class CfgMarXet
             Default (0) uses Exile's default position function
         */
         staticVehicleSpawning = 0;
+
+        /* 
+            All items in this list will not be allowed to list in the marketplace
+        */
+        blacklist = {
+            "ItemCompass",
+            "ItemMap",
+            "Exile_Item_XM8",
+            "ItemRadio",
+            "Exile_Item_PlasticBottleFreshWater",
+            "Exile_Uniform_BambiOverall"
+        }
     };
 };
