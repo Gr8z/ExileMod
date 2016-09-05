@@ -33,10 +33,9 @@ if(SC_mapMarkers) then
     
     _marker = createMarker [format ["%1", _locationName],_pos];
     _marker setMarkerShape "Icon";
-    _marker setMarkerSize [3,3];
+    _marker setMarkerSize [0.8,0.8];
     _marker setMarkerType "mil_dot";
     _marker setMarkerBrush "Solid";
-    _marker setMarkerText _markerName;
     _marker setMarkerColor _markerColour;
     _marker setMarkerAlpha 0.5;
         
