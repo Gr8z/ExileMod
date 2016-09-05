@@ -85,6 +85,9 @@ switch (_option) do
         _priceEditBox = (_display displayCtrl 21011);
         _priceEditBox ctrlEnable false;
         _priceEditBox ctrlSetText "";
+        _listingFeeEditBox = (_display displayCtrl 21013);
+        _listingFeeEditBox ctrlEnable false;
+        _listingFeeEditBox ctrlSetText "";
         _title = _display displayCtrl 21009;
         _title ctrlSetText "";
         _dropdown = _display displayCtrl 21016;
@@ -220,6 +223,9 @@ switch (_option) do
         _priceEditBox = (_display displayCtrl 21011);
         _priceEditBox ctrlEnable false;
         _priceEditBox ctrlSetText "";
+        _listingFeeEditBox = (_display displayCtrl 21013);
+        _listingFeeEditBox ctrlEnable false;
+        _listingFeeEditBox ctrlSetText "";
         _title = _display displayCtrl 21009;
         _title ctrlSetText "";
         _dropdown = _display displayCtrl 21019;
