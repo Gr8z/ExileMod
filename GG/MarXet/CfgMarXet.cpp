@@ -39,6 +39,6 @@ class CfgMarXet
             "ItemRadio",
             "Exile_Item_PlasticBottleFreshWater",
             "Exile_Uniform_BambiOverall"
-        }
+        };
     };
 };
