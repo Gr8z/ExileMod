@@ -49,15 +49,17 @@ switch (_option) do
         _priceEditBox = (_display displayCtrl 21011);
         _priceEditBox ctrlRemoveAllEventHandlers "KeyUp";
         _priceEditBox ctrlSetEventHandler ["KeyUp","
-        if ((count(ctrlText (_this select 0))) > 0) then {
+        if (((count(ctrlText (_this select 0))) > 0) && (parseNumber(ctrlText (_this select 0)) isEqualTo 0) && (parseNumber(ctrlText (_this select 0)) < 10000000)) then {
+            
             ctrlEnable [21024,true];
 
-            _textPrice = parseNumber(ctrlText _priceEditBox);
+            _textPrice = str(abs(parseNumber(ctrlText (_this select 0))));
             MarXet_finalfee = _textPrice * 0.10;
-            _listingFeeEditBox  ctrlSetText MarXet_finalfee;
+            ctrlSetText [21013, MarXet_finalfee];
 
         }else{
             ctrlEnable [21024,false];
+            ctrlSetText [21013, '0'];
         };
 
         "];
