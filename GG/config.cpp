@@ -85,7 +85,7 @@ class CfgNotifications
     {
         description = "%1";
         title = "Territory Due Date";
-        iconPicture = "\A3\ui_f\data\map\mapcontrol\logo.paa";
+        iconPicture = "GG\images\logo.paa";
         iconText = "";
         color[] = {1, 1, 1, 1};
         duration = 5;
