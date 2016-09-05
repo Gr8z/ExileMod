@@ -16,6 +16,7 @@
 "C:\Program Files\PBO Manager v.1.4 beta\PBOConsole.exe" -pack "C:\ExileMod\addons\MarXet_Server" "D:\a3Server\@ExileServer\addons\MarXet_Server.pbo"
 "C:\Program Files\PBO Manager v.1.4 beta\PBOConsole.exe" -pack "C:\ExileMod\addons\a3_exile_occupation" "D:\a3Server\@ExileServer\addons\a3_exile_occupation.pbo"
 "C:\Program Files\PBO Manager v.1.4 beta\PBOConsole.exe" -pack "C:\ExileMod\addons\XG_killboard" "D:\a3Server\@ExileServer\addons\XG_killboard.pbo"
+"C:\Program Files\PBO Manager v.1.4 beta\PBOConsole.exe" -pack "C:\ExileMod\addons\AVS" "D:\a3Server\@ExileServer\addons\AVS.pbo"
 
 echo Creating new PBOs 
 
