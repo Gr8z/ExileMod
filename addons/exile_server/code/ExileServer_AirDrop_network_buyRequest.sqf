@@ -12,7 +12,7 @@
 private["_sessionID","_parameters","_player","_playerMoney","_amount"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
-_amount = _parameters select 0;
+_amount = parseNumber(_parameters select 0);
 try 
 {
 	_player = _sessionID call ExileServer_system_session_getPlayerObject;
