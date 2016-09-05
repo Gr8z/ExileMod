@@ -60,7 +60,7 @@ class CfgMarXet
 			"Exile_Item_Raisins",
 			"Exile_Item_Moobar",
 			"Exile_Item_CockONut",
-			"Exile_Item_InstantCoffee"		
+			"Exile_Item_InstantCoffee",		
             "Exile_Item_PlasticBottleCoffee",
 			"Exile_Item_PowerDrink",
 			"Exile_Item_PlasticBottleFreshWater",
