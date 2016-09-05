@@ -18,16 +18,16 @@ try
 	_player = _sessionID call ExileServer_system_session_getPlayerObject;
 	if (_player isEqualTo objNull) then
 	{
-		throw 1;
+		throw "You do not exist! :)";
 	};
 	if !(alive _player) then
 	{
-		throw 2;
+		throw "Player not alive";
 	};
 	_playerMoney = _player getVariable ["ExileMoney", 0]; 
 	if (_playerMoney < _amount) then
 	{
-		throw 3;
+		throw "Not Enough Money";
 	};
 	_playerMoney = _playerMoney - _amount;
 	_player setVariable ["ExileMoney", _playerMoney, true];
@@ -35,6 +35,6 @@ try
 }
 catch
 {
-	[_sessionID, "toastRequest", ["ErrorTitleAndText", ["Air Drop", [format["%1",_exception]]]]] call ExileServer_system_network_send_to;
+	[_sessionID, "toastRequest", ["ErrorTitleAndText", ["Air Drop", _exception]]] call ExileServer_system_network_send_to;
 };
 true
