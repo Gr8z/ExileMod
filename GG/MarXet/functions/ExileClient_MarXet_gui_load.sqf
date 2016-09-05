@@ -27,6 +27,8 @@ switch (_option) do
         MarXet_Poptab = 0;
         MarXet_WhichSideAreYouOn = 0;
         MarXet_Sorting = 0;
+        MarXet_feePercent = 0.10;
+
         ["LoadDropdown","Left"] call ExileClient_MarXet_gui_load;
         ["LoadDropdown","Right"] call ExileClient_MarXet_gui_load;
         ["LoadDropdown","Sort"] call ExileClient_MarXet_gui_load;
@@ -44,16 +46,26 @@ switch (_option) do
         _leftDropdown = (_display displayCtrl 21019);
         _leftDropdown ctrlRemoveAllEventHandlers "LBSelChanged";
         _leftDropdown ctrlSetEventHandler ["LBSelChanged", "[""LoadLeft""] call ExileClient_MarXet_gui_load;"];
+        _listingFeeEditBox = (_display displayCtrl 21013);
         _priceEditBox = (_display displayCtrl 21011);
         _priceEditBox ctrlRemoveAllEventHandlers "KeyUp";
-        _priceEditBox ctrlSetEventHandler ["KeyUp","if ((count(ctrlText (_this select 0))) > 0) then {ctrlEnable [21024,true];}else{ctrlEnable [21024,false];};"];
+        _priceEditBox ctrlSetEventHandler ["KeyUp","
+        if ((count(ctrlText (_this select 0))) > 0) then {
+            ctrlEnable [21024,true];
+
+            _textPrice = ctrlText _priceEditBox;
+            MarXet_finalfee = _textPrice * MarXet_feePercent;
+            _listingFeeEditBox  ctrlSetText MarXet_finalfee;
+
+        }else{
+            ctrlEnable [21024,false];
+        };
+
+        "];
         _pinCodeEditBox = (_display displayCtrl 21032);
         _pinCodeEditBox ctrlRemoveAllEventHandlers "KeyUp";
         _pinCodeEditBox ctrlSetEventHandler ["KeyUp","if ((count(ctrlText (_this select 0))) isEqualTo 4) then {ctrlEnable [21014,true];}else{ctrlEnable [21014,false];};"];
-		_listingFeeEditBox = (_display displayCtrl 21013);
-        _listingFeeEditBox ctrlRemoveAllEventHandlers "KeyUp";
-        _listingFeeEditBox ctrlSetEventHandler ["KeyUp","if ((count(ctrlText (_this select 0))) isEqualTo 4) then {ctrlEnable [21014,true];}else{ctrlEnable [21014,false];};"];
-        _sortingDropdown = (_display displayCtrl 21033);
+		_sortingDropdown = (_display displayCtrl 21033);
         _sortingDropdown ctrlRemoveAllEventHandlers "LBSelChanged";
         _sortingDropdown ctrlSetEventHandler ["LBSelChanged", "[""Sort""] call ExileClient_MarXet_gui_load;"];
         _purchaseBtn = _display displayCtrl 21014;

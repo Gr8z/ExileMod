@@ -263,6 +263,6 @@ switch (toLower worldName) do {
 	_x addWeapon "srifle_DMR_04_F";
 	_x addPrimaryWeaponItem "optic_LRPS";
 	_x addWeapon "hgun_ACPC2_F";
-	_x addAction ["<img image='\a3\ui_f\data\IGUI\Cfg\Actions\reammo_ca.paa' size='1' shadow='false' />Access MarXet","createDialog 'RscMarXetDialog'","",1,false,true,"","((position player) distance _target) <= 4"];
+	_x addAction ["<img image='\a3\ui_f\data\IGUI\Cfg\Actions\reammo_ca.paa' size='1' shadow='false' />Access Marketplace","createDialog 'RscMarXetDialog'","",1,false,true,"","((position player) distance _target) <= 4"];
 } forEach _traders;
 [format["MarXet Traders have been placed. Trader count: %1. Map: %2",(count(_traders)),worldName],"Client Traders"] call ExileClient_MarXet_util_log;
