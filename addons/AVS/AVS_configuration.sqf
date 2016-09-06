@@ -78,7 +78,7 @@ AVS_VehicleAmmoBlacklist =
 AVS_RearmSystemActive = true;
 
 // Distance away from an object to get the rearm option.
-AVS_RearmDistance = 20;
+AVS_RearmDistance = 40;
 
 // Number of seconds it takes to rearm. (NOT YET IMPLEMENTED)
 AVS_RearmTime = 15;
@@ -144,7 +144,7 @@ AVS_RefuelSystemActive = true;
 // Use AVS to fill Fuel-Canister with AVS Refuel Objects (Gas Station Pump). It's active only if AVS Refuel System is active too.
 AVS_FillCanisterActive = true; // Remember to disable "Exile fill canister empty", to do this see Installation.txt
 
-AVS_RefuelDistance = 20;	//  maximum distance to refuel. It doesn't affect the choppers that refuel on roof.
+AVS_RefuelDistance = 40;	//  maximum distance to refuel. It doesn't affect the choppers that refuel on roof.
 AVS_RefuelObjects =
 [
 	//"Land_fs_feed_F", 			// Gas Station Pump (Altis)
