@@ -17,7 +17,7 @@ ZCP_DMS_ExileToasts_Message_Size        = 19;                   // Exile Toasts 
 ZCP_DMS_ExileToasts_Message_Font        = "PuristaLight";           // Exile Toasts font for "ExileToast" client notification type.
 /*Exile Toasts Notification Settings*/
 
-ZCP_AI_useLaunchersChance = 0; // %Change to spawn Launcher on AI soldier ( never exceeds the MIN and MAX defined per cappoint).
+ZCP_AI_useLaunchersChance = 5; // %Change to spawn Launcher on AI soldier ( never exceeds the MIN and MAX defined per cappoint).
 
 // Put the following to -1 to disable it.
 ZCP_AI_killAIAfterMissionCompletionTimer = -1; // Amount of seconds before all ZCP AI get auto killed after a mission is completed. ( DMS only ).
