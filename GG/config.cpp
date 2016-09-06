@@ -7022,7 +7022,8 @@ class CfgTraderCategories
 			"Exile_Car_ProwlerUnarmed",
 			"Exile_Car_QilinUnarmed",
 			"Exile_Car_MB4WD",
-			"Exile_Car_MB4WDOpen"
+			"Exile_Car_MB4WDOpen",
+			"B_LSV_01_armed_F"
 		};
 	};
 
@@ -7061,8 +7062,7 @@ class CfgTraderCategories
 			"Exile_Chopper_Orca_BlackCustom",
 			"Exile_Chopper_Mohawk_FIA",
 			"Exile_Chopper_Huron_Black",
-			"Exile_Chopper_Hellcat_Green",
-			"B_Heli_Light_01_armed_F"
+			"Exile_Chopper_Hellcat_Green"
 		};
 	};
 
