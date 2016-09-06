@@ -124,7 +124,7 @@
 2, DLCOptics
 2, DLCSupressor
 2, Bipods
-1, Explosives
+1.5, Explosives
 0.01, Magazine03
 
 ///////////////////////////////////////////////////////////////////////////////

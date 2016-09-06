@@ -701,6 +701,8 @@
 12, DemoCharge_Remote_Mag
 12, IEDUrbanSmall_Remote_Mag
 12, IEDLandSmall_Remote_Mag
+15, ClaymoreDirectionalMine_Remote_Mag
+15, MineDetector
 15, APERSMine_Range_Mag
 15, APERSBoundingMine_Range_Mag
 15, APERSTripMine_Wire_Mag

@@ -4079,12 +4079,12 @@ class CfgInteractionMenus
 				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo 0)";
 				action = "_this spawn ExileClient_object_lock_setPin";
 			};
-			class HackSafe : ExileAbstractAction
+			/*class HackSafe : ExileAbstractAction
 			{
 				title = "Hack Safe";
 				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo -1)";
 				action = "_this spawn ExAd_fnc_startHack";
-			};
+			}; */
 			class RaidSafe : ExileAbstractAction
 			{
 				title = "Attempt Lockpicking";
@@ -4243,12 +4243,12 @@ class CfgInteractionMenus
 				condition = "(!((ExileClientInteractionObject getVariable ['ExileConstructionDamage',0]) isEqualTo 0)) && (call ExileClient_util_world_isInOwnTerritory)";
 				action = "_this call ExileClient_object_construction_repair";
 			};
-			class RaidDoor : ExileAbstractAction
+			/*class RaidDoor : ExileAbstractAction
 			{
 				title = "Attempt Break In";
 				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo -1)";
 				action = "[ExileClientInteractionObject,'door'] execVM 'GG\HEG_Xbrm_client\functions\Xbrm_lockpick_init.sqf'";
-			};
+			}; */
 		};
 	};
 
