@@ -1338,6 +1338,7 @@ class CfgCraftingRecipes
 			{1, "Exile_Item_Magazine04"}
 	    };
 	    category = "Tools & Items";
+	};
 };
 class CfgExileArsenal
 {
