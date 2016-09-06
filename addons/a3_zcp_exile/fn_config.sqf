@@ -71,7 +71,7 @@ ZCP_CapPoints = [
     [
         "Battlezone", // name (0)
         [[10000,10000,0],[10000,10000,0]], // [[x,y,z],[x,y,z]] if using static location (1)
-        ["Reputation","Random"], // Reward -> Random, Poptabs, Vehicle, Buildingbox, WeaponBox , BigWeaponBox, SniperWeaponBox (2)
+        ["Reputation","Vehicle"], // Reward -> Random, Poptabs, Vehicle, Buildingbox, WeaponBox , BigWeaponBox, SniperWeaponBox (2)
         "alpha", // unique varname -> this gets checked and fixed automaticly on server start ( so don't really worry about it ).
         0, // unique index -> this gets checked and fixed automaticly on server start ( so don't really worry about it ).
         true, // spawnAI on start of the missions ( NEEDS AI system for this ) (5)

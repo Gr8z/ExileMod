@@ -14,6 +14,7 @@ if (!hasInterface || isServer) exitWith {};
 [] execVM "GG\StatusBar\statusBar.sqf";
 [] execVM "GG\welcome.sqf";
 [] execvm "GG\advertise.sqf";
+[] execVM "GG\announcepay.sqf";
 
 _pic = "GG\images\logo.paa";
 [
@@ -134,6 +135,3 @@ private _npcs = [
     _trader addEventHandler ["AnimDone", {_this call ExileClient_object_trader_event_onAnimationDone}];
 }
 forEach _npcs;
-waitUntil {!isNull findDisplay 46 && !isNil 'ExileClientLoadedIn' && getPlayerUID player != ''};
-uiSleep 10;
-execVM "GG\announcepay.sqf";
