@@ -27,14 +27,7 @@ if(isNil "ExAd_HALOPARACHUTE_USE_KEY_ACTIONS")then{ExAd_HALOPARACHUTE_USE_KEY_AC
 if(isNil "ExAd_ACTION_PARACHUTE_HEIGHT")then{ExAd_ACTION_PARACHUTE_HEIGHT = 10;};
 if(isNil "ExAd_ACTION_EJECT_HEIGHT")then{ExAd_ACTION_EJECT_HEIGHT = 0;};
 
-[] spawn {
-	while {true} do {
-		waitUntil{!isNil "ExileClientLoadedIn"};
-		UISleep 0.1;
-		waitUntil{ExileClientLoadedIn};
-		UISleep 0.1;
-		waitUntil{alive player};
-		
+ExAd_HaloLoop = {		
 		if(ExAd_HALOPARACHUTE_USE_ACTIONS)then{
 			ExAd_ACTION_PARACHUTE = player addaction [format["<t color='#E48A36'><img image='\a3\ui_f\data\gui\cfg\CommunicationMenu\supplydrop_ca.paa' />%1</t>", "Open Parachute"], {[] spawn ExAd_fnc_pullParachute}, [], 6, true, true, "", "call ExAd_fnc_showParachute"];
 			ExAd_ACTION_EJECT = player addaction [format["<t color='#E48A36'><img image='\a3\ui_f\data\gui\cfg\CommunicationMenu\supplydrop_ca.paa' />%1</t>", "Halo Jump"], {call ExAd_fnc_ejectPlayer}, [], 6, false, true, "", "call ExAd_fnc_showEject;"];
@@ -54,14 +47,15 @@ if(isNil "ExAd_ACTION_EJECT_HEIGHT")then{ExAd_ACTION_EJECT_HEIGHT = 0;};
 			}];
 		};
 		
-		waitUntil{!alive player};
-		if(ExAd_HALOPARACHUTE_USE_ACTIONS)then{
-			player removeAction ExAd_ACTION_PARACHUTE;
-			player removeAction ExAd_ACTION_EJECT;
+		if (!alive player) then {
+			if(ExAd_HALOPARACHUTE_USE_ACTIONS)then{
+				player removeAction ExAd_ACTION_PARACHUTE;
+				player removeAction ExAd_ACTION_EJECT;
+			};
+			
+			if(ExAd_HALOPARACHUTE_USE_KEY_ACTIONS)then{
+				(findDisplay 46) displayRemoveEventHandler ["KeyDown", ExAd_ACTION_HALOPARACHUTE_USE_KEY_ACTIONS];
+			};
 		};
-		
-		if(ExAd_HALOPARACHUTE_USE_KEY_ACTIONS)then{
-			(findDisplay 46) displayRemoveEventHandler ["KeyDown", ExAd_ACTION_HALOPARACHUTE_USE_KEY_ACTIONS];
-		};
-	};
 };
+ExAd_HaloLoopRefresh = [2, ExAd_HaloLoop, [], true] call ExileClient_system_thread_addtask;
