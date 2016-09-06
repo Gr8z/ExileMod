@@ -1810,6 +1810,623 @@ class CfgExileArsenal
 	class V_RebreatherIA												{ quality = 1; price = 500; };
 	class V_RebreatherIR												{ quality = 1; price = 500; };
 	
+	
+	///////////////////////////////////////////////////////////////////////////////
+	// TRYK
+	///////////////////////////////////////////////////////////////////////////////
+	
+	///////////////////////////////////////////////////////////////////////////////
+    // TRYK Glasses Glasses w/NVGS built in
+    ///////////////////////////////////////////////////////////////////////////////
+    class TRYK_US_ESS_Glasses                           { quality = 1; price = 150; };
+    class TRYK_US_ESS_Glasses_WH                        { quality = 1; price = 150; };
+    class TRYK_US_ESS_Glasses_BLK                       { quality = 1; price = 150; };
+    class TRYK_US_ESS_Glasses_TAN                       { quality = 1; price = 150; };
+    class TRYK_US_ESS_Glasses_TAN_BLK                   { quality = 1; price = 150; };
+    class TRYK_SPGEAR_Glasses                           { quality = 1; price = 150; };
+    class TRYK_headset_Glasses                          { quality = 1; price = 150; };
+    class TRYK_SpsetG_Glasses                           { quality = 1; price = 150; };
+    class TRYK_Spset_PHC1_Glasses                       { quality = 1; price = 150; };
+    class TRYK_Spset_PHC2_Glasses                       { quality = 1; price = 150; };
+    class TRYK_US_ESS_Glasses_H                         { quality = 1; price = 150; };
+    class TRYK_US_ESS_Glasses_Cover                     { quality = 1; price = 150; };
+    class TRYK_headset2_glasses                         { quality = 1; price = 150; };
+ 
+    ///////////////////////////////////////////////////////////////////////////////
+    // TRYK HeadGear
+    ///////////////////////////////////////////////////////////////////////////////
+    class TRYK_US_ESS_Glasses_NV                        { quality = 1; price = 1250; };
+    class TRYK_US_ESS_Glasses_TAN_NV                    { quality = 1; price = 1250; };
+    class TRYK_ESS_BLKTAN_NV                            { quality = 1; price = 1250; };
+    class TRYK_ESS_BLKBLK_NV                            { quality = 1; price = 1250; };
+    class TRYK_G_Shades_Black_NV                        { quality = 1; price = 1250; };
+    class TRYK_G_Shades_Blue_NV                         { quality = 1; price = 1250; };
+    class TRYK_G_bala_ess_NV                            { quality = 1; price = 1250; };
+    class TRYK_bandana_NV                               { quality = 1; price = 1250; };
+    class TRYK_SPgearG_NV                               { quality = 1; price = 1250; };
+    class TRYK_SPgear_PHC1_NV                           { quality = 1; price = 1250; };
+    class TRYK_SPgear_PHC2_NV                           { quality = 1; price = 1250; };
+    class TRYK_G_bala_wh_NV                             { quality = 1; price = 1250; };
+    class TRYK_ESS_wh_NV                                { quality = 1; price = 1250; };
+ 
+    ///////////////////////////////////////////////////////////////////////////////
+    // TRYK HeadGear
+    ///////////////////////////////////////////////////////////////////////////////
+    class TRYK_ESS_CAP_OD                               { quality = 1; price = 150; };
+    class TRYK_ESS_CAP_tan                              { quality = 1; price = 150; };
+    class TRYK_R_CAP_BLK                                { quality = 1; price = 150; };
+    class TRYK_R_CAP_TAN                                { quality = 1; price = 150; };
+    class TRYK_R_CAP_OD_US                              { quality = 1; price = 150; };
+    class TRYK_r_cap_tan_Glasses                        { quality = 1; price = 150; };
+    class TRYK_r_cap_blk_Glasses                        { quality = 1; price = 150; };
+    class TRYK_r_cap_od_Glasses                         { quality = 1; price = 150; };
+    class TRYK_H_headsetcap_Glasses                     { quality = 1; price = 150; };
+    class TRYK_H_headsetcap_blk_Glasses                 { quality = 1; price = 150; };
+    class TRYK_H_headsetcap_od_Glasses                  { quality = 1; price = 150; };
+    class TRYK_TAC_EARMUFF_SHADE                        { quality = 1; price = 150; };
+    class TRYK_TAC_EARMUFF                              { quality = 1; price = 150; };
+    class TRYK_NOMIC_TAC_EARMUFF                        { quality = 1; price = 150; };
+    class TRYK_headset2                                 { quality = 1; price = 150; };
+    class TRYK_TAC_EARMUFF_Gs                           { quality = 1; price = 150; };
+    class TRYK_TAC_SET_bn                               { quality = 1; price = 150; };
+    class TRYK_NOMIC_TAC_EARMUFF_Gs                     { quality = 1; price = 150; };
+    class TRYK_TAC_EARMUFF_SHADE_Gs                     { quality = 1; price = 150; };
+    class TRYK_TAC_SET_TAN                              { quality = 1; price = 150; };
+    class TRYK_TAC_SET_OD                               { quality = 1; price = 150; };
+    class TRYK_TAC_SET_WH                               { quality = 1; price = 150; };
+    class TRYK_TAC_SET_MESH                             { quality = 1; price = 150; };
+    class TRYK_TAC_SET_TAN_2                            { quality = 1; price = 150; };
+    class TRYK_TAC_SET_OD_2                             { quality = 1; price = 150; };
+    class TRYK_TAC_SET_WH_2                             { quality = 1; price = 150; };
+    class TRYK_TAC_SET_MESH_2                           { quality = 1; price = 150; };
+    class TRYK_bandana_g                                { quality = 1; price = 150; };
+    class TRYK_H_PASGT_BLK                              { quality = 1; price = 150; };
+    class TRYK_H_PASGT_OD                               { quality = 1; price = 150; };
+    class TRYK_H_PASGT_COYO                             { quality = 1; price = 150; };
+    class TRYK_H_PASGT_TAN                              { quality = 1; price = 150; };
+    class TRYK_H_Helmet_Snow                            { quality = 1; price = 150; };
+    class TRYK_H_WH                                     { quality = 1; price = 150; };
+    class TRYK_H_GR                                     { quality = 1; price = 150; };
+    class TRYK_H_AOR1                                   { quality = 1; price = 150; };
+    class TRYK_H_AOR2                                   { quality = 1; price = 150; };
+    class TRYK_H_EARMUFF                                { quality = 1; price = 150; };
+    class TRYK_H_TACEARMUFF_H                           { quality = 1; price = 150; };
+    class TRYK_H_Bandana_H                              { quality = 1; price = 150; };
+    class TRYK_H_Bandana_wig                            { quality = 1; price = 150; };
+    class TRYK_H_Bandana_wig_g                          { quality = 1; price = 150; };
+    class TRYK_H_wig                                    { quality = 1; price = 150; };
+    class TRYK_H_headset2                               { quality = 1; price = 150; };
+    class TRYK_H_ghillie_over                           { quality = 1; price = 150; };
+    class TRYK_H_ghillie_top                            { quality = 1; price = 150; };
+    class TRYK_H_ghillie_top_headless                   { quality = 1; price = 150; };
+    class TRYK_H_ghillie_over_green                     { quality = 1; price = 150; };
+    class TRYK_H_ghillie_top_green                      { quality = 1; price = 150; };
+    class TRYK_H_ghillie_top_headless_green             { quality = 1; price = 150; };
+    class TRYK_H_woolhat                                { quality = 1; price = 150; };
+    class TRYK_H_woolhat_CW                             { quality = 1; price = 150; };
+    class TRYK_H_woolhat_WH                             { quality = 1; price = 150; };
+    class TRYK_H_woolhat_br                             { quality = 1; price = 150; };
+    class TRYK_H_woolhat_cu                             { quality = 1; price = 150; };
+    class TRYK_H_woolhat_tan                            { quality = 1; price = 150; };
+    class TRYK_H_headsetcap                             { quality = 1; price = 150; };
+    class TRYK_H_headsetcap_blk                         { quality = 1; price = 150; };
+    class TRYK_H_headsetcap_od                          { quality = 1; price = 150; };
+    class TRYK_H_pakol                                  { quality = 1; price = 150; };
+    class TRYK_H_pakol2                                 { quality = 1; price = 150; };
+    class TRYK_H_LHS_HEL_G                              { quality = 1; price = 150; };
+    class TRYK_H_Helmet_Winter                          { quality = 1; price = 150; };
+    class TRYK_H_Helmet_Winter_2                        { quality = 1; price = 150; };
+ 
+    ///////////////////////////////////////////////////////////////////////////////
+    // TRYK HeadGear w/NVGS built in
+    ///////////////////////////////////////////////////////////////////////////////
+ 
+    class TRYK_Headphone_NV                             { quality = 1; price = 1000; };
+    class TRYK_HRPIGEAR_NV                              { quality = 1; price = 1000; };
+    class TRYK_Headset_NV                               { quality = 1; price = 1000; };
+    class TRYK_TAC_boonie_SET_NV                        { quality = 1; price = 1000; };
+    class TRYK_TAC_SET_NV_TAN                           { quality = 1; price = 1000; };
+    class TRYK_TAC_SET_NV_OD                            { quality = 1; price = 1000; };
+    class TRYK_TAC_SET_NV_WH                            { quality = 1; price = 1000; };
+    class TRYK_TAC_SET_NV_MESH                          { quality = 1; price = 1000; };
+    class TRYK_TAC_SET_NV_TAN_2                         { quality = 1; price = 1000; };
+    class TRYK_TAC_SET_NV_OD_2                          { quality = 1; price = 1000; };
+    class TRYK_TAC_SET_NV_WH_2                          { quality = 1; price = 1000; };
+    class TRYK_TAC_SET_NV_MESH_2                        { quality = 1; price = 1000; };
+    class TRYK_H_DELTAHELM_NV                           { quality = 1; price = 1000; };
+ 
+    ///////////////////////////////////////////////////////////////////////////////
+    // TRYK NeckGear
+    ///////////////////////////////////////////////////////////////////////////////
+ 
+    class TRYK_Shemagh_shade_MESH                       { quality = 1; price = 100; };
+    class TRYK_Shemagh_shade_N                          { quality = 1; price = 100; };
+    class TRYK_Shemagh_shade_G_N                        { quality = 1; price = 100; };
+    class TRYK_Shemagh_shade_WH_N                       { quality = 1; price = 100; };
+    class TRYK_kio_balaclava_WH                         { quality = 1; price = 100; };
+    class TRYK_kio_balaclava_BLK                        { quality = 1; price = 100; };
+    class TRYK_kio_balaclavas                           { quality = 1; price = 100; };
+    class TRYK_kio_balaclava_BLK_ear                    { quality = 1; price = 100; };
+    class TRYK_kio_balaclava_ear                        { quality = 1; price = 100; };
+    class TRYK_kio_balaclava_ESS                        { quality = 1; price = 100; };
+    class TRYK_Shemagh                                  { quality = 1; price = 100; };
+    class TRYK_Shemagh_mesh                             { quality = 1; price = 100; };
+    class TRYK_Shemagh_G                                { quality = 1; price = 100; };
+    class TRYK_Shemagh_WH                               { quality = 1; price = 100; };
+    class TRYK_Shemagh_shade                            { quality = 1; price = 100; };
+    class TRYK_Shemagh_shade_G                          { quality = 1; price = 100; };
+    class TRYK_Shemagh_shade_WH                         { quality = 1; price = 100; };
+    class TRYK_Shemagh_shade_MH                         { quality = 1; price = 100; };
+    class TRYK_Shemagh_ESS                              { quality = 1; price = 100; };
+    class TRYK_Shemagh_ESS_G                            { quality = 1; price = 100; };
+    class TRYK_Shemagh_ESS_WH                           { quality = 1; price = 100; };
+    class TRYK_Shemagh_EAR_TAN                          { quality = 1; price = 100; };
+    class TRYK_Shemagh_EAR_WH                           { quality = 1; price = 100; };
+ 
+    ///////////////////////////////////////////////////////////////////////////////
+    // TRYK NeckGear NeckGear w/NVGS built in
+    ///////////////////////////////////////////////////////////////////////////////
+ 
+    class TRYK_balaclava_BLACK_NV                       { quality = 1; price = 1000; };
+    class TRYK_balaclava_NV                             { quality = 1; price = 1000; };
+    class TRYK_balaclava_BLACK_EAR_NV                   { quality = 1; price = 1000; };
+    class TRYK_balaclava_EAR_NV                         { quality = 1; price = 1000; };
+    class TRYK_Shemagh_TAN_NV                           { quality = 1; price = 1000; };
+    class TRYK_Shemagh_MESH_NV                          { quality = 1; price = 1000; };
+    class TRYK_Shemagh_G_NV                             { quality = 1; price = 1000; };
+    class TRYK_Shemagh_WH_NV                            { quality = 1; price = 1000; };
+    class TRYK_Shemagh_EAR_NV                           { quality = 1; price = 1000; };
+    class TRYK_Shemagh_EAR_G_NV                         { quality = 1; price = 1000; };
+    class TRYK_Shemagh_EAR_WH_NV                        { quality = 1; price = 1000; };
+    class TRYK_ShemaghESSTAN_NV                         { quality = 1; price = 1000; };
+    class TRYK_ShemaghESSOD_NV                          { quality = 1; price = 1000; };
+    class TRYK_ShemaghESSWH_NV                          { quality = 1; price = 1000; };
+ 
+    ///////////////////////////////////////////////////////////////////////////////
+    // TRYK Uniforms
+    ///////////////////////////////////////////////////////////////////////////////
+ 
+    class TRYK_HRP_UCP                                  { quality = 1; price = 100; };
+    class TRYK_HRP_USMC                                 { quality = 1; price = 100; };
+    class TRYK_HRP_khk                                  { quality = 1; price = 100; };
+    class TRYK_U_B_OD_OD_CombatUniform                  { quality = 1; price = 100; };
+    class TRYK_U_B_OD_OD_R_CombatUniform                { quality = 1; price = 100; };
+    class TRYK_U_B_TANTAN_CombatUniform                 { quality = 1; price = 100; };
+    class TRYK_U_B_TANTAN_R_CombatUniform               { quality = 1; price = 100; };
+    class TRYK_U_B_BLKBLK_CombatUniform                 { quality = 1; price = 100; };
+    class TRYK_U_B_BLKBLK_R_CombatUniform               { quality = 1; price = 100; };
+    class TRYK_U_B_GRYOCP_CombatUniform                 { quality = 1; price = 100; };
+    class TRYK_U_B_GRYOCP_R_CombatUniformTshirt         { quality = 1; price = 100; };
+    class TRYK_U_B_TANOCP_CombatUniform                 { quality = 1; price = 100; };
+    class TRYK_U_B_TANOCP_R_CombatUniformTshirt         { quality = 1; price = 100; };
+    class TRYK_U_B_BLKOCP_CombatUniform                 { quality = 1; price = 100; };
+    class TRYK_U_B_BLKOCP_R_CombatUniformTshirt         { quality = 1; price = 100; };
+    class TRYK_U_B_BLKTAN_CombatUniform                 { quality = 1; price = 100; };
+    class TRYK_U_B_BLKTANR_CombatUniformTshirt          { quality = 1; price = 100; };
+    class TRYK_U_B_ODTAN_CombatUniform                  { quality = 1; price = 100; };
+    class TRYK_U_B_ODTANR_CombatUniformTshirt           { quality = 1; price = 100; };
+    class TRYK_U_B_GRTAN_CombatUniform                  { quality = 1; price = 100; };
+    class TRYK_U_B_GRTANR_CombatUniformTshirt           { quality = 1; price = 100; };
+    class TRYK_U_B_wood_CombatUniform                   { quality = 1; price = 100; };
+    class TRYK_U_B_woodR_CombatUniformTshirt            { quality = 1; price = 100; };
+    class TRYK_U_B_wood3c_CombatUniform                 { quality = 1; price = 100; };
+    class TRYK_U_B_wood3c_CombatUniformTshirt           { quality = 1; price = 100; };
+    class TRYK_U_B_MARPAT_WOOD_CombatUniform            { quality = 1; price = 100; };
+    class TRYK_U_B_MARPAT_WOOD_CombatUniformTshirt      { quality = 1; price = 100; };
+    class TRYK_U_B_WOOD_MARPAT_CombatUniform            { quality = 1; price = 100; };
+    class TRYK_U_B_WOOD_MARPAT_CombatUniformTshirt      { quality = 1; price = 100; };
+    class TRYK_U_B_woodtan_CombatUniform                { quality = 1; price = 100; };
+    class TRYK_U_B_woodtanR_CombatUniformTshirt         { quality = 1; price = 100; };
+    class TRYK_U_B_JSDF_CombatUniform                   { quality = 1; price = 100; };
+    class TRYK_U_B_JSDF_CombatUniformTshirt             { quality = 1; price = 100; };
+    class TRYK_U_B_3CD_Delta_BDU                        { quality = 1; price = 100; };
+    class TRYK_U_B_3CD_Delta_BDUTshirt                  { quality = 1; price = 100; };
+    class TRYK_U_B_3CD_Ranger_BDU                       { quality = 1; price = 100; };
+    class TRYK_U_B_3CD_Ranger_BDUTshirt                 { quality = 1; price = 100; };
+    class TRYK_U_B_3CD_BLK_BDUTshirt                    { quality = 1; price = 100; };
+    class TRYK_U_B_3CD_BLK_BDUTshirt2                   { quality = 1; price = 100; };
+    class TRYK_U_B_ACU                                  { quality = 1; price = 100; };
+    class TRYK_U_B_ACUTshirt                            { quality = 1; price = 100; };
+    class TRYK_U_B_MARPAT_Wood                          { quality = 1; price = 100; };
+    class TRYK_U_B_MARPAT_Wood_Tshirt                   { quality = 1; price = 100; };
+    class TRYK_U_B_MARPAT_Desert                        { quality = 1; price = 100; };
+    class TRYK_U_B_MARPAT_Desert_Tshirt                 { quality = 1; price = 100; };
+    class TRYK_U_B_MARPAT_Desert2                       { quality = 1; price = 100; };
+    class TRYK_U_B_MARPAT_Desert2_Tshirt                { quality = 1; price = 100; };
+    class TRYK_U_B_3c                                   { quality = 1; price = 100; };
+    class TRYK_U_B_3cr                                  { quality = 1; price = 100; };
+    class TRYK_U_B_Sage_Tshirt                          { quality = 1; price = 100; };
+    class TRYK_U_B_BLK3CD                               { quality = 1; price = 100; };
+    class TRYK_U_B_BLK3CD_Tshirt                        { quality = 1; price = 100; };
+    class TRYK_U_B_BLK                                  { quality = 1; price = 100; };
+    class TRYK_U_B_BLK_Tshirt                           { quality = 1; price = 100; };
+    class TRYK_U_B_BLKTAN                               { quality = 1; price = 100; };
+    class TRYK_U_B_BLKTAN_Tshirt                        { quality = 1; price = 100; };
+    class TRYK_U_B_ODTAN                                { quality = 1; price = 100; };
+    class TRYK_U_B_ODTAN_Tshirt                         { quality = 1; price = 100; };
+    class TRYK_U_B_BLK_OD                               { quality = 1; price = 100; };
+    class TRYK_U_B_BLK_OD_Tshirt                        { quality = 1; price = 100; };
+    class TRYK_U_B_C01_Tsirt                            { quality = 1; price = 100; };
+    class TRYK_U_B_C02_Tsirt                            { quality = 1; price = 100; };
+    class TRYK_U_B_OD_BLK                               { quality = 1; price = 100; };
+    class TRYK_U_B_OD_BLK_2                             { quality = 1; price = 100; };
+    class TRYK_U_B_BLK_TAN_1                            { quality = 1; price = 100; };
+    class TRYK_U_B_BLK_TAN_2                            { quality = 1; price = 100; };
+    class TRYK_U_B_wh_tan_Rollup_CombatUniform          { quality = 1; price = 100; };
+    class TRYK_U_B_wh_OD_Rollup_CombatUniform           { quality = 1; price = 100; };
+    class TRYK_U_B_wh_blk_Rollup_CombatUniform          { quality = 1; price = 100; };
+    class TRYK_U_B_BLK_tan_Rollup_CombatUniform         { quality = 1; price = 100; };
+    class TRYK_U_B_BLK_OD_Rollup_CombatUniform          { quality = 1; price = 100; };
+    class TRYK_U_B_NATO_UCP_GRY_CombatUniform           { quality = 1; price = 100; };
+    class TRYK_U_B_NATO_UCP_GRY_R_CombatUniform         { quality = 1; price = 100; };
+    class TRYK_U_B_NATO_UCP_CombatUniform               { quality = 1; price = 100; };
+    class TRYK_U_B_NATO_UCP_R_CombatUniform             { quality = 1; price = 100; };
+    class TRYK_U_B_NATO_OCP_c_BLK_CombatUniform         { quality = 1; price = 100; };
+    class TRYK_U_B_NATO_OCP_BLK_c_R_CombatUniform       { quality = 1; price = 100; };
+    class TRYK_U_B_NATO_OCP_BLK_CombatUniform           { quality = 1; price = 100; };
+    class TRYK_U_B_NATO_OCP_BLK_R_CombatUniform         { quality = 1; price = 100; };
+    class TRYK_U_B_NATO_OCPD_CombatUniform              { quality = 1; price = 100; };
+    class TRYK_U_B_NATO_OCPD_R_CombatUniform            { quality = 1; price = 100; };
+    class TRYK_U_B_NATO_OCP_CombatUniform               { quality = 1; price = 100; };
+    class TRYK_U_B_NATO_OCP_R_CombatUniform             { quality = 1; price = 100; };
+    class TRYK_U_B_AOR1_Rollup_CombatUniform            { quality = 1; price = 100; };
+    class TRYK_U_B_AOR2_Rollup_CombatUniform            { quality = 1; price = 100; };
+    class TRYK_U_B_MTP_CombatUniform                    { quality = 1; price = 100; };
+    class TRYK_U_B_MTP_R_CombatUniform                  { quality = 1; price = 100; };
+    class TRYK_U_B_MTP_BLK_CombatUniform                { quality = 1; price = 100; };
+    class TRYK_U_B_MTP_BLK_R_CombatUniform              { quality = 1; price = 100; };
+    class TRYK_U_B_Woodland                             { quality = 1; price = 100; };
+    class TRYK_U_B_Woodland_Tshirt                      { quality = 1; price = 100; };
+    class TRYK_U_B_WDL_GRY_CombatUniform                { quality = 1; price = 100; };
+    class TRYK_U_B_WDL_GRY_R_CombatUniform              { quality = 1; price = 100; };
+    class TRYK_U_B_ARO1_GR_CombatUniform                { quality = 1; price = 100; };
+    class TRYK_U_B_ARO1_GR_R_CombatUniform              { quality = 1; price = 100; };
+    class TRYK_U_B_ARO1_GRY_CombatUniform               { quality = 1; price = 100; };
+    class TRYK_U_B_ARO1_GRY_R_CombatUniform             { quality = 1; price = 100; };
+    class TRYK_U_B_ARO1_CombatUniform                   { quality = 1; price = 100; };
+    class TRYK_U_B_ARO1R_CombatUniform                  { quality = 1; price = 100; };
+    class TRYK_U_B_ARO1_BLK_CombatUniform               { quality = 1; price = 100; };
+    class TRYK_U_B_ARO1_BLK_R_CombatUniform             { quality = 1; price = 100; };
+    class TRYK_U_B_ARO1_CBR_CombatUniform               { quality = 1; price = 100; };
+    class TRYK_U_B_ARO1_CBR_R_CombatUniform             { quality = 1; price = 100; };
+    class TRYK_U_B_ARO2_CombatUniform                   { quality = 1; price = 100; };
+    class TRYK_U_B_ARO2R_CombatUniform                  { quality = 1; price = 100; };
+    class TRYK_U_B_AOR2_BLK_CombatUniform               { quality = 1; price = 100; };
+    class TRYK_U_B_AOR2_BLK_R_CombatUniform             { quality = 1; price = 100; };
+    class TRYK_U_B_AOR2_OD_CombatUniform                { quality = 1; price = 100; };
+    class TRYK_U_B_AOR2_OD_R_CombatUniform              { quality = 1; price = 100; };
+    class TRYK_U_B_AOR2_GRY_CombatUniform               { quality = 1; price = 100; };
+    class TRYK_U_B_AOR2_GRY_R_CombatUniform             { quality = 1; price = 100; };
+    class TRYK_U_B_Snow_CombatUniform                   { quality = 1; price = 100; };
+    class TRYK_U_B_Snowt                                { quality = 1; price = 100; };
+    class TRYK_U_B_Denim_T_WH                           { quality = 1; price = 100; };
+    class TRYK_U_B_Denim_T_BK                           { quality = 1; price = 100; };
+    class TRYK_U_B_BLK_T_WH                             { quality = 1; price = 100; };
+    class TRYK_U_B_BLK_T_BK                             { quality = 1; price = 100; };
+    class TRYK_U_B_RED_T_BR                             { quality = 1; price = 100; };
+    class TRYK_U_B_Denim_T_BG_WH                        { quality = 1; price = 100; };
+    class TRYK_U_B_Denim_T_BG_BK                        { quality = 1; price = 100; };
+    class TRYK_U_B_BLK_T_BG_WH                          { quality = 1; price = 100; };
+    class TRYK_U_B_BLK_T_BG_BK                          { quality = 1; price = 100; };
+    class TRYK_U_B_RED_T_BG_BR                          { quality = 1; price = 100; };
+    class TRYK_U_B_fleece                               { quality = 1; price = 100; };
+    class TRYK_U_B_fleece_UCP                           { quality = 1; price = 100; };
+    class TRYK_U_B_UCP_PCUs                             { quality = 1; price = 100; };
+    class TRYK_U_B_GRY_PCUs                             { quality = 1; price = 100; };
+    class TRYK_U_B_Wood_PCUs                            { quality = 1; price = 100; };
+    class TRYK_U_B_PCUs                                 { quality = 1; price = 100; };
+    class TRYK_U_B_UCP_PCUs_R                           { quality = 1; price = 100; };
+    class TRYK_U_B_GRY_PCUs_R                           { quality = 1; price = 100; };
+    class TRYK_U_B_Wood_PCUs_R                          { quality = 1; price = 100; };
+    class TRYK_U_B_PCUs_R                               { quality = 1; price = 100; };
+    class TRYK_U_B_PCUGs                                { quality = 1; price = 100; };
+    class TRYK_U_B_PCUODs                               { quality = 1; price = 100; };
+    class TRYK_U_B_PCUGs_gry                            { quality = 1; price = 100; };
+    class TRYK_U_B_PCUGs_BLK                            { quality = 1; price = 100; };
+    class TRYK_U_B_PCUGs_OD                             { quality = 1; price = 100; };
+    class TRYK_U_B_PCUGs_gry_R                          { quality = 1; price = 100; };
+    class TRYK_U_B_PCUGs_BLK_R                          { quality = 1; price = 100; };
+    class TRYK_U_B_PCUGs_OD_R                           { quality = 1; price = 100; };
+    class TRYK_U_Bts_GRYGRY_PCUs                        { quality = 1; price = 100; };
+    class TRYK_U_Bts_UCP_PCUs                           { quality = 1; price = 100; };
+    class TRYK_U_Bts_Wood_PCUs                          { quality = 1; price = 100; };
+    class TRYK_U_Bts_PCUs                               { quality = 1; price = 100; };
+    class TRYK_U_pad_j                                  { quality = 1; price = 100; };
+    class TRYK_U_pad_j_blk                              { quality = 1; price = 100; };
+    class TRYK_U_pad_hood_Cl                            { quality = 1; price = 100; };
+    class TRYK_U_pad_hood_Cl_blk                        { quality = 1; price = 100; };
+    class TRYK_U_pad_hood_tan                           { quality = 1; price = 100; };
+    class TRYK_U_pad_hood_Blk                           { quality = 1; price = 100; };
+    class TRYK_U_pad_hood_CSATBlk                       { quality = 1; price = 100; };
+    class TRYK_U_pad_hood_Blod                          { quality = 1; price = 100; };
+    class TRYK_U_pad_hood_odBK                          { quality = 1; price = 100; };
+    class TRYK_U_pad_hood_BKT2                          { quality = 1; price = 100; };
+    class TRYK_hoodie_Blk                               { quality = 1; price = 100; };
+    class TRYK_hoodie_FR                                { quality = 1; price = 100; };
+    class TRYK_hoodie_Wood                              { quality = 1; price = 100; };
+    class TRYK_hoodie_3c                                { quality = 1; price = 100; };
+    class TRYK_T_camo_tan                               { quality = 1; price = 100; };
+    class TRYK_T_camo_3c                                { quality = 1; price = 100; };
+    class TRYK_T_camo_Wood                              { quality = 1; price = 100; };
+    class TRYK_T_camo_wood_marpat                       { quality = 1; price = 100; };
+    class TRYK_T_camo_Desert_marpat                     { quality = 1; price = 100; };
+    class TRYK_T_camo_3c_BG                             { quality = 1; price = 100; };
+    class TRYK_T_camo_Wood_BG                           { quality = 1; price = 100; };
+    class TRYK_T_camo_wood_marpat_BG                    { quality = 1; price = 100; };
+    class TRYK_T_camo_desert_marpat_BG                  { quality = 1; price = 100; };
+    class TRYK_T_PAD                                    { quality = 1; price = 100; };
+    class TRYK_T_OD_PAD                                 { quality = 1; price = 100; };
+    class TRYK_T_TAN_PAD                                { quality = 1; price = 100; };
+    class TRYK_T_BLK_PAD                                { quality = 1; price = 100; };
+    class TRYK_T_T2_PAD                                 { quality = 1; price = 100; };
+    class TRYK_T_CSAT_PAD                               { quality = 1; price = 100; };
+    class TRYK_U_nohoodPcu_gry                          { quality = 1; price = 100; };
+    class TRYK_U_hood_nc                                { quality = 1; price = 100; };
+    class TRYK_U_hood_mc                                { quality = 1; price = 100; };
+    class TRYK_U_denim_hood_blk                         { quality = 1; price = 100; };
+    class TRYK_U_denim_hood_mc                          { quality = 1; price = 100; };
+    class TRYK_U_denim_hood_3c                          { quality = 1; price = 100; };
+    class TRYK_U_denim_hood_nc                          { quality = 1; price = 100; };
+    class TRYK_U_denim_jersey_blu                       { quality = 1; price = 100; };
+    class TRYK_U_denim_jersey_blk                       { quality = 1; price = 100; };
+    class TRYK_shirts_PAD                               { quality = 1; price = 100; };
+    class TRYK_shirts_OD_PAD                            { quality = 1; price = 100; };
+    class TRYK_shirts_TAN_PAD                           { quality = 1; price = 100; };
+    class TRYK_shirts_BLK_PAD                           { quality = 1; price = 100; };
+    class TRYK_shirts_PAD_BK                            { quality = 1; price = 100; };
+    class TRYK_shirts_OD_PAD_BK                         { quality = 1; price = 100; };
+    class TRYK_shirts_TAN_PAD_BK                        { quality = 1; price = 100; };
+    class TRYK_shirts_BLK_PAD_BK                        { quality = 1; price = 100; };
+    class TRYK_shirts_PAD_BLW                           { quality = 1; price = 100; };
+    class TRYK_shirts_OD_PAD_BLW                        { quality = 1; price = 100; };
+    class TRYK_shirts_TAN_PAD_BLW                       { quality = 1; price = 100; };
+    class TRYK_shirts_BLK_PAD_BLW                       { quality = 1; price = 100; };
+    class TRYK_shirts_PAD_YEL                           { quality = 1; price = 100; };
+    class TRYK_shirts_OD_PAD_YEL                        { quality = 1; price = 100; };
+    class TRYK_shirts_TAN_PAD_YEL                       { quality = 1; price = 100; };
+    class TRYK_shirts_BLK_PAD_YEL                       { quality = 1; price = 100; };
+    class TRYK_shirts_PAD_RED2                          { quality = 1; price = 100; };
+    class TRYK_shirts_OD_PAD_RED2                       { quality = 1; price = 100; };
+    class TRYK_shirts_TAN_PAD_RED2                      { quality = 1; price = 100; };
+    class TRYK_shirts_BLK_PAD_RED2                      { quality = 1; price = 100; };
+    class TRYK_shirts_PAD_BLU3                          { quality = 1; price = 100; };
+    class TRYK_shirts_OD_PAD_BLU3                       { quality = 1; price = 100; };
+    class TRYK_shirts_TAN_PAD_BLU3                      { quality = 1; price = 100; };
+    class TRYK_shirts_BLK_PAD_BLU3                      { quality = 1; price = 100; };
+    class TRYK_shirts_DENIM_R                           { quality = 1; price = 100; };
+    class TRYK_shirts_DENIM_BL                          { quality = 1; price = 100; };
+    class TRYK_shirts_DENIM_BK                          { quality = 1; price = 100; };
+    class TRYK_shirts_DENIM_WH                          { quality = 1; price = 100; };
+    class TRYK_shirts_DENIM_BWH                         { quality = 1; price = 100; };
+    class TRYK_shirts_DENIM_RED2                        { quality = 1; price = 100; };
+    class TRYK_shirts_DENIM_WHB                         { quality = 1; price = 100; };
+    class TRYK_shirts_DENIM_ylb                         { quality = 1; price = 100; };
+    class TRYK_shirts_DENIM_od                          { quality = 1; price = 100; };
+    class TRYK_shirts_DENIM_R_Sleeve                    { quality = 1; price = 100; };
+    class TRYK_shirts_DENIM_BL_Sleeve                   { quality = 1; price = 100; };
+    class TRYK_shirts_DENIM_BK_Sleeve                   { quality = 1; price = 100; };
+    class TRYK_shirts_DENIM_WH_Sleeve                   { quality = 1; price = 100; };
+    class TRYK_shirts_DENIM_BWH_Sleeve                  { quality = 1; price = 100; };
+    class TRYK_shirts_DENIM_RED2_Sleeve                 { quality = 1; price = 100; };
+    class TRYK_shirts_DENIM_WHB_Sleeve                  { quality = 1; price = 100; };
+    class TRYK_shirts_DENIM_ylb_Sleeve                  { quality = 1; price = 100; };
+    class TRYK_shirts_DENIM_od_Sleeve                   { quality = 1; price = 100; };
+    class TRYK_shirts_PAD_BL                            { quality = 1; price = 100; };
+    class TRYK_shirts_OD_PAD_BL                         { quality = 1; price = 100; };
+    class TRYK_shirts_TAN_PAD_BL                        { quality = 1; price = 100; };
+    class TRYK_shirts_BLK_PAD_BL                        { quality = 1; price = 100; };
+    class TRYK_U_taki_wh                                { quality = 1; price = 100; };
+    class TRYK_U_taki_COY                               { quality = 1; price = 100; };
+    class TRYK_U_taki_BL                                { quality = 1; price = 100; };
+    class TRYK_U_taki_BLK                               { quality = 1; price = 100; };
+    class TRYK_U_Bts_PCUGs                              { quality = 1; price = 100; };
+    class TRYK_U_Bts_PCUODs                             { quality = 1; price = 100; };
+    class TRYK_U_taki_G_WH                              { quality = 1; price = 100; };
+    class TRYK_U_taki_G_COY                             { quality = 1; price = 100; };
+    class TRYK_U_taki_G_BL                              { quality = 1; price = 100; };
+    class TRYK_U_taki_G_BLK                             { quality = 1; price = 100; };
+    class TRYK_U_B_PCUHs                                { quality = 1; price = 100; };
+    class TRYK_U_B_PCUGHs                               { quality = 1; price = 100; };
+    class TRYK_U_B_PCUODHs                              { quality = 1; price = 100; };
+    class TRYK_B_USMC_R                                 { quality = 1; price = 100; };
+    class TRYK_B_USMC_R_ROLL                            { quality = 1; price = 100; };
+    class TRYK_ZARATAKI                                 { quality = 1; price = 100; };
+    class TRYK_ZARATAKI2                                { quality = 1; price = 100; };
+    class TRYK_ZARATAKI3                                { quality = 1; price = 100; };
+    class TRYK_B_TRYK_UCP_T                             { quality = 1; price = 100; };
+    class TRYK_B_TRYK_3C_T                              { quality = 1; price = 100; };
+    class TRYK_B_TRYK_MTP_T                             { quality = 1; price = 100; };
+    class TRYK_B_TRYK_OCP_T                             { quality = 1; price = 100; };
+    class TRYK_B_TRYK_OCP_D_T                           { quality = 1; price = 100; };
+    class TRYK_DMARPAT_T                                { quality = 1; price = 100; };
+    class TRYK_C_AOR2_T                                 { quality = 1; price = 100; };
+    class TRYK_U_B_Sage_T                               { quality = 1; price = 100; };
+    class TRYK_U_B_Wood_T                               { quality = 1; price = 100; };
+    class TRYK_U_B_BLTAN_T                              { quality = 1; price = 100; };
+    class TRYK_U_B_BLOD_T                               { quality = 1; price = 100; };
+    class TRYK_OVERALL_flesh                            { quality = 1; price = 100; };
+    class TRYK_OVERALL_nok_flesh                        { quality = 1; price = 100; };
+    class TRYK_OVERALL_SAGE_BLKboots                    { quality = 1; price = 100; };
+    class TRYK_OVERALL_SAGE_BLKboots_nk_blk             { quality = 1; price = 100; };
+    class TRYK_OVERALL_SAGE_BLKboots_nk                 { quality = 1; price = 100; };
+    class TRYK_OVERALL_SAGE_BLKboots_nk_blk2            { quality = 1; price = 100; };
+    class TRYK_OVERALL_SAGE                             { quality = 1; price = 100; };
+    class TRYK_SUITS_BLK_F                              { quality = 1; price = 100; };
+    class TRYK_SUITS_BR_F                               { quality = 1; price = 100; };
+    class TRYK_H_ghillie_top_headless3glass             { quality = 1; price = 100; };
+    class TRYK_shoulder_armor_BK                        { quality = 1; price = 100; };
+    class TRYK_shoulder_armor_OD                        { quality = 1; price = 100; };
+    class TRYK_shoulder_armor_CY                        { quality = 1; price = 100; };
+    class TRYK_H_ghillie_top_headless3                  { quality = 1; price = 100; };
+    class TRYK_U_B_PCUHsW                               { quality = 1; price = 100; };
+    class TRYK_U_B_PCUHsW2                              { quality = 1; price = 100; };
+    class TRYK_U_B_PCUHsW3                              { quality = 1; price = 100; };
+    class TRYK_U_B_PCUHsW3nh                            { quality = 1; price = 100; };
+    class TRYK_U_B_PCUHsW4                              { quality = 1; price = 100; };
+    class TRYK_U_B_PCUHsW5                              { quality = 1; price = 100; };
+    class TRYK_U_B_PCUHsW6                              { quality = 1; price = 100; };
+ 
+    ///////////////////////////////////////////////////////////////////////////////
+    // TRYK Vests
+    ///////////////////////////////////////////////////////////////////////////////
+ 
+    class TRYK_Hrp_vest_ucp                             { quality = 1; price = 100; };
+    class TRYK_Hrp_vest_od                              { quality = 1; price = 100; };
+    class TRYK_V_PlateCarrier_JSDF                      { quality = 1; price = 100; };
+    class TRYK_V_ArmorVest_AOR1                         { quality = 1; price = 100; };
+    class TRYK_V_ArmorVest_AOR2                         { quality = 1; price = 100; };
+    class TRYK_V_ArmorVest_coyo                         { quality = 1; price = 100; };
+    class TRYK_V_ArmorVest_Brown                        { quality = 1; price = 100; };
+    class TRYK_V_ArmorVest_CBR                          { quality = 1; price = 100; };
+    class TRYK_V_ArmorVest_khk                          { quality = 1; price = 100; };
+    class TRYK_V_ArmorVest_rgr                          { quality = 1; price = 100; };
+    class TRYK_V_ArmorVest_green                        { quality = 1; price = 100; };
+    class TRYK_V_ArmorVest_tan                          { quality = 1; price = 100; };
+    class TRYK_V_ArmorVest_Delta                        { quality = 1; price = 100; };
+    class TRYK_V_ArmorVest_Ranger                       { quality = 1; price = 100; };
+    class TRYK_V_ArmorVest_AOR1_2                       { quality = 1; price = 100; };
+    class TRYK_V_ArmorVest_AOR2_2                       { quality = 1; price = 100; };
+    class TRYK_V_ArmorVest_coyo2                        { quality = 1; price = 100; };
+    class TRYK_V_ArmorVest_Brown2                       { quality = 1; price = 100; };
+    class TRYK_V_ArmorVest_cbr2                         { quality = 1; price = 100; };
+    class TRYK_V_ArmorVest_khk2                         { quality = 1; price = 100; };
+    class TRYK_V_ArmorVest_rgr2                         { quality = 1; price = 100; };
+    class TRYK_V_ArmorVest_green2                       { quality = 1; price = 100; };
+    class TRYK_V_ArmorVest_tan2                         { quality = 1; price = 100; };
+    class TRYK_V_ArmorVest_Delta2                       { quality = 1; price = 100; };
+    class TRYK_V_ArmorVest_Ranger2                      { quality = 1; price = 100; };
+    class TRYK_V_PlateCarrier_blk                       { quality = 1; price = 100; };
+    class TRYK_V_PlateCarrier_oli                       { quality = 1; price = 100; };
+    class TRYK_V_PlateCarrier_coyo                      { quality = 1; price = 100; };
+    class TRYK_V_PlateCarrier_wood                      { quality = 1; price = 100; };
+    class TRYK_V_PlateCarrier_ACU                       { quality = 1; price = 100; };
+    class TRYK_V_TacVest_coyo                           { quality = 1; price = 100; };
+    class TRYK_V_harnes_blk_L                           { quality = 1; price = 100; };
+    class TRYK_V_harnes_od_L                            { quality = 1; price = 100; };
+    class TRYK_V_harnes_TAN_L                           { quality = 1; price = 100; };
+    class TRYK_V_PlateCarrier_blk_L                     { quality = 1; price = 100; };
+    class TRYK_V_PlateCarrier_wood_L                    { quality = 1; price = 100; };
+    class TRYK_V_PlateCarrier_ACU_L                     { quality = 1; price = 100; };
+    class TRYK_V_PlateCarrier_coyo_L                    { quality = 1; price = 100; };
+    class TRYK_V_ChestRig_L                             { quality = 1; price = 100; };
+    class TRYK_V_ChestRig                               { quality = 1; price = 100; };
+    class TRYK_V_Bulletproof                            { quality = 1; price = 100; };
+    class TRYK_V_Bulletproof_BLK                        { quality = 1; price = 100; };
+    class TRYK_V_Bulletproof_BL                         { quality = 1; price = 100; };
+    class TRYK_V_IOTV_BLK                               { quality = 1; price = 100; };
+    class TRYK_V_tacv1M_BK                              { quality = 1; price = 100; };
+    class TRYK_V_tacv1MLC_BK                            { quality = 1; price = 100; };
+    class TRYK_V_tacv1                                  { quality = 1; price = 100; };
+    class TRYK_V_tacv1_CY                               { quality = 1; price = 100; };
+    class TRYK_V_tacv1_BK                               { quality = 1; price = 100; };
+    class TRYK_V_tacv1_P_BK                             { quality = 1; price = 100; };
+    class TRYK_V_tacv1_SHERIFF_BK                       { quality = 1; price = 100; };
+    class TRYK_V_tacv1_FBI_BK                           { quality = 1; price = 100; };
+    class TRYK_V_tacv1LP_BK                             { quality = 1; price = 100; };
+    class TRYK_V_tacv1LSRF_BK                           { quality = 1; price = 100; };
+    class TRYK_V_tacv1LC_BK                             { quality = 1; price = 100; };
+    class TRYK_V_tacv1LC_CY                             { quality = 1; price = 100; };
+    class TRYK_V_tacv1LC_OD                             { quality = 1; price = 100; };
+    class TRYK_V_tacv1LC_FBI_BK                         { quality = 1; price = 100; };
+    class TRYK_V_tacv1LC_SRF_BK                         { quality = 1; price = 100; };
+    class TRYK_V_tacv1LC_SRF_OD                         { quality = 1; price = 100; };
+    class TRYK_V_tacv1LC_P_BK                           { quality = 1; price = 100; };
+    class TRYK_V_PlateCarrier_POLICE                    { quality = 1; price = 100; };
+    class TRYK_V_ArmorVest_HRT_B                        { quality = 1; price = 100; };
+    class TRYK_V_ArmorVest_HRT_OD                       { quality = 1; price = 100; };
+    class TRYK_V_ArmorVest_HRT2_B                       { quality = 1; price = 100; };
+    class TRYK_V_ArmorVest_HRT2_OD                      { quality = 1; price = 100; };
+    class TRYK_V_ArmorVest_Winter                       { quality = 1; price = 100; };
+    class TRYK_V_Sheriff_BA_OD                          { quality = 1; price = 100; };
+    class TRYK_V_tacv10_BK                              { quality = 1; price = 100; };
+    class TRYK_V_tacv10_OD                              { quality = 1; price = 100; };
+    class TRYK_V_tacv10_TN                              { quality = 1; price = 100; };
+    class TRYK_V_tacv10LC_BK                            { quality = 1; price = 100; };
+    class TRYK_V_tacv10LC_OD                            { quality = 1; price = 100; };
+    class TRYK_V_tacv10LC_TN                            { quality = 1; price = 100; };
+    class TRYK_V_tacv1L_BK                              { quality = 1; price = 100; };
+    class TRYK_V_tacv1L_OD                              { quality = 1; price = 100; };
+    class TRYK_V_tacv1L_CY                              { quality = 1; price = 100; };
+    class TRYK_V_tacv1LC_FBI2_BK                        { quality = 1; price = 100; };
+    class TRYK_V_tacv1LC_SRF2_BK                        { quality = 1; price = 100; };
+    class TRYK_V_tacv1LC_SRF2_OD                        { quality = 1; price = 100; };
+    class TRYK_V_tacv1LC_P2_BK                          { quality = 1; price = 100; };
+    class TRYK_V_tacv1_MSL_BK                           { quality = 1; price = 100; };
+    class TRYK_V_tacv1_MSL_NV                           { quality = 1; price = 100; };
+    class TRYK_V_tacv1LMSL_BK                           { quality = 1; price = 100; };
+    class TRYK_V_tacv1LMSL_NV                           { quality = 1; price = 100; };
+    class TRYK_V_tacv1LC_MSL_BK                         { quality = 1; price = 100; };
+    class TRYK_V_tacv1LC_MSL_NV                         { quality = 1; price = 100; };
+    class TRYK_V_tacSVD_BK                              { quality = 1; price = 100; };
+    class TRYK_V_tacSVD_OD                              { quality = 1; price = 100; };
+    class TRYK_V_Sheriff_BA_TL                          { quality = 1; price = 100; };
+    class TRYK_V_Sheriff_BA_TBL                         { quality = 1; price = 100; };
+    class TRYK_V_Sheriff_BA_TCL                         { quality = 1; price = 100; };
+    class TRYK_V_Sheriff_BA_TL2                         { quality = 1; price = 500; };
+    class TRYK_V_Sheriff_BA_TBL2                        { quality = 1; price = 500; };
+    class TRYK_V_Sheriff_BA_TCL2                        { quality = 1; price = 500; };
+    class TRYK_V_Sheriff_BA_T                           { quality = 1; price = 100; };
+    class TRYK_V_Sheriff_BA_TB                          { quality = 1; price = 100; };
+    class TRYK_V_Sheriff_BA_T2                          { quality = 1; price = 100; };
+    class TRYK_V_Sheriff_BA_TB2                         { quality = 1; price = 100; };
+    class TRYK_V_Sheriff_BA_T3                          { quality = 1; price = 100; };
+    class TRYK_V_Sheriff_BA_TB3                         { quality = 1; price = 100; };
+    class TRYK_V_Sheriff_BA_T4                          { quality = 1; price = 100; };
+    class TRYK_V_Sheriff_BA_TB4                         { quality = 1; price = 100; };
+    class TRYK_V_Sheriff_BA_T5                          { quality = 1; price = 100; };
+    class TRYK_V_Sheriff_BA_TB5                         { quality = 1; price = 100; };
+    class TRYK_V_Sheriff_BA_TBL3_BK                     { quality = 1; price = 100; };
+    class TRYK_V_Sheriff_BA_TBL3_OD                     { quality = 1; price = 100; };
+    class TRYK_V_Sheriff_BA_TBL3_TN                     { quality = 1; price = 100; };
+    class TRYK_LOC_AK_chestrig_OD                       { quality = 1; price = 100; };
+    class TRYK_LOC_AK_chestrig_TAN                      { quality = 1; price = 100; };
+ 
+    ///////////////////////////////////////////////////////////////////////////////
+    // TRYK BackPacks
+    ///////////////////////////////////////////////////////////////////////////////
+   
+    class TRYK_B_AssaultPack_UCP                        { quality = 1; price = 500; };
+    class TRYK_B_AssaultPack_Type2camo                  { quality = 1; price = 500; };
+    class TRYK_B_AssaultPack_MARPAT_Desert              { quality = 1; price = 500; };
+    class TRYK_B_AssaultPack_MARPAT_Wood                { quality = 1; price = 500; };
+    class TRYK_B_Kitbag_Base                            { quality = 2; price = 600; };
+    class TRYK_B_Kitbag_blk                             { quality = 2; price = 600; };
+    class TRYK_B_Kitbag_aaf                             { quality = 2; price = 600; };
+    class TRYK_B_Carryall_blk                           { quality = 3; price = 700; };
+    class TRYK_B_Carryall_wh                            { quality = 3; price = 700; };
+    class TRYK_B_Carryall_wood                          { quality = 3; price = 700; };
+    class TRYK_B_Carryall_JSDF                          { quality = 3; price = 700; };
+    class TRYK_B_Kitbag_Base_JSDF                       { quality = 1; price = 800; };
+    class TRYK_B_Coyotebackpack                         { quality = 1; price = 700; };
+    class TRYK_B_Coyotebackpack_OD                      { quality = 1; price = 700; };
+    class TRYK_B_Coyotebackpack_BLK                     { quality = 1; price = 700; };
+    class TRYK_B_Coyotebackpack_WH                      { quality = 1; price = 700; };
+    class TRYK_B_Alicepack                              { quality = 1; price = 700; };
+    class TRYK_B_Medbag                                 { quality = 1; price = 100; };
+    class TRYK_B_Medbag_OD                              { quality = 1; price = 100; };
+    class TRYK_B_Medbag_BK                              { quality = 1; price = 100; };
+    class TRYK_B_Medbag_ucp                             { quality = 1; price = 100; };
+    class TRYK_B_Belt                                   { quality = 1; price = 100; };
+    class TRYK_B_Belt_BLK                               { quality = 1; price = 100; };
+    class TRYK_B_Belt_CYT                               { quality = 1; price = 100; };
+    class TRYK_B_Belt_tan                               { quality = 1; price = 100; };
+    class TRYK_B_Belt_br                                { quality = 1; price = 100; };
+    class TRYK_B_Belt_GR                                { quality = 1; price = 100; };
+    class TRYK_B_Belt_AOR1                              { quality = 1; price = 100; };
+    class TRYK_B_Belt_AOR2                              { quality = 1; price = 100; };
+    class TRYK_B_BAF_BAG_BLK                            { quality = 1; price = 100; };
+    class TRYK_B_BAF_BAG_CYT                            { quality = 1; price = 100; };
+    class TRYK_B_BAF_BAG_OD                             { quality = 1; price = 100; };
+    class TRYK_B_BAF_BAG_rgr                            { quality = 1; price = 100; };
+    class TRYK_B_BAF_BAG_mcamo                          { quality = 1; price = 100; };
+    class TRYK_B_tube_cyt                               { quality = 1; price = 100; };
+    class TRYK_B_tube_od                                { quality = 1; price = 100; };
+    class TRYK_B_tube_blk                               { quality = 1; price = 100; };
+    class TRYK_B_FieldPack_Wood                         { quality = 1; price = 100; };
+    class TRYK_Winter_pack                              { quality = 1; price = 100; };
+	
+	
+	
 	//////// Ammo ///////////
 	class 6Rnd_GreenSignal_F 											{ quality = 1; price = 10; };
 	class 6Rnd_RedSignal_F 												{ quality = 1; price = 10; };
@@ -4097,6 +4714,620 @@ class CfgTerritories
 };
 class CfgTraderCategories 
 {
+	class TRYKUniforms
+	{
+		name = "TRYK Uniforms";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\uniform_ca.paa";
+		items[] =
+		{
+			"TRYK_HRP_UCP",
+			"TRYK_HRP_USMC",
+			"TRYK_HRP_khk",
+			"TRYK_U_B_OD_OD_CombatUniform",
+			"TRYK_U_B_OD_OD_R_CombatUniform",
+			"TRYK_U_B_TANTAN_CombatUniform",
+			"TRYK_U_B_TANTAN_R_CombatUniform",
+			"TRYK_U_B_BLKBLK_CombatUniform",
+			"TRYK_U_B_BLKBLK_R_CombatUniform",
+			"TRYK_U_B_GRYOCP_CombatUniform",
+			"TRYK_U_B_GRYOCP_R_CombatUniformTshirt",
+			"TRYK_U_B_TANOCP_CombatUniform",
+			"TRYK_U_B_TANOCP_R_CombatUniformTshirt",
+			"TRYK_U_B_BLKOCP_CombatUniform",
+			"TRYK_U_B_BLKOCP_R_CombatUniformTshirt",
+			"TRYK_U_B_BLKTAN_CombatUniform",
+			"TRYK_U_B_BLKTANR_CombatUniformTshirt",
+			"TRYK_U_B_ODTAN_CombatUniform",
+			"TRYK_U_B_ODTANR_CombatUniformTshirt",
+			"TRYK_U_B_GRTAN_CombatUniform",
+			"TRYK_U_B_GRTANR_CombatUniformTshirt",
+			"TRYK_U_B_wood_CombatUniform",
+			"TRYK_U_B_woodR_CombatUniformTshirt",
+			"TRYK_U_B_wood3c_CombatUniform",
+			"TRYK_U_B_wood3c_CombatUniformTshirt",
+			"TRYK_U_B_MARPAT_WOOD_CombatUniform",
+			"TRYK_U_B_MARPAT_WOOD_CombatUniformTshirt",
+			"TRYK_U_B_WOOD_MARPAT_CombatUniform",
+			"TRYK_U_B_WOOD_MARPAT_CombatUniformTshirt",
+			"TRYK_U_B_woodtan_CombatUniform",
+			"TRYK_U_B_woodtanR_CombatUniformTshirt",
+			"TRYK_U_B_JSDF_CombatUniform",
+			"TRYK_U_B_JSDF_CombatUniformTshirt",
+			"TRYK_U_B_3CD_Delta_BDU",
+			"TRYK_U_B_3CD_Delta_BDUTshirt",
+			"TRYK_U_B_3CD_Ranger_BDU",
+			"TRYK_U_B_3CD_Ranger_BDUTshirt",
+			"TRYK_U_B_3CD_BLK_BDUTshirt",
+			"TRYK_U_B_3CD_BLK_BDUTshirt2",
+			"TRYK_U_B_ACU",
+			"TRYK_U_B_ACUTshirt",
+			"TRYK_U_B_MARPAT_Wood",
+			"TRYK_U_B_MARPAT_Wood_Tshirt",
+			"TRYK_U_B_MARPAT_Desert",
+			"TRYK_U_B_MARPAT_Desert_Tshirt",
+			"TRYK_U_B_MARPAT_Desert2",
+			"TRYK_U_B_MARPAT_Desert2_Tshirt",
+			"TRYK_U_B_3c",
+			"TRYK_U_B_3cr",
+			"TRYK_U_B_Sage_Tshirt",
+			"TRYK_U_B_BLK3CD",
+			"TRYK_U_B_BLK3CD_Tshirt",
+			"TRYK_U_B_BLK",
+			"TRYK_U_B_BLK_Tshirt",
+			"TRYK_U_B_BLKTAN",
+			"TRYK_U_B_BLKTAN_Tshirt",
+			"TRYK_U_B_ODTAN",
+			"TRYK_U_B_ODTAN_Tshirt",
+			"TRYK_U_B_BLK_OD",
+			"TRYK_U_B_BLK_OD_Tshirt",
+			"TRYK_U_B_C01_Tsirt",
+			"TRYK_U_B_C02_Tsirt",
+			"TRYK_U_B_OD_BLK",
+			"TRYK_U_B_OD_BLK_2",
+			"TRYK_U_B_BLK_TAN_1",
+			"TRYK_U_B_BLK_TAN_2",
+			"TRYK_U_B_wh_tan_Rollup_CombatUniform",
+			"TRYK_U_B_wh_OD_Rollup_CombatUniform",
+			"TRYK_U_B_wh_blk_Rollup_CombatUniform",
+			"TRYK_U_B_BLK_tan_Rollup_CombatUniform",
+			"TRYK_U_B_BLK_OD_Rollup_CombatUniform",
+			"TRYK_U_B_NATO_UCP_GRY_CombatUniform",
+			"TRYK_U_B_NATO_UCP_GRY_R_CombatUniform",
+			"TRYK_U_B_NATO_UCP_CombatUniform",
+			"TRYK_U_B_NATO_UCP_R_CombatUniform",
+			"TRYK_U_B_NATO_OCP_c_BLK_CombatUniform",
+			"TRYK_U_B_NATO_OCP_BLK_c_R_CombatUniform",
+			"TRYK_U_B_NATO_OCP_BLK_CombatUniform",
+			"TRYK_U_B_NATO_OCP_BLK_R_CombatUniform",
+			"TRYK_U_B_NATO_OCPD_CombatUniform",
+			"TRYK_U_B_NATO_OCPD_R_CombatUniform",
+			"TRYK_U_B_NATO_OCP_CombatUniform",
+			"TRYK_U_B_NATO_OCP_R_CombatUniform",
+			"TRYK_U_B_AOR1_Rollup_CombatUniform",
+			"TRYK_U_B_AOR2_Rollup_CombatUniform",
+			"TRYK_U_B_MTP_CombatUniform",
+			"TRYK_U_B_MTP_R_CombatUniform",
+			"TRYK_U_B_MTP_BLK_CombatUniform",
+			"TRYK_U_B_MTP_BLK_R_CombatUniform",
+			"TRYK_U_B_Woodland",
+			"TRYK_U_B_Woodland_Tshirt",
+			"TRYK_U_B_WDL_GRY_CombatUniform",
+			"TRYK_U_B_WDL_GRY_R_CombatUniform",
+			"TRYK_U_B_ARO1_GR_CombatUniform",
+			"TRYK_U_B_ARO1_GR_R_CombatUniform",
+			"TRYK_U_B_ARO1_GRY_CombatUniform",
+			"TRYK_U_B_ARO1_GRY_R_CombatUniform",
+			"TRYK_U_B_ARO1_CombatUniform",
+			"TRYK_U_B_ARO1R_CombatUniform",
+			"TRYK_U_B_ARO1_BLK_CombatUniform",
+			"TRYK_U_B_ARO1_BLK_R_CombatUniform",
+			"TRYK_U_B_ARO1_CBR_CombatUniform",
+			"TRYK_U_B_ARO1_CBR_R_CombatUniform",
+			"TRYK_U_B_ARO2_CombatUniform",
+			"TRYK_U_B_ARO2R_CombatUniform",
+			"TRYK_U_B_AOR2_BLK_CombatUniform",
+			"TRYK_U_B_AOR2_BLK_R_CombatUniform",
+			"TRYK_U_B_AOR2_OD_CombatUniform",
+			"TRYK_U_B_AOR2_OD_R_CombatUniform",
+			"TRYK_U_B_AOR2_GRY_CombatUniform",
+			"TRYK_U_B_AOR2_GRY_R_CombatUniform",
+			"TRYK_U_B_Snow_CombatUniform",
+			"TRYK_U_B_Snowt",
+			"TRYK_U_B_Denim_T_WH",
+			"TRYK_U_B_Denim_T_BK",
+			"TRYK_U_B_BLK_T_WH",
+			"TRYK_U_B_BLK_T_BK",
+			"TRYK_U_B_RED_T_BR",
+			"TRYK_U_B_Denim_T_BG_WH",
+			"TRYK_U_B_Denim_T_BG_BK",
+			"TRYK_U_B_BLK_T_BG_WH",
+			"TRYK_U_B_BLK_T_BG_BK",
+			"TRYK_U_B_RED_T_BG_BR",
+			"TRYK_U_B_fleece",
+			"TRYK_U_B_fleece_UCP",
+			"TRYK_U_B_UCP_PCUs",
+			"TRYK_U_B_GRY_PCUs",
+			"TRYK_U_B_Wood_PCUs",
+			"TRYK_U_B_PCUs",
+			"TRYK_U_B_UCP_PCUs_R",
+			"TRYK_U_B_GRY_PCUs_R",
+			"TRYK_U_B_Wood_PCUs_R",
+			"TRYK_U_B_PCUs_R",
+			"TRYK_U_B_PCUGs",
+			"TRYK_U_B_PCUODs",
+			"TRYK_U_B_PCUGs_gry",
+			"TRYK_U_B_PCUGs_BLK",
+			"TRYK_U_B_PCUGs_OD",
+			"TRYK_U_B_PCUGs_gry_R",
+			"TRYK_U_B_PCUGs_BLK_R",
+			"TRYK_U_B_PCUGs_OD_R",
+			"TRYK_U_Bts_GRYGRY_PCUs",
+			"TRYK_U_Bts_UCP_PCUs",
+			"TRYK_U_Bts_Wood_PCUs",
+			"TRYK_U_Bts_PCUs",
+			"TRYK_U_pad_j",
+			"TRYK_U_pad_j_blk",
+			"TRYK_U_pad_hood_Cl",
+			"TRYK_U_pad_hood_Cl_blk",
+			"TRYK_U_pad_hood_tan",
+			"TRYK_U_pad_hood_Blk",
+			"TRYK_U_pad_hood_CSATBlk",
+			"TRYK_U_pad_hood_Blod",
+			"TRYK_U_pad_hood_odBK",
+			"TRYK_U_pad_hood_BKT2",
+			"TRYK_hoodie_Blk",
+			"TRYK_hoodie_FR",
+			"TRYK_hoodie_Wood",
+			"TRYK_hoodie_3c",
+			"TRYK_T_camo_tan",
+			"TRYK_T_camo_3c",
+			"TRYK_T_camo_Wood",
+			"TRYK_T_camo_wood_marpat",
+			"TRYK_T_camo_Desert_marpat",
+			"TRYK_T_camo_3c_BG",
+			"TRYK_T_camo_Wood_BG",
+			"TRYK_T_camo_wood_marpat_BG",
+			"TRYK_T_camo_desert_marpat_BG",
+			"TRYK_T_PAD",
+			"TRYK_T_OD_PAD",
+			"TRYK_T_TAN_PAD",
+			"TRYK_T_BLK_PAD",
+			"TRYK_T_T2_PAD",
+			"TRYK_T_CSAT_PAD",
+			"TRYK_U_nohoodPcu_gry",
+			"TRYK_U_hood_nc",
+			"TRYK_U_hood_mc",
+			"TRYK_U_denim_hood_blk",
+			"TRYK_U_denim_hood_mc",
+			"TRYK_U_denim_hood_3c",
+			"TRYK_U_denim_hood_nc",
+			"TRYK_U_denim_jersey_blu",
+			"TRYK_U_denim_jersey_blk",
+			"TRYK_shirts_PAD",
+			"TRYK_shirts_OD_PAD",
+			"TRYK_shirts_TAN_PAD",
+			"TRYK_shirts_BLK_PAD",
+			"TRYK_shirts_PAD_BK",
+			"TRYK_shirts_OD_PAD_BK",
+			"TRYK_shirts_TAN_PAD_BK",
+			"TRYK_shirts_BLK_PAD_BK",
+			"TRYK_shirts_PAD_BLW",
+			"TRYK_shirts_OD_PAD_BLW",
+			"TRYK_shirts_TAN_PAD_BLW",
+			"TRYK_shirts_BLK_PAD_BLW",
+			"TRYK_shirts_PAD_YEL",
+			"TRYK_shirts_OD_PAD_YEL",
+			"TRYK_shirts_TAN_PAD_YEL",
+			"TRYK_shirts_BLK_PAD_YEL",
+			"TRYK_shirts_PAD_RED2",
+			"TRYK_shirts_OD_PAD_RED2",
+			"TRYK_shirts_TAN_PAD_RED2",
+			"TRYK_shirts_BLK_PAD_RED2",
+			"TRYK_shirts_PAD_BLU3",
+			"TRYK_shirts_OD_PAD_BLU3",
+			"TRYK_shirts_TAN_PAD_BLU3",
+			"TRYK_shirts_BLK_PAD_BLU3",
+			"TRYK_shirts_DENIM_R",
+			"TRYK_shirts_DENIM_BL",
+			"TRYK_shirts_DENIM_BK",
+			"TRYK_shirts_DENIM_WH",
+			"TRYK_shirts_DENIM_BWH",
+			"TRYK_shirts_DENIM_RED2",
+			"TRYK_shirts_DENIM_WHB",
+			"TRYK_shirts_DENIM_ylb",
+			"TRYK_shirts_DENIM_od",
+			"TRYK_shirts_DENIM_R_Sleeve",
+			"TRYK_shirts_DENIM_BL_Sleeve",
+			"TRYK_shirts_DENIM_BK_Sleeve",
+			"TRYK_shirts_DENIM_WH_Sleeve",
+			"TRYK_shirts_DENIM_BWH_Sleeve",
+			"TRYK_shirts_DENIM_RED2_Sleeve",
+			"TRYK_shirts_DENIM_WHB_Sleeve",
+			"TRYK_shirts_DENIM_ylb_Sleeve",
+			"TRYK_shirts_DENIM_od_Sleeve",
+			"TRYK_shirts_PAD_BL",
+			"TRYK_shirts_OD_PAD_BL",
+			"TRYK_shirts_TAN_PAD_BL",
+			"TRYK_shirts_BLK_PAD_BL",
+			"TRYK_U_taki_wh",
+			"TRYK_U_taki_COY",
+			"TRYK_U_taki_BL",
+			"TRYK_U_taki_BLK",
+			"TRYK_U_Bts_PCUGs",
+			"TRYK_U_Bts_PCUODs",
+			"TRYK_U_taki_G_WH",
+			"TRYK_U_taki_G_COY",
+			"TRYK_U_taki_G_BL",
+			"TRYK_U_taki_G_BLK",
+			"TRYK_U_B_PCUHs",
+			"TRYK_U_B_PCUGHs",
+			"TRYK_U_B_PCUODHs",
+			"TRYK_B_USMC_R",
+			"TRYK_B_USMC_R_ROLL",
+			"TRYK_ZARATAKI",
+			"TRYK_ZARATAKI2",
+			"TRYK_ZARATAKI3",
+			"TRYK_B_TRYK_UCP_T",
+			"TRYK_B_TRYK_3C_T",
+			"TRYK_B_TRYK_MTP_T",
+			"TRYK_B_TRYK_OCP_T",
+			"TRYK_B_TRYK_OCP_D_T",
+			"TRYK_DMARPAT_T",
+			"TRYK_C_AOR2_T",
+			"TRYK_U_B_Sage_T",
+			"TRYK_U_B_Wood_T",
+			"TRYK_U_B_BLTAN_T",
+			"TRYK_U_B_BLOD_T",
+			"TRYK_OVERALL_flesh",
+			"TRYK_OVERALL_nok_flesh",
+			"TRYK_OVERALL_SAGE_BLKboots",
+			"TRYK_OVERALL_SAGE_BLKboots_nk_blk",
+			"TRYK_OVERALL_SAGE_BLKboots_nk",
+			"TRYK_OVERALL_SAGE_BLKboots_nk_blk2",
+			"TRYK_OVERALL_SAGE",
+			"TRYK_SUITS_BLK_F",
+			"TRYK_SUITS_BR_F",
+			"TRYK_H_ghillie_top_headless3glass",
+			"TRYK_shoulder_armor_BK",
+			"TRYK_shoulder_armor_OD",
+			"TRYK_shoulder_armor_CY",
+			"TRYK_H_ghillie_top_headless3",
+			"TRYK_U_B_PCUHsW",
+			"TRYK_U_B_PCUHsW2",
+			"TRYK_U_B_PCUHsW3",
+			"TRYK_U_B_PCUHsW3nh",
+			"TRYK_U_B_PCUHsW4",
+			"TRYK_U_B_PCUHsW5",
+			"TRYK_U_B_PCUHsW6"
+			};
+	};
+
+	class TRYKVests
+	{
+		name = "TRYK Vests";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\vest_ca.paa";
+		items[] =
+		{
+			"TRYK_Hrp_vest_ucp",
+			"TRYK_V_PlateCarrier_JSDF",
+			"TRYK_V_ArmorVest_AOR1",
+			"TRYK_V_ArmorVest_AOR2",
+			"TRYK_V_ArmorVest_coyo",
+			"TRYK_V_ArmorVest_Brown",
+			"TRYK_V_ArmorVest_CBR",
+			"TRYK_V_ArmorVest_khk",
+			"TRYK_V_ArmorVest_rgr",
+			"TRYK_V_ArmorVest_green",
+			"TRYK_V_ArmorVest_tan",
+			"TRYK_V_ArmorVest_Delta",
+			"TRYK_V_ArmorVest_Ranger",
+			"TRYK_V_ArmorVest_AOR1_2",
+			"TRYK_V_ArmorVest_AOR2_2",
+			"TRYK_V_ArmorVest_coyo2",
+			"TRYK_V_ArmorVest_Brown2",
+			"TRYK_V_ArmorVest_cbr2",
+			"TRYK_V_ArmorVest_khk2",
+			"TRYK_V_ArmorVest_rgr2",
+			"TRYK_V_ArmorVest_green2",
+			"TRYK_V_ArmorVest_tan2",
+			"TRYK_V_ArmorVest_Delta2",
+			"TRYK_V_ArmorVest_Ranger2",
+			"TRYK_V_PlateCarrier_blk",
+			"TRYK_V_PlateCarrier_coyo",
+			"TRYK_V_PlateCarrier_wood",
+			"TRYK_V_PlateCarrier_ACU",
+			"TRYK_V_TacVest_coyo",
+			"TRYK_V_harnes_blk_L",
+			"TRYK_V_harnes_od_L",
+			"TRYK_V_harnes_TAN_L",
+			"TRYK_V_PlateCarrier_blk_L",
+			"TRYK_V_PlateCarrier_wood_L",
+			"TRYK_V_PlateCarrier_ACU_L",
+			"TRYK_V_PlateCarrier_coyo_L",
+			"TRYK_V_ChestRig_L",
+			"TRYK_V_ChestRig",
+			"TRYK_V_Bulletproof",
+			"TRYK_V_Bulletproof_BLK",
+			"TRYK_V_Bulletproof_BL",
+			"TRYK_V_IOTV_BLK",
+			"TRYK_V_tacv1M_BK",
+			"TRYK_V_tacv1MLC_BK",
+			"TRYK_V_tacv1",
+			"TRYK_V_tacv1_CY",
+			"TRYK_V_tacv1_BK",
+			"TRYK_V_tacv1_P_BK",
+			"TRYK_V_tacv1_SHERIFF_BK",
+			"TRYK_V_tacv1_FBI_BK",
+			"TRYK_V_tacv1LP_BK",
+			"TRYK_V_tacv1LSRF_BK",
+			"TRYK_V_tacv1LC_BK",
+			"TRYK_V_tacv1LC_CY",
+			"TRYK_V_tacv1LC_OD",
+			"TRYK_V_tacv1LC_FBI_BK",
+			"TRYK_V_tacv1LC_SRF_BK",
+			"TRYK_V_tacv1LC_SRF_OD",
+			"TRYK_V_tacv1LC_P_BK",
+			"TRYK_V_PlateCarrier_POLICE",
+			"TRYK_V_ArmorVest_HRT_B",
+			"TRYK_V_ArmorVest_HRT_OD",
+			"TRYK_V_ArmorVest_HRT2_B",
+			"TRYK_V_ArmorVest_HRT2_OD",
+			"TRYK_V_ArmorVest_Winter",
+			"TRYK_V_Sheriff_BA_OD",
+			"TRYK_V_tacv10_BK",
+			"TRYK_V_tacv10_OD",
+			"TRYK_V_tacv10_TN",
+			"TRYK_V_tacv10LC_BK",
+			"TRYK_V_tacv10LC_OD",
+			"TRYK_V_tacv10LC_TN",
+			"TRYK_V_tacv1L_BK",
+			"TRYK_V_tacv1L_OD",
+			"TRYK_V_tacv1L_CY",
+			"TRYK_V_tacv1LC_FBI2_BK",
+			"TRYK_V_tacv1LC_SRF2_BK",
+			"TRYK_V_tacv1LC_SRF2_OD",
+			"TRYK_V_tacv1LC_P2_BK",
+			"TRYK_V_tacv1_MSL_BK",
+			"TRYK_V_tacv1_MSL_NV",
+			"TRYK_V_tacv1LMSL_BK",
+			"TRYK_V_tacv1LMSL_NV",
+			"TRYK_V_tacv1LC_MSL_BK",
+			"TRYK_V_tacv1LC_MSL_NV",
+			"TRYK_V_tacSVD_BK",
+			"TRYK_V_tacSVD_OD",
+			"TRYK_V_Sheriff_BA_TL",
+			"TRYK_V_Sheriff_BA_TBL",
+			"TRYK_V_Sheriff_BA_TCL",
+			"TRYK_V_Sheriff_BA_TL2",
+			"TRYK_V_Sheriff_BA_TBL2",
+			"TRYK_V_Sheriff_BA_TCL2",
+			"TRYK_V_Sheriff_BA_T",
+			"TRYK_V_Sheriff_BA_TB",
+			"TRYK_V_Sheriff_BA_T2",
+			"TRYK_V_Sheriff_BA_TB2",
+			"TRYK_V_Sheriff_BA_T3",
+			"TRYK_V_Sheriff_BA_TB3",
+			"TRYK_V_Sheriff_BA_T4",
+			"TRYK_V_Sheriff_BA_TB4",
+			"TRYK_V_Sheriff_BA_T5",
+			"TRYK_V_Sheriff_BA_TB5",
+			"TRYK_V_Sheriff_BA_TBL3_BK",
+			"TRYK_V_Sheriff_BA_TBL3_OD",
+			"TRYK_V_Sheriff_BA_TBL3_TN",
+			"TRYK_LOC_AK_chestrig_OD",
+			"TRYK_LOC_AK_chestrig_TAN"
+		};
+	};
+
+	class TRYKHeadgear
+	{
+		name = "TRYK Headgear";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\headgear_ca.paa";
+		items[] =
+		{
+			"TRYK_US_ESS_Glasses",
+			"TRYK_US_ESS_Glasses_WH",
+			"TRYK_US_ESS_Glasses_BLK",
+			"TRYK_US_ESS_Glasses_TAN",
+			"TRYK_US_ESS_Glasses_TAN_BLK",
+			"TRYK_SPGEAR_Glasses",
+			"TRYK_headset_Glasses",
+			"TRYK_SpsetG_Glasses",
+			"TRYK_Spset_PHC1_Glasses",
+			"TRYK_Spset_PHC2_Glasses",
+			"TRYK_US_ESS_Glasses_H",
+			"TRYK_US_ESS_Glasses_Cover",
+			"TRYK_headset2_glasses",
+			"TRYK_ESS_CAP_OD",
+			"TRYK_ESS_CAP_tan",
+			"TRYK_R_CAP_BLK",
+			"TRYK_R_CAP_TAN",
+			"TRYK_R_CAP_OD_US",
+			"TRYK_r_cap_tan_Glasses",
+			"TRYK_r_cap_blk_Glasses",
+			"TRYK_r_cap_od_Glasses",
+			"TRYK_H_headsetcap_Glasses",
+			"TRYK_H_headsetcap_blk_Glasses",
+			"TRYK_H_headsetcap_od_Glasses",
+			"TRYK_TAC_EARMUFF_SHADE",
+			"TRYK_TAC_EARMUFF",
+			"TRYK_NOMIC_TAC_EARMUFF",
+			"TRYK_headset2",
+			"TRYK_TAC_EARMUFF_Gs",
+			"TRYK_TAC_SET_bn",
+			"TRYK_NOMIC_TAC_EARMUFF_Gs",
+			"TRYK_TAC_EARMUFF_SHADE_Gs",
+			"TRYK_TAC_SET_TAN",
+			"TRYK_TAC_SET_OD",
+			"TRYK_TAC_SET_WH",
+			"TRYK_TAC_SET_MESH",
+			"TRYK_TAC_SET_TAN_2",
+			"TRYK_TAC_SET_OD_2",
+			"TRYK_TAC_SET_WH_2",
+			"TRYK_TAC_SET_MESH_2",
+			"TRYK_bandana_g",
+			"TRYK_H_PASGT_BLK",
+			"TRYK_H_PASGT_OD",
+			"TRYK_H_PASGT_COYO",
+			"TRYK_H_PASGT_TAN",
+			"TRYK_H_Helmet_Snow",
+			"TRYK_H_WH",
+			"TRYK_H_GR",
+			"TRYK_H_AOR1",
+			"TRYK_H_AOR2",
+			"TRYK_H_EARMUFF",
+			"TRYK_H_TACEARMUFF_H",
+			"TRYK_H_Bandana_H",
+			"TRYK_H_Bandana_wig",
+			"TRYK_H_Bandana_wig_g",
+			"TRYK_H_wig",
+			"TRYK_H_headset2",
+			"TRYK_H_ghillie_over",
+			"TRYK_H_ghillie_top",
+			"TRYK_H_ghillie_top_headless",
+			"TRYK_H_ghillie_over_green",
+			"TRYK_H_ghillie_top_green",
+			"TRYK_H_ghillie_top_headless_green",
+			"TRYK_H_woolhat",
+			"TRYK_H_woolhat_CW",
+			"TRYK_H_woolhat_WH",
+			"TRYK_H_woolhat_br",
+			"TRYK_H_woolhat_cu",
+			"TRYK_H_woolhat_tan",
+			"TRYK_H_headsetcap",
+			"TRYK_H_headsetcap_blk",
+			"TRYK_H_headsetcap_od",
+			"TRYK_H_pakol",
+			"TRYK_H_pakol2",
+			"TRYK_H_LHS_HEL_G",
+			"TRYK_H_Helmet_Winter",
+			"TRYK_H_Helmet_Winter_2",
+			"TRYK_Shemagh_shade_MESH",
+			"TRYK_Shemagh_shade_N",
+			"TRYK_Shemagh_shade_G_N",
+			"TRYK_Shemagh_shade_WH_N",
+			"TRYK_kio_balaclava_WH",
+			"TRYK_kio_balaclava_BLK",
+			"TRYK_kio_balaclavas",
+			"TRYK_kio_balaclava_BLK_ear",
+			"TRYK_kio_balaclava_ear",
+			"TRYK_kio_balaclava_ESS",
+			"TRYK_Shemagh",
+			"TRYK_Shemagh_mesh",
+			"TRYK_Shemagh_G",
+			"TRYK_Shemagh_WH",
+			"TRYK_Shemagh_shade",
+			"TRYK_Shemagh_shade_G",
+			"TRYK_Shemagh_shade_WH",
+			"TRYK_Shemagh_shade_MH",
+			"TRYK_Shemagh_ESS",
+			"TRYK_Shemagh_ESS_G",
+			"TRYK_Shemagh_ESS_WH",
+			"TRYK_Shemagh_EAR_TAN",
+			"TRYK_Shemagh_EAR_WH"
+		};
+	};
+
+	class TRYKNVGHeadgear
+	{
+		name = "TRYK NVG Headgear";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\headgear_ca.paa";
+		items[] =
+		{
+			"TRYK_US_ESS_Glasses_NV",
+			"TRYK_US_ESS_Glasses_TAN_NV",
+			"TRYK_ESS_BLKTAN_NV",
+			"TRYK_ESS_BLKBLK_NV",
+			"TRYK_G_Shades_Black_NV",
+			"TRYK_G_Shades_Blue_NV",
+			"TRYK_G_bala_ess_NV",
+			"TRYK_bandana_NV",
+			"TRYK_SPgearG_NV",
+			"TRYK_SPgear_PHC1_NV",
+			"TRYK_SPgear_PHC2_NV",
+			"TRYK_G_bala_wh_NV",
+			"TRYK_ESS_wh_NV",
+			"TRYK_Headphone_NV",
+			"TRYK_HRPIGEAR_NV",
+			"TRYK_Headset_NV",
+			"TRYK_TAC_boonie_SET_NV",
+			"TRYK_TAC_SET_NV_TAN",
+			"TRYK_TAC_SET_NV_OD",
+			"TRYK_TAC_SET_NV_WH",
+			"TRYK_TAC_SET_NV_MESH",
+			"TRYK_TAC_SET_NV_TAN_2",
+			"TRYK_TAC_SET_NV_OD_2",
+			"TRYK_TAC_SET_NV_WH_2",
+			"TRYK_TAC_SET_NV_MESH_2",
+			"TRYK_H_DELTAHELM_NV",
+			"TRYK_balaclava_BLACK_NV",
+			"TRYK_balaclava_NV",
+			"TRYK_balaclava_BLACK_EAR_NV",
+			"TRYK_balaclava_EAR_NV",
+			"TRYK_Shemagh_TAN_NV",
+			"TRYK_Shemagh_MESH_NV",
+			"TRYK_Shemagh_G_NV",
+			"TRYK_Shemagh_WH_NV",
+			"TRYK_Shemagh_EAR_NV",
+			"TRYK_Shemagh_EAR_G_NV",
+			"TRYK_Shemagh_EAR_WH_NV",
+			"TRYK_ShemaghESSTAN_NV",
+			"TRYK_ShemaghESSOD_NV",
+			"TRYK_ShemaghESSWH_NV"
+		};
+	};
+
+ 
+	class TRYKBackpacks
+	{
+		name = "TRYK Backpacks";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\backpack_ca.paa";
+		items[] =
+		{
+			"TRYK_B_AssaultPack_UCP",
+			"TRYK_B_AssaultPack_Type2camo",
+			"TRYK_B_AssaultPack_MARPAT_Desert",
+			"TRYK_B_AssaultPack_MARPAT_Wood",
+			"TRYK_B_Kitbag_Base",
+			"TRYK_B_Kitbag_blk",
+			"TRYK_B_Kitbag_aaf",
+			"TRYK_B_Carryall_blk",
+			"TRYK_B_Carryall_wh",
+			"TRYK_B_Carryall_wood",
+			"TRYK_B_Carryall_JSDF",
+			"TRYK_B_Kitbag_Base_JSDF",
+			"TRYK_B_Coyotebackpack",
+			"TRYK_B_Coyotebackpack_OD",
+			"TRYK_B_Coyotebackpack_BLK",
+			"TRYK_B_Coyotebackpack_WH",
+			"TRYK_B_Alicepack",
+			"TRYK_B_Medbag",
+			"TRYK_B_Medbag_OD",
+			"TRYK_B_Medbag_BK",
+			"TRYK_B_Medbag_ucp",
+			"TRYK_B_Belt",
+			"TRYK_B_Belt_BLK",
+			"TRYK_B_Belt_CYT",
+			"TRYK_B_Belt_tan",
+			"TRYK_B_Belt_br",
+			"TRYK_B_Belt_GR",
+			"TRYK_B_Belt_AOR1",
+			"TRYK_B_Belt_AOR2",
+			"TRYK_B_BAF_BAG_BLK",
+			"TRYK_B_BAF_BAG_CYT",
+			"TRYK_B_BAF_BAG_OD",
+			"TRYK_B_BAF_BAG_rgr",
+			"TRYK_B_BAF_BAG_mcamo",
+			"TRYK_B_tube_cyt",
+			"TRYK_B_tube_od",
+			"TRYK_B_tube_blk",
+			"TRYK_B_FieldPack_Wood",
+			"TRYK_Winter_pack"
+		};
+	
+	};
+	
+	
 	class Community
 	{
 		name = "Community Items";
@@ -5993,6 +7224,11 @@ class CfgTraders
 			"Backpacks",
 			"NVG",
 			"EquipmentTools",
+			"TRYKUniforms",
+			"TRYKVests",
+			"TRYKHeadgear",
+			"TRYKNVGHeadgear",
+			"TRYKBackpacks",
 			"FirstAid"
 		};
 	};
