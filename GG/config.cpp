@@ -1324,11 +1324,11 @@ class CfgCraftingRecipes
 	class GoldGun: Exile_AbstractCraftingRecipe
 	{
 	    name = "Craft Gold";
-	    pictureItem = "Exile_Weapon_AKS_Gold";
+	    pictureItem = "Exile_Weapon_TaurusGold";
 	    requiresFire = 1;
 	    returnedItems[] =
 	    {
-	        {1, "Exile_Weapon_AKS_Gold"}
+	        {1, "Exile_Weapon_TaurusGold"}
 	    };
 	    components[] =
 	    {
