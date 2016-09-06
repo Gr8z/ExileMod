@@ -81,7 +81,7 @@ class RscTitles
 
 class CfgSounds
 {
-    sounds[] = {intro,cam};
+    sounds[] = {intro,cam,safeTrap};
     class intro
     {
         name = "intro";
@@ -96,15 +96,12 @@ class CfgSounds
         titles[] = {};
     };
 	
-	{
-	sounds[] = {0};
 	class safeTrap
 	{
 		name = "Xbrm_safeTrapped";
 		sound[] = {"\GG\HEG_Xbrm_client\sFx\bomb.ogg", 1, 1};
-		titles[] = {0,""};
+		titles[] = {}
 	};
-};
 };
 ///////////////////////////////////////////////////////////////////////////////
 // Exile Settings - Do not change these!
