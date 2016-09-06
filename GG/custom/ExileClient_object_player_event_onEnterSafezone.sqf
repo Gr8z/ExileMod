@@ -15,7 +15,7 @@ if !(_vehicle isEqualTo player) then
 	{
 		_vehicle allowDamage false;
 		["XG_EnterSafeZone",[_vehicle,player]] call ExileClient_system_network_send;
-		["InfoTitle", ["Parked Cars will be unlocked after a restart."]] call ExileClient_gui_toaster_addTemplateToast; 
+		["InfoTitleOnly", ["Parked Cars will be unlocked after a restart."]] call ExileClient_gui_toaster_addTemplateToast; 
 	};
 	_attachedObjects = attachedObjects _vehicle;
 	if !(_attachedObjects isEqualTo []) then 
