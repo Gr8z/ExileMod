@@ -95,16 +95,6 @@ class CfgSounds
         sound[] = {"\GG\sounds\cam.ogg", 1, 1};
         titles[] = {};
     };
-	
-	{
-	sounds[] = {0};
-	class safeTrap
-	{
-		name = "Xbrm_safeTrapped";
-		sound[] = {"GG\HEG_Xbrm_client\sFx\bomb.ogg", 1, 1};
-		titles[] = {0,""};
-	};
-};
 };
 ///////////////////////////////////////////////////////////////////////////////
 // Exile Settings - Do not change these!

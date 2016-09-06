@@ -3449,25 +3449,6 @@ class CfgInteractionMenus
 				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo -1)";
 				action = "_this spawn ExAd_fnc_startHack";
 			};
-			class RaidSafe : ExileAbstractAction
-			{
-				title = "Attempt Lockpicking";
-				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo -1)";
-				action = "[ExileClientInteractionObject,'safe'] execVM 'GG\HEG_Xbrm_client\functions\Xbrm_lockpick_init.sqf'";
-			};
-			class TrapSafe : ExileAbstractAction
-			{
-				title = "Rig With Explosives";
-				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo 0)";
-				action = "ExileClientInteractionObject execVM 'GG\HEG_Xbrm_client\functions\addTrap.sqf'";
-			};
-			
-			class ScanSafe : ExileAbstractAction
-			{
-				title = "Scan For Explosives";
-				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo -1)";
-				action = "ExileClientInteractionObject execVM 'GG\HEG_Xbrm_client\functions\scanTrap.sqf'";
-			};
 		};
 	};
 	class ATM
@@ -3606,12 +3587,6 @@ class CfgInteractionMenus
 				title = "Repair";
 				condition = "(!((ExileClientInteractionObject getVariable ['ExileConstructionDamage',0]) isEqualTo 0)) && (call ExileClient_util_world_isInOwnTerritory)";
 				action = "_this call ExileClient_object_construction_repair";
-			};
-			class RaidDoor : ExileAbstractAction
-			{
-				title = "Attempt Break In";
-				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo -1)";
-				action = "[ExileClientInteractionObject,'door'] execVM 'GG\HEG_Xbrm_client\functions\Xbrm_lockpick_init.sqf'";
 			};
 		};
 	};
