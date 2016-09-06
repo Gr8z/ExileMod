@@ -41,7 +41,7 @@ if (_isTrappedObject) then {
 		Xbrm_defusing = false;
 	};
 	if (_result) then {
-		execVM "addons\HEG_Xbrm_client\functions\defuseTrap.sqf";
+		execVM "GG\HEG_Xbrm_client\functions\defuseTrap.sqf";
 	};
 } else {
 	["SuccessTitleOnly", ["No explosives found!"]] call ExileClient_gui_toaster_addTemplateToast;

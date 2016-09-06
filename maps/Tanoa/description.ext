@@ -101,7 +101,7 @@ class CfgSounds
 	class safeTrap
 	{
 		name = "Xbrm_safeTrapped";
-		sound[] = {"GG\HEG_Xbrm_client\sFx\bomb.ogg", 1, 1};
+		sound[] = {"\GG\HEG_Xbrm_client\sFx\bomb.ogg", 1, 1};
 		titles[] = {0,""};
 	};
 };

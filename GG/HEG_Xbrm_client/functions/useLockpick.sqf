@@ -27,7 +27,7 @@ Xbrm_network_send = [player, _object, _type, "attempt"];
 publicVariableServer "Xbrm_network_send";
 
 //open keypad
-execVM "addons\HEG_Xbrm_client\keypad\keypad.sqf";
+execVM "GG\HEG_Xbrm_client\keypad\keypad.sqf";
 
 player playAction "Crouch";
 
@@ -64,7 +64,7 @@ if (_isTrappedObject) exitWith {
 	ctrlDelete (uiNamespace getVariable "progressBox");
 	ctrlDelete (uiNamespace getVariable "progressText");
 	ctrlDelete (uiNamespace getVariable "progressTextBox");
-	[_object, _origin, 2] execVM "addons\HEG_Xbrm_client\functions\detonate.sqf";
+	[_object, _origin, 2] execVM "GG\HEG_Xbrm_client\functions\detonate.sqf";
 	Xbrm_network_send = [player, _object, _type, "failed"];
 	publicVariableServer "Xbrm_network_send";
 	Xbrm_raiding = false;
@@ -74,7 +74,7 @@ _counter = _timer * 10;
 _pcnt = "%";
 
 //start timer, and action loop
-_timer execVM "addons\HEG_Xbrm_client\anim\animate.sqf";
+_timer execVM "GG\HEG_Xbrm_client\anim\animate.sqf";
 for "_i" from 1 to _counter do {
 
 	_isCancelled = player getvariable ["LockpickIsCancelled",1] isEqualTo -1;

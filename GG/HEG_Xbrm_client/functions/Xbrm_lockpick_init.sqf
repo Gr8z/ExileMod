@@ -50,24 +50,24 @@ if(_result) then {
 				case "wood": {
 					_timer = Xbrm_door_time;
 					_chance = Xbrm_door_chance;
-					[_target, _type, _timer, _chance] execVM "addons\HEG_Xbrm_client\functions\useLockpick.sqf";
+					[_target, _type, _timer, _chance] execVM "GG\HEG_Xbrm_client\functions\useLockpick.sqf";
 				};
 				case "metal": {
 					_timer = Xbrm_doorM_time;
 					_chance = Xbrm_doorM_chance;
-					[_target, _type, _timer, _chance] execVM "addons\HEG_Xbrm_client\functions\useLockpick.sqf";
+					[_target, _type, _timer, _chance] execVM "GG\HEG_Xbrm_client\functions\useLockpick.sqf";
 				};
 				case "concrete": {
 					_timer = Xbrm_doorC_time;
 					_chance = Xbrm_doorC_chance;
-					[_target, _type, _timer, _chance] execVM "addons\HEG_Xbrm_client\functions\useLockpick.sqf";
+					[_target, _type, _timer, _chance] execVM "GG\HEG_Xbrm_client\functions\useLockpick.sqf";
 				};
 			};
 		};
 		case "safe": {
 			_timer = Xbrm_safe_time;
 			_chance = Xbrm_safe_chance;
-			[_target, _type, _timer, _chance] execVM "addons\HEG_Xbrm_client\functions\useLockpick.sqf";
+			[_target, _type, _timer, _chance] execVM "GG\HEG_Xbrm_client\functions\useLockpick.sqf";
 		};
 	};
 };

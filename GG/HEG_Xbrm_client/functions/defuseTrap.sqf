@@ -60,7 +60,7 @@ _KDEH = findDisplay 46 displayAddEventHandler ["KeyDown","_this call fnc_keyPres
 ["SuccessTitleOnly", ["Press ENTER to cancel."]] call ExileClient_gui_toaster_addTemplateToast;
 
 //start action loop and timer
-execVM "addons\HEG_Xbrm_client\anim\defuse.sqf";
+execVM "GG\HEG_Xbrm_client\anim\defuse.sqf";
 _counter = Xbrm_defuse_time * 10;
 _pcnt = "%";
 
@@ -101,7 +101,7 @@ if (player distance _origin >= 5) exitWith {
 _chance = Xbrm_defuse_chance;
 if (_chance < _getLucky) then {
 	player playActionNow "GestureNo";
-	[_object, _origin, 1] execVM "addons\HEG_Xbrm_client\functions\detonate.sqf";
+	[_object, _origin, 1] execVM "GG\HEG_Xbrm_client\functions\detonate.sqf";
 	Xbrm_defusing = false;
 } else {
 	player playActionNow "GestureYes";

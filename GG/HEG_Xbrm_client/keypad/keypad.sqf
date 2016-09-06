@@ -23,19 +23,19 @@ fnc_keyPressed = {
 	  case 1: 
 	  {
 		  ["Whoops",["Press red button to cancel."]] call ExileClient_gui_notification_event_addNotification;
-		  execVM "addons\HEG_Xbrm_client\keypad\keypad.sqf";
+		  execVM "GG\HEG_Xbrm_client\keypad\keypad.sqf";
 	  };
 	  //Enter key
 	  case 28:
 	  {
 		  ["Whoops",["Press red button to cancel."]] call ExileClient_gui_notification_event_addNotification;
-		  execVM "addons\HEG_Xbrm_client\keypad\keypad.sqf";
+		  execVM "GG\HEG_Xbrm_client\keypad\keypad.sqf";
 	  };
 	  //Num Enter key
 	  case 156:
 	  {
 		  ["Whoops",["Press red button to cancel."]] call ExileClient_gui_notification_event_addNotification;
-		  execVM "addons\HEG_Xbrm_client\keypad\keypad.sqf";
+		  execVM "GG\HEG_Xbrm_client\keypad\keypad.sqf";
 	  };
   };
 };
