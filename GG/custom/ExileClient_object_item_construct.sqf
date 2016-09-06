@@ -29,7 +29,11 @@ _cantBuildNear = [
     "land_AII_upper_part","Land_Ind_IlluminantTower","Land_Misc_deerstand","Land_ns_Jbad_A_Stationhouse",
     "Land_Airport_01_controlTower_F","Land_Airport_01_terminal_F","Land_Airport_02_controlTower_F",
     "Land_Airport_02_terminal_F","Land_Cargo_House_V4_F","Land_Cargo_HQ_V4_F","Land_Cargo_Patrol_V4_F",
-    "Land_Cargo_Tower_V4_F","Land_Atm_01_F"
+    "Land_Cargo_Tower_V4_F","Land_Atm_01_F",
+    // Fuel Stations
+	"Land_HelipadSquare_F","Land_HelipadEmpty_F","O_Truck_03_covered_F","Land_CarService_F","Land_fs_roof_F",
+	"Land_fs_feed_F","CargoNet_01_barrels_F","Land_A_FuelStation_Feed","Land_A_FuelStation_Shed",
+	"Land_FuelStation_01_pump_F","Land_FuelStation_02_pump_F"
 ]; 
 _cantBuildDist = 200;
 
