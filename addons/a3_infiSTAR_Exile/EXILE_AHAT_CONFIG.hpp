@@ -299,7 +299,7 @@ VCT = 300;	/* if "DayNightVote = true;" - Time (in seconds) to wait until nex vo
 	the game is still broken and sometimes you can see people naked when they are not.
 	I did not add the old check back in, I made a new one making use of new functions :)
 */
-fix_uniform_and_vest = true;
+fix_uniform_and_vest = false;
 
 
 /*
@@ -336,7 +336,7 @@ MPH = false;
 /*
 	This will check from serverside if a playerobject received damage but did not take it
 */
-GodModeCheck = true;
+GodModeCheck = false;
 /****************************************************************************************************/
 /****************************NOT FULLY TESTED - NEW CHECK - ABOVE************************************/
 /****************************************************************************************************/
@@ -457,7 +457,7 @@ badIDDsToClose[] =
 	314,632,1320,2121,148,163,129,169,157,69,156,165,166,167,312,1321,2727
 };
 
-/* Use IDD White-List ? */ UDW = true;
+/* Use IDD White-List ? */ UDW = false;
 /* allowedIDDs: Insert IDDs here to prevent them from being closed! */
 allowedIDDs[] =
 {
@@ -489,7 +489,7 @@ allowedIDDs[] =
 	it is highly recommended to have this check turned on (useBlacklistedVariableCheck = true;)
 	shows "BadVariable in xxxxxxxx " in the logs.
 */
-useBlacklistedVariableCheck = true;
+useBlacklistedVariableCheck = false;
 blacklistedVariables[] =
 {
 	"BIS_DEBUG_CAM",
