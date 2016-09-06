@@ -45,7 +45,7 @@ GG_fnc_drawToMap = {
 ] call GG_fnc_drawToMap;
 
 [  
-	[[4261.92,11640.8],[4308.47,11640.8]],
+	[[4261.92,11640.8],[4309.69,11646.2]],
 	4,
 	["ColorWhite", 1]
 ] call GG_fnc_drawToMap;
