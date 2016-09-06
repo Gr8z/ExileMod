@@ -74,51 +74,10 @@ ZCP_RewardWeightForRandomChoice = [
 // capradius -> 0 for Random, real number for Static base files.
 ZCP_CapPoints = [
     [
-        "Battlezone Alpha", // name (0)
+        "Battlezone", // name (0)
         [[10000,10000,0],[10000,10000,0]], // [[x,y,z],[x,y,z]] if using static location (1)
-        ["Reputation","BigWeaponBox"], // Reward -> Random, Poptabs, Vehicle, Buildingbox, WeaponBox , BigWeaponBox, SniperWeaponBox (2)
+        ["Reputation","BigWeaponBox","Poptabs"], // Reward -> Random, Poptabs, Vehicle, Buildingbox, WeaponBox , BigWeaponBox, SniperWeaponBox (2)
         "alpha", // unique varname -> this gets checked and fixed automaticly on server start ( so don't really worry about it ).
-        0, // unique index -> this gets checked and fixed automaticly on server start ( so don't really worry about it ).
-        true, // spawnAI on start of the missions ( NEEDS AI system for this ) (5)
-        false, // isStatic location ( if true it will take the location specified earlier) (6)
-        "Random", // baseFile -> Random OR the name of the sqf file OR array of basefiles to choose from ( eg: ["m3e_base1.sqf","m3e_village.sqf"], )
-        -1, // capradius if you use a specific static basefile. -> put -1 if you want to use the corresponding one from the ZCP_Capbasses array).
-        -1, // max terrainGradient -> when specific static basefile is used (9) -> put -1 if you want to use the corresponding one from the ZCP_Capbasses array).
-        -1, // distancefromojects -> when specific static basefile is used (10) -> put -1 if you want to use the corresponding one from the ZCP_Capbasses array).
-        120, // captime in seconds for this mission (11)
-        2, // Minimum amount of AI at the start of mission (12)
-        4, // Maximum amount of AI at start of mission ( If you want it to always be a number change MIN and MAX to the same number. )
-        false, // deploy smoke on the circle border when mission is finished (14)
-        0, // ammount of seconds to wait before deploying the smokescreen (15)
-        0, // ammount of meters outside the circle to place the smoke sources ( 0 is ON the circle border, 50 would be 50 meter outside the border)
-        true, // use Waves of AI to attack the base when a player is capping (17)
-        [ // array of waves of AI () (18)
-            [
-                15, // procentage of the cap time to start attack (50 = 50% of the total captime)
-                2, // Amount of AI units in a group
-                1, // Amount of AI groups
-                150, // distance in meter form ZCP for the ai to spawn
-                true // false -> all groups from 1 random location, true -> all groups from their own random location
-            ]
-            ,
-            [
-                50, // procentage of the cap time to start attack (50 = 50% of the total captime)
-                2, // Amount of AI units in a group
-                2, // Amount of AI groups
-                100, // distance in meter form ZCP for the ai to spawn
-                true // false -> all groups from 1 random location, true -> all groups from their own random location
-            ]
-        ],
-        1, // Minimum amount of launchers for starting AI (19)
-        2, // Maximum amount of launchers for starting AI (20)
-        1, // Minimum amount of launchers for Wave AI (21)
-        1  // Maximum amount of launchers for Wave AI (22)
-    ]
-	[
-        "Battlezone Bravo", // name (0)
-        [[10000,10000,0],[10000,10000,0]], // [[x,y,z],[x,y,z]] if using static location (1)
-        ["Reputation","Vehicle"], // Reward -> Random, Poptabs, Vehicle, Buildingbox, WeaponBox , BigWeaponBox, SniperWeaponBox (2)
-        "bravo", // unique varname -> this gets checked and fixed automaticly on server start ( so don't really worry about it ).
         0, // unique index -> this gets checked and fixed automaticly on server start ( so don't really worry about it ).
         true, // spawnAI on start of the missions ( NEEDS AI system for this ) (5)
         false, // isStatic location ( if true it will take the location specified earlier) (6)
@@ -158,7 +117,7 @@ ZCP_CapPoints = [
 ];
 
 
-ZCP_MaxMissions = 2; // Amount of cap points at the same time when ZCP_MaxMissionsRelativeToPlayers = false
+ZCP_MaxMissions = 1; // Amount of cap points at the same time when ZCP_MaxMissionsRelativeToPlayers = false
 
 ZCP_Minimum_Online_Players = 1; // Amount of players to be online before it allows to spawn a capture point. !!! O = always
 
@@ -399,10 +358,7 @@ ZCP_DMS_ArmedVehicles =                 [                           // List of a
 ZCP_DMS_MilitaryVehicles =              [                           // List of military vehicles that can spawn
                                         "Exile_Car_Strider",
                                         "Exile_Car_Hunter",
-                                        "Exile_Car_Ifrit",
-										"B_MRAP_01_hmg_F",
-										"O_MRAP_02_hmg_F",
-										"I_MRAP_03_hmg_F"
+                                        "Exile_Car_Ifrit"
                                     ];
 
 ZCP_DMS_TransportTrucks =               [                           // List of transport trucks that can spawn
@@ -442,7 +398,7 @@ ZCP_DMS_TransportHelis =                [                           // List of t
                                         "Exile_Chopper_Taru_Transport_Black"
                                     ];
 
-ZCP_VehicleReward = ZCP_DMS_MilitaryVehicles;
+ZCP_VehicleReward = ZCP_DMS_TransportTrucks;
 ZCP_DMS_DEBUG = false;
 
 
