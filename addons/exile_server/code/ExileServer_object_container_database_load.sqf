@@ -43,4 +43,13 @@ if !(_abandoned isEqualTo "") then
 _containerObject enableSimulationGlobal false;
 _containerObject call ExileServer_system_simulationMonitor_addVehicle;
 _containerObject addMPEventHandler ["MPKilled", { if !(isServer) exitWith {}; (_this select 0) call ExileServer_object_container_event_onMpKilled; }];
+
+  ////////////////////////////
+ // HEG Safe Trapping Start//
+////////////////////////////
+_containerObject setVariable ["HegIsTrapped", (_data select 21), true];
+  //////////////////////////
+ // HEG Safe Trapping End//
+//////////////////////////
+
 _containerObject
