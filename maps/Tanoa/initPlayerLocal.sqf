@@ -2,7 +2,7 @@
  * Created with Exile Mod 3DEN Plugin
  * www.exilemod.com
  */
-
+[] execVM "GG\service\service_point.sqf";
 [] execVM "GG\MostWanted_Client\MostWanted_Init.sqf";
 [] execVM "GG\MarXet\MarXet_Init.sqf";
 
