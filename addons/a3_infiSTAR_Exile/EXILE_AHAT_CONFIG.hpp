@@ -604,21 +604,17 @@ allSupportBoxes[] =
 		"Support-Box1",
 		{
 			"Exile_Item_Flag","Exile_Item_CookingPot",
-			{"Exile_Item_Codelock",5},{"Exile_Item_DuctTape",5},{"Exile_Item_InstaDoc",5},
-			{"Exile_Item_ExtensionCord",5},{"Exile_Item_FortificationUpgrade",50},
-			{"Exile_Item_GloriousKnakworst_Cooked",10},{"Exile_Item_PlasticBottleFreshWater",10},{"Exile_Item_SafeKit",5}
+			{"Exile_Item_Codelock",5},{"Exile_Item_DuctTape",10},{"Exile_Item_InstaDoc",10},
+			{"Exile_Item_Energydrink",10},{"Exile_Item_ExtensionCord",5},{"Exile_Item_FloodLightKit",5},
+			{"Exile_Item_FortificationUpgrade",5},{"Exile_Item_FuelCanisterFull",5},{"Exile_Item_GloriousKnakworst_Cooked",10},
+			{"Exile_Item_LightBulb",5},{"Exile_Item_Matches",5},{"Exile_Item_MetalBoard",5},
+			{"Exile_Item_MetalPole",5},{"Exile_Item_PlasticBottleFreshWater",10},{"Exile_Item_PortableGeneratorKit",5},
+			{"Exile_Item_Rope",15},{"Exile_Item_SafeKit",15},{"Exile_Magazine_Battery",15}
 		}
 	},
 	{
 		"Support-Box2",
 		{
-<<<<<<< HEAD
-			"Exile_Item_Flag","Exile_Item_WorkBenchKit","B_Carryall_khk","Exile_Item_CampFireKit","Exile_Item_CamoTentKit",
-			{"Exile_Item_CookingPot",2},{"Exile_Melee_Axe",1},{"Exile_Item_Handsaw",1},{"Exile_Item_Matches",2},
-			{"Exile_Item_Codelock",4},{"Exile_Item_WoodDoorKit",2},{"Exile_Item_WoodDoorwayKit",2},{"Exile_Item_WoodFloorKit",10},
-			{"Exile_Item_WoodFloorPortKit",2},{"Exile_Item_WoodGateKit",2},{"Exile_Item_WoodStairsKit",2},{"Exile_Item_WoodWallKit",18},
-			{"Exile_Item_WoodWindowKit",4},{"Exile_Item_SafeKit",1},{"Exile_Item_GloriousKnakworst",2},{"Exile_Item_PlasticBottleFreshWater",3}
-=======
 
 			"Exile_Item_Flag","Exile_Item_WorkBenchKit","B_Carryall_khk",
 			{"Exile_Item_CookingPot",2},{"Exile_Melee_Axe",2},{"Exile_Item_Matches",2},
@@ -626,17 +622,21 @@ allSupportBoxes[] =
 			{"Exile_Item_Matches",2},{"Exile_Item_WoodFloorKit",18},{"Exile_Item_WoodFloorPortKit",4},
 			{"Exile_Item_WoodGateKit",2},{"Exile_Item_WoodStairsKit",4},{"Exile_Item_WoodWallKit",25},
 			{"Exile_Item_WoodWindowKit",4},{"Exile_Item_SafeKit",3},{"Exile_Item_FortificationUpgrade",10}
->>>>>>> origin/Revival
 		}
 	},
 	{
 		"Support-Box3",
 		{
-			{"Exile_Item_WoodDoorKit",20},{"Exile_Item_WoodWallKit",30},
-			{"Exile_Item_WoodWindowKit",10},{"Exile_Item_WoodFloorKit",60}
+			{"Exile_Item_WoodDoorKit",4},{"Exile_Item_WoodWallKit",30},
+			{"Exile_Item_WoodWindowKit",4},{"Exile_Item_WoodFloorKit",30}
+		}
+	},
+	{
+		"Support-Box4",
+		{
+			"ItemMap",{"ItemGPS",5},"ItemWatch"
 		}
 	}
-	
 };
 
 
