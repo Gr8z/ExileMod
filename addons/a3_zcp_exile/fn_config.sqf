@@ -80,7 +80,7 @@ ZCP_CapPoints = [
         -1, // capradius if you use a specific static basefile. -> put -1 if you want to use the corresponding one from the ZCP_Capbasses array).
         -1, // max terrainGradient -> when specific static basefile is used (9) -> put -1 if you want to use the corresponding one from the ZCP_Capbasses array).
         -1, // distancefromojects -> when specific static basefile is used (10) -> put -1 if you want to use the corresponding one from the ZCP_Capbasses array).
-        120, // captime in seconds for this mission (11)
+        600, // captime in seconds for this mission (11)
         2, // Minimum amount of AI at the start of mission (12)
         4, // Maximum amount of AI at start of mission ( If you want it to always be a number change MIN and MAX to the same number. )
         false, // deploy smoke on the circle border when mission is finished (14)
@@ -122,7 +122,7 @@ ZCP_CapPoints = [
 
 ZCP_MaxMissions = 1; // Amount of cap points at the same time when ZCP_MaxMissionsRelativeToPlayers = false
 
-ZCP_Minimum_Online_Players = 1; // Amount of players to be online before it allows to spawn a capture point. !!! O = always
+ZCP_Minimum_Online_Players = 15; // Amount of players to be online before it allows to spawn a capture point. !!! O = always
 
 ZCP_MaxMissionsRelativeToPlayers = false; // ZCP_MaxMissions will be ignored if true. ZCP_RelativeMaxMissions will be used
 ZCP_RelativeMaxMissions = [
@@ -361,7 +361,10 @@ ZCP_DMS_ArmedVehicles =                 [                           // List of a
 ZCP_DMS_MilitaryVehicles =              [                           // List of military vehicles that can spawn
                                         "Exile_Car_Strider",
                                         "Exile_Car_Hunter",
-                                        "Exile_Car_Ifrit"
+                                        "Exile_Car_Ifrit",
+										"B_MRAP_01_hmg_F",
+										"O_MRAP_02_hmg_F",
+										"I_MRAP_03_hmg_F"
                                     ];
 
 ZCP_DMS_TransportTrucks =               [                           // List of transport trucks that can spawn
@@ -401,7 +404,7 @@ ZCP_DMS_TransportHelis =                [                           // List of t
                                         "Exile_Chopper_Taru_Transport_Black"
                                     ];
 
-ZCP_VehicleReward = ZCP_DMS_TransportTrucks;
+ZCP_VehicleReward = ZCP_DMS_MilitaryVehicles;
 ZCP_DMS_DEBUG = false;
 
 
