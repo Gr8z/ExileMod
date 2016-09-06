@@ -29,8 +29,9 @@ if (hasInterface) then
 	AVS_fillAction = 0;
 	AVS_fillActionAdded = false;
 
-	AVS_Loop = 
+	while {true} do
 	{
+
 		_vehicle = vehicle player;
 
 		if (AVS_RefuelSystemActive && AVS_FillCanisterActive && {_vehicle isEqualTo player}) then 
@@ -232,6 +233,6 @@ if (hasInterface) then
 				};
 			};
 		};
+		sleep 2;
 	};
-	AVS_LoopRefresh = [2, AVS_Loop, [], true] call ExileClient_system_thread_addtask;
 };
