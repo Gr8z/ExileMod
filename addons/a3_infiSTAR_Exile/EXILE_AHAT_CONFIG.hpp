@@ -314,7 +314,7 @@ VCT = 300;	/* if "DayNightVote = true;" - Time (in seconds) to wait until nex vo
 	the game is still broken and sometimes you can see people naked when they are not.
 	I did not add the old check back in, I made a new one making use of new functions :)
 */
-fix_uniform_and_vest = false;
+fix_uniform_and_vest = true;
 
 
 /*
