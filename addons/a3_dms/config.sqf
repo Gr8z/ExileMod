@@ -798,7 +798,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"hgun_Pistol_heavy_02_F",
 											"Exile_Weapon_Colt1911",
 											"Exile_Weapon_Makarov",
-											"Exile_Weapon_Taurus",
+											"Exile_Weapon_Taurus"
 										];
 	DMS_sniper_optics =					[							// Optics for Sniper Class
 											#ifdef GIVE_AI_APEX_GEAR
