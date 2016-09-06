@@ -1185,7 +1185,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_Box_BreachingCharges =			[							// List of breaching charges (weighted). Not used (yet).
 											"BreachingChargeBigMomma",
 											"BreachingChargeMetal",
-											"BreachingChargeWood",
+											"BreachingChargeWood"
 										];
 
 	DMS_RareLoot						= true;						// Potential chance to spawn rare loot in any crate.
