@@ -1319,7 +1319,25 @@ class CfgCraftingRecipes
 	        {1, "Exile_Item_ThermalScannerPro"}
 	    };
 	    category = "Tools & Items";
+		
 	};
+	class GoldGun: Exile_AbstractCraftingRecipe
+	{
+	    name = "Craft Gold";
+	    pictureItem = "Exile_Weapon_AKS_Gold";
+	    requiresFire = 1;
+	    returnedItems[] =
+	    {
+	        {1, "Exile_Weapon_AKS_Gold"}
+	    };
+	    components[] =
+	    {
+	        {1, "Exile_Item_Magazine01"},
+	        {1, "Exile_Item_Magazine02"},
+	        {1, "Exile_Item_Magazine03"},
+			{1, "Exile_Item_Magazine04"}
+	    };
+	    category = "Tools & Items";
 };
 class CfgExileArsenal
 {
@@ -2165,7 +2183,7 @@ class CfgExileArsenal
 	class Exile_Weapon_Colt1911											{ quality = 1; price = 100; };
 	class Exile_Weapon_Makarov											{ quality = 1; price = 100; };
 	class Exile_Weapon_Taurus											{ quality = 1; price = 100; };
-	class Exile_Weapon_TaurusGold										{ quality = 1; price = 150; };
+	class Exile_Weapon_TaurusGold										{ quality = 1; price = 150; sellPrice = 250000; }; //MAGAZINE CRAFT ITEM
 	class Exile_Weapon_M1014											{ quality = 1; price = 200; };
 	
 	///////// NIArms Handguns /////////	

@@ -77,7 +77,7 @@
 8, Exile_Weapon_Colt1911   // Colt 1911
 9, Exile_Weapon_Makarov	// Makarov
 9, Exile_Weapon_Taurus		// Taurus
-2, Exile_Weapon_TaurusGold	// Taurus (Gold)
+//2, Exile_Weapon_TaurusGold	// Taurus (Gold)
 9, hgun_Pistol_01_F		// PM 9 mm
 9, hgun_P07_khk_F			// P07 9 mm (Khaki)
 7, hlc_smg_mp5k 			//MP5K
