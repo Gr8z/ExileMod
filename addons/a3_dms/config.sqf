@@ -955,9 +955,10 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_ai_remove_launchers				= false;						// Remove rocket launchers on AI death
 
 	DMS_AI_wep_launchers_AT =			[							// AT Launchers
-											"launch_RPG7_F",
+											"launch_RPG7_F"
 										];
-	DMS_AI_wep_launchers_AA =			[							// AA Launchers
+	DMS_AI_wep_launchers_AA =			[							
+											"launch_RPG7_F"// AA Launchers
 										];
 
 	DMS_RHeli_Height					= 500;						// Altitude of the heli when flying to drop point.
