@@ -24,7 +24,7 @@ script developed by HEG
 _dev_debug = false;  											// Use this to drop the times to 15 seconds for faster testing
 											
 //CHANCES
-Xbrm_safe_chance = 30;											// Chance by percentage to successfully open safe
+Xbrm_safe_chance = 50;											// Chance by percentage to successfully open safe
 Xbrm_doorC_chance = 30;											// Chance by percentage to successfully open concrete door
 Xbrm_doorM_chance = 40;											// Chance by percentage to successfully open a metal door
 Xbrm_door_chance = 50;											// Chance by percentage to successfully open a wooden door
@@ -47,15 +47,15 @@ you don't know what you're doing.
 */
 
 //CLASSES
-Xbrm_safe_trap = "SatchelCharge_Remote_Mag";					// Explosive to be used for safe trapping. Default: Satchel Charge - "SatchelCharge_Remote_Mag"
+Xbrm_safe_trap = "ClaymoreDirectionalMine_Remote_Mag";					// Explosive to be used for safe trapping. Default: Satchel Charge - "SatchelCharge_Remote_Mag"
 Xbrm_trap_defuser = "MineDetector";                             // Device used to scan and defuse trapped safes. Default: Mine Detector - "MineDetector"         
 Xbrm_lockpick_classname = "Exile_Item_Knife";					// Device used to break into doors and safes. Default: Knife - "Exile_Item_Knife"
 
 
 //MESSAGES - These are the warning messages you get when you don't have the proper items, set them to match your classes from above.
-Xbrm_no_trap = 			"You need a satchel charge!";
-Xbrm_no_defuser = 		"You need a mine detector!";
-Xbrm_no_lockpick =		"You need a knife!";
+Xbrm_no_trap = 			"You need a claymore mine to rig this safe!";
+Xbrm_no_defuser = 		"You need a mine detector to scan for traps!";
+Xbrm_no_lockpick =		"You need a knife to lockpick this safe!";
 
 
 											  ///////////////////////////////

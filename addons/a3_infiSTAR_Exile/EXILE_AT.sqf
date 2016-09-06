@@ -9,7 +9,7 @@
 	Arma AntiHack & AdminTools - infiSTAR.de
 */
 comment 'Antihack & AdminTools - Christian Lorenzen - www.infiSTAR.de';
-VERSION_DATE_IS = '25-Aug-2016 22-55-03#214';
+VERSION_DATE_IS = '06-Sep-2016 18-37-46#214';
 infiSTAR_customFunctions = [];
 _configClasses = "true" configClasses (configfile >> "CfgCustomFunctions");
 {
@@ -103,20 +103,13 @@ fnc_get_selected_object = {
 	};
 	SELECTED_TARGET_PLAYER
 };
-FN_GET_CLR_PLAYERLIST = {
-	if(_this isEqualTo SELECTED_TARGET_PLAYER)exitWith{[1,0.7,0.15,1]};
-	if(!alive _this)exitWith{[1,1,1,1]};
-	_xuid = getPlayerUID _this;
-	if(((_xuid in infiSTAR_ADMINS)&&!(_xuid in infiSTAR_Ds))||((_xuid in infiSTAR_Ds)&&(MYPUIDinfiESP in infiSTAR_Ds))||(_xuid == MYPUIDinfiESP))exitWith{[0,1,0,1]};
-	if(_this in (units(group player)))exitWith{[1,0.95,0,1]};
-	if(vehicle _this isEqualTo _this)exitWith{[1,0.17,0.17,1]};
-	[0.047,0.502,1,1]
-};
 FN_GET_CLR = {
 	if(_this isEqualTo SELECTED_TARGET_PLAYER)exitWith{[1,0.7,0.15,_alpha]};
 	if(!alive _this)exitWith{[1,1,1,_alpha]};
 	_xuid = getPlayerUID _this;
-	if(((_xuid in infiSTAR_ADMINS)&&!(_xuid in infiSTAR_Ds))||((_xuid in infiSTAR_Ds)&&(MYPUIDinfiESP in infiSTAR_Ds))||(_xuid == MYPUIDinfiESP))exitWith{[0,1,0,_alpha]};
+	if(_xuid in infiSTAR_ADMINS_ALL || (_xuid in infiSTAR_Ds && MYPUIDinfiESP in infiSTAR_Ds))exitWith{[0,0.5,0.5,_alpha]};
+	if(_xuid in infiSTAR_ADMINS && !(_xuid in infiSTAR_Ds))exitWith{[0,1,0,_alpha]};
+	if(_xuid in infiSTAR_ADMINS && (_xuid in infiSTAR_Ds && MYPUIDinfiESP in infiSTAR_Ds))exitWith{[0,1,0,_alpha]};
 	if(_this in (units(group player)))exitWith{[1,0.95,0,_alpha]};
 	if(vehicle _this isEqualTo _this)exitWith{[1,0.17,0.17,_alpha]};
 	[0.047,0.502,1,_alpha]
@@ -506,6 +499,7 @@ fnc_searchNfill = {
 		if(isNil 'lastSearched')then{lastSearched = '';};
 		[] spawn {
 			disableSerialization;
+			_alpha = 1;
 			while {true} do
 			{
 				if(isNull (findDisplay MAIN_DISPLAY_ID))exitWith{};
@@ -569,7 +563,7 @@ fnc_searchNfill = {
 											_ctrl lbSetPicture [_lbid,_xpic];
 											_ctrl lbSetPictureColor [_lbid,[1, 1, 1, 1]];
 										};
-										_clr = _x call FN_GET_CLR_PLAYERLIST;
+										_clr = _x call FN_GET_CLR;
 										_ctrl lbSetColor [_lbid,_clr];
 									} forEach (units _grp);
 								};
@@ -1064,13 +1058,14 @@ fnc_reallyAdditem = {
 			}
 			else
 			{
-				_crew = crew _target;
+				_crew = fullCrew _target;
 				if!(_crew isEqualTo [])then
 				{
 					{
-						if(isPlayer _x)exitWith
+						_unit = _x select 0;
+						if(isPlayer _unit)exitWith
 						{
-							_target setOwner (owner _x);
+							_target setOwner (owner _unit);
 						};
 					} forEach _crew;
 				};
@@ -1679,7 +1674,8 @@ fnc_fill_infiSTAR_Player_REAL = {
 				_ctrl lbSetPicture [_index,_xpic];
 				_ctrl lbSetPictureColor [_index,[1, 1, 1, 1]];
 			};
-			_clr = _x call FN_GET_CLR_PLAYERLIST;
+			_alpha = 1;
+			_clr = _x call FN_GET_CLR;
 			_ctrl lbSetColor [_index,_clr];
 		};
 		if(!isNil'SortAlphaPlease')exitWith
@@ -2274,10 +2270,10 @@ fnc_TPME2 = {
 	_object = vehicle player;
 	prevLoc = getPosATL _object;
 	_distance = -1;if!(_object isEqualTo player)then{_distance = -5;};
-	_pos = _unit modelToWorld [0,_distance,0];
+	_pos = _unit modelToWorldVisual [0,_distance,0];
 	if(local _object)then
 	{
-		_object setPos _pos;
+		_object setPosATL _pos;
 	}
 	else
 	{
@@ -3096,8 +3092,12 @@ fnc_get_reason = {
 		
 		if(_opt isEqualTo 1)then
 		{
-			_msg = format[''%1 has been %2!'',_TNAME,_what];
-			[8,toArray _msg] call fnc_AdminReq;
+			_code = format[''
+				_text = ''''%1 has been %2!'''';
+				systemChat _text;
+				[''''ErrorTitleAndText'''', [''''infiSTAR.de'''', _text]] call ExileClient_gui_toaster_addTemplateToast;
+			'',_TNAME,_what];
+			[_code] call admin_d0;
 		};
 		_log = format[''%4 %1(%2): %3'',_TNAME,_TUID,_txt,_what];
 		_log call FN_SHOW_LOG;
@@ -3558,7 +3558,7 @@ fnc_PlayerESP_NORM_CODE = {
 				_typename = gettext(configFile >> 'CfgVehicles' >> _class >> 'displayName');
 				_icon = gettext(configFile >> 'CfgVehicles' >> _class >> 'Picture');
 				
-				_crew = crew _veh;
+				_crew = fullCrew _veh;
 				_vehclr = [0.047,0.502,1,_alpha];
 				if(!alive _veh)then{_vehclr = [1,1,1,_alpha]};
 				
@@ -3572,11 +3572,11 @@ fnc_PlayerESP_NORM_CODE = {
 						_num = _cnt * -1;
 						{
 							_height = _num + _forEachIndex;
-							_role = assignedVehicleRole _x;
-							if(_role isEqualTo [])then{_role = 'Passenger';}else{_role = _role select 0;};
-							_txt = format['%1. %2 - %3 %4HP',_forEachIndex,_role,_x call fnc_get_exileObjName,round((1-(damage _x))*100)];
-							drawIcon3D['\A3\ui_f\data\map\Markers\Military\dot_ca.paa',[1,0.17,0.17,_alpha],_x modelToWorldVisual (_x selectionPosition 'head'),0,0,0,format['%1',_forEachIndex],1,0.03,'PuristaMedium','',true];
-							drawIcon3D['',_x call FN_GET_CLR,_pos,.5,_height,0,_txt,1,0.03,'PuristaMedium','',true];
+							_unit = _x select 0;
+							_role = _x select 1;
+							_txt = format['%1. %2 - %3 %4HP',_forEachIndex,_role,_unit call fnc_get_exileObjName,round((1-(damage _unit))*100)];
+							drawIcon3D['\A3\ui_f\data\map\Markers\Military\dot_ca.paa',[1,0.17,0.17,_alpha],_unit modelToWorldVisual (_unit selectionPosition 'head'),0,0,0,format['%1',_forEachIndex],1,0.03,'PuristaMedium','',true];
+							drawIcon3D['',_unit call FN_GET_CLR,_pos,.5,_height,0,_txt,1,0.03,'PuristaMedium','',true];
 						} forEach _crew;
 					};
 					
@@ -3590,13 +3590,14 @@ fnc_PlayerESP_NORM_CODE = {
 				{
 					_crewnames = '';
 					{
+						_unit = _x select 0;
 						if(_crewnames == '')then
 						{
-							_crewnames = _x call fnc_get_exileObjName;
+							_crewnames = _unit call fnc_get_exileObjName;
 						}
 						else
 						{
-							_crewnames = format['%1, %2',_crewnames,_x call fnc_get_exileObjName];
+							_crewnames = format['%1, %2',_crewnames,_unit call fnc_get_exileObjName];
 						};
 					} forEach _crew;
 					
@@ -3637,17 +3638,17 @@ fnc_PlayerESP_SS_CODE = {
 				{
 					_distance = round(cameraOn distance _x);
 					_alpha = (1-(_distance/_espRenderRange/1.5));
-					_clr = [1,1,1,_alpha];	
-					_crew = crew (vehicle _x);
+					_clr = [1,1,1,_alpha];
+					_crew = fullCrew (vehicle _x);
 					_name = '';
 					{
 						if(_forEachIndex == 0) then
 						{
-							_name = format['%1(%2m)',_x call fnc_get_exileObjName,_distance];
+							_name = format['%1(%2m)',(_x select 0) call fnc_get_exileObjName,_distance];
 						}
 						else
 						{
-							_name = _name + format[', %1(%2m)',_x call fnc_get_exileObjName,_distance];
+							_name = _name + format[', %1(%2m)',(_x select 0) call fnc_get_exileObjName,_distance];
 						};
 					} forEach _crew;
 					_pos = _x modelToWorldVisual (_x selectionPosition 'head');
@@ -3737,13 +3738,13 @@ fnc_draw_MapIcons = {
 							{
 								if(_forEachIndex isEqualTo 0)then
 								{
-									_names = _names + format['%1',_x call fnc_get_exileObjName];
+									_names = _names + format['%1',(_x select 0) call fnc_get_exileObjName];
 								}
 								else
 								{
-									_names = _names + format[', %1',_x call fnc_get_exileObjName];
+									_names = _names + format[', %1',(_x select 0) call fnc_get_exileObjName];
 								};
-							} forEach (crew _veh);
+							} forEach (fullCrew _veh);
 							_typename = gettext (configFile >> 'CfgVehicles' >> _type >> 'displayName');
 							_txt = format['%1 - %2 (%3m)',_names,_typename,_dist];
 						};
@@ -4235,7 +4236,7 @@ infiSTAR_FlyUp = {
 	};
 	if(_ctrl)exitWith
 	{
-		_obj setPos (_obj modelToWorld [0,0,3]);
+		_obj setPosATL (_obj modelToWorldVisual [0,0,3]);
 	};
 };
 fnc_Hover = {

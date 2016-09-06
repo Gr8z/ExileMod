@@ -12,7 +12,7 @@
 	'ahmed-banna@hotmail.com'
 	
 	Last download was on:
-	'25-Aug-2016 22-55-03';
+	'06-Sep-2016 18-37-46';
 */
 class Cfg_infiSTAR_settings {
 /*
@@ -84,7 +84,6 @@ chatCommands[] =
 chatCommandsP[] =
 {
 		{"admin","SUPPORT FORBIDDEN IN SIDECHAT! JOIN OUR TEAMSPEAK.."}
-		
 };
 
 
@@ -235,6 +234,11 @@ adminUIDandAccess[] =
 	}
 };
 
+
+
+/****************************************************************************************************/
+/********************OPTIONS BELOW REQUIRE CHANGES TO YOUR EXILE SERVER DATABASE!********************/
+/****************************************************************************************************/
 /*
 	Use Database WhiteList?
 	if "USE_DATABASE_WHITELIST = true;", UIDs that are not whitelisted in your exile server database, will be kicked on connect.
@@ -242,6 +246,17 @@ adminUIDandAccess[] =
 	To use this, you need to use what I've added to "infiSTAR.de_Exile\SERVER_ARMA3_FOLDER\db_related_changes"
 */
 USE_DATABASE_WHITELIST = false;
+
+/*
+	Use Log to database?
+	if "USE_LOG_TO_DATABASE = true;", infiSTAR will log to your exile server database! (yes I know this is great!)
+	
+	To use this, you need to use what I've added to "infiSTAR.de_Exile\SERVER_ARMA3_FOLDER\db_related_changes"
+*/
+USE_LOG_TO_DATABASE = true;
+/****************************************************************************************************/
+/********************OPTIONS ABOVE REQUIRE CHANGES TO YOUR EXILE SERVER DATABASE!********************/
+/****************************************************************************************************/
 
 
 
@@ -299,7 +314,7 @@ VCT = 300;	/* if "DayNightVote = true;" - Time (in seconds) to wait until nex vo
 	the game is still broken and sometimes you can see people naked when they are not.
 	I did not add the old check back in, I made a new one making use of new functions :)
 */
-fix_uniform_and_vest = true;
+fix_uniform_and_vest = false;
 
 
 /*
@@ -336,7 +351,7 @@ MPH = false;
 /*
 	This will check from serverside if a playerobject received damage but did not take it
 */
-GodModeCheck = true;
+GodModeCheck = false;
 /****************************************************************************************************/
 /****************************NOT FULLY TESTED - NEW CHECK - ABOVE************************************/
 /****************************************************************************************************/
@@ -359,7 +374,7 @@ disconnect_dupe_check = true;		/* checks if player tries to dupe using the "disc
 block_glitch_actions = true;		/* if a player is near a flag where he has no buildrights, he can't vault/getover/lean close to buildingparts (to prevent glitching!) */
 wall_glitch_object = true;			/* checks if a players tries to glitch through a wall (if player is allowed to build in that territory, it will not be logged.) */
 wall_glitch_vehicle = true;			/* stops players from glitching into bases using "eject" or "getout" of a vehicle.. */
-check_doors_n_gates = true;			/* check if a door is locked but still being opened */
+check_doors_n_gates = true;			/* Fixes Hatches (so when they are locked, they stay closed..) and closes every door that's locked + keeps closing it in case somebody tries to hack open it! */
 checkHiddenObjects = true;			/* checks if there is hidden objects close to the player (hidden objects could be walked through..) */
 attach_to_check = true;				/* logs and detaches attached vehicles that are close.. basically completely disallow attaching of vehicles! */
 slingload_check = true;				/* forbid sling loading / rope attaching a vehicle with a crew */
@@ -457,7 +472,7 @@ badIDDsToClose[] =
 	314,632,1320,2121,148,163,129,169,157,69,156,165,166,167,312,1321,2727
 };
 
-/* Use IDD White-List ? */ UDW = true;
+/* Use IDD White-List ? */ UDW = false;
 /* allowedIDDs: Insert IDDs here to prevent them from being closed! */
 allowedIDDs[] =
 {
@@ -597,11 +612,21 @@ allSupportBoxes[] =
 	{
 		"Support-Box2",
 		{
+<<<<<<< HEAD
 			"Exile_Item_Flag","Exile_Item_WorkBenchKit","B_Carryall_khk","Exile_Item_CampFireKit","Exile_Item_CamoTentKit",
 			{"Exile_Item_CookingPot",2},{"Exile_Melee_Axe",1},{"Exile_Item_Handsaw",1},{"Exile_Item_Matches",2},
 			{"Exile_Item_Codelock",4},{"Exile_Item_WoodDoorKit",2},{"Exile_Item_WoodDoorwayKit",2},{"Exile_Item_WoodFloorKit",10},
 			{"Exile_Item_WoodFloorPortKit",2},{"Exile_Item_WoodGateKit",2},{"Exile_Item_WoodStairsKit",2},{"Exile_Item_WoodWallKit",18},
 			{"Exile_Item_WoodWindowKit",4},{"Exile_Item_SafeKit",1},{"Exile_Item_GloriousKnakworst",2},{"Exile_Item_PlasticBottleFreshWater",3}
+=======
+
+			"Exile_Item_Flag","Exile_Item_WorkBenchKit","B_Carryall_khk",
+			{"Exile_Item_CookingPot",2},{"Exile_Melee_Axe",2},{"Exile_Item_Matches",2},
+			{"Exile_Item_Codelock",4},{"Exile_Item_WoodDoorKit",2},{"Exile_Item_WoodDoorwayKit",2},
+			{"Exile_Item_Matches",2},{"Exile_Item_WoodFloorKit",18},{"Exile_Item_WoodFloorPortKit",4},
+			{"Exile_Item_WoodGateKit",2},{"Exile_Item_WoodStairsKit",4},{"Exile_Item_WoodWallKit",25},
+			{"Exile_Item_WoodWindowKit",4},{"Exile_Item_SafeKit",3},{"Exile_Item_FortificationUpgrade",10}
+>>>>>>> origin/Revival
 		}
 	},
 	{

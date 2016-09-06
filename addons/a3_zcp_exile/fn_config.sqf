@@ -359,12 +359,13 @@ ZCP_DMS_ArmedVehicles =                 [                           // List of a
                                     ];
 
 ZCP_DMS_MilitaryVehicles =              [                           // List of military vehicles that can spawn
-                                        "Exile_Car_Strider",
-                                        "Exile_Car_Hunter",
-                                        "Exile_Car_Ifrit",
+                                        "Exile_Car_BTR40_MG_Green",
+										"Exile_Car_BTR40_MG_Camo",
+										"Exile_Car_BRDM2_HQ",
 										"B_MRAP_01_hmg_F",
 										"O_MRAP_02_hmg_F",
-										"I_MRAP_03_hmg_F"
+										"I_MRAP_03_hmg_F",
+										"O_T_LSV_02_armed_F"
                                     ];
 
 ZCP_DMS_TransportTrucks =               [                           // List of transport trucks that can spawn

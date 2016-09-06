@@ -19,7 +19,7 @@ class CfgPatches
 		author[]= {"Chris(tian) 'infiSTAR' Lorenzen"};
 		website[]= {"https://infiSTAR.de"};
 		contact[]= {"admin@infiSTAR.de","infiSTAR23@gmail.com"};
-		version = v0058;
+		version = v0059;
 		licensed = "ahmed-banna@hotmail.com";
 	};
 };

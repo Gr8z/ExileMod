@@ -78,7 +78,7 @@ AVS_VehicleAmmoBlacklist =
 AVS_RearmSystemActive = true;
 
 // Distance away from an object to get the rearm option.
-AVS_RearmDistance = 10;
+AVS_RearmDistance = 40;
 
 // Number of seconds it takes to rearm. (NOT YET IMPLEMENTED)
 AVS_RearmTime = 15;
@@ -103,7 +103,7 @@ AVS_RearmObjects =
 ];
 
 // Default cost of a magazine if not found in AVS_RearmCosts
-AVS_RearmCostDefault = 99999999;
+AVS_RearmCostDefault = 10000;
 
 // Costs of individual magazines.
 AVS_RearmCosts =
@@ -144,7 +144,7 @@ AVS_RefuelSystemActive = true;
 // Use AVS to fill Fuel-Canister with AVS Refuel Objects (Gas Station Pump). It's active only if AVS Refuel System is active too.
 AVS_FillCanisterActive = true; // Remember to disable "Exile fill canister empty", to do this see Installation.txt
 
-AVS_RefuelDistance = 5;	//  maximum distance to refuel. It doesn't affect the choppers that refuel on roof.
+AVS_RefuelDistance = 40;	//  maximum distance to refuel. It doesn't affect the choppers that refuel on roof.
 AVS_RefuelObjects =
 [
 	//"Land_fs_feed_F", 			// Gas Station Pump (Altis)
@@ -152,7 +152,8 @@ AVS_RefuelObjects =
 	//"Land_A_FuelStation_Shed",	// Esseker/Chernarus
 	//"Land_A_FuelStation_Feed",	// Chernarus
 	"Land_FuelStation_01_pump_F",	// Tanoa
-	"Land_FuelStation_02_pump_F"
+	"Land_FuelStation_02_pump_F",
+	"Exile_Trader_Vehicle"
 ];
 
 AVS_FuelCost = 5;					// 5 poptabs/liter
