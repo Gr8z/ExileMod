@@ -17,7 +17,7 @@ ZCP_DMS_ExileToasts_Message_Size        = 19;                   // Exile Toasts 
 ZCP_DMS_ExileToasts_Message_Font        = "PuristaLight";           // Exile Toasts font for "ExileToast" client notification type.
 /*Exile Toasts Notification Settings*/
 
-ZCP_AI_useLaunchersChance = 25; // %Change to spawn Launcher on AI soldier ( never exceeds the MIN and MAX defined per cappoint).
+ZCP_AI_useLaunchersChance = 0; // %Change to spawn Launcher on AI soldier ( never exceeds the MIN and MAX defined per cappoint).
 
 // Put the following to -1 to disable it.
 ZCP_AI_killAIAfterMissionCompletionTimer = -1; // Amount of seconds before all ZCP AI get auto killed after a mission is completed. ( DMS only ).
@@ -52,12 +52,7 @@ ZCP_UseSpecificNamesForCappers = true; // Use the player name, if false it says 
 
 // ZCP_giveSurvivalBoxWithPoptabsReward = true; not used anymore. You can now define multiple rewards per mission.
 ZCP_RewardWeightForRandomChoice = [
-    ["Poptabs", 4],
-    ["BuildBox", 3],
-    ["WeaponBox", 4],
-    ["SurvivalBox", 4],
     ["Vehicle", 2],
-    ["SniperWeaponBox", 1],
     ["BigWeaponBox", 2]
 ];
 // How does this work ( 6 + 3 + 5 + 2 = 16)
@@ -76,7 +71,7 @@ ZCP_CapPoints = [
     [
         "Battlezone", // name (0)
         [[10000,10000,0],[10000,10000,0]], // [[x,y,z],[x,y,z]] if using static location (1)
-        ["Reputation","BigWeaponBox","Poptabs"], // Reward -> Random, Poptabs, Vehicle, Buildingbox, WeaponBox , BigWeaponBox, SniperWeaponBox (2)
+        ["Reputation","Random"], // Reward -> Random, Poptabs, Vehicle, Buildingbox, WeaponBox , BigWeaponBox, SniperWeaponBox (2)
         "alpha", // unique varname -> this gets checked and fixed automaticly on server start ( so don't really worry about it ).
         0, // unique index -> this gets checked and fixed automaticly on server start ( so don't really worry about it ).
         true, // spawnAI on start of the missions ( NEEDS AI system for this ) (5)
@@ -94,7 +89,7 @@ ZCP_CapPoints = [
         true, // use Waves of AI to attack the base when a player is capping (17)
         [ // array of waves of AI () (18)
             [
-                15, // procentage of the cap time to start attack (50 = 50% of the total captime)
+                25, // procentage of the cap time to start attack (50 = 50% of the total captime)
                 2, // Amount of AI units in a group
                 1, // Amount of AI groups
                 150, // distance in meter form ZCP for the ai to spawn
@@ -104,14 +99,22 @@ ZCP_CapPoints = [
             [
                 50, // procentage of the cap time to start attack (50 = 50% of the total captime)
                 2, // Amount of AI units in a group
-                2, // Amount of AI groups
+                1, // Amount of AI groups
+                100, // distance in meter form ZCP for the ai to spawn
+                true // false -> all groups from 1 random location, true -> all groups from their own random location
+            ]
+			,
+			[
+                75, // procentage of the cap time to start attack (50 = 50% of the total captime)
+                2, // Amount of AI units in a group
+                1, // Amount of AI groups
                 100, // distance in meter form ZCP for the ai to spawn
                 true // false -> all groups from 1 random location, true -> all groups from their own random location
             ]
         ],
-        1, // Minimum amount of launchers for starting AI (19)
-        2, // Maximum amount of launchers for starting AI (20)
-        1, // Minimum amount of launchers for Wave AI (21)
+        0, // Minimum amount of launchers for starting AI (19)
+        1, // Maximum amount of launchers for starting AI (20)
+        0, // Minimum amount of launchers for Wave AI (21)
         1  // Maximum amount of launchers for Wave AI (22)
     ]
 ];
