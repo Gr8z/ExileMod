@@ -6532,7 +6532,7 @@ class CfgTraderCategories
 			"APERSBoundingMine_Range_Mag",
 			"APERSMine_Range_Mag",
 			"APERSTripMine_Wire_Mag",
-			"ClaymoreDirectionalMine_Remote_Mag",
+			//"ClaymoreDirectionalMine_Remote_Mag",
 			//"DemoCharge_Remote_Mag",
 			"IEDLandBig_Remote_Mag",
 			"IEDLandSmall_Remote_Mag",
