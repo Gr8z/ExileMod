@@ -45,7 +45,10 @@ AVS_GlobalWeaponBlacklist =
 [
 //	"WeaponClassName"
 	"missiles_DAR", 				// Removes DAR missiles from all vehicles
-	"missiles_DAGR"
+	"missiles_DAGR",
+	"rockets_Skyfire",
+	"gatling_30mm_VTOL_02",
+	"missiles_SCALPEL"
 ];
 
 // Any ammo classes listed here will be sanitized from all vehicles.
@@ -55,7 +58,19 @@ AVS_GlobalAmmoBlacklist =
 	"24Rnd_missiles",
 	"12Rnd_missiles",
 	"12Rnd_PG_missiles",
-	"24Rnd_PG_missiles"
+	"24Rnd_PG_missiles",
+	"14Rnd_80mm_Rockets",
+	"38Rnd_80mm_Rockets",
+	"8Rnd_LG_scalpel",
+	"2Rnd_LG_scalpel",
+	"6Rnd_LG_scalpel",
+	"250Rnd_30mm_HE_shells",
+	"250Rnd_30mm_HE_shells_Tracer_Red",
+	"250Rnd_30mm_HE_shells_Tracer_Green",
+	"250Rnd_30mm_APDS_shells",
+	"250Rnd_30mm_APDS_shells_Tracer_Red",
+	"250Rnd_30mm_APDS_shells_Tracer_Green",
+	"250Rnd_30mm_APDS_shells_Tracer_Yellow"
 ];
 
 // You may remove specific weapon classes from specific vehicle classes here.
@@ -129,8 +144,8 @@ AVS_RearmCosts =
 	//["240Rnd_40mm_GPR_Tracer_Red_shells", 430],			// Blackfish autocannon
 	//["160Rnd_40mm_APFSDS_Tracer_Red_shells", 290],		// Blackfish autocannon
 	//["100Rnd_105mm_HEAT_MP", 480],						// Blackfish cannon 105mm
-	["4000Rnd_20mm_Tracer_Red_shells", 4800],			// Blackfish gatling 20mm
-	["250Rnd_30mm_HE_shells_Tracer_Green", 860]			// Y-32 gatling 30mm
+	//["4000Rnd_20mm_Tracer_Red_shells", 4800],			// Blackfish gatling 20mm
+	//["250Rnd_30mm_HE_shells_Tracer_Green", 860]			// Y-32 gatling 30mm
 ];
 
 //**************************************************************
