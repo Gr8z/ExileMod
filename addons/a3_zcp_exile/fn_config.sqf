@@ -52,8 +52,7 @@ ZCP_UseSpecificNamesForCappers = true; // Use the player name, if false it says 
 
 // ZCP_giveSurvivalBoxWithPoptabsReward = true; not used anymore. You can now define multiple rewards per mission.
 ZCP_RewardWeightForRandomChoice = [
-    ["Vehicle", 2],
-    ["BigWeaponBox", 2]
+    ["Vehicle", 1]
 ];
 // How does this work ( 6 + 3 + 5 + 2 = 16)
 // 6/16 = 37.50 %
@@ -81,7 +80,7 @@ ZCP_CapPoints = [
         -1, // max terrainGradient -> when specific static basefile is used (9) -> put -1 if you want to use the corresponding one from the ZCP_Capbasses array).
         -1, // distancefromojects -> when specific static basefile is used (10) -> put -1 if you want to use the corresponding one from the ZCP_Capbasses array).
         600, // captime in seconds for this mission (11)
-        2, // Minimum amount of AI at the start of mission (12)
+        4, // Minimum amount of AI at the start of mission (12)
         4, // Maximum amount of AI at start of mission ( If you want it to always be a number change MIN and MAX to the same number. )
         false, // deploy smoke on the circle border when mission is finished (14)
         0, // ammount of seconds to wait before deploying the smokescreen (15)
@@ -124,13 +123,13 @@ ZCP_MaxMissions = 1; // Amount of cap points at the same time when ZCP_MaxMissio
 
 ZCP_Minimum_Online_Players = 15; // Amount of players to be online before it allows to spawn a capture point. !!! O = always
 
-ZCP_MaxMissionsRelativeToPlayers = false; // ZCP_MaxMissions will be ignored if true. ZCP_RelativeMaxMissions will be used
+ZCP_MaxMissionsRelativeToPlayers = True; // ZCP_MaxMissions will be ignored if true. ZCP_RelativeMaxMissions will be used
 ZCP_RelativeMaxMissions = [
     //[ min players,  amount of cappoints],
-    [5, 1],
-    [15, 2],
-    [40, 3],
-    [65, 4]
+    [15, 1],
+    [35, 2],
+    [40, 2],
+    [60, 3]
 ];
 ZCP_SecondsCheckPlayers = 600; // seconds for loop check if the server holds more players now (and spawn extra cappoints). ( 600 = every 10 minuts)
 
@@ -355,54 +354,41 @@ ZCP_DMS_RareLootChance  = 10;                       // Percentage Chance to spaw
 
 // Vehicles
 ZCP_DMS_ArmedVehicles =                 [                           // List of armed vehicles that can spawn
-                                        "Exile_Car_Offroad_Armed_Guerilla01"
+                                        
                                     ];
 
 ZCP_DMS_MilitaryVehicles =              [                           // List of military vehicles that can spawn
-                                        "Exile_Car_BTR40_MG_Green",
-										"Exile_Car_BTR40_MG_Camo",
 										"Exile_Car_BRDM2_HQ",
 										"B_MRAP_01_hmg_F",
 										"O_MRAP_02_hmg_F",
 										"I_MRAP_03_hmg_F",
-										"O_T_LSV_02_armed_F"
+										"O_T_LSV_02_armed_F",
+										"Exile_Car_SUV_Armed_Black",
+										"Exile_Car_HMMWV_M134_Green",
+										"Exile_Car_HMMWV_M2_Green",
+										
                                     ];
 
 ZCP_DMS_TransportTrucks =               [                           // List of transport trucks that can spawn
-                                        "Exile_Car_Van_Guerilla01",
-                                        "Exile_Car_Zamak",
-                                        "Exile_Car_Tempest",
-                                        "Exile_Car_HEMMT",
-                                        "Exile_Car_Ural_Open_Military",
-                                        "Exile_Car_Ural_Covered_Military"
+                                        
                                     ];
 
 ZCP_DMS_RefuelTrucks =                  [                           // List of refuel trucks that can spawn
-                                        "Exile_Car_Van_Fuel_Black",
-                                        "Exile_Car_Van_Fuel_White",
-                                        "Exile_Car_Van_Fuel_Red",
-                                        "Exile_Car_Van_Fuel_Guerilla01",
-                                        "Exile_Car_Van_Fuel_Guerilla02",
-                                        "Exile_Car_Van_Fuel_Guerilla03"
+                                      
                                     ];
 
 ZCP_DMS_CivilianVehicles =              [                           // List of civilian vehicles that can spawn
-                                        "Exile_Car_SUV_Red",
-                                        "Exile_Car_Hatchback_Rusty1",
-                                        "Exile_Car_Hatchback_Rusty2",
-                                        "Exile_Car_Hatchback_Sport_Red",
-                                        "Exile_Car_SUV_Red",
-                                        "Exile_Car_Offroad_Rusty2",
-                                        "Exile_Bike_QuadBike_Fia"
+                                        
                                     ];
 
 ZCP_DMS_TransportHelis =                [                           // List of transport helis that can spawn
-                                        "Exile_Chopper_Hummingbird_Green",
-                                        "Exile_Chopper_Orca_BlackCustom",
-                                        "Exile_Chopper_Mohawk_FIA",
-                                        "Exile_Chopper_Huron_Black",
-                                        "Exile_Chopper_Hellcat_Green",
-                                        "Exile_Chopper_Taru_Transport_Black"
+										"B_Heli_Light_01_armed_F",
+										"B_Heli_Transport_01_F",
+										"B_Heli_Transport_01_camo_F",
+										"Exile_Chopper_Huey_Armed_Green",
+										"I_Heli_light_03_F",
+										"O_Heli_Light_02_F"
+										
                                     ];
 
 ZCP_VehicleReward = ZCP_DMS_MilitaryVehicles;
