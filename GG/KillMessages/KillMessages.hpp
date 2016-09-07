@@ -9,7 +9,7 @@ class KM_RscStructuredText
     colorText[] = {1, 1, 1, 1};
     class Attributes 
     {
-        font = "TahomaB";
+        font = "PuristaSemiBold";
         color = "#ffffff";
         colorLink = "#D09B43";
         align = "Left";
@@ -52,7 +52,7 @@ class XG_killBoard_RscText
 	style = 0x02;
 	colorBackground[] = {0.19,0.23,0.24,0.6};
 	colorText[] = {1,1,1,1};
-	font = "TahomaB";
+	font = "PuristaSemiBold";
 	sizeEx = 0.032;
 	h = 0.05;
 	text = "";
@@ -66,7 +66,7 @@ class XG_killBoard_RscFrame
 	shadow = 0;
 	colorBackground[] = {0.19,0.23,0.24,0.6};
 	colorText[] = {1,1,1,1};
-	font = "TahomaB";
+	font = "PuristaSemiBold";
 	sizeEx = 0.03;
 	text = "";
 };
@@ -80,7 +80,7 @@ class XG_killBoard_RscListBox
 	size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
 	rowHeight = 0;
 	style = 0x02 + 0x20;
-	font = "TahomaB";
+	font = "PuristaSemiBold";
 	sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
 	shadow = 0;
 	color[] = {1,1,1,1};
@@ -163,7 +163,7 @@ class XG_killBoard_RscPicture
 	type = 0;
 	style = 1;
 	shadow = 0;
-	font = "TahomaB";
+	font = "PuristaSemiBold";
 	sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
 	colorText[] = {1,1,1,1};
 	colorBackground[] = {0,0,0,0.6};
