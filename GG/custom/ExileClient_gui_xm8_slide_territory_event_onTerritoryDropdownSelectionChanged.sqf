@@ -1,12 +1,5 @@
 /**
  * ExileClient_gui_xm8_slide_territory_event_onTerritoryDropdownSelectionChanged
- *
- * Exile Mod
- * www.exilemod.com
- * © 2015 Exile Mod Team
- *
- * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
- * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
 private["_listBox","_index","_display","_playerListBox","_flag","_buildRights","_playerUID","_playerObject","_text","_playerTerritoryAccess","_myAccessLevel","_leaveButton","_promoteButton","_demoteButton","_radiusButton","_nextProtectionMoneyDueDate","_dateTimeString","_territoryPayDayInfo"];
