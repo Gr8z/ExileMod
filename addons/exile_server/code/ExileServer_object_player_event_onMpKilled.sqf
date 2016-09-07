@@ -2,9 +2,10 @@ private["_systemChat"];
 params[["_victim",objNull],["_killer",objNull]];
 if(isNil "XG_DataBaseLog") then
 {
-	XG_DataBaseLog = compileFinal	
-	"
-		params[['_killer',objNull],['_victim',objNull]];
+	XG_DataBaseLog = compileFinal 
+	"	
+	{
+		params[['_killer',objNull],[_victim',objNull]];
 		_killerName = name _killer;
 		_killerUID = getPlayerUID _killer;
 		_victimName = name _victim;
@@ -13,6 +14,7 @@ if(isNil "XG_DataBaseLog") then
 		_killerVehicle = getText(configFile >> 'CfgVehicles' >> (typeof (vehicle _killer)) >> 'displayName');
 		_distance = round(_killer distance _victim);
 		format['XG_LogKill:%1:%2:%3:%4:%5:%6:%7',_victimUID,_victimName,_killerUID,_killerName,_killerWeapon,_killerVehicle,_distance] call ExileServer_system_database_query_fireAndForget;
+	}
 	";
 };
 _XG_Fnc_Killed_Handle =
