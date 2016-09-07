@@ -1,4 +1,4 @@
-// 105 Simple Objects
+// 106 Simple Objects
 private _invisibleSelections = ["zasleh", "zasleh2", "box_nato_grenades_sign_f", "box_nato_ammoord_sign_f", "box_nato_support_sign_f"];
 private _simpleObjects = [
 ["a3\structures_f_exp\naval\piers\quayconcrete_01_20m_wall_f.p3d", [4182.55, 11676.7, -2.93501], [-0.793488, -0.608558, -0.00584165], [-0.0871557, 0.104131, 0.990737]],
@@ -97,15 +97,16 @@ private _simpleObjects = [
 ["a3\structures_f_exp\naval\piers\quayconcrete_01_20m_wall_f.p3d", [4939.57, 11314, -1.59799], [0.50072, -0.865609, 0], [0, 0, 1]],
 ["a3\structures_f_exp\naval\piers\quayconcrete_01_20m_wall_f.p3d", [4942.52, 11319, -1.60459], [-0.496558, 0.868004, 0], [0, 0, 1]],
 ["a3\structures_f_exp\naval\piers\quayconcrete_01_20m_wall_f.p3d", [4956.01, 11323.5, -1.59799], [0.50072, -0.865609, 0], [0, 0, 1]],
-["a3\structures_f_exp\naval\piers\quayconcrete_01_20m_wall_f.p3d", [4954.68, 11325.9, -1.60459], [-0.496558, 0.868004, 0], [0, 0, 1]],
+["a3\structures_f_exp\naval\piers\quayconcrete_01_20m_wall_f.p3d", [4981.92, 11350.1, 2.97088], [-0.707107, 0.707107, 0], [0, 0, 1]],
 ["a3\structures_f_exp\naval\piers\quayconcrete_01_innercorner_f.p3d", [4966.9, 11333.6, -2.16187], [-0.624248, -0.781226, 0], [0, 0, 1]],
-["a3\structures_f_exp\naval\piers\quayconcrete_01_20m_wall_f.p3d", [4971.17, 11339.9, -1.60459], [-0.777104, 0.629372, 0], [0, 0, 1]],
-["a3\structures_f_exp\naval\piers\quayconcrete_01_20m_wall_f.p3d", [4972.51, 11338.9, -1.59799], [0.777688, -0.62865, 0], [0, 0, 1]],
-["a3\structures_f_exp\naval\piers\quayconcrete_01_20m_wall_f.p3d", [4969.16, 11334.8, -1.59799], [0.777688, -0.62865, 0], [0, 0, 1]],
-["a3\structures_f_exp\naval\piers\quayconcrete_01_20m_wall_f.p3d", [4984.64, 11354, -2.78838], [0.774724, -0.632171, -0.012731], [0.087156, 0.0868241, 0.992404]],
-["a3\structures_f_exp\naval\piers\quayconcrete_01_20m_wall_f.p3d", [4983.27, 11354.9, -2.82408], [-0.774725, 0.63217, 0.012731], [0.087156, 0.0868241, 0.992404]],
+["a3\structures_f_exp\naval\piers\quayconcrete_01_20m_wall_f.p3d", [4968.76, 11337.1, 0.695264], [-0.696364, 0.717686, 0.00186558], [-0.173648, -0.17101, 0.969846]],
+["a3\structures_f_exp\naval\piers\quayconcrete_01_20m_wall_f.p3d", [4970.99, 11334.9, 0.775014], [0.685982, -0.727598, -0.00547234], [-0.173648, -0.17101, 0.969846]],
+["a3\structures_f_exp\naval\piers\quayconcrete_01_20m_wall_f.p3d", [4997.27, 11360, 0.0745499], [0.688984, -0.724765, 0.00407682], [0.224951, 0.219186, 0.949397]],
+["a3\structures_f_exp\naval\piers\quayconcrete_01_20m_wall_f.p3d", [4994.58, 11362.8, 0.0476277], [-0.712609, 0.701527, 0.0068859], [0.224951, 0.219186, 0.949397]],
 ["a3\structures_f_exp\naval\piers\quayconcrete_01_20m_wall_f.p3d", [4194.16, 11661.4, -1.61601], [-0.79652, -0.604612, 0], [0, 0, 1]],
-["a3\structures_f_exp\naval\piers\quayconcrete_01_20m_wall_f.p3d", [4197.15, 11663.6, -1.61427], [0.797367, 0.603495, 0], [0, 0, 1]]
+["a3\structures_f_exp\naval\piers\quayconcrete_01_20m_wall_f.p3d", [4197.15, 11663.6, -1.61427], [0.797367, 0.603495, 0], [0, 0, 1]],
+["a3\structures_f_exp\naval\piers\quayconcrete_01_20m_wall_f.p3d", [4954.68, 11325.9, -1.60459], [-0.496558, 0.868004, 0], [0, 0, 1]],
+["a3\structures_f_exp\naval\piers\quayconcrete_01_20m_wall_f.p3d", [4984.34, 11347.6, 2.98325], [0.696564, -0.717495, 0], [0, 0, 1]]
 ];
 
 {
