@@ -113,7 +113,7 @@ ZCP_CapPoints = [
             ]
         ],
         0, // Minimum amount of launchers for starting AI (19)
-        1, // Maximum amount of launchers for starting AI (20)
+        0, // Maximum amount of launchers for starting AI (20)
         0, // Minimum amount of launchers for Wave AI (21)
         1  // Maximum amount of launchers for Wave AI (22)
     ]
@@ -122,7 +122,7 @@ ZCP_CapPoints = [
 
 ZCP_MaxMissions = 1; // Amount of cap points at the same time when ZCP_MaxMissionsRelativeToPlayers = false
 
-ZCP_Minimum_Online_Players = 15; // Amount of players to be online before it allows to spawn a capture point. !!! O = always
+ZCP_Minimum_Online_Players = 0; // Amount of players to be online before it allows to spawn a capture point. !!! O = always
 
 ZCP_MaxMissionsRelativeToPlayers = True; // ZCP_MaxMissions will be ignored if true. ZCP_RelativeMaxMissions will be used
 ZCP_RelativeMaxMissions = [
