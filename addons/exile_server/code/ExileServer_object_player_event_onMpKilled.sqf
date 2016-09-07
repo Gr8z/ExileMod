@@ -5,7 +5,7 @@ if(isNil "XG_DataBaseLog") then
 	XG_DataBaseLog = compileFinal 
 	"	
 	{
-		params[['_killer',objNull],[_victim',objNull]];
+		params[['_killer',objNull],['_victim',objNull]];
 		_killerName = name _killer;
 		_killerUID = getPlayerUID _killer;
 		_victimName = name _victim;
