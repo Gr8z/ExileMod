@@ -11,8 +11,8 @@ _setStatus =
 
     if(_status select _index == _statusDesc) exitWith {};
  
-    _markerNameZone = format ["BlackMarketZone_%1", _gunStores select _index];
-    _markerNameDescription = format ["BlackMarketDesc_%1", _gunStores select _index];
+    _markerNameZone = format ["BlackMarketZone_%1", CC_blackMarketPos select _index];
+    _markerNameDescription = format ["BlackMarketDesc_%1", CC_blackMarketPos select _index];
     
     switch (_statusDesc) do {
         case "EMPTY": {
