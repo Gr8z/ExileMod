@@ -19,35 +19,27 @@ _setStatus =
             _markerNameZone setmarkerColorLocal CC_col_empty;
             _markerNameDescription setmarkerColorLocal CC_col_empty;
             _markerNameDescription setMarkerTextLocal CC_name_empty;
-
-            diag_log("BLACKMARKETMARKERS: EMPTY Status changed");
         };
         case "ENEMY": {
             _markerNameZone setmarkerColorLocal CC_col_enemy;
             _markerNameDescription setmarkerColorLocal CC_col_enemy;
             _markerNameDescription setMarkerTextLocal CC_name_enemy;
-
-            diag_log("BLACKMARKETMARKERS: ENEMY Status changed");
         };
         case "FRIENDLY": {
             _markerNameZone setmarkerColorLocal CC_col_friendly;
             _markerNameDescription setmarkerColorLocal CC_col_friendly;
             _markerNameDescription setMarkerTextLocal CC_name_friendly;
-
-            diag_log("BLACKMARKETMARKERS: FRIENDLY Status changed");
         };
         case "MIXED": {
             _markerNameZone setmarkerColorLocal CC_col_mixed;
             _markerNameDescription setmarkerColorLocal CC_col_mixed;
             _markerNameDescription setMarkerTextLocal CC_name_mixed;
-
-            diag_log("BLACKMARKETMARKERS: MIXED Status changed");
         };
     };
  
     if(_friendly && (_statusDesc in ["ENEMY", "MIXED"])) then {
         if (CC_blackMarketIntruderWarning) then {
-            ["InfoTitleAndText", ["WARNING", "Enemy player just entered the area"]] call ExileClient_gui_toaster_addTemplateToast;
+            ["InfoTitleAndText", ["WARNING", CC_blackMarketIntruderWarningMessage]] call ExileClient_gui_toaster_addTemplateToast;
         };
     };
  

@@ -17,8 +17,6 @@ _status = [];
     _markerName setMarkerSizeLocal [CC_blackMarketRadius, CC_blackMarketRadius];
     _markerName setMarkerBrushLocal "Grid";
     _markerName setMarkerAlphaLocal CC_blackMarketMarkerTransparency;
-    
-    diag_log("BLACKMARKETMARKERS: Circle Marker Created");
  
     _markerName = format["BlackMarketDesc_%1",_zoneName];
     deleteMarkerLocal _markerName;
@@ -28,8 +26,6 @@ _status = [];
     _markerName setMarkerColorLocal CC_col_empty;
     _markerName setMarkerSizeLocal [1,1];
     _markerName setMarkerTextLocal CC_name_empty;
-
-    diag_log("BLACKMARKETMARKERS: Text Marker Created");
  
     _status pushBack "EMPTY";
  
