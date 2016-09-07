@@ -352,9 +352,6 @@ ZCP_DMS_RareLootList =                  [                           // List of r
 ZCP_DMS_RareLootChance  = 10;                       // Percentage Chance to spawn rare loot in any crate | Default: 10%
 
 // Vehicles
-ZCP_DMS_ArmedVehicles =                 [                           // List of armed vehicles that can spawn
-                                        
-                                    ];
 
 ZCP_DMS_MilitaryVehicles =              [                           // List of military vehicles that can spawn
 										"Exile_Car_BRDM2_HQ",
@@ -368,18 +365,6 @@ ZCP_DMS_MilitaryVehicles =              [                           // List of m
 										
                                     ];
 
-ZCP_DMS_TransportTrucks =               [                           // List of transport trucks that can spawn
-                                        
-                                    ];
-
-ZCP_DMS_RefuelTrucks =                  [                           // List of refuel trucks that can spawn
-                                      
-                                    ];
-
-ZCP_DMS_CivilianVehicles =              [                           // List of civilian vehicles that can spawn
-                                        
-                                    ];
-
 ZCP_DMS_TransportHelis =                [                           // List of transport helis that can spawn
 										"B_Heli_Light_01_armed_F",
 										"B_Heli_Transport_01_F",
@@ -390,7 +375,7 @@ ZCP_DMS_TransportHelis =                [                           // List of t
 										
                                     ];
 
-ZCP_VehicleReward = ZCP_DMS_MilitaryVehicles;
+ZCP_VehicleReward = ZCP_DMS_MilitaryVehicles+ZCP_DMS_TransportHelis;
 ZCP_DMS_DEBUG = false;
 
 
