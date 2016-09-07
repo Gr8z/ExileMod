@@ -9,7 +9,7 @@ private ["_ok","_Time","_LastUsedTime","_OnlineLimit","_traderZoneNearLimit","_m
 _ok = true;
 _Time = time - ExAd_XM8_AirDrop_lastDrop;
 _LastUsedTime = 300;
-_OnlineLimit = 15;
+_OnlineLimit = 1;
 _traderZoneNearLimit = 200;
 
 if (ExAd_XM8_AirDrop_DropInProgress) then {
