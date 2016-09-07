@@ -52,7 +52,8 @@ ZCP_UseSpecificNamesForCappers = true; // Use the player name, if false it says 
 
 // ZCP_giveSurvivalBoxWithPoptabsReward = true; not used anymore. You can now define multiple rewards per mission.
 ZCP_RewardWeightForRandomChoice = [
-    ["Vehicle", 1]
+    ["Vehicle", 2],
+    ["BigWeaponBox", 2]
 ];
 // How does this work ( 6 + 3 + 5 + 2 = 16)
 // 6/16 = 37.50 %
@@ -70,7 +71,7 @@ ZCP_CapPoints = [
     [
         "Battlezone", // name (0)
         [[10000,10000,0],[10000,10000,0]], // [[x,y,z],[x,y,z]] if using static location (1)
-        ["Reputation","Vehicle"], // Reward -> Random, Poptabs, Vehicle, Buildingbox, WeaponBox , BigWeaponBox, SniperWeaponBox (2)
+        ["Reputation","random"], // Reward -> Random, Poptabs, Vehicle, Buildingbox, WeaponBox , BigWeaponBox, SniperWeaponBox (2)
         "alpha", // unique varname -> this gets checked and fixed automaticly on server start ( so don't really worry about it ).
         0, // unique index -> this gets checked and fixed automaticly on server start ( so don't really worry about it ).
         true, // spawnAI on start of the missions ( NEEDS AI system for this ) (5)
@@ -126,10 +127,8 @@ ZCP_Minimum_Online_Players = 15; // Amount of players to be online before it all
 ZCP_MaxMissionsRelativeToPlayers = True; // ZCP_MaxMissions will be ignored if true. ZCP_RelativeMaxMissions will be used
 ZCP_RelativeMaxMissions = [
     //[ min players,  amount of cappoints],
-    [15, 1],
-    [35, 2],
-    [40, 2],
-    [60, 3]
+    [25, 1],
+    [40, 2]
 ];
 ZCP_SecondsCheckPlayers = 600; // seconds for loop check if the server holds more players now (and spawn extra cappoints). ( 600 = every 10 minuts)
 
