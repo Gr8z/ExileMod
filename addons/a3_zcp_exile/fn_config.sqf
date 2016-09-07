@@ -364,7 +364,7 @@ ZCP_DMS_MilitaryVehicles =              [                           // List of m
 										"O_T_LSV_02_armed_F",
 										"Exile_Car_SUV_Armed_Black",
 										"Exile_Car_HMMWV_M134_Green",
-										"Exile_Car_HMMWV_M2_Green",
+										"Exile_Car_HMMWV_M2_Green"
 										
                                     ];
 
