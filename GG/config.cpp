@@ -4696,7 +4696,7 @@ class CfgLocker
 {
 	numbersOnly = "0123456789";
 	
-	maxDeposit = 2000000;
+	maxDeposit = 500000;
 };
 class CfgPlayer 
 {
