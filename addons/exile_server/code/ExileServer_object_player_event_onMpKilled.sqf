@@ -156,7 +156,7 @@ switch (_killType) do
 		_countDeath = true;
 		_countKill = false;
 		_systemChat = format ["%1 was killed by an NPC!", name _victim];
-		["AI",_victim] call _XG_Fnc_Killed_Handle;
+		["Exile","NPC",_killer,_victim] call _XG_fnc_Send_Killed;
 		_newVictimRespect = _oldVictimRespect - round ((abs _oldVictimRespect) / 100 * (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Percentages" >> "npc")));
 	};
 	case 5:
