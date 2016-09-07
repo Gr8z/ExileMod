@@ -34,16 +34,16 @@ while {showmarkers} do
             {
                 if (_friendlyCount > 0) then
                 {
-                    [_forEachIndex, "MIXED", true] call _setStatus;
+                    [_forEachIndex, "MIXED", true, _markerName] call _setStatus;
                 }
                 else
                 {
-                    [_forEachIndex, "ENEMY", true] call _setStatus;
+                    [_forEachIndex, "ENEMY", true, _markerName] call _setStatus;
                 };
             }
             else
             {
-                [_forEachIndex, "FRIENDLY", true] call _setStatus;
+                [_forEachIndex, "FRIENDLY", true, _markerName] call _setStatus;
             };
         }
         else
@@ -52,22 +52,22 @@ while {showmarkers} do
             {
                 if (_friendlyCount > 0) then
                 {
-                    [_forEachIndex, "MIXED", false] call _setStatus;
+                    [_forEachIndex, "MIXED", false, _markerName] call _setStatus;
                 }
                 else
                 {
-                    [_forEachIndex, "ENEMY", false] call _setStatus;
+                    [_forEachIndex, "ENEMY", false, _markerName] call _setStatus;
                 };
             }
             else
             {
                 if (_friendlyCount > 0) then
                 {
-                    [_forEachIndex, "FRIENDLY", false] call _setStatus;
+                    [_forEachIndex, "FRIENDLY", false, _markerName] call _setStatus;
                 }
                 else
                 {
-                    [_forEachIndex, "EMPTY", false] call _setStatus;
+                    [_forEachIndex, "EMPTY", false, _markerName] call _setStatus;
                 };
             };
         };

@@ -7,12 +7,12 @@
 
 _setStatus =
 {
-    params["_index", "_statusDesc", "_friendly"];
+    params["_index", "_statusDesc", "_friendly","_markerName"];
 
     if(_status select _index == _statusDesc) exitWith {};
  
-    _markerNameZone = format ["BlackMarketZone_%1", CC_blackMarketPos select _index];
-    _markerNameDescription = format ["BlackMarketDesc_%1", CC_blackMarketPos select _index];
+    _markerNameZone = format ["BlackMarketZone_%1", _markerName];
+    _markerNameDescription = format ["BlackMarketDesc_%1", _markerName];
     
     switch (_statusDesc) do {
         case "EMPTY": {
@@ -34,6 +34,7 @@ _setStatus =
             _markerNameDescription setmarkerColorLocal CC_col_friendly;
             _markerNameDescription setMarkerTextLocal CC_name_friendly;
 
+            diag_log("BLACKMARKETMARKERS: FRIENDLY Status changed");
         };
         case "MIXED": {
             _markerNameZone setmarkerColorLocal CC_col_mixed;
