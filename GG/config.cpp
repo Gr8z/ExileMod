@@ -3692,10 +3692,6 @@ class CfgExileCustomCode
     ExileClient_system_locker_network_lockerResponse =									"GG\custom\ExileClient_system_locker_network_lockerResponse.sqf";
     ExileClient_gui_upgradeTerritoryDialog_event_onTerritoryDropDownSelectionChanged = 	"GG\custom\ExileClient_gui_upgradeTerritoryDialog_event_onTerritoryDropDownSelectionChanged.sqf";
     ExileClient_gui_xm8_showPartySlides =                                               "GG\custom\ExileClient_gui_xm8_showPartySlides.sqf";
-    ExileServer_object_player_createBambi =                                             "GG\custom\ExileServer_object_player_createBambi.sqf";
-    ExileServer_object_player_database_load =                                           "GG\custom\ExileServer_object_player_database_load.sqf";
-    ExileServer_object_player_event_onMpKilled =                                        "GG\custom\ExileServer_object_player_event_onMpKilled.sqf";
-    ExileServer_system_network_event_onPlayerConnected =                                "GG\custom\ExileServer_system_network_event_onPlayerConnected.sqf";
 };
 
 class CfgExileEnvironment

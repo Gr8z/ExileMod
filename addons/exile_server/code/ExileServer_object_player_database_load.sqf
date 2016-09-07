@@ -1,12 +1,5 @@
 /**
  * ExileServer_object_player_database_load
- *
- * Exile Mod
- * www.exilemod.com
- * © 2015 Exile Mod Team
- *
- * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
- * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
 private["_data","_oldPlayerObject","_playerUID","_sessionID","_position","_direction","_player","_clanID","_clanName","_clanData","_clanGroup","_devFriendlyMode","_devs","_requestingPlayer","_bambiPlayer","_headgear","_goggles","_binocular","_primaryWeapon","_handgunWeapon","_secondaryWeapon","_currentWeapon","_uniform","_vest","_backpack","_uniformContainer","_vestContainer","_backpackContainer","_assignedItems"];
@@ -50,6 +43,27 @@ else
 };
 _player setDamage (_data select 3);
 _player setName _name;
+
+// Most-Wanted
+private ["_bounty","_lock","_interval","_type","_immunity"];
+
+_interval = getNumber(missionConfigFile >> "CfgMostWanted" >> "Database" >> "Immunity" >> "interval");
+_immunity = format ["hasImmunity:%1:%2",_playerUID,_interval] call ExileServer_system_database_query_selectSingleField;
+_player setVariable ["ExileBountyImmunity", _immunity, true];
+
+_bounty = format["getBounty:%1",_playerUID] call ExileServer_system_database_query_selectSingle;
+_player setVariable ["ExileBounty",_bounty select 0];
+_lock = false;
+if ((_bounty select 1) isEqualTo 1) then
+{
+	_lock = true;
+};
+_player setVariable ["ExileBountyLock",_lock,true];
+_player setVariable ["ExileBountyContract",_bounty select 2,true];
+_player setVariable ["ExileBountyCompletedContracts",_bounty select 3];
+_player setVariable ["ExileBountyFriends",_bounty select 4,true];
+// Most-Wanted
+
 _player setVariable ["ExileMoney", (_data select 38), true];
 _player setVariable ["ExileScore", (_data select 39)];
 _player setVariable ["ExileKills", (_data select 40)];
@@ -242,5 +256,17 @@ if (getNumber (configFile >> "CfgSettings" >> "VehicleSpawn" >> "thermalVision")
 	]
 ] 
 call ExileServer_system_network_send_to;
+
+// Most-Wanted
+[
+	_sessionID,
+	"updateCompletedContracts",
+	[
+		(_player getVariable ["ExileBountyCompletedContracts",""])
+	]
+]
+call ExileServer_system_network_send_to;
+// Most-Wanted
+
 [_sessionID, _player] call ExileServer_system_session_update;
 true

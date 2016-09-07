@@ -2,8 +2,8 @@ private["_systemChat"];
 params[["_victim",objNull],["_killer",objNull]];
 if(isNil "XG_DataBaseLog") then
 {
-	XG_DataBaseLog =	
-	{
+	XG_DataBaseLog = compileFinal	
+	"
 		params[['_killer',objNull],['_victim',objNull]];
 		_killerName = name _killer;
 		_killerUID = getPlayerUID _killer;
@@ -13,7 +13,7 @@ if(isNil "XG_DataBaseLog") then
 		_killerVehicle = getText(configFile >> 'CfgVehicles' >> (typeof (vehicle _killer)) >> 'displayName');
 		_distance = round(_killer distance _victim);
 		format['XG_LogKill:%1:%2:%3:%4:%5:%6:%7',_victimUID,_victimName,_killerUID,_killerName,_killerWeapon,_killerVehicle,_distance] call ExileServer_system_database_query_fireAndForget;
-	};
+	";
 };
 _XG_Fnc_Killed_Handle =
 {	
@@ -229,6 +229,28 @@ if !(isNull _killingPlayer) then
 	_killerStatsNeedUpdate = false;
 	if (_countKill) then
 	{
+
+		// Most-Wanted
+
+        _bounty = _victim getVariable ["ExileBounty",[]];
+        diag_log format["Victim's bounty: %1",_bounty];
+        if (count(_bounty) > 0) then
+        {
+            _contract = _killer getVariable ["ExileBountyContract",[]];
+            _friends = _killer getVariable ["ExileBountyFriends",[]];
+            diag_log format["Killer's bounty contract:%1",_contract];
+            if !(_contract in _friends) then
+            {
+                if ((_contract select 1) isEqualTo (getPlayerUID _victim)) then
+                {
+                    diag_log "Killer has a contract";
+                    [_victim,_killer] call ExileServer_MostWanted_bounty_targetKilled;
+                };
+            };
+        };
+
+        // Most-Wanted
+        
 		_newKillerFrags = _killingPlayer getVariable ["ExileKills", 0];
 		_newKillerFrags = _newKillerFrags + 1;
 		_killerStatsNeedUpdate = true;
