@@ -9,13 +9,13 @@ _status = [];
 _gunStores = [];
  
 {
-    _x params ["_markerName","_markerPos","_radius"];
+    _x params ["_markerName","_markerPos"];
     _markerName = format["BlackMarketZone_%1",_markerName];
     deleteMarkerLocal _markerName;
     _marker = createMarkerLocal [_markerName, _markerPos];
     _markerName setMarkerShapeLocal "ELLIPSE";
     _markerName setMarkerColorLocal CC_col_empty;
-    _markerName setMarkerSizeLocal [_radius, _radius];
+    _markerName setMarkerSizeLocal [CC_blackMarketRadius, CC_blackMarketRadius];
     _markerName setMarkerBrushLocal "Grid";
     _markerName setMarkerAlphaLocal CC_blackMarketMarkerTransparency;
  
@@ -32,4 +32,4 @@ _gunStores = [];
     _status pushBack "EMPTY";
     _gunStores pushBack _x;
  
-} forEach CC_storesPos;
+} forEach CC_blackMarketPos;

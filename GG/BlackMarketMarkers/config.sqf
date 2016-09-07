@@ -20,10 +20,11 @@ CC_name_mixed = "BLACK MARKET (Enemies and Friendlies)"; // Map Marker Name When
 CC_blackMarketIntruderWarning = true;   // Warn players in gunstore areas of enemy intruders (false = no, true = yes)
 CC_blackMarketMarkerTransparency = 0.5; // Set how transparent you want the markers to be. (0 - 1)
 
-CC_storesPos = // Define all your BlackMarkets Below
+CC_blackMarketRadius = 100; // Radius of every map marker.
+CC_blackMarketPos = // Define all your BlackMarkets Below
 [
 	// ["NAME", [X,Y], RADIUS],
-    ["Zelenogorsk", [2080.181,5249.057], 100],
-    ["Shalka", [2129.555,12845.642], 100],
-    ["factorySolnichiy", [13100.316,7178.036], 100]
+    ["Zelenogorsk", [2080.181,5249.057]],
+    ["Shalka", [2129.555,12845.642]],
+    ["factorySolnichiy", [13100.316,7178.036]]
 ];
