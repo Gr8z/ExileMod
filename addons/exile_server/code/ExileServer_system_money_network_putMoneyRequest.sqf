@@ -68,7 +68,7 @@ try
 			{
 				throw "Invalid container load";
 			};
-			_maximumPoptabsLoad = _maximumLoad * 20;
+			_maximumPoptabsLoad = _maximumLoad * 10;
 			_maximumAmmountToAdd = _maximumPoptabsLoad - _containerMoney;
 			if(_amount > _maximumAmmountToAdd)then
 			{
