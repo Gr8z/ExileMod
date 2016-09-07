@@ -1430,7 +1430,7 @@ class CfgCraftingRecipes
 	    category = "Tools & Items";
 		
 	};
-	class ENVG02: Exile_AbstractCraftingRecipe
+	class ENVG03: Exile_AbstractCraftingRecipe
 	{
 	    name = "Craft ENVG (Grey)";
 	    pictureItem = "NVGogglesB_gry_F";
