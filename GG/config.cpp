@@ -879,7 +879,7 @@ class CfgCraftingRecipes
 		name = "Craft Wood Doorway";
 		pictureItem = "Exile_Item_WoodDoorwayKit";
 		requiredInteractionModelGroup = "WorkBench";
-		tools[] = {"Exile_Item_CordlessScrewdriver"};
+		tools[] = {"Exile_Item_CordlessScrewdriver" , "Exile_Item_Handsaw"};
 		returnedItems[] = 
 		{
 			{1, "Exile_Item_WoodDoorwayKit"}
@@ -895,7 +895,7 @@ class CfgCraftingRecipes
 		name = "Craft Wood Floor";
 		pictureItem = "Exile_Item_WoodFloorKit";
 		requiredInteractionModelGroup = "WorkBench";
-		tools[] = {"Exile_Item_CordlessScrewdriver"};
+		tools[] = {"Exile_Item_CordlessScrewdriver" , "Exile_Item_Handsaw"};
 		returnedItems[] = 
 		{
 			{1, "Exile_Item_WoodFloorKit"}
@@ -912,7 +912,7 @@ class CfgCraftingRecipes
 		name = "Craft Wood Floor Port";
 		pictureItem = "Exile_Item_WoodFloorPortKit";
 		requiredInteractionModelGroup = "WorkBench";
-		tools[] = {"Exile_Item_CordlessScrewdriver"};
+		tools[] = {"Exile_Item_CordlessScrewdriver" , "Exile_Item_Handsaw"};
 		returnedItems[] = 
 		{
 			{1, "Exile_Item_WoodFloorPortKit"}
@@ -929,7 +929,7 @@ class CfgCraftingRecipes
 		name = "Craft Wood Gate";
 		pictureItem = "Exile_Item_WoodGateKit";
 		requiredInteractionModelGroup = "WorkBench";
-		tools[] = {"Exile_Item_CordlessScrewdriver"};
+		tools[] = {"Exile_Item_CordlessScrewdriver" , "Exile_Item_Handsaw"};
 		returnedItems[] = 
 		{
 			{1, "Exile_Item_WoodGateKit"}
@@ -962,7 +962,7 @@ class CfgCraftingRecipes
 		name = "Craft Wood Stairs";
 		pictureItem = "Exile_Item_WoodStairsKit";
 		requiredInteractionModelGroup = "WorkBench";
-		tools[] = {"Exile_Item_CordlessScrewdriver"};
+		tools[] = {"Exile_Item_CordlessScrewdriver" , "Exile_Item_Handsaw"};
 		returnedItems[] = 
 		{
 			{1, "Exile_Item_WoodStairsKit"}
@@ -979,7 +979,7 @@ class CfgCraftingRecipes
 		name = "Craft Wood Support";
 		pictureItem = "Exile_Item_WoodSupportKit";
 		requiredInteractionModelGroup = "WorkBench";
-		tools[] = {"Exile_Item_CordlessScrewdriver"};
+		tools[] = {"Exile_Item_CordlessScrewdriver" , "Exile_Item_Handsaw"};
 		returnedItems[] = 
 		{
 			{1, "Exile_Item_WoodSupportKit"}
@@ -996,7 +996,7 @@ class CfgCraftingRecipes
 		name = "Craft Wood Wall";
 		pictureItem = "Exile_Item_WoodWallKit";
 		requiredInteractionModelGroup = "WorkBench";
-		tools[] = {"Exile_Item_CordlessScrewdriver"};
+		tools[] = {"Exile_Item_CordlessScrewdriver" , "Exile_Item_Handsaw"};
 		returnedItems[] = 
 		{
 			{1, "Exile_Item_WoodWallKit"}
@@ -1013,7 +1013,7 @@ class CfgCraftingRecipes
 		name = "Craft 1/2 Wood Wall";
 		pictureItem = "Exile_Item_WoodWallHalfKit";
 		requiredInteractionModelGroup = "WorkBench";
-		tools[] = {"Exile_Item_CordlessScrewdriver"};
+		tools[] = {"Exile_Item_CordlessScrewdriver" , "Exile_Item_Handsaw"};
 		returnedItems[] = 
 		{
 			{1, "Exile_Item_WoodWallHalfKit"}
@@ -1030,7 +1030,7 @@ class CfgCraftingRecipes
 		name = "Craft Wood Window";
 		pictureItem = "Exile_Item_WoodWindowKit";
 		requiredInteractionModelGroup = "WorkBench";
-		tools[] = {"Exile_Item_CordlessScrewdriver"};
+		tools[] = {"Exile_Item_CordlessScrewdriver" , "Exile_Item_Handsaw"};
 		returnedItems[] = 
 		{
 			{1, "Exile_Item_WoodWindowKit"}
@@ -1046,7 +1046,7 @@ class CfgCraftingRecipes
 	{
 		name = "Craft Work Bench";
 		pictureItem = "Exile_Item_WorkBenchKit";
-		tools[] = {"Exile_Item_CordlessScrewdriver"};
+		tools[] = {"Exile_Item_Handsaw"};
 		returnedItems[] = 
 		{
 			{1, "Exile_Item_WorkBenchKit"}
