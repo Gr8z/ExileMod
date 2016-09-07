@@ -144,7 +144,6 @@
 9, hlc_25Rnd_9x19mm_JHP_AUG
 9, hlc_25Rnd_9x19mm_M882_AUG
 8, hlc_25Rnd_9x19mm_subsonic_AUG
-2, hlc_50rnd_9x19_B_9mmar
 
 > SMGAttachments
 10, optic_Holosight_smg
