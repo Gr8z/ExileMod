@@ -3480,8 +3480,9 @@ class CfgExileArsenal
 	
 	///////// Military Planes /////////
 	class Exile_Plane_BlackfishInfantry									{ quality = 3; price = 45000; };
-	class Exile_Plane_BlackfishVehicle									{ quality = 3; price = 45000; };
+	class Exile_Plane_BlackfishVehicle									{ quality = 3; price = 50000; };
 	class O_T_VTOL_02_infantry_F										{ quality = 3; price = 45000; };
+	class O_T_VTOL_02_vehicle_F											{ quality = 3; price = 50000; };
 	
 	///////// Military /////////
 	class Exile_Car_Ifrit 												{ quality = 2; price = 20000; };
@@ -6889,7 +6890,8 @@ class CfgTraderCategories
 			"Exile_Plane_Ceasar",
 			"Exile_Plane_BlackfishInfantry",
 			"Exile_Plane_BlackfishVehicle",
-			"O_T_VTOL_02_infantry_F"
+			"O_T_VTOL_02_infantry_F",
+			"O_T_VTOL_02_vehicle_F"
 		};
 	};
 
