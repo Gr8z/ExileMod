@@ -1424,7 +1424,8 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"Exile_Item_Cement",
 											"RPG7_F",
 											"RPG32_F",
-											"7Rnd_408_Mag"
+											"7Rnd_408_Mag",
+											"Exile_Item_Magazine03"
 											
 											
 											

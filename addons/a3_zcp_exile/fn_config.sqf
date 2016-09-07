@@ -52,8 +52,8 @@ ZCP_UseSpecificNamesForCappers = true; // Use the player name, if false it says 
 
 // ZCP_giveSurvivalBoxWithPoptabsReward = true; not used anymore. You can now define multiple rewards per mission.
 ZCP_RewardWeightForRandomChoice = [
-    ["Vehicle", 2],
-    ["BigWeaponBox", 2]
+    ["Vehicle", 199],
+    ["BigWeaponBox", 1]
 ];
 // How does this work ( 6 + 3 + 5 + 2 = 16)
 // 6/16 = 37.50 %
@@ -346,10 +346,9 @@ ZCP_DMS_BoxItems                        = ZCP_DMS_BoxSurvivalSupplies+ZCP_DMS_Bo
 
 ZCP_DMS_RareLoot                        = true;                     // Potential chance to spawn rare loot in any crate.
 ZCP_DMS_RareLootList =                  [                           // List of rare loot to spawn
-                                        "Exile_Item_SafeKit",
-                                        "Exile_Item_CodeLock"
+                                        "Exile_Item_Magazine04"
                                     ];
-ZCP_DMS_RareLootChance  = 10;                       // Percentage Chance to spawn rare loot in any crate | Default: 10%
+ZCP_DMS_RareLootChance  = 100;                       // Percentage Chance to spawn rare loot in any crate | Default: 10%
 
 // Vehicles
 
