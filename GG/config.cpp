@@ -4542,7 +4542,7 @@ class CfgInteractionMenus
 			};
 		};
 	};
-	/*
+	
 	class Bounties
 	{
 	    targetType = 2;
@@ -4558,7 +4558,7 @@ class CfgInteractionMenus
 	        };
 	    };
 	};
-	*/
+	
 };
 class CfgInteractionModels
 {
