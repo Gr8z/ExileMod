@@ -7,7 +7,7 @@
 [] execVM "GG\MarXet\MarXet_Init.sqf";
 [] execVM "GG\fnc_drawToMap.sqf";
 
-missionNamespace setVariable ["ExileClient_KillMessages_network_KillMessages",(compileFinal preprocessFileLineNumbers "GG\KillMessages\KillMessages.sqf")];
+missionNamespace setVariable ["ExileClient_KillMessages_network_KillMessages",(compileFinal preprocessFileLineNumbers "GG\KillMessages\ExileClient_KillMessages_network_KillMessages.sqf")];
 missionNamespace setVariable ["XG_killboardClient",(compileFinal preprocessFile "GG\KillMessages\XG_killboardClient.sqf")];
 
 if (!hasInterface || isServer) exitWith {};

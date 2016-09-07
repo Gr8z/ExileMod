@@ -60,11 +60,11 @@ class CfgNetworkMessages
         module = "AntiTheft";
         parameters[] = {"OBJECT","OBJECT"};
     };
-	class KillMessages
-	{
-		module = "KillMessages";
-		parameters[] = {"STRING","STRING","OBJECT","OBJECT"};
-	};
+    class KillMessages
+    {
+        module = "KillMessages";
+        parameters[] = {"STRING","STRING","OBJECT","OBJECT"};
+    };
     class buyRequest
     {
         module = "AirDrop";
