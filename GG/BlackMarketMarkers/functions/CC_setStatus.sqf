@@ -7,38 +7,48 @@
 
 _setStatus =
 {
-    if(_status select (_this select 0) == (_this select 1)) exitWith {};
+    params["_index", "_statusDesc", "_friendly"];
+
+    if(_status select _index == _statusDesc) exitWith {};
  
-    _markerNameZone = format ["BlackMarketZone_%1", _gunStores select (_this select 0)];
-    _markerNameDescription = format ["BlackMarketDesc_%1", _gunStores select (_this select 0)];
-    switch(_this select 1) do {
+    _markerNameZone = format ["BlackMarketZone_%1", _gunStores select _index];
+    _markerNameDescription = format ["BlackMarketDesc_%1", _gunStores select _index];
+    
+    switch (_statusDesc) do {
         case "EMPTY": {
             _markerNameZone setmarkerColorLocal CC_col_empty;
             _markerNameDescription setmarkerColorLocal CC_col_empty;
             _markerNameDescription setMarkerTextLocal CC_name_empty;
+
+            diag_log("BLACKMARKETMARKERS: EMPTY Status changed");
         };
         case "ENEMY": {
             _markerNameZone setmarkerColorLocal CC_col_enemy;
             _markerNameDescription setmarkerColorLocal CC_col_enemy;
             _markerNameDescription setMarkerTextLocal CC_name_enemy;
+
+            diag_log("BLACKMARKETMARKERS: ENEMY Status changed");
         };
         case "FRIENDLY": {
             _markerNameZone setmarkerColorLocal CC_col_friendly;
             _markerNameDescription setmarkerColorLocal CC_col_friendly;
             _markerNameDescription setMarkerTextLocal CC_name_friendly;
+
         };
         case "MIXED": {
             _markerNameZone setmarkerColorLocal CC_col_mixed;
             _markerNameDescription setmarkerColorLocal CC_col_mixed;
             _markerNameDescription setMarkerTextLocal CC_name_mixed;
+
+            diag_log("BLACKMARKETMARKERS: MIXED Status changed");
         };
     };
  
-    if((_this select 2) && ((_this select 1) in ["ENEMY", "MIXED"])) then {
+    if(_friendly && (_statusDesc in ["ENEMY", "MIXED"])) then {
         if (CC_blackMarketIntruderWarning) then {
             ["InfoTitleAndText", ["WARNING", "Enemy player just entered the area"]] call ExileClient_gui_toaster_addTemplateToast;
         };
     };
  
-    _status set [_this select 0, _this select 1];
+    _status set [_index, _statusDesc];
 };

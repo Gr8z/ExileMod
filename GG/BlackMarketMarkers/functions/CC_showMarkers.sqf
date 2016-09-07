@@ -9,12 +9,13 @@ showmarkers = true;
 while {showmarkers} do
 {
     {
-        _blackmarketPos = getPos _x;
+        _x params ["_markerName","_markerPos"];
+        
         _friendlyCount = 0;
         _enemyCount = 0;
 
         {
-            if (isPlayer _x && alive _x && {_x distance _blackmarketPos < CC_blackMarketRadius}) then
+            if (isPlayer _x && alive _x && {_x distance _markerPos < CC_blackMarketRadius}) then
             {
                 if (group _x == group player) then
                 {
@@ -27,7 +28,7 @@ while {showmarkers} do
             };
         } forEach playableUnits;
 
-        if (player distance _blackmarketPos < CC_blackMarketRadius) then
+        if (player distance _markerPos < CC_blackMarketRadius) then
         {
             if(_enemyCount > 0) then
             {
@@ -70,7 +71,7 @@ while {showmarkers} do
                 };
             };
         };
-    } forEach _gunStores;
+    } forEach CC_blackMarketPos;
     
     sleep 1;
 };

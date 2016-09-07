@@ -28,3 +28,5 @@ CC_blackMarketPos = // Define all your BlackMarkets Below
     ["Shalka", [2129.555,12845.642]],
     ["factorySolnichiy", [13100.316,7178.036]]
 ];
+
+diag_log("BLACKMARKETMARKERS: Configuration done.");
