@@ -48,21 +48,21 @@ _ctrl ctrlSetStructuredText (parseText (format ["<br/><t align='center'size='1.4
 	[] spawn AirDrop_fnc_buySelected;',"CALL STARTER DROP"] call ExAd_fnc_createButton;
 
 [_display,_slide,([_slideClass,"1dropBut"] call ExAd_fnc_getNextIDC),[3.5*_pW,11.5*_pH,11.2*_pW,1*_pH],
-	'ExAd_XM8_AirDrop_boxCost = ExAd_XM8_AirDrop_box1Cost;
-	ExAd_XM8_AirDrop_boxDonorCost = ExAd_XM8_AirDrop_box1DonorCost;
-	ExAd_XM8_AirDrop_boxWepCount = ExAd_XM8_AirDrop_box1WepCount;
-	ExAd_XM8_AirDrop_boxMagCount = ExAd_XM8_AirDrop_box1MagCount;
-	ExAd_XM8_AirDrop_boxItemCount = ExAd_XM8_AirDrop_box1ItemCount;
-	ExAd_XM8_AirDrop_boxRareCount = ExAd_XM8_AirDrop_box1RareCount;
+	'ExAd_XM8_AirDrop_boxCost = ExAd_XM8_AirDrop_box2Cost;
+	ExAd_XM8_AirDrop_boxDonorCost = ExAd_XM8_AirDrop_box2DonorCost;
+	ExAd_XM8_AirDrop_boxWepCount = ExAd_XM8_AirDrop_box2WepCount;
+	ExAd_XM8_AirDrop_boxMagCount = ExAd_XM8_AirDrop_box2MagCount;
+	ExAd_XM8_AirDrop_boxItemCount = ExAd_XM8_AirDrop_box2ItemCount;
+	ExAd_XM8_AirDrop_boxRareCount = ExAd_XM8_AirDrop_box2RareCount;
 	[] spawn AirDrop_fnc_buySelected;',"CALL MEDIUM DROP"] call ExAd_fnc_createButton;
 
 [_display,_slide,([_slideClass,"1dropBut"] call ExAd_fnc_getNextIDC),[3.5*_pW,17*_pH,11.2*_pW,1*_pH],
-	'ExAd_XM8_AirDrop_boxCost = ExAd_XM8_AirDrop_box1Cost;
-	ExAd_XM8_AirDrop_boxDonorCost = ExAd_XM8_AirDrop_box1DonorCost;
-	ExAd_XM8_AirDrop_boxWepCount = ExAd_XM8_AirDrop_box1WepCount;
-	ExAd_XM8_AirDrop_boxMagCount = ExAd_XM8_AirDrop_box1MagCount;
-	ExAd_XM8_AirDrop_boxItemCount = ExAd_XM8_AirDrop_box1ItemCount;
-	ExAd_XM8_AirDrop_boxRareCount = ExAd_XM8_AirDrop_box1RareCount;
+	'ExAd_XM8_AirDrop_boxCost = ExAd_XM8_AirDrop_box3Cost;
+	ExAd_XM8_AirDrop_boxDonorCost = ExAd_XM8_AirDrop_box3DonorCost;
+	ExAd_XM8_AirDrop_boxWepCount = ExAd_XM8_AirDrop_box3WepCount;
+	ExAd_XM8_AirDrop_boxMagCount = ExAd_XM8_AirDrop_box3MagCount;
+	ExAd_XM8_AirDrop_boxItemCount = ExAd_XM8_AirDrop_box3ItemCount;
+	ExAd_XM8_AirDrop_boxRareCount = ExAd_XM8_AirDrop_box3RareCount;
 	[] spawn AirDrop_fnc_buySelected;',"CALL PRO DROP"] call ExAd_fnc_createButton;
 
 _ctrl = [_display,_slide,([_slideClass,""] call ExAd_fnc_getNextIDC),[18*_pW,2*_pH,12.8*_pW,16*_pH],"","PuristaMedium",1,"#ffffff","left",0] call ExAd_fnc_createStructuredText;
