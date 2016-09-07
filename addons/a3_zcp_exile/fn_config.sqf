@@ -356,12 +356,17 @@ ZCP_DMS_MilitaryVehicles =              [                           // List of m
 										"Exile_Car_BRDM2_HQ",
 										"B_MRAP_01_hmg_F",
 										"O_MRAP_02_hmg_F",
+										"O_T_MRAP_02_hmg_ghex_F",
 										"I_MRAP_03_hmg_F",
 										"O_T_LSV_02_armed_F",
+										"O_LSV_02_armed_F",
 										"Exile_Car_SUV_Armed_Black",
 										"Exile_Car_HMMWV_M134_Green",
-										"Exile_Car_HMMWV_M2_Green"
-										
+										"Exile_Car_HMMWV_M2_Green",
+										"Exile_Car_BTR40_MG_Green",
+										"B_T_LSV_01_armed_F",
+										"B_LSV_01_armed_F",
+										"HMMWV_M2_GPK_1"
                                     ];
 
 ZCP_DMS_TransportHelis =                [                           // List of transport helis that can spawn
@@ -374,7 +379,7 @@ ZCP_DMS_TransportHelis =                [                           // List of t
 										
                                     ];
 
-ZCP_VehicleReward = ZCP_DMS_MilitaryVehicles+ZCP_DMS_TransportHelis;
+ZCP_VehicleReward = ZCP_DMS_MilitaryVehicles;
 ZCP_DMS_DEBUG = false;
 
 
