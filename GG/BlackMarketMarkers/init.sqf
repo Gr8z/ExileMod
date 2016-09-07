@@ -7,5 +7,5 @@
 
 #include "config.sqf"
 #include "functions\CC_createMarkers.sqf"
-#include "functions\CC_setMarkers.sqf"
+#include "functions\CC_setStatus.sqf"
 #include "functions\CC_showMarkers.sqf"
