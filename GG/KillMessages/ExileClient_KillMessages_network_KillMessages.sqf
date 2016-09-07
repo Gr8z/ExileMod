@@ -54,7 +54,7 @@ switch (_PV) do
 			case 2:
 			{
 				_display = getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "icon");
-				_message = format["<t color='%4'>%1</t> <img image='%3' color='%5' size='2'/> <t color='%6'>%2</t>",(name _victim),(name _killer),_display,_XG_colorVictim,_XG_ColorVW,_XG_ColorKiller];
+				_message = format["<t color='%4'>%1</t> <img image='%3' color='%5' size='2'/> <t color='%6'>%2</t>",(name _killer),(name _victim),_display,_XG_colorVictim,_XG_ColorVW,_XG_ColorKiller];
 			};
 		};
 	};
@@ -84,7 +84,7 @@ switch (_PV) do
 					case "Weapon":
 					{
 						_display = getText(configFile >> "CfgWeapons" >> (currentWeapon _killer) >> "picture");
-						_message = format["<t color='%4'>%1</t> <img image='%3' size='2'/> <t color='%6'>%2</t> <t color='%5'>[%7m]</t>",(name _victim),(name _killer),_display,_XG_colorVictim,_XG_ColorVW,_XG_ColorKiller,round((position _victim) distance (position _killer))];
+						_message = format["<t color='%4'>%1</t> <img image='%3' size='2'/> <t color='%6'>%2</t> <t color='%5'>[%7m]</t>",(name _killer),(name _victim),_display,_XG_colorVictim,_XG_ColorVW,_XG_ColorKiller,round((position _victim) distance (position _killer))];
 					};
 					case "NoWeapon":
 					{
@@ -98,29 +98,9 @@ switch (_PV) do
 	{
 		switch(_type) do
 		{
-			case "Unknown":
-			{
-				_message = format["<t color='%2'>%1</t> <t color='%3'>died for an unknown reason</t>",(name _victim),_XG_colorVictim,_XG_ColorText];
-			};
-			case "Suicide":
-			{
-				_message = format["<t color='%2'>%1</t> <t color='%3'>commited suicide</t>",(name _victim),_XG_colorVictim,_XG_ColorText];
-			};
-			case "Roulette":
-			{
-				_message = format["<t color='%2'>%1</t> <t color='%3'>died while playing Russian Roulette</t>",(name _victim),_XG_colorVictim,_XG_ColorText]
-			};
-			case "Crashed":
-			{
-				_message = format["<t color='%2'>%1</t> <t color='%3'>crashed to death</t>",(name _victim),_XG_colorVictim,_XG_ColorText];
-			};
 			case "NPC":
 			{
 				_message = format["<t color='%2'>%1</t> <t color='%3'>was killed by an NPC</t>",(name _victim),_XG_colorVictim,_XG_ColorText];
-			};
-			case "TK":
-			{
-				_message = format["<t color='%2'>%1</t> <t color='%3'>was team-killed by</t> <t color='%5'>%4</t>",(name _victim),_XG_colorVictim,_XG_ColorText,(name _killer),_XG_ColorKiller];
 			};
 		};
 	};

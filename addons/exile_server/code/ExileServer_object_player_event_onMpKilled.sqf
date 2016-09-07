@@ -127,7 +127,6 @@ switch (_killType) do
 	{
 		_countDeath = true;
 		_systemChat = format ["%1 died for an unknown reason!", name _victim];
-		["Exile","Unknown",_killer,_victim] call _XG_fnc_Send_Killed;
 		_newVictimRespect = _oldVictimRespect - round ((abs _oldVictimRespect) / 100 * (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Percentages" >> "unlucky")));
 	};
 	case 1:
@@ -136,14 +135,12 @@ switch (_killType) do
 		_modifyVictimRespect = true;
 		_systemChat = format ["%1 commited suicide!", name _victim];
 		_newVictimRespect = _oldVictimRespect - round ((abs _oldVictimRespect) / 100 * (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Percentages" >> "suicide")));
-		["Exile","Suicide",_killer,_victim] call _XG_fnc_Send_Killed;
 	};
 	case 2:
 	{
 		_countDeath = true;
 		_countKill = false;
 		_systemChat = format ["%1 died while playing Russian Roulette!", name _victim];
-		["Exile","Roulette",_killer,_victim] call _XG_fnc_Send_Killed;
 		_newVictimRespect = _oldVictimRespect; 
 		_victim call ExileServer_system_russianRoulette_event_onPlayerDied;
 	};
@@ -152,7 +149,6 @@ switch (_killType) do
 		_countDeath = true;
 		_countKill = false;
 		_systemChat = format ["%1 crashed to death!", name _victim];
-		["Exile","Crashed",_killer,_victim] call _XG_fnc_Send_Killed;
 		_newVictimRespect = _oldVictimRespect - round ((abs _oldVictimRespect) / 100 * (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Percentages" >> "crash")));
 	};
 	case 4:
@@ -160,7 +156,7 @@ switch (_killType) do
 		_countDeath = true;
 		_countKill = false;
 		_systemChat = format ["%1 was killed by an NPC!", name _victim];
-		["Exile","NPC",_killer,_victim] call _XG_fnc_Send_Killed;
+		["AI",_victim] call _XG_Fnc_Killed_Handle;
 		_newVictimRespect = _oldVictimRespect - round ((abs _oldVictimRespect) / 100 * (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Percentages" >> "npc")));
 	};
 	case 5:
@@ -168,7 +164,6 @@ switch (_killType) do
 		_countDeath = false;
 		_countKill = false;
 		_systemChat = format ["%1 was team-killed by %2!", name _victim, name _killingPlayer];
-		["Exile","TK",_killer,_victim] call _XG_fnc_Send_Killed;
 		_systemChat call _XG_fnc_Send_Killed;
 		_respectLoss = round ((abs _oldKillerRespect) / 100 * (getNumber (configFile >> "CfgSettings" >> "Respect" >> "Percentages" >> "friendyFire")));
 		_newKillerRespect = _oldKillerRespect - _respectLoss;
