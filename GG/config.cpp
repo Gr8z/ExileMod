@@ -3463,13 +3463,13 @@ class CfgExileArsenal
 	///////// Military Helicopters Armed /////////
 	class Exile_Chopper_Huey_Armed_Green								{ quality = 3; price = 25000; };
 	class Exile_Chopper_Huey_Armed_Desert								{ quality = 3; price = 25000; };
-	class B_Heli_Transport_01_F											{ quality = 4; price = 50000; };
-	class B_Heli_Transport_01_camo_F									{ quality = 4; price = 50000; };
-	class B_CTRG_Heli_Transport_01_sand_F								{ quality = 4; price = 50000; };
-	class B_CTRG_Heli_Transport_01_tropic_F								{ quality = 4; price = 50000; };
-	class B_Heli_Light_01_armed_F										{ quality = 4; price = 50000; };
-	class B_Heli_Transport_03_F											{ quality = 4; price = 50000; };
-	class B_Heli_Transport_03_black_F									{ quality = 4; price = 50000; };
+	class B_Heli_Transport_01_F											{ quality = 4; price = 100000; };
+	class B_Heli_Transport_01_camo_F									{ quality = 4; price = 100000; };
+	class B_CTRG_Heli_Transport_01_sand_F								{ quality = 4; price = 100000; };
+	class B_CTRG_Heli_Transport_01_tropic_F								{ quality = 4; price = 100000; };
+	class B_Heli_Light_01_armed_F										{ quality = 4; price = 100000; };
+	class B_Heli_Transport_03_F											{ quality = 4; price = 100000; };
+	class B_Heli_Transport_03_black_F									{ quality = 4; price = 100000; };
 	
 	///////// Planes /////////
 	class Exile_Plane_Cessna											{ quality = 2; price = 7500; };
