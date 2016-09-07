@@ -1582,8 +1582,8 @@ class Mission
 	        type = "ExileTraderZone";
 	        colorName = "ColorBlack";
 	        fillName = "SolidBorder";
-	        a = 200;
-	        b = 200;
+	        a = 300;
+	        b = 300;
 	        drawBorder = 1;
 	        id = 113;
 	        atlOffset = 0;
