@@ -680,7 +680,7 @@ class CfgCraftingRecipes
 		tools[] = {"Exile_Item_Grinder"};
 		category = "Tools & Items";
 	};
-	class CraftMetalHedgehog: Exile_AbstractCraftingRecipe
+	/*class CraftMetalHedgehog: Exile_AbstractCraftingRecipe
 	{
 		name = "Craft Metal Hedgehog";
 		pictureItem = "Exile_Item_MetalHedgehogKit";
@@ -695,7 +695,7 @@ class CfgCraftingRecipes
 		};
 		tools[] = {"Exile_Item_Grinder"};
 		category = "Tools & Items";
-	};
+	};*/
 	class CraftMetalPole: Exile_AbstractCraftingRecipe
 	{
 		name = "Craft Metal Pole";
@@ -851,7 +851,7 @@ class CfgCraftingRecipes
 		};
 		category = "Tools & Items";
 	};
-	class CraftWireFenceKit: Exile_AbstractCraftingRecipe
+	/*class CraftWireFenceKit: Exile_AbstractCraftingRecipe
 	{
 		name = "Craft Wire Fence Kit";
 		pictureItem = "Exile_Item_WireFenceKit_Long";
@@ -873,12 +873,13 @@ class CfgCraftingRecipes
 			{1, "Exile_Item_MetalScrews"}
 		};
 		category = "Tools & Items";
-	};
+	};*/
 	class CraftWoodDoorWay: Exile_AbstractCraftingRecipe
 	{
 		name = "Craft Wood Doorway";
 		pictureItem = "Exile_Item_WoodDoorwayKit";
 		requiredInteractionModelGroup = "WorkBench";
+		tools[] = {"Exile_Item_CordlessScrewdriver"};
 		returnedItems[] = 
 		{
 			{1, "Exile_Item_WoodDoorwayKit"}
@@ -894,13 +895,15 @@ class CfgCraftingRecipes
 		name = "Craft Wood Floor";
 		pictureItem = "Exile_Item_WoodFloorKit";
 		requiredInteractionModelGroup = "WorkBench";
+		tools[] = {"Exile_Item_CordlessScrewdriver"};
 		returnedItems[] = 
 		{
 			{1, "Exile_Item_WoodFloorKit"}
 		};
 		components[] = 
 		{
-			{4, "Exile_Item_WoodPlank"}
+			{4, "Exile_Item_WoodPlank"},
+			{1, "Exile_Item_MetalScrews"}
 		};
 		category = "Wood Contructions";
 	};
@@ -909,13 +912,15 @@ class CfgCraftingRecipes
 		name = "Craft Wood Floor Port";
 		pictureItem = "Exile_Item_WoodFloorPortKit";
 		requiredInteractionModelGroup = "WorkBench";
+		tools[] = {"Exile_Item_CordlessScrewdriver"};
 		returnedItems[] = 
 		{
 			{1, "Exile_Item_WoodFloorPortKit"}
 		};
 		components[] = 
 		{
-			{6, "Exile_Item_WoodPlank"}
+			{6, "Exile_Item_WoodPlank"},
+			{1, "Exile_Item_MetalScrews"}
 		};
 		category = "Wood Contructions";
 	};
@@ -924,13 +929,15 @@ class CfgCraftingRecipes
 		name = "Craft Wood Gate";
 		pictureItem = "Exile_Item_WoodGateKit";
 		requiredInteractionModelGroup = "WorkBench";
+		tools[] = {"Exile_Item_CordlessScrewdriver"};
 		returnedItems[] = 
 		{
 			{1, "Exile_Item_WoodGateKit"}
 		};
 		components[] = 
 		{
-			{8, "Exile_Item_WoodPlank"}
+			{8, "Exile_Item_WoodPlank"},
+			{1, "Exile_Item_MetalScrews"}
 		};
 		category = "Wood Contructions";
 	};
@@ -955,13 +962,15 @@ class CfgCraftingRecipes
 		name = "Craft Wood Stairs";
 		pictureItem = "Exile_Item_WoodStairsKit";
 		requiredInteractionModelGroup = "WorkBench";
+		tools[] = {"Exile_Item_CordlessScrewdriver"};
 		returnedItems[] = 
 		{
 			{1, "Exile_Item_WoodStairsKit"}
 		};
 		components[] = 
 		{
-			{6, "Exile_Item_WoodPlank"}
+			{6, "Exile_Item_WoodPlank"},
+			{1, "Exile_Item_MetalScrews"}
 		};
 		category = "Wood Contructions";
 	};
@@ -970,13 +979,15 @@ class CfgCraftingRecipes
 		name = "Craft Wood Support";
 		pictureItem = "Exile_Item_WoodSupportKit";
 		requiredInteractionModelGroup = "WorkBench";
+		tools[] = {"Exile_Item_CordlessScrewdriver"};
 		returnedItems[] = 
 		{
 			{1, "Exile_Item_WoodSupportKit"}
 		};
 		components[] = 
 		{
-			{6, "Exile_Item_WoodPlank"}
+			{6, "Exile_Item_WoodPlank"},
+			{1, "Exile_Item_MetalScrews"}
 		};
 		category = "Wood Contructions";
 	};
@@ -985,13 +996,15 @@ class CfgCraftingRecipes
 		name = "Craft Wood Wall";
 		pictureItem = "Exile_Item_WoodWallKit";
 		requiredInteractionModelGroup = "WorkBench";
+		tools[] = {"Exile_Item_CordlessScrewdriver"};
 		returnedItems[] = 
 		{
 			{1, "Exile_Item_WoodWallKit"}
 		};
 		components[] = 
 		{
-			{4, "Exile_Item_WoodPlank"}
+			{4, "Exile_Item_WoodPlank"},
+			{1, "Exile_Item_MetalScrews"}
 		};
 		category = "Wood Contructions";
 	};
@@ -1000,13 +1013,15 @@ class CfgCraftingRecipes
 		name = "Craft 1/2 Wood Wall";
 		pictureItem = "Exile_Item_WoodWallHalfKit";
 		requiredInteractionModelGroup = "WorkBench";
+		tools[] = {"Exile_Item_CordlessScrewdriver"};
 		returnedItems[] = 
 		{
 			{1, "Exile_Item_WoodWallHalfKit"}
 		};
 		components[] = 
 		{
-			{2, "Exile_Item_WoodPlank"}
+			{2, "Exile_Item_WoodPlank"},
+			{1, "Exile_Item_MetalScrews"}
 		};
 		category = "Wood Contructions";
 	};
@@ -1015,13 +1030,15 @@ class CfgCraftingRecipes
 		name = "Craft Wood Window";
 		pictureItem = "Exile_Item_WoodWindowKit";
 		requiredInteractionModelGroup = "WorkBench";
+		tools[] = {"Exile_Item_CordlessScrewdriver"};
 		returnedItems[] = 
 		{
 			{1, "Exile_Item_WoodWindowKit"}
 		};
 		components[] = 
 		{
-			{6, "Exile_Item_WoodPlank"}
+			{6, "Exile_Item_WoodPlank"},
+			{1, "Exile_Item_MetalScrews"}
 		};
 		category = "Wood Contructions";
 	};
@@ -1029,6 +1046,7 @@ class CfgCraftingRecipes
 	{
 		name = "Craft Work Bench";
 		pictureItem = "Exile_Item_WorkBenchKit";
+		tools[] = {"Exile_Item_CordlessScrewdriver"};
 		returnedItems[] = 
 		{
 			{1, "Exile_Item_WorkBenchKit"}
@@ -1307,7 +1325,7 @@ class CfgCraftingRecipes
 	{
 	    name = "Craft Laserdesignator";
 	    pictureItem = "Laserdesignator";
-	    requiresFire = 1;
+		tools[] = {"Exile_Item_Foolbox", "Exile_Item_Screwdriver", "Exile_Item_Grinder", "Exile_Item_Pliers"};
 	    returnedItems[] =
 	    {
 	        {1, "Laserdesignator"}
@@ -1325,7 +1343,6 @@ class CfgCraftingRecipes
 	{
 	    name = "Craft Gold";
 	    pictureItem = "Exile_Weapon_TaurusGold";
-	    requiresFire = 1;
 	    returnedItems[] =
 	    {
 	        {1, "Exile_Weapon_TaurusGold"}
@@ -1338,6 +1355,99 @@ class CfgCraftingRecipes
 			{1, "Exile_Item_Magazine04"}
 	    };
 	    category = "Tools & Items";
+	};
+	class ViperHelmet01: Exile_AbstractCraftingRecipe
+	{
+	    name = "Craft Viper Helmet (Hex)";
+	    pictureItem = "H_HelmetO_ViperSP_hex_F";
+	    returnedItems[] =
+	    {
+	        {1, "H_HelmetO_ViperSP_hex_F"}
+	    };
+		tools[] = {"Exile_Item_Foolbox", "Exile_Item_Screwdriver", "Exile_Item_Grinder", "Exile_Item_Pliers"};
+	    components[] =
+	    {
+	        {2, "Laserdesignator"},
+	        {1, "Exile_Construction_Laptop_Static"},
+	        {1, "H_HelmetB_TI_tna_F"}
+	    };
+	    category = "Tools & Items";
+		
+	};
+	class ViperHelmet02: Exile_AbstractCraftingRecipe
+	{
+	    name = "Craft Viper Helmet (Green Hex)";
+	    pictureItem = "H_HelmetO_ViperSP_ghex_F";
+	    returnedItems[] =
+	    {
+	        {1, "H_HelmetO_ViperSP_ghex_F"}
+	    };
+		tools[] = {"Exile_Item_Foolbox", "Exile_Item_Screwdriver", "Exile_Item_Grinder", "Exile_Item_Pliers"};
+	    components[] =
+	    {
+	        {2, "Laserdesignator"},
+	        {1, "Exile_Construction_Laptop_Static"},
+	        {1, "H_HelmetB_TI_tna_F"}
+	    };
+	    category = "Tools & Items";
+		
+	};
+	class ENVG01: Exile_AbstractCraftingRecipe
+	{
+	    name = "Craft ENVG (Black)";
+	    pictureItem = "NVGogglesB_blk_F";
+	    returnedItems[] =
+	    {
+	        {1, "NVGogglesB_blk_F"}
+	    };
+		tools[] = {"Exile_Item_Foolbox", "Exile_Item_Screwdriver", "Exile_Item_Grinder", "Exile_Item_Pliers"};
+	    components[] =
+	    {
+	        {1, "Laserdesignator"},
+	        {1, "Exile_Construction_Laptop_Static"},
+	        {1, "NVGoggles_OPFOR"},
+			{1, "optic_Nightstalker"}
+	    };
+	    category = "Tools & Items";
+		
+	};
+	class ENVG02: Exile_AbstractCraftingRecipe
+	{
+	    name = "Craft ENVG (Green)";
+	    pictureItem = "NVGogglesB_grn_F";
+	    returnedItems[] =
+	    {
+	        {1, "NVGogglesB_grn_F"}
+	    };
+		tools[] = {"Exile_Item_Foolbox", "Exile_Item_Screwdriver", "Exile_Item_Grinder", "Exile_Item_Pliers"};
+	    components[] =
+	    {
+	        {1, "Laserdesignator"},
+	        {1, "Exile_Construction_Laptop_Static"},
+	        {1, "NVGoggles_INDEP"},
+			{1, "optic_Nightstalker"}
+	    };
+	    category = "Tools & Items";
+		
+	};
+	class ENVG02: Exile_AbstractCraftingRecipe
+	{
+	    name = "Craft ENVG (Grey)";
+	    pictureItem = "NVGogglesB_gry_F";
+	    returnedItems[] =
+	    {
+	        {1, "NVGogglesB_gry_F"}
+	    };
+		tools[] = {"Exile_Item_Foolbox", "Exile_Item_Screwdriver", "Exile_Item_Grinder", "Exile_Item_Pliers"};
+	    components[] =
+	    {
+	        {1, "Laserdesignator"},
+	        {1, "Exile_Construction_Laptop_Static"},
+	        {1, "O_NVGoggles_urb_F"},
+			{1, "optic_Nightstalker"}
+	    };
+	    category = "Tools & Items";
+		
 	};
 };
 class CfgExileArsenal
@@ -4440,14 +4550,14 @@ class CfgInteractionMenus
 	    target = "Exile_Trader_Office";
 
 	    class Actions
-	    {
+	    /*{
 	        class MostWanted: ExileAbstractAction
 	        {
 	            title = "Bounties";
 	            condition = "true";
 	            action = "createDialog 'MostWantedDialog';";
 	        };
-	    };
+	    };*/
 	};
 };
 class CfgInteractionModels
@@ -6025,13 +6135,14 @@ class CfgTraderCategories
 			"Exile_Melee_Axe",
 			"Exile_Item_Handsaw",
 			"Exile_Item_Pliers",
-			"Exile_Item_Grinder",
+			//"Exile_Item_Grinder",
 			"Exile_Item_Knife",
 			"Exile_Magazine_Battery",
-			"Exile_Melee_SledgeHammer",
+			//"Exile_Melee_SledgeHammer",
 			"Exile_Item_Foolbox",
 			"Exile_Item_CordlessScrewdriver",
 			"Exile_Item_Shovel"
+			"Exile_Item_Screwdriver",
 			/*
 			"Exile_Item_ThermalScannerPro",
 			"Exile_Item_FireExtinguisher",
@@ -6939,8 +7050,8 @@ class CfgTraderCategories
 		items[] = 
 		{
 			"H_HelmetB_TI_tna_F",
-			//"H_HelmetO_ViperSP_hex_F",
-			//"H_HelmetO_ViperSP_ghex_F"
+			"H_HelmetO_ViperSP_hex_F",
+			"H_HelmetO_ViperSP_ghex_F"
 		};
 	};
 	
@@ -7204,7 +7315,7 @@ class CfgTraders
 			"SpecOpsLauncherAmmo",
 			"SpecOpsUniforms",
 			"ViperHarnesses",
-			"SpecOpsHelmets",
+			//"SpecOpsHelmets",
 			"SpecOpsSpecial",
 			//"SpecOpsNVG",
 			"StaticMGs",
