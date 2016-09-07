@@ -140,7 +140,7 @@ AVS_RearmCosts =
 	["500Rnd_65x39_Belt_Tracer_Green_Splash", 1000],	// Qilin belt
 	["100Rnd_127x99_mag_Tracer_Red", 200],				// Prowler HMG mag
 	["130Rnd_338_Mag", 260],							// Prowler MMG mag
-	["240Rnd_CMFlare_Chaff_Magazine", 29],				// Blackfish flares
+	["240Rnd_CMFlare_Chaff_Magazine", 29]				// Blackfish flares
 	//["240Rnd_40mm_GPR_Tracer_Red_shells", 430],			// Blackfish autocannon
 	//["160Rnd_40mm_APFSDS_Tracer_Red_shells", 290],		// Blackfish autocannon
 	//["100Rnd_105mm_HEAT_MP", 480],						// Blackfish cannon 105mm

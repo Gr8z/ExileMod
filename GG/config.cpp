@@ -7230,7 +7230,8 @@ class CfgTraderCategories
 			"Exile_Plane_AN2_Green",
 			"Exile_Plane_Ceasar",
 			"Exile_Plane_BlackfishInfantry",
-			"Exile_Plane_BlackfishVehicle"
+			"Exile_Plane_BlackfishVehicle",
+			"O_T_VTOL_02_infantry_F"
 		};
 	};
 
