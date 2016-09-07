@@ -8,8 +8,8 @@
 _status = [];
  
 {
-    _x params ["_markerName","_markerPos"];
-    _markerName = format["BlackMarketZone_%1",_markerName];
+    _x params ["_zoneName","_markerPos"];
+    _markerName = format["BlackMarketZone_%1",_zoneName];
     deleteMarkerLocal _markerName;
     _marker = createMarkerLocal [_markerName, _markerPos];
     _markerName setMarkerShapeLocal "ELLIPSE";
@@ -20,7 +20,7 @@ _status = [];
     
     diag_log("BLACKMARKETMARKERS: Circle Marker Created");
  
-    _markerName = format["BlackMarketDesc_%1",_markerName];
+    _markerName = format["BlackMarketDesc_%1",_zoneName];
     deleteMarkerLocal _markerName;
     _marker = createMarkerLocal [_markerName, _markerPos];
     _markerName setMarkerShapeLocal "ICON";
