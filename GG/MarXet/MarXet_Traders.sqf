@@ -63,7 +63,7 @@ switch (toLower worldName) do {
 			private ["_sign"];
 			_sign = createVehicle [_x select 0, [0,0,0], [], 0, ""];
 			_sign enableSimulationGlobal false;
-			_sign setObjectTextureGlobal [0, "GG\MarXet\images\MarXet_Sign.jpg"];
+			_sign setObjectTextureGlobal [0, "GG\images\MarXet_Sign.jpg"];
 			if (_x select 4) then {
 				_sign setDir (_x select 2);
 				_sign setPos (_x select 1);
@@ -174,7 +174,7 @@ switch (toLower worldName) do {
             private ["_sign"];
             _sign = createVehicle [_x select 0, [0,0,0], [], 0, ""];
             _sign enableSimulationGlobal false;
-            _sign setObjectTextureGlobal [0, "GG\MarXet\images\MarXet_Sign.jpg"];
+            _sign setObjectTextureGlobal [0, "GG\images\MarXet_Sign.jpg"];
             if (_x select 4) then {
                 _sign setDir (_x select 2);
                 _sign setPos (_x select 1);
@@ -244,7 +244,7 @@ switch (toLower worldName) do {
 			private ["_sign"];
 			_sign = createVehicle [_x select 0, [0,0,0], [], 0, ""];
 			_sign enableSimulationGlobal false;
-			_sign setObjectTextureGlobal [0, "GG\MarXet\images\MarXet_Sign.jpg"];
+			_sign setObjectTextureGlobal [0, "GG\images\MarXet_Sign.jpg"];
 			if (_x select 4) then {
 				_sign setDir (_x select 2);
 				_sign setPos (_x select 1);
