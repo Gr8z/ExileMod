@@ -13,14 +13,14 @@ _pH = 0.04;
 _slideClass = "GG_AirDrop";
 
 //WE HAVE TO RANDOMIZE FOLLOWING VALUES EACH TIME XM8 LOADED
-ExAd_XM8_AirDrop_box1RareCount = floor(random 1);
+ExAd_XM8_AirDrop_box1RareCount = floor((random 1) +1);
 ExAd_XM8_AirDrop_box1MagCount = floor((random 5) + 1);
-ExAd_XM8_AirDrop_box1ItemCount = floor((random 2) + 1);
-ExAd_XM8_AirDrop_box2RareCount = floor((random 2) + 1);
+ExAd_XM8_AirDrop_box1ItemCount = floor((random 3) + 1);
+ExAd_XM8_AirDrop_box2RareCount = floor((random 3) + 1);
 ExAd_XM8_AirDrop_box2MagCount = floor((random 10) + 2);
-ExAd_XM8_AirDrop_box2ItemCount = floor((random 4) + 4);
-ExAd_XM8_AirDrop_box3RareCount = floor((random 2) + 2);
-ExAd_XM8_AirDrop_box3MagCount = floor((random 10) + 4);
+ExAd_XM8_AirDrop_box2ItemCount = floor((random 6) + 4);
+ExAd_XM8_AirDrop_box3RareCount = floor((random 5) + 2);
+ExAd_XM8_AirDrop_box3MagCount = floor((random 15) + 4);
 ExAd_XM8_AirDrop_box3ItemCount = floor((random 10) + 4);
 ExAd_XM8_AirDrop_BoxWeapon = (selectRandom ExAd_XM8_AirDrop_BoxWeapons);
 ExAd_XM8_AirDrop_mag = (getArray (configfile >> "cfgWeapons" >> ExAd_XM8_AirDrop_BoxWeapon >> "magazines")) select 0;
