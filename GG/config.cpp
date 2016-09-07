@@ -6144,7 +6144,7 @@ class CfgTraderCategories
 			"Exile_Item_Foolbox",
 			"Exile_Item_CordlessScrewdriver",
 			"Exile_Item_Shovel"
-			"Exile_Item_Screwdriver",
+			"Exile_Item_Screwdriver"
 			/*
 			"Exile_Item_ThermalScannerPro",
 			"Exile_Item_FireExtinguisher",
