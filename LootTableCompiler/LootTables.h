@@ -125,7 +125,7 @@
 2, DLCSupressor
 2, Bipods
 1.5, Explosives
-0.01, Magazine03
+//0.01, Magazine03
 
 ///////////////////////////////////////////////////////////////////////////////
 // Hospital, Medevac etc.
@@ -134,7 +134,7 @@
 70, MedicalItems
 10, Food
 10, Drinks
-0.08, Magazine04
+//0.08, Magazine04
 
 ///////////////////////////////////////////////////////////////////////////////
 // Light Houses + Life Guard Towers + Castles
