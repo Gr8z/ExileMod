@@ -4544,21 +4544,23 @@ class CfgInteractionMenus
 			};
 		};
 	};
+	/*
 	class Bounties
 	{
 	    targetType = 2;
 	    target = "Exile_Trader_Office";
 
 	    class Actions
-	    /*{
+	    {
 	        class MostWanted: ExileAbstractAction
 	        {
 	            title = "Bounties";
 	            condition = "true";
 	            action = "createDialog 'MostWantedDialog';";
 	        };
-	    };*/
+	    };
 	};
+	*/
 };
 class CfgInteractionModels
 {
