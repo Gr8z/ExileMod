@@ -35,7 +35,7 @@ ZCP_PoptabReward = 250; // Poptab reward for capping per player online. ( When p
 ZCP_MinPoptabReward = 1000; // Poptabreward is added to this number
 ZCP_PopTabsRewardForGroup = 1000;
 
-ZCP_ReputationReward = 250; // Respect reward for capping per  player online.
+ZCP_ReputationReward = 100; // Respect reward for capping per  player online.
 ZCP_MinReputationReward = 1000; // ZCP_ReputationReward is added to this number
 ZCP_ReputationRewardForGroup = 500; // Each group members gets this amount of reputation ( for the trouble).
 ZCP_CONFIG_GroupDistanceForRespect = 200; // meters to be close to the capper to get the group award
