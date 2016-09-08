@@ -2,12 +2,13 @@
  * ExileClient_gui_selectSpawnLocation_show
  */
  
-private["_display","_topTextCTRL1","_topTextCTRL2","_spawnButton","_listBox","_listItemIndex","_numberOfSpawnPoints","_randNum","_randData","_randomSpawnIndex","_puid","_title"];
+private["_display","_topTextCTRL1","_topTextCTRL2","_spawnButton","_listBox","_listItemIndex","_numberOfSpawnPoints","_randNum","_randData","_randomSpawnIndex","_puid","_title","_player"];
 disableSerialization;
 diag_log "Selecting spawn location...";
 ExileClientSpawnLocationSelectionDone = false;
 ExileClientSelectedSpawnLocationMarkerName = "";
 createDialog "RscExileSelectSpawnLocationDialog";
+_player = _sessionID call ExileServer_system_session_getPlayerObject;
 waitUntil
 {
 	_display = findDisplay 24002;
@@ -107,7 +108,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			_cost = 1353;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
-			format['setAccountMoney:%1:%2', (player getVariable ["ExileLocker",0])- _cost, (getPlayerUID player)] call ExileServer_system_database_query_fireAndForget;
+			format['setAccountMoney:%1:%2', ,(player getVariable ["ExileLocker",0])- _cost, _player getVariable ["ExileDatabaseID", 0]] call ExileServer_system_database_query_fireAndForget;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Scout Loadout 1</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "TRYK_U_B_Wood_T";
