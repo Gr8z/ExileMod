@@ -68,8 +68,8 @@ _rndDir = random 180;
 _wreck = createVehicle ["Land_FuelStation_Build_F",_pos getPos [10+(random 5),_rndDir+90],[], 0, "CAN_COLLIDE"];
 
 
-_vehClass1 = "Exile_Car_SUV_Red";
-_vehClass2 = "Exile_Car_SUV_Grey";
+_vehClass1 = "Exile_Car_MB4WD";
+_vehClass2 = "Exile_Car_MB4WD";
 
 if !(_extraParams isEqualTo []) then
 {

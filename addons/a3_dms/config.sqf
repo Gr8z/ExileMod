@@ -19,16 +19,16 @@
 #define USE_MARKSMAN_DLC_WEAPONS_IN_CRATES 1
 
 // Uncomment this if you want Apex weapons on AI.
-//#define GIVE_AI_APEX_WEAPONS 1
+#define GIVE_AI_APEX_WEAPONS 1
 
 // Uncomment this if you want Apex gear on AI. Uniforms, Vests, Backpacks, Helmets,Scopes
-//#define GIVE_AI_APEX_GEAR 1
+#define GIVE_AI_APEX_GEAR 1
 
 // Uncomment this if you want Apex weapons in loot crates
-//#define USE_APEX_WEAPONS_IN_CRATES 1
+#define USE_APEX_WEAPONS_IN_CRATES 1
 
 // Uncomment this if you want Apex vehicles to spawn for AI/missions
-//#define USE_APEX_VEHICLES 1
+#define USE_APEX_VEHICLES 1
 
 
 
@@ -1419,9 +1419,9 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"B_T_LSV_01_armed_F",
 											"O_T_LSV_02_armed_F",
 											#endif
-											"B_MRAP_01_hmg_F",
-											"O_MRAP_02_hmg_F",
-											"I_MRAP_03_hmg"
+											"Exile_Car_HMMWV_M134_Green",
+											"Exile_Car_HMMWV_M2_Green",
+											"Exile_Car_SUV_Armed_Black"
 										];
 
 	DMS_MilitaryVehicles =				[							// List of (unarmed) military vehicles that can spawn
