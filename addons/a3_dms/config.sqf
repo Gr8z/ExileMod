@@ -232,37 +232,37 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 
 	DMS_RandomBanditMissionsOnStart		= 0;						// Number of (random) bandit missions to spawn when the server starts, just so players don't have to wait for missions to spawn.
 	DMS_BanditMissionTypes =			[			//	List of missions with spawn chances. If they add up to 100%, they represent the percentage chance each one will spawn
-											["bandits",3],
-											["bauhaus",3],
-											["beertransport",3],
-											["behindenemylines",3],
-											["blackhawkdown",3],
-											["cardealer",3],
-											["construction",3],
-											["donthasslethehoff",3],
-											["foodtransport",3],
-											["guntransport",3],
-											["humanitarian",3],
-											["lost_battalion",3],
-											["medical",3],
-											["mercbase",2],
-											["mercenaries",3],
-											["nedbuilding1_mission",3],
-											["nedcar_mission",4],
-											["nedguns1_mission",3],
-											["nedhatchback_mission",3],
-											["nedhunter_mission",2],
-											["nedifrit_mission",2],
-											["nedlittlebird_mission",2],
-											["nedmedical1_mission",3],
-											["nedoffroad_mission",3],
-											["nedresearch_mission",3],
-											["nedsnipercamp_mission",3],
-											["nedstrider_mission",2],
-											["nedural_mission",3],
-											["roguenavyseals",3],
-											["thieves",3],
-											["walmart",3]
+											["bandits",5],
+											["bauhaus",5],
+											["beertransport",5],
+											["behindenemylines",5],
+											["blackhawkdown",5],
+											["cardealer",5],
+											["construction",5],
+											["donthasslethehoff",5],
+											["foodtransport",5],
+											["guntransport",5],
+											["humanitarian",5],
+											["lost_battalion",5],
+											["medical",5],
+											["mercbase",5],
+											["mercenaries",5],
+											["nedbuilding1_mission",5],
+											["nedcar_mission",5],
+											["nedguns1_mission",5],
+											["nedhatchback_mission",5],
+											["nedhunter_mission",5],
+											["nedifrit_mission",5],
+											["nedlittlebird_mission",1],
+											["nedmedical1_mission",5],
+											["nedoffroad_mission",5],
+											["nedresearch_mission",5],
+											["nedsnipercamp_mission",5],
+											["nedstrider_mission",5],
+											["nedural_mission",5],
+											["roguenavyseals",5],
+											["thieves",5],
+											["walmart",5]
 										];
 
 
@@ -453,7 +453,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_AI_WP_Radius_base				= 5;						// Waypoint radius for AI in bases.
 	DMS_AI_WP_Radius_heli				= 500;						// Waypoint radius for AI in helis.
 
-	DMS_AI_destroyVehicleChance			= 0;						// Percent chance that an AI vehicle will be destroyed after the AI have been killed. Set to 100 for always, or 0 for never.
+	DMS_AI_destroyVehicleChance			= 100;						// Percent chance that an AI vehicle will be destroyed after the AI have been killed. Set to 100 for always, or 0 for never.
 
 	DMS_AI_destroyStaticWeapon			= true;						// Whether or not to destroy static HMGs after AI death.
 	DMS_AI_destroyStaticWeapon_chance	= 100;						// Percent chance that a static weapon will be destroyed (only applied if "DMS_AI_destroyStaticWeapon" is true)
@@ -931,7 +931,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 										];
 	DMS_sniper_optic_chance				= 100;						// Percentage chance that a Sniper Class AI will get an optic
 	DMS_sniper_bipod_chance				= 90;						// Percentage chance that a Sniper Class AI will get a bipod
-	DMS_sniper_suppressor_chance		= 15;						// Percentage chance that a Sniper Class AI will get a suppressor
+	DMS_sniper_suppressor_chance		= 3;						// Percentage chance that a Sniper Class AI will get a suppressor
 
 	DMS_sniper_items =					[							// Items for Sniper Class AI (Loot stuff that goes in uniform/vest/backpack)
 											"Exile_Item_InstaDoc",
@@ -1439,7 +1439,9 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"B_T_LSV_01_armed_F",
 											"O_T_LSV_02_armed_F",
 											#endif
-											"Exile_Car_Offroad_Armed_Guerilla01"
+											"B_MRAP_01_hmg_F",
+											"O_MRAP_02_hmg_F",
+											"I_MRAP_03_hmg"
 										];
 
 	DMS_MilitaryVehicles =				[							// List of (unarmed) military vehicles that can spawn

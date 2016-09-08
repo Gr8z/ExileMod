@@ -45,14 +45,6 @@ if !(_OK) exitWith
 
 //create possible difficulty add more of one difficulty to weight it towards that
 _PossibleDifficulty		= 	[
-								"easy",
-								"moderate",
-								"difficult",
-								"difficult",
-								"difficult",
-								"hardcore",
-								"hardcore",
-								"hardcore",
 								"hardcore"
 							];
 //choose difficulty and set value
@@ -87,7 +79,7 @@ switch (_difficulty) do
 	//case "hardcore":
 	default
 	{
-		_AICount = (10 + (round (random 6)));
+		_AICount = (15 + (round (random 6)));
 		_crate_weapons 		= (4 + (round (random 1)));
 		_crate_items 		= (8 + (round (random 7)));
 		_crate_backpacks 	= (4 + (round (random 1)));
@@ -136,23 +128,22 @@ _staticGuns =
 
 //create possible vehicle list
 _PossibleVehicleClass 		= [
-								"Exile_Chopper_Hummingbird_Civillian_Blue",
-								"Exile_Chopper_Hummingbird_Civillian_Red",
-								"Exile_Chopper_Hummingbird_Civillian_ION",
-								"Exile_Chopper_Hummingbird_Civillian_BlueLine",
-								"Exile_Chopper_Hummingbird_Civillian_Digital",
-								"Exile_Chopper_Hummingbird_Civillian_Elliptical",
-								"Exile_Chopper_Hummingbird_Civillian_Furious",
-								"Exile_Chopper_Hummingbird_Civillian_GrayWatcher",
-								"Exile_Chopper_Hummingbird_Civillian_Jeans",
-								"Exile_Chopper_Hummingbird_Civillian_Light",
-								"Exile_Chopper_Hummingbird_Civillian_Shadow",
-								"Exile_Chopper_Hummingbird_Civillian_Sheriff",
-								"Exile_Chopper_Hummingbird_Civillian_Speedy",
-								"Exile_Chopper_Hummingbird_Civillian_Sunset",
-								"Exile_Chopper_Hummingbird_Civillian_Vrana",
-								"Exile_Chopper_Hummingbird_Civillian_Wasp",
-								"Exile_Chopper_Hummingbird_Civillian_Wave"
+								"B_Heli_Light_01_armed_F",
+								"O_Heli_Light_02_F",
+								"B_Heli_Transport_01_F",
+								"B_Heli_Transport_01_Camo_F",
+								"I_Heli_Transport_02_F",
+								"I_Heli_Light_03_F",
+								"B_Heli_Transport_03_F",
+								"B_CTRG_Heli_Transport_01_sand_F",
+								"B_CTRG_Heli_Transport_01_tropic_F",
+								"Exile_Chopper_Huey_Armed_Desert",
+								"Exile_Chopper_Huey_Armed_Green",
+								"Exile_Chopper_Hellcat_FIA",
+								"Exile_Chopper_Hellcat_Green",
+								"Exile_Chopper_Orca_CSAT",
+								"Exile_chopper_Huron_Black",
+								"Exile_chopper_Huron_Green"
 							];
 //choose the vehicle
 _VehicleClass = selectRandom _PossibleVehicleClass;
