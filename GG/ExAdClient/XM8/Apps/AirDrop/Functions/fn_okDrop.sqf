@@ -10,7 +10,7 @@ _ok = true;
 _Time = time - ExAd_XM8_AirDrop_lastDrop;
 _LastUsedTime = 300;
 _OnlineLimit = 15;
-_traderZoneNearLimit = 200;
+_traderZoneNearLimit = 400;
 
 if (ExAd_XM8_AirDrop_DropInProgress) then {
 	_msg = "Please Wait.. An Air Drop is already in progress.";
