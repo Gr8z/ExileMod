@@ -3129,33 +3129,33 @@ class CfgExileArsenal
 	class bipod_01_F_khk												{ quality = 1; price = 75; };
 
 	///////// Muzzle Attachments /////////
-	class muzzle_snds_acp 												{ quality = 1; price = 50; };
-	class muzzle_snds_338_black 										{ quality = 3; price = 150; };
-	class muzzle_snds_338_green 										{ quality = 3; price = 150; };
-	class muzzle_snds_338_sand 											{ quality = 3; price = 150; };
-	class muzzle_snds_93mmg 											{ quality = 3; price = 150; };
-	class muzzle_snds_93mmg_tan 										{ quality = 3; price = 150; };
-	class muzzle_snds_58_blk_F											{ quality = 1; price = 75; };
-	class muzzle_snds_58_wdm_F											{ quality = 1; price = 75; };
-	class muzzle_snds_B 												{ quality = 2; price = 75; };
-	class muzzle_snds_B_khk_F											{ quality = 2; price = 75; };
-	class muzzle_snds_B_snd_F											{ quality = 2; price = 75; };
-	class muzzle_snds_H 												{ quality = 1; price = 75; };
-	class muzzle_snds_H_khk_F											{ quality = 1; price = 75; };
-	class muzzle_snds_H_snd_F											{ quality = 1; price = 75; };
-	class muzzle_snds_H_MG 												{ quality = 1; price = 75; };
-	class muzzle_snds_H_MG_blk_F										{ quality = 1; price = 75; };
-	class muzzle_snds_H_MG_khk_F										{ quality = 1; price = 75; };
-	class muzzle_snds_H_SW 												{ quality = 1; price = 75; };
-	class muzzle_snds_L 												{ quality = 1; price = 50; };
-	class muzzle_snds_M 												{ quality = 1; price = 75; };
-	class muzzle_snds_m_khk_F											{ quality = 1; price = 75; };	
-	class muzzle_snds_m_snd_F											{ quality = 1; price = 75; };		
+	class muzzle_snds_acp 												{ quality = 1; price = 150; };
+	class muzzle_snds_338_black 										{ quality = 3; price = 300; };
+	class muzzle_snds_338_green 										{ quality = 3; price = 300; };
+	class muzzle_snds_338_sand 											{ quality = 3; price = 300; };
+	class muzzle_snds_93mmg 											{ quality = 3; price = 300; };
+	class muzzle_snds_93mmg_tan 										{ quality = 3; price = 300; };
+	class muzzle_snds_58_blk_F											{ quality = 1; price = 150; };
+	class muzzle_snds_58_wdm_F											{ quality = 1; price = 150; };
+	class muzzle_snds_B 												{ quality = 2; price = 200; };
+	class muzzle_snds_B_khk_F											{ quality = 2; price = 200; };
+	class muzzle_snds_B_snd_F											{ quality = 2; price = 200; };
+	class muzzle_snds_H 												{ quality = 1; price = 200; };
+	class muzzle_snds_H_khk_F											{ quality = 1; price = 200; };
+	class muzzle_snds_H_snd_F											{ quality = 1; price = 200; };
+	class muzzle_snds_H_MG 												{ quality = 1; price = 200; };
+	class muzzle_snds_H_MG_blk_F										{ quality = 1; price = 200; };
+	class muzzle_snds_H_MG_khk_F										{ quality = 1; price = 200; };
+	class muzzle_snds_H_SW 												{ quality = 1; price = 200; };
+	class muzzle_snds_L 												{ quality = 1; price = 200; };
+	class muzzle_snds_M 												{ quality = 1; price = 200; };
+	class muzzle_snds_m_khk_F											{ quality = 1; price = 200; };	
+	class muzzle_snds_m_snd_F											{ quality = 1; price = 200; };		
 
 	///////// Stealth Muzzle Attachements /////////
-	class muzzle_snds_65_TI_blk_F										{ quality = 3; price = 250; };	
-	class muzzle_snds_65_TI_hex_F										{ quality = 3; price = 250; };
-	class muzzle_snds_65_TI_ghex_F										{ quality = 3; price = 250; };
+	class muzzle_snds_65_TI_blk_F										{ quality = 3; price = 350; };	
+	class muzzle_snds_65_TI_hex_F										{ quality = 3; price = 350; };
+	class muzzle_snds_65_TI_ghex_F										{ quality = 3; price = 350; };
 	
 	///////// Optic Attachements /////////
 	class optic_Aco														{ quality = 1; price = 100; };
@@ -3201,20 +3201,20 @@ class CfgExileArsenal
 	class hlc_acc_Surefiregrip 											{ quality = 1; price = 50; };
 
 	///////// NIArms Muzzle Attachements /////////	
-	class hlc_muzzle_Agendasix10mm 										{ quality = 1; price = 75; };
-	class hlc_muzzle_Agendasix 											{ quality = 1; price = 75; };
-	class hlc_muzzle_Tundra 											{ quality = 1; price = 50; };
-	class hlc_muzzle_snds_AUG 											{ quality = 1; price = 75; };
-	class hlc_muzzle_snds_a6AUG 										{ quality = 1; price = 75; };
-	class hlc_muzzle_545SUP_AK 											{ quality = 1; price = 75; };
-	class hlc_muzzle_762SUP_AK 											{ quality = 2; price = 75; };
-	class hlc_muzzle_snds_M14 											{ quality = 2; price = 75; };
-	class hlc_muzzle_556NATO_KAC 										{ quality = 1; price = 75; };
-	class hlc_muzzle_300blk_KAC 										{ quality = 2; price = 75; };
-	class hlc_muzzle_snds_fal											{ quality = 2; price = 75; };
-	class hlc_muzzle_snds_g3											{ quality = 3; price = 75; };
-	class hlc_muzzle_snds_HK33											{ quality = 1; price = 75; };
-	class muzzle_hbadger												{ quality = 2; price = 75; };
+	class hlc_muzzle_Agendasix10mm 										{ quality = 1; price = 250; };
+	class hlc_muzzle_Agendasix 											{ quality = 1; price = 250; };
+	class hlc_muzzle_Tundra 											{ quality = 1; price = 250; };
+	class hlc_muzzle_snds_AUG 											{ quality = 1; price = 250; };
+	class hlc_muzzle_snds_a6AUG 										{ quality = 1; price = 250; };
+	class hlc_muzzle_545SUP_AK 											{ quality = 1; price = 250; };
+	class hlc_muzzle_762SUP_AK 											{ quality = 2; price = 250; };
+	class hlc_muzzle_snds_M14 											{ quality = 2; price = 250; };
+	class hlc_muzzle_556NATO_KAC 										{ quality = 1; price = 250; };
+	class hlc_muzzle_300blk_KAC 										{ quality = 2; price = 250; };
+	class hlc_muzzle_snds_fal											{ quality = 2; price = 250; };
+	class hlc_muzzle_snds_g3											{ quality = 3; price = 250; };
+	class hlc_muzzle_snds_HK33											{ quality = 1; price = 250; };
+	class muzzle_hbadger												{ quality = 2; price = 250; };
 
 	///////// NIArms Optic Attachements /////////	
 	class HLC_Optic_PSO1 												{ quality = 1; price = 200; };
