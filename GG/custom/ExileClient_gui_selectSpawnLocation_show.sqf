@@ -2,12 +2,13 @@
  * ExileClient_gui_selectSpawnLocation_show
  */
  
-private["_display","_topTextCTRL1","_topTextCTRL2","_spawnButton","_listBox","_listItemIndex","_numberOfSpawnPoints","_randNum","_randData","_randomSpawnIndex","_puid","_title","_player"];
+private["_display","_topTextCTRL1","_topTextCTRL2","_spawnButton","_listBox","_listItemIndex","_numberOfSpawnPoints","_randNum","_randData","_randomSpawnIndex","_puid","_title","_player","_sessionID"];
 disableSerialization;
 diag_log "Selecting spawn location...";
 ExileClientSpawnLocationSelectionDone = false;
 ExileClientSelectedSpawnLocationMarkerName = "";
 createDialog "RscExileSelectSpawnLocationDialog";
+_sessionID = _this select 0;
 _player = _sessionID call ExileServer_system_session_getPlayerObject;
 waitUntil
 {
