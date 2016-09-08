@@ -197,6 +197,7 @@ class CfgSettings
 			"ItemCompass",
 			"ItemMap", // Because why not
 			"Exile_Item_XM8",
+			"Exile_Item_CanOpener",
 			"ItemRadio",
 			"Exile_Item_ExtensionCord",
 			"Exile_Item_PlasticBottleFreshWater"
