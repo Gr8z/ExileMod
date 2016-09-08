@@ -140,24 +140,32 @@
 // Light Houses + Life Guard Towers + Castles
 ///////////////////////////////////////////////////////////////////////////////
 > Tourist
-10, MilitaryBackpacks
-10, MilitaryHeadgear
-3, Ghillies
-3, DLCGhillies
-10, Snipers
-5, SniperAmmo
-3, SniperAttachments
-8, DLCRifles
-10, MediumRifles
-6, DLCAmmo
-3, DLCOptics
-3, DLCSupressor
-7, CivilianItems
-5, HandGrenades
-3, Restraints
-4, MedicalItems
-3, Rebreathers
-0.2, Explosives
+17, Food
+14, Drinks
+12, Pistols
+7, PistolAmmo
+3, PistolAttachments
+2, Shotguns
+2, ShotgunAmmo
+10, SMG
+7, SMGAmmo
+3, SMGAttachments
+8, LightRifles
+5, MediumRifles
+3, DLCRifles
+3, DLCAmmo
+2, DLCOptics
+2, DLCSupressor
+7, RifleAmmo
+2, RifleAttachments
+12, GuerillaVests
+10, GuerillaClothing
+10, CivilianBackpacks
+5, CivilianHeadgear
+5, CivilianItems
+3, Chemlights
+2, Restraints
+4, GuerillaItems
 
 ///////////////////////////////////////////////////////////////////////////////
 // Ghost Hotel Buildings
