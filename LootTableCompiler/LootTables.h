@@ -39,7 +39,7 @@
 2, DLCOptics
 2, DLCSupressor
 7, RifleAmmo
-5, RifleAttachments
+2, RifleAttachments
 12, GuerillaVests
 10, GuerillaClothing
 10, CivilianBackpacks
@@ -113,7 +113,7 @@
 5, MediumRifles
 2, HeavyRifles
 3, RifleAmmo
-3, RifleAttachments
+2, RifleAttachments
 4, LMG
 2, LMGAmmo
 3, Snipers
@@ -146,12 +146,12 @@
 3, DLCGhillies
 10, Snipers
 5, SniperAmmo
-5, SniperAttachments
+3, SniperAttachments
 8, DLCRifles
 10, MediumRifles
 6, DLCAmmo
-6, DLCOptics
-6, DLCSupressor
+3, DLCOptics
+3, DLCSupressor
 7, CivilianItems
 5, HandGrenades
 3, Restraints
@@ -173,6 +173,7 @@
 2, SniperAmmo
 2, SniperAttachments
 10, HeavyRifles
+2, RifleAttachments
 12, DLCRifles
 2, DLCAmmo
 2, DLCOptics
