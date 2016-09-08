@@ -31,7 +31,7 @@ try
 	};
 	_playerMoney = _playerMoney - _amount;
 	_player setVariable ["ExileMoney", _playerMoney, true];
-	format["setAccountMoney:%1:%2", _playerMoney, _player getVariable ["ExileDatabaseID", 0]] call ExileServer_system_database_query_fireAndForget;
+	format["updateLocker:%1:%2", _playerMoney, _player getVariable ["ExileDatabaseID", 0]] call ExileServer_system_database_query_fireAndForget;
 }
 catch
 {
