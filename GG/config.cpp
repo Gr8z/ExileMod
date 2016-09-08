@@ -3879,7 +3879,7 @@ class CfgExileLootSettings
 	 * Interval in seconds when the client searches for
 	 * new buildings to spawn loot in
 	 */
-	spawnInterval = 30;
+	spawnInterval = 120;
 
 	/**
 	 * This is a percentage value to determine how many loot
