@@ -207,14 +207,15 @@ _missionObjs =
             _sub1,
             [
                 1,
-                [2,DMS_Box_BaseParts_Concrete],
+                [10,DMS_BoxItems],
+				[5,DMS_BoxWeapons],
                 1
             ]
         ],
         [
             _sub2,
             [
-                [2,DMS_sniper_weps],                // Spawn a random 5 weapons that AI snipers can spawn with.
+                [1,DMS_sniper_weps],                // Spawn a random 5 weapons that AI snipers can spawn with.
                 [5,DMS_BoxSurvivalSupplies],
                 1
             ]
@@ -275,7 +276,7 @@ _added =
         [
             [
                 _sub1,
-                {_this setVariable ["ExileMoney",0,true]}                       // The submarine will have 25,000 poptabs after the mission completes. The capacity is actually 5000, but I just overload it.
+                {_this setVariable ["ExileMoney",10000,true]}                       // The submarine will have 25,000 poptabs after the mission completes. The capacity is actually 5000, but I just overload it.
             ]
         ],
         [],
