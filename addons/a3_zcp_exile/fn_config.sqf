@@ -25,8 +25,8 @@ ZCP_AI_killAIAfterMissionCompletionTimer = -1; // Amount of seconds before all Z
 ZCP_MessagePlayersBeforeWaves = true; // True -> Inform for an icoming wave of AI, false is not inform the players inside.
 
 // ZCP_CapTime = 300; // Now defined for each mission seperate
-ZCP_ServerStartWaitTime = 10;
-ZCP_MinWaitTime = 60; // seconds to wait to spawn a new capturepoint when 1 was capped.
+ZCP_ServerStartWaitTime = 120;
+ZCP_MinWaitTime = 600; // seconds to wait to spawn a new capturepoint when 1 was capped.
 ZCP_MaxWaitTime = 900; // random between 0 and THIS number added to the ZCP_MinWaitTime to counter spawning points at the same time
 ZCP_BaseCleanupDelay = 500; // seconds to wait to delete a captured base.
 
