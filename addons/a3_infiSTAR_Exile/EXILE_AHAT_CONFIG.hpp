@@ -253,7 +253,7 @@ USE_DATABASE_WHITELIST = false;
 	
 	To use this, you need to use what I've added to "infiSTAR.de_Exile\SERVER_ARMA3_FOLDER\db_related_changes"
 */
-USE_LOG_TO_DATABASE = true;
+USE_LOG_TO_DATABASE = false;
 /****************************************************************************************************/
 /********************OPTIONS ABOVE REQUIRE CHANGES TO YOUR EXILE SERVER DATABASE!********************/
 /****************************************************************************************************/
