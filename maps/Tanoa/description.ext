@@ -1,0 +1,164 @@
+///////////////////////////////////////////////////////////////////////////////
+// Server Settings - Modify at will
+///////////////////////////////////////////////////////////////////////////////
+author = "[GG] Ghostz Gamerz";
+onLoadName = "[GG] Ghostz Gamerz ExileMod Tanoa";
+onLoadMission= "www.ghostzgamerz.com";
+loadScreen = "GG\images\logo.jpg"; 
+disableChannels[] = {0, 2};
+OnLoadIntro = "";
+OnLoadIntroTime = false;
+OnLoadMissionTime = false;
+
+class Header
+{
+    gameType = Survive; // Do NOT change this
+    minPlayers = 1;
+    maxPlayers = 100;
+};
+
+class CfgFunctions
+{
+	#include "GG\ExAdClient\CfgFunctions.cpp"
+};
+
+class CfgHints
+{
+	#include "GG\ExAdClient\CfgHints.cpp"
+	#include "GG\MostWanted_Client\Notifications.hpp"
+};
+
+class CfgNetworkMessages
+{
+	#include "GG\ExAdClient\CfgNetworkMessages.cpp"
+	#include "GG\MostWanted_Client\NetworkMessages.hpp"
+	#include "GG\MarXet\CfgMarXetNetworkMessages.hpp"
+
+
+    class XG_EnterSafeZone 
+    {
+        module = "AntiTheft";
+        parameters[] = {"OBJECT","OBJECT"};
+    };
+    class XG_LeftSafeZone
+    {
+        module = "AntiTheft";
+        parameters[] = {"OBJECT"};
+    };
+    class XG_PlayerEnterSafezone
+    {
+        module = "AntiTheft";
+        parameters[] = {"OBJECT"};
+    };
+    class XG_PlayerLeaveSafezone
+    {
+        module = "AntiTheft";
+        parameters[] = {"OBJECT"};
+    };
+    class XG_CheckVariable
+    {
+        module = "AntiTheft";
+        parameters[] = {"OBJECT","OBJECT"};
+    };
+    class KillMessages
+    {
+        module = "KillMessages";
+        parameters[] = {"STRING","STRING","OBJECT","OBJECT"};
+    };
+    class buyRequest
+    {
+        module = "AirDrop";
+        parameters[] = {"STRING"};
+    };
+    class lockerRequest
+    {
+        module = "Donor";
+        parameters[] = {"STRING"};
+    };
+};
+
+
+class RscTitles
+{
+    #include "GG\StatusBar\statusBar.hpp"
+    #include "GG\KillMessages\KillMessages.hpp"
+};
+
+class CfgSounds
+{
+    sounds[] = {intro,cam,safeTrap};
+    class intro
+    {
+        name = "intro";
+        sound[] = {"\GG\sounds\introsong.ogg", 1, 1};
+        titles[] = {};
+    };
+
+    class cam
+    {
+        name = "cam";
+        sound[] = {"\GG\sounds\cam.ogg", 1, 1};
+        titles[] = {};
+    };
+	
+	class safeTrap
+	{
+		name = "Xbrm_safeTrapped";
+		sound[] = {"\GG\sounds\bomb.ogg", 1, 1};
+		titles[] = {};
+	};
+};
+///////////////////////////////////////////////////////////////////////////////
+// Exile Settings - Do not change these!
+///////////////////////////////////////////////////////////////////////////////
+forceRotorLibSimulation = 2;
+skipLobby = 1;
+joinUnassigned = 1;
+respawn = "BASE";
+respawnDelay = 10;
+respawnDialog = 0;
+respawnOnStart = 0;
+respawnButton = 1; 
+respawnTemplates[] = {"Exile"};
+corpseManagerMode = 0;
+corpseLimit = 20;
+corpseRemovalMinTime = 1800;
+corpseRemovalMaxTime = 3600;
+wreckManagerMode = 0;
+wreckLimit = 2;
+wreckRemovalMinTime = 60;
+wreckRemovalMaxTime = 360;
+scriptedPlayer = 1;
+disabledAI = 1;
+enableItemsDropping = 0;
+briefing = 0;
+debriefing = 0;
+allowFunctionsLog = 1;
+enableDebugConsole = 1; 
+allowFunctionsRecompile = 0;
+showSquadRadar = 0;
+showUAVFeed = 0;
+reviveDelay = 6;
+reviveForceRespawnDelay = 3;
+reviveBleedOutDelay = 120;
+
+showHUD[] = 
+{
+    true,   // Scripted HUD (same as showHUD command)
+    true,   // Vehicle + soldier info
+    true,   // Vehicle radar 
+    true,   // Vehicle compass
+    true,   // Tank direction indicator
+    false,  // Commanding menu
+    false,  // Group Bar
+    true,   // HUD Weapon Cursors
+    false   // Squad Radar
+};
+
+#include "GG\config.cpp"
+#include "GG\AdminMenu.hpp"
+#include "GG\MostWanted_Client\Dialog\MostWantedDefines.hpp"
+#include "GG\MostWanted_Client\Dialog\MostWantedDialog.hpp"
+#include "GG\MarXet\dialog\RscMarXetDefines.hpp"
+#include "GG\MarXet\dialog\RscMarXetDialog.hpp"
+#include "GG\KillMessages\killBoard.hpp"
