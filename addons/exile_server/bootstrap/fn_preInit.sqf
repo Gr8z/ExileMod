@@ -274,7 +274,8 @@ forEach
 	['ExileServer_world_loadAllTerritories', 'exile_server\code\ExileServer_world_loadAllTerritories.sqf'],
 	['ExileServer_world_spawnSpawnZoneVehicles', 'exile_server\code\ExileServer_world_spawnSpawnZoneVehicles.sqf'],
 	['ExileServer_world_spawnVehicles', 'exile_server\code\ExileServer_world_spawnVehicles.sqf'],
-	['ExileServer_Donators', 'exile_server\donors\donators.sqf']
+	['ExileServer_Donators', 'exile_server\donors\donators.sqf'],
+	['ExileServer_Donor_network_takemoneyRequest', 'exile_server\code\ExileServer_Donor_network_takemoneyRequest.sqf']
 ];
 
 call ExileServer_system_process_preInit;
