@@ -3873,13 +3873,13 @@ class CfgExileLootSettings
 	 * the garbage collector settings of your server
 	 * CfgSettings!
 	 */
-	lifeTime = 8;
+	lifeTime = 6;
 
 	/**
 	 * Interval in seconds when the client searches for
 	 * new buildings to spawn loot in
 	 */
-	spawnInterval = 120;
+	spawnInterval = 60;
 
 	/**
 	 * This is a percentage value to determine how many loot
@@ -3903,7 +3903,7 @@ class CfgExileLootSettings
  	 * This results in 30 loot positions and that is too much. So we
  	 * cap this at 10
  	 */
-	maximumNumberOfLootSpotsPerBuilding = 3;
+	maximumNumberOfLootSpotsPerBuilding = 6;
 
 	/**
 	 * Exile spawns a random number of items per loot spot. This 
@@ -3921,7 +3921,7 @@ class CfgExileLootSettings
 	 * 50m  = Minimum
 	 * 200m = Maximum
 	 */
-	spawnRadius = 120;
+	spawnRadius = 100;
 
 	/**
 	 * Defines the radius around trader cities where the system should
