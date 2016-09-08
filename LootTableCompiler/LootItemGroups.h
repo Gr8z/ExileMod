@@ -1230,7 +1230,7 @@
 7, V_PlateCarrierH_CTRG
 
 > MilitaryHeadgear
-1, Exile_Headgear_GasMask
+4, Exile_Headgear_GasMask
 4, H_MilCap_ocamo
 4, H_MilCap_mcamo
 4, H_MilCap_oucamo
