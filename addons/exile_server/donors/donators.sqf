@@ -110,7 +110,7 @@ Medic3 = [
 
 /////// Scout Class ///////////
 Scout1 = [
-	"0", // NAME (OD-00-00-0000) #0000
+	"76561198021389971", // NAME (OD-00-00-0000) #0000
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout1";

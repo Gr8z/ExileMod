@@ -107,6 +107,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			_cost = 1353;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
+			format['setAccountMoney:%1:%2', (player getVariable ["ExileLocker",0])- _cost, (getPlayerUID player)] call ExileServer_system_database_query_fireAndForget;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Scout Loadout 1</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "TRYK_U_B_Wood_T";
