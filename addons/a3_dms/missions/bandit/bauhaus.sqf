@@ -43,7 +43,7 @@ if !(_OK) exitWith
 
 
 // Set general mission difficulty
-_difficulty = "difficult";
+_difficulty = "moderate";
 
 
 // Create AI

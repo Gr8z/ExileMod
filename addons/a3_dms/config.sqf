@@ -1097,24 +1097,9 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_CrateCase_Sniper =				[							// If you pass "Sniper" in _lootValues, then it will spawn these weapons/items/backpacks
 											[
 												["Rangefinder",1],
-												//["srifle_GM6_F",1],
-												//["srifle_LRR_F",1],
-												["srifle_EBR_F",1],
-												["hgun_Pistol_heavy_01_F",1],
-												["hgun_PDW2000_F",1],
-												["hlc_rifle_M14",1],
-												["hlc_rifle_M14_Bipod",1],
-												["hlc_rifle_M14_Rail",1],
-												["hlc_rifle_m14dmr",1],
-												["hlc_rifle_m14sopmod",1],
-												["hlc_rifle_L1A1SLR",1],
-												["hlc_rifle_M21",1],
-												["hlc_rifle_psg1",1],
-												["hlc_rifle_psg1A1",1],
-												["hlc_rifle_PSG1A1_RIS",1],
-												["hlc_rifle_M1903A1",1],
-												["hlc_rifle_M1903A1OMR",1],
-												["hlc_rifle_M1903A1_unertl",1]
+												["srifle_GM6_F",1],
+												["srifle_LRR_F",1],
+												
 											],
 											[
 												["ItemGPS",1],
@@ -1135,8 +1120,8 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 												["muzzle_snds_acp",1],
 												["optic_Holosight_smg",1],
 												["muzzle_snds_L",1],
-												//["5Rnd_127x108_APDS_Mag",3],
-												//["7Rnd_408_Mag",3],
+												["5Rnd_127x108_APDS_Mag",3],
+												["7Rnd_408_Mag",3],
 												["20Rnd_762x51_Mag",5],
 												["11Rnd_45ACP_Mag",3],
 												["30Rnd_9x21_Mag",3]
@@ -1158,7 +1143,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"arifle_CTAR_blk_F",
 											"arifle_SPAR_01_khk_F",
 											"arifle_SPAR_03_khk_F",
-											//"srifle_DMR_07_ghex_F",				// Oh great, a 6.5mm 20 round sniper rifle... because everybody wanted a nerfed MXM :p
+											"srifle_DMR_07_ghex_F",				// Oh great, a 6.5mm 20 round sniper rifle... because everybody wanted a nerfed MXM :p
 											"LMG_03_F",
 											#endif
 											"Exile_Melee_Axe",
@@ -1342,9 +1327,6 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"Exile_Item_HBarrier5Kit"
 										] + DMS_Box_BaseParts_Wood + DMS_Box_BaseParts_Wood + DMS_Box_BaseParts_Wood + DMS_Box_BaseParts_Concrete;
 	DMS_BoxCraftingMaterials =			[
-											"Exile_Item_Cement",
-											"Exile_Item_Sand",
-											"Exile_Item_Sand",
 											"Exile_Item_WaterCanisterDirtyWater",
 											"Exile_Item_MetalBoard",
 											"Exile_Item_MetalPole",
@@ -1417,21 +1399,19 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"launch_rpg32_ghex_F",
 											"launch_rpg7_F",
 											"Exile_Item_Magazines03",
-											"Exile_Item_Magazines04",
 											"5Rnd_127x108_APDS_Mag",
 											"MineDetector",
 											"Exile_Item_Sand",
 											"Exile_Item_Cement",
 											"RPG7_F",
 											"RPG32_F",
-											"7Rnd_408_Mag",
-											"Exile_Item_Magazine03"
+											"7Rnd_408_Mag"
 											
 											
 											
 											
 										];
-	DMS_RareLootChance					= 3;						// Percentage Chance to spawn rare loot in any crate | Default: 10%
+	DMS_RareLootChance					= 5;						// Percentage Chance to spawn rare loot in any crate | Default: 10%
 
 	// Vehicles
 	DMS_ArmedVehicles =					[							// List of armed vehicles that can spawn
