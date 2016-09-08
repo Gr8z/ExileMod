@@ -28,7 +28,7 @@ try
     _completedContracts = _playerObject getVariable ["ExileBountyCompletedContracts",""];
     if (_completedContracts isEqualTo "" || _completedContracts isEqualTo []) then
     {
-        throw "Player's completed contract is blank";
+        throw "This contract has already been completed";
     };
     _index = -1;
     {
