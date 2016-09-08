@@ -65,7 +65,7 @@ SC_fastNightsMultiplierDay  	= 6;                    	// the time multiplier to 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 SC_randomSpawnMinPlayers    	= 1;                    	// Minimum number of players to be online before random spawning AI can spawn
-SC_randomSpawnMaxGroups        	= 6;                    	// Maximum amount of random AI groups allowed at any time
+SC_randomSpawnMaxGroups        	= 2;                    	// Maximum amount of random AI groups allowed at any time
 SC_randomSpawnMinGroupSize      = 2;                    	// Minimum amount of random AI groups allowed per group
 SC_randomSpawnMaxGroupSize      = 3;                    	// Maximum amount of random AI groups allowed per group
 SC_randomSpawnChance			= 12;						// Percentage chance of spawning if suitable player found
