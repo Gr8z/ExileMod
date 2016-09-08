@@ -1,5 +1,5 @@
 /**
- * ExileServer_Donor_network_takemoneyRequest
+ * ExileServer_Donor_network_lockerRequest
  *
  * Exile Mod
  * www.exilemod.com
@@ -16,7 +16,19 @@ _amount = parseNumber(_parameters select 0);
 try 
 {
 	_player = _sessionID call ExileServer_system_session_getPlayerObject;
-	_playerMoney = _player getVariable ["ExileLocker", 0]; 
+	if (_player isEqualTo objNull) then
+	{
+		throw "You do not exist! :)";
+	};
+	if !(alive _player) then
+	{
+		throw "Player not alive";
+	};
+	_playerMoney = _player getVariable ["ExileLocker", 0];
+	if (_playerMoney < _amount) then
+	{
+		throw "Not Enough Money";
+	};
 	_playerMoney = _playerMoney - _amount;
 	_player setVariable ["ExileMoney", _playerMoney, true];
 	format["setAccountMoney:%1:%2", _playerMoney, _player getVariable ["ExileDatabaseID", 0]] call ExileServer_system_database_query_fireAndForget;

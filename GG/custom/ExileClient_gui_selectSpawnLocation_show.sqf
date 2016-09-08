@@ -106,7 +106,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 
 			_cost = 1353;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
-			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
+			["lockerRequest",[str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Scout Loadout 1</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "TRYK_U_B_Wood_T";
@@ -133,7 +133,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			
 			_cost = 4200;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
-			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
+			["lockerRequest",[str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Scout Loadout 2</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "Exile_Uniform_Woodland";
@@ -164,7 +164,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			
 			_cost = 8420;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
-			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
+			["lockerRequest",[str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Scout Loadout 3</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "U_B_GhillieSuit";
@@ -197,7 +197,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			
 			_cost = 1250;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
-			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
+			["lockerRequest",[str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Marksman Loadout 1</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "TRYK_B_TRYK_MTP_T";
@@ -222,7 +222,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			
 			_cost = 6433;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
-			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];	
+			["lockerRequest",[str(_cost)]] call ExileClient_system_network_send;	
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Marksman Loadout 2</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "U_B_T_Soldier_SL_F";
@@ -251,7 +251,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			
 			_cost = 9032;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
-			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
+			["lockerRequest",[str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Marksman Loadout 3</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "U_B_T_FullGhillie_tna_F";
@@ -282,7 +282,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			
 			_cost = 1062;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
-			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
+			["lockerRequest",[str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Soldier Loadout 1</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "U_I_C_Soldier_Para_2_F";
@@ -308,7 +308,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			
 			_cost = 4850;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
-			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
+			["lockerRequest",[str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Soldier Loadout 2</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "U_I_C_Soldier_Para_3_F";
@@ -337,7 +337,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			
 			_cost = 8470;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
-			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
+			["lockerRequest",[str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Soldier Loadout 3</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "U_I_C_Soldier_Camo_F";
@@ -369,7 +369,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			
 			_cost = 1440;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
-			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
+			["lockerRequest",[str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Medic Loadout 1</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "TRYK_B_TRYK_UCP_T";
@@ -396,7 +396,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			
 			_cost = 5408;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
-			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
+			["lockerRequest",[str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Medic Loadout 2</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "TRYK_U_B_NATO_UCP_R_CombatUniform";
@@ -426,7 +426,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			
 			_cost = 8745;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
-			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
+			["lockerRequest",[str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Medic Loadout 3</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "TRYK_U_B_NATO_UCP_CombatUniform";
@@ -459,7 +459,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			
 			_cost = 1823;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
-			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
+			["lockerRequest",[str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Engineer Loadout 1</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "U_B_GEN_Commander_F";
@@ -486,7 +486,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			
 			_cost = 5145;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
-			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
+			["lockerRequest",[str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Engineer Loadout 2</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "U_B_GEN_Soldier_F";
@@ -517,7 +517,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			
 			_cost = 7650;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
-			player setVariable ["ExileLocker", ((player getVariable ["ExileLocker", 0]) - _cost)];
+			["lockerRequest",[str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Engineer Loadout 3</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
 			player forceAddUniform "U_B_GEN_Soldier_F";
