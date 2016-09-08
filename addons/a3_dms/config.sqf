@@ -1098,7 +1098,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											[
 												["Rangefinder",1],
 												["srifle_GM6_F",1],
-												["srifle_LRR_F",1],
+												["srifle_LRR_F",1]
 												
 											],
 											[
