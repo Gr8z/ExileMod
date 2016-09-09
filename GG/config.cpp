@@ -1356,7 +1356,7 @@ class CfgCraftingRecipes
 	    };
 	    category = "Tools & Items";
 	};
-	class ViperHelmet01: Exile_AbstractCraftingRecipe
+	/*class ViperHelmet01: Exile_AbstractCraftingRecipe
 	{
 	    name = "Craft Viper Helmet (Hex)";
 	    pictureItem = "H_HelmetO_ViperSP_hex_F";
@@ -1391,7 +1391,7 @@ class CfgCraftingRecipes
 	    };
 	    category = "Tools & Items";
 		
-	};
+	};*/
 	class ENVG01: Exile_AbstractCraftingRecipe
 	{
 	    name = "Craft ENVG (Black)";
@@ -5765,11 +5765,11 @@ class CfgTraderCategories
 			"Exile_Melee_Axe",
 			"Exile_Item_Handsaw",
 			"Exile_Item_Pliers",
-			//"Exile_Item_Grinder",
+			"Exile_Item_Grinder",
 			//"Exile_Item_Knife",
 			//"Exile_Magazine_Battery",
 			//"Exile_Melee_SledgeHammer",
-			//"Exile_Item_Foolbox",
+			"Exile_Item_Foolbox",
 			"Exile_Item_CordlessScrewdriver",
 			"Exile_Item_Shovel",
 			"Exile_Item_Screwdriver"
