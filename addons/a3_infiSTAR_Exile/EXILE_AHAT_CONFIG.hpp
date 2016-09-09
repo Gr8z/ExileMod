@@ -122,10 +122,8 @@ NOTIFY_MSG_ARRAY[] =
 */
 pathToCustomBillBoardTextures[] =
 {
-	{"Doggy","exile_assets\texture\flag\flag_mate_21dmd_co.paa"},
-	{"Spawny","exile_assets\texture\flag\flag_mate_spawny_co.paa"},
-	{"Dickbutt","exile_assets\texture\flag\flag_misc_dickbutt_co.paa"},
-	{"Vish","exile_assets\texture\flag\flag_mate_vish_co.paa"}
+	{"Base Warning","GG\images\warning.paa"},
+	{"Dickbutt","exile_assets\texture\flag\flag_misc_dickbutt_co.paa"}
 };
 
 
