@@ -3229,7 +3229,7 @@ class CfgExileArsenal
 	//class hlc_optic_goshawk 											{ quality = 3; price = 1500; };
 	
 	///////// Food /////////
-	class Exile_Item_EMRE												{ quality = 1; price = 75; }; //75, 60
+	class Exile_Item_EMRE												{ quality = 2; price = 75; }; //75, 60
 	class Exile_Item_GloriousKnakworst									{ quality = 1; price = 60; }; //60, 30
 	class Exile_Item_Surstromming										{ quality = 1; price = 55; }; //55, 25
 	class Exile_Item_SausageGravy										{ quality = 1; price = 50; }; //50, 25
@@ -3250,10 +3250,10 @@ class CfgExileArsenal
 	class Exile_Item_Can_Empty											{ quality = 1; price = 1; sellPrice = 1; };
 
 	///////// Drinks /////////
-	class Exile_Item_PlasticBottleCoffee	 							{ quality = 1; price = 75; sellPrice = 10; }; //100, 60
+	class Exile_Item_PlasticBottleCoffee	 							{ quality = 2; price = 75; sellPrice = 10; }; //100, 60
 	class Exile_Item_PowerDrink											{ quality = 1; price = 70; }; //95, 10
 	class Exile_Item_PlasticBottleFreshWater 							{ quality = 1; price = 60; sellPrice = 5; }; //80, 15
-	class Exile_Item_Beer 												{ quality = 1; price = 55; }; //75, 30
+	class Exile_Item_Beer 												{ quality = 2; price = 55; }; //75, 30
 	class Exile_Item_EnergyDrink										{ quality = 1; price = 55; }; //75, 20
 	class Exile_Item_MountainDupe										{ quality = 1; price = 35; }; //50, 20
 	class Exile_Item_ChocolateMilk										{ quality = 1; price = 25; }; //35, 10
@@ -6174,7 +6174,6 @@ class CfgTraderCategories
 			"hgun_Pistol_01_F",
 			"hgun_ACPC2_F",
 			"hgun_P07_F",
-			"hgun_P07_khk_F",
 			"hgun_Rook40_F",
 			"hgun_Pistol_heavy_01_F",
 			"hgun_Pistol_heavy_02_F",
@@ -6214,7 +6213,6 @@ class CfgTraderCategories
 		items[] = 
 		{
 			"arifle_MX_SW_Black_F",
-			"arifle_MX_SW_F",
 			"LMG_03_F",
 			"LMG_Mk200_F",
 			"LMG_Zafir_F",
@@ -6247,24 +6245,16 @@ class CfgTraderCategories
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
-			"arifle_Katiba_C_F",
+			
 			"arifle_Katiba_F",
 			"arifle_Katiba_GL_F",
 			"arifle_Mk20_F",
 			"arifle_Mk20_GL_F",
-			"arifle_Mk20_GL_plain_F",
-			"arifle_Mk20_plain_F",
 			"arifle_Mk20C_F",
 			"arifle_Mk20C_plain_F",
 			"arifle_MX_Black_F",
-			"arifle_MX_F",
-			"arifle_MX_khk_F",
 			"arifle_MX_GL_Black_F",
-			"arifle_MX_GL_F",
-			"arifle_MX_GL_khk_F",
-			"arifle_MXC_Black_F",
-			"arifle_MXC_F",
-			"arifle_MXC_khk_F",				
+			"arifle_MXC_Black_F",		
 			"arifle_SDAR_F",
 			"arifle_TRG20_F",
 			"arifle_TRG21_F",
@@ -6274,26 +6264,12 @@ class CfgTraderCategories
 			"arifle_AKM_F",
 			"arifle_AKS_F",
 			"arifle_CTAR_blk_F",
-			"arifle_CTAR_ghex_F",
-			"arifle_CTAR_hex_F",
 			"arifle_CTAR_GL_blk_F",
-			"arifle_CTAR_GL_ghex_F",
-			"arifle_CTAR_GL_hex_F",
 			"arifle_CTARS_blk_F",
-			"arifle_CTARS_ghex_F",
-			"arifle_CTARS_hex_F",
 			"arifle_SPAR_01_blk_F",
-			"arifle_SPAR_01_khk_F",
-			"arifle_SPAR_01_snd_F",
 			"arifle_SPAR_01_GL_blk_F",
-			"arifle_SPAR_01_GL_khk_F",
-			"arifle_SPAR_01_GL_snd_F",
 			"arifle_SPAR_02_blk_F",
-			"arifle_SPAR_02_khk_F",
-			"arifle_SPAR_02_snd_F",
 			"arifle_SPAR_03_blk_F",
-			"arifle_SPAR_03_khk_F",
-			"arifle_SPAR_03_snd_F",
 			// Niarms
 			"hlc_rifle_ak12",
 			"hlc_rifle_ak12GL",
@@ -6301,8 +6277,6 @@ class CfgTraderCategories
 			"hlc_rifle_ak47",
 			"hlc_rifle_ak74",
 			"hlc_rifle_ak74_MTK",
-			"hlc_rifle_ak74_dirty",
-			"hlc_rifle_ak74_dirty2",
 			"hlc_rifle_ak74m",
 			"hlc_rifle_ak74m_gl",
 			"hlc_rifle_ak74m_MTK",
@@ -6315,44 +6289,18 @@ class CfgTraderCategories
 			"hlc_rifle_aks74u",
 			"hlc_rifle_aks74u_MTK",
 			"hlc_rifle_augsrcarb_b",
-			"hlc_rifle_augsrcarb",
 			"hlc_rifle_augsrhbar_b",
-			"hlc_rifle_augsrhbar",
-			"hlc_rifle_augsrhbar_t",
 			"hlc_rifle_augsr_b",
-			"hlc_rifle_augsr",
-			"hlc_rifle_augsr_t",
-			"hlc_rifle_augsrcarb_t",
 			"hlc_rifle_augpara_b",
-			"hlc_rifle_augpara",
-			"hlc_rifle_augpara_t",
 			"hlc_rifle_auga1carb_B",
-			"hlc_rifle_auga1carb",
-			"hlc_rifle_auga1carb_t",
 			"hlc_rifle_aughbar_B",
-			"hlc_rifle_aughbar",
-			"hlc_rifle_aughbar_t",
 			"hlc_rifle_auga1_b",
-			"hlc_rifle_aug",
-			"hlc_rifle_auga1_t",
 			"hlc_rifle_auga2para_b",
-			"hlc_rifle_auga2para",
-			"hlc_rifle_auga2para_t",
 			"hlc_rifle_auga2carb_b",
-			"hlc_rifle_auga2carb",
-			"hlc_rifle_auga2carb_t",
 			"hlc_rifle_auga2lsw_b",
-			"hlc_rifle_auga2lsw",
-			"hlc_rifle_auga2lsw_t",
 			"hlc_rifle_auga2_b",
-			"hlc_rifle_auga2",
-			"hlc_rifle_auga2_t",
 			"hlc_rifle_auga3_GL_B",
-			"hlc_rifle_auga3_GL_BL",
-			"hlc_rifle_auga3_GL",
 			"hlc_rifle_auga3_b",
-			"hlc_rifle_auga3_bl",
-			"hlc_rifle_auga3",
 			"hlc_rifle_G36MLIC",
 			"hlc_rifle_G36A1",
 			"hlc_rifle_G36A1AG36",
@@ -6388,11 +6336,8 @@ class CfgTraderCategories
 			"hlc_rifle_FAL5061",
 			"hlc_rifle_FAL5061Rail",
 			"hlc_rifle_slr107u",
-			"hlc_rifle_slr107u_MTK",
 			"hlc_rifle_RK62",
 			"hlc_rifle_aek971",
-			"hlc_rifle_aek971_mtk",
-			"hlc_rifle_aek971worn",
 			"hlc_rifle_RU5562",
 			"hlc_rifle_RU556",
 			"hlc_rifle_bcmjack",
@@ -6435,19 +6380,9 @@ class CfgTraderCategories
 		items[] = 
 		{
 			"arifle_MXM_Black_F",
-			"arifle_MXM_F",
-			"arifle_MXM_khk_F",
 			"srifle_DMR_01_F",
 			"srifle_DMR_03_F",
-			"srifle_DMR_03_khaki_F",
-			"srifle_DMR_03_multicam_F",
-			"srifle_DMR_03_tan_F",
-			"srifle_DMR_03_woodland_F",
-			"srifle_DMR_06_camo_F",
-			"srifle_DMR_06_olive_F",
 			"srifle_DMR_07_blk_F",
-			"srifle_DMR_07_ghex_F",
-			"srifle_DMR_07_hex_F",
 			"srifle_EBR_F",
 			//NIArms			
 			"hlc_rifle_M14",
@@ -6484,11 +6419,7 @@ class CfgTraderCategories
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
-			"MMG_01_hex_F",
-			"MMG_01_tan_F",
 			"MMG_02_black_F",
-			"MMG_02_camo_F",
-			"MMG_02_sand_F"
 		};
 	};
 	
@@ -6499,29 +6430,14 @@ class CfgTraderCategories
 		items[] = 
 		{
 			"srifle_DMR_04_F",
-			"srifle_DMR_04_Tan_F",
-			"srifle_DMR_02_camo_F",
 			"srifle_DMR_02_F",
 			"srifle_DMR_02_sniper_F",
 			"srifle_DMR_05_blk_F",
-			"srifle_DMR_05_hex_F",
-			"srifle_DMR_05_tan_f",
-			"srifle_GM6_camo_F",
 			"srifle_GM6_F",
-			"srifle_GM6_ghex_F",
-			"srifle_LRR_camo_F",
 			"srifle_LRR_F",
-			"srifle_LRR_tna_F",
 			//NIArms
 			"hlc_rifle_awcovert_BL",
-			"hlc_rifle_awcovert_FDE",
-			"hlc_rifle_awcovert",
 			"hlc_rifle_awmagnum_BL",
-			"hlc_rifle_awMagnum_BL_ghillie",
-			"hlc_rifle_awmagnum_FDE",
-			"hlc_rifle_awMagnum_FDE_ghillie",
-			"hlc_rifle_awmagnum",
-			"hlc_rifle_awMagnum_OD_ghillie"
 		};
 	};
 	
