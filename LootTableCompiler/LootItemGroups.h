@@ -1467,6 +1467,9 @@
 60, Exile_Item_MobilePhone
 40, Exile_Item_Knife
 
+> Batteries
+100, Exile_Magazine_Battery
+
 > Unused
 3, Exile_Item_FireExtinguisher
 14, Exile_Item_Hammer
