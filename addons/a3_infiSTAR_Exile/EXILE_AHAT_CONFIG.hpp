@@ -203,7 +203,7 @@ adminUIDandAccess[] =
 		 "0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
 			"Teleport On Map Click","Teleport - Target To Me","Teleport - Me To Target",
-			"Teleport In Facing Direction (10m steps)","Drag and drop units on the map",
+			"Teleport In Facing Direction (10m steps)",
 			"spectating","Delete Vehicle","FlyUp","ShowGear","Show Server Information",
 			"HealSelf","HealRepairNear","AdminLog","Freeze","UnFreeze","Restrain","UnRestrain",
 			"==== Base Deleter ====","Items spawn menu",
