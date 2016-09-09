@@ -3694,7 +3694,6 @@ class CfgExileCustomCode
     ExileClient_gui_upgradeTerritoryDialog_event_onTerritoryDropDownSelectionChanged = 	"GG\custom\ExileClient_gui_upgradeTerritoryDialog_event_onTerritoryDropDownSelectionChanged.sqf";
     ExileClient_gui_xm8_slide_territory_event_onTerritoryDropdownSelectionChanged = 	"GG\custom\ExileClient_gui_xm8_slide_territory_event_onTerritoryDropdownSelectionChanged.sqf";
     ExileClient_gui_xm8_showPartySlides =                                               "GG\custom\ExileClient_gui_xm8_showPartySlides.sqf";
-    ExileClient_gui_vehicleTraderDialog_event_onInputBoxChars =                         "GG\custom\ExileClient_gui_vehicleTraderDialog_event_onInputBoxChars.sqf";
 };
 
 class CfgExileEnvironment
@@ -4959,7 +4958,7 @@ class CfgTraderCategories
 			"TRYK_V_tacv10_OD",
 			"TRYK_V_tacv10_TN",
 			"TRYK_V_tacv1_MSL_BK",
-			"TRYK_V_tacv1LC_MSL_NV",
+			//"TRYK_V_tacv1LC_MSL_NV",
 			"TRYK_V_tacSVD_BK",
 			"TRYK_V_tacSVD_OD",
 			"TRYK_V_Sheriff_BA_T",
@@ -5039,22 +5038,22 @@ class CfgTraderCategories
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\headgear_ca.paa";
 		items[] =
 		{
-			"TRYK_US_ESS_Glasses_NV",
-			"TRYK_G_Shades_Black_NV",
-			"TRYK_bandana_NV",
-			"TRYK_SPgearG_NV",
-			"TRYK_G_bala_wh_NV",
-			"TRYK_ESS_wh_NV",
-			"TRYK_Headphone_NV",
-			"TRYK_HRPIGEAR_NV",
-			"TRYK_Headset_NV",
-			"TRYK_TAC_boonie_SET_NV",
-			"TRYK_TAC_SET_NV_TAN",
-			"TRYK_TAC_SET_NV_OD",
-			"TRYK_H_DELTAHELM_NV",
-			"TRYK_balaclava_BLACK_NV",
-			"TRYK_balaclava_NV",
-			"TRYK_balaclava_EAR_NV"
+			//"TRYK_US_ESS_Glasses_NV",
+			//"TRYK_G_Shades_Black_NV",
+			//"TRYK_bandana_NV",
+			//"TRYK_SPgearG_NV",
+			//"TRYK_G_bala_wh_NV",
+			//"TRYK_ESS_wh_NV",
+			//"TRYK_Headphone_NV",
+			//"TRYK_HRPIGEAR_NV",
+			//"TRYK_Headset_NV",
+			//"TRYK_TAC_boonie_SET_NV",
+			//"TRYK_TAC_SET_NV_TAN",
+			//"TRYK_TAC_SET_NV_OD",
+			//"TRYK_H_DELTAHELM_NV",
+			//"TRYK_balaclava_BLACK_NV",
+			//"TRYK_balaclava_NV",
+			//"TRYK_balaclava_EAR_NV"
 			//"TRYK_Shemagh_TAN_NV",
 			//"TRYK_Shemagh_MESH_NV",
 			//"TRYK_Shemagh_G_NV",
@@ -5868,7 +5867,7 @@ class CfgTraderCategories
 		{
 			"Exile_Item_InstaDoc",
 			"Exile_Item_Bandage",
-			"Exile_Item_Vishpirin"
+			"Exile_Item_Vishpirin",
 			//"Exile_Item_Heatpack"
 			//"Exile_Item_Defibrillator"
 		};
