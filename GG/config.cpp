@@ -5054,9 +5054,9 @@ class CfgTraderCategories
 			"TRYK_balaclava_BLACK_NV",
 			"TRYK_balaclava_NV",
 			"TRYK_balaclava_EAR_NV",
-			"TRYK_Shemagh_TAN_NV",
-			"TRYK_Shemagh_MESH_NV",
-			"TRYK_Shemagh_G_NV",
+			//"TRYK_Shemagh_TAN_NV",
+			//"TRYK_Shemagh_MESH_NV",
+			//"TRYK_Shemagh_G_NV",
 		};
 	};
 
