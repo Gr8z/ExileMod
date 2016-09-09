@@ -424,19 +424,6 @@
 //8, Exile_Magazine_10Rnd_9x39				// VSS
 
 > RifleAttachments
-10, muzzle_snds_M
-10, muzzle_snds_H
-10, muzzle_snds_H_khk_F
-10, muzzle_snds_H_snd_F
-10, muzzle_snds_58_blk_F
-10, muzzle_snds_m_khk_F
-10, muzzle_snds_m_snd_F
-10, muzzle_snds_58_wdm_F
-10, muzzle_snds_65_TI_blk_F
-10, muzzle_snds_65_TI_hex_F
-10, muzzle_snds_65_TI_ghex_F
-10, muzzle_snds_H_MG_blk_F
-10, muzzle_snds_H_MG_khk_F
 10, optic_Arco
 10, optic_Arco_blk_F
 10, optic_Arco_ghex_F
@@ -492,6 +479,27 @@
 10, muzzle_hbadger
 //1, optic_tws
 //1, hlc_optic_goshawk
+
+> Suppressors
+10, muzzle_snds_M
+10, muzzle_snds_H
+10, muzzle_snds_H_khk_F
+10, muzzle_snds_H_snd_F
+10, muzzle_snds_58_blk_F
+10, muzzle_snds_m_khk_F
+10, muzzle_snds_m_snd_F
+10, muzzle_snds_58_wdm_F
+10, muzzle_snds_65_TI_blk_F
+10, muzzle_snds_65_TI_hex_F
+10, muzzle_snds_65_TI_ghex_F
+10, muzzle_snds_H_MG_blk_F
+10, muzzle_snds_H_MG_khk_F
+5, muzzle_snds_338_black
+5, muzzle_snds_338_green
+5, muzzle_snds_338_sand
+5, muzzle_snds_93mmg
+5, muzzle_snds_93mmg_tan
+5, muzzle_snds_B
 
 > LMG
 
@@ -633,13 +641,7 @@
 14, optic_KHS_old
 14, optic_KHS_tan
 
-> DLCSupressor
-40, muzzle_snds_338_black
-40, muzzle_snds_338_green
-40, muzzle_snds_338_sand
-40, muzzle_snds_93mmg
-40, muzzle_snds_93mmg_tan
-40, muzzle_snds_B
+
 
 > EpicWeapons
 8, srifle_GM6_F			// GM6 Lynx 12.7 mm
