@@ -2,6 +2,7 @@
 Engineer1 = [
 	"0", // NAME (OD-00-00-0000) #0000
 	"76561198131195291", // TopherTheGopher (OD-2016-07-08) #14108 
+	"76561197987069300", // ShroomBear (OD-2016-05-10) #13697 
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Engineer1";
@@ -11,6 +12,7 @@ Engineer2 = [
 	"76561198082227396", // Shootin Putin (OD-2016-07-07) #14102
 	"76561198013727461", // Medaglia (OD-2016-07-12) #14136
 	"76561198041124253", // Alpha (OD-2016-07-19) #14163 
+	"76561197987069300", // ShroomBear (OD-2016-05-10) #13697 
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Engineer2";
@@ -28,6 +30,7 @@ Engineer3 = [
 	"76561198072044107", // McBear (OD-2016-03-24) #13358 
 	"76561198145289881", // Rook9 (OD-2016-07-06) #14100
 	"76561198066067824", // [BHJ] General187 (OD-2016-07-12) #14131
+	"76561197987069300", // ShroomBear (OD-2016-05-10) #13697 
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Engineer3";
@@ -37,6 +40,7 @@ Engineer3 = [
 Marksman1 = [
 	"76561198106890529", // Englishman (OD-2016-05-10) #13687
 	"76561198090941099", // Josh (OD-2016-06-25) #13963
+	"76561197987069300", // ShroomBear (OD-2016-05-10) #13697 
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Marksman1";
@@ -46,7 +50,8 @@ Marksman2 = [
 	"76561198076062133", // lteale (OD-2016-04-19) #13504    
 	"76561198041528102", // Jay (OD-2016-05-08) #13679    
 	"76561198064823672", // Mr Deadly Aim (OD-2016-05-15) #13735       
-	"76561198168821750", // Stitch (OD-2016-07-12) #14134    
+	"76561198168821750", // Stitch (OD-2016-07-12) #14134
+    "76561197987069300", // ShroomBear (OD-2016-05-10) #13697 
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Marksman2";
@@ -72,6 +77,7 @@ Marksman3 = [
 	"76561197977797550", // Doctor (OD-2016-05-06) #13666 
 	"76561198053962268", // Dolus (OD-2016-05-21) #13775
 	"76561198135356952", // TheSurvivorZ (OD-2016-06-01) #13823
+	"76561197987069300", // ShroomBear (OD-2016-05-10) #13697 
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Marksman3";
@@ -79,12 +85,14 @@ Marksman3 = [
 
 /////// Medic Class ///////////
 Medic1 = [
+	"76561197987069300", // ShroomBear (OD-2016-05-10) #13697 
 	//"76561198126348047", // [TF]Mr. Bandit (OD-2016-04-26) #13578
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Medic1";
 
 Medic2 = [
+	"76561197987069300", // ShroomBear (OD-2016-05-10) #13697 
 	"0", // NAME (OD-00-00-0000) #0000
 // Add UIDs above, don't forget the comma
 "0"
@@ -98,7 +106,8 @@ Medic3 = [
 	"76561198056028211", // Nasty
 	"76561198133936962", // Wrice4
 	"76561198088251390", // Six (Taking pictures for loadouts)
-	"76561198166817787", // [WD] Sgt.Spicy Indian (EXP-2016-07-19) #13939 
+	"76561198166817787", // [WD] Sgt.Spicy Indian (EXP-2016-07-19) #13939
+	"76561197987069300", // ShroomBear (OD-2016-05-10) #13697 
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Medic3";
@@ -106,13 +115,15 @@ Medic3 = [
 /////// Scout Class ///////////
 Scout1 = [
 	"76561198021389971", // NAME (OD-00-00-0000) #0000
+	"76561197987069300", // ShroomBear (OD-2016-05-10) #13697 
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout1";
 
 Scout2 = [
 	"76561197980662311", // ezPK XS PWR (OD-2015-09-15) #11479
-	"76561198090813740", // Celty (OD-2016-06-19) #13943	
+	"76561198090813740", // Celty (OD-2016-06-19) #13943
+	"76561197987069300", // ShroomBear (OD-2016-05-10) #13697 
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Scout2";
@@ -166,6 +177,7 @@ Scout3 = [
 
 /////// Soldier Class ///////////
 Soldier1 = [
+	"76561197987069300", // ShroomBear (OD-2016-05-10) #13697 
 	"0", // Puncake (EXP-2016-06-30) #13614
 // Add UIDs above, don't forget the comma
 "0"
@@ -175,6 +187,7 @@ Soldier2 = [
 	"76561197991652949", // Bhum (OD-2016-05-02) #13631 
 	"76561197994499310", // Comrade Karl (OD-2016-06-11) #13888  
 	"76561198043587439", // Killjoy (OD-2016-08-14) #14199
+	"76561197987069300", // ShroomBear (OD-2016-05-10) #13697 
 // Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Soldier2";
@@ -214,6 +227,7 @@ Soldier3 = [
 	"76561198055516450", // Viper (OD-2016-07-24) #14173
 	"76561198160267380", // F. Robinson (OD-2016-08-06) #14183
 	"76561197973676519", // Dr.Greenthumb (EXP-2016-10-28)
+	"76561197987069300", // ShroomBear (OD-2016-05-10) #13697 
 	// Add UIDs above, don't forget the comma
 "0"
 ];publicVariable "Soldier3";
