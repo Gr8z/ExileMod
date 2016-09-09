@@ -1360,11 +1360,11 @@ class CfgCraftingRecipes
 	{
 	    name = "Craft Viper Helmet (Hex)";
 	    pictureItem = "H_HelmetO_ViperSP_hex_F";
+		tools[] = {"Exile_Item_Foolbox", "Exile_Item_Screwdriver", "Exile_Item_Grinder", "Exile_Item_Pliers"};
 	    returnedItems[] =
 	    {
 	        {1, "H_HelmetO_ViperSP_hex_F"}
 	    };
-		tools[] = {"Exile_Item_Foolbox", "Exile_Item_Screwdriver", "Exile_Item_Grinder", "Exile_Item_Pliers"};
 	    components[] =
 	    {
 	        {2, "Laserdesignator"},
@@ -1378,11 +1378,11 @@ class CfgCraftingRecipes
 	{
 	    name = "Craft Viper Helmet (Green Hex)";
 	    pictureItem = "H_HelmetO_ViperSP_ghex_F";
+		tools[] = {"Exile_Item_Foolbox", "Exile_Item_Screwdriver", "Exile_Item_Grinder", "Exile_Item_Pliers"};
 	    returnedItems[] =
 	    {
 	        {1, "H_HelmetO_ViperSP_ghex_F"}
 	    };
-		tools[] = {"Exile_Item_Foolbox", "Exile_Item_Screwdriver", "Exile_Item_Grinder", "Exile_Item_Pliers"};
 	    components[] =
 	    {
 	        {2, "Laserdesignator"},
@@ -1396,11 +1396,11 @@ class CfgCraftingRecipes
 	{
 	    name = "Craft ENVG (Black)";
 	    pictureItem = "NVGogglesB_blk_F";
+		tools[] = {"Exile_Item_Foolbox", "Exile_Item_Screwdriver", "Exile_Item_Grinder", "Exile_Item_Pliers"};
 	    returnedItems[] =
 	    {
 	        {1, "NVGogglesB_blk_F"}
 	    };
-		tools[] = {"Exile_Item_Foolbox", "Exile_Item_Screwdriver", "Exile_Item_Grinder", "Exile_Item_Pliers"};
 	    components[] =
 	    {
 	        {1, "Laserdesignator"},
@@ -1415,11 +1415,11 @@ class CfgCraftingRecipes
 	{
 	    name = "Craft ENVG (Green)";
 	    pictureItem = "NVGogglesB_grn_F";
+		tools[] = {"Exile_Item_Foolbox", "Exile_Item_Screwdriver", "Exile_Item_Grinder", "Exile_Item_Pliers"};
 	    returnedItems[] =
 	    {
 	        {1, "NVGogglesB_grn_F"}
 	    };
-		tools[] = {"Exile_Item_Foolbox", "Exile_Item_Screwdriver", "Exile_Item_Grinder", "Exile_Item_Pliers"};
 	    components[] =
 	    {
 	        {1, "Laserdesignator"},
@@ -1434,11 +1434,11 @@ class CfgCraftingRecipes
 	{
 	    name = "Craft ENVG (Grey)";
 	    pictureItem = "NVGogglesB_gry_F";
+		tools[] = {"Exile_Item_Foolbox", "Exile_Item_Screwdriver", "Exile_Item_Grinder", "Exile_Item_Pliers"};
 	    returnedItems[] =
 	    {
 	        {1, "NVGogglesB_gry_F"}
 	    };
-		tools[] = {"Exile_Item_Foolbox", "Exile_Item_Screwdriver", "Exile_Item_Grinder", "Exile_Item_Pliers"};
 	    components[] =
 	    {
 	        {1, "Laserdesignator"},
