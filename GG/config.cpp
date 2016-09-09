@@ -5031,35 +5031,6 @@ class CfgTraderCategories
 			"TRYK_Shemagh_EAR_TAN"
 		};
 	};
-
-	class TRYKNVGHeadgear
-	{
-		name = "TRYK NVG Headgear";
-		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\headgear_ca.paa";
-		items[] =
-		{
-			//"TRYK_US_ESS_Glasses_NV",
-			//"TRYK_G_Shades_Black_NV",
-			//"TRYK_bandana_NV",
-			//"TRYK_SPgearG_NV",
-			//"TRYK_G_bala_wh_NV",
-			//"TRYK_ESS_wh_NV",
-			//"TRYK_Headphone_NV",
-			//"TRYK_HRPIGEAR_NV",
-			//"TRYK_Headset_NV",
-			//"TRYK_TAC_boonie_SET_NV",
-			//"TRYK_TAC_SET_NV_TAN",
-			//"TRYK_TAC_SET_NV_OD",
-			//"TRYK_H_DELTAHELM_NV",
-			//"TRYK_balaclava_BLACK_NV",
-			//"TRYK_balaclava_NV",
-			//"TRYK_balaclava_EAR_NV"
-			//"TRYK_Shemagh_TAN_NV",
-			//"TRYK_Shemagh_MESH_NV",
-			//"TRYK_Shemagh_G_NV",
-		};
-	};
-
  
 	class TRYKBackpacks
 	{
@@ -7004,7 +6975,6 @@ class CfgTraders
 			"TRYKUniforms",
 			"TRYKVests",
 			"TRYKHeadgear",
-			"TRYKNVGHeadgear",
 			"TRYKBackpacks",
 			"FirstAid"
 		};
