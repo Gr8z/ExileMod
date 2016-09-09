@@ -15,7 +15,7 @@ lbClear _pricelist;
     _index = _x;
     _price = (_index select 0);
     _respect = (_index select 1);
-    _lbentry = _pricelist lbAdd format["%1 | %2%3",_price,_respect,"%"];
+    _lbentry = _pricelist lbAdd format["%1pops | %2%3 rep",_price,_respect,"%"];
     _data = _pricelist lbSetData [_lbentry, (format["%1:%2",_price,_respect])];
 } foreach _values;
 lbSetCurSel [2101, 0];

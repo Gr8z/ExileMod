@@ -23,7 +23,7 @@ try
     {
         throw "Please Select A Target Player";
     };
-    if (_price isEqualTo "") then
+    if (_pricelist isEqualTo "") then
     {
         throw "Please Select The Worth Of The Bounty";
     };
