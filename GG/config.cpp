@@ -1356,7 +1356,7 @@ class CfgCraftingRecipes
 	    };
 	    category = "Tools & Items";
 	};
-	/*class ViperHelmet01: Exile_AbstractCraftingRecipe
+	class ViperHelmet01: Exile_AbstractCraftingRecipe
 	{
 	    name = "Craft Viper Helmet (Hex)";
 	    pictureItem = "H_HelmetO_ViperSP_hex_F";
@@ -1391,7 +1391,7 @@ class CfgCraftingRecipes
 	    };
 	    category = "Tools & Items";
 		
-	};*/
+	};
 	class ENVG01: Exile_AbstractCraftingRecipe
 	{
 	    name = "Craft ENVG (Black)";
@@ -3317,7 +3317,7 @@ class CfgExileArsenal
 	class Exile_Item_ZipTie												{ quality = 1; price = 100; };
 	class Exile_Item_ThermalScannerPro									{ quality = 1; price = 2500; sellPrice = 250; };
 	class Exile_Melee_SledgeHammer										{ quality = 1; price = 500; sellPrice = 100; };
-	class Exile_Item_Foolbox											{ quality = 1; price = 1500; sellPrice = 150;};
+	class Exile_Item_Foolbox											{ quality = 2; price = 1500; sellPrice = 150;};
 	class Exile_Item_CordlessScrewdriver								{ quality = 1; price = 500; };
 	class Exile_Item_Shovel										    	{ quality = 1; price = 500; };
 	//class Exile_Item_FireExtinguisher									{ quality = 1; price = 650; };
