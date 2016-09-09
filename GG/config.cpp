@@ -3458,6 +3458,7 @@ class CfgExileArsenal
 	class B_Heli_Light_01_armed_F										{ quality = 4; price = 100000; sellPrice = 20000;};
 	class B_Heli_Transport_03_F											{ quality = 4; price = 100000; sellPrice = 20000;};
 	class B_Heli_Transport_03_black_F									{ quality = 4; price = 100000; sellPrice = 20000;};
+	class O_Heli_Light_02_F												{ quality = 4; price = 100000; sellPrice = 20000;};
 	
 	///////// Planes /////////
 	class Exile_Plane_Cessna											{ quality = 2; price = 7500; };
