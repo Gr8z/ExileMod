@@ -79,18 +79,6 @@ class CfgNotifications
 		priority = 0;
 		difficulty[] = {};
 	};
-
-    class DueDate
-    {
-        description = "%1";
-        title = "Territory Due Date";
-        iconPicture = "GG\images\logo.paa";
-        iconText = "";
-        color[] = {0.01,0.61,0.94,1};
-        duration = 5;
-        priority = 0;
-        difficulty[] = {};
-    };
 };
 
 class CfgClans

@@ -15,7 +15,6 @@ if (!hasInterface || isServer) exitWith {};
 [] execVM "GG\StatusBar\statusBar.sqf";
 [] execVM "GG\welcome.sqf";
 [] execvm "GG\advertise.sqf";
-[] execVM "GG\announcepay.sqf";
 
 _pic = "GG\images\logo.paa";
 [
