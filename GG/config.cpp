@@ -4917,7 +4917,7 @@ class CfgTraderCategories
 			"TRYK_shoulder_armor_CY",
 			"TRYK_H_ghillie_top_headless3",
 			"TRYK_U_B_PCUHsW",
-			"TRYK_U_B_PCUHsW2",
+			"TRYK_U_B_PCUHsW2"
 			};
 	};
 
@@ -4963,7 +4963,7 @@ class CfgTraderCategories
 			"TRYK_V_tacSVD_OD",
 			"TRYK_V_Sheriff_BA_T",
 			"TRYK_LOC_AK_chestrig_OD",
-			"TRYK_LOC_AK_chestrig_TAN",
+			"TRYK_LOC_AK_chestrig_TAN"
 		};
 	};
 
@@ -5028,7 +5028,7 @@ class CfgTraderCategories
 			"TRYK_Shemagh_shade_G",
 			"TRYK_Shemagh_ESS",
 			"TRYK_Shemagh_ESS_G",
-			"TRYK_Shemagh_EAR_TAN",
+			"TRYK_Shemagh_EAR_TAN"
 		};
 	};
 
@@ -5053,7 +5053,7 @@ class CfgTraderCategories
 			"TRYK_H_DELTAHELM_NV",
 			"TRYK_balaclava_BLACK_NV",
 			"TRYK_balaclava_NV",
-			"TRYK_balaclava_EAR_NV",
+			"TRYK_balaclava_EAR_NV"
 			//"TRYK_Shemagh_TAN_NV",
 			//"TRYK_Shemagh_MESH_NV",
 			//"TRYK_Shemagh_G_NV",
