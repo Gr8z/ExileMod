@@ -1357,7 +1357,7 @@ class CfgCraftingRecipes
 	    {
 	        {4, "Exile_magazine_Battery"},
 	        {2, "Exile_item_Laptop"},
-	        {1, "Exile_headgear_gasmask"}
+	        {2, "Exile_item_thermalscannerpro"}
 	    };
 	    category = "Tools & Items";
 		
@@ -1375,7 +1375,7 @@ class CfgCraftingRecipes
 	    {
 	        {4, "Exile_magazine_Battery"},
 	        {2, "Exile_item_Laptop"},
-	        {1, "Exile_headgear_gasmask"}
+	        {2, "Exile_item_thermalscannerpro"}
 	    };
 	    category = "Tools & Items";
 		
