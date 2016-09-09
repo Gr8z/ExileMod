@@ -3694,6 +3694,7 @@ class CfgExileCustomCode
     ExileClient_gui_upgradeTerritoryDialog_event_onTerritoryDropDownSelectionChanged = 	"GG\custom\ExileClient_gui_upgradeTerritoryDialog_event_onTerritoryDropDownSelectionChanged.sqf";
     ExileClient_gui_xm8_slide_territory_event_onTerritoryDropdownSelectionChanged = 	"GG\custom\ExileClient_gui_xm8_slide_territory_event_onTerritoryDropdownSelectionChanged.sqf";
     ExileClient_gui_xm8_showPartySlides =                                               "GG\custom\ExileClient_gui_xm8_showPartySlides.sqf";
+    ExileClient_gui_vehicleTraderDialog_event_onInputBoxChars =                         "GG\custom\ExileClient_gui_vehicleTraderDialog_event_onInputBoxChars.sqf";
 };
 
 class CfgExileEnvironment
