@@ -5,7 +5,7 @@ author = "[GG] Ghostz Gamerz";
 onLoadName = "[GG] Ghostz Gamerz ExileMod Tanoa";
 onLoadMission= "www.ghostzgamerz.com";
 loadScreen = "GG\images\logo.jpg"; 
-disableChannels[]={{0, true, true},{1, false, true},{2, true, true},{3, false, false},{4, false, false},{5, false, false},{6, true, true}};
+disableChannels[] = {0, 2};
 OnLoadIntro = "";
 OnLoadIntroTime = false;
 OnLoadMissionTime = false;
@@ -141,7 +141,6 @@ showUAVFeed = 0;
 reviveDelay = 6;
 reviveForceRespawnDelay = 3;
 reviveBleedOutDelay = 120;
-showGroupIndicator = 1;
 
 showHUD[] = 
 {
@@ -153,7 +152,7 @@ showHUD[] =
     false,  // Commanding menu
     false,  // Group Bar
     true,   // HUD Weapon Cursors
-    true   // Squad Radar
+    false   // Squad Radar
 };
 
 #include "GG\config.cpp"
