@@ -5761,7 +5761,7 @@ class CfgTraderCategories
 			//"Exile_Melee_SledgeHammer",
 			"Exile_Item_Foolbox",
 			"Exile_Item_CordlessScrewdriver",
-			"Exile_Item_Shovel",
+			//"Exile_Item_Shovel",
 			"Exile_Item_Screwdriver"
 			/*
 			"Exile_Item_ThermalScannerPro",
