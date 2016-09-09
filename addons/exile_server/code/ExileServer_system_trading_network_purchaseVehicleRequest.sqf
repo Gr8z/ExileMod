@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_parameters","_vehicleClass","_pinCode","_playerObject","_salesPrice","_playerMoney","_position","_vehicleObject","_logging","_traderLog","_responseCode"];
+private["_sessionID","_parameters","_vehicleClass","_pinCode","_playerObject","_salesPrice","_playerMoney","_position","_vehicleObject","_logging","_traderLog","_responseCode","_quality","_requiredRespect","_playerRespect"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
 _vehicleClass = _parameters select 0;
@@ -43,6 +43,13 @@ try
 	if (_playerMoney < _salesPrice) then
 	{
 		throw 5;
+	};
+	_playerRespect = _playerObject getVariable ["ExileScore", 0];
+	_quality = getNumber(missionConfigFile >> "CfgExileArsenal" >> _vehicleClass >> "quality");
+	_requiredRespect = getNumber(missionConfigFile >> "CfgTrading" >> "requiredRespect" >> format["Level%1",_quality]);
+	if (_requiredRespect > _playerRespect) then
+	{
+		throw 6;
 	};
 	if !((count _pinCode) isEqualTo 4) then
 	{
