@@ -1333,7 +1333,7 @@ class CfgCraftingRecipes
 	    pictureItem = "Exile_Weapon_TaurusGold";
 	    returnedItems[] =
 	    {
-	        {1, "TaurusTracker455_gold"}
+	        {1, "Exile_weapon_taurusgold"}
 	    };
 	    components[] =
 	    {
@@ -1355,9 +1355,9 @@ class CfgCraftingRecipes
 	    };
 	    components[] =
 	    {
-	        {2, "Laserdesignator"},
-	        {1, "Exile_item_Laptop"},
-	        {1, "H_HelmetB_TI_tna_F"}
+	        {4, "Exile_magazine_Battery"},
+	        {2, "Exile_item_Laptop"},
+	        {1, "Exile_headgear_gasmask"}
 	    };
 	    category = "Tools & Items";
 		
@@ -1373,9 +1373,9 @@ class CfgCraftingRecipes
 	    };
 	    components[] =
 	    {
-	        {2, "Laserdesignator"},
-	        {1, "Exile_item_Laptop"},
-	        {1, "H_HelmetB_TI_tna_F"}
+	        {4, "Exile_magazine_Battery"},
+	        {2, "Exile_item_Laptop"},
+	        {1, "Exile_headgear_gasmask"}
 	    };
 	    category = "Tools & Items";
 		
@@ -1391,10 +1391,10 @@ class CfgCraftingRecipes
 	    };
 	    components[] =
 	    {
-	        {1, "Laserdesignator"},
-	        {1, "Exile_item_Laptop"},
-	        {1, "NVGoggles_OPFOR"},
-			{1, "optic_Nightstalker"}
+	        {1, "Exile_item_mobilephone"},
+	        {2, "Exile_item_Laptop"},
+	        {1, "Exile_item_basecamerakit"},
+			{2, "Exile_magazine_Battery"}
 	    };
 	    category = "Tools & Items";
 		
@@ -1410,10 +1410,10 @@ class CfgCraftingRecipes
 	    };
 	    components[] =
 	    {
-	        {1, "Laserdesignator"},
-	        {1, "Exile_item_Laptop"},
-	        {1, "NVGoggles_INDEP"},
-			{1, "optic_Nightstalker"}
+	        {1, "Exile_item_mobilephone"},
+	        {2, "Exile_item_Laptop"},
+	        {1, "Exile_item_basecamerakit"},
+			{2, "Exile_magazine_Battery"}
 	    };
 	    category = "Tools & Items";
 		
@@ -1429,10 +1429,10 @@ class CfgCraftingRecipes
 	    };
 	    components[] =
 	    {
-	        {1, "Laserdesignator"},
-	        {1, "Exile_item_Laptop"},
-	        {1, "O_NVGoggles_urb_F"},
-			{1, "optic_Nightstalker"}
+	        {1, "Exile_item_mobilephone"},
+	        {2, "Exile_item_Laptop"},
+	        {1, "Exile_item_basecamerakit"},
+			{2, "Exile_magazine_Battery"}
 	    };
 	    category = "Tools & Items";
 		
