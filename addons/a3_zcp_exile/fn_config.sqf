@@ -365,8 +365,7 @@ ZCP_DMS_MilitaryVehicles =              [                           // List of m
 										"Exile_Car_HMMWV_M2_Green",
 										"Exile_Car_BTR40_MG_Green",
 										"B_T_LSV_01_armed_F",
-										"B_LSV_01_armed_F",
-										"HMMWV_M2_GPK_1"
+										"B_LSV_01_armed_F"
                                     ];
 
 ZCP_DMS_TransportHelis =                [                           // List of transport helis that can spawn

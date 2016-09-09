@@ -3451,13 +3451,13 @@ class CfgExileArsenal
 	///////// Military Helicopters Armed /////////
 	class Exile_Chopper_Huey_Armed_Green								{ quality = 3; price = 25000; };
 	class Exile_Chopper_Huey_Armed_Desert								{ quality = 3; price = 25000; };
-	class B_Heli_Transport_01_F											{ quality = 4; price = 100000; };
-	class B_Heli_Transport_01_camo_F									{ quality = 4; price = 100000; };
-	class B_CTRG_Heli_Transport_01_sand_F								{ quality = 4; price = 100000; };
-	class B_CTRG_Heli_Transport_01_tropic_F								{ quality = 4; price = 100000; };
-	class B_Heli_Light_01_armed_F										{ quality = 4; price = 100000; };
-	class B_Heli_Transport_03_F											{ quality = 4; price = 100000; };
-	class B_Heli_Transport_03_black_F									{ quality = 4; price = 100000; };
+	class B_Heli_Transport_01_F											{ quality = 4; price = 100000; sellPrice = 20000;};
+	class B_Heli_Transport_01_camo_F									{ quality = 4; price = 100000; sellPrice = 20000;};
+	class B_CTRG_Heli_Transport_01_sand_F								{ quality = 4; price = 100000; sellPrice = 20000;};
+	class B_CTRG_Heli_Transport_01_tropic_F								{ quality = 4; price = 100000; sellPrice = 20000;};
+	class B_Heli_Light_01_armed_F										{ quality = 4; price = 100000; sellPrice = 20000;};
+	class B_Heli_Transport_03_F											{ quality = 4; price = 100000; sellPrice = 20000;};
+	class B_Heli_Transport_03_black_F									{ quality = 4; price = 100000; sellPrice = 20000;};
 	
 	///////// Planes /////////
 	class Exile_Plane_Cessna											{ quality = 2; price = 7500; };
@@ -3494,7 +3494,7 @@ class CfgExileArsenal
 	class Exile_Car_Tempest 											{ quality = 1; price = 10000; };
 	
 	///////// Military Armed /////////
-	class O_LSV_02_armed_F												{ quality = 3; price = 25000; };
+	class O_LSV_02_armed_F												{ quality = 3; price = 40000; };
 	class B_LSV_01_armed_F												{ quality = 3; price = 25000; };
 	class B_T_LSV_01_armed_F											{ quality = 3; price = 25000; };
 	class Exile_Car_Offroad_Armed_Guerilla01 							{ quality = 2; price = 12500; };
@@ -3513,14 +3513,15 @@ class CfgExileArsenal
 	class Exile_Car_HMMWV_M2_Desert 									{ quality = 3; price = 30000; };
 	class Exile_Car_HMMWV_M134_Green 									{ quality = 3; price = 35000; };
 	class Exile_Car_HMMWV_M134_Desert 									{ quality = 3; price = 35000; };
-	class Exile_Car_BTR40_MG_Green										{ quality = 3; price = 40000; };
-	class Exile_Car_BTR40_MG_Camo										{ quality = 3; price = 40000; };
-	class Exile_Car_SUV_Armed_Black										{ quality = 3; price = 45000; };
-	class Exile_Car_BRDM2_HQ											{ quality = 3; price = 40000; };
-	class B_MRAP_01_hmg_F												{ quality = 3; price = 40000; };
-	class O_MRAP_02_hmg_F												{ quality = 3; price = 60000; };
-	class I_MRAP_03_hmg_F												{ quality = 3; price = 80000; };
-	class O_T_LSV_02_armed_F											{ quality = 3; price = 50000; };
+	class Exile_Car_BTR40_MG_Green										{ quality = 3; price = 30000; };
+	class Exile_Car_BTR40_MG_Camo										{ quality = 3; price = 30000; };
+	class Exile_Car_SUV_Armed_Black										{ quality = 3; price = 45000; sellPrice = 20000;};
+	class Exile_Car_BRDM2_HQ											{ quality = 3; price = 40000; sellPrice = 20000;};
+	class B_MRAP_01_hmg_F												{ quality = 3; price = 40000; sellPrice = 20000;};
+	class O_MRAP_02_hmg_F												{ quality = 3; price = 60000; sellPrice = 20000;};
+	class O_T_MRAP_02_hmg_ghex_F										{ quality = 3; price = 60000; sellPrice = 20000;};
+	class I_MRAP_03_hmg_F												{ quality = 3; price = 80000; sellPrice = 20000;};
+	class O_T_LSV_02_armed_F											{ quality = 3; price = 50000; sellPrice = 20000;};
 
 	///////// Military Medical /////////
 	class B_Truck_01_medical_F											{ quality = 1; price = 10000; };
