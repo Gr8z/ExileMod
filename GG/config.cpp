@@ -1356,7 +1356,7 @@ class CfgCraftingRecipes
 	    components[] =
 	    {
 	        {2, "Laserdesignator"},
-	        {1, "Exile_Construction_Laptop_Static"},
+	        {1, "Exile_Construction_Laptop"},
 	        {1, "H_HelmetB_TI_tna_F"}
 	    };
 	    category = "Tools & Items";
@@ -1374,7 +1374,7 @@ class CfgCraftingRecipes
 	    components[] =
 	    {
 	        {2, "Laserdesignator"},
-	        {1, "Exile_Construction_Laptop_Static"},
+	        {1, "Exile_Construction_Laptop"},
 	        {1, "H_HelmetB_TI_tna_F"}
 	    };
 	    category = "Tools & Items";
@@ -1392,7 +1392,7 @@ class CfgCraftingRecipes
 	    components[] =
 	    {
 	        {1, "Laserdesignator"},
-	        {1, "Exile_Construction_Laptop_Static"},
+	        {1, "Exile_Construction_Laptop"},
 	        {1, "NVGoggles_OPFOR"},
 			{1, "optic_Nightstalker"}
 	    };
@@ -1411,7 +1411,7 @@ class CfgCraftingRecipes
 	    components[] =
 	    {
 	        {1, "Laserdesignator"},
-	        {1, "Exile_Construction_Laptop_Static"},
+	        {1, "Exile_Construction_Laptop"},
 	        {1, "NVGoggles_INDEP"},
 			{1, "optic_Nightstalker"}
 	    };
@@ -1430,7 +1430,7 @@ class CfgCraftingRecipes
 	    components[] =
 	    {
 	        {1, "Laserdesignator"},
-	        {1, "Exile_Construction_Laptop_Static"},
+	        {1, "Exile_Construction_Laptop"},
 	        {1, "O_NVGoggles_urb_F"},
 			{1, "optic_Nightstalker"}
 	    };
