@@ -210,7 +210,7 @@ adminUIDandAccess[] =
 			"God Mode","Vehicle God Mode","Stealth / Invisible",
 			"Spawn Support-Boxes",
 			"Spawn Ammo","Request Steam Name","showinfo","UnlockLockVehicle","Spawn Vehicles","Spawn Persistent Vehicles",
-			"Kill","Force Disconnect","Kick (Announce)"
+			"Kill","Force Disconnect","Kick (Announce)",
 			"Change Money on Player","Change Money on Bank","Change Respect","MapIcons","MapIcons: Buildings","MapIcons: Flags",
 			"MapIcons: Player","MapIcons: DeadPlayer","MapIcons: Vehicles","MapIcons: Vehicle Types","MapIcons: Vehicle lockstate",
 			"MapIcons: DeadVehicles","MapIcons: AI",
