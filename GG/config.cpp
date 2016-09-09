@@ -5757,7 +5757,7 @@ class CfgTraderCategories
 			"Exile_Item_Pliers",
 			"Exile_Item_Grinder",
 			//"Exile_Item_Knife",
-			//"Exile_Magazine_Battery",
+			"Exile_Magazine_Battery",
 			//"Exile_Melee_SledgeHammer",
 			"Exile_Item_Foolbox",
 			"Exile_Item_CordlessScrewdriver",
