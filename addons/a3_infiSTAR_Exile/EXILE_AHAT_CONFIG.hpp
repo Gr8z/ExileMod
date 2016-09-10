@@ -192,7 +192,6 @@ adminUIDandAccess[] =
 		{"76561197960289679", //TangoWhiskey
 		 "76561198088251390", // SIX
 		 "76561197979611157", // Clanzoucu
-		 "76561198073495490", // Adam Kadmon
 		 "76561198274767971", // CanadianFrodo
 		 "76561198065188130", // Nacho
 		 "76561198036004541", // Demen
@@ -202,15 +201,15 @@ adminUIDandAccess[] =
 		{
 			"Teleport On Map Click","Teleport - Target To Me","Teleport - Me To Target",
 			"Teleport In Facing Direction (10m steps)",
-			"spectating","Delete Vehicle","FlyUp","ShowGear","Show Server Information",
-			"HealSelf","HealRepairNear","AdminLog","Freeze","UnFreeze","Restrain","UnRestrain",
+			"spectating","Delete Vehicle","FlyUp","ShowGear",
+			"HealRepairNear","AdminLog","Freeze","UnFreeze","Restrain","UnRestrain",
 			"==== Base Deleter ====","Items spawn menu",
 			"Remove Gear","Heal","Restore","Flip Vehicle","Move In My Vehicle","Move In Target Vehicle","Eject","Eject Crew",
 			"Player ESP","AI ESP","Dead ESP","Loot ESP","Vehicle Marker","Flag Marker (with radius)","DeadPlayer Marker",
-			"God Mode","Vehicle God Mode","Lower Terrain","Stealth / Invisible",
-			"Mass Message","Spawn Support-Boxes",
+			"God Mode","Vehicle God Mode","Stealth / Invisible",
+			"Spawn Support-Boxes",
 			"Spawn Ammo","Request Steam Name","showinfo","UnlockLockVehicle","Spawn Vehicles","Spawn Persistent Vehicles",
-			"Kill","Force Disconnect","Kick (Announce)","Ban (Announce)","TempBan (Announce)",
+			"Kill","Force Disconnect","Kick (Announce)",
 			"Change Money on Player","Change Money on Bank","Change Respect","MapIcons","MapIcons: Buildings","MapIcons: Flags",
 			"MapIcons: Player","MapIcons: DeadPlayer","MapIcons: Vehicles","MapIcons: Vehicle Types","MapIcons: Vehicle lockstate",
 			"MapIcons: DeadVehicles","MapIcons: AI",
@@ -223,10 +222,11 @@ adminUIDandAccess[] =
 		"76561198060389676", // Powerwolf
 		"0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
-			"spectating","ShowGear","Show Server Information","Spawn Vehicles",
+			"spectating","ShowGear","Spawn Vehicles",
 			"Freeze","UnFreeze","Remove Gear","Heal","Restore","Flip Vehicle",
-			"Eject","DeadPlayer Marker","Mass Message","Request Steam Name","UnlockLockVehicle",
-			"Kill","Kick (Announce)","Change Money on Player","Change Money on Bank",
+			"Eject","DeadPlayer Marker","Request Steam Name","UnlockLockVehicle",
+			"Kill","Kick (Announce)","Change Money on Player","Change Money on Bank","Spawn Vehicles",
+			"showinfo",
 			""
 		}
 	}

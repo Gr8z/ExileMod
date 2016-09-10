@@ -1412,7 +1412,6 @@
 8, Exile_Item_ExtensionCord
 8, Exile_Item_LightBulb
 6, Exile_Item_WaterCanisterEmpty
-8, Exile_Melee_Shovel
 10, Exile_Item_JunkMetal
 9, Exile_Item_Handsaw
 8, Exile_Item_Pliers
@@ -1467,6 +1466,9 @@
 60, Exile_Item_MobilePhone
 40, Exile_Item_Knife
 
+> Batteries
+100, Exile_Magazine_Battery
+
 > Unused
 3, Exile_Item_FireExtinguisher
 14, Exile_Item_Hammer
@@ -1475,3 +1477,4 @@
 5, Exile_Item_Defibrillator
 5, Exile_Item_Wrench
 20, Exile_Item_OilCanister
+8, Exile_Melee_Shovel

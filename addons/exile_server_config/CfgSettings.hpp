@@ -415,7 +415,7 @@ class CfgSettings
 
 		class Thunderstorm
 		{
-			fogValue = 0.7;
+			fogValue = 0.2;
 			fogDecay = 0.2;
 			fogBase = 5;
 			overcast = 0.8;
@@ -518,14 +518,12 @@ class CfgSettings
 			If this is enabled, Exile developers will spawn with a ton of pop tabs.
 			We will have a hard time debugging things if you disable this.
 		*/
-		devFriendyMode = 0;
+		devFriendyMode = 1;
 
 		devs[] = 
 		{
-			{"76561197985241690","[EXILE|DEV] Eichi"},
-			{"76561198022879703","[EXILE|DEV] Grim"},
-			{"76561198075905447","[EXILE|DEV] Vishpala"},
-			{"76561197968613061","[EXILE|DEV] Niuva"}
+			{"76561198204864584","GR8"},
+			{"76561198153784743","GHOST"}
 		};
 	};
 

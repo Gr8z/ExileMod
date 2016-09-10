@@ -98,11 +98,7 @@ if(_aiActive > _maxAIcount) exitWith
 			_groupRadius = 500;
 			_difficulty = "easy";
 			_side = SC_BanditSide;
-			_spawnPosition = _pos;				
-									
-			// Get the AI to shut the fuck up :)
-			enableSentences false;
-			enableRadio false;
+			_spawnPosition = _pos;
 				
 			if(!SC_useWaypoints) then
 			{

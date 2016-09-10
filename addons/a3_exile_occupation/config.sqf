@@ -21,7 +21,7 @@ SC_extendedLogging          	= false;                	// set to true for additio
 SC_infiSTAR_log					= false;						// true Use infiSTAR logging, false logs to server rpt
 SC_maxAIcount					= 40;						// the maximum amount of AI, if the AI count is above this then additional AI won't spawn
 SC_mapMarkers					= true;                	// Place map markers at the occupied areas (occupyPlaces and occupyMilitary only) true/false
-SC_minFPS						= 5;				    	// any lower than minFPS on the server and additional AI won't spawn
+SC_minFPS						= 15;				    	// any lower than minFPS on the server and additional AI won't spawn
 SC_scaleAI						= 10;						// any more than _scaleAI players on the server and _maxAIcount is reduced for each extra player
 
 SC_removeUserMapMarkers     	= false;                 	// true to delete map markers placed by players every 10 seconds
@@ -31,7 +31,7 @@ SC_minDistanceToSpawnZones  	= 750;                  	// Minimum distance in met
 SC_minDistanceToTraders     	= 750;                  	// Minimum distance in metres to the nearest trader zone
 SC_minDistanceToTerritory   	= 350;                  	// Minimum distance in metres to the nearest player territory
 SC_minDistanceToPlayer      	= 250;                  	// Minimum distance in metres to the nearest player
-SC_useWaypoints					= false;                 	// When spawning AI create waypoints to make them enter buildings (can affect performance when the AI is spawned and the waypoints are calculated)
+SC_useWaypoints					= true;                 	// When spawning AI create waypoints to make them enter buildings (can affect performance when the AI is spawned and the waypoints are calculated)
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -40,7 +40,7 @@ SC_useWaypoints					= false;                 	// When spawning AI create waypoin
 
 SC_processReporter				= false;                 	// log the a list of active server processes every 60 seconds (useful for debugging server problems)
 SC_fastNights               	= true;						// true if you want night time to go faster than daytime
-SC_occupyPlaces 				= true;						// true if you want villages,towns,cities patrolled by bandits
+SC_occupyPlaces 				= false;					// true if you want villages,towns,cities patrolled by bandits
 SC_occupyTraders            	= false;					// true if you want to create trader camps at positions specified in SC_occupyTraderDetails
 SC_occupyStatic	 		    	= false;		    		// true if you want to add AI in specific locations
 SC_occupyTransport 	        	= false;					// true if you want pubic transport (travels between traders)
@@ -329,7 +329,7 @@ SC_buildings                	= [	"Land_TentHangar_V1_F","Land_Hangar_F","Land_Ai
                                     "land_AII_upper_part","Land_Ind_IlluminantTower","Land_Misc_deerstand","Land_ns_Jbad_A_Stationhouse",
                                     "Land_Airport_01_controlTower_F","Land_Airport_01_terminal_F","Land_Airport_02_controlTower_F",
                                     "Land_Airport_02_terminal_F","Land_Cargo_House_V4_F","Land_Cargo_HQ_V4_F","Land_Cargo_Patrol_V4_F",
-                                    "Land_Cargo_Tower_V4_F"
+                                    "Land_Cargo_Tower_V4_F","Land_Medevac_HQ_V1_F"
                                 ]; 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

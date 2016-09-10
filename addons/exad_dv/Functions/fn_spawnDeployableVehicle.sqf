@@ -20,7 +20,7 @@ params ["_playerNetId","_configClass","_player","_spawnPos","_spawnDir","_usePos
 
 _player = objectFromNetId _playerNetId;
 
-_spawnPos = _player modelToWorld [0,2,0];
+_spawnPos = _player modelToWorld [0,3,0];
 _spawnDir = direction _player;
 _usePositionATL = true;
 
