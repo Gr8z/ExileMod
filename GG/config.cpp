@@ -5724,6 +5724,7 @@ class CfgTraderCategories
 			"Exile_Item_MetalScrews",
 			"Exile_Item_JunkMetal",
 			"Exile_Item_PortableGeneratorKit",
+			"Exile_Item_FloodLightKit",
 			"Exile_Item_MetalBoard",
 			"Exile_Item_MetalPole",
 			//"Exile_Item_MobilePhone",
@@ -5763,7 +5764,6 @@ class CfgTraderCategories
 			//"Exile_Magazine_Battery",
 			//"Exile_Melee_SledgeHammer",
 			"Exile_Item_Foolbox",
-			"Exile_Item_FloodLightKit",
 			"Exile_Item_CordlessScrewdriver",
 			//"Exile_Item_Shovel",
 			"Exile_Item_Screwdriver"
