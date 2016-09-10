@@ -29,7 +29,7 @@ try {
     {
         throw "Classname doesn't exist!";
     };
-	if (_vehicleObject getVariable ["ExileIsPersistent", false]) then
+	if !(_vehicleObject getVariable ["ExileIsPersistent", false]) then
 	{
 		throw "Vehicle is not persistent. You can only list persistent vehicles.";
 	};
