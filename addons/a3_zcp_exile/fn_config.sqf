@@ -157,9 +157,7 @@ ZCP_CapBases = [ // located in capbases folder [filename, capradius, buildeditor
 
 
 ZCP_Blacklist = [ // [ [x,y,z], radius ];
-    [[23644,18397,0] , 1200], // altis saltlake
-    [[-999,-999,0] , 500],
-    [[-999,-999,0] , 500]
+    [[2901.51, 12333.8, 0] , 1600] // Rad Zone
 ];
 
 ZCP_createVirtualCircle = true;
