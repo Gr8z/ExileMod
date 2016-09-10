@@ -31,7 +31,7 @@ SC_minDistanceToSpawnZones  	= 750;                  	// Minimum distance in met
 SC_minDistanceToTraders     	= 750;                  	// Minimum distance in metres to the nearest trader zone
 SC_minDistanceToTerritory   	= 350;                  	// Minimum distance in metres to the nearest player territory
 SC_minDistanceToPlayer      	= 250;                  	// Minimum distance in metres to the nearest player
-SC_useWaypoints					= false;                 	// When spawning AI create waypoints to make them enter buildings (can affect performance when the AI is spawned and the waypoints are calculated)
+SC_useWaypoints					= true;                 	// When spawning AI create waypoints to make them enter buildings (can affect performance when the AI is spawned and the waypoints are calculated)
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -329,7 +329,7 @@ SC_buildings                	= [	"Land_TentHangar_V1_F","Land_Hangar_F","Land_Ai
                                     "land_AII_upper_part","Land_Ind_IlluminantTower","Land_Misc_deerstand","Land_ns_Jbad_A_Stationhouse",
                                     "Land_Airport_01_controlTower_F","Land_Airport_01_terminal_F","Land_Airport_02_controlTower_F",
                                     "Land_Airport_02_terminal_F","Land_Cargo_House_V4_F","Land_Cargo_HQ_V4_F","Land_Cargo_Patrol_V4_F",
-                                    "Land_Cargo_Tower_V4_F"
+                                    "Land_Cargo_Tower_V4_F","Land_Medevac_HQ_V1_F"
                                 ]; 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
