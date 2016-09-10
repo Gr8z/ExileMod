@@ -518,7 +518,7 @@ class CfgSettings
 			If this is enabled, Exile developers will spawn with a ton of pop tabs.
 			We will have a hard time debugging things if you disable this.
 		*/
-		devFriendyMode = 1;
+		devFriendyMode = 0;
 
 		devs[] = 
 		{
