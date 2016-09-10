@@ -253,7 +253,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											["nedhatchback_mission",5],
 											["nedhunter_mission",2],
 											["nedifrit_mission",2],
-											["nedlittlebird_mission",1],
+											["nedlittlebird_mission",.5],
 											["nedmedical1_mission",5],
 											["nedoffroad_mission",5],
 											["nedresearch_mission",5],
