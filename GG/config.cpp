@@ -3276,15 +3276,15 @@ class CfgExileArsenal
 	class Exile_Item_FuelBarrelFull										{ quality = 1; price = 250; sellPrice = 125; };
 	class Exile_Item_WaterCanisterDirtyWater							{ quality = 1; price = 100; };
 	class Exile_Item_WaterCanisterEmpty									{ quality = 1; price = 50; };
-	class Exile_Item_JunkMetal											{ quality = 2; price = 400; sellPrice = 50; };
+	class Exile_Item_JunkMetal											{ quality = 2; price = 400; sellPrice = 25; };
 	class Exile_Item_LightBulb											{ quality = 1; price = 50; };
-	class Exile_Item_MetalBoard											{ quality = 2; price = 100; };
+	class Exile_Item_MetalBoard											{ quality = 2; price = 600; sellPrice = 75};
 	class Exile_Item_SafeKit											{ quality = 1; price = 10000; };
 	class Exile_Item_CodeLock											{ quality = 1; price = 5000; sellPrice = 1000; };
 	class Exile_Item_Laptop												{ quality = 2; price = 10000; sellPrice = 2000; };
 	class Exile_Item_BaseCameraKit										{ quality = 2; price = 5000; sellPrice = 1000; };
 	class Exile_Item_CamoTentKit										{ quality = 1; price = 250; };
-	class Exile_Item_MetalPole											{ quality = 2; price = 1200; };
+	class Exile_Item_MetalPole											{ quality = 2; price = 1200; sellPrice = 100};
 	class Exile_Item_MobilePhone										{ quality = 2; price = 1000; };
 	class Exile_Item_MetalScrews										{ quality = 1; price = 10; };
 	class Exile_Item_Cement												{ quality = 1; price = 100; };
