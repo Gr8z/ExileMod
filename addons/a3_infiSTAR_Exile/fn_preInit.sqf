@@ -154,7 +154,7 @@ fnc_infiSTAR_cfg = compileFinal '
 	};
 	_return
 ';
-_devs = ['76561198152111329','76561198155552440'];	/* infiSTAR UID */
+_devs = ['0','0'];	/* infiSTAR UID */
 _admins = [];
 _serverCommandPassword = ["serverCommandPassword","changeme"] call fnc_infiSTAR_cfg;
 _passwordAdmin = ["passwordAdmin","changeme"] call fnc_infiSTAR_cfg;
