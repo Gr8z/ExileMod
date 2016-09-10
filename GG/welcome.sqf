@@ -18,12 +18,14 @@
         {
             _nextDueDate = _flag getVariable ["ExileTerritoryMaintenanceDue", [0, 0, 0, 0, 0]];
             _name = _flag getVariable ["ExileTerritoryName", ""];
+            /*
             _flagPos = getPos _x;
             _mrkrName = format["FlagMapMarker_%1",_name];
             _mrkrName = createMarker [_mrkrName,[_flagPos select 0,_flagPos select 1]];
             _mrkrName setMarkerShape "ICON";
             _mrkrName setMarkerType "hd_flag";
             _mrkrName setMarkerTextLocal _name;
+            */
             _dueDate = format 
             [
                     "%2/%3/%1",
