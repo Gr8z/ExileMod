@@ -48,6 +48,10 @@ try {
         {
             throw "Vehicle object is nil, cannot process!";
         };
+		if (_vehicleObject getVariable ["ExileIsPersistent", false]) then
+		{
+			throw "Vehicle is not persistent. You can only list persistent vehicles.";
+		};
         _availableHitpoints = getAllHitPointsDamage _vehicleObject;
         _vehicleHitpoints = [];
         if!(_availableHitpoints isEqualTo [])then
