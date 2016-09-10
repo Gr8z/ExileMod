@@ -7,7 +7,7 @@ www.ghostzgamerz.com
 
 private ["_display","_getControl","_equippedMagazines","_SelectedRecipeCtrl","_recipeList","_components","_Tools","_requiredInteractionModelGroup",
 "_requiresOcean","_requiresFire","_returnedItems","_Quantity","_Component","_ComponentDispName","_ComponentPicture","_equippedComponentQuantity","_lbsize",
-"_Tool","_ToolDispName","_ToolPicture","_equippedToolQuantity","_foundObject","_interactionModelGroupConfig","_RequiredDispName","_interactionModelGroupModels"];
+"_Tool","_ToolDispName","_ToolPicture","_equippedToolQuantity","_foundObject","_interactionModelGroupConfig","_RequiredDispName","_interactionModelGroupModels","_pic"];
 
 disableSerialization;
 
@@ -16,6 +16,7 @@ _display = uiNameSpace getVariable ["RscExileXM8", displayNull];
 _equippedMagazines = magazines player;
 _SelectedRecipeCtrl = [_display,"GG_Craft","componentsList"] call ExAd_fnc_getAppCtrl;
 _recipeList = [_display,"GG_Craft","recipeList"] call ExAd_fnc_getAppCtrl;
+_pic = [_display,"GG_Craft","pic"] call ExAd_fnc_getAppCtrl;
 SelectedRecipe 	= _SelectedRecipeCtrl lbData (lbCurSel _SelectedRecipeCtrl);
 
 _components 				   = getArray(missionConfigFile >> "CfgCraftingRecipes" >> SelectedRecipe  >> "components");
@@ -54,6 +55,7 @@ else
 
 
 _recipeList lbSetPicture [_forEachIndex+1,_ComponentPicture];
+_pic ctrlSetText _ComponentPicture;
 _recipeList lbSetData [_forEachIndex+1,_Component];
 
 } forEach _components;
