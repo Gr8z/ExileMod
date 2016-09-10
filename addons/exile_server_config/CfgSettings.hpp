@@ -415,7 +415,7 @@ class CfgSettings
 
 		class Thunderstorm
 		{
-			fogValue = 0.7;
+			fogValue = 0.2;
 			fogDecay = 0.2;
 			fogBase = 5;
 			overcast = 0.8;
