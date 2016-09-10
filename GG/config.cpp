@@ -6868,6 +6868,11 @@ class CfgTraders
 		{
 			"Handguns",
 			"Shotguns",
+			"NIARMSAK",
+			"NIARMSAUG",
+			"NIARMSHK",
+			"NIARMSAR",
+			"NIARMSFAL",
 			"SubMachineGuns",
 			"LightMachineGuns",
 			"AssaultRifles",
