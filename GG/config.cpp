@@ -3288,6 +3288,7 @@ class CfgExileArsenal
 	class Exile_Item_MetalScrews										{ quality = 1; price = 10; };
 	class Exile_Item_Cement												{ quality = 1; price = 100; };
 	class Exile_Item_Sand												{ quality = 1; price = 50; };
+	class Exile_Item_FloodLightKit										{ quality = 1; price = 250;};
 	//class Exile_Item_Rope												{ quality = 1; price = 100; };
 	//class Exile_Item_MetalWire										{ quality = 1; price = 100; };
 	//class Exile_Item_CarWheel											{ quality = 1; price = 1000; };
@@ -3307,7 +3308,8 @@ class CfgExileArsenal
 	class Exile_Melee_SledgeHammer										{ quality = 1; price = 500; sellPrice = 100; };
 	class Exile_Item_Foolbox											{ quality = 2; price = 1500; sellPrice = 150;};
 	class Exile_Item_CordlessScrewdriver								{ quality = 1; price = 500; };
-	class Exile_Item_Shovel										    	{ quality = 1; price = 500; };
+	class Exile_Item_Shovel												{ quality = 1; price = 500; };
+	class Exile_Item_PortableGeneratorKit								{ quality = 1; price = 600; };
 	//class Exile_Item_FireExtinguisher									{ quality = 1; price = 650; };
 	//class Exile_Item_Hammer											{ quality = 1; price = 600; };
 	//class Exile_Item_OilCanister										{ quality = 1; price = 1750; };
@@ -5721,6 +5723,7 @@ class CfgTraderCategories
 			"Exile_Item_LightBulb",
 			"Exile_Item_MetalScrews",
 			"Exile_Item_JunkMetal",
+			"Exile_Item_PortableGeneratorKit",
 			"Exile_Item_MetalBoard",
 			"Exile_Item_MetalPole",
 			//"Exile_Item_MobilePhone",
@@ -5760,6 +5763,7 @@ class CfgTraderCategories
 			//"Exile_Magazine_Battery",
 			//"Exile_Melee_SledgeHammer",
 			"Exile_Item_Foolbox",
+			"Exile_Item_FloodLightKit",
 			"Exile_Item_CordlessScrewdriver",
 			//"Exile_Item_Shovel",
 			"Exile_Item_Screwdriver"
