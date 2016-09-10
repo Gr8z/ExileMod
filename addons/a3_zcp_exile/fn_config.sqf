@@ -135,24 +135,24 @@ ZCP_SecondsCheckPlayers = 600; // seconds for loop check if the server holds mor
 // For every spawned mission,
 // buildeditor currenty supported -> m3e, xcam, EdenConverted ( THis is exported as terrainbuilder and converted with my site), m3eEden
 ZCP_CapBases = [ // located in capbases folder [filename, capradius, buildeditor, max terraingradient (if not overwritten by staticbasefile), radius of open space for it to spawn base]
-    ["m3e_base1.sqf", 60, "m3e", 90, 60],
-    ["m3e_village.sqf", 50, "m3e", 90, 50],
-    ["xcam_milPoint.sqf", 50, "xcam", 90, 50],
-    ["ec_audacity.sqf", 30, "EdenConverted", 90, 30],
-    ["ec_bravery.sqf", 35, "EdenConverted", 90, 35],
-    ["ec_courage.sqf", 25, "EdenConverted", 90, 25],
-    ["ec_defiance.sqf", 20, "EdenConverted", 90, 20],
-    ["ec_endurance.sqf", 20, "EdenConverted", 90, 20],
-    ["ec_fortitude.sqf", 25, "EdenConverted", 90, 25],
-    ["ec_maze.sqf", 35, "EdenConverted", 90, 20],
-    ["ec_battlefield.sqf", 65, "EdenConverted", 90, 20],
-    ["ec_urban.sqf", 65, "EdenConverted", 90, 20],
-    ["m3e_base2.sqf", 90, "m3e", 90, 20],
-    ["m3e_base3.sqf", 40, "m3e", 90, 20],
-    ["m3e_smallBase1.sqf", 40, "m3e", 90, 20],
-    ["m3e_exoBase1.sqf", 30, "m3e", 90, 50],
-    ["m3e_exoBase2.sqf", 30, "m3e", 90, 50],
-    ["m3e_exoBase3.sqf", 35, "m3e", 90, 50]
+    ["m3e_base1.sqf", 60, "m3e", 30, 60],
+    ["m3e_village.sqf", 50, "m3e", 30, 50],
+    ["xcam_milPoint.sqf", 50, "xcam", 30, 50],
+    ["ec_audacity.sqf", 30, "EdenConverted", 30, 30],
+    ["ec_bravery.sqf", 35, "EdenConverted", 30, 35],
+    ["ec_courage.sqf", 25, "EdenConverted", 30, 25],
+    ["ec_defiance.sqf", 20, "EdenConverted", 30, 20],
+    ["ec_endurance.sqf", 20, "EdenConverted", 30, 20],
+    ["ec_fortitude.sqf", 25, "EdenConverted", 30, 25],
+    ["ec_maze.sqf", 35, "EdenConverted", 30, 35],
+    ["ec_battlefield.sqf", 65, "EdenConverted", 30, 65],
+    ["ec_urban.sqf", 65, "EdenConverted", 30, 65],
+    ["m3e_base2.sqf", 90, "m3e", 30, 90],
+    ["m3e_base3.sqf", 40, "m3e", 30, 40],
+    ["m3e_smallBase1.sqf", 40, "m3e", 30, 40],
+    ["m3e_exoBase1.sqf", 30, "m3e", 30, 50],
+    ["m3e_exoBase2.sqf", 30, "m3e", 30, 50],
+    ["m3e_exoBase3.sqf", 35, "m3e", 30, 50]
 ];
 
 
