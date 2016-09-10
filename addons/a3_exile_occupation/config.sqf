@@ -40,7 +40,7 @@ SC_useWaypoints					= false;                 	// When spawning AI create waypoin
 
 SC_processReporter				= false;                 	// log the a list of active server processes every 60 seconds (useful for debugging server problems)
 SC_fastNights               	= true;						// true if you want night time to go faster than daytime
-SC_occupyPlaces 				= true;						// true if you want villages,towns,cities patrolled by bandits
+SC_occupyPlaces 				= false;					// true if you want villages,towns,cities patrolled by bandits
 SC_occupyTraders            	= false;					// true if you want to create trader camps at positions specified in SC_occupyTraderDetails
 SC_occupyStatic	 		    	= false;		    		// true if you want to add AI in specific locations
 SC_occupyTransport 	        	= false;					// true if you want pubic transport (travels between traders)
