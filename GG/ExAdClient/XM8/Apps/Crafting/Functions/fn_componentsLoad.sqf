@@ -55,7 +55,6 @@ else
 
 
 _recipeList lbSetPicture [_forEachIndex+1,_ComponentPicture];
-_pic ctrlSetText _ComponentPicture;
 _recipeList lbSetData [_forEachIndex+1,_Component];
 
 } forEach _components;
@@ -183,6 +182,9 @@ _recipeList lbAdd Format["%2 - [%1]",  _Quantity, _ComponentDispName];
 
 _lbsize = lbSize _recipeList;
 _recipeList lbSetPicture [_lbsize-1,_ComponentPicture];
+
+_pic ctrlSetText _ComponentPicture;
+
 _recipeList lbSetData [_lbsize-1,_Component];
 (_display displayCtrl 5507) ctrlSetText _ComponentPicture;
 } forEach _returnedItems; 
