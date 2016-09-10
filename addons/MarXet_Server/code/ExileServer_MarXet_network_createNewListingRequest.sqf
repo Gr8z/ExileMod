@@ -6,16 +6,13 @@
 *  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
 *  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
 */
-private["_sessionID","_package","_itemArray","_itemClassname","_price","_location","_newListing","_playerObject","_playerUID","_listingID","_vehicle","_la","_vehicleObjectNetID","_vehicleObject","_availableHitpoints","_vehicleHitpoints","_data"];
+private["_sessionID","_package","_itemArray","_itemClassname","_price","_location","_newListing","_playerObject","_playerUID","_listingID","_vehicle","_la","_vehicleObjectNetID","_vehicleObject","_availableHitpoints","_vehicleHitpoints"];
 _sessionID = _this select 0;
 _package = _this select 1;
 _itemArray = _package select 0;
 _itemClassname = _itemArray select 0;
 _price = parseNumber(_itemArray select 1);
 _location = _itemArray select 2;
-
-_data = format ["loadVehicle:%1", _objId] call ExileServer_system_database_query_selectSingle;
-
 _newListing = [];
 try {
     _playerObject = _sessionID call ExileServer_system_session_getPlayerObject;
@@ -45,16 +42,11 @@ try {
     _la = [_itemClassname];
     if (count(_itemArray) isEqualTo 4) then
     {
-		_pincode = (_data select 20);
         _vehicleObjectNetID = _itemArray select 3;
         _vehicleObject = objectFromNetId _vehicleObjectNetID;
         if (isNull _vehicleObject) then
         {
             throw "Vehicle object is nil, cannot process!";
-        };
-		if (isNull _pincode) then
-        {
-            throw "Vehicle is not persistent. Only persistent vehicles can be listed.";
         };
         _availableHitpoints = getAllHitPointsDamage _vehicleObject;
         _vehicleHitpoints = [];
