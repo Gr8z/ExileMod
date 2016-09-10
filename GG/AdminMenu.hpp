@@ -423,15 +423,6 @@ y=0.0379694 * safezoneH + safezoneY;
 w=0.0625001 * safezoneW;
 h=0.02 * safezoneH;
 };
-class infi_BTN25:RscButton_infiSTAR
-{
-idc=25;
-x=0.535 * safezoneW + safezoneX + (0.15 * safezoneW);
-y=0.0379694 * safezoneH + safezoneY;
-w=0.0625001 * safezoneW;
-h=0.02 * safezoneH;
-action="call fnc_btn_html";
-};
 class infi_BTN36:RscButton_infiSTAR
 {
 idc=36;

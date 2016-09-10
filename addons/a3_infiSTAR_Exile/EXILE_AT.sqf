@@ -1333,8 +1333,6 @@ fnc_colorButtons = {
 	_ctrlR ctrlSetPosition _ctrlRTMP;
 	_ctrlR ctrlCommit _mytime;
 	
-	_btnHTML = _display displayCtrl 25;
-	if(infiSTAR_HTML_LOAD)then{_btnHTML ctrlSetTextColor [1,0,0,1];_btnHTML ctrlSetText 'HIDE HTML';}else{_btnHTML ctrlSetTextColor [0,1,0,1];_btnHTML ctrlSetText 'SHOW HTML';};
 	(uiNamespace getVariable 'RscHTML_infiSTAR_Admin') ctrlEnable infiSTAR_HTML_LOAD;
 	(uiNamespace getVariable 'RscHTML_infiSTAR_Admin') ctrlShow infiSTAR_HTML_LOAD;
 };
