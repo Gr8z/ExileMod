@@ -29,10 +29,6 @@ try {
     {
         throw "Classname doesn't exist!";
     };
-	if !(_vehicleObject getVariable ["ExileIsPersistent", false]) then
-	{
-		throw "Vehicle is not persistent. You can only list persistent vehicles.";
-	};
     if (_price <= 0) then
     {
         throw "The sale price was less than or equal to 0";
@@ -53,6 +49,10 @@ try {
         {
             throw "Vehicle object is nil, cannot process!";
         };
+		if !(_vehicleObject getVariable ["ExileIsPersistent", false]) then
+		{
+			throw "Vehicle is not persistent. You can only list persistent vehicles.";
+		};
         _availableHitpoints = getAllHitPointsDamage _vehicleObject;
         _vehicleHitpoints = [];
         if!(_availableHitpoints isEqualTo [])then
