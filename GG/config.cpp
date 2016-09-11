@@ -3097,9 +3097,9 @@ class CfgExileArsenal
 
 	///////// NIArms SG510 Rifles /////////
 	class hlc_rifle_amt 												{ quality = 2; price = 900; };
-	class hlc_rifle_sig5104 											{ quality = 1; price = 950; };
-	class hlc_rifle_STGW57 												{ quality = 1; price = 800; };
-	class hlc_rifle_stgw57_commando 									{ quality = 1; price = 850; };
+	class hlc_rifle_sig5104 											{ quality = 2; price = 950; };
+	class hlc_rifle_STGW57 												{ quality = 2; price = 800; };
+	class hlc_rifle_stgw57_commando 									{ quality = 2; price = 850; };
 	class hlc_rifle_stgw57_RIS 											{ quality = 2; price = 900; };
 	
 		///////// Pointer Attachments /////////
