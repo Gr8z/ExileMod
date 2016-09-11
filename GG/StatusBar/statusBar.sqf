@@ -163,7 +163,7 @@ GGStatusBar =
 			<t color='%10'>FPS:  %7</t>
 			<t color='%10'><img size='1.6' image='GG\images\icons\restart.paa' color='%19'/>%17:%18</t>",
 			"%", 
-			count playableUnits,
+			((playersNumber west)+(playersNumber east)+(playersNumber civilian)+(playersNumber resistance)),
 			_damage,
 			_wallet,
 			_hunger, 

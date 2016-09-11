@@ -30,7 +30,7 @@ try
 		throw "Not Enough Money";
 	};
 	_playerMoney = _playerMoney - _amount;
-	_player setVariable ["ExileMoney", _playerMoney, true];
+	_player setVariable ["ExileLocker", _playerMoney, true];
 	format["updateLocker:%1:%2", _playerMoney, _player getVariable ["ExileDatabaseID", 0]] call ExileServer_system_database_query_fireAndForget;
 }
 catch

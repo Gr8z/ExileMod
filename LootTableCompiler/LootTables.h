@@ -122,10 +122,10 @@
 1, DLCRifles
 2, DLCAmmo
 2, DLCOptics
-2, Suppressors
+1.5, Suppressors
 2, Bipods
-1.5, Explosives
-0.03, Magazine01
+.5, Explosives
+0.025, Magazine01
 
 ///////////////////////////////////////////////////////////////////////////////
 // Hospital, Medevac etc.
@@ -192,5 +192,5 @@
 5, MedicalItems
 2, Explosives
 5, EpicWeapons
-0.8, Phoneknife
-0.025, Magazine02
+0.65, Phoneknife
+0.01, Magazine02

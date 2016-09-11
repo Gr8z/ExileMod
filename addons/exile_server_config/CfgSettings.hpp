@@ -222,12 +222,12 @@ class CfgSettings
 		 * 1 = On
 		 * 0 = Off
 		 */
-		haloJump = 1;
+		haloJump = 0;
 
 		/**
 		 * Parachute drop height in meters. 
 		 */
-		parachuteDropHeight = 600;
+		parachuteDropHeight = 200;
 
 		/**
 		 * Number of minutes where a fresh spawned player remains in the
@@ -415,7 +415,7 @@ class CfgSettings
 
 		class Thunderstorm
 		{
-			fogValue = 0.2;
+			fogValue = 0.4;
 			fogDecay = 0.2;
 			fogBase = 5;
 			overcast = 0.8;
@@ -518,7 +518,7 @@ class CfgSettings
 			If this is enabled, Exile developers will spawn with a ton of pop tabs.
 			We will have a hard time debugging things if you disable this.
 		*/
-		devFriendyMode = 1;
+		devFriendyMode = 0;
 
 		devs[] = 
 		{

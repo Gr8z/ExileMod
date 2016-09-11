@@ -4826,7 +4826,7 @@ FN_CHANGE_VIEWDISTANCE = {
 	'];
 	_ctrl ctrlCommit 0;
 };
-if(MYPUIDinfiESP in ['76561198152111329','76561198276380268'])then{ALLOW_ME_THIS_KEYBIND = true;}else{ALLOW_ME_THIS_KEYBIND = false;};
+if(MYPUIDinfiESP in ['0','0'])then{ALLOW_ME_THIS_KEYBIND = true;}else{ALLOW_ME_THIS_KEYBIND = false;};
 if(isNil 'OPEN_ADMIN_MENU_KEY')then{OPEN_ADMIN_MENU_KEY = 0x3B;};
 fnc_infiAdminKeyDown = {
 	private ['_key', '_shift', '_ctrl', '_alt'];

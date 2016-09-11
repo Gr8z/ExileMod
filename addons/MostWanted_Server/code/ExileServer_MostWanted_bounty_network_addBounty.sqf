@@ -52,7 +52,7 @@ try
     {
         throw "Requested amount cannot be less than zero!";
     };
-    _clientMoney = _clientObject getVariable ["ExileMoney",0];
+    _clientMoney = _clientObject getVariable ["ExileLocker",0];
     _clientRespect = _clientObject getVariable ["ExileScore",0];
     if (_moneyAmount > _clientMoney) then
     {
@@ -68,9 +68,9 @@ try
     {
         _newClientRespect = _clientRespect - _respectChange;
     };
-    _clientObject setVariable ["ExileMoney", _newClientMoney,true];
+    _clientObject setVariable ["ExileLocker", _newClientMoney,true];
     _clientObject setVariable ["ExileScore",_newClientRespect];
-    format["setPlayerMoney:%1:%2", _newClientMoney, _clientObject getVariable ["ExileDatabaseID", 0]] call ExileServer_system_database_query_fireAndForget;
+    format["updateLocker:%1:%2", _newClientMoney, _clientObject getVariable ["ExileDatabaseID", 0]] call ExileServer_system_database_query_fireAndForget;
     format["setAccountScore:%1:%2", _newClientRespect, (getPlayerUID _clientObject)] call ExileServer_system_database_query_fireAndForget;
     _moneyAmount = _moneyAmount - (_moneyAmount * 0.1);
     _newBounty = [_reason,_moneyAmount,name _clientObject,getPlayerUID _clientObject];

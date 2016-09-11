@@ -253,7 +253,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											["nedhatchback_mission",5],
 											["nedhunter_mission",2],
 											["nedifrit_mission",2],
-											["nedlittlebird_mission",1],
+											["nedlittlebird_mission",.5],
 											["nedmedical1_mission",5],
 											["nedoffroad_mission",5],
 											["nedresearch_mission",5],
@@ -355,9 +355,9 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_Survivor_Static_RankGain		= -400;
 	DMS_Survivor_Static_SpawnMoney		= 0;						// The amount of Poptabs carried by a Survivor static gunner
 
-	DMS_Survivor_Vehicle_MoneyGain		= -500;						// The amount of Poptabs gained for killing a Survivor vehicle crew member
+	DMS_Survivor_Vehicle_MoneyGain		= -100;						// The amount of Poptabs gained for killing a Survivor vehicle crew member
 	DMS_Survivor_Vehicle_RepGain		= -100;						// The amount of Respect gained for killing a Survivor vehicle crew member
-	DMS_Survivor_Vehicle_RankGain		= -600;
+	DMS_Survivor_Vehicle_RankGain		= -100;
 	DMS_Survivor_Vehicle_SpawnMoney		= 0;						// The amount of Poptabs carried by a Survivor vehicle crew member
 
 	DMS_AIKill_DistanceBonusMinDistance	= 100;						// Minimum distance from the player to the AI to apply the distance bonus.
@@ -365,13 +365,13 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 
 	DMS_Diff_RepOrTabs_on_roadkill 		= true;						// Whether or not you want to use different values for giving respect/poptabs when you run an AI over. Default values are NEGATIVE. This means player will LOSE respect or poptabs.
 	DMS_Bandit_Soldier_RoadkillMoney	= -100;						// The amount of Poptabs gained/lost for running over a bandit soldier
-	DMS_Bandit_Soldier_RoadkillRep		= -500;						// The amount of Respect gained/lost for running over a bandit soldier
+	DMS_Bandit_Soldier_RoadkillRep		= -100;						// The amount of Respect gained/lost for running over a bandit soldier
 	DMS_Bandit_Soldier_RoadkillRank		= 20;
 	DMS_Bandit_Static_RoadkillMoney		= -100;						// The amount of Poptabs gained/lost for running over a bandit static gunner
 	DMS_Bandit_Static_RoadkillRep		= -500;						// The amount of Respect gained/lost for running over a bandit static gunner
 	DMS_Bandit_Static_RoadkillRank		= 30;
 	DMS_Bandit_Vehicle_RoadkillMoney	= -100;						// The amount of Poptabs gained/lost for running over a bandit vehicle crew member
-	DMS_Bandit_Vehicle_RoadkillRep		= -500;						// The amount of Respect gained/lost for running over a bandit vehicle crew member
+	DMS_Bandit_Vehicle_RoadkillRep		= -100;						// The amount of Respect gained/lost for running over a bandit vehicle crew member
 	DMS_Bandit_Vehicle_RoadkillRank		= 50;
 /* DonkeyPunchDMS Custom RoadKill Settings for Hero AI*/
 	DMS_Hero_Soldier_RoadkillMoney		= 20;						// The amount of Poptabs gained/lost for running over a hero soldier
@@ -384,13 +384,13 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_Hero_Vehicle_RoadkillRep		= 10;						// The amount of Respect gained/lost for running over a hero vehicle crew member
 	DMS_Hero_Vehicle_RoadkillRank		= -100;
 /* DonkeyPunchDMS Custom Roadkill Settings for Survivor AI*/
-	DMS_Survivor_Soldier_RoadkillMoney	= -200;						// The amount of Poptabs gained/lost for running over a Survivor soldier
-	DMS_Survivor_Soldier_RoadkillRep	= -200;						// The amount of Respect gained/lost for running over a Survivor soldier
-	DMS_Survivor_Soldier_RoadkillRank	= -200;
-	DMS_Survivor_Static_RoadkillMoney	= -200;						// The amount of Poptabs gained/lost for running over a Survivor static gunner
-	DMS_Survivor_Static_RoadkillRep		= -200;						// The amount of Respect gained/lost for running over a Survivor static gunner
-	DMS_Survivor_Static_RoadkillRank	= -200;
-	DMS_Survivor_Vehicle_RoadkillMoney	= -500;						// The amount of Poptabs gained/lost for running over a Survivor vehicle crew member
+	DMS_Survivor_Soldier_RoadkillMoney	= -100;						// The amount of Poptabs gained/lost for running over a Survivor soldier
+	DMS_Survivor_Soldier_RoadkillRep	= -100;						// The amount of Respect gained/lost for running over a Survivor soldier
+	DMS_Survivor_Soldier_RoadkillRank	= -100;
+	DMS_Survivor_Static_RoadkillMoney	= -100;						// The amount of Poptabs gained/lost for running over a Survivor static gunner
+	DMS_Survivor_Static_RoadkillRep		= -100;						// The amount of Respect gained/lost for running over a Survivor static gunner
+	DMS_Survivor_Static_RoadkillRank	= -100;
+	DMS_Survivor_Vehicle_RoadkillMoney	= -100;						// The amount of Poptabs gained/lost for running over a Survivor vehicle crew member
 	DMS_Survivor_Vehicle_RoadkillRep	= -100;						// The amount of Respect gained/lost for running over a Survivor vehicle crew member
 	DMS_Survivor_Vehicle_RoadkillRank	= -100;
 
@@ -403,8 +403,8 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_clear_AI_body_chance			= 50;						// Percentage chance that AI bodies will be cleared when they die
 	DMS_ai_disable_ramming_damage 		= true;						// Disables damage due to ramming into AI. !!!NOTE: THIS WILL NOT BE RELIABLE WITH "DMS_ai_offload_to_client"!!!
 	DMS_remove_roadkill					= true; 					// Remove gear from AI bodies that are roadkilled
-	DMS_remove_roadkill_chance			= 50;						// Percentage chance that roadkilled AI bodies will be deleted
-	DMS_explode_onRoadkill				= true;						// Whether or not to spawn an explosion when an AI gets run over. It will likely take out the 2 front wheels. Should help mitigate the ineffective AI vs. striders issue ;)
+	DMS_remove_roadkill_chance			= 75;						// Percentage chance that roadkilled AI bodies will be deleted
+	DMS_explode_onRoadkill				= false;						// Whether or not to spawn an explosion when an AI gets run over. It will likely take out the 2 front wheels. Should help mitigate the ineffective AI vs. striders issue ;)
 	DMS_RemoveNVG						= false;					// Remove NVGs from AI bodies
 
 	DMS_MaxAIDistance					= 500;						// The maximum distance an AI unit can be from a mission before he is killed. Helps with AI running away and forcing the mission to keep running. Set to 0 if you don't want it.
@@ -422,7 +422,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_ai_freezeCheckingDelay			= 15;						// How often (in seconds) DMS will check whether to freeze/un-freeze AI.
 	DMS_ai_freezeOnSpawn				= true;						// Whether or not to freeze an AI group when initially spawned.
 
-	DMS_ai_share_info					= false;					// Share info about killer
+	DMS_ai_share_info					= true;					// Share info about killer
 	DMS_ai_share_info_distance			= 25;						// The distance killer's info will be shared to other AI
 
 	DMS_ai_nighttime_accessory_chance	= 75;						// Percentage chance that AI will have a flashlight or laser pointer on their guns if spawned during nighttime

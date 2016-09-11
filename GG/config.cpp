@@ -2590,6 +2590,7 @@ class CfgExileArsenal
 	///////// Rockets /////////
 	class RPG32_F														{ quality = 4; price = 1500; };
 	class RPG32_HE_F													{ quality = 4; price = 1500; };
+	class RPG7_F														{ quality = 4; price = 1500; };
 		
 	///////// Chemlights & Flares /////////
 	class Chemlight_blue												{ quality = 1; price = 15; };
@@ -3096,9 +3097,9 @@ class CfgExileArsenal
 
 	///////// NIArms SG510 Rifles /////////
 	class hlc_rifle_amt 												{ quality = 2; price = 900; };
-	class hlc_rifle_sig5104 											{ quality = 1; price = 950; };
-	class hlc_rifle_STGW57 												{ quality = 1; price = 800; };
-	class hlc_rifle_stgw57_commando 									{ quality = 1; price = 850; };
+	class hlc_rifle_sig5104 											{ quality = 2; price = 950; };
+	class hlc_rifle_STGW57 												{ quality = 2; price = 800; };
+	class hlc_rifle_stgw57_commando 									{ quality = 2; price = 850; };
 	class hlc_rifle_stgw57_RIS 											{ quality = 2; price = 900; };
 	
 		///////// Pointer Attachments /////////
@@ -3275,15 +3276,15 @@ class CfgExileArsenal
 	class Exile_Item_FuelBarrelFull										{ quality = 1; price = 250; sellPrice = 125; };
 	class Exile_Item_WaterCanisterDirtyWater							{ quality = 1; price = 100; };
 	class Exile_Item_WaterCanisterEmpty									{ quality = 1; price = 50; };
-	class Exile_Item_JunkMetal											{ quality = 2; price = 400; sellPrice = 50; };
+	class Exile_Item_JunkMetal											{ quality = 2; price = 400; sellPrice = 25; };
 	class Exile_Item_LightBulb											{ quality = 1; price = 50; };
-	class Exile_Item_MetalBoard											{ quality = 2; price = 100; };
+	class Exile_Item_MetalBoard											{ quality = 2; price = 600; sellPrice = 75};
 	class Exile_Item_SafeKit											{ quality = 1; price = 10000; };
 	class Exile_Item_CodeLock											{ quality = 1; price = 5000; sellPrice = 1000; };
 	class Exile_Item_Laptop												{ quality = 2; price = 10000; sellPrice = 2000; };
 	class Exile_Item_BaseCameraKit										{ quality = 2; price = 5000; sellPrice = 1000; };
 	class Exile_Item_CamoTentKit										{ quality = 1; price = 250; };
-	class Exile_Item_MetalPole											{ quality = 2; price = 1200; };
+	class Exile_Item_MetalPole											{ quality = 2; price = 1200; sellPrice = 100};
 	class Exile_Item_MobilePhone										{ quality = 2; price = 1000; };
 	class Exile_Item_MetalScrews										{ quality = 1; price = 10; };
 	class Exile_Item_Cement												{ quality = 1; price = 100; };
@@ -6206,7 +6207,6 @@ class CfgTraderCategories
 			"hlc_smg_9mmar",
 			"hlc_smg_mp5sd5",
 			"hlc_smg_mp5sd6"
-			
 		};
 	};
 
@@ -6245,11 +6245,10 @@ class CfgTraderCategories
 
 	class AssaultRifles
 	{
-		name = "Assault Rifles";
+		name = "A3 Assault Rifles";
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
-			
 			"arifle_Katiba_F",
 			"arifle_Katiba_GL_F",
 			"arifle_Mk20_F",
@@ -6273,8 +6272,16 @@ class CfgTraderCategories
 			"arifle_SPAR_01_blk_F",
 			"arifle_SPAR_01_GL_blk_F",
 			"arifle_SPAR_02_blk_F",
-			"arifle_SPAR_03_blk_F",
-			// Niarms
+			"arifle_SPAR_03_blk_F"
+		};
+	};
+
+	class NIARMSAK
+	{
+		name = "NIARMS AK Style Rifles";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] = 
+		{
 			"hlc_rifle_ak12",
 			"hlc_rifle_ak12GL",
 			"hlc_rifle_aku12",
@@ -6292,6 +6299,17 @@ class CfgTraderCategories
 			"hlc_rifle_aks74_MTK",
 			"hlc_rifle_aks74u",
 			"hlc_rifle_aks74u_MTK",
+			"hlc_rifle_RK62",
+			"hlc_rifle_aek971"			
+		};
+	};
+
+	class NIARMSAUG
+	{
+		name = "NIARMS AUG Rifles";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] = 
+		{
 			"hlc_rifle_augsrcarb_b",
 			"hlc_rifle_augsrhbar_b",
 			"hlc_rifle_augsr_b",
@@ -6304,7 +6322,16 @@ class CfgTraderCategories
 			"hlc_rifle_auga2lsw_b",
 			"hlc_rifle_auga2_b",
 			"hlc_rifle_auga3_GL_B",
-			"hlc_rifle_auga3_b",
+			"hlc_rifle_auga3_b"			
+		};
+	};
+	
+	class NIARMSHK
+	{
+		name = "NIARMS HK Rifles";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] = 
+		{
 			"hlc_rifle_G36MLIC",
 			"hlc_rifle_G36A1",
 			"hlc_rifle_G36A1AG36",
@@ -6323,8 +6350,6 @@ class CfgTraderCategories
 			"hlc_rifle_G36V",
 			"hlc_rifle_G36VAG36",
 			"hlc_rifle_G36TAC",
-			"hlc_rifle_honeybadger",
-			"hlc_rifle_vendimus",
 			"hlc_rifle_g3sg1",
 			"hlc_rifle_g3a3",
 			"hlc_rifle_g3a3v",
@@ -6332,16 +6357,18 @@ class CfgTraderCategories
 			"hlc_rifle_g3ka4",
 			"hLC_Rifle_g3ka4_GL",
 			"hlc_rifle_hk33a2",
-			"hlc_rifle_hk33a2RIS",
-			"hlc_rifle_falosw",
-			"hlc_rifle_osw_GL",
-			"hlc_rifle_FAL5000",
-			"hlc_rifle_FAL5000Rail",
-			"hlc_rifle_FAL5061",
-			"hlc_rifle_FAL5061Rail",
-			"hlc_rifle_slr107u",
-			"hlc_rifle_RK62",
-			"hlc_rifle_aek971",
+			"hlc_rifle_hk33a2RIS"
+		};
+	};
+			
+	class NIARMSAR
+	{
+		name = "NIARMS AR Style Rifles";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] = 
+		{
+			"hlc_rifle_honeybadger",
+			"hlc_rifle_vendimus",
 			"hlc_rifle_RU5562",
 			"hlc_rifle_RU556",
 			"hlc_rifle_bcmjack",
@@ -6352,7 +6379,23 @@ class CfgTraderCategories
 			"hlc_rifle_m4m203",
 			"hlc_rifle_CQBR",
 			"hlc_rifle_samr2",
-			"hlc_rifle_SAMR",
+			"hlc_rifle_SAMR"	
+		};
+	};		
+	
+	class NIARMSFAL
+	{
+		name = "FN/SIG Rifles";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] = 
+		{
+			"hlc_rifle_falosw",
+			"hlc_rifle_osw_GL",
+			"hlc_rifle_FAL5000",
+			"hlc_rifle_FAL5000Rail",
+			"hlc_rifle_FAL5061",
+			"hlc_rifle_FAL5061Rail",
+			"hlc_rifle_slr107u",
 			"hlc_rifle_c1A1",
 			"hlc_rifle_LAR",
 			"hlc_rifle_SLR",
@@ -6364,8 +6407,8 @@ class CfgTraderCategories
 			"hlc_rifle_stgw57_commando",
 			"hlc_rifle_stgw57_RIS"			
 		};
-	};
-	
+	};		
+						
 	class Shotguns
 	{
 		name = "Shotguns";
@@ -6423,7 +6466,8 @@ class CfgTraderCategories
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
-			"MMG_02_black_F",
+			"MMG_01_tan_F",
+			"MMG_02_black_F"
 		};
 	};
 	
@@ -6437,17 +6481,17 @@ class CfgTraderCategories
 			"srifle_DMR_02_F",
 			"srifle_DMR_02_sniper_F",
 			"srifle_DMR_05_blk_F",
-			"srifle_GM6_F",
+			//"srifle_GM6_F",
 			"srifle_LRR_F",
 			//NIArms
 			"hlc_rifle_awcovert_BL",
-			"hlc_rifle_awmagnum_BL",
+			"hlc_rifle_awmagnum_BL"
 		};
 	};
 	
 	class SpecOpsMuzzle
 	{
-		name = "Sound Supressors";
+		name = "Spec OPs Supressors";
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
@@ -6464,7 +6508,7 @@ class CfgTraderCategories
 	
 	class SpecOpsAmmo
 	{
-		name = "Ammuntion";
+		name = "Spec OP's Ammunition";
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
@@ -6824,6 +6868,11 @@ class CfgTraders
 		{
 			"Handguns",
 			"Shotguns",
+			"NIARMSAK",
+			"NIARMSAUG",
+			"NIARMSHK",
+			"NIARMSAR",
+			"NIARMSFAL",
 			"SubMachineGuns",
 			"LightMachineGuns",
 			"AssaultRifles",
@@ -7897,7 +7946,7 @@ class CfgVehicleTransport
 };
 class CfgXM8
 {
-	extraApps[] = {"GG_VG","GG_CHVD","GG_Journal","GG_Quad","GG_Selfie","GG_Scan","GG_Chat","GG_Craft","GG_AirDrop","GG_kills"};
+	extraApps[] = {"GG_VG","GG_CHVD","GG_Journal","GG_Quad","GG_Selfie","GG_Scan","GG_Chat","GG_Craft","GG_AirDrop","GG_kills","GG_Bounties"};
 	
 	class GG_VG 
 	{
@@ -7986,7 +8035,13 @@ class CfgXM8
 	{
 		title = "Kill Board";
 		quickFunction = "call XG_killboardClient";
-		logo = "GG\ExAdClient\XM8\Apps\Kills\icon_Kills.paa"; // CHANGE
+		logo = "GG\ExAdClient\XM8\Apps\Kills\icon_Kills.paa";
+	};	
+	class GG_Bounties
+	{
+		title = "Bounties";
+		quickFunction = "createDialog 'MostWantedDialog';";
+		logo = "GG\ExAdClient\XM8\Apps\Bounties\icon_Bounty.paa";
 	};	
 }; 
 class CfgVon
