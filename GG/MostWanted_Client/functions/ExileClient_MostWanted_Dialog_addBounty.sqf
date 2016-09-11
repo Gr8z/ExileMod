@@ -16,7 +16,7 @@ _value = _value splitString ":";
 _price = (_value select 0);
 _respectdivisor = (_value select 1);
 _reason = "N/A";
-_playermoney = player getVariable ["ExileLocker", 0];
+_playermoney = player getVariable ["ExileMoney", 0];
 try
 {
     if (_victimNetID isEqualTo "") then
