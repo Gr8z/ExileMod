@@ -104,7 +104,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 1:{
 			if !(_puid in Scout1 + Scout2 + Scout3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Scout Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 
-			_cost = 568;
+			_cost = 799;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			["lockerRequest",[str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Scout Loadout 1</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
@@ -131,7 +131,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 2:{
 			if !(_puid in Scout2 + Scout3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Scout Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			
-			_cost = 978;
+			_cost = 1494;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			["lockerRequest",[str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Scout Loadout 2</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
@@ -141,7 +141,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addVest "V_TacVest_camo";
 			player addBackpack "B_Kitbag_rgr";
 			for "_i" from 1 to 3 do {player addItemToBackpack "11Rnd_45ACP_Mag";};
-            for "_i" from 1 to 3 do {player addItemToBackpack "30Rnd_9x21_Mag_SMG_02_Tracer_Red";};
+            for "_i" from 1 to 3 do {player addItemToBackpack "hlc_25Rnd_9x19mm_M882_AUG";};
 			player addWeapon "hlc_rifle_augpara";
 			player addPrimaryWeaponItem "hlc_muzzle_snds_a6AUG";
 			player addWeapon "hgun_Pistol_heavy_01_F";
@@ -161,12 +161,12 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 3:{
 			if !(_puid in Scout3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Scout Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			
-			_cost = 1446;
+			_cost = 2354;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			["lockerRequest",[str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Scout Loadout 3</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
-			player forceAddUniform "U_B_T_GhillieSuit_F";
+			player forceAddUniform "U_B_T_sniper_F";
 			player addHeadgear "TRYK_H_Booniehat_WOOD";
 			player addVest "V_PlateCarrier1_tna_F";
 			player addBackpack "B_Carryall_ghex_F";
@@ -194,7 +194,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 4:{
 			if !(_puid in Marksman1 + Marksman2 + Marksman3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Marksman Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			
-			_cost = 719;
+			_cost = 986;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			["lockerRequest",[str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Marksman Loadout 1</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
@@ -218,7 +218,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 5:{
 			if !(_puid in Marksman2 + Marksman3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Marksman Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			
-			_cost = 1240;
+			_cost = 1517;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			["lockerRequest",[str(_cost)]] call ExileClient_system_network_send;	
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Marksman Loadout 2</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
@@ -246,7 +246,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 6:{
 			if !(_puid in Marksman3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Marksman Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			
-			_cost = 1756;
+			_cost = 2390;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			["lockerRequest",[str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Marksman Loadout 3</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
@@ -278,7 +278,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 7:{
 			if !(_puid in Soldier1 + Soldier2 + Soldier3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Soldier Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			
-			_cost = 1062;
+			_cost = 970;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			["lockerRequest",[str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Soldier Loadout 1</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
@@ -304,7 +304,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 8:{
 			if !(_puid in Soldier2 + Soldier3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Soldier Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			
-			_cost = 4850;
+			_cost = 1407;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			["lockerRequest",[str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Soldier Loadout 2</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
@@ -332,7 +332,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 9:{
 			if !(_puid in Soldier3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Soldier Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			
-			_cost = 8470;
+			_cost = 1805;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			["lockerRequest",[str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Soldier Loadout 3</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
@@ -343,10 +343,10 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addBackpack "B_Carryall_oli";
 			for "_i" from 1 to 2 do {player addItemToVest "HandGrenade";};
 			for "_i" from 1 to 3 do {player addItemToBackpack "Exile_Magazine_7Rnd_45ACP";};
-			for "_i" from 1 to 3 do {player addItemToBackpack "hlc_30Rnd_556x45_B_AUG";};
+			for "_i" from 1 to 3 do {player addItemToBackpack "30Rnd_65x39_caseless_mag_Tracer";};
 			for "_i" from 1 to 3 do {player addItemToBackpack "1Rnd_HE_Grenade_shell";};
-			player addWeapon "hlc_rifle_auga3_GL";
-			player addPrimaryWeaponItem "optic_ERCO_khk_F";
+			player addWeapon "hlc_rifle_G36MLIAG36";
+			player addPrimaryWeaponItem "optic_arco_blk_F";
 			player addWeapon "Exile_Weapon_Colt1911";
 			player addWeapon "Binocular";
 			player addItemToUniform "Exile_Magazine_Swing";
@@ -364,7 +364,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 10:{
 			if !(_puid in Medic1 + Medic2 + Medic3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Medic Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			
-			_cost = 1440;
+			_cost = 874;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			["lockerRequest",[str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Medic Loadout 1</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
@@ -391,7 +391,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 11:{
 			if !(_puid in Medic2 + Medic3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Medic Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			
-			_cost = 5408;
+			_cost = 1492;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			["lockerRequest",[str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Medic Loadout 2</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
@@ -401,8 +401,8 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addVest "V_TacVest_blk";
 			player addBackpack "TRYK_B_Medbag_ucp";
 			for "_i" from 1 to 4 do {player addItemToBackpack "11Rnd_45ACP_Mag";};
-			for "_i" from 1 to 3 do {player addItemToBackpack "30Rnd_9x21_Mag";};
-			player addWeapon "hgun_PDW2000_F";
+			for "_i" from 1 to 3 do {player addItemToBackpack "hlc_30Rnd_9x19_B_MP5";};
+			player addWeapon "hlc_smg_MP5N";
 			player addPrimaryWeaponItem "optic_ACO_grn_smg";
 			player addWeapon "hgun_Pistol_heavy_01_F";
 			player addHandgunItem "optic_MRD";
@@ -421,7 +421,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 12:{
 			if !(_puid in Medic3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Medic Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			
-			_cost = 8745;
+			_cost = 1973;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			["lockerRequest",[str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Medic Loadout 3</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
@@ -431,8 +431,8 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addHeadgear "H_Beret_Colonel";
 			player addBackpack "B_ViperHarness_blk_F";
 			for "_i" from 1 to 3 do {player addItemToBackpack "11Rnd_45ACP_Mag";};
-			for "_i" from 1 to 3 do {player addItemToBackpack "30Rnd_65x39_caseless_mag";};
-			player addWeapon "arifle_MX_SW_Black_F";
+			for "_i" from 1 to 2 do {player addItemToBackpack "hlc_100rnd_556x45_EPR_G36";};
+			player addWeapon "hlc_rifle_MG36";
 			player addPrimaryWeaponItem "optic_ERCO_blk_F";
 			player addPrimaryWeaponItem "bipod_01_F_blk";
 			player addWeapon "hgun_Pistol_heavy_01_F";
@@ -454,7 +454,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 13:{
 			if !(_puid in Engineer1 + Engineer2 + Engineer3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Engineer Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			
-			_cost = 1823;
+			_cost = 824;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			["lockerRequest",[str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Engineer Loadout 1</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
@@ -467,6 +467,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addWeapon "hgun_Pistol_heavy_01_F";
 			player addHandgunItem "optic_MRD";
 			player addItemToUniform "Exile_Magazine_Swing";
+			player addItemTovest "HandGrenade";
 			player addItemToBackpack "Exile_Item_Bandage";
 			player addItemToBackpack "Exile_Item_MountainDupe";
 			player addItemToBackpack "Exile_Item_BeefParts";
@@ -481,22 +482,22 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 14:{
 			if !(_puid in Engineer2 + Engineer3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Engineer Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			
-			_cost = 5145;
+			_cost = 1443;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			["lockerRequest",[str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Engineer Loadout 2</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
-			player forceAddUniform "U_B_GEN_Soldier_F";
-			player addHeadgear "H_MilCap_gen_F";
-			player addVest "V_TacVest_gen_F";
+			player forceAddUniform "TRYK_U_B_OD_BLK";
+			player addGoggles "G_Balaclava_blk";
+			player addVest "V_TacVestIR_blk";
 			player addBackpack "TRYK_B_Kitbag_blk";
 			for "_i" from 1 to 3 do {player addItemToBackpack "11Rnd_45ACP_Mag";};
-			for "_i" from 1 to 3 do {player addItemToBackpack "30Rnd_45ACP_Mag_SMG_01";};
-			player addWeapon "SMG_01_F";
-			player addPrimaryWeaponItem "optic_Aco_smg";
+			for "_i" from 1 to 3 do {player addItemToBackpack "hlc_10rnd_12g_buck_S12";};
+			player addWeapon "hlc_rifle_saiga12k";
 			player addWeapon "hgun_Pistol_heavy_01_F";
 			player addHandgunItem "optic_MRD";
 			player addItemToUniform "Exile_Magazine_Swing";
+			player addItemTovest "HandGrenade";
 			player addItemToBackpack "Exile_Item_EnergyDrink";
 			player addItemToBackpack "Exile_Item_InstaDoc";
 			player addItemToBackpack "Exile_Item_GloriousKnakworst";
@@ -512,14 +513,14 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 15:{
 			if !(_puid in Engineer3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Engineer Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 			
-			_cost = 7650;
+			_cost = 2226;
 			if (_cost > _locker) then {_noMoneyText spawn bis_fnc_dynamictext} else {
 			["lockerRequest",[str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Engineer Loadout 3</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
-			player forceAddUniform "U_B_GEN_Soldier_F";
+			player forceAddUniform "TRYKU_B_BLKTANR_CombatUniformTshirt";
 			player addVest "V_PlateCarrier1_blk";
-			player addHeadgear "H_Beret_gen_F";
+			player addHeadgear "TRYK_H_PASGT_BLK";
 			player addBackpack "B_ViperHarness_blk_F";
 			for "_i" from 1 to 3 do {player addItemToBackpack "11Rnd_45ACP_Mag";};
 			for "_i" from 1 to 2 do {player addItemToBackpack "hlc_200rnd_556x45_M_SAW";};
@@ -530,7 +531,8 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addWeapon "hgun_Pistol_heavy_01_F";
 			player addHandgunItem "optic_MRD";
 			player addItemToUniform "Exile_Magazine_Swing";
-			player addItemToVest "Exile_Item_InstaDoc";
+			player addItemTovest "HandGrenade";
+			player addItemToVest "Exile_Item_Vishpirin";
 			player addItemToVest "Exile_Item_PlasticBottleCoffee";
 			player addItemToVest "Exile_Item_EMRE";
 			player addItemToVest "Exile_Item_Matches";
