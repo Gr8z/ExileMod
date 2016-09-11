@@ -9,5 +9,5 @@ private["_display","_text","_money"];
 disableSerialization;
 _display = uiNamespace getVariable ["MostWantedDialog",displayNull];
 _text = _display displayCtrl 2501;
-_money = player getVariable ["ExileMoney",0];
+_money = player getVariable ["ExileLocker",0];
 _text ctrlSetStructuredText parseText format["<t align='right' valign='middle' size='0.8'>POPTABS: %1 | RESPECT: %2</t>",_money,ExileClientPlayerScore];

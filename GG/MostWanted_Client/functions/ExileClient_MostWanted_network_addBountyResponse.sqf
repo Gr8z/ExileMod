@@ -8,7 +8,7 @@
 private["_money","_respect","_moneyCost","_respectCost","_display"];
 _money = parseNumber(_this select 0);
 _respect = parseNumber(_this select 1);
-_moneyCost = _money - (player getVariable ["ExileMoney",0]);
+_moneyCost = _money - (player getVariable ["ExileLocker",0]);
 _respectCost = _respect - ExileClientPlayerScore;
 ExileClientPlayerScore = _respect;
 ["SuccessTitleAndText", ["Bounty successfully set!", format["-%1 poptabs -%2 respect",_moneyCost,_respectCost]]] call ExileClient_gui_toaster_addTemplateToast;
