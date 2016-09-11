@@ -203,7 +203,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addVest "V_Chestrig_rgr";
 			player addHeadgear "H_Bandanna_khk_hs";
 			player addBackpack "B_AssaultPack_rgr";
-			for "_i" from 1 to 2 do {player addItemToBackpack "30Rnd_556x45_Stanag_red";};
+			for "_i" from 1 to 2 do {player addItemToBackpack "hlc_30rnd_556x45_EPR";};
 			player addWeapon "hlc_rifle_SAMR";
 			player addItemToUniform "Exile_Magazine_Swing";
 			player addItemToBackpack "Exile_Item_MountainDupe";
@@ -518,7 +518,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			["lockerRequest",[str(_cost)]] call ExileClient_system_network_send;
 			[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Engineer Loadout 3</t><br/><img size='0.6' image='GG\images\icons\poptab_ca.paa'/><t size='0.7'font='OrbitronLight'>%1</t>",_cost],0,0,10,0] spawn bis_fnc_dynamictext;
 
-			player forceAddUniform "TRYKU_B_BLKTANR_CombatUniformTshirt";
+			player forceAddUniform "TRYK_U_B_BLKTANR_CombatUniformTshirt";
 			player addVest "V_PlateCarrier1_blk";
 			player addHeadgear "TRYK_H_PASGT_BLK";
 			player addBackpack "B_ViperHarness_blk_F";
