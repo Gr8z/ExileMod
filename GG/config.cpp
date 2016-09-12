@@ -1780,10 +1780,6 @@ class CfgExileArsenal
 	
 	///////// Stealth Helmets /////////
 	class H_HelmetB_TI_tna_F											{ quality = 2; price = 500; };
-	
-	///////// Special Purpose Helmets 	/////////
-	class H_HelmetO_ViperSP_ghex_F										{ quality = 4; price = 7500; };
-	class H_HelmetO_ViperSP_hex_F										{ quality = 4; price = 7500; };
 		
 	///////// Night Vision Goggles /////////
 	class NVGoggles														{ quality = 1; price = 250; };
@@ -6708,9 +6704,7 @@ class CfgTraderCategories
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
-			"H_HelmetB_TI_tna_F",
-			"H_HelmetO_ViperSP_hex_F",
-			"H_HelmetO_ViperSP_ghex_F"
+			"H_HelmetB_TI_tna_F"
 		};
 	};
 	
