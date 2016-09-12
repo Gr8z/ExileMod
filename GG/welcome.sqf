@@ -1,5 +1,5 @@
 [] spawn {    
-	waitUntil {player == player};
+	waitUntil {!isNull findDisplay 46 && !isNil 'ExileClientLoadedIn' && getPlayerUID player != ''};
 
     // Welcome messages
     private ["_worldName","_playerUID","_announcepay","_buildRights","_flag","_dueDate","_nextDueDate","_msg","_name","_missingModList"];
@@ -13,7 +13,6 @@
     [["Visit Us At:","www.GHOSTZGAMERZ.com","For Rules","Forums","and Donor Perks","",""], .5, .85] call BIS_fnc_typeText;
 
     // Territory Information
-    waitUntil {!((getPlayerUID player) isEqualTo '')};
     _playerUID = getPlayerUID player;
     _announcepay = [];
     {
