@@ -12,7 +12,7 @@
 	'ahmed-banna@hotmail.com'
 	
 	Last download was on:
-	'06-Sep-2016 18-37-46';
+	'12-Sep-2016 13-05-07';
 */
 class Cfg_infiSTAR_settings {
 /*
@@ -41,15 +41,6 @@ OPEN_ADMIN_MENU_KEY = 0x3B;
 HIDE_FROM_PLAYERS = false;				/* So no normal can see it :)! */
 announce_adminstate_changed = false;	/* whenever you type !admin as an admin it will announce that you logged out or in to all players on the server! */
 use_html_load_on_adminmenu = false;		/* default and recommended is TRUE. infiSTAR updates and news are announced in the top right corner when you open the AdminMenu if this is true! */
-
-/*
-	DLL SETTINGS
-	"" is the Arma3Server directory
-	"infiSTAR_Logs/" would be a folder called "infiSTAR_Logs" within your Arma3Server directory.
-	You need to create the defined folder if it doesn't exist. If you don't create it - the DLL won't be able to write any Log files ! ! !
-*/
-LOG_PATH = "Logs/";
-
 
 
 
@@ -146,13 +137,15 @@ hiddenSuperAdmin[] =
 adminUIDandAccess[] =
 {
 	{
-		{"76561198137100220", // Deadskin
+		{
+		 "76561198137100220", // Deadskin
 		 "76561197978528230", // Dark
 		 "76561198056028211", // Nasty
 		 "76561198133936962", // Wrice4
 		 "76561198021389971", // thirdhero
 		 //Add UID's Above - Don't forget the comma!
-		"0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
+		"0"
+		},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
 			"Teleport On Map Click","Teleport - Target To Me","Teleport - Me To Target",
 			"Teleport In Facing Direction (10m steps)","Drag and drop units on the map",
@@ -167,14 +160,19 @@ adminUIDandAccess[] =
 			"Spawn Ammo","Login as Arma Admin","BIS FreeRoam Cam (works with ESP)","FreeRoam Cam (does not work with ESP)",
 			"Request Steam Name","showinfo",
 			"UnlockLockVehicle","Copy Worldspace(coords) to RPT & Chat",
+			
 			"Spawn Vehicles","Spawn Persistent Vehicles",
+			
 			"Kill","Explode","Force Disconnect",
 			"Kick (Silent)","Kick (Announce)","Ban (Silent)","Ban (Announce)","TempBan (Silent)","TempBan (Announce)",
+			
 			"AdminConsole",
 			"DebugConsole",
 			"Execute code on server (DebugConsole)","Execute code global (DebugConsole)","Execute code local (DebugConsole)",
 			"Lock Server (DebugConsole)","UnLock Server (DebugConsole)","Ban (DebugConsole)","Kick (DebugConsole)",
+			
 			"Change Money on Player","Change Money on Bank","Change Respect",
+			
 			"MapIcons",
 			"MapIcons: Buildings","MapIcons: Flags",
 			"MapIcons: Player","MapIcons: DeadPlayer","MapIcons: Vehicles",
@@ -183,13 +181,15 @@ adminUIDandAccess[] =
 			"Arsenal",	// Adds Arsenal to the mousewheel actions if you press "," on the Numpad!
 			"Unconscious","Remove Unconscious",
 			"Light",	// Zeus like Lighting from the Air strikes down at selected player / target / location - use ctrl+1 or the menu to use it!
+			
 			"Spawn Zombie on Target Location!",	// This only works when you are using ExilZ / RyanZombies
 			
 			""
 		}
 	},
 	{
-		{"76561197960289679", //TangoWhiskey
+		{
+		"76561197960289679", //TangoWhiskey
 		 "76561198088251390", // SIX
 		 "76561197979611157", // Clanzoucu
 		 "76561198274767971", // CanadianFrodo
@@ -197,7 +197,8 @@ adminUIDandAccess[] =
 		 "76561198036004541", // Demen
 		 "76561197987069300", // Shroombear
 		 "76561198090941099", // Josh
-		 "0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
+		 "0"
+		 },	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
 			"Teleport On Map Click","Teleport - Target To Me","Teleport - Me To Target",
 			"Teleport In Facing Direction (10m steps)",
@@ -255,6 +256,32 @@ USE_LOG_TO_DATABASE = false;
 /****************************************************************************************************/
 /********************OPTIONS ABOVE REQUIRE CHANGES TO YOUR EXILE SERVER DATABASE!********************/
 /****************************************************************************************************/
+/*
+	ARMA_LOG.dll SETTINGS
+	LOG_PATH = ""; is the Arma3Server directory
+	LOG_PATH = "infiSTAR_Logs/"; would be a folder called "infiSTAR_Logs" within your Arma3Server directory.
+	You need to create the defined folder if it doesn't exist. If you don't create it - the DLL won't be able to write any Log files ! ! !
+*/
+LOG_PATH = "Logs/";
+WRITE_LOG_FILES = true;
+
+
+/*
+	What is this?
+	infiSTAR has a global blacklist so hackers don't jump around servers and learn how to bypass infiSTAR.
+	There was a situation where a group of people asked why their friend could not join the server.
+	Well he was globally banned for hacking.. anyways - if you as a server admin want him to get in even tho he is globally banned,
+	just ask for his UID and add the UID in the array below.
+*/
+UID_SKIPBLACKLIST[] =
+{
+	"UID1","UID2","UID3","..."
+};
+
+
+
+
+
 
 
 
@@ -325,13 +352,71 @@ experimental_dupe_check = true;
 	re-assigning "InventoryOpened" eventhandler to stop glitch open a locked safe
 */
 stopSafeGlitchAndCorpseDupe = true;
+
+
+/*
+	checks if player tries to dupe using the "disconnect trick" -> sends a ping to the server whenever a player opens the escape menu
+*/
+disconnect_dupe_check = true;
+
+
+
+
+/*
+	if a player is near a flag where he has no buildrights, he can't vault/getover/lean close to buildingparts (to prevent glitching!)
+*/
+block_glitch_actions = false;
+
+
+/*
+	checks if a players tries to glitch through a wall (if player is allowed to build in that territory, it will not be logged.)
+*/
+wall_glitch_object = true;
+
+
+/*
+	stops players from glitching into bases using "eject" or "getout" of a vehicle..
+*/
+wall_glitch_vehicle = true;
 /****************************************************************************************************/
 /***************************FIXES DUE TO ARMA BEING BROKEN - ABOVE***********************************/
 /****************************************************************************************************/
+/* ********************************************************************************* */
+/*            many checks should be set to true instead of false.                    */
+/* ********************************************************************************* */
+LVC = true;			/* Local Vehicle Check - ALWAYS HAVE THIS TRUE! */
+URC = false;			/* Check unitRecoilCoefficient and reset default unitRecoilCoefficient */
+CAP = false;		/* Check Actions Plr - "Actions: xxx/xxx possible scroll menu hack (or you added custom actions..)" */
+KCM = false;			/* Just close ALL CommandingMenus */
+CMC = true;		/* Check for CommandingMenus that are not in the allowedCommandingMenus array */
+allowedCommandingMenus[] = {"#user:example","#user:example2"};
 
-/****************************************************************************************************/
-/***************************NOT FULLY TESTED - NEW CHECK - BELOW*************************************/
-/****************************************************************************************************/
+
+checkFilePatchingEnabled = true;	/* checks if filepatching is enabled on the client (if it is, the client could inject any script based hack easily) */
+check_Notifications = false;		/* checks if BIS_fnc_showNotification was used, as it is used with many hacks - some custom addons however use them too. */
+check_doors_n_gates = true;			/* Fixes Hatches (so when they are locked, they stay closed..) and closes every door that's locked + keeps closing it in case somebody tries to hack open it! */
+checkHiddenObjects = true;			/* checks if there is hidden objects close to the player (hidden objects could be walked through..) */
+attach_to_check = true;				/* logs and detaches attached vehicles that are close.. basically completely disallow attaching of vehicles! */
+slingload_check = true;				/* forbid sling loading / rope attaching a vehicle with a crew */
+
+
+checkPopTabIncrease = true;
+LogPopTabIncrease = 15000;			/* Only if checkPopTabIncrease = true; logs if poptabs increased by x within ~50 seconds */
+
+checkRespectIncrease = true;
+LogRespectIncrease = 5000;			/* Only if checkRespectIncrease = true; logs if respect increased by x within ~50 seconds */
+
+
+
+/* Check for Map Menu & Map Sub-Menu */
+CMM = false;
+maxMapMenuEntries = 6;	/* "Map Menu has been changed x entries found - Texts: y" incase you want to add some briefing to your map menu. Only matters if you have CMM = true; */
+
+/* if steam api.steampowered.com is working, this might be a nice feature */
+check_steam_ban = false;	/* will announce and log steambanned players - using GetPlayerBans v1 */
+ban_for_steam_ban = false;	/* if "check_steam_ban = true;" then steambanned players will get banned from your Arma server! */
+
+
 /*
 	if you have any addon/mod that modifies any of the named handlers below, you need to put that one to  true
 	most mods don't do that - so keep it FALSE.
@@ -349,51 +434,7 @@ MPH = false;
 /*
 	This will check from serverside if a playerobject received damage but did not take it
 */
-GodModeCheck = false;
-/****************************************************************************************************/
-/****************************NOT FULLY TESTED - NEW CHECK - ABOVE************************************/
-/****************************************************************************************************/
-
-/* ********************************************************************************* */
-/*            many checks should be set to true instead of false.                    */
-/* ********************************************************************************* */
-LVC = true;			/* Local Vehicle Check - ALWAYS HAVE THIS TRUE! */
-URC = false;			/* Check unitRecoilCoefficient and reset default unitRecoilCoefficient */
-CAP = false;		/* Check Actions Plr - "Actions: xxx/xxx possible scroll menu hack (or you added custom actions..)" */
-
-
-KCM = false;			/* Just close ALL CommandingMenus */
-CMC = true;		/* Check for CommandingMenus that are not in the allowedCommandingMenus array */
-allowedCommandingMenus[] = {"#user:example","#user:example2"};
-
-
-check_Notifications = false;		/* checks if BIS_fnc_showNotification was used, as it is used with many hacks - some custom addons however use them too. */
-disconnect_dupe_check = true;		/* checks if player tries to dupe using the "disconnect trick" -> sends a ping to the server whenever a player opens the escape menu */
-block_glitch_actions = true;		/* if a player is near a flag where he has no buildrights, he can't vault/getover/lean close to buildingparts (to prevent glitching!) */
-wall_glitch_object = true;			/* checks if a players tries to glitch through a wall (if player is allowed to build in that territory, it will not be logged.) */
-wall_glitch_vehicle = true;			/* stops players from glitching into bases using "eject" or "getout" of a vehicle.. */
-check_doors_n_gates = true;			/* Fixes Hatches (so when they are locked, they stay closed..) and closes every door that's locked + keeps closing it in case somebody tries to hack open it! */
-checkHiddenObjects = true;			/* checks if there is hidden objects close to the player (hidden objects could be walked through..) */
-attach_to_check = true;				/* logs and detaches attached vehicles that are close.. basically completely disallow attaching of vehicles! */
-slingload_check = true;				/* forbid sling loading / rope attaching a vehicle with a crew */
-
-checkPopTabIncrease = true;
-LogPopTabIncrease = 15000;			/* Only if checkPopTabIncrease = true; logs if poptabs increased by x within ~50 seconds */
-
-checkRespectIncrease = true;
-LogRespectIncrease = 5000;			/* Only if checkRespectIncrease = true; logs if respect increased by x within ~50 seconds */
-
-
-checkFilePatchingEnabled = true;	/* checks if filepatching is enabled on the client (if it is, the client could inject any script based hack easily) */
-
-
-/* Check for Map Menu & Map Sub-Menu */
-CMM = false;
-maxMapMenuEntries = 6;	/* "Map Menu has been changed x entries found - Texts: y" incase you want to add some briefing to your map menu. Only matters if you have CMM = true; */
-
-/* if steam api.steampowered.com is working, this might be a nice feature */
-check_steam_ban = false;	/* will announce and log steambanned players - using GetPlayerBans v1 */
-ban_for_steam_ban = false;	/* if "check_steam_ban = true;" then steambanned players will get banned from your Arma server! */
+GodModeCheck = true;
 
 
 
@@ -450,12 +491,25 @@ badbanChat[] = {};
 badNamesFull[] = {"grim"};
 
 /* Not allowed Names on server. Example: badNamesPartial[] = {"THE"}; would kick all players with names like "the car" as it includes "THE" (not case sensitive) */
-badNamesPartial[] = {"admin","thirtysix","adolf","le hippo","nigger"};
+badNamesPartial[] = {"admin","thirtysix","adolf","le hippo"};
 
 
 /* Not allowed Group Names on server. Example: badGroupNames[] = {"THE"}; would rename all groups with names like "the car" as it includes "THE" (not case sensitive) */
-badGroupNames[] = {"admin","Ghostz Gamerz"};
+badGroupNames[] = {"admin"};
 
+
+
+/*
+	if somebody talks on one of the following channels, his channel will be switched to "direct" channel
+	0 = Global
+	1 = Side
+	2 = Command
+	3 = Group
+	4 = Vehicle
+	5 = Direct <-- this is where people get switched too if they talk in one of the blacklisted channels!
+	6-15 = Custom Radio (see radioChannelCreate)
+*/
+disAllowVon[] = {1,2};
 
 
 /* badIDDsToKick will be checked before badIDDsToClose, badIDDsToClose will be checked before allowedIDDs */
@@ -467,7 +521,7 @@ badIDDsToClose[] =
 {
 	2,3,7,17,19,25,26,27,28,29,30,31,32,37,40,41,43,44,45,51,52,53,56,74,85,
 	106,126,127,132,146,147,150,151,152,153,154,155,159,162,164,262,
-	314,632,1320,2121,148,163,169,157,69,156,165,166,167,312,1321,2727
+	314,632,1320,2121,148,163,129,169,157,69,156,165,166,167,312,1321,2727
 };
 
 /* Use IDD White-List ? */ UDW = false;
@@ -554,7 +608,7 @@ ForbiddenVehicles[] =
 LocalWhitelist[] =
 {
 	"O_HMG_01_weapon_F","O_HMG_01_F","O_HMG_01_support_F","I_UavTerminal","I_UAV_01_backpack_F",
-	"Exile_Bike_OldBike"
+	"Exile_Bike_OldBike","B_HMG_01_F","B_HMG_01_high_F"
 };
 
 
@@ -601,11 +655,9 @@ allSupportBoxes[] =
 	{
 		"Support-Box1",
 		{
-		
 			{"Exile_Item_Codelock",5},{"Exile_Item_DuctTape",5},{"Exile_Item_InstaDoc",5},
 			{"Exile_Item_FortificationUpgrade",50},{"Exile_Item_GloriousKnakworst_Cooked",10},
 			{"Exile_Item_PlasticBottleFreshWater",10},{"Exile_Item_SafeKit",5}
-			
 		}
 	},
 	{
@@ -624,8 +676,13 @@ allSupportBoxes[] =
 			{"Exile_Item_WoodDoorKit",20},{"Exile_Item_WoodWallKit",60},
 			{"Exile_Item_WoodWindowKit",10},{"Exile_Item_WoodFloorKit",60}
 		}
+	},
+	{
+		"Support-Box4",
+		{
+			"ItemMap",{"ItemGPS",5},"ItemWatch"
+		}
 	}
-	
 };
 
 

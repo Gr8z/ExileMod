@@ -12,7 +12,7 @@
 	'ahmed-banna@hotmail.com'
 	
 	Last download was on:
-	'06-Sep-2016 18-37-46';
+	'12-Sep-2016 13-05-07';
 	
 	NOTE:
 	THIS FILE SHOULD NOT BE TOUCHED UNLESS YOU REALLY KNOW WHAT YOU ARE DOING!
@@ -162,7 +162,6 @@ _OPEN_ADMIN_MENU_KEY = ["OPEN_ADMIN_MENU_KEY",0x3B] call fnc_infiSTAR_cfg;
 _HIDE_FROM_PLAYERS = ["HIDE_FROM_PLAYERS",false] call fnc_infiSTAR_cfg;
 _announce_adminstate_changed = ["announce_adminstate_changed",false] call fnc_infiSTAR_cfg;
 _use_html_load_on_adminmenu = ["use_html_load_on_adminmenu",true] call fnc_infiSTAR_cfg;
-LOG_PATH = ["LOG_PATH",""] call fnc_infiSTAR_cfg;
 _LogAdminActions = ["LogAdminActions",true] call fnc_infiSTAR_cfg;
 _enableIngameLogs = ["enableIngameLogs",true] call fnc_infiSTAR_cfg;
 _needAdminNameTag = ["needAdminNameTag",false] call fnc_infiSTAR_cfg;
@@ -185,13 +184,18 @@ _adminUIDandAccess = ["adminUIDandAccess",[]] call fnc_infiSTAR_cfg;
 
 _USE_DATABASE_WHITELIST = ["USE_DATABASE_WHITELIST",false] call fnc_infiSTAR_cfg;
 _USE_LOG_TO_DATABASE = ["USE_LOG_TO_DATABASE",false] call fnc_infiSTAR_cfg;
+LOG_PATH = ["LOG_PATH",""] call fnc_infiSTAR_cfg;
+_WRITE_LOG_FILES = ["WRITE_LOG_FILES",false] call fnc_infiSTAR_cfg;
+
+_UID_SKIPBLACKLIST = ["SKIPBLACKLIST",[]] call fnc_infiSTAR_cfg;
+
 _USE_UID_WHITELIST = ["USE_UID_WHITELIST",false] call fnc_infiSTAR_cfg;
 _UID_WHITELIST = ["UID_WHITELIST",[]] call fnc_infiSTAR_cfg;
 
 
 _ExileDevFriendlyMode = ["ExileDevFriendlyMode",false] call fnc_infiSTAR_cfg;
-_ESCMNUTOP = ["ESCMNUTOP","AntiHack & AdminTools"] call fnc_infiSTAR_cfg;
-_ESCMNUBOT = ["ESCMNUBOT","by infiSTAR.de"] call fnc_infiSTAR_cfg;
+_ESCMNUTOP = ["ESCMNUTOP","[GG]Exile Tanoa Alpha"] call fnc_infiSTAR_cfg;
+_ESCMNUBOT = ["ESCMNUBOT","by [GG] GhostzGamerz"] call fnc_infiSTAR_cfg;
 _BRIEFING_MSG = ["BRIEFING_MSG",false] call fnc_infiSTAR_cfg;
 _HTML_LOAD_URL = ["HTML_LOAD_URL",""] call fnc_infiSTAR_cfg;
 _ENABLE_PRIVATE_CHAT_MENU = ["ENABLE_PRIVATE_CHAT_MENU",false] call fnc_infiSTAR_cfg;
@@ -214,13 +218,11 @@ _SVD = ["SVD",100] call fnc_infiSTAR_cfg;
 _fix_uniform_and_vest = ["fix_uniform_and_vest",false] call fnc_infiSTAR_cfg;
 _experimental_dupe_check = ["experimental_dupe_check",false] call fnc_infiSTAR_cfg;
 _stopSafeGlitchAndCorpseDupe = ["stopSafeGlitchAndCorpseDupe",false] call fnc_infiSTAR_cfg;
+_disconnect_dupe_check = ["disconnect_dupe_check",false] call fnc_infiSTAR_cfg;
 
-
-_useCustomFiredEventHandler = ["useCustomFiredEventHandler",false] call fnc_infiSTAR_cfg;
-_useCustomHandeDamageHandler = ["useCustomHandeDamageHandler",false] call fnc_infiSTAR_cfg;
-_MPH = ["MPH",false] call fnc_infiSTAR_cfg;
-_GodModeCheck = ["GodModeCheck",false] call fnc_infiSTAR_cfg;
-
+_block_glitch_actions = ["block_glitch_actions",false] call fnc_infiSTAR_cfg;
+_wall_glitch_object = ["wall_glitch_object",false] call fnc_infiSTAR_cfg;
+_wall_glitch_vehicle = ["wall_glitch_vehicle",false] call fnc_infiSTAR_cfg;
 
 _URC = ["URC",true] call fnc_infiSTAR_cfg;
 _LVC = ["LVC",true] call fnc_infiSTAR_cfg;_LVC=true;
@@ -232,11 +234,8 @@ _allowedCommandingMenus = ["allowedCommandingMenus",[]] call fnc_infiSTAR_cfg;
 _allowedCommandingMenus = _allowedCommandingMenus - ["#user:example"];
 _allowedCommandingMenus = _allowedCommandingMenus - ["#user:example2"];
 
+_checkFilePatchingEnabled = ["checkFilePatchingEnabled",true] call fnc_infiSTAR_cfg;
 _check_Notifications = ["check_Notifications",false] call fnc_infiSTAR_cfg;
-_disconnect_dupe_check = ["disconnect_dupe_check",false] call fnc_infiSTAR_cfg;
-_block_glitch_actions = ["block_glitch_actions",false] call fnc_infiSTAR_cfg;
-_wall_glitch_object = ["wall_glitch_object",false] call fnc_infiSTAR_cfg;
-_wall_glitch_vehicle = ["wall_glitch_vehicle",false] call fnc_infiSTAR_cfg;
 _check_doors_n_gates = ["check_doors_n_gates",false] call fnc_infiSTAR_cfg;
 _checkHiddenObjects = ["checkHiddenObjects",true] call fnc_infiSTAR_cfg;
 _attach_to_check = ["attach_to_check",false] call fnc_infiSTAR_cfg;
@@ -245,11 +244,15 @@ _checkPopTabIncrease = ["checkPopTabIncrease",false] call fnc_infiSTAR_cfg;
 _LogPopTabIncrease = ["LogPopTabIncrease",15000] call fnc_infiSTAR_cfg;
 _checkRespectIncrease = ["checkRespectIncrease",false] call fnc_infiSTAR_cfg;
 _LogRespectIncrease = ["LogRespectIncrease",5000] call fnc_infiSTAR_cfg;
-_checkFilePatchingEnabled = ["checkFilePatchingEnabled",true] call fnc_infiSTAR_cfg;
 _CMM = ["CMM",true] call fnc_infiSTAR_cfg;
 _maxMapMenuEntries = ["maxMapMenuEntries",6] call fnc_infiSTAR_cfg;
 _check_steam_ban = ["check_steam_ban",false] call fnc_infiSTAR_cfg;
 _ban_for_steam_ban = ["ban_for_steam_ban",false] call fnc_infiSTAR_cfg;
+
+_useCustomFiredEventHandler = ["useCustomFiredEventHandler",false] call fnc_infiSTAR_cfg;
+_useCustomHandeDamageHandler = ["useCustomHandeDamageHandler",false] call fnc_infiSTAR_cfg;
+_MPH = ["MPH",false] call fnc_infiSTAR_cfg;
+_GodModeCheck = ["GodModeCheck",false] call fnc_infiSTAR_cfg;
 
 _UAT = ["UAT",true] call fnc_infiSTAR_cfg;
 _allowTPcfg = (getArray(configfile >> "Cfg_infiSTAR_settings" >> "allowTP" >> "custom"));
@@ -264,6 +267,10 @@ _badbanChat = ["badbanChat",[]] call fnc_infiSTAR_cfg;
 _badNamesFull = ["badNamesFull",[]] call fnc_infiSTAR_cfg;
 _badNamesPartial = ["badNamesPartial",[]] call fnc_infiSTAR_cfg;
 _badGroupNames = ["badGroupNames",[]] call fnc_infiSTAR_cfg;
+
+_disAllowVon = ["disAllowVon",[]] call fnc_infiSTAR_cfg;
+_disAllowVon = _disAllowVon - [5];
+
 _badIDDsToKick = ["badIDDsToKick",[]] call fnc_infiSTAR_cfg;
 _badIDDsToClose = ["badIDDsToClose",[]] call fnc_infiSTAR_cfg;
 _UDW = ["UDW",true] call fnc_infiSTAR_cfg;
@@ -314,7 +321,6 @@ fnc_CompilableString = {
 };
 fnc_CompilableString = compileFinal ([fnc_CompilableString] call fnc_CompilableString);
 publicVariable "fnc_CompilableString";
-_testserver = true;
 
 
 
@@ -333,6 +339,7 @@ fnc_get_exileObjName = compileFinal "
 	if(alive _this)then{name _this}else{_this getVariable['ExileName','']}
 ";
 publicVariable "fnc_get_exileObjName";
+fnc_infiSTAR_getName = fnc_get_exileObjName;
 
 
 fn_onPlayerTake = compileFinal "

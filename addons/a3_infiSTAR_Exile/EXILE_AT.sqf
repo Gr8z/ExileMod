@@ -9,7 +9,7 @@
 	Arma AntiHack & AdminTools - infiSTAR.de
 */
 comment 'Antihack & AdminTools - Christian Lorenzen - www.infiSTAR.de';
-VERSION_DATE_IS = '06-Sep-2016 18-37-46#214';
+VERSION_DATE_IS = '12-Sep-2016 13-05-07#214';
 infiSTAR_customFunctions = [];
 _configClasses = "true" configClasses (configfile >> "CfgCustomFunctions");
 {
@@ -3096,9 +3096,12 @@ fnc_get_reason = {
 				[''''ErrorTitleAndText'''', [''''infiSTAR.de'''', _text]] call ExileClient_gui_toaster_addTemplateToast;
 			'',_TNAME,_what];
 			[_code] call admin_d0;
+		}
+		else
+		{
+			_log = format[''%4 %1(%2): %3'',_TNAME,_TUID,_txt,_what];
+			_log call FN_SHOW_LOG;
 		};
-		_log = format[''%4 %1(%2): %3'',_TNAME,_TUID,_txt,_what];
-		_log call FN_SHOW_LOG;
 	true;'];
 	_ctrl ctrlCommit 0;
 	_ctrl = [_display,'RSCButton',7338] call fnc_createctrl;
