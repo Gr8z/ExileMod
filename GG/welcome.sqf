@@ -36,7 +36,7 @@
     }
     forEach (allMissionObjects "Exile_Construction_Flag_Static");
     sleep 2;
-    _announcepay pushBack ["","","",""];
+    _announcepay pushBack [" "," "," "," "];
     if !(count _announcepay == 0) then{
             [_announcepay, -.5, .85] call BIS_fnc_typeText;
     };
@@ -62,16 +62,12 @@
     };
 
     if (_missingMods) then {
-        _msg = "Please Download/Load these Mods to fully enjoy your experience on this server."
-        _missingModList pushBack _msg;
-        _missingModList pushBack ["","","",""];
+        _missingModList pushBack [" "," "," "," "];
 
         sleep 2;
 
         if !(count _missingModList == 0) then{
                 [_missingModList, .5, .85] call BIS_fnc_typeText;
         };
-
-    }
-
+    };
 };
