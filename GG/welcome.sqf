@@ -1,5 +1,8 @@
 [] spawn {    
 	waitUntil {player == player};
+
+    // Welcome messages
+    private ["_worldName","_playerUID","_announcepay","_buildRights","_flag","_dueDate","_nextDueDate","_msg","_name","_missingModList"];
     playSound "intro";
     _worldName = switch (toLower worldName) do {
         case "tanoa" :{"Tanoa"};
@@ -8,6 +11,8 @@
     [[format["Welcome %2, to [GG] Ghostz Gamerz %1 Alpha", _worldName, profileNameSteam],"","","Join our teamspeak for 10k free pop tabs","",""], -.5, .85] call BIS_fnc_typeText;
     sleep 2;
     [["Visit Us At:","www.GHOSTZGAMERZ.com","For Rules","Forums","and Donor Perks","",""], .5, .85] call BIS_fnc_typeText;
+
+    // Territory Information
     waitUntil {!((getPlayerUID player) isEqualTo '')};
     _playerUID = getPlayerUID player;
     _announcepay = [];
@@ -18,14 +23,6 @@
         {
             _nextDueDate = _flag getVariable ["ExileTerritoryMaintenanceDue", [0, 0, 0, 0, 0]];
             _name = _flag getVariable ["ExileTerritoryName", ""];
-            /*
-            _flagPos = getPos _x;
-            _mrkrName = format["FlagMapMarker_%1",_name];
-            _mrkrName = createMarker [_mrkrName,[_flagPos select 0,_flagPos select 1]];
-            _mrkrName setMarkerShape "ICON";
-            _mrkrName setMarkerType "hd_flag";
-            _mrkrName setMarkerTextLocal _name;
-            */
             _dueDate = format 
             [
                     "%2/%3/%1",
@@ -40,8 +37,42 @@
     }
     forEach (allMissionObjects "Exile_Construction_Flag_Static");
     sleep 2;
-    _announcepay pushBack ["",""];
+    _announcepay pushBack ["","","",""];
     if !(count _announcepay == 0) then{
             [_announcepay, -.5, .85] call BIS_fnc_typeText;
     };
+
+    // Missing Mod Information
+    _missingModList = [];
+    _missingMods = false;
+
+    if !(isClass (configFile >> "CfgPatches" >> "asdg_jointrails")) then {
+        _msg = "We detected that your game is not running ASDG Joint Rails Mod.";
+        _missingMods = true;
+        _missingModList pushBack _msg;
+    };
+    if !(isClass (configFile >> "CfgPatches" >> "hlcweapons_core")) then {
+        _msg = "We detected that your game is not running NiArms Pack Mod.";
+        _missingMods = true;
+        _missingModList pushBack _msg;
+    };
+    if !(isClass (configFile >> "CfgPatches" >> "TRYK_Uniform")) then {
+        _msg = "We detected that your game is not running TRYK Multiplay Uniforms Mod.";
+        _missingMods = true;
+        _missingModList pushBack _msg;
+    };
+
+    if (_missingMods) then {
+        _msg = "Please Download/Load these Mods to fully enjoy your experience on this server."
+        _missingModList pushBack _msg;
+        _missingModList pushBack ["","","",""];
+
+        sleep 2;
+
+        if !(count _missingModList == 0) then{
+                [_missingModList, .5, .85] call BIS_fnc_typeText;
+        };
+
+    }
+
 };
