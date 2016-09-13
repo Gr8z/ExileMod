@@ -1035,7 +1035,7 @@ _49code = {
 			(_display49 displayCtrl 122) ctrlShow false;
 		};
 		"; if(!_BRIEFING_MSG)then{ _A3AHstring = _A3AHstring + "
-			(_display49 displayCtrl 120) ctrlSetText 'infiSTAR.de AntiHack & AdminsTools - [Author: infiSTAR, Contact: infiSTAR23@gmail.com]';
+			(_display49 displayCtrl 120) ctrlSetText '[GG] Ghostz Gamerz ExileMod Tanoa - [Teamspeak: ts.ghostzgamerz.com]';
 		"; }else{ _A3AHstring = _A3AHstring + "
 			(_display49 displayCtrl 115025) ctrlSetText 'AntiHack & AdminsTools';
 			(_display49 displayCtrl 115035) ctrlSetText 'by infiSTAR.de';
@@ -2746,7 +2746,7 @@ _poses = [
 				if(call fnc_check_if_enemy_base)then
 				{
 					"+_faaded+" = true;
-					TitleText ['!!!\nDO NOT LOOK THROUGH WALLS\n!!!\n\n\n\nAntiHack by infiSTAR.de','BLACK FADED'];
+					TitleText ['!!!\nDO NOT LOOK THROUGH WALLS\n!!!\n\n\n\n[GG] Ghostz Gamerz','BLACK FADED'];
 				};
 				breakTo 'MAIN';
 			};
@@ -6669,8 +6669,3 @@ fnc_player_pee = {
 	deleteVehicle _stream;
 };
 publicVariable 'fnc_player_pee';
-/* ********************************************************************************* */
-/* *********************************www.infiSTAR.de********************************* */
-/* *******************Developed by infiSTAR (infiSTAR23@gmail.com)****************** */
-/* **************infiSTAR Copyright®© 2011 - 2016 All rights reserved.************** */
-/* ****DayZAntiHack.com***DayZAntiHack.de***ArmaAntiHack.com***Arma3AntiHack.com**** */
