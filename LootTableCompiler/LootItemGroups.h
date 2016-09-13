@@ -147,55 +147,14 @@
 20, optic_ACO_grn
 20, optic_Aco
 
-> Rifles
-10, arifle_Katiba_F			// Katiba 6.5 mm
-8, arifle_Katiba_GL_F		// Katiba GL 6.5 mm
-8, arifle_MXC_F				// MXC 6.5 mm
-8, arifle_MX_F				// MX 6.5 mm
-4, arifle_MX_GL_F			// MX 3GL 6.5 mm
-6, arifle_MXM_F				// MXM 6.5 mm
-3, arifle_MXM_Black_F		// MXM 6.5 mm (Black)
-6, arifle_SDAR_F			// SDAR 5.56 mm
-8, arifle_TRG21_F			// TRG-21 5.56 mm
-8, arifle_TRG20_F			// TRG-20 5.56 mm
-4, arifle_TRG21_GL_F		// TRG-21 EGLM 5.56 mm
-7, arifle_Mk20_F			// Mk20 5.56 mm
-7, arifle_Mk20C_F			// Mk20C 5.56 mm
-4, arifle_Mk20_GL_F			// Mk20 EGLM 5.56 mm
-3, arifle_MXC_Black_F		// MXC 6.5 mm (Black)
-3, arifle_MX_Black_F		// MX 6.5 mm (Black)
-3, arifle_MX_GL_Black_F		// MX 3GL 6.5 mm (Black)
-10, Exile_Weapon_AK107	
-10, Exile_Weapon_AK107_GL	
-10, Exile_Weapon_AK74_GL
-10, Exile_Weapon_AK74
-10, Exile_Weapon_AK47				
-10, Exile_Weapon_AKS_Gold	
-10, Exile_Weapon_DMR		
-10, Exile_Weapon_LeeEnfield
-10, Exile_Weapon_CZ550
-10, Exile_Weapon_SVD
-10, Exile_Weapon_SVDCamo
-10, Exile_Weapon_VSSVintorez
-8, arifle_MX_khk_F   			// MX 6.5 mm (Khaki)
-4, arifle_MX_GL_khk_F			// MX 3GL 6.5 mm (Khaki)
-8, arifle_MXC_khk_F  			// MXC 6.5 mm (Khaki)
-3, arifle_MXM_khk_F  			// MXM 6.5 mm (Khaki)
-5, arifle_AK12_F          		// AK-12 7.62 mm
-5, arifle_AK12_GL_F             // AK-12 GL 7.62 mm
-5, arifle_AKM_F                 // AKM 7.62 mm
-5, arifle_AKM_FL_F              // AKM 7.62 mm
-5, arifle_AKS_F                 // AKS
-5, arifle_ARX_blk_F             // Type 115 6.5 mm (Black)
-5, arifle_ARX_ghex_F            // Type 115 6.5 mm (Green Hex)
-5, arifle_ARX_hex_F             // Type 115 6.5 mm (Hex)
-5, arifle_CTAR_blk_F            // CAR-95 5.8 mm (Black)
-5, arifle_CTAR_hex_F			// CAR-95 5.8 mm (Hex)
-5, arifle_CTAR_ghex_F			// CAR-95 5.8 mm (Green Hex)
-5, arifle_CTAR_GL_blk_F         // CAR-95 GL 5.8 mm (Black)
-5, arifle_CTARS_blk_F           // CAR-95-1 5.8mm (Black)
-5, arifle_CTARS_ghex_F			// CAR-95-1 5.8mm (Green Hex)
-5, arifle_CTARS_hex_F			// CAR-95-1 5.8mm (Hex)
+> FFSRifles
+6, arifle_SDAR_F				// SDAR 5.56 mm
+8, arifle_TRG21_F				// TRG-21 5.56 mm
+8, arifle_TRG20_F				// TRG-20 5.56 mm
+4, arifle_TRG21_GL_F			// TRG-21 EGLM 5.56 mm
+7, arifle_Mk20_F				// Mk20 5.56 mm
+7, arifle_Mk20C_F				// Mk20C 5.56 mm
+4, arifle_Mk20_GL_F				// Mk20 EGLM 5.56 mm
 5, arifle_SPAR_01_blk_F         // SPAR-16 5.56 mm (Black)
 5, arifle_SPAR_01_khk_F         // SPAR-16 5.56 mm (Khaki)
 5, arifle_SPAR_01_snd_F         // SPAR-16 5.56 mm (Sand)
@@ -205,9 +164,64 @@
 5, arifle_SPAR_02_blk_F         // SPAR-16S 5.56 mm (Black)
 5, arifle_SPAR_02_khk_F         // SPAR-16S 5.56 mm (Khaki)
 5, arifle_SPAR_02_snd_F         // SPAR-16S 5.56 mm (Sand)
+
+> SFRifles
+10, arifle_Katiba_F				// Katiba 6.5 mm
+8, arifle_Katiba_GL_F			// Katiba GL 6.5 mm
+8, arifle_MXC_F					// MXC 6.5 mm
+8, arifle_MX_F					// MX 6.5 mm
+4, arifle_MX_GL_F				// MX 3GL 6.5 mm
+6, arifle_MXM_F					// MXM 6.5 mm
+3, arifle_MXM_Black_F			// MXM 6.5 mm (Black)
+3, arifle_MXC_Black_F			// MXC 6.5 mm (Black)
+3, arifle_MX_Black_F			// MX 6.5 mm (Black)
+3, arifle_MX_GL_Black_F			// MX 3GL 6.5 mm (Black)
+8, arifle_MX_khk_F   			// MX 6.5 mm (Khaki)
+4, arifle_MX_GL_khk_F			// MX 3GL 6.5 mm (Khaki)
+8, arifle_MXC_khk_F  			// MXC 6.5 mm (Khaki)
+3, arifle_MXM_khk_F  			// MXM 6.5 mm (Khaki)
+5, arifle_ARX_blk_F             // Type 115 6.5 mm (Black)
+5, arifle_ARX_ghex_F            // Type 115 6.5 mm (Green Hex)
+5, arifle_ARX_hex_F             // Type 115 6.5 mm (Hex)
+
+> CivilianSniper
+10, Exile_Weapon_LeeEnfield
+10, Exile_Weapon_CZ550
+10, Exile_Weapon_VSSVintorez
+
+> MilitarySniper
+10, Exile_Weapon_DMR		
+10, Exile_Weapon_SVD
+10, Exile_Weapon_SVDCamo
+
+> FFFRifles
+10, Exile_Weapon_AK107	
+10, Exile_Weapon_AK107_GL
+10, Exile_Weapon_AK74_GL
+10, Exile_Weapon_AK74					
+
+5, arifle_AKS_F                 // AKS	
+
+
+> SSTRifles
+5, arifle_AK12_F          		// AK-12 7.62 mm
+5, arifle_AK12_GL_F             // AK-12 GL 7.62 mm
+5, arifle_AKM_F                 // AKM 7.62 mm
+5, arifle_AKM_FL_F              // AKM 7.62 mm
 5, arifle_SPAR_03_blk_F         // SPAR-17 7.62 mm (Black)
 5, arifle_SPAR_03_khk_F         // SPAR-17 7.62 mm (Khaki)
 5, arifle_SPAR_03_snd_F         // SPAR-17 7.62 mm (Sand)
+10, Exile_Weapon_AKS_Gold
+10, Exile_Weapon_AK47
+
+> FERifles
+5, arifle_CTAR_blk_F            // CAR-95 5.8 mm (Black)
+5, arifle_CTAR_hex_F			// CAR-95 5.8 mm (Hex)
+5, arifle_CTAR_ghex_F			// CAR-95 5.8 mm (Green Hex)
+5, arifle_CTAR_GL_blk_F         // CAR-95 GL 5.8 mm (Black)
+5, arifle_CTARS_blk_F           // CAR-95-1 5.8mm (Black)
+5, arifle_CTARS_ghex_F			// CAR-95-1 5.8mm (Green Hex)
+5, arifle_CTARS_hex_F			// CAR-95-1 5.8mm (Hex)
 
 > RifleAmmo
 11, 20Rnd_556x45_UW_mag						// SDAR
