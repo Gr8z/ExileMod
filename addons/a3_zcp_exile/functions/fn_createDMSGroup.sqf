@@ -35,7 +35,7 @@ if (_ZCP_CDG_minLaunchers > 0) then
 		{
 			_ZCP_CDG_unit = _ZCP_CDG_units select _i;
 
-			_ZCP_CDG_launcher = (selectRandom (missionNamespace getVariable [format ["DMS_AI_wep_launchers_%1",_ZCP_CDG_launcherType],["launch_NLAW_F"]]));
+			_ZCP_CDG_launcher = (selectRandom (missionNamespace getVariable [format ["DMS_AI_wep_launchers_%1",_ZCP_CDG_launcherType],["launch_RPG7_F"]]));
 
 			removeBackpackGlobal _ZCP_CDG_unit;
 			_ZCP_CDG_unit addBackpack "B_Carryall_mcamo";
