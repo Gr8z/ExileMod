@@ -70,7 +70,7 @@ try
 		_territoryLog = format ["PLAYER ( %1 ) %2 PAID %3 POP TABS FOR THE RANSOM OF TERRITORY #%4 | PLAYER TOTAL POP TABS: %5", _playerUID, _playerObject, _flagFee, _databaseID, _playerMoney];
 		"extDB2" callExtension format["1:TERRITORY:%1", _territoryLog];
 	};
-	[_sessionID, "toastRequest", ["SuccessTitleOnly", ["Random paid!"]]] call ExileServer_system_network_send_to;
+	[_sessionID, "toastRequest", ["SuccessTitleOnly", ["Ransom paid!"]]] call ExileServer_system_network_send_to;
 }
 catch 
 {
