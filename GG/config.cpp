@@ -1344,7 +1344,7 @@ class CfgCraftingRecipes
 	    };
 	    category = "Tools & Items";
 	};
-	class ViperHelmet01: Exile_AbstractCraftingRecipe
+	/*class ViperHelmet01: Exile_AbstractCraftingRecipe
 	{
 	    name = "Craft Viper Helmet (Hex)";
 	    pictureItem = "H_HelmetO_ViperSP_hex_F";
@@ -1436,7 +1436,7 @@ class CfgCraftingRecipes
 	    };
 	    category = "Tools & Items";
 		
-	};
+	};*/
 };
 class CfgExileArsenal
 {
