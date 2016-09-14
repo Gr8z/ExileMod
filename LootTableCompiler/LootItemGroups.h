@@ -199,7 +199,6 @@
 10, Exile_Weapon_AK107_GL
 10, Exile_Weapon_AK74_GL
 10, Exile_Weapon_AK74					
-
 5, arifle_AKS_F                 // AKS	
 
 
