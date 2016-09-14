@@ -5967,7 +5967,7 @@ class CfgTraderCategories
 			"150Rnd_762x54_Box",
 			"150Rnd_762x54_Box_Tracer",
 			//"10Rnd_93x64_DMR_05_Mag",
-			//"150Rnd_93x64_Mag",
+			"150Rnd_93x64_Mag",
 			//"10Rnd_338_Mag",
 			//"130Rnd_338_Mag",
 			//"7Rnd_408_Mag",

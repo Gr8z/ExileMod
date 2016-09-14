@@ -532,7 +532,7 @@ class CfgSettings
 		/*
 			A list of events that are active
 		*/
-		enabledEvents[] = {/*"SupplyBox", */"AbandonedSafe"}; 
+		enabledEvents[] = {"SupplyBox", "AbandonedSafe"}; 
 
 		class SupplyBox 
 		{
@@ -556,7 +556,7 @@ class CfgSettings
 				The type of box is chosen randomly from the following list.
 				Add a type multiple times to increase the chance of being used.
 			*/
-			types[] = {"Building","Weapons","Medical"};
+			types[] = {"Building","Weapons","Medical","Supplies"};
 
 			class BoxTypes
 			{
@@ -564,14 +564,14 @@ class CfgSettings
 				{
 					items[] = 
 					{
-						{"Exile_Item_WoodWallKit",5},
+						{"Exile_Item_WoodWallKit",6},
 						{"Exile_Item_WoodWallHalfKit",2},
 						{"Exile_Item_WoodWindowKit",2},
-						{"Exile_Item_WorkBenchKit",2},
+						{"Exile_Item_WorkBenchKit",1},
 						{"Exile_Item_WoodFloorPortKit",2},
-						{"Exile_Item_WoodFloorKit",5},
+						{"Exile_Item_WoodFloorKit",4},
 						{"Exile_Item_WoodGateKit",1},
-						{"Exile_Item_Flag",1},
+						{"Exile_Item_WoodDoorKit",1},
 						{"Exile_Item_SafeKit",1}
 					};
 				};
@@ -581,31 +581,46 @@ class CfgSettings
 					items[] = 
 					{
 						{"Exile_Item_Defibrillator",1},
-						{"Exile_Magazine_Battery",2},
-						{"Exile_Item_InstaDoc",3},
-						{"Exile_Item_Bandage",2},
+						{"Exile_Magazine_Battery",1},
+						{"Exile_Item_InstaDoc",5},
+						{"Exile_Item_Bandage",4},
 						{"Exile_Item_Vishpirin",2},
-						{"Exile_Item_Heatpack",2}
+						{"Exile_Item_PlasticBottleFreshWater",4}
 					};
 				};
 
+				class Supplies
+				{
+					items[] =
+					{
+						{"Exile_Item_EMRE",5},
+						{"Exile_Item_InstantCoffee",2},
+						{"Exile_Item_ChristmasTinner",4},
+						{"Exile_Item_BBQSandwich",2},
+						{"Exile_Item_PlasticBottleFreshWater",4},
+						{"Exile_Item_Beer",1},
+						{"Exile_Item_PlasticBottleCoffee",3},
+						{"Exile_Item_MountainDupe",1}
+					};
+				};
+				
+				
+				
+				
 				class Weapons 
 				{
 					items[] = 
 					{
-						{"LMG_Zafir_F",1},
-						{"MMG_01_hex_F",1},
 						{"srifle_EBR_F",1},
 						{"srifle_DMR_01_F",1},
-						{"srifle_GM6_F",1},
 						{"srifle_LRR_F",1},
-						{"srifle_DMR_02_F",1},
 						{"MMG_01_tan_F",1},
-						{"srifle_DMR_03_F",1},
 						{"srifle_DMR_03_khaki_F",1},
-						{"srifle_DMR_03_tan_F",1},
-						{"srifle_DMR_04_F",1},
-						{"srifle_LRR_camo_F",1}
+						{"150Rnd_93x64_Mag",3},
+						{"20Rnd_762x51_Mag",3},
+						{"HandGrenade",1}
+						
+						
 					};
 				};
 			};
