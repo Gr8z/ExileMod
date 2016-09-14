@@ -57,6 +57,7 @@ _listBox ctrlAddEventHandler ["LBDblClick", "call fnc_LBDblClick_LBSelChanged_LO
 _listBox ctrlAddEventHandler ["LBSelChanged", "call fnc_LBDblClick_LBSelChanged_LO;"];
 _listItemIndex = _listBox lbAdd "Respect Loadout";
 _listItemIndex = _listBox lbSetColor [0, [0, 1, 0, 0.5]];
+/*
 _listItemIndex = _listBox lbSetTooltip [0, "Get a Free Loadout based on your respect"];
 _listItemIndex = _listBox lbAdd "Scout Level 1";
 _listItemIndex = _listBox lbSetTooltip [1, "$4.69 / month"];
@@ -88,8 +89,9 @@ _listItemIndex = _listBox lbAdd "Engineer Level 2";
 _listItemIndex = _listBox lbSetTooltip [14, "$8.90 / month"];
 _listItemIndex = _listBox lbAdd "Engineer Level 3";
 _listItemIndex = _listBox lbSetTooltip [15, "$15.00 / month"];
+*/
 
-systemChat 'DONOR LOADOUTS CAN BE PURCHASED FROM GHOSTZGAMERZ.COM';
+//systemChat 'DONOR LOADOUTS CAN BE PURCHASED FROM GHOSTZGAMERZ.COM';
 waitUntil {!isNil "Soldier3"};
 FNC_GET_ACTUAL_LOADOUT = {
 	waitUntil {typeOf player isEqualTo 'Exile_Unit_Player'};
