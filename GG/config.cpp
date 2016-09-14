@@ -1934,105 +1934,105 @@ class CfgExileArsenal
     ///////////////////////////////////////////////////////////////////////////////
     // TRYK HeadGear
     ///////////////////////////////////////////////////////////////////////////////
-    class TRYK_US_ESS_Glasses_NV                        { quality = 1; price = 1250; };
-    class TRYK_US_ESS_Glasses_TAN_NV                    { quality = 1; price = 1250; };
-    class TRYK_ESS_BLKTAN_NV                            { quality = 1; price = 1250; };
-    class TRYK_ESS_BLKBLK_NV                            { quality = 1; price = 1250; };
-    class TRYK_G_Shades_Black_NV                        { quality = 1; price = 1250; };
-    class TRYK_G_Shades_Blue_NV                         { quality = 1; price = 1250; };
-    class TRYK_G_bala_ess_NV                            { quality = 1; price = 1250; };
-    class TRYK_bandana_NV                               { quality = 1; price = 1250; };
-    class TRYK_SPgearG_NV                               { quality = 1; price = 1250; };
-    class TRYK_SPgear_PHC1_NV                           { quality = 1; price = 1250; };
-    class TRYK_SPgear_PHC2_NV                           { quality = 1; price = 1250; };
-    class TRYK_G_bala_wh_NV                             { quality = 1; price = 1250; };
-    class TRYK_ESS_wh_NV                                { quality = 1; price = 1250; };
+    class TRYK_US_ESS_Glasses_NV                        { quality = 1; price = 300; };
+    class TRYK_US_ESS_Glasses_TAN_NV                    { quality = 1; price = 300; };
+    class TRYK_ESS_BLKTAN_NV                            { quality = 1; price = 300; };
+    class TRYK_ESS_BLKBLK_NV                            { quality = 1; price = 300; };
+    class TRYK_G_Shades_Black_NV                        { quality = 1; price = 300; };
+    class TRYK_G_Shades_Blue_NV                         { quality = 1; price = 300; };
+    class TRYK_G_bala_ess_NV                            { quality = 1; price = 300; };
+    class TRYK_bandana_NV                               { quality = 1; price = 300; };
+    class TRYK_SPgearG_NV                               { quality = 1; price = 300; };
+    class TRYK_SPgear_PHC1_NV                           { quality = 1; price = 300; };
+    class TRYK_SPgear_PHC2_NV                           { quality = 1; price = 300; };
+    class TRYK_G_bala_wh_NV                             { quality = 1; price = 300; };
+    class TRYK_ESS_wh_NV                                { quality = 1; price = 300; };
  
     ///////////////////////////////////////////////////////////////////////////////
     // TRYK HeadGear
     ///////////////////////////////////////////////////////////////////////////////
-    class TRYK_ESS_CAP_OD                               { quality = 1; price = 150; };
-    class TRYK_ESS_CAP_tan                              { quality = 1; price = 150; };
-    class TRYK_R_CAP_BLK                                { quality = 1; price = 150; };
-    class TRYK_R_CAP_TAN                                { quality = 1; price = 150; };
-    class TRYK_R_CAP_OD_US                              { quality = 1; price = 150; };
-    class TRYK_r_cap_tan_Glasses                        { quality = 1; price = 150; };
-    class TRYK_r_cap_blk_Glasses                        { quality = 1; price = 150; };
-    class TRYK_r_cap_od_Glasses                         { quality = 1; price = 150; };
-    class TRYK_H_headsetcap_Glasses                     { quality = 1; price = 150; };
-    class TRYK_H_headsetcap_blk_Glasses                 { quality = 1; price = 150; };
-    class TRYK_H_headsetcap_od_Glasses                  { quality = 1; price = 150; };
-    class TRYK_TAC_EARMUFF_SHADE                        { quality = 1; price = 150; };
-    class TRYK_TAC_EARMUFF                              { quality = 1; price = 150; };
-    class TRYK_NOMIC_TAC_EARMUFF                        { quality = 1; price = 150; };
-    class TRYK_headset2                                 { quality = 1; price = 150; };
-    class TRYK_TAC_EARMUFF_Gs                           { quality = 1; price = 150; };
-    class TRYK_TAC_SET_bn                               { quality = 1; price = 150; };
-    class TRYK_NOMIC_TAC_EARMUFF_Gs                     { quality = 1; price = 150; };
-    class TRYK_TAC_EARMUFF_SHADE_Gs                     { quality = 1; price = 150; };
-    class TRYK_TAC_SET_TAN                              { quality = 1; price = 150; };
-    class TRYK_TAC_SET_OD                               { quality = 1; price = 150; };
-    class TRYK_TAC_SET_WH                               { quality = 1; price = 150; };
-    class TRYK_TAC_SET_MESH                             { quality = 1; price = 150; };
-    class TRYK_TAC_SET_TAN_2                            { quality = 1; price = 150; };
-    class TRYK_TAC_SET_OD_2                             { quality = 1; price = 150; };
-    class TRYK_TAC_SET_WH_2                             { quality = 1; price = 150; };
-    class TRYK_TAC_SET_MESH_2                           { quality = 1; price = 150; };
-    class TRYK_bandana_g                                { quality = 1; price = 150; };
-    class TRYK_H_PASGT_BLK                              { quality = 1; price = 150; };
-    class TRYK_H_PASGT_OD                               { quality = 1; price = 150; };
-    class TRYK_H_PASGT_COYO                             { quality = 1; price = 150; };
-    class TRYK_H_PASGT_TAN                              { quality = 1; price = 150; };
-    class TRYK_H_Helmet_Snow                            { quality = 1; price = 150; };
-    class TRYK_H_WH                                     { quality = 1; price = 150; };
-    class TRYK_H_GR                                     { quality = 1; price = 150; };
-    class TRYK_H_AOR1                                   { quality = 1; price = 150; };
-    class TRYK_H_AOR2                                   { quality = 1; price = 150; };
-    class TRYK_H_EARMUFF                                { quality = 1; price = 150; };
-    class TRYK_H_TACEARMUFF_H                           { quality = 1; price = 150; };
-    class TRYK_H_Bandana_H                              { quality = 1; price = 150; };
-    class TRYK_H_Bandana_wig                            { quality = 1; price = 150; };
-    class TRYK_H_Bandana_wig_g                          { quality = 1; price = 150; };
-    class TRYK_H_wig                                    { quality = 1; price = 150; };
-    class TRYK_H_headset2                               { quality = 1; price = 150; };
-    class TRYK_H_ghillie_over                           { quality = 1; price = 150; };
-    class TRYK_H_ghillie_top                            { quality = 1; price = 150; };
-    class TRYK_H_ghillie_top_headless                   { quality = 1; price = 150; };
-    class TRYK_H_ghillie_over_green                     { quality = 1; price = 150; };
-    class TRYK_H_ghillie_top_green                      { quality = 1; price = 150; };
-    class TRYK_H_ghillie_top_headless_green             { quality = 1; price = 150; };
-    class TRYK_H_woolhat                                { quality = 1; price = 150; };
-    class TRYK_H_woolhat_CW                             { quality = 1; price = 150; };
-    class TRYK_H_woolhat_WH                             { quality = 1; price = 150; };
-    class TRYK_H_woolhat_br                             { quality = 1; price = 150; };
-    class TRYK_H_woolhat_cu                             { quality = 1; price = 150; };
-    class TRYK_H_woolhat_tan                            { quality = 1; price = 150; };
-    class TRYK_H_headsetcap                             { quality = 1; price = 150; };
-    class TRYK_H_headsetcap_blk                         { quality = 1; price = 150; };
-    class TRYK_H_headsetcap_od                          { quality = 1; price = 150; };
-    class TRYK_H_pakol                                  { quality = 1; price = 150; };
-    class TRYK_H_pakol2                                 { quality = 1; price = 150; };
-    class TRYK_H_LHS_HEL_G                              { quality = 1; price = 150; };
-    class TRYK_H_Helmet_Winter                          { quality = 1; price = 150; };
-    class TRYK_H_Helmet_Winter_2                        { quality = 1; price = 150; };
+    class TRYK_ESS_CAP_OD                               { quality = 1; price = 50; };
+    class TRYK_ESS_CAP_tan                              { quality = 1; price = 50; };
+    class TRYK_R_CAP_BLK                                { quality = 1; price = 50; };
+    class TRYK_R_CAP_TAN                                { quality = 1; price = 50; };
+    class TRYK_R_CAP_OD_US                              { quality = 1; price = 50; };
+    class TRYK_r_cap_tan_Glasses                        { quality = 1; price = 50; };
+    class TRYK_r_cap_blk_Glasses                        { quality = 1; price = 50; };
+    class TRYK_r_cap_od_Glasses                         { quality = 1; price = 50; };
+    class TRYK_H_headsetcap_Glasses                     { quality = 1; price = 50; };
+    class TRYK_H_headsetcap_blk_Glasses                 { quality = 1; price = 50; };
+    class TRYK_H_headsetcap_od_Glasses                  { quality = 1; price = 50; };
+    class TRYK_TAC_EARMUFF_SHADE                        { quality = 1; price = 50; };
+    class TRYK_TAC_EARMUFF                              { quality = 1; price = 50; };
+    class TRYK_NOMIC_TAC_EARMUFF                        { quality = 1; price = 50; };
+    class TRYK_headset2                                 { quality = 1; price = 50; };
+    class TRYK_TAC_EARMUFF_Gs                           { quality = 1; price = 50; };
+    class TRYK_TAC_SET_bn                               { quality = 1; price = 50; };
+    class TRYK_NOMIC_TAC_EARMUFF_Gs                     { quality = 1; price = 50; };
+    class TRYK_TAC_EARMUFF_SHADE_Gs                     { quality = 1; price = 50; };
+    class TRYK_TAC_SET_TAN                              { quality = 1; price = 50; };
+    class TRYK_TAC_SET_OD                               { quality = 1; price = 50; };
+    class TRYK_TAC_SET_WH                               { quality = 1; price = 50; };
+    class TRYK_TAC_SET_MESH                             { quality = 1; price = 50; };
+    class TRYK_TAC_SET_TAN_2                            { quality = 1; price = 50; };
+    class TRYK_TAC_SET_OD_2                             { quality = 1; price = 50; };
+    class TRYK_TAC_SET_WH_2                             { quality = 1; price = 50; };
+    class TRYK_TAC_SET_MESH_2                           { quality = 1; price = 50; };
+    class TRYK_bandana_g                                { quality = 1; price = 50; };
+    class TRYK_H_PASGT_BLK                              { quality = 1; price = 50; };
+    class TRYK_H_PASGT_OD                               { quality = 1; price = 50; };
+    class TRYK_H_PASGT_COYO                             { quality = 1; price = 50; };
+    class TRYK_H_PASGT_TAN                              { quality = 1; price = 50; };
+    class TRYK_H_Helmet_Snow                            { quality = 1; price = 50; };
+    class TRYK_H_WH                                     { quality = 1; price = 50; };
+    class TRYK_H_GR                                     { quality = 1; price = 50; };
+    class TRYK_H_AOR1                                   { quality = 1; price = 50; };
+    class TRYK_H_AOR2                                   { quality = 1; price = 50; };
+    class TRYK_H_EARMUFF                                { quality = 1; price = 50; };
+    class TRYK_H_TACEARMUFF_H                           { quality = 1; price = 50; };
+    class TRYK_H_Bandana_H                              { quality = 1; price = 50; };
+    class TRYK_H_Bandana_wig                            { quality = 1; price = 50; };
+    class TRYK_H_Bandana_wig_g                          { quality = 1; price = 50; };
+    class TRYK_H_wig                                    { quality = 1; price = 50; };
+    class TRYK_H_headset2                               { quality = 1; price = 50; };
+    class TRYK_H_ghillie_over                           { quality = 1; price = 50; };
+    class TRYK_H_ghillie_top                            { quality = 1; price = 50; };
+    class TRYK_H_ghillie_top_headless                   { quality = 1; price = 50; };
+    class TRYK_H_ghillie_over_green                     { quality = 1; price = 50; };
+    class TRYK_H_ghillie_top_green                      { quality = 1; price = 50; };
+    class TRYK_H_ghillie_top_headless_green             { quality = 1; price = 50; };
+    class TRYK_H_woolhat                                { quality = 1; price = 50; };
+    class TRYK_H_woolhat_CW                             { quality = 1; price = 50; };
+    class TRYK_H_woolhat_WH                             { quality = 1; price = 50; };
+    class TRYK_H_woolhat_br                             { quality = 1; price = 50; };
+    class TRYK_H_woolhat_cu                             { quality = 1; price = 50; };
+    class TRYK_H_woolhat_tan                            { quality = 1; price = 50; };
+    class TRYK_H_headsetcap                             { quality = 1; price = 50; };
+    class TRYK_H_headsetcap_blk                         { quality = 1; price = 50; };
+    class TRYK_H_headsetcap_od                          { quality = 1; price = 50; };
+    class TRYK_H_pakol                                  { quality = 1; price = 50; };
+    class TRYK_H_pakol2                                 { quality = 1; price = 50; };
+    class TRYK_H_LHS_HEL_G                              { quality = 1; price = 50; };
+    class TRYK_H_Helmet_Winter                          { quality = 1; price = 50; };
+    class TRYK_H_Helmet_Winter_2                        { quality = 1; price = 50; };
  
     ///////////////////////////////////////////////////////////////////////////////
     // TRYK HeadGear w/NVGS built in
     ///////////////////////////////////////////////////////////////////////////////
  
-    class TRYK_Headphone_NV                             { quality = 1; price = 1000; };
-    class TRYK_HRPIGEAR_NV                              { quality = 1; price = 1000; };
-    class TRYK_Headset_NV                               { quality = 1; price = 1000; };
-    class TRYK_TAC_boonie_SET_NV                        { quality = 1; price = 1000; };
-    class TRYK_TAC_SET_NV_TAN                           { quality = 1; price = 1000; };
-    class TRYK_TAC_SET_NV_OD                            { quality = 1; price = 1000; };
-    class TRYK_TAC_SET_NV_WH                            { quality = 1; price = 1000; };
-    class TRYK_TAC_SET_NV_MESH                          { quality = 1; price = 1000; };
-    class TRYK_TAC_SET_NV_TAN_2                         { quality = 1; price = 1000; };
-    class TRYK_TAC_SET_NV_OD_2                          { quality = 1; price = 1000; };
-    class TRYK_TAC_SET_NV_WH_2                          { quality = 1; price = 1000; };
-    class TRYK_TAC_SET_NV_MESH_2                        { quality = 1; price = 1000; };
-    class TRYK_H_DELTAHELM_NV                           { quality = 1; price = 1000; };
+    class TRYK_Headphone_NV                             { quality = 1; price = 500; };
+    class TRYK_HRPIGEAR_NV                              { quality = 1; price = 500; };
+    class TRYK_Headset_NV                               { quality = 1; price = 500; };
+    class TRYK_TAC_boonie_SET_NV                        { quality = 1; price = 500; };
+    class TRYK_TAC_SET_NV_TAN                           { quality = 1; price = 500; };
+    class TRYK_TAC_SET_NV_OD                            { quality = 1; price = 500; };
+    class TRYK_TAC_SET_NV_WH                            { quality = 1; price = 500; };
+    class TRYK_TAC_SET_NV_MESH                          { quality = 1; price = 500; };
+    class TRYK_TAC_SET_NV_TAN_2                         { quality = 1; price = 500; };
+    class TRYK_TAC_SET_NV_OD_2                          { quality = 1; price = 500; };
+    class TRYK_TAC_SET_NV_WH_2                          { quality = 1; price = 500; };
+    class TRYK_TAC_SET_NV_MESH_2                        { quality = 1; price = 500; };
+    class TRYK_H_DELTAHELM_NV                           { quality = 1; price = 500; };
  
     ///////////////////////////////////////////////////////////////////////////////
     // TRYK NeckGear
@@ -2066,20 +2066,20 @@ class CfgExileArsenal
     // TRYK NeckGear NeckGear w/NVGS built in
     ///////////////////////////////////////////////////////////////////////////////
  
-    class TRYK_balaclava_BLACK_NV                       { quality = 1; price = 1000; };
-    class TRYK_balaclava_NV                             { quality = 1; price = 1000; };
-    class TRYK_balaclava_BLACK_EAR_NV                   { quality = 1; price = 1000; };
-    class TRYK_balaclava_EAR_NV                         { quality = 1; price = 1000; };
-    class TRYK_Shemagh_TAN_NV                           { quality = 1; price = 1000; };
-    class TRYK_Shemagh_MESH_NV                          { quality = 1; price = 1000; };
-    class TRYK_Shemagh_G_NV                             { quality = 1; price = 1000; };
-    class TRYK_Shemagh_WH_NV                            { quality = 1; price = 1000; };
-    class TRYK_Shemagh_EAR_NV                           { quality = 1; price = 1000; };
-    class TRYK_Shemagh_EAR_G_NV                         { quality = 1; price = 1000; };
-    class TRYK_Shemagh_EAR_WH_NV                        { quality = 1; price = 1000; };
-    class TRYK_ShemaghESSTAN_NV                         { quality = 1; price = 1000; };
-    class TRYK_ShemaghESSOD_NV                          { quality = 1; price = 1000; };
-    class TRYK_ShemaghESSWH_NV                          { quality = 1; price = 1000; };
+    class TRYK_balaclava_BLACK_NV                       { quality = 1; price = 500; };
+    class TRYK_balaclava_NV                             { quality = 1; price = 500; };
+    class TRYK_balaclava_BLACK_EAR_NV                   { quality = 1; price = 500; };
+    class TRYK_balaclava_EAR_NV                         { quality = 1; price = 500; };
+    class TRYK_Shemagh_TAN_NV                           { quality = 1; price = 500; };
+    class TRYK_Shemagh_MESH_NV                          { quality = 1; price = 500; };
+    class TRYK_Shemagh_G_NV                             { quality = 1; price = 500; };
+    class TRYK_Shemagh_WH_NV                            { quality = 1; price = 500; };
+    class TRYK_Shemagh_EAR_NV                           { quality = 1; price = 500; };
+    class TRYK_Shemagh_EAR_G_NV                         { quality = 1; price = 500; };
+    class TRYK_Shemagh_EAR_WH_NV                        { quality = 1; price = 500; };
+    class TRYK_ShemaghESSTAN_NV                         { quality = 1; price = 500; };
+    class TRYK_ShemaghESSOD_NV                          { quality = 1; price = 500; };
+    class TRYK_ShemaghESSWH_NV                          { quality = 1; price = 500; };
  
     ///////////////////////////////////////////////////////////////////////////////
     // TRYK Uniforms
@@ -5967,7 +5967,7 @@ class CfgTraderCategories
 			"150Rnd_762x54_Box",
 			"150Rnd_762x54_Box_Tracer",
 			//"10Rnd_93x64_DMR_05_Mag",
-			//"150Rnd_93x64_Mag",
+			"150Rnd_93x64_Mag",
 			//"10Rnd_338_Mag",
 			//"130Rnd_338_Mag",
 			//"7Rnd_408_Mag",
