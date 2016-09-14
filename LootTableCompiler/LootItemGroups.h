@@ -121,6 +121,7 @@
 
 > Shotguns
 1, Exile_Weapon_M1014	//M1014
+0.5, hlc_rifle_saiga12k //Izhmash Saiga12K
 
 > ShotgunAmmo
 1, Exile_Magazine_8Rnd_74Slug		//M1014
@@ -130,6 +131,21 @@
 33, SMG_02_F		// Sting 9 mm
 33, SMG_05_F		// Protector 9mm
 33, hgun_PDW2000_F	// PDW2000 9 mm
+1, hlc_rifle_augpara				//Steyr AUGA1 9mm[OD]
+1, hlc_rifle_augpara_b				//Steyr AUGA1 9mm[Black]
+1, hlc_rifle_augpara_t				//Steyr AUGA1 9mm[Tan]
+1, hlc_rifle_auga2para				//Steyr AUGA2 9mm[OD]
+1, hlc_rifle_auga2para_t				//Steyr AUGA2 9mm[Tan]
+1, hlc_rifle_auga2para_b				//Steyr AUGA2 9mm[Black]
+1, hlc_smg_mp510				//HK MP5/10
+1, hlc_smg_mp5k_PDW				//HK MP5K-PDW
+1, hlc_smg_mp5a2				//HK MP5A2
+1, hlc_smg_MP5N				//HK MP5N
+1, hlc_smg_9mmar				//HK MP5N '9MMAR'
+1, hlc_smg_mp5a4				//HK MP5A4
+1, hlc_smg_mp5sd5				//HK MP5SD5
+1, hlc_smg_mp5a3				//HK MP5A3
+1, hlc_smg_mp5sd6				//HK MP5SD6
 
 > SMGAmmo
 50, 30Rnd_45ACP_Mag_SMG_01					// Vermin SMG
@@ -147,7 +163,7 @@
 20, optic_ACO_grn
 20, optic_Aco
 
-> FFSRifles
+> FFSRifles						//5.56
 6, arifle_SDAR_F				// SDAR 5.56 mm
 8, arifle_TRG21_F				// TRG-21 5.56 mm
 8, arifle_TRG20_F				// TRG-20 5.56 mm
@@ -164,8 +180,75 @@
 5, arifle_SPAR_02_blk_F         // SPAR-16S 5.56 mm (Black)
 5, arifle_SPAR_02_khk_F         // SPAR-16S 5.56 mm (Khaki)
 5, arifle_SPAR_02_snd_F         // SPAR-16S 5.56 mm (Sand)
+1, hlc_rifle_RU556				//AR15 Sanitised Carbine
+1, hlc_rifle_RU5562				//AR15 Magpul Carbine
+1, hlc_rifle_CQBR				//Colt M4 CQB-R
+1, hlc_rifle_M4					//Colt M4 Carbine
+1, hlc_rifle_m4m203				//Colt M4 Carbine (GL)
+1, hlc_rifle_bcmjack			//BCM 'Jack' Carbine
+1, hlc_rifle_Colt727			//Colt Carbine
+1, hlc_rifle_Colt727_GL			//Colt Carbine(GL)
+1, hlc_rifle_SAMR				//RRA LAR-15
+1, hlc_rifle_samr2				//RRA LAR-15
+1, hlc_rifle_G36A1				//HK G36A1
+1, hlc_rifle_MG36				//HK MG36A1
+1, hlc_rifle_G36A1AG36			//HK G36A1(GL)
+1, hlc_rifle_G36KA1				//HK G36KA1
+1, hlc_rifle_G36C				//HK G36C
+1, hlc_rifle_G36E1				//HK G36E
+1, hlc_rifle_G36E1AG36			//HK G36E(GL)
+1, hlc_rifle_G36KE1				//HK G36KE
+1, hlc_rifle_G36V				//HK G36V
+1, hlc_rifle_G36KV				//HK G36KV
+1, hlc_rifle_G36CV				//HK G36CV
+1, hlc_rifle_G36VAG36			//HK G36V(GL)
+1, hlc_rifle_G36TAC				//HK G36V(KAC)
+1, hlc_rifle_g36KTac			//HK G36KV(KAC)
+1, hlc_rifle_G36CTac			//HK G36CV(KAC)
+1, hlc_rifle_hk53				//HK HK53
+1, hlc_rifle_hk53RAS			//HK HK53(RAS)
+1, hlc_rifle_hk33a2				//HK HK33A2
+1, hlc_rifle_hk33a2RIS			//HK HK33A2(RIS)
+1, hlc_rifle_Bushmaster300				//Bushmaster .300 Carbine
+1, hlc_rifle_vendimus				//AR15 .300 Dissipator
+1, hlc_rifle_honeybadger				//AAC 'Honey-Badger'
 
-> SFRifles
+> AugsRifles
+1, hlc_rifle_aug				//Steyr AUGA1[OD]
+1, hlc_rifle_auga1_t				//Steyr AUGA1[Tan]
+1, hlc_rifle_auga1_b				//Steyr AUGA1[Black]
+1, hlc_rifle_auga1carb				//Steyr AUGA1 Carbine[OD]
+1, hlc_rifle_auga1carb_B				//Steyr AUGA1 Carbine[Black]
+1, hlc_rifle_auga1carb_t				//Steyr AUGA1 Carbine[Tan]
+1, hlc_rifle_aughbar				//Steyr AUGA1 HBAR[OD]
+1, hlc_rifle_aughbar_t				//Steyr AUGA1 HBAR[Tan]
+1, hlc_rifle_aughbar_B				//Steyr AUGA1 HBAR[Black]
+1, hlc_rifle_auga2				//Steyr AUGA2[OD]
+1, hlc_rifle_auga2_t				//Steyr AUGA2[Tan]
+1, hlc_rifle_auga2_b				//Steyr AUGA2[Black]
+1, hlc_rifle_augsr				//Steyr AUG-SR[OD]
+1, hlc_rifle_augsr_t				//Steyr AUG-SR[Tan]
+1, hlc_rifle_augsr_b				//Steyr AUG-SR[Black]
+1, hlc_rifle_auga2carb				//Steyr AUGA2 Carbine[OD]
+1, hlc_rifle_auga2carb_t				//Steyr AUGA2 Carbine[Tan]
+1, hlc_rifle_auga2carb_b				//Steyr AUGA2 Carbine[Black]
+1, hlc_rifle_augsrcarb				//Steyr AUG-SR Carbine[OD]
+1, hlc_rifle_augsrcarb_t				//Steyr AUGA-SR Carbine[Tan]
+1, hlc_rifle_augsrcarb_b				//Steyr AUG-SR Carbine[Black]
+1, hlc_rifle_auga2lsw				//Steyr AUGA2 HBAR[OD]
+1, hlc_rifle_auga2lsw_t				//Steyr AUGA2 HBAR[Tan]
+1, hlc_rifle_auga2lsw_b				//Steyr AUGA2 HBAR[Black]
+1, hlc_rifle_augsrhbar				//Steyr AUG-SR HBAR[OD]
+1, hlc_rifle_augsrhbar_t				//Steyr AUG-SR HBAR[Tan]
+1, hlc_rifle_augsrhbar_b				//Steyr AUG-SR HBAR[Black]
+1, hlc_rifle_auga3				//Steyr AUGA3[Green]
+1, hlc_rifle_auga3_bl				//Steyr AUGA3[Blue]
+1, hlc_rifle_auga3_b				//Steyr AUGA3[Black]
+1, hlc_rifle_auga3_GL				//Steyr AUGA3(GL)[Green]
+1, hlc_rifle_auga3_GL_BL				//Steyr AUGA3(GL)[Blue]
+1, hlc_rifle_auga3_GL_B				//Steyr AUGA3(GL)[Black]
+
+> SFRifles						//6.5
 10, arifle_Katiba_F				// Katiba 6.5 mm
 8, arifle_Katiba_GL_F			// Katiba GL 6.5 mm
 8, arifle_MXC_F					// MXC 6.5 mm
@@ -183,6 +266,10 @@
 5, arifle_ARX_blk_F             // Type 115 6.5 mm (Black)
 5, arifle_ARX_ghex_F            // Type 115 6.5 mm (Green Hex)
 5, arifle_ARX_hex_F             // Type 115 6.5 mm (Hex)
+1, hlc_rifle_G36MLIC			//HK G36-MLI(C)
+1, hlc_rifle_G36KMLIC			//HK G36K-MLI(C)
+1, hlc_rifle_G36MLIAG36			//HK G36MLI(C)(GL)
+1, hlc_rifle_G36CMLIC			//HK G36C-MLI(C)
 
 > CivilianSniper
 10, Exile_Weapon_LeeEnfield
@@ -193,16 +280,44 @@
 10, Exile_Weapon_DMR		
 10, Exile_Weapon_SVD
 10, Exile_Weapon_SVDCamo
+28, srifle_DMR_01_F				// Rahim 7.62 mm
+28, srifle_EBR_F				// Mk18 ABR 7.62 mm
+22, srifle_GM6_F				// GM6 Lynx 12.7 mm
+22, srifle_LRR_F				// M320 LRR .408
+22, srifle_LRR_tna_F    		// M320 LRR .408 (Tropic)
+22, srifle_GM6_ghex_F   		// GM6 Lynx 12.7 mm (Green Hex)
+22, srifle_DMR_07_blk_F     	// CMR-76 6.5 mm (Black)
+22, srifle_DMR_07_hex_F     	// CMR-76 6.5 mm (Hex)
+22, srifle_DMR_07_ghex_F    	// CMR-76 6.5 mm (Green Hex)
 
-> FFFRifles
+> FFFRifles						//5.45
 10, Exile_Weapon_AK107	
 10, Exile_Weapon_AK107_GL
 10, Exile_Weapon_AK74_GL
 10, Exile_Weapon_AK74					
-5, arifle_AKS_F                 // AKS	
+5, arifle_AKS_F                 // AKS
+1, hlc_rifle_rpk74n				//Izhmash RPK74
+1, hlc_rifle_ak74				//Izhmash AK74
+1, hlc_rifle_ak74_dirty			//Izhmash AK74(Worn)
+1, hlc_rifle_ak74_dirty2		//Izhmash AK74(Worn)
+1, hlc_rifle_ak74_MTK			//Izhmash AK74(MTK)
+1, hlc_rifle_ak74m				//Izhmash AK74M
+1, hlc_rifle_ak74m_gl			//Izhmash AK74M(GL)
+1, hlc_rifle_ak74m_MTK			//Izhmash AK74M(MTK)
+1, hlc_rifle_aks74				//Izhmash AKS74
+1, hlc_rifle_aks74u				//Izhmash AKS74U
+1, hlc_rifle_ak12				//Izhmash AK12
+1, hlc_rifle_ak12GL				//Izhmash AK12(GL)
+1, hlc_rifle_aku12				//Izhmash AK12U
+1, hlc_rifle_aks74_GL			//Izhmash AKS74(GL)
+1, hlc_rifle_aek971				//ZID AEK971S
+1, hlc_rifle_aek971worn			//ZID AEK971S(Worn)
+1, hlc_rifle_aek971_mtk			//ZID AEK971S(MTK)
+1, hlc_rifle_aks74u_MTK			//Izhmash AKS74U(MTK)
+1, hlc_rifle_aks74_MTK			//Izhmash AKS74(MTK)
 
 
-> SSTRifles
+> SSTRifles						//7.62
 5, arifle_AK12_F          		// AK-12 7.62 mm
 5, arifle_AK12_GL_F             // AK-12 GL 7.62 mm
 5, arifle_AKM_F                 // AKM 7.62 mm
@@ -212,8 +327,45 @@
 5, arifle_SPAR_03_snd_F         // SPAR-17 7.62 mm (Sand)
 10, Exile_Weapon_AKS_Gold
 10, Exile_Weapon_AK47
+1, hlc_rifle_ak47				//Izhmash AK47
+1, Izhmash AK47					//Izhmash AKM
+1, hlc_rifle_akmgl				//Izhmash AKM (GL)
+1, hlc_rifle_akm_MTK			//Izhmash AKM(MTK)
+1, hlc_rifle_RK62				//Valmet Rk.62
+1, hlc_rifle_slr107u			//Arsenal Inc. SLR107U
+1, hlc_rifle_slr107u_MTK		//Arsenal Inc. SLR107U(MTK)
+1, hlc_rifle_falosw				//DSArms FAL OSW
+1, hlc_rifle_osw_GL				//DSArms FAL OSW(GL)
+1, hlc_rifle_SLR				//Lithgow SLR
+1, hlc_rifle_FAL5061Rail		//FN FAL 50.61'Para' (RIS)
+1, hlc_rifle_FAL5061			//FN FAL 50.61'Para'
+1, hlc_rifle_FAL5000			//FN FAL 50.00
+1, hlc_rifle_FAL5000Rail		//FN FAL 50.00 (RIS)
+1, hlc_rifle_L1A1SLR			//Enfield L1A1 SLR
+1, hlc_rifle_c1A1				//CAL C1A1
+1, hlc_rifle_LAR				//FN LAR
+1, hlc_rifle_STG58F				//Steyr STG.58
+1, hlc_rifle_SLRchopmod			//Lithgow SLR Chopmod
+1, hlc_rifle_g3sg1				//HK G3/SG1
+1, hlc_rifle_g3a3				//HK G3A3
+1, hlc_rifle_g3a3ris			//HK G3A3 RIS
+1, hlc_rifle_g3a3v				//HK G3A3 (Widegrip)
+1, hlc_rifle_g3ka4				//HK G3KA4 RAS
+1, HLC_Rifle_g3ka4_GL			//HK G3KA4 RAS(GL)
+1, hlc_rifle_hk51				//FR Ordnance MC51
+1, hlc_rifle_M14				//Springfield Armory M14
+1, hlc_rifle_M14_Bipod			//Springfield Armory M14(Bipod)
+1, hlc_rifle_M14_Rail			//Springfield Armory M14(Rail)
+1, hlc_rifle_M21				//Springfield Armory M21
+1, hlc_rifle_m14dmr				//Springfield Armory M14DMR
+1, hlc_rifle_m14sopmod			//Troy M14 SOPMOD
+1, hlc_rifle_STGW57				//SIG Stgw.57
+1, hlc_rifle_stgw57_RIS			//SIG Stgw.57+RIS
+1, hlc_rifle_stgw57_commando	//SIG Stgw.57 Commando
+1, hlc_rifle_sig5104			//SIG SG510-4
+1, hlc_rifle_amt				//SIG AMT
 
-> FERifles
+> FERifles						//5.8
 5, arifle_CTAR_blk_F            // CAR-95 5.8 mm (Black)
 5, arifle_CTAR_hex_F			// CAR-95 5.8 mm (Hex)
 5, arifle_CTAR_ghex_F			// CAR-95 5.8 mm (Green Hex)
@@ -329,17 +481,6 @@
 10, 200Rnd_556x45_Box_Red_F         // LIM-85	
 10, 200Rnd_556x45_Box_Tracer_F      // LIM-85	
 10, 200Rnd_556x45_Box_Tracer_Red_F  // LIM-85	
-
-> Snipers
-28, srifle_DMR_01_F			// Rahim 7.62 mm
-28, srifle_EBR_F			// Mk18 ABR 7.62 mm
-22, srifle_GM6_F			// GM6 Lynx 12.7 mm
-22, srifle_LRR_F			// M320 LRR .408
-22, srifle_LRR_tna_F    	// M320 LRR .408 (Tropic)
-22, srifle_GM6_ghex_F   	// GM6 Lynx 12.7 mm (Green Hex)
-22, srifle_DMR_07_blk_F     // CMR-76 6.5 mm (Black)
-22, srifle_DMR_07_hex_F     // CMR-76 6.5 mm (Hex)
-22, srifle_DMR_07_ghex_F    // CMR-76 6.5 mm (Green Hex)
 
 > SniperAmmo
 17, 5Rnd_127x108_Mag			// GM6 Lynx
