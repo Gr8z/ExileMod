@@ -100,7 +100,7 @@ removeBackpackGlobal 			_unit;
 // Give default items
 {
 	// "Why doesn't linkItem work with any of these? Because fuck you, that's why" - BIS
-	if (_x in ["Binocular","Rangefinder","Laserdesignator","Laserdesignator_02","Laserdesignator_03"]) then
+	if (_x in ["Binocular","Rangefinder"]) then
 	{
 		_unit addWeapon _x;
 	}
@@ -141,7 +141,7 @@ if (_customGearSet isEqualTo []) then
 
 	// Equipment (Stuff that goes in the toolbelt slots)
 	{
-		if (_x in ["Binocular","Rangefinder","Laserdesignator","Laserdesignator_02","Laserdesignator_03"]) then
+		if (_x in ["Binocular","Rangefinder"]) then
 		{
 			_unit addWeapon _x;
 		}
@@ -334,7 +334,7 @@ else
 			} forEach _magazines;
 
 			{
-				if (_x in ["Binocular","Rangefinder","Laserdesignator","Laserdesignator_02","Laserdesignator_03"]) then
+				if (_x in ["Binocular","Rangefinder"]) then
 				{
 					_unit addWeapon _x;
 				}

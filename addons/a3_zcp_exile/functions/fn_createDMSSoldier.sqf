@@ -72,7 +72,7 @@ if !(DMS_ai_default_items isEqualTo []) then
 {
 	{
 		// "Why doesn't linkItem work with any of these? Because fuck you, that's why" - BIS
-		if (_x in ["Binocular","Rangefinder","Laserdesignator","Laserdesignator_02","Laserdesignator_03"]) then
+		if (_x in ["Binocular","Rangefinder"]) then
 		{
 			_ZCP_CDS_unitAI addWeapon _x;
 		}
@@ -92,7 +92,7 @@ if !(_ZCP_CDS_soldierClass in DMS_ai_SupportedClasses) exitWith
 
 	// Equipment (Stuff that goes in the toolbelt slots)
 	{
-		if (_x in ["Binocular","Rangefinder","Laserdesignator","Laserdesignator_02","Laserdesignator_03"]) then
+		if (_x in ["Binocular","Rangefinder"]) then
 		{
 			_ZCP_CDS_unitAI addWeapon _x;
 		}

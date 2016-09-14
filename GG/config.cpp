@@ -1577,20 +1577,20 @@ class CfgExileArsenal
 	class B_OutdoorPack_blk												{ quality = 1; price = 150; };
 	class B_OutdoorPack_blu												{ quality = 1; price = 150; };
 	class B_OutdoorPack_tan												{ quality = 1; price = 150; };
-	class B_AssaultPack_blk												{ quality = 1; price = 200; };
+	class B_AssaultPack_blk												{ quality = 1; price = 200; sellPrice = 50; };
 	class B_AssaultPack_cbr												{ quality = 1; price = 200; };
 	class B_AssaultPack_dgtl											{ quality = 1; price = 200; };
 	class B_AssaultPack_khk												{ quality = 1; price = 200; };
 	class B_AssaultPack_mcamo											{ quality = 1; price = 200; };
-	class B_AssaultPack_rgr												{ quality = 1; price = 200; };
+	class B_AssaultPack_rgr												{ quality = 1; price = 200; sellPrice = 50; };
 	class B_AssaultPack_sgg												{ quality = 1; price = 200; };
 	class B_AssaultPack_tna_F											{ quality = 1; price = 200; };
-	class B_FieldPack_blk												{ quality = 1; price = 250; };
+	class B_FieldPack_blk												{ quality = 1; price = 250; sellPrice = 50; };
 	class B_FieldPack_cbr												{ quality = 1; price = 250; };
 	class B_FieldPack_ocamo												{ quality = 1; price = 250; };
 	class B_FieldPack_oucamo											{ quality = 1; price = 250; };
 	class B_FieldPack_ghex_F											{ quality = 1; price = 250; };
-	class B_TacticalPack_blk											{ quality = 1; price = 300; };
+	class B_TacticalPack_blk											{ quality = 1; price = 300; sellPrice = 50; };
 	class B_TacticalPack_rgr											{ quality = 1; price = 300; };
 	class B_TacticalPack_ocamo											{ quality = 1; price = 300; };
 	class B_TacticalPack_mcamo											{ quality = 1; price = 300; };
@@ -2493,7 +2493,7 @@ class CfgExileArsenal
     class TRYK_B_Kitbag_aaf                             { quality = 2; price = 600; };
     class TRYK_B_Carryall_blk                           { quality = 3; price = 700; };
     class TRYK_B_Carryall_wh                            { quality = 3; price = 700; };
-    class TRYK_B_Carryall_wood                          { quality = 3; price = 700; };
+    class TRYK_B_Carryall_wood                          { quality = 3; price = 700; sellPrice = 50; };
     class TRYK_B_Carryall_JSDF                          { quality = 3; price = 700; };
     class TRYK_B_Kitbag_Base_JSDF                       { quality = 1; price = 500; };
     class TRYK_B_Coyotebackpack                         { quality = 1; price = 700; };
@@ -2766,8 +2766,8 @@ class CfgExileArsenal
 
 	///////// Pistols /////////
 	class hgun_Pistol_01_F												{ quality = 1; price = 150; };
-	class hgun_ACPC2_F 													{ quality = 1; price = 150; };
-	class hgun_P07_F 													{ quality = 1; price = 150; };
+	class hgun_ACPC2_F 													{ quality = 1; price = 150; sellPrice = 25; };
+	class hgun_P07_F 													{ quality = 1; price = 150; sellPrice = 40; };
 	class hgun_P07_khk_F												{ quality = 1; price = 150; };
 	class hgun_Rook40_F 												{ quality = 1; price = 150; };
 	class hgun_Pistol_heavy_01_F 										{ quality = 1; price = 200; };
@@ -2791,7 +2791,7 @@ class CfgExileArsenal
 	class arifle_Mk20C_plain_F											{ quality = 1; price = 400; };
 	class arifle_MX_Black_F												{ quality = 1; price = 500; };
 	class arifle_MX_F													{ quality = 1; price = 500; };
-	class arifle_MX_khk_F												{ quality = 1; price = 500; };
+	class arifle_MX_khk_F												{ quality = 1; price = 500; sellPrice = 50; };
 	class arifle_MX_GL_Black_F											{ quality = 1; price = 550; };
 	class arifle_MX_GL_F												{ quality = 1; price = 550; };
 	class arifle_MX_GL_khk_F											{ quality = 1; price = 550; };
@@ -2853,7 +2853,7 @@ class CfgExileArsenal
 	class srifle_DMR_02_sniper_F 										{ quality = 3; price = 1500; };
 	class srifle_DMR_03_F 												{ quality = 2; price = 900; };
 	class srifle_DMR_03_khaki_F 										{ quality = 2; price = 900; };
-	class srifle_DMR_03_multicam_F 										{ quality = 2; price = 900; };
+	class srifle_DMR_03_multicam_F 										{ quality = 2; price = 900; sellPrice = 50; };
 	class srifle_DMR_03_tan_F 											{ quality = 2; price = 900; };
 	class srifle_DMR_03_woodland_F 										{ quality = 2; price = 900; };
 	class srifle_DMR_04_F 												{ quality = 3; price = 1000; };
@@ -2901,7 +2901,7 @@ class CfgExileArsenal
 	class Exile_Weapon_Makarov											{ quality = 1; price = 100; };
 	class Exile_Weapon_Taurus											{ quality = 1; price = 100; };
 	class Exile_Weapon_TaurusGold										{ quality = 1; price = 150; sellPrice = 250000; }; //MAGAZINE CRAFT ITEM
-	class Exile_Weapon_M1014											{ quality = 1; price = 200; };
+	class Exile_Weapon_M1014											{ quality = 1; price = 200; sellPrice = 35; };
 	
 	///////// NIArms Handguns /////////	
 	class hlc_smg_mp5k 													{ quality = 1; price = 350; };
@@ -2913,7 +2913,7 @@ class CfgExileArsenal
 	class hlc_rifle_ak12GL 												{ quality = 1; price = 475; };
 	class hlc_rifle_aku12 												{ quality = 1; price = 425; };
 	class hlc_rifle_ak47 												{ quality = 2; price = 425; };
-	class hlc_rifle_ak74 												{ quality = 1; price = 425; };
+	class hlc_rifle_ak74 												{ quality = 1; price = 425; sellPrice = 50; };
 	class hlc_rifle_ak74_MTK 											{ quality = 1; price = 425; };
 	class hlc_rifle_ak74_dirty 											{ quality = 1; price = 425; };
 	class hlc_rifle_ak74_dirty2 										{ quality = 1; price = 425; };
@@ -2922,7 +2922,7 @@ class CfgExileArsenal
 	class hlc_rifle_ak74m_MTK 											{ quality = 1; price = 425; };
 	class hlc_rifle_akm 												{ quality = 1; price = 425; };
 	class hlc_rifle_akmgl 												{ quality = 1; price = 425; };
-	class hlc_rifle_akm_MTK 											{ quality = 1; price = 425; };
+	class hlc_rifle_akm_MTK 											{ quality = 1; price = 425; sellPrice = 50; };
 	class hlc_rifle_aks74 												{ quality = 1; price = 425; };
 	class hlc_rifle_aks74_GL 											{ quality = 1; price = 475; };
 	class hlc_rifle_aks74_MTK 											{ quality = 1; price = 425; };
@@ -2948,7 +2948,7 @@ class CfgExileArsenal
 	class hlc_rifle_Colt727_GL 											{ quality = 1; price = 550; };
 	class hlc_rifle_M4 													{ quality = 1; price = 450; };
 	class hlc_rifle_m4m203 												{ quality = 1; price = 475; };
-	class hlc_rifle_CQBR 												{ quality = 1; price = 435; };
+	class hlc_rifle_CQBR 												{ quality = 1; price = 435; sellPrice = 50; };
 	class hlc_rifle_samr2 												{ quality = 1; price = 435; };
 	class hlc_rifle_SAMR 												{ quality = 1; price = 435; };
 
@@ -3092,7 +3092,7 @@ class CfgExileArsenal
 	class hlc_smg_mp5k_PDW 												{ quality = 1; price = 425; };
 	class hlc_smg_MP5N 													{ quality = 1; price = 400; };
 	class hlc_smg_9mmar 												{ quality = 1; price = 450; };
-	class hlc_smg_mp5sd5 												{ quality = 1; price = 425; };
+	class hlc_smg_mp5sd5 												{ quality = 1; price = 425; sellPrice = 40; };
 	class hlc_smg_mp5sd6 												{ quality = 1; price = 425; };
 
 	///////// NIArms SG510 Rifles /////////
@@ -3118,7 +3118,7 @@ class CfgExileArsenal
 	class bipod_01_F_khk												{ quality = 1; price = 75; };
 
 	///////// Muzzle Attachments /////////
-	class muzzle_snds_acp 												{ quality = 1; price = 150; };
+	class muzzle_snds_acp 												{ quality = 1; price = 150; sellPrice = 30; };
 	class muzzle_snds_338_black 										{ quality = 3; price = 300; };
 	class muzzle_snds_338_green 										{ quality = 3; price = 300; };
 	class muzzle_snds_338_sand 											{ quality = 3; price = 300; };
@@ -3130,7 +3130,7 @@ class CfgExileArsenal
 	class muzzle_snds_B_khk_F											{ quality = 2; price = 200; };
 	class muzzle_snds_B_snd_F											{ quality = 2; price = 200; };
 	class muzzle_snds_H 												{ quality = 1; price = 200; };
-	class muzzle_snds_H_khk_F											{ quality = 1; price = 200; };
+	class muzzle_snds_H_khk_F											{ quality = 1; price = 200; sellPrice = 30; };
 	class muzzle_snds_H_snd_F											{ quality = 1; price = 200; };
 	class muzzle_snds_H_MG 												{ quality = 1; price = 200; };
 	class muzzle_snds_H_MG_blk_F										{ quality = 1; price = 200; };
@@ -3156,7 +3156,7 @@ class CfgExileArsenal
 	class optic_AMS_snd													{ quality = 2; price = 500; };
 	class optic_Arco													{ quality = 1; price = 250; };
 	class optic_Arco_blk_F												{ quality = 1; price = 250; };	
-	class optic_Arco_ghex_F												{ quality = 1; price = 250; };		
+class optic_Arco_ghex_F													{ quality = 1; price = 250; sellPrice = 50; };		
 	class optic_ERCO_blk_F												{ quality = 1; price = 250; };
 	class optic_ERCO_khk_F												{ quality = 1; price = 250; };
 	class optic_ERCO_snd_F												{ quality = 1; price = 250; };
@@ -3176,7 +3176,7 @@ class CfgExileArsenal
 	class optic_LRPS													{ quality = 3; price = 400; };
 	class optic_LRPS_tna_F												{ quality = 3; price = 400; };
 	class optic_LRPS_ghex_F												{ quality = 3; price = 400; };
-	class optic_MRCO													{ quality = 1; price = 200; };
+	class optic_MRCO													{ quality = 1; price = 200; sellPrice = 25; };
 	class optic_NVS														{ quality = 1; price = 500; };
 	class optic_SOS														{ quality = 1; price = 300; };
 	class optic_SOS_khk_F												{ quality = 1; price = 300; };
@@ -3207,7 +3207,7 @@ class CfgExileArsenal
 
 	///////// NIArms Optic Attachements /////////	
 	class HLC_Optic_PSO1 												{ quality = 1; price = 200; };
-	class HLC_Optic_1p29 												{ quality = 1; price = 150; };
+	class HLC_Optic_1p29 												{ quality = 1; price = 150; sellPrice = 25; };
 	class hlc_optic_kobra 												{ quality = 1; price = 150; };
 	class hlc_optic_PVS4FAL 											{ quality = 2; price = 500; };
 	class hlc_optic_PVS4G3 												{ quality = 2; price = 500; };
