@@ -101,6 +101,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 0:{
 			execVM "GG\ranks.sqf";
 		};
+	/*
 		case 1:{
 			if !(_puid in Scout1 + Scout2 + Scout3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Scout Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 
@@ -544,6 +545,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addWeapon "Exile_Melee_Axe";
 			call ExileClient_object_player_bambiStateEnd; };};
 		};
+	*/
 	};
 };
 fnc_LBDblClick_LBSelChanged_LO = {
