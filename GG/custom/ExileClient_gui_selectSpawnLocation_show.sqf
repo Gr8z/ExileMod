@@ -57,6 +57,7 @@ _listBox ctrlAddEventHandler ["LBDblClick", "call fnc_LBDblClick_LBSelChanged_LO
 _listBox ctrlAddEventHandler ["LBSelChanged", "call fnc_LBDblClick_LBSelChanged_LO;"];
 _listItemIndex = _listBox lbAdd "Respect Loadout";
 _listItemIndex = _listBox lbSetColor [0, [0, 1, 0, 0.5]];
+/*
 _listItemIndex = _listBox lbSetTooltip [0, "Get a Free Loadout based on your respect"];
 _listItemIndex = _listBox lbAdd "Scout Level 1";
 _listItemIndex = _listBox lbSetTooltip [1, "$4.69 / month"];
@@ -88,8 +89,9 @@ _listItemIndex = _listBox lbAdd "Engineer Level 2";
 _listItemIndex = _listBox lbSetTooltip [14, "$8.90 / month"];
 _listItemIndex = _listBox lbAdd "Engineer Level 3";
 _listItemIndex = _listBox lbSetTooltip [15, "$15.00 / month"];
+*/
 
-systemChat 'DONOR LOADOUTS CAN BE PURCHASED FROM GHOSTZGAMERZ.COM';
+//systemChat 'DONOR LOADOUTS CAN BE PURCHASED FROM GHOSTZGAMERZ.COM';
 waitUntil {!isNil "Soldier3"};
 FNC_GET_ACTUAL_LOADOUT = {
 	waitUntil {typeOf player isEqualTo 'Exile_Unit_Player'};
@@ -101,6 +103,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 		case 0:{
 			execVM "GG\ranks.sqf";
 		};
+	/*
 		case 1:{
 			if !(_puid in Scout1 + Scout2 + Scout3) then {[parseText format["<img size='2' shadow='0' image='GG\images\logo.paa'/><br/><t size='0.7'font='OrbitronLight'>Only Available for Scout Loadout Donators.</t>"],0,0,10,0] spawn bis_fnc_dynamictext;} else {
 
@@ -544,6 +547,7 @@ FNC_GET_ACTUAL_LOADOUT = {
 			player addWeapon "Exile_Melee_Axe";
 			call ExileClient_object_player_bambiStateEnd; };};
 		};
+	*/
 	};
 };
 fnc_LBDblClick_LBSelChanged_LO = {
