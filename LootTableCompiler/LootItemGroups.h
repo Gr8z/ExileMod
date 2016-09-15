@@ -454,14 +454,29 @@
 //1, optic_tws
 
 > LMG
-25, arifle_MX_SW_Black_F	// MX SW 6.5 mm (Black)
-25, arifle_MX_SW_F			// MX SW 6.5 mm
-25, LMG_Mk200_F				// Mk200 6.5 mm
-25, LMG_Zafir_F				// Zafir 7.62 mm
+25, arifle_MX_SW_Black_F		// MX SW 6.5 mm (Black)
+25, arifle_MX_SW_F				// MX SW 6.5 mm
+25, LMG_Mk200_F					// Mk200 6.5 mm
+25, LMG_Zafir_F					// Zafir 7.62 mm
 25, Exile_Weapon_RPK
 25, Exile_Weapon_PK
 25, Exile_Weapon_PKP
-25, LMG_03_F				//= LIM-85 5.56 mm
+25, LMG_03_F					//= LIM-85 5.56 mm
+1, hlc_rifle_RPK12				//Izhmash RPK12
+1, hlc_rifle_rpk				//Izhmash RPK
+1, hlc_lmg_M60E4				//M60E4
+1, hlc_lmg_m60					//M60
+1, hlc_lmg_minimipara			//FN Minimi Para
+1, hlc_lmg_minimi				//FN Minimi (18.3 in.)
+1, hlc_lmg_m249para				//M249E2 Para(13.7in.)
+1, hlc_lmg_M249E2				//M249E2
+1, hlc_lmg_minimi_railed		//FN Minimi (RIS/Solid Stock)
+1, hlc_m249_pip2				//M249E2 (RIS/13.7 in.)
+1, hlc_m249_pip1				//M249 PIP (RIS/18.3 in.)
+1, hlc_m249_pip3				//M249 PIP (RIS/PIP Stock)
+1, hlc_m249_pip4				//M249 PIP (VFG/PIP Stock)
+1, hlc_m249_SQuantoon			//M249 (Squantoon Special)
+1, hlc_lmg_mk48					//Mk.48 Mod.0
 
 > LMGAmmo
 12, 100Rnd_65x39_caseless_mag			// MX SW
