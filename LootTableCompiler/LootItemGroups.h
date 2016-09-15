@@ -306,30 +306,31 @@
 
 
 > FFFRifles						//5.45
-10, Exile_Weapon_AK107	
-10, Exile_Weapon_AK107_GL
-10, Exile_Weapon_AK74_GL
-10, Exile_Weapon_AK74					
 5, arifle_AKS_F                 // AKS
-1, hlc_rifle_rpk74n				//Izhmash RPK74
-1, hlc_rifle_ak74				//Izhmash AK74
-1, hlc_rifle_ak74_dirty			//Izhmash AK74(Worn)
-1, hlc_rifle_ak74_dirty2		//Izhmash AK74(Worn)
-1, hlc_rifle_ak74_MTK			//Izhmash AK74(MTK)
-1, hlc_rifle_ak74m				//Izhmash AK74M
-1, hlc_rifle_ak74m_gl			//Izhmash AK74M(GL)
-1, hlc_rifle_ak74m_MTK			//Izhmash AK74M(MTK)
-1, hlc_rifle_aks74				//Izhmash AKS74
-1, hlc_rifle_aks74u				//Izhmash AKS74U
-1, hlc_rifle_ak12				//Izhmash AK12
-1, hlc_rifle_ak12GL				//Izhmash AK12(GL)
-1, hlc_rifle_aku12				//Izhmash AK12U
-1, hlc_rifle_aks74_GL			//Izhmash AKS74(GL)
+5, hlc_rifle_rpk74n				//Izhmash RPK74
+4.5, Exile_Weapon_AK74
+4, Exile_Weapon_AK74_GL
+3, Exile_Weapon_AK107
+3, hlc_rifle_aku12				//Izhmash AK12U
+2.5, Exile_Weapon_AK107_GL
+2.5, hlc_rifle_ak12				//Izhmash AK12
+2, hlc_rifle_ak12GL				//Izhmash AK12(GL)				
+2, hlc_rifle_ak74				//Izhmash AK74
+2, hlc_rifle_ak74_dirty			//Izhmash AK74(Worn)
+2, hlc_rifle_ak74_dirty2		//Izhmash AK74(Worn)
+2, hlc_rifle_ak74_MTK			//Izhmash AK74(MTK)
+2, hlc_rifle_ak74m				//Izhmash AK74M
+2, hlc_rifle_ak74m_MTK			//Izhmash AK74M(MTK)
+2, hlc_rifle_aks74				//Izhmash AKS74
+2, hlc_rifle_aks74u				//Izhmash AKS74U
+2, hlc_rifle_aks74u_MTK			//Izhmash AKS74U(MTK)
+2, hlc_rifle_aks74_MTK			//Izhmash AKS74(MTK)
+1.5, hlc_rifle_ak74m_gl			//Izhmash AK74M(GL)
+1.5, hlc_rifle_aks74_GL			//Izhmash AKS74(GL)
 1, hlc_rifle_aek971				//ZID AEK971S
 1, hlc_rifle_aek971worn			//ZID AEK971S(Worn)
 1, hlc_rifle_aek971_mtk			//ZID AEK971S(MTK)
-1, hlc_rifle_aks74u_MTK			//Izhmash AKS74U(MTK)
-1, hlc_rifle_aks74_MTK			//Izhmash AKS74(MTK)
+
 
 
 > SSTRifles						//7.62
