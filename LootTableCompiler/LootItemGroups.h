@@ -280,15 +280,26 @@
 10, Exile_Weapon_DMR		
 10, Exile_Weapon_SVD
 10, Exile_Weapon_SVDCamo
-28, srifle_DMR_01_F				// Rahim 7.62 mm
-28, srifle_EBR_F				// Mk18 ABR 7.62 mm
-22, srifle_GM6_F				// GM6 Lynx 12.7 mm
-22, srifle_LRR_F				// M320 LRR .408
-22, srifle_LRR_tna_F    		// M320 LRR .408 (Tropic)
-22, srifle_GM6_ghex_F   		// GM6 Lynx 12.7 mm (Green Hex)
-22, srifle_DMR_07_blk_F     	// CMR-76 6.5 mm (Black)
-22, srifle_DMR_07_hex_F     	// CMR-76 6.5 mm (Hex)
-22, srifle_DMR_07_ghex_F    	// CMR-76 6.5 mm (Green Hex)
+28, srifle_DMR_01_F					// Rahim 7.62 mm
+28, srifle_EBR_F					// Mk18 ABR 7.62 mm
+22, srifle_GM6_F					// GM6 Lynx 12.7 mm
+22, srifle_LRR_F					// M320 LRR .408
+22, srifle_LRR_tna_F    			// M320 LRR .408 (Tropic)
+22, srifle_GM6_ghex_F   			// GM6 Lynx 12.7 mm (Green Hex)
+22, srifle_DMR_07_blk_F     		// CMR-76 6.5 mm (Black)
+22, srifle_DMR_07_hex_F     		// CMR-76 6.5 mm (Hex)
+22, srifle_DMR_07_ghex_F    		// CMR-76 6.5 mm (Green Hex)
+1, hlc_rifle_awmagnum				//AI AWM (OD)
+1, hlc_rifle_awmagnum_BL			//AI AWM (Black)
+1, hlc_rifle_awmagnum_FDE			//AI AWM (FDE)
+1, hlc_rifle_awMagnum_OD_ghillie	//AI AWM (OD+Ghillie)
+1, hlc_rifle_awMagnum_FDE_ghillie	//AI AWM (FDE+Ghillie)
+1, hlc_rifle_awMagnum_BL_ghillie	//AI AWM (Black+Ghillie)
+1, hlc_rifle_awcovert_BL			//AI AWC-M (Black)
+1, hlc_rifle_awcovert_FDE			//AI AWC-M (FDE)
+1, hlc_rifle_M1903A1_unertl			//M1903A1 (Sniper)
+1, hlc_rifle_M1903A1				//M1903A1
+1, hlc_rifle_M1903A1OMR				//M1903A1 'Guthrie'
 
 > FFFRifles						//5.45
 10, Exile_Weapon_AK107	
