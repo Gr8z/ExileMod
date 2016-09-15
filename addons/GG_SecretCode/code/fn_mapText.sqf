@@ -17,7 +17,6 @@ MAP_TEXT__CODE = {
     ];
     _ctrl ctrlCommit 0;
 };
-publicVariable 'MAP_TEXT__CODE';
 
 [] spawn {
 	waitUntil{!isNil'FN_infiSTAR_S'};
