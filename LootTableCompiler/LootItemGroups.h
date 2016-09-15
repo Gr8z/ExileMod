@@ -127,25 +127,25 @@
 1, Exile_Magazine_8Rnd_74Slug		//M1014
 
 > SMG
-34, SMG_01_F						// Vermin SMG .45 ACP
-33, SMG_02_F						// Sting 9 mm
-33, SMG_05_F						// Protector 9mm
-33, hgun_PDW2000_F					// PDW2000 9 mm
-1, hlc_rifle_augpara				//Steyr AUGA1 9mm[OD]
-1, hlc_rifle_augpara_b				//Steyr AUGA1 9mm[Black]
-1, hlc_rifle_augpara_t				//Steyr AUGA1 9mm[Tan]
-1, hlc_rifle_auga2para				//Steyr AUGA2 9mm[OD]
-1, hlc_rifle_auga2para_t			//Steyr AUGA2 9mm[Tan]
-1, hlc_rifle_auga2para_b			//Steyr AUGA2 9mm[Black]
-1, hlc_smg_mp510					//HK MP5/10
-1, hlc_smg_mp5k_PDW					//HK MP5K-PDW
-1, hlc_smg_mp5a2					//HK MP5A2
-1, hlc_smg_MP5N						//HK MP5N
-1, hlc_smg_9mmar					//HK MP5N '9MMAR'
-1, hlc_smg_mp5a4					//HK MP5A4
-1, hlc_smg_mp5sd5					//HK MP5SD5
-1, hlc_smg_mp5a3					//HK MP5A3
-1, hlc_smg_mp5sd6					//HK MP5SD6
+5, SMG_02_F							// Sting 9 mm
+5, SMG_05_F							// Protector 9mm
+5, hgun_PDW2000_F					// PDW2000 9 mm
+5, hlc_rifle_augpara				//Steyr AUGA1 9mm[OD]
+4, hlc_rifle_augpara_b				//Steyr AUGA1 9mm[Black]
+4, hlc_rifle_augpara_t				//Steyr AUGA1 9mm[Tan]
+3, hlc_rifle_auga2para				//Steyr AUGA2 9mm[OD]
+3, hlc_rifle_auga2para_t			//Steyr AUGA2 9mm[Tan]
+3, hlc_rifle_auga2para_b			//Steyr AUGA2 9mm[Black]
+3, hlc_smg_mp5a3					//HK MP5A3
+3, hlc_smg_mp5k_PDW					//HK MP5K-PDW
+3, hlc_smg_mp5a2					//HK MP5A2
+3, hlc_smg_MP5N						//HK MP5N
+3, hlc_smg_9mmar					//HK MP5N '9MMAR'
+3, hlc_smg_mp5a4					//HK MP5A4
+2, hlc_smg_mp5sd5					//HK MP5SD5
+2, hlc_smg_mp510					//HK MP5/10
+2, hlc_smg_mp5sd6					//HK MP5SD6
+1, SMG_01_F							// Vermin SMG .45 ACP
 
 > SMGAmmo
 50, 30Rnd_45ACP_Mag_SMG_01					// Vermin SMG
@@ -213,7 +213,6 @@
 1, hlc_rifle_vendimus			//AR15 .300 Dissipator
 1, hlc_rifle_honeybadger		//AAC 'Honey-Badger'
 
-
 > AugsRifles
 1, hlc_rifle_aug				//Steyr AUGA1[OD]
 1, hlc_rifle_auga1_t			//Steyr AUGA1[Tan]
@@ -271,8 +270,6 @@
 1.5, arifle_ARX_blk_F           // Type 115 6.5 mm (Black)
 1, arifle_ARX_ghex_F            // Type 115 6.5 mm (Green Hex)
 1, arifle_ARX_hex_F             // Type 115 6.5 mm (Hex)
-
-
 
 > CivilianSniper
 10, Exile_Weapon_LeeEnfield
@@ -334,52 +331,52 @@
 
 
 > SSTRifles						//7.62
-5, arifle_AK12_F          		// AK-12 7.62 mm
-5, arifle_AK12_GL_F             // AK-12 GL 7.62 mm
 5, arifle_AKM_F                 // AKM 7.62 mm
 5, arifle_AKM_FL_F              // AKM 7.62 mm
-5, arifle_SPAR_03_blk_F         // SPAR-17 7.62 mm (Black)
-5, arifle_SPAR_03_khk_F         // SPAR-17 7.62 mm (Khaki)
-5, arifle_SPAR_03_snd_F         // SPAR-17 7.62 mm (Sand)
-10, Exile_Weapon_AKS_Gold
-10, Exile_Weapon_AK47
-1, hlc_rifle_ak47				//Izhmash AK47
-1, Izhmash AK47					//Izhmash AKM
-1, hlc_rifle_akmgl				//Izhmash AKM (GL)
-1, hlc_rifle_akm_MTK			//Izhmash AKM(MTK)
-1, hlc_rifle_RK62				//Valmet Rk.62
-1, hlc_rifle_slr107u			//Arsenal Inc. SLR107U
-1, hlc_rifle_slr107u_MTK		//Arsenal Inc. SLR107U(MTK)
-1, hlc_rifle_falosw				//DSArms FAL OSW
-1, hlc_rifle_osw_GL				//DSArms FAL OSW(GL)
-1, hlc_rifle_SLR				//Lithgow SLR
-1, hlc_rifle_FAL5061Rail		//FN FAL 50.61'Para' (RIS)
-1, hlc_rifle_FAL5061			//FN FAL 50.61'Para'
-1, hlc_rifle_FAL5000			//FN FAL 50.00
-1, hlc_rifle_FAL5000Rail		//FN FAL 50.00 (RIS)
-1, hlc_rifle_L1A1SLR			//Enfield L1A1 SLR
-1, hlc_rifle_c1A1				//CAL C1A1
-1, hlc_rifle_LAR				//FN LAR
-1, hlc_rifle_STG58F				//Steyr STG.58
-1, hlc_rifle_SLRchopmod			//Lithgow SLR Chopmod
-1, hlc_rifle_g3sg1				//HK G3/SG1
-1, hlc_rifle_g3a3				//HK G3A3
-1, hlc_rifle_g3a3ris			//HK G3A3 RIS
-1, hlc_rifle_g3a3v				//HK G3A3 (Widegrip)
-1, hlc_rifle_g3ka4				//HK G3KA4 RAS
-1, HLC_Rifle_g3ka4_GL			//HK G3KA4 RAS(GL)
-1, hlc_rifle_hk51				//FR Ordnance MC51
-1, hlc_rifle_M14				//Springfield Armory M14
-1, hlc_rifle_M14_Bipod			//Springfield Armory M14(Bipod)
-1, hlc_rifle_M14_Rail			//Springfield Armory M14(Rail)
+4, arifle_AK12_F          		// AK-12 7.62 mm
+4, hlc_rifle_hk51				//FR Ordnance MC51
+3.5, arifle_AK12_GL_F           // AK-12 GL 7.62 mm
+3.5, hlc_rifle_slr107u			//Arsenal Inc. SLR107U
+3.5, hlc_rifle_slr107u_MTK		//Arsenal Inc. SLR107U(MTK)
+3.5, hlc_rifle_L1A1SLR			//Enfield L1A1 SLR
+3.5, Exile_Weapon_AK47			// AK 47
+3.5, hlc_rifle_ak47				//Izhmash AK47
+3, arifle_SPAR_03_blk_F         // SPAR-17 7.62 mm (Black)
+3, arifle_SPAR_03_khk_F         // SPAR-17 7.62 mm (Khaki)
+3, arifle_SPAR_03_snd_F         // SPAR-17 7.62 mm (Sand)
+3, Izhmash AK47					//Izhmash AKM
+3, hlc_rifle_akm_MTK			//Izhmash AKM(MTK)
+3, hlc_rifle_RK62				//Valmet Rk.62
+3, hlc_rifle_falosw				//DSArms FAL OSW
+3, hlc_rifle_g3a3v				//HK G3A3 (Widegrip)
+3, hlc_rifle_FAL5061			//FN FAL 50.61'Para'
+3, hlc_rifle_FAL5000			//FN FAL 50.00
+3, hlc_rifle_SLR				//Lithgow SLR
+3, hlc_rifle_g3a3				//HK G3A3
+3, hlc_rifle_SLRchopmod			//Lithgow SLR Chopmod
+3, hlc_rifle_LAR				//FN LAR
+2.5, hlc_rifle_osw_GL			//DSArms FAL OSW(GL)
+2.5, hlc_rifle_akmgl			//Izhmash AKM (GL)
+2, hlc_rifle_FAL5061Rail		//FN FAL 50.61'Para' (RIS)
+2, hlc_rifle_FAL5000Rail		//FN FAL 50.00 (RIS)
+2, hlc_rifle_c1A1				//CAL C1A1
+2, hlc_rifle_STG58F				//Steyr STG.58
+2, hlc_rifle_g3sg1				//HK G3/SG1
+2, hlc_rifle_g3a3ris			//HK G3A3 RIS
+2, hlc_rifle_g3ka4				//HK G3KA4 RAS
+2, hlc_rifle_M14				//Springfield Armory M14
+1.5, HLC_Rifle_g3ka4_GL			//HK G3KA4 RAS(GL)
+1.5, hlc_rifle_M14_Bipod		//Springfield Armory M14(Bipod)
+1.5, hlc_rifle_m14sopmod		//Troy M14 SOPMOD
+2, hlc_rifle_M14_Rail			//Springfield Armory M14(Rail)
 1, hlc_rifle_M21				//Springfield Armory M21
 1, hlc_rifle_m14dmr				//Springfield Armory M14DMR
-1, hlc_rifle_m14sopmod			//Troy M14 SOPMOD
 1, hlc_rifle_STGW57				//SIG Stgw.57
 1, hlc_rifle_stgw57_RIS			//SIG Stgw.57+RIS
 1, hlc_rifle_stgw57_commando	//SIG Stgw.57 Commando
 1, hlc_rifle_sig5104			//SIG SG510-4
 1, hlc_rifle_amt				//SIG AMT
+0.2, Exile_Weapon_AKS_Gold
 
 > FERifles						//5.8
 5, arifle_CTAR_blk_F            // CAR-95 5.8 mm (Black)
@@ -690,6 +687,17 @@
 5, U_C_Man_casual_4_F               // Summer Clothes (Sky)
 5, U_C_Man_casual_5_F               // Summer Clothes (Yellow)
 5, U_C_Man_casual_6_F               // Summer Clothes (Red)
+1, TRYK_U_B_BLK_T_WH
+1, TRYK_U_B_BLK_T_BK
+1, TRYK_U_B_RED_T_BR
+1, TRYK_U_B_Denim_T_BG_WH
+1, TRYK_U_B_Denim_T_BG_BK
+1, TRYK_U_B_fleece
+1, TRYK_ZARATAKI
+1, TRYK_ZARATAKI2
+1, TRYK_ZARATAKI3
+1, TRYK_SUITS_BR_F
+1, TRYK_SUITS_BLK_F
 
 > CivilianBackpacks
 10, B_OutdoorPack_blk
@@ -712,6 +720,10 @@
 50, V_Rangemaster_belt
 25, V_Press_F
 25, V_TacVest_blk_POLICE
+1, TRYK_Hrp_vest_ucp
+1, TRYK_V_harnes_blk_L
+1, TRYK_V_Bulletproof_BLK
+1, TRYK_V_Sheriff_BA_TBL
 
 > CivilianHeadgear
 5, H_Bandanna_surfer
