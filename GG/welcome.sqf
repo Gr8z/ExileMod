@@ -36,7 +36,7 @@
     }
     forEach (allMissionObjects "Exile_Construction_Flag_Static");
     sleep 2;
-    _announcepay pushBack [" "," "," "," "];
+    _announcepay append ["","",""];
     if !(count _announcepay == 0) then{
             [_announcepay, -.5, .85] call BIS_fnc_typeText;
     };
@@ -62,7 +62,7 @@
     };
 
     if (_missingMods) then {
-        _missingModList pushBack [" "," "," "," "];
+        _missingModList append ["","",""];
 
         sleep 2;
 
