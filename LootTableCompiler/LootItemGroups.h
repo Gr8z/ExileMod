@@ -164,54 +164,55 @@
 20, optic_Aco
 
 > FFSRifles						//5.56
-6, arifle_SDAR_F				// SDAR 5.56 mm
-8, arifle_TRG21_F				// TRG-21 5.56 mm
-8, arifle_TRG20_F				// TRG-20 5.56 mm
+5, arifle_Mk20_F				// Mk20 5.56 mm
+5, arifle_Mk20C_F				// Mk20C 5.56 mm
+5, arifle_SDAR_F				// SDAR 5.56 mm
+5, hlc_rifle_hk53				//HK HK53
+5, hlc_rifle_hk53RAS			//HK HK53(RAS)
+4.5, arifle_TRG21_F				// TRG-21 5.56 mm
+4.5, arifle_TRG20_F				// TRG-20 5.56 mm
 4, arifle_TRG21_GL_F			// TRG-21 EGLM 5.56 mm
-7, arifle_Mk20_F				// Mk20 5.56 mm
-7, arifle_Mk20C_F				// Mk20C 5.56 mm
 4, arifle_Mk20_GL_F				// Mk20 EGLM 5.56 mm
-5, arifle_SPAR_01_blk_F         // SPAR-16 5.56 mm (Black)
-5, arifle_SPAR_01_khk_F         // SPAR-16 5.56 mm (Khaki)
-5, arifle_SPAR_01_snd_F         // SPAR-16 5.56 mm (Sand)
-5, arifle_SPAR_01_GL_blk_F      // SPAR-16 GL 5.56 mm (Black)
-5, arifle_SPAR_01_GL_khk_F      // SPAR-16 GL 5.56 mm (Khaki)
-5, arifle_SPAR_01_GL_snd_F      // SPAR-16 GL 5.56 mm (Sand)
-5, arifle_SPAR_02_blk_F         // SPAR-16S 5.56 mm (Black)
-5, arifle_SPAR_02_khk_F         // SPAR-16S 5.56 mm (Khaki)
-5, arifle_SPAR_02_snd_F         // SPAR-16S 5.56 mm (Sand)
-1, hlc_rifle_RU556				//AR15 Sanitised Carbine
-1, hlc_rifle_RU5562				//AR15 Magpul Carbine
-1, hlc_rifle_CQBR				//Colt M4 CQB-R
-1, hlc_rifle_M4					//Colt M4 Carbine
-1, hlc_rifle_m4m203				//Colt M4 Carbine (GL)
-1, hlc_rifle_bcmjack			//BCM 'Jack' Carbine
-1, hlc_rifle_Colt727			//Colt Carbine
-1, hlc_rifle_Colt727_GL			//Colt Carbine(GL)
-1, hlc_rifle_SAMR				//RRA LAR-15
-1, hlc_rifle_samr2				//RRA LAR-15
-1, hlc_rifle_G36A1				//HK G36A1
-1, hlc_rifle_MG36				//HK MG36A1
-1, hlc_rifle_G36A1AG36			//HK G36A1(GL)
-1, hlc_rifle_G36KA1				//HK G36KA1
-1, hlc_rifle_G36C				//HK G36C
-1, hlc_rifle_G36E1				//HK G36E
-1, hlc_rifle_G36E1AG36			//HK G36E(GL)
-1, hlc_rifle_G36KE1				//HK G36KE
-1, hlc_rifle_G36V				//HK G36V
-1, hlc_rifle_G36KV				//HK G36KV
-1, hlc_rifle_G36CV				//HK G36CV
-1, hlc_rifle_G36VAG36			//HK G36V(GL)
-1, hlc_rifle_G36TAC				//HK G36V(KAC)
-1, hlc_rifle_g36KTac			//HK G36KV(KAC)
-1, hlc_rifle_G36CTac			//HK G36CV(KAC)
-1, hlc_rifle_hk53				//HK HK53
-1, hlc_rifle_hk53RAS			//HK HK53(RAS)
-1, hlc_rifle_hk33a2				//HK HK33A2
-1, hlc_rifle_hk33a2RIS			//HK HK33A2(RIS)
+4, arifle_SPAR_01_blk_F         // SPAR-16 5.56 mm (Black)
+4, arifle_SPAR_01_khk_F         // SPAR-16 5.56 mm (Khaki)
+4, arifle_SPAR_01_snd_F         // SPAR-16 5.56 mm (Sand)
+4, arifle_SPAR_01_GL_blk_F      // SPAR-16 GL 5.56 mm (Black)
+4, arifle_SPAR_01_GL_khk_F      // SPAR-16 GL 5.56 mm (Khaki)
+4, arifle_SPAR_01_GL_snd_F      // SPAR-16 GL 5.56 mm (Sand)
+4, arifle_SPAR_02_blk_F         // SPAR-16S 5.56 mm (Black)
+4, arifle_SPAR_02_khk_F         // SPAR-16S 5.56 mm (Khaki)
+4, arifle_SPAR_02_snd_F         // SPAR-16S 5.56 mm (Sand)
+4, hlc_rifle_RU556				//AR15 Sanitised Carbine
+4, hlc_rifle_RU5562				//AR15 Magpul Carbine
+4, hlc_rifle_CQBR				//Colt M4 CQB-R
+4, hlc_rifle_M4					//Colt M4 Carbine
+4, hlc_rifle_Colt727			//Colt Carbine
+3.5, hlc_rifle_m4m203			//Colt M4 Carbine (GL)
+3.5, hlc_rifle_Colt727_GL		//Colt Carbine(GL)
+3, hlc_rifle_hk33a2				//HK HK33A2
+3, hlc_rifle_hk33a2RIS			//HK HK33A2(RIS)
+2.5, hlc_rifle_G36A1			//HK G36A1
+2.5, hlc_rifle_G36KA1				//HK G36KA1
+2.5, hlc_rifle_G36C				//HK G36C
+2.5, hlc_rifle_G36E1				//HK G36E
+2.5, hlc_rifle_G36TAC				//HK G36V(KAC)
+2.5, hlc_rifle_g36KTac			//HK G36KV(KAC)
+2.5, hlc_rifle_G36CTac			//HK G36CV(KAC)
+2.5, hlc_rifle_G36KE1				//HK G36KE
+2.5, hlc_rifle_G36V				//HK G36V
+2.5, hlc_rifle_G36KV				//HK G36KV
+2.5, hlc_rifle_G36CV				//HK G36CV
+2, hlc_rifle_MG36				//HK MG36A1
+2, hlc_rifle_G36VAG36			//HK G36V(GL)
+2, hlc_rifle_bcmjack			//BCM 'Jack' Carbine
+2, hlc_rifle_SAMR				//RRA LAR-15
+2, hlc_rifle_samr2				//RRA LAR-15
+2, hlc_rifle_G36A1AG36			//HK G36A1(GL)
+2, hlc_rifle_G36E1AG36			//HK G36E(GL)
 1, hlc_rifle_Bushmaster300		//Bushmaster .300 Carbine
 1, hlc_rifle_vendimus			//AR15 .300 Dissipator
 1, hlc_rifle_honeybadger		//AAC 'Honey-Badger'
+
 
 > AugsRifles
 1, hlc_rifle_aug				//Steyr AUGA1[OD]
@@ -249,27 +250,29 @@
 1, hlc_rifle_auga3_GL_B			//Steyr AUGA3(GL)[Black]
 
 > SFRifles						//6.5
-10, arifle_Katiba_F				// Katiba 6.5 mm
-8, arifle_Katiba_GL_F			// Katiba GL 6.5 mm
-8, arifle_MXC_F					// MXC 6.5 mm
-8, arifle_MX_F					// MX 6.5 mm
-4, arifle_MX_GL_F				// MX 3GL 6.5 mm
-6, arifle_MXM_F					// MXM 6.5 mm
-3, arifle_MXM_Black_F			// MXM 6.5 mm (Black)
-3, arifle_MXC_Black_F			// MXC 6.5 mm (Black)
-3, arifle_MX_Black_F			// MX 6.5 mm (Black)
-3, arifle_MX_GL_Black_F			// MX 3GL 6.5 mm (Black)
-8, arifle_MX_khk_F   			// MX 6.5 mm (Khaki)
-4, arifle_MX_GL_khk_F			// MX 3GL 6.5 mm (Khaki)
-8, arifle_MXC_khk_F  			// MXC 6.5 mm (Khaki)
-3, arifle_MXM_khk_F  			// MXM 6.5 mm (Khaki)
-5, arifle_ARX_blk_F             // Type 115 6.5 mm (Black)
-5, arifle_ARX_ghex_F            // Type 115 6.5 mm (Green Hex)
-5, arifle_ARX_hex_F             // Type 115 6.5 mm (Hex)
-1, hlc_rifle_G36MLIC			//HK G36-MLI(C)
-1, hlc_rifle_G36KMLIC			//HK G36K-MLI(C)
-1, hlc_rifle_G36MLIAG36			//HK G36MLI(C)(GL)
-1, hlc_rifle_G36CMLIC			//HK G36C-MLI(C)
+5, arifle_Katiba_F				// Katiba 6.5 mm
+5, arifle_MXC_F					// MXC 6.5 mm
+4.5, arifle_MXC_Black_F			// MXC 6.5 mm (Black)
+4.5, arifle_MXC_khk_F  			// MXC 6.5 mm (Khaki)
+4, arifle_Katiba_GL_F			// Katiba GL 6.5 mm
+4, arifle_MX_F					// MX 6.5 mm
+3.5, arifle_MX_Black_F			// MX 6.5 mm (Black)
+3, arifle_MX_khk_F   			// MX 6.5 mm (Khaki)
+3, arifle_MXM_F					// MXM 6.5 mm
+2.5, arifle_MX_GL_F				// MX 3GL 6.5 mm
+2.5, arifle_MX_GL_khk_F			// MX 3GL 6.5 mm (Khaki)
+2.5, arifle_MX_GL_Black_F		// MX 3GL 6.5 mm (Black)
+2.5, arifle_MXM_Black_F			// MXM 6.5 mm (Black)
+2.5, arifle_MXM_khk_F  			// MXM 6.5 mm (Khaki)
+2, hlc_rifle_G36MLIC			//HK G36-MLI(C)
+2, hlc_rifle_G36KMLIC			//HK G36K-MLI(C)
+2, hlc_rifle_G36CMLIC			//HK G36C-MLI(C)
+1.5, hlc_rifle_G36MLIAG36		//HK G36MLI(C)(GL)
+1.5, arifle_ARX_blk_F           // Type 115 6.5 mm (Black)
+1, arifle_ARX_ghex_F            // Type 115 6.5 mm (Green Hex)
+1, arifle_ARX_hex_F             // Type 115 6.5 mm (Hex)
+
+
 
 > CivilianSniper
 10, Exile_Weapon_LeeEnfield
@@ -277,29 +280,30 @@
 10, Exile_Weapon_VSSVintorez
 
 > MilitarySniper
-10, Exile_Weapon_DMR		
-10, Exile_Weapon_SVD
-10, Exile_Weapon_SVDCamo
-28, srifle_DMR_01_F					// Rahim 7.62 mm
-28, srifle_EBR_F					// Mk18 ABR 7.62 mm
-22, srifle_GM6_F					// GM6 Lynx 12.7 mm
-22, srifle_LRR_F					// M320 LRR .408
-22, srifle_LRR_tna_F    			// M320 LRR .408 (Tropic)
-22, srifle_GM6_ghex_F   			// GM6 Lynx 12.7 mm (Green Hex)
-22, srifle_DMR_07_blk_F     		// CMR-76 6.5 mm (Black)
-22, srifle_DMR_07_hex_F     		// CMR-76 6.5 mm (Hex)
-22, srifle_DMR_07_ghex_F    		// CMR-76 6.5 mm (Green Hex)
-1, hlc_rifle_awmagnum				//AI AWM (OD)
-1, hlc_rifle_awmagnum_BL			//AI AWM (Black)
-1, hlc_rifle_awmagnum_FDE			//AI AWM (FDE)
-1, hlc_rifle_awMagnum_OD_ghillie	//AI AWM (OD+Ghillie)
-1, hlc_rifle_awMagnum_FDE_ghillie	//AI AWM (FDE+Ghillie)
-1, hlc_rifle_awMagnum_BL_ghillie	//AI AWM (Black+Ghillie)
-1, hlc_rifle_awcovert_BL			//AI AWC-M (Black)
-1, hlc_rifle_awcovert_FDE			//AI AWC-M (FDE)
-1, hlc_rifle_M1903A1_unertl			//M1903A1 (Sniper)
-1, hlc_rifle_M1903A1				//M1903A1
-1, hlc_rifle_M1903A1OMR				//M1903A1 'Guthrie'
+0.5, srifle_LRR_tna_F    				// M320 LRR .408 (Tropic)
+0.75, srifle_LRR_F						// M320 LRR .408
+1, srifle_GM6_ghex_F   					// GM6 Lynx 12.7 mm (Green Hex)
+1.5, srifle_GM6_F						// GM6 Lynx 12.7 mm
+2, hlc_rifle_awmagnum_BL				//AI AWM (Black)
+2, hlc_rifle_awmagnum_FDE				//AI AWM (FDE)
+2, hlc_rifle_awMagnum_OD_ghillie		//AI AWM (OD+Ghillie)
+2, hlc_rifle_awMagnum_FDE_ghillie		//AI AWM (FDE+Ghillie)
+2, hlc_rifle_awMagnum_BL_ghillie		//AI AWM (Black+Ghillie)
+2, hlc_rifle_awcovert_BL				//AI AWC-M (Black)
+2, hlc_rifle_awcovert_FDE				//AI AWC-M (FDE)
+2.5, hlc_rifle_awmagnum					//AI AWM (OD)
+3, hlc_rifle_M1903A1_unertl				//M1903A1 (Sniper)
+3, hlc_rifle_M1903A1					//M1903A1
+3, hlc_rifle_M1903A1OMR					//M1903A1 'Guthrie'
+4, Exile_Weapon_DMR		
+4, Exile_Weapon_SVD
+4, Exile_Weapon_SVDCamo
+4, srifle_DMR_01_F					// Rahim 7.62 mm
+5, srifle_EBR_F						// Mk18 ABR 7.62 mm
+5, srifle_DMR_07_blk_F     			// CMR-76 6.5 mm (Black)
+5, srifle_DMR_07_hex_F     			// CMR-76 6.5 mm (Hex)
+5, srifle_DMR_07_ghex_F    			// CMR-76 6.5 mm (Green Hex)
+
 
 > FFFRifles						//5.45
 10, Exile_Weapon_AK107	
