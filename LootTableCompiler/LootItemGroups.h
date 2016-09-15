@@ -87,65 +87,65 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 > Pistols
-20, hgun_ACPC2_F			// ACP-C2 .45
-21, hgun_P07_F				// P07 9 mm
-20, hgun_Rook40_F			// Rook-40 9 mm
-13, hgun_Pistol_heavy_01_F	// 4-five .45
-13, hgun_Pistol_heavy_02_F	// Zubr .45
-13, hgun_Pistol_Signal_F	// Starter Pistol
-13, Exile_Weapon_Colt1911   // Colt 1911
-13, Exile_Weapon_Makarov	// Makarov
-13, Exile_Weapon_Taurus		// Taurus
-13, Exile_Weapon_TaurusGold	// Taurus (Gold)
-13, hgun_Pistol_01_F		// PM 9 mm
-13, hgun_P07_khk_F			// P07 9 mm (Khaki)
+20, hgun_ACPC2_F					// ACP-C2 .45
+21, hgun_P07_F						// P07 9 mm
+20, hgun_Rook40_F					// Rook-40 9 mm
+13, hgun_Pistol_heavy_01_F			// 4-five .45
+13, hgun_Pistol_heavy_02_F			// Zubr .45
+13, hgun_Pistol_Signal_F			// Starter Pistol
+13, Exile_Weapon_Colt1911   		// Colt 1911
+13, Exile_Weapon_Makarov			// Makarov
+13, Exile_Weapon_Taurus				// Taurus
+13, Exile_Weapon_TaurusGold			// Taurus (Gold)
+13, hgun_Pistol_01_F				// PM 9 mm
+13, hgun_P07_khk_F					// P07 9 mm (Khaki)
 
 > PistolAmmo
-20, 11Rnd_45ACP_Mag				// 4-five
-10, 16Rnd_9x21_Mag				// PDW2000, P07, ROOK-40
-20, 30Rnd_9x21_Mag				// Sting, PDW2000, P07, ROOK-40
-16, 6Rnd_45ACP_Cylinder			// Zubr
-7, 6Rnd_GreenSignal_F			// Starter Pistol
-7, 6Rnd_RedSignal_F				// Starter Pistol 
-20, 9Rnd_45ACP_Mag				// ACP-C2
-20, Exile_Magazine_7Rnd_45ACP	// Colt 1911
-20, Exile_Magazine_8Rnd_9x18	// Makarov
-20, Exile_Magazine_6Rnd_45ACP	// Taurus
-20, 10Rnd_9x21_Mag				// PM 9 mm
+20, 11Rnd_45ACP_Mag					// 4-five
+10, 16Rnd_9x21_Mag					// PDW2000, P07, ROOK-40
+20, 30Rnd_9x21_Mag					// Sting, PDW2000, P07, ROOK-40
+16, 6Rnd_45ACP_Cylinder				// Zubr
+7, 6Rnd_GreenSignal_F				// Starter Pistol
+7, 6Rnd_RedSignal_F					// Starter Pistol 
+20, 9Rnd_45ACP_Mag					// ACP-C2
+20, Exile_Magazine_7Rnd_45ACP		// Colt 1911
+20, Exile_Magazine_8Rnd_9x18		// Makarov
+20, Exile_Magazine_6Rnd_45ACP		// Taurus
+20, 10Rnd_9x21_Mag					// PM 9 mm
 
 > PistolAttachments
 36, muzzle_snds_L
 36, muzzle_snds_acp
-14, optic_Yorris		// No one needs this crap
+14, optic_Yorris					// No one needs this crap
 14, optic_MRD
 
 > Shotguns
-1, Exile_Weapon_M1014	//M1014
-0.5, hlc_rifle_saiga12k //Izhmash Saiga12K
+1, Exile_Weapon_M1014				//M1014
+0.5, hlc_rifle_saiga12k 			//Izhmash Saiga12K
 
 > ShotgunAmmo
 1, Exile_Magazine_8Rnd_74Slug		//M1014
 
 > SMG
-34, SMG_01_F		// Vermin SMG .45 ACP
-33, SMG_02_F		// Sting 9 mm
-33, SMG_05_F		// Protector 9mm
-33, hgun_PDW2000_F	// PDW2000 9 mm
+34, SMG_01_F						// Vermin SMG .45 ACP
+33, SMG_02_F						// Sting 9 mm
+33, SMG_05_F						// Protector 9mm
+33, hgun_PDW2000_F					// PDW2000 9 mm
 1, hlc_rifle_augpara				//Steyr AUGA1 9mm[OD]
 1, hlc_rifle_augpara_b				//Steyr AUGA1 9mm[Black]
 1, hlc_rifle_augpara_t				//Steyr AUGA1 9mm[Tan]
 1, hlc_rifle_auga2para				//Steyr AUGA2 9mm[OD]
-1, hlc_rifle_auga2para_t				//Steyr AUGA2 9mm[Tan]
-1, hlc_rifle_auga2para_b				//Steyr AUGA2 9mm[Black]
-1, hlc_smg_mp510				//HK MP5/10
-1, hlc_smg_mp5k_PDW				//HK MP5K-PDW
-1, hlc_smg_mp5a2				//HK MP5A2
-1, hlc_smg_MP5N				//HK MP5N
-1, hlc_smg_9mmar				//HK MP5N '9MMAR'
-1, hlc_smg_mp5a4				//HK MP5A4
-1, hlc_smg_mp5sd5				//HK MP5SD5
-1, hlc_smg_mp5a3				//HK MP5A3
-1, hlc_smg_mp5sd6				//HK MP5SD6
+1, hlc_rifle_auga2para_t			//Steyr AUGA2 9mm[Tan]
+1, hlc_rifle_auga2para_b			//Steyr AUGA2 9mm[Black]
+1, hlc_smg_mp510					//HK MP5/10
+1, hlc_smg_mp5k_PDW					//HK MP5K-PDW
+1, hlc_smg_mp5a2					//HK MP5A2
+1, hlc_smg_MP5N						//HK MP5N
+1, hlc_smg_9mmar					//HK MP5N '9MMAR'
+1, hlc_smg_mp5a4					//HK MP5A4
+1, hlc_smg_mp5sd5					//HK MP5SD5
+1, hlc_smg_mp5a3					//HK MP5A3
+1, hlc_smg_mp5sd6					//HK MP5SD6
 
 > SMGAmmo
 50, 30Rnd_45ACP_Mag_SMG_01					// Vermin SMG
@@ -209,44 +209,44 @@
 1, hlc_rifle_hk53RAS			//HK HK53(RAS)
 1, hlc_rifle_hk33a2				//HK HK33A2
 1, hlc_rifle_hk33a2RIS			//HK HK33A2(RIS)
-1, hlc_rifle_Bushmaster300				//Bushmaster .300 Carbine
-1, hlc_rifle_vendimus				//AR15 .300 Dissipator
-1, hlc_rifle_honeybadger				//AAC 'Honey-Badger'
+1, hlc_rifle_Bushmaster300		//Bushmaster .300 Carbine
+1, hlc_rifle_vendimus			//AR15 .300 Dissipator
+1, hlc_rifle_honeybadger		//AAC 'Honey-Badger'
 
 > AugsRifles
 1, hlc_rifle_aug				//Steyr AUGA1[OD]
-1, hlc_rifle_auga1_t				//Steyr AUGA1[Tan]
-1, hlc_rifle_auga1_b				//Steyr AUGA1[Black]
-1, hlc_rifle_auga1carb				//Steyr AUGA1 Carbine[OD]
-1, hlc_rifle_auga1carb_B				//Steyr AUGA1 Carbine[Black]
-1, hlc_rifle_auga1carb_t				//Steyr AUGA1 Carbine[Tan]
-1, hlc_rifle_aughbar				//Steyr AUGA1 HBAR[OD]
-1, hlc_rifle_aughbar_t				//Steyr AUGA1 HBAR[Tan]
-1, hlc_rifle_aughbar_B				//Steyr AUGA1 HBAR[Black]
+1, hlc_rifle_auga1_t			//Steyr AUGA1[Tan]
+1, hlc_rifle_auga1_b			//Steyr AUGA1[Black]
+1, hlc_rifle_auga1carb			//Steyr AUGA1 Carbine[OD]
+1, hlc_rifle_auga1carb_B		//Steyr AUGA1 Carbine[Black]
+1, hlc_rifle_auga1carb_t		//Steyr AUGA1 Carbine[Tan]
+1, hlc_rifle_aughbar			//Steyr AUGA1 HBAR[OD]
+1, hlc_rifle_aughbar_t			//Steyr AUGA1 HBAR[Tan]
+1, hlc_rifle_aughbar_B			//Steyr AUGA1 HBAR[Black]
 1, hlc_rifle_auga2				//Steyr AUGA2[OD]
-1, hlc_rifle_auga2_t				//Steyr AUGA2[Tan]
-1, hlc_rifle_auga2_b				//Steyr AUGA2[Black]
+1, hlc_rifle_auga2_t			//Steyr AUGA2[Tan]
+1, hlc_rifle_auga2_b			//Steyr AUGA2[Black]
 1, hlc_rifle_augsr				//Steyr AUG-SR[OD]
-1, hlc_rifle_augsr_t				//Steyr AUG-SR[Tan]
-1, hlc_rifle_augsr_b				//Steyr AUG-SR[Black]
-1, hlc_rifle_auga2carb				//Steyr AUGA2 Carbine[OD]
-1, hlc_rifle_auga2carb_t				//Steyr AUGA2 Carbine[Tan]
-1, hlc_rifle_auga2carb_b				//Steyr AUGA2 Carbine[Black]
-1, hlc_rifle_augsrcarb				//Steyr AUG-SR Carbine[OD]
-1, hlc_rifle_augsrcarb_t				//Steyr AUGA-SR Carbine[Tan]
-1, hlc_rifle_augsrcarb_b				//Steyr AUG-SR Carbine[Black]
-1, hlc_rifle_auga2lsw				//Steyr AUGA2 HBAR[OD]
-1, hlc_rifle_auga2lsw_t				//Steyr AUGA2 HBAR[Tan]
-1, hlc_rifle_auga2lsw_b				//Steyr AUGA2 HBAR[Black]
-1, hlc_rifle_augsrhbar				//Steyr AUG-SR HBAR[OD]
-1, hlc_rifle_augsrhbar_t				//Steyr AUG-SR HBAR[Tan]
-1, hlc_rifle_augsrhbar_b				//Steyr AUG-SR HBAR[Black]
+1, hlc_rifle_augsr_t			//Steyr AUG-SR[Tan]
+1, hlc_rifle_augsr_b			//Steyr AUG-SR[Black]
+1, hlc_rifle_auga2carb			//Steyr AUGA2 Carbine[OD]
+1, hlc_rifle_auga2carb_t		//Steyr AUGA2 Carbine[Tan]
+1, hlc_rifle_auga2carb_b		//Steyr AUGA2 Carbine[Black]
+1, hlc_rifle_augsrcarb			//Steyr AUG-SR Carbine[OD]
+1, hlc_rifle_augsrcarb_t		//Steyr AUGA-SR Carbine[Tan]
+1, hlc_rifle_augsrcarb_b		//Steyr AUG-SR Carbine[Black]
+1, hlc_rifle_auga2lsw			//Steyr AUGA2 HBAR[OD]
+1, hlc_rifle_auga2lsw_t			//Steyr AUGA2 HBAR[Tan]
+1, hlc_rifle_auga2lsw_b			//Steyr AUGA2 HBAR[Black]
+1, hlc_rifle_augsrhbar			//Steyr AUG-SR HBAR[OD]
+1, hlc_rifle_augsrhbar_t		//Steyr AUG-SR HBAR[Tan]
+1, hlc_rifle_augsrhbar_b		//Steyr AUG-SR HBAR[Black]
 1, hlc_rifle_auga3				//Steyr AUGA3[Green]
-1, hlc_rifle_auga3_bl				//Steyr AUGA3[Blue]
-1, hlc_rifle_auga3_b				//Steyr AUGA3[Black]
-1, hlc_rifle_auga3_GL				//Steyr AUGA3(GL)[Green]
-1, hlc_rifle_auga3_GL_BL				//Steyr AUGA3(GL)[Blue]
-1, hlc_rifle_auga3_GL_B				//Steyr AUGA3(GL)[Black]
+1, hlc_rifle_auga3_bl			//Steyr AUGA3[Blue]
+1, hlc_rifle_auga3_b			//Steyr AUGA3[Black]
+1, hlc_rifle_auga3_GL			//Steyr AUGA3(GL)[Green]
+1, hlc_rifle_auga3_GL_BL		//Steyr AUGA3(GL)[Blue]
+1, hlc_rifle_auga3_GL_B			//Steyr AUGA3(GL)[Black]
 
 > SFRifles						//6.5
 10, arifle_Katiba_F				// Katiba 6.5 mm
