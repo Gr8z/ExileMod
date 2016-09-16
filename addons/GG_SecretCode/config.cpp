@@ -26,6 +26,8 @@ class CfgFunctions
 			class statusBar {};
 			class getLoadout {};
 			class airDrops {};
+			class craftingApp {};
+			class selfie {};
 		};
 		class main
 		{
