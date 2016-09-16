@@ -19,16 +19,4 @@ MAP_TEXT__CODE = {
 };
 publicVariable 'MAP_TEXT__CODE';
 
-[] spawn {
-	waitUntil{!isNil'FN_infiSTAR_S'};
-	['',{
-		if(!isNil'MAP_TEXT_JIP_T')then{terminate MAP_TEXT_JIP_T;MAP_TEXT_JIP_T=nil;};
-		MAP_TEXT_JIP_T = [] spawn {
-			waitUntil {!isNil 'MAP_TEXT__CODE'};
-			waitUntil {!isNull findDisplay 46};
-			waitUntil {!isNull findDisplay 12};
-			[] call MAP_TEXT__CODE;
-		};
-	},-2,'MAP_TEXT_JIP'] call FN_infiSTAR_S;
-};
 true
