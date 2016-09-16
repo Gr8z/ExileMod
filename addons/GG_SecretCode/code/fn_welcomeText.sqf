@@ -80,21 +80,21 @@ WELCOME_TEXT__CODE = {
     };
 
     // Missing Mod Information
-    _missingModList = [];
+    _missingModList = ["We detected that your game is not running the following Mods:"];
     _missingMods = false;
 
     if !(isClass (configFile >> "CfgPatches" >> "asdg_jointrails")) then {
-        _msg = "We detected that your game is not running ASDG Joint Rails Mod.";
+        _msg = "ASDG Joint Rails";
         _missingMods = true;
         _missingModList pushBack _msg;
     };
     if !(isClass (configFile >> "CfgPatches" >> "hlcweapons_core")) then {
-        _msg = "We detected that your game is not running NiArms Pack Mod.";
+        _msg = "NiArms Pack";
         _missingMods = true;
         _missingModList pushBack _msg;
     };
     if !(isClass (configFile >> "CfgPatches" >> "TRYK_Uniform")) then {
-        _msg = "We detected that your game is not running TRYK Multiplay Uniforms Mod.";
+        _msg = "TRYK Multiplay Uniforms";
         _missingMods = true;
         _missingModList pushBack _msg;
     };
@@ -104,8 +104,8 @@ WELCOME_TEXT__CODE = {
 
         sleep 2;
 
-        if !(count _missingModList == 0) then{
-                [_missingModList, .5, .85] call BIS_fnc_typeText;
+        if (count _missingModList > 1) then{
+            [_missingModList, .5, .85] call BIS_fnc_typeText;
         };
     };
 };
