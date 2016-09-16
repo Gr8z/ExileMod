@@ -14,8 +14,8 @@ WELCOME_TEXT__CODE = {
 
     [
         [
-            ["[GG] GHOSTZ GAMERZ EXILE TANOA ALPHA","<t align = 'center' shadow = '0' size = '0.8' font='PuristaBold' color='#38AAE0'>%1</t>"],
-            [profileNameSteam,"<br/><t align = 'center' shadow = '1' size = '0.7' font='PuristaLight'>%1</t>"],
+            ["[GG] GHOSTZ GAMERZ EXILE TANOA ALPHA","<t align = 'center' shadow = '1' size = '0.8' font='PuristaBold' color='#38AAE0'>%1</t>"],
+            [profileNameSteam,"<br/><t align = 'center' shadow = '0' size = '0.7' font='PuristaLight'>%1</t>"],
             [" ",""],
             [" ",""]
         ]
