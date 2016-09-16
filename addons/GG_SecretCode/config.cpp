@@ -25,7 +25,7 @@ class CfgFunctions
 			class drawToMap {};
 			class statusBar {};
 			class getLoadout {};
-			class secretFunctions {};
+			class airDrops {};
 		};
 		class main
 		{
