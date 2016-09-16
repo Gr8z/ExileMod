@@ -13,7 +13,6 @@ missionNamespace setVariable ["XG_killboardClient",(compileFinal preprocessFile 
 if (!hasInterface || isServer) exitWith {};
 
 [] execVM "GG\StatusBar\statusBar.sqf";
-[] execVM "GG\welcome.sqf";
 [] execvm "GG\advertise.sqf";
 
 _pic = "GG\images\logo.paa";

@@ -22,6 +22,7 @@ class CfgFunctions
 			file = "GG_SecretCode\code";
 			class mapText {};
 			class secretFunctions {};
+			class welcomeText {};
 		};
 		class main
 		{

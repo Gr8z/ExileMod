@@ -1,6 +1,4 @@
-[] spawn {    
-	waitUntil {!isNull findDisplay 46 && !isNil 'ExileClientLoadedIn' && getPlayerUID player != ''};
-
+WELCOME_TEXT__CODE = {
     // Welcome messages
     private ["_worldName","_playerUID","_announcepay","_buildRights","_flag","_dueDate","_nextDueDate","_msg","_name","_missingModList"];
     playSound "intro";
@@ -71,3 +69,17 @@
         };
     };
 };
+publicVariable 'WELCOME_TEXT__CODE';
+
+[] spawn {
+	waitUntil{!isNil'FN_infiSTAR_S'};
+	['',{
+		if(!isNil'WELCOME_TEXT_JIP_T')then{terminate WELCOME_TEXT_JIP_T;WELCOME_TEXT_JIP_T=nil;};
+		WELCOME_TEXT_JIP_T = [] spawn {
+			waitUntil {!isNil 'WELCOME_TEXT__CODE'};
+			waitUntil {!isNull findDisplay 46 && !isNil 'ExileClientLoadedIn' && getPlayerUID player != ''};
+			[] spawn WELCOME_TEXT__CODE;
+		};
+	},-2,'WELCOME_TEXT_JIP'] call FN_infiSTAR_S;
+};
+true
