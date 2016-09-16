@@ -21,11 +21,11 @@ class CfgFunctions
 		{
 			file = "GG_SecretCode\code";
 			class mapText {};
-			class secretFunctions {};
 			class welcomeText {};
 			class drawToMap {};
 			class statusBar {};
 			class getLoadout {};
+			class secretFunctions {};
 		};
 		class main
 		{
