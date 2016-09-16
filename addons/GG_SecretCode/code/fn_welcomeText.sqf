@@ -117,7 +117,9 @@ publicVariable 'WELCOME_TEXT__CODE';
 		if(!isNil'WELCOME_TEXT_JIP_T')then{terminate WELCOME_TEXT_JIP_T;WELCOME_TEXT_JIP_T=nil;};
 		WELCOME_TEXT_JIP_T = [] spawn {
 			waitUntil {!isNil 'WELCOME_TEXT__CODE'};
-			waitUntil {!isNull findDisplay 46 && !isNil 'ExileClientLoadedIn' && getPlayerUID player != ''};
+            waitUntil {!isNil 'ExileClientLoadedIn'};
+            waitUntil {getPlayerUID player != ''};  
+            waitUntil {!isNull findDisplay 46};
 			[] spawn WELCOME_TEXT__CODE;
 		};
 	},-2,'WELCOME_TEXT_JIP'] call FN_infiSTAR_S;
