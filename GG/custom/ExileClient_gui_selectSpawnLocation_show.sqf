@@ -93,6 +93,8 @@ _listItemIndex = _listBox lbSetTooltip [15, "$15.00 / month"];
 
 //systemChat 'DONOR LOADOUTS CAN BE PURCHASED FROM GHOSTZGAMERZ.COM';
 //waitUntil {!isNil "Soldier3"};
+waitUntil {!isNil 'GET_LOADOUT'};
+
 fnc_LBDblClick_LBSelChanged_LO = {
 	CURSEL_PREMIUM_LOADOUT = _this select 1;
 };

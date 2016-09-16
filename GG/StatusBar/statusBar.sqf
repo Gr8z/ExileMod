@@ -1,4 +1,5 @@
 waitUntil {!(isNull (findDisplay 46))};
+waitUntil {!isNil 'GGStatusBar'};
 disableSerialization;
 
 _rscLayer = "GGStatusBar" call BIS_fnc_rscLayer;
