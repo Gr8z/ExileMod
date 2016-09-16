@@ -1,15 +1,55 @@
 WELCOME_TEXT__CODE = {
     // Welcome messages
-    private ["_worldName","_playerUID","_announcepay","_buildRights","_flag","_dueDate","_nextDueDate","_msg","_name","_missingModList"];
+    private ["_NewLoginCount","_Logins","_LoginCount","_playerUID","_announcepay","_buildRights","_flag","_dueDate","_nextDueDate","_msg","_name","_missingModList"];
     playSound "intro";
-    _worldName = switch (toLower worldName) do {
-        case "tanoa" :{"Tanoa"};
-        default{worldName};
-    };
-    [[format["Welcome %2, to [GG] Ghostz Gamerz %1 Alpha", _worldName, profileNameSteam],"","","Join our teamspeak for 10k free pop tabs","",""], -.5, .85] call BIS_fnc_typeText;
     sleep 2;
-    [["Visit Us At:","www.GHOSTZGAMERZ.com","For Rules","Forums","",""], .5, .85] call BIS_fnc_typeText;
+    // Login Count
+    _LoginCount = profileNamespace getVariable "var_GG_Logins";
+    if (isNil "_LoginCount") then {
+        profileNamespace setVariable ["var_GG_Logins",1];
+        saveProfileNamespace;
+        _LoginCount = profileNamespace getVariable "var_GG_Logins";
+    };
+    _Logins = profileNamespace getVariable "var_GG_Logins";
 
+    [
+        [
+            ["[GG] GHOSTZ GAMERZ EXILE TANOA ALPHA","<t align = 'center' shadow = '0' size = '0.8' font='PuristaBold' color='#38AAE0'>%1</t>"],
+            [profileNameSteam,"<br/><t align = 'center' shadow = '1' size = '0.7' font='PuristaLight'>%1</t>"],
+            [" ",""],
+            [" ",""]
+        ]
+    ] spawn BIS_fnc_typeText;
+
+    sleep 9;
+
+    switch (_Logins) do {
+        case 0, case 1, case 2, case 3, case 4, case 5:
+        {
+            [["Visit Us At:","www.GHOSTZGAMERZ.com","For Rules","Forums","Free Builders Box","Leaderboards","Kill Feed","and Changelogs","","","","","","",""], .5, .85] call BIS_fnc_typeText;
+            [["Join Our Teamspeak:","ts.GhostzGamerz.com","New Players recieve 10,000 Free Pop Tabs","Free Private Channels Available","Fast Admin support Channels","People waiting to Team Up","","","","","",""], -.5, .85] call BIS_fnc_typeText;
+
+        };
+        case 10:
+        {
+            [["WOW! This is your 10th time logging in...","We hope you are liking it here","Don't play alone, Bring your friends too","Don't forget to leave your feedback on our forums.","","","","",""], -.5, .85] call BIS_fnc_typeText;  
+        };
+        case 50:
+        {
+            [["WOHO! you reach 50 logins on our server.","We appreciate your loyalty","Help this community by Donating","A Small $5 Donation would help us out alot on the server costs.","","","",""], -.5, .85] call BIS_fnc_typeText;  
+        };
+        case 100:
+        {
+            [["You Just achieved a milestone","You are now logging in for the 100th time","Thank you so much for beign an active member of this community","","","","",""], -.5, .85] call BIS_fnc_typeText;  
+        };
+        default {};
+    };
+
+
+    _NewLoginCount = _Logins + 1;
+    profileNamespace setVariable ["var_GG_Logins",_NewLoginCount];
+    saveProfileNamespace;
+    
     // Territory Information
     _playerUID = getPlayerUID player;
     _announcepay = [];
