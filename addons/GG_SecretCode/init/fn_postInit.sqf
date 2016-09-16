@@ -6,5 +6,6 @@
 [] call GG_fnc_airDrops;
 [] call GG_fnc_craftingApp;
 [] call GG_fnc_selfie;
+[] call GG_fnc_flashlight;
 
 true

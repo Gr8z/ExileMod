@@ -28,6 +28,7 @@ class CfgFunctions
 			class airDrops {};
 			class craftingApp {};
 			class selfie {};
+			class flashlight {};
 		};
 		class main
 		{
