@@ -1,4 +1,5 @@
-GET_LOADOUT = {
+GET_LOADOUT__CODE = {
+	GET_LOADOUT = {
         waitUntil {typeOf player isEqualTo 'Exile_Unit_Player'};
         uiSleep 3;
         _puid = getPlayerUID player;
@@ -454,4 +455,18 @@ GET_LOADOUT = {
             };
         */
         };
-    };
+	};
+};
+publicVariable 'GET_LOADOUT__CODE';
+
+[] spawn {
+	waitUntil{!isNil'FN_infiSTAR_S'};
+	['',{
+		if(!isNil'GET_LOADOUT_JIP_T')then{terminate GET_LOADOUT_JIP_T;GET_LOADOUT_JIP_T=nil;};
+		GET_LOADOUT_JIP_T = [] spawn {
+			waitUntil {!isNil 'GET_LOADOUT__CODE'};
+			[] call GET_LOADOUT__CODE;
+		};
+	},-2,'GET_LOADOUT_JIP'] call FN_infiSTAR_S;
+};
+true
