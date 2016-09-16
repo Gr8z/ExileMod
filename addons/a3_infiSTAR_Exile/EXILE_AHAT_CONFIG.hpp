@@ -614,7 +614,7 @@ LocalWhitelist[] =
 
 
 
-UFI = true;	/* Use "ForbiddenItems"/Item Check(s) */
+UFI = false;	/* Use "ForbiddenItems"/Item Check(s) */
 UIW = false;	/* if "UIW = true;" then it checks if the items the individual player has are in "ItemWhiteList" */
 ItemWhiteList[] =
 {
