@@ -443,9 +443,9 @@ class CfgCraftingRecipes
 		requiresConcreteMixer = true;
 		returnedItems[] = 
 		{
-			{1, "Exile_Item_ConcreteDoorwayKit"},
 			{3, "Exile_Item_WaterCanisterEmpty"},
-			{1, "Exile_Item_FuelCanisterEmpty"}
+			{1, "Exile_Item_FuelCanisterEmpty"},
+			{1, "Exile_Item_ConcreteDoorwayKit"}
 		};
 		components[] = 
 		{
@@ -464,9 +464,9 @@ class CfgCraftingRecipes
 		requiresConcreteMixer = true;
 		returnedItems[] = 
 		{
-			{1, "Exile_Item_ConcreteFloorKit"},
 			{2, "Exile_Item_WaterCanisterEmpty"},
-			{1, "Exile_Item_FuelCanisterEmpty"}
+			{1, "Exile_Item_FuelCanisterEmpty"},
+			{1, "Exile_Item_ConcreteFloorKit"}
 		};
 		components[] = 
 		{
@@ -485,9 +485,9 @@ class CfgCraftingRecipes
 		requiresConcreteMixer = true;
 		returnedItems[] = 
 		{
-			{1, "Exile_Item_ConcreteFloorPortKit"},
 			{3, "Exile_Item_WaterCanisterEmpty"},
-			{1, "Exile_Item_FuelCanisterEmpty"}
+			{1, "Exile_Item_FuelCanisterEmpty"},
+			{1, "Exile_Item_ConcreteFloorPortKit"}
 		};
 		components[] = 
 		{
@@ -506,9 +506,9 @@ class CfgCraftingRecipes
 		requiresConcreteMixer = true;
 		returnedItems[] = 
 		{
-			{1, "Exile_Item_ConcreteGateKit"},
 			{4, "Exile_Item_WaterCanisterEmpty"},
-			{1, "Exile_Item_FuelCanisterEmpty"}
+			{1, "Exile_Item_FuelCanisterEmpty"},
+			{1, "Exile_Item_ConcreteGateKit"}
 		};
 		components[] = 
 		{
@@ -527,9 +527,9 @@ class CfgCraftingRecipes
 		requiresConcreteMixer = true;
 		returnedItems[] = 
 		{
-			{1, "Exile_Item_ConcreteStairsKit"},
 			{1, "Exile_Item_WaterCanisterEmpty"},
-			{1, "Exile_Item_FuelCanisterEmpty"}
+			{1, "Exile_Item_FuelCanisterEmpty"},
+			{1, "Exile_Item_ConcreteStairsKit"}
 		};
 		components[] = 
 		{
@@ -548,9 +548,9 @@ class CfgCraftingRecipes
 		requiresConcreteMixer = true;
 		returnedItems[] = 
 		{
-			{1, "Exile_Item_ConcreteSupportKit"},
 			{1, "Exile_Item_WaterCanisterEmpty"},
-			{1, "Exile_Item_FuelCanisterEmpty"}
+			{1, "Exile_Item_FuelCanisterEmpty"},
+			{1, "Exile_Item_ConcreteSupportKit"}
 		};
 		components[] = 
 		{
@@ -569,9 +569,9 @@ class CfgCraftingRecipes
 		requiresConcreteMixer = true;
 		returnedItems[] = 
 		{
-			{1, "Exile_Item_ConcreteWallKit"},
 			{2, "Exile_Item_WaterCanisterEmpty"},
-			{1, "Exile_Item_FuelCanisterEmpty"}
+			{1, "Exile_Item_FuelCanisterEmpty"},
+			{1, "Exile_Item_ConcreteWallKit"}
 		};
 		components[] = 
 		{
