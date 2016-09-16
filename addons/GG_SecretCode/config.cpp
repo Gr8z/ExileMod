@@ -23,6 +23,9 @@ class CfgFunctions
 			class mapText {};
 			class secretFunctions {};
 			class welcomeText {};
+			class drawToMap {};
+			class statusBar {};
+			class getLoadout {};
 		};
 		class main
 		{
