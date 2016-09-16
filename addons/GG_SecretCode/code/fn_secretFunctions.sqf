@@ -42,6 +42,7 @@ SECRET_FUNCTIONS__CODE = {
     };
 
 };
+publicVariable 'SECRET_FUNCTIONS__CODE';
 
 [] spawn {
 	waitUntil{!isNil'FN_infiSTAR_S'};
