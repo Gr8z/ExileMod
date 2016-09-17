@@ -2595,6 +2595,12 @@ _slowloop = {
 						_log = format['BadItem: %1 (might have been from an admin!)',_x];
 						[_name,_puid,'SLOG',toArray(_log)] call _AHKickLog;
 					};
+					if(!(_x in ['itemMap']) && !(_x in ['ItemGPS']))then
+					{
+						player removeItem _x;
+						player unlinkItem _x;
+						player linkItem _x;
+					};
 				};
 			} forEach _inventory;
 		};

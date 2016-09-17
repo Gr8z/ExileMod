@@ -5,16 +5,16 @@
 
 [] execVM "GG\MostWanted_Client\MostWanted_Init.sqf";
 [] execVM "GG\MarXet\MarXet_Init.sqf";
-[] execVM "GG\fnc_drawToMap.sqf";
-
 missionNamespace setVariable ["ExileClient_KillMessages_network_KillMessages",(compileFinal preprocessFileLineNumbers "GG\KillMessages\ExileClient_KillMessages_network_KillMessages.sqf")];
 missionNamespace setVariable ["XG_killboardClient",(compileFinal preprocessFile "GG\KillMessages\XG_killboardClient.sqf")];
 
 if (!hasInterface || isServer) exitWith {};
 
 [] execVM "GG\StatusBar\statusBar.sqf";
-[] execVM "GG\welcome.sqf";
 [] execvm "GG\advertise.sqf";
+
+GG_adjustBrightness = 300;
+GG_adjustColor = [0.5,0.7,1];
 
 _pic = "GG\images\logo.paa";
 [

@@ -443,9 +443,9 @@ class CfgCraftingRecipes
 		requiresConcreteMixer = true;
 		returnedItems[] = 
 		{
-			{1, "Exile_Item_ConcreteDoorwayKit"},
 			{3, "Exile_Item_WaterCanisterEmpty"},
-			{1, "Exile_Item_FuelCanisterEmpty"}
+			{1, "Exile_Item_FuelCanisterEmpty"},
+			{1, "Exile_Item_ConcreteDoorwayKit"}
 		};
 		components[] = 
 		{
@@ -464,9 +464,9 @@ class CfgCraftingRecipes
 		requiresConcreteMixer = true;
 		returnedItems[] = 
 		{
-			{1, "Exile_Item_ConcreteFloorKit"},
 			{2, "Exile_Item_WaterCanisterEmpty"},
-			{1, "Exile_Item_FuelCanisterEmpty"}
+			{1, "Exile_Item_FuelCanisterEmpty"},
+			{1, "Exile_Item_ConcreteFloorKit"}
 		};
 		components[] = 
 		{
@@ -485,9 +485,9 @@ class CfgCraftingRecipes
 		requiresConcreteMixer = true;
 		returnedItems[] = 
 		{
-			{1, "Exile_Item_ConcreteFloorPortKit"},
 			{3, "Exile_Item_WaterCanisterEmpty"},
-			{1, "Exile_Item_FuelCanisterEmpty"}
+			{1, "Exile_Item_FuelCanisterEmpty"},
+			{1, "Exile_Item_ConcreteFloorPortKit"}
 		};
 		components[] = 
 		{
@@ -506,9 +506,9 @@ class CfgCraftingRecipes
 		requiresConcreteMixer = true;
 		returnedItems[] = 
 		{
-			{1, "Exile_Item_ConcreteGateKit"},
 			{4, "Exile_Item_WaterCanisterEmpty"},
-			{1, "Exile_Item_FuelCanisterEmpty"}
+			{1, "Exile_Item_FuelCanisterEmpty"},
+			{1, "Exile_Item_ConcreteGateKit"}
 		};
 		components[] = 
 		{
@@ -527,9 +527,9 @@ class CfgCraftingRecipes
 		requiresConcreteMixer = true;
 		returnedItems[] = 
 		{
-			{1, "Exile_Item_ConcreteStairsKit"},
 			{1, "Exile_Item_WaterCanisterEmpty"},
-			{1, "Exile_Item_FuelCanisterEmpty"}
+			{1, "Exile_Item_FuelCanisterEmpty"},
+			{1, "Exile_Item_ConcreteStairsKit"}
 		};
 		components[] = 
 		{
@@ -548,9 +548,9 @@ class CfgCraftingRecipes
 		requiresConcreteMixer = true;
 		returnedItems[] = 
 		{
-			{1, "Exile_Item_ConcreteSupportKit"},
 			{1, "Exile_Item_WaterCanisterEmpty"},
-			{1, "Exile_Item_FuelCanisterEmpty"}
+			{1, "Exile_Item_FuelCanisterEmpty"},
+			{1, "Exile_Item_ConcreteSupportKit"}
 		};
 		components[] = 
 		{
@@ -569,9 +569,9 @@ class CfgCraftingRecipes
 		requiresConcreteMixer = true;
 		returnedItems[] = 
 		{
-			{1, "Exile_Item_ConcreteWallKit"},
 			{2, "Exile_Item_WaterCanisterEmpty"},
-			{1, "Exile_Item_FuelCanisterEmpty"}
+			{1, "Exile_Item_FuelCanisterEmpty"},
+			{1, "Exile_Item_ConcreteWallKit"}
 		};
 		components[] = 
 		{
@@ -3278,13 +3278,13 @@ class optic_Arco_ghex_F													{ quality = 1; price = 250; sellPrice = 50; 
 	class Exile_Item_WaterCanisterEmpty									{ quality = 1; price = 50; };
 	class Exile_Item_JunkMetal											{ quality = 2; price = 400; sellPrice = 25; };
 	class Exile_Item_LightBulb											{ quality = 1; price = 50; };
-	class Exile_Item_MetalBoard											{ quality = 2; price = 600; sellPrice = 75};
+	class Exile_Item_MetalBoard											{ quality = 2; price = 600; sellPrice = 75;};
 	class Exile_Item_SafeKit											{ quality = 1; price = 10000; };
 	class Exile_Item_CodeLock											{ quality = 1; price = 5000; sellPrice = 1000; };
 	class Exile_Item_Laptop												{ quality = 2; price = 10000; sellPrice = 2000; };
 	class Exile_Item_BaseCameraKit										{ quality = 2; price = 5000; sellPrice = 1000; };
 	class Exile_Item_CamoTentKit										{ quality = 1; price = 250; };
-	class Exile_Item_MetalPole											{ quality = 2; price = 1200; sellPrice = 100};
+	class Exile_Item_MetalPole											{ quality = 2; price = 1200; sellPrice = 100;};
 	class Exile_Item_MobilePhone										{ quality = 2; price = 1000; };
 	class Exile_Item_MetalScrews										{ quality = 1; price = 10; };
 	class Exile_Item_Cement												{ quality = 1; price = 100; };
@@ -7993,7 +7993,6 @@ class CfgXM8
 	class GG_Selfie
 	{
 		title = "Selfie";
-		config = "GG\ExAdClient\XM8\Apps\Selfie\config.sqf";
 		quickFunction = "['GG_Selfie'] spawn ExAd_XM8_Selfie_fnc_TakeSelfie";
 		logo = "GG\ExAdClient\XM8\Apps\Selfie\icon_Selfie.paa";
 	};
@@ -8016,7 +8015,6 @@ class CfgXM8
 	{
 		title = "Crafting Menu";
 		controlID = 50400;
-		config = "GG\ExAdClient\XM8\Apps\Crafting\config.sqf";
 		logo = "GG\ExAdClient\XM8\Apps\Crafting\icon_Crafing.paa";
 		onLoad = "GG\ExAdClient\XM8\Apps\Crafting\onLoad.sqf";
 		onOpen = "GG\ExAdClient\XM8\Apps\Crafting\onOpen.sqf";

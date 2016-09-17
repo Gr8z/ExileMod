@@ -18,6 +18,7 @@
 "C:\Program Files\PBO Manager v.1.4 beta\PBOConsole.exe" -pack "C:\ExileMod\addons\XG_killboard" "D:\a3Server\@ExileServer\addons\XG_killboard.pbo"
 "C:\Program Files\PBO Manager v.1.4 beta\PBOConsole.exe" -pack "C:\ExileMod\addons\AVS" "D:\a3Server\@ExileServer\addons\AVS.pbo"
 "C:\Program Files\PBO Manager v.1.4 beta\PBOConsole.exe" -pack "C:\ExileMod\addons\HEG_Xbrm" "D:\a3Server\@ExileServer\addons\HEG_Xbrm.pbo"
+"C:\Program Files\PBO Manager v.1.4 beta\PBOConsole.exe" -pack "C:\ExileMod\addons\GG_SecretCode" "D:\a3Server\@ExileServer\addons\GG_SecretCode.pbo"
 
 echo Creating new PBOs 
 
