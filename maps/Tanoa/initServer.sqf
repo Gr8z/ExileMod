@@ -145,6 +145,10 @@ private _vehicles = [
     {
         ExileRouletteChairs pushBack _vehicle;
         ExileRouletteChairPositions pushBack [_x select 1, getDir _vehicle];
+    };    
+    if (_vehicle isKindOf "Exile_Sign_TraderCity") then
+    {
+        _vehicle setObjectTextureGlobal [0, "GG\images\billboard.paa"];
     };
 }
 forEach _vehicles;
