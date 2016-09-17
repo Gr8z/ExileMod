@@ -466,29 +466,29 @@
 //1, optic_tws
 
 > LMG
-25, arifle_MX_SW_Black_F		// MX SW 6.5 mm (Black)
-25, arifle_MX_SW_F				// MX SW 6.5 mm
-25, LMG_Mk200_F					// Mk200 6.5 mm
-25, LMG_Zafir_F					// Zafir 7.62 mm
-25, Exile_Weapon_RPK
-25, Exile_Weapon_PK
-25, Exile_Weapon_PKP
-25, LMG_03_F					//= LIM-85 5.56 mm
-1, hlc_rifle_RPK12				//Izhmash RPK12
-1, hlc_rifle_rpk				//Izhmash RPK
-1, hlc_lmg_M60E4				//M60E4
-1, hlc_lmg_m60					//M60
-1, hlc_lmg_minimipara			//FN Minimi Para
-1, hlc_lmg_minimi				//FN Minimi (18.3 in.)
-1, hlc_lmg_m249para				//M249E2 Para(13.7in.)
-1, hlc_lmg_M249E2				//M249E2
-1, hlc_lmg_minimi_railed		//FN Minimi (RIS/Solid Stock)
-1, hlc_m249_pip2				//M249E2 (RIS/13.7 in.)
-1, hlc_m249_pip1				//M249 PIP (RIS/18.3 in.)
-1, hlc_m249_pip3				//M249 PIP (RIS/PIP Stock)
-1, hlc_m249_pip4				//M249 PIP (VFG/PIP Stock)
-1, hlc_m249_SQuantoon			//M249 (Squantoon Special)
+5, arifle_MX_SW_Black_F		// MX SW 6.5 mm (Black)
+5, arifle_MX_SW_F				// MX SW 6.5 mm
+5, LMG_Mk200_F					// Mk200 6.5 mm
+4, Exile_Weapon_RPK
+4, hlc_rifle_RPK12				//Izhmash RPK12
+4, hlc_rifle_rpk				//Izhmash RPK
+3, Exile_Weapon_PK
+3, LMG_03_F					//= LIM-85 5.56 mm
+3, hlc_lmg_minimipara			//FN Minimi Para
+3, hlc_lmg_minimi				//FN Minimi (18.3 in.)
+3, hlc_lmg_m249para				//M249E2 Para(13.7in.)
+3, hlc_lmg_M249E2				//M249E2
+3, hlc_lmg_minimi_railed		//FN Minimi (RIS/Solid Stock)
+3, hlc_m249_pip2				//M249E2 (RIS/13.7 in.)
+3, hlc_m249_pip1				//M249 PIP (RIS/18.3 in.)
+3, hlc_m249_pip3				//M249 PIP (RIS/PIP Stock)
+3, hlc_m249_pip4				//M249 PIP (VFG/PIP Stock)
+3, hlc_m249_SQuantoon			//M249 (Squantoon Special)
+2, Exile_Weapon_PKP
+2, hlc_lmg_M60E4				//M60E4
+2, hlc_lmg_m60					//M60
 1, hlc_lmg_mk48					//Mk.48 Mod.0
+1, LMG_Zafir_F					// Zafir 7.62 mm
 
 > LMGAmmo
 12, 100Rnd_65x39_caseless_mag			// MX SW
@@ -496,7 +496,7 @@
 12, 150Rnd_762x54_Box					// Zafir
 10, 150Rnd_762x54_Box_Tracer			// Zafir
 5, 130Rnd_338_Mag
-51, 150Rnd_93x64_Mag
+3, 150Rnd_93x64_Mag
 10, Exile_Magazine_45Rnd_545x39_RPK_Green
 10, Exile_Magazine_75Rnd_545x39_RPK_Green
 10, Exile_Magazine_100Rnd_762x54_PK_Green
