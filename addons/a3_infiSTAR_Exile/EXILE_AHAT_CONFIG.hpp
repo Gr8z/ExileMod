@@ -305,7 +305,7 @@ ESCMNUBOT = "www.GHOSTZGAMERZ.com";
 BRIEFING_MSG = false;	/* use mission briefing message: if   "BRIEFING_MSG = false;"   then the message will be replaced by infiSTAR */
 HTML_LOAD_URL = "http://ghostzgamerz.com/esc.php";		/* HTML_LOAD_URL = ""; == disabled and if you set a url it will be shown in ESCAPE menu. HTML in Arma/this is limited. Try it :) example: "http://goo.gl/gb0o7b" */
 ENABLE_PRIVATE_CHAT_MENU = true;		/* players can open it by typing !chat in chat or by  custom controls -> "Use Action 3" */
-PRIVATE_CHAT_MENU_8GNETWORK = true;	/* if this is true - players will only be able to use private chat if they enable 8GNetwork in their xm8 */
+PRIVATE_CHAT_MENU_8GNETWORK = false;	/* if this is true - players will only be able to use private chat if they enable 8GNetwork in their xm8 */
 
 /* shows RESTART IN X MINS */
 USE_RESTART_TIMER = true;			/* show time left to next restart */
