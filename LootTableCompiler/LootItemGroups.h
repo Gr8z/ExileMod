@@ -301,7 +301,6 @@
 5, srifle_DMR_07_hex_F     			// CMR-76 6.5 mm (Hex)
 5, srifle_DMR_07_ghex_F    			// CMR-76 6.5 mm (Green Hex)
 
-
 > FFFRifles						//5.45
 5, arifle_AKS_F                 // AKS
 5, hlc_rifle_rpk74n				//Izhmash RPK74
@@ -327,8 +326,6 @@
 1, hlc_rifle_aek971				//ZID AEK971S
 1, hlc_rifle_aek971worn			//ZID AEK971S(Worn)
 1, hlc_rifle_aek971_mtk			//ZID AEK971S(MTK)
-
-
 
 > SSTRifles						//7.62
 5, arifle_AKM_F                 // AKM 7.62 mm
@@ -387,7 +384,7 @@
 5, arifle_CTARS_ghex_F			// CAR-95-1 5.8mm (Green Hex)
 5, arifle_CTARS_hex_F			// CAR-95-1 5.8mm (Hex)
 
-> RifleAmmo
+> CivRifleAmmo
 11, 20Rnd_556x45_UW_mag						// SDAR
 15, 30Rnd_556x45_Stanag						// TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR, SPAR-16
 15, 30Rnd_556x45_Stanag_green				// TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR, SPAR-16
@@ -400,38 +397,40 @@
 9, 30Rnd_65x39_caseless_mag					// MX/C/M/SW/3GL
 9, 30Rnd_65x39_caseless_mag_Tracer			// MX/C/M/SW/3GL
 8, Exile_Magazine_10Rnd_303					// Lee-Enfield
-9, Exile_Magazine_30Rnd_762x39_AK			// AK
 9, Exile_Magazine_30Rnd_545x39_AK			// AK
 9, Exile_Magazine_30Rnd_545x39_AK_Green		// AK
 9, Exile_Magazine_30Rnd_545x39_AK_Red		// AK
 9, Exile_Magazine_30Rnd_545x39_AK_White		// AK
 9, Exile_Magazine_30Rnd_545x39_AK_Yellow	// AK
-9, Exile_Magazine_20Rnd_762x51_DMR			// DMR
-9, Exile_Magazine_20Rnd_762x51_DMR_Yellow	// DMR
-9, Exile_Magazine_20Rnd_762x51_DMR_Red		// DMR
-9, Exile_Magazine_20Rnd_762x51_DMR_Green	// DMR
-9, Exile_Magazine_20Rnd_762x51_DMR_White	// DMR
 9, Exile_Magazine_5Rnd_22LR					// CZ550
-9, Exile_Magazine_10Rnd_762x54				// SVD
 9, Exile_Magazine_10Rnd_9x39				// VSS
 9, Exile_Magazine_20Rnd_9x39				// VSS
+9, 30Rnd_545x39_Mag_F						// AKS
+9, 30Rnd_545x39_Mag_Green_F					// AKS
+9, 30Rnd_545x39_Mag_Tracer_F				// AKS
+9, 30Rnd_545x39_Mag_Tracer_Green_F			// AKS
+9, 30Rnd_580x42_Mag_F						// CAR-95
+9, 30Rnd_580x42_Mag_Tracer_F				// CAR-95
+
+> MilRifleAmmo
+9, 100Rnd_580x42_Mag_F						// CAR-95-1
+9, 100Rnd_580x42_Mag_Tracer_F				// CAR-95-1
+9, 150Rnd_556x45_Drum_Mag_F					// SPAR-16S 
+9, 150Rnd_556x45_Drum_Mag_Tracer_F			// SPAR-16S 
+5, 10Rnd_50BW_Mag_F							// Type 115
+9, 20Rnd_762x51_Mag							// SPAR-17
 9, 30Rnd_762x39_Mag_F						// AK-12, AKM
 9, 30Rnd_762x39_Mag_Green_F                 // AK-12, AKM
 9, 30Rnd_762x39_Mag_Tracer_F                // AK-12, AKM
 9, 30Rnd_762x39_Mag_Tracer_Green_F          // AK-12, AKM
 9, 30Rnd_762x39_AK47_M						// AKS
-9, 30Rnd_545x39_Mag_F						// AKS
-9, 30Rnd_545x39_Mag_Green_F					// AKS
-9, 30Rnd_545x39_Mag_Tracer_F				// AKS
-9, 30Rnd_545x39_Mag_Tracer_Green_F			// AKS
-5, 10Rnd_50BW_Mag_F							// Type 115
-9, 30Rnd_580x42_Mag_F						// CAR-95
-9, 30Rnd_580x42_Mag_Tracer_F				// CAR-95
-9, 100Rnd_580x42_Mag_F						// CAR-95-1
-9, 100Rnd_580x42_Mag_Tracer_F				// CAR-95-1
-9, 150Rnd_556x45_Drum_Mag_F					// SPAR-16S 
-9, 150Rnd_556x45_Drum_Mag_Tracer_F			// SPAR-16S 
-9, 20Rnd_762x51_Mag							// SPAR-17
+9, Exile_Magazine_10Rnd_762x54				// SVD
+9, Exile_Magazine_30Rnd_762x39_AK			// AK
+9, Exile_Magazine_20Rnd_762x51_DMR			// DMR
+9, Exile_Magazine_20Rnd_762x51_DMR_Yellow	// DMR
+9, Exile_Magazine_20Rnd_762x51_DMR_Red		// DMR
+9, Exile_Magazine_20Rnd_762x51_DMR_Green	// DMR
+9, Exile_Magazine_20Rnd_762x51_DMR_White	// DMR
 
 > RifleAttachments
 10, muzzle_snds_M
@@ -501,10 +500,10 @@
 10, Exile_Magazine_45Rnd_545x39_RPK_Green
 10, Exile_Magazine_75Rnd_545x39_RPK_Green
 10, Exile_Magazine_100Rnd_762x54_PK_Green
-//10, 200Rnd_65x39_Belt					// Mk200
-//10, 200Rnd_65x39_Belt_Tracer_Green	// Mk200
-//10, 200Rnd_65x39_Belt_Tracer_Red		// Mk200
-//10, 200Rnd_65x39_Belt_Tracer_Yellow	// Mk200
+10, 200Rnd_65x39_Belt					// Mk200
+10, 200Rnd_65x39_Belt_Tracer_Green	// Mk200
+10, 200Rnd_65x39_Belt_Tracer_Red		// Mk200
+10, 200Rnd_65x39_Belt_Tracer_Yellow	// Mk200
 10, 200Rnd_556x45_Box_F				// LIM-85 	
 10, 200Rnd_556x45_Box_Red_F         // LIM-85	
 10, 200Rnd_556x45_Box_Tracer_F      // LIM-85	
@@ -533,11 +532,11 @@
 
 > DLCRifles
 // To overpowered. Do not use in vanilla Exile
-//4, MMG_01_hex_F				//Navid
-//4, MMG_01_tan_F				//Navid
-//6, MMG_02_black_F				//SPMG
-//6, MMG_02_camo_F				//SPMG
-//6, MMG_02_sand_F				//SPMG
+4, MMG_01_hex_F				//Navid
+4, MMG_01_tan_F				//Navid
+6, MMG_02_black_F				//SPMG
+6, MMG_02_camo_F				//SPMG
+6, MMG_02_sand_F				//SPMG
 6, srifle_DMR_02_camo_F			//MAR10
 6, srifle_DMR_02_F				//MAR10
 6, srifle_DMR_02_sniper_F		//MAR10
@@ -554,8 +553,8 @@
 3, srifle_DMR_06_olive_F		//Mk14
 
 > DLCAmmo
-//18, 150Rnd_93x64_Mag		//Navid
-//25, 130Rnd_338_Mag			//SPMG
+18, 150Rnd_93x64_Mag		//Navid
+25, 130Rnd_338_Mag			//SPMG
 16, 10Rnd_338_Mag			//MAR10
 11, 20Rnd_762x51_Mag		//MK1EMR
 14, 10Rnd_127x54_Mag		//ASP1KIR
@@ -577,13 +576,6 @@
 40, muzzle_snds_93mmg
 40, muzzle_snds_93mmg_tan
 40, muzzle_snds_B
-
-> EpicWeapons
-4, MMG_01_hex_F				//Navid
-4, MMG_01_tan_F				//Navid
-6, MMG_02_black_F			//SPMG
-6, MMG_02_camo_F			//SPMG
-6, MMG_02_sand_F			//SPMG
 
 > Bipods
 17, bipod_03_F_oli
