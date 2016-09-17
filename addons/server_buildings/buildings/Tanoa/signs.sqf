@@ -8,11 +8,11 @@ if (isServer) then {
 
     ];
     {
-        private _sign = (_x select 0) createVehicle (_x select 1);
-        _sign allowDamage false;
-        _sign setPosWorld (_x select 1);
-        _sign setVectorDirAndUp [_x select 2, _x select 3];
-        _sign enableSimulationGlobal (_x select 4);
+        private _sign = (_x select 0) createVehicle [0,0,0];
+        _sign setPosASL (_x select 1);
+        _sign setVectorDirAndUp (_x select 2);
+        _sign enableSimulationGlobal false;
         _sign setObjectTextureGlobal [0, "GG\images\billboard.paa"];
-    forEach _signs;
+        _sign allowDamage ((_x select 3) select 1);
+    } forEach _signs;
 };
