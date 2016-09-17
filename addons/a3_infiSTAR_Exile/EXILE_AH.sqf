@@ -6305,34 +6305,6 @@ _fn_4 = {
 				false
 			] call FN_infiSTAR_S;
 		};
-		if("+_USE_THIS_TIME_FUNCTION+" > _restarttimerTimer)then
-		{
-			_restarttimerTimer = "+_USE_THIS_TIME_FUNCTION+" + 20;
-			
-			_restartinseconds = (_restartTime * 60) - _runningtime;
-			_hours = floor(_restartinseconds / 60 / 60);
-			if(_hours isEqualTo 0)then
-			{
-				_minutes = floor((((_restartinseconds / 60 / 60) - _hours) max 0.0001)*60);
-				if(_minutes <= 2)then
-				{
-					_seconds = round(_restartinseconds - (_hours*60*60) - (_minutes * 60));
-					_seconds = if(_seconds <= 10)then{format['0%1',_seconds]}else{_seconds};
-					
-					[
-						[
-							_minutes,
-							_seconds
-						],
-						{
-							systemChat format['SERVER: RESTART IN 00:0%1:%2',_this select 0,_this select 1];
-						},
-						-2,
-						false
-					] call FN_infiSTAR_S;
-				};
-			};
-		};
 "; }; _A3AHstring = _A3AHstring + "
 	};
 };
