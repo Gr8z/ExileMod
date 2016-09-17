@@ -4,7 +4,7 @@ _flags = nearestObjects [player,["Exile_Construction_Flag_Static"],150];
 try
 {
 	if(count _flags == 0)exitWith{
-		throw "No connetion to a Virtual Garage"
+		throw "You need to be near your base to use Virtual Garage"
 	};
 
 	_flag = _flags select 0;
