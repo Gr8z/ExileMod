@@ -2,7 +2,7 @@ WELCOME_TEXT__CODE = {
     // Welcome messages
     private ["_NewLoginCount","_Logins","_LoginCount","_playerUID","_announcepay","_buildRights","_flag","_dueDate","_nextDueDate","_msg","_name","_missingModList"];
     playSound "intro";
-    sleep 2;
+    uiSleep 2;
     // Login Count
     _LoginCount = profileNamespace getVariable "var_GG_Logins";
     if (isNil "_LoginCount") then {
@@ -21,7 +21,7 @@ WELCOME_TEXT__CODE = {
         ]
     ] spawn BIS_fnc_typeText;
 
-    sleep 9;
+    uiSleep 15;
 
     switch (_Logins) do {
         case 0, case 1, case 2, case 3, case 4, case 5:
@@ -73,7 +73,7 @@ WELCOME_TEXT__CODE = {
         };
     }
     forEach (allMissionObjects "Exile_Construction_Flag_Static");
-    sleep 2;
+    uiSleep 2;
     _announcepay append ["","",""];
     if !(count _announcepay == 0) then{
             [_announcepay, -.5, .85] call BIS_fnc_typeText;

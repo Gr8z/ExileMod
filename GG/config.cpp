@@ -4472,7 +4472,7 @@ class CfgInteractionMenus
 			// Pushes a boat into look direction to move into water
 			class Push: ExileAbstractAction
 			{
-				title = "Fus Ro Dah!";
+				title = "Push";
 				condition = "((crew ExileClientInteractionObject) isEqualTo [])";
 				action = "_this call ExileClient_object_vehicle_push";
 			};
