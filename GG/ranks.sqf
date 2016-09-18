@@ -7,7 +7,7 @@ switch (true) do
     {
     call ExileClient_object_player_bambiStateEnd;
     _rank = "Scavenger";  
-     [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,5000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
+     [parseText format["<br/><br/><br/><t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,5000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
     player forceAddUniform "TRYK_U_B_Denim_T_BG_BK";
 	player addHeadgear "H_Bandanna_camo";
 	player addVest "V_Rangemaster_belt";
@@ -26,7 +26,7 @@ switch (true) do
    {
    call ExileClient_object_player_bambiStateEnd;
     _rank = "Pickpocket";     
-   [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,50000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
+   [parseText format["<br/><br/><br/><t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,50000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
     player forceAddUniform "TRYK_U_denim_hood_mc";
 	player addHeadgear "H_Cap_blk";
     player addVest "V_BandollierB_rgr";
@@ -48,7 +48,7 @@ switch (true) do
    {
     _rank = "Thief";
     call ExileClient_object_player_bambiStateEnd;
-   [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,100000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
+   [parseText format["<br/><br/><br/><t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,100000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
     player forceAddUniform "TRYK_B_TRYK_UCP_T";
     player addHeadgear "H_Watchcap_blk";
     player addVest "V_BandollierB_blk";
@@ -74,7 +74,7 @@ switch (true) do
    {
     _rank = "Gangster";  
     call ExileClient_object_player_bambiStateEnd;
-   [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,150000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
+   [parseText format["<br/><br/><br/><t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,150000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
     player forceAddUniform "TRYK_shirts_OD_PAD_BK";
     player addVest "V_BandollierB_blk";
     player addBackpack "TRYK_B_FieldPack_Wood";
@@ -100,7 +100,7 @@ switch (true) do
    {
    _rank = "Hitman";
    call ExileClient_object_player_bambiStateEnd;
-   [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,250000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
+   [parseText format["<br/><br/><br/><t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,250000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
     player forceAddUniform "TRYK_U_B_PCUGs_BLK";
     player addVest "TRYK_V_harnes_blk_L";
     player addBackpack "B_FieldPack_blk";
@@ -125,7 +125,7 @@ switch (true) do
    {
     _rank = "Bounty Hunter";  
   call ExileClient_object_player_bambiStateEnd;
-    [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,350000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
+    [parseText format["<br/><br/><br/><t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,350000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
     player forceAddUniform "TRYK_T_PAD";
     player addVest "TRYK_V_ArmorVest_tan";
     player addBackpack "B_TacticalPack_blk";
@@ -150,7 +150,7 @@ switch (true) do
    {
     _rank = "Mercenary";  
   call ExileClient_object_player_bambiStateEnd;
-     [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,450000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
+     [parseText format["<br/><br/><br/><t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,450000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
     player forceAddUniform "TRYK_U_B_PCUODHs";
     player addVest "TRYK_V_ArmorVest_Ranger";
     player addBackpack "B_FieldPack_blk";
@@ -175,7 +175,7 @@ switch (true) do
    {
     _rank = "Assassin";  
   call ExileClient_object_player_bambiStateEnd;
-     [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,600000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
+     [parseText format["<br/><br/><br/><t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,600000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
     player forceAddUniform "TRYK_U_B_Woodland";
     player addVest "V_I_G_resistanceLeader_F";
     player addBackpack "TRYK_B_BAF_BAG_OD";
@@ -201,7 +201,7 @@ switch (true) do
    {
     _rank = "Terrorist";  
 	call ExileClient_object_player_bambiStateEnd;
-		[parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,800000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
+		[parseText format["<br/><br/><br/><t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,800000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
 		player forceAddUniform "TRYK_U_hood_nc";
 		player addItem "Exile_Item_Matches";
 		player addVest "V_TacVest_khk";
@@ -227,7 +227,7 @@ switch (true) do
    {
     _rank = "Warlord";
     call ExileClient_object_player_bambiStateEnd;  
-   [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t>",_rank],0,0,10,0] spawn bis_fnc_dynamictext;
+   [parseText format["<br/><br/><br/><t size='0.6'font='OrbitronLight'>Your Rank is %1</t>",_rank],0,0,10,0] spawn bis_fnc_dynamictext;
     player forceAddUniform "TRYK_U_B_MTP_R_CombatUniform"; 
 	for "_i" from 1 to 4 do {this addItemToUniform "20Rnd_762x51_Mag";};
 	player addVest "V_PlateCarrierGL_rgr";
@@ -257,7 +257,7 @@ switch (true) do
     {   
     //  "Your rank is Inmate";
     _rank = "Inmate";  
-     [parseText format["<t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,2500-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
+     [parseText format["<br/><br/><br/><t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,2500-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
 	 player linkItem "ItemMap";
     };
 };

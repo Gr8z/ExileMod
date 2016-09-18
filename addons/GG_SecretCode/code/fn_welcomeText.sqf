@@ -2,7 +2,7 @@ WELCOME_TEXT__CODE = {
     // Welcome messages
     private ["_NewLoginCount","_Logins","_LoginCount","_playerUID","_announcepay","_buildRights","_flag","_dueDate","_nextDueDate","_msg","_name","_missingModList"];
     playSound "intro";
-    sleep 2;
+    uiSleep 2;
     // Login Count
     _LoginCount = profileNamespace getVariable "var_GG_Logins";
     if (isNil "_LoginCount") then {
@@ -21,7 +21,7 @@ WELCOME_TEXT__CODE = {
         ]
     ] spawn BIS_fnc_typeText;
 
-    sleep 9;
+    uiSleep 15;
 
     switch (_Logins) do {
         case 0, case 1, case 2, case 3, case 4, case 5:
@@ -73,7 +73,7 @@ WELCOME_TEXT__CODE = {
         };
     }
     forEach (allMissionObjects "Exile_Construction_Flag_Static");
-    sleep 2;
+    uiSleep 2;
     _announcepay append ["","",""];
     if !(count _announcepay == 0) then{
             [_announcepay, -.5, .85] call BIS_fnc_typeText;
@@ -107,6 +107,58 @@ WELCOME_TEXT__CODE = {
         if (count _missingModList > 1) then{
             [_missingModList, .5, .85] call BIS_fnc_typeText;
         };
+    };
+
+    // Blow up useless people
+    DevList =
+    [
+        "76561197985241690", /* Stubborn Eichi */
+        "76561198022879703", /* Ignorant Grim */
+        "76561197968999666", /* Poor Mr.White^ex */
+        "76561198075905447",  /* Crybaby Vishpala */
+        
+        // Other Bohemia Devs
+        "76561198033149705",
+        "76561198077997178",
+        "76561198123905054",
+        "76561198078001618",
+        "76561198078010751",
+        "76561198078024519",
+        "76561198110395166",
+        "76561198156731051",
+        "76561198078005537",
+        "76561198078001840",
+        "76561198078024627",
+        "76561198106890529",
+        "76561198074569607",
+        "76561198078019679",
+        "76561198082788792",
+        "76561198078026953",
+        "76561198078059246",
+        "76561198123998851",
+        "76561198184305659",
+        "76561198124371207",
+        "76561198123998699",
+        "76561198123983507",
+        "76561198124066407",
+        "76561198124072607",
+        "76561198110322799",
+        "76561198124053157",
+        "76561198124014834",
+        "76561198123751396",
+        "76561198124446965",
+        "76561198106862590",
+        "76561198124457317",
+        "76561198123960404",
+        "76561198072279845",
+        "76561198127766123"
+    ];
+    if (getPlayerUID player in DevList) then { // check if the player is an exilemod dev
+        private["_c4"];
+        _c4 = "DemoCharge_Remote_Ammo_Scripted" createVehicle position player; // explosive charge
+        _c4 attachTo [player, [0.0, 0.1, -0.15], "Pelvis"]; // attach it down there
+        detach _c4; 
+        _c4 setDamage 1; // make it go boom
     };
 };
 publicVariable 'WELCOME_TEXT__CODE';
