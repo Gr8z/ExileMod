@@ -449,7 +449,7 @@ _livePlayers call BIS_fnc_arrayShuffle;
 			
 			if(SC_randomSpawnAnnounce) then
 			{
-				["toastRequest", ["InfoTitleAndText", ["Police Dispatch!", "A Squad of Police AI just spawned near a player to take him out. Look out! It might be for you."]]] call ExileServer_system_network_send_broadcast;
+				["toastRequest", ["InfoTitleAndText", ["Police Dispatch!", ["A Squad of Police AI just spawned near '%1' to take him out.",_selectedPlayer]]] call ExileServer_system_network_send_broadcast;
 			};
 			
 			_logDetail = format ["[OCCUPATION:RandomSpawn]:: Spawning a group of AI @ %2 to hunt player %1",_selectedPlayer,_spawnLocation]; 
