@@ -8,18 +8,18 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=161;
+		nextID=166;
 	};
 	class LayerIndexProvider
 	{
-		nextID=6;
+		nextID=8;
 	};
 	class Camera
 	{
-		pos[]={12091.9,39.845737,2456.5942};
-		dir[]={-0.60161805,-0.78946728,0.12169069};
-		up[]={-0.77379775,0.6137867,0.15651771};
-		aside[]={0.1982573,-6.2515028e-008,0.98015445};
+		pos[]={12331.521,117.01117,14301.857};
+		dir[]={-0.77564347,-0.61093062,-0.158911};
+		up[]={-0.59853858,0.79165637,-0.12262566};
+		aside[]={-0.20072109,-5.6016142e-007,0.97970521};
 	};
 };
 binarizationWanted=0;
@@ -519,7 +519,7 @@ class Mission
 			name="military Edits 1";
 			class Entities
 			{
-				items=101;
+				items=105;
 				class Item0
 				{
 					dataType="Object";
@@ -2195,9 +2195,73 @@ class Mission
 					type="Land_Cargo_Tower_V4_F";
 					atlOffset=-9.5367432e-007;
 				};
+				class Item101
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12165.164,44.076321,14286.774};
+						angles[]={0,3.8384302,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=162;
+					type="Land_Cargo_House_V4_F";
+				};
+				class Item102
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12164.65,44.154034,14300.013};
+						angles[]={0,5.6704535,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=165;
+					type="Land_Cargo_House_V4_F";
+				};
+				class Item103
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12241.127,50.245567,14272.417};
+						angles[]={0,0.40261868,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=163;
+					type="Land_Cargo_Patrol_V4_F";
+				};
+				class Item104
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12186.61,56.223183,14274.021};
+						angles[]={0,6.2483387,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=164;
+					type="Land_Cargo_Tower_V4_F";
+				};
 			};
 			id=145;
-			atlOffset=-77.150917;
+			atlOffset=65.875313;
 		};
 		class Item2
 		{

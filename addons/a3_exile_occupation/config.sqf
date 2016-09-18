@@ -115,7 +115,8 @@ SC_staticBandits            	= [		//[[pos],ai count,radius,search buildings]
                                     [[10768.2,8653.25,0],2,100,true],
                                     [[12026.0,9709.35,0],2,100,true],
                                     [[10031.2,11792.8,0],2,100,true],
-                                    [[8593.64,10061.9,0],2,100,true]
+                                    [[8593.64,10061.9,0],2,100,true],
+                                    [[12179.8,14288.6,0],2,100,true]
 								  ];     
 SC_staticSurvivors          	= [		//[[pos],ai count,radius,search buildings]
 										//[[3770,8791,0],8,250,true]	

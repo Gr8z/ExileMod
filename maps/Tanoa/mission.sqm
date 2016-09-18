@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=155;
+		nextID=156;
 	};
 	class MarkerIDProvider
 	{
@@ -86,7 +86,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=79;
+		items=80;
 		class Item0
 		{
 			dataType="Group";
@@ -2813,6 +2813,18 @@ class Mission
 			colorName="ColorBlack";
 			id=154;
 			atlOffset=1.1581078e+023;
+		};
+		class Item79
+		{
+			dataType="Marker";
+			position[]={12179.768,43.457649,14288.567};
+			name="marker_18";
+			type="o_unknown";
+			alpha=0.60000002;
+			a=0.5;
+			b=0.5;
+			id=155;
+			atlOffset=0.013851166;
 		};
 	};
 };
