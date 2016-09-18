@@ -8,18 +8,18 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=151;
+		nextID=155;
 	};
 	class MarkerIDProvider
 	{
-		nextID=15;
+		nextID=21;
 	};
 	class Camera
 	{
-		pos[]={6714.2573,60.907822,6082.5952};
-		dir[]={-0.0077659674,-0.97385842,0.22704339};
-		up[]={-0.033291824,0.22709525,0.97330362};
-		aside[]={0.99942046,4.0590749e-009,0.034185458};
+		pos[]={6622.8052,674.37653,6100.3232};
+		dir[]={-0.063797206,-0.93204308,0.3567135};
+		up[]={-0.16409737,0.36223164,0.91752666};
+		aside[]={0.98438871,3.4298864e-008,0.17605583};
 	};
 };
 binarizationWanted=0;
@@ -86,7 +86,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=76;
+		items=79;
 		class Item0
 		{
 			dataType="Group";
@@ -2779,6 +2779,40 @@ class Mission
 			b=0.5;
 			id=150;
 			atlOffset=0.028707504;
+		};
+		class Item76
+		{
+			dataType="Marker";
+			position[]={13687.902,4.1274717e+024,6583.1108};
+			name="marker_11";
+			text="   Millitary Base";
+			type="o_unknown";
+			id=151;
+			atlOffset=4.1274717e+024;
+		};
+		class Item77
+		{
+			dataType="Marker";
+			position[]={13691.661,8.6067227e+024,6461.5869};
+			name="marker_19";
+			text="   ATM (locker)";
+			type="loc_Tourism";
+			colorName="ColorWhite";
+			a=2;
+			b=2;
+			id=153;
+			atlOffset=8.6067227e+024;
+		};
+		class Item78
+		{
+			dataType="Marker";
+			position[]={13677.326,1.1581078e+023,6787.355};
+			name="marker_20";
+			text="   MAP MARKER LEGEND";
+			type="Select";
+			colorName="ColorBlack";
+			id=154;
+			atlOffset=1.1581078e+023;
 		};
 	};
 };
