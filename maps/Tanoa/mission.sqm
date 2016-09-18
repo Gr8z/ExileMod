@@ -2584,7 +2584,7 @@ class Mission
 			position[]={1104.832,7.4661765,7591.8115};
 			name="marker_0";
 			type="o_unknown";
-			alpha=0.60000002;
+			alpha=0.8;
 			a=0.5;
 			b=0.5;
 			id=134;
@@ -2596,7 +2596,7 @@ class Mission
 			position[]={12104.795,5.1222959e+036,2488.4873};
 			name="marker_1";
 			type="o_unknown";
-			alpha=0.60000002;
+			alpha=0.8;
 			a=0.5;
 			b=0.5;
 			id=135;
@@ -2608,7 +2608,7 @@ class Mission
 			position[]={11487.771,20.932587,6234.146};
 			name="marker_10";
 			type="o_unknown";
-			alpha=0.60000002;
+			alpha=0.8;
 			a=0.5;
 			b=0.5;
 			id=136;
@@ -2620,7 +2620,7 @@ class Mission
 			position[]={5529.9897,4.2313867,12036.098};
 			name="marker_12";
 			type="o_unknown";
-			alpha=0.60000002;
+			alpha=0.8;
 			a=0.5;
 			b=0.5;
 			id=137;
@@ -2632,7 +2632,7 @@ class Mission
 			position[]={6517.2241,5.0519624,12702.787};
 			name="marker_13";
 			type="o_unknown";
-			alpha=0.60000002;
+			alpha=0.8;
 			a=0.5;
 			b=0.5;
 			id=138;
@@ -2644,7 +2644,7 @@ class Mission
 			position[]={9599.5723,5.5976987,6533.4092};
 			name="marker_14";
 			type="o_unknown";
-			alpha=0.60000002;
+			alpha=0.8;
 			a=0.5;
 			b=0.5;
 			id=139;
@@ -2656,7 +2656,7 @@ class Mission
 			position[]={5698.5112,3.0595338,11041.825};
 			name="marker_15";
 			type="o_unknown";
-			alpha=0.60000002;
+			alpha=0.8;
 			a=0.5;
 			b=0.5;
 			id=140;
@@ -2668,7 +2668,7 @@ class Mission
 			position[]={3934.6233,1.515498,13917.848};
 			name="marker_16";
 			type="o_unknown";
-			alpha=0.60000002;
+			alpha=0.8;
 			a=0.5;
 			b=0.5;
 			id=141;
@@ -2680,7 +2680,7 @@ class Mission
 			position[]={2634.0122,36.653488,11692.806};
 			name="marker_17";
 			type="o_unknown";
-			alpha=0.60000002;
+			alpha=0.8;
 			a=0.5;
 			b=0.5;
 			id=142;
@@ -2692,7 +2692,7 @@ class Mission
 			position[]={9470.3906,7.6304483,3846.5122};
 			name="marker_2";
 			type="o_unknown";
-			alpha=0.60000002;
+			alpha=0.8;
 			a=0.5;
 			b=0.5;
 			id=143;
@@ -2704,7 +2704,7 @@ class Mission
 			position[]={5580.8735,1.4023596,4050.0522};
 			name="marker_3";
 			type="o_unknown";
-			alpha=0.60000002;
+			alpha=0.8;
 			a=0.5;
 			b=0.5;
 			id=144;
@@ -2716,7 +2716,7 @@ class Mission
 			position[]={7128.6387,2.6700001,7995.6499};
 			name="marker_4";
 			type="o_unknown";
-			alpha=0.60000002;
+			alpha=0.8;
 			a=0.5;
 			b=0.5;
 			id=145;
@@ -2727,7 +2727,7 @@ class Mission
 			position[]={7446.3633,7.4899998,8542.7393};
 			name="marker_5";
 			type="o_unknown";
-			alpha=0.60000002;
+			alpha=0.8;
 			a=0.5;
 			b=0.5;
 			id=146;
@@ -2738,7 +2738,7 @@ class Mission
 			position[]={10768.162,405.0791,8653.251};
 			name="marker_6";
 			type="o_unknown";
-			alpha=0.60000002;
+			alpha=0.8;
 			a=0.5;
 			b=0.5;
 			id=147;
@@ -2750,7 +2750,7 @@ class Mission
 			position[]={12026.01,179.16922,9709.3486};
 			name="marker_7";
 			type="o_unknown";
-			alpha=0.60000002;
+			alpha=0.8;
 			a=0.5;
 			b=0.5;
 			id=148;
@@ -2762,7 +2762,7 @@ class Mission
 			position[]={10031.196,409.88113,11792.827};
 			name="marker_8";
 			type="o_unknown";
-			alpha=0.60000002;
+			alpha=0.8;
 			a=0.5;
 			b=0.5;
 			id=149;
@@ -2774,7 +2774,7 @@ class Mission
 			position[]={8593.6436,20.731867,10061.859};
 			name="marker_9";
 			type="o_unknown";
-			alpha=0.60000002;
+			alpha=0.8;
 			a=0.5;
 			b=0.5;
 			id=150;
@@ -2820,7 +2820,7 @@ class Mission
 			position[]={12179.768,43.457649,14288.567};
 			name="marker_18";
 			type="o_unknown";
-			alpha=0.60000002;
+			alpha=0.8;
 			a=0.5;
 			b=0.5;
 			id=155;
