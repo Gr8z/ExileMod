@@ -6,7 +6,7 @@ GGAdsMessages =
                 ["Visit our website at www.GhostzGamerz.com","","",""],
                 ["Join Our Teamspeak to get 10,000 Free Pop Tabs","TS.GhostzGamerz.com","","",""],
                 ["Get a pro building box By Posting 30 Posts on the Forums.","","",""],
-                ["You can learn alot about our comunity just by Joining our Teamspeak and Forums","Visit www.GhostzGamerz.com","","",""],
+                ["You can learn alot about our community just by Joining our Teamspeak and Forums","Visit www.GhostzGamerz.com","","",""],
                 ["You can easily send your feeback on our forums."],
                 ["We are waiting for you on our TS Server","TS.ghostzgamerz.com","","",""]
         ];
