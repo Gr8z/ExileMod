@@ -424,7 +424,7 @@ _livePlayers call BIS_fnc_arrayShuffle;
 			for "_i" from 1 to _groupSize do
 			{
 				_loadOut = ["cops"] call SC_fnc_selectGear;
-				_unit = [_group,_spawnLocation,"custom","random","bandit","soldier",_loadOut] call DMS_fnc_SpawnAISoldier;				
+				_unit = [_group,_spawnLocation,"custom","easy","bandit","soldier",_loadOut] call DMS_fnc_SpawnAISoldier;				
 				_unit allowFleeing 0;
 				_unit allowDamage false;
 				_unit disableAI "AUTOTARGET";
