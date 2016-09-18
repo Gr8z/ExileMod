@@ -364,7 +364,7 @@ SC_BanditLastNames      		= ["Dimitrov","Petrov","Horvat","Novak","Dvorak","Vese
 SC_SurvivorsChance          	= 20;						// chance in % to spawn survivors instead of bandits (for places and land vehicles)
 
 
-SC_SurvivorsFriendly        	= true;                 	// true if you want survivors to be friendly to players (until they are attacked by players)
+SC_SurvivorsFriendly        	= false;                 	// true if you want survivors to be friendly to players (until they are attacked by players)
 															// false if you want survivors to be aggressive to players
 
 // Possible equipment for survivor AI to spawn with 
