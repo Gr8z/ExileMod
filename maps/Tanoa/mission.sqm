@@ -2783,17 +2783,16 @@ class Mission
 		class Item76
 		{
 			dataType="Marker";
-			position[]={13687.902,4.1274717e+024,6583.1108};
+			position[]={13687,0,6583.1108};
 			name="marker_11";
 			text="   Millitary Base";
 			type="o_unknown";
 			id=151;
-			atlOffset=4.1274717e+024;
 		};
 		class Item77
 		{
 			dataType="Marker";
-			position[]={13691.661,8.6067227e+024,6461.5869};
+			position[]={13687,0,6461.5869};
 			name="marker_19";
 			text="   ATM (Bank)";
 			type="loc_Tourism";
@@ -2801,18 +2800,16 @@ class Mission
 			a=2;
 			b=2;
 			id=153;
-			atlOffset=8.6067227e+024;
 		};
 		class Item78
 		{
 			dataType="Marker";
-			position[]={13677.326,1.1581078e+023,6787.355};
+			position[]={13677.326,0,6787.355};
 			name="marker_20";
 			text="   MAP MARKER LEGEND";
 			type="Select";
 			colorName="ColorBlack";
 			id=154;
-			atlOffset=1.1581078e+023;
 		};
 		class Item79
 		{
