@@ -14,7 +14,11 @@ GGAdsMessages =
         [_msg, -.5, .85] call BIS_fnc_typeText;
 }; 
 sleep 180;
-GGAdsMessagesLoop = [600, GGAdsMessages, [], true] call ExileClient_system_thread_addtask;
+
+_LoginCount = profileNamespace getVariable "var_GG_Logins";
+if (_LoginCount < 20) then {
+        GGAdsMessagesLoop = [600, GGAdsMessages, [], true] call ExileClient_system_thread_addtask;
+};
 
 // Fix Map disappearing from inventory
 Map_FIX_CODE = {
