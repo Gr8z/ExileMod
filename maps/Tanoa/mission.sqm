@@ -8,18 +8,18 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=117;
+		nextID=156;
 	};
 	class MarkerIDProvider
 	{
-		nextID=15;
+		nextID=21;
 	};
 	class Camera
 	{
-		pos[]={6714.2573,60.907822,6082.5952};
-		dir[]={-0.0077659674,-0.97385842,0.22704339};
-		up[]={-0.033291824,0.22709525,0.97330362};
-		aside[]={0.99942046,4.0590749e-009,0.034185458};
+		pos[]={6622.8052,674.37653,6100.3232};
+		dir[]={-0.063797206,-0.93204308,0.3567135};
+		up[]={-0.16409737,0.36223164,0.91752666};
+		aside[]={0.98438871,3.4298864e-008,0.17605583};
 	};
 };
 binarizationWanted=0;
@@ -86,7 +86,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=59;
+		items=80;
 		class Item0
 		{
 			dataType="Group";
@@ -2577,6 +2577,254 @@ class Mission
 				};
 				nAttributes=5;
 			};
+		};
+		class Item59
+		{
+			dataType="Marker";
+			position[]={1104.832,7.4661765,7591.8115};
+			name="marker_0";
+			type="o_unknown";
+			alpha=0.8;
+			a=0.5;
+			b=0.5;
+			id=134;
+			atlOffset=0.016000271;
+		};
+		class Item60
+		{
+			dataType="Marker";
+			position[]={12104.795,5.1222959e+036,2488.4873};
+			name="marker_1";
+			type="o_unknown";
+			alpha=0.8;
+			a=0.5;
+			b=0.5;
+			id=135;
+			atlOffset=5.1222959e+036;
+		};
+		class Item61
+		{
+			dataType="Marker";
+			position[]={11487.771,20.932587,6234.146};
+			name="marker_10";
+			type="o_unknown";
+			alpha=0.8;
+			a=0.5;
+			b=0.5;
+			id=136;
+			atlOffset=0.0017261505;
+		};
+		class Item62
+		{
+			dataType="Marker";
+			position[]={5529.9897,4.2313867,12036.098};
+			name="marker_12";
+			type="o_unknown";
+			alpha=0.8;
+			a=0.5;
+			b=0.5;
+			id=137;
+			atlOffset=0.017329216;
+		};
+		class Item63
+		{
+			dataType="Marker";
+			position[]={6517.2241,5.0519624,12702.787};
+			name="marker_13";
+			type="o_unknown";
+			alpha=0.8;
+			a=0.5;
+			b=0.5;
+			id=138;
+			atlOffset=0.0058784485;
+		};
+		class Item64
+		{
+			dataType="Marker";
+			position[]={9599.5723,5.5976987,6533.4092};
+			name="marker_14";
+			type="o_unknown";
+			alpha=0.8;
+			a=0.5;
+			b=0.5;
+			id=139;
+			atlOffset=-0.012627602;
+		};
+		class Item65
+		{
+			dataType="Marker";
+			position[]={5698.5112,3.0595338,11041.825};
+			name="marker_15";
+			type="o_unknown";
+			alpha=0.8;
+			a=0.5;
+			b=0.5;
+			id=140;
+			atlOffset=0.19976664;
+		};
+		class Item66
+		{
+			dataType="Marker";
+			position[]={3934.6233,1.515498,13917.848};
+			name="marker_16";
+			type="o_unknown";
+			alpha=0.8;
+			a=0.5;
+			b=0.5;
+			id=141;
+			atlOffset=-0.049321294;
+		};
+		class Item67
+		{
+			dataType="Marker";
+			position[]={2634.0122,36.653488,11692.806};
+			name="marker_17";
+			type="o_unknown";
+			alpha=0.8;
+			a=0.5;
+			b=0.5;
+			id=142;
+			atlOffset=0.0026702881;
+		};
+		class Item68
+		{
+			dataType="Marker";
+			position[]={9470.3906,7.6304483,3846.5122};
+			name="marker_2";
+			type="o_unknown";
+			alpha=0.8;
+			a=0.5;
+			b=0.5;
+			id=143;
+			atlOffset=0.0013332367;
+		};
+		class Item69
+		{
+			dataType="Marker";
+			position[]={5580.8735,1.4023596,4050.0522};
+			name="marker_3";
+			type="o_unknown";
+			alpha=0.8;
+			a=0.5;
+			b=0.5;
+			id=144;
+			atlOffset=-0.011997104;
+		};
+		class Item70
+		{
+			dataType="Marker";
+			position[]={7128.6387,2.6700001,7995.6499};
+			name="marker_4";
+			type="o_unknown";
+			alpha=0.8;
+			a=0.5;
+			b=0.5;
+			id=145;
+		};
+		class Item71
+		{
+			dataType="Marker";
+			position[]={7446.3633,7.4899998,8542.7393};
+			name="marker_5";
+			type="o_unknown";
+			alpha=0.8;
+			a=0.5;
+			b=0.5;
+			id=146;
+		};
+		class Item72
+		{
+			dataType="Marker";
+			position[]={10768.162,405.0791,8653.251};
+			name="marker_6";
+			type="o_unknown";
+			alpha=0.8;
+			a=0.5;
+			b=0.5;
+			id=147;
+			atlOffset=-0.070617676;
+		};
+		class Item73
+		{
+			dataType="Marker";
+			position[]={12026.01,179.16922,9709.3486};
+			name="marker_7";
+			type="o_unknown";
+			alpha=0.8;
+			a=0.5;
+			b=0.5;
+			id=148;
+			atlOffset=0.0082855225;
+		};
+		class Item74
+		{
+			dataType="Marker";
+			position[]={10031.196,409.88113,11792.827};
+			name="marker_8";
+			type="o_unknown";
+			alpha=0.8;
+			a=0.5;
+			b=0.5;
+			id=149;
+			atlOffset=-0.0013427734;
+		};
+		class Item75
+		{
+			dataType="Marker";
+			position[]={8593.6436,20.731867,10061.859};
+			name="marker_9";
+			type="o_unknown";
+			alpha=0.8;
+			a=0.5;
+			b=0.5;
+			id=150;
+			atlOffset=0.028707504;
+		};
+		class Item76
+		{
+			dataType="Marker";
+			position[]={13687.902,4.1274717e+024,6583.1108};
+			name="marker_11";
+			text="   Millitary Base";
+			type="o_unknown";
+			id=151;
+			atlOffset=4.1274717e+024;
+		};
+		class Item77
+		{
+			dataType="Marker";
+			position[]={13691.661,8.6067227e+024,6461.5869};
+			name="marker_19";
+			text="   ATM (locker)";
+			type="loc_Tourism";
+			colorName="ColorWhite";
+			a=2;
+			b=2;
+			id=153;
+			atlOffset=8.6067227e+024;
+		};
+		class Item78
+		{
+			dataType="Marker";
+			position[]={13677.326,1.1581078e+023,6787.355};
+			name="marker_20";
+			text="   MAP MARKER LEGEND";
+			type="Select";
+			colorName="ColorBlack";
+			id=154;
+			atlOffset=1.1581078e+023;
+		};
+		class Item79
+		{
+			dataType="Marker";
+			position[]={12179.768,43.457649,14288.567};
+			name="marker_18";
+			type="o_unknown";
+			alpha=0.8;
+			a=0.5;
+			b=0.5;
+			id=155;
+			atlOffset=0.013851166;
 		};
 	};
 };

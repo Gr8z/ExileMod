@@ -207,7 +207,7 @@ adminUIDandAccess[] =
 			"==== Base Deleter ====","Items spawn menu",
 			"Remove Gear","Heal","Restore","Flip Vehicle","Move In My Vehicle","Move In Target Vehicle","Eject","Eject Crew",
 			"Player ESP","AI ESP","Dead ESP","Loot ESP","Vehicle Marker","Flag Marker (with radius)","DeadPlayer Marker",
-			"God Mode","Vehicle God Mode","Mass Message","Stealth / Invisible",
+			"God Mode","Vehicle God Mode","Mass Message","Stealth / Invisible","Create Billboard",
 			"Spawn Support-Boxes",
 			"Spawn Ammo","Request Steam Name","showinfo","UnlockLockVehicle","Spawn Vehicles","Spawn Persistent Vehicles",
 			"Kill","Force Disconnect","Kick (Announce)",
@@ -224,7 +224,7 @@ adminUIDandAccess[] =
 		"0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
 			"spectating","ShowGear","Spawn Vehicles",
-			"Freeze","UnFreeze","Remove Gear","Heal","Restore","Flip Vehicle",
+			"Freeze","UnFreeze","Remove Gear","Heal","Restore","Flip Vehicle","Create Billboard",
 			"Eject","DeadPlayer Marker","Request Steam Name","UnlockLockVehicle",
 			"Kill","Kick (Announce)","Change Money on Player","Change Money on Bank","Spawn Vehicles",
 			"showinfo",

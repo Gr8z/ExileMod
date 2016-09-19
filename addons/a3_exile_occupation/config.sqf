@@ -20,7 +20,7 @@ SC_extendedLogging          	= false;                	// set to true for additio
 
 SC_infiSTAR_log					= false;						// true Use infiSTAR logging, false logs to server rpt
 SC_maxAIcount					= 40;						// the maximum amount of AI, if the AI count is above this then additional AI won't spawn
-SC_mapMarkers					= true;                	// Place map markers at the occupied areas (occupyPlaces and occupyMilitary only) true/false
+SC_mapMarkers					= false;                	// Place map markers at the occupied areas (occupyPlaces and occupyMilitary only) true/false
 SC_minFPS						= 15;				    	// any lower than minFPS on the server and additional AI won't spawn
 SC_scaleAI						= 10;						// any more than _scaleAI players on the server and _maxAIcount is reduced for each extra player
 
@@ -42,11 +42,11 @@ SC_processReporter				= false;                 	// log the a list of active serv
 SC_fastNights               	= true;						// true if you want night time to go faster than daytime
 SC_occupyPlaces 				= false;					// true if you want villages,towns,cities patrolled by bandits
 SC_occupyTraders            	= false;					// true if you want to create trader camps at positions specified in SC_occupyTraderDetails
-SC_occupyStatic	 		    	= false;		    		// true if you want to add AI in specific locations
+SC_occupyStatic	 		    	= true;		    		// true if you want to add AI in specific locations
 SC_occupyTransport 	        	= false;					// true if you want pubic transport (travels between traders)
 SC_occupyLootCrates		    	= false;					// true if you want to have random loot crates with guards
 SC_occupyRandomSpawn        	= true;                		// (WORK IN PROGRESS) true if you want random spawning AI that hunt for nearby players
-SC_occupyMilitary 		    	= true;			    		// true if you want military buildings patrolled
+SC_occupyMilitary 		    	= false;			    		// true if you want military buildings patrolled
 SC_occupyVehicle				= true;						// true if you want to have roaming AI land vehicles
 SC_occupySky					= false;					// true if you want to have roaming AI helis
 SC_occupySea					= false;					// true if you want to have roaming AI boats
@@ -98,7 +98,25 @@ SC_occupyTraderDetails      	= [
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
 
 SC_staticBandits            	= [		//[[pos],ai count,radius,search buildings]	
-    
+                                    [[1104.83,7591.81,0],2,100,true],
+                                    [[12104.8,2488.49,0],2,100,true],
+                                    [[11487.8,6234.15,0],2,100,true],
+                                    [[11670.7,4106.17,0],2,100,true],
+                                    [[5529.99,12036.1,0],2,100,true],
+                                    [[6517.22,12702.8,0],2,100,true],
+                                    [[9599.57,6533.41,0],2,100,true],
+                                    [[5698.51,11041.8,0],2,100,true],
+                                    [[3934.62,13917.8,0],2,100,true],
+                                    [[2634.01,11692.8,0],2,100,true],
+                                    [[9470.39,3846.51,0],2,100,true],
+                                    [[5580.87,4050.05,0],2,100,true],
+                                    [[7128.64,7995.65,0],2,100,true],
+                                    [[7446.36,8542.74,0],2,100,true],
+                                    [[10768.2,8653.25,0],2,100,true],
+                                    [[12026.0,9709.35,0],2,100,true],
+                                    [[10031.2,11792.8,0],2,100,true],
+                                    [[8593.64,10061.9,0],2,100,true],
+                                    [[12179.8,14288.6,0],2,100,true]
 								  ];     
 SC_staticSurvivors          	= [		//[[pos],ai count,radius,search buildings]
 										//[[3770,8791,0],8,250,true]	
@@ -347,7 +365,7 @@ SC_BanditLastNames      		= ["Dimitrov","Petrov","Horvat","Novak","Dvorak","Vese
 SC_SurvivorsChance          	= 20;						// chance in % to spawn survivors instead of bandits (for places and land vehicles)
 
 
-SC_SurvivorsFriendly        	= true;                 	// true if you want survivors to be friendly to players (until they are attacked by players)
+SC_SurvivorsFriendly        	= false;                 	// true if you want survivors to be friendly to players (until they are attacked by players)
 															// false if you want survivors to be aggressive to players
 
 // Possible equipment for survivor AI to spawn with 
@@ -476,9 +494,7 @@ if(!SC_SurvivorsFriendly) then
 CIVILIAN    	setFriend [EAST,0]; 
 CIVILIAN    	setFriend [WEST,0]; 
 EAST        	setFriend [CIVILIAN,0]; 
-WEST        	setFriend [CIVILIAN,0]; 
-EAST        	setFriend [WEST,0]; 
-WEST        	setFriend [EAST,0]; 
+WEST        	setFriend [CIVILIAN,0];
 
    
 SC_SurvivorSide         		= CIVILIAN;

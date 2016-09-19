@@ -65,7 +65,7 @@ if(_side == "survivor") then { _currentSide = SC_SurvivorSide };
             for "_i" from 1 to _aiCount do
             {		
                 _loadOut = [_side] call SC_fnc_selectGear;
-                _unit = [_initialGroup,_spawnPosition,"custom","random",_side,"soldier",_loadOut] call DMS_fnc_SpawnAISoldier;
+                _unit = [_initialGroup,_spawnPosition,"custom","easy",_side,"soldier",_loadOut] call DMS_fnc_SpawnAISoldier;
 				_unit allowFleeing 0;
 				_unit allowDamage false;
 				_unit disableAI "AUTOTARGET";
