@@ -14,8 +14,6 @@ switch (true) do
     player addItem "Exile_Item_Matches";
     player addItem "Exile_Item_ExtensionCord";
     player linkItem "ItemGPS";
-    player addWeaponGlobal "Exile_Melee_Axe";
-    player addMagazine "Exile_Magazine_Swing";
     player addItem "Exile_Item_CanOpener";
     player addItem "Exile_Item_PlasticBottleFreshWater";
    //  "Your rank is Scavenger";
@@ -35,8 +33,6 @@ switch (true) do
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
     player addItem "Exile_Item_ExtensionCord";
-    player addWeaponGlobal "Exile_Melee_Axe";
-    player addMagazine "Exile_Magazine_Swing";
     player addItem "Exile_Item_PlasticBottleFreshWater";
     player addItem "Exile_Item_CanOpener";
     player addItem "Exile_Item_PlasticBottleFreshWater";
@@ -59,8 +55,6 @@ switch (true) do
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
     player addItem "Exile_Item_ExtensionCord";
-    player addWeaponGlobal "Exile_Melee_Axe";
-    player addMagazine "Exile_Magazine_Swing";
     player addItem "Exile_Item_BBQSandwich";
     player addItem "Exile_Item_PlasticBottleFreshWater";
     player addItem "Exile_Item_InstaDoc";
@@ -85,8 +79,6 @@ switch (true) do
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
     player addItem "Exile_Item_ExtensionCord";
-    player addWeaponGlobal "Exile_Melee_Axe";
-    player addMagazine "Exile_Magazine_Swing";
     player addItem "Exile_Item_BBQSandwich";
     player addItem "Exile_Item_PlasticBottleFreshWater";
     player addItem "Exile_Item_InstaDoc";
@@ -110,8 +102,6 @@ switch (true) do
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
     player addItem "Exile_Item_ExtensionCord";
-    player addWeaponGlobal "Exile_Melee_Axe";
-    player addMagazine "Exile_Magazine_Swing";
     player addItem "Exile_Item_BBQSandwich";
     player addItem "Exile_Item_PlasticBottleFreshWater";
     player addItem "Exile_Item_InstaDoc";
@@ -135,8 +125,6 @@ switch (true) do
     player addItem "Exile_Item_Matches";
     player linkItem "ItemGPS";
     player addItem "Exile_Item_ExtensionCord";
-    player addWeaponGlobal "Exile_Melee_Axe";
-    player addMagazine "Exile_Magazine_Swing";
     player addItem "Exile_Item_BBQSandwich";
     player addItem "Exile_Item_PlasticBottleFreshWater";
     player addItem "Exile_Item_InstaDoc";
@@ -160,8 +148,6 @@ switch (true) do
     player addItem "Exile_Item_Matches";
     player addItem "Exile_Item_ExtensionCord";
     player linkItem "ItemGPS";
-    player addWeaponGlobal "Exile_Melee_Axe";
-    player addMagazine "Exile_Magazine_Swing";
     player addItem "Exile_Item_BBQSandwich";
     player addItem "Exile_Item_PlasticBottleFreshWater";
     player addItem "Exile_Item_InstaDoc";
@@ -186,8 +172,6 @@ switch (true) do
     player addItem "Exile_Item_Matches";
     player addItem "Exile_Item_ExtensionCord";
     player linkItem "ItemGPS";
-    player addWeaponGlobal "Exile_Melee_Axe";
-    player addMagazine "Exile_Magazine_Swing";
     player addItem "Exile_Item_BBQSandwich";
     player addItem "Exile_Item_PlasticBottleFreshWater";
     player addItem "Exile_Item_InstaDoc";
@@ -211,9 +195,7 @@ switch (true) do
 		player addWeapon "hlc_rifle_akm_MTK";
 		player addPrimaryWeaponItem "optic_MRCO";
 		player linkItem "ItemGPS";
-		player addWeaponGlobal "Exile_Melee_Axe";
 		player additem "Exile_Item_ExtensionCord";
-		player addMagazine "Exile_Magazine_Swing";
 		player addItem "Exile_Item_BBQSandwich";
 		player addItem "Exile_Item_PlasticBottleFreshWater";
 		player addItem "Exile_Item_InstaDoc";
@@ -242,8 +224,6 @@ switch (true) do
     player addItem "Exile_Item_Matches";
     player addItem "Exile_Item_ExtensionCord";
     player linkItem "ItemGPS";
-    player addWeaponGlobal "Exile_Melee_Axe";
-    player addMagazine "Exile_Magazine_Swing";
     player addItem "Exile_Item_GloriousKnakworst";
     player addItem "Exile_Item_PowerDrink";
     player addItem "Exile_Item_InstaDoc";
