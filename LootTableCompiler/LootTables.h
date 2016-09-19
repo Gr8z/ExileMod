@@ -17,6 +17,7 @@
 6, CivilianItems
 5, Chemlights
 4, GuerillaItems
+10, Garbage
 
 ///////////////////////////////////////////////////////////////////////////////
 // Apartments, Offices etc.
@@ -46,6 +47,7 @@
 3, Chemlights
 2, Restraints
 4, GuerillaItems
+10, Garbage
 
 ///////////////////////////////////////////////////////////////////////////////
 // Kiosks, Supermarkets etc.
@@ -57,8 +59,7 @@
 5, CivilianItems
 5, Electronics
 5, Vehicle
-
-
+10, Garbage
 
 ///////////////////////////////////////////////////////////////////////////////
 // Construction Sites, Warehouses, Research etc.
@@ -67,7 +68,7 @@
 40, IndustrialItems
 25, Vehicle
 5, Restraints
-2, Batteries
+20, Garbage
 
 ///////////////////////////////////////////////////////////////////////////////
 // Factories
@@ -76,7 +77,7 @@
 15, Electronics
 20, Vehicle
 40, IndustrialItems
-2, Batteries
+20, Garbage
 
 ///////////////////////////////////////////////////////////////////////////////
 // Fuel Stations, Garages, Workshops etc.
@@ -85,6 +86,7 @@
 25, IndustrialItems
 40, Vehicle
 5, Restraints
+20, Garbage
 
 ///////////////////////////////////////////////////////////////////////////////
 // Towers, Barracks, Hangars etc.
@@ -126,6 +128,7 @@
 2, Bipods
 .5, Explosives
 0.025, Magazine01
+2, Garbage
 
 ///////////////////////////////////////////////////////////////////////////////
 // Hospital, Medevac etc.
@@ -134,7 +137,6 @@
 70, MedicalItems
 10, Food
 10, Drinks
-//0.08, Magazine04
 
 ///////////////////////////////////////////////////////////////////////////////
 // Light Houses + Life Guard Towers + Castles
@@ -164,12 +166,12 @@
 3, Chemlights
 2, Restraints
 4, GuerillaItems
+5, Garbage
 
 ///////////////////////////////////////////////////////////////////////////////
 // Ghost Hotel Buildings
 ///////////////////////////////////////////////////////////////////////////////
 > Radiation
-1, Batteries
 10, MilitaryBackpacks
 10, MilitaryHeadgear
 20, Food
@@ -194,3 +196,4 @@
 5, EpicWeapons
 0.65, Phoneknife
 0.01, Magazine02
+10, Garbage

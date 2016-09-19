@@ -714,11 +714,8 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 > CivilianItems
-30, ItemWatch
-30, ItemRadio
 15, ItemGPS
 25, Binocular
-35, ItemMap
 
 > CivilianClothing
 5, U_C_HunterBody_grn
@@ -1418,6 +1415,7 @@
 8, Exile_Item_ScrewDriver
 9, Exile_Melee_Axe
 4, Exile_Item_CordlessScrewdriver
+5, Exile_Item_Carwheel
 
 > Vehicle
 35, Exile_Item_FuelCanisterFull
@@ -1466,9 +1464,6 @@
 60, Exile_Item_MobilePhone
 40, Exile_Item_Knife
 
-> Batteries
-100, Exile_Magazine_Battery
-
 > Unused
 3, Exile_Item_FireExtinguisher
 14, Exile_Item_Hammer
@@ -1478,3 +1473,16 @@
 5, Exile_Item_Wrench
 20, Exile_Item_OilCanister
 8, Exile_Melee_Shovel
+
+> Garbage
+10, Exile_Item_ToiletPaper
+10, Exile_Item_Can_Empty
+10, Exile_Item_PlasticBottleEmpty
+10, Exile_Item_WaterCanisterEmpty
+10, Exile_Item_FuelBarrelEmpty
+10, Exile_Item_FuelCanisterEmpty
+8, Exile_Item_Rope
+8, Exile_Item_FireExtinguisher
+10, ItemMap
+10, ItemWatch
+10, ItemRadio
