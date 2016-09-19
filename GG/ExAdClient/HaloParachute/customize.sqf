@@ -21,4 +21,4 @@ ExAd_HALOPARACHUTE_USE_ACTIONS = true;	//BOOLEAN - Allows player to eject from a
 ExAd_HALOPARACHUTE_USE_KEY_ACTIONS = true;	//BOOLEAN - Show addActions on the screen
 
 ExAd_ACTION_PARACHUTE_HEIGHT = 10; 		//SCALAR - What is the minimum altitude a player can pull a parachute. |RECOMMENDED 30 meters when safe_mode activated
-ExAd_ACTION_EJECT_HEIGHT = 500; 		//SCALAR - What is the minimum altitude a player can Halo/Eject from a vehicle.
+ExAd_ACTION_EJECT_HEIGHT = 300000; 		//SCALAR - What is the minimum altitude a player can Halo/Eject from a vehicle.
