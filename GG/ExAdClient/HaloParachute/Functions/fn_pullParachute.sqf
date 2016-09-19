@@ -40,7 +40,7 @@ if(ExAd_HALOPARACHUTE_SAFE_MODE)then{
 };
 
 if(ExAd_HALOPARACHUTE_USE_KEY_ACTIONS)then{
-	hint "You can eject from parachute above 100m with: ALT + SHIFT + X"
+	["InfoTitleAndText", ["Eject Parachute", " Press ALT + SHIFT + X to Eject from a parachute."]] call ExileClient_gui_toaster_addTemplateToast;
 };
 
 true
