@@ -2795,7 +2795,7 @@ class Mission
 			dataType="Marker";
 			position[]={13691.661,8.6067227e+024,6461.5869};
 			name="marker_19";
-			text="   ATM (locker)";
+			text="   ATM (Bank)";
 			type="loc_Tourism";
 			colorName="ColorWhite";
 			a=2;
