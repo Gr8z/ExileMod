@@ -59,7 +59,6 @@ ExileClientPlayerScore = parseNumber (_this select 2);
 ExileClientPlayerKills = _this select 3;
 ExileClientPlayerDeaths = _this select 4;
 (_this select 9) call ExileClient_system_clan_network_updateClanInfoFull;
-call GG_rank_loadout;
 if!((_this select 9) isEqualTo [])then
 {
 	if!(isNull ((_this select 9) select 5))then
