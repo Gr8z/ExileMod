@@ -55,11 +55,11 @@ switch (_spawnType) do
 call ExileClient_object_player_initStamina;
 false call ExileClient_gui_hud_showSurvivalInfo;
 call ExileClient_system_rating_balance;
-call GG_rank_loadout;
 ExileClientPlayerScore = parseNumber (_this select 2);
 ExileClientPlayerKills = _this select 3;
 ExileClientPlayerDeaths = _this select 4;
 (_this select 9) call ExileClient_system_clan_network_updateClanInfoFull;
+call GG_rank_loadout;
 if!((_this select 9) isEqualTo [])then
 {
 	if!(isNull ((_this select 9) select 5))then
