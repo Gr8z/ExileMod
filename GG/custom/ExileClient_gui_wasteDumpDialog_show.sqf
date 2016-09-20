@@ -22,14 +22,14 @@ _localVehicles = [];
 			{
 				if((_family isEqualTo _vifamily) || (getPlayerUID player) isEqualTo _ownerUID) then
 				{
-					_localVehicles pushBack _x;
+					if (local _x) then {_localVehicles pushBack _x;};
 				};
 			}
 			else
 			{
 				if((getPlayerUID player) isEqualTo _ownerUID) then
 				{
-					_localVehicles pushBack _x;
+					if (local _x) then {_localVehicles pushBack _x;};
 				};
 			};
 		}
@@ -39,14 +39,14 @@ _localVehicles = [];
 			{
 				if((str(group player) isEqualTo _group) || (_family isEqualTo _vifamily) || (getPlayerUID player) isEqualTo _ownerUID) then
 				{
-					_localVehicles pushBack _x;
+					if (local _x) then {_localVehicles pushBack _x;};
 				};
 			}
 			else
 			{
 				if((str(group player) isEqualTo _group) || (getPlayerUID player) isEqualTo _ownerUID) then
 				{
-					_localVehicles pushBack _x;
+					if (local _x) then {_localVehicles pushBack _x;};
 				};
 			};
 		};
