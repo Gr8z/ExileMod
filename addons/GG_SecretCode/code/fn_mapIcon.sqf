@@ -11,7 +11,7 @@ MAP_ICON__CODE = {
     findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw", "
     {
         _this select 0 drawIcon [
-            'exile_assets\texture\item\Exile_Item_Codelock.paa',
+            'exile_assets\texture\ui\code_pad_ca.paa',
             [1,1,1,1],
             _x select 1,
             25,
