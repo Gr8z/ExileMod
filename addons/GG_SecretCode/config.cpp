@@ -24,7 +24,6 @@ class CfgFunctions
 			class welcomeText {};
 			class drawToMap {};
 			class statusBar {};
-			class getLoadout {};
 			class airDrops {};
 			class craftingApp {};
 			class selfie {};
