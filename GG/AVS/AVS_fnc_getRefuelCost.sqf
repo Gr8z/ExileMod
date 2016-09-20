@@ -1,10 +1,4 @@
 /*
-© 2015 Zenix Gaming Ops
-Developed by Rod-Serling
-Co-Developed by Vishpala
-
-All rights reserved.
-
 Function:
 	AVS_fnc_getRefuelCost - Gets the current cost to refuel this vehicle.
 Usage:

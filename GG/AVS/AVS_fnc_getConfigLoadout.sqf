@@ -1,9 +1,4 @@
 /*
-© 2015 Zenix Gaming Ops
-Developed by Rod-Serling
-Co-Developed by Vishpala
-
-All rights reserved.
 
 Function:
 	AVS_fnc_getConfigLoadout - Gets the loadout of the vehicle type from CfgVehicles.

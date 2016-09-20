@@ -1,13 +1,5 @@
 /*
 defuseTrap.sqf
-Written by: -NFK- @Harsh Environment Gaming
-www.hegexile.com
-You are free to use and or modify
-this script however you please.
-You do not have permission to 
-charge for download or installation
-of this script or any other
-script developed by HEG 
 */
 
 private ["_target","_object","_getLucky","_origin","_fixed","_KDEH","_counter","_pcnt","_fixIt","_isCancelled","_chance"];

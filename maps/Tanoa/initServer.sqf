@@ -1,8 +1,3 @@
-/**
- * Created with Exile Mod 3DEN Plugin
- * www.exilemod.com
- */
-
 ExileRouletteChairs = [];
 ExileRouletteChairPositions = [];
 

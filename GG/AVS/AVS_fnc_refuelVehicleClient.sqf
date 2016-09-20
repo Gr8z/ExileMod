@@ -1,6 +1,4 @@
 /*
-Developed by Vandest
-
 Function:
 	AVS_fnc_refuelVehicleClient - Refuels the vehicle for this client.
 

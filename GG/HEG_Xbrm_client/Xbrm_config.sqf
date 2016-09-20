@@ -1,21 +1,3 @@
-
-
-									  /*****************************************/
-									 /******Xtended base raiding mechaniX******/
-									/*****************************************/
-
-/*
-Xbrm_init.sqf
-Written by: -oSoDirty- @Harsh Environment Gaming
-Inspired by, and credits to: w4_lockpicking by w4rgo
-www.hegexile.com
-You do not have permission to 
-charge for download or installation
-of this script or any other
-script developed by HEG 
-*/
-
-
 											  ///////////////////////////////
 											 ////// Xbrm config start //////
 											///////////////////////////////

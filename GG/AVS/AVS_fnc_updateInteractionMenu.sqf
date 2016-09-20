@@ -1,11 +1,4 @@
 /*
-© 2015 Zenix Gaming Ops
-Developed by Rod-Serling
-Co-Developed by Vishpala
-Modified by Vandest
-
-All rights reserved.
-
 Function:
 	AVS_fnc_updateInteractionMenu - Updates the interaction menu to allow the player to rearm a vehicle.
 

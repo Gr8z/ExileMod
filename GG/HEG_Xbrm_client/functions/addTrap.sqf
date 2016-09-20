@@ -1,13 +1,5 @@
 /*
 addTrap.sqf
-Written by: -oSoDirty- @Harsh Environment Gaming
-www.hegexile.com
-You are free to use and or modify
-this script however you please.
-You do not have permission to 
-charge for download or installation
-of this script or any other
-script developed by HEG 
 */
 
 private ["_object","_objectID","_isTrappedObject"];

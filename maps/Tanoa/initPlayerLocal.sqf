@@ -1,8 +1,3 @@
-/**
- * Created with Exile Mod 3DEN Plugin
- * www.exilemod.com
- */
-
 [] execVM "GG\MostWanted_Client\MostWanted_Init.sqf";
 [] execVM "GG\MarXet\MarXet_Init.sqf";
 missionNamespace setVariable ["ExileClient_KillMessages_network_KillMessages",(compileFinal preprocessFileLineNumbers "GG\KillMessages\ExileClient_KillMessages_network_KillMessages.sqf")];
