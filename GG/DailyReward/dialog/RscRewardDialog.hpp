@@ -1,15 +1,4 @@
-#define GUI_GRID_X	(0)
-#define GUI_GRID_Y	(0)
-#define GUI_GRID_W	(0.025)
-#define GUI_GRID_H	(0.04)
-#define GUI_GRID_WAbs	(1)
-#define GUI_GRID_HAbs	(1)
-
-class RscPicture;
-class RscButtonMenuOK;
-class RscButtonMenuCancel;
-class RscText;
-
+#include "RscRewardDefines.hpp"
 class RewardsDialog
 {
 	idd = 22000;
@@ -20,6 +9,8 @@ class RewardsDialog
 		class DialogBackground: RscText
 		{
 			idc = -1;
+			type = CT_STATIC;
+			style = ST_LEFT;
 			x = 10 * GUI_GRID_W + GUI_GRID_X;
 			y = 6 * GUI_GRID_H + GUI_GRID_Y;
 			w = 20 * GUI_GRID_W;
