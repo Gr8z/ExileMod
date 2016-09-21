@@ -7,19 +7,17 @@ _Rewardpic = (_display displayCtrl 1002);
 _RewardText = (_display displayCtrl 1003);
 _RewardClose = (_display displayCtrl 1004);
 
-_rewardList = ["respect","tabs","crate"] call BIS_fnc_selectRandom;
+//_rewardList = ["respect","tabs","crate"] call BIS_fnc_selectRandom;
+_rewardList = ["crate"] call BIS_fnc_selectRandom;
 switch (_rewardList) do { 
 	case "respect" : { 
-		_Rewardpic ctrlSetText "GG\images\reward\rewardsRespect.paa";
-		_RewardText ctrlSetStructuredText parseText format["<t align='center' size='1'>You won %1 Respect</t>","0"];
+		call ExileClient_Reward_gui_RespectReward;
 	};
 	case "tabs" : { 
-		_Rewardpic ctrlSetText "GG\images\reward\rewardsTabs.paa";
-		_RewardText ctrlSetStructuredText parseText format["<t align='center' size='1'>You won %1 Pop Tabs</t>","0"];
+		call ExileClient_Reward_gui_TabsReward;
 	};
 	case "crate" : {  
-		_Rewardpic ctrlSetText"GG\images\reward\rewardsCrate.paa";
-		_RewardText ctrlSetStructuredText parseText format["<t align='center' size='1'>You won a %1</t>","0"];
+		call ExileClient_Reward_gui_CrateReward;
 	};
 };
 
