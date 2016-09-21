@@ -54,7 +54,7 @@ class RewardsDialog
 		class ClaimButton: RscRewardButtonMenuOK
 		{
 			idc = 1001;
-			onButtonClick = "call ExileClient_Reward_gui_onButtonClick;";
+			action = "call ExileClient_Reward_gui_onButtonClick;";
 			text = "Claim";
 			x = 10.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 18.5 * GUI_GRID_H + GUI_GRID_Y;

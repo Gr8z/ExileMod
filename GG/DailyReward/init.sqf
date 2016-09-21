@@ -1,5 +1,5 @@
 private["_code"];
-if (!hasInterface || isServer) exitWith {};
+//if (!hasInterface || isServer) exitWith {};
 
 {
     _code = compileFinal (preprocessFileLineNumbers (_x select 1));
