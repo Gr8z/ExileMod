@@ -548,7 +548,7 @@ class RscButtonMenu
 		1
 	};
 };
-class RscButtonMenuOK
+class RscButtonMenuOK : RscButton
 {
 	idc = 1;
 	shortcuts[] = 
@@ -567,7 +567,7 @@ class RscButtonMenuOK
 		1
 	};
 };
-class RscButtonMenuCancel
+class RscButtonMenuCancel : RscButton
 {
 	idc = 2;
 	shortcuts[] = 
