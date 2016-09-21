@@ -67,7 +67,7 @@ class RewardsDialog
 		class PictureReward: RscRewardPicture
 		{
 			idc = 1200;
-			text = "GG/images/reward/rewardsMain.paa";
+			text = "GG\images\reward\rewardsMain.paa";
 			x = 11 * GUI_GRID_W + GUI_GRID_X;
 			y = 8 * GUI_GRID_H + GUI_GRID_Y;
 			w = 18 * GUI_GRID_W;
