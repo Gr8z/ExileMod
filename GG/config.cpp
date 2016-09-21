@@ -4244,7 +4244,7 @@ class CfgInteractionMenus
 			class StopHack: ExileAbstractAction
 			{
 				title = "Interupt Hack";
-				condition = "((([ExileClientInteractionObject, getPlayerUID player] call ExileClient_util_territory_getAccessLevel) select 0) < ExAd_VG_ACCESS_LEVEL)";
+				condition = "(((([ExileClientInteractionObject, getPlayerUID player] call ExileClient_util_territory_getAccessLevel) select 0) < ExAd_VG_ACCESS_LEVEL) && ((ExileClientInteractionObject animationPhase 'LaptopLidRotation') >= 0.5))";
 				action = "_this spawn ExAd_fnc_stopHack";
 			};
 		};
