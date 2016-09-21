@@ -26,7 +26,7 @@ class RscRewardText
 	style = 0;
 	shadow = 0;
 	colorShadow[] ={0,0,0,0.5};
-	font = "OrbitronLight";
+	font = "RobotoCondensed";
 	SizeEx = "(((((safezoneW / safezoneH) min 0.9) / 1.2) / 25) * 1)";
 	linespacing = 1;
 	tooltipColorText[] ={1,1,1,1};
@@ -44,7 +44,7 @@ class RscRewardStructuredText
 	colorText[] ={1,1,1,1};
 	class Attributes
 	{
-		font = "PuristaMedium";
+		font = "RobotoCondensed";
 		color = "#ffffff";
 		colorLink = "#D09B43";
 		align = "left";
