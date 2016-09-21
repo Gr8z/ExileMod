@@ -76,7 +76,7 @@ class RewardsDialog
 		class RewardLabel: RscRewardText
 		{
 			idc = 1002;
-			align = "center"
+			align = "center";
 			text = "You have won 1000 pop tabs";
 			x = 10.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 16.5 * GUI_GRID_H + GUI_GRID_Y;
