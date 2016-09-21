@@ -12,7 +12,7 @@ class RewardsDialog
 	onUnload = "uiNamespace setVariable ['RewardsDialog', displayNull]; false call ExileClient_gui_postProcessing_toggleDialogBackgroundBlur;";
 	class Controls
 	{
-		class DialogBackground: RscText
+		class DialogBackground: RscRewardText
 		{
 			idc = 1000;
 			x = 10 * GUI_GRID_W + GUI_GRID_X;
@@ -21,7 +21,7 @@ class RewardsDialog
 			h = 14 * GUI_GRID_H;
 			colorBackground[] = {0.05,0.05,0.05,0.7};
 		};
-		class DialogCation: RscText
+		class DialogCation: RscRewardText
 		{
 			idc = 1001;
 			text = "Daily Rewards";
@@ -31,7 +31,7 @@ class RewardsDialog
 			h = 1 * GUI_GRID_H;
 			colorBackground[] = {0.1,0.1,0.1,1};
 		};
-		class InfoLabel: RscText
+		class InfoLabel: RscRewardText
 		{
 			idc = 1004;
 			text = "Claim your dialy Reward from [GG] Ghostz Gamerz";
@@ -40,7 +40,7 @@ class RewardsDialog
 			w = 19 * GUI_GRID_W;
 			h = 1 * GUI_GRID_H;
 		};
-		class CancelButton: RscButtonMenuCancel
+		class CancelButton: RscRewardButtonMenuCancel
 		{
 			action = "closeDialog 0";
 
@@ -51,7 +51,7 @@ class RewardsDialog
 			colorText[] = {1,1,1,1};
 			colorBackground[] = {0,0,0,0.8};
 		};
-		class ClaimButton: RscButtonMenuOK
+		class ClaimButton: RscRewardButtonMenuOK
 		{
 			idc = 4001;
 			onMouseButtonClick = "";
@@ -64,7 +64,7 @@ class RewardsDialog
 			colorText[] = {1,1,1,1};
 			colorBackground[] = {0,0,0,0.8};
 		};
-		class PictureReward: RscPicture
+		class PictureReward: RscRewardPicture
 		{
 			idc = 1200;
 			text = "GG/images/reward/rewardsMain.paa";
@@ -73,7 +73,7 @@ class RewardsDialog
 			w = 18 * GUI_GRID_W;
 			h = 8 * GUI_GRID_H;
 		};
-		class RewardLabel: RscText
+		class RewardLabel: RscRewardText
 		{
 			idc = 1002;
 			align = "center"

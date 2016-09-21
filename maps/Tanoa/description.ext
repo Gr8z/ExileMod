@@ -162,4 +162,5 @@ showHUD[] =
 #include "GG\MarXet\dialog\RscMarXetDefines.hpp"
 #include "GG\MarXet\dialog\RscMarXetDialog.hpp"
 #include "GG\KillMessages\killBoard.hpp"
+#include "GG\DailyReward\dialog\RscRewardDefines.hpp"
 #include "GG\DailyReward\dialog\RscRewardDialog.hpp"
