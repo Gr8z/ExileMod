@@ -24,10 +24,6 @@ _idcInfoPic = ["GG_VG","InfoPic"] call ExAd_fnc_getNextIDC;
 _idcInfoStr = ["GG_VG","InfoVehStr"] call ExAd_fnc_getNextIDC;
 [_display,_slide,_idcInfoStr,[(_rightCol + _margin) * _pW, (4 + _margin) * _pH, (_rightColW - 2 * _margin) * _pW, (13.5 - 2 * _margin) * _pH],"","PuristaMedium",0.75,"#ffffff","left",1] call ExAd_fnc_createStructuredText;
 
-[_display,_slide,(["GG_VG","InfoCBStr"] call ExAd_fnc_getNextIDC),[(_rightCol + _margin + 0.4) * _pW, (16.5 - _margin + 0.25	) * _pH, (_rightColW - 2 * _margin) * _pW, (13.5 - 2 * _margin) * _pH],STR_ExAd_VG_APP_CB_SECRET,"PuristaMedium",0.65,"#ffffff","left",1] call ExAd_fnc_createStructuredText;
-
-[_display,_slide,(["GG_VG","InfoCB"] call ExAd_fnc_getNextIDC),[(_rightCol + _margin) * _pW, (16.5 - _margin + 0.2) * _pH, 0.75 * _pW, 0.75 * _pH],'profileNamespace setVariable["ExAd_StreamFriendlyUI",_this select 1]',"Toogle - Stream friendly UI"] call ExAd_fnc_createCheckBox;
-
 /*Stored Vehicles*/
 [_display,_slide,(["GG_VG","SubTitle1"] call ExAd_fnc_getNextIDC),[_leftCol * _pW, 2.75 * _pH, _leftColW * _pW, 1 * _pH],STR_ExAd_VG_APP_TTL_STORED,"PuristaMedium",1.2,"#ffffff","left",1] call ExAd_fnc_createStructuredText;
 

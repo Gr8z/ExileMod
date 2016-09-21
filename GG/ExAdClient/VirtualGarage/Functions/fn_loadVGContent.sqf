@@ -25,6 +25,4 @@ for "_i" from 0 to 3 do {
 
 [[_flag, ExAd_VG_ALLOWED_VEH_TYPE,_flag getVariable ["ExileTerritorySize", 50]] call ExAd_fnc_getNearByLocalVeh,ctrlIDC ([_display,"GG_VG","NearVehicleList"] call ExAd_fnc_getAppCtrl)] call ExAd_fnc_fillVGList;
 
-([_display,"GG_VG","InfoCB"] call ExAd_fnc_getAppCtrl) cbSetChecked ((profileNamespace getVariable["ExAd_StreamFriendlyUI",0]) == 1);
-
 true

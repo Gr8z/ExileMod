@@ -30,7 +30,6 @@ _data = format ["loadVehicle:%1", _objId] call ExileServer_system_database_query
 
 if(count _data > 0)then{
 	_displayName = getText(ConfigFile >> "CfgVehicles" >> (_data select 1) >> "displayName");
-	_pinCode = if(_streamFriendlyUI == 0)then{_data select 20}else{"XXXX"};
 	_fuel = _data select 5;
 	_damage = _data select 6;
 	_texture = _data select 21;
@@ -38,7 +37,7 @@ if(count _data > 0)then{
 	_magazines = _data select 18;
 	_weapons = _data select 19;
 
-	_text = format[STR_ExAd_VG_APP_DETAILS, "<br/>", _displayName, _pinCode, _fuel, _damage, _texture, _items, _magazines, _weapons];
+	_text = format[STR_ExAd_VG_APP_DETAILS, "<br/>", _displayName, _pinCode, _fuel, _damage, _texture];
 
 	[_text,_ctrl] remoteExec ["ExAd_fnc_loadVGDetailView", _requestFrom]; 
 };

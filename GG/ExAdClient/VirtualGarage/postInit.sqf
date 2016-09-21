@@ -17,7 +17,7 @@ if(isNil "ExAd_VG_ALLOWED_VEH_TYPE")then{ExAd_VG_ALLOWED_VEH_TYPE = ["Car","Air"
 ["STR_ExAd_VG_NOTI_NOT_PERSISTENT", "You can only store pincode protected vehicles into the garage!"] call ExAd_fnc_localize;
 ["STR_ExAd_VG_NOTI_NOT_AVAILABLE", "The vehicle is not available anymore!"] call ExAd_fnc_localize;
 
-["STR_ExAd_VG_APP_DETAILS", "%2 %1Pin code: XXXX %1Fuel: %4 %1Damage: %5 %1Texture: %6 %1Items: %7 %1Magazines: %8 %1Weapons: %9"] call ExAd_fnc_localize;
+["STR_ExAd_VG_APP_DETAILS", "%2 %1 %1Fuel: %4 %1Damage: %5 %1Texture: %6"] call ExAd_fnc_localize;
 ["STR_ExAd_VG_APP_BTN_BACK", "Go Back"] call ExAd_fnc_localize;
 ["STR_ExAd_VG_APP_BTN_FETCH", "Fetch"] call ExAd_fnc_localize;
 ["STR_ExAd_VG_APP_BTN_STORE", "Store"] call ExAd_fnc_localize;
