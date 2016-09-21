@@ -40,17 +40,6 @@ class RewardsDialog
 	};
 	class Controls
 	{
-		class CancelButton: RscRewardButtonMenuCancel
-		{
-			idc = -1;
-			action = "closeDialog 0";
-			x = 23.5 * GUI_GRID_W + GUI_GRID_X;
-			y = 18.5 * GUI_GRID_H + GUI_GRID_Y;
-			w = 6 * GUI_GRID_W;
-			h = 1 * GUI_GRID_H;
-			colorText[] = {1,1,1,1};
-			colorBackground[] = {0,0,0,0.8};
-		};
 		class ClaimButton: RscRewardButtonMenuOK
 		{
 			idc = 1001;
@@ -77,11 +66,22 @@ class RewardsDialog
 		{
 			idc = 1003;
 			align = "center";
-			text = "<t align='center' size='1'>You have won 1000 pop tabs</t>";
+			text = "<t align='center' size='1'>Win Respect, Pop Tabs or a special item.</t>";
 			x = 10.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 16.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 19 * GUI_GRID_W;
 			h = 1 * GUI_GRID_H;
+		};
+		class CancelButton: RscRewardButtonMenuCancel
+		{
+			idc = 1004;
+			action = "closeDialog 0";
+			x = 23.5 * GUI_GRID_W + GUI_GRID_X;
+			y = 18.5 * GUI_GRID_H + GUI_GRID_Y;
+			w = 6 * GUI_GRID_W;
+			h = 1 * GUI_GRID_H;
+			colorText[] = {1,1,1,1};
+			colorBackground[] = {0,0,0,0.8};
 		};
 	};
 };

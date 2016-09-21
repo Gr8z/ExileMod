@@ -8,5 +8,7 @@ private["_code"];
 forEach
 [
     ['ExileClient_Reward_gui_load','GG\DailyReward\functions\ExileClient_Reward_gui_load.sqf'],
+    ['ExileClient_Reward_gui_animation','GG\DailyReward\functions\ExileClient_Reward_gui_animation.sqf'],
+    ['ExileClient_Reward_gui_showReward','GG\DailyReward\functions\ExileClient_Reward_gui_showReward.sqf'],
     ['ExileClient_Reward_gui_onButtonClick','GG\DailyReward\functions\ExileClient_Reward_gui_onButtonClick.sqf']
 ];
