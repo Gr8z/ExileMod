@@ -265,31 +265,16 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											["walmart",5]
 										];
 
-
-	DMS_StaticMissionTypes =			[								// List of STATIC missions with spawn chances.
-											//["saltflats",1]			//<--Example (already imported by default on Altis in map configs)
-											//["slums",1]				//<--Example (already imported by default on Altis in map configs)
-											//["occupation",1]		//<--Example
-											//["sectorB",1]			//<--Example for Taviana
+	DMS_StaticMissionTypes =			[
+											["hotel_invasion",5],
+											["underwater_stash",2],
+											["comms_alpha",10]
 										];
 
-	DMS_BasesToImportOnServerStart = 	[								// List of static bases to import on server startup (spawned post-init). This will reduce the amount of work the server has to do when it actually spawns static missions, and players won't be surprised when a base suddenly pops up. You can also include any other M3E-exported bases to spawn here.
-											//"saltflatsbase",		//<--Example (already imported by default on Altis)
-											//"slums_objects"		//<--Example (already imported by default on Altis)
+	DMS_BasesToImportOnServerStart = 	[
+											"hotel_invasion_buildings",
+											"comms_alpha_buildings"
 										];
-
-	DMS_BanditMissionsOnServerStart =	[
-											//"construction"		//<-- Example
-										];
-
-	DMS_StaticMissionsOnServerStart =	[								// List of STATIC missions with spawn chances.
-											//"saltflats"			//<--Example
-											//"slums"				//<--Example
-											//"occupation"			//<--Example
-											//"sectorB"				//<--Example for Taviana
-										];
-
-
 
 	DMS_findSafePosBlacklist =			[								// This list defines areas where missions WILL NOT spawn. For position blacklist info refer to: http://www.exilemod.com/topic/61-dms-defents-mission-system/?do=findComment&comment=31190
 											// There are examples in the altis map config (it blacklists the salt flats) and in the tavi/taviana map configs.
