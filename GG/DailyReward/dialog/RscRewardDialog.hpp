@@ -26,6 +26,7 @@ class RewardsDialog
 			w = 20 * GUI_GRID_W;
 			h = 1 * GUI_GRID_H;
 			colorBackground[] = {0.1,0.1,0.1,1};
+			font = "PuristaMedium";
 		};
 		class InfoLabel: RscRewardText
 		{
