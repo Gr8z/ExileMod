@@ -6,6 +6,6 @@
 [] call GG_fnc_craftingApp;
 [] call GG_fnc_selfie;
 [] call GG_fnc_flashlight;
-[] call GG_fnc_mapIcon;
+//[] call GG_fnc_mapIcon;
 
 true

@@ -16,5 +16,10 @@ if (isServer) then {
     _object = (_x select 0) createVehicle [0,0,0];
     _object setDir (_x select 2);
     _object setPosATL (_x select 1);
+	_marker = createMarker ["cashpoint_" + str(_forEachIndex), _x select 1];
+	_marker setMarkerShape "ICON";
+	_marker setMarkerType "loc_Tourism";
+	_marker setMarkerColor "ColorWhite";
+	_marker setMarkerSize [1.4,1.4];
 	} foreach _objs;
 };
