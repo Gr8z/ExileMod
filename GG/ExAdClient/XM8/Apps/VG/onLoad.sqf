@@ -40,7 +40,7 @@ _idcStoredVehList = ["GG_VG","StoreVehList"] call ExAd_fnc_getNextIDC;
 _idcNearVehList = ["GG_VG","NearVehicleList"] call ExAd_fnc_getNextIDC;
 [_display,_slide,_idcNearVehList,[_leftCol * _pW, 11.5 * _pH, _leftColW * _pW, 5 * _pH],"",""] call ExAd_fnc_createList;
 
-[_display,_slide,(["GG_VG","storeButton"] call ExAd_fnc_getNextIDC),[_leftCol * _pW, 16.5 * _pH, _leftColW * _pW, 1 * _pH],format["if(call ExAd_fnc_allowVGStore)then{disableUserInput true;['VGStore', %1] spawn ExAd_fnc_onBtnClickVG}else{['ErrorTitleAndText', ['Virtual Garage', '%2']] call ExileClient_gui_toaster_addTemplateToast}",_idcNearVehList,STR_ExAd_VG_NOTI_FULL],STR_ExAd_VG_APP_BTN_STORE,""] call ExAd_fnc_createButton;
+[_display,_slide,(["GG_VG","storeButton"] call ExAd_fnc_getNextIDC),[_leftCol * _pW, 16.5 * _pH, _leftColW * _pW, 1 * _pH],format["if(call ExAd_fnc_allowVGStore)then{disableUserInput true;['VGStore', %1] call ExAd_fnc_onBtnClickVG}else{['ErrorTitleAndText', ['Virtual Garage', '%2']] call ExileClient_gui_toaster_addTemplateToast}",_idcNearVehList,STR_ExAd_VG_NOTI_FULL],STR_ExAd_VG_APP_BTN_STORE,""] call ExAd_fnc_createButton;
 
 XM8_VG_elChanged = {
 	params ["_listCtrl","_picCtrl","_strCtrl","_ref","_data","_pic"];
