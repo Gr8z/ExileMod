@@ -32,7 +32,7 @@ _idcInfoStr = ["GG_VG","InfoVehStr"] call ExAd_fnc_getNextIDC;
 _idcStoredVehList = ["GG_VG","StoreVehList"] call ExAd_fnc_getNextIDC;
 [_display,_slide,_idcStoredVehList,[_leftCol * _pW, 4 * _pH, _leftColW * _pW, 5 * _pH],format["[_this select 0,%1,%2] call XM8_VG_elChanged",_idcInfoPic,_idcInfoStr],""] call ExAd_fnc_createList;
 
-[_display,_slide,(["GG_VG","fetchButton"] call ExAd_fnc_getNextIDC),[_leftCol*_pW, 9*_pH, _leftColW*_pW, 1*_pH],format["disableUserInput true;['VGLoad', %1] call ExAd_fnc_onBtnClickVG",_idcStoredVehList],STR_ExAd_VG_APP_BTN_FETCH,""] call ExAd_fnc_createButton;
+[_display,_slide,(["GG_VG","fetchButton"] spawn ExAd_fnc_getNextIDC),[_leftCol*_pW, 9*_pH, _leftColW*_pW, 1*_pH],format["disableUserInput true;['VGLoad', %1] call ExAd_fnc_onBtnClickVG",_idcStoredVehList],STR_ExAd_VG_APP_BTN_FETCH,""] call ExAd_fnc_createButton;
 
 /*Nearby vehicles*/
 [_display,_slide,(["GG_VG","SubTitle2"] call ExAd_fnc_getNextIDC),[_leftCol * _pW, 10.25 * _pH, _leftColW * _pW, 1 * _pH],STR_ExAd_VG_APP_TTL_NEAR,"PuristaMedium",1.2,"#ffffff","left",1] call ExAd_fnc_createStructuredText;
