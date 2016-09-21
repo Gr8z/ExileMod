@@ -213,6 +213,14 @@ class RscRewardButton
 	colorFocused[] ={1,1,1,0};
 	colorShadow[] ={0,0,0,0};
 	colorBorder[] ={0,0,0,1};
+	textureNoShortcut = "#(argb,8,8,3)color(0,0,0,0)";
+	class HitZone
+	{
+		left = 0;
+		top = 0;
+		right = 0;
+		bottom = 0;
+	};
 	soundEnter[] =
 	{
 		"\A3\ui_f\data\sound\RscButton\soundEnter",
@@ -353,7 +361,7 @@ class RscRewardButtonMenu
 		1
 	};
 };
-class RscRewardButtonMenuOK : RscRewardShortcutButton
+class RscRewardButtonMenuOK : RscRewardButton
 {
 	idc = 1;
 	shortcuts[] ={
@@ -371,7 +379,7 @@ class RscRewardButtonMenuOK : RscRewardShortcutButton
 		1
 	};
 };
-class RscRewardButtonMenuCancel : RscRewardShortcutButton
+class RscRewardButtonMenuCancel : RscRewardButton
 {
 	idc = 2;
 	shortcuts[] =
