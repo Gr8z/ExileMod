@@ -12,5 +12,6 @@ class VirtualGarage
 	class loadVGContent {};
 	class loadVGDetailView {};
 	class onBtnClickVG {};
+	class onBtnClickVGFetch {};
 	class postInitVG {file = "GG\ExAdClient\VirtualGarage\postInit.sqf"; postInit = 1;};
 };
