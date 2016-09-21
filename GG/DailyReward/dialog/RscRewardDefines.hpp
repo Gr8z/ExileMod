@@ -237,7 +237,7 @@ class RscRewardButtonMenu
 		1
 	};
 };
-class RscRewardButtonMenuOK
+class RscRewardButtonMenuOK : RscRewardButtonMenu
 {
 	idc = 1;
 	shortcuts[] ={
@@ -255,7 +255,7 @@ class RscRewardButtonMenuOK
 		1
 	};
 };
-class RscRewardButtonMenuCancel
+class RscRewardButtonMenuCancel : RscRewardButtonMenu
 {
 	idc = 2;
 	shortcuts[] =
