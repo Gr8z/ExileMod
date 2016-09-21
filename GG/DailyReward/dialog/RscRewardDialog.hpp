@@ -15,11 +15,11 @@ class RewardsDialog
 	idd = 22000;
 	onLoad = "uiNamespace setVariable ['RewardsDialog', _this select 0];true call ExileClient_gui_postProcessing_toggleDialogBackgroundBlur;";
 	onUnload = "uiNamespace setVariable ['RewardsDialog', displayNull]; false call ExileClient_gui_postProcessing_toggleDialogBackgroundBlur;";
-	class Controls
+	class controlsBackground
 	{
 		class DialogBackground: RscText
 		{
-			idc = 1000;
+			idc = -1;
 			x = 10 * GUI_GRID_W + GUI_GRID_X;
 			y = 6 * GUI_GRID_H + GUI_GRID_Y;
 			w = 20 * GUI_GRID_W;
@@ -28,7 +28,7 @@ class RewardsDialog
 		};
 		class DialogCation: RscText
 		{
-			idc = 1001;
+			idc = -1;
 			text = "Daily Rewards";
 			x = 10 * GUI_GRID_W + GUI_GRID_X;
 			y = 4.9 * GUI_GRID_H + GUI_GRID_Y;
@@ -38,17 +38,20 @@ class RewardsDialog
 		};
 		class InfoLabel: RscText
 		{
-			idc = 1004;
+			idc = -1;
 			text = "Claim your dialy Reward from [GG] Ghostz Gamerz";
 			x = 10.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 6.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 19 * GUI_GRID_W;
 			h = 1 * GUI_GRID_H;
 		};
+	};
+	class Controls
+	{
 		class CancelButton: RscButtonMenuCancel
 		{
+			idc = -1;
 			action = "closeDialog 0";
-
 			x = 23.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 18.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 6 * GUI_GRID_W;
@@ -58,9 +61,8 @@ class RewardsDialog
 		};
 		class ClaimButton: RscButtonMenuOK
 		{
-			idc = 4001;
+			idc = 1001;
 			onMouseButtonClick = "";
-
 			text = "Claim";
 			x = 10.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 18.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -71,7 +73,7 @@ class RewardsDialog
 		};
 		class PictureReward: RscPicture
 		{
-			idc = 1200;
+			idc = 1002;
 			text = "GG\images\reward\rewardsMain.paa";
 			x = 11 * GUI_GRID_W + GUI_GRID_X;
 			y = 8 * GUI_GRID_H + GUI_GRID_Y;
@@ -80,7 +82,7 @@ class RewardsDialog
 		};
 		class RewardLabel: RscText
 		{
-			idc = 1002;
+			idc = 1003;
 			align = "center";
 			text = "You have won 1000 pop tabs";
 			x = 10.5 * GUI_GRID_W + GUI_GRID_X;
