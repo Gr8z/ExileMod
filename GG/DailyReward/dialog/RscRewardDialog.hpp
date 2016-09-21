@@ -2,7 +2,7 @@
 class RewardsDialog
 {
 	idd = 22000;
-	onLoad = "uiNamespace setVariable ['RewardsDialog', _this select 0];true call ExileClient_gui_postProcessing_toggleDialogBackgroundBlur;";
+	onLoad = "uiNamespace setVariable ['RewardsDialog', _this select 0];true call ExileClient_gui_postProcessing_toggleDialogBackgroundBlur; call ExileClient_Reward_gui_load";
 	onUnload = "uiNamespace setVariable ['RewardsDialog', displayNull]; false call ExileClient_gui_postProcessing_toggleDialogBackgroundBlur;";
 	class controlsBackground
 	{
@@ -54,7 +54,7 @@ class RewardsDialog
 		class ClaimButton: RscRewardButtonMenuOK
 		{
 			idc = 1001;
-			onMouseButtonClick = "";
+			onButtonClick = "call ExileClient_Reward_gui_onButtonClick;";
 			text = "Claim";
 			x = 10.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 18.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -73,11 +73,11 @@ class RewardsDialog
 			w = 18 * GUI_GRID_W;
 			h = 8 * GUI_GRID_H;
 		};
-		class RewardLabel: RscRewardText
+		class RewardLabel: RscRewardStructuredText
 		{
 			idc = 1003;
 			align = "center";
-			text = "You have won 1000 pop tabs";
+			text = "<t align='center' size='1'>You have won 1000 pop tabs</t>";
 			x = 10.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 16.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 19 * GUI_GRID_W;
