@@ -1378,9 +1378,9 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_RareLoot						= true;						// Potential chance to spawn rare loot in any crate.
 	DMS_RareLootAmount					= 1;						// How many rare loot items to add.
 	DMS_RareLootList =					[							// List of rare loot to spawn
-											"BreachingChargeBigMomma",
-											"BreachingChargeMetal",
-											"BreachingChargeWood",
+											"Exile_Item_BreachingCharge_BigMomma",
+											"Exile_Item_BreachingCharge_Metal",
+											"Exile_Item_BreachingCharge_Wood",
 											"optic_Nightstalker",
 											"srifle_DMR_02_F",
 											"srifle_GM6_F",
