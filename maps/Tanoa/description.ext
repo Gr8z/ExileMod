@@ -75,6 +75,16 @@ class CfgNetworkMessages
         module = "Donor";
         parameters[] = {"STRING"};
     };
+    class addRespectReward
+    {
+        module = "Reward";
+        parameters[] = {"STRING"};
+    };
+    class addPopReward
+    {
+        module = "Reward";
+        parameters[] = {"STRING"};
+    };
 };
 
 

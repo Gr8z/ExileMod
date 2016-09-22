@@ -13,4 +13,6 @@ _amount = floor((random 1000) + (random 1000));
 if (_amount < 100) then {_amount = 50000;};
 if (_amount < 10) then {_amount = 100000;};
 
+["addPopReward",[str(_amount)]] call ExileClient_system_network_send;
+
 _RewardText ctrlSetStructuredText parseText format["<t align='center' size='1'>You won %1 Pop Tabs</t>",_amount];
