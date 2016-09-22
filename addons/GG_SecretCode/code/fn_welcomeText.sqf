@@ -73,10 +73,11 @@ WELCOME_TEXT__CODE = {
         };
     }
     forEach (allMissionObjects "Exile_Construction_Flag_Static");
-    uiSleep 2;
-    _announcepay append ["","",""];
+    
     if !(count _announcepay == 0) then{
-            [_announcepay, -.5, .85] call BIS_fnc_typeText;
+        uiSleep 2;
+        _announcepay append ["","",""];
+        [_announcepay, -.5, .85] call BIS_fnc_typeText;
     };
 
     // Missing Mod Information
