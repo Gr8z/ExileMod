@@ -1,6 +1,6 @@
 WELCOME_TEXT__CODE = {
     // Welcome messages
-    private ["_NewLoginCount","_Logins","_LoginCount","_playerUID","_announcepay","_buildRights","_flag","_dueDate","_nextDueDate","_msg","_name","_missingModList"];
+    private ["_NewLoginCount","_Logins","_LoginCount","_playerUID","_announcepay","_buildRights","_flag","_dueDate","_nextDueDate","_msg","_name","_missingModList","_dailyReward"];
     playSound "intro";
     uiSleep 2;
     // Login Count
@@ -107,6 +107,12 @@ WELCOME_TEXT__CODE = {
         if (count _missingModList > 1) then{
             [_missingModList, .5, .85] call BIS_fnc_typeText;
         };
+    };
+
+    _dailyReward = _victimObject getVariable ["ExileDailyReward",false];
+    if (_dailyReward) then
+    {
+       createDialog "RewardsDialog";
     };
 
     // Blow up useless people
