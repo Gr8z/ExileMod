@@ -171,7 +171,7 @@ AVS_RefuelObjects =
 	"Exile_Trader_Vehicle"
 ];
 
-AVS_FuelCost = 5;					// 5 poptabs/liter
+AVS_FuelCost = 2;					// 5 poptabs/liter
 AVS_RefuelSpeed = 3;				// 3 liters/second (for ground vehicles, small tank)
 AVS_RefuelSpeedAirVehicle = 20;		// 20 liters/second (for air vehicles, big tank so need to be faster)
 
