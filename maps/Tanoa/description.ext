@@ -70,11 +70,6 @@ class CfgNetworkMessages
         module = "AirDrop";
         parameters[] = {"STRING"};
     };
-    class lockerRequest
-    {
-        module = "Donor";
-        parameters[] = {"STRING"};
-    };
     class addRespectReward
     {
         module = "Reward";
