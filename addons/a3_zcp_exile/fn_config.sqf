@@ -129,7 +129,7 @@ ZCP_CONFIG_AI_soldierClass = 'O_G_Soldier_F'; // The class model for the soldier
 ZCP_CONFIG_MaxRandomAIMoney = 100; // Max poptabs on in AI it's inventory. ( Random between 0 -> this number ).
 
 // These are used when the cappoint is a city point.
-ZCP_CONFIG_UseCityName = true; // Use City name CP for maker naming instead of ZCP alpha..
+ZCP_CONFIG_UseCityName = false; // Use City name CP for maker naming instead of ZCP alpha..
 ZCP_CONFIG_CityDistanceToPlayer = 100; // distance for the town to be from a player ( From center town )
 ZCP_CONFIG_CityDistanceToTrader = 500; // distance for the town to be from a trader ( From center town )
 ZCP_CONFIG_CityDistanceToSpawn = 500; // distance for the town to be from a spawnpoint ( From center town )
