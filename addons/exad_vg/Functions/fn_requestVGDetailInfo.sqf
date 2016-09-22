@@ -37,7 +37,7 @@ if(count _data > 0)then{
 	_magazines = _data select 18;
 	_weapons = _data select 19;
 
-	_text = format[STR_ExAd_VG_APP_DETAILS, "<br/>", _displayName, _pinCode, _fuel, _damage, _texture];
+	_text = format[STR_ExAd_VG_APP_DETAILS, "<br/>", _displayName, _fuel, _damage, _texture];
 
 	[_text,_ctrl] remoteExec ["ExAd_fnc_loadVGDetailView", _requestFrom]; 
 };

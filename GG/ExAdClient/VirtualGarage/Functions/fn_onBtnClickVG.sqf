@@ -2,7 +2,7 @@
 	fn_onBtnClickVG.sqf
 */
 
-private ["_fnc","_idc","_data","_result"];
+private ["_fnc","_idc","_data"];
 
 _fnc = [_this,0,nil] call BIS_fnc_param;
 _idc = [_this,1,nil] call BIS_fnc_param;
