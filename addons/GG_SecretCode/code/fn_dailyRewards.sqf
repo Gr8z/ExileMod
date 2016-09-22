@@ -40,6 +40,7 @@ DAILY_REWARDS__CODE = {
 
 		_Rewardpic = (_display displayCtrl 1002);
 		_RewardText = (_display displayCtrl 1003);
+		_RewardClaim = (_display displayCtrl 1001);
 		_RewardClose = (_display displayCtrl 1004);
 
 		_rewardList = ["respect","tabs","crate"] call BIS_fnc_selectRandom;
@@ -61,6 +62,7 @@ DAILY_REWARDS__CODE = {
 		player setVariable ["ExileDailyReward",false];
 
 		_RewardClose ctrlSetText "Close";
+		_RewardClaim ctrlSetText "Claimed";
 		_RewardClose ctrlEnable true;
 	};
 
