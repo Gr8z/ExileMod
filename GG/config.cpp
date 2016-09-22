@@ -4533,7 +4533,7 @@ class CfgInteractionMenus
 			class HideCorpse: ExileAbstractAction
 			{
 				title = "Hide Body";
-				condition = "!(alive ExileClientInteractionObject) && ('Exile_Melee_Shovel' isEqualTo (currentWeapon player))";
+				condition = "!(alive ExileClientInteractionObject)";
 				action = "['HideBody', (_this select 0)] call ExileClient_action_execute";
 			};
 		};
