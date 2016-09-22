@@ -85,11 +85,6 @@ class CfgNetworkMessages
         module = "Reward";
         parameters[] = {"STRING"};
     };
-    class InsertClaimedVehicle
-    {
-        module = "ClaimVehicle";
-        parameters[] = {"STRING","STRING"};
-    };
 };
 
 
