@@ -10,6 +10,7 @@ if(ZCP_dev) then {
 	ZCP_BaseCleanupDelay = 1;
 	ZCP_ServerStartWaitTime = 20;
 	ZCP_AI_killAIAfterMissionCompletionTimer = 5;
+	ZCP_Minimum_Online_Players = 0;
 };
 
 ZCP_Version = "ZCP_Exile_3.0";
