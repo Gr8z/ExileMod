@@ -36,12 +36,12 @@ _AIMaxReinforcements = (10 + (round (random 30)));		//AI reinforcement cap
 _AItrigger = (10 + (round (random 5)));					//If AI numbers fall below this number then reinforce if any left from AIMax
 _AIwave = (4 + (round (random 4)));						//Max amount of AI in reinforcement wave
 _AIdelay = (55 + (round (random 120)));					//The delay between reinforcements
-_crate_weapons0 	= (5 + (round (random 20)));		//Crate 0 weapons number
-_crate_items0 		= (5 + (round (random 20)));		//Crate 0 items number
-_crate_backpacks0 	= (3 + (round (random 1)));			//Crate 0 back packs number
-_crate_weapons1 	= (4 + (round (random 2)));			//Crate 1 weapons number
-_crate_items1 		= (10 + (round (random 40)));		//Crate 1 items number
-_crate_backpacks1 	= (1 + (round (random 8)));			//Crate 1 back packs number
+_crate_weapons0 	= (10 + (round (random 20)));		//Crate 0 weapons number
+_crate_items0 		= (10 + (round (random 20)));		//Crate 0 items number
+_crate_backpacks0 	= (6 + (round (random 1)));			//Crate 0 back packs number
+_crate_weapons1 	= (8 + (round (random 2)));			//Crate 1 weapons number
+_crate_items1 		= (20 + (round (random 40)));		//Crate 1 items number
+_crate_backpacks1 	= (2 + (round (random 8)));			//Crate 1 back packs number
 	};
 	case "moderate":
 	{
@@ -51,12 +51,12 @@ _AIMaxReinforcements = (20 + (round (random 20)));
 _AItrigger = (10 + (round (random 10)));
 _AIwave = (5 + (round (random 3)));
 _AIdelay = (55 + (round (random 120)));
-_crate_weapons0 	= (10 + (round (random 15)));
-_crate_items0 		= (10 + (round (random 15)));
-_crate_backpacks0 	= (3 + (round (random 1)));
-_crate_weapons1 	= (6 + (round (random 3)));
-_crate_items1 		= (20 + (round (random 30)));
-_crate_backpacks1 	= (5 + (round (random 4)));
+_crate_weapons0 	= (20 + (round (random 15)));
+_crate_items0 		= (20 + (round (random 15)));
+_crate_backpacks0 	= (6 + (round (random 1)));
+_crate_weapons1 	= (12 + (round (random 3)));
+_crate_items1 		= (40 + (round (random 30)));
+_crate_backpacks1 	= (10 + (round (random 4)));
 	};
 	case "difficult":
 	{
@@ -66,12 +66,12 @@ _AIMaxReinforcements = (30 + (round (random 20)));
 _AItrigger = (10 + (round (random 10)));
 _AIwave = (6 + (round (random 2)));
 _AIdelay = (55 + (round (random 120)));
-_crate_weapons0 	= (30 + (round (random 20)));
-_crate_items0 		= (15 + (round (random 10)));
-_crate_backpacks0 	= (3 + (round (random 1)));
-_crate_weapons1 	= (8 + (round (random 3)));
-_crate_items1 		= (30 + (round (random 20)));
-_crate_backpacks1 	= (6 + (round (random 4))); 
+_crate_weapons0 	= (60 + (round (random 20)));
+_crate_items0 		= (30 + (round (random 10)));
+_crate_backpacks0 	= (6 + (round (random 1)));
+_crate_weapons1 	= (16 + (round (random 3)));
+_crate_items1 		= (60 + (round (random 20)));
+_crate_backpacks1 	= (12 + (round (random 4))); 
 	};
 	//case "hardcore":
 	default
@@ -82,12 +82,12 @@ _AIMaxReinforcements = (40 + (round (random 10)));
 _AItrigger = (15 + (round (random 5)));
 _AIwave = (6 + (round (random 2)));
 _AIdelay = (55 + (round (random 120)));
-_crate_weapons0 	= (20 + (round (random 5)));
-_crate_items0 		= (20 + (round (random 5)));
-_crate_backpacks0 	= (2 + (round (random 1)));
-_crate_weapons1 	= (10 + (round (random 2)));
-_crate_items1 		= (40 + (round (random 10)));
-_crate_backpacks1 	= (10 + (round (random 2)));
+_crate_weapons0 	= (40 + (round (random 5)));
+_crate_items0 		= (40 + (round (random 5)));
+_crate_backpacks0 	= (4 + (round (random 1)));
+_crate_weapons1 	= (20 + (round (random 2)));
+_crate_items1 		= (80 + (round (random 10)));
+_crate_backpacks1 	= (20 + (round (random 2)));
 	};
 };
 

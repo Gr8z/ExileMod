@@ -68,9 +68,9 @@ switch (_difficulty) do
 		_msgStart = ['#FFFF00',"A Strider is parked at a small easy base! Go kill them and steal it"];
 		_msgWIN = ['#0080ff',"Convicts killed everyone and made off with the Strider"];
 		_AICount = (4 + (round (random 4)));
-		_crate_weapons 		= (2 + (round (random 2)));
-		_crate_items 		= (4 + (round (random 4)));
-		_crate_backpacks 	= (1 + (round (random 2)));
+		_crate_weapons 		= (2 + (round (random 4)));
+		_crate_items 		= (4 + (round (random 8)));
+		_crate_backpacks 	= (1 + (round (random 4)));
 		_vehicle = ["Exile_Car_Strider",[(_pos select 0) -30, (_pos select 1) -30]] call DMS_fnc_SpawnNonPersistentVehicle;
 	};
 
@@ -78,9 +78,9 @@ switch (_difficulty) do
 	{
 		_msgStart = ['#FFFF00',"A Strider is parked at a small moderate base! Go kill them and steal it"];
 		_AICount = (6 + (round (random 4)));
-		_crate_weapons 		= (3 + (round (random 3)));
-		_crate_items 		= (6 + (round (random 4)));
-		_crate_backpacks 	= (2 + (round (random 2)));
+		_crate_weapons 		= (3 + (round (random 6)));
+		_crate_items 		= (6 + (round (random 8)));
+		_crate_backpacks 	= (2 + (round (random 4)));
 		// Do coin toss calculation for vehicle and message
 		if ((round (random 1)) isEqualTo 0) then
 		{
@@ -99,9 +99,9 @@ switch (_difficulty) do
 		_msgStart = ['#FFFF00',"A Strider is parked at a small difficult base! Go kill them and steal it"];
 		_msgWIN = ['#0080ff',format ["Convicts killed everyone and made off with the Strider, entry code %1...",_pinCode]];
 		_AICount = (8 + (round (random 4)));
-		_crate_weapons 		= (4 + (round (random 4)));
-		_crate_items 		= (6 + (round (random 6)));
-		_crate_backpacks 	= (3 + (round (random 2)));
+		_crate_weapons 		= (4 + (round (random 8)));
+		_crate_items 		= (6 + (round (random 12)));
+		_crate_backpacks 	= (3 + (round (random 4)));
 		_vehicle = ["Exile_Car_Strider",[(_pos select 0) -30, (_pos select 1) -30],_pinCode] call DMS_fnc_SpawnPersistentVehicle;
 	};
 
@@ -110,9 +110,9 @@ switch (_difficulty) do
 		_msgStart = ['#FFFF00',"A Strider is parked at a small hardcore base! Go kill them and steal it"];
 		_msgWIN = ['#0080ff',format ["Convicts killed everyone and made off with the Strider, entry code %1...",_pinCode]];
 		_AICount = (10 + (round (random 4)));
-		_crate_weapons 		= (5 + (round (random 5)));
-		_crate_items 		= (8 + (round (random 8)));
-		_crate_backpacks 	= (4 + (round (random 2)));
+		_crate_weapons 		= (5 + (round (random 10)));
+		_crate_items 		= (8 + (round (random 16)));
+		_crate_backpacks 	= (4 + (round (random 4)));
 		_vehicle = ["Exile_Car_Strider",[(_pos select 0) -30, (_pos select 1) -30],_pinCode] call DMS_fnc_SpawnPersistentVehicle;
 	};
 };

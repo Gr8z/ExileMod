@@ -82,9 +82,9 @@ _crate setObjectTextureGlobal [1,"#(rgb,8,8,3)color(1,0,0.1,1)"];
 // Set crate loot values
 _crate_loot_values =
 [
-	5,		// Weapons
-	10,		// Items
-	3 		// Backpacks
+	10,		// Weapons
+	20,		// Items
+	4 		// Backpacks
 ];
 
 _veh =

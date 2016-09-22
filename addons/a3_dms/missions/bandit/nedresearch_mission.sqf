@@ -63,34 +63,34 @@ switch (_difficulty) do
 	case "easy":
 	{
 		_AICount = (4 + (round (random 4)));
-		_crate_weapons 		= (4 + (round (random 2)));
-		_crate_items 		= (3 + (round (random 3)));
-		_crate_backpacks 	= (1 + (round (random 1)));
+		_crate_weapons 		= (4 + (round (random 4)));
+		_crate_items 		= (3 + (round (random 6)));
+		_crate_backpacks 	= (1 + (round (random 2)));
 	};
 
 	case "moderate":
 	{
 		_AICount = (4 + (round (random 6)));
-		_crate_weapons 		= (6 + (round (random 3)));
-		_crate_items 		= (6 + (round (random 3)));
-		_crate_backpacks 	= (2 + (round (random 1)));
+		_crate_weapons 		= (6 + (round (random 6)));
+		_crate_items 		= (6 + (round (random 6)));
+		_crate_backpacks 	= (2 + (round (random 2)));
 	};
 
 	case "difficult":
 	{
 		_AICount = (6 + (round (random 6)));
-		_crate_weapons 		= (8 + (round (random 3)));
-		_crate_items 		= (8 + (round (random 4)));
-		_crate_backpacks 	= (3 + (round (random 1)));
+		_crate_weapons 		= (8 + (round (random 6)));
+		_crate_items 		= (8 + (round (random 8)));
+		_crate_backpacks 	= (3 + (round (random 2)));
 	};
 
 	//case "hardcore":
 	default
 	{
 		_AICount = (8 + (round (random 8)));
-		_crate_weapons 		= (10 + (round (random 6)));
-		_crate_items 		= (15 + (round (random 8)));
-		_crate_backpacks 	= (4 + (round (random 1)));
+		_crate_weapons 		= (10 + (round (random 12)));
+		_crate_items 		= (15 + (round (random 16)));
+		_crate_backpacks 	= (4 + (round (random 2)));
 	};
 };
 

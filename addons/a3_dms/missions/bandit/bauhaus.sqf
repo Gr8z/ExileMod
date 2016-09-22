@@ -68,15 +68,15 @@ _wreck = createVehicle ["Land_Wreck_Ural_F",[(_pos select 0) - 10, (_pos select 
 // Set crate loot values
 _crate_loot_values1 =
 [
-	2,		// Weapons
-	[15,DMS_BoxBuildingSupplies],		// Items
-	2 		// Backpacks
+	4,		// Weapons
+	[30,DMS_BoxBuildingSupplies],		// Items
+	4 		// Backpacks
 ];
 _crate_loot_values2 =
 [
-	1,		// Weapons
-	20,		// Items
-	5 		// Backpacks
+	2,		// Weapons
+	40,		// Items
+	10 		// Backpacks
 ];
 
 
