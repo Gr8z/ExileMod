@@ -80,6 +80,11 @@ class CfgNetworkMessages
         module = "Reward";
         parameters[] = {"STRING"};
     };
+    class updateRewardDate
+    {
+        module = "Reward";
+        parameters[] = {"STRING"};
+    };
 };
 
 

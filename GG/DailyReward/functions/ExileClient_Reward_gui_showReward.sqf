@@ -22,5 +22,7 @@ switch (_rewardList) do {
 
 playSound "SndExileTwinkleTwisterSuccess";
 
+["updateRewardDate",[str(_rewardList)]] call ExileClient_system_network_send;
+
 _RewardClose ctrlSetText "Close";
 _RewardClose ctrlEnable true;
