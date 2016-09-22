@@ -6,7 +6,7 @@
 
 
 [ // ['original','original in your language'] the %1 %2 and so on are Variables!
-    ['%1 capbase set up. Capture for %2 min!' , '%1 capbase set up. Capture for %2 min!'], // ZCP Alpha capbase set up. Capture for 10 min!
+    ['%1 set up. Capture for %2 min!' , '%1 set up. Capture for %2 min!'], // ZCP Alpha capbase set up. Capture for 10 min!
     ['%2 is capping The %1. %3min left!' , '%2 is capping %1. %3min left!'], // Zupa is capping ZCP alpha, 5min left.
     ['A player' , 'A player'], // A player
     ['%1 is 50%4 captured by %2. %3min left!', '%1 is 50%4 captured by %2. %3min left!'], // ZCP Alpha is 50% captured by Zupa/A player. 2min left!
@@ -17,7 +17,7 @@
     ['Captured Battlezone', 'Captured Battlezone'], // Captured point
     ['Reputation', 'Respect'], // Reputation
     ['Group Reputation', 'Group Respect'], // Group reputation
-    ['Package delivered, eyes on the sky!', 'Package delivered, eyes on the sky!'], // Package delivered, eyes on the sky!
+    ['Package delivered!', 'Package delivered!'], // Package delivered, eyes on the sky!
     ['Package delivered, eyes on the sky! Poptabs on bank!', 'Package delivered, eyes on the sky! Poptabs on bank!'], // Package delivered, eyes on the sky! Poptabs on bank!
     ['Battle Zone is contested!', 'Battle Zone is being contested!'], // Package delivered, eyes on the sky! Poptabs on bank!   
     ['Battle Zone is no longer contested!', 'Battle Zone is no longer being contested!'], // Capture point is contested!
