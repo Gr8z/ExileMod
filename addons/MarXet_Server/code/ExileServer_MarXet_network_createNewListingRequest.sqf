@@ -6,7 +6,7 @@
 *  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
 *  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
 */
-private["_sessionID","_package","_itemArray","_itemClassname","_price","_location","_newListing","_playerObject","_playerUID","_listingID","_vehicle","_la","_vehicleObjectNetID","_vehicleObject","_availableHitpoints","_vehicleHitpoints"];
+private["_sessionID","_package","_itemArray","_itemClassname","_price","_location","_newListing","_playerObject","_playerUID","_listingID","_vehicle","_la","_vehicleObjectNetID","_vehicleObject","_availableHitpoints","_vehicleHitpoints","_ExileIsLocked","_vehiclePinCode"];
 _sessionID = _this select 0;
 _package = _this select 1;
 _itemArray = _package select 0;
@@ -49,10 +49,16 @@ try {
         {
             throw "Vehicle object is nil, cannot process!";
         };
-		if !(_vehicleObject getVariable ["ExileIsPersistent", false]) then
+        _ExileIsLocked = _vehicleObject getVariable ['ExileIsLocked', 1] isEqualTo -1;
+		if (_ExileIsLocked) then
 		{
-			throw "Vehicle is not persistent. You can only list persistent vehicles.";
+			throw "Vehicle is not lcoked. Please lock your vehicle before selling it.";
 		};
+        _vehiclePinCode = _vehicleObject getVariable ["ExileAccessCode","000000"];
+        if (_vehiclePinCode isEqualTo "000000") then
+        {
+            throw "Vehicle is not persistent. You can only list persistent vehicles.";
+        };
         _availableHitpoints = getAllHitPointsDamage _vehicleObject;
         _vehicleHitpoints = [];
         if!(_availableHitpoints isEqualTo [])then
