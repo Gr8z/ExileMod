@@ -109,7 +109,7 @@ WELCOME_TEXT__CODE = {
         };
     };
 
-    _dailyReward = _victimObject getVariable ["ExileDailyReward",false];
+    _dailyReward = player getVariable ["ExileDailyReward",false];
     if (_dailyReward) then
     {
        createDialog "RewardsDialog";
