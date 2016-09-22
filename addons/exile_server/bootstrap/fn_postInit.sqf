@@ -11,6 +11,5 @@
  
 
 call ExileServer_system_process_postInit;
-call ExileServer_Donators;
 
 true

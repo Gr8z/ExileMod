@@ -49,7 +49,6 @@ clearBackpackCargoGlobal _vehicleObject;
 clearItemCargoGlobal _vehicleObject;
 clearMagazineCargoGlobal _vehicleObject;
 clearWeaponCargoGlobal _vehicleObject;
-
 if (_vehicleClassName isKindOf "I_UGV_01_F") then 
 {
 	createVehicleCrew _vehicleObject;
