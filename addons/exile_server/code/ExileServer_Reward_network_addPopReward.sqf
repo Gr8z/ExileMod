@@ -31,6 +31,6 @@ try
 }
 catch
 {
-	[_sessionID, "toastRequest", ["ErrorTitleAndText", ["Air Drop", _exception]]] call ExileServer_system_network_send_to;
+	[_sessionID, "toastRequest", ["ErrorTitleAndText", ["Reward", _exception]]] call ExileServer_system_network_send_to;
 };
 true
