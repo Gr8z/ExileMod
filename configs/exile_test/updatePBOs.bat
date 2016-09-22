@@ -18,6 +18,7 @@
 "C:\Program Files\PBO Manager v.1.4 beta\PBOConsole.exe" -pack "C:\ExileMod\addons\XG_killboard" "D:\a3Server\@ExileServer_test\addons\XG_killboard.pbo"
 "C:\Program Files\PBO Manager v.1.4 beta\PBOConsole.exe" -pack "C:\ExileMod\addons\AVS" "D:\a3Server\@ExileServer_test\addons\AVS.pbo"
 "C:\Program Files\PBO Manager v.1.4 beta\PBOConsole.exe" -pack "C:\ExileMod\addons\GG_SecretCode" "D:\a3Server\@ExileServer_test\addons\GG_SecretCode.pbo"
+"C:\Program Files\PBO Manager v.1.4 beta\PBOConsole.exe" -pack "C:\ExileMod\addons\ClaimVehicles_Server" "D:\a3Server\@ExileServer_test\addons\ClaimVehicles_Server.pbo"
 
 echo Creating new PBOs 
 
