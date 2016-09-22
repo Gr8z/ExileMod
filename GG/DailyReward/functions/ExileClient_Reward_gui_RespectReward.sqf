@@ -13,7 +13,7 @@ _amount = floor((random 500) + (random 500));
 if (_amount < 50) then {_amount = 5000;};
 if (_amount < 5) then {_amount = 10000;};
 
-ExileClientPlayerScore = _amount;
+ExileClientPlayerScore = ExileClientPlayerScore + _amount;
 ["addRespectReward",[str(_amount)]] call ExileClient_system_network_send;
 
 _RewardText ctrlSetStructuredText parseText format["<t align='center' size='1'>You won %1 Respect</t>",_amount];
