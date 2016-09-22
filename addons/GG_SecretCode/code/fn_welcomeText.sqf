@@ -1,6 +1,6 @@
 WELCOME_TEXT__CODE = {
     // Welcome messages
-    private ["_NewLoginCount","_Logins","_LoginCount","_playerUID","_announcepay","_buildRights","_flag","_dueDate","_nextDueDate","_msg","_name","_missingModList"];
+    private ["_NewLoginCount","_Logins","_LoginCount","_playerUID","_announcepay","_buildRights","_flag","_dueDate","_nextDueDate","_msg","_name","_missingModList","_dailyReward"];
     playSound "intro";
     uiSleep 2;
     // Login Count
@@ -73,10 +73,11 @@ WELCOME_TEXT__CODE = {
         };
     }
     forEach (allMissionObjects "Exile_Construction_Flag_Static");
-    uiSleep 2;
-    _announcepay append ["","",""];
+
     if !(count _announcepay == 0) then{
-            [_announcepay, -.5, .85] call BIS_fnc_typeText;
+        uiSleep 2;
+        _announcepay append ["","",""];
+        [_announcepay, -.5, .85] call BIS_fnc_typeText;
     };
 
     // Missing Mod Information
@@ -109,13 +110,19 @@ WELCOME_TEXT__CODE = {
         };
     };
 
+    _dailyReward = player getVariable ["ExileDailyReward",false];
+    if (_dailyReward) then
+    {
+       createDialog "RewardsDialog";
+    };
+
     // Blow up useless people
     DevList =
     [
         "76561197985241690", /* Stubborn Eichi */
         "76561198022879703", /* Ignorant Grim */
         "76561197968999666", /* Poor Mr.White^ex */
-        "76561198075905447",  /* Crybaby Vishpala */
+        "76561198075905447", /* Crybaby Vishpala */
         
         // Other Bohemia Devs
         "76561198033149705",

@@ -70,9 +70,19 @@ class CfgNetworkMessages
         module = "AirDrop";
         parameters[] = {"STRING"};
     };
-    class lockerRequest
+    class addRespectReward
     {
-        module = "Donor";
+        module = "Reward";
+        parameters[] = {"STRING"};
+    };
+    class addPopReward
+    {
+        module = "Reward";
+        parameters[] = {"STRING"};
+    };
+    class updateRewardDate
+    {
+        module = "Reward";
         parameters[] = {"STRING"};
     };
 };
@@ -162,3 +172,4 @@ showHUD[] =
 #include "GG\MarXet\dialog\RscMarXetDefines.hpp"
 #include "GG\MarXet\dialog\RscMarXetDialog.hpp"
 #include "GG\KillMessages\killBoard.hpp"
+#include "GG\DailyReward\dialog\RscRewardDialog.hpp"

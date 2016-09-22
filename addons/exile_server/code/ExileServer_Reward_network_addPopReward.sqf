@@ -1,5 +1,5 @@
 /**
- * ExileServer_Donor_network_lockerRequest
+ * ExileServer_Reward_network_addPopReward
  *
  * Exile Mod
  * www.exilemod.com
@@ -24,17 +24,13 @@ try
 	{
 		throw "Player not alive";
 	};
-	_playerMoney = _player getVariable ["ExileLocker", 0];
-	if (_playerMoney < _amount) then
-	{
-		throw "Not Enough Money";
-	};
-	_playerMoney = _playerMoney - _amount;
+	_playerMoney = _player getVariable ["ExileLocker", 0]; 
+	_playerMoney = _playerMoney + _amount;
 	_player setVariable ["ExileLocker", _playerMoney, true];
-	format["updateLocker:%1:%2", _playerMoney, _player getVariable ["ExileDatabaseID", 0]] call ExileServer_system_database_query_fireAndForget;
+	format["updateLocker:%1:%2", _playerMoney, getPlayerUID _player] call ExileServer_system_database_query_fireAndForget;
 }
 catch
 {
-	[_sessionID, "toastRequest", ["ErrorTitleAndText", ["Loadouts", _exception]]] call ExileServer_system_network_send_to;
+	[_sessionID, "toastRequest", ["ErrorTitleAndText", ["Reward", _exception]]] call ExileServer_system_network_send_to;
 };
 true
