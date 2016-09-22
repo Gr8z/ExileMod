@@ -73,7 +73,7 @@ WELCOME_TEXT__CODE = {
         };
     }
     forEach (allMissionObjects "Exile_Construction_Flag_Static");
-    
+
     if !(count _announcepay == 0) then{
         uiSleep 2;
         _announcepay append ["","",""];
@@ -122,7 +122,7 @@ WELCOME_TEXT__CODE = {
         "76561197985241690", /* Stubborn Eichi */
         "76561198022879703", /* Ignorant Grim */
         "76561197968999666", /* Poor Mr.White^ex */
-        "76561198075905447",  /* Crybaby Vishpala */
+        "76561198075905447", /* Crybaby Vishpala */
         
         // Other Bohemia Devs
         "76561198033149705",
