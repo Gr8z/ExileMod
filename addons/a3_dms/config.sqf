@@ -271,10 +271,21 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											["comms_alpha",10]
 										];
 
+	DMS_BanditMissionsOnServerStart =	[
+											//"construction"		//<-- Example
+										];
+
 	DMS_BasesToImportOnServerStart = 	[
 											"hotel_invasion_buildings",
 											"comms_alpha_buildings"
 										];
+
+	DMS_StaticMissionsOnServerStart =	[								// List of STATIC missions with spawn chances.
+											//"saltflats"			//<--Example
+											//"slums"				//<--Example
+											//"occupation"			//<--Example
+											//"sectorB"				//<--Example for Taviana
+										];	
 
 	DMS_findSafePosBlacklist =			[								// This list defines areas where missions WILL NOT spawn. For position blacklist info refer to: http://www.exilemod.com/topic/61-dms-defents-mission-system/?do=findComment&comment=31190
 											// There are examples in the altis map config (it blacklists the salt flats) and in the tavi/taviana map configs.
