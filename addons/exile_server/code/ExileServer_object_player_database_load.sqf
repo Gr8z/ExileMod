@@ -65,7 +65,7 @@ _player setVariable ["ExileBountyFriends",_bounty select 4,true];
 // Most-Wanted
 
 private ["_dailyReward"];
-_dailyReward = format ["getAccountReward:%1:%2",_playerUID] call ExileServer_system_database_query_selectSingleField;
+_dailyReward = format ["getAccountReward:%1",_playerUID] call ExileServer_system_database_query_selectSingleField;
 _player setVariable ["ExileDailyReward", _dailyReward, true];
 
 _player setVariable ["ExileMoney", (_data select 38), true];
