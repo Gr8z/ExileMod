@@ -29,6 +29,7 @@ class CfgFunctions
 			class selfie {};
 			class flashlight {};
 			class mapIcon {};
+			class dailyRewards {};
 		};
 		class main
 		{
