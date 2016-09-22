@@ -16,6 +16,7 @@ _crateWeapons =	[
 	"srifle_DMR_05_blk_F",
 	"MMG_01_hex_F",
 	"launch_rpg32_ghex_F",
+	"MineDetector",
 	"launch_rpg7_F"
 ];
 
@@ -26,9 +27,9 @@ _crateBackpacks = [
 ];
 
 _crateItems = [
-	"BreachingChargeBigMomma",
-	"BreachingChargeMetal",
-	"BreachingChargeWood",
+	"Exile_Item_BreachingCharge_BigMomma",
+	"Exile_Item_BreachingCharge_Metal",
+	"Exile_Item_BreachingCharge_Wood",
 	"optic_Nightstalker",
 	"Exile_Item_Knife",
 	"Exile_Item_ThermalScannerPro",
@@ -37,7 +38,6 @@ _crateItems = [
 	"Exile_Item_Magazine02",
 	"Exile_Item_Magazine03",
 	"Exile_Item_Magazine04",
-	"MineDetector",
 	"RPG7_F",
 	"RPG32_F",
 	"Exile_Item_Laptop",
