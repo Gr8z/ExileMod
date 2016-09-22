@@ -27,7 +27,7 @@ try
 	_playerMoney = _player getVariable ["ExileLocker", 0]; 
 	_playerMoney = _playerMoney + _amount;
 	_player setVariable ["ExileLocker", _playerMoney, true];
-	format["updateLocker:%1:%2", _playerMoney, _player getVariable ["ExileDatabaseID", 0]] call ExileServer_system_database_query_fireAndForget;
+	format["updateLocker:%1:%2", _playerMoney, getPlayerUID _player] call ExileServer_system_database_query_fireAndForget;
 }
 catch
 {

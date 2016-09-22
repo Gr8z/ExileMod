@@ -27,7 +27,7 @@ try
 	_playerRespect = _player getVariable ["ExileScore", 0]; 
 	_playerRespect = _playerRespect + _amount;
 	_player setVariable ["ExileScore", _playerRespect, true];
-	format["setAccountScore:%1:%2", _playerRespect, _player getVariable ["ExileDatabaseID", 0]] call ExileServer_system_database_query_fireAndForget;
+	format["setAccountScore:%1:%2", _playerRespect, getPlayerUID _player] call ExileServer_system_database_query_fireAndForget;
 }
 catch
 {
