@@ -59,7 +59,7 @@
         true // Allow spawning of extra objects in the town if sqf file(s) is/are provided. (27)
     ],
     [
-        "Battlepoint", // name (0)
+        "Battlezone", // name (0)
         [[10000,10000,0],[10000,10000,0]], // [[x,y,z],[x,y,z]] if using static location (1)
         ["Reputation","random"], // Reward -> Random, Poptabs, Vehicle, Buildingbox, WeaponBox , BigWeaponBox, SniperWeaponBox (2)
         "bravo", // unique varname -> this gets checked and fixed automaticly on server start ( so don't really worry about it ).
