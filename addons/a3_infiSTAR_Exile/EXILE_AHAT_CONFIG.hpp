@@ -12,7 +12,7 @@
 	'ahmed-banna@hotmail.com'
 	
 	Last download was on:
-	'12-Sep-2016 13-05-07';
+	'23-Sep-2016 06-02-42';
 */
 class Cfg_infiSTAR_settings {
 /*

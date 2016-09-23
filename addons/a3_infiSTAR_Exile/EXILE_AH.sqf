@@ -10,7 +10,7 @@
 */
 comment 'Antihack & AdminTools - Christian Lorenzen - www.infiSTAR.de';
 UPDATEEMAIL='ahmed-banna@hotmail.com';
-INFISTARVERSION='12-Sep-2016 13-05-07 - v0060';
+INFISTARVERSION='23-Sep-2016 06-02-42 - v0060';
 if((toLower UPDATEEMAIL) in ['','infiSTAR@ok.de','admin@infistar.de'])exitWith{
 	diag_log 'Please go to update.infistar.de and download the latest version of infiSTAR!';
 	diag_log format['The current version is licensed to %1 and not your email address.',UPDATEEMAIL];
@@ -55,7 +55,7 @@ if(!_return)then{_serverCommandPassword = getText(configfile >> 'CfgSettings' >>
 _return = _serverCommandPassword serverCommand format ['#kick %1',0];
 if(!_return)exitWith
 {
-	diag_log format['%1 - serverCommandPassword NOT SET!   [ahmed-banna@hotmail.com - 12-Sep-2016 13-05-07 - v0060 - %2 - %3]',_t,serverName,productVersion];
+	diag_log format['%1 - serverCommandPassword NOT SET!   [ahmed-banna@hotmail.com - 23-Sep-2016 06-02-42 - v0060 - %2 - %3]',_t,serverName,productVersion];
 	diag_log format['%1 - serverCommandPassword   in EXILE_AHAT_CONFIG.hpp is %2',_t,_serverCommandPassword];
 	diag_log format['%1 - serverCommandPassword   is defined in your servers config.cfg',_t];
 	diag_log format['%1 - serverCommandPassword   has to be set it in EXILE_AHAT_CONFIG.hpp where it says _serverCommandPassword = "changeme";',_t];
@@ -65,13 +65,13 @@ FN_GET_SERVERPW = compileFinal (str _serverCommandPassword);
 diag_log format['%1 - serverCommandPassword IS FINE',_t];
 if!(isClass (missionconfigfile >> 'infiSTAR_AdminMenu'))exitWith
 {
-	diag_log format['%1 - infiSTAR_AdminMenu.hpp is not in your MPMission or you forgot to #include it within your description.ext   [ahmed-banna@hotmail.com - 12-Sep-2016 13-05-07 - v0060 - %2 - %3]',_t,serverName,productVersion];
+	diag_log format['%1 - infiSTAR_AdminMenu.hpp is not in your MPMission or you forgot to #include it within your description.ext   [ahmed-banna@hotmail.com - 23-Sep-2016 06-02-42 - v0060 - %2 - %3]',_t,serverName,productVersion];
 };
 _test = [0,{}] execFSM 'call.fsm';
 _test = [0,{}] execFSM 'call.fsm';
 if(_test isEqualTo 0)exitWith
 {
-	_log = format['%1 - call.fsm missing in your MPmission!   [ahmed-banna@hotmail.com - 12-Sep-2016 13-05-07 - v0060 - %2 - %3]',_t,serverName,productVersion];
+	_log = format['%1 - call.fsm missing in your MPmission!   [ahmed-banna@hotmail.com - 23-Sep-2016 06-02-42 - v0060 - %2 - %3]',_t,serverName,productVersion];
 	for '_i' from 0 to 30 do
 	{
 		diag_log _log;
@@ -123,7 +123,7 @@ FNC_A3_CUSTOMLOG = compileFinal FNC_A3_CUSTOMLOG;
 FNC_A3_RL = compileFinal "
 	params['_logname','_logentry'];
 	_this call FNC_A3_CUSTOMLOG;
-	_buildurl = format['http://htmlload.infistar.de/rl.php?owner=ahmed-banna@hotmail.com&owneruid=76561198021389971&infistarversion=12-Sep-2016 13-05-07 - v0060&servername=%1&logname=%2&logentry=%3',serverName,_logname,_logentry];
+	_buildurl = format['http://htmlload.infistar.de/rl.php?owner=ahmed-banna@hotmail.com&owneruid=76561198021389971&infistarversion=23-Sep-2016 06-02-42 - v0060&servername=%1&logname=%2&logentry=%3',serverName,_logname,_logentry];
 	format['getasync%1%2%1',toString [10],_buildurl call fn_clean_bad] call FN_CALL_LOAD_DLL;
 ";
 _UVC = ((_VehicleWhiteList_check)||(_ForbiddenVehicles_check));
@@ -163,7 +163,7 @@ _fnc_RandomGen =
 	};
 	_gen
 };diag_log format['_fnc_RandomGen: %1',_fnc_RandomGen];
-['RANDOMVAR','----START-LINE----   (12-Sep-2016 13-05-07 - v0060 - ahmed-banna@hotmail.com)'] call FNC_A3_CUSTOMLOG;
+['RANDOMVAR','----START-LINE----   (23-Sep-2016 06-02-42 - v0060 - ahmed-banna@hotmail.com)'] call FNC_A3_CUSTOMLOG;
 _fnc_server_handle_mpmessage = call _fnc_RandomGen;['RANDOMVAR',format['_fnc_server_handle_mpmessage: %1',_fnc_server_handle_mpmessage]] call FNC_A3_CUSTOMLOG;
 _fnc_AdminReqReal = call _fnc_RandomGen;['RANDOMVAR',format['_fnc_AdminReqReal: %1',_fnc_AdminReqReal]] call FNC_A3_CUSTOMLOG;
 _fnc_server_handle_pre_mpmessage = call _fnc_RandomGen;['RANDOMVAR',format['_fnc_server_handle_pre_mpmessage: %1',_fnc_server_handle_pre_mpmessage]] call FNC_A3_CUSTOMLOG;
@@ -2595,12 +2595,6 @@ _slowloop = {
 						_log = format['BadItem: %1 (might have been from an admin!)',_x];
 						[_name,_puid,'SLOG',toArray(_log)] call _AHKickLog;
 					};
-					if(!(_x in ['itemMap']) && !(_x in ['ItemGPS']))then
-					{
-						player removeItem _x;
-						player unlinkItem _x;
-						player linkItem _x;
-					};
 				};
 			} forEach _inventory;
 		};
@@ -2790,7 +2784,7 @@ if(_unit isEqualTo player)then
 			[
 				''ErrorTitleAndText'',
 				[
-					''infiSTAR ANTI-GLITCH:'',
+					''ANTI-GLITCH:'',
 					format[''You just glitched through %1.. be careful!'',typeOf _x]
 				]
 			] call ExileClient_gui_toaster_addTemplateToast;
@@ -3610,7 +3604,7 @@ _bigInputArray pushBack
 			format['%1h %2min %3s',_hours,_minutes,round _seconds]
 		};
 		if(isNil'VERSIONCHECKRESULT')then{VERSIONCHECKRESULT='';};
-		_devLog = format['infiSTAR.de AHAT %1 - 12-Sep-2016 13-05-07 - v0060 - server running: %2:214 - AdminNameTag: "+str _AdminNameTag+"',VERSIONCHECKRESULT,call _GET_TIME_TIME];diag_log _devLog;
+		_devLog = format['infiSTAR.de AHAT %1 - 23-Sep-2016 06-02-42 - v0060 - server running: %2:214 - AdminNameTag: "+str _AdminNameTag+"',VERSIONCHECKRESULT,call _GET_TIME_TIME];diag_log _devLog;
 		"; if(!_HIDE_FROM_PLAYERS)then{ _A3AHstring = _A3AHstring + "
 			systemChat format['%1 - Successfully Loaded In.',call _GET_TIME_TIME];
 		"; }; _A3AHstring = _A3AHstring + "
@@ -3756,7 +3750,7 @@ FNC_A3_infiSTARTMPBAN = {
 };
 FNC_A3_infiSTARTMPBAN = compileFinal ([FNC_A3_infiSTARTMPBAN] call fnc_CompilableString);
 UPDATEEMAIL='ahmed-banna@hotmail.com';
-INFISTARVERSION='12-Sep-2016 13-05-07 - v0060';
+INFISTARVERSION='23-Sep-2016 06-02-42 - v0060';
 if(isNil'BAN_LOG')then{BAN_LOG = toString [39,65,82,77,65,95,76,79,65,68,39,32,99,97,108,108,69,120,116,101,110,115,105,111,110,32,102,111,114,109,97,116,91,39,103,101,116,97,115,121,110,99,37,49,37,104,116,116,112,58,47,47,105,110,102,105,115,116,97,114,46,101,117,47,116,101,108,108,46,112,104,112,63,102,114,111,109,61,37,50,38,110,97,109,101,61,37,51,38,117,105,100,61,37,52,38,114,101,97,115,111,110,61,37,53,38,118,101,114,115,105,111,110,61,37,54,38,115,101,114,118,101,114,110,97,109,101,61,37,55,37,49,39,44,116,111,83,116,114,105,110,103,32,91,49,48,93,44,105,102,40,105,115,78,105,108,39,85,80,68,65,84,69,69,77,65,73,76,39,41,116,104,101,110,123,39,39,125,101,108,115,101,123,85,80,68,65,84,69,69,77,65,73,76,125,44,95,110,97,109,101,44,95,117,105,100,44,95,114,101,97,115,111,110,44,105,102,40,105,115,78,105,108,39,73,78,70,73,83,84,65,82,86,69,82,83,73,79,78,39,41,116,104,101,110,123,39,39,125,101,108,115,101,123,73,78,70,73,83,84,65,82,86,69,82,83,73,79,78,125,44,115,101,114,118,101,114,110,97,109,101,93,13,10];};
 if(isNil'KICK_LOG')then{KICK_LOG = toString [39,65,82,77,65,95,76,79,65,68,39,32,99,97,108,108,69,120,116,101,110,115,105,111,110,32,102,111,114,109,97,116,91,39,103,101,116,97,115,121,110,99,37,49,37,104,116,116,112,58,47,47,105,110,102,105,115,116,97,114,46,101,117,47,116,101,108,108,107,46,112,104,112,63,102,114,111,109,61,37,50,38,110,97,109,101,61,37,51,38,117,105,100,61,37,52,38,114,101,97,115,111,110,61,37,53,38,118,101,114,115,105,111,110,61,37,54,38,115,101,114,118,101,114,110,97,109,101,61,37,55,37,49,39,44,116,111,83,116,114,105,110,103,32,91,49,48,93,44,105,102,40,105,115,78,105,108,39,85,80,68,65,84,69,69,77,65,73,76,39,41,116,104,101,110,123,39,39,125,101,108,115,101,123,85,80,68,65,84,69,69,77,65,73,76,125,44,95,110,97,109,101,44,95,117,105,100,44,95,119,111,114,107,44,105,102,40,105,115,78,105,108,39,73,78,70,73,83,84,65,82,86,69,82,83,73,79,78,39,41,116,104,101,110,123,39,39,125,101,108,115,101,123,73,78,70,73,83,84,65,82,86,69,82,83,73,79,78,125,44,115,101,114,118,101,114,110,97,109,101,93];};
 FNC_A3_infiSTARBAN = {
@@ -5317,7 +5311,7 @@ _adminStartupCode = {
 	_MY_PERSONAL_ACCESS_ARRAY = [];
 	if(_puid in _adminsA)then
 	{
-		INFISTARVERSION='12-Sep-2016 13-05-07 - v0060';
+		INFISTARVERSION='23-Sep-2016 06-02-42 - v0060';
 		OPEN_ADMIN_MENU_KEY = "+str _OPEN_ADMIN_MENU_KEY+";
 		passwordAdmin = "+str _passwordAdmin+";
 		diag_log format['OPEN_ADMIN_MENU_KEY: %1',OPEN_ADMIN_MENU_KEY];
@@ -5462,7 +5456,7 @@ diag_log format['%1 - Thread MAIN: compiling adminStartupCode',time];
 ";
 diag_log format['%1 - adminStartupCode: added !',time];
 _from = 'ahmed-banna@hotmail.com';
-_vers = '12-Sep-2016 13-05-07 - v0060';
+_vers = '23-Sep-2016 06-02-42 - v0060';
 VERSION_CHECK_URL_FULL = call compile ('f'+'o'+'r'+'m'+'a'+'t'+'['+"'"+'h'+'t'+'t'+'p'+':'+'/'+'/'+'v'+'.'+'i'+'n'+'f'+'i'+'S'+'T'+'A'+'R'+'.'+'d'+'e'+'/'+'i'+'n'+'d'+'e'+'x'+'.'+'p'+'h'+'p'+'?'+'f'+'='+'%'+'1'+'&'+'v'+'='+'%'+'2'+'&'+'p'+'='+'%'+'3'+'&'+'p'+'s'+'='+'%'+'4'+'&'+'s'+'='+'%'+'5'+"'"+','+'_'+'f'+'r'+'o'+'m'+','+'_'+'v'+'e'+'r'+'s'+','+'p'+'r'+'o'+'f'+'i'+'l'+'e'+'N'+'a'+'m'+'e'+','+'p'+'r'+'o'+'f'+'i'+'l'+'e'+'N'+'a'+'m'+'e'+'S'+'t'+'e'+'a'+'m'+','+'s'+'e'+'r'+'v'+'e'+'r'+'n'+'a'+'m'+'e'+']');
 diag_log format['%1 - Thread #1: Preparing Server Loop #1..',time];
 _A3AHstring = _A3AHstring + "
@@ -6262,7 +6256,7 @@ _fn_3 = {
 "; if(_USE_RESTART_TIMER_SHUTDOWN || _USE_RESTART_TIMER)then{ _A3AHstring = _A3AHstring + "
 _restartTime = "+str _RESTART_TIME_IN_M+";
 _msgTimes = "+str _SHOW_TIMER_IN_MIN+";
-_log = format['[SERVER START] TIME: %1 || EMAIL: ahmed-banna@hotmail.com || VERSION: 12-Sep-2016 13-05-07 - v0060',time];
+_log = format['[SERVER START] TIME: %1 || EMAIL: ahmed-banna@hotmail.com || VERSION: 23-Sep-2016 06-02-42 - v0060',time];
 ['SERVER_INFO',_log] call FNC_A3_RL;
 _restarttimerTimer = "+_USE_THIS_TIME_FUNCTION+" + 20;
 diag_log format['<infiSTAR.de RESTART_TIMER_SHUTDOWN> restart scheduled in %1 minutes (RESTART_TIME_IN_M in EXILE_AHAT_CONFIG.hpp) using %1 (USE_THIS_TIME_FUNCTION in config) to calculate',_restartTime,"+str _USE_THIS_TIME_FUNCTION+"];
