@@ -142,7 +142,6 @@ adminUIDandAccess[] =
 		 "76561197978528230", // Dark
 		 "76561198056028211", // Nasty
 		 "76561198133936962", // Wrice4
-		 "76561198021389971", // thirdhero
 		 //Add UID's Above - Don't forget the comma!
 		"0"
 		},	/* Admins with UIDs in this Array have their Access defined in the array below. */
@@ -190,6 +189,7 @@ adminUIDandAccess[] =
 	{
 		{
 		"76561197960289679", //TangoWhiskey
+		"76561198021389971", // thirdhero
 		 "76561198088251390", // SIX
 		 "76561197979611157", // Clanzoucu
 		 "76561198274767971", // CanadianFrodo
