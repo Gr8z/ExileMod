@@ -4013,6 +4013,13 @@ class CfgInteractionMenus
 				action = "false spawn ExileClient_object_lock_toggle";
 			};
 
+			class ClaimVehicle: ExileAbstractAction
+			{
+			    title = "Claim Vehicle";
+			    condition = "true";
+			    action = "call ExileClient_ClaimVehicles_network_claimRequestSend";
+			};
+
 			// Repairs a vehicle to 100%. Requires Duckttape
 			class Repair: ExileAbstractAction
 			{
@@ -4098,6 +4105,13 @@ class CfgInteractionMenus
 				title = "Hotwire";
 				condition = "((locked ExileClientInteractionObject) isEqualTo 2) && ((locked ExileClientInteractionObject) != 1)";
 				action = "['HotwireVehicle', _this select 0] call ExileClient_action_execute";
+			};
+
+			class ClaimVehicle: ExileAbstractAction
+			{
+			    title = "Claim Vehicle";
+			    condition = "true";
+			    action = "call ExileClient_ClaimVehicles_network_claimRequestSend";
 			};
 
 			// Repairs a vehicle to 100%. Requires Duckttape
@@ -4218,6 +4232,7 @@ class CfgInteractionMenus
 			};
 		};
 	};
+
 	class ATM
     {
         targetType = 2;
@@ -4232,6 +4247,7 @@ class CfgInteractionMenus
             };
         };
     };
+
 	class Laptop
 	{
 		targetType = 2;
@@ -4364,9 +4380,6 @@ class CfgInteractionMenus
 		};
 	};
 
-	/*
-		Tent, Storage crate etc.
-	*/
 	class Container
 	{
 		targetType = 2;
@@ -4448,6 +4461,13 @@ class CfgInteractionMenus
 				title = "Hotwire";
 				condition = "((locked ExileClientInteractionObject) isEqualTo 2) && ((locked ExileClientInteractionObject) != 1)";
 				action = "['HotwireVehicle', _this select 0] call ExileClient_action_execute";
+			};
+
+			class ClaimVehicle: ExileAbstractAction
+			{
+			    title = "Claim Vehicle";
+			    condition = "true";
+			    action = "call ExileClient_ClaimVehicles_network_claimRequestSend";
 			};
 
 			// Repairs a vehicle to 100%. Requires Duckttape
