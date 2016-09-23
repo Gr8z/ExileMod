@@ -106,11 +106,11 @@ DAILY_REWARDS__CODE = {
 
 		["addPopReward",[str(_amount)]] call ExileClient_system_network_send;
 
-		_RewardText ctrlSetStructuredText parseText format["<t align='center' size='1'>You won %1 Pop Tabs</t>",_amount];
+		_RewardText ctrlSetStructuredText parseText format["<t align='center' size='1'>You won %1 Pop Tabs. They are in your bank.</t>",_amount];
 	};
 
     ExileClient_Reward_gui_CrateReward = {
-    	private["_display","_Rewardpic","_RewardText","_RewardClaim","_crateItems","_spawnPos","_crate","_crateFinalItem","_crateFullList","_crateWeapons","_crateBackpacks","_displayName","_cfg","_mag"];
+    	private["_display","_Rewardpic","_RewardText","_RewardClaim","_crateItems","_spawnPos","_crate","_crateFinalItem","_crateFullList","_crateWeapons","_crateBackpacks","_displayName","_cfg","_mag","_posObject","_marker"];
 
 		disableSerialization;
 		_display = uiNamespace getVariable ["RewardsDialog",displayNull];
@@ -180,7 +180,14 @@ DAILY_REWARDS__CODE = {
 		if (_crateFinalItem in _crateItems) then {_cfg="CfgMagazines";_crate additemCargo [_crateFinalItem,1];};
 
 		_displayName = getText(configFile >> _cfg >> _crateFinalItem >> 'displayName');
-		_RewardText ctrlSetStructuredText parseText format["<t align='center' size='1'>You won a <t size='1.1'>%1</t></t>",_displayName];
+		_posObject = getPos _crate;
+
+		_marker  = createMarkerLocal [_marker,_posObject];
+		_marker  setMarkerText format["%1",_displayName];
+		_marker  setMarkerType "mil_dot";
+		_marker  setMarkerColor "ColorWhite";
+
+		_RewardText ctrlSetStructuredText parseText format["<t align='center' size='1'>You won a <t size='1.1'>%1</t>. Its in a loot crate near you and marked on the map.</t>",_displayName];
 	};
 
     ExileClient_Reward_gui_onButtonClick = {
