@@ -591,6 +591,10 @@
 10, hlc_5rnd_300WM_mk248_AWM
 10, hlc_5rnd_300WM_SBT_AWM
 10, hlc_20Rnd_762x51_B_G3
+3, Exile_Magazine_5Rnd_127x108_Bullet_Cam_Mag
+2, Exile_Magazine_10Rnd_93x64_DMR_05_Bullet_Cam_Mag
+2, Exile_Magazine_7Rnd_408_Bullet_Cam_Mag
+2, Exile_Magazine_10Rnd_338_Bullet_Cam_Mag
 
 > SniperAttachments
 10, muzzle_snds_B

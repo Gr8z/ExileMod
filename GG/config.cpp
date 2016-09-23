@@ -2524,7 +2524,11 @@ class CfgExileArsenal
     class TRYK_B_FieldPack_Wood                         { quality = 1; price = 100; };
     class TRYK_Winter_pack                              { quality = 1; price = 100; };
 	
-	
+	// Price for bullet cam magazines is normal magazine price + 20 pop tabs per bullet
+	class Exile_Magazine_5Rnd_127x108_Bullet_Cam_Mag		{ quality = 6; price = 100 +  5 * 20; };
+	class Exile_Magazine_10Rnd_93x64_DMR_05_Bullet_Cam_Mag	{ quality = 6; price = 45 + 10 * 20; };
+	class Exile_Magazine_7Rnd_408_Bullet_Cam_Mag			{ quality = 6; price = 40 +  7 * 20; };
+	class Exile_Magazine_10Rnd_338_Bullet_Cam_Mag			{ quality = 6; price = 45 + 10 * 20; };
 	
 	//////// Ammo ///////////
 	class 6Rnd_GreenSignal_F 											{ quality = 1; price = 10; };
@@ -6076,8 +6080,11 @@ class CfgTraderCategories
 			"hlc_5rnd_300WM_SBT_AWM",
 			//Exile
 			"Exile_Magazine_8Rnd_74Slug",		
-			"Exile_Magazine_8Rnd_74Pellets"
-			
+			"Exile_Magazine_8Rnd_74Pellets",
+			"Exile_Magazine_5Rnd_127x108_Bullet_Cam_Mag",
+			"Exile_Magazine_10Rnd_93x64_DMR_05_Bullet_Cam_Mag",
+			"Exile_Magazine_7Rnd_408_Bullet_Cam_Mag",
+			"Exile_Magazine_10Rnd_338_Bullet_Cam_Mag"
 		};
 	};
 
