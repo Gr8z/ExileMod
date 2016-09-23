@@ -24,10 +24,6 @@ try
 	{
 		throw "corpse NULL";
 	};
-	if !('Exile_Melee_Shovel' isEqualTo (currentWeapon _player)) then
-	{
-		throw "You need a shovel to do that.";
-	};
 	if !((typeOf _corpse) isEqualTo "Exile_Unit_Player") then 
 	{
 		throw "You can only bury players.";
