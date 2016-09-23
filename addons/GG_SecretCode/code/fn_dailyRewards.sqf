@@ -163,7 +163,7 @@ DAILY_REWARDS__CODE = {
 
 		_spawnPos = player modelToWorld [0,2,0];
 
-		_crate = createVehicle ["Box_NATO_Wps_F", _spawnPos, [], 0, "NONE"];
+		_crate = createVehicleLocal ["Box_NATO_Wps_F", _spawnPos, [], 0, "NONE"];
 
 		clearWeaponCargo _crate;
 		clearMagazineCargo _crate;
