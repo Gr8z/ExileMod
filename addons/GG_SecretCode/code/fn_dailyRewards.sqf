@@ -183,9 +183,9 @@ DAILY_REWARDS__CODE = {
 		_posObject = getPos _crate;
 
 		_marker  = createMarkerLocal ["markerRewardCrate",_posObject];
-		_marker  setMarkerText format["%1",_displayName];
-		_marker  setMarkerType "mil_dot";
-		_marker  setMarkerColor "ColorWhite";
+		_marker  setMarkerTextLocal format["%1",_displayName];
+		_marker  setMarkerTypeLocal "mil_dot";
+		_marker  setMarkerColorLocal "ColorWhite";
 
 		hint "Your Reward is in a loot crate near you and marked on the map.";
 		_RewardText ctrlSetStructuredText parseText format["<t align='center' size='1'>You won a <t size='1.1'>%1</t>.</t>",_displayName];
