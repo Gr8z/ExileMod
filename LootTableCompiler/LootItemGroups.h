@@ -703,15 +703,15 @@
 50, MiniGrenade
 
 > Explosives
-12, DemoCharge_Remote_Mag
-12, IEDUrbanSmall_Remote_Mag
-12, IEDLandSmall_Remote_Mag
-15, ClaymoreDirectionalMine_Remote_Mag
-15, MineDetector
-15, APERSMine_Range_Mag
-15, APERSBoundingMine_Range_Mag
-15, APERSTripMine_Wire_Mag
-4, SatchelCharge_Remote_Mag
+11, DemoCharge_Remote_Mag
+10, IEDUrbanSmall_Remote_Mag
+10, IEDLandSmall_Remote_Mag
+12, ClaymoreDirectionalMine_Remote_Mag
+12, MineDetector
+12, APERSMine_Range_Mag
+11, APERSBoundingMine_Range_Mag
+12, APERSTripMine_Wire_Mag
+10, SatchelCharge_Remote_Mag
 
 ///////////////////////////////////////////////////////////////////////////////
 // Clothing & Gear
