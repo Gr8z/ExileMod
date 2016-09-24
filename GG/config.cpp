@@ -3693,7 +3693,6 @@ class CfgExileCustomCode
     ExileClient_gui_xm8_showPartySlides =                                               "GG\custom\ExileClient_gui_xm8_showPartySlides.sqf";
     ExileClient_util_playerEquipment_add =                                              "GG\custom\ExileClient_util_playerEquipment_add.sqf";
     ExileClient_object_player_event_onHandleDamage =                                    "GG\custom\ExileClient_object_player_event_onHandleDamage.sqf";
-	ExileClient_system_radiation_thread_update =										"GG\custom\ExileClient_system_radiation_thread_update.sqf";
 };
 
 class CfgExileEnvironment
