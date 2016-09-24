@@ -100,12 +100,76 @@ class RscTitles
 };
 
 class CfgSounds
-{
-    sounds[] = {intro,cam,safeTrap};
+{ 
+	sounds[] = {GG_Sound_GeigerCounter_Low01,GG_Sound_GeigerCounter_Low02,GG_Sound_GeigerCounter_Low03,GG_Sound_GeigerCounter_Medium01,GG_Sound_GeigerCounter_Medium02,GG_Sound_GeigerCounter_Medium03,GG_Sound_GeigerCounter_High01,GG_Sound_GeigerCounter_High02,GG_Sound_GeigerCounter_High03,intro,cam,safeTrap};
+	class GG_Sound_GeigerCounter_Low01
+    {
+        name="Geiger Counter";
+        sound[]=
+        {"\exile_assets\sound\Exile_GeigerCounter_Low01.wss", 0.5, 0.75};
+        titles[]={};
+    };
+    class GG_Sound_GeigerCounter_Low02
+    {
+        name="Geiger Counter";
+        sound[]=
+        {
+            "\exile_assets\sound\Exile_GeigerCounter_Low02.wss", 0.5, 0.75};
+        titles[]={};
+    };
+    class GG_Sound_GeigerCounter_Low03
+    {
+        name="Geiger Counter";
+        sound[]=
+        {"\exile_assets\sound\Exile_GeigerCounter_Low03.wss", 0.5, 0.75};
+        titles[]={};
+    };
+    class GG_Sound_GeigerCounter_Medium01
+    {
+        name="Geiger Counter";
+        sound[]=
+        {"\exile_assets\sound\Exile_GeigerCounter_Medium01.wss", 0.5, 0.75};
+        titles[]={};
+    };
+    class GG_Sound_GeigerCounter_Medium02
+    {
+        name="Geiger Counter";
+        sound[]=
+        {"\exile_assets\sound\Exile_GeigerCounter_Medium02.wss", 0.5, 0.75};
+        titles[]={};
+    };
+    class GG_Sound_GeigerCounter_Medium03
+    {
+        name="Geiger Counter";
+        sound[]=
+        {"\exile_assets\sound\Exile_GeigerCounter_Medium03.wss", 0.5, 0.75};
+        titles[]={};
+    };
+    class GG_Sound_GeigerCounter_High01
+    {
+        name="Geiger Counter";
+        sound[]=
+        {"\exile_assets\sound\Exile_GeigerCounter_High01.wss", 0.5, 0.75};
+        titles[]={};
+    };
+    class GG_Sound_GeigerCounter_High02
+    {
+        name="Geiger Counter";
+        sound[]=
+        {"\exile_assets\sound\Exile_GeigerCounter_High02.wss", 0.5, 0.75};
+        titles[]={};
+    };
+    class GG_Sound_GeigerCounter_High03
+    {
+        name="Geiger Counter";
+        sound[]=
+        {"\exile_assets\sound\Exile_GeigerCounter_High03.wss", 0.5, 0.75};
+        titles[]={};
+    };
     class intro
     {
         name = "intro";
-        sound[] = {"\GG\sounds\introsong.ogg", 1, 1};
+        sound[] = {"\GG\sounds\introsong.ogg", 1, 0.75};
         titles[] = {};
     };
 
