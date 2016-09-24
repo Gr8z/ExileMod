@@ -10,7 +10,7 @@ if (!hasInterface || isServer) exitWith {};
 [] execVM "GG\StatusBar\statusBar.sqf";
 [] execvm "GG\advertise.sqf";
 
-GG_adjustBrightness = 200;
+GG_adjustBrightness = 150;
 GG_adjustColor = [0.5,0.7,1];
 
 _pic = "GG\images\logo.paa";
