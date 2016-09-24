@@ -106,7 +106,7 @@ class CfgSounds
     {
         name="Geiger Counter";
         sound[]=
-        {"\GG\sounds\radiation\Exile_GeigerCounter_Low01.wss", 0.5, 0.75};
+        {"\exile_assets\sound\Exile_GeigerCounter_Low01.wss", 0.5, 0.75};
         titles[]={};
     };
     class GG_Sound_GeigerCounter_Low02
@@ -114,56 +114,56 @@ class CfgSounds
         name="Geiger Counter";
         sound[]=
         {
-            "\GG\sounds\radiation\Exile_GeigerCounter_Low02.wss", 0.5, 0.75};
+            "\exile_assets\sound\Exile_GeigerCounter_Low02.wss", 0.5, 0.75};
         titles[]={};
     };
     class GG_Sound_GeigerCounter_Low03
     {
         name="Geiger Counter";
         sound[]=
-        {"\GG\sounds\radiation\Exile_GeigerCounter_Low03.wss", 0.5, 0.75};
+        {"\exile_assets\sound\Exile_GeigerCounter_Low03.wss", 0.5, 0.75};
         titles[]={};
     };
     class GG_Sound_GeigerCounter_Medium01
     {
         name="Geiger Counter";
         sound[]=
-        {"\GG\sounds\radiation\Exile_GeigerCounter_Medium01.wss", 0.5, 0.75};
+        {"\exile_assets\sound\Exile_GeigerCounter_Medium01.wss", 0.5, 0.75};
         titles[]={};
     };
     class GG_Sound_GeigerCounter_Medium02
     {
         name="Geiger Counter";
         sound[]=
-        {"\GG\sounds\radiation\Exile_GeigerCounter_Medium02.wss", 0.5, 0.75};
+        {"\exile_assets\sound\Exile_GeigerCounter_Medium02.wss", 0.5, 0.75};
         titles[]={};
     };
     class GG_Sound_GeigerCounter_Medium03
     {
         name="Geiger Counter";
         sound[]=
-        {"\GG\sounds\radiation\Exile_GeigerCounter_Medium03.wss", 0.5, 0.75};
+        {"\exile_assets\sound\Exile_GeigerCounter_Medium03.wss", 0.5, 0.75};
         titles[]={};
     };
     class GG_Sound_GeigerCounter_High01
     {
         name="Geiger Counter";
         sound[]=
-        {"\GG\sounds\radiation\Exile_GeigerCounter_High01.wss", 0.5, 0.75};
+        {"\exile_assets\sound\Exile_GeigerCounter_High01.wss", 0.5, 0.75};
         titles[]={};
     };
     class GG_Sound_GeigerCounter_High02
     {
         name="Geiger Counter";
         sound[]=
-        {"\GG\sounds\radiation\Exile_GeigerCounter_High02.wss", 0.5, 0.75};
+        {"\exile_assets\sound\Exile_GeigerCounter_High02.wss", 0.5, 0.75};
         titles[]={};
     };
     class GG_Sound_GeigerCounter_High03
     {
         name="Geiger Counter";
         sound[]=
-        {"\GG\sounds\radiation\Exile_GeigerCounter_High03.wss", 0.5, 0.75};
+        {"\exile_assets\sound\Exile_GeigerCounter_High03.wss", 0.5, 0.75};
         titles[]={};
     };
     class intro
