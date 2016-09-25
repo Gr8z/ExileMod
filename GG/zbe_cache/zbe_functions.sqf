@@ -11,6 +11,8 @@ zbe_deleteunitsnotleader = {
 zbe_cache = {
 	_toCache = (units _group) - [(_leader)];
 	{if (!(isPlayer _x) && {!("driver" in assignedVehicleRole _x)}) then {
+		_x allowdamage false;
+		sleep 2;
 		_x enablesimulationglobal false;
 		_x hideobjectglobal true;};
 	} forEach _toCache;
@@ -20,6 +22,8 @@ zbe_unCache = {
 	{if (!(isPlayer _x) && {!("driver" in assignedVehicleRole _x)}) then {
 		_x enablesimulationglobal true;
 		_x hideobjectglobal false;};
+		sleep 2;
+		_x allowdamage true;
 	} forEach _toCache;
 };
 
