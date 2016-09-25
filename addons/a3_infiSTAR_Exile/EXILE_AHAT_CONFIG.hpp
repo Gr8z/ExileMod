@@ -192,7 +192,6 @@ adminUIDandAccess[] =
 		 "76561198088251390", // SIX
 		 "76561197979611157", // Clanzoucu
 		 "76561198274767971", // CanadianFrodo
-		 "76561198065188130", // Nacho
 		 "76561198036004541", // Demen
 		 "76561197987069300", // Shroombear
 		 "76561198090941099", // Josh
@@ -219,6 +218,7 @@ adminUIDandAccess[] =
 	{
 		{
 		"76561198218878119", // Mack
+		"76561198065188130", // Nacho
 		"0"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
 			"spectating","ShowGear","Spawn Vehicles",
