@@ -196,4 +196,4 @@
 5, EpicWeapons
 0.65, Phoneknife
 0.01, Magazine02
-10, Garbage
+15, Garbage

@@ -703,10 +703,10 @@
 50, MiniGrenade
 
 > Explosives
-11, DemoCharge_Remote_Mag
-10, IEDUrbanSmall_Remote_Mag
-10, IEDLandSmall_Remote_Mag
-12, ClaymoreDirectionalMine_Remote_Mag
+15, DemoCharge_Remote_Mag
+9, IEDUrbanSmall_Remote_Mag
+9, IEDLandSmall_Remote_Mag
+10, ClaymoreDirectionalMine_Remote_Mag
 12, MineDetector
 12, APERSMine_Range_Mag
 11, APERSBoundingMine_Range_Mag
