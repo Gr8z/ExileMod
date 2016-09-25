@@ -4426,7 +4426,7 @@ class CfgInteractionMenus
 			class HackVG : ExileAbstractAction
 			{
 				title = "Hack Virtual Garage";
-				condition = "((([ExileClientInteractionObject, getPlayerUID player] call ExileClient_util_territory_getAccessLevel) select 0) < ExAd_VG_ACCESS_LEVEL))";
+				condition = "((([ExileClientInteractionObject, getPlayerUID player] call ExileClient_util_territory_getAccessLevel) select 0) < ExAd_VG_ACCESS_LEVEL)";
 				action = "_this spawn ExAd_fnc_startHack";
 			};
 		};
