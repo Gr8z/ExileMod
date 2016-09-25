@@ -136,9 +136,7 @@ if (isServer) then {
 		["Land_LampAirport_F",[2014.15,3425.26,12.9658],[[-0.320928,0.947103,0],[0,0,1]],[false,false]],
 		["Land_LampAirport_F",[2111.76,3453.38,12.95],[[-0.266764,0.963762,0],[0,0,1]],[false,false]],
 		["Land_LampHalogen_F",[12128.7,2501.39,3.553],[[-0.777242,0.629201,0],[0,0,1]],[false,false]],
-		["Land_LampHalogen_F",[12053,2460.24,4.30323],[[-0.145672,-0.989333,0],[0,0,1]],[false,false]],
-		["B_G_Soldier_AR_F",[12078.8,2469.5,3.71594],[[0,1,0],[0,0,1]],[false,false]]
-	];
+		["Land_LampHalogen_F",[12053,2460.24,4.30323],[[-0.145672,-0.989333,0],[0,0,1]],[false,false]]
 	{
 		private _object = (_x select 0) createVehicle [0,0,0];
 		_object setPosASL (_x select 1);
