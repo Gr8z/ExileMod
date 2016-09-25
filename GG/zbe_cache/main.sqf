@@ -51,6 +51,13 @@ zbe_centerPOS = [zbe_mapside, zbe_mapside, 0];
 					[_x, zbe_vehicleCacheDistCar] execFSM "GG\zbe_cache\zbe_vehicleCaching.fsm";
 			};
 		} forEach _assetscar;
+		_assetscar = zbe_centerPOS nearObjects ["Exile_Construction_Abstract_Static", zbe_mapside];
+		{
+			if !(_x in zbe_cached_base) then {
+				zbe_cached_base = zbe_cached_base + [_x];
+					[_x, zbe_vehicleCacheDistCar] execFSM "GG\zbe_cache\zbe_vehicleCaching.fsm";
+			};
+		} forEach _assetscar;
 		_assetsair = zbe_centerPOS nearEntities ["Air", zbe_mapside];
 		{
 			if !(_x in zbe_cached_air) then {
@@ -66,6 +73,11 @@ zbe_centerPOS = [zbe_mapside, zbe_mapside, 0];
 			};
 		} forEach _assetsboat;
 
+		{
+			if (!(_x in _assetscar)) then {
+			zbe_cached_base = zbe_cached_base - [_x];
+			};
+		} forEach zbe_cached_base;
 		{
 			if (!(_x in _assetscar)) then {
 			zbe_cached_cars = zbe_cached_cars - [_x];
