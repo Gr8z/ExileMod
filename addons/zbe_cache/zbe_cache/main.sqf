@@ -41,6 +41,7 @@ zbe_centerPOS = [zbe_mapside, zbe_mapside, 0];
 [] spawn {
 	private ["_assetscar", "_assetsair", "_assetsboat"];
 	zbe_cached_cars = [];
+	zbe_cached_base = [];
 	zbe_cached_air = [];
 	zbe_cached_boat = [];
 	while {true} do {
@@ -48,6 +49,13 @@ zbe_centerPOS = [zbe_mapside, zbe_mapside, 0];
 		{
 			if !(_x in zbe_cached_cars) then {
 				zbe_cached_cars = zbe_cached_cars + [_x];
+				[_x, zbe_vehicleCacheDistCar] execFSM "\zbe_cache\zbe_cache\zbe_vehicleCaching.fsm";
+			};
+		} forEach _assetscar;
+		_assetscar = zbe_centerPOS nearObjects ["Exile_Construction_Abstract_Static", zbe_mapside];
+		{
+			if !(_x in zbe_cached_base) then {
+				zbe_cached_base = zbe_cached_base + [_x];
 				[_x, zbe_vehicleCacheDistCar] execFSM "\zbe_cache\zbe_cache\zbe_vehicleCaching.fsm";
 			};
 		} forEach _assetscar;
@@ -71,6 +79,11 @@ zbe_centerPOS = [zbe_mapside, zbe_mapside, 0];
 			zbe_cached_cars = zbe_cached_cars - [_x];
 			};
 		} forEach zbe_cached_cars;
+		{
+			if (!(_x in _assetscar)) then {
+			zbe_cached_base = zbe_cached_base - [_x];
+			};
+		} forEach zbe_cached_base;
 		{
 			if (!(_x in _assetsair)) then {
 			zbe_cached_air = zbe_cached_air - [_x];
