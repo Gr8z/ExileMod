@@ -156,7 +156,7 @@ class CfgLootTables
 			{3800.73411378764, "ItemRadio"}, // 0.59%
 			{3859.33015269541, "ItemWatch"}, // 0.59%
 			{3917.92619160318, "Exile_Item_ToiletPaper"}, // 0.59%
-			{3976.52223051095, "Exile_Item_Can_Empty"}, // 0.09%
+			{3976.52223051095, "Exile_Item_Can_Empty"}, // 0.59%
 			{4035.11826941872, "Exile_Item_PlasticBottleEmpty"}, // 0.59%
 			{4093.71430832649, "Exile_Item_WaterCanisterEmpty"}, // 0.59%
 			{4152.31034723426, "Exile_Item_FuelBarrelEmpty"}, // 0.59%
