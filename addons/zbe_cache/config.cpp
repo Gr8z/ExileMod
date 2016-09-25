@@ -1,4 +1,3 @@
-#include "BIS_AddonInfo.hpp"
 class CfgPatches
 {
 	class ZBE_Cache
@@ -20,7 +19,7 @@ class CfgFunctions
         {
             class Cache_Init
             {
-                file = "zbe_cache_addon_version\init.sqf";
+                file = "zbe_cache\init.sqf";
                 preInit = 1;
             };
         };
