@@ -20,6 +20,7 @@
 "C:\Program Files\PBO Manager v.1.4 beta\PBOConsole.exe" -pack "C:\ExileMod\addons\HEG_Xbrm" "D:\a3Server\@ExileServer\addons\HEG_Xbrm.pbo"
 "C:\Program Files\PBO Manager v.1.4 beta\PBOConsole.exe" -pack "C:\ExileMod\addons\GG_SecretCode" "D:\a3Server\@ExileServer\addons\GG_SecretCode.pbo"
 "C:\Program Files\PBO Manager v.1.4 beta\PBOConsole.exe" -pack "C:\ExileMod\addons\ClaimVehicles_Server" "D:\a3Server\@ExileServer\addons\ClaimVehicles_Server.pbo"
+"C:\Program Files\PBO Manager v.1.4 beta\PBOConsole.exe" -pack "C:\ExileMod\addons\zbe_cache" "D:\a3Server\@ExileServer\addons\zbe_cache.pbo"
 
 echo Creating new PBOs 
 
