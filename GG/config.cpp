@@ -4416,7 +4416,6 @@ class CfgInteractionMenus
 				condition = "((ExileClientInteractionObject getvariable ['ExileFlagStolen',1]) isEqualTo 0)";
 				action = "['StealFlag', _this select 0] call ExileClient_action_execute";
 			};
-			
 			class RestoreFlag: ExileAbstractAction
 			{
 				title = "Restore Flag";
@@ -4426,7 +4425,7 @@ class CfgInteractionMenus
 			class HackVG : ExileAbstractAction
 			{
 				title = "Hack Virtual Garage";
-				condition = "((([ExileClientInteractionObject, getPlayerUID player] call ExileClient_util_territory_getAccessLevel) select 0) < ExAd_VG_ACCESS_LEVEL)";
+				condition = "true";
 				action = "_this spawn ExAd_fnc_startHack";
 			};
 		};
