@@ -1147,7 +1147,7 @@ class CfgCraftingRecipes
 		};
 		category = "Food & Drinks";
 	};
-	class FillFuelCanister: Exile_AbstractCraftingRecipe
+	/*class FillFuelCanister: Exile_AbstractCraftingRecipe
 	{
 		name = "Fill Fuel Canister";
 		pictureItem = "Exile_Item_FuelCanisterFull";
@@ -1161,7 +1161,7 @@ class CfgCraftingRecipes
 			{1, "Exile_Item_FuelCanisterEmpty"}
 		};
 		category = "Tools & Items";
-	};
+	};*/
 	class UpgradeToConcreteDoor: Exile_AbstractCraftingRecipe
 	{
 		name = "Upgrade to Concrete Door";
