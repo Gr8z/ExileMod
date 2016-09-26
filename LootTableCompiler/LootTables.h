@@ -57,9 +57,9 @@
 35, Drinks
 10, CivilianBackpacks
 5, CivilianItems
-5, Electronics
+1, Electronics
 5, Vehicle
-10, Garbage
+15, Garbage
 
 ///////////////////////////////////////////////////////////////////////////////
 // Construction Sites, Warehouses, Research etc.
