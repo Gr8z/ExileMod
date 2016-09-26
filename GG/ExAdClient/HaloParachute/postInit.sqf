@@ -11,6 +11,8 @@ if(isNil "ExAd_HALOPARACHUTE_USE_ACTIONS")then{ExAd_HALOPARACHUTE_USE_ACTIONS = 
 if(isNil "ExAd_HALOPARACHUTE_USE_KEY_ACTIONS")then{ExAd_HALOPARACHUTE_USE_KEY_ACTIONS = true;};
 if(isNil "ExAd_ACTION_PARACHUTE_HEIGHT")then{ExAd_ACTION_PARACHUTE_HEIGHT = 10;};
 if(isNil "ExAd_ACTION_EJECT_HEIGHT")then{ExAd_ACTION_EJECT_HEIGHT = 0;};
+if(isNil "ExAd_ParaActionAdded")then{ExAd_ParaActionAdded = false;};
+if(isNil "ExAd_EjectActionAdded")then{ExAd_EjectActionAdded = false;};
 
 if(ExAd_HALOPARACHUTE_USE_KEY_ACTIONS)then{
 	ExAd_ACTION_HALOPARACHUTE_USE_KEY_ACTIONS = (findDisplay 46) displayAddEventHandler ["KeyDown",{
