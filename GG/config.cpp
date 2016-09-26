@@ -3771,12 +3771,12 @@ class CfgExileEnvironment
 	{
 		class FireFlies: FireFlies
 		{
-			enable = 1;
+			enable = 0;
 		};
 
 		class Anomalies: Anomalies
 		{
-			enable = 1;
+			enable = 0;
 		};
 
 		class Breathing: Breathing
