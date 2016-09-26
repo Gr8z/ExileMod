@@ -12,7 +12,7 @@
     _colour101      = parseText "#3366CC";
     _colour100      = parseText "#336600";
     _colour90       = parseText "#339900";
-	    _colour80       = parseText "#33CC00";
+	_colour80       = parseText "#33CC00";
     _colour70       = parseText "#33FF00";
     _colour60       = parseText "#66FF00";
     _colour50       = parseText "#CCFF00";
@@ -65,9 +65,7 @@
         case 1: {_minutes = "01"};
         case 0: {_minutes = "00"};
     };
-    
-    
-            
+          
     //Colour coding
     //Damage
         
@@ -85,8 +83,6 @@
     if((_damage >= 1) && (_damage < 10)) then {_colourDamage =  _colour0;};
     if(_damage < 1) then{_colourDamage =  _colourDead;};
     
-    
-    
     //Hunger
     _colourHunger = _colourDefault;
     if(_hunger >= 100) then{_colourHunger = _colour100;};
@@ -101,8 +97,7 @@
     if((_hunger >= 10) && (_hunger < 20)) then {_colourHunger =  _colour10;};
     if((_hunger >= 1) && (_hunger < 10)) then {_colourHunger =  _colour0;};
     if(_hunger < 1) then{_colourHunger =  _colourDead;};
-    
-            
+             
     //Thirst
     _colourThirst = _colourDefault;     
     switch true do{
@@ -119,8 +114,6 @@
         case((_thirst >= 1) && (_thirst < 10)) :  {_colourThirst =  _colour0;};
         case(_thirst < 1) : {_colourThirst =  _colourDead;};
     };
-    
-    
     
     //Energy
     _colourEnergy = _colourDefault;
