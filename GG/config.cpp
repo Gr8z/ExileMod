@@ -4016,7 +4016,7 @@ class CfgInteractionMenus
 			class ClaimVehicle: ExileAbstractAction
 			{
 			    title = "Claim Vehicle";
-			    condition = "true";
+			    condition = "(locked ExileClientInteractionObject) != 2";
 			    action = "call ExileClient_ClaimVehicles_network_claimRequestSend";
 			};
 
@@ -4110,7 +4110,7 @@ class CfgInteractionMenus
 			class ClaimVehicle: ExileAbstractAction
 			{
 			    title = "Claim Vehicle";
-			    condition = "true";
+			    condition = "(locked ExileClientInteractionObject) != 2";
 			    action = "call ExileClient_ClaimVehicles_network_claimRequestSend";
 			};
 
@@ -4465,7 +4465,7 @@ class CfgInteractionMenus
 			class ClaimVehicle: ExileAbstractAction
 			{
 			    title = "Claim Vehicle";
-			    condition = "true";
+			    condition = "(locked ExileClientInteractionObject) != 2";
 			    action = "call ExileClient_ClaimVehicles_network_claimRequestSend";
 			};
 
