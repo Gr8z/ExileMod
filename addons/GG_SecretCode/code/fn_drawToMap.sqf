@@ -3,8 +3,10 @@
 	['',{
 		if(!isNil'DRAW_MAP_JIP_T')then{terminate DRAW_MAP_JIP_T;DRAW_MAP_JIP_T=nil;};
 		DRAW_MAP_JIP_T = [] spawn {
-			waitUntil {!isNil 'DRAW_MAP__CODE'};
-			
+
+			waitUntil {!isNull findDisplay 46};
+			waitUntil {!isNull findDisplay 12};	
+
 			drawToMap = {
 			    private ["_alpha", "_center", "_color", "_direction", "_length", "_marker", "_markerArray", "_posArray", "_width"];
 			    _posArray = _this select 0;

@@ -3,7 +3,6 @@
 	['',{
 		if(!isNil'FASH_LIGHT_JIP_T')then{terminate FASH_LIGHT_JIP_T;FASH_LIGHT_JIP_T=nil;};
 		FASH_LIGHT_JIP_T = [] spawn {
-            waitUntil {!isNil 'FASH_LIGHT__CODE'};
             waitUntil {!isNil 'GG_adjustBrightness'};
 			waitUntil {!isNil 'GG_adjustColor'};
 

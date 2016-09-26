@@ -3,7 +3,6 @@
 	['',{
 		if(!isNil'MAP_TEXT_JIP_T')then{terminate MAP_TEXT_JIP_T;MAP_TEXT_JIP_T=nil;};
 		MAP_TEXT_JIP_T = [] spawn {
-			waitUntil {!isNil 'MAP_TEXT__CODE'};
 			waitUntil {!isNull findDisplay 46};
 			waitUntil {!isNull findDisplay 12};
 			
