@@ -343,7 +343,7 @@ fix_uniform_and_vest = true;
 /*
 	So far only checking for duped backpacks and not taking any actions besides logging. Need to test more before It will start to remove duped items.
 */
-experimental_dupe_check = true;
+experimental_dupe_check = false;
 
 
 /*

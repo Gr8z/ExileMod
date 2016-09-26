@@ -22,7 +22,7 @@ if (hasInterface) then
 	AVS_fillAction = 0;
 	AVS_fillActionAdded = false;
 
-	while {true} do
+	updateInteractionMenuLoop = 
 	{
 
 		_vehicle = vehicle player;
@@ -226,6 +226,6 @@ if (hasInterface) then
 				};
 			};
 		};
-		sleep 2;
 	};
+	updateInteractionMenuVar = [5, updateInteractionMenuLoop, [], true] call ExileClient_system_thread_addtask;
 };

@@ -52,7 +52,7 @@ if (AVS_RearmSystemActive || AVS_RefuelSystemActive) then
 		// Client-side only stuff.
 		AVS_fnc_getConfigLoadout = compileFinal (preprocessFileLineNumbers "GG\AVS\AVS_fnc_getConfigLoadout.sqf");	// Server already processed this file.
 		[] spawn AVS_fnc_sanitizegastation;
-		[] spawn AVS_fnc_updateInteractionMenu;
+		[] call AVS_fnc_updateInteractionMenu;
 		diag_log format ["AVS - Client code version %1 initialized.", AVS_Version];
 	};
 };

@@ -41,7 +41,7 @@ forEach
 ];
 
 
-[] spawn {
+CHVD_Script = [] spawn {
 	CHVD_scriptRunning = true;
 	//Wait for mission init, in case there are variables defined some place else
 	waitUntil {time > 0 && !isNil "ExileClientPlayerIsSpawned"};
