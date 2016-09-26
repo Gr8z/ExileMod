@@ -61,7 +61,7 @@ ExAdParachuteLoop =
 	};
 	
 	// EJECT
-	_role = if(count assignedVehicleRole player > 0)then{if(assignedVehicleRole player select 0 == "cargo")then{false}else{true}}else{true}
+	_role = if(count assignedVehicleRole player > 0)then{if(assignedVehicleRole player select 0 == "cargo")then{false}else{true}}else{true};
 	if ((vehicle player != player) && ((getPos player) select 2 > ExAd_ACTION_EJECT_HEIGHT) && _role) then 
 	{
 		if (!ExAd_EjectActionAdded) then 
