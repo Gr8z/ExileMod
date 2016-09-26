@@ -1,5 +1,4 @@
-﻿#include "MostWanted_Client\CfgMostWanted.cpp"
-#include "MarXet\CfgMarXet.cpp"
+﻿#include "MarXet\CfgMarXet.cpp"
 
 class CfgRemoteExec
 {
@@ -3690,7 +3689,6 @@ class CfgExileCustomCode
     ExileClient_system_locker_network_lockerResponse =									"GG\custom\ExileClient_system_locker_network_lockerResponse.sqf";
     ExileClient_gui_upgradeTerritoryDialog_event_onTerritoryDropDownSelectionChanged = 	"GG\custom\ExileClient_gui_upgradeTerritoryDialog_event_onTerritoryDropDownSelectionChanged.sqf";
     ExileClient_gui_xm8_slide_territory_event_onTerritoryDropdownSelectionChanged = 	"GG\custom\ExileClient_gui_xm8_slide_territory_event_onTerritoryDropdownSelectionChanged.sqf";
-    ExileClient_gui_xm8_showPartySlides =                                               "GG\custom\ExileClient_gui_xm8_showPartySlides.sqf";
     ExileClient_util_playerEquipment_add =                                              "GG\custom\ExileClient_util_playerEquipment_add.sqf";
     ExileClient_object_player_event_onHandleDamage =                                    "GG\custom\ExileClient_object_player_event_onHandleDamage.sqf";
 };
@@ -4560,24 +4558,7 @@ class CfgInteractionMenus
 				action = "['HideBody', (_this select 0)] call ExileClient_action_execute";
 			};
 		};
-	};
-	
-	class Bounties
-	{
-	    targetType = 2;
-	    target = "Exile_Trader_Office";
-
-	    class Actions
-	    {
-	        class MostWanted: ExileAbstractAction
-	        {
-	            title = "Bounties";
-	            condition = "true";
-	            action = "createDialog 'MostWantedDialog';";
-	        };
-	    };
-	};
-	
+	};	
 };
 class CfgInteractionModels
 {
@@ -7974,7 +7955,7 @@ class CfgVehicleTransport
 };
 class CfgXM8
 {
-	extraApps[] = {"GG_VG","GG_CHVD","GG_Journal","GG_Quad","GG_Selfie","GG_Scan","GG_Chat","GG_Craft","GG_AirDrop","GG_kills","GG_Bounties"};
+	extraApps[] = {"GG_VG","GG_CHVD","GG_Journal","GG_Quad","GG_Selfie","GG_Scan","GG_Chat","GG_Craft","GG_AirDrop","GG_kills"};
 	
 	class GG_VG 
 	{
@@ -8062,13 +8043,7 @@ class CfgXM8
 		title = "Kill Board";
 		quickFunction = "call XG_killboardClient";
 		logo = "GG\ExAdClient\XM8\Apps\Kills\icon_Kills.paa";
-	};	
-	class GG_Bounties
-	{
-		title = "Bounties";
-		quickFunction = "createDialog 'MostWantedDialog';";
-		logo = "GG\ExAdClient\XM8\Apps\Bounties\icon_Bounty.paa";
-	};	
+	};
 }; 
 class CfgVon
 {

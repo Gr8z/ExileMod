@@ -31,25 +31,6 @@ else
 	};
 };
 
-// Most-Wanted
-private ["_bounty","_lock","_interval","_type","_immunity"];
-_interval = getNumber(missionConfigFile >> "CfgMostWanted" >> "Database" >> "Immunity" >> "interval");
-_immunity = format ["hasImmunity:%1:%2",(getPlayerUID _requestingPlayer),_interval] call ExileServer_system_database_query_selectSingleField;
-_bambiPlayer setVariable ["ExileBountyImmunity", _immunity, true];
-
-_bounty = format ["getBounty:%1",(getPlayerUID _requestingPlayer)] call ExileServer_system_database_query_selectSingle;
-_bambiPlayer setVariable ["ExileBounty",_bounty select 0];
-_lock = false;
-if ((_bounty select 1) isEqualTo 1) then
-{
-	_lock = true;
-};
-_bambiPlayer setVariable ["ExileBountyLock",_lock,true];
-_bambiPlayer setVariable ["ExileBountyContract",_bounty select 2,true];
-_bambiPlayer setVariable ["ExileBountyCompletedContracts",_bounty select 3];
-_bambiPlayer setVariable ["ExileBountyFriends",_bounty select 4,true];
-// Most-Wanted
-
 _name = name _requestingPlayer;
 _clanID = (_accountData select 3);
 if !((typeName _clanID) isEqualTo "SCALAR") then
@@ -157,10 +138,6 @@ _bambiPlayer call ExileServer_object_player_database_update;
 	]
 ]
 call ExileServer_system_network_send_to;
-
-// Most-Wanted
-[_sessionID,"updateCompletedContracts",[_bounty select 3]] call ExileServer_system_network_send_to;
-// Most-Wanted
 
 [_sessionID, _bambiPlayer] call ExileServer_system_session_update;
 

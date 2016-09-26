@@ -25,13 +25,11 @@ class CfgFunctions
 class CfgHints
 {
 	#include "GG\ExAdClient\CfgHints.cpp"
-	#include "GG\MostWanted_Client\Notifications.hpp"
 };
 
 class CfgNetworkMessages
 {
 	#include "GG\ExAdClient\CfgNetworkMessages.cpp"
-	#include "GG\MostWanted_Client\NetworkMessages.hpp"
 	#include "GG\MarXet\CfgMarXetNetworkMessages.hpp"
 
 
@@ -172,8 +170,6 @@ showHUD[] =
 
 #include "GG\config.cpp"
 #include "GG\AdminMenu.hpp"
-#include "GG\MostWanted_Client\Dialog\MostWantedDefines.hpp"
-#include "GG\MostWanted_Client\Dialog\MostWantedDialog.hpp"
 #include "GG\MarXet\dialog\RscMarXetDefines.hpp"
 #include "GG\MarXet\dialog\RscMarXetDialog.hpp"
 #include "GG\KillMessages\killBoard.hpp"

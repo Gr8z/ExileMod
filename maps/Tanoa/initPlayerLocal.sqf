@@ -1,4 +1,3 @@
-[] execVM "GG\MostWanted_Client\MostWanted_Init.sqf";
 [] execVM "GG\MarXet\MarXet_Init.sqf";
 [] execVM "GG\ClaimVehicles\ClaimVehicles_Client_init.sqf";
 

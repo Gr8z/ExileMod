@@ -44,26 +44,6 @@ else
 _player setDamage (_data select 3);
 _player setName _name;
 
-// Most-Wanted
-private ["_bounty","_lock","_interval","_type","_immunity"];
-
-_interval = getNumber(missionConfigFile >> "CfgMostWanted" >> "Database" >> "Immunity" >> "interval");
-_immunity = format ["hasImmunity:%1:%2",_playerUID,_interval] call ExileServer_system_database_query_selectSingleField;
-_player setVariable ["ExileBountyImmunity", _immunity, true];
-
-_bounty = format["getBounty:%1",_playerUID] call ExileServer_system_database_query_selectSingle;
-_player setVariable ["ExileBounty",_bounty select 0];
-_lock = false;
-if ((_bounty select 1) isEqualTo 1) then
-{
-	_lock = true;
-};
-_player setVariable ["ExileBountyLock",_lock,true];
-_player setVariable ["ExileBountyContract",_bounty select 2,true];
-_player setVariable ["ExileBountyCompletedContracts",_bounty select 3];
-_player setVariable ["ExileBountyFriends",_bounty select 4,true];
-// Most-Wanted
-
 private ["_dailyReward"];
 _dailyReward = format ["getAccountReward:%1",_playerUID] call ExileServer_system_database_query_selectSingleField;
 _player setVariable ["ExileDailyReward", _dailyReward, true];
@@ -260,17 +240,6 @@ if (getNumber (configFile >> "CfgSettings" >> "VehicleSpawn" >> "thermalVision")
 	]
 ] 
 call ExileServer_system_network_send_to;
-
-// Most-Wanted
-[
-	_sessionID,
-	"updateCompletedContracts",
-	[
-		(_player getVariable ["ExileBountyCompletedContracts",""])
-	]
-]
-call ExileServer_system_network_send_to;
-// Most-Wanted
 
 [_sessionID, _player] call ExileServer_system_session_update;
 true
