@@ -24,11 +24,30 @@ class CfgFunctions
 			class welcomeText {};
 			class drawToMap {};
 			class statusBar {};
-			class airDrops {};
-			class craftingApp {};
 			class selfie {};
 			class flashlight {};
-			class dailyRewards {};
+		};
+		class airDrops
+		{
+			file = "GG_SecretCode\code\airDrops";
+			class airDrops_buySelected {};
+			class airDrops_okDrop {};
+		};
+		class craftingApp
+		{
+			file = "GG_SecretCode\code\craftingApp";
+			class craftingApp_componentsLoad {};
+			class craftingApp_recipeLoad {};
+		};
+		class dailyRewards
+		{
+			file = "GG_SecretCode\code\dailyRewards";
+			class dailyRewards_animation {};
+			class dailyRewards_showReward {};
+			class dailyRewards_RespectReward {};
+			class dailyRewards_TabsReward {};
+			class dailyRewards_CrateReward {};
+			class dailyRewards_onButtonClick {};
 		};
 		class main
 		{
