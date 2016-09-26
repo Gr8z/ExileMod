@@ -12,7 +12,7 @@
 	'ahmed-banna@hotmail.com'
 	
 	Last download was on:
-	'23-Sep-2016 06-02-42';
+	'26-Sep-2016 07-25-48';
 	
 	NOTE:
 	THIS FILE SHOULD NOT BE TOUCHED UNLESS YOU REALLY KNOW WHAT YOU ARE DOING!
@@ -386,73 +386,69 @@ publicVariable "fn_onPlayerTake";
 
 if(_stopSafeGlitchAndCorpseDupe)then{
 fn_onInventoryOpened = compileFinal "
-	_cancelEvent = _this call ExileClient_object_player_event_onInventoryOpened;
-	if(!_cancelEvent)then
+	_container = _this select 1;
+	
+	_locked = locked _container isEqualTo 2;
+	_ExileIsLocked = _container getVariable ['ExileIsLocked', 1] isEqualTo -1;
+	_lockedNear = false;
+	
+	if(!_locked && !_ExileIsLocked)then
 	{
-		_container = _this select 1;
-		
-		_locked = locked _container isEqualTo 2;
-		_ExileIsLocked = _container getVariable ['ExileIsLocked', 1] isEqualTo -1;
-		_lockedNear = false;
-		
-		if(!_locked && !_ExileIsLocked)then
+		if((_container isKindOf 'GroundWeaponHolder')||(_container isKindOf 'WeaponHolderSimulated')||(_container isKindOf 'LootWeaponHolder')||(_container isKindOf 'Man'))then
 		{
-			if((_container isKindOf 'GroundWeaponHolder')||(_container isKindOf 'WeaponHolderSimulated')||(_container isKindOf 'LootWeaponHolder')||(_container isKindOf 'Man'))then
+			_vehicles = player nearObjects ['AllVehicles', 7];
+			if(!_lockedNear)then
 			{
-				_vehicles = player nearObjects ['AllVehicles', 7];
-				if(!_lockedNear)then
 				{
+					_lockedxx = locked _x isEqualTo 2;
+					_ExileIsLockedxx = _x getVariable ['ExileIsLocked', 1] isEqualTo -1;
+					if((_lockedxx || _ExileIsLockedxx) && !(_x in [_container,vehicle _container]))exitWith
 					{
-						_lockedxx = locked _x isEqualTo 2;
-						_ExileIsLockedxx = _x getVariable ['ExileIsLocked', 1] isEqualTo -1;
-						if((_lockedxx || _ExileIsLockedxx) && !(_x in [_container,vehicle _container]))exitWith
-						{
-							_lockedNear = true;
-							systemChat 'locked vehicle to close.. gear menu will not show the cargo tab!';
-						};
-					} forEach _vehicles;
-				};
-				if(!_lockedNear)then
-				{
-					{
-						_obj = _x;
-						if(!(_obj isKindOf 'Man')&&(_container isKindOf 'Man')&&(!alive _container))exitWith
-						{
-							_lockedNear = true;
-							systemChat 'vehicle to close to dead body.. gear menu will not show the cargo tab!';
-						};
-					} forEach _vehicles;
-				};
-				if(!_lockedNear)then
-				{
-					{
-						_lockedx = locked _x isEqualTo 2;
-						_ExileIsLockedx = _x getVariable ['ExileIsLocked', 1] isEqualTo -1;
-						if(_lockedx || _ExileIsLockedx)exitWith
-						{
-							_lockedNear = true;
-							systemChat 'locked supply close.. gear menu will not show the cargo tab!';
-						};
-					} forEach (player nearSupplies 5);
-				};
+						_lockedNear = true;
+						systemChat 'locked vehicle to close.. gear menu will not show the cargo tab!';
+					};
+				} forEach _vehicles;
 			};
-		};
-		if(_locked || _ExileIsLocked || _lockedNear)then
-		{
-			if(!isNil'checkGearDisplayThread')then{terminate checkGearDisplayThread;checkGearDisplayThread=nil;};
-			checkGearDisplayThread = [] spawn {
-				disableSerialization;
-				_fn_hide_cargo = {
-					((findDisplay 602) displayCtrl 6401) ctrlEnable false;
-					ctrlSetFocus ((findDisplay 602) displayCtrl 6321);
-					ctrlActivate ((findDisplay 602) displayCtrl 6321);
-				};
-				waitUntil {call _fn_hide_cargo;!isNull findDisplay 602};
-				waitUntil {call _fn_hide_cargo;isNull findDisplay 602};
+			if(!_lockedNear)then
+			{
+				{
+					_obj = _x;
+					if(!(_obj isKindOf 'Man')&&(alive _obj)&&(_container isKindOf 'Man')&&(!alive _container))exitWith
+					{
+						_lockedNear = true;
+						systemChat 'vehicle to close to dead body.. gear menu will not show the cargo tab!';
+					};
+				} forEach _vehicles;
+			};
+			if(!_lockedNear)then
+			{
+				{
+					_lockedx = locked _x isEqualTo 2;
+					_ExileIsLockedx = _x getVariable ['ExileIsLocked', 1] isEqualTo -1;
+					if(_lockedx || _ExileIsLockedx)exitWith
+					{
+						_lockedNear = true;
+						systemChat 'locked supply close.. gear menu will not show the cargo tab!';
+					};
+				} forEach (player nearSupplies 5);
 			};
 		};
 	};
-	_cancelEvent
+	if(_locked || _ExileIsLocked || _lockedNear)then
+	{
+		if(!isNil'checkGearDisplayThread')then{terminate checkGearDisplayThread;checkGearDisplayThread=nil;};
+		checkGearDisplayThread = [] spawn {
+			disableSerialization;
+			_fn_hide_cargo = {
+				((findDisplay 602) displayCtrl 6401) ctrlEnable false;
+				ctrlSetFocus ((findDisplay 602) displayCtrl 6321);
+				ctrlActivate ((findDisplay 602) displayCtrl 6321);
+			};
+			waitUntil {call _fn_hide_cargo;!isNull findDisplay 602};
+			waitUntil {call _fn_hide_cargo;isNull findDisplay 602};
+		};
+	};
+	_this call ExileClient_object_player_event_onInventoryOpened
 ";
 publicVariable "fn_onInventoryOpened";
 }
@@ -623,44 +619,58 @@ true
 
 if(_block_glitch_actions || _wall_glitch_object || _wall_glitch_vehicle)then{
 	fnc_check_if_enemy_base = compileFinal "
-		_flags = player nearObjects ['Exile_Construction_Flag_Static', 55];
-		if(_flags isEqualTo [])exitWith{false};
-		
-		_grp = group player;
-		_groupID = groupID _grp;
-		
-		_uids = [getPlayerUID player];
-		if!(_groupID isEqualTo '')then
+		if(isNil'last_check_if_enemy_base')then{last_check_if_enemy_base=0;};
+		if(isNil'last_ret_check_if_enemy_base')then{last_ret_check_if_enemy_base=true;};
+		if(last_check_if_enemy_base < diag_tickTime)then
 		{
-			{
-				_xuid = getPlayerUID _x;
-				if!(_xuid isEqualTo '')then
+			_ret = call {
+				_flags = player nearObjects ['Exile_Construction_Flag_Static', 90];
+				if(_flags isEqualTo [])exitWith{false};
+				
+				_grp = group player;
+				_groupID = groupID _grp;
+				
+				_uids = [getPlayerUID player];
+				if!(_groupID isEqualTo '')then
 				{
-					_uids pushBackUnique _xuid;
-				};
-			} forEach (units _grp);
-		};
-		
-		scopeName 'MAIN_FLAG';
-		_val = true;
-		{
-			_flag = _x;
-			_flagStolen = _flag getvariable ['ExileFlagStolen',-999];
-			if(_flagStolen isEqualTo 1)exitWith{_val = false;breakTo 'MAIN_FLAG';};
-			
-			_radius = _flag getVariable['ExileTerritorySize', -1];
-			if((player distance _flag) < _radius)then
-			{
-				_buildRights = _flag getVariable['ExileTerritoryBuildRights', []];
-				{
-					if(_x in _buildRights)exitWith
 					{
-						_val = false;breakTo 'MAIN_FLAG';
+						_xuid = getPlayerUID _x;
+						if!(_xuid isEqualTo '')then
+						{
+							_uids pushBackUnique _xuid;
+						};
+					} forEach (units _grp);
+				};
+				
+				scopeName 'MAIN_FLAG';
+				_val = true;
+				{
+					_flag = _x;
+					_flagStolen = _flag getvariable ['ExileFlagStolen',-999];
+					if(_flagStolen isEqualTo 1)exitWith{_val = false;breakTo 'MAIN_FLAG';};
+					
+					_radius = _flag getVariable['ExileTerritorySize', -1];
+					if((player distance _flag) < _radius)then
+					{
+						_buildRights = _flag getVariable['ExileTerritoryBuildRights', []];
+						{
+							if(_x in _buildRights)exitWith
+							{
+								_val = false;breakTo 'MAIN_FLAG';
+							};
+						} forEach _uids;
 					};
-				} forEach _uids;
+				} forEach _flags;
+				_val
 			};
-		} forEach _flags;
-		_val
+			last_check_if_enemy_base = diag_tickTime + 10;
+			last_ret_check_if_enemy_base = _ret;
+			_ret
+		}
+		else
+		{
+			last_ret_check_if_enemy_base
+		};
 	";
 	publicVariable "fnc_check_if_enemy_base";
 };

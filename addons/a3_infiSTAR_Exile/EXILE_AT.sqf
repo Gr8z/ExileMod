@@ -9,7 +9,7 @@
 	Arma AntiHack & AdminTools - infiSTAR.de
 */
 comment 'Antihack & AdminTools - Christian Lorenzen - www.infiSTAR.de';
-VERSION_DATE_IS = '12-Sep-2016 13-05-07#214';
+VERSION_DATE_IS = '26-Sep-2016 07-25-48#214';
 infiSTAR_customFunctions = [];
 _configClasses = "true" configClasses (configfile >> "CfgCustomFunctions");
 {
