@@ -1,4 +1,4 @@
-ExAd_DV_DESPAWN_IDLE_TIME = 600;
+ExAd_DV_DESPAWN_IDLE_TIME = 300;
 
 ExAd_XM8_DV_fnc_itemsInCargo = {
 	params ["_container","_itemArray","_item","_amount","_response"];

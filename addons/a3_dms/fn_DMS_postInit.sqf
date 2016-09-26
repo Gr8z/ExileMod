@@ -205,7 +205,7 @@ if (DMS_ShowDifficultyColorLegend) then
 
 
 // Add heli paratroopers monitor to the thread system.
-[5, DMS_fnc_HeliParatroopers_Monitor, [], true] call ExileServer_system_thread_addTask;
+//[5, DMS_fnc_HeliParatroopers_Monitor, [], true] call ExileServer_system_thread_addTask;
 
 
 {
