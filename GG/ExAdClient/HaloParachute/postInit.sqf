@@ -14,22 +14,21 @@ if(isNil "ExAd_ACTION_EJECT_HEIGHT")then{ExAd_ACTION_EJECT_HEIGHT = 0;};
 if(isNil "ExAd_ParaActionAdded")then{ExAd_ParaActionAdded = false;};
 if(isNil "ExAd_EjectActionAdded")then{ExAd_EjectActionAdded = false;};
 
-if(ExAd_HALOPARACHUTE_USE_KEY_ACTIONS)then{
-	ExAd_ACTION_HALOPARACHUTE_USE_KEY_ACTIONS = (findDisplay 46) displayAddEventHandler ["KeyDown",{
-		if(_this select 1 == 45 && _this select 2 && _this select 4)then{
-			if((getPos player) select 2 > ExAd_ACTION_EJECT_HEIGHT && vehicle player != player)then{
-				call ExAd_fnc_ejectPlayer
-			}else{
-				if(call ExAd_fnc_showParachute)then{
-					[] spawn ExAd_fnc_pullParachute
-				}
-			}
-		}
-	}];
-};
 
 if(ExAd_HALOPARACHUTE_USE_KEY_ACTIONS)then{
-	(findDisplay 46) displayRemoveEventHandler ["KeyDown", ExAd_ACTION_HALOPARACHUTE_USE_KEY_ACTIONS];
+	ExAdEject = [] spawn {
+		ExAd_ACTION_HALOPARACHUTE_USE_KEY_ACTIONS = (findDisplay 46) displayAddEventHandler ["KeyDown",{
+			if(_this select 1 == 45 && _this select 2 && _this select 4)then{
+				if((getPos player) select 2 > ExAd_ACTION_EJECT_HEIGHT && vehicle player != player)then{
+					call ExAd_fnc_ejectPlayer
+				}else{
+					if(call ExAd_fnc_showParachute)then{
+						[] spawn ExAd_fnc_pullParachute
+					}
+				}
+			}
+		}];
+	};
 };
 
 ExAdParachuteLoop = 
@@ -77,7 +76,7 @@ ExAdParachuteLoop =
 	{
 	if (ExAd_EjectActionAdded) then
 	{
-				player removeAction ExAd_ACTION_EJECT;
+			player removeAction ExAd_ACTION_EJECT;
 			ExAd_EjectActionAdded = false;
 		};
 	};
