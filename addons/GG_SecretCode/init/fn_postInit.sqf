@@ -1,7 +1,7 @@
 [] call GG_fnc_mapText;
 [] call GG_fnc_welcomeText;
 [] call GG_fnc_drawToMap;
-publicVariable "GG_fnc_statusBar";
+remoteExecCall ["GG_fnc_statusBar", -2];
 [] call GG_fnc_airDrops;
 [] call GG_fnc_craftingApp;
 [] call GG_fnc_selfie;
