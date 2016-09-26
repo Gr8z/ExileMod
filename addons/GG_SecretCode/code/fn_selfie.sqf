@@ -1,66 +1,46 @@
-SELFIE_APP__CODE = {
+try
+{
+	if  ((nearestObject [player,'Exile_Construction_Abstract_Static']) distance player < 75) exitWith {
+	  throw "Selfie Failed, You are near a base.";
+	};
 
-	ExAd_XM8_Selfie_fnc_TakeSelfie = {
+	if (ExileClientPlayerIsInCombat) exitWith {
+	 	throw "Selfie Failed, You are in combat.";
+	};
 
-		try
-		{
-			if  ((nearestObject [player,'Exile_Construction_Abstract_Static']) distance player < 75) exitWith {
-			  throw "Selfie Failed, You are near a base.";
-			};
+	[] spawn {
+		player enablesimulation false; 
+		showCinemaBorder true;
+		_camera = "camera" camCreate (player modelToWorld [1,1,2]);
+		_camera cameraEffect ["Internal","TOP"];  
+		_camera camSetTarget vehicle player;  
+		_camera camSetRelPos [0,2,2];  
+		_camera camCommit 5;  
 
-			if (ExileClientPlayerIsInCombat) exitWith {
-			 	throw "Selfie Failed, You are in combat.";
-			};
+		waitUntil {camCommitted _camera};
+		cutText ['','WHITE IN'];
+		playSound "cam";
 
-			[] spawn {
-				player enablesimulation false; 
-				showCinemaBorder true;
-				_camera = "camera" camCreate (player modelToWorld [1,1,2]);
-				_camera cameraEffect ["Internal","TOP"];  
-				_camera camSetTarget vehicle player;  
-				_camera camSetRelPos [0,2,2];  
-				_camera camCommit 5;  
+		_filepath = "GG\Selfie\GG"+ str(round(random 10000)) +".png";
+		_filepathFull = "Documents\Arma 3 - Other Profiles\"+ name player +"\Screenshots\"+_filepath;
+		screenshot _filepath;
 
-				waitUntil {camCommitted _camera};
-				cutText ['','WHITE IN'];
-				playSound "cam";
+		uiSleep 2;
+		player enablesimulation true;
+		_camera cameraEffect ["terminate","back"];
+		camDestroy _camera;
 
-				_filepath = "GG\Selfie\GG"+ str(round(random 10000)) +".png";
-				_filepathFull = "Documents\Arma 3 - Other Profiles\"+ name player +"\Screenshots\"+_filepath;
-				screenshot _filepath;
+		2 cutText [format["Selfie Saved at %1", _filepathFull], "PLAIN DOWN", 1];
+	};
 
-				uiSleep 2;
-				player enablesimulation true;
-				_camera cameraEffect ["terminate","back"];
-				camDestroy _camera;
-
-				2 cutText [format["Selfie Saved at %1", _filepathFull], "PLAIN DOWN", 1];
-			};
-
-			["extraApps", 1] call ExileClient_gui_xm8_slide;
-			closeDialog 0;
-		}
-		catch
-		{
-			[_exception] spawn {
-				UISleep 0.5; 
-				["ErrorTitleAndText", ["Selfie", _this select 0]] call ExileClient_gui_toaster_addTemplateToast;
-				["extraApps", 1] call ExileClient_gui_xm8_slide;
-			};
-		};
-
+	["extraApps", 1] call ExileClient_gui_xm8_slide;
+	closeDialog 0;
+}
+catch
+{
+	[_exception] spawn {
+		UISleep 0.5; 
+		["ErrorTitleAndText", ["Selfie", _this select 0]] call ExileClient_gui_toaster_addTemplateToast;
+		["extraApps", 1] call ExileClient_gui_xm8_slide;
 	};
 };
-publicVariable 'SELFIE_APP__CODE';
-
-[] spawn {
-	waitUntil{!isNil'FN_infiSTAR_S'};
-	['',{
-		if(!isNil'SELFIE_APP_JIP_T')then{terminate SELFIE_APP_JIP_T;SELFIE_APP_JIP_T=nil;};
-		SELFIE_APP_JIP_T = [] spawn {
-			waitUntil {!isNil 'SELFIE_APP__CODE'};
-			[] call SELFIE_APP__CODE;
-		};
-	},-2,'SELFIE_APP_JIP'] call FN_infiSTAR_S;
-};
-true

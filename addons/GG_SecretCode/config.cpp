@@ -28,7 +28,6 @@ class CfgFunctions
 			class craftingApp {};
 			class selfie {};
 			class flashlight {};
-			class mapIcon {};
 			class dailyRewards {};
 		};
 		class main

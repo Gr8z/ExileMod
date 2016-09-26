@@ -8020,7 +8020,7 @@ class CfgXM8
 	class GG_Selfie
 	{
 		title = "Selfie";
-		quickFunction = "['GG_Selfie'] spawn ExAd_XM8_Selfie_fnc_TakeSelfie";
+		quickFunction = "['GG_Selfie'] spawn GG_fnc_selfie";
 		logo = "GG\ExAdClient\XM8\Apps\Selfie\icon_Selfie.paa";
 	};
 	class GG_Scan

@@ -4,9 +4,8 @@
 publicVariable "GG_fnc_statusBar";
 [] call GG_fnc_airDrops;
 [] call GG_fnc_craftingApp;
-[] call GG_fnc_selfie;
+publicVariable "GG_fnc_selfie";
 [] call GG_fnc_flashlight;
 [] call GG_fnc_dailyRewards;
-//[] call GG_fnc_mapIcon;
 
 true
