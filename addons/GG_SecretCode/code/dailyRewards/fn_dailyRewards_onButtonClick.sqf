@@ -13,4 +13,4 @@ _RewardClaim ctrlEnable false;
 _RewardClose ctrlEnable false;
 _RewardText ctrlSetStructuredText parseText "<t align='center' size='1'>Choosing a reward...</t>";
 
-[] spawn GG_fnc_dailyRewards_dailyRewards_animation;
+[] spawn GG_fnc_dailyRewards_animation;

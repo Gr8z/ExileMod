@@ -11,13 +11,13 @@ _RewardClose = (_display displayCtrl 1004);
 _rewardList = ["respect","tabs","crate"] call BIS_fnc_selectRandom;
 switch (_rewardList) do { 
 	case "respect" : { 
-		call GG_fnc_dailyRewards_dailyRewards_RespectReward;
+		call GG_fnc_dailyRewards_RespectReward;
 	};
 	case "tabs" : { 
-		call GG_fnc_dailyRewards_dailyRewards_TabsReward;
+		call GG_fnc_dailyRewards_TabsReward;
 	};
 	case "crate" : {  
-		call GG_fnc_dailyRewards_dailyRewards_CrateReward;
+		call GG_fnc_dailyRewards_CrateReward;
 	};
 };
 

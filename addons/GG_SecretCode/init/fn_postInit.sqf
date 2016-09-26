@@ -12,7 +12,7 @@ publicVariable "GG_fnc_airDrops_okDrop";
 publicVariable "GG_fnc_craftingApp_componentsLoad";
 publicVariable "GG_fnc_craftingApp_recipeLoad";
 
-publicVariable "GG_fnc_dailyRewards_dailyRewards_animation";
+publicVariable "GG_fnc_dailyRewards_animation";
 publicVariable "GG_fnc_dailyRewards_showReward";
 publicVariable "GG_fnc_dailyRewards_RespectReward";
 publicVariable "GG_fnc_dailyRewards_TabsReward";

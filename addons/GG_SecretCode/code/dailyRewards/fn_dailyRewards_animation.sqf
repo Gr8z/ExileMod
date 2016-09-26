@@ -26,4 +26,4 @@ while {_a =_a + 1; _a < 8} do {
 _suffleDone = true;
 
 waitUntil {!isNil '_suffleDone'};
-[] call GG_fnc_dailyRewards_dailyRewards_showReward;
+[] call GG_fnc_dailyRewards_showReward;
