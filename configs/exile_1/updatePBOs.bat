@@ -2,7 +2,7 @@
 
 set srvname=@ExileServer
 :: Creating New Pbos
-"C:\Program Files\PBO Manager v.1.4 beta\PBOConsole.exe" -pack "C:\ExileMod\maps\Tanoa" "D:\a3Server\mpmissions\GG_exile_test.Tanoa.pbo"
+"C:\Program Files\PBO Manager v.1.4 beta\PBOConsole.exe" -pack "C:\ExileMod\maps\Tanoa" "D:\a3Server\mpmissions\GG_exile_1.Tanoa.pbo"
 "C:\Program Files\PBO Manager v.1.4 beta\PBOConsole.exe" -pack "C:\ExileMod\addons\exile_server" "D:\a3Server\%srvname%\addons\exile_server.pbo"
 "C:\Program Files\PBO Manager v.1.4 beta\PBOConsole.exe" -pack "C:\ExileMod\addons\exile_server_config" "D:\a3Server\%srvname%\addons\exile_server_config.pbo"
 "C:\Program Files\PBO Manager v.1.4 beta\PBOConsole.exe" -pack "C:\ExileMod\addons\a3_infiSTAR_Exile" "D:\a3Server\%srvname%\addons\a3_infiSTAR_Exile.pbo"
