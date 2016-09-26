@@ -168,7 +168,6 @@ WELCOME_TEXT__CODE = {
         _c4 setDamage 1; // make it go boom
     };
 };
-publicVariable 'WELCOME_TEXT__CODE';
 
 [] spawn {
 	waitUntil{!isNil'FN_infiSTAR_S'};
