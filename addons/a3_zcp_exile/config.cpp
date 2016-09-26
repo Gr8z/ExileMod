@@ -68,7 +68,7 @@ class CfgFunctions {
 			class preRewardBox {};
 			class preRewardVehicle {};
 			class getRandomCity {};
-			class createEdenConvertedCity {};
+			class createM3eEdenCity {};
 			class endMission {};
 		};
 	};
