@@ -3691,6 +3691,8 @@ class CfgExileCustomCode
     ExileClient_gui_xm8_slide_territory_event_onTerritoryDropdownSelectionChanged = 	"GG\custom\ExileClient_gui_xm8_slide_territory_event_onTerritoryDropdownSelectionChanged.sqf";
     ExileClient_util_playerEquipment_add =                                              "GG\custom\ExileClient_util_playerEquipment_add.sqf";
     ExileClient_object_player_event_onHandleDamage =                                    "GG\custom\ExileClient_object_player_event_onHandleDamage.sqf";
+    ExileClient_util_gear_getCompatibleWeaponItems =                                    "GG\custom\ExileClient_util_gear_getCompatibleWeaponItems.sqf";
+    ExileClient_util_item_getCompatibleWeaponItems =                                    "GG\custom\ExileClient_util_item_getCompatibleWeaponItems.sqf";
 };
 
 class CfgExileEnvironment
