@@ -26,7 +26,23 @@ if(_ZCP_RV_preVechicle isEqualTo objNull) then {
     clearMagazineCargoGlobal _ZCP_RV_vehicle;
     clearBackpackCargoGlobal _ZCP_RV_vehicle;
     clearItemCargoGlobal _ZCP_RV_vehicle;
+    _ZCP_RV_vehicle setAmmoCargo 0;
 
+    if (_ZCP_RV_vehicleClass isKindOf "I_Heli_light_03_F") then
+    {
+        _ZCP_RV_vehicle removeWeaponturret ["missiles_DAR", [-1]];
+        _ZCP_RV_vehicle removeMagazineTurret ["24Rnd_missiles", [-1]];
+    };
+    if (_ZCP_RV_vehicleClass isKindOf "O_Heli_Light_02_F") then
+    {
+        _ZCP_RV_vehicle removeWeaponturret ["missiles_DAR", [-1]];
+        _ZCP_RV_vehicle removeMagazineTurret ["24Rnd_missiles", [-1]];
+    };
+    if (_ZCP_RV_vehicleClass isKindOf "B_Heli_Light_01_armed_F") then
+    {
+        _ZCP_RV_vehicle removeWeaponturret ["missiles_DAR", [-1]];
+        _ZCP_RV_vehicle removeMagazineTurret ["24Rnd_missiles", [-1]];
+    };
     if (_ZCP_RV_vehicleClass isKindOf "I_UGV_01_F") then
     {
     	createVehicleCrew _ZCP_RV_vehicle;
