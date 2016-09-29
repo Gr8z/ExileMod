@@ -669,7 +669,7 @@ switch (_option) do
                     } else {
                         if !(parseNumber(ctrlText 21011) isEqualTo 0) then
                         {
-                            if !(parseNumber(ctrlText 21011) > 100) then {
+                            if !(parseNumber(ctrlText 21011) > 99) then {
                                 ["ErrorTitleAndText", ["Marketplace", "You cannot list something for less then 100 pop tabs."]] call ExileClient_gui_toaster_addTemplateToast;
                                 MarXet_ListingArray = nil;
                             } else {
