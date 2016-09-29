@@ -1,13 +1,4 @@
-///////////////////////////////////////////////////////////
-//														 //
-//	EXO Servers base1 by Crunch for Zupa Capture Points	 //				 
-//	http://www.exo-servers.com							 //
-//														 //
-///////////////////////////////////////////////////////////
-
-private ["_obj"];
-
-_obj = [
+private _objs = [
 	["FlagCarrierCDF",[3945.39,3962.32,0],180,[0,0,1],true],
 	["Land_CncShelter_F",[3945.29,3945.56,0],0,[0,0,1],true],
 	["Land_CncShelter_F",[3945.29,3944.02,0],0,[0,0,1],true],
@@ -59,4 +50,4 @@ _obj = [
 	["Land_CncWall4_F",[3928.61,3957.62,-1.05061],90,[0,0,1],true]
 ];
 
-_obj
+_objs
