@@ -1,4 +1,4 @@
-private["_vehicle","_availableHitpoints","_fixable","_equippedMagazines"];
+private["_vehicle","_availableHitpoints","_fixable","_equippedMagazines","_vehdamage"];
 
 if (ExileClientActionDelayShown) exitWith { false };
 ExileClientActionDelayShown = true;
@@ -21,6 +21,12 @@ _availableHitpoints = (getAllHitPointsDamage _vehicle) select 0;
 	{
 		_fixable = "potato";
 	};
+}
+forEach _availableHitpoints;
+
+_vehdamage = 0;
+{
+	_vehdamage = (_vehicle getHitPointDamage _x) + _vehdamage;
 }
 forEach _availableHitpoints;
 
@@ -63,7 +69,7 @@ else
 					["switchMoveRequest", [netId player, _animation]] call ExileClient_system_network_send;
 
 					_startTime = diag_tickTime;
-					_duration = 35;
+					_duration = 35 + _vehdamage;
 					_sleepDuration = _duration / 100;
 					_progress = 0;
 
