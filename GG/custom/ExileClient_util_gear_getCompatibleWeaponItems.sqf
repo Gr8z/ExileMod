@@ -7,18 +7,8 @@ _weaponClassName = _this;
 _weaponConfig = configFile >> "CfgWeapons" >> _weaponClassName;
 _compatibleItems = getArray (_weaponConfig >> "magazines");
 
-/*
 {
-	if (isClass (_weaponConfig >> "WeaponSlotsInfo" >> _x)) then
-	{
-		_compatibleItems append getArray (_weaponConfig >> "WeaponSlotsInfo" >> _x >> "compatibleItems");
-	};
-}
-forEach ["CowsSlot", "PointerSlot", "MuzzleSlot", "UnderBarrelSlot"];
-*/
-
-{
-	_getcompatibleItems = [_weaponClassName, _x] call asdg_fnc_compatibleItems;
+	_getcompatibleItems = [_weaponClassName] call asdg_fnc_compatibleItems;
 	_compatibleItems append _getcompatibleItems;
 
 }forEach [101,201,301,302];
