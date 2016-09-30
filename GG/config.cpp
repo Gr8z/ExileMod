@@ -4034,31 +4034,31 @@ class CfgInteractionMenus
 			{
 				title = "REPAIR INFO";
 				condition = "true";
-				action = "_this call GG_fnc_repairVechicle_displayVehicleRepairInfo";
+				action = "_this call GG_fnc_repairVehicle_displayVehicleRepairInfo";
 			};
 			class ReplaceWheels: ExileAbstractAction
 			{
 				title = "Replace wheel";
 				condition = "true";
-				action = "_this call GG_fnc_repairVechicle_repairWheels";
+				action = "_this call GG_fnc_repairVehicle_repairWheels";
 			};
 			class RepairWheels: ExileAbstractAction
 			{
 				title = "Repair wheel";
 				condition = "true";
-				action = "_this call GG_fnc_repairVechicle_repairSingleWheel";
+				action = "_this call GG_fnc_repairVehicle_repairSingleWheel";
 			};
 			class ScavengeWheels: ExileAbstractAction
 			{
 				title = "Scavenge wheel";
 				condition = "true";
-				action = "_this call GG_fnc_repairVechicle_scavengeWheel";
+				action = "_this call GG_fnc_repairVehicle_scavengeWheel";
 			};
 			class RepairBody: ExileAbstractAction
 			{
 				title = "Repair body";
 				condition = "true";
-				action = "_this call GG_fnc_repairVechicle_vehicleRepairCar";
+				action = "_this call GG_fnc_repairVehicle_vehicleRepairCar";
 			};
 
 			// Hot-wires a vehicle
@@ -4161,19 +4161,19 @@ class CfgInteractionMenus
 			{
 				title = "REPAIR INFO";
 				condition = "true";
-				action = "_this call GG_fnc_repairVechicle_displayVehicleRepairInfo";
+				action = "_this call GG_fnc_repairVehicle_displayVehicleRepairInfo";
 			};
 			class RepairMinor: ExileAbstractAction
 			{
 				title = "Minor repair";
 				condition = "true";
-				action = "_this call GG_fnc_repairVechicle_repairchopperhalf";
+				action = "_this call GG_fnc_repairVehicle_repairchopperhalf";
 			};
 			class RepairFull: ExileAbstractAction
 			{
 				title = "Full repair";
 				condition = "true";
-				action = "_this call GG_fnc_repairVechicle_repairchopper";
+				action = "_this call GG_fnc_repairVehicle_repairchopper";
 			};
 			
 			// Flips a vehicle so the player doesnt have to call an admin
