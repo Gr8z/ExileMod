@@ -17,7 +17,7 @@ _goodWheels = [];
 if (!local _vehicle) then
 {
 	[
-		"InfoTitleAndText", 
+		"ErrorTitleAndText", 
 		["Repair Info", "Get in driver seat first"]
 	] call ExileClient_gui_toaster_addTemplateToast;
 }
@@ -92,8 +92,8 @@ else
 						case 1: 	
 						{ 
 							[
-								"InfoTitleAndText", 
-								["Scavenge Info", "Do not move while scavenging"]
+								"ErrorTitleAndText", 
+								["Scavenge Info", "Scavenge cancelled"]
 							] call ExileClient_gui_toaster_addTemplateToast;
 							_progressBarColor = [0.82, 0.82, 0.82, 1];
 						};

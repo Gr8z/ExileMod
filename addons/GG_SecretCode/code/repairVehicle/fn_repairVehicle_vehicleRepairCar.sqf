@@ -9,7 +9,7 @@ _vehicle = _this select 0;
 if (vehicle player isEqualTo _vehicle) exitWith 
 {
 	[
-		"InfoTitleAndText", 
+		"ErrorTitleAndText", 
 		["Repair Info", "Are you serious?"]
 	] call ExileClient_gui_toaster_addTemplateToast;
 	ExileClientActionDelayShown = false;
@@ -46,7 +46,7 @@ if (isNil "_fixable") exitWith
 if (!local _vehicle) then
 {
 	[
-		"InfoTitleAndText", 
+		"ErrorTitleAndText", 
 		["Repair Info", "Get in driver seat first"]
 	] call ExileClient_gui_toaster_addTemplateToast;
 }
@@ -126,8 +126,8 @@ else
 				case 1: 	
 				{ 
 					[
-						"InfoTitleAndText", 
-						["Repair Info", "Do not move during repair"]
+						"ErrorTitleAndText", 
+						["Repair Info", "Repair Cancelled"]
 					] call ExileClient_gui_toaster_addTemplateToast;
 					_progressBarColor = [0.82, 0.82, 0.82, 1];
 				};
@@ -148,7 +148,7 @@ else
 	else 
 	{
 		[
-			"InfoTitleAndText", 
+			"ErrorTitleAndText", 
 			["Repair Info", "You need duct tape"]
 		] call ExileClient_gui_toaster_addTemplateToast;
 	};
