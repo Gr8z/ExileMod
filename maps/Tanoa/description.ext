@@ -114,10 +114,17 @@ class CfgSounds
         titles[] = {};
     };
 	
-	class safeTrap
+    class safeTrap
+    {
+        name = "Xbrm_safeTrapped";
+        sound[] = {"\GG\sounds\bomb.ogg", 1, 1};
+        titles[] = {};
+    };
+
+	class gunShot
 	{
-		name = "Xbrm_safeTrapped";
-		sound[] = {"\GG\sounds\bomb.ogg", 1, 1};
+		name = "gunShot";
+		sound[] = {"\GG\sounds\gunshot.ogg", 1, 1};
 		titles[] = {};
 	};
 };
