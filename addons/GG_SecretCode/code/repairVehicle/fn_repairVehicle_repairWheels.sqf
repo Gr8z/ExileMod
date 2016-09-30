@@ -23,7 +23,7 @@ _availableHitpoints = (getAllHitPointsDamage _vehicle) select 0;
 }
 forEach _availableHitpoints;
 
-_wheels = [_vehicle] call JohnO_fnc_getVehicleType;
+_wheels = [_vehicle] call GG_fnc_repairVehicle_getVehicleType;
 _broken = [];
 {
 	if ((_vehicle getHitPointDamage _x) > 0) then
