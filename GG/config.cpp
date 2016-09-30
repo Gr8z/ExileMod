@@ -3686,7 +3686,6 @@ class CfgExileCustomCode
     ExileClient_gui_wasteDumpDialog_show =                  							"GG\custom\ExileClient_gui_wasteDumpDialog_show.sqf";
     ExileClient_object_player_event_onInventoryOpened =     							"GG\custom\ExileClient_object_player_event_onInventoryOpened.sqf";
     ExileClient_gui_lockerDialog_show =													"GG\custom\ExileClient_gui_lockerDialog_show.sqf";
-    ExileClient_system_locker_network_lockerResponse =									"GG\custom\ExileClient_system_locker_network_lockerResponse.sqf";
     ExileClient_gui_upgradeTerritoryDialog_event_onTerritoryDropDownSelectionChanged = 	"GG\custom\ExileClient_gui_upgradeTerritoryDialog_event_onTerritoryDropDownSelectionChanged.sqf";
     ExileClient_gui_xm8_slide_territory_event_onTerritoryDropdownSelectionChanged = 	"GG\custom\ExileClient_gui_xm8_slide_territory_event_onTerritoryDropdownSelectionChanged.sqf";
     ExileClient_util_playerEquipment_add =                                              "GG\custom\ExileClient_util_playerEquipment_add.sqf";
@@ -4270,9 +4269,15 @@ class CfgInteractionMenus
         {
             class Locker: ExileAbstractAction
             {
-                title = "ATM";
+                title = "Bank";
                 condition = "true";
                 action = "_this call ExileClient_gui_lockerDialog_show";
+            };
+            class FamilyLocker: ExileAbstractAction
+            {
+                title = "Family Bank";
+                condition = "!(ExileClientClanInfo isEqualTo [])";
+                action = "_this call ExileClient_gui_FamilylockerDialog_show";
             };
         };
     };
@@ -4729,6 +4734,7 @@ class CfgLocker
 	numbersOnly = "0123456789";
 	
 	maxDeposit = 500000;
+	maxFamilyDeposit = 1000000;
 };
 class CfgPlayer 
 {

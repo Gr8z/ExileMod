@@ -1,5 +1,5 @@
 /**
- * ExileClient_gui_lockerDialog_show
+ * ExileClient_gui_FamilylockerDialog_show
  */
  
 private["_lockerTitle","_dialog","_lockerAmount","_lockerLimit","_depositInput","_withdrawInput","_lockerAmountLabel","_inventoryAmount","_inventoryAmountString","_inventoryAmountLabel"];
@@ -7,9 +7,9 @@ disableSerialization;
 createDialog "RscExileLockerDialog";
 _dialog = uiNameSpace getVariable ["RscExileLockerDialog", displayNull];
 _lockerAmount = [(player getVariable ["ExileLocker", 0])] call BIS_fnc_numberText;
-_lockerLimit = [(getNumber(missionConfigFile >> "CfgLocker" >> "maxDeposit"))] call BIS_fnc_numberText;
+_lockerLimit = [(getNumber(missionConfigFile >> "CfgLocker" >> "maxFamilyDeposit"))] call BIS_fnc_numberText;
 _lockerTitle = _dialog displayCtrl 1001;
-_lockerTitle ctrlSetText "Bank";
+_lockerTitle ctrlSetText "Family Bank";
 _depositInput = _dialog displayCtrl 4006;
 _depositInput ctrlSetText "";
 _withdrawInput = _dialog displayCtrl 4005;

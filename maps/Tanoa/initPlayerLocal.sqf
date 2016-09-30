@@ -3,6 +3,7 @@
 
 missionNamespace setVariable ["ExileClient_KillMessages_network_KillMessages",(compileFinal preprocessFileLineNumbers "GG\KillMessages\ExileClient_KillMessages_network_KillMessages.sqf")];
 missionNamespace setVariable ["XG_killboardClient",(compileFinal preprocessFile "GG\KillMessages\XG_killboardClient.sqf")];
+missionNamespace setVariable ["ExileClient_gui_FamilylockerDialog_show",(compileFinal preprocessFile "GG\custom\ExileClient_gui_FamilylockerDialog_show.sqf")];
 
 if (!hasInterface || isServer) exitWith {};
 
