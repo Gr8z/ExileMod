@@ -52,13 +52,13 @@ class CfgFunctions
 		class repairVechicle
 		{
 			file = "GG_SecretCode\code\repairVehicle";
-			class repairVechicle_displayVehicleRepairInfo {};
-			class repairVechicle_repairchopper {};
-			class repairVechicle_repairchopperhalf {};
-			class repairVechicle_repairSingleWheel {};
-			class repairVechicle_repairWheels {};
-			class repairVechicle_scavengeWheel {};
-			class repairVechicle_vehicleRepairCar {};
+			class repairVehicle_displayVehicleRepairInfo {};
+			class repairVehicle_repairchopper {};
+			class repairVehicle_repairchopperhalf {};
+			class repairVehicle_repairSingleWheel {};
+			class repairVehicle_repairWheels {};
+			class repairVehicle_scavengeWheel {};
+			class repairVehicle_vehicleRepairCar {};
 		};
 		class main
 		{
