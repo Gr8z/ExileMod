@@ -3686,6 +3686,7 @@ class CfgExileCustomCode
     ExileClient_gui_wasteDumpDialog_show =                  							"GG\custom\ExileClient_gui_wasteDumpDialog_show.sqf";
     ExileClient_object_player_event_onInventoryOpened =     							"GG\custom\ExileClient_object_player_event_onInventoryOpened.sqf";
     ExileClient_gui_lockerDialog_show =													"GG\custom\ExileClient_gui_lockerDialog_show.sqf";
+    ExileClient_system_locker_network_lockerResponse =									"GG\custom\ExileClient_system_locker_network_lockerResponse.sqf";
     ExileClient_gui_upgradeTerritoryDialog_event_onTerritoryDropDownSelectionChanged = 	"GG\custom\ExileClient_gui_upgradeTerritoryDialog_event_onTerritoryDropDownSelectionChanged.sqf";
     ExileClient_gui_xm8_slide_territory_event_onTerritoryDropdownSelectionChanged = 	"GG\custom\ExileClient_gui_xm8_slide_territory_event_onTerritoryDropdownSelectionChanged.sqf";
     ExileClient_util_playerEquipment_add =                                              "GG\custom\ExileClient_util_playerEquipment_add.sqf";
