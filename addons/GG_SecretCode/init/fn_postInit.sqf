@@ -20,6 +20,7 @@ publicVariable "GG_fnc_dailyRewards_CrateReward";
 publicVariable "GG_fnc_dailyRewards_onButtonClick";
 
 publicVariable "GG_fnc_repairVehicle_displayVehicleRepairInfo";
+publicVariable "GG_fnc_repairVehicle_getVehicleType";
 publicVariable "GG_fnc_repairVehicle_repairchopper";
 publicVariable "GG_fnc_repairVehicle_repairchopperhalf";
 publicVariable "GG_fnc_repairVehicle_repairSingleWheel";

@@ -53,6 +53,7 @@ class CfgFunctions
 		{
 			file = "GG_SecretCode\code\repairVehicle";
 			class repairVehicle_displayVehicleRepairInfo {};
+			class repairVehicle_getVehicleType {};
 			class repairVehicle_repairchopper {};
 			class repairVehicle_repairchopperhalf {};
 			class repairVehicle_repairSingleWheel {};
