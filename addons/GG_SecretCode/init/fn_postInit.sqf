@@ -19,11 +19,8 @@ publicVariable "GG_fnc_dailyRewards_TabsReward";
 publicVariable "GG_fnc_dailyRewards_CrateReward";
 publicVariable "GG_fnc_dailyRewards_onButtonClick";
 
-publicVariable "GG_fnc_repairVehicle_displayVehicleRepairInfo";
 publicVariable "GG_fnc_repairVehicle_getVehicleType";
 publicVariable "GG_fnc_repairVehicle_repairchopper";
-publicVariable "GG_fnc_repairVehicle_repairchopperhalf";
-publicVariable "GG_fnc_repairVehicle_repairSingleWheel";
 publicVariable "GG_fnc_repairVehicle_repairWheels";
 publicVariable "GG_fnc_repairVehicle_scavengeWheel";
 publicVariable "GG_fnc_repairVehicle_vehicleRepairCar";

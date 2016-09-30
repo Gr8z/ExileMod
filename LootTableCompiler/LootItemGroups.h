@@ -1419,7 +1419,8 @@
 8, Exile_Item_ScrewDriver
 9, Exile_Melee_Axe
 4, Exile_Item_CordlessScrewdriver
-5, Exile_Item_Carwheel
+7, Exile_Item_Carwheel
+5, Exile_Item_Wrench
 
 > Vehicle
 35, Exile_Item_FuelCanisterFull
@@ -1474,7 +1475,6 @@
 5, Exile_Item_Carwheel
 5, Exile_Item_SleepingMat
 5, Exile_Item_Defibrillator
-5, Exile_Item_Wrench
 20, Exile_Item_OilCanister
 8, Exile_Melee_Shovel
 

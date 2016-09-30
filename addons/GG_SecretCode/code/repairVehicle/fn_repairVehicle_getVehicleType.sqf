@@ -29,11 +29,11 @@ else
 {
 	if (typeOf _vehicle in _sixWheels) then
 	{
-		_wheels = ["HitLF2Wheel","HitLFWheel","HitRFWheel","HitRF2Wheel","HitRMWheel","HitLMWheel"];//,"HitLBWheel","HitRBWheel"];
+		_wheels = ["HitLF2Wheel","HitLFWheel","HitRFWheel","HitRF2Wheel","HitRMWheel","HitLMWheel"];
 	}
 	else
 	{
-		_wheels = ["HitLF2Wheel","HitLFWheel","HitRFWheel","HitRF2Wheel"];//,"HitRMWheel","HitLMWheel","HitLBWheel","HitRBWheel"];
+		_wheels = ["HitLF2Wheel","HitLFWheel","HitRFWheel","HitRF2Wheel"];
 	};	
 };	
 _wheels

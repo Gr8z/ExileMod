@@ -26,7 +26,7 @@ else
 	if !(_goodWheels isEqualTo []) then
 	{
 		_equippedMagazines = magazines player;
-		if ("Exile_Item_Foolbox" in _equippedMagazines) then
+		if ("Exile_Item_Wrench" in _equippedMagazines) then
 		{	
 			_wheelToRemove = _goodWheels select 0;
 
@@ -114,7 +114,7 @@ else
 		{
 			[
 				"ErrorTitleAndText", 
-				["Scavenge Info", "You require a toolbox to remove a wheel from this vehicle"]
+				["Scavenge Info", "You require a wrench to remove a wheel from this vehicle"]
 			] call ExileClient_gui_toaster_addTemplateToast;
 		};	
 	}

@@ -3318,7 +3318,7 @@ class optic_Arco_ghex_F													{ quality = 1; price = 250; sellPrice = 50; 
 	//class Exile_Item_Hammer											{ quality = 1; price = 600; };
 	//class Exile_Item_OilCanister										{ quality = 1; price = 1750; };
 	class Exile_Item_Screwdriver										{ quality = 1; price = 250; };
-	//class Exile_Item_Wrench											{ quality = 1; price = 250; };
+	class Exile_Item_Wrench												{ quality = 1; price = 150; };
 	//class Exile_Item_SleepingMat										{ quality = 1; price = 1250; };
 	//class Exile_Item_ToiletPaper										{ quality = 1; price = 5; };
 	
@@ -4029,24 +4029,11 @@ class CfgInteractionMenus
 				action = "['RepairVehicle', _this select 0] call ExileClient_action_execute";
 			};
 			*/
-			// Advanced repair
-			class RepairInfoLand: ExileAbstractAction
-			{
-				title = "REPAIR INFO";
-				condition = "true";
-				action = "_this call GG_fnc_repairVehicle_displayVehicleRepairInfo";
-			};
 			class ReplaceWheels: ExileAbstractAction
-			{
-				title = "Replace wheel";
-				condition = "true";
-				action = "_this call GG_fnc_repairVehicle_repairWheels";
-			};
-			class RepairWheels: ExileAbstractAction
 			{
 				title = "Repair wheel";
 				condition = "true";
-				action = "_this call GG_fnc_repairVehicle_repairSingleWheel";
+				action = "_this call GG_fnc_repairVehicle_repairWheels";
 			};
 			class ScavengeWheels: ExileAbstractAction
 			{
@@ -4156,19 +4143,6 @@ class CfgInteractionMenus
 				action = "['RepairVehicle', _this select 0] call ExileClient_action_execute";
 			};
 			*/
-			// Advanced repair
-			class RepairInfoChopper: ExileAbstractAction
-			{
-				title = "REPAIR INFO";
-				condition = "true";
-				action = "_this call GG_fnc_repairVehicle_displayVehicleRepairInfo";
-			};
-			class RepairMinor: ExileAbstractAction
-			{
-				title = "Minor repair";
-				condition = "true";
-				action = "_this call GG_fnc_repairVehicle_repairchopperhalf";
-			};
 			class RepairFull: ExileAbstractAction
 			{
 				title = "Full repair";
@@ -5818,6 +5792,7 @@ class CfgTraderCategories
 		{
 			"Exile_Item_Matches",
 			"Exile_Item_CookingPot",
+			"Exile_Item_Wrench",
 			"Exile_Item_CanOpener",
 			"Exile_Melee_Axe",
 			"Exile_Item_Handsaw",
