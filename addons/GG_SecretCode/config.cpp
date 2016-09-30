@@ -56,9 +56,9 @@ class CfgFunctions
 			class repairVechicle_repairchopper {};
 			class repairVechicle_repairchopperhalf {};
 			class repairVechicle_repairSingleWheel {};
-			class repairVechicle_repairSingleWheel {};
 			class repairVechicle_repairWheels {};
 			class repairVechicle_scavengeWheel {};
+			class repairVechicle_vehicleRepairCar {};
 		};
 		class main
 		{
