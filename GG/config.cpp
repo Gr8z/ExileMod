@@ -4021,11 +4021,44 @@ class CfgInteractionMenus
 			};
 
 			// Repairs a vehicle to 100%. Requires Duckttape
+			/*
 			class Repair: ExileAbstractAction
 			{
 				title = "Repair";
 				condition = "true";
 				action = "['RepairVehicle', _this select 0] call ExileClient_action_execute";
+			};
+			*/
+			// Advanced repair
+			class RepairInfoLand: ExileAbstractAction
+			{
+				title = "REPAIR INFO";
+				condition = "true";
+				action = "_this call GG_fnc_repairVechicle_displayVehicleRepairInfo";
+			};
+			class ReplaceWheels: ExileAbstractAction
+			{
+				title = "Replace wheel";
+				condition = "true";
+				action = "_this call GG_fnc_repairVechicle_repairWheels";
+			};
+			class RepairWheels: ExileAbstractAction
+			{
+				title = "Repair wheel";
+				condition = "true";
+				action = "_this call GG_fnc_repairVechicle_repairSingleWheel";
+			};
+			class ScavengeWheels: ExileAbstractAction
+			{
+				title = "Scavenge wheel";
+				condition = "true";
+				action = "_this call GG_fnc_repairVechicle_scavengeWheel";
+			};
+			class RepairBody: ExileAbstractAction
+			{
+				title = "Repair body";
+				condition = "true";
+				action = "_this call GG_fnc_repairVechicle_vehicleRepairCar";
 			};
 
 			// Hot-wires a vehicle
@@ -4115,13 +4148,34 @@ class CfgInteractionMenus
 			};
 
 			// Repairs a vehicle to 100%. Requires Duckttape
+			/*
 			class Repair: ExileAbstractAction
 			{
 				title = "Repair";
 				condition = "true";
 				action = "['RepairVehicle', _this select 0] call ExileClient_action_execute";
 			};
-
+			*/
+			// Advanced repair
+			class RepairInfoChopper: ExileAbstractAction
+			{
+				title = "REPAIR INFO";
+				condition = "true";
+				action = "_this call GG_fnc_repairVechicle_displayVehicleRepairInfo";
+			};
+			class RepairMinor: ExileAbstractAction
+			{
+				title = "Minor repair";
+				condition = "true";
+				action = "_this call GG_fnc_repairVechicle_repairchopperhalf";
+			};
+			class RepairFull: ExileAbstractAction
+			{
+				title = "Full repair";
+				condition = "true";
+				action = "_this call GG_fnc_repairVechicle_repairchopper";
+			};
+			
 			// Flips a vehicle so the player doesnt have to call an admin
 			// Check if vector up is fucked
 			class Flip: ExileAbstractAction

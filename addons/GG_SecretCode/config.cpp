@@ -49,6 +49,17 @@ class CfgFunctions
 			class dailyRewards_CrateReward {};
 			class dailyRewards_onButtonClick {};
 		};
+		class repairVechicle
+		{
+			file = "GG_SecretCode\code\repairVechicle";
+			class repairVechicle_displayVehicleRepairInfo {};
+			class repairVechicle_repairchopper {};
+			class repairVechicle_repairchopperhalf {};
+			class repairVechicle_repairSingleWheel {};
+			class repairVechicle_repairSingleWheel {};
+			class repairVechicle_repairWheels {};
+			class repairVechicle_scavengeWheel {};
+		};
 		class main
 		{
 			file = "GG_SecretCode\init";
