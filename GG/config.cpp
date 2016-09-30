@@ -3295,7 +3295,7 @@ class optic_Arco_ghex_F													{ quality = 1; price = 250; sellPrice = 50; 
 	class Exile_Item_FloodLightKit										{ quality = 1; price = 250;};
 	//class Exile_Item_Rope												{ quality = 1; price = 100; };
 	//class Exile_Item_MetalWire										{ quality = 1; price = 100; };
-	//class Exile_Item_CarWheel											{ quality = 1; price = 1000; };
+	class Exile_Item_CarWheel											{ quality = 1; price = 50; };
 
 	///////// Tools /////////
 	class Exile_Item_Matches 											{ quality = 1; price = 50; };
@@ -4145,7 +4145,7 @@ class CfgInteractionMenus
 			*/
 			class RepairFull: ExileAbstractAction
 			{
-				title = "Full repair";
+				title = "Repair";
 				condition = "true";
 				action = "_this call GG_fnc_repairVehicle_repairchopper";
 			};
@@ -5755,6 +5755,7 @@ class CfgTraderCategories
 		items[] = 
 		{
 			"Exile_Item_DuctTape",
+			"Exile_Item_CarWheel",
 			"Exile_Item_ZipTie",
 			"Exile_Item_ExtensionCord",
 			"Exile_Item_LightBulb",
@@ -5777,7 +5778,7 @@ class CfgTraderCategories
 			"Exile_Item_Laptop",
 			"Exile_Item_BaseCameraKit",
 			"Exile_Item_MetalHedgehogKit",
-			"Exile_Item_CarWheel",
+			
 			"Exile_Item_Cement",
 			"Exile_Item_Sand"
 			*/
