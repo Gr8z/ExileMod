@@ -6,7 +6,7 @@ ExileClientActionDelayAbort = false;
 
 _vehicle = _this select 0;
 
-_wheels = [_vehicle] call JohnO_fnc_getVehicleType;
+_wheels = [_vehicle] call GG_fnc_repairVehicle_getVehicleType;
 _goodWheels = [];
 {
 	if ((_vehicle getHitPointDamage _x) <= 0) then
