@@ -26,6 +26,7 @@ class CfgFunctions
 			class statusBar {};
 			class selfie {};
 			class flashlight {};
+			class suicide {};
 		};
 		class airDrops
 		{

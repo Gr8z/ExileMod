@@ -3693,6 +3693,7 @@ class CfgExileCustomCode
     ExileClient_object_player_event_onHandleDamage =                                    "GG\custom\ExileClient_object_player_event_onHandleDamage.sqf";
     ExileClient_util_gear_getCompatibleWeaponItems =                                    "GG\custom\ExileClient_util_gear_getCompatibleWeaponItems.sqf";
     ExileClient_util_item_getCompatibleWeaponItems =                                    "GG\custom\ExileClient_util_item_getCompatibleWeaponItems.sqf";
+    ExileClient_gui_escape_suicide =                                    				"GG\custom\ExileClient_gui_escape_suicide.sqf";
 };
 
 class CfgExileEnvironment

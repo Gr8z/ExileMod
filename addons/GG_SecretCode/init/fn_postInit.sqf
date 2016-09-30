@@ -5,6 +5,7 @@
 
 publicVariable "GG_fnc_statusBar";
 publicVariable "GG_fnc_selfie";
+publicVariable "GG_fnc_suicide";
 
 publicVariable "GG_fnc_airDrops_buySelected";
 publicVariable "GG_fnc_airDrops_okDrop";
