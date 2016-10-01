@@ -15,7 +15,7 @@
                 ["Land_Atm_01_F", [14287.7,11602.7,0],214,0,0,false]
             ];
             _imagePath = [(str missionConfigFile), 0, -15] call BIS_fnc_trimString;
-            iconToShow = _imagePath + "GG\images\icons\exile.paa";
+            iconToShow = _imagePath + "GG\images\icons\ATM.paa";
             findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw", "
             {
                 _this select 0 drawIcon [
@@ -33,7 +33,6 @@
                 ]
             } forEach objATM;
             "];
-            [] call MAP_ICON__CODE;
         };
     },-2,'MAP_ICON_JIP'] call FN_infiSTAR_S;
 };
