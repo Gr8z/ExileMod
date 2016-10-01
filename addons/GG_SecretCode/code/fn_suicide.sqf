@@ -1,4 +1,4 @@
-if (handgunWeapon player == "") exitWith {hint "You need a handgun to suicide!";};
+if (handgunWeapon player == "") exitWith {["ErrorTitleAndText", ["Suicide", "You need a handgun to suicide!"]] call ExileClient_gui_toaster_addTemplateToast;};
 
 _animation = ["GestureExileSuicide01","GestureExileSuicide02"] call BIS_fnc_selectRandom; 
 
