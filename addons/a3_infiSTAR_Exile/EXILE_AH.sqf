@@ -819,6 +819,7 @@ _49code = {
 						if(_idd isEqualTo 24005 && _idc isEqualTo 5001 && _buttonAction isEqualTo '[uiNamespace getVariable ''RscExileCraftItemRecipeClassName'', (lbCurSel 5002) + 1] call ExileClient_object_item_craft; closeDialog 0;')exitWith{false};
 						if(_idd isEqualTo 24015 && _idc isEqualTo 4141 && _buttonAction isEqualTo '[] call ExileClient_gui_xm8_slide_slothMachine_event_onSpinButtonClick;')exitWith{false};
 						if(_idd isEqualTo 12 && _idc isEqualTo -1 && _buttonAction isEqualTo 'call ExileClient_gui_clan_markerAddMenu_event_onUnload;')exitWith{false};
+						if(_idd isEqualTo 12 && _idc isEqualTo -1 && _buttonAction isEqualTo 'closedialog 0')exitWith{false};
 						if(_idd isEqualTo 12 && _idc isEqualTo -1 && _buttonAction isEqualTo 'call ExileClient_gui_clan_markerAddMenu_event_onAddButtonClick;')exitWith{false};
 						if(_idd isEqualTo 12 && _idc isEqualTo -1 && _buttonAction isEqualTo 'call ExileClient_gui_clan_polyAddMenu_event_onUnload;')exitWith{false};
 						if(_idd isEqualTo 12 && _idc isEqualTo 4002 && _buttonAction isEqualTo 'call ExileClient_gui_clan_polyAddMenu_event_onAddButtonClick;')exitWith{false};
@@ -827,6 +828,7 @@ _49code = {
 						if(_idd isEqualTo -1340 && _idc isEqualTo 1602 && _buttonAction isEqualTo 'call fnc_fill_chat_playerlist;')exitWith{false};
 						if(_idd isEqualTo 6666 && _idc isEqualTo 6677 && _buttonAction isEqualTo 'call HALV_paintshop_selected;')exitWith{false};
 						if(_idd isEqualTo 6666 && _idc isEqualTo 6679 && _buttonAction isEqualTo 'call HALV_paintshop_addtolist;')exitWith{false};
+						if(_idd isEqualTo 6666 && _idc isEqualTo 22000 && _buttonAction isEqualTo 'call GG_fnc_dailyRewards_onButtonClick;')exitWith{false};
 						if(_idd isEqualTo 151 && _idc isEqualTo 2405 && _buttonAction isEqualTo 'finddisplay 151 createdisplay ''RscDisplayOptionsLayout''')exitWith{false};
 						true
 					})then{

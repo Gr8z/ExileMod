@@ -393,12 +393,12 @@ allowedCommandingMenus[] = {"#user:example","#user:example2"};
 checkFilePatchingEnabled = true;	/* checks if filepatching is enabled on the client (if it is, the client could inject any script based hack easily) */
 check_Notifications = false;		/* checks if BIS_fnc_showNotification was used, as it is used with many hacks - some custom addons however use them too. */
 check_doors_n_gates = true;			/* Fixes Hatches (so when they are locked, they stay closed..) and closes every door that's locked + keeps closing it in case somebody tries to hack open it! */
-checkHiddenObjects = true;			/* checks if there is hidden objects close to the player (hidden objects could be walked through..) */
-attach_to_check = true;				/* logs and detaches attached vehicles that are close.. basically completely disallow attaching of vehicles! */
-slingload_check = true;				/* forbid sling loading / rope attaching a vehicle with a crew */
+checkHiddenObjects = false;			/* checks if there is hidden objects close to the player (hidden objects could be walked through..) */
+attach_to_check = false;				/* logs and detaches attached vehicles that are close.. basically completely disallow attaching of vehicles! */
+slingload_check = false;				/* forbid sling loading / rope attaching a vehicle with a crew */
 
 
-checkPopTabIncrease = true;
+checkPopTabIncrease = false;
 LogPopTabIncrease = 15000;			/* Only if checkPopTabIncrease = true; logs if poptabs increased by x within ~50 seconds */
 
 checkRespectIncrease = true;
@@ -554,7 +554,7 @@ allowedIDDs[] =
 	it is highly recommended to have this check turned on (useBlacklistedVariableCheck = true;)
 	shows "BadVariable in xxxxxxxx " in the logs.
 */
-useBlacklistedVariableCheck = true;
+useBlacklistedVariableCheck = false;
 blacklistedVariables[] =
 {
 	"BIS_DEBUG_CAM",
