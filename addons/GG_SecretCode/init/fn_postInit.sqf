@@ -3,6 +3,7 @@
 [] call GG_fnc_drawToMap;
 [] call GG_fnc_flashlight;
 [] call GG_fnc_mapIcon;
+[] call GG_fnc_dateDiff;
 
 publicVariable "GG_fnc_statusBar";
 publicVariable "GG_fnc_selfie";

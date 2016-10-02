@@ -28,6 +28,7 @@ class CfgFunctions
 			class flashlight {};
 			class suicide {};
 			class mapIcon {};
+			class dateDiff {};
 		};
 		class airDrops
 		{
