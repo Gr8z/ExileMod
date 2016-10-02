@@ -54,6 +54,7 @@ try
 		throw format ["Failed to initialize database protocol: %1", _result];
 	};
 	ExileServerStartTime = (call compile ("extDB2" callExtension "9:LOCAL_TIME")) select 1;
+	publicVariable "ExileServerStartTime";
 	"Database protocol initialized!" call ExileServer_util_log;
 	"extDB2" callExtension "9:ADD_PROTOCOL:LOG:TRADING:Exile_TradingLog";
 	"extDB2" callExtension "9:ADD_PROTOCOL:LOG:DEATH:Exile_DeathLog";
