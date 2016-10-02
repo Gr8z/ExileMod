@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=156;
+		nextID=158;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6643.7178,341.23788,6078.2358};
-		dir[]={-0.063797206,-0.93204308,0.3567135};
-		up[]={-0.16409737,0.36223164,0.91752666};
-		aside[]={0.98438871,3.4298864e-008,0.17605583};
+		pos[]={6795.7178,286.07251,5954.9868};
+		dir[]={0.096114337,-0.75563949,0.64791453};
+		up[]={0.1108942,0.65487951,0.74754965};
+		aside[]={0.98918545,2.9744115e-007,-0.14673932};
 	};
 };
 binarizationWanted=0;
@@ -2666,38 +2666,15 @@ class Mission
 		class Item75
 		{
 			dataType="Marker";
-			position[]={13687,0,6583.1108};
-			name="marker_11";
-			text="   Millitary Base";
-			type="o_unknown";
-			id=151;
-			atlOffset=24.849688;
+			position[]={6448.4888,-1.1616158e-033,5656.4009};
+			name="marker_20";
+			text="   www.GhostzGamerz.com";
+			type="loc_Bush";
+			colorName="ColorBlue";
+			id=154;
+			atlOffset=23.768751;
 		};
 		class Item76
-		{
-			dataType="Marker";
-			position[]={13687,0,6461.5869};
-			name="marker_19";
-			text="   ATM (Bank)";
-			type="loc_Tourism";
-			colorName="ColorWhite";
-			a=2;
-			b=2;
-			id=153;
-			atlOffset=25.323351;
-		};
-		class Item77
-		{
-			dataType="Marker";
-			position[]={13677.326,0,6787.355};
-			name="marker_20";
-			text="   MAP MARKER LEGEND";
-			type="Select";
-			colorName="ColorBlack";
-			id=154;
-			atlOffset=25.356928;
-		};
-		class Item78
 		{
 			dataType="Marker";
 			position[]={12179.768,43.457649,14288.567};
@@ -2708,6 +2685,28 @@ class Mission
 			b=0.5;
 			id=155;
 			atlOffset=0.013851166;
+		};
+		class Item77
+		{
+			dataType="Marker";
+			position[]={6446.8179,-3.2416491e-023,5550.6802};
+			name="marker_21";
+			text="   ts.GhostzGamerz.com";
+			type="loc_Bush";
+			colorName="ColorUNKNOWN";
+			id=156;
+			atlOffset=23.18923;
+		};
+		class Item78
+		{
+			dataType="Marker";
+			position[]={6447.6582,-1.6518061e-022,5460.8071};
+			name="marker_22";
+			text="   Discord.me/GhostzGamerz";
+			type="loc_Bush";
+			colorName="ColorCIV";
+			id=157;
+			atlOffset=24.796856;
 		};
 	};
 };
