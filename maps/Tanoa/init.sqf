@@ -1,10 +1,7 @@
 if ((productVersion select 3) isEqualto 138587) then
 {
- // End loading screen
- endLoadingScreen;
-
- // End the mission
- endMission "END6";
+	systemChat "Please download a different perf build";
+    (findDisplay 46) closeDisplay 0;
 };
 
 [] execVM "GG\battlezones.sqf";
