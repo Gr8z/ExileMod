@@ -3,7 +3,6 @@
 [] call GG_fnc_drawToMap;
 [] call GG_fnc_flashlight;
 [] call GG_fnc_mapIcon;
-[] call GG_fnc_dateDiff;
 
 publicVariable "GG_fnc_statusBar";
 publicVariable "GG_fnc_selfie";
@@ -27,5 +26,7 @@ publicVariable "GG_fnc_repairVehicle_repairchopper";
 publicVariable "GG_fnc_repairVehicle_repairWheels";
 publicVariable "GG_fnc_repairVehicle_scavengeWheel";
 publicVariable "GG_fnc_repairVehicle_vehicleRepairCar";
+
+publicVariable "GG_fnc_dateDiff";
 
 true
