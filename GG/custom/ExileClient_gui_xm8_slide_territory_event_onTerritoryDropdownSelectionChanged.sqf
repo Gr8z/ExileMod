@@ -64,15 +64,8 @@ else
 	_leaveButton ctrlEnable true;
 };
 _nextProtectionMoneyDueDate = _flag getVariable ["ExileTerritoryMaintenanceDue", [0, 0, 0, 0, 0]];
-_dateTimeString = format 
-[
-	"%1-%2-%3 %4:%5",
-	_nextProtectionMoneyDueDate select 0,
-	_nextProtectionMoneyDueDate select 1,
-	_nextProtectionMoneyDueDate select 2,
-	_nextProtectionMoneyDueDate select 3,
-	_nextProtectionMoneyDueDate select 4
-];
+_dateTimeString = [_nextProtectionMoneyDueDate, ExileServerStartTime] call GG_fnc_dateDiff;
+
 _territoryPayDayInfo = _display displayCtrl 4133;
 if ((_flag getVariable ["ExileFlagStolen", 0]) isEqualTo 1) then 
 {
@@ -82,6 +75,6 @@ if ((_flag getVariable ["ExileFlagStolen", 0]) isEqualTo 1) then
 else 
 {
 	_territoryPayDayInfo ctrlSetTextColor [1, 1, 1, 1];
-	_territoryPayDayInfo ctrlSetText (format ["Protection Money Due Date: %1 EST", _dateTimeString]);
+	_territoryPayDayInfo ctrlSetText (format ["Protection Money Due Date in %1 Days.", _dateTimeString]);
 };
 true
