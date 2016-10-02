@@ -4040,8 +4040,8 @@ class CfgInteractionMenus
 			};
 			class ScavengeWheels: ExileAbstractAction
 			{
-				title = "Scavenge wheel";
-				condition = "true";
+				title = "Salvage wheel";
+				condition = "!(call ExAd_XM8_DV_fnc_canPack)";
 				action = "_this call GG_fnc_repairVehicle_scavengeWheel";
 			};
 			class RepairBody: ExileAbstractAction
@@ -4080,7 +4080,7 @@ class CfgInteractionMenus
 			class DrainFuel: ExileAbstractAction
 			{
 				title = "Drain Fuel";
-				condition = "call ExileClient_object_vehicle_interaction_show";
+				condition = "(call ExileClient_object_vehicle_interaction_show) && !(call ExAd_XM8_DV_fnc_canPack)";
 				action = "_this call ExileClient_object_vehicle_drain";
 			};
 			class PackDeployedVehicle: ExileAbstractAction
