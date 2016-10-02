@@ -9,7 +9,7 @@ _dialog = uiNameSpace getVariable ["RscExileLockerDialog", displayNull];
 _lockerAmount = [(player getVariable ["ExileLocker", 0])] call BIS_fnc_numberText;
 _lockerLimit = [(getNumber(missionConfigFile >> "CfgLocker" >> "maxDeposit"))] call BIS_fnc_numberText;
 _lockerTitle = _dialog displayCtrl 1001;
-_lockerTitle ctrlSetText "Bank";
+_lockerTitle ctrlSetText "ATM";
 _depositInput = _dialog displayCtrl 4006;
 _depositInput ctrlSetText "";
 _withdrawInput = _dialog displayCtrl 4005;

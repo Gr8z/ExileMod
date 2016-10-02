@@ -4272,15 +4272,9 @@ class CfgInteractionMenus
         {
             class Locker: ExileAbstractAction
             {
-                title = "Bank";
+                title = "ATM";
                 condition = "true";
                 action = "_this call ExileClient_gui_lockerDialog_show";
-            };
-            class FamilyLocker: ExileAbstractAction
-            {
-                title = "Family Bank";
-                condition = "!(ExileClientClanInfo isEqualTo [])";
-                action = "_this call ExileClient_gui_FamilylockerDialog_show";
             };
         };
     };
@@ -4737,7 +4731,6 @@ class CfgLocker
 	numbersOnly = "0123456789";
 	
 	maxDeposit = 500000;
-	maxFamilyDeposit = 1000000;
 };
 class CfgPlayer 
 {
