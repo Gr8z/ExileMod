@@ -67,9 +67,9 @@
 		        if (_playerUID in _buildRights) then
 		        {
 		            _nextDueDate = _flag getVariable ["ExileTerritoryMaintenanceDue", [0, 0, 0, 0, 0]];
-		            _dueDate = [_nextDueDate, ExileServerStartTime] call GG_fnc_dateDiff;
+		            _dueDate = [ExileServerStartTime,_nextDueDate] call GG_fnc_dateDiff;
 		            _name = _flag getVariable ["ExileTerritoryName", ""];
-		            _msg = format["%1 days left to pay for '%1'",_dueDate,_name];
+		            _msg = format["%1 days left to pay for '%2'",_dueDate,_name];
 		            _announcepay pushBack _msg;
 		            
 		        };

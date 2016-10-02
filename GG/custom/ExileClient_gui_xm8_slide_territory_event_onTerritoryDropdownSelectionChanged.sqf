@@ -64,7 +64,7 @@ else
 	_leaveButton ctrlEnable true;
 };
 _nextProtectionMoneyDueDate = _flag getVariable ["ExileTerritoryMaintenanceDue", [0, 0, 0, 0, 0]];
-_dateTimeString = [_nextProtectionMoneyDueDate, ExileServerStartTime] call GG_fnc_dateDiff;
+_dateTimeString = [ExileServerStartTime, _nextProtectionMoneyDueDate, ] call GG_fnc_dateDiff;
 
 _territoryPayDayInfo = _display displayCtrl 4133;
 if ((_flag getVariable ["ExileFlagStolen", 0]) isEqualTo 1) then 
