@@ -4272,7 +4272,7 @@ class CfgInteractionMenus
         {
             class Locker: ExileAbstractAction
             {
-                title = "ATM";
+                title = "Bank";
                 condition = "true";
                 action = "_this call ExileClient_gui_lockerDialog_show";
             };
