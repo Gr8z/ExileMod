@@ -29,6 +29,7 @@ class CfgFunctions
 			class suicide {};
 			class mapIcon {};
 			class dateDiff {};
+			class mapTips {};
 		};
 		class airDrops
 		{
