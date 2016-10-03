@@ -1,7 +1,7 @@
 if !(visibleMap) then {
 
     GG_text_tips = nil;
-    
+
     _colourDefault  = parseText "#ffffff";
     _colourExtra    = parseText "#38bee1";
     _colour108      = parseText "#FF7000";
@@ -166,5 +166,5 @@ if !(visibleMap) then {
     if (isNil "GG_text_tips") then {
         GG_text_tips = tipsArray select (random (count tipsArray - 1));
     };
-    ((uiNamespace getVariable "GGStatusBar")displayCtrl 55554)ctrlSetStructuredText parseText GG_text_tips];
+    ((uiNamespace getVariable "GGStatusBar")displayCtrl 55554)ctrlSetStructuredText parseText GG_text_tips;
 };
