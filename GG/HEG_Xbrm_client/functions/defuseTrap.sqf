@@ -98,9 +98,6 @@ if (_chance < _getLucky) then {
 } else {
 	player playActionNow "GestureYes";
 	_target setVariable ["HegIsTrapped", 0 ,true];
-	_resp = ExileClientPlayerScore + 1000;
-	ENIGMA_UpdateStats = [player,0,_resp];
-	publicVariableServer "ENIGMA_UpdateStats";
 	player playActionNow "GestureYes";
 	player addItem Xbrm_trap_defuser;
 	player addMagazine Xbrm_safe_trap;

@@ -77,7 +77,7 @@ for "_i" from 1 to _counter do {
 	};
 	if !(alive player) exitWith {};
 	(uiNamespace getVariable "progressBar") progressSetPosition (_i/_counter); 
-	(uiNamespace getVariable "progressText") ctrlSetStructuredText parseText format["Lockpicking Progress: %1%2", floor _fixIt, _pcnt];
+	(uiNamespace getVariable "progressText") ctrlSetStructuredText parseText format["Lockpicking Progress: %1%2 (press red button to stop)", floor _fixIt, _pcnt];
 	if (_isCancelled) exitWith {
 		["ErrorTitleOnly", ["Cancelled!"]] call ExileClient_gui_toaster_addTemplateToast;
 	};
@@ -118,9 +118,6 @@ if (_chance < _diceRoll || _isCancelled) then {
 	Xbrm_network_send = [player, _object, _type, "failed"];
 	publicVariableServer "Xbrm_network_send";
 } else {
-	_resp = ExileClientPlayerScore + 1000;
-	ENIGMA_UpdateStats = [player,0,_resp];
-    publicVariableServer "ENIGMA_UpdateStats";
 	player playActionNow "GestureYes";
 	player addMagazine Xbrm_lockpick_classname;
 	["SuccessTitleOnly",["Lockpicking successful!"]] call ExileClient_gui_toaster_addTemplateToast;

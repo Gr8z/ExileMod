@@ -10,10 +10,7 @@ _type = _this select 1;
 _concreteClasses = ["Exile_Construction_ConcreteFloorHatch_Static","Exile_Construction_ConcreteGate_Static","Exile_Construction_ConcreteDoor_Static"];
 _metalClasses = ["Exile_Construction_WoodDoor_Reinforced_Static", "Exile_Construction_WoodGate_Reinforced_Static"];
 _woodClasses = ["Exile_Construction_WoodGate_Static","Exile_Construction_WoodDoor_Static"];
-if ((typeOf _target) in _concreteClasses) then { doorKind = "concrete"; };
-if ((typeOf _target) in _metalClasses) then { doorKind = "metal"; };
-if ((typeOf _target) in _woodClasses) then { doorKind = "wood"; };
-_doorKind = doorKind;
+_doorKind = "none";
 
 if(Xbrm_raiding) exitWith {
 	["ErrorTitleOnly", ["You are already lockpicking!"]] call ExileClient_gui_toaster_addTemplateToast;

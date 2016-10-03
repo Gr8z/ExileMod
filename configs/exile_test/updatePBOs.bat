@@ -20,6 +20,7 @@ set srvname=@ExileServer_test
 "C:\Program Files\PBO Manager v.1.4 beta\PBOConsole.exe" -pack "C:\ExileMod\addons\AVS" "C:\a3Server\%srvname%\addons\AVS.pbo"
 "C:\Program Files\PBO Manager v.1.4 beta\PBOConsole.exe" -pack "C:\ExileMod\addons\GG_SecretCode" "C:\a3Server\%srvname%\addons\GG_SecretCode.pbo"
 "C:\Program Files\PBO Manager v.1.4 beta\PBOConsole.exe" -pack "C:\ExileMod\addons\ClaimVehicles_Server" "C:\a3Server\%srvname%\addons\ClaimVehicles_Server.pbo"
+"C:\Program Files\PBO Manager v.1.4 beta\PBOConsole.exe" -pack "C:\ExileMod\addons\HEG_Xbrm" "C:\a3Server\%srvname%\addons\HEG_Xbrm.pbo"
 
 echo Creating new PBOs 
 

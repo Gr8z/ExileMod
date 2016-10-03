@@ -42,7 +42,7 @@ fnc_keyPressed = {
 
 disableSerialization;
 _display = uiNameSpace getVariable ["RscExileKeypad", displayNull]; 
-_display displayRemoveEventHandler ["KeyDown", _KDEH];
+if !(isNil "_KDEH") then {_display displayRemoveEventHandler ["KeyDown", _KDEH];};
 _display closeDisplay 0;
 
 disableSerialization;
