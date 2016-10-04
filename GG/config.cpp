@@ -3465,6 +3465,7 @@ class optic_Arco_ghex_F													{ quality = 1; price = 250; sellPrice = 50; 
 	class B_Heli_Transport_03_F											{ quality = 4; price = 100000; sellPrice = 20000;};
 	class B_Heli_Transport_03_black_F									{ quality = 4; price = 100000; sellPrice = 20000;};
 	class O_Heli_Light_02_F												{ quality = 4; price = 100000; sellPrice = 20000;};
+	class I_Heli_light_03_F												{ quality = 4; price = 100000; sellPrice = 20000;};
 	
 	///////// Planes /////////
 	class Exile_Plane_Cessna											{ quality = 2; price = 7500; };
