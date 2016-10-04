@@ -165,7 +165,6 @@ if !(visibleMap) then {
 
     if (isNil "GG_text_tips") then {
         GG_text_tips = tipsArray select (random (count tipsArray - 1));
-        GG_text_tipsStructured = format["<t size='1.2' font='Tahoma'>%1</t>",GG_text_tips;
     };
-    ((uiNamespace getVariable "GGStatusBar")displayCtrl 55554)ctrlSetStructuredText parseText GG_text_tipsStructured;
+    ((uiNamespace getVariable "GGStatusBar")displayCtrl 55554)ctrlSetStructuredText parseText format["<t size='1.2' font='Tahoma'>%1</t>",GG_text_tips];
 };
