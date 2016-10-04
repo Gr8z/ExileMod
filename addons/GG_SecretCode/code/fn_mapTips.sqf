@@ -49,7 +49,7 @@
 					'All violations can be reported, via a support ticket,  on the forums.',
 					'English only on side chat.',
 					'No voice on sidechat.',
-					'No excessive vulgar language, exual comments, racism, homophobic slurs, health threats, or life insults.',
+					'No excessive vulgar language, sexual comments, racism, homophobic slurs, health threats, or life insults.',
 					'We cannot guarantee a refund if you do not show photo or video proof.',
 					'We can refund you in the event of a server bug, crash, or failure regarding GG equipment.',
 					'You can blow up territory walls with base explosives.',
