@@ -13,8 +13,6 @@ _margin = 0.2;
 
 _slideClass = "GG_Journal";
 
-[_display,_slide,([_slideClass,"picBg"] call ExAd_fnc_getNextIDC),[1 * _pW, -1 * _pH, (_leftColW + _rightCol + 5) * _pW, 21 * _pH],"GG\ExAdClient\XM8\Apps\Journal\ExAd_Scroll.paa",[1,1,1,1],false,false,""] call ExAd_fnc_createPicture;
-
 [_display,_slide,([_slideClass,"btnBack"] call ExAd_fnc_getNextIDC),[27 * _pW, 17 * _pH, 6 * _pW, 1 * _pH],'["extraApps", 1] call ExileClient_gui_xm8_slide;',"Go Back"] call ExAd_fnc_createButton;
 
 _newParent = [_display,_slide,([_slideClass,"ctrlGrp"] call ExAd_fnc_getNextIDC),[6.5 * _pW, 3 * _pH, 21 * _pW, 13 * _pH]] call ExAd_fnc_createCtrlGrp;
