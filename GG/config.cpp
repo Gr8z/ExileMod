@@ -8016,7 +8016,7 @@ class CfgXM8
 	};		
 	class GG_Journal 
 	{
-		title = "Journal";
+		title = "Notepad";
 		controlID = 50300;					//IDC:50300 -> 50305 || These need to be unique and out of range from each other
 		config = "GG\ExAdClient\XM8\Apps\Journal\config.sqf";
 		logo = "GG\ExAdClient\XM8\Apps\Journal\Icon_Journal.paa";
