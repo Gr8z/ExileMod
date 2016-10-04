@@ -7,4 +7,4 @@ _rscLayer cutRsc["GGStatusBar","PLAIN"];
 
 uiSleep 5;
 
-statusBarRefresh = [1, GG_fnc_statusBar, [], true] call ExileClient_system_thread_addtask;
+statusBarRefresh = [0.30, GG_fnc_statusBar, [], true] call ExileClient_system_thread_addtask;
