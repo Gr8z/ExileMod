@@ -2,7 +2,7 @@
 	customize.sqf
 */
 
-ExAd_HACKING_MIN_PLAYERS_ONLINE = 25;			//SCALAR - Minimun allowed players online to initalize a hack.
+ExAd_HACKING_MIN_PLAYERS_ONLINE = 15;			//SCALAR - Minimun allowed players online to initalize a hack.
 
 ExAd_HACKING_ALLOWED_HACKS = 1;					//SCALAR - Simultaneous hacks allowed.
 
