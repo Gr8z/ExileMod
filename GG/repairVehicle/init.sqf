@@ -2,7 +2,7 @@ private["_code"];
 if (!hasInterface || isServer) exitWith {};
 
 {
-    _file = format["GG\DailyReward\repairVehicle\%1", _x select 1];
+    _file = format["GG\repairVehicle\repairVehicle\%1", _x select 1];
     _code = compileFinal (preprocessFileLineNumbers _file);
     missionNamespace setVariable [(_x select 0), _code];
 }
