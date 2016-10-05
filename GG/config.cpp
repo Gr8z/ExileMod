@@ -8041,6 +8041,7 @@ class CfgXM8
 		title = "Selfie";
 		quickFunction = "['GG_Selfie'] spawn GG_fnc_selfie";
 		logo = "GG\ExAdClient\XM8\Apps\Selfie\icon_Selfie.paa";
+		config = "GG\ExAdClient\XM8\Apps\Selfie\config.sqf";
 	};
 	class GG_Scan
 	{
@@ -8061,6 +8062,7 @@ class CfgXM8
 	{
 		title = "Crafting Menu";
 		controlID = 50400;
+		config = "GG\ExAdClient\XM8\Apps\Crafting\config.sqf";
 		logo = "GG\ExAdClient\XM8\Apps\Crafting\icon_Crafing.paa";
 		onLoad = "GG\ExAdClient\XM8\Apps\Crafting\onLoad.sqf";
 		onOpen = "GG\ExAdClient\XM8\Apps\Crafting\onOpen.sqf";
