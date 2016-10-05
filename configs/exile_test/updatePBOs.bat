@@ -3,7 +3,7 @@
 set srvname=@ExileServer_test
 :: Creating New Pbos
 
-MakePBO -! -N "C:\ExileMod\maps\Tanoa" "C:\a3Server\mpmissions\GG_exile_test.Tanoa.pbo"
+MakePBO -! -P -N "C:\ExileMod\maps\Tanoa" "C:\a3Server\mpmissions\GG_exile_test.Tanoa.pbo"
 
 "C:\Program Files\PBO Manager v.1.4 beta\PBOConsole.exe" -pack "C:\ExileMod\addons\exile_server" "C:\a3Server\%srvname%\addons\exile_server.pbo"
 "C:\Program Files\PBO Manager v.1.4 beta\PBOConsole.exe" -pack "C:\ExileMod\addons\exile_server_config" "C:\a3Server\%srvname%\addons\exile_server_config.pbo"
