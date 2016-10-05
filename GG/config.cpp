@@ -2654,7 +2654,7 @@ class CfgExileArsenal
 	class Exile_Magazine_8Rnd_9x18										{ quality = 1; price = 20; };
 	class Exile_Magazine_6Rnd_45ACP										{ quality = 1; price = 20; };
 	class Exile_Magazine_5Rnd_22LR										{ quality = 1; price = 20; };
-	class Exile_Magazine_10Rnd_762x54									{ quality = 1; price = 20; };
+	class Exile_Magazine_10Rnd_762x54									{ quality = 2; price = 20; };
 	class Exile_Magazine_10Rnd_9x39										{ quality = 1; price = 20; };
 	class Exile_Magazine_20Rnd_9x39										{ quality = 1; price = 20; };
 	class Exile_Magazine_8Rnd_74Slug									{ quality = 1; price = 20; };
@@ -2837,8 +2837,8 @@ class CfgExileArsenal
 	///////// Light Machine Guns /////////
 	class arifle_MX_SW_Black_F											{ quality = 1; price = 700; };
 	class arifle_MX_SW_F												{ quality = 1; price = 700; };
-	class LMG_03_F														{ quality = 1; price = 700; };
-	class LMG_Mk200_F													{ quality = 1; price = 750; };
+	class LMG_03_F														{ quality = 2; price = 700; };
+	class LMG_Mk200_F													{ quality = 2; price = 750; };
 	class LMG_Zafir_F													{ quality = 2; price = 850; };
 	class MMG_01_hex_F													{ quality = 3; price = 2000; };
 	class MMG_01_tan_F													{ quality = 3; price = 2000; };
@@ -2923,9 +2923,9 @@ class CfgExileArsenal
 	class hlc_rifle_ak74m 												{ quality = 1; price = 425; };
 	class hlc_rifle_ak74m_gl 											{ quality = 1; price = 475; };
 	class hlc_rifle_ak74m_MTK 											{ quality = 1; price = 425; };
-	class hlc_rifle_akm 												{ quality = 1; price = 425; };
-	class hlc_rifle_akmgl 												{ quality = 1; price = 425; };
-	class hlc_rifle_akm_MTK 											{ quality = 1; price = 425; sellPrice = 50; };
+	class hlc_rifle_akm 												{ quality = 2; price = 425; };
+	class hlc_rifle_akmgl 												{ quality = 2; price = 425; };
+	class hlc_rifle_akm_MTK 											{ quality = 2; price = 425; sellPrice = 50; };
 	class hlc_rifle_aks74 												{ quality = 1; price = 425; };
 	class hlc_rifle_aks74_GL 											{ quality = 1; price = 475; };
 	class hlc_rifle_aks74_MTK 											{ quality = 1; price = 425; };
@@ -3293,7 +3293,7 @@ class optic_Arco_ghex_F													{ quality = 1; price = 250; sellPrice = 50; 
 	class Exile_Item_Cement												{ quality = 1; price = 100; };
 	class Exile_Item_Sand												{ quality = 1; price = 50; };
 	class Exile_Item_FloodLightKit										{ quality = 1; price = 250;};
-	//class Exile_Item_Rope												{ quality = 1; price = 100; };
+	class Exile_Item_Rope												{ quality = 1; price = 100; };
 	//class Exile_Item_MetalWire										{ quality = 1; price = 100; };
 	class Exile_Item_CarWheel											{ quality = 1; price = 50; };
 
