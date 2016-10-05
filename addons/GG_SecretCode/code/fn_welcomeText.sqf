@@ -96,11 +96,6 @@
 		        _missingMods = true;
 		        _missingModList pushBack _msg;
 		    };
-		    if !(isClass (configFile >> "CfgPatches" >> "TRYK_Uniform")) then {
-		        _msg = "TRYK Multiplay Uniforms";
-		        _missingMods = true;
-		        _missingModList pushBack _msg;
-		    };
 
 		    if (_missingMods) then {
 		        _missingModList append ["","",""];

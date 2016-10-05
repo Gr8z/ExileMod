@@ -71,10 +71,6 @@ class CfgTraders
 			"Backpacks",
 			"NVG",
 			"EquipmentTools",
-			"TRYKUniforms",
-			"TRYKVests",
-			"TRYKHeadgear",
-			"TRYKBackpacks",
 			"FirstAid"
 		};
 	};

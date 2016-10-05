@@ -19,15 +19,3 @@ _LoginCount = profileNamespace getVariable "var_GG_Logins";
 if (_LoginCount < 20) then {
         GGAdsMessagesLoop = [600, GGAdsMessages, [], true] call ExileClient_system_thread_addtask;
 };
-
-// Fix Map disappearing from inventory
-Map_FIX_CODE = {
-        if !('ItemMap' in (items player + assignedItems player)) then
-        {
-                player removeItem 'itemMap';
-                player unlinkItem 'itemMap';
-                player linkItem 'itemMap';
-        };
-};
-
-mapRefresh = [30, Map_FIX_CODE, [], true] call ExileClient_system_thread_addtask;
