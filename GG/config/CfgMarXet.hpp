@@ -1,4 +1,3 @@
-
 class CfgMarXet {
 	class Database {
 		restrictTime = -1;

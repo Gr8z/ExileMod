@@ -1,5 +1,3 @@
-
-
 class CfgNotifications {
 	class Success {
 		description = "%1";

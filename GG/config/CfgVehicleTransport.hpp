@@ -1,5 +1,3 @@
-
-
 class CfgVehicleTransport {
 	class Exile_Container_SupplyBox {
 		vehicles[] = {"Exile_Car_Van_Abstract", "Exile_Car_Offroad_Abstract", "Exile_Car_Zamak_Abstract", "Exile_Car_HEMMT_Abstract", "Exile_Car_Tempest_Abstract"};

@@ -1,5 +1,3 @@
-
-
 class CfgTrading {
 	sellPriceFactor = 0.5;
 	rekeyPriceFactor = 0;

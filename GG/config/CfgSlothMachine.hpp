@@ -1,5 +1,3 @@
-
-
 class CfgSlothMachine {
 	spinCost = 100;
 	Jackpot = 10100;

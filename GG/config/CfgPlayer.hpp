@@ -1,5 +1,3 @@
-
-
 class CfgPlayer {
 	hungerDecay = 90;
 	thirstDecay = 60;

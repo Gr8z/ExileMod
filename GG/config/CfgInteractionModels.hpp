@@ -1,5 +1,3 @@
-
-
 class CfgInteractionModels {
 	class WaterSource {
 		name = "Water tanks, barrels, coolers or pumps";

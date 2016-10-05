@@ -1,5 +1,3 @@
-
-
 class Exile_AbstractCraftingRecipe {
 	name = "";
 	pictureItem = "";

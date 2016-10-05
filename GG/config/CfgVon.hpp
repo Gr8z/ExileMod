@@ -1,5 +1,3 @@
-
-
 class CfgVon {
 	class global {
 		id = 0;

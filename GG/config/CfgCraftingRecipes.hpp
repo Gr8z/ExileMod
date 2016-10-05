@@ -528,22 +528,6 @@ class CfgCraftingRecipes
 		tools[] = {"Exile_Item_Grinder"};
 		category = "Tools & Items";
 	};
-	/*class CraftMetalHedgehog: Exile_AbstractCraftingRecipe
-	{
-		name = "Craft Metal Hedgehog";
-		pictureItem = "Exile_Item_MetalHedgehogKit";
-		requiresFire = 1;
-		returnedItems[] = 
-		{
-			{1, "Exile_Item_MetalHedgehogKit"}
-		};
-		components[] = 
-		{
-			{4, "Exile_Item_MetalPole"}
-		};
-		tools[] = {"Exile_Item_Grinder"};
-		category = "Tools & Items";
-	};*/
 	class CraftMetalPole: Exile_AbstractCraftingRecipe
 	{
 		name = "Craft Metal Pole";
@@ -699,29 +683,6 @@ class CfgCraftingRecipes
 		};
 		category = "Tools & Items";
 	};
-	/*class CraftWireFenceKit: Exile_AbstractCraftingRecipe
-	{
-		name = "Craft Wire Fence Kit";
-		pictureItem = "Exile_Item_WireFenceKit_Long";
-		requiredInteractionModelGroup = "WorkBench";
-		tools[] = 
-		{
-			"Exile_Item_Grinder", 
-			"Exile_Item_Pliers",
-			"Exile_Item_Screwdriver"
-		};
-		returnedItems[] = 
-		{
-			{1, "Exile_Item_RazorWireKit_Long"}
-		};
-		components[] = 
-		{
-			{4, "Exile_Item_MetalPole"},
-			{6, "Exile_Item_MetalWire"},
-			{1, "Exile_Item_MetalScrews"}
-		};
-		category = "Tools & Items";
-	};*/
 	class CraftWoodDoorWay: Exile_AbstractCraftingRecipe
 	{
 		name = "Craft Wood Doorway";
@@ -1007,21 +968,6 @@ class CfgCraftingRecipes
 		};
 		category = "Food & Drinks";
 	};
-	/*class FillFuelCanister: Exile_AbstractCraftingRecipe
-	{
-		name = "Fill Fuel Canister";
-		pictureItem = "Exile_Item_FuelCanisterFull";
-		requiredInteractionModelGroup = "FuelSource";
-		returnedItems[] = 
-		{
-			{1, "Exile_Item_FuelCanisterFull"}
-		};
-		components[] = 
-		{
-			{1, "Exile_Item_FuelCanisterEmpty"}
-		};
-		category = "Tools & Items";
-	};*/
 	class UpgradeToConcreteDoor: Exile_AbstractCraftingRecipe
 	{
 		name = "Upgrade to Concrete Door";
@@ -1204,97 +1150,4 @@ class CfgCraftingRecipes
 	    };
 	    category = "Tools & Items";
 	};
-	/*class ViperHelmet01: Exile_AbstractCraftingRecipe
-	{
-	    name = "Craft Viper Helmet (Hex)";
-	    pictureItem = "H_HelmetO_ViperSP_hex_F";
-		tools[] = {"Exile_Item_Foolbox", "Exile_Item_Screwdriver", "Exile_Item_Grinder", "Exile_Item_Pliers"};
-	    returnedItems[] =
-	    {
-	        {1, "H_HelmetO_ViperSP_hex_F"}
-	    };
-	    components[] =
-	    {
-	        {4, "Exile_magazine_Battery"},
-	        {2, "Exile_item_Laptop"},
-	        {2, "Exile_item_thermalscannerpro"}
-	    };
-	    category = "Tools & Items";
-		
-	};
-	class ViperHelmet02: Exile_AbstractCraftingRecipe
-	{
-	    name = "Craft Viper Helmet (Green Hex)";
-	    pictureItem = "H_HelmetO_ViperSP_ghex_F";
-		tools[] = {"Exile_Item_Foolbox", "Exile_Item_Screwdriver", "Exile_Item_Grinder", "Exile_Item_Pliers"};
-	    returnedItems[] =
-	    {
-	        {1, "H_HelmetO_ViperSP_ghex_F"}
-	    };
-	    components[] =
-	    {
-	        {4, "Exile_magazine_Battery"},
-	        {2, "Exile_item_Laptop"},
-	        {2, "Exile_item_thermalscannerpro"}
-	    };
-	    category = "Tools & Items";
-		
-	};
-	class ENVG01: Exile_AbstractCraftingRecipe
-	{
-	    name = "Craft ENVG (Black)";
-	    pictureItem = "NVGogglesB_blk_F";
-		tools[] = {"Exile_Item_Foolbox", "Exile_Item_Screwdriver", "Exile_Item_Grinder", "Exile_Item_Pliers"};
-	    returnedItems[] =
-	    {
-	        {1, "NVGogglesB_blk_F"}
-	    };
-	    components[] =
-	    {
-	        {1, "Exile_item_mobilephone"},
-	        {2, "Exile_item_Laptop"},
-	        {1, "Exile_item_basecamerakit"},
-			{2, "Exile_magazine_Battery"}
-	    };
-	    category = "Tools & Items";
-		
-	};
-	class ENVG02: Exile_AbstractCraftingRecipe
-	{
-	    name = "Craft ENVG (Green)";
-	    pictureItem = "NVGogglesB_grn_F";
-		tools[] = {"Exile_Item_Foolbox", "Exile_Item_Screwdriver", "Exile_Item_Grinder", "Exile_Item_Pliers"};
-	    returnedItems[] =
-	    {
-	        {1, "NVGogglesB_grn_F"}
-	    };
-	    components[] =
-	    {
-	        {1, "Exile_item_mobilephone"},
-	        {2, "Exile_item_Laptop"},
-	        {1, "Exile_item_basecamerakit"},
-			{2, "Exile_magazine_Battery"}
-	    };
-	    category = "Tools & Items";
-		
-	};
-	class ENVG03: Exile_AbstractCraftingRecipe
-	{
-	    name = "Craft ENVG (Grey)";
-	    pictureItem = "NVGogglesB_gry_F";
-		tools[] = {"Exile_Item_Foolbox", "Exile_Item_Screwdriver", "Exile_Item_Grinder", "Exile_Item_Pliers"};
-	    returnedItems[] =
-	    {
-	        {1, "NVGogglesB_gry_F"}
-	    };
-	    components[] =
-	    {
-	        {1, "Exile_item_mobilephone"},
-	        {2, "Exile_item_Laptop"},
-	        {1, "Exile_item_basecamerakit"},
-			{2, "Exile_magazine_Battery"}
-	    };
-	    category = "Tools & Items";
-		
-	};*/
 };

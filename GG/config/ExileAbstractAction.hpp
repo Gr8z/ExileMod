@@ -1,5 +1,3 @@
-
-
 class ExileAbstractAction {
 	title = "";
 	condition = "true";

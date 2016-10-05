@@ -128,7 +128,6 @@ class CfgTraderCategories
 			"TRYK_V_tacv10_OD",
 			"TRYK_V_tacv10_TN",
 			"TRYK_V_tacv1_MSL_BK",
-			//"TRYK_V_tacv1LC_MSL_NV",
 			"TRYK_V_tacSVD_BK",
 			"TRYK_V_tacSVD_OD",
 			"TRYK_V_Sheriff_BA_T",
@@ -240,107 +239,6 @@ class CfgTraderCategories
 			"TRYK_Winter_pack"
 		};
 	
-	};
-	
-	
-	class Community
-	{
-		name = "Community Items";
-		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\uniform_ca.paa";
-		items[] = 
-		{
-			// Add your items here <3
-		};
-	};
-
-	class Community2
-	{
-		name = "Community Items 2";
-		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\uniform_ca.paa";
-		items[] = 
-		{
-			// Add your items here <3
-		};
-	};
-
-	class Community3
-	{
-		name = "Community Items 3";
-		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\uniform_ca.paa";
-		items[] = 
-		{
-			// Add your items here <3
-		};
-	};
-
-	class Community4
-	{
-		name = "Community Items 4";
-		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\uniform_ca.paa";
-		items[] = 
-		{
-			// Add your items here <3
-		};
-	};
-
-	class Community5
-	{
-		name = "Community Items 5";
-		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\uniform_ca.paa";
-		items[] = 
-		{
-			// Add your items here <3
-		};
-	};
-
-	class Community6
-	{
-		name = "Community Items 6";
-		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\uniform_ca.paa";
-		items[] = 
-		{
-			// Add your items here <3
-		};
-	};
-
-	class Community7
-	{
-		name = "Community Items 7";
-		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\uniform_ca.paa";
-		items[] = 
-		{
-			// Add your items here <3
-		};
-	};
-
-	class Community8
-	{
-		name = "Community Items 8";
-		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\uniform_ca.paa";
-		items[] = 
-		{
-			// Add your items here <3
-		};
-	};
-
-	class Community9
-	{
-		name = "Community Items 9";
-		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\uniform_ca.paa";
-		items[] = 
-		{
-			// Add your items here <3
-		};
-	};
-
-	class Community10
-	{
-		name = "Community Items 10";
-		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\uniform_ca.paa";
-		items[] = 
-		{
-			// Add your items here <3
-		};
 	};
 	class CivilianUniforms
 	{
@@ -823,13 +721,10 @@ class CfgTraderCategories
 			"optic_SOS",
 			"optic_SOS_khk_F",
 			"optic_Nightstalker",
-			//"optic_tws"
-			//"optic_tws_mg"
 			//NIArms
 			"HLC_Optic_PSO1",
 			"HLC_Optic_1p29",
 			"hlc_optic_kobra",
-			//"hlc_optic_goshawk",
 			"hlc_optic_PVS4FAL",
 			"hlc_optic_PVS4G3",
 			"hlc_optic_PVS4M14",
@@ -906,23 +801,9 @@ class CfgTraderCategories
 			"Exile_Item_FloodLightKit",
 			"Exile_Item_MetalBoard",
 			"Exile_Item_MetalPole",
-			//"Exile_Item_MobilePhone",
 			"Exile_Item_SafeKit",
 			"Exile_Item_CodeLock",
-			//"Exile_Item_FuelCanisterFull",
-			//"Exile_Item_FuelBarrelFull",
-			//"Exile_Item_WaterCanisterDirtyWater",
 			"Exile_Item_CamoTentKit"
-			/*
-			"Exile_Item_Rope",
-			"Exile_Item_MetalWire",
-			"Exile_Item_Laptop",
-			"Exile_Item_BaseCameraKit",
-			"Exile_Item_MetalHedgehogKit",
-			
-			"Exile_Item_Cement",
-			"Exile_Item_Sand"
-			*/
 		};
 	};
 	
@@ -940,23 +821,9 @@ class CfgTraderCategories
 			"Exile_Item_Handsaw",
 			"Exile_Item_Pliers",
 			"Exile_Item_Grinder",
-			//"Exile_Item_Knife",
-			//"Exile_Magazine_Battery",
-			//"Exile_Melee_SledgeHammer",
 			"Exile_Item_Foolbox",
 			"Exile_Item_CordlessScrewdriver",
-			//"Exile_Item_Shovel",
 			"Exile_Item_Screwdriver"
-			/*
-			"Exile_Item_ThermalScannerPro",
-			"Exile_Item_FireExtinguisher",
-			"Exile_Item_Hammer",
-			"Exile_Item_OilCanister",
-			"Exile_Item_Screwdriver",
-			"Exile_Item_Wrench",
-			"Exile_Item_SleepingMat",	
-			"Exile_Item_ToiletPaper",			
-			*/
 		};
 	};
 
@@ -1013,8 +880,6 @@ class CfgTraderCategories
 			"Exile_Item_InstaDoc",
 			"Exile_Item_Bandage",
 			"Exile_Item_Vishpirin"
-			//"Exile_Item_Heatpack"
-			//"Exile_Item_Defibrillator"
 		};
 	};
 
@@ -1144,23 +1009,12 @@ class CfgTraderCategories
 			"10Rnd_762x54_Mag",
 			"150Rnd_762x54_Box",
 			"150Rnd_762x54_Box_Tracer",
-			//"10Rnd_93x64_DMR_05_Mag",
 			"150Rnd_93x64_Mag",
-			//"10Rnd_338_Mag",
-			//"130Rnd_338_Mag",
-			//"7Rnd_408_Mag",
 			"10Rnd_127x54_Mag",
-			//"5Rnd_127x108_Mag",
-			//"5Rnd_127x108_APDS_Mag",
-			//"10Rnd_50BW_Mag_F",
 			//NIArms
 			"hlc_12Rnd_45ACP_B_mk23",
 			"hlc_12Rnd_45ACP_S_mk23",
 			"hlc_12Rnd_45ACP_T_mk23",
-			//"hlc_8Rnd_44mag_B_deagle",
-			//"hlc_8Rnd_44mag_JHP_deagle",
-			//"hlc_50Rnd_44mag_B_deagle",
-			//"hlc_50Rnd_44mag_FUN",
 			"hlc_10rnd_12g_buck_S12",
 			"hlc_10rnd_12g_slug_S12",
 			"hlc_25Rnd_9x19mm_M882_AUG",
@@ -1237,15 +1091,10 @@ class CfgTraderCategories
 			"hlc_100Rnd_762x51_T_M60E4",
 			"hlc_100Rnd_762x51_M_M60E4",
 			"hlc_100Rnd_762x51_Barrier_M60E4",
-			//"hlc_5Rnd_792_T_Kar98",
-			//"hlc_5Rnd_792_AP_Kar98",
 			"29rnd_300BLK_STANAG",
 			"29rnd_300BLK_STANAG_T",
 			"29rnd_300BLK_STANAG_S",
 			"hlc_5rnd_3006_1903",
-			//"hlc_10Rnd_303_B_enfield",
-			//"hlc_10Rnd_303_T_enfield",
-			//"hlc_10Rnd_303_AP_enfield",
 			"hlc_5rnd_300WM_FMJ_AWM",
 			"hlc_5rnd_300WM_AP_AWM",
 			"hlc_5rnd_300WM_BTSP_AWM",
@@ -1339,13 +1188,10 @@ class CfgTraderCategories
 			"APERSBoundingMine_Range_Mag",
 			"APERSMine_Range_Mag",
 			"APERSTripMine_Wire_Mag",
-			//"ClaymoreDirectionalMine_Remote_Mag",
-			//"DemoCharge_Remote_Mag",
 			"IEDLandBig_Remote_Mag",
 			"IEDLandSmall_Remote_Mag",
 			"IEDUrbanBig_Remote_Mag",
 			"IEDUrbanSmall_Remote_Mag",
-			//"SatchelCharge_Remote_Mag",
 			"SLAMDirectionalMine_Wire_Mag",
 			//NIArms
 			"hlc_VOG25_AK"
@@ -1663,7 +1509,6 @@ class CfgTraderCategories
 			"srifle_DMR_02_F",
 			"srifle_DMR_02_sniper_F",
 			"srifle_DMR_05_blk_F",
-			//"srifle_GM6_F",
 			"srifle_LRR_F",
 			//NIArms
 			"hlc_rifle_awcovert_BL",
@@ -1703,7 +1548,6 @@ class CfgTraderCategories
 			"7Rnd_408_Mag",
 			"10Rnd_127x54_Mag",	
 			"5Rnd_127x108_Mag",
-			//"5Rnd_127x108_APDS_Mag",
 			"10Rnd_50BW_Mag_F",
 			//NIArms
 			"hlc_5rnd_300WM_FMJ_AWM",
@@ -1774,8 +1618,6 @@ class CfgTraderCategories
 			"optic_SOS",
 			"optic_SOS_khk_F",
 			"optic_Nightstalker"
-			//"optic_tws"
-			//"optic_tws_mg"
 		};
 	};
 	
