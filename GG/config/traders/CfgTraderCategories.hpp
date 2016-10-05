@@ -1050,10 +1050,6 @@ class CfgTraderCategories
 			"arifle_TRG20_F",
 			"arifle_TRG21_F",
 			"arifle_TRG21_GL_F",
-			"arifle_AK12_F",											
-			"arifle_AK12_GL_F",
-			"arifle_AKM_F",
-			"arifle_AKS_F",
 			"arifle_CTAR_blk_F",
 			"arifle_CTAR_GL_blk_F",
 			"arifle_CTARS_blk_F",
@@ -1064,14 +1060,16 @@ class CfgTraderCategories
 		};
 	};
 
-	class NIARMSAK
+	class AK
 	{
-		name = "NIARMS AK Style Rifles";
+		name = "AK Style Rifles";
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
 			"hlc_rifle_ak12",
-			"hlc_rifle_ak12GL",
+			"arifle_AK12_F",
+			"hlc_rifle_ak12GL",							
+			"arifle_AK12_GL_F",
 			"hlc_rifle_aku12",
 			"hlc_rifle_ak47",
 			"hlc_rifle_ak74",
@@ -1080,9 +1078,11 @@ class CfgTraderCategories
 			"hlc_rifle_ak74m_gl",
 			"hlc_rifle_ak74m_MTK",
 			"hlc_rifle_akm",
+			"arifle_AKM_F",
 			"hlc_rifle_akmgl",
 			"hlc_rifle_akm_MTK",
 			"hlc_rifle_aks74",
+			"arifle_AKS_F",
 			"hlc_rifle_aks74_GL",
 			"hlc_rifle_aks74_MTK",
 			"hlc_rifle_aks74u",
@@ -1092,9 +1092,9 @@ class CfgTraderCategories
 		};
 	};
 
-	class NIARMSAUG
+	class AUG
 	{
-		name = "NIARMS AUG Rifles";
+		name = "AUG Rifles";
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
@@ -1114,9 +1114,9 @@ class CfgTraderCategories
 		};
 	};
 	
-	class NIARMSHK
+	class HK
 	{
-		name = "NIARMS HK Rifles";
+		name = "HK Rifles";
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
@@ -1149,9 +1149,9 @@ class CfgTraderCategories
 		};
 	};
 			
-	class NIARMSAR
+	class AR
 	{
-		name = "NIARMS AR Style Rifles";
+		name = "AR Style Rifles";
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
@@ -1171,7 +1171,7 @@ class CfgTraderCategories
 		};
 	};		
 	
-	class NIARMSFAL
+	class FAL
 	{
 		name = "FN/SIG Rifles";
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
