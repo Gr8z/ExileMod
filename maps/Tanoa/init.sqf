@@ -7,3 +7,5 @@ if ((productVersion select 3) isEqualto 138587) then
 [] execVM "GG\battlezones.sqf";
 [] execVM "GG\AVS\AVS_fnc_init.sqf";
 [] execVM "GG\HEG_Xbrm_client\Xbrm_config.sqf";
+[] execVM "GG\DailyReward\init.sqf";
+[] execVM "GG\repairVehicle\init.sqf";
