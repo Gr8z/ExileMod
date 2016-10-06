@@ -826,7 +826,12 @@ class CfgTraderCategories
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemmuzzle_ca.paa";
 		items[] = 
 		{
-			"hlc_muzzle_Agendasix10mm"
+			"hlc_muzzle_Agendasix10mm",
+			"CUP_muzzle_snds_M9",
+			"CUP_muzzle_snds_MicroUzi",
+			"CUP_muzzle_Bizon",
+			"CUP_muzzle_PBS4",
+			"CUP_muzzle_PB6P9"
 		};
 	};
 
@@ -918,10 +923,9 @@ class CfgTraderCategories
 			"NVGoggles",
 			"NVGoggles_INDEP",
 			"NVGoggles_OPFOR",
-			"NVGoggles_tna_F",
-			"O_NVGoggles_hex_F",
-			"O_NVGoggles_urb_F",
-			"O_NVGoggles_ghex_F"
+			"NVGoggles_tna_F"
+			"CUP_H_RUS_6B27_NVG_olive",
+			"CUP_H_RUS_6B27_NVG"
 		};
 	};
 	
@@ -1377,10 +1381,6 @@ class CfgTraderCategories
 			"CUP_10Rnd_762x54_SVD_M",
 			"CUP_10Rnd_9x39_SP5_VSS_M",
 			"CUP_20Rnd_9x39_SP5_VSS_M",
-			"CUP_10x_303_M",
-			"CUP_5Rnd_127x108_KSVK_M",
-			"CUP_10Rnd_127x99_M107",
-			"CUP_5Rnd_127x99_as50_M",
 			//Shotgun Ammo//////////////////////////////////////////////////////////////////////////////
 			"CUP_20Rnd_B_AA12_Pellets",
 			"CUP_20Rnd_B_AA12_74Slug",
@@ -1592,9 +1592,8 @@ class CfgTraderCategories
 			"CUP_lmg_M249_para",
 			"CUP_lmg_M249",
 			"CUP_lmg_M240",
-			"CUP_lmg_M60E4",
-			"CUP_lmg_Mk48_des",
-			"CUP_lmg_Mk48_wdl"
+			"CUP_lmg_M60E4"
+			
 		};
 	};
 
@@ -1978,7 +1977,9 @@ class CfgTraderCategories
 		items[] = 
 		{
 			"MMG_01_tan_F",
-			"MMG_02_black_F"
+			"MMG_02_black_F",
+			//"CUP_lmg_Mk48_des",
+			"CUP_lmg_Mk48_wdl"
 		};
 	};
 	
@@ -2018,11 +2019,6 @@ class CfgTraderCategories
 			"muzzle_snds_65_TI_blk_F",
 			"muzzle_snds_65_TI_hex_F",
 			"muzzle_snds_65_TI_ghex_F",
-			"CUP_muzzle_snds_M9",
-			"CUP_muzzle_snds_MicroUzi",
-			"CUP_muzzle_Bizon",
-			"CUP_muzzle_PBS4",
-			"CUP_muzzle_PB6P9",
 			"CUP_muzzle_snds_G36_black",
 			"CUP_muzzle_snds_G36_desert",
 			"CUP_muzzle_snds_L85",
@@ -2089,6 +2085,11 @@ class CfgTraderCategories
 			"hlc_5rnd_300WM_BTSP_AWM",
 			"hlc_5rnd_300WM_mk248_AWM",
 			"hlc_5rnd_300WM_SBT_AWM"
+			//CUP
+			"CUP_10x_303_M",
+			"CUP_5Rnd_127x108_KSVK_M",
+			"CUP_10Rnd_127x99_M107",
+			"CUP_5Rnd_127x99_as50_M"
 		};
 	};
 	
@@ -2255,8 +2256,9 @@ class CfgTraderCategories
 		items[] = 
 		{
 			"Exile_Headgear_GasMask",
-			"CUP_H_RUS_6B27_NVG_olive",
-			"CUP_H_RUS_6B27_NVG"
+			"O_NVGoggles_hex_F",
+			"O_NVGoggles_urb_F",
+			"O_NVGoggles_ghex_F"
 		};
 	};
 	class Cars

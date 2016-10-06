@@ -337,10 +337,10 @@ class CfgExileArsenal
 	class NVGoggles														{ quality = 1; price = 250; };
 	class NVGoggles_INDEP												{ quality = 1; price = 250; };
 	class NVGoggles_OPFOR												{ quality = 1; price = 250; };
-	class NVGoggles_tna_F												{ quality = 1; price = 250; };
-	class O_NVGoggles_ghex_F											{ quality = 1; price = 250; };
-	class O_NVGoggles_hex_F												{ quality = 1; price = 250; };
-	class O_NVGoggles_urb_F												{ quality = 1; price = 250; };
+	class NVGoggles_tna_F												{ quality = 1; price = 300; };
+	class O_NVGoggles_ghex_F											{ quality = 1; price = 300; };
+	class O_NVGoggles_hex_F												{ quality = 1; price = 300; };
+	class O_NVGoggles_urb_F												{ quality = 1; price = 300; };
 
 	///////// Exile Headgear /////////	
 	class Exile_Headgear_SantaHat										{ quality = 1; price = 75; };
@@ -859,7 +859,7 @@ class CfgExileArsenal
 	class hlc_rifle_slr107u 											{ quality = 2; price = 500; };
 	class hlc_rifle_slr107u_MTK 										{ quality = 2; price = 500; };
 	class hlc_rifle_ak12 												{ quality = 1; price = 425; };
-	class hlc_rifle_ak12GL 												{ quality = 1; price = 475; };
+	class hlc_rifle_ak12GL 												{ quality = 1; price = 675; };
 	class hlc_rifle_aku12 												{ quality = 1; price = 425; };
 	class hlc_rifle_ak47 												{ quality = 2; price = 425; };
 	class hlc_rifle_ak74 												{ quality = 1; price = 425; sellPrice = 50; };
@@ -867,13 +867,13 @@ class CfgExileArsenal
 	class hlc_rifle_ak74_dirty 											{ quality = 1; price = 425; };
 	class hlc_rifle_ak74_dirty2 										{ quality = 1; price = 425; };
 	class hlc_rifle_ak74m 												{ quality = 1; price = 425; };
-	class hlc_rifle_ak74m_gl 											{ quality = 1; price = 475; };
+	class hlc_rifle_ak74m_gl 											{ quality = 1; price = 675; };
 	class hlc_rifle_ak74m_MTK 											{ quality = 1; price = 425; };
 	class hlc_rifle_akm 												{ quality = 2; price = 625; };
 	class hlc_rifle_akmgl 												{ quality = 2; price = 825; };
 	class hlc_rifle_akm_MTK 											{ quality = 2; price = 625; sellPrice = 50; };
 	class hlc_rifle_aks74 												{ quality = 1; price = 425; };
-	class hlc_rifle_aks74_GL 											{ quality = 1; price = 475; };
+	class hlc_rifle_aks74_GL 											{ quality = 1; price = 675; };
 	class hlc_rifle_aks74_MTK 											{ quality = 1; price = 425; };
 	class hlc_rifle_aks74u 												{ quality = 1; price = 425; };
 	class hlc_rifle_aks74u_MTK 											{ quality = 1; price = 425; };
@@ -1131,7 +1131,7 @@ class CfgExileArsenal
 	class optic_SOS_khk_F												{ quality = 1; price = 300; };
 	class optic_MRD														{ quality = 1; price = 75; };
 	class optic_Yorris													{ quality = 1; price = 75; };
-	class optic_Nightstalker											{ quality = 4; price = 2000; };
+	class optic_Nightstalker											{ quality = 3; price = 2000; };
 	//class optic_tws													{ quality = 1; price = 1500; };
 	//class optic_tws_mg												{ quality = 1; price = 1500; };
 	
@@ -1150,7 +1150,7 @@ class CfgExileArsenal
 	class hlc_muzzle_556NATO_KAC 										{ quality = 1; price = 250; };
 	class hlc_muzzle_300blk_KAC 										{ quality = 2; price = 250; };
 	class hlc_muzzle_snds_fal											{ quality = 2; price = 250; };
-	class hlc_muzzle_snds_g3											{ quality = 3; price = 250; };
+	class hlc_muzzle_snds_g3											{ quality = 2; price = 250; };
 	class hlc_muzzle_snds_HK33											{ quality = 1; price = 250; };
 	class muzzle_hbadger												{ quality = 2; price = 250; };
 
@@ -1178,7 +1178,7 @@ class CfgExileArsenal
 	class HLC_Optic_ZFSG1 												{ quality = 1; price = 100; };
 	
 
-		//Dogtages
+		//Dogtags
 	  class CUP_item_CDF_dogtags                            { quality = 1; price = 500; };
 	  //RangeFinders
 	  class CUP_Vector21Nite                                { quality = 1; price = 200; };
@@ -1214,8 +1214,8 @@ class CfgExileArsenal
 	  // CUP Pistol Attachments //////////////////////////////////////////////////////////////////
 	  ////////////////////////////////////////////////////////////////////////////////////////////
 	  class CUP_acc_Glock17_Flashlight                      { quality = 1; price = 40; };
-	  class CUP_muzzle_snds_M9                              { quality = 1; price = 300; };
-	  class CUP_muzzle_snds_MicroUzi                        { quality = 1; price = 300; };
+	  class CUP_muzzle_snds_M9                              { quality = 1; price = 200; };
+	  class CUP_muzzle_snds_MicroUzi                        { quality = 1; price = 200; };
 	  ////////////////////////////////////////////////////////////////////////////////////////////
 	  // CUP SMGs ////////////////////////////////////////////////////////////////////////////////
 	  ////////////////////////////////////////////////////////////////////////////////////////////
@@ -1334,7 +1334,7 @@ class CfgExileArsenal
 	  class CUP_30Rnd_TE1_Red_Tracer_545x39_AK_M          	{ quality = 1; price = 200; };
 	  class CUP_30Rnd_TE1_White_Tracer_545x39_AK_M          { quality = 1; price = 200; };
 	  class CUP_30Rnd_TE1_Yellow_Tracer_545x39_AK_M         { quality = 1; price = 200; };
-	  class CUP_30Rnd_762x39_AK47_M                         { quality = 1; price = 300; };
+	  class CUP_30Rnd_762x39_AK47_M                         { quality = 2; price = 250; };
 	  // 556 AMMO ////////////////////////////////////////////////////////////////////////////////
 	  class CUP_20Rnd_556x45_Stanag                         { quality = 1; price = 100; };
 	  class CUP_30Rnd_556x45_Stanag                         { quality = 1; price = 100; };
@@ -1347,22 +1347,22 @@ class CfgExileArsenal
 	  class CUP_100Rnd_TE1_Green_Tracer_556x45_BetaCMag     { quality = 1; price = 200; };
 	  class CUP_100Rnd_TE1_Yellow_Tracer_556x45_BetaCMag    { quality = 1; price = 200; };
 	  // 762 AMMO /////////////////////////////////////////////////////////////////////////////////
-	  class CUP_20Rnd_762x51_L129_M                         { quality = 1; price = 300; };
-	  class CUP_20Rnd_762x51_FNFAL_M                        { quality = 1; price = 300; };
-	  class CUP_30Rnd_Sa58_M                                { quality = 1; price = 200; };
-	  class CUP_30Rnd_Sa58_M_TracerG                        { quality = 1; price = 200; };
-	  class CUP_30Rnd_Sa58_M_TracerR                        { quality = 1; price = 200; };
-	  class CUP_30Rnd_Sa58_M_TracerY                        { quality = 1; price = 200; };
-	  class CUP_20Rnd_762x51_B_SCAR                         { quality = 1; price = 300; };
-	  class CUP_20Rnd_TE1_White_Tracer_762x51_SCAR          { quality = 1; price = 300; };
-	  class CUP_20Rnd_TE1_Yellow_Tracer_762x51_SCAR         { quality = 1; price = 300; };
-	  class CUP_20Rnd_TE1_Red_Tracer_762x51_SCAR            { quality = 1; price = 300; };
-	  class CUP_20Rnd_TE1_Green_Tracer_762x51_SCAR          { quality = 1; price = 300; };
-	  class CUP_20Rnd_762x51_CZ805B                         { quality = 1; price = 300; };
-	  class CUP_20Rnd_TE1_Red_Tracer_762x51_CZ805B          { quality = 1; price = 300; };
-	  class CUP_20Rnd_TE1_Yellow_Tracer_762x51_CZ805B       { quality = 1; price = 300; };
-	  class CUP_20Rnd_TE1_Green_Tracer_762x51_CZ805B        { quality = 1; price = 300; };
-	  class CUP_20Rnd_TE1_White_Tracer_762x51_CZ805B        { quality = 1; price = 300; };  
+	  class CUP_20Rnd_762x51_L129_M                         { quality = 2; price = 250; };
+	  class CUP_20Rnd_762x51_FNFAL_M                        { quality = 2; price = 250; };
+	  class CUP_30Rnd_Sa58_M                                { quality = 2; price = 200; };
+	  class CUP_30Rnd_Sa58_M_TracerG                        { quality = 2; price = 200; };
+	  class CUP_30Rnd_Sa58_M_TracerR                        { quality = 2; price = 200; };
+	  class CUP_30Rnd_Sa58_M_TracerY                        { quality = 2; price = 200; };
+	  class CUP_20Rnd_762x51_B_SCAR                         { quality = 2; price = 200; };
+	  class CUP_20Rnd_TE1_White_Tracer_762x51_SCAR          { quality = 2; price = 200; };
+	  class CUP_20Rnd_TE1_Yellow_Tracer_762x51_SCAR         { quality = 2; price = 200; };
+	  class CUP_20Rnd_TE1_Red_Tracer_762x51_SCAR            { quality = 2; price = 200; };
+	  class CUP_20Rnd_TE1_Green_Tracer_762x51_SCAR          { quality = 2; price = 200; };
+	  class CUP_20Rnd_762x51_CZ805B                         { quality = 2; price = 200; };
+	  class CUP_20Rnd_TE1_Red_Tracer_762x51_CZ805B          { quality = 2; price = 200; };
+	  class CUP_20Rnd_TE1_Yellow_Tracer_762x51_CZ805B       { quality = 2; price = 200; };
+	  class CUP_20Rnd_TE1_Green_Tracer_762x51_CZ805B        { quality = 2; price = 200; };
+	  class CUP_20Rnd_TE1_White_Tracer_762x51_CZ805B        { quality = 2; price = 200; };  
 	  ////////////////////////////////////////////////////////////////////////////////////////////
 	  // CUP Grenade Launcher Ammo ///////////////////////////////////////////////////////////////
 	  ////////////////////////////////////////////////////////////////////////////////////////////
@@ -1381,11 +1381,11 @@ class CfgExileArsenal
 	  ////////////////////////////////////////////////////////////////////////////////////////////
 	  class CUP_optic_MAAWS_Scope                           { quality = 1; price = 300; }
 	  class CUP_optic_Kobra                                 { quality = 1; price = 150; }; //0
-	  class CUP_optic_PSO_1                                 { quality = 1; price = 400; };//4
-	  class CUP_optic_NSPU                                  { quality = 1; price = 900; };//4 nv
-	  class CUP_optic_GOSHAWK                             { quality = 5; price = 10000; };//therm
-	  class CUP_muzzle_PBS4                                 { quality = 1; price = 400; };
-	  class CUP_muzzle_PB6P9                                { quality = 1; price = 400; };
+	  class CUP_optic_PSO_1                                 { quality = 1; price = 300; };//4
+	  class CUP_optic_NSPU                                  { quality = 1; price = 800; };//4 nv
+	  class CUP_optic_GOSHAWK                               { quality = 5; price = 5000;};//therm
+	  class CUP_muzzle_PBS4                                 { quality = 1; price = 250; };
+	  class CUP_muzzle_PB6P9                                { quality = 1; price = 250; };
 	  class CUP_optic_ZDDot                                 { quality = 1; price = 150; };//0
 	  class CUP_acc_Flashlight                              { quality = 1; price = 40; };
 	  class CUP_optic_RCO                                   { quality = 1; price = 300; };//2
@@ -1394,47 +1394,47 @@ class CfgExileArsenal
 	  class CUP_optic_HoloDesert                            { quality = 1; price = 150; };//0
 	  class CUP_muzzle_snds_G36_desert                      { quality = 1; price = 300; };
 	  class CUP_optic_Eotech533                             { quality = 2; price = 150; };//0
-	  class CUP_optic_SUSAT                                 { quality = 1; price = 500; };//5
+	  class CUP_optic_SUSAT                                 { quality = 1; price = 400; };//5
 	  //class CUP_optic_CWS                                 { quality = 1; price = 5000; };//thermal
-	  class CUP_acc_sffh                                    { quality = 1; price = 80; };
+	  class CUP_acc_sffh                                    { quality = 1; price = 250; };
 	  class CUP_optic_Elcan                                 { quality = 1; price = 300; };
-	  class CUP_optic_Elcan_reflex                          { quality = 1; price = 400; };
-	  class CUP_optic_ElCAN_SpecterDR                       { quality = 1; price = 400; };
-	  class CUP_optic_ACOG                                  { quality = 1; price = 400; };//4
-	  class CUP_optic_AN_PVS_4                              { quality = 1; price = 500; };
-	  class CUP_optic_AN_PVS_10                             { quality = 1; price = 800; };
-	  class CUP_optic_CompM2_Black                        { quality = 1; price = 150; };//0
-	  class CUP_optic_CompM2_Woodland                     { quality = 1; price = 150; };//0
-	  class CUP_optic_CompM2_Woodland2                    { quality = 1; price = 150; };//0
-	  class CUP_optic_CompM2_Desert                       { quality = 1; price = 150; };//0
+	  class CUP_optic_Elcan_reflex                          { quality = 1; price = 300; };
+	  class CUP_optic_ElCAN_SpecterDR                       { quality = 1; price = 300; };
+	  class CUP_optic_ACOG                                  { quality = 1; price = 300; };//4
+	  class CUP_optic_AN_PVS_4                              { quality = 1; price = 350; };
+	  class CUP_optic_AN_PVS_10                             { quality = 1; price = 400; };
+	  class CUP_optic_CompM2_Black                        { quality = 1; price = 200; };//0
+	  class CUP_optic_CompM2_Woodland                     { quality = 1; price = 200; };//0
+	  class CUP_optic_CompM2_Woodland2                    { quality = 1; price = 200; };//0
+	  class CUP_optic_CompM2_Desert                       { quality = 1; price = 200; };//0
 	  class CUP_acc_Flashlight_desert                       { quality = 1; price = 40; };
 	  class CUP_optic_RCO_desert                            { quality = 1; price = 300; };//2
-	  class CUP_muzzle_snds_M16_camo                        { quality = 1; price = 400; };
-	  class CUP_muzzle_snds_M16                             { quality = 1; price = 400; };
-	  class CUP_muzzle_snds_L85                             { quality = 1; price = 400; };
+	  class CUP_muzzle_snds_M16_camo                        { quality = 1; price = 300; };
+	  class CUP_muzzle_snds_M16                             { quality = 1; price = 300; };
+	  class CUP_muzzle_snds_L85                             { quality = 1; price = 300; };
 	  class CUP_optic_HolowWdl                            { quality = 1; price = 150; };  //bugged
 	  class CUP_acc_Flashlight_wdl                          { quality = 1; price = 40; };
 	  class CUP_optic_LeupoldMk4_CQ_T						{ quality = 1; price = 200; };
 	  //class CUP_optic_AN_PAS_13c1                         { quality = 2; price = 6000; };//therm
 	  //class CUP_optic_AN_PAS_13c2                         { quality = 2; price = 6000; };//therm
 	  class CUP_muzzle_mfsup_SCAR_L                       { quality = 1; price = 300; };  //bugged
-	  class CUP_optic_CompM4                                { quality = 1; price = 150; };//0
-	  class CUP_muzzle_snds_SCAR_L                          { quality = 1; price = 500; };
+	  class CUP_optic_CompM4                                { quality = 1; price = "50; };//0
+	  class CUP_muzzle_snds_SCAR_L                          { quality = 1; price = 350; };
 	  class CUP_muzzle_mfsup_SCAR_H                       { quality = 1; price = 300; };  //bugged
 	  class CUP_optic_LeupoldMk4_MRT_tan					{ quality = 1; price = 200; };
-	  class CUP_optic_SB_11_4x20_PM                         { quality = 1; price = 600; }; //4
-	  class CUP_optic_TrijiconRx01_black                    { quality = 2; price = 150; };
-	  class CUP_optic_TrijiconRx01_desert                   { quality = 2; price = 150; };
-	  class CUP_optic_Eotech533Grey                         { quality = 2; price = 150; };//0
+	  class CUP_optic_SB_11_4x20_PM                         { quality = 1; price = 300; }; //4
+	  class CUP_optic_TrijiconRx01_black                    { quality = 2; price = 250; };
+	  class CUP_optic_TrijiconRx01_desert                   { quality = 2; price = 250; };
+	  class CUP_optic_Eotech533Grey                         { quality = 1; price = 150; };//0
 	  class CUP_acc_XM8_light_module                        { quality = 1; price = 40; };
-	  class CUP_muzzle_snds_SCAR_H                          { quality = 1; price = 500; };  
+	  class CUP_muzzle_snds_SCAR_H                          { quality = 1; price = 350; };  
 	  ////////////////////////////////////////////////////////////////////////////////////////////
 	  // CUP LMGs ////////////////////////////////////////////////////////////////////////////////
 	  ////////////////////////////////////////////////////////////////////////////////////////////
-	  class CUP_arifle_RPK74                                { quality = 1; price = 800; };
-	  class CUP_lmg_Pecheneg                                { quality = 1; price = 800; };
-	  class CUP_lmg_PKM                                     { quality = 1; price = 800; };
-	  class CUP_lmg_UK59                                    { quality = 1; price = 800; };
+	  class CUP_arifle_RPK74                                { quality = 2; price = 750; };
+	  class CUP_lmg_Pecheneg                                { quality = 2; price = 750; };
+	  class CUP_lmg_PKM                                     { quality = 2; price = 750; };
+	  class CUP_lmg_UK59                                    { quality = 2; price = 750; };
 	  class CUP_arifle_L86A2                                { quality = 1; price = 600; };
 	  class CUP_lmg_L110A1                                  { quality = 1; price = 600; };
 	  class CUP_lmg_L7A2                                    { quality = 1; price = 600; };
@@ -1442,32 +1442,32 @@ class CfgExileArsenal
 	  class CUP_arifle_MG36_camo                            { quality = 1; price = 600; };
 	  class CUP_lmg_M249_para                               { quality = 1; price = 600; };
 	  class CUP_lmg_M249                                    { quality = 1; price = 600; };
-	  class CUP_lmg_M240                                    { quality = 1; price = 1000; };
-	  class CUP_lmg_M60E4									{ quality = 1; price = 1000; };
-	  class CUP_lmg_Mk48_des                                { quality = 3; price = 8000; sellPrice = 2500; };
-	  class CUP_lmg_Mk48_wdl                                { quality = 3; price = 8000; sellPrice = 2500; };
+	  class CUP_lmg_M240                                    { quality = 2; price = 900; };
+	  class CUP_lmg_M60E4									{ quality = 2; price = 1000;};
+	  class CUP_lmg_Mk48_des                                { quality = 3; price = 1100;};
+	  class CUP_lmg_Mk48_wdl                                { quality = 3; price = 1100;};
 	  ////////////////////////////////////////////////////////////////////////////////////////////
 	  // CUP LMG Ammo ////////////////////////////////////////////////////////////////////////////
 	  ////////////////////////////////////////////////////////////////////////////////////////////
-	  class CUP_45Rnd_TE4_LRT4_Green_Tracer_545x39_RPK_M    { quality = 1; price = 200; };
-	  class CUP_75Rnd_TE4_LRT4_Green_Tracer_545x39_RPK_M    { quality = 1; price = 225; };
-	  class CUP_100Rnd_TE4_LRT4_762x54_PK_Tracer_Green_M    { quality = 1; price = 250; };
-	  class CUP_50Rnd_UK59_762x54R_Tracer                   { quality = 1; price = 225; };
-	  class CUP_100Rnd_TE4_LRT4_White_Tracer_762x51_Belt_M  { quality = 1; price = 250; };
-	  class CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M    { quality = 1; price = 250; };
+	  class CUP_45Rnd_TE4_LRT4_Green_Tracer_545x39_RPK_M    { quality = 1; price = 150; };
+	  class CUP_75Rnd_TE4_LRT4_Green_Tracer_545x39_RPK_M    { quality = 1; price = 150; };
+	  class CUP_100Rnd_TE4_LRT4_762x54_PK_Tracer_Green_M    { quality = 2; price = 250; };
+	  class CUP_50Rnd_UK59_762x54R_Tracer                   { quality = 2; price = 250; };
+	  class CUP_100Rnd_TE4_LRT4_White_Tracer_762x51_Belt_M  { quality = 2; price = 250; };
+	  class CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M    { quality = 2; price = 250; };
 	  class CUP_200Rnd_TE4_Red_Tracer_556x45_M249           { quality = 1; price = 200; };
 	  class CUP_200Rnd_TE4_Yellow_Tracer_556x45_M249        { quality = 1; price = 200; };
 	  class CUP_200Rnd_TE4_Green_Tracer_556x45_M249         { quality = 1; price = 200; };
-	  class CUP_100Rnd_TE4_Green_Tracer_556x45_M249         { quality = 1; price = 100; };
-	  class CUP_100Rnd_TE4_Red_Tracer_556x45_M249           { quality = 1; price = 100; };
-	  class CUP_100Rnd_TE4_Yellow_Tracer_556x45_M249        { quality = 1; price = 100; };
+	  class CUP_100Rnd_TE4_Green_Tracer_556x45_M249         { quality = 1; price = 150; };
+	  class CUP_100Rnd_TE4_Red_Tracer_556x45_M249           { quality = 1; price = 150; };
+	  class CUP_100Rnd_TE4_Yellow_Tracer_556x45_M249        { quality = 1; price = 150; };
 	  class CUP_200Rnd_TE4_Green_Tracer_556x45_L110A1       { quality = 1; price = 200; };
 	  class CUP_200Rnd_TE4_Red_Tracer_556x45_L110A1         { quality = 1; price = 200; };
 	  class CUP_200Rnd_TE4_Yellow_Tracer_556x45_L110A1      { quality = 1; price = 200; };
 	  ////////////////////////////////////////////////////////////////////////////////////////////
 	  // CUP LMG Attachments /////////////////////////////////////////////////////////////////////
 	  ////////////////////////////////////////////////////////////////////////////////////////////
-	  class CUP_optic_PechenegScope                         { quality = 1; price = 500; };
+	  class CUP_optic_PechenegScope                         { quality = 1; price = 250; };
 	  class CUP_optic_ElcanM145                        		{ quality = 1; price = 150; };
 	  ////////////////////////////////////////////////////////////////////////////////////////////
 	  // CUP Snipers /////////////////////////////////////////////////////////////////////////////
@@ -1513,22 +1513,22 @@ class CfgExileArsenal
 	  class CUP_10Rnd_762x54_SVD_M					        { quality = 1; price = 150; };
 	  class CUP_10Rnd_9x39_SP5_VSS_M						{ quality = 1; price = 50; };
 	  class CUP_20Rnd_9x39_SP5_VSS_M						{ quality = 1; price = 60; };
-	  class CUP_10x_303_M									{ quality = 1; price = 200; };
-	  class CUP_5Rnd_127x108_KSVK_M                         { quality = 1; price = 400; };
-	  class CUP_10Rnd_127x99_M107                           { quality = 1; price = 400; };
-	  class CUP_5Rnd_127x99_as50_M                          { quality = 1; price = 350; };
+	  class CUP_10x_303_M									{ quality = 3; price = 500; };
+	  class CUP_5Rnd_127x108_KSVK_M                         { quality = 3; price = 500; };
+	  class CUP_10Rnd_127x99_M107                           { quality = 3; price = 500; };
+	  class CUP_5Rnd_127x99_as50_M                          { quality = 3; price = 500; };
 	  ////////////////////////////////////////////////////////////////////////////////////////////
 	  // Sniper Items ////////////////////////////////////////////////////////////////////////////
 	  ////////////////////////////////////////////////////////////////////////////////////////////
-	  class CUP_optic_SB_3_12x50_PMII                       { quality = 2; price = 1000; }; //10
-	  class CUP_optic_LeupoldMk4                            { quality = 1; price = 1000; }; //10
-	  class CUP_optic_LeupoldMk4_10x40_LRT_Desert           { quality = 2; price = 1000; }; //10
-	  class CUP_optic_LeupoldMk4_10x40_LRT_Woodland         { quality = 2; price = 1000; };
-	  class CUP_optic_Leupold_VX3                           { quality = 1; price = 900; }; //9
-	  class CUP_optic_PSO_3									{ quality = 1; price = 900; }; //9
-	  class CUP_muzzle_snds_M110                            { quality = 1; price = 1000; }; //9
-	  class CUP_muzzle_snds_AWM                             { quality = 1; price = 1500; }; //9
-	  class CUP_muzzle_snds_M14                             { quality = 1; price = 500; }; //9
+	  class CUP_optic_SB_3_12x50_PMII                       { quality = 1; price = 350; }; //10
+	  class CUP_optic_LeupoldMk4                            { quality = 1; price = 350; }; //10
+	  class CUP_optic_LeupoldMk4_10x40_LRT_Desert           { quality = 1; price = 400; }; //10
+	  class CUP_optic_LeupoldMk4_10x40_LRT_Woodland         { quality = 1; price = 400; };
+	  class CUP_optic_Leupold_VX3                           { quality = 1; price = 300; }; //9
+	  class CUP_optic_PSO_3									{ quality = 1; price = 300; }; //9
+	  class CUP_muzzle_snds_M110                            { quality = 1; price = 400; }; //9
+	  class CUP_muzzle_snds_AWM                             { quality = 1; price = 450; }; //9
+	  class CUP_muzzle_snds_M14                             { quality = 1; price = 350; }; //9
 	  ////////////////////////////////////////////////////////////////////////////////////////////
 	  // CUP Shotguns ////////////////////////////////////////////////////////////////////////////
 	  ////////////////////////////////////////////////////////////////////////////////////////////
@@ -1538,9 +1538,9 @@ class CfgExileArsenal
 	  ////////////////////////////////////////////////////////////////////////////////////////////
 	  // CUP Shotgun Ammo ////////////////////////////////////////////////////////////////////////
 	  ////////////////////////////////////////////////////////////////////////////////////////////
-	  class CUP_20Rnd_B_AA12_Pellets	                 	{ quality = 1; price = 20; };
-	  class CUP_20Rnd_B_AA12_74Slug		                 	{ quality = 1; price = 20; };
-	  class CUP_20Rnd_B_AA12_HE			                 	{ quality = 1; price = 2000; };
+	  class CUP_20Rnd_B_AA12_Pellets	                 	{ quality = 1; price = 100; };
+	  class CUP_20Rnd_B_AA12_74Slug		                 	{ quality = 1; price = 100; };
+	  class CUP_20Rnd_B_AA12_HE			                 	{ quality = 3; price = 750; };
 	  class CUP_8Rnd_B_Beneli_74Slug                     	{ quality = 1; price = 30; };
 	  class CUP_8Rnd_B_Beneli_74Pellets                     { quality = 1; price = 20; };
 	  class CUP_8Rnd_B_Saiga12_74Slug_M                    	{ quality = 1; price = 30; };
@@ -1550,13 +1550,13 @@ class CfgExileArsenal
 	  ////////////////////////////////////////////////////////////////////////////////////////////
 	  class CUP_B_HikingPack_Civ                            { quality = 1; price = 400; }; //300
 	  class CUP_B_RUS_Backpack                              { quality = 1; price = 250; }; //250
-	  class CUP_B_GER_Pack_Flecktarn                        { quality = 1; price = 300; }; //280
-	  class CUP_B_GER_Pack_Tropentarn                       { quality = 1; price = 300; }; //280
+	  class CUP_B_GER_Pack_Flecktarn                        { quality = 1; price = 450; }; //280
+	  class CUP_B_GER_Pack_Tropentarn                       { quality = 1; price = 450; }; //280
 	  class CUP_B_USPack_Coyote                             { quality = 1; price = 300; }; //280
 	  class CUP_B_USPack_Black                              { quality = 1; price = 300; }; //280
 	  class CUP_B_Bergen_BAF                                { quality = 1; price = 300; }; //280
 	  class CUP_B_ACRPara_m95                               { quality = 1; price = 400; }; //300
-	  class CUP_B_ACRScout_m95                              { quality = 1; price = 100; }; //60
+	  class CUP_B_ACRScout_m95                              { quality = 1; price = 150; }; //60
 	  class CUP_B_CivPack_WDL                               { quality = 1; price = 300; }; //280
 	  class CUP_B_AlicePack_Khaki                           { quality = 1; price = 400; }; //300
 	  class CUP_B_AlicePack_Bedroll                         { quality = 1; price = 400; }; //300
@@ -1726,9 +1726,9 @@ class CfgExileArsenal
 	  // CUP HeadGear /////////////////////////////////////////////////////////////////////////////
 	  ////////////////////////////////////////////////////////////////////////////////////////////
 	    class CUP_H_RUS_6B27                                    { quality = 1; price = 100; };
-	    class CUP_H_RUS_6B27_NVG                                { quality = 1; price = 300; };
+	    class CUP_H_RUS_6B27_NVG                                { quality = 1; price = 250; };
 	    class CUP_H_RUS_6B27_olive                              { quality = 1; price = 100; };
-	    class CUP_H_RUS_6B27_NVG_olive                          { quality = 1; price = 300; };
+	    class CUP_H_RUS_6B27_NVG_olive                          { quality = 1; price = 250; };
 	    class CUP_H_SLA_BeretRed                                { quality = 1; price = 100; };
 	    class CUP_H_BAF_Officer_Beret                           { quality = 1; price = 100; };
 	    class CUP_H_BAF_Officer_Beret_PRR_O                     { quality = 1; price = 100; };
@@ -2035,27 +2035,27 @@ class CfgExileArsenal
 		class CUP_RPG18_M                               { quality = 3; price = 1000; };
 		class CUP_launch_M136                           { quality = 3; price = 5000; };
 		class CUP_M136_M                                { quality = 3; price = 1000; };
-		class CUP_launch_MK153Mod0                      { quality = 3; price = 10000; sellPrice = 2500; };
+		class CUP_launch_MK153Mod0                      { quality = 3; price = 8000;};
 		class CUP_SMAW_HEDP_M                           { quality = 3; price = 3000; };
 		class CUP_SMAW_HEAT_M                           { quality = 3; price = 3500; };
-		class CUP_launch_RPG7V                          { quality = 3; price = 10000; sellPrice = 2500; };
+		class CUP_launch_RPG7V                          { quality = 3; price = 8000;};
 		class CUP_PG7V_M                                { quality = 3; price = 3000; };
 		class CUP_OG7_M                                 { quality = 3; price = 3500; };
-		class CUP_launch_MAAWS                          { quality = 3; price = 25000; sellPrice = 5000; };
+		class CUP_launch_MAAWS                          { quality = 3; price = 25000;};
 		class CUP_MAAWS_HEDP_M                          { quality = 3; price = 3500; };
 	    class CUP_MAAWS_HEAT_M                          { quality = 3; price = 3000; };
 	  ///AA LAUCNHERS/////////////////////////////////////////////////////////////////////////////
-	    class CUP_launch_Fim92Stinger                   { quality = 3; price = 30000; sellPrice = 6000; };
-		class CUP_stinger_M                             { quality = 3; price = 6000; sellPrice = 1000; };
-		class CUP_Launch_igla                           { quality = 3; price = 35000; sellPrice = 7000; };
-		class CUP_igla_M                                { quality = 3; price = 7000; sellPrice = 800; };
-	  	class CUP_launch_9k32Strela                     { quality = 3; price = 40000; sellPrice = 7500; };
-		class CUP_Strela_2_M                            { quality = 3; price = 8000; sellPrice = 1500; };
+	    class CUP_launch_Fim92Stinger                   { quality = 3; price = 25000; };
+		class CUP_stinger_M                             { quality = 3; price = 22000; };
+		class CUP_Launch_igla                           { quality = 3; price = 25000;};
+		class CUP_igla_M                                { quality = 3; price = 7000;};
+	  	class CUP_launch_9k32Strela                     { quality = 3; price = 20000;};
+		class CUP_Strela_2_M                            { quality = 3; price = 8000;};
 	  ///AT LAUCNHERS/////////////////////////////////////////////////////////////////////////////////
-	    class CUP_launch_Javelin                        { quality = 3; price = 30000; sellPrice = 6000; };
-		class CUP_Javelin_M                             { quality = 3; price = 3000; };
-	  	class CUP_launch_M47                            { quality = 3; price = 25000; sellPrice = 5000; };
-		class CUP_Dragon_EP1_M                          { quality = 3; price = 2500; };
+	    class CUP_launch_Javelin                        { quality = 3; price = 18000;};
+		class CUP_Javelin_M                             { quality = 3; price = 13000; };
+	  	class CUP_launch_M47                            { quality = 3; price = 15000;};
+		class CUP_Dragon_EP1_M                          { quality = 3; price = 9000; };
 	  ////////////////////////////////////////////////////////////////////////////////////////////
 	  ///////////////////////////// CUP Vehicles /////////////////////////////////////////////////
 	  ////////////////////////////////////////////////////////////////////////////////////////////
