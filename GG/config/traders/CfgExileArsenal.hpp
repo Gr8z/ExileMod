@@ -753,7 +753,7 @@ class CfgExileArsenal
 	class arifle_TRG21_GL_F												{ quality = 1; price = 450; };
 	class arifle_AK12_F													{ quality = 2; price = 400; };												
 	class arifle_AK12_GL_F												{ quality = 2; price = 450; };
-	class arifle_AKM_F													{ quality = 2; price = 400; };
+	class arifle_AKM_F													{ quality = 2; price = 600; };
 	class arifle_AKS_F													{ quality = 1; price = 350; };
 	class arifle_CTAR_blk_F												{ quality = 1; price = 350; };
 	class arifle_CTAR_ghex_F											{ quality = 1; price = 350; };
@@ -853,7 +853,7 @@ class CfgExileArsenal
 	class Exile_Weapon_M1014											{ quality = 1; price = 200; sellPrice = 35; };
 	
 	///////// NIArms Handguns /////////	
-	class hlc_smg_mp5k 													{ quality = 1; price = 350; };
+	class hlc_smg_mp5k 													{ quality = 1; price = 250; };
 	
 	///////// NIArms AK Rifles /////////
 	class hlc_rifle_slr107u 											{ quality = 2; price = 500; };
@@ -869,9 +869,9 @@ class CfgExileArsenal
 	class hlc_rifle_ak74m 												{ quality = 1; price = 425; };
 	class hlc_rifle_ak74m_gl 											{ quality = 1; price = 475; };
 	class hlc_rifle_ak74m_MTK 											{ quality = 1; price = 425; };
-	class hlc_rifle_akm 												{ quality = 2; price = 425; };
-	class hlc_rifle_akmgl 												{ quality = 2; price = 425; };
-	class hlc_rifle_akm_MTK 											{ quality = 2; price = 425; sellPrice = 50; };
+	class hlc_rifle_akm 												{ quality = 2; price = 625; };
+	class hlc_rifle_akmgl 												{ quality = 2; price = 825; };
+	class hlc_rifle_akm_MTK 											{ quality = 2; price = 625; sellPrice = 50; };
 	class hlc_rifle_aks74 												{ quality = 1; price = 425; };
 	class hlc_rifle_aks74_GL 											{ quality = 1; price = 475; };
 	class hlc_rifle_aks74_MTK 											{ quality = 1; price = 425; };
@@ -880,8 +880,7 @@ class CfgExileArsenal
 	class hlc_rifle_rpk 												{ quality = 1; price = 525; };
 	class hlc_rifle_RPK12 												{ quality = 1; price = 525; };
 	class hlc_rifle_rpk74n 												{ quality = 1; price = 525; };
-	class hlc_rifle_saiga12k 											{ quality = 1; price = 500; };
-	class hlc_rifle_RK62 												{ quality = 2; price = 410; };
+	class hlc_rifle_saiga12k 											{ quality = 3; price = 1700; };
 	class hlc_rifle_aek971 												{ quality = 1; price = 425; };
 	class hlc_rifle_aek971_mtk 											{ quality = 1; price = 425; };
 	class hlc_rifle_aek971worn 											{ quality = 1; price = 425; };
@@ -900,6 +899,7 @@ class CfgExileArsenal
 	class hlc_rifle_CQBR 												{ quality = 1; price = 435; sellPrice = 50; };
 	class hlc_rifle_samr2 												{ quality = 1; price = 435; };
 	class hlc_rifle_SAMR 												{ quality = 1; price = 435; };
+	class hlc_rifle_RK62 												{ quality = 2; price = 450; };
 
 	///////// NIArms AUG Rifles /////////
 	class hlc_rifle_augsrcarb_b 										{ quality = 1; price = 455; };
@@ -1185,17 +1185,17 @@ class CfgExileArsenal
 	  ////////////////////////////////////////////////////////////////////////////////////////////
 	  // CUP Pistols /////////////////////////////////////////////////////////////////////////////
 	  ////////////////////////////////////////////////////////////////////////////////////////////
-	  class CUP_hgun_Colt1911	                            { quality = 1; price = 300; };
+	  class CUP_hgun_Colt1911	                            { quality = 1; price = 200; };
 	  class CUP_hgun_Duty				                    { quality = 1; price = 250; };
 	  class CUP_hgun_Makarov                                { quality = 1; price = 250; };
 	  class CUP_hgun_MicroUzi	                            { quality = 1; price = 300; };
-	  class CUP_hgun_TaurusTracker455	                    { quality = 1; price = 300; };
+	  class CUP_hgun_TaurusTracker455	                    { quality = 1; price = 220; };
 	  class CUP_hgun_TaurusTracker455_gold					{ quality = 2; price = 500; };
 	  class CUP_hgun_M9	                                    { quality = 1; price = 300; };
 	  class CUP_hgun_Glock17	                            { quality = 1; price = 300; };
 	  class CUP_hgun_Phantom 						        { quality = 1; price = 250; };
-	  class CUP_hgun_Compact						        { quality = 2; price = 300; };
-	  class CUP_hgun_PB6P9        			    	        { quality = 1; price = 350; };
+	  class CUP_hgun_Compact						        { quality = 1; price = 300; };
+	  class CUP_hgun_PB6P9        			    	        { quality = 1; price = 250; };
 	  class CUP_hgun_SA61       					        { quality = 1; price = 250; };
 	  ////////////////////////////////////////////////////////////////////////////////////////////
 	  // CUP Pistol Ammo /////////////////////////////////////////////////////////////////////////
@@ -1241,7 +1241,7 @@ class CfgExileArsenal
 	  // CUP Rifles //////////////////////////////////////////////////////////////////////////////
 	  ////////////////////////////////////////////////////////////////////////////////////////////
 	  // AK FAMILY ///////////////////////////////////////////////////////////////////////////////
-	  class CUP_arifle_AK47                                 { quality = 1; price = 500; };
+	  class CUP_arifle_AK47                                 { quality = 1; price = 400; };
 	  class CUP_arifle_AK74                                 { quality = 1; price = 500; };
 	  class CUP_arifle_AK74_GL                              { quality = 1; price = 600; };
 	  class CUP_arifle_AK74M                                { quality = 1; price = 500; };
@@ -1251,7 +1251,7 @@ class CfgExileArsenal
 	  class CUP_arifle_AKS74U                               { quality = 1; price = 600; };
 	  class CUP_arifle_AK107                                { quality = 1; price = 500; };
 	  class CUP_arifle_AK107_GL                             { quality = 1; price = 600; };
-	  class CUP_arifle_AKM                                  { quality = 1; price = 600; };
+	  class CUP_arifle_AKM                                  { quality = 1; price = 400; };
 	  // CZ FAMILY ///////////////////////////////////////////////////////////////////////////////
 	  class CUP_arifle_CZ805_A1                             { quality = 1; price = 500; };
 	  class CUP_arifle_CZ805_A2                             { quality = 1; price = 700; };
@@ -1532,9 +1532,9 @@ class CfgExileArsenal
 	  ////////////////////////////////////////////////////////////////////////////////////////////
 	  // CUP Shotguns ////////////////////////////////////////////////////////////////////////////
 	  ////////////////////////////////////////////////////////////////////////////////////////////
-	  class CUP_sgun_AA12									{ quality = 1; price = 1200; };
-	  class CUP_sgun_M1014									{ quality = 1; price = 500; };
-	  class CUP_sgun_Saiga12K								{ quality = 1; price = 500; };
+	  class CUP_sgun_AA12									{ quality = 3; price = 1200; };
+	  class CUP_sgun_M1014									{ quality = 1; price = 200; };
+	  class CUP_sgun_Saiga12K								{ quality = 1; price = 300; };
 	  ////////////////////////////////////////////////////////////////////////////////////////////
 	  // CUP Shotgun Ammo ////////////////////////////////////////////////////////////////////////
 	  ////////////////////////////////////////////////////////////////////////////////////////////
