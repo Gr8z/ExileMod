@@ -817,11 +817,11 @@ class CfgExileArsenal
 	class srifle_DMR_07_hex_F											{ quality = 2; price = 750; };
 	class srifle_EBR_F 													{ quality = 2; price = 900; };
 	class srifle_GM6_camo_F 											{ quality = 3; price = 2500; };
-	class srifle_GM6_F 													{ quality = 3; price = 2500; };
+	class srifle_GM6_F 													{ quality = 3; price = 2200; };
 	class srifle_GM6_ghex_F 											{ quality = 3; price = 2500; };
-	class srifle_LRR_camo_F 											{ quality = 3; price = 1750; };
-	class srifle_LRR_F 													{ quality = 3; price = 1750; };
-	class srifle_LRR_tna_F 												{ quality = 3; price = 1750; };
+	class srifle_LRR_camo_F 											{ quality = 3; price = 2250; };
+	class srifle_LRR_F 													{ quality = 3; price = 1950; };
+	class srifle_LRR_tna_F 												{ quality = 3; price = 2250; };
 	
 	///////// Launchers /////////
 	class launch_RPG7_F													{ quality = 4; price = 3000; };
@@ -943,29 +943,29 @@ class CfgExileArsenal
 	class hlc_rifle_auga3 												{ quality = 1; price = 435; };
 
 	///////// NIArms AWM Rifles /////////
-	class hlc_rifle_awcovert_BL 										{ quality = 3; price = 1300; };
-	class hlc_rifle_awcovert_FDE 										{ quality = 3; price = 1300; };
-	class hlc_rifle_awcovert 											{ quality = 3; price = 1250; };
-	class hlc_rifle_awmagnum_BL 										{ quality = 3; price = 1250; };
-	class hlc_rifle_awMagnum_BL_ghillie 								{ quality = 3; price = 1350; };
-	class hlc_rifle_awmagnum_FDE 										{ quality = 3; price = 1250; };
-	class hlc_rifle_awMagnum_FDE_ghillie 								{ quality = 3; price = 1350; };
-	class hlc_rifle_awmagnum 											{ quality = 3; price = 1250; };
-	class hlc_rifle_awMagnum_OD_ghillie 								{ quality = 3; price = 1350; };
+	class hlc_rifle_awcovert_BL 										{ quality = 3; price = 1650; };
+	class hlc_rifle_awcovert_FDE 										{ quality = 3; price = 1650; };
+	class hlc_rifle_awcovert 											{ quality = 3; price = 1650; };
+	class hlc_rifle_awmagnum_BL 										{ quality = 3; price = 1650; };
+	class hlc_rifle_awMagnum_BL_ghillie 								{ quality = 3; price = 1750; };
+	class hlc_rifle_awmagnum_FDE 										{ quality = 3; price = 1650; };
+	class hlc_rifle_awMagnum_FDE_ghillie 								{ quality = 3; price = 1750; };
+	class hlc_rifle_awmagnum 											{ quality = 3; price = 1650; };
+	class hlc_rifle_awMagnum_OD_ghillie 								{ quality = 3; price = 1750; };
 
 	///////// NIArms FAL Rifles /////////
 	class hlc_rifle_c1A1 												{ quality = 2; price = 750; };
-	class hlc_rifle_falosw 												{ quality = 2; price = 825; };
+	class hlc_rifle_falosw 												{ quality = 2; price = 725; };
 	class hlc_rifle_osw_GL 												{ quality = 2; price = 875; };
-	class hlc_rifle_L1A1SLR 											{ quality = 2; price = 825; };
-	class hlc_rifle_FAL5000 											{ quality = 2; price = 825; };
-	class hlc_rifle_FAL5000Rail 										{ quality = 2; price = 865; };
-	class hlc_rifle_FAL5061 											{ quality = 2; price = 825; };
-	class hlc_rifle_FAL5061Rail 										{ quality = 2; price = 865; };
+	class hlc_rifle_L1A1SLR 											{ quality = 2; price = 800; };
+	class hlc_rifle_FAL5000 											{ quality = 2; price = 800; };
+	class hlc_rifle_FAL5000Rail 										{ quality = 2; price = 875; };
+	class hlc_rifle_FAL5061 											{ quality = 2; price = 775; };
+	class hlc_rifle_FAL5061Rail 										{ quality = 2; price = 850; };
 	class hlc_rifle_LAR 												{ quality = 2; price = 825; };
-	class hlc_rifle_SLR 												{ quality = 2; price = 825; };
-	class hlc_rifle_SLRchopmod 											{ quality = 2; price = 825; };
-	class hlc_rifle_STG58F 												{ quality = 2; price = 825; };
+	class hlc_rifle_SLR 												{ quality = 2; price = 550; };
+	class hlc_rifle_SLRchopmod 											{ quality = 2; price = 550; };
+	class hlc_rifle_STG58F 												{ quality = 2; price = 725; };
 
 	///////// NIArms G3 Rifles /////////
 	class hlc_rifle_g3sg1 												{ quality = 2; price = 900; };
@@ -1243,39 +1243,39 @@ class CfgExileArsenal
 	  // AK FAMILY ///////////////////////////////////////////////////////////////////////////////
 	  class CUP_arifle_AK47                                 { quality = 1; price = 400; };
 	  class CUP_arifle_AK74                                 { quality = 1; price = 500; };
-	  class CUP_arifle_AK74_GL                              { quality = 1; price = 600; };
+	  class CUP_arifle_AK74_GL                              { quality = 1; price = 650; };
 	  class CUP_arifle_AK74M                                { quality = 1; price = 500; };
-	  class CUP_arifle_AKS                                  { quality = 1; price = 600; };
-	  class CUP_arifle_AKS74                                { quality = 1; price = 600; };
+	  class CUP_arifle_AKS                                  { quality = 2; price = 600; };
+	  class CUP_arifle_AKS74                                { quality = 1; price = 500; };
 	  class CUP_arifle_AKS_Gold                             { quality = 1; price = 2500; };
 	  class CUP_arifle_AKS74U                               { quality = 1; price = 600; };
 	  class CUP_arifle_AK107                                { quality = 1; price = 500; };
-	  class CUP_arifle_AK107_GL                             { quality = 1; price = 600; };
-	  class CUP_arifle_AKM                                  { quality = 1; price = 400; };
+	  class CUP_arifle_AK107_GL                             { quality = 1; price = 750; };
+	  class CUP_arifle_AKM                                  { quality = 2; price = 700; };
 	  // CZ FAMILY ///////////////////////////////////////////////////////////////////////////////
 	  class CUP_arifle_CZ805_A1                             { quality = 1; price = 500; };
-	  class CUP_arifle_CZ805_A2                             { quality = 1; price = 700; };
+	  class CUP_arifle_CZ805_A2                             { quality = 1; price = 600; };
 	  class CUP_arifle_CZ805_GL                             { quality = 1; price = 750; };
 	  class CUP_arifle_CZ805_B                              { quality = 1; price = 500; };
-	  class CUP_arifle_CZ805_B_GL                           { quality = 1; price = 600; };
+	  class CUP_arifle_CZ805_B_GL                           { quality = 1; price = 750; };
 	  // FNFAL FAMILY ////////////////////////////////////////////////////////////////////////////
-	  class CUP_arifle_FNFAL_railed                         { quality = 2; price = 500; };
-	  class CUP_arifle_FNFAL                                { quality = 2; price = 500; };
+	  class CUP_arifle_FNFAL_railed                         { quality = 2; price = 800; };
+	  class CUP_arifle_FNFAL                                { quality = 2; price = 750; };
 	  // G36 FAMILY //////////////////////////////////////////////////////////////////////////////
-	  class CUP_arifle_G36A                                 { quality = 1; price = 400; };
-	  class CUP_arifle_G36A_camo                            { quality = 1; price = 400; };
-	  class CUP_arifle_G36K                                 { quality = 1; price = 400; };
-	  class CUP_arifle_G36K_camo                            { quality = 1; price = 400; };
+	  class CUP_arifle_G36A                                 { quality = 1; price = 450; };
+	  class CUP_arifle_G36A_camo                            { quality = 1; price = 500; };
+	  class CUP_arifle_G36K                                 { quality = 1; price = 500; };
+	  class CUP_arifle_G36K_camo                            { quality = 1; price = 500; };
 	  class CUP_arifle_G36C                                 { quality = 1; price = 400; };
 	  class CUP_arifle_G36C_camo                            { quality = 1; price = 500; };
 	  // L85A2 FAMILY ////////////////////////////////////////////////////////////////////////////
 	  class CUP_arifle_L85A2                                { quality = 1; price = 500; };
-	  class	CUP_arifle_L85A2_GL                             { quality = 1; price = 600; };
+	  class	CUP_arifle_L85A2_GL                             { quality = 1; price = 750; };
 	  // M16 FAMILY //////////////////////////////////////////////////////////////////////////////
-	  class CUP_arifle_M16A2                                { quality = 1; price = 500; };
+	  class CUP_arifle_M16A2                                { quality = 1; price = 400; };
 	  class CUP_arifle_M16A2_GL                             { quality = 1; price = 600; };
-	  class CUP_arifle_M16A4_Base                           { quality = 1; price = 500; };
-	  class CUP_arifle_M16A4_GL                             { quality = 1; price = 600; }
+	  class CUP_arifle_M16A4_Base                           { quality = 1; price = 600; };
+	  class CUP_arifle_M16A4_GL                             { quality = 1; price = 800; }
 	  // M4 FAMILY ///////////////////////////////////////////////////////////////////////////////
 	  class CUP_arifle_M4A1                                 { quality = 1; price = 500; };
 	  class CUP_arifle_M4A1_camo                            { quality = 1; price = 500; };
@@ -1286,44 +1286,44 @@ class CfgExileArsenal
 	  class CUP_arifle_M4A1_BUIS_camo_GL                    { quality = 1; price = 600; };
 	  class	CUP_arifle_M4A1_BUIS_desert_GL                  { quality = 1; price = 600; };
 	  // SA58 FAMILY /////////////////////////////////////////////////////////////////////////////
-	  class CUP_arifle_Sa58P                                { quality = 1; price = 600; };
-	  class CUP_arifle_Sa58P_des                            { quality = 1; price = 600; };
-	  class CUP_arifle_Sa58V                                { quality = 1; price = 600; };
-	  class CUP_arifle_Sa58V_camo                           { quality = 1; price = 600; };
-	  class CUP_arifle_Sa58RIS1                             { quality = 1; price = 600; };
-	  class CUP_arifle_Sa58RIS2                             { quality = 1; price = 600; };
-	  class CUP_arifle_Sa58RIS2_gl                          { quality = 1; price = 600; };
-	  class CUP_arifle_Sa58RIS1_des                         { quality = 1; price = 600; };
-	  class CUP_arifle_Sa58RIS2_camo                        { quality = 1; price = 600; };
+	  class CUP_arifle_Sa58P                                { quality = 2; price = 600; };
+	  class CUP_arifle_Sa58P_des                            { quality = 2; price = 800; };
+	  class CUP_arifle_Sa58V                                { quality = 2; price = 600; };
+	  class CUP_arifle_Sa58V_camo                           { quality = 2; price = 800; };
+	  class CUP_arifle_Sa58RIS1                             { quality = 2; price = 600; };
+	  class CUP_arifle_Sa58RIS2                             { quality = 2; price = 600; };
+	  class CUP_arifle_Sa58RIS2_gl                          { quality = 2; price = 800; };
+	  class CUP_arifle_Sa58RIS1_des                         { quality = 2; price = 800; };
+	  class CUP_arifle_Sa58RIS2_camo                        { quality = 2; price = 800; };
 	  // MK16 FAMILY /////////////////////////////////////////////////////////////////////////////
-	  class CUP_arifle_Mk16_STD                             { quality = 1; price = 500; };
-	  class CUP_arifle_Mk16_STD_FG                          { quality = 1; price = 500; };
-	  class CUP_arifle_Mk16_STD_SFG                         { quality = 1; price = 500; };
-	  class CUP_arifle_Mk16_STD_EGLM                        { quality = 1; price = 600; };
-	  class CUP_arifle_Mk16_CQC                             { quality = 1; price = 500; };
-	  class CUP_arifle_Mk16_CQC_FG                          { quality = 1; price = 500; };
-	  class CUP_arifle_Mk16_CQC_SFG                         { quality = 1; price = 500; };
-	  class CUP_arifle_Mk16_CQC_EGLM                        { quality = 1; price = 600; };
-	  class CUP_arifle_Mk16_SV                              { quality = 1; price = 500; };
+	  class CUP_arifle_Mk16_STD                             { quality = 2; price = 450; };
+	  class CUP_arifle_Mk16_STD_FG                          { quality = 2; price = 500; };
+	  class CUP_arifle_Mk16_STD_SFG                         { quality = 2; price = 550; };
+	  class CUP_arifle_Mk16_STD_EGLM                        { quality = 2; price = 750; };
+	  class CUP_arifle_Mk16_CQC                             { quality = 2; price = 500; };
+	  class CUP_arifle_Mk16_CQC_FG                          { quality = 2; price = 550; };
+	  class CUP_arifle_Mk16_CQC_SFG                         { quality = 2; price = 600; };
+	  class CUP_arifle_Mk16_CQC_EGLM                        { quality = 2; price = 800; };
+	  class CUP_arifle_Mk16_SV                              { quality = 2; price = 400; };
 	  // MK17 FAMILY /////////////////////////////////////////////////////////////////////////////
-	  class CUP_arifle_Mk17_CQC                             { quality = 2; price = 700; };
+	  class CUP_arifle_Mk17_CQC                             { quality = 2; price = 650; };
 	  class CUP_arifle_Mk17_CQC_FG                          { quality = 2; price = 700; };
-	  class CUP_arifle_Mk17_CQC_SFG                         { quality = 2; price = 700; };
-	  class CUP_arifle_Mk17_CQC_EGLM                        { quality = 2; price = 750; };
-	  class CUP_arifle_Mk17_STD                             { quality = 2; price = 700; };
-	  class CUP_arifle_Mk17_STD_FG                          { quality = 2; price = 700; };
+	  class CUP_arifle_Mk17_CQC_SFG                         { quality = 2; price = 750; };
+	  class CUP_arifle_Mk17_CQC_EGLM                        { quality = 2; price = 850; };
+	  class CUP_arifle_Mk17_STD                             { quality = 2; price = 600; };
+	  class CUP_arifle_Mk17_STD_FG                          { quality = 2; price = 650; };
 	  class CUP_arifle_Mk17_STD_SFG                         { quality = 2; price = 700; };
-	  class CUP_arifle_Mk17_STD_EGLM                        { quality = 2; price = 750; };
+	  class CUP_arifle_Mk17_STD_EGLM                        { quality = 2; price = 900; };
 	  // MK20 FAMILY /////////////////////////////////////////////////////////////////////////////
-	  class CUP_arifle_Mk20                                 { quality = 1; price = 2000; };
+	  class CUP_arifle_Mk20                                 { quality = 2; price = 800; };
 	  // XM8 FAMILY //////////////////////////////////////////////////////////////////////////////
-	  class CUP_arifle_XM8_Carbine                          { quality = 1; price = 500; };
-	  class CUP_arifle_XM8_Carbine_GL                       { quality = 1; price = 600; };
-	  class CUP_arifle_xm8_sharpshooter                     { quality = 1; price = 500; };
+	  class CUP_arifle_XM8_Carbine                          { quality = 1; price = 600; };
+	  class CUP_arifle_XM8_Carbine_GL                       { quality = 1; price = 800; };
+	  class CUP_arifle_xm8_sharpshooter                     { quality = 1; price = 600; };
 	  class CUP_arifle_XM8_Compact                          { quality = 1; price = 500; };
-	  class CUP_arifle_XM8_Compact_Rail                     { quality = 1; price = 500; };
-	  class CUP_arifle_XM8_Railed                           { quality = 1; price = 500; };
-	  class CUP_arifle_XM8_Carbine_FG                       { quality = 1; price = 500; };
+	  class CUP_arifle_XM8_Compact_Rail                     { quality = 1; price = 450; };
+	  class CUP_arifle_XM8_Railed                           { quality = 1; price = 450; };
+	  class CUP_arifle_XM8_Carbine_FG                       { quality = 1; price = 650; };
 	  ////////////////////////////////////////////////////////////////////////////////////////////
 	  // CUP Rifle Ammo //////////////////////////////////////////////////////////////////////////
 	  ////////////////////////////////////////////////////////////////////////////////////////////
@@ -1472,26 +1472,26 @@ class CfgExileArsenal
 	  ////////////////////////////////////////////////////////////////////////////////////////////
 	  // CUP Snipers /////////////////////////////////////////////////////////////////////////////
 	  ////////////////////////////////////////////////////////////////////////////////////////////
-	  class CUP_srifle_AWM_des                              { quality = 4; price = 16000; sellPrice = 3500; };
-	  class CUP_srifle_AWM_wdl                              { quality = 4; price = 16000; sellPrice = 3500; };
-	  class CUP_srifle_CZ550_rail                           { quality = 1; price = 800; };
-	  class CUP_srifle_CZ550                                { quality = 1; price = 750; };
-	  class CUP_srifle_CZ750                                { quality = 1; price = 800; };
-	  class CUP_srifle_DMR                                  { quality = 1; price = 800; };
-	  class CUP_srifle_M14                                  { quality = 1; price = 800; };
-	  class CUP_srifle_M24_des                              { quality = 1; price = 800; };
-	  class CUP_srifle_M24_wdl                              { quality = 1; price = 800; };
-	  class CUP_srifle_M40A3                                { quality = 1; price = 800; };
-	  class CUP_srifle_M110                                 { quality = 1; price = 800; };
-	  class CUP_srifle_SVD                                  { quality = 1; price = 800; };
-	  class CUP_srifle_L129A1                               { quality = 1; price = 800; };
-	  class CUP_srifle_MK12SPR                              { quality = 1; price = 600; };
-	  class CUP_srifle_VSSVintorez                          { quality = 1; price = 600; };
-	  class CUP_srifle_LeeEnfield                           { quality = 1; price = 600; };
-	  class CUP_srifle_LeeEnfield_rail                      { quality = 1; price = 700; };
-	  class CUP_srifle_ksvk                                 { quality = 3; price = 14000; sellPrice = 2500; };
-	  class CUP_srifle_M107_Base                            { quality = 4; price = 18000; sellPrice = 4500; };
-	  class CUP_srifle_AS50                                 { quality = 4; price = 15000; sellPrice = 3000; };
+	  class CUP_srifle_AWM_des                              { quality = 3; price = 2400;};
+	  class CUP_srifle_AWM_wdl                              { quality = 3; price = 2400;};
+	  class CUP_srifle_CZ550_rail                           { quality = 2; price = 800; };
+	  class CUP_srifle_CZ550                                { quality = 2; price = 750; };
+	  class CUP_srifle_CZ750                                { quality = 2; price = 850; };
+	  class CUP_srifle_DMR                                  { quality = 2; price = 850; };
+	  class CUP_srifle_M14                                  { quality = 2; price = 850; };
+	  class CUP_srifle_M24_des                              { quality = 3; price = 900; };
+	  class CUP_srifle_M24_wdl                              { quality = 3; price = 900; };
+	  class CUP_srifle_M40A3                                { quality = 3; price = 900; };
+	  class CUP_srifle_M110                                 { quality = 3; price = 950; };
+	  class CUP_srifle_SVD                                  { quality = 2; price = 750; };
+	  class CUP_srifle_L129A1                               { quality = 2; price = 750; };
+	  class CUP_srifle_MK12SPR                              { quality = 2; price = 850; };
+	  class CUP_srifle_VSSVintorez                          { quality = 3; price = 800; };
+	  class CUP_srifle_LeeEnfield                           { quality = 2; price = 600; };
+	  class CUP_srifle_LeeEnfield_rail                      { quality = 2; price = 700; };
+	  class CUP_srifle_ksvk                                 { quality = 3; price = 2500;};
+	  class CUP_srifle_M107_Base                            { quality = 3; price = 3000;};
+	  class CUP_srifle_AS50                                 { quality = 3; price = 3500;};
 	  ////////////////////////////////////////////////////////////////////////////////////////////
 	  // CUP Sniper Ammo /////////////////////////////////////////////////////////////////////////
 	  ////////////////////////////////////////////////////////////////////////////////////////////
@@ -1726,9 +1726,9 @@ class CfgExileArsenal
 	  // CUP HeadGear /////////////////////////////////////////////////////////////////////////////
 	  ////////////////////////////////////////////////////////////////////////////////////////////
 	    class CUP_H_RUS_6B27                                    { quality = 1; price = 100; };
-	    class CUP_H_RUS_6B27_NVG                                { quality = 1; price = 100; };
+	    class CUP_H_RUS_6B27_NVG                                { quality = 1; price = 300; };
 	    class CUP_H_RUS_6B27_olive                              { quality = 1; price = 100; };
-	    class CUP_H_RUS_6B27_NVG_olive                          { quality = 1; price = 100; };
+	    class CUP_H_RUS_6B27_NVG_olive                          { quality = 1; price = 300; };
 	    class CUP_H_SLA_BeretRed                                { quality = 1; price = 100; };
 	    class CUP_H_BAF_Officer_Beret                           { quality = 1; price = 100; };
 	    class CUP_H_BAF_Officer_Beret_PRR_O                     { quality = 1; price = 100; };

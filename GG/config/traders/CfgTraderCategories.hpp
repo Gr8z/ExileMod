@@ -560,9 +560,7 @@ class CfgTraderCategories
 			"H_Cap_blk_Syndikat_F",
 			"H_Cap_grn_Syndikat_F",
 			"CUP_H_RUS_6B27",
-            "CUP_H_RUS_6B27_NVG",
             "CUP_H_RUS_6B27_olive",
-            "CUP_H_RUS_6B27_NVG_olive",
             "CUP_H_SLA_BeretRed",
             "CUP_H_BAF_Officer_Beret",
             "CUP_H_BAF_Officer_Beret_PRR_O",
@@ -796,20 +794,6 @@ class CfgTraderCategories
 			"hlc_acc_Surefiregrip",
 			"acc_pointer_IR",
 			"CUP_acc_Glock17_Flashlight",
-			"CUP_muzzle_snds_M9",
-			"CUP_muzzle_snds_MicroUzi",
-			"CUP_muzzle_Bizon",
-			"CUP_muzzle_PBS4",
-			"CUP_muzzle_PB6P9",
-			"CUP_muzzle_snds_G36_black",
-			"CUP_muzzle_snds_G36_desert",
-			"CUP_muzzle_snds_L85",
-			"CUP_muzzle_snds_M16",
-			"CUP_muzzle_snds_M16_camo",
-			"CUP_muzzle_snds_SCAR_L",
-			"CUP_muzzle_snds_SCAR_H",
-			"CUP_muzzle_snds_M110",
-			"CUP_muzzle_snds_AWM",
 			"CUP_acc_sffh",
 			"CUP_acc_Flashlight",
 			"CUP_acc_XM8_light_module",
@@ -842,38 +826,7 @@ class CfgTraderCategories
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemmuzzle_ca.paa";
 		items[] = 
 		{
-			"muzzle_snds_acp",
-			"muzzle_snds_B",
-			"muzzle_snds_H",
-			"muzzle_snds_H_MG",
-			"muzzle_snds_H_SW",
-			"muzzle_snds_L",
-			"muzzle_snds_M",
-			"muzzle_snds_H_khk_F",
-			"muzzle_snds_H_snd_F",
-			"muzzle_snds_58_blk_F",
-			"muzzle_snds_m_khk_F",
-			"muzzle_snds_m_snd_F",
-			"muzzle_snds_B_khk_F",
-			"muzzle_snds_B_snd_F",
-			"muzzle_snds_58_wdm_F",
-			"muzzle_snds_H_MG_blk_F",
-			"muzzle_snds_H_MG_khk_F",
-			//NIArms
-			"hlc_muzzle_Agendasix10mm",
-			"hlc_muzzle_Agendasix",
-			"hlc_muzzle_Tundra",
-			"hlc_muzzle_snds_AUG",
-			"hlc_muzzle_snds_a6AUG",
-			"hlc_muzzle_545SUP_AK",
-			"hlc_muzzle_762SUP_AK",
-			"hlc_muzzle_snds_M14",
-			"hlc_muzzle_556NATO_KAC",
-			"hlc_muzzle_300blk_KAC",
-			"hlc_muzzle_snds_fal",
-			"hlc_muzzle_snds_g3",
-			"hlc_muzzle_snds_HK33",
-			"muzzle_HBADGER"
+			"hlc_muzzle_Agendasix10mm"
 		};
 	};
 
@@ -1626,6 +1579,7 @@ class CfgTraderCategories
 			"hlc_rifle_MG36",
 			"hlc_lmg_m249para",
 			"hlc_m249_SQuantoon",
+			//CUP
 			"CUP_arifle_RPK74",
 			"CUP_lmg_Pecheneg",
 			"CUP_lmg_PKM",
@@ -1698,6 +1652,8 @@ class CfgTraderCategories
 			//"hlc_rifle_aks74u_MTK",
 			//"hlc_rifle_RK62",
 			//"hlc_rifle_aek971",
+			"hlc_rifle_SLR",
+			"hlc_rifle_SLRchopmod",
 			// CUP
 			"CUP_arifle_AK47",
 			"CUP_arifle_AK74",
@@ -1747,14 +1703,14 @@ class CfgTraderCategories
 		items[] = 
 		{
 			"CUP_arifle_Sa58P",
-			"CUP_arifle_Sa58P_des",
+			//"CUP_arifle_Sa58P_des",
 			"CUP_arifle_Sa58V",
-			"CUP_arifle_Sa58V_camo",
+			//"CUP_arifle_Sa58V_camo",
 			"CUP_arifle_Sa58RIS1",
 			"CUP_arifle_Sa58RIS2",
-			"CUP_arifle_Sa58RIS2_gl",
-			"CUP_arifle_Sa58RIS1_des",
-			"CUP_arifle_Sa58RIS2_camo"
+			"CUP_arifle_Sa58RIS2_gl"
+			//"CUP_arifle_Sa58RIS1_des",
+			//"CUP_arifle_Sa58RIS2_camo"
 		};
 	};
 
@@ -1877,11 +1833,11 @@ class CfgTraderCategories
 			"hlc_rifle_hk33a2",
 			"hlc_rifle_hk33a2RIS",
 			"CUP_arifle_G36A",
-			"CUP_arifle_G36A_camo",
+			//"CUP_arifle_G36A_camo",
 			"CUP_arifle_G36K",
-			"CUP_arifle_G36K_camo",
+			//"CUP_arifle_G36K_camo",
 			"CUP_arifle_G36C",
-			"CUP_arifle_G36C_camo",
+			//"CUP_arifle_G36C_camo",
 		};
 	};
 			
@@ -1907,13 +1863,13 @@ class CfgTraderCategories
 			"CUP_arifle_L85A2",
 			"CUP_arifle_L85A2_GL",
 			"CUP_arifle_M4A1",
-			"CUP_arifle_M4A1_camo",
+			//"CUP_arifle_M4A1_camo",
 			"CUP_arifle_M4A1_black",
-			"CUP_arifle_M4A1_desert",
-			"CUP_arifle_M4A3_desert",		
+			//"CUP_arifle_M4A1_desert",
+			//"CUP_arifle_M4A3_desert",		
 			"CUP_arifle_M4A1_BUIS_GL",
-			"CUP_arifle_M4A1_BUIS_camo_GL",
-			"CUP_arifle_M4A1_BUIS_desert_GL"
+			//"CUP_arifle_M4A1_BUIS_camo_GL",
+			//"CUP_arifle_M4A1_BUIS_desert_GL"
 		};
 	};		
 	
@@ -1932,8 +1888,6 @@ class CfgTraderCategories
 			"hlc_rifle_slr107u",
 			"hlc_rifle_c1A1",
 			"hlc_rifle_LAR",
-			"hlc_rifle_SLR",
-			"hlc_rifle_SLRchopmod",
 			"hlc_rifle_STG58F",
 			"hlc_rifle_amt",
 			"hlc_rifle_sig5104",
@@ -1984,15 +1938,14 @@ class CfgTraderCategories
 			"hlc_rifle_M1903A1",
 			"hlc_rifle_M1903A1OMR",
 			"hlc_rifle_M1903A1_unertl",
-			"CUP_srifle_AWM_des",
-			"CUP_srifle_AWM_wdl",
+			//CUP
 			"CUP_srifle_CZ550_rail",
 			"CUP_srifle_CZ550",
 			"CUP_srifle_CZ750",
 			"CUP_arifle_Mk20",
 			"CUP_srifle_DMR",
 			"CUP_srifle_M14",
-			"CUP_srifle_M24_des",
+			//"CUP_srifle_M24_des",
 			"CUP_srifle_M24_wdl",
 			"CUP_srifle_M40A3",
 			"CUP_srifle_M110",
@@ -2001,10 +1954,8 @@ class CfgTraderCategories
 			"CUP_srifle_MK12SPR",
 			"CUP_srifle_VSSVintorez",
 			"CUP_srifle_LeeEnfield",
-			"CUP_srifle_LeeEnfield_rail",
-			"CUP_srifle_ksvk",
-			"CUP_srifle_M107_Base",
-			"CUP_srifle_AS50"
+			"CUP_srifle_LeeEnfield_rail"
+			
 		};
 	};
 	
@@ -2044,7 +1995,12 @@ class CfgTraderCategories
 			"srifle_LRR_F",
 			//NIArms
 			"hlc_rifle_awcovert_BL",
-			"hlc_rifle_awmagnum_BL"
+			"hlc_rifle_awmagnum_BL",
+			//"CUP_srifle_AWM_des",
+			"CUP_srifle_AWM_wdl",
+			"CUP_srifle_ksvk",
+			"CUP_srifle_M107_Base",
+			"CUP_srifle_AS50"
 		};
 	};
 	
@@ -2061,7 +2017,53 @@ class CfgTraderCategories
 			"muzzle_snds_93mmg_tan",
 			"muzzle_snds_65_TI_blk_F",
 			"muzzle_snds_65_TI_hex_F",
-			"muzzle_snds_65_TI_ghex_F"
+			"muzzle_snds_65_TI_ghex_F",
+			"CUP_muzzle_snds_M9",
+			"CUP_muzzle_snds_MicroUzi",
+			"CUP_muzzle_Bizon",
+			"CUP_muzzle_PBS4",
+			"CUP_muzzle_PB6P9",
+			"CUP_muzzle_snds_G36_black",
+			"CUP_muzzle_snds_G36_desert",
+			"CUP_muzzle_snds_L85",
+			"CUP_muzzle_snds_M16",
+			"CUP_muzzle_snds_M16_camo",
+			"CUP_muzzle_snds_SCAR_L",
+			"CUP_muzzle_snds_SCAR_H",
+			"CUP_muzzle_snds_M110",
+			"CUP_muzzle_snds_AWM",
+			"muzzle_snds_acp",
+			"muzzle_snds_B",
+			"muzzle_snds_H",
+			"muzzle_snds_H_MG",
+			"muzzle_snds_H_SW",
+			"muzzle_snds_L",
+			"muzzle_snds_M",
+			"muzzle_snds_H_khk_F",
+			"muzzle_snds_H_snd_F",
+			"muzzle_snds_58_blk_F",
+			"muzzle_snds_m_khk_F",
+			"muzzle_snds_m_snd_F",
+			"muzzle_snds_B_khk_F",
+			"muzzle_snds_B_snd_F",
+			"muzzle_snds_58_wdm_F",
+			"muzzle_snds_H_MG_blk_F",
+			"muzzle_snds_H_MG_khk_F",
+			//NIArms
+			"hlc_muzzle_Agendasix",
+			"hlc_muzzle_Tundra",
+			"hlc_muzzle_snds_AUG",
+			"hlc_muzzle_snds_a6AUG",
+			"hlc_muzzle_545SUP_AK",
+			"hlc_muzzle_762SUP_AK",
+			"hlc_muzzle_snds_M14",
+			"hlc_muzzle_556NATO_KAC",
+			"hlc_muzzle_300blk_KAC",
+			"hlc_muzzle_snds_fal",
+			"hlc_muzzle_snds_g3",
+			"hlc_muzzle_snds_HK33",
+			"muzzle_HBADGER"
+			
 		};
 	};
 	
@@ -2252,7 +2254,9 @@ class CfgTraderCategories
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
-			"Exile_Headgear_GasMask"
+			"Exile_Headgear_GasMask",
+			"CUP_H_RUS_6B27_NVG_olive",
+			"CUP_H_RUS_6B27_NVG"
 		};
 	};
 	class Cars
