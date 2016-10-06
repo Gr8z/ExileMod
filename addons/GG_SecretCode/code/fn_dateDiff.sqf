@@ -44,6 +44,6 @@ _daysOfMonths = [31, if(_isLeapYear) then {29} else {28}, 31, 30, 31, 30, 31, 31
 	_daysSum = _daysSum + _x;
 } forEach _daysOfMonths;
 
-_daysTotal = _daysTotal - _dayStart + _dayEnd + _daysSum;
+_daysTotal = (_daysTotal - _dayStart + _dayEnd + _daysSum) - 1;
 
 _daysTotal
