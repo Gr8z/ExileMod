@@ -352,7 +352,7 @@ ZCP_DMS_TransportHelis =                [                           // List of t
 										
                                     ];
 
-ZCP_VehicleReward = ZCP_DMS_MilitaryVehicles+ZCP_DMS_TransportHelis;
+ZCP_VehicleReward = ZCP_DMS_MilitaryVehicles;
 ZCP_DMS_DEBUG = false;
 
 ZCP_CurrentMod = "Exile"; // Exile, ( Epoch coming soon again)
