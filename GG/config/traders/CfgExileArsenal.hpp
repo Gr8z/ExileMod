@@ -1418,7 +1418,7 @@ class CfgExileArsenal
 	  //class CUP_optic_AN_PAS_13c1                         { quality = 2; price = 6000; };//therm
 	  //class CUP_optic_AN_PAS_13c2                         { quality = 2; price = 6000; };//therm
 	  class CUP_muzzle_mfsup_SCAR_L                       { quality = 1; price = 300; };  //bugged
-	  class CUP_optic_CompM4                                { quality = 1; price = "50; };//0
+	  class CUP_optic_CompM4                                { quality = 1; price = 50; };//0
 	  class CUP_muzzle_snds_SCAR_L                          { quality = 1; price = 350; };
 	  class CUP_muzzle_mfsup_SCAR_H                       { quality = 1; price = 300; };  //bugged
 	  class CUP_optic_LeupoldMk4_MRT_tan					{ quality = 1; price = 200; };
