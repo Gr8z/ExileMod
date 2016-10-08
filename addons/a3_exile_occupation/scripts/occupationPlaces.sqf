@@ -18,7 +18,7 @@ _okToSpawn          = true;
 
 
 // more than _scaleAI players on the server and the max AI count drops per additional player
-_currentPlayerCount = count playableUnits;
+_currentPlayerCount = ((playersNumber west)+(playersNumber east)+(playersNumber civilian)+(playersNumber resistance));
 if(_currentPlayerCount > _scaleAI) then 
 {
 	_maxAIcount = _maxAIcount - (_currentPlayerCount - _scaleAI) ;

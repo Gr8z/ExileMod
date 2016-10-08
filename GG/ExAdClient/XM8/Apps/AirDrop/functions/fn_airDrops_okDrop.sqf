@@ -37,7 +37,7 @@ if ((_traderZoneNearLimit>0) && {((markertype _x) == "ExileTraderZone") && {((ge
 };
 } forEach allMapMarkers;
 
-if ((count playableUnits) < _OnlineLimit) then  {
+if (((playersNumber west)+(playersNumber east)+(playersNumber civilian)+(playersNumber resistance)) < _OnlineLimit) then  {
 	 _msg = format["Air Drop Failed. Less Than %1 Players online.",_OnlineLimit];
 	["ErrorTitleAndText", ["AirDrop", _msg]] call ExileClient_gui_toaster_addTemplateToast;
 	_ok = false;ExAd_XM8_AirDrop_DropInProgress = false;

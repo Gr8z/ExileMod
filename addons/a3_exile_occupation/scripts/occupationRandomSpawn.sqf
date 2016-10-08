@@ -256,7 +256,7 @@ if(count(SC_liveRandomGroups) >= SC_randomSpawnMaxGroups) exitWith
 };
 
 // more than _scaleAI players on the server and the max AI count drops per additional player
-_currentPlayerCount = count playableUnits;
+_currentPlayerCount = ((playersNumber west)+(playersNumber east)+(playersNumber civilian)+(playersNumber resistance));
 if(_currentPlayerCount < SC_randomSPawnMinPlayers OR _currentPlayerCount < count(SC_liveRandomGroups)) exitWith 
 { 
     if(SC_extendedLogging) then 

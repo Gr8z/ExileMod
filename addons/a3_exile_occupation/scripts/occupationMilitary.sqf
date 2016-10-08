@@ -13,7 +13,7 @@ _scaleAI			= SC_scaleAI;
 _buildings 			= SC_buildings; // Class names for the military buildings to patrol
 _building 			= [];
 
-_currentPlayerCount = count playableUnits;
+_currentPlayerCount = ((playersNumber west)+(playersNumber east)+(playersNumber civilian)+(playersNumber resistance));
 if(_currentPlayerCount > _scaleAI) then 
 {
 	_maxAIcount = _maxAIcount - (_currentPlayerCount - _scaleAI) ;

@@ -7,7 +7,7 @@ _logDetail = format['[OCCUPATION:Vehicle] Started'];
 _side               = "bandit"; 
 
 // more than _scaleAI players on the server and the max AI count drops per additional player
-_currentPlayerCount = count playableUnits;
+_currentPlayerCount = ((playersNumber west)+(playersNumber east)+(playersNumber civilian)+(playersNumber resistance));
 _maxAIcount 		= SC_maxAIcount;
 
 if(_currentPlayerCount > SC_scaleAI) then 

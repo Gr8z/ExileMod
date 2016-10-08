@@ -86,7 +86,7 @@ _player removeItem "Exile_Item_Laptop";
 		
 		if(_ticks >= ExAd_HACKING_MAX_TIME)exitWith{_success = true};
 		
-		waitUntil{{(_x distance (getPosATL _laptop)) < ExAd_HACKING_MAX_DISTANCE}count playableUnits > 0};
+		waitUntil{{(_x distance (getPosATL _laptop)) < ExAd_HACKING_MAX_DISTANCE}((playersNumber west)+(playersNumber east)+(playersNumber civilian)+(playersNumber resistance)) > 0};
 	};
 	
 	_laptop setVariable ["ExAd_HACKING_IN_PROGRESS", false, true];
