@@ -187,6 +187,7 @@ adminUIDandAccess[] =
 	{
 		{
 		"76561198021389971", // thirdhero
+		"76561197960289679", // Tango
 		 "76561198088251390", // SIX
 		 "76561197979611157", // Clanzoucu
 		 "76561198274767971", // CanadianFrodo
@@ -673,9 +674,10 @@ allSupportBoxes[] =
 		}
 	},
 	{
-		"Support-Box4",
+		"Starter-Box4",
 		{
-			"ItemMap",{"ItemGPS",5},"ItemWatch"
+			B_Carryall_khk","Exile_Item_Flag",{Exile_Item_WoodDoorKit"2},{"Exile_Item_WoodWallKit",6},{Exile_Item_WoodFloorKit",4},
+			{"Exile_Item_Codelock",2},B_Carryall_khk"
 		}
 	}
 };
