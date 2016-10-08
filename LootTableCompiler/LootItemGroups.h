@@ -77,10 +77,22 @@
 8, Exile_Weapon_Colt1911   // Colt 1911
 9, Exile_Weapon_Makarov	// Makarov
 9, Exile_Weapon_Taurus		// Taurus
-//2, Exile_Weapon_TaurusGold	// Taurus (Gold)
+2, Exile_Weapon_TaurusGold	// Taurus (Gold)
 9, hgun_Pistol_01_F		// PM 9 mm
 9, hgun_P07_khk_F			// P07 9 mm (Khaki)
 7, hlc_smg_mp5k 			//MP5K
+5, CUP_hgun_Colt1911
+5, CUP_hgun_Duty
+5, CUP_hgun_Makarov
+5, CUP_hgun_MicroUzi
+5, CUP_hgun_TaurusTracker455
+5, CUP_hgun_TaurusTracker455_gold
+5, CUP_hgun_M9
+5, CUP_hgun_Glock17
+5, CUP_hgun_Phantom
+5, CUP_hgun_Compact
+5, CUP_hgun_PB6P9
+5, CUP_hgun_SA61
 
 
 > PistolAmmo
@@ -98,18 +110,42 @@
 7, hlc_30Rnd_9x19_B_MP5
 5, hlc_30Rnd_9x19_GD_MP5
 5, hlc_30Rnd_9x19_SD_MP5
+5, CUP_7Rnd_45ACP_1911
+5, CUP_10Rnd_9x19_Compact
+5, CUP_18Rnd_9x19_Phantom
+5, CUP_17Rnd_9x19_glock17
+5, CUP_15Rnd_9x19_M9
+5, CUP_8Rnd_9x18_Makarov_M
+5, CUP_20Rnd_B_765x17_Ball_M
+5, CUP_30Rnd_9x19_UZI
+5, CUP_8Rnd_9x18_MakarovSD_M
+5, CUP_6Rnd_45ACP_M
+5, CUP_64Rnd_9x19_Bizon_M
+5, CUP_64Rnd_Green_Tracer_9x19_Bizon_M
+5, CUP_64Rnd_Red_Tracer_9x19_Bizon_M
+5, CUP_64Rnd_White_Tracer_9x19_Bizon_M
+5, CUP_64Rnd_Yellow_Tracer_9x19_Bizon_M
+5, CUP_30Rnd_9x19_EVO
+5, CUP_30Rnd_9x19_MP5
 
 > PistolAttachments
 36, muzzle_snds_L
 36, muzzle_snds_acp
 14, optic_Yorris		// No one needs this crap
 14, optic_MRD
+10, CUP_acc_Glock17_Flashlight
 
 > Shotguns
 1, Exile_Weapon_M1014	//M1014
+1, hlc_rifle_saiga12k
+1, CUP_sgun_AA12
+1, CUP_sgun_M1014
+1, CUP_sgun_Saiga12K
 
 > ShotgunAmmo
 1, Exile_Magazine_8Rnd_74Slug		//M1014
+1, CUP_20Rnd_B_AA12_Pellets
+1, CUP_20Rnd_B_AA12_74Slug
 
 > SMG
 6, SMG_01_F		// Vermin SMG .45 ACP
@@ -131,6 +167,10 @@
 3, hlc_rifle_auga2para
 3, hlc_rifle_auga2para_b
 3, hlc_rifle_auga2para_t
+5, CUP_smg_MP5A5
+5, CUP_smg_MP5SD6
+5, CUP_smg_EVO
+5, CUP_smg_bizon
 
 > SMGAmmo
 7, 30Rnd_45ACP_Mag_SMG_01					// Vermin SMG
@@ -318,6 +358,16 @@
 7, hlc_rifle_honeybadger
 7, hlc_rifle_vendimus
 
+> EpicWeapons
+8, srifle_GM6_F			// GM6 Lynx 12.7 mm
+10, srifle_LRR_F			// M320 LRR .408
+9, srifle_LRR_tna_F    	// M320 LRR .408 (Tropic)
+7, srifle_GM6_ghex_F   	// GM6 Lynx 12.7 mm (Green Hex)
+10, MMG_01_hex_F				//Navid
+10, MMG_01_tan_F				//Navid
+9, MMG_02_black_F			//SPMG
+9, MMG_02_camo_F			//SPMG
+9, MMG_02_sand_F			//SPMG
 
 
 > RifleAmmo
@@ -421,7 +471,107 @@
 10, 29rnd_300blk_stanag
 10,	29rnd_300blk_stanag_T
 10,	29rnd_300blk_stanag_S
-//8, Exile_Magazine_10Rnd_9x39				// VSS
+8, Exile_Magazine_10Rnd_9x39
+10, CUP_7Rnd_45ACP_1911
+10, CUP_10Rnd_9x19_Compact
+10, CUP_18Rnd_9x19_Phantom
+10, CUP_17Rnd_9x19_glock17
+10, CUP_15Rnd_9x19_M9
+10, CUP_8Rnd_9x18_Makarov_M
+10, CUP_20Rnd_B_765x17_Ball_M
+10, CUP_30Rnd_9x19_UZI
+10, CUP_8Rnd_9x18_MakarovSD_M
+10, CUP_6Rnd_45ACP_M
+10, CUP_64Rnd_9x19_Bizon_M
+10, CUP_64Rnd_Green_Tracer_9x19_Bizon_M
+10, CUP_64Rnd_Red_Tracer_9x19_Bizon_M
+10, CUP_64Rnd_White_Tracer_9x19_Bizon_M
+10, CUP_64Rnd_Yellow_Tracer_9x19_Bizon_M
+10, CUP_30Rnd_9x19_EVO
+10, CUP_30Rnd_9x19_MP5
+10, CUP_30Rnd_545x39_AK_M
+10, CUP_30Rnd_TE1_Green_Tracer_545x39_AK_M
+10, CUP_30Rnd_TE1_Red_Tracer_545x39_AK_M
+10, CUP_30Rnd_TE1_White_Tracer_545x39_AK_M
+10, CUP_30Rnd_TE1_Yellow_Tracer_545x39_AK_M
+10, CUP_30Rnd_Subsonic_545x39_AK_M
+10, CUP_30Rnd_762x39_AK47_M
+10, CUP_20Rnd_556x45_Stanag
+10, CUP_30Rnd_556x45_Stanag
+10, CUP_30Rnd_556x45_G36
+10, CUP_30Rnd_TE1_Red_Tracer_556x45_G36
+10, CUP_30Rnd_TE1_Green_Tracer_556x45_G36
+10, CUP_30Rnd_TE1_Yellow_Tracer_556x45_G36
+10, CUP_100Rnd_556x45_BetaCMag
+10, CUP_100Rnd_TE1_Red_Tracer_556x45_BetaCMag
+10, CUP_100Rnd_TE1_Green_Tracer_556x45_BetaCMag
+10, CUP_100Rnd_TE1_Yellow_Tracer_556x45_BetaCMag
+10, CUP_20Rnd_762x51_FNFAL_M
+10, CUP_30Rnd_Sa58_M
+10, CUP_30Rnd_Sa58_M_TracerG
+10, CUP_30Rnd_Sa58_M_TracerR
+10, CUP_30Rnd_Sa58_M_TracerY
+10, CUP_20Rnd_762x51_B_SCAR
+10, CUP_20Rnd_TE1_White_Tracer_762x51_SCAR
+10, CUP_20Rnd_TE1_Yellow_Tracer_762x51_SCAR
+10, CUP_20Rnd_TE1_Red_Tracer_762x51_SCAR
+10, CUP_20Rnd_TE1_Green_Tracer_762x51_SCAR
+10, CUP_20Rnd_762x51_CZ805B
+10, CUP_20Rnd_TE1_Red_Tracer_762x51_CZ805B
+10, CUP_20Rnd_TE1_Yellow_Tracer_762x51_CZ805B
+10, CUP_20Rnd_TE1_Green_Tracer_762x51_CZ805B
+10, CUP_20Rnd_TE1_White_Tracer_762x51_CZ805B
+10, CUP_45Rnd_TE4_LRT4_Green_Tracer_545x39_RPK_M
+10, CUP_75Rnd_TE4_LRT4_Green_Tracer_545x39_RPK_M
+10, CUP_100Rnd_TE4_LRT4_762x54_PK_Tracer_Green_M
+10, CUP_50Rnd_UK59_762x54R_Tracer
+10, CUP_100Rnd_TE4_LRT4_White_Tracer_762x51_Belt_M
+10, CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M
+10, CUP_200Rnd_TE4_Red_Tracer_556x45_M249
+10, CUP_200Rnd_TE4_Yellow_Tracer_556x45_M249
+10, CUP_200Rnd_TE4_Green_Tracer_556x45_M249
+10, CUP_100Rnd_TE4_Green_Tracer_556x45_M249
+10, CUP_100Rnd_TE4_Red_Tracer_556x45_M249
+10, CUP_100Rnd_TE4_Yellow_Tracer_556x45_M249
+10, CUP_200Rnd_TE4_Green_Tracer_556x45_L110A1
+10, CUP_200Rnd_TE4_Red_Tracer_556x45_L110A1
+10, CUP_200Rnd_TE4_Yellow_Tracer_556x45_L110A1
+10, CUP_5Rnd_86x70_L115A1
+10, CUP_5x_22_LR_17_HMR_M
+10, CUP_10Rnd_762x51_CZ750
+10, CUP_10Rnd_762x51_CZ750_Tracer
+10, CUP_20Rnd_762x51_L129_M
+10, CUP_20Rnd_762x51_DMR
+10, CUP_20Rnd_TE1_Yellow_Tracer_762x51_DMR
+10, CUP_20Rnd_TE1_Red_Tracer_762x51_DMR
+10, CUP_20Rnd_TE1_Green_Tracer_762x51_DMR
+10, CUP_20Rnd_TE1_White_Tracer_762x51_DMR
+10, CUP_5Rnd_762x51_M24
+10, CUP_20Rnd_762x51_B_M110
+10, CUP_20Rnd_TE1_White_Tracer_762x51_M110
+10, CUP_20Rnd_TE1_Yellow_Tracer_762x51_M110
+10, CUP_20Rnd_TE1_Red_Tracer_762x51_M110
+10, CUP_20Rnd_TE1_Green_Tracer_762x51_M110
+10, CUP_10Rnd_762x54_SVD_M
+10, CUP_10Rnd_9x39_SP5_VSS_M
+10, CUP_20Rnd_9x39_SP5_VSS_M
+10, CUP_20Rnd_B_AA12_Pellets
+10, CUP_20Rnd_B_AA12_74Slug
+10, CUP_8Rnd_B_Beneli_74Slug
+10, CUP_8Rnd_B_Beneli_74Pellets
+10, CUP_8Rnd_B_Saiga12_74Slug_M
+10, CUP_8Rnd_B_Saiga12_74Pellets_M
+10, CUP_1Rnd_HE_M203
+10, CUP_1Rnd_HEDP_M203
+10, CUP_FlareWhite_M203
+10, CUP_FlareGreen_M203
+10, CUP_FlareRed_M203
+10, CUP_FlareYellow_M203
+10, CUP_1Rnd_Smoke_M203
+10, CUP_1Rnd_SmokeRed_M203
+10, CUP_1Rnd_SmokeGreen_M203
+10, CUP_1Rnd_SmokeYellow_M203
+10, CUP_6Rnd_HE_M203
 
 > RifleAttachments
 10, optic_Arco
@@ -441,7 +591,6 @@
 10, optic_ERCO_khk_F
 10, optic_ERCO_snd_F
 7, optic_NVS
-
 10, HLC_Optic_1p29
 10, hlc_optic_accupoint_g3
 10, hlc_optic_artel_m14
@@ -477,8 +626,41 @@
 10, hlc_muzzle_snds_M14
 10, hlc_muzzle_Tundra
 10, muzzle_hbadger
-//1, optic_tws
-//1, hlc_optic_goshawk
+10, CUP_acc_sffh
+10, CUP_acc_Flashlight
+10, CUP_acc_XM8_light_module
+10, CUP_acc_Flashlight_desert
+10, CUP_acc_Flashlight_wdl
+10, CUP_optic_Kobra
+10, CUP_optic_PechenegScope
+10, CUP_optic_PSO_1
+10, CUP_optic_PSO_3
+10, CUP_optic_ZDDot
+10, CUP_optic_Eotech533
+10, CUP_optic_SUSAT
+10, CUP_optic_ACOG
+10, CUP_optic_Elcan
+10, CUP_optic_Elcan_reflex
+10, CUP_optic_ElCAN_SpecterDR
+10, CUP_optic_MAAWS_Scope
+10, CUP_optic_ElcanM145
+10, CUP_optic_RCO
+10, CUP_optic_RCO_desert
+10, CUP_optic_HoloDesert
+10, CUP_optic_Eotech533Grey
+10, CUP_optic_HoloBlack
+10, CUP_optic_LeupoldMk4_CQ_T
+10, CUP_optic_CompM4
+10, CUP_optic_TrijiconRx01_black
+10, CUP_optic_TrijiconRx01_desert
+10, CUP_optic_LeupoldMk4_MRT_tan
+10, CUP_optic_SB_11_4x20_PM
+10, CUP_optic_SB_3_12x50_PMII
+10, CUP_optic_LeupoldMk4
+10, CUP_optic_LeupoldMk4_10x40_LRT_Desert
+10, CUP_optic_LeupoldMk4_10x40_LRT_Woodland
+10, CUP_optic_Leupold_VX3
+10, CUP_optic_AN_PVS_10
 
 > Suppressors
 10, muzzle_snds_M
@@ -500,9 +682,13 @@
 5, muzzle_snds_93mmg
 5, muzzle_snds_93mmg_tan
 5, muzzle_snds_B
+10, CUP_muzzle_snds_M9
+10, CUP_muzzle_snds_MicroUzi
+10, CUP_muzzle_Bizon
+10, CUP_muzzle_PBS4
+10, CUP_muzzle_PB6P9
 
 > LMG
-
 8, LMG_Mk200_F				// Mk200 6.5 mm
 8, LMG_Zafir_F				// Zafir 7.62 mm
 10, Exile_Weapon_RPK
@@ -522,6 +708,19 @@
 10, hlc_m249_pip3
 10, hlc_m249_pip4
 8, hlc_m249_squantoon
+10, CUP_arifle_RPK74
+10, CUP_lmg_Pecheneg
+10, CUP_lmg_PKM
+10, CUP_lmg_UK59
+10, CUP_arifle_L86A2
+10, CUP_lmg_L110A1
+10, CUP_lmg_L7A2
+10, CUP_arifle_MG36
+10, CUP_arifle_MG36_camo
+10, CUP_lmg_M249_para
+10, CUP_lmg_M249
+10, CUP_lmg_M240
+10, CUP_lmg_M60E4
 
 > LMGAmmo
 10, 100Rnd_65x39_caseless_mag			// MX SW
@@ -548,6 +747,20 @@
 10, hlc_200rnd_556x45_B_SAW
 10, hlc_200rnd_556x45_M_SAW
 10, hlc_200rnd_556x45_T_SAW
+10, CUP_45Rnd_TE4_LRT4_Green_Tracer_545x39_RPK_M
+10, CUP_75Rnd_TE4_LRT4_Green_Tracer_545x39_RPK_M
+10, CUP_100Rnd_TE4_LRT4_762x54_PK_Tracer_Green_M
+10, CUP_50Rnd_UK59_762x54R_Tracer
+10, CUP_100Rnd_TE4_LRT4_White_Tracer_762x51_Belt_M
+10, CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M
+10, CUP_200Rnd_TE4_Red_Tracer_556x45_M249
+10, CUP_200Rnd_TE4_Yellow_Tracer_556x45_M249
+10, CUP_200Rnd_TE4_Green_Tracer_556x45_M249
+10, CUP_100Rnd_TE4_Green_Tracer_556x45_M249
+10, CUP_100Rnd_TE4_Red_Tracer_556x45_M249
+10, CUP_100Rnd_TE4_Yellow_Tracer_556x45_M249
+10, CUP_200Rnd_TE4_Green_Tracer_556x45_L110A1
+10, CUP_200Rnd_TE4_Red_Tracer_556x45_L110A1
 
 > Snipers
 10, srifle_DMR_01_F			// Rahim 7.62 mm
@@ -576,6 +789,22 @@
 8, hlc_rifle_g3sg1
 6, hlc_rifle_PSG1A1_RIS
 6, hlc_rifle_psg1
+10, CUP_srifle_CZ550_rail
+10, CUP_srifle_CZ550
+10, CUP_srifle_CZ750
+10, CUP_arifle_Mk20
+10, CUP_srifle_DMR
+10, CUP_srifle_M14
+10, CUP_srifle_M24_des
+10, CUP_srifle_M24_wdl
+10, CUP_srifle_M40A3
+10, CUP_srifle_M110
+10, CUP_srifle_SVD
+10, CUP_srifle_L129A1
+10, CUP_srifle_MK12SPR
+10, CUP_srifle_VSSVintorez
+10, CUP_srifle_LeeEnfield
+10, CUP_srifle_LeeEnfield_rail
 
 > SniperAmmo
 3, 5Rnd_127x108_Mag		// GM6 Lynx
@@ -595,6 +824,25 @@
 2, Exile_Magazine_10Rnd_93x64_DMR_05_Bullet_Cam_Mag
 2, Exile_Magazine_7Rnd_408_Bullet_Cam_Mag
 2, Exile_Magazine_10Rnd_338_Bullet_Cam_Mag
+10, CUP_5Rnd_86x70_L115A1
+10, CUP_5x_22_LR_17_HMR_M
+10, CUP_10Rnd_762x51_CZ750
+10, CUP_10Rnd_762x51_CZ750_Tracer
+10, CUP_20Rnd_762x51_L129_M
+10, CUP_20Rnd_762x51_DMR
+10, CUP_20Rnd_TE1_Yellow_Tracer_762x51_DMR
+10, CUP_20Rnd_TE1_Red_Tracer_762x51_DMR
+10, CUP_20Rnd_TE1_Green_Tracer_762x51_DMR
+10, CUP_20Rnd_TE1_White_Tracer_762x51_DMR
+10, CUP_5Rnd_762x51_M24
+10, CUP_20Rnd_762x51_B_M110
+10, CUP_20Rnd_TE1_White_Tracer_762x51_M110
+10, CUP_20Rnd_TE1_Yellow_Tracer_762x51_M110
+10, CUP_20Rnd_TE1_Red_Tracer_762x51_M110
+10, CUP_20Rnd_TE1_Green_Tracer_762x51_M110
+10, CUP_10Rnd_762x54_SVD_M
+10, CUP_10Rnd_9x39_SP5_VSS_M
+10, CUP_20Rnd_9x39_SP5_VSS_M
 
 > SniperAttachments
 10, muzzle_snds_B
@@ -608,12 +856,9 @@
 7, optic_LRPS_ghex_F
 8, hlc_muzzle_snds_HK33
 8, hlc_muzzle_snds_G3
-//1, optic_tws
-//1, optic_tws_mg
 
 
 > DLCRifles
-
 7, srifle_DMR_02_camo_F			//MAR10
 7, srifle_DMR_02_F				//MAR10
 7, srifle_DMR_02_sniper_F		//MAR10
@@ -630,7 +875,6 @@
 8, srifle_DMR_06_olive_F		//Mk14
 
 > DLCAmmo
-
 25, 10Rnd_338_Mag			//MAR10
 25, 20Rnd_762x51_Mag		//MK1EMR
 25, 10Rnd_127x54_Mag		//ASP1KIR
@@ -644,19 +888,6 @@
 14, optic_KHS_hex
 14, optic_KHS_old
 14, optic_KHS_tan
-
-
-
-> EpicWeapons
-8, srifle_GM6_F			// GM6 Lynx 12.7 mm
-10, srifle_LRR_F			// M320 LRR .408
-9, srifle_LRR_tna_F    	// M320 LRR .408 (Tropic)
-7, srifle_GM6_ghex_F   	// GM6 Lynx 12.7 mm (Green Hex)
-10, MMG_01_hex_F				//Navid
-10, MMG_01_tan_F				//Navid
-9, MMG_02_black_F			//SPMG
-9, MMG_02_camo_F			//SPMG
-9, MMG_02_sand_F			//SPMG
 
 > Bipods
 17, bipod_03_F_oli
@@ -755,12 +986,70 @@
 2, U_C_Driver_1_white
 2, U_C_Driver_1_yellow
 2, U_C_Driver_1_orange
-//6, U_C_Poor_1
-//6, U_C_Poor_2
-//6, U_C_Poor_shorts_1
-//2, U_OrestesBody
-//2, U_NikosBody
-//2, U_NikosAgedBody
+6, U_C_Poor_1
+6, U_C_Poor_2
+6, U_C_Poor_shorts_1
+2, U_OrestesBody
+2, U_NikosBody
+2, U_NikosAgedBody
+5, CUP_U_C_Villager_01
+5, CUP_U_C_Villager_04
+5, CUP_U_C_Villager_02
+5, CUP_U_C_Villager_03
+5, CUP_U_C_Woodlander_01
+5, CUP_U_C_Woodlander_02
+5, CUP_U_C_Woodlander_03
+5, CUP_U_C_Woodlander_04
+5, CUP_U_C_Worker_03
+5, CUP_U_C_Worker_04
+5, CUP_U_C_Worker_02
+5, CUP_U_C_Worker_01
+5, CUP_U_C_Citizen_02
+5, CUP_U_C_Citizen_01
+5, CUP_U_C_Citizen_04
+5, CUP_U_C_Citizen_03
+5, CUP_U_C_Fireman_01
+5, CUP_U_O_CHDKZ_Bardak
+5, CUP_U_O_CHDKZ_Lopotev
+5, CUP_O_TKI_Khet_Jeans_04
+5, CUP_O_TKI_Khet_Jeans_02
+5, CUP_O_TKI_Khet_Jeans_01
+5, CUP_O_TKI_Khet_Jeans_03
+5, CUP_O_TKI_Khet_Partug_04
+5, CUP_O_TKI_Khet_Partug_02
+5, CUP_O_TKI_Khet_Partug_01
+5, CUP_O_TKI_Khet_Partug_07
+5, CUP_O_TKI_Khet_Partug_08
+5, CUP_O_TKI_Khet_Partug_05
+5, CUP_O_TKI_Khet_Partug_06
+5, CUP_O_TKI_Khet_Partug_03
+5, CUP_U_C_Labcoat_02
+5, CUP_U_C_Labcoat_03
+5, CUP_U_C_Labcoat_01
+5, CUP_U_C_Mechanic_02
+5, CUP_U_C_Mechanic_03
+5, CUP_U_C_Mechanic_01
+5, CUP_U_C_Rescuer_01
+5, CUP_U_C_Policeman_01
+5, CUP_U_C_Priest_01
+5, CUP_U_O_Partisan_TTsKO
+5, CUP_U_O_Partisan_TTsKO_Mixed
+5, CUP_U_O_Partisan_VSR_Mixed1
+5, CUP_U_O_Partisan_VSR_Mixed2
+5, CUP_U_C_Pilot_01
+5, CUP_U_C_Profiteer_02
+5, CUP_U_C_Profiteer_03
+5, CUP_U_C_Profiteer_01
+5, CUP_U_C_Profiteer_04
+5, CUP_U_C_Rocker_01
+5, CUP_U_C_Rocker_03
+5, CUP_U_C_Rocker_02
+5, CUP_U_C_Rocker_04
+5, CUP_U_O_RUS_Gorka_Green
+5, CUP_U_O_RUS_Gorka_Partizan_A
+5, CUP_U_O_RUS_Gorka_Partizan
+5, CUP_U_C_Suit_01
+5, CUP_U_C_Suit_02
 
 > CivilianBackpacks
 9, B_OutdoorPack_blk
@@ -778,12 +1067,54 @@
 5, B_Kitbag_sgg
 5, B_Kitbag_cbr
 7, B_AssaultPack_tna_F 
+5, CUP_B_HikingPack_Civ
+5, CUP_B_USPack_Coyote
+5, CUP_B_USPack_Black
+5, CUP_B_CivPack_WDL
+5, CUP_B_AlicePack_Khaki
+5, CUP_B_AlicePack_Bedroll
+5, CUP_B_AssaultPack_ACU
+5, CUP_B_AssaultPack_Coyote
+5, CUP_B_AssaultPack_Black
 
 > CivilianVests
 20, U_Rangemaster
 30, V_Rangemaster_belt
 25, V_Press_F
 25, V_TacVest_blk_POLICE
+20, CUP_V_OI_TKI_Jacket1_04
+20, CUP_V_OI_TKI_Jacket1_06
+20, CUP_V_OI_TKI_Jacket1_01
+20, CUP_V_OI_TKI_Jacket1_05
+20, CUP_V_OI_TKI_Jacket1_02
+20, CUP_V_OI_TKI_Jacket1_03
+20, CUP_V_OI_TKI_Jacket4_04
+20, CUP_V_OI_TKI_Jacket4_05
+20, CUP_V_OI_TKI_Jacket4_02
+20, CUP_V_OI_TKI_Jacket4_06
+20, CUP_V_OI_TKI_Jacket4_03
+20, CUP_V_OI_TKI_Jacket4_01
+20, CUP_V_O_TK_OfficerBelt2
+20, CUP_V_O_TK_OfficerBelt
+20, CUP_V_OI_TKI_Jacket3_04
+20, CUP_V_OI_TKI_Jacket3_02
+20, CUP_V_OI_TKI_Jacket3_03
+20, CUP_V_OI_TKI_Jacket3_05
+20, CUP_V_OI_TKI_Jacket3_06
+20, CUP_V_OI_TKI_Jacket3_01
+20, CUP_V_OI_TKI_Jacket2_04
+20, CUP_V_OI_TKI_Jacket2_06
+20, CUP_V_OI_TKI_Jacket2_03
+20, CUP_V_OI_TKI_Jacket2_02
+20, CUP_V_OI_TKI_Jacket2_05
+20, CUP_V_OI_TKI_Jacket2_01
+20, CUP_V_B_LHDVest_Blue
+20, CUP_V_B_LHDVest_Brown
+20, CUP_V_B_LHDVest_Green
+20, CUP_V_B_LHDVest_Red
+20, CUP_V_B_LHDVest_Violet
+20, CUP_V_B_LHDVest_White
+20, CUP_V_B_LHDVest_Yellow
 
 > CivilianHeadgear
 5, H_Bandanna_surfer
@@ -815,6 +1146,13 @@
 2, H_RacingHelmet_1_white_F
 2, H_RacingHelmet_1_yellow_F
 2, H_RacingHelmet_1_orange_F
+2, CUP_H_Navy_CrewHelmet_Blue
+2, CUP_H_Navy_CrewHelmet_Brown
+2, CUP_H_Navy_CrewHelmet_Green
+2, CUP_H_Navy_CrewHelmet_Red
+2, CUP_H_Navy_CrewHelmet_Violet
+2, CUP_H_Navy_CrewHelmet_White
+2, CUP_H_Navy_CrewHelmet_Yellow
 
 > GuerillaItems
 25, Rangefinder
@@ -840,6 +1178,9 @@
 10, U_I_C_Soldier_Para_4_F           // Paramilitary Garb (Tank Top)
 10, U_I_C_Soldier_Para_5_F           // Paramilitary Garb (Shorts)
 8, U_I_C_Soldier_Camo_F             // Syndikat Uniform
+10, CUP_U_I_GUE_Anorak_01
+10, CUP_U_I_GUE_Anorak_03
+10, CUP_U_I_GUE_Anorak_02
 
 > GuerillaBackpacks
 14, B_FieldPack_blk
@@ -980,6 +1321,74 @@
 5, U_B_GEN_Commander_F              // Gendarmerie Commander Uniform
 5, U_O_T_Soldier_F                  // Fatigues (Green Hex) [CSAT]
 5, U_O_T_Officer_F                  // Officer Fatigues (Green Hex) [CSAT]
+5, CUP_U_B_CZ_WDL_TShirt
+5, CUP_U_B_BAF_DDPM_S2_UnRolled
+5, CUP_U_B_BAF_DDPM_S1_RolledUp
+5, CUP_U_B_BAF_DDPM_Tshirt
+5, CUP_U_B_BAF_DPM_S2_UnRolled
+5, CUP_U_B_BAF_DPM_S1_RolledUp
+5, CUP_U_B_BAF_DPM_Tshirt
+5, CUP_U_B_BAF_MTP_S2_UnRolled
+5, CUP_U_B_BAF_MTP_S1_RolledUp
+5, CUP_U_B_BAF_MTP_Tshirt
+5, CUP_U_B_BAF_MTP_S4_UnRolled
+5, CUP_U_B_BAF_MTP_S3_RolledUp
+5, CUP_U_B_BAF_MTP_S5_UnRolled
+5, CUP_U_B_BAF_MTP_S6_UnRolled
+5, CUP_U_O_CHDKZ_Kam_03
+5, CUP_U_O_CHDKZ_Kam_01
+5, CUP_U_O_CHDKZ_Kam_04
+5, CUP_U_O_CHDKZ_Kam_02
+5, CUP_U_O_CHDKZ_Commander
+5, CUP_U_O_CHDKZ_Kam_08
+5, CUP_U_O_CHDKZ_Kam_05
+5, CUP_U_O_CHDKZ_Kam_07
+5, CUP_U_O_CHDKZ_Kam_06
+5, CUP_U_B_GER_Flecktarn_2
+5, CUP_U_B_GER_Tropentarn_2
+5, CUP_U_B_GER_Flecktarn_1
+5, CUP_U_B_GER_Tropentarn_1
+5, CUP_U_B_USMC_Officer
+5, CUP_U_B_USMC_MARPAT_WDL_RollUpKneepad
+5, CUP_U_B_USMC_MARPAT_WDL_RolledUp
+5, CUP_U_B_USMC_MARPAT_WDL_Kneepad
+5, CUP_U_B_USMC_MARPAT_WDL_TwoKneepads
+5, CUP_U_B_USMC_MARPAT_WDL_Sleeves
+5, CUP_U_I_GUE_Flecktarn2
+5, CUP_U_I_GUE_Flecktarn3
+5, CUP_U_I_GUE_Flecktarn
+5, CUP_U_I_GUE_Woodland1
+5, CUP_U_I_RACS_Desert_2
+5, CUP_U_I_RACS_Urban_2
+5, CUP_U_I_RACS_PilotOverall
+5, CUP_U_I_RACS_Desert_1
+5, CUP_U_I_RACS_Urban_1
+5, CUP_U_O_RUS_EMR_1_VDV
+5, CUP_U_O_RUS_EMR_1
+5, CUP_U_O_RUS_Flora_1_VDV
+5, CUP_U_O_RUS_Flora_1
+5, CUP_U_O_RUS_Commander
+5, CUP_U_O_RUS_EMR_2_VDV
+5, CUP_U_O_RUS_EMR_2
+5, CUP_U_O_RUS_Flora_2_VDV
+5, CUP_U_O_RUS_Flora_2
+5, CUP_U_O_SLA_Officer_Suit
+5, CUP_U_O_SLA_Overalls_Pilot
+5, CUP_U_O_SLA_Overalls_Tank
+5, CUP_U_O_SLA_MixedCamo
+5, CUP_U_O_SLA_Desert
+5, CUP_U_O_SLA_Green
+5, CUP_U_O_SLA_Urban
+5, CUP_U_O_TK_Officer
+5, CUP_U_O_SLA_Officer
+5, CUP_U_O_TK_Green
+5, CUP_U_O_TK_MixedCamo
+5, CUP_U_B_USArmy_TwoKnee
+5, CUP_U_B_USArmy_Base
+5, CUP_U_B_USArmy_Soft
+5, CUP_U_B_USArmy_UBACS
+5, CUP_U_B_USArmy_PilotOverall
+5, CUP_U_B_USMC_PilotOverall
 
 > MilitaryBackpacks
 12, B_Carryall_ocamo
@@ -994,6 +1403,15 @@
 5, B_Bergen_dgtl_F               
 5, B_Bergen_hex_F                
 5, B_Bergen_tna_F
+5, CUP_B_RUS_Backpack
+5, CUP_B_GER_Pack_Flecktarn
+5, CUP_B_GER_Pack_Tropentarn
+5, CUP_B_ACRPara_m95
+5, CUP_B_ACRScout_m95
+5, CUP_B_Bergen_BAF
+5, CUP_B_USMC_AssaultPack
+5, CUP_B_USMC_MOLLE
+5, CUP_B_USMC_MOLLE_WDL
 
 > MilitaryVests
 10, V_PlateCarrier1_blk
@@ -1007,6 +1425,93 @@
 10, V_PlateCarrierSpec_rgr
 7, V_PlateCarrierL_CTRG
 7, V_PlateCarrierH_CTRG
+10, CUP_V_RUS_6B3_1
+10, CUP_V_RUS_6B3_2
+10, CUP_V_RUS_6B3_4
+10, CUP_V_O_SLA_Flak_Vest03
+10, CUP_V_O_SLA_Flak_Vest01
+10, CUP_V_O_SLA_Flak_Vest02
+10, CUP_V_RUS_6B3_3
+10, CUP_V_I_Carrier_Belt
+10, CUP_V_B_GER_Carrier_Vest
+10, CUP_V_B_GER_Carrier_Vest_3
+10, CUP_V_B_GER_Carrier_Vest_2
+10, CUP_V_B_GER_Carrier_Rig_2
+10, CUP_V_B_GER_Carrier_Rig_2_Brown
+10, CUP_V_B_GER_Carrier_Rig
+10, CUP_V_B_GER_Carrier_Rig_3_Brown
+10, CUP_V_B_GER_Vest_1
+10, CUP_V_B_GER_Vest_2
+10, CUP_V_I_Guerilla_Jacket
+10, CUP_V_B_Interceptor_Rifleman
+10, CUP_V_B_IOTV_gl
+10, CUP_V_B_IOTV_MG
+10, CUP_V_B_IOTV_Medic
+10, CUP_V_B_IOTV_Rifleman
+10, CUP_V_B_IOTV_AT
+10, CUP_V_B_IOTV_saw
+10, CUP_V_B_IOTV_SL
+10, CUP_V_B_IOTV_tl
+10, CUP_V_B_RRV_DA2
+10, CUP_V_B_RRV_DA1
+10, CUP_V_B_MTV_Pouches
+10, CUP_V_B_MTV_PistolBlack
+10, CUP_V_B_MTV
+10, CUP_V_B_MTV_Mine
+10, CUP_V_B_MTV_LegPouch
+10, CUP_V_B_MTV_Marksman
+10, CUP_V_B_MTV_MG
+10, CUP_V_B_MTV_Patrol
+10, CUP_V_B_MTV_noCB
+10, CUP_V_B_MTV_TL
+10, CUP_V_BAF_Osprey_Mk2_DDPM_Crewman
+10, CUP_V_BAF_Osprey_Mk2_DDPM_Empty
+10, CUP_V_BAF_Osprey_Mk2_DDPM_Grenadier
+10, CUP_V_BAF_Osprey_Mk2_DDPM_Medic
+10, CUP_V_BAF_Osprey_Mk2_DDPM_Officer
+10, CUP_V_BAF_Osprey_Mk2_DDPM_Pilot
+10, CUP_V_BAF_Osprey_Mk2_DDPM_Soldier1
+10, CUP_V_BAF_Osprey_Mk2_DDPM_Soldier2
+10, CUP_V_BAF_Osprey_Mk2_DDPM_Sapper
+10, CUP_V_BAF_Osprey_Mk2_DDPM_Scout
+10, CUP_V_BAF_Osprey_Mk2_DPM_Crewman
+10, CUP_V_BAF_Osprey_Mk2_DPM_Empty
+10, CUP_V_BAF_Osprey_Mk2_DPM_Grenadier
+10, CUP_V_BAF_Osprey_Mk2_DPM_Medic
+10, CUP_V_BAF_Osprey_Mk2_DPM_Officer
+10, CUP_V_BAF_Osprey_Mk2_DPM_Pilot
+10, CUP_V_BAF_Osprey_Mk2_DPM_Soldier1
+10, CUP_V_BAF_Osprey_Mk2_DPM_Soldier2
+10, CUP_V_BAF_Osprey_Mk2_DPM_Sapper
+10, CUP_V_BAF_Osprey_Mk2_DPM_Scout
+10, CUP_V_B_USArmy_PilotVest
+10, CUP_V_B_PilotVest
+10, CUP_V_C_Police_Holster
+10, CUP_V_O_Ins_Carrier_Rig
+10, CUP_V_O_Ins_Carrier_Rig_Com
+10, CUP_V_O_Ins_Carrier_Rig_Light
+10, CUP_V_O_Ins_Carrier_Rig_MG
+10, CUP_V_I_RACS_Carrier_Vest
+10, CUP_V_I_RACS_Carrier_Vest_3
+10, CUP_V_I_RACS_Carrier_Vest_2
+10, CUP_V_I_RACS_Carrier_Rig_2
+10, CUP_V_I_RACS_Carrier_Rig_3
+10, CUP_V_B_RRV_MG
+10, CUP_V_B_RRV_Light
+10, CUP_V_B_RRV_Medic
+10, CUP_V_B_RRV_Officer
+10, CUP_V_B_RRV_Scout
+10, CUP_V_B_RRV_Scout2
+10, CUP_V_B_RRV_Scout3
+10, CUP_V_B_RRV_TL
+10, CUP_V_O_SLA_Carrier_Belt
+10, CUP_V_O_SLA_Carrier_Belt02
+10, CUP_V_O_SLA_Carrier_Belt03
+10, CUP_V_RUS_Smersh_1
+10, CUP_V_RUS_Smersh_2
+10, CUP_V_O_TK_Vest_1
+10, CUP_V_O_TK_Vest_2
+10, CUP_V_O_TK_CrewBelt
 
 > MilitaryHeadgear
 4, Exile_Headgear_GasMask
@@ -1068,11 +1573,187 @@
 3, H_HelmetLeaderO_ghex_F
 3, H_HelmetCrew_O_ghex_F 
 2, H_HelmetB_TI_tna_F
+5, CUP_H_RUS_6B27
+5, CUP_H_RUS_6B27_olive
+5, CUP_H_SLA_BeretRed
+5, CUP_H_BAF_Officer_Beret
+5, CUP_H_BAF_Officer_Beret_PRR_O
+5, CUP_H_BAF_Officer_Beret_PRR_U
+5, CUP_H_BAF_Crew_Helmet_DDPM
+5, CUP_H_BAF_Crew_Helmet_DPM
+5, CUP_H_BAF_Crew_Helmet_MTP
+5, CUP_H_BAF_Helmet_1_DDPM
+5, CUP_H_BAF_Helmet_1_DPM
+5, CUP_H_BAF_Helmet_1_MTP
+5, CUP_H_BAF_Helmet_Net_2_DDPM
+5, CUP_H_BAF_Helmet_2_DDPM
+5, CUP_H_BAF_Helmet_Net_2_DPM
+5, CUP_H_BAF_Helmet_2_DPM
+5, CUP_H_BAF_Helmet_Net_2_MTP
+5, CUP_H_BAF_Helmet_2_MTP
+5, CUP_H_BAF_Helmet_3_DDPM
+5, CUP_H_BAF_Helmet_3_DPM
+5, CUP_H_BAF_Helmet_3_MTP
+5, CUP_H_BAF_Helmet_4_DDPM
+5, CUP_H_BAF_Helmet_4_DPM
+5, CUP_H_BAF_Helmet_4_MTP
+5, CUP_H_BAF_Helmet_Pilot
+5, CUP_H_FR_BandanaGreen
+5, CUP_H_FR_BandanaWdl
+5, CUP_H_RUS_Bandana_HS
+5, CUP_H_FR_Bandana_Headset
+5, CUP_H_C_Beanie_01
+5, CUP_H_C_Beanie_02
+5, CUP_H_C_Beanie_03
+5, CUP_H_C_Beanie_04
+5, CUP_H_ChDKZ_Beanie
+5, CUP_H_FR_BeanieGreen
+5, CUP_H_C_Beret_04
+5, CUP_H_C_Beret_01
+5, CUP_H_C_Beret_02
+5, CUP_H_C_Beret_03
+5, CUP_H_RUS_Beret_Spetsnaz
+5, CUP_H_RUS_Beret_VDV
+5, CUP_H_Ger_Boonie_Flecktarn
+5, CUP_H_FR_BoonieMARPAT
+5, CUP_H_Ger_Boonie_desert
+5, CUP_H_FR_BoonieWDL
+5, CUP_H_FR_PRR_BoonieWDL
+5, CUP_H_PMC_Cap_Burberry
+5, CUP_H_PMC_Cap_Grey
+5, CUP_H_USMC_Officer_Cap
+5, CUP_H_PMC_Cap_Tan
+5, CUP_H_PMC_Cap_Back_Burberry
+5, CUP_H_PMC_Cap_Back_Grey
+5, CUP_H_PMC_Cap_Back_Tan
+5, CUP_H_PMC_Cap_Back_EP_Grey
+5, CUP_H_PMC_Cap_Back_EP_Tan
+5, CUP_H_PMC_Cap_Back_PRR_Burberry
+5, CUP_H_PMC_Cap_Back_PRR_Grey
+5, CUP_H_PMC_Cap_Back_PRR_Tan
+5, CUP_H_PMC_Cap_EP_Grey
+5, CUP_H_PMC_Cap_EP_Tan
+5, CUP_H_FR_Cap_Headset_Green
+5, CUP_H_FR_Cap_Officer_Headset
+5, CUP_H_PMC_Cap_PRR_Burberry
+5, CUP_H_PMC_Cap_PRR_Grey
+5, CUP_H_PMC_Cap_PRR_Tan
+5, CUP_H_PMC_EP_Headset
+5, CUP_H_NAPA_Fedora
+5, CUP_H_C_Fireman_Helmet_01
+5, CUP_H_FR_Headband_Headset
+5, CUP_H_FR_Headset
+5, CUP_H_USArmy_HelmetMICH
+5, CUP_H_USArmy_HelmetMICH_earpro
+5, CUP_H_USArmy_HelmetMICH_earpro_ess
+5, CUP_H_USArmy_HelmetMICH_ESS
+5, CUP_H_USArmy_HelmetMICH_headset
+5, CUP_H_USArmy_HelmetMICH_headset_ess
+5, CUP_H_USArmy_HelmetMICH_wdl
+5, CUP_H_ChDKZ_Cap
+5, CUP_H_C_Policecap_01
+5, CUP_H_PMC_PRR_Headset
+5, CUP_H_RACS_Helmet_DPAT
+5, CUP_H_RACS_Helmet_Goggles_DPAT
+5, CUP_H_RACS_Helmet_Headset_DPAT
+5, CUP_H_RACS_Helmet_DES
+5, CUP_H_RACS_Helmet_Goggles_DES
+5, CUP_H_RACS_Helmet_Headset_DES
+5, CUP_H_ChDKZ_Beret
+5, CUP_H_SLA_BeanieGreen
+5, CUP_H_SLA_Boonie
+5, CUP_H_SLA_Beret
+5, CUP_H_SLA_Helmet
+5, CUP_H_SLA_OfficerCap
+5, CUP_H_SLA_Pilot_Helmet
+5, CUP_H_SLA_SLCap
+5, CUP_H_SLA_TankerHelmet
+5, CUP_H_TK_TankerHelmet
+5, CUP_H_TK_Beret
+5, CUP_H_TK_Helmet
+5, CUP_H_TKI_Lungee_Open_01
+5, CUP_H_TKI_Lungee_Open_02
+5, CUP_H_TKI_Lungee_Open_03
+5, CUP_H_TKI_Lungee_Open_04
+5, CUP_H_TKI_Lungee_Open_05
+5, CUP_H_TKI_Lungee_Open_06
+5, CUP_H_TKI_Lungee_01
+5, CUP_H_TKI_Lungee_02
+5, CUP_H_TKI_Lungee_03
+5, CUP_H_TKI_Lungee_04
+5, CUP_H_TKI_Lungee_05
+5, CUP_H_TKI_Lungee_06
+5, CUP_H_TKI_Pakol_1_01
+5, CUP_H_TKI_Pakol_2_04
+5, CUP_H_TKI_Pakol_2_05
+5, CUP_H_TKI_Pakol_2_06
+5, CUP_H_TKI_Pakol_1_02
+5, CUP_H_TKI_Pakol_1_03
+5, CUP_H_TKI_Pakol_1_04
+5, CUP_H_TKI_Pakol_1_05
+5, CUP_H_TKI_Pakol_1_06
+5, CUP_H_TKI_Pakol_2_01
+5, CUP_H_TKI_Pakol_2_02
+5, CUP_H_TKI_Pakol_2_03
+5, CUP_H_TK_PilotHelmet
+5, CUP_H_TK_Lungee
+5, CUP_H_TKI_SkullCap_01
+5, CUP_H_TKI_SkullCap_02
+5, CUP_H_TKI_SkullCap_04
+5, CUP_H_TKI_SkullCap_03
+5, CUP_H_TKI_SkullCap_05
+5, CUP_H_TKI_SkullCap_06
+5, CUP_H_RUS_TSH_4_Brown
+5, CUP_H_USArmy_Boonie
+5, CUP_H_USA_Cap
+5, CUP_H_USArmy_Helmet_ECH1_Black
+5, CUP_H_USArmy_Helmet_ECH2_Black
+5, CUP_H_USArmy_Helmet_ECH1_Green
+5, CUP_H_USArmy_Helmet_ECH2_GREEN
+5, CUP_H_USArmy_Helmet_ECH1_Sand
+5, CUP_H_USArmy_Helmet_ECH2_Sand
+5, CUP_H_USArmy_Helmet_M1_btp
+5, CUP_H_USArmy_Helmet_M1_Vine
+5, CUP_H_USArmy_Helmet_M1_Olive
+5, CUP_H_USArmy_Helmet_M1_m81
+5, CUP_H_USArmy_Helmet_Pro
+5, CUP_H_USArmy_Helmet_Pro_gog
+5, CUP_H_C_Ushanka_03
+5, CUP_H_C_Ushanka_02
+5, CUP_H_C_Ushanka_01
+5, CUP_H_C_Ushanka_04
+5, CUP_H_USMC_Crew_Helmet
+5, CUP_H_FR_ECH
+5, CUP_H_USMC_HelmetWDL
+5, CUP_H_USMC_Goggles_HelmetWDL
+5, CUP_H_USMC_Headset_HelmetWDL
+5, CUP_H_USMC_Headset_GoggleW_HelmetWDL
+5, CUP_H_USMC_Helmet_Pilot
+5, CUP_H_RUS_ZSH_1_Goggles
+5, CUP_H_RUS_ZSH_1
+5, CUP_H_RUS_ZSH_Shield_Up
+5, CUP_H_RUS_ZSH_Shield_Down
+5, CUP_TK_NeckScarf
+5, CUP_FR_NeckScarf
+5, CUP_FR_NeckScarf2
+5, CUP_H_C_MAGA_01
+5, CUP_H_C_TrackIR_01
 
 > Ghillies
 10, U_B_GhillieSuit			// Ghillie Suit [NATO]
 10, U_O_GhillieSuit			// Ghillie Suit [CSAT]
 10, U_I_GhillieSuit			// Ghillie Suit [AAF]
+10, CUP_U_B_BAF_DDPM_Ghillie
+10, CUP_U_B_BAF_MTP_Ghillie
+10, CUP_U_B_BAF_DPM_Ghillie
+10, CUP_U_B_GER_Ghillie
+10, CUP_U_B_GER_Fleck_Ghillie
+10, CUP_U_B_USMC_Ghillie_WDL
+10, CUP_U_I_Ghillie_Top
+10, CUP_U_O_RUS_Ghillie
+10, CUP_U_O_TK_Ghillie
+10, CUP_U_O_TK_Ghillie_Top
+10, CUP_U_B_USArmy_Ghillie
 
 > DLCGhillies
 12, U_B_FullGhillie_ard		
