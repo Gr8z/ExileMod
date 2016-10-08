@@ -676,7 +676,7 @@ allSupportBoxes[] =
 	{
 		"Support-Box4",
 		{
-			"B_Carryall_khk","Exile_Item_Flag",{"Exile_Item_WoodDoorKit"2},{"Exile_Item_WoodWallKit",6},{"Exile_Item_WoodFloorKit",4},
+			"B_Carryall_khk","Exile_Item_Flag",{"Exile_Item_WoodDoorKit",2},{"Exile_Item_WoodWallKit",6},{"Exile_Item_WoodFloorKit",4},
 			{"Exile_Item_Codelock",2}
 		}
 	}
