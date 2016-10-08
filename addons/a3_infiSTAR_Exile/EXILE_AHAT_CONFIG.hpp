@@ -657,7 +657,7 @@ allSupportBoxes[] =
 		}
 	},
 	{
-		"Support-Box2",
+		"Forums-Box2",
 		{
 			"Exile_Item_Flag","Exile_Item_WorkBenchKit","B_Carryall_khk","Exile_Item_CampFireKit","Exile_Item_CamoTentKit",
 			{"Exile_Item_CookingPot",2},{"Exile_Melee_Axe",1},{"Exile_Item_Handsaw",1},{"Exile_Item_Matches",2},
@@ -674,7 +674,7 @@ allSupportBoxes[] =
 		}
 	},
 	{
-		"Support-Box4",
+		"Starter-Box4",
 		{
 			"B_Carryall_khk","Exile_Item_Flag",{"Exile_Item_WoodDoorKit",2},{"Exile_Item_WoodWallKit",6},{"Exile_Item_WoodFloorKit",4},
 			{"Exile_Item_Codelock",2}
