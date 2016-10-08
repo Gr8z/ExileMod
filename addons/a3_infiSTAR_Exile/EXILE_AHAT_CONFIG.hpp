@@ -186,15 +186,12 @@ adminUIDandAccess[] =
 	},
 	{
 		{
-		"76561197960289679", //TangoWhiskey
 		"76561198021389971", // thirdhero
 		 "76561198088251390", // SIX
 		 "76561197979611157", // Clanzoucu
 		 "76561198274767971", // CanadianFrodo
 		 "76561198036004541", // Demen
-		 "76561197987069300", // Shroombear
 		 "76561198090941099", // Josh
-		 "76561198056028211", // Nasty
 		 "0"
 		 },	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
