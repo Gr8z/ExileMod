@@ -1835,7 +1835,7 @@ class CfgTraderCategories
 			//"CUP_arifle_G36A_camo",
 			"CUP_arifle_G36K",
 			//"CUP_arifle_G36K_camo",
-			"CUP_arifle_G36C",
+			"CUP_arifle_G36C"
 			//"CUP_arifle_G36C_camo",
 		};
 	};
@@ -1866,7 +1866,7 @@ class CfgTraderCategories
 			"CUP_arifle_M4A1_black",
 			//"CUP_arifle_M4A1_desert",
 			//"CUP_arifle_M4A3_desert",		
-			"CUP_arifle_M4A1_BUIS_GL",
+			"CUP_arifle_M4A1_BUIS_GL"
 			//"CUP_arifle_M4A1_BUIS_camo_GL",
 			//"CUP_arifle_M4A1_BUIS_desert_GL"
 		};
