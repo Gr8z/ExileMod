@@ -32,7 +32,7 @@ serverCommandPassword = "penis1234";
 	
 	This is used to be able to use the "login" function ingame. Will log you in as Arma "Admin".
 */
-passwordAdmin = "phD3t9X2mw69";
+passwordAdmin = "phd3t9X2mw69";
 /* serverCommandPassword and passwordAdmin should always be different passwords or it could cause problems! */
 
 
