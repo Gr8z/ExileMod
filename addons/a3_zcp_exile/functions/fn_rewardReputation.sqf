@@ -2,7 +2,7 @@ private['_ZCP_RR_awardToGive','_ZCP_RR_playerScore','_ZCP_RR_currentCapper'];
 
 _ZCP_RR_currentCapper = _this select 0;
 
-_ZCP_RR_awardToGive = ZCP_MinReputationReward + (ZCP_ReputationReward) * (count playableUnits);
+_ZCP_RR_awardToGive = ZCP_MinReputationReward + (ZCP_ReputationReward) * ((playersNumber west)+(playersNumber east)+(playersNumber civilian)+(playersNumber resistance));
 _ZCP_RR_playerScore = _ZCP_RR_currentCapper getVariable ["ExileScore", 0];
 _ZCP_RR_playerScore = _ZCP_RR_playerScore + _ZCP_RR_awardToGive;
 

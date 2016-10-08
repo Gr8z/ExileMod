@@ -39,6 +39,6 @@ ExAd_XM8_AirDrop_BoxWeapons = ["LMG_Zafir_F","MMG_01_hex_F","srifle_EBR_F","srif
 }
 forEach
 [
-	["GG_fnc_airDrops_buySelected", 	"fn_airDrops_okDrop.sqf"],
+	["GG_fnc_airDrops_buySelected", 	"fn_airDrops_buySelected.sqf"],
 	["GG_fnc_airDrops_okDrop", 			"fn_airDrops_okDrop.sqf"]
 ];

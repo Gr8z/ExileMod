@@ -13,7 +13,7 @@ _maxAIcount 			= SC_maxAIcount;
 _minFPS 				= SC_minFPS;
 _scaleAI				= SC_scaleAI;
 
-_currentPlayerCount = count playableUnits;
+_currentPlayerCount = ((playersNumber west)+(playersNumber east)+(playersNumber civilian)+(playersNumber resistance));
 if(_currentPlayerCount > _scaleAI) then 
 {
 	_maxAIcount = _maxAIcount - (_currentPlayerCount - _scaleAI) ;
