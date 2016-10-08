@@ -7,7 +7,7 @@ switch (true) do
     {
     _rank = "Scavenger";  
      [parseText format["<br/><br/><br/><t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,5000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
-    player forceAddUniform "CUP_U_I_GUE_Anorak_03";
+    player forceAddUniform "U_I_C_Soldier_Bandit_2_F";
 	player addVest "V_Rangemaster_belt";
 	player addBackpack "CUP_B_SLA_Medicbag";
 	player addHeadgear "H_Bandanna_sgg";
@@ -28,8 +28,8 @@ switch (true) do
 	player addWeapon "hgun_P07_F";
 	player addVest "V_BandollierB_rgr";
 	for "_i" from 1 to 2 do {this addItemToVest "16Rnd_9x21_Mag";};
-	player addBackpack "B_AssaultPack_rgr";
-	player addHeadgear "H_Cap_blk";
+	player addBackpack "B_AssaultPack_cbr";
+	player addHeadgear "CUP_H_PMC_Cap_Grey";
 	player linkItem "ItemMap";
 	player addItem "Exile_Item_Matches";
     player addItem "Exile_Item_ExtensionCord";
@@ -44,7 +44,7 @@ switch (true) do
     _rank = "Thief";
     call ExileClient_object_player_bambiStateEnd;
    [parseText format["<br/><br/><br/><t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,100000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
-    player forceAddUniform "U_I_G_Story_Protagonist_F";
+    player forceAddUniform "CUP_U_C_Woodlander_01";
 	player addVest "V_BandollierB_blk";
 	for "_i" from 1 to 3 do {this addItemToVest "11Rnd_45ACP_Mag";};
 	player addBackpack "B_AssaultPack_blk";
@@ -69,9 +69,9 @@ switch (true) do
     _rank = "Gangster";  
     call ExileClient_object_player_bambiStateEnd;
    [parseText format["<br/><br/><br/><t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,150000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
-    player forceAddUniform "U_BG_Guerilla2_3";
+    player forceAddUniform "CUP_U_C_Rocker_02";
     player addVest "V_BandollierB_rgr";
-    player addBackpack "B_FieldPack_oli";
+    player addBackpack "B_FieldPack_khk";
 	for "_i" from 1 to 2 do {player addItemToBackpack "Exile_Magazine_8Rnd_74Slug";};
     for "_i" from 1 to 2 do {player addItemToBackpack "Exile_Magazine_8Rnd_74Pellets";};
 	player addHeadgear "CUP_H_PMC_Cap_Grey";
@@ -94,10 +94,11 @@ switch (true) do
    _rank = "Hitman";
    call ExileClient_object_player_bambiStateEnd;
    [parseText format["<br/><br/><br/><t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,250000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
-    player forceAddUniform "TRYK_U_B_PCUGs_BLK";
-    player addVest "TRYK_V_harnes_blk_L";
-    player addBackpack "B_FieldPack_blk";
-    player addHeadgear "TRYK_H_woolhat";
+    player forceAddUniform "CUP_U_I_GUE_Anorak_03";
+    player addVest "V_BandollierB_blk";
+    player addBackpack "B_FieldPack_oli";
+    player addHeadgear "H_Watchcap_blk";
+	player addGoggles "G_Aviator";
 	for "_i" from 1 to 3 do {player addItemToBackpack "hlc_30Rnd_9x19_GD_MP5";};
 	player addWeaponGlobal "hlc_smg_mp5sd5";
 	player addPrimaryWeaponItem "optic_Aco_smg";
@@ -118,14 +119,14 @@ switch (true) do
     _rank = "Bounty Hunter";  
   call ExileClient_object_player_bambiStateEnd;
     [parseText format["<br/><br/><br/><t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,350000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
-player forceAddUniform "CUP_U_B_FR_Scout";
-	for "_i" from 1 to 3 do {this addItemToUniform "CUP_30Rnd_556x45_Stanag";};
+	player forceAddUniform "CUP_U_B_FR_Scout";
+	for "_i" from 1 to 3 do {this addItemToUniform "hlc_30rnd_556x45_EPR_G36";};
 	player addVest "CUP_V_OI_TKI_Jacket2_02";
 	player addBackpack "B_TacticalPack_blk";
 	player addHeadgear "H_Cap_oli";
 	player addGoggles "G_Bandanna_sport";
-	player addWeaponGlobal "CUP_arifle_L85A2";
-	player addPrimaryWeaponItem "CUP_optic_HoloWdl";
+	player addWeaponGlobal "hlc_rifle_G36CV";
+	player addPrimaryWeaponItem "CUP_optic_SUSAT";
 	player linkItem "ItemGPS";
 	player linkItem "ItemMap";
 	player addItem "Exile_Item_Matches";
@@ -138,28 +139,30 @@ player forceAddUniform "CUP_U_B_FR_Scout";
     //  "Your rank is Bounty Hunter";
    };
    
+
+   
     case (_respect > 274999 && _respect < 324999):
    {
-    _rank = "Mercenary";  
+    _rank = "Mercenary";  "CUP_arifle_L85A2"
   call ExileClient_object_player_bambiStateEnd;
      [parseText format["<br/><br/><br/><t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,450000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
-player forceAddUniform "U_I_C_Soldier_Para_2_F";
-player addVest "V_TacChestrig_oli_F";
-for "_i" from 1 to 3 do {this addItemToVest "hlc_30rnd_556x45_EPR_G36";};
-player addBackpack "B_FieldPack_khk";
-player addHeadgear "H_Cap_oli_hs";
-player addGoggles "G_Bandanna_sport";
-player addWeaponGlobal "hlc_rifle_G36CV";
-player addPrimaryWeaponItem "CUP_optic_SUSAT";
-player linkItem "ItemGPS";
-player linkItem "ItemMap";
-player addItem "Exile_Item_Matches";
-player addItem "Exile_Item_ExtensionCord";
-player addItem "Exile_Item_BBQSandwich";
-player addItem "Exile_Item_InstaDoc";
-player add "Exile_Item_CanOpener";
-player addItem "Exile_Item_PlasticBottleFreshWater";
-player addItem "Exile_Item_PlasticBottleFreshWater";
+	player forceAddUniform "U_I_C_Soldier_Para_2_F";
+	player addVest "V_TacChestrig_oli_F";
+	for "_i" from 1 to 3 do {this addItemToVest "CUP_30Rnd_556x45_Stanag";};
+	player addBackpack "B_FieldPack_khk";
+	player addHeadgear "H_Cap_oli_hs";
+	player addGoggles "G_Bandanna_sport";
+	player addWeaponGlobal "CUP_arifle_L85A2";
+	player addPrimaryWeaponItem "CUP_optic_HoloWdl";
+	player linkItem "ItemGPS";
+	player linkItem "ItemMap";
+	player addItem "Exile_Item_Matches";
+	player addItem "Exile_Item_ExtensionCord";
+	player addItem "Exile_Item_BBQSandwich";
+	player addItem "Exile_Item_InstaDoc";
+	player add "Exile_Item_CanOpener";
+	player addItem "Exile_Item_PlasticBottleFreshWater";
+	player addItem "Exile_Item_PlasticBottleFreshWater";
     //   "Your rank is Mercenary";
    };
    
