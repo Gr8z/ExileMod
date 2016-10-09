@@ -849,7 +849,8 @@ class CfgExileArsenal
 	class Exile_Weapon_Colt1911											{ quality = 1; price = 100; };
 	class Exile_Weapon_Makarov											{ quality = 1; price = 100; };
 	class Exile_Weapon_Taurus											{ quality = 1; price = 100; };
-	class Exile_Weapon_TaurusGold										{ quality = 1; price = 150; sellPrice = 250000; }; //MAGAZINE CRAFT ITEM
+	class Exile_Weapon_TaurusGold										{ quality = 1; price = 150; }; //MAGAZINE CRAFT ITEM
+	class CUP_item_Money												{ quality = 1; price = 150; sellPrice = 250000; }; //MAGAZINE CRAFT ITEM
 	class Exile_Weapon_M1014											{ quality = 1; price = 200; sellPrice = 35; };
 	
 	///////// NIArms Handguns /////////	

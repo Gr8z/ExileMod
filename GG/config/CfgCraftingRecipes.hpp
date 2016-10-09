@@ -1135,11 +1135,11 @@ class CfgCraftingRecipes
 	};
 	class GoldGun: Exile_AbstractCraftingRecipe
 	{
-	    name = "Craft Gold";
+	    name = "Craft Money";
 	    pictureItem = "Exile_Weapon_TaurusGold";
 	    returnedItems[] =
 	    {
-	        {1, "Exile_weapon_taurusgold"}
+	        {1, "CUP_item_Money"}
 	    };
 	    components[] =
 	    {
