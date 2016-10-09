@@ -2084,7 +2084,7 @@ class CfgTraderCategories
 			"hlc_5rnd_300WM_AP_AWM",
 			"hlc_5rnd_300WM_BTSP_AWM",
 			"hlc_5rnd_300WM_mk248_AWM",
-			"hlc_5rnd_300WM_SBT_AWM"
+			"hlc_5rnd_300WM_SBT_AWM",
 			//CUP
 			"CUP_10x_303_M",
 			"CUP_5Rnd_127x108_KSVK_M",
