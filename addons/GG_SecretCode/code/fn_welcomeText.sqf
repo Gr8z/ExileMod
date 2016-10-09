@@ -86,18 +86,28 @@
 		    _missingModList = ["We detected that your game is not running the following Mods:"];
 		    _missingMods = false;
 
-		    if !(isClass (configFile >> "CfgPatches" >> "asdg_jointrails")) then {
-		        _msg = "ASDG Joint Rails";
+		    if !(isClass (configFile >> "CfgPatches" >> "cba_main")) then {
+		        _msg = "CBA";
+		        _missingMods = true;
+		        _missingModList pushBack _msg;
+		    };
+		    if !(isClass (configFile >> "CfgPatches" >> "CUP_Creatures_People_Core")) then {
+		        _msg = "CUP Units";
+		        _missingMods = true;
+		        _missingModList pushBack _msg;
+		    };
+		    if !(isClass (configFile >> "CfgPatches" >> "CUP_BaseData")) then {
+		        _msg = "CUP Weapons";
+		        _missingMods = true;
+		        _missingModList pushBack _msg;
+		    };
+		    if !(isClass (configFile >> "CfgPatches" >> "CUP_Vehicles_Core")) then {
+		        _msg = "CUP Vehicles";
 		        _missingMods = true;
 		        _missingModList pushBack _msg;
 		    };
 		    if !(isClass (configFile >> "CfgPatches" >> "hlcweapons_core")) then {
 		        _msg = "NiArms Pack";
-		        _missingMods = true;
-		        _missingModList pushBack _msg;
-		    };
-		    if !(isClass (configFile >> "CfgPatches" >> "TRYK_Uniform")) then {
-		        _msg = "TRYK Multiplay Uniforms";
 		        _missingMods = true;
 		        _missingModList pushBack _msg;
 		    };

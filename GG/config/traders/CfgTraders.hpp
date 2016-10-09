@@ -8,11 +8,17 @@ class CfgTraders
 		{
 			"Handguns",
 			"Shotguns",
-			"NIARMSAK",
-			"NIARMSAUG",
-			"NIARMSHK",
-			"NIARMSAR",
-			"NIARMSFAL",
+			"AK",
+			"AUG",
+			"HK",
+			"AR",
+			"FAL",
+			"CZ",
+			"M16",
+			"SA58",
+			"MK16",
+			"MK17",
+			"MK20",
 			"SubMachineGuns",
 			"LightMachineGuns",
 			"AssaultRifles",
@@ -71,10 +77,6 @@ class CfgTraders
 			"Backpacks",
 			"NVG",
 			"EquipmentTools",
-			"TRYKUniforms",
-			"TRYKVests",
-			"TRYKHeadgear",
-			"TRYKBackpacks",
 			"FirstAid"
 		};
 	};
