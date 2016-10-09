@@ -1429,7 +1429,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"CUP_arifle_Sa58V_camo",
 											"CUP_arifle_Sa58RIS1",
 											"CUP_arifle_Sa58RIS2",
-											"CUP_arifle_Sa58RIS2_gl"
+											"CUP_arifle_Sa58RIS2_gl",
 											"CUP_arifle_Sa58RIS1_des",
 											"CUP_arifle_Sa58RIS2_camo",
 											"CUP_arifle_Mk16_STD",
