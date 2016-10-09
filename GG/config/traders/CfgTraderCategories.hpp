@@ -923,7 +923,7 @@ class CfgTraderCategories
 			"NVGoggles",
 			"NVGoggles_INDEP",
 			"NVGoggles_OPFOR",
-			"NVGoggles_tna_F"
+			"NVGoggles_tna_F",
 			"CUP_H_RUS_6B27_NVG_olive",
 			"CUP_H_RUS_6B27_NVG"
 		};
