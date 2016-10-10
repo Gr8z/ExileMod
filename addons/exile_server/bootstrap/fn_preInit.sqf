@@ -276,7 +276,8 @@ forEach
 	['ExileServer_world_spawnVehicles', 'exile_server\code\ExileServer_world_spawnVehicles.sqf'],
 	['ExileServer_Reward_network_addPopReward', 'exile_server\code\ExileServer_Reward_network_addPopReward.sqf'],
 	['ExileServer_Reward_network_updateRewardDate', 'exile_server\code\ExileServer_Reward_network_updateRewardDate.sqf'],
-	['ExileServer_Reward_network_addRespectReward', 'exile_server\code\ExileServer_Reward_network_addRespectReward.sqf']
+	['ExileServer_Reward_network_addRespectReward', 'exile_server\code\ExileServer_Reward_network_addRespectReward.sqf'],
+	['ExileServer_BasePaint_network_updateBasePaintRequest', 'exile_server\code\ExileServer_BasePaint_network_updateBasePaintRequest.sqf']
 ];
 
 call ExileServer_system_process_preInit;
