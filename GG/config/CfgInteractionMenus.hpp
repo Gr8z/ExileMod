@@ -287,7 +287,7 @@ class CfgInteractionMenus {
 			};
 
 			class Paint : ExileAbstractAction {
-				title = "Paint (coming soon)";
+				title = "Paint";
 				condition = "call ExileClient_util_world_isInOwnTerritory";
 				action = "createDialog 'PaintDialog'";
 			};
