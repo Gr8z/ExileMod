@@ -1478,7 +1478,6 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"CUP_arifle_M4A1_BUIS_desert_GL",
 											"CUP_arifle_FNFAL_railed",
 											"CUP_arifle_FNFAL",
-											"CUP_sgun_AA12",
 											"CUP_sgun_M1014",
 											"CUP_sgun_Saiga12K",
 											"CUP_srifle_CZ550_rail",
@@ -1496,14 +1495,8 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"CUP_srifle_MK12SPR",
 											"CUP_srifle_VSSVintorez",
 											"CUP_srifle_LeeEnfield",
-											"CUP_srifle_LeeEnfield_rail",
-											"CUP_lmg_Mk48_des",
-											"CUP_lmg_Mk48_wdl",
-											"CUP_srifle_AWM_des",
-											"CUP_srifle_AWM_wdl",
-											"CUP_srifle_ksvk",
-											"CUP_srifle_M107_Base",
-											"CUP_srifle_AS50"
+											"CUP_srifle_LeeEnfield_rail"
+					
 
 										];
 	DMS_BoxFood =						[							// List of food that can spawn in a crate.
@@ -1631,6 +1624,13 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"srifle_DMR_05_blk_F",
 											"MMG_01_hex_F",
 											"MMG_02_black_F",
+											"CUP_lmg_Mk48_des",
+											"CUP_lmg_Mk48_wdl",
+											"CUP_srifle_AWM_des",
+											"CUP_srifle_AWM_wdl",
+											"CUP_srifle_ksvk",
+											"CUP_srifle_M107_Base",
+											"CUP_sgun_AA12",
 											"Exile_Item_Knife",
 											"Exile_Item_ThermalScannerPro",
 											"ClaymoreDirectionalMine_Remote_Mag",
@@ -1643,7 +1643,10 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"Exile_Item_Cement",
 											"RPG7_F",
 											"RPG32_F",
-											"7Rnd_408_Mag"
+											"7Rnd_408_Mag",
+											"CUP_5Rnd_127x108_KSVK_M",
+											"CUP_10Rnd_127x99_M107",
+											"CUP_5Rnd_127x99_as50_M"
 											
 											
 											
@@ -1659,7 +1662,12 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											#endif
 											"Exile_Car_HMMWV_M134_Green",
 											"Exile_Car_HMMWV_M2_Green",
-											"Exile_Car_SUV_Armed_Black"
+											"Exile_Car_SUV_Armed_Black",
+											"CUP_O_Gaz_Vodnik_PK_RU",
+											"CUP_B_Jackal2_L2A1_GB_W",
+											"CUP_B_LR_Special_M2_GB_W",
+											"CUP_B_BAF_Coyote_L2A1_W",
+											"CUP_B_RG31_M2_OD_USMC",
 										];
 
 	DMS_MilitaryVehicles =				[							// List of (unarmed) military vehicles that can spawn
@@ -1714,7 +1722,9 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"Exile_Chopper_Mohawk_FIA",
 											"Exile_Chopper_Huron_Black",
 											"Exile_Chopper_Hellcat_Green",
-											"Exile_Chopper_Taru_Transport_Black"
+											"Exile_Chopper_Taru_Transport_Black",
+											"CUP_B_SA330_Puma_HC1_BAF"
+											
 										];
 
 	DMS_ReinforcementHelis =			[							// List of helis that can spawn for AI paratrooper reinforcements.

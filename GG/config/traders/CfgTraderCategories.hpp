@@ -1556,6 +1556,7 @@ class CfgTraderCategories
 		items[] = 
 		{
 			"arifle_MX_SW_Black_F",
+			"arifle_MX_SW_khk_F",
 			"LMG_03_F",
 			"LMG_Mk200_F",
 			"LMG_Zafir_F",
@@ -1905,7 +1906,7 @@ class CfgTraderCategories
 		items[] = 
 		{
 			"Exile_Weapon_M1014",
-			"hlc_rifle_saiga12k",
+			//"hlc_rifle_saiga12k",
 			"CUP_sgun_AA12",
 			//"CUP_sgun_M1014",
 			"CUP_sgun_Saiga12K"	
@@ -1979,7 +1980,6 @@ class CfgTraderCategories
 			"MMG_01_tan_F",
 			"MMG_02_black_F",
 			//"CUP_lmg_Mk48_des",
-			"CUP_lmg_Mk48_wdl"
 		};
 	};
 	
@@ -1999,9 +1999,7 @@ class CfgTraderCategories
 			"hlc_rifle_awmagnum_BL",
 			//"CUP_srifle_AWM_des",
 			"CUP_srifle_AWM_wdl",
-			"CUP_srifle_ksvk",
-			"CUP_srifle_M107_Base",
-			"CUP_srifle_AS50"
+			
 		};
 	};
 	
