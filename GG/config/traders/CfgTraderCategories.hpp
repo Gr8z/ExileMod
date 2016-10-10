@@ -1572,7 +1572,7 @@ class CfgTraderCategories
 			"hlc_lmg_M249E2",
 			"hlc_m249_pip2",
 			"hlc_lmg_m60",
-			"hlc_lmg_M60E4",
+			//"hlc_lmg_M60E4",
 			"hlc_lmg_mk48",
 			"hlc_rifle_rpk",
 			"hlc_rifle_RPK12",
@@ -1590,8 +1590,8 @@ class CfgTraderCategories
 			"CUP_lmg_L7A2",
 			"CUP_arifle_MG36",
 			"CUP_arifle_MG36_camo",
-			"CUP_lmg_M249_para",
-			"CUP_lmg_M249",
+			//"CUP_lmg_M249_para",
+			//"CUP_lmg_M249",
 			"CUP_lmg_M240",
 			"CUP_lmg_M60E4"
 			
