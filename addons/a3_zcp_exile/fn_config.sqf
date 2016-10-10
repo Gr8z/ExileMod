@@ -229,8 +229,6 @@ ZCP_DMS_BoxWeapons =					[							// List of weapons that can spawn in a crate
 										"arifle_MX_SW_Black_F",
 										"srifle_EBR_F",
 										"srifle_DMR_01_F",
-										"srifle_GM6_F",
-										"srifle_LRR_F",
 										"arifle_MXM_F",
 										"arifle_MXM_Black_F",
 										"srifle_DMR_02_F"
@@ -320,11 +318,6 @@ ZCP_DMS_ArmedVehicles =					[							// List of armed vehicles that can spawn
 										"Exile_Car_Offroad_Armed_Guerilla01"
 									];
 
-ZCP_DMS_MilitaryVehicles =				[							// List of military vehicles that can spawn
-										"Exile_Car_Strider",
-										"Exile_Car_Hunter",
-										"Exile_Car_Ifrit"
-									];
 
 ZCP_DMS_MilitaryVehicles =              [                           // List of military vehicles that can spawn
 										"Exile_Car_BRDM2_HQ",
@@ -339,7 +332,15 @@ ZCP_DMS_MilitaryVehicles =              [                           // List of m
 										"Exile_Car_HMMWV_M2_Green",
 										"Exile_Car_BTR40_MG_Green",
 										"B_T_LSV_01_armed_F",
-										"B_LSV_01_armed_F"
+										"B_LSV_01_armed_F",
+										"CUP_B_BAF_Coyote_L2A1_W",
+										"CUP_B_Ridgback_HMG_GB_W",
+										"Exile_Car_Strider",
+										"Exile_Car_Hunter",
+										"Exile_Car_Ifrit"
+										
+										
+										
                                     ];
 
 ZCP_DMS_TransportHelis =                [                           // List of transport helis that can spawn
