@@ -1,6 +1,6 @@
 params["_colorPaint"];
 
-private["_smokeClass","_equippedMagazines","_displayName","_smokeattach"];
+private["_smokeClass","_texture","_equippedMagazines","_displayName","_smokeattach"];
 
 switch (_colorPaint) do { 
 	case "White" : { 
@@ -36,8 +36,8 @@ switch (_colorPaint) do {
 
 closeDialog 0;
 
-_equippedMagazines = magazines player;
-if !(_smokeClass in _equippedMagazines) exitWith
+_equippedMagazines = {_x == _smokeClass} count magazines player;
+if (_equippedMagazines < 2) exitWith
 {	
 	_displayName = getText(configFile >> "CfgMagazines" >> _smokeClass >> 'displayName');
 	[
@@ -56,6 +56,8 @@ sleep 4;
 
 deleteVehicle _smokeattach1;
 deleteVehicle _smokeattach2;
+player removeMagazine _smokeClass;
+player removeMagazine _smokeClass;
 
 ExileClientInteractionObject setObjectTexture [0, _texture];
 ExileClientInteractionObject setObjectTexture [1, _texture];
