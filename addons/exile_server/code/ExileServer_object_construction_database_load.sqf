@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_constructionID","_data","_position","_vectorDirection","_vectorUp","_constructionObject","_damageLevel","_public","_pinCode"];
+private["_constructionID","_data","_position","_vectorDirection","_vectorUp","_constructionObject","_damageLevel","_public","_pinCode","_texture"];
 _constructionID = _this;
 _data = format ["loadConstruction:%1", _constructionID] call ExileServer_system_database_query_selectSingle;
 _position = [_data select 4, _data select 5, _data select 6];
@@ -23,6 +23,7 @@ _constructionObject setVariable ["ExileOwnerUID", (_data select 2)];
 _constructionObject setVariable ["ExileIsPersistent", true];
 _constructionObject setVariable ["ExileTerritoryID", (_data select 15)];
 _damageLevel = (_data select 17);
+_texture = (_data select 18);
 _public = _damageLevel > 0;
 _constructionObject setVariable ["ExileConstructionDamage",_damageLevel,_public];
 if(_public)then
@@ -43,6 +44,10 @@ if (getNumber(configFile >> "CfgVehicles" >> (_data select 1) >> "exileRequiresS
 else 
 {
 	_constructionObject enableSimulationGlobal false;
+};
+if (_texture != "") then {
+	_constructionObject setObjectTextureGlobal [0, _texture];
+	_constructionObject setObjectTextureGlobal [1, _texture];
 };
 _constructionObject setVelocity [0, 0, 0];
 _constructionObject setPosATL _position;
