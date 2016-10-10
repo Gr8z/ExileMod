@@ -45,7 +45,7 @@ try
 catch 
 {
 	_responseCode = _exception;
-	[_sessionID, "purchaseVehicleSkinResponse", [_responseCode, 0]] call ExileServer_system_network_send_to;
+	[_sessionID, "toastRequest", ["ErrorTitleAndText", ["Base Paint", _responseCode]]] call ExileServer_system_network_send_to;
 };
 if !(isNull _playerObject) then 
 {
