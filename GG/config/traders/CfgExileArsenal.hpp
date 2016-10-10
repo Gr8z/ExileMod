@@ -836,7 +836,7 @@ class CfgExileArsenal
 	class Exile_Weapon_AK47												{ quality = 2; price = 500; };
 	class Exile_Weapon_AKM												{ quality = 2; price = 500; };
 	class Exile_Weapon_AKS												{ quality = 2; price = 500; };
-	class Exile_Weapon_AKS_Gold											{ quality = 2; price = 550; };
+	class Exile_Weapon_AKS_Gold											{ quality = 2; price = 2000; };
 	class Exile_Weapon_DMR												{ quality = 3; price = 650; };
 	class Exile_Weapon_LeeEnfield										{ quality = 1; price = 250; };
 	class Exile_Weapon_CZ550											{ quality = 2; price = 400; };
@@ -1191,7 +1191,7 @@ class CfgExileArsenal
 	  class CUP_hgun_Makarov                                { quality = 1; price = 250; };
 	  class CUP_hgun_MicroUzi	                            { quality = 1; price = 300; };
 	  class CUP_hgun_TaurusTracker455	                    { quality = 1; price = 220; };
-	  class CUP_hgun_TaurusTracker455_gold					{ quality = 2; price = 500; };
+	  class CUP_hgun_TaurusTracker455_gold					{ quality = 2; price = 1100; };
 	  class CUP_hgun_M9	                                    { quality = 1; price = 300; };
 	  class CUP_hgun_Glock17	                            { quality = 1; price = 300; };
 	  class CUP_hgun_Phantom 						        { quality = 1; price = 250; };
@@ -1248,7 +1248,7 @@ class CfgExileArsenal
 	  class CUP_arifle_AK74M                                { quality = 1; price = 500; };
 	  class CUP_arifle_AKS                                  { quality = 2; price = 600; };
 	  class CUP_arifle_AKS74                                { quality = 1; price = 500; };
-	  class CUP_arifle_AKS_Gold                             { quality = 1; price = 6000; };
+	  class CUP_arifle_AKS_Gold                             { quality = 1; price = 4000; };
 	  class CUP_arifle_AKS74U                               { quality = 1; price = 600; };
 	  class CUP_arifle_AK107                                { quality = 1; price = 500; };
 	  class CUP_arifle_AK107_GL                             { quality = 1; price = 750; };
