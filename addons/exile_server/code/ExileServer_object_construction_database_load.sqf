@@ -23,7 +23,7 @@ _constructionObject setVariable ["ExileOwnerUID", (_data select 2)];
 _constructionObject setVariable ["ExileIsPersistent", true];
 _constructionObject setVariable ["ExileTerritoryID", (_data select 15)];
 _damageLevel = (_data select 17);
-_texture = str(_data select 18);
+_texture = (_data select 18);
 _public = _damageLevel > 0;
 _constructionObject setVariable ["ExileConstructionDamage",_damageLevel,_public];
 if(_public)then
