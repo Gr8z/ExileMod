@@ -108,25 +108,25 @@
 10, Exile_Magazine_6Rnd_45ACP	// Taurus
 10, 10Rnd_9x21_Mag				// PM 9 mm
 7, hlc_30Rnd_9x19_B_MP5
-5, hlc_30Rnd_9x19_GD_MP5
-5, hlc_30Rnd_9x19_SD_MP5
-5, CUP_7Rnd_45ACP_1911
-5, CUP_10Rnd_9x19_Compact
-5, CUP_18Rnd_9x19_Phantom
-5, CUP_17Rnd_9x19_glock17
-5, CUP_15Rnd_9x19_M9
-5, CUP_8Rnd_9x18_Makarov_M
-5, CUP_20Rnd_B_765x17_Ball_M
-5, CUP_30Rnd_9x19_UZI
-5, CUP_8Rnd_9x18_MakarovSD_M
-5, CUP_6Rnd_45ACP_M
-5, CUP_64Rnd_9x19_Bizon_M
+8, hlc_30Rnd_9x19_GD_MP5
+7, hlc_30Rnd_9x19_SD_MP5
+7, CUP_7Rnd_45ACP_1911
+8, CUP_10Rnd_9x19_Compact
+8, CUP_18Rnd_9x19_Phantom
+8, CUP_17Rnd_9x19_glock17
+8, CUP_15Rnd_9x19_M9
+9, CUP_8Rnd_9x18_Makarov_M
+6, CUP_20Rnd_B_765x17_Ball_M
+7, CUP_30Rnd_9x19_UZI
+7, CUP_8Rnd_9x18_MakarovSD_M
+8, CUP_6Rnd_45ACP_M
+7, CUP_64Rnd_9x19_Bizon_M
 5, CUP_64Rnd_Green_Tracer_9x19_Bizon_M
 5, CUP_64Rnd_Red_Tracer_9x19_Bizon_M
 5, CUP_64Rnd_White_Tracer_9x19_Bizon_M
 5, CUP_64Rnd_Yellow_Tracer_9x19_Bizon_M
-5, CUP_30Rnd_9x19_EVO
-5, CUP_30Rnd_9x19_MP5
+8, CUP_30Rnd_9x19_EVO
+8, CUP_30Rnd_9x19_MP5
 
 > PistolAttachments
 36, muzzle_snds_L
@@ -136,16 +136,18 @@
 10, CUP_acc_Glock17_Flashlight
 
 > Shotguns
-1, Exile_Weapon_M1014	//M1014
-1, hlc_rifle_saiga12k
-1, CUP_sgun_AA12
-1, CUP_sgun_M1014
-1, CUP_sgun_Saiga12K
+30, Exile_Weapon_M1014	//M1014
+15, hlc_rifle_saiga12k
+8, CUP_sgun_AA12
+30, CUP_sgun_M1014
+15, CUP_sgun_Saiga12K
 
 > ShotgunAmmo
-1, Exile_Magazine_8Rnd_74Slug		//M1014
-1, CUP_20Rnd_B_AA12_Pellets
-1, CUP_20Rnd_B_AA12_74Slug
+20, Exile_Magazine_8Rnd_74Slug		//M1014
+10, CUP_20Rnd_B_AA12_Pellets
+10, CUP_20Rnd_B_AA12_74Slug
+15, CUP_8Rnd_B_Saiga12_74Slug_M
+15, CUP_8Rnd_B_Saiga12_74Pellets_M
 
 > SMG
 6, SMG_01_F		// Vermin SMG .45 ACP
@@ -275,12 +277,20 @@
 10, hlc_rifle_g36tac
 10, hlc_rifle_g36v
 8, hlc_rifle_g36vag36
-10, hlc_rifle_slr
-10, hlc_rifle_slr107u
-10, hlc_rifle_slr107u_mtk
-10, hlc_rifle_slrchopmod
-10, hlc_rifle_stg58f
-10, hlc_rifle_stgw57
+10, CUP_arifle_AK47
+10, CUP_arifle_AK74
+10, CUP_arifle_G36A
+7, CUP_arifle_G36A_camo
+10, CUP_arifle_G36K
+7, CUP_arifle_G36K_camo
+10, CUP_arifle_G36C
+7, CUP_arifle_G36C_camo
+10, CUP_arifle_M4A1
+8, CUP_arifle_M4A1_camo
+10, CUP_arifle_M4A1_black
+8, CUP_arifle_M4A1_desert
+8, CUP_arifle_M4A3_desert
+
 
 
 > MediumRifles
@@ -332,8 +342,56 @@
 10, hlc_rifle_sig5104
 10, hlc_rifle_stgw57_commando
 10, hlc_rifle_stgw57_ris
-
-
+10, hlc_rifle_slr
+10, hlc_rifle_slr107u
+10, hlc_rifle_slr107u_mtk
+10, hlc_rifle_slrchopmod
+10, hlc_rifle_stg58f
+10, hlc_rifle_stgw57
+10, CUP_arifle_AK74_GL
+10, CUP_arifle_AK74M
+10, CUP_arifle_AKS
+10, CUP_arifle_AKS74
+5, CUP_arifle_AKS_Gold
+10, CUP_arifle_AKS74U
+9, CUP_arifle_AK107
+8, CUP_arifle_AK107_GL
+9, CUP_arifle_AKM
+8, CUP_arifle_CZ805_A1
+8, CUP_arifle_CZ805_A2
+7, CUP_arifle_CZ805_GL
+8, CUP_arifle_CZ805_B
+7, CUP_arifle_CZ805_B_GL
+10, CUP_arifle_M16A2
+8, CUP_arifle_M16A2_GL
+10, CUP_arifle_M16A4_Base
+8, CUP_arifle_M16A4_GL
+8, CUP_arifle_Sa58P
+7, CUP_arifle_Sa58P_des
+8, CUP_arifle_Sa58V
+7, CUP_arifle_Sa58V_camo
+7, CUP_arifle_Sa58RIS1
+7, CUP_arifle_Sa58RIS2
+6, CUP_arifle_Sa58RIS2_gl
+7, CUP_arifle_Sa58RIS1_des
+7, CUP_arifle_Sa58RIS2_camo
+9, CUP_arifle_Mk16_STD
+8, CUP_arifle_Mk16_STD_FG
+9, CUP_arifle_Mk16_STD_SFG
+7, CUP_arifle_Mk16_STD_EGLM
+8, CUP_arifle_Mk16_CQC
+9, CUP_arifle_Mk16_CQC_FG
+9, CUP_arifle_Mk16_CQC_SFG
+7, CUP_arifle_Mk16_CQC_EGLM
+8, CUP_arifle_Mk16_SV
+10, CUP_arifle_XM8_Compact
+10, CUP_arifle_XM8_Compact_Rail
+10, CUP_arifle_XM8_Railed
+10, CUP_arifle_L85A2
+8, CUP_arifle_L85A2_GL
+8, CUP_arifle_M4A1_BUIS_GL
+7, CUP_arifle_M4A1_BUIS_camo_GL
+7, CUP_arifle_M4A1_BUIS_desert_GL
 
 > HeavyRifles
 10, Exile_Weapon_SVD
@@ -357,6 +415,12 @@
 10, hlc_rifle_falosw
 7, hlc_rifle_honeybadger
 7, hlc_rifle_vendimus
+9, CUP_arifle_FNFAL_railed
+9, CUP_arifle_FNFAL
+10, CUP_arifle_XM8_Carbine
+7, CUP_arifle_XM8_Carbine_GL
+8, CUP_arifle_xm8_sharpshooter
+9, CUP_arifle_XM8_Carbine_FG
 
 > EpicWeapons
 8, srifle_GM6_F			// GM6 Lynx 12.7 mm
@@ -368,6 +432,9 @@
 9, MMG_02_black_F			//SPMG
 9, MMG_02_camo_F			//SPMG
 9, MMG_02_sand_F			//SPMG
+9, CUP_srifle_ksvk
+7, CUP_srifle_M107_Base
+7, CUP_srifle_AS50 
 
 
 > RifleAmmo
@@ -700,13 +767,8 @@
 8, hlc_lmg_M60
 8, hlc_lmg_M60E4
 10, hlc_lmg_minimi
-10, hlc_lmg_minimi_railed
-10, hlc_lmg_minimipara
 8, hlc_lmg_mk48
 10, hlc_m249_pip1
-10, hlc_m249_pip2
-10, hlc_m249_pip3
-10, hlc_m249_pip4
 8, hlc_m249_squantoon
 10, CUP_arifle_RPK74
 10, CUP_lmg_Pecheneg
@@ -719,16 +781,16 @@
 10, CUP_arifle_MG36_camo
 10, CUP_lmg_M249_para
 10, CUP_lmg_M249
-10, CUP_lmg_M240
-10, CUP_lmg_M60E4
+9, CUP_lmg_M240
+8, CUP_lmg_M60E4
 
 > LMGAmmo
 10, 100Rnd_65x39_caseless_mag			// MX SW
 10, 100Rnd_65x39_caseless_mag_Tracer	// MX SW
 10, 150Rnd_762x54_Box					// Zafir
 10, 150Rnd_762x54_Box_Tracer			// Zafir
-8, 130Rnd_338_Mag
-10, 150Rnd_93x64_Mag
+8, 130Rnd_338_Mag						//SPMG
+10, 150Rnd_93x64_Mag					//Navid
 10, Exile_Magazine_45Rnd_545x39_RPK_Green
 10, Exile_Magazine_75Rnd_545x39_RPK_Green
 10, Exile_Magazine_100Rnd_762x54_PK_Green
@@ -787,23 +849,23 @@
 10, hlc_rifle_m14sopmod
 10, hlc_rifle_m21
 8, hlc_rifle_g3sg1
-6, hlc_rifle_PSG1A1_RIS
-6, hlc_rifle_psg1
-10, CUP_srifle_CZ550_rail
-10, CUP_srifle_CZ550
-10, CUP_srifle_CZ750
-10, CUP_arifle_Mk20
-10, CUP_srifle_DMR
-10, CUP_srifle_M14
-10, CUP_srifle_M24_des
-10, CUP_srifle_M24_wdl
-10, CUP_srifle_M40A3
-10, CUP_srifle_M110
+7, hlc_rifle_PSG1A1_RIS
+7, hlc_rifle_psg1
+8, CUP_srifle_CZ550_rail
+8, CUP_srifle_CZ550
+9, CUP_srifle_CZ750
+9, CUP_arifle_Mk20
+8, CUP_srifle_DMR
+9, CUP_srifle_M14
+8, CUP_srifle_M24_des
+7, CUP_srifle_M24_wdl
+8, CUP_srifle_M40A3
+8, CUP_srifle_M110
 10, CUP_srifle_SVD
 10, CUP_srifle_L129A1
-10, CUP_srifle_MK12SPR
-10, CUP_srifle_VSSVintorez
-10, CUP_srifle_LeeEnfield
+9, CUP_srifle_MK12SPR
+7, CUP_srifle_VSSVintorez
+8, CUP_srifle_LeeEnfield
 10, CUP_srifle_LeeEnfield_rail
 
 > SniperAmmo
@@ -811,7 +873,7 @@
 3, 7Rnd_408_Mag			// M320 LRR
 10, 10Rnd_762x51_Mag		// Rahim
 10, 20Rnd_762x51_Mag		// Mk18 ABR
-1, 5Rnd_127x108_APDS_Mag	// GM6 Lynx 
+2, 5Rnd_127x108_APDS_Mag	// GM6 Lynx 
 10, 20Rnd_650x39_Cased_Mag_F	// CMR-76
 10, hlc_5rnd_3006_1903
 10, hlc_5rnd_300WM_AP_AWM
@@ -820,7 +882,7 @@
 10, hlc_5rnd_300WM_mk248_AWM
 10, hlc_5rnd_300WM_SBT_AWM
 10, hlc_20Rnd_762x51_B_G3
-3, Exile_Magazine_5Rnd_127x108_Bullet_Cam_Mag
+2, Exile_Magazine_5Rnd_127x108_Bullet_Cam_Mag
 2, Exile_Magazine_10Rnd_93x64_DMR_05_Bullet_Cam_Mag
 2, Exile_Magazine_7Rnd_408_Bullet_Cam_Mag
 2, Exile_Magazine_10Rnd_338_Bullet_Cam_Mag
@@ -843,6 +905,10 @@
 10, CUP_10Rnd_762x54_SVD_M
 10, CUP_10Rnd_9x39_SP5_VSS_M
 10, CUP_20Rnd_9x39_SP5_VSS_M
+5, CUP_10x_303_M
+5, CUP_5Rnd_127x108_KSVK_M
+5, CUP_10Rnd_127x99_M107
+5, CUP_5Rnd_127x99_as50_M      
 
 > SniperAttachments
 10, muzzle_snds_B
