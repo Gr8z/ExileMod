@@ -589,7 +589,7 @@ class CfgCraftingRecipes
 		requiredInteractionModelGroup = "WorkBench";
 		returnedItems[] = 
 		{
-			{1, "Exile_Item_RepairKitWood"}
+			{1, "Exile_Item_RepairKitMetal"}
 		};
 		components[] = 
 		{
