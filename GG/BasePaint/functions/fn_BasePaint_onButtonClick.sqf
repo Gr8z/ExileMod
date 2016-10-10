@@ -1,6 +1,6 @@
 params["_colorPaint"];
 
-private["_smokeClass","_texture","_equippedMagazines","_displayName","_smokeattach"];
+private["_smokeClass","_texture","_equippedMagazines","_displayName","_smokeattach","_object"];
 
 switch (_colorPaint) do { 
 	case "White" : { 
@@ -36,6 +36,7 @@ switch (_colorPaint) do {
 
 closeDialog 0;
 
+_object = ExileClientInteractionObject;
 _equippedMagazines = {_x == _smokeClass} count magazines player;
 if (_equippedMagazines < 2) exitWith
 {	
@@ -59,4 +60,4 @@ deleteVehicle _smokeattach2;
 player removeMagazine _smokeClass;
 player removeMagazine _smokeClass;
 
-["updateBasePaintRequest", [netId ExileClientInteractionObject, _texture]] call ExileClient_system_network_send;
+["updateBasePaintRequest", [netId _object, _texture]] call ExileClient_system_network_send;
