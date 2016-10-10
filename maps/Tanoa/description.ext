@@ -88,6 +88,11 @@ class CfgNetworkMessages
         module = "ClaimVehicle";
         parameters[] = {"STRING","STRING"};
     };
+    class updateBasePaintRequest
+    {
+     module = "BasePaint";
+     parameters[] = {"SCALAR","SCALAR"};
+    };
 };
 
 

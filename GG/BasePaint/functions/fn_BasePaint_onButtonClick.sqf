@@ -59,5 +59,4 @@ deleteVehicle _smokeattach2;
 player removeMagazine _smokeClass;
 player removeMagazine _smokeClass;
 
-ExileClientInteractionObject setObjectTexture [0, _texture];
-ExileClientInteractionObject setObjectTexture [1, _texture];
+["updateBasePaintRequest", [netId ExileClientInteractionObject, _texture]] call ExileClient_system_network_send;
