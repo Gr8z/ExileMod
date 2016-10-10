@@ -35,15 +35,10 @@ try
 	{
 		throw 6;
 	};
-	_skinMaterials = getArray(configFile >> "CfgVehicles" >> _skinClassName >> "hiddenSelectionsMaterials");
-	{
-		_vehicleObject setObjectTextureGlobal [_forEachIndex, _skinTextures select _forEachIndex];
-	}
-	forEach _skinTextures;
-	{
-		_vehicleObject setObjectMaterial [_forEachIndex, _x];
-	}
-	forEach _skinMaterials;
+
+	_vehicleObject setObjectTextureGlobal [0, _skinTextures];
+	_vehicleObject setObjectTextureGlobal [1, _skinTextures];
+
 	_vehicleID = _vehicleObject getVariable ["ExileDatabaseID", -1];
 	format["updateConstructionTexture:%1:%2", _skinTextures, _vehicleID] call ExileServer_system_database_query_fireAndForget;
 }
