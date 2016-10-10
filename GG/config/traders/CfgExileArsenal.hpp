@@ -559,13 +559,13 @@ class CfgExileArsenal
 	class 3Rnd_UGL_FlareYellow_F										{ quality = 1; price = 50; };
 
 	///////// Smokes /////////
-	class SmokeShell													{ quality = 1; price = 25; };
-	class SmokeShellBlue												{ quality = 1; price = 25; };
-	class SmokeShellGreen												{ quality = 1; price = 25; };
-	class SmokeShellOrange												{ quality = 1; price = 25; };
-	class SmokeShellPurple												{ quality = 1; price = 25; };
-	class SmokeShellRed													{ quality = 1; price = 25; };
-	class SmokeShellYellow												{ quality = 1; price = 25; };
+	class SmokeShell													{ quality = 2; price = 150; };
+	class SmokeShellBlue												{ quality = 2; price = 150; };
+	class SmokeShellGreen												{ quality = 2; price = 150; };
+	class SmokeShellOrange												{ quality = 2; price = 150; };
+	class SmokeShellPurple												{ quality = 2; price = 150; };
+	class SmokeShellRed													{ quality = 2; price = 150; };
+	class SmokeShellYellow												{ quality = 2; price = 150; };
 	class 1Rnd_Smoke_Grenade_shell										{ quality = 1; price = 25; };
 	class 1Rnd_SmokeBlue_Grenade_shell									{ quality = 1; price = 25; };
 	class 1Rnd_SmokeGreen_Grenade_shell									{ quality = 1; price = 25; };

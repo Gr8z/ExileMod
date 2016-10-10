@@ -9,3 +9,4 @@ if ((productVersion select 3) isEqualto 138587) then
 [] execVM "GG\HEG_Xbrm_client\Xbrm_config.sqf";
 [] execVM "GG\DailyReward\init.sqf";
 [] execVM "GG\repairVehicle\init.sqf";
+[] execVM "GG\BasePaint\init.sqf";

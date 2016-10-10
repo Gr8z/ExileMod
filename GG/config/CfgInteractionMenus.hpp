@@ -285,6 +285,12 @@ class CfgInteractionMenus {
 				condition = "((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo 0)";
 				action = "true spawn ExileClient_object_lock_toggle";
 			};
+
+			class Paint : ExileAbstractAction {
+				title = "Paint (coming soon)";
+				condition = "call ExileClient_util_world_isInOwnTerritory";
+				action = "createDialog 'PaintDialog'";
+			};
 			
 			class Move : ExileAbstractAction {
 				title = "Move";
