@@ -1248,7 +1248,7 @@ class CfgExileArsenal
 	  class CUP_arifle_AK74M                                { quality = 1; price = 500; };
 	  class CUP_arifle_AKS                                  { quality = 2; price = 600; };
 	  class CUP_arifle_AKS74                                { quality = 1; price = 500; };
-	  class CUP_arifle_AKS_Gold                             { quality = 1; price = 2500; };
+	  class CUP_arifle_AKS_Gold                             { quality = 1; price = 6000; };
 	  class CUP_arifle_AKS74U                               { quality = 1; price = 600; };
 	  class CUP_arifle_AK107                                { quality = 1; price = 500; };
 	  class CUP_arifle_AK107_GL                             { quality = 1; price = 750; };
@@ -1496,8 +1496,8 @@ class CfgExileArsenal
 	  ////////////////////////////////////////////////////////////////////////////////////////////
 	  // CUP Sniper Ammo /////////////////////////////////////////////////////////////////////////
 	  ////////////////////////////////////////////////////////////////////////////////////////////
-	  class CUP_5Rnd_86x70_L115A1                           { quality = 1; price = 400; };
-	  class CUP_5x_22_LR_17_HMR_M                        	{ quality = 3; price = 400; };
+	  class CUP_5Rnd_86x70_L115A1                           { quality = 1; price = 200; };
+	  class CUP_5x_22_LR_17_HMR_M                        	{ quality = 3; price = 200; };
 	  class CUP_10Rnd_762x51_CZ750							{ quality = 1; price = 200; };
 	  class CUP_10Rnd_762x51_CZ750_Tracer					{ quality = 1; price = 150; };
 	  class CUP_20Rnd_762x51_DMR                            { quality = 1; price = 200; };
@@ -1505,7 +1505,7 @@ class CfgExileArsenal
 	  class CUP_20Rnd_TE1_Red_Tracer_762x51_DMR             { quality = 1; price = 200; };
 	  class CUP_20Rnd_TE1_Green_Tracer_762x51_DMR           { quality = 1; price = 200; };
 	  class CUP_20Rnd_TE1_White_Tracer_762x51_DMR           { quality = 1; price = 200; };
-	  class CUP_5Rnd_762x51_M24   							{ quality = 1; price = 155; };
+	  class CUP_5Rnd_762x51_M24   							{ quality = 1; price = 150; };
 	  class CUP_20Rnd_762x51_B_M110                         { quality = 1; price = 250; };
 	  class CUP_20Rnd_TE1_White_Tracer_762x51_M110          { quality = 1; price = 200; };
 	  class CUP_20Rnd_TE1_Yellow_Tracer_762x51_M110         { quality = 1; price = 200; };
@@ -1513,11 +1513,11 @@ class CfgExileArsenal
 	  class CUP_20Rnd_TE1_Green_Tracer_762x51_M110          { quality = 1; price = 200; };
 	  class CUP_10Rnd_762x54_SVD_M					        { quality = 1; price = 150; };
 	  class CUP_10Rnd_9x39_SP5_VSS_M						{ quality = 1; price = 50; };
-	  class CUP_20Rnd_9x39_SP5_VSS_M						{ quality = 1; price = 60; };
-	  class CUP_10x_303_M									{ quality = 3; price = 500; };
-	  class CUP_5Rnd_127x108_KSVK_M                         { quality = 3; price = 500; };
-	  class CUP_10Rnd_127x99_M107                           { quality = 3; price = 500; };
-	  class CUP_5Rnd_127x99_as50_M                          { quality = 3; price = 500; };
+	  class CUP_20Rnd_9x39_SP5_VSS_M						{ quality = 1; price = 100; };
+	  class CUP_10x_303_M									{ quality = 3; price = 250; };
+	  class CUP_5Rnd_127x108_KSVK_M                         { quality = 3; price = 250; };
+	  class CUP_10Rnd_127x99_M107                           { quality = 3; price = 250; };
+	  class CUP_5Rnd_127x99_as50_M                          { quality = 3; price = 250; };
 	  ////////////////////////////////////////////////////////////////////////////////////////////
 	  // Sniper Items ////////////////////////////////////////////////////////////////////////////
 	  ////////////////////////////////////////////////////////////////////////////////////////////
