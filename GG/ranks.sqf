@@ -18,7 +18,7 @@ switch (true) do
 	//  "Your rank is Scavenger";
     };
      
-    case (_respect > 5000 && _respect < 49999):
+    case (_respect > 4999 && _respect < 49999):
    {
    call ExileClient_object_player_bambiStateEnd;
     _rank = "Pickpocket";     
@@ -38,7 +38,7 @@ switch (true) do
 	//    "Your rank is Pickpocket";
     };
    
-    case (_respect > 50000 && _respect < 99999):
+    case (_respect > 49999 && _respect < 99999):
    {
     _rank = "Thief";
     call ExileClient_object_player_bambiStateEnd;
@@ -62,7 +62,7 @@ switch (true) do
    //   "Your rank is Thief";
    };
    
-    case (_respect > 100000 && _respect < 159999):
+    case (_respect > 99999 && _respect < 159999):
    {
     _rank = "Gangster";  
     call ExileClient_object_player_bambiStateEnd;
@@ -87,7 +87,7 @@ switch (true) do
     //  "Your rank is Gangster";
    };
    
-    case (_respect > 160000 && _respect < 224999):
+    case (_respect > 159999 && _respect < 224999):
    {
    _rank = "Hitman";
    call ExileClient_object_player_bambiStateEnd;
@@ -112,7 +112,7 @@ switch (true) do
     //   "Your rank is Hitman";
    };
    
-    case (_respect > 225000 && _respect < 274999):
+    case (_respect > 224999 && _respect < 274999):
    {
     _rank = "Bounty Hunter";  
   call ExileClient_object_player_bambiStateEnd;
@@ -139,7 +139,7 @@ switch (true) do
    
 
    
-    case (_respect > 275000 && _respect < 324999):
+    case (_respect > 274999 && _respect < 324999):
    {
     _rank = "Mercenary";  
   call ExileClient_object_player_bambiStateEnd;
@@ -164,7 +164,7 @@ switch (true) do
     //   "Your rank is Mercenary";
    };
    
-    case (_respect > 325000 && _respect < 399999):
+    case (_respect > 324999 && _respect < 399999):
    {
     _rank = "Assassin";  
   call ExileClient_object_player_bambiStateEnd;
@@ -187,10 +187,10 @@ switch (true) do
 	player add "Exile_Item_CanOpener";
 	player addItem "Exile_Item_PlasticBottleFreshWater";
 	player addItem "Exile_Item_PlasticBottleFreshWater";
-    //  "Your rank is Assassin"
+    //  "Your rank is Assassin";
    };
    
-     case (_respect > 400000 && _respect < 499999):
+     case (_respect > 399999 && _respect < 499999):
    {
     _rank = "Terrorist";  
 	call ExileClient_object_player_bambiStateEnd;
@@ -246,9 +246,9 @@ player forceAddUniform "U_I_C_Soldier_Para_4_F";
    
     default
     {   
-    //  "Your rank is Inmate";
     _rank = "Inmate";  
      [parseText format["<br/><br/><br/><t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,2500-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
 	 player linkItem "ItemMap";
+	 //  "Your rank is Inmate";
     };
 };
