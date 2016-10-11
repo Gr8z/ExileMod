@@ -2336,17 +2336,26 @@ class CfgExileArsenal
 	class I_IR_Grenade													{ quality = 1; price = 50; };
 	class 1Rnd_HE_Grenade_shell											{ quality = 2; price = 75; };
 	class 3Rnd_HE_Grenade_shell											{ quality = 2; price = 150; };
-	class APERSBoundingMine_Range_Mag									{ quality = 2; price = 500; };
-	class APERSMine_Range_Mag											{ quality = 2; price = 600; };
-	class APERSTripMine_Wire_Mag										{ quality = 2; price = 300; };
-	class ClaymoreDirectionalMine_Remote_Mag							{ quality = 2; price = 350; };
+	class APERSBoundingMine_Range_Mag									{ quality = 2; price = 1000; };
+	class APERSMine_Range_Mag											{ quality = 2; price = 1000; };
+	class APERSTripMine_Wire_Mag										{ quality = 2; price = 1000; };
+	class ClaymoreDirectionalMine_Remote_Mag							{ quality = 2; price = 1750; };
 	class DemoCharge_Remote_Mag											{ quality = 2; price = 1500; };
 	class IEDLandBig_Remote_Mag											{ quality = 2; price = 1500; };
 	class IEDLandSmall_Remote_Mag										{ quality = 2; price = 1000; };
 	class IEDUrbanSmall_Remote_Mag										{ quality = 2; price = 1000; };
 	class IEDUrbanBig_Remote_Mag										{ quality = 2; price = 1500; };
 	class SatchelCharge_Remote_Mag										{ quality = 2; price = 2500; };
-	class SLAMDirectionalMine_Wire_Mag									{ quality = 2; price = 700; };
+	class SLAMDirectionalMine_Wire_Mag									{ quality = 2; price = 1000; };
+	
+	
+	///////// CUPS Explosives /////////
+	class CUP_Mine_M													{ quality = 2; price = 1200; };
+	class CUP_MineE_M													{ quality = 2; price = 1200; };
+	class CUP_IED_V1_M													{ quality = 2; price = 1200; };
+	
+	
+	
 	
 	///////// NIArms Explosives /////////
 	class 	hlc_VOG25_AK												{ quality = 1; price = 75; };
