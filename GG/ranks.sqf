@@ -233,6 +233,7 @@ player forceAddUniform "U_I_C_Soldier_Para_4_F";
 	player addHandgunItem "muzzle_snds_acp";
 	player addItem "hlc_200rnd_556x45_B_SAW";
 	player addItemToUniform "9Rnd_45ACP_Mag";
+	player addItemToUniform "9Rnd_45ACP_Mag";
 	for "_i" from 1 to 3 do {this addItemToBackpack "HandGrenade";};
 	player linkItem "ItemGPS";
 	player linkItem "ItemMap";
