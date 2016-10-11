@@ -1666,8 +1666,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"Exile_Car_SUV_Armed_Black",
 											"CUP_O_Gaz_Vodnik_PK_RU",
 											"CUP_B_Jackal2_L2A1_GB_W",
-											"CUP_B_LR_Special_M2_GB_W",
-											"CUP_B_RG31_M2_OD_USMC"
+											"CUP_B_LR_Special_M2_GB_W"
 										];
 
 	DMS_MilitaryVehicles =				[							// List of (unarmed) military vehicles that can spawn
