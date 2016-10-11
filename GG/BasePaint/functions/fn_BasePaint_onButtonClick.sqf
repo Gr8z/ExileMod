@@ -12,7 +12,7 @@ switch (_colorPaint) do {
 		_texture = "\A3\Data_F\Flags\flag_red_co.paa";
 	};	
 	case "Green" : { 
-		_smokeClass = "SmokeShellRGreen"; 		
+		_smokeClass = "SmokeShellGreen"; 		
 		_texture = "\A3\Data_F\Flags\flag_green_co.paa";
 	};	
 	case "Blue" : { 
