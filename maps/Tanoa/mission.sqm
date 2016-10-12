@@ -1942,6 +1942,7 @@ class Mission
 			name="ExileMarker18";
 			text="Kotomo";
 			type="ExileSpawnZoneIcon";
+			colorName="ColorBlue";
 			id=118;
 			atlOffset=-3.456516;
 		};
@@ -1969,6 +1970,7 @@ class Mission
 			name="ExileMarker20";
 			text="Nandai";
 			type="ExileSpawnZoneIcon";
+			colorName="ColorBlue";
 			id=120;
 			atlOffset=-8.7623243;
 		};
@@ -1996,6 +1998,7 @@ class Mission
 			name="ExileMarker22";
 			text="Ovau";
 			type="ExileSpawnZoneIcon";
+			colorName="ColorBlue";
 			id=122;
 			atlOffset=-13.458803;
 		};
@@ -2023,6 +2026,7 @@ class Mission
 			name="ExileMarker24";
 			text="Nicolet";
 			type="ExileSpawnZoneIcon";
+			colorName="ColorBlue";
 			id=124;
 			atlOffset=-17.434483;
 		};
@@ -2361,6 +2365,7 @@ class Mission
 			name="ExileMarker59";
 			text="Georgetown";
 			type="ExileSpawnZoneIcon";
+			colorName="ColorBlue";
 			id=120;
 			atlOffset=-5.0706201;
 		};
