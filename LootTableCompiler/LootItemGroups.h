@@ -1899,7 +1899,7 @@
 9, Exile_Melee_Axe
 4, Exile_Item_CordlessScrewdriver
 7, Exile_Item_Carwheel
-5, Exile_Item_Wrench
+7, Exile_Item_Wrench
 
 > Vehicle
 35, Exile_Item_FuelCanisterFull
