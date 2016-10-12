@@ -2406,8 +2406,7 @@ class CfgTraderCategories
 			"C_Boat_Transport_02_F",
 			"Exile_Boat_RHIB",
 			"CUP_B_Zodiac_USMC",
-			"CUP_C_Fishing_Boat_Chernarus",
-			"CUP_B_Seafox_USV_USMC"
+			"CUP_C_Fishing_Boat_Chernarus"
 		};
 	};
 	
