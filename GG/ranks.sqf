@@ -133,7 +133,7 @@ switch (true) do
 	player addItem "Exile_Item_PlasticBottleFreshWater";
 	player addItem "Exile_Item_PlasticBottleFreshWater";
 	player addItem "Exile_Item_InstaDoc";
-	player add "Exile_Item_CanOpener";
+	player addItem "Exile_Item_CanOpener";
     //  "Your rank is Bounty Hunter";
    };
    
@@ -158,7 +158,7 @@ switch (true) do
 	player addItem "Exile_Item_ExtensionCord";
 	player addItem "Exile_Item_BBQSandwich";
 	player addItem "Exile_Item_InstaDoc";
-	player add "Exile_Item_CanOpener";
+	player addItem "Exile_Item_CanOpener";
 	player addItem "Exile_Item_PlasticBottleFreshWater";
 	player addItem "Exile_Item_PlasticBottleFreshWater";
     //   "Your rank is Mercenary";
@@ -184,7 +184,7 @@ switch (true) do
 	player addItem "Exile_Item_ExtensionCord";
 	player addItem "Exile_Item_BBQSandwich";
 	player addItem "Exile_Item_InstaDoc";
-	player add "Exile_Item_CanOpener";
+	player addItem "Exile_Item_CanOpener";
 	player addItem "Exile_Item_PlasticBottleFreshWater";
 	player addItem "Exile_Item_PlasticBottleFreshWater";
     //  "Your rank is Assassin";
@@ -215,7 +215,7 @@ player forceAddUniform "U_I_C_Soldier_Para_4_F";
     //   "Your rank is Terrorist";
    };
    
-       case (_respect > 500000):
+       case (_respect > 499999):
    {
     _rank = "Warlord";
     call ExileClient_object_player_bambiStateEnd;  
