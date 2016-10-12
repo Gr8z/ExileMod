@@ -26,7 +26,7 @@ switch (true) do
 	    player forceAddUniform "U_I_C_Soldier_Bandit_3_F";
 		player addWeapon "hgun_P07_F";
 		player addVest "V_BandollierB_rgr";
-		for "_i" from 1 to 2 do {this addItemToVest "16Rnd_9x21_Mag";};
+		for "_i" from 1 to 2 do {player addItemToVest "16Rnd_9x21_Mag";};
 		player addBackpack "B_AssaultPack_cbr";
 		player addHeadgear "CUP_H_PMC_Cap_Grey";
 		player linkItem "ItemMap";
@@ -45,7 +45,7 @@ switch (true) do
 	   [parseText format["<br/><br/><br/><t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,100000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
 	    player forceAddUniform "CUP_U_C_Woodlander_01";
 		player addVest "V_BandollierB_blk";
-		for "_i" from 1 to 3 do {this addItemToVest "11Rnd_45ACP_Mag";};
+		for "_i" from 1 to 3 do {player addItemToVest "11Rnd_45ACP_Mag";};
 		player addBackpack "B_AssaultPack_blk";
 		player addHeadgear "H_Watchcap_blk";
 		player addWeapon "hgun_Pistol_heavy_01_F";
@@ -118,7 +118,7 @@ switch (true) do
 	  call ExileClient_object_player_bambiStateEnd;
 	    [parseText format["<br/><br/><br/><t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,350000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
 		player forceAddUniform "CUP_U_B_FR_Scout";
-		for "_i" from 1 to 3 do {this addItemToUniform "hlc_30rnd_556x45_EPR_G36";};
+		for "_i" from 1 to 3 do {player addItemToUniform "hlc_30rnd_556x45_EPR_G36";};
 		player addVest "CUP_V_OI_TKI_Jacket2_02";
 		player addBackpack "B_TacticalPack_blk";
 		player addHeadgear "H_Cap_oli";
@@ -144,7 +144,7 @@ switch (true) do
 	     [parseText format["<br/><br/><br/><t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,450000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
 		player forceAddUniform "U_I_C_Soldier_Para_2_F";
 		player addVest "V_TacChestrig_oli_F";
-		for "_i" from 1 to 3 do {this addItemToVest "CUP_30Rnd_556x45_Stanag";};
+		for "_i" from 1 to 3 do {player addItemToVest "CUP_30Rnd_556x45_Stanag";};
 		player addBackpack "B_FieldPack_khk";
 		player addHeadgear "H_Cap_oli_hs";
 		player addGoggles "G_Bandanna_sport";
@@ -169,7 +169,7 @@ switch (true) do
 	    [parseText format["<br/><br/><br/><t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,600000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
 		player forceAddUniform "CUP_U_B_FR_Scout";
 		player addVest "V_I_G_resistanceLeader_F";
-		for "_i" from 1 to 3 do {this addItemToVest "30Rnd_65x39_caseless_mag";
+		for "_i" from 1 to 3 do {player addItemToVest "30Rnd_65x39_caseless_mag";
 		player addBackpack "B_TacticalPack_blk";
 		player addHeadgear "H_Shemag_olive_hs";
 		player addGoggles "G_Balaclava_blk";
@@ -195,8 +195,8 @@ switch (true) do
 			[parseText format["<br/><br/><br/><t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,800000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
 		player forceAddUniform "U_I_C_Soldier_Para_4_F";
 		player addVest "V_TacVest_khk";
-		for "_i" from 1 to 3 do {this addItemToVest "hlc_30Rnd_762x39_b_ak";};
-		for "_i" from 1 to 2 do {this addItemToBackpack "HandGrenade";};
+		for "_i" from 1 to 3 do {player addItemToVest "hlc_30Rnd_762x39_b_ak";};
+		for "_i" from 1 to 2 do {player addItemToBackpack "HandGrenade";};
 		player addBackpack "B_Kitbag_cbr";
 		player addHeadgear "H_ShemagOpen_tan";
 		player addWeaponGlobal "hlc_rifle_akm_MTK";
@@ -230,14 +230,14 @@ switch (true) do
 		player addItem "hlc_200rnd_556x45_B_SAW";
 		player addItemToUniform "9Rnd_45ACP_Mag";
 		player addItemToUniform "9Rnd_45ACP_Mag";
-		for "_i" from 1 to 3 do {this addItemToBackpack "HandGrenade";};
+		for "_i" from 1 to 3 do {player addItemToBackpack "HandGrenade";};
 		player linkItem "ItemGPS";
 		player linkItem "ItemMap";
 		player addItem "Exile_Item_Matches";
 		player addItem "Exile_Item_ExtensionCord";
 		player addItem "Exile_Item_GloriousKnakworst";
 		player addItem "Exile_Item_CanOpener";
-		for "_i" from 1 to 2 do {this addItemToVest "Exile_Item_PowerDrink";};
+		for "_i" from 1 to 2 do {player addItemToVest "Exile_Item_PowerDrink";};
 		player addItem "Exile_Item_InstaDoc";
 	   //    "Your rank is Warlord";
     };
