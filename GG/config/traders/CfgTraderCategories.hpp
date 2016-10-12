@@ -2327,7 +2327,8 @@ class CfgTraderCategories
 			"CUP_C_Golf4_camodark_Civ",
 			"CUP_C_Golf4_reptile_Civ",
 			"CUP_M1030",
-			"CUP_B_M1133_MEV_Woodland"
+			"CUP_B_M1133_MEV_Woodland",
+			"CUP_O_BMP2_AMB_TKA"
 		};
 	};
 
