@@ -8,11 +8,11 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=175;
+		nextID=176;
 	};
 	class MarkerIDProvider
 	{
-		nextID=21;
+		nextID=24;
 	};
 	class Camera
 	{
@@ -78,7 +78,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=95;
+		items=96;
 		class Item0
 		{
 			dataType="Group";
@@ -2885,6 +2885,19 @@ class Mission
 			colorName="ColorRed";
 			id=174;
 			atlOffset=62.641167;
+		};
+		class Item95
+		{
+			dataType="Marker";
+			position[]={10437.685,-6.5382084e-021,-1514};
+			name="marker_23";
+			text="  ATM Machine";
+			type="loc_Bush";
+			colorName="ColorWhite";
+			a=1.5;
+			b=1.5;
+			id=175;
+			atlOffset=55.764454;
 		};
 	};
 };
