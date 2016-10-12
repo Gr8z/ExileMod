@@ -2316,6 +2316,7 @@ class CfgTraderCategories
 			"CUP_B_LR_Transport_GB_W",
 			"CUP_C_LR_Transport_CTK",
 			"CUP_O_Datsun_PK",
+			"CUP_C_Datsun_Covered",
 			"CUP_C_Datsun_Plain",
 			"CUP_C_Octavia_CIV",
 			"CUP_C_Golf4_random_Civ",
@@ -2324,7 +2325,9 @@ class CfgTraderCategories
 			"CUP_C_Golf4_camodigital_Civ",
 			"CUP_C_Golf4_kitty_Civ",
 			"CUP_C_Golf4_camodark_Civ",
-			"CUP_C_Golf4_reptile_Civ"
+			"CUP_C_Golf4_reptile_Civ",
+			"CUP_M1030",
+			"CUP_B_M1133_MEV_Woodland"
 		};
 	};
 
@@ -2343,7 +2346,11 @@ class CfgTraderCategories
 			"Exile_Car_Zamak",
 			"Exile_Car_Tempest",
 			"Exile_Car_HEMMT",
-			"Exile_Car_Ikarus_Blue"
+			"Exile_Car_Ikarus_Blue",
+			"CUP_I_Ural_Repair_UN",
+			"CUP_O_Ural_Reammo_RU",
+			"CUP_B_MTVR_USA",
+			"CUP_B_MTVR_Ammo_USA"
 		};
 	};
 
@@ -2397,9 +2404,9 @@ class CfgTraderCategories
 			"Exile_Boat_WaterScooter",
 			"C_Boat_Transport_02_F",
 			"Exile_Boat_RHIB",
-			"CUP_B_RHIB2Turret_USMC",
 			"CUP_B_Zodiac_USMC",
-			"CUP_C_Fishing_Boat_Chernarus"
+			"CUP_C_Fishing_Boat_Chernarus",
+			"CUP_B_Seafox_USV_USMC"
 		};
 	};
 	
@@ -2422,7 +2429,8 @@ class CfgTraderCategories
 		items[] = 
 		{
 			"O_T_Boat_Armed_01_hmg_F",
-			"B_T_Boat_Armed_01_minigun_F"
+			"B_T_Boat_Armed_01_minigun_F",
+			"CUP_B_RHIB2Turret_USMC"
 		};
 	};
 
@@ -2438,7 +2446,9 @@ class CfgTraderCategories
 			"Exile_Plane_BlackfishInfantry",
 			"Exile_Plane_BlackfishVehicle",
 			"O_T_VTOL_02_infantry_F",
-			"O_T_VTOL_02_vehicle_F"
+			"O_T_VTOL_02_vehicle_F",
+			"CUP_B_C130J_Cargo_USMC",
+			"CUP_O_AN2_TK"
 		};
 	};
 

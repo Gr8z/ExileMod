@@ -334,7 +334,8 @@ ZCP_DMS_MilitaryVehicles =              [                           // List of m
 										"B_T_LSV_01_armed_F",
 										"B_LSV_01_armed_F",
 										"CUP_B_BAF_Coyote_L2A1_W",
-										"CUP_B_RG31_M2_OD_USMC"
+										"CUP_B_RG31_M2_OD_USMC",
+										"CUP_O_BMP_HQ_TKA"
 										
 										
 										
