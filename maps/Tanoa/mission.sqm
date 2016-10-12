@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=158;
+		nextID=175;
 	};
 	class MarkerIDProvider
 	{
@@ -78,7 +78,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=79;
+		items=95;
 		class Item0
 		{
 			dataType="Group";
@@ -1884,11 +1884,11 @@ class Mission
 		class Item14
 		{
 			dataType="Marker";
-			position[]={2265.1299,0,8596.3701};
+			position[]={2265.1299,-4.6071828e-020,8596.3701};
 			name="ExileMarker14";
 			text="Trader City Ferry";
 			type="ExileTraderZoneIcon";
-			colorName="ColorGreen";
+			colorName="ColorGUER";
 			id=114;
 			atlOffset=-1.2647192;
 		};
@@ -1910,13 +1910,13 @@ class Mission
 		class Item16
 		{
 			dataType="Marker";
-			position[]={11670.7,0,4106.1699};
+			position[]={11670.7,9.7053979e+033,4106.1699};
 			name="ExileMarker16";
 			text="Trader City Saioko";
 			type="ExileTraderZoneIcon";
-			colorName="ColorGreen";
+			colorName="ColorGUER";
 			id=116;
-			atlOffset=-162.97455;
+			atlOffset=9.7053979e+033;
 		};
 		class Item17
 		{
@@ -1938,13 +1938,13 @@ class Mission
 		class Item18
 		{
 			dataType="Marker";
-			position[]={10806.4,0,6388.1001};
+			position[]={10806.4,9.7053979e+033,6388.1001};
 			name="ExileMarker18";
 			text="Kotomo";
 			type="ExileSpawnZoneIcon";
-			colorName="ColorBlue";
+			colorName="ColorWEST";
 			id=118;
-			atlOffset=-3.456516;
+			atlOffset=9.7053979e+033;
 		};
 		class Item19
 		{
@@ -1966,11 +1966,11 @@ class Mission
 		class Item20
 		{
 			dataType="Marker";
-			position[]={14356.3,0,8870.7197};
+			position[]={14356.3,-4.6071828e-020,8870.7197};
 			name="ExileMarker20";
 			text="Nandai";
 			type="ExileSpawnZoneIcon";
-			colorName="ColorBlue";
+			colorName="ColorWEST";
 			id=120;
 			atlOffset=-8.7623243;
 		};
@@ -1994,11 +1994,11 @@ class Mission
 		class Item22
 		{
 			dataType="Marker";
-			position[]={12543,0,12623.9};
+			position[]={12543,-4.6071828e-020,12623.9};
 			name="ExileMarker22";
 			text="Ovau";
 			type="ExileSpawnZoneIcon";
-			colorName="ColorBlue";
+			colorName="ColorWEST";
 			id=122;
 			atlOffset=-13.458803;
 		};
@@ -2022,11 +2022,11 @@ class Mission
 		class Item24
 		{
 			dataType="Marker";
-			position[]={6530.2002,0,13106.1};
+			position[]={6530.2002,-4.5542432e-020,13106.1};
 			name="ExileMarker24";
 			text="Nicolet";
 			type="ExileSpawnZoneIcon";
-			colorName="ColorBlue";
+			colorName="ColorWEST";
 			id=124;
 			atlOffset=-17.434483;
 		};
@@ -2050,11 +2050,11 @@ class Mission
 		class Item26
 		{
 			dataType="Marker";
-			position[]={8911.6797,0,8520.4902};
+			position[]={8911.6797,3.611427e+017,8520.4902};
 			name="ExileMarker26";
 			type="ExileSpecOpsTraderIcon";
 			id=126;
-			atlOffset=-228.87505;
+			atlOffset=3.611427e+017;
 		};
 		class Item27
 		{
@@ -2181,13 +2181,13 @@ class Mission
 		class Item36
 		{
 			dataType="Marker";
-			position[]={12190.4,0,8167.0298};
+			position[]={12190.4,9.7053979e+033,8167.0298};
 			name="ExileMarker36";
 			text="Trader City Banana";
 			type="ExileTraderZoneIcon";
-			colorName="ColorGreen";
+			colorName="ColorGUER";
 			id=136;
-			atlOffset=-49.674259;
+			atlOffset=9.7053979e+033;
 		};
 		class Item37
 		{
@@ -2267,9 +2267,10 @@ class Mission
 		class Item42
 		{
 			dataType="Marker";
-			position[]={2901.51,0,12333.8};
+			position[]={2901.51,-4.5542432e-020,12333.8};
 			name="ExileMarker42";
 			type="ExileContaminatedZoneIcon";
+			colorName="ColorRed";
 			id=142;
 			atlOffset=-127.87136;
 		};
@@ -2361,11 +2362,11 @@ class Mission
 		class Item49
 		{
 			dataType="Marker";
-			position[]={5739.3398,0,10301.3};
+			position[]={5739.3398,-4.5542432e-020,10301.3};
 			name="ExileMarker59";
 			text="Georgetown";
 			type="ExileSpawnZoneIcon";
-			colorName="ColorBlue";
+			colorName="ColorWEST";
 			id=120;
 			atlOffset=-5.0706201;
 		};
@@ -2404,11 +2405,11 @@ class Mission
 		class Item52
 		{
 			dataType="Marker";
-			position[]={7991.1001,0,12411.6};
+			position[]={7991.1001,-4.6071828e-020,12411.6};
 			name="ExileMarker52";
 			text="Trader City Galili";
 			type="ExileTraderZoneIcon";
-			colorName="ColorGreen";
+			colorName="ColorGUER";
 			id=152;
 			atlOffset=-123.48886;
 		};
@@ -2678,7 +2679,7 @@ class Mission
 		class Item75
 		{
 			dataType="Marker";
-			position[]={6448.4888,-1.1616158e-033,5656.4009};
+			position[]={6448.4888,0,5656.4009};
 			name="marker_20";
 			text="   www.GhostzGamerz.com";
 			type="loc_Bush";
@@ -2719,6 +2720,171 @@ class Mission
 			colorName="ColorCIV";
 			id=157;
 			atlOffset=24.796856;
+		};
+		class Item79
+		{
+			dataType="Marker";
+			position[]={3882,-4.5767218e-020,-496};
+			name="ExileMarker4_1";
+			text="Spec Ops Trader";
+			type="ExileSpecOpsTraderIcon";
+			id=158;
+			atlOffset=64.742004;
+		};
+		class Item80
+		{
+			dataType="Marker";
+			position[]={3882,9.712885e+033,-1020};
+			name="ExileMarker6_1";
+			text="Boat Trader";
+			type="ExileBoatTraderIcon";
+			id=159;
+			atlOffset=9.712885e+033;
+		};
+		class Item81
+		{
+			dataType="Marker";
+			position[]={3882,-0.0080032349,-1514};
+			name="ExileMarker46_1";
+			text="Aircraft Trader";
+			type="ExileAircraftTraderIcon";
+			id=160;
+			atlOffset=64.734001;
+		};
+		class Item82
+		{
+			dataType="Marker";
+			position[]={6748.8682,3.6100416e+017,-496};
+			name="ExileMarker14_1";
+			text="Trader City (SZ)";
+			type="ExileTraderZoneIcon";
+			colorName="ColorGUER";
+			id=161;
+			atlOffset=3.6100416e+017;
+		};
+		class Item83
+		{
+			dataType="Marker";
+			position[]={6748.8682,3.611427e+017,-1020};
+			name="ExileMarker18_1";
+			text="Bambi Spawn";
+			type="ExileSpawnZoneIcon";
+			colorName="ColorWEST";
+			id=162;
+			atlOffset=3.611427e+017;
+		};
+		class Item84
+		{
+			dataType="Marker";
+			position[]={6748.8682,-0.080055237,-1514};
+			name="ExileMarker2_1";
+			text="Russian Roulette (SZ)";
+			type="ExileRussianRouletteIcon";
+			id=163;
+			atlOffset=64.26889;
+		};
+		class Item85
+		{
+			dataType="Marker";
+			position[]={10437.685,9.7053979e+033,-1020};
+			name="ExileMarker42_1";
+			text="Radiation Island";
+			type="ExileContaminatedZoneIcon";
+			colorName="ColorRed";
+			id=164;
+			atlOffset=9.7053979e+033;
+		};
+		class Item86
+		{
+			dataType="Marker";
+			position[]={13617.966,5.6002204e+029,-1514};
+			name="ExileMarker42_2";
+			text=" Battlezone";
+			type="ExileMissionCapturePointIcon";
+			id=165;
+			atlOffset=5.6002204e+029;
+		};
+		class Item87
+		{
+			dataType="Marker";
+			position[]={10437.685,-4.5542432e-020,-496};
+			name="ExileMarker30_1";
+			text="Concrete Mixer";
+			type="ExileConcreteMixerZoneIcon";
+			colorName="ColorOrange";
+			id=166;
+			atlOffset=55.764454;
+		};
+		class Item88
+		{
+			dataType="Marker";
+			position[]={270.43701,-4.5780246e-020,-1020};
+			name="ExileMarker4_2";
+			text=" Easy";
+			type="ExileMissionEasyIcon";
+			id=167;
+			atlOffset=62.641167;
+		};
+		class Item89
+		{
+			dataType="Marker";
+			position[]={2077.314,9.712885e+033,-1020};
+			name="ExileMarker4_3";
+			text=" Difficult";
+			type="ExileMissionDifficultIcon";
+			id=168;
+			atlOffset=9.712885e+033;
+		};
+		class Item90
+		{
+			dataType="Marker";
+			position[]={270.43701,-0.0013313293,-1514};
+			name="ExileMarker4_4";
+			text=" Moderate";
+			type="ExileMissionModerateIcon";
+			id=169;
+			atlOffset=62.639835;
+		};
+		class Item91
+		{
+			dataType="Marker";
+			position[]={2077.314,9.7078936e+033,-1514};
+			name="ExileMarker4_5";
+			text=" Hardcore";
+			type="ExileMissionHardcoreIcon";
+			id=170;
+			atlOffset=9.7078936e+033;
+		};
+		class Item92
+		{
+			dataType="Marker";
+			position[]={13617.966,5.5971739e+029,-496};
+			name="ExileMarker42_30";
+			text=" Supply Drop";
+			type="ExileHeart";
+			id=172;
+			atlOffset=5.5971739e+029;
+		};
+		class Item93
+		{
+			dataType="Marker";
+			position[]={13617.966,9.7078936e+033,-1020};
+			name="ExileMarker42_31";
+			text=" Abadoned Safe";
+			type="ExileSafe";
+			id=173;
+			atlOffset=9.7078936e+033;
+		};
+		class Item94
+		{
+			dataType="Marker";
+			position[]={270.43701,-5.495296e-027,-496};
+			name="marker_11";
+			text=" Military Base";
+			type="o_unknown";
+			colorName="ColorRed";
+			id=174;
+			atlOffset=62.641167;
 		};
 	};
 };
