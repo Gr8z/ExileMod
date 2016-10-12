@@ -828,7 +828,15 @@ _49code = {
 						if(_idd isEqualTo -1340 && _idc isEqualTo 1602 && _buttonAction isEqualTo 'call fnc_fill_chat_playerlist;')exitWith{false};
 						if(_idd isEqualTo 6666 && _idc isEqualTo 6677 && _buttonAction isEqualTo 'call HALV_paintshop_selected;')exitWith{false};
 						if(_idd isEqualTo 6666 && _idc isEqualTo 6679 && _buttonAction isEqualTo 'call HALV_paintshop_addtolist;')exitWith{false};
-						if(_idd isEqualTo 6666 && _idc isEqualTo 22000 && _buttonAction isEqualTo 'call GG_fnc_dailyRewards_onButtonClick;')exitWith{false};
+						if(_idd isEqualTo 22000 && _idc isEqualTo 1001 && _buttonAction isEqualTo 'call GG_fnc_dailyRewards_onButtonClick;')exitWith{false};
+						if(_idd isEqualTo 22000 && _idc isEqualTo 1004 && _buttonAction isEqualTo 'closeDialog 0')exitWith{false};
+						if(_idd isEqualTo 23000 && _idc isEqualTo 1200 && _buttonAction isEqualTo '[''White''] spawn GG_fnc_BasePaint_onButtonClick')exitWith{false};
+						if(_idd isEqualTo 23000 && _idc isEqualTo 1201 && _buttonAction isEqualTo '[''Red''] spawn GG_fnc_BasePaint_onButtonClick')exitWith{false};
+						if(_idd isEqualTo 23000 && _idc isEqualTo 1202 && _buttonAction isEqualTo '[''Green''] spawn GG_fnc_BasePaint_onButtonClick')exitWith{false};
+						if(_idd isEqualTo 23000 && _idc isEqualTo 1203 && _buttonAction isEqualTo '[''Blue''] spawn GG_fnc_BasePaint_onButtonClick')exitWith{false};
+						if(_idd isEqualTo 23000 && _idc isEqualTo 1204 && _buttonAction isEqualTo '[''Yellow''] spawn GG_fnc_BasePaint_onButtonClick')exitWith{false};
+						if(_idd isEqualTo 23000 && _idc isEqualTo 1205 && _buttonAction isEqualTo '[''Purple''] spawn GG_fnc_BasePaint_onButtonClick')exitWith{false};
+						if(_idd isEqualTo 23000 && _idc isEqualTo 1206 && _buttonAction isEqualTo '[''Orange''] spawn GG_fnc_BasePaint_onButtonClick')exitWith{false};
 						if(_idd isEqualTo 151 && _idc isEqualTo 2405 && _buttonAction isEqualTo 'finddisplay 151 createdisplay ''RscDisplayOptionsLayout''')exitWith{false};
 						true
 					})then{
