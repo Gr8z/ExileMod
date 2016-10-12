@@ -169,7 +169,7 @@ switch (true) do
 	    [parseText format["<br/><br/><br/><t size='0.6'font='OrbitronLight'>Your Rank is %1</t><br/><t size='0.5'font='OrbitronLight'>You need to earn %2 more respect for the next rank!</t>",_rank,600000-_respect],0,0,10,0] spawn bis_fnc_dynamictext;
 		player forceAddUniform "CUP_U_B_FR_Scout";
 		player addVest "V_I_G_resistanceLeader_F";
-		for "_i" from 1 to 3 do {player addItemToVest "30Rnd_65x39_caseless_mag";
+		for "_i" from 1 to 3 do {player addItemToVest "30Rnd_65x39_caseless_mag";};
 		player addBackpack "B_TacticalPack_blk";
 		player addHeadgear "H_Shemag_olive_hs";
 		player addGoggles "G_Balaclava_blk";
