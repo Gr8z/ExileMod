@@ -78,7 +78,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_AI_KillPercent					= 100;						// The percent amount of AI that need to be killed for "killPercent" mission requirement (NOT IMPLEMENTED)
 
 	/*Mission Marker settings*/
-	DMS_ShowDifficultyColorLegend		= true;						// Whether or not to show a "color legend" at the bottom left of the map that shows which color corresponds to which difficulty. I know it's not very pretty, meh.
+	DMS_ShowDifficultyColorLegend		= false;						// Whether or not to show a "color legend" at the bottom left of the map that shows which color corresponds to which difficulty. I know it's not very pretty, meh.
 	DMS_ShowMarkerCircle				= false;					// Whether or not to show the colored "circle" around a mission marker.
 	DMS_MarkerText_ShowMissionPrefix	= true;						// Whether or not to place a prefix before the mission marker text. Enable this if your players get confused by the marker names :P
 	DMS_MarkerText_MissionPrefix		= "Mission:";				// The text displayed before the mission name in the mission marker.
