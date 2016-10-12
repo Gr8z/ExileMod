@@ -1888,6 +1888,7 @@ class Mission
 			name="ExileMarker14";
 			text="Trader City Ferry";
 			type="ExileTraderZoneIcon";
+			colorName="ColorGreen";
 			id=114;
 			atlOffset=-1.2647192;
 		};
@@ -1913,6 +1914,7 @@ class Mission
 			name="ExileMarker16";
 			text="Trader City Saioko";
 			type="ExileTraderZoneIcon";
+			colorName="ColorGreen";
 			id=116;
 			atlOffset=-162.97455;
 		};
@@ -2099,6 +2101,7 @@ class Mission
 			position[]={8430.1602,0,10246.8};
 			name="ExileMarker30";
 			type="ExileConcreteMixerZoneIcon";
+			colorName="ColorOrange";
 			id=130;
 			atlOffset=-19.43;
 		};
@@ -2125,6 +2128,7 @@ class Mission
 			position[]={11930.8,0,10345.6};
 			name="ExileMarker32";
 			type="ExileConcreteMixerZoneIcon";
+			colorName="ColorOrange";
 			id=132;
 			atlOffset=-151.46959;
 		};
@@ -2151,6 +2155,7 @@ class Mission
 			position[]={11139.4,0,11546.9};
 			name="ExileMarker34";
 			type="ExileConcreteMixerZoneIcon";
+			colorName="ColorOrange";
 			id=134;
 			atlOffset=-350.38;
 		};
@@ -2176,6 +2181,7 @@ class Mission
 			name="ExileMarker36";
 			text="Trader City Banana";
 			type="ExileTraderZoneIcon";
+			colorName="ColorGreen";
 			id=136;
 			atlOffset=-49.674259;
 		};
@@ -2397,6 +2403,7 @@ class Mission
 			name="ExileMarker52";
 			text="Trader City Galili";
 			type="ExileTraderZoneIcon";
+			colorName="ColorGreen";
 			id=152;
 			atlOffset=-123.48886;
 		};
