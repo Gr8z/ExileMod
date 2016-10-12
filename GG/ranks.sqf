@@ -207,7 +207,7 @@ switch (true) do
 		player addItem "Exile_Item_ExtensionCord";
 		player addItem "Exile_Item_BBQSandwich";
 		player addItem "Exile_Item_InstaDoc";
-		player add "Exile_Item_CanOpener";
+		player addItem "Exile_Item_CanOpener";
 		player addItem "Exile_Item_PlasticBottleFreshWater";
 		player addItem "Exile_Item_PlasticBottleFreshWater";
 	    //   "Your rank is Terrorist";
