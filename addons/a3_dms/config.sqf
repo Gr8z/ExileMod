@@ -1664,6 +1664,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"Exile_Car_HMMWV_M134_Green",
 											"Exile_Car_HMMWV_M2_Green",
 											"Exile_Car_SUV_Armed_Black",
+											"Exile_Car_BTR40_MG_Green",
 											"CUP_O_Gaz_Vodnik_PK_RU",
 											"CUP_B_Jackal2_L2A1_GB_W",
 											"CUP_B_LR_Special_M2_GB_W"

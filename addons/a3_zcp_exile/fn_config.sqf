@@ -327,15 +327,13 @@ ZCP_DMS_MilitaryVehicles =              [                           // List of m
 										"I_MRAP_03_hmg_F",
 										"O_T_LSV_02_armed_F",
 										"O_LSV_02_armed_F",
-										"Exile_Car_SUV_Armed_Black",
-										"Exile_Car_HMMWV_M134_Green",
-										"Exile_Car_HMMWV_M2_Green",
-										"Exile_Car_BTR40_MG_Green",
 										"B_T_LSV_01_armed_F",
 										"B_LSV_01_armed_F",
-										"CUP_B_BAF_Coyote_L2A1_W",
+										"CUP_O_BMP_HQ_TKA",
 										"CUP_B_RG31_M2_OD_USMC",
-										"CUP_O_BMP_HQ_TKA"
+										"CUP_B_BAF_Coyote_L2A1_W",
+										"CUP_B_Wolfhound_LMG_GB_D"
+										
 										
 										
 										
