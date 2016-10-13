@@ -1486,6 +1486,9 @@ class CfgTraderCategories
 			"IEDUrbanBig_Remote_Mag",
 			"IEDUrbanSmall_Remote_Mag",
 			"SLAMDirectionalMine_Wire_Mag",
+			"CUP_Mine_M",
+			"CUP_MineE_M",					
+			"CUP_IED_V1_M",
 			//NIArms
 			"hlc_VOG25_AK"
 		};
