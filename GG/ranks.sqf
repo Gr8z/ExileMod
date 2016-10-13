@@ -56,7 +56,6 @@ switch (true) do
 		player linkItem "ItemMap";
 	    player addItem "Exile_Item_ExtensionCord";
 	    player addItem "Exile_Item_BBQSandwich";
-	    player addItem "Exile_Item_Vishpirin";
 	    player addItem "Exile_Item_CanOpener";
 	    player addItem "Exile_Item_PlasticBottleFreshWater";
 	   //   "Your rank is Thief";
@@ -81,7 +80,7 @@ switch (true) do
 	    player addItem "Exile_Item_ExtensionCord";
 	    player addItem "Exile_Item_BBQSandwich";
 	    player addItem "Exile_Item_PlasticBottleFreshWater";
-	    player addItem "Exile_Item_InstaDoc";
+	    player addItem "Exile_Item_Vishpirin";
 	    player addItem "Exile_Item_CanOpener";
 	    player addItem "Exile_Item_PlasticBottleFreshWater";
 	    //  "Your rank is Gangster";
