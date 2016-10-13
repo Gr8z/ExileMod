@@ -199,7 +199,6 @@ adminUIDandAccess[] =
 		 "76561198274767971", // CanadianFrodo
 		 "76561198036004541", // Demen
 		 "76561198090941099", // Josh
-		 "76561198065188130", // Nacho
 		 "0"
 		 },	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
