@@ -30,6 +30,7 @@ switch (true) do
 		player addBackpack "B_AssaultPack_cbr";
 		player addHeadgear "CUP_H_PMC_Cap_Grey";
 		player linkItem "ItemMap";
+		player linkItem "ItemGPS";
 		player addItem "Exile_Item_Matches";
 	    player addItem "Exile_Item_ExtensionCord";
 	    player addItem "Exile_Item_ChristmasTinner";
