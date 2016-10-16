@@ -782,10 +782,11 @@ class CfgExileArsenal
 
 	///////// Light Machine Guns /////////
 	class arifle_MX_SW_Black_F											{ quality = 1; price = 700; };
-	class arifle_MX_SW_F												{ quality = 1; price = 850; };
-	class LMG_03_F														{ quality = 2; price = 700; };
-	class LMG_Mk200_F													{ quality = 2; price = 750; };
-	class LMG_Zafir_F													{ quality = 2; price = 850; };
+	class arifle_MX_SW_F												{ quality = 1; price = 750; };
+	class arifle_MX_SW_khk_F											{ quality = 1; price = 800; };
+	class LMG_03_F														{ quality = 2; price = 750; };
+	class LMG_Mk200_F													{ quality = 2; price = 850; };
+	class LMG_Zafir_F													{ quality = 2; price = 1000; };
 	class MMG_01_hex_F													{ quality = 3; price = 2000; };
 	class MMG_01_tan_F													{ quality = 3; price = 2000; };
 	class MMG_02_black_F												{ quality = 3; price = 2000; };

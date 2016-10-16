@@ -1559,7 +1559,6 @@ class CfgTraderCategories
 		items[] = 
 		{
 			"arifle_MX_SW_Black_F",
-			"arifle_MX_SW_khk_F",
 			"LMG_03_F",
 			"LMG_Mk200_F",
 			"LMG_Zafir_F",
@@ -1592,11 +1591,10 @@ class CfgTraderCategories
 			"CUP_lmg_L110A1",
 			"CUP_lmg_L7A2",
 			"CUP_arifle_MG36",
-			"CUP_arifle_MG36_camo",
+			"CUP_lmg_M240"
 			//"CUP_lmg_M249_para",
 			//"CUP_lmg_M249",
-			"CUP_lmg_M240",
-			"CUP_lmg_M60E4"
+			//"CUP_lmg_M60E4"
 			
 		};
 	};
