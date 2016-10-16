@@ -22,4 +22,5 @@ class CfgExileCustomCode {
 	ExileClient_util_gear_getCompatibleWeaponItems = "GG\custom\ExileClient_util_gear_getCompatibleWeaponItems.sqf";
 	ExileClient_util_item_getCompatibleWeaponItems = "GG\custom\ExileClient_util_item_getCompatibleWeaponItems.sqf";
 	ExileClient_util_playerEquipment_add = "GG\custom\ExileClient_util_playerEquipment_add.sqf";
+	ExileClient_gui_traderDialog_updateInventoryDropdown = "GG\custom\ExileClient_gui_traderDialog_updateInventoryDropdown.sqf";
 };

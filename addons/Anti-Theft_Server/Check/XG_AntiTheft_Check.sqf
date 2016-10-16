@@ -17,6 +17,15 @@
 
 params [["_player",objNull],["_vehicle",objNull],["_family","No Family"],["_vehicleInfo",[]],"_ret"];
 _vehicleInfo params [["_group",""],["_vifamily","No Family"],["_ownerUID",""]];
+if!([_player,200] call ExileClient_util_world_isTraderZoneInRange) exitWith
+{
+	if!(_vehicleInfo isEqualTo []) then
+	{
+		_vehicleInfo params [["_group",0],["_vifamily","No Family"],["_ownerUID",""],["_evhID",0]];
+		_vehicle removeEventHandler ["GetIn",_evhID];
+		_vehicle setVariable ["XG_AntiTheftInfo",[],true];
+	};
+};
 if(_group isEqualTo "No Group") then
 {
 	if!(_family isEqualTo "No Family") then
