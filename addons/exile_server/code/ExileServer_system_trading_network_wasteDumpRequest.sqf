@@ -36,7 +36,7 @@ try
 	{
 		throw 2;
 	};
-	_vehicleInfo = _x getVariable ["XG_AntiTheftInfo",[]];
+	_vehicleInfo = _vehicleObject getVariable ["XG_AntiTheftInfo",[]];
 	if!(_vehicleInfo isEqualTo []) then
 	{
 		_vehicleInfo params [["_group",""],["_vifamily","No Family"],["_ownerUID",""]];
