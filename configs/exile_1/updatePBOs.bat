@@ -23,6 +23,8 @@ MakePBO -! -P -N "C:\ExileMod\maps\Tanoa" "C:\a3Server\mpmissions\GG_exile_1.Tan
 "C:\Program Files\PBO Manager v.1.4 beta\PBOConsole.exe" -pack "C:\ExileMod\addons\GG_SecretCode" "C:\a3Server\%srvname%\addons\GG_SecretCode.pbo"
 "C:\Program Files\PBO Manager v.1.4 beta\PBOConsole.exe" -pack "C:\ExileMod\addons\ClaimVehicles_Server" "C:\a3Server\%srvname%\addons\ClaimVehicles_Server.pbo"
 "C:\Program Files\PBO Manager v.1.4 beta\PBOConsole.exe" -pack "C:\ExileMod\addons\HEG_Xbrm" "C:\a3Server\%srvname%\addons\HEG_Xbrm.pbo"
+"C:\Program Files\PBO Manager v.1.4 beta\PBOConsole.exe" -pack "C:\ExileMod\addons\SA_AdvancedSlingLoading" "C:\a3Server\%srvname%\addons\SA_AdvancedSlingLoading.pbo"
+"C:\Program Files\PBO Manager v.1.4 beta\PBOConsole.exe" -pack "C:\ExileMod\addons\SA_AdvancedTowing" "C:\a3Server\%srvname%\addons\SA_AdvancedTowing.pbo"
 
 echo Creating new PBOs 
 
