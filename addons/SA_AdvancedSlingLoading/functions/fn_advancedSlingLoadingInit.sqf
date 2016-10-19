@@ -1067,7 +1067,7 @@ ASL_Add_Player_Actions = {
 
 if(!isDedicated) then {
 	[] spawn {
-		while {true} do {
+		GG_fnc_ASL = {
 			if(!isNull player && isPlayer player) then {
 				if!( player getVariable ["ASL_Actions_Loaded",false] ) then {
 					[] call ASL_Add_Player_Actions;
@@ -1075,8 +1075,8 @@ if(!isDedicated) then {
 				};
 			};
 			missionNamespace setVariable ["ASL_Nearby_Vehicles", (call ASL_Find_Nearby_Vehicles)];
-			sleep 2;
 		};
+		ASL_Refresh = [2, GG_fnc_ASL, [], true] call ExileClient_system_thread_addtask;
 	};
 };
 
