@@ -771,7 +771,7 @@ SA_Find_Nearby_Tow_Vehicles = {
 
 if(!isDedicated) then {
 	[] spawn {
-		GG_fnc_ASL = {
+		GG_fnc_SA = {
 			if(!isNull player && isPlayer player) then {
 				if!( player getVariable ["SA_Tow_Actions_Loaded",false] ) then {
 					[] call SA_Add_Player_Tow_Actions;
