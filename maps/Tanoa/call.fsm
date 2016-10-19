@@ -7,24 +7,26 @@ window[] = {0,-1,-1,-1,-1,836,458,1418,87,1,220};
 *//*%FSM</HEAD>*/
 class FSM
 {
-	fsmName = "call.fsm";
-	class States
-	{
-		/*%FSM<STATE "call_FSM">*/
-		class call_FSM
-		{
-			name = "call_FSM";
-			itemno = 0;
-			init = /*%FSM<STATEINIT""">*/"(_this select 0) call (_this select 1)"/*%FSM</STATEINIT""">*/;
-			precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
-			class Links{};
-		};
-		/*%FSM</STATE>*/
-	};
-	initState="";
-	finalStates[] =
-	{
-		"call_FSM",
-	};
+        fsmName = "call.fsm";
+        class States
+        {
+                /*%FSM<STATE "call_FSM">*/
+                class call_FSM
+                {
+                        name = "call_FSM";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/"(_this select 0) call (_this select 1)"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="";
+        finalStates[] =
+        {
+                "call_FSM",
+        };
 };
 /*%FSM</COMPILE>*/
