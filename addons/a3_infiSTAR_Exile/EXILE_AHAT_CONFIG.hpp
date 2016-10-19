@@ -407,7 +407,7 @@ LVC = true;			/* Local Vehicle Check - ALWAYS HAVE THIS TRUE! */
 URC = false;			/* Check unitRecoilCoefficient and reset default unitRecoilCoefficient */
 CAP = false;		/* Check Actions Plr - "Actions: xxx/xxx possible scroll menu hack (or you added custom actions..)" */
 KCM = false;			/* Just close ALL CommandingMenus */
-CMC = true;		/* Check for CommandingMenus that are not in the allowedCommandingMenus array */
+CMC = false;		/* Check for CommandingMenus that are not in the allowedCommandingMenus array */
 allowedCommandingMenus[] = {"#user:example","#user:example2"};
 
 task_force_radio = false;			/* put this to true if you allow task force radio on your server! */
