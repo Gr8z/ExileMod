@@ -12,7 +12,7 @@
 	'ahmed-banna@hotmail.com'
 	
 	Last download was on:
-	'26-Sep-2016 07-25-48';
+	'11-Oct-2016 08-25-07';
 	
 	NOTE:
 	THIS FILE SHOULD NOT BE TOUCHED UNLESS YOU REALLY KNOW WHAT YOU ARE DOING!
@@ -139,17 +139,15 @@ if(!_found)exitWith
 };
 diag_log format["%1 - Cfg_infiSTAR_settings has been found, STARTING",time];
 fnc_infiSTAR_cfg = compileFinal '
-    private["_inputclassname","_path","_default","_defaultT","_return"];
+    private["_inputclassname","_path","_default","_return"];
 	_inputclassname = _this select 0;
     _path = (configfile >> "Cfg_infiSTAR_settings" >> _inputclassname);
 	_default = _this select 1;
-	_defaultT = typename _default;
 	_return = call {
-		if(_defaultT isEqualTo "BOOL")exitWith{(getText _path)=="true"};
-		if(_defaultT isEqualTo "ARRAY")exitWith{getArray _path};
-		if(_defaultT isEqualTo "SCALAR")exitWith{getNumber _path};
-		if(_defaultT isEqualTo "STRING")exitWith{getText _path};
-		diag_log format["fnc_infiSTAR_cfg inputclassname: %1, default: %2, default type: %3 - was used!",_inputclassname,_default,_defaultT];
+		if(_default isEqualType true)exitWith{(getText _path)=="true"};
+		if(_default isEqualType 0)exitWith{getNumber _path};
+		if(_default isEqualType [])exitWith{getArray _path};
+		if(_default isEqualType "")exitWith{getText _path};
 		_default
 	};
 	_return
@@ -210,6 +208,10 @@ _DayNightVote = ["DayNightVote",true] call fnc_infiSTAR_cfg;
 _MRV = ["MRV",0.3] call fnc_infiSTAR_cfg;
 _MVP = ["MVP",0.51] call fnc_infiSTAR_cfg;
 _VCT = ["VCT",300] call fnc_infiSTAR_cfg;
+
+_allowPee = ["allowPee",true] call fnc_infiSTAR_cfg;
+_enableJump = ["enableJump",true] call fnc_infiSTAR_cfg;
+
 _TGV = ["TGV",40] call fnc_infiSTAR_cfg;
 _VDV = ["VDV",900] call fnc_infiSTAR_cfg;
 _VOV = ["VOV",750] call fnc_infiSTAR_cfg;
@@ -234,9 +236,11 @@ _allowedCommandingMenus = ["allowedCommandingMenus",[]] call fnc_infiSTAR_cfg;
 _allowedCommandingMenus = _allowedCommandingMenus - ["#user:example"];
 _allowedCommandingMenus = _allowedCommandingMenus - ["#user:example2"];
 
+_task_force_radio = ["task_force_radio",true] call fnc_infiSTAR_cfg;
 _checkFilePatchingEnabled = ["checkFilePatchingEnabled",true] call fnc_infiSTAR_cfg;
 _check_Notifications = ["check_Notifications",false] call fnc_infiSTAR_cfg;
 _check_doors_n_gates = ["check_doors_n_gates",false] call fnc_infiSTAR_cfg;
+
 _checkHiddenObjects = ["checkHiddenObjects",true] call fnc_infiSTAR_cfg;
 _attach_to_check = ["attach_to_check",false] call fnc_infiSTAR_cfg;
 _slingload_check = ["slingload_check",false] call fnc_infiSTAR_cfg;
@@ -275,6 +279,8 @@ _badIDDsToKick = ["badIDDsToKick",[]] call fnc_infiSTAR_cfg;
 _badIDDsToClose = ["badIDDsToClose",[]] call fnc_infiSTAR_cfg;
 _UDW = ["UDW",true] call fnc_infiSTAR_cfg;
 _allowedIDDs = ["allowedIDDs",[]] call fnc_infiSTAR_cfg;
+
+_variableTypeChecks = ["variableTypeChecks",[]] call fnc_infiSTAR_cfg;
 
 _useBlacklistedVariableCheck = ["useBlacklistedVariableCheck",false] call fnc_infiSTAR_cfg;
 _blacklistedVariables = [];

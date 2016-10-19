@@ -9,7 +9,7 @@
 	Arma AntiHack & AdminTools - infiSTAR.de
 */
 comment 'Antihack & AdminTools - Christian Lorenzen - www.infiSTAR.de';
-VERSION_DATE_IS = '26-Sep-2016 07-25-48#214';
+VERSION_DATE_IS = '11-Oct-2016 08-25-07#1136';
 infiSTAR_customFunctions = [];
 _configClasses = "true" configClasses (configfile >> "CfgCustomFunctions");
 {
@@ -3188,16 +3188,19 @@ fnc_ReviveTarget = {
 			_log = 'target already alive..!';
 			_log call FN_SHOW_LOG;
 		};
-		if(getPlayerUID _target != '')then
+		if((getPlayerUID _target) isEqualTo '')exitWith
 		{
-			moveOut _target;
-			unassignVehicle _target;
-			_target action ['eject', (vehicle _target)];
-			
-			_log = format['Revived %1(%2) @%3',_target call fnc_get_exileObjName,getPlayerUID _target,mapGridPosition _target];
+			_log = 'target object not a player anymore..!';
 			_log call FN_SHOW_LOG;
-			[19,netId _target] call fnc_AdminReq;
 		};
+		
+		moveOut _target;
+		unassignVehicle _target;
+		_target action ['eject', (vehicle _target)];
+		
+		_log = format['Revived %1(%2) @%3',_target call fnc_get_exileObjName,getPlayerUID _target,mapGridPosition _target];
+		_log call FN_SHOW_LOG;
+		[19,netId _target] call fnc_AdminReq;
 	}
 	else
 	{
@@ -3991,7 +3994,7 @@ infiSTAR_A3MAPICONS = {
 					} forEach [
 						['mapiconsshowflags','Flags'],
 						['mapiconsshowbuildings','Buildings'],
-						['mapiconsshowcameras','CAMERAS'],
+						['mapiconsshowcameras','Cameras'],
 						['mapiconsshowplayer','Player'],
 						['mapiconsshowdeadplayer','DeadPlayer'],
 						['mapiconsshowvehicles','Vehicles'],
@@ -4381,7 +4384,7 @@ infiSTAR_A3Togglelock = {
 		cursorTarget animate [_x,if(_animationPhase > 0)then{0}else{1}];
 	} forEach ['DoorRotation','DoorRotationLeft','DoorRotationRight','open_left','open_right','lock_cGarage','Open_Door','lock_Door','raise','Open_top','Open_bot'];
 };
-_stayLocalNumber = 217;
+_stayLocalNumber = 1139;
 fnc_RscDisplayDebugPublic = {
 	if!('DebugConsole' call ADMINLEVELACCESS)exitWith{systemChat 'You are not allowed to use this! (missing DebugConsole in Adminpowers)';};
 	disableSerialization;
@@ -4889,9 +4892,6 @@ if!(_oldValues isEqualTo [])then
 		};
 	} forEach _oldValues;
 };
-HTML_LOAD_URL_EXILE = 'http://htmlload.infistar.de/admin.php';
-
-_log = format['%1 - Menu Loaded - press F1 (default Key) to open it!',call GET_TIME_TIME];systemchat _log;diag_log _log;
 
 if(!isNil 'infiAdminKeyDown')then{(findDisplay 46) displayRemoveEventHandler ['KeyDown',infiAdminKeyDown];infiAdminKeyDown = nil;};
 infiAdminKeyDown = (findDisplay 46) displayAddEventHandler ['KeyDown',{ _this call fnc_infiAdminKeyDown }];
@@ -4908,6 +4908,8 @@ if('Teleport On Map Click' call ADMINLEVELACCESS)then
 	infiAdminMouseButtonUp = (uiNamespace getVariable 'A3MAPICONS_mainMap') ctrlAddEventHandler['MouseButtonUp','call fnc_MouseButtonUp'];
 };
 FN_SHOW_LOG = {['SuccessTitleAndText', ['infiSTAR.de', _this]] call ExileClient_gui_toaster_addTemplateToast;};
+
+_log = format['%1 - Menu Loaded - press F1 (default Key) to open it!',call GET_TIME_TIME];systemchat _log;diag_log _log;
 ";
 /* ********************************************************************************* */
 /* *********************************www.infiSTAR.de********************************* */

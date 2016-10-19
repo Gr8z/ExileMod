@@ -323,8 +323,27 @@ MVP = 0.51;	/* if "DayNightVote = true;" - Minimum vote percentage. A setting th
 VCT = 300;	/* if "DayNightVote = true;" - Time (in seconds) to wait until nex vote is possible. */
 
 
-/* The following 4 options can be disabled by putting the value to -1. For example "TGV = -1;" */
-/* Terrain Grid Value   */ TGV = -1;	/* 50, 25, 12.5  */	/* if set to 50 grass will be very low for better client FPS.. default is 25 ~35 is good performance and grass :) */
+
+/* Allow players to type !pee to start peeing */
+allowPee = true;
+
+/* Enable jumping instead of GetOver function (infiSTAR jumping is a custom jump animation :P) */
+enableJump = true;
+
+
+
+/*
+	The following 4 options can be disabled by putting the value to -1. For example "TGV = -1;"
+
+	TGV: if set to 50 grass will be very low for better client FPS.. default is 25. ~35 is good performance and grass :)
+
+	old infiSTAR default values were:
+	TGV = 40;
+	VDV = 1000;
+	VOV = 800;
+	SVD = 50;
+*/
+/* Terrain Grid Value   */ TGV = -1;
 /* ViewDistance Value   */ VDV = -1;
 /* ObjectViewDistance   */ VOV = -1;
 /* ShadowViewDistance   */ SVD = -1;
@@ -392,7 +411,7 @@ KCM = false;			/* Just close ALL CommandingMenus */
 CMC = true;		/* Check for CommandingMenus that are not in the allowedCommandingMenus array */
 allowedCommandingMenus[] = {"#user:example","#user:example2"};
 
-
+task_force_radio = false;			/* put this to true if you allow task force radio on your server! */
 checkFilePatchingEnabled = true;	/* checks if filepatching is enabled on the client (if it is, the client could inject any script based hack easily) */
 check_Notifications = false;		/* checks if BIS_fnc_showNotification was used, as it is used with many hacks - some custom addons however use them too. */
 check_doors_n_gates = true;			/* Fixes Hatches (so when they are locked, they stay closed..) and closes every door that's locked + keeps closing it in case somebody tries to hack open it! */
@@ -551,6 +570,24 @@ allowedIDDs[] =
 	/* main idd - never delete it */
 	46
 };
+
+/*
+	important check to make sure certain variables are set and have the correct type!
+*/
+variableTypeChecks[] =
+{
+	{'ExileIsPlayingRussianRoulette',false},
+	{'ExileClientIsHandcuffed',false},
+	{'ExilePlayerInSafezone',false},
+	{'ExileClientIsAutoRunning',false},
+	{'ExileCurrentBreachingObject',objNull},
+	{'ExileClientInteractionObject',objNull},
+	{'HTML_LOAD_URL3',''},
+	{'infiSTAR_lastJumptime',0},
+	{'PLAYER_IN_VEHICLE',false}
+};
+
+
 
 
 /*
