@@ -16,9 +16,6 @@ if(_side == "survivor") then { _currentSide = SC_SurvivorSide };
 	_radius = _currentStatic select 2;
 	_staticSearch = _currentStatic select 3;
 	
-	_logDetail = format ["[OCCUPATION Static]:: Checking static spawn @ %1 for existing %2 AI",_spawnPosition,_currentSide];
-    [_logDetail] call SC_fnc_log;
-	
 	_okToSpawn = true;
 	Sleep 0.1;
 
@@ -134,7 +131,6 @@ if(_side == "survivor") then { _currentSide = SC_SurvivorSide };
 
 						} foreach _buildingPositions;		
 						_wpPosition = _highest;
-						diag_log format ["Static Patrol %3 waypoint added - building: %1 position: %2",_y,_highest,_group];
 						_i = _buildingPositions find _wpPosition;
 						_wp = _group addWaypoint [_wpPosition, 5] ;
 						_wp setWaypointBehaviour "AWARE";
