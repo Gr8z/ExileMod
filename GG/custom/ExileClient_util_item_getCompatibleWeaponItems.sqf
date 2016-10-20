@@ -8,7 +8,7 @@ _weaponConfig = configFile >> "CfgWeapons" >> _weaponClassName;
 _compatibleItems = getArray (_weaponConfig >> "magazines");
 
 {
-	_getcompatibleItems = [_weaponClassName] call asdg_fnc_compatibleItems;
+	_getcompatibleItems = [_weaponClassName] call CBA_fnc_compatibleItems;
 	_compatibleItems append _getcompatibleItems;
 
 }forEach [101,201,301,302];
