@@ -72,7 +72,7 @@ CC_townsList = [];
 	};
 	_markerName = format["groupTowns_%1",_townName];
 	if !(_markerName in CC_TownMarkers) then {
-		_marker = createMarkerLocal [_townName,_townPos];
+		_marker = createMarkerLocal [_markerName,_townPos];
 		_markerName setMarkerPos (_townPos);
 		_markerName setMarkerAlpha 1;
 		_markerName setMarkerTextLocal _townName;
