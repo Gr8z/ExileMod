@@ -48,7 +48,7 @@ forEach allMapMarkers;
 _squad = group player;
 CC_livingmates = [];
 {
-  if (alive _x) then {CC_livingmates = CC_livingmates + [_x];};
+  if (alive _x && _x != player) then {CC_livingmates = CC_livingmates + [_x];};
 } foreach units _squad;
 
 CC_townsList = [];
@@ -74,7 +74,7 @@ CC_townsList = [];
 	if !(_markerName in CC_TownMarkers) then {
 		_marker = createMarkerLocal [_markerName,_townPos];
 		_markerName setMarkerPos (_townPos);
-		_markerName setMarkerAlpha 1;
+		_markerName setMarkerAlpha 0;
 		_markerName setMarkerTextLocal _townName;
 		_markerName	setMarkerTypelocal "hd_end";
 		CC_TownMarkers pushBack _markerName;
