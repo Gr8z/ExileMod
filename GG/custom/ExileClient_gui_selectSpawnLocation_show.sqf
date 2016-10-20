@@ -19,6 +19,8 @@ _display displayAddEventHandler ["KeyDown", "_this call ExileClient_gui_loadingS
 _listBox = _display displayCtrl 24002;
 lbClear _listBox;
 
+ExileClientSelectedSpawnLocationMarkerName = "";
+
 if(isNil "CC_LastSpawnLocation") then
 {
 	CC_LastSpawnLocation = [];

@@ -26,7 +26,6 @@ _currentSpawn = ExileClientSelectedSpawnLocationMarkerName;
 ] call ExileClient_system_thread_addTask;
 
 ExileClientSpawnLocationSelectionDone = true;
-ExileClientSelectedSpawnLocationMarkerName = "";
 closeDialog 1;
 
 true
