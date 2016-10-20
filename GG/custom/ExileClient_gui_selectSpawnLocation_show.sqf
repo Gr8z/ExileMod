@@ -3,7 +3,7 @@
  * ExileClient_gui_selectSpawnLocation_show
  */
  
-private["_display","_spawnButton","_listBox","_listItemIndex","_numberOfSpawnPoints","_randNum","_randData","_randomSpawnIndex","_numberOfSpawnCities"];
+private["_display","_spawnButton","_listBox","_listItemIndex","_numberOfSpawnPoints","_randNum","_randData","_randomSpawnIndex","_numberOfSpawnCities","_spawns_arr"];
 disableSerialization;
 ExileClientSpawnLocationSelectionDone = false;
 ExileClientSelectedSpawnLocationMarkerName = "";
@@ -36,10 +36,16 @@ if!(CC_TownMarkers isEqualTo []) then
 	CC_TownMarkers = [];
 };
 
-
+if (isNil "_spawns_arr") then {_spawns_arr = []};
+{
+	if (getMarkerType _x == "ExileSpawnZone") then
+	{
+		_spawns_arr = _spawns_arr + [[_x]];
+	};
+}
+forEach allMapMarkers;
 
 _groupLeader = leader (group (vehicle player));
-
 
 _squad = group player;
 CC_livingmates = [];
