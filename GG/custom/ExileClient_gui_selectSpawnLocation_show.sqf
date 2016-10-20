@@ -50,12 +50,12 @@ forEach allMapMarkers;
 _squad = group player;
 CC_livingmates = [];
 {
-  if (alive _x && _x != player) then {CC_livingmates = CC_livingmates + [_x];};
+  if (alive _x && isPlayer _x && _x != player) then {CC_livingmates = CC_livingmates + [_x];};
 } foreach units _squad;
 
 CC_townsList = [];
 {
-	_mate = units group player select _forEachIndex;
+	_mate = CC_livingmates select _forEachIndex;
 	_matePos = position _mate;
 	_townsNear = nearestLocations [_matePos, ["NameVillage","NameCity","NameCityCapital"], 500];
 	if !((count _townsNear) isEqualTo 0) then
