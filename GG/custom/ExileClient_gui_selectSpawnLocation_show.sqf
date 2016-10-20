@@ -45,8 +45,6 @@ if (isNil "_spawns_arr") then {_spawns_arr = []};
 }
 forEach allMapMarkers;
 
-_groupLeader = leader (group (vehicle player));
-
 _squad = group player;
 CC_livingmates = [];
 {
@@ -73,12 +71,14 @@ CC_townsList = [];
 		_townName = text _locations;
 	};
 	_markerName = format["groupTowns_%1",_townName];
-	_marker = createMarker [_townName,_townPos];
-	_markerName setMarkerPos (_townPos);
-	_markerName setMarkerAlpha 0;
-	_markerName setMarkerTextLocal _townName;
-	_markerName	setMarkerTypelocal "hd_end";
-	CC_TownMarkers pushBack _markerName;
+	if !(_markerName in CC_TownMarkers) then {
+		_marker = createMarkerLocal [_townName,_townPos];
+		_markerName setMarkerPos (_townPos);
+		_markerName setMarkerAlpha 1;
+		_markerName setMarkerTextLocal _townName;
+		_markerName	setMarkerTypelocal "hd_end";
+		CC_TownMarkers pushBack _markerName;
+	};
 } forEach CC_townsList;
 
 _numberOfSpawnCities = 0;
