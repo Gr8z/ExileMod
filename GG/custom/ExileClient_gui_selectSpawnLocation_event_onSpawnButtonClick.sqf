@@ -14,7 +14,7 @@ if(isNil "CC_LastSpawnLocation") then
 {
 	CC_LastSpawnLocation = [];
 };
-//CC_LastSpawnLocation pushBack ExileClientSelectedSpawnLocationMarkerName;
+CC_LastSpawnLocation pushBack ExileClientSelectedSpawnLocationMarkerName;
 _currentSpawn = ExileClientSelectedSpawnLocationMarkerName;
 [
 	900, // Default is 15 minutes.
@@ -26,6 +26,7 @@ _currentSpawn = ExileClientSelectedSpawnLocationMarkerName;
 ] call ExileClient_system_thread_addTask;
 
 ExileClientSpawnLocationSelectionDone = true;
+ExileClientSelectedSpawnLocationMarkerName = "";
 closeDialog 1;
 
 true
