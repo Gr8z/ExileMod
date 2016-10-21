@@ -5,7 +5,7 @@
 private["_player","_chuteNetID","_spawnType","_chute"];
 _player = _this select 0;
 _chuteNetID = _this select 1;
-_spawnType = CC_LastSpawnLocationSelected;
+_spawnType = GG_SpawnTypeSelected;
 if !(_chuteNetID isEqualTo "") then
 {
 	_chute = objectFromNetId _chuteNetID;
