@@ -5,7 +5,6 @@
 private["_player","_chuteNetID","_spawnType","_chute"];
 _player = _this select 0;
 _chuteNetID = _this select 1;
-_spawnType = GG_SpawnTypeSelected;
 if !(_chuteNetID isEqualTo "") then
 {
 	_chute = objectFromNetId _chuteNetID;
@@ -30,7 +29,7 @@ ExileClientPlayerAttributesASecondAgo =
 	ExileClientPlayerAttributes select 5,
 	ExileClientPlayerAttributes select 6
 ];
-switch (_spawnType) do 
+switch (GG_SpawnTypeSelected) do 
 {
 	case 0:
 	{
