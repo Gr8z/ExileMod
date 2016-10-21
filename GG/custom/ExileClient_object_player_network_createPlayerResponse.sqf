@@ -32,15 +32,13 @@ ExileClientPlayerAttributesASecondAgo =
 ];
 switch (_spawnType) do 
 {
-	case 0: 
-	{
-	};
-	case 1:
+	case 0:
 	{
 		player action ["GetinDriver", _chute];
 		["InfoTitleAndText", ["Eject Parachute", " Press ALT + SHIFT + X to Eject from a parachute."]] call ExileClient_gui_toaster_addTemplateToast;
 		ExileJobParachuteFix = [0.25, ExileClient_object_player_parachuteFix, [], true] call ExileClient_system_thread_addtask;
 	};
+	case 1: {};
 };
 call ExileClient_object_player_initStamina;
 false call ExileClient_gui_hud_showSurvivalInfo;

@@ -47,7 +47,7 @@ _title ctrlSetText "SPAWN TYPE";
 _title ctrlSetFont "PuristaBold";
 
 _listBox = _display ctrlCreate["RscListbox", 24004];
-_listBox ctrlSetPosition [1.1625,0.86505,0.481313,0.27495];
+_listBox ctrlSetPosition [1.1625,0.86505,0.481313,0.1];
 _listBox ctrlSetBackgroundColor [0.07,0.07,0.08,1];
 _listBox ctrlCommit 0;
 _listBox ctrlEnable true;
@@ -64,10 +64,10 @@ FNC_GET_ACTUAL_SPAWN = {
 	waitUntil {typeOf player isEqualTo 'Exile_Unit_Player'};
 	uiSleep 3;
 	switch (_this) do {
-		case 0:{
+		case 0 : {
 			GG_SpawnTypeSelected = 0;
 		};
-		case 1:{
+		case 1 : {
 			GG_SpawnTypeSelected = 1;
 		};
 	};
