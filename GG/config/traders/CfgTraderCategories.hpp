@@ -2364,7 +2364,7 @@ class CfgTraderCategories
 		{
 			"Exile_Chopper_Hummingbird_Green",
 			"Exile_Chopper_Hummingbird_Civillian_Wasp",
-			"Exile_Chopper_Huey_Green",
+			//"Exile_Chopper_Huey_Green",
 			"Exile_Chopper_Huey_Armed_Green",
 			"Exile_Chopper_Taru_Black",
 			"Exile_Chopper_Taru_Covered_Black",
@@ -2385,7 +2385,8 @@ class CfgTraderCategories
 			"CUP_B_MV22_USMC_RAMPGUN",
 			"CUP_B_Merlin_HC3_GB",
 			"CUP_B_SA330_Puma_HC1_BAF",
-			"CUP_B_UH1Y_UNA_USMC"
+			"CUP_B_UH1Y_UNA_USMC",
+			"CUP_O_UH1H_TKA"
 		};
 	};
 

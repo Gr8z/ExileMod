@@ -2203,7 +2203,7 @@ class CfgExileArsenal
 	  ////////////////////////////////////////////////////////////////////////////////////////////
 	  ////// UH1 AKA Huey ////////////////////////////////////////////////////////////////////////
 	  ////////////////////////////////////////////////////////////////////////////////////////////
-	  class CUP_O_UH1H_TKA                                  { quality = 3; price = 9000; };
+	  class CUP_O_UH1H_TKA                                  { quality = 2; price = 15000; };
 	  ////////////////////////////////////////////////////////////////////////////////////////////
 	  ////// AN2 BIPLANE /////////////////////////////////////////////////////////////////////////
 	  ////////////////////////////////////////////////////////////////////////////////////////////
@@ -2467,8 +2467,8 @@ class CfgExileArsenal
 	
 	///////// Military Helicopters /////////
 	class Exile_Chopper_Hummingbird_Green								{ quality = 1; price = 7500; };
-	class Exile_Chopper_Huey_Green 										{ quality = 2; price = 17000; };
-	class Exile_Chopper_Huey_Desert										{ quality = 2; price = 17000; };
+	class Exile_Chopper_Huey_Green 										{ quality = 2; price = 12000; };
+	class Exile_Chopper_Huey_Desert										{ quality = 2; price = 12000; };
 	class Exile_Chopper_Hellcat_Green									{ quality = 2; price = 27500; };
 	class Exile_Chopper_Hellcat_FIA										{ quality = 2; price = 27500; };
 	class Exile_Chopper_Huron_Black										{ quality = 2; price = 30000; };
@@ -2486,7 +2486,7 @@ class CfgExileArsenal
 	
 	///////// Military Helicopters Armed /////////
 	class Exile_Chopper_Huey_Armed_Green								{ quality = 3; price = 45000; };
-	class Exile_Chopper_Huey_Armed_Desert								{ quality = 3; price = 25000; };
+	class Exile_Chopper_Huey_Armed_Desert								{ quality = 3; price = 35000; };
 	class B_Heli_Transport_01_F											{ quality = 4; price = 100000; sellPrice = 20000;};
 	class B_Heli_Transport_01_camo_F									{ quality = 4; price = 100000; sellPrice = 20000;};
 	class B_CTRG_Heli_Transport_01_sand_F								{ quality = 4; price = 100000; sellPrice = 20000;};
