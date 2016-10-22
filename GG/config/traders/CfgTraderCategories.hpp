@@ -2364,7 +2364,7 @@ class CfgTraderCategories
 		{
 			"Exile_Chopper_Hummingbird_Green",
 			"Exile_Chopper_Hummingbird_Civillian_Wasp",
-			//"Exile_Chopper_Huey_Green",
+			"Exile_Chopper_Huey_Green",
 			"Exile_Chopper_Huey_Armed_Green",
 			"Exile_Chopper_Taru_Black",
 			"Exile_Chopper_Taru_Covered_Black",

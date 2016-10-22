@@ -2203,7 +2203,7 @@ class CfgExileArsenal
 	  ////////////////////////////////////////////////////////////////////////////////////////////
 	  ////// UH1 AKA Huey ////////////////////////////////////////////////////////////////////////
 	  ////////////////////////////////////////////////////////////////////////////////////////////
-	  class CUP_O_UH1H_TKA                                  { quality = 2; price = 15000; };
+	  class CUP_O_UH1H_TKA                                  { quality = 2; price = 45000; };
 	  ////////////////////////////////////////////////////////////////////////////////////////////
 	  ////// AN2 BIPLANE /////////////////////////////////////////////////////////////////////////
 	  ////////////////////////////////////////////////////////////////////////////////////////////
@@ -2485,8 +2485,8 @@ class CfgExileArsenal
 	class Exile_Chopper_Taru_Covered_Black								{ quality = 2; price = 12500; };
 	
 	///////// Military Helicopters Armed /////////
-	class Exile_Chopper_Huey_Armed_Green								{ quality = 3; price = 45000; };
-	class Exile_Chopper_Huey_Armed_Desert								{ quality = 3; price = 35000; };
+	class Exile_Chopper_Huey_Armed_Green								{ quality = 3; price = 40000; };
+	class Exile_Chopper_Huey_Armed_Desert								{ quality = 3; price = 40000; };
 	class B_Heli_Transport_01_F											{ quality = 4; price = 100000; sellPrice = 20000;};
 	class B_Heli_Transport_01_camo_F									{ quality = 4; price = 100000; sellPrice = 20000;};
 	class B_CTRG_Heli_Transport_01_sand_F								{ quality = 4; price = 100000; sellPrice = 20000;};
