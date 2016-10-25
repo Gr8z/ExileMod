@@ -95,28 +95,20 @@ if (_devFriendlyMode isEqualTo 1) then
 	forEach _devs;
 };
 _parachuteNetID = "";
-if ((getNumber(configFile >> "CfgSettings" >> "BambiSettings" >> "parachuteSpawning")) isEqualTo 1) then
+
+_spawnType = _this select 5;
+switch (_spawnType) do 
 {
-	_position set [2, getNumber(configFile >> "CfgSettings" >> "BambiSettings" >> "parachuteDropHeight")];
-	if ((getNumber(configFile >> "CfgSettings" >> "BambiSettings" >> "haloJump")) isEqualTo 1) then
-	{
-		_bambiPlayer setPosATL _position;
-		_spawnType = 2;
-	}
-	else
-	{
+	case 0: {};
+	case 1: {
 		_parachuteObject = createVehicle ["Steerable_Parachute_F", _position, [], 0, "CAN_COLLIDE"];
 		_parachuteObject setDir _direction;
 		_parachuteObject setPosATL _position;
 		_parachuteObject enableSimulationGlobal true;
 		_parachuteNetID = netId _parachuteObject;
-		_spawnType = 1;
 	};
-}
-else
-{
-	_spawnType = 0;
 };
+
 _bambiPlayer addMPEventHandler ["MPKilled", {_this call ExileServer_object_player_event_onMpKilled}];
 _bambiPlayer call ExileServer_object_player_database_insert;
 _bambiPlayer call ExileServer_object_player_database_update;

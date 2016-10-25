@@ -19,7 +19,8 @@ try
 	{
 		throw format ["Session %1 requested a bambi character, but doesn't have a player object. Hacker or Monday?", _sessionID];
 	};
-	_spawnLocationMarkerName = _parameters select 0;
+	_spawnLocationMarkerName = _parameters select 0 select 0;
+	_spawnLocationType = _parameters select 0 select 1;
 	_playerUID = getPlayerUID _requestingPlayer;
 	if(_playerUID isEqualTo "")then
 	{
@@ -40,7 +41,7 @@ try
 		};
 	}
 	forEach getArray(configFile >> "CfgSettings" >> "BambiSettings" >> "loadOut");
-	[_sessionID, _requestingPlayer, _spawnLocationMarkerName, _bambiPlayer, _accountData] call ExileServer_object_player_createBambi;
+	[_sessionID, _requestingPlayer, _spawnLocationMarkerName, _bambiPlayer, _accountData, _spawnLocationType] call ExileServer_object_player_createBambi;
 }
 catch
 {

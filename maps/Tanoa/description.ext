@@ -93,6 +93,11 @@ class CfgNetworkMessages
      module = "BasePaint";
      parameters[] = {"STRING","STRING"};
     };
+    class createPlayerRequest
+    {
+        module = "object_player";
+        parameters[] = {"ARRAY"};
+    };
 };
 
 

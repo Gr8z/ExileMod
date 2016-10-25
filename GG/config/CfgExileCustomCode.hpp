@@ -24,4 +24,5 @@ class CfgExileCustomCode {
 	ExileClient_util_playerEquipment_add = "GG\custom\ExileClient_util_playerEquipment_add.sqf";
 	ExileClient_gui_traderDialog_updateInventoryDropdown = "GG\custom\ExileClient_gui_traderDialog_updateInventoryDropdown.sqf";
 	ExileClient_gui_selectSpawnLocation_show = "GG\custom\ExileClient_gui_selectSpawnLocation_show.sqf";
+	ExileClient_gui_selectSpawnLocation_event_onListBoxSelectionChanged = "GG\custom\ExileClient_gui_selectSpawnLocation_event_onListBoxSelectionChanged.sqf";
 };

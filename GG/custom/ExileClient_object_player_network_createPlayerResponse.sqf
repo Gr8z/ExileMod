@@ -1,10 +1,11 @@
 /**
  * ExileClient_object_player_network_createPlayerResponse
-*/
+ */
  
 private["_player","_chuteNetID","_spawnType","_chute"];
 _player = _this select 0;
 _chuteNetID = _this select 1;
+_spawnType = _this select 10;
 if !(_chuteNetID isEqualTo "") then
 {
 	_chute = objectFromNetId _chuteNetID;
@@ -29,15 +30,27 @@ ExileClientPlayerAttributesASecondAgo =
 	ExileClientPlayerAttributes select 5,
 	ExileClientPlayerAttributes select 6
 ];
-switch (GG_SpawnTypeSelected) do 
+switch (_spawnType) do 
 {
-	case 0:
+	case 0: 
+	{
+	};
+	case 1:
 	{
 		player action ["GetinDriver", _chute];
 		["InfoTitleAndText", ["Eject Parachute", " Press ALT + SHIFT + X to Eject from a parachute."]] call ExileClient_gui_toaster_addTemplateToast;
 		ExileJobParachuteFix = [0.25, ExileClient_object_player_parachuteFix, [], true] call ExileClient_system_thread_addtask;
 	};
-	case 1: {};
+	case 2:
+	{
+		["InfoTitleAndText", ["Watch your landing speed!", "Going faster than 20km/h might kill you."]] call ExileClient_gui_toaster_addTemplateToast;
+		player switchMove "";
+		player playMoveNow "HaloFreeFall_non"; 
+		player playMoveNow "HaloFreeFall_non";
+		player playMoveNow "HaloFreeFall_non";
+		player setVelocity [(sin (getDir player)) * 50, (cos (getDir player)) * 50, -5];
+		ExileJobParachuteFix = [0.25, ExileClient_object_player_parachuteFix, [], true] call ExileClient_system_thread_addtask;
+	};
 };
 call ExileClient_object_player_initStamina;
 false call ExileClient_gui_hud_showSurvivalInfo;
@@ -47,6 +60,7 @@ ExileClientPlayerKills = _this select 3;
 ExileClientPlayerDeaths = _this select 4;
 (_this select 9) call ExileClient_system_clan_network_updateClanInfoFull;
 [] execVM "GG\ranks.sqf";
+
 if!((_this select 9) isEqualTo [])then
 {
 	if!(isNull ((_this select 9) select 5))then

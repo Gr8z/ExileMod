@@ -6,7 +6,7 @@ private["_display","_topTextCTRL1","_topTextCTRL2","_spawnButton","_listBox","_l
 disableSerialization;
 diag_log "Selecting spawn location...";
 ExileClientSpawnLocationSelectionDone = false;
-ExileClientSelectedSpawnLocationMarkerName = "";
+ExileClientSelectedSpawnLocationMarkerName = [];
 createDialog "RscExileSelectSpawnLocationDialog";
 waitUntil
 {
@@ -65,10 +65,10 @@ FNC_GET_ACTUAL_SPAWN = {
 	uiSleep 3;
 	switch (_this) do {
 		case 0 : {
-			GG_SpawnTypeSelected = 0;
+			GG_SpawnTypeSelected = 1;
 		};
 		case 1 : {
-			GG_SpawnTypeSelected = 1;
+			GG_SpawnTypeSelected = 0;
 		};
 	};
 };
