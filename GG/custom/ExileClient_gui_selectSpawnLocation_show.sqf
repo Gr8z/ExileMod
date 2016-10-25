@@ -6,7 +6,7 @@ private["_display","_topTextCTRL1","_topTextCTRL2","_spawnButton","_listBox","_l
 disableSerialization;
 diag_log "Selecting spawn location...";
 ExileClientSpawnLocationSelectionDone = false;
-GG_SpawnTypeSelected = 1;
+GG_SELECTEDSPAWN = 1;
 ExileClientSelectedSpawnLocationMarkerName = [];
 createDialog "RscExileSelectSpawnLocationDialog";
 waitUntil
@@ -61,23 +61,13 @@ _listItemIndex = _listBox lbSetTooltip [0, "Spawn in the air with a parachute."]
 _listItemIndex = _listBox lbAdd "Ground Spawn";
 _listItemIndex = _listBox lbSetTooltip [1, "Spawn on the ground."];
 
-FNC_GET_ACTUAL_SPAWN = {
-	switch (_this) do {
-		case 0 : {GG_SpawnTypeSelected = 1;};
-		case 1 : {GG_SpawnTypeSelected = 0;};
-	};
-};
 fnc_LBDblClick_LBSelChanged_LO = {
 	GG_SELECTEDSPAWN = _this select 1;
-	_spawnButton ctrlEnable false;
-};
-fnc_ButtonClick_24003 = {
-	[] call ExileClient_gui_selectSpawnLocation_event_onSpawnButtonClick;
+
 	if(isNil"GG_SELECTEDSPAWN")then{GG_SELECTEDSPAWN=0;};
 	GG_SELECTEDSPAWN spawn FNC_GET_ACTUAL_SPAWN;
+
+	_spawnButton ctrlEnable false;
 };
-_spawnButton = _display displayCtrl 24003;
-_spawnButton ctrlRemoveAllEventHandlers "SliderPosChanged";
-_spawnButton ctrlSetEventHandler["ButtonClick","call fnc_ButtonClick_24003"];
-_spawnButton ctrlSetText "Let's go!";
+
 true

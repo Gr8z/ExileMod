@@ -7,7 +7,7 @@ disableSerialization;
 _listBoxControl = _this select 0;
 _listBoxControlIndex = _this select 1;
 _display = findDisplay 24002;
-ExileClientSelectedSpawnLocationMarkerName = [_listBoxControl lbData _listBoxControlIndex,GG_SpawnTypeSelected];
+ExileClientSelectedSpawnLocationMarkerName = [_listBoxControl lbData _listBoxControlIndex,GG_SELECTEDSPAWN];
 ExileClientSelectedSpawnLocationMarkerNameForZoom = ExileClientSelectedSpawnLocationMarkerName select 0;
 _spawnButton = _display displayCtrl 24003;
 _spawnButton ctrlEnable true;
