@@ -62,19 +62,14 @@ _listItemIndex = _listBox lbAdd "Ground Spawn";
 _listItemIndex = _listBox lbSetTooltip [1, "Spawn on the ground."];
 
 FNC_GET_ACTUAL_SPAWN = {
-	waitUntil {typeOf player isEqualTo 'Exile_Unit_Player'};
-	uiSleep 3;
 	switch (_this) do {
-		case 0 : {
-			GG_SpawnTypeSelected = 1;
-		};
-		case 1 : {
-			GG_SpawnTypeSelected = 0;
-		};
+		case 0 : {GG_SpawnTypeSelected = 1;};
+		case 1 : {GG_SpawnTypeSelected = 0;};
 	};
 };
 fnc_LBDblClick_LBSelChanged_LO = {
 	GG_SELECTEDSPAWN = _this select 1;
+	_spawnButton ctrlEnable false;
 };
 fnc_ButtonClick_24003 = {
 	[] call ExileClient_gui_selectSpawnLocation_event_onSpawnButtonClick;
