@@ -6,6 +6,7 @@ private["_display","_topTextCTRL1","_topTextCTRL2","_spawnButton","_listBox","_l
 disableSerialization;
 diag_log "Selecting spawn location...";
 ExileClientSpawnLocationSelectionDone = false;
+GG_SpawnTypeSelected = 1;
 ExileClientSelectedSpawnLocationMarkerName = [];
 createDialog "RscExileSelectSpawnLocationDialog";
 waitUntil
