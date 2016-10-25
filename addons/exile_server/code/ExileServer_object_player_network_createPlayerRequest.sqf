@@ -19,10 +19,10 @@ try
 	{
 		throw format ["Session %1 requested a bambi character, but doesn't have a player object. Hacker or Monday?", _sessionID];
 	};
-	_spawnLocationMarkerName = _parameters select 0 select 0;
-	_spawnLocationType = _parameters select 0 select 1;
+	_spawnLocationMarkerName = (_parameters select 0) select 0;
+	_spawnLocationType = (_parameters select 0) select 1;
 	_playerUID = getPlayerUID _requestingPlayer;
-	if(_playerUID isEqualTo "")then
+	if(_playerUID isEqualTo "") then
 	{
 		throw format ["Player: '%1' has no player UID. Arma/Steam sucks!.",name _requestingPlayer];
 	};

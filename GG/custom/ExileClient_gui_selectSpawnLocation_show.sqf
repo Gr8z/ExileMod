@@ -56,16 +56,15 @@ _listBox ctrlRemoveAllEventHandlers "LBDblClick";
 _listBox ctrlRemoveAllEventHandlers "LBSelChanged";
 _listBox ctrlAddEventHandler ["LBDblClick", "call fnc_LBDblClick_LBSelChanged_LO;"];
 _listBox ctrlAddEventHandler ["LBSelChanged", "call fnc_LBDblClick_LBSelChanged_LO;"];
-_listItemIndex = _listBox lbAdd "Parachute Spawn";
-_listItemIndex = _listBox lbSetTooltip [0, "Spawn in the air with a parachute."];
 _listItemIndex = _listBox lbAdd "Ground Spawn";
-_listItemIndex = _listBox lbSetTooltip [1, "Spawn on the ground."];
+_listItemIndex = _listBox lbSetTooltip [0, "Spawn on the ground."];
+_listItemIndex = _listBox lbAdd "Parachute Spawn";
+_listItemIndex = _listBox lbSetTooltip [1, "Spawn in the air with a parachute."];
 
 fnc_LBDblClick_LBSelChanged_LO = {
 	GG_SELECTEDSPAWN = _this select 1;
 
-	if(isNil"GG_SELECTEDSPAWN")then{GG_SELECTEDSPAWN=0;};
-	GG_SELECTEDSPAWN spawn FNC_GET_ACTUAL_SPAWN;
+	if(isNil"GG_SELECTEDSPAWN")then{GG_SELECTEDSPAWN=1;};
 
 	_spawnButton ctrlEnable false;
 };
