@@ -47,22 +47,42 @@ _title ctrlEnable true;
 _title ctrlSetText "SPAWN TYPE";
 _title ctrlSetFont "PuristaBold";
 
-_listBoxSpawnType = _display ctrlCreate["RscListbox", 24004];
-_listBoxSpawnType ctrlSetPosition [1.1625,0.86505,0.481313,0.1];
-_listBoxSpawnType ctrlSetBackgroundColor [0.07,0.07,0.08,1];
-_listBoxSpawnType ctrlCommit 0;
-_listBoxSpawnType ctrlEnable true;
-_listBoxSpawnType ctrlRemoveAllEventHandlers "LBDblClick";
-_listBoxSpawnType ctrlRemoveAllEventHandlers "LBSelChanged";
-_listBoxSpawnType ctrlAddEventHandler ["LBDblClick", "_this call ExileClient_gui_selectSpawnLocation_event_onListBoxSelectionChanged;"];
-_listBoxSpawnType ctrlAddEventHandler ["LBSelChanged", "_this call ExileClient_gui_selectSpawnLocation_event_onListBoxSelectionChanged;"];
+_listBox = _display ctrlCreate["RscListbox", 24004];
+_listBox ctrlSetPosition [1.1625,0.86505,0.481313,0.1];
+_listBox ctrlSetBackgroundColor [0.07,0.07,0.08,1];
+_listBox ctrlCommit 0;
+_listBox ctrlEnable true;
+_listBox ctrlRemoveAllEventHandlers "LBDblClick";
+_listBox ctrlRemoveAllEventHandlers "LBSelChanged";
+_listBox ctrlAddEventHandler ["LBDblClick", "call fnc_LBDblClick_LBSelChanged_LO;"];
+_listBox ctrlAddEventHandler ["LBSelChanged", "call fnc_LBDblClick_LBSelChanged_LO;"];
+_listItemIndex = _listBox lbAdd "Parachute Spawn";
+_listItemIndex = _listBox lbSetTooltip [0, "Spawn in the air with a parachute."];
+_listItemIndex = _listBox lbAdd "Ground Spawn";
+_listItemIndex = _listBox lbSetTooltip [1, "Spawn on the ground."];
 
-_listItemIndex = _listBoxSpawnType lbAdd "Parachute Spawn";
-_listBoxSpawnType lbSetData [_listItemIndex, lbData [24004,0]];
-_listItemIndex = _listBoxSpawnType lbSetTooltip [0, "Spawn in the air with a parachute."];
-
-_listItemIndex = _listBoxSpawnType lbAdd "Ground Spawn";
-_listBoxSpawnType lbSetData [_listItemIndex, lbData [24004,1]];
-_listItemIndex = _listBoxSpawnType lbSetTooltip [1, "Spawn on the ground."];
-
+FNC_GET_ACTUAL_SPAWN = {
+	waitUntil {typeOf player isEqualTo 'Exile_Unit_Player'};
+	uiSleep 3;
+	switch (_this) do {
+		case 0 : {
+			GG_SpawnTypeSelected = 1;
+		};
+		case 1 : {
+			GG_SpawnTypeSelected = 0;
+		};
+	};
+};
+fnc_LBDblClick_LBSelChanged_LO = {
+	GG_SELECTEDSPAWN = _this select 1;
+};
+fnc_ButtonClick_24003 = {
+	[] call ExileClient_gui_selectSpawnLocation_event_onSpawnButtonClick;
+	if(isNil"GG_SELECTEDSPAWN")then{GG_SELECTEDSPAWN=0;};
+	GG_SELECTEDSPAWN spawn FNC_GET_ACTUAL_SPAWN;
+};
+_spawnButton = _display displayCtrl 24003;
+_spawnButton ctrlRemoveAllEventHandlers "SliderPosChanged";
+_spawnButton ctrlSetEventHandler["ButtonClick","call fnc_ButtonClick_24003"];
+_spawnButton ctrlSetText "Let's go!";
 true
