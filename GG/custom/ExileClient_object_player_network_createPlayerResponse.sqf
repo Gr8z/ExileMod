@@ -2,10 +2,9 @@
  * ExileClient_object_player_network_createPlayerResponse
  */
  
-private["_player","_chuteNetID","_spawnType","_chute"];
+private["_player","_chuteNetID","_chute"];
 _player = _this select 0;
 _chuteNetID = _this select 1;
-_spawnType = _this select 10;
 if !(_chuteNetID isEqualTo "") then
 {
 	_chute = objectFromNetId _chuteNetID;
@@ -30,7 +29,7 @@ ExileClientPlayerAttributesASecondAgo =
 	ExileClientPlayerAttributes select 5,
 	ExileClientPlayerAttributes select 6
 ];
-switch (_spawnType) do 
+switch (GG_SELECTEDSPAWN) do 
 {
 	case 0: 
 	{
